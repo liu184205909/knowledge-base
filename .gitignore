@@ -1,0 +1,75 @@
+# ===========================
+# Project Code - Git 忽略规则
+# ===========================
+
+# Cursor 编辑器配置
+.cursorignore
+.vscode/
+.history/
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 临时文件
+*.tmp
+*.temp
+*.log
+*.bak
+
+# Python 相关（如果使用）
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Node.js 相关（如果使用）
+node_modules/
+package-lock.json
+yarn.lock
+
+# ===========================
+# 项目特定忽略（根据需要调整）
+# ===========================
+
+# 如果你确定某些文件夹完全不需要 Git 管理，取消下面的注释
+# 00 通用/
+# Pseo脚本/
+# Thread螺纹加工/
+
+# ===========================
+# 注意：添加到此列表的文件夹将无法在 Cursor 的 @ 搜索中找到
+# 如果需要在 Cursor 中搜索但不想提交到 Git，见下方说明
+# ===========================
+Ubrightsolution官网文章/333_结构优化建议.md
+Ubrightsolution官网文章/333_EN.md
+Ubrightsolution官网文章/333.md
+Ubrightsolution官网文章/444.md
+Ubrightsolution官网文章/777_01_基础入门篇_EN.md
+Ubrightsolution官网文章/777_01_基础入门篇.md
+Ubrightsolution官网文章/777_02_材料科学专题_EN.md
+Ubrightsolution官网文章/777_02_材料科学专题.md
+Ubrightsolution官网文章/777_03_热处理工艺专题_EN.md
+Ubrightsolution官网文章/777_03_热处理工艺专题.md
+Ubrightsolution官网文章/777_04_精密加工技术篇_EN.md
+Ubrightsolution官网文章/777_04_精密加工技术篇.md
+Ubrightsolution官网文章/777_05_设备选型与维护篇_EN.md
+Ubrightsolution官网文章/777_05_设备选型与维护篇.md
+Ubrightsolution官网文章/777_06_质量控制体系篇_EN.md
+Ubrightsolution官网文章/777_06_质量控制体系篇.md
+Ubrightsolution官网文章/777_07_故障诊断与解决方案篇_EN.md
+Ubrightsolution官网文章/777_07_故障诊断与解决方案篇.md
+Ubrightsolution官网文章/777_08_工艺对比与选择篇_EN.md
+Ubrightsolution官网文章/777_08_工艺对比与选择篇.md
+Ubrightsolution官网文章/777_09_生产线规划与管理篇_EN.md
+Ubrightsolution官网文章/777_09_生产线规划与管理篇.md
+Ubrightsolution官网文章/777_10_成本分析与应用案例篇_EN.md
+Ubrightsolution官网文章/777_10_成本分析与应用案例篇.md
+Ubrightsolution官网文章/777_10篇框架优化方案.md
+Ubrightsolution官网文章/777_10篇SEO建议.md
+Ubrightsolution官网文章/777_扩展框架方案.md
+Ubrightsolution官网文章/777.md
+Ubrightsolution官网文章/888.md
+Ubrightsolution官网文章/sitemap.md
