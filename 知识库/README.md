@@ -82,7 +82,7 @@ AI搜索时代的GEO优化（理论+实战）。
 
 ## Claude Skills 完全指南 - 章节导航
 
-> 📖 完整白皮书：[Claude-Skills完全指南.md](01-AI实战方法/04-Claude-Skills完全指南/Claude-Skills完全指南.md)
+> 📖 完整白皮书：[Claude-Skills完全指南](01-AI实战方法/04-Claude-Skills完全指南/Claude-Skills完全指南.md)
 > 📄 82页 | ~2,500行 | 作者：花叔 × Claude Code
 
 ### 快速跳转
