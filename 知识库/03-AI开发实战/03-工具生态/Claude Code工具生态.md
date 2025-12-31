@@ -16,6 +16,8 @@
 4. **[MCP服务器](#4-mcp服务器)** - 外部工具，连接外部世界
 5. **[使用技巧](#5-使用技巧)** - 保持AI高效状态
 
+**深入阅读**：[Claude Skills完全指南](./Claude-Skills完全指南/Claude-Skills完全指南.md) - 82页白皮书
+
 ---
 
 ## 1. 概念扫盲
@@ -202,12 +204,13 @@ AI自动：
 
 ### 2.4 推荐阅读
 
-**完整指南**：[Claude Skills完全指南](../01-AI实战方法/04-Claude-Skills完全指南/Claude-Skills完全指南.md)
+**完整指南**：[Claude Skills完全指南](./Claude-Skills完全指南/Claude-Skills完全指南.md) - 82页白皮书
 
 **核心章节**：
+- 第1章：核心概念（什么是Skills）
 - 第3章：技术架构（三层加载机制）
 - 第5章：如何创建和使用Skills
-- 第6章：真实案例
+- 第6章：真实案例分析
 - 第8章：使用场景与最佳实践
 
 ---
@@ -623,46 +626,6 @@ claude mcp remove <服务器名称>
 
 ---
 
-## 6. ZRead MCP配置（可选）
-
-### 6.1 什么是ZRead MCP？
-
-**ZRead MCP** 为 Claude Code 提供开源仓库的深度访问能力：
-
-- 📚 **文档搜索** - 搜索 GitHub 仓库的文档、代码与注释
-- 📁 **仓库结构** - 获取仓库目录结构和文件列表
-- 💻 **代码读取** - 读取指定文件的完整代码内容
-
-**需要**：智谱AI GLM Coding Plan 套餐
-
----
-
-### 6.2 配置步骤
-
-#### 方法1：一键安装
-
-```bash
-claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp --header "Authorization: Bearer your_api_key"
-```
-
----
-
-### 6.3 使用示例
-
-#### 示例1：快速上手开源库
-```
-你: "帮我了解 fastapi 这个开源库"
-AI: 使用 search_doc + get_repo_structure + read_file
-```
-
-#### 示例2：排查Issue
-```
-你: "react-router 有没有类似的问题和解决方案"
-AI: 使用 search_doc 搜索 issue
-```
-
----
-
 ## 📊 总结对比
 
 ### Skills vs Plugins vs MCP
@@ -698,8 +661,7 @@ AI: 使用 search_doc 搜索 issue
 - [智谱开放平台](https://open.bigmodel.cn)
 
 ### 知识库文档
-- [Claude Skills完全指南](../01-AI实战方法/04-Claude-Skills完全指南/Claude-Skills完全指南.md) - 82页白皮书
-- [ZRead MCP配置](./MCP服务器配置.md) - 详细配置指南
+- [Claude Skills完全指南](./Claude-Skills完全指南/Claude-Skills完全指南.md) - 82页白皮书（深入理解Skills）
 - [UI设计资源](./UI设计资源.md) - aura.build使用指南
 
 ---
