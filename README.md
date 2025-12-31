@@ -45,7 +45,8 @@ AI使用的实用方法和工具模板。
 - [Vibe-Coding多AI协作](知识库/03-AI开发实战/02-AI开发流程/Vibe-Coding多AI协作.md) - 多AI协作模式
 - [自动化流水线案例](知识库/03-AI开发实战/02-AI开发流程/自动化流水线案例.md) - CI/CD自动化
 - [工具生态](知识库/03-AI开发实战/03-工具生态/Claude Code工具生态.md) - Skills+Plugins+MCP完整指南
-- [Claude Skills白皮书](知识库/03-AI开发实战/03-工具生态/Claude-Skills完全指南/Claude-Skills完全指南.md) - 82页深入指南
+- [Claude Skills白皮书](知识库/03-AI开发实战/03-工具生态/Claude-Skills完全指南.md) - 82页深入指南
+- [ZRead MCP配置](知识库/03-AI开发实战/03-工具生态/ZRead MCP配置.md) - GitHub开源项目深度访问
 - [UI设计资源](知识库/03-AI开发实战/03-工具生态/UI设计资源.md) - aura.build使用指南
 
 ### [🔬 04-GEO前沿探索](知识库/04-GEO前沿探索/) *(3个文件)*
@@ -66,7 +67,7 @@ AI搜索时代的GEO优化（理论+实战）。
 
 ## Claude Skills 完全指南 - 章节导航
 
-> 📖 完整白皮书：[Claude-Skills完全指南](知识库/01-AI实战方法/04-Claude-Skills完全指南/Claude-Skills完全指南.md)
+> 📖 完整白皮书：[Claude-Skills完全指南](知识库/03-AI开发实战/03-工具生态/Claude-Skills完全指南.md)
 > 📄 82页 | ~2,500行 | 作者：花叔 × Claude Code
 
 ### 快速跳转

@@ -16,7 +16,7 @@
 4. **[MCP服务器](#4-mcp服务器)** - 外部工具，连接外部世界
 5. **[使用技巧](#5-使用技巧)** - 保持AI高效状态
 
-**深入阅读**：[Claude Skills完全指南](./Claude-Skills完全指南/Claude-Skills完全指南.md) - 82页白皮书
+**深入阅读**：[Claude Skills完全指南](./Claude-Skills完全指南.md) - 82页白皮书
 
 ---
 
@@ -204,7 +204,7 @@ AI自动：
 
 ### 2.4 推荐阅读
 
-**完整指南**：[Claude Skills完全指南](./Claude-Skills完全指南/Claude-Skills完全指南.md) - 82页白皮书
+**完整指南**：[Claude Skills完全指南](./Claude-Skills完全指南.md) - 82页白皮书
 
 **核心章节**：
 - 第1章：核心概念（什么是Skills）
@@ -661,7 +661,8 @@ claude mcp remove <服务器名称>
 - [智谱开放平台](https://open.bigmodel.cn)
 
 ### 知识库文档
-- [Claude Skills完全指南](./Claude-Skills完全指南/Claude-Skills完全指南.md) - 82页白皮书（深入理解Skills）
+- [Claude Skills完全指南](./Claude-Skills完全指南.md) - 82页白皮书（深入理解Skills）
+- [ZRead MCP配置](./ZRead MCP配置.md) - GitHub开源项目深度访问工具
 - [UI设计资源](./UI设计资源.md) - aura.build使用指南
 
 ---
