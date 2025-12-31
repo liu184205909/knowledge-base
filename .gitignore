@@ -99,4 +99,7 @@ Ubrightsolution官网文章/777.md
 Ubrightsolution官网文章/888.md
 Ubrightsolution官网文章/sitemap.md
 .claude/settings.local.json
-# README.md 已移除，加入源代码管理
+# README 同步相关
+README.backup.md
+sync-readme.bat
+.git/hooks/pre-sync-readme.ps1
