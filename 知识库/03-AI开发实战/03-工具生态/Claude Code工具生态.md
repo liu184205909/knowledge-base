@@ -235,22 +235,35 @@ AI自动：
 
 ### 3.2 插件安装
 
-#### 步骤1：添加官方插件市场
+#### 一句话安装80+专业插件（推荐）
 
 ```bash
-claude plugin add https://github.com/anthropics/claude-plugins-official
+claude plugin marketplace add https://github.com/wshobson/agents
 ```
 
-或者通过VSCode界面：`Ctrl+Shift+P` → "Claude Code: Add Plugin Market"
+这会自动安装包含80+专业插件的完整市场，涵盖：
+- 核心开发：Python、JavaScript、后端架构、调试工具
+- DevOps：CI/CD、Kubernetes、云基础设施
+- 测试：单元测试、性能测试、安全扫描
+- 特色：LLM应用、Web3、游戏开发、SEO优化
 
-#### 步骤2：查看并启用插件
+#### 添加官方插件市场（可选）
 
 ```bash
-# 查看可用插件
-claude plugin list
+claude plugin marketplace add https://github.com/anthropics/claude-plugins-official
+```
 
-# 启用插件
+官方市场包含核心插件：feature-dev、code-review-ai 等
+
+#### 安装单个插件
+
+```bash
+# 从市场安装
+claude plugin install feature-dev
+
+# 启用/禁用插件
 claude plugin enable feature-dev
+claude plugin disable feature-dev
 ```
 
 ---
@@ -368,128 +381,44 @@ frontend-mobile-development:frontend-developer
 
 ---
 
-### 4.2 MCP安装
+### 4.2 快速安装推荐MCP
 
-#### 方法1：一键安装命令（推荐）
-
-**示例：安装智谱视觉理解MCP**
+#### 核心MCP一键安装（推荐）
 
 ```bash
-claude mcp add -s user zai-mcp-server --env Z_AI_API_KEY=your_api_key -- npx -y "@z_ai/mcp-server"
-```
-
-**参数说明**：
-- `-s user`: 安装到用户级配置
-- `--env`: 设置环境变量（API Key）
-- `-- npx -y`: 使用npx自动安装
-
----
-
-#### 方法2：手动配置
-
-**配置文件位置**：`~/.claude/settings.json`
-
-```json
-{
-  "mcpServers": {
-    "playwright": {
-      "command": "npx",
-      "args": ["-y", "@playwright/mcp@latest"]
-    },
-    "zai-mcp-server": {
-      "command": "npx",
-      "args": ["-y", "@z_ai/mcp-server"],
-      "env": {
-        "Z_AI_API_KEY": "your_api_key"
-      }
-    }
-  }
-}
-```
-
-**重启Claude Code**让配置生效
-
----
-
-### 4.3 推荐MCP清单
-
-#### 核心MCP（强烈推荐）
-
-##### 1. web-reader
-**功能**：网页读取、提取元数据
-
-**安装**：
-```bash
+# 1. 网页读取（免费）
 claude mcp add -s user -t http web-reader https://web-reader.xdai.dev
-```
 
-**使用场景**：
-```
-"读取 https://docs.example.com 的 API 文档"
-"总结这个技术文章: [URL]"
-```
-
----
-
-##### 2. web-search-prime
-**功能**：联网搜索、实时信息
-
-**安装**：
-```bash
+# 2. 联网搜索（免费）
 claude mcp add -s user -t http web-search-prime https://web-search.xdai.dev
+
+# 3. 视觉理解：UI转代码、OCR、错误诊断
+claude mcp add -s user zai-mcp-server --env Z_AI_API_KEY=your_api_key -- npx -y "@z_ai/mcp-server"
+
+# 4. 浏览器自动化（E2E测试）
+claude mcp add -s user playwright -- npx -y "@playwright/mcp@latest"
+
+# 5. GitHub深度访问（需要GLM Coding Plan）
+claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp --header "Authorization: Bearer your_api_key"
 ```
 
----
+**功能说明**：
 
-##### 3. zai-mcp-server ⭐
-**功能**：视觉理解（UI转代码、OCR、错误诊断）
-
-**主要工具**：
-- `ui_to_artifact` - UI截图→代码
-- `extract_text_from_screenshot` - OCR文字提取
-- `diagnose_error_screenshot` - 错误诊断
-
----
-
-##### 4. playwright
-**功能**：浏览器自动化、E2E测试
-
-**主要工具**：
-- `launch_browser` - 启动浏览器
-- `navigate` - 导航到URL
-- `click` / `fill` - 点击/填写表单
-- `screenshot` - 截图
-
-**注意**：首次使用会自动下载浏览器（约100-200MB，需2-5分钟）
+| MCP | 功能 | 用途 | 成本 |
+|-----|------|------|------|
+| **web-reader** | 网页读取 | 读取技术文档、总结文章 | 免费 |
+| **web-search-prime** | 联网搜索 | 搜索最新资料、实时信息 | 免费 |
+| **zai-mcp-server** | 视觉理解 | UI截图→代码、OCR、错误诊断 | 免费 |
+| **playwright** | 浏览器自动化 | E2E测试、网页操作 | 免费 |
+| **zread** | GitHub深度访问 | 读取源码、搜索commits/issues | 需套餐 |
 
 ---
 
-### 4.4 进阶MCP
+### 4.3 MCP管理
 
-#### 5. @magicuidesign/mcp
-UI组件库（彩虹按钮、滚动动画等）
-
-#### 6. sequential-thinking
-结构化思考、系统设计
-
-#### 7-9. firecrawl / apify / rube
-- **firecrawl**: 深度网站爬取
-- **apify**: 专业爬虫（Instagram、Google Maps）
-- **rube**: 500+应用集成
-
----
-
-### 4.5 MCP管理
-
-#### 查看MCP列表
+#### 查看MCP状态
 ```bash
 /mcp list
-```
-
-#### 禁用/启用MCP
-```bash
-claude mcp disable <server-name>
-claude mcp enable <server-name>
 ```
 
 #### 删除MCP
@@ -499,13 +428,13 @@ claude mcp remove <服务器名称>
 
 ---
 
-### 4.6 MCP市场
+### 4.4 MCP市场
 
 **国外市场**：
-- [Smithery](https://smithery.ai/servers)
+- [Smithery](https://smithery.ai/servers) - 500+ MCP 服务器
 
 **国内市场**：
-- [MCP Market](https://mcpmarket.cn/)
+- [MCP Market](https://mcpmarket.cn/) - 国内 MCP 市场
 
 ---
 
@@ -668,6 +597,23 @@ claude mcp remove <服务器名称>
 ---
 
 **最后更新**: 2025-12-31
-**版本**: v2.0
+**版本**: v2.1（简化安装说明）
+
+---
+
+## ⚡ 快速开始
+
+### 一句话安装80+插件 + 5个核心MCP
+
+```bash
+# 1. 安装80+专业插件
+claude plugin marketplace add https://github.com/wshobson/agents
+
+# 2. 安装核心MCP（根据需要选择）
+claude mcp add -s user -t http web-reader https://web-reader.xdai.dev
+claude mcp add -s user -t http web-search-prime https://web-search.xdai.dev
+claude mcp add -s user zai-mcp-server --env Z_AI_API_KEY=your_key -- npx -y "@z_ai/mcp-server"
+claude mcp add -s user playwright -- npx -y "@playwright/mcp@latest"
+```
 
 **现在你理解Skills、Plugins、MCP的关系了吗？** 🎯
