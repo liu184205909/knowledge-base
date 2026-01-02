@@ -149,6 +149,35 @@ Month 3: 实战
 
 ---
 
+## 🔄 跨电脑同步
+
+**新电脑首次使用**：
+```bash
+git clone https://github.com/liu184205909/knowledge-base.git 知识库
+```
+
+**日常工作流**：
+```bash
+# 工作开始：拉取最新更新
+git pull origin main
+
+# 工作结束：推送本地修改
+git add .
+git commit -m "update: 描述修改内容"
+git push origin main
+```
+
+**一键同步脚本**：
+- `pull-from-github.bat` - 从 GitHub 拉取更新
+- `push-to-github.bat` - 推送修改到 GitHub
+- `smart-sync.bat` - 智能同步工具（推荐）
+
+**详细文档**：
+- [跨电脑同步指南](跨电脑同步指南.md) - 完整同步教程
+- [快速参考](快速参考.md) - 常用命令速查
+
+---
+
 ## 🔗 相关资源
 
 **官方文档**
