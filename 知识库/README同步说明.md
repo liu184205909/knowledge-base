@@ -109,10 +109,10 @@ git commit -m "refactor: 重命名文件夹和文档，统一命名规范"
 ## ✅ v3.2 版本更新内容
 
 ### 文件夹重命名
-- `00-Claude基础配置/` → `00-Claude Code/`
+- `00-Claude基础配置/` → `00-CC使用手册/`
 
 ### 文档重命名
-- `Claude Code自动安装指南.md` → `01-快速安装.md`
+- `Claude Code自动安装指南.md` → `01-claude code安装指南.md`
 - `Claude-Skills完全指南.md` → `02-Skills核心概念.md`
 - `UI设计资源.md` → `03-UI设计自动化.md`
 
