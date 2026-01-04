@@ -101,7 +101,88 @@
 
 ---
 
-## 📊 三种并行方式对比
+## 📊 四种并行方式对比
+
+### 方式0：Cursor/Claude Code多窗口（常见误区）⚠️
+
+**用户常见问题**：
+> "我用Cursor打开多个窗口，每个窗口用不同模型，不也实现并行了吗？"
+> "我在Claude Code IDE开多个New Session，不也是独立会话吗？"
+
+**致命问题：缺少代码隔离**
+
+```bash
+# Cursor多窗口的真实情况
+项目目录：my-project/
+├─ src/
+├─ package.json
+└─ tsconfig.json
+
+Cursor窗口1（Claude）：修改 src/user.ts
+Cursor窗口2（GPT-4）：修改 src/user.ts  ← 覆盖窗口1的改动！
+Cursor窗口3（Gemini）：修改 src/user.ts ← 覆盖窗口2的改动！
+
+→ 💥 三个AI互相覆盖代码
+→ ❌ 没有冲突检测
+→ ❌ 后面执行的覆盖前面的
+→ ❌ 无法回滚和Review
+```
+
+**vs Schaltwerk的对比**：
+
+| 维度 | Cursor多窗口 | Schaltwerk | 差距 |
+|------|------------|-----------|------|
+| **代码隔离** | ❌ 共享同一目录 | ✅ Git Worktree自动隔离 | **致命差距** |
+| **冲突处理** | ❌ 手动Git管理（2小时） | ✅ 自动检测+Diff视图（5分钟） | **24倍差距** |
+| **并行数量** | ⚠️ 2-3个（再多就乱） | ✅ 3-10个（图形界面） | 3-5倍 |
+| **进度监控** | ❌ 切换窗口查看 | ✅ 统一控制面板 | 效率↓ |
+| **合并代码** | ❌ 手动解决冲突 | ✅ 一键Merge/Discard | **高风险** |
+| **失败处理** | ❌ 手动检查每个窗口 | ✅ 实时显示错误日志 | 难度高 |
+| **适用场景** | 2-3个简单任务 | 3-10个复杂任务 | 本质区别 |
+
+**什么时候可以用Cursor多窗口？**
+
+```bash
+✅ 适合场景：
+- 2-3个简单独立任务（如：写3个独立组件）
+- 你熟悉Git Worktree，愿意手动创建隔离环境
+- 愿意花2小时管理，换取省5分钟安装工具
+
+❌ 不适合场景：
+- 5个以上任务（你会手忙脚乱）
+- 任务有依赖关系（需要手动管理顺序）
+- 需要大量修改文件（Git冲突噩梦）
+- 不熟悉Git Worktree（学习成本高）
+```
+
+**如果要手动模拟Schaltwerk（不推荐）**：
+
+```bash
+# 你需要手动做Schaltwerk自动做的事：
+1. 为每个AI创建Git分支
+   git checkout -b feature/task1
+   git checkout -b feature/task2
+   git checkout -b feature/task3
+
+2. 为每个AI创建Worktree（隔离环境）
+   git worktree add ../task1 feature/task1
+   git worktree add ../task2 feature/task2
+   git worktree add ../task3 feature/task3
+
+3. 打开3个Cursor窗口，分别打开3个目录
+   Cursor 1: ../task1
+   Cursor 2: ../task2
+   Cursor 3: ../task3
+
+4. 手动监控进度、手动解决冲突、手动合并
+
+→ 时间成本：2小时管理 + 1小时开发 = 3小时
+vs Schaltwerk：5分钟管理 + 30分钟开发 = 35分钟
+```
+
+**结论**：Cursor多窗口 = "手动版Schaltwerk"，但效率差5倍。
+
+---
 
 ### 方式1：手动多开终端（Boris Cherny方式）
 
