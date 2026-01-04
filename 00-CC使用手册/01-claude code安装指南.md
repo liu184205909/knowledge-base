@@ -124,130 +124,99 @@ claude mcp list
 
 ## 📋 配置文件说明
 
-### 最终配置文件位置
+**配置文件位置**：`~/.claude/settings.json` (Windows: `C:\Users\<用户名>\.claude\settings.json`)
 
-**唯一配置文件**：`C:\Users\<用户名>\.claude.json`
-
-**包含内容**：
-- API配置（env字段）
-- 模型设置（alwaysThinkingEnabled）
-- 所有MCP服务器配置
-- 使用统计和项目配置
-
-### 配置文件优化建议
-
-#### ✅ 推荐做法：合并配置文件
-
-**将 `settings.json` 的内容合并到 `.claude.json`**
-
-```json
-// .claude.json 应该包含：
-{
-  "env": {
-    "ANTHROPIC_BASE_URL": "...",
-    "ANTHROPIC_AUTH_TOKEN": "...",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-4.7",
-    ...
-  },
-  "alwaysThinkingEnabled": true,
-  "mcpServers": {
-    "web-reader": { ... },
-    "web-search-prime": { ... },
-    ...
-  }
-}
-```
-
-**然后删除**：
-- `C:\Users\<用户名>\.claude\settings.json` （已合并）
-- `C:\Users\<用户名>\.claude.json.backup` （备份文件）
-- `C:\Users\<用户名>\.claude.json.corrupted.*` （损坏文件）
-
-#### ❌ 不建议：移动配置文件
-
-**不要将 `.claude.json` 移动到 `.claude/` 文件夹**
-- 原因：Claude Code 默认在用户目录下查找 `.claude.json`
-- 移动后可能导致配置无法加载
-
----
-
-## 🔧 故障排除
-
-### 问题1：MCP连接失败
-
-**web-reader连接失败**：
-```bash
-claude mcp remove web-reader
-claude mcp add -s user -t http web-reader https://web-reader.xdai.dev
-```
-
-**其他MCP连接失败**：
-1. 检查网络连接
-2. 验证API Key（对于需要密钥的MCP）
-3. 完全重启 Claude Code
-4. 等待 10-20 秒让 MCP 服务器启动
-
----
-
-### 问题2：MCP未显示在列表中
-
-**解决方案**：
-1. ✅ 完全重启 Claude Code（不是重新加载窗口）
-2. ✅ 等待 10-20 秒
-3. ✅ 检查配置文件 JSON 格式是否正确
-4. ✅ 运行 `claude mcp list` 查看状态
-
----
-
-### 问题3：插件安装后没反应
-
-**检查步骤**：
-```bash
-# 查看已安装的插件
-/plugin list
-
-# 查看插件是否启用
-claude plugin enable <plugin-name>
-```
+包含 API 配置、模型设置、所有 MCP 服务器配置。如有问题直接让 AI 自动修复即可。
 
 ---
 
 ## 📊 MCP功能对比
 
-| MCP名称 | 功能 | 是否免费 | 使用场景 |
-|---------|------|---------|---------|
-| **web-reader** | 读取网页 | ✅ 免费 | 读取技术文档、文章 |
-| **web-search-prime** | 联网搜索 | ✅ 免费 | 搜索最新信息、技术动态 |
-| **zai-mcp-server** | 视觉理解 | ⚠️ 需API Key | 图片分析、UI转换、视频理解 |
-| **playwright** | 浏览器自动化 | ✅ 免费 | 自动化测试、网页交互 |
-| **zread** | GitHub深度访问 | ❌ 需付费套餐 | 深入学习开源项目源码 |
+| MCP名称 | 功能 | 是否免费 | 使用场景 | 推荐指数 |
+|---------|------|---------|---------|---------|
+| **web-reader** | 读取网页 | ✅ 免费 | 读取技术文档、文章、博客 | ⭐⭐⭐⭐⭐ 必装 |
+| **web-search-prime** | 联网搜索 | ✅ 免费 | 搜索最新信息、技术动态 | ⭐⭐⭐⭐⭐ 必装 |
+| **playwright** | 浏览器自动化 | ✅ 免费 | 自动化测试、网页交互、截图 | ⭐⭐⭐⭐ 推荐 |
+| **zai-mcp-server** | 视觉理解 | ⚠️ 需API Key | 图片分析、UI转换代码、视频理解 | ⭐⭐⭐⭐ 推荐 |
+| **zread** | GitHub深度访问 | ❌ 需付费套餐 | 深入学习开源项目源码 | ⭐⭐⭐ 高级 |
 
 ---
 
 ## 💡 推荐安装组合
 
-### 基础版（免费）
+### 🎯 入门版（免费，适合新手）
 ```bash
-# 1. 插件
+# 核心三件套：联网搜索 + 网页读取 + 浏览器自动化
 claude plugin marketplace add https://github.com/wshobson/agents
-
-# 2. MCP（免费）
 claude mcp add -s user -t http web-reader https://web-reader.xdai.dev
 claude mcp add -s user -t http web-search-prime https://web-search.xdai.dev
 claude mcp add -s user playwright -- npx -y "@playwright/mcp@latest"
 ```
 
-### 专业版（需要API Key）
+**适用场景**：
+- 学习新技术，搜索和阅读文档
+- 日常开发任务
+- 自动化测试基础需求
+
+---
+
+### 🚀 进阶版（需要视觉API，适合独立开发者）
 ```bash
-# 基础版 + 视觉理解
+# 入门版 + 视觉理解能力
 claude mcp add -s user zai-mcp-server --env Z_AI_API_KEY=your_key -- npx -y "@z_ai/mcp-server"
 ```
 
-### 完整版（需要付费套餐）
+**新增能力**：
+- 截图分析错误信息
+- UI 设计稿转换为代码
+- 视频内容理解
+- 数据可视化图表分析
+
+**推荐 API**：智谱视觉 API 或其他兼容视觉服务
+
+---
+
+### 💎 专业版（需要 GLM Coding Plan 付费，适合深度开发者）
 ```bash
-# 专业版 + GitHub深度访问
+# 进阶版 + GitHub 深度访问
 claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp --header "Authorization: Bearer your_api_key"
 ```
+
+**新增能力**：
+- 深度分析开源项目架构
+- 学习优秀代码实现
+- 理解复杂项目结构
+- 研究 GitHub 热门仓库
+
+**订阅地址**：https://zhipuaishengchan.datasink.sensorsdata.cn/t/rR
+
+---
+
+### 🌟 终极版（全功能，适合超级个体）
+```bash
+# 所有功能 + 自定义 Skills
+# 1. 安装所有 MCP
+claude mcp add -s user -t http web-reader https://web-reader.xdai.dev
+claude mcp add -s user -t http web-search-prime https://web-search.xdai.dev
+claude mcp add -s user playwright -- npx -y "@playwright/mcp@latest"
+claude mcp add -s user zai-mcp-server --env Z_AI_API_KEY=your_key -- npx -y "@z_ai/mcp-server"
+claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp --header "Authorization: Bearer your_api_key"
+
+# 2. 安装所有插件
+claude plugin marketplace add https://github.com/wshobson/agents
+
+# 3. 创建自定义 Skills（参考 02-Skills核心概念.md）
+```
+
+**完整能力矩阵**：
+- ✅ 联网搜索 + 网页读取
+- ✅ 浏览器自动化
+- ✅ 视觉理解
+- ✅ GitHub 深度访问
+- ✅ 80+ 专业插件
+- ✅ 自定义 Skills
+
+**适合人群**：独立开发者、超级个体、创业团队
 
 ---
 
@@ -272,24 +241,6 @@ claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp 
    - aura.build 使用教程
 
 **注意**：这些文档适合深入学习，不是安装必需的。
-
----
-
-## ✅ 安装检查清单
-
-完成安装后，请逐项检查：
-
-- [ ] Claude Code / Cursor 已安装
-- [ ] 80+ 插件已安装（`/plugin list` 查看）
-- [ ] web-reader MCP 已安装
-- [ ] web-search-prime MCP 已安装
-- [ ] playwright MCP 已安装
-- [ ] zai-mcp-server MCP 已安装（如果需要）
-- [ ] zread MCP 已安装（如果需要）
-- [ ] 所有MCP在 `claude mcp list` 中显示为 ✓ Connected
-- [ ] 能够搜索最新信息
-- [ ] 能够读取网页内容
-- [ ] API Key 已正确配置（对于需要密钥的MCP）
 
 ---
 
