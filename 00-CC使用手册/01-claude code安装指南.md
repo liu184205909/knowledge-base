@@ -32,21 +32,6 @@
 └──────────────────────────────────────┘
 ```
 
-### 核心配置文件
-
-**配置位置**: `~/.claude/settings.json` (Windows: `C:\Users\<用户名>\.claude\settings.json`)
-
-**关键配置**:
-```json
-{
-  "env": {
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-4.5-air",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-4.7",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-4.7"
-  }
-}
-```
-
 ### 🔌 插件与MCP兼容性
 
 由于使用Claude Code框架，所有插件和MCP服务器完全兼容：
@@ -56,13 +41,7 @@
 - ✅ **IDE插件** - VS Code、Jetbrains、Cursor等
 - ✅ **智谱专属MCP** - ZRead GitHub深度访问等
 
-### API配置
 
-- **API Key管理**: https://bigmodel.cn/usercenter/proj-mgmt/apikeys
-- **订阅服务**: https://zhipuaishengchan.datasink.sensorsdata.cn/t/rR
-- **技术支持**: 关注公众号「花叔」
-
----
 
 ## 🚀 快速安装（3步）
 
@@ -119,14 +98,6 @@ claude mcp list
 ```
 
 **预期结果**：所有MCP显示为 ✓ Connected
-
----
-
-## 📋 配置文件说明
-
-**配置文件位置**：`~/.claude/settings.json` (Windows: `C:\Users\<用户名>\.claude\settings.json`)
-
-包含 API 配置、模型设置、所有 MCP 服务器配置。如有问题直接让 AI 自动修复即可。
 
 ---
 
