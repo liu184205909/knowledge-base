@@ -91,6 +91,113 @@ claude mcp list
 
 ---
 
+## 🚀 高级工具：Schaltwerk（多AI协同管理）
+
+### 什么是Schaltwerk？
+
+> **同时运行10个AI Agent并行开发同一个项目**
+
+Schaltwerk是一个基于**Git Worktree**的AI Agent管理平台，让你可以：
+- 同时启动10个AI Agent处理不同任务
+- 每个Agent在完全隔离的"平行宇宙"中工作
+- 自动处理Git分支冲突
+- GitHub风格Diff视图Review
+
+### 核心特性
+
+**自动隔离**：
+- 基于Git Worktree创建独立工作树
+- 每个Agent互不干扰，文件系统完全隔离
+- 你不需要了解Git原理，图形界面一键操作
+
+**并行开发**：
+```
+Agent A：修Bug
+Agent B：写新功能
+Agent C：重构文档
+...
+同时进行，互不干扰
+```
+
+**智能合并**：
+- GitHub风格Diff视图
+- 行就合并，不行就销毁平行宇宙
+- 自动处理最繁琐的隔离工作
+
+### 安装使用
+
+**Mac安装**：
+```bash
+brew install --cask 2mawi2/tap/schaltwerk
+```
+
+**其他平台**：
+- 下载地址：https://link.bytenote.net/5MHVcn
+
+**使用流程**：
+```
+1. 写Spec（需求规格）
+2. 配置Agent（选择AI、设置提示词）
+3. 启动多个Agent（一键Start）
+4. 喝咖啡（等待完成）
+5. Review合并（Diff视图）
+```
+
+### 与其他工作流的对比
+
+| 维度 | Schaltwerk | Vibe-Coding | feature-dev |
+|------|-----------|-------------|-------------|
+| **类型** | 工具软件 | 工作流程 | 开发SOP |
+| **并行方式** | 10个AI自动并行 | 3个AI手动切换 | 1个AI串行 |
+| **隔离机制** | Git Worktree自动 | 手动切换 | Plan模式 |
+| **难度** | 零学习成本 | 需要训练思维 | 需要理解流程 |
+
+### 推荐使用场景
+
+✅ **非常适合**：
+- 多功能并行开发（3个以上功能）
+- 多Bug同时修复
+- 大规模重构
+- **与Vibe-Coding结合使用**（最佳实践）
+
+❌ **不推荐**：
+- 简单单任务
+- 学习Git Worktree原理
+- 需要深度代码审查
+
+### 与Vibe-Coding结合使用
+
+**Vibe-Coding + Schaltwerk = 完美组合**：
+
+```
+Vibe-Coding的"三线并进"思维
+↓
+Schaltwerk的"自动隔离"工具
+↓
+你只需要：写Spec → 喝咖啡 → Review
+```
+
+**实战示例**：
+```bash
+# 1. 在Schaltwerk中写3个Spec
+Spec 1: 给登录页加验证码
+Spec 2: 优化数据库查询
+Spec 3: 更新API文档
+
+# 2. 配置3个Agent（都用Claude Code）
+Agent 1: 专注功能开发
+Agent 2: 专注性能优化
+Agent 3: 专注文档更新
+
+# 3. 一键Start，3个Agent同时开始
+
+# 4. 喝咖啡等待
+
+# 5. Diff视图Review，合并所有改动
+```
+
+---
+
 ## 🔍 发现更多插件和MCP
 
 ### 方法1: Claude官方插件市场
