@@ -248,4 +248,218 @@ A: 可以减少AI专家数量，使用单AI+人工审核的模式，但保持文
 
 ---
 
+## 六、Vibe-Coding + Schaltwerk = 终极组合 ⭐⭐⭐
+
+> **三线并进的思维 + 自动隔离的工具 = 完美的多AI协同**
+
+### 为什么结合使用？
+
+**Vibe-Coding的局限**：
+- ✅ 三线并进思维很棒
+- ❌ 需要手动管理3个工具
+- ❌ 容易混乱和冲突
+- ❌ 大脑容易过载
+
+**Schaltwerk的优势**：
+- ✅ 自动隔离多AI工作环境
+- ✅ 图形界面管理，零学习成本
+- ✅ 自动处理Git冲突
+- ❌ 缺少"三线并进"的思维指导
+
+**结合后**：
+```
+Vibe-Coding的思维模式
+↓
+Schaltwerk的工具支撑
+↓
+你只需要：写Spec → 喝咖啡 → Review
+```
+
+---
+
+### 实战工作流
+
+#### 场景：全栈开发一个完整功能
+
+**步骤1：在Schaltwerk中写3个Spec**
+
+```markdown
+## Spec 1: 前端UI（马上做）
+
+### 目标
+开发用户评论的前端界面
+
+### 技术要求
+- React + TypeScript
+- 评论列表组件
+- 评论输入框
+- 实时更新
+
+---
+
+## Spec 2: 后端API（现在做）
+
+### 目标
+开发评论相关的API接口
+
+### 技术要求
+- Node.js + Express
+- RESTful API
+- WebSocket实时通知
+- 数据库设计
+
+---
+
+## Spec 3: 产品设计（未来做）
+
+### 目标
+规划评论功能的后续迭代
+
+### 内容
+- 点赞功能
+- 表情回复
+- 富文本支持
+- 敏感词过滤
+```
+
+**步骤2：配置3个Agent**
+
+```
+Agent 1 (Cursor):
+- Spec 1: 前端UI
+- 专注：代码实现
+
+Agent 2 (Claude Code):
+- Spec 2: 后端API
+- 专注：技术方案
+
+Agent 3 (Claude Code):
+- Spec 3: 产品设计
+- 专注：文档和规划
+```
+
+**步骤3：启动3个Agent**
+
+Schaltwerk自动创建3个Git Worktree：
+```
+Worktree 1: feature/comment-frontend
+Worktree 2: feature/comment-backend
+Worktree 3: docs/comment-next-steps
+```
+
+**步骤4：三线并进**
+
+```
+左屏（Schaltwerk Agent 1）：
+├─ 看Agent 1在写前端组件
+└─ 等AI生成时，切换到中屏
+
+中屏（Schaltwerk Agent 2）：
+├─ Review Agent 2的后端API设计
+└─ 确认后，切换到右屏
+
+右屏（Schaltwerk Agent 3）：
+├─ 看Agent 3写产品文档
+└─ 思考下一个Spec
+
+→ 三线并进，永远满载！
+```
+
+**步骤5：Review合并**
+
+3个Agent完成后：
+1. Schaltwerk显示GitHub风格Diff视图
+2. Review每个Agent的改动
+3. 一键合并或销毁Worktree
+
+---
+
+### 进阶技巧
+
+#### 技巧1：动态调整Agent数量
+
+```
+初期（3个功能）：
+- Spec 1 → Agent 1
+- Spec 2 → Agent 2
+- Spec 3 → Agent 3
+
+中期（Agent 1完成）：
+- Spec 4 → Agent 1（重新分配）
+
+后期（3个Agent同时工作）：
+- Spec 5, 6, 7 → Agent 1, 2, 3
+→ 流水线持续运转
+```
+
+#### 技巧2：依赖关系管理
+
+```
+独立功能（可并行）：
+- Agent 1: 用户评论
+- Agent 2: 文章点赞
+- Agent 3: 数据导出
+
+依赖功能（需串行）：
+- Agent 1: 数据库Schema（先做）
+- Agent 2: API开发（等Agent 1完成）
+- Agent 3: 前端对接（等Agent 2完成）
+```
+
+#### 技巧3：质量保障
+
+```
+三层保障：
+1. Agent内部：feature-dev 7阶段流程
+2. Agent之间：互相Review代码
+3. 你最后：Schaltwerk Diff视图总Review
+```
+
+---
+
+### 对比表格
+
+| 维度 | 纯Vibe-Coding | 纯Schaltwerk | Vibe-Coding + Schaltwerk |
+|------|--------------|--------------|------------------------|
+| **思维模式** | 三线并进 | 无（单任务） | 三线并进 |
+| **工具支撑** | 手动管理 | 自动隔离 | 自动隔离 |
+| **并行数量** | 3个（手动切换） | 10个（图形界面） | 10个（三线并进） |
+| **冲突处理** | 手动Git | 自动处理 | 自动处理 |
+| **学习成本** | 高（需训练思维） | 低（图形界面） | 中（需理解两者） |
+| **效率提升** | 3-5倍 | 5-10倍 | **10-15倍** ⭐ |
+
+---
+
+### 最佳实践
+
+✅ **推荐组合**：
+```
+简单项目：纯Vibe-Coding（3个工具手动切换）
+中等项目：Vibe-Coding + Schaltwerk（3-5个Agent）
+复杂项目：Vibe-Coding + Schaltwerk（10个Agent）
+```
+
+✅ **工作流**：
+```
+1. 早晨：写3-5个Spec（1小时）
+2. 上午：启动3个Agent，并行工作（2小时）
+3. 中午：Review + 合并（30分钟）
+4. 下午：写下一批Spec + 重新分配Agent
+```
+
+✅ **注意事项**：
+- 从3个Agent开始，不要一开始就用10个
+- 保持Spec清晰（AI完成度取决于Spec质量）
+- 最后一定要Review（AI也会犯错）
+
+---
+
+## 七、相关文档
+
+- [多AI协同开发](./多AI协同开发.md) - Schaltwerk完整教程
+- [feature-dev开发流程](./feature-dev开发流程.md) - 单AI 7阶段SOP
+- [01-claude code安装指南](../../00-CC使用手册/01-claude%20code安装指南.md) - Schaltwerk工具介绍
+
+---
+
 > 💡 **记住**：Vibe Coding 不是简单的工具堆砌，而是一种思维方式的转变。当你真正理解了流水线式开发的精髓，你会发现原本的"垃圾时间"都变成了思考的黄金时段。
