@@ -2,6 +2,8 @@
 
 > **AI自动执行安装** | 适用于新电脑或首次安装 | 最后更新: 2026-01-04
 
+claude code 插件说明：
+
 ---
 
 ## 🏗️ 技术架构说明
@@ -111,42 +113,154 @@ claude mcp list
 | **zai-mcp-server** | 视觉理解 | ⚠️ 需API Key | 图片分析、UI转换代码、视频理解 |
 | **zread** | GitHub深度访问 | ❌ 需付费套餐 | 深入学习开源项目源码 |
 
+
+
 ---
 
-## 🎯 常见使用场景
+## 🔍 发现更多插件和MCP
 
-### 场景1：学习新技术
-```
-你: "我想学习 FastAPI，帮我了解它的核心概念和最佳实践"
+### 方法1: Claude官方插件市场
 
-AI 会自动：
-1. 使用 web-search 搜索 FastAPI 文档
-2. 使用 web-reader 读取详细内容
-3. 调用 python-development 插件（Python专家）
-4. 整理成易于理解的学习指南
+**访问地址**: https://github.com/anthropics/courses/tree/main/cursor-course
+
+**搜索技巧**:
+1. 在GitHub搜索: `topic:claude-code-plugin`
+2. 在GitHub搜索: `topic:claude-code-agent`
+3. 浏览官方推荐插件列表
+
+---
+
+### 方法2: MCP官方仓库
+
+**Model Context Protocol官方**: https://github.com/modelcontextprotocol
+
+**推荐MCP服务器**:
+
+**GitHub搜索命令**:
+```bash
+# 搜索MCP服务器
+topic:model-context-protocol
+
+# 搜索特定功能的MCP
+mcp browser automation
+mcp database
+mcp api
 ```
 
-### 场景2：开发功能
-```
-你: "帮我开发一个用户认证功能"
+**热门MCP分类**:
+- 🌐 **网页相关**: @modelcontextprotocol/server-puppeteer、@executeautomation/puppeteer-mcp-server
+- 💾 **数据库**: @modelcontextprotocol/server-postgres、@modelcontextprotocol/server-sqlite
+- 📁 **文件系统**: @modelcontextprotocol/server-filesystem
+- 🔍 **搜索引擎**: @modelcontextprotocol/server-brave-search
+- 🗄️ **知识库**: @modelcontextprotocol/server-memory
 
-AI 会自动：
-1. 使用 feature-dev 插件（功能开发工作流）
-2. 使用 web-search 搜索最佳实践
-3. 读取相关技术文档
-4. 生成代码并解释
+---
+
+### 方法3: 使用AI助手查找插件
+
+**Prompt模板**:
+
+```bash
+"我需要[具体需求]
+
+请帮我：
+1. 搜索适合的Claude Code插件
+2. 或搜索适合的MCP服务器
+3. 提供安装命令
+4. 说明使用场景
+
+【我的需求】
+[描述你的具体需求，例如：
+- 处理Excel文件
+- 连接MySQL数据库
+- 自动化测试
+- 代码审查
+- 等等...]"
 ```
 
-### 场景3：分析开源项目
-```
-你: "帮我分析 Next.js 的路由实现原理"
+**实际示例**:
 
-AI 会自动：
-1. 使用 zread 搜索 Next.js 仓库
-2. 获取仓库结构
-3. 读取路由相关源码
-4. 分析实现原理并总结
+```bash
+# 示例1: 寻找数据库插件
+"我需要连接和操作PostgreSQL数据库
+请推荐合适的MCP服务器并提供安装命令"
+
+# 示例2: 寻找测试工具
+"我需要自动化测试我的Web应用
+请推荐合适的插件和MCP服务器"
+
+# 示例3: 寻找开发工具
+"我需要更好的代码审查和重构工具
+请推荐相关的Claude Code插件"
 ```
+
+---
+
+### 方法4: 社区资源
+
+**GitHub精选列表**:
+- [awesome-claud-code](https://github.com/topics/claude-code) - 社区贡献的插件集合
+- [mcp-servers](https://github.com/topics/model-context-protocol) - MCP服务器列表
+
+**关注这些组织**:
+- @anthropics - Claude官方
+- @modelcontextprotocol - MCP官方
+- @wshobson - 知名插件开发者
+
+---
+
+### 方法5: 创建自定义插件
+
+**当现有插件无法满足需求时**:
+
+**Prompt模板**:
+```bash
+"我想创建一个Claude Code插件来[具体功能]
+
+请帮我：
+1. 设计插件架构
+2. 编写插件代码
+3. 提供安装和测试步骤
+
+【插件需求】
+- [详细描述插件功能]
+- [期望的输入输出]
+- [使用场景]"
+```
+
+**参考文档**:
+- Claude Code插件开发文档: https://docs.anthropic.com/en/docs/build-with-claude/claude-for-developers
+- MCP服务器开发文档: https://modelcontextprotocol.io/introduction
+
+---
+
+## 📋 推荐插件组合
+
+### 入门开发
+```bash
+# 已包含80+插件
+claude plugin marketplace add https://github.com/wshobson/agents
+```
+
+### Python开发
+- python-development (已包含)
+- python-packaging (已包含)
+- python-testing-patterns (已包含)
+
+### Web开发
+- javascript-typescript (已包含)
+- playwright (MCP)
+- web-reader (MCP)
+
+### 数据分析
+- python-development (已包含)
+- @modelcontextprotocol/server-postgres (MCP)
+- @modelcontextprotocol/server-sqlite (MCP)
+
+### 自动化测试
+- playwright (MCP)
+- test-automator (已包含)
+- debugging-toolkit (已包含)
 
 ---
 
