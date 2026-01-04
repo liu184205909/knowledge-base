@@ -1,6 +1,66 @@
 # Claude Code 自动安装指南
 
-> **AI自动执行安装** | 适用于新电脑或首次安装 | 最后更新: 2026-01-02
+> **AI自动执行安装** | 适用于新电脑或首次安装 | 最后更新: 2026-01-04
+
+---
+
+## 🏗️ 技术架构说明
+
+本知识库基于 **Claude Code + GLM Coding Plan** 架构，通过智谱AI的GLM-4.7模型驱动。
+
+### 三层架构
+
+```
+┌─────────────────────────────────────┐
+│   🛠️ 工具层：Claude Code            │
+│   - 智能编码工具框架                 │
+│   - 插件系统、MCP服务器、IDE集成      │
+└──────────────┬──────────────────────┘
+               ↓
+┌──────────────────────────────────────┐
+│   ⚙️ 驱动层：GLM Coding Plan         │
+│   - 智谱AI提供的兼容API服务           │
+│   - 官方文档: https://docs.bigmodel.cn/cn/coding-plan/tool/claude
+│   - 价格优势: 3倍用量，成本仅为国际服务的1/7
+└──────────────┬───────────────────────┘
+               ↓
+┌──────────────────────────────────────┐
+│   🧠 模型层：GLM-4.7                 │
+│   - 当前配置模型，性能旗舰版           │
+│   - 国内优化: 访问更快更稳定           │
+│   - 中文优化: 针对中文场景深度优化     │
+└──────────────────────────────────────┘
+```
+
+### 核心配置文件
+
+**配置位置**: `~/.claude/settings.json` (Windows: `C:\Users\<用户名>\.claude\settings.json`)
+
+**关键配置**:
+```json
+{
+  "env": {
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "glm-4.5-air",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-4.7",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "glm-4.7"
+  }
+}
+```
+
+### 🔌 插件与MCP兼容性
+
+由于使用Claude Code框架，所有插件和MCP服务器完全兼容：
+
+- ✅ **Claude Code原生插件** - 80+专业插件完全可用
+- ✅ **MCP服务器** - 视觉、搜索、网页读取等通用MCP
+- ✅ **IDE插件** - VS Code、Jetbrains、Cursor等
+- ✅ **智谱专属MCP** - ZRead GitHub深度访问等
+
+### API配置
+
+- **API Key管理**: https://bigmodel.cn/usercenter/proj-mgmt/apikeys
+- **订阅服务**: https://zhipuaishengchan.datasink.sensorsdata.cn/t/rR
+- **技术支持**: 关注公众号「花叔」
 
 ---
 
