@@ -130,117 +130,15 @@ claude mcp list
 
 ---
 
-## 📊 MCP功能对比
+## 📊 MCP功能说明
 
-| MCP名称 | 功能 | 是否免费 | 使用场景 | 推荐指数 |
-|---------|------|---------|---------|---------|
-| **web-reader** | 读取网页 | ✅ 免费 | 读取技术文档、文章、博客 | ⭐⭐⭐⭐⭐ 必装 |
-| **web-search-prime** | 联网搜索 | ✅ 免费 | 搜索最新信息、技术动态 | ⭐⭐⭐⭐⭐ 必装 |
-| **playwright** | 浏览器自动化 | ✅ 免费 | 自动化测试、网页交互、截图 | ⭐⭐⭐⭐ 推荐 |
-| **zai-mcp-server** | 视觉理解 | ⚠️ 需API Key | 图片分析、UI转换代码、视频理解 | ⭐⭐⭐⭐ 推荐 |
-| **zread** | GitHub深度访问 | ❌ 需付费套餐 | 深入学习开源项目源码 | ⭐⭐⭐ 高级 |
-
----
-
-## 💡 推荐安装组合
-
-### 🎯 入门版（免费，适合新手）
-```bash
-# 核心三件套：联网搜索 + 网页读取 + 浏览器自动化
-claude plugin marketplace add https://github.com/wshobson/agents
-claude mcp add -s user -t http web-reader https://web-reader.xdai.dev
-claude mcp add -s user -t http web-search-prime https://web-search.xdai.dev
-claude mcp add -s user playwright -- npx -y "@playwright/mcp@latest"
-```
-
-**适用场景**：
-- 学习新技术，搜索和阅读文档
-- 日常开发任务
-- 自动化测试基础需求
-
----
-
-### 🚀 进阶版（需要视觉API，适合独立开发者）
-```bash
-# 入门版 + 视觉理解能力
-claude mcp add -s user zai-mcp-server --env Z_AI_API_KEY=your_key -- npx -y "@z_ai/mcp-server"
-```
-
-**新增能力**：
-- 截图分析错误信息
-- UI 设计稿转换为代码
-- 视频内容理解
-- 数据可视化图表分析
-
-**推荐 API**：智谱视觉 API 或其他兼容视觉服务
-
----
-
-### 💎 专业版（需要 GLM Coding Plan 付费，适合深度开发者）
-```bash
-# 进阶版 + GitHub 深度访问
-claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp --header "Authorization: Bearer your_api_key"
-```
-
-**新增能力**：
-- 深度分析开源项目架构
-- 学习优秀代码实现
-- 理解复杂项目结构
-- 研究 GitHub 热门仓库
-
-**订阅地址**：https://zhipuaishengchan.datasink.sensorsdata.cn/t/rR
-
----
-
-### 🌟 终极版（全功能，适合超级个体）
-```bash
-# 所有功能 + 自定义 Skills
-# 1. 安装所有 MCP
-claude mcp add -s user -t http web-reader https://web-reader.xdai.dev
-claude mcp add -s user -t http web-search-prime https://web-search.xdai.dev
-claude mcp add -s user playwright -- npx -y "@playwright/mcp@latest"
-claude mcp add -s user zai-mcp-server --env Z_AI_API_KEY=your_key -- npx -y "@z_ai/mcp-server"
-claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp --header "Authorization: Bearer your_api_key"
-
-# 2. 安装所有插件
-claude plugin marketplace add https://github.com/wshobson/agents
-
-# 3. 创建自定义 Skills（参考 02-Skills核心概念.md）
-```
-
-**完整能力矩阵**：
-- ✅ 联网搜索 + 网页读取
-- ✅ 浏览器自动化
-- ✅ 视觉理解
-- ✅ GitHub 深度访问
-- ✅ 80+ 专业插件
-- ✅ 自定义 Skills
-
-**适合人群**：独立开发者、超级个体、创业团队
-
----
-
-## 📚 进阶学习（可选）
-
-### 深度学习文档
-
-**如果需要深入学习，可以阅读**：
-
-1. [Claude-Skills完全指南.md](./Claude-Skills完全指南.md) - 82页白皮书
-   - Skills 的工作原理
-   - 如何创建自定义 Skills
-   - 最佳实践和技巧
-
-2. [Claude Code工具生态.md](./Claude Code工具生态.md) - 完整指南
-   - Skills/Plugins/MCP 的区别
-   - 何时使用哪个工具
-   - 使用技巧和最佳实践
-
-3. [UI设计资源.md](./UI设计资源.md) - aura.build使用指南
-   - UI设计自动化
-   - aura.build 使用教程
-
-**注意**：这些文档适合深入学习，不是安装必需的。
+| MCP名称 | 功能 | 是否免费 | 使用场景 |
+|---------|------|---------|---------|
+| **web-reader** | 读取网页 | ✅ 免费 | 读取技术文档、文章、博客 |
+| **web-search-prime** | 联网搜索 | ✅ 免费 | 搜索最新信息、技术动态 |
+| **playwright** | 浏览器自动化 | ✅ 免费 | 自动化测试、网页交互、截图 |
+| **zai-mcp-server** | 视觉理解 | ⚠️ 需API Key | 图片分析、UI转换代码、视频理解 |
+| **zread** | GitHub深度访问 | ❌ 需付费套餐 | 深入学习开源项目源码 |
 
 ---
 
@@ -282,5 +180,6 @@ AI 会自动：
 ---
 
 **创建时间**: 2026-01-02
+**最后更新**: 2026-01-04
 **预计安装时间**: 5-10分钟
 **难度等级**: ⭐ 简单（AI自动执行）
