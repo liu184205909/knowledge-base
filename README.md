@@ -167,14 +167,14 @@ git commit -m "update: 描述修改内容"
 git push origin main
 ```
 
-**一键同步脚本**：
-- `pull-from-github.bat` - 从 GitHub 拉取更新
-- `push-to-github.bat` - 推送修改到 GitHub
-- `smart-sync.bat` - 智能同步工具（推荐）
+**一键同步**：
+```bash
+知识库/smart-sync.bat
+```
 
 **详细文档**：
-- [跨电脑同步指南](跨电脑同步指南.md) - 完整同步教程
-- [快速参考](快速参考.md) - 常用命令速查
+- [跨电脑同步指南](知识库/跨电脑同步指南.md) - 完整同步教程
+- [快速参考](知识库/快速参考.md) - 常用命令速查
 
 ---
 

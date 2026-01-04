@@ -1,0 +1,893 @@
+// Add the function to the main menu
+function onOpen() {
+    var ui = SpreadsheetApp.getUi();
+    ui.createMenu('🎉 Generate')
+        .addItem("Process Sheets 📚", "processSheets")
+        .addToUi();
+  }
+  
+  // Function to process all sheets based on a single "Settings" sheet
+  function processSheets() {
+    var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+    var settingsSheet = spreadsheet.getSheetByName("Settings");
+    if (!settingsSheet) {
+      SpreadsheetApp.getUi().alert("Settings sheet not found!");
+      return;
+    }
+  
+    var globalSettings = fetchGlobalSettings(settingsSheet);
+    var configurations = fetchSheetConfigurations(settingsSheet);
+  
+    configurations.forEach(config => {
+      if (config.process) { // Only process if the checkbox is checked
+        var dataSheet = spreadsheet.getSheetByName(config.dataSheetName);
+        if (dataSheet) {
+          var settings = { ...globalSettings, ...config }; // Merge global and sheet-specific settings
+          processRows(settings, dataSheet);
+        } else {
+          Logger.log(`Data sheet "${config.dataSheetName}" not found.`);
+        }
+      }
+    });
+  }
+  
+  // Fetch global settings from the "Settings" sheet
+  function fetchGlobalSettings(settingsSheet) {
+    return {
+      openaiApiKey: settingsSheet.getRange("B2").getValue(),
+      openaiTemperature: Number(settingsSheet.getRange("B3").getValue()),
+      openaiMaxTokens: Number(settingsSheet.getRange("B4").getValue()),
+      openaiSystemPrompt: settingsSheet.getRange("B5").getValue(),
+      claudeApiKey: settingsSheet.getRange("B6").getValue(),
+      claudeTemperature: Number(settingsSheet.getRange("B7").getValue()),
+      claudeMaxTokens: Number(settingsSheet.getRange("B8").getValue()),
+      claudeSystemPrompt: settingsSheet.getRange("B9").getValue(),
+      geminiApiKey: settingsSheet.getRange("B10").getValue(),
+      geminiTemperature: Number(settingsSheet.getRange("B11").getValue()),
+      geminiMaxTokens: Number(settingsSheet.getRange("B12").getValue()),
+      groqApiKey: settingsSheet.getRange("B13").getValue(),
+      groqTemperature: Number(settingsSheet.getRange("B14").getValue()),
+      groqMaxTokens: Number(settingsSheet.getRange("B15").getValue()),
+      groqSystemPrompt: settingsSheet.getRange("B16").getValue(),
+      perplexityApiKey: settingsSheet.getRange("B17").getValue(),
+      perplexityTemperature: Number(settingsSheet.getRange("B18").getValue()),
+      perplexityMaxTokens: Number(settingsSheet.getRange("B19").getValue()),
+      perplexitySystemPrompt: settingsSheet.getRange("B20").getValue(),
+      grokApiKey: settingsSheet.getRange("B21").getValue(),
+      grokTemperature: Number(settingsSheet.getRange("B22").getValue()),
+      grokMaxTokens: Number(settingsSheet.getRange("B23").getValue()),
+      grokSystemPrompt: settingsSheet.getRange("B24").getValue(),
+      deepseekApiKey: settingsSheet.getRange("B25").getValue(),
+      deepseekTemperature: Number(settingsSheet.getRange("B26").getValue()),
+      deepseekMaxTokens: Number(settingsSheet.getRange("B27").getValue()),
+      deepseekSystemPrompt: settingsSheet.getRange("B28").getValue(),
+      kimiApiKey: settingsSheet.getRange("B29").getValue(),
+      kimiTemperature: Number(settingsSheet.getRange("B30").getValue()),
+      kimiMaxTokens: Number(settingsSheet.getRange("B31").getValue()),
+      kimiSystemPrompt: settingsSheet.getRange("B32").getValue(),
+      zhipuApiKey: settingsSheet.getRange("B38").getValue(),
+      zhipuTemperature: Number(settingsSheet.getRange("B39").getValue()),
+      zhipuMaxTokens: Number(settingsSheet.getRange("B40").getValue()),
+      zhipuSystemPrompt: settingsSheet.getRange("B41").getValue(),
+            // --- Imagen settings ---
+      imagenSampleCount: Number(settingsSheet.getRange("B33").getValue()), // 1-4
+      imagenAspectRatio: settingsSheet.getRange("B34").getValue(),         // "1:1"|"3:4"|"4:3"|"9:16"|"16:9"
+      imagenSize: settingsSheet.getRange("B35").getValue(),                // "1K"|"2K"（Ultra/Standard 支持）
+      imagenPersonGen: settingsSheet.getRange("B36").getValue(),           // "allow_adult"|"dont_allow"
+      driveFolderId: settingsSheet.getRange("B37").getValue()              // 可选：生成图保存的 Drive 文件夹ID
+    };
+  }
+  
+  // Fetch configurations for data sheets from the "Settings" sheet
+  function fetchSheetConfigurations(settingsSheet) {
+    var data = settingsSheet.getRange("A42:H").getValues(); // Updated range to A42:H to account for new Zhipu settings
+    var configurations = [];
+  
+    data.forEach(row => {
+      if (row[0]) { // Check if Data Sheet Name exists
+        var isProcessEnabled = row[7] === true; // Process checkbox is now in column H (index 7)
+        
+        configurations.push({
+          dataSheetName: row[0],        // Column A (index 0)
+          aiEngine: row[1],             // Column B (index 1)
+          aiModel: row[2],              // Column C (index 2) - Corrected
+          startRow: Number(row[3]),     // Column D (index 3) - Shifted
+          endRow: Number(row[4]),       // Column E (index 4) - Shifted
+          promptColumns: isProcessEnabled ? row[5].split(',').map(letterToNum) : row[5], // Column F (index 5) - Shifted
+          outputColumns: isProcessEnabled ? row[6].split(',').map(letterToNum) : row[6], // Column G (index 6) - Shifted
+          process: isProcessEnabled     // Column H (index 7) - Shifted
+        });
+      }
+    });
+  
+    return configurations;
+  }
+  
+  // Process rows for a given data sheet
+  function processRows(settings, dataSheet) {
+    // Ensure aiModel exists in settings; if not, log error or use a default? For now, assume it exists.
+    if (!settings.aiModel && settings.process) { 
+      Logger.log(`AI Model missing for sheet configuration: ${settings.dataSheetName}`);
+      // Potentially skip processing or throw an error
+      // return; 
+    }
+  
+    for (var i = settings.startRow - 1; i < settings.endRow; i++) {
+      for (var j = 0; j < settings.promptColumns.length; j++) {
+        var promptColumn = settings.promptColumns[j];
+        var outputColumn = settings.outputColumns[j];
+        var promptCell = dataSheet.getRange(i + 1, promptColumn);
+        var finalPrompt = promptCell.getValue();
+  
+        if (!finalPrompt.trim()) continue;
+  
+        var outputCell = dataSheet.getRange(i + 1, outputColumn);
+        if (outputCell.getValue() === '') {
+          var outputText;
+          if (settings.aiEngine === "Gemini") {
+              // 检查是否为 Gemini 2.5 Flash Image 模型
+              if (settings.aiModel && settings.aiModel.includes("gemini-2.5-flash-image")) {
+                  outputText = sendToGeminiFlashImage(finalPrompt, settings.geminiApiKey, settings.aiModel, {
+                      temperature: settings.geminiTemperature,
+                      maxTokens: settings.geminiMaxTokens,
+                      driveFolderId: settings.driveFolderId
+                  });
+              } else {
+                  outputText = sendToGeminiPro(finalPrompt, settings.geminiApiKey, settings.aiModel, settings.geminiTemperature, settings.geminiMaxTokens);
+              }
+          } else if (settings.aiEngine === "OpenAI") {
+              if (settings.aiModel.includes("gpt-5")) {
+                  outputText = sendToGPT5(finalPrompt, settings.openaiApiKey, settings.aiModel, settings.openaiSystemPrompt);
+              } else if (settings.aiModel.includes("o1")) {
+                  outputText = sendToO1(finalPrompt, settings.openaiApiKey, settings.aiModel);
+              } else if (settings.aiModel.includes("o3")) {
+                  outputText = sendToO3(finalPrompt, settings.openaiApiKey, settings.aiModel);
+              } else if (settings.aiModel.includes("search")) {
+                  outputText = sendToGPTsearch(finalPrompt, settings.openaiApiKey, settings.aiModel);
+              } else {
+                  outputText = sendToGPT(finalPrompt, settings.openaiApiKey, settings.aiModel, settings.openaiTemperature, settings.openaiMaxTokens, settings.openaiSystemPrompt);
+              }
+
+                    } else if (settings.aiEngine === "Imagen") {
+              outputText = sendToImagen(
+                finalPrompt,
+                settings.geminiApiKey,                   // 同一 API Key
+                settings.aiModel,                        // 例如 "imagen-4.0-generate-001"
+                {
+                  sampleCount: settings.imagenSampleCount || 1,
+                  aspectRatio: settings.imagenAspectRatio || "1:1",
+                  sampleImageSize: settings.imagenSize || "1K",
+                  personGeneration: settings.imagenPersonGen || "allow_adult",
+                  driveFolderId: settings.driveFolderId || ""
+                }
+              );
+
+          } else if (settings.aiEngine === "Claude") {
+              outputText = sendToClaude(finalPrompt, settings.claudeApiKey, settings.aiModel, settings.claudeTemperature, settings.claudeMaxTokens, settings.claudeSystemPrompt);
+          } else if (settings.aiEngine === "GroqCloud") {
+              outputText = sendToGroq(finalPrompt, settings.groqApiKey, settings.aiModel, settings.groqTemperature, settings.groqMaxTokens, settings.groqSystemPrompt);
+          } else if (settings.aiEngine === "Perplexity") {
+              outputText = sendToPerplexity(finalPrompt, settings.perplexityApiKey, settings.aiModel, settings.perplexityTemperature, settings.perplexityMaxTokens, settings.perplexitySystemPrompt);
+          } else if (settings.aiEngine === "Grok") {
+              outputText = sendToGrok(finalPrompt, settings.grokApiKey, settings.aiModel, settings.grokTemperature, settings.grokMaxTokens, settings.grokSystemPrompt);
+          } else if (settings.aiEngine === "DeepSeek") {
+              outputText = sendToDeepSeek(finalPrompt, settings.deepseekApiKey, settings.aiModel, settings.deepseekTemperature, settings.deepseekMaxTokens, settings.deepseekSystemPrompt);
+          } else if (settings.aiEngine === "Kimi") {
+              outputText = sendToKimi(finalPrompt, settings.kimiApiKey, settings.aiModel, settings.kimiTemperature, settings.kimiMaxTokens, settings.kimiSystemPrompt);
+          } else if (settings.aiEngine === "Zhipu") {
+              outputText = sendToZhipu(finalPrompt, settings.zhipuApiKey, settings.aiModel, settings.zhipuTemperature, settings.zhipuMaxTokens, settings.zhipuSystemPrompt);
+                     } else {
+              outputText = 'Error: Unknown AI engine';
+          }
+          outputCell.setValue(outputText);
+        }
+      }
+    }
+  }
+  
+  // Function to convert letter to column number
+  function letterToNum(letter) {
+    if (!letter.trim()) throw new Error('Invalid column letter');
+  
+    letter = letter.trim().toUpperCase();
+    var column = 0, length = letter.length;
+    for (var i = 0; i < length; i++) {
+      column += (letter.charCodeAt(i) - 64) * Math.pow(26, length - i - 1);
+    }
+    return column;
+  }
+  
+  // Function to send prompt to Gemini Pro
+  function sendToGeminiPro(prompt, apiKey, model, temperature, maxTokens) {
+    var endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+    var geminiProData = {
+      "contents": [
+        {
+          "parts": [
+            {
+              "text": prompt
+            }
+          ]
+        }
+      ],
+      "generationConfig": {
+        "temperature": temperature,
+        "maxOutputTokens": maxTokens,
+        "topP": 0.8,
+        "topK": 10,
+        "stopSequences": ["Title"]
+      },
+      "safetySettings": [
+        {
+          "category": "HARM_CATEGORY_HARASSMENT",
+          "threshold": "BLOCK_NONE"
+        },
+        {
+          "category": "HARM_CATEGORY_HATE_SPEECH",
+          "threshold": "BLOCK_NONE"
+        },
+        {
+          "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+          "threshold": "BLOCK_NONE"
+        },
+        {
+          "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+          "threshold": "BLOCK_NONE"
+        }
+      ]
+    };
+  
+    var geminiProOptions = {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(geminiProData),
+      muteHttpExceptions: true
+    };
+  
+    try {
+      var response = UrlFetchApp.fetch(endpoint, geminiProOptions);
+      var jsonResponse = JSON.parse(response.getContentText());
+  
+      // Safely extract the response content
+      if (jsonResponse && jsonResponse.candidates && jsonResponse.candidates[0].content.parts[0]) {
+        return jsonResponse.candidates[0].content.parts[0].text;
+      } else {
+        Logger.log('Unexpected response structure: ' + response.getContentText());
+        return 'Error: Unexpected response structure';
+      }
+    } catch (error) {
+      Logger.log('Error sending to Gemini Pro: ' + error);
+      return 'Error: Failed to fetch response from Gemini Pro';
+    }
+  }
+// --- Imagen: text-to-image via Gemini API (return IMAGE() formula) ---
+function sendToImagen(prompt, apiKey, model, opts) {
+  opts = opts || {};
+  var endpoint = "https://generativelanguage.googleapis.com/v1beta/models/" + model + ":predict";
+
+  // build parameters
+  var params = {
+    sampleCount: Math.min(Math.max(Number(opts.sampleCount || 1), 1), 4),
+    aspectRatio: String(opts.aspectRatio || "1:1")
+  };
+  // size only for non-fast models
+  if (opts.sampleImageSize && model.indexOf("fast") === -1) {
+    params.sampleImageSize = String(opts.sampleImageSize); // "1K" | "2K"
+  }
+  // optional personGeneration (recommend "allow_adult")
+  if (opts.personGeneration && String(opts.personGeneration).trim() !== "") {
+    params.personGeneration = String(opts.personGeneration).trim();
+  }
+
+  var payload = {
+    instances: [{ prompt: String(prompt || "") }],
+    parameters: params
+  };
+
+  var options = {
+    method: "post",
+    contentType: "application/json",
+    payload: JSON.stringify(payload),
+    headers: { "x-goog-api-key": apiKey },
+    muteHttpExceptions: true
+  };
+
+  try {
+    var resp = UrlFetchApp.fetch(endpoint, options);
+    var data = JSON.parse(resp.getContentText());
+
+    // pick first image base64
+    var b64 = null;
+    if (data && data.predictions && data.predictions.length) {
+      var p0 = data.predictions[0];
+      b64 = p0.bytesBase64Encoded || (p0.image && p0.image.imageBytes) || null;
+    } else if (data && data.generatedImages && data.generatedImages.length) {
+      var g0 = data.generatedImages[0];
+      b64 = g0.image && g0.image.imageBytes || null;
+    }
+    if (!b64) return "Error: Unexpected Imagen response - " + resp.getContentText();
+
+    // save to Drive and return =IMAGE() formula
+    var folder = null;
+    if (opts.driveFolderId) {
+      try { folder = DriveApp.getFolderById(String(opts.driveFolderId)); } catch (e) {}
+    }
+    var blob = Utilities.newBlob(Utilities.base64Decode(b64), "image/png", "imagen-1.png");
+    var file = folder ? folder.createFile(blob) : DriveApp.createFile(blob);
+    file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+
+    var viewUrl = "https://drive.google.com/uc?export=view&id=" + file.getId();
+    // 返回纯直链URL，适合WordPress导入
+    return viewUrl;
+  } catch (err) {
+    Logger.log("Imagen error: " + err);
+    return "Error: Failed to call Imagen";
+  }
+}
+
+  // 🍓 GPT-5
+  function sendToGPT5(prompt, apiKey, model, systemPrompt) {
+  const body = {
+    model: model,
+    input: [{ role: "system", content: systemPrompt }, { role: "user", content: prompt }],
+    reasoning: {
+      effort: "minimal"
+    },
+    text: {
+      verbosity: "low"
+    }
+  };
+
+  const options = {
+    method: 'post',
+    contentType: 'application/json',
+    headers: {
+      Authorization: 'Bearer ' + apiKey
+    },
+    payload: JSON.stringify(body)
+  };
+
+  const response = UrlFetchApp.fetch("https://api.openai.com/v1/responses", options);
+  const data = JSON.parse(response.getContentText());
+
+  // Find the "message" type object in the output array
+  const messageObj = data.output.find(o => o.type === "message");
+
+  if (messageObj && messageObj.content && messageObj.content.length > 0) {
+    return messageObj.content[0].text || 'No text found in message content';
+  } else {
+    return 'No message object found in output';
+  }
+}
+  
+  // Function to send data to OpenAI GPT
+  function sendToGPT(prompt, apiKey, model, temperature, maxTokens, systemPrompt) {
+    var gptData = {
+      model: model,
+      messages: [{ role: "system", content: systemPrompt }, { role: "user", content: prompt }],
+      max_tokens: maxTokens,
+      temperature: temperature
+    };
+    var gptOptions = {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(gptData),
+      headers: { Authorization: `Bearer ${apiKey}` }
+    };
+    var response = UrlFetchApp.fetch("https://api.openai.com/v1/chat/completions", gptOptions);
+    return JSON.parse(response.getContentText()).choices[0].message.content;
+  }
+  
+  // Function to send data to OpenAI GPT Search Models
+  function sendToGPTsearch(prompt, apiKey, model) {
+    var gptData = {
+      model: model,
+      messages: [{ role: "user", content: prompt }],
+    };
+    var gptOptions = {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(gptData),
+      headers: { Authorization: `Bearer ${apiKey}` }
+    };
+    var response = UrlFetchApp.fetch("https://api.openai.com/v1/chat/completions", gptOptions);
+    console.log(response.getContentText());
+    return JSON.parse(response.getContentText()).choices[0].message.content;
+  }
+  
+  // Function for OpenAI o1 models
+  function sendToO1(prompt, apiKey, model) {
+    var gptData = {
+      model: model,
+      messages: [{ role: "user", content: prompt }]
+    };
+    var gptOptions = {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(gptData),
+      headers: { Authorization: `Bearer ${apiKey}` }
+    };
+    var response = UrlFetchApp.fetch("https://api.openai.com/v1/chat/completions", gptOptions);
+    return JSON.parse(response.getContentText()).choices[0].message.content;
+  }
+  
+  // Function for OpenAI o3 models
+  function sendToO3(prompt, apiKey, model) {
+    var gptData = {
+      model: model,
+      reasoning_effort: 'medium',
+      messages: [{ role: "user", content: prompt }]
+    };
+    var gptOptions = {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(gptData),
+      headers: { Authorization: `Bearer ${apiKey}` }
+    };
+    var response = UrlFetchApp.fetch("https://api.openai.com/v1/chat/completions", gptOptions);
+    return JSON.parse(response.getContentText()).choices[0].message.content;
+  }
+  
+  // Function to send data to Claude
+  function sendToClaude(prompt, apiKey, model, temperature, maxTokens, systemPrompt) {
+    var endpoint = 'https://api.anthropic.com/v1/messages';
+    var claudeData = {
+      model: model,
+      temperature: temperature,
+      max_tokens: maxTokens,
+      system: systemPrompt,
+      messages: [{ role: "user", content: prompt }]
+    };
+    var claudeOptions = {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(claudeData),
+      headers: { "x-api-key": apiKey, "anthropic-version": "2023-06-01" }
+    };
+    var response = UrlFetchApp.fetch(endpoint, claudeOptions);
+    return JSON.parse(response.getContentText()).content[0].text;
+  }
+  
+  // Function to send data to Groq API
+  function sendToGroq(prompt, apiKey, model, temperature, maxTokens, systemPrompt) {
+    var endpoint = 'https://api.groq.com/openai/v1/chat/completions';
+    var groqData = {
+      model: model,
+      temperature: temperature,
+      max_tokens: maxTokens,
+      messages: [{ role: "system", content: systemPrompt }, { role: "user", content: prompt }]
+    };
+    var groqOptions = {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(groqData),
+      headers: { Authorization: `Bearer ${apiKey}` }
+    };
+    var response = UrlFetchApp.fetch(endpoint, groqOptions);
+    return JSON.parse(response.getContentText()).choices[0].message.content;
+  }
+  
+  // Function to send data to Perplexity API
+  function sendToPerplexity(prompt, apiKey, model, temperature, maxTokens, systemPrompt) {
+    var endpoint = 'https://api.perplexity.ai/chat/completions';
+    var perplexityData = {
+      "model": model,
+      "messages": [
+        {
+          "role": "system",
+          "content": systemPrompt
+        },
+        {
+          "role": "user",
+          "content": prompt
+        }
+      ],
+      "max_tokens": maxTokens || "Optional",
+      "temperature": temperature || 0.2,
+      "top_p": 0.9,
+      "return_images": false,
+      "return_related_questions": false,
+      "top_k": 0,
+      "stream": false,
+      "presence_penalty": 0,
+      "frequency_penalty": 1
+    };
+  
+    var perplexityOptions = {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(perplexityData),
+      headers: {
+        'Authorization': `Bearer ${apiKey}`
+      },
+      muteHttpExceptions: true
+    };
+  
+    try {
+      var response = UrlFetchApp.fetch(endpoint, perplexityOptions);
+      var jsonResponse = JSON.parse(response.getContentText());
+  
+      // Extract the assistant's response from the Perplexity API
+      if (jsonResponse && jsonResponse.choices && jsonResponse.choices[0].message.content) {
+        var content = jsonResponse.choices[0].message.content;
+        // Remove citations like [1], [2], etc., and <think> tags using regex
+        content = content.replace(/\[\d+\]|<think>.*?<\/think>/gs, "").trim();
+        return content;
+      } else {
+        Logger.log('Unexpected response structure: ' + response.getContentText());
+        return 'Error: Unexpected response structure';
+      }
+    } catch (error) {
+      Logger.log('Error sending to Perplexity: ' + error);
+      return 'Error: Failed to fetch response from Perplexity';
+    }
+  }
+  
+  // Function to send data to Grok API
+  function sendToGrok(prompt, apiKey, model, temperature, maxTokens, systemPrompt) {
+    var endpoint = 'https://api.x.ai/v1/chat/completions';
+    var grokData = {
+      model: model,
+      temperature: temperature,
+      max_tokens: maxTokens,
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: prompt }
+      ]
+    };
+    var grokOptions = {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(grokData),
+      headers: { "Authorization": "Bearer " + apiKey }
+    };
+    var response = UrlFetchApp.fetch(endpoint, grokOptions);
+    return JSON.parse(response.getContentText()).choices[0].message.content;
+  }
+  
+  // Function to send data to DeepSeek API
+  function sendToDeepSeek(prompt, apiKey, model, temperature, maxTokens, systemPrompt) {
+    var endpoint = 'https://api.deepseek.com/chat/completions';
+    var deepSeekData = {
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: prompt }
+      ],
+      model: model,
+      frequency_penalty: 0,
+      max_tokens: maxTokens,
+      presence_penalty: 0,
+      response_format: {
+        type: "text"
+      },
+      stop: null,
+      stream_options: null,
+      temperature: temperature,
+      top_p: 1
+    };
+    var deepSeekOptions = {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(deepSeekData),
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+        "Authorization": "Bearer " + apiKey
+      }
+    };
+    var response = UrlFetchApp.fetch(endpoint, deepSeekOptions);
+    var jsonResponse = JSON.parse(response.getContentText());
+    return jsonResponse.choices[0].message.content; // Extract the assistant's response content
+  }
+  
+  // Function to send data to Kimi API (Moonshot Platform)
+  function sendToKimi(prompt, apiKey, model, temperature, maxTokens, systemPrompt) {
+    var endpoint = 'https://api.moonshot.cn/v1/chat/completions';
+    var kimiData = {
+      model: model,
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user", content: prompt }
+      ],
+      temperature: temperature,
+      max_tokens: maxTokens,
+      top_p: 1,
+      frequency_penalty: 0,
+      presence_penalty: 0,
+      stream: false
+    };
+    var kimiOptions = {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(kimiData),
+      headers: {
+        "Authorization": "Bearer " + apiKey,
+        "Content-Type": "application/json"
+      },
+      muteHttpExceptions: true
+    };
+    
+    try {
+      var response = UrlFetchApp.fetch(endpoint, kimiOptions);
+      var jsonResponse = JSON.parse(response.getContentText());
+      
+      if (jsonResponse && jsonResponse.choices && jsonResponse.choices[0].message.content) {
+        return jsonResponse.choices[0].message.content;
+      } else {
+        Logger.log('Unexpected Kimi response structure: ' + response.getContentText());
+        return 'Error: Unexpected response structure from Kimi';
+      }
+    } catch (error) {
+      Logger.log('Error sending to Kimi: ' + error);
+      return 'Error: Failed to fetch response from Kimi';
+    }
+  }
+
+  // Function to send data to Zhipu AI API (GLM models)
+  function sendToZhipu(prompt, apiKey, model, temperature, maxTokens, systemPrompt) {
+    // 确保 model 是 glm-4.6 或兼容的文本模型
+    if (!model || model === '') {
+      model = 'glm-4.6'; // 默认使用 glm-4.6
+    }
+    
+    var endpoint = 'https://open.bigmodel.cn/api/paas/v4/chat/completions';
+    
+    // 清理输入参数，确保是纯文本字符串
+    var cleanPrompt = String(prompt || '').trim();
+    var cleanSystemPrompt = String(systemPrompt || '').trim();
+    
+    // 构建请求体 - 严格按照 OpenAI 兼容格式
+    var zhipuData = {
+      model: model,
+      messages: []
+    };
+    
+    // 只有当 systemPrompt 不为空时才添加
+    if (cleanSystemPrompt !== '') {
+      zhipuData.messages.push({
+        role: "system", 
+        content: cleanSystemPrompt
+      });
+    }
+    
+    // 添加用户消息 - 确保 content 是字符串
+    zhipuData.messages.push({
+      role: "user", 
+      content: cleanPrompt
+    });
+    
+    // 设置参数
+    if (temperature !== undefined && temperature !== null) {
+      zhipuData.temperature = parseFloat(temperature);
+    }
+    if (maxTokens !== undefined && maxTokens !== null) {
+      zhipuData.max_tokens = parseInt(maxTokens);
+    }
+    zhipuData.top_p = 0.7;
+    zhipuData.stream = false;
+    
+    var zhipuOptions = {
+      method: 'post',
+      contentType: 'application/json',
+      payload: JSON.stringify(zhipuData),
+      headers: {
+        "Authorization": "Bearer " + apiKey,
+        "Content-Type": "application/json"
+      },
+      muteHttpExceptions: true
+    };
+    
+    try {
+      // 调试：打印请求体信息（不包含敏感内容）
+      Logger.log('GLM Request - Model: ' + model);
+      Logger.log('GLM Request - Messages count: ' + zhipuData.messages.length);
+      
+      var response = UrlFetchApp.fetch(endpoint, zhipuOptions);
+      var responseText = response.getContentText();
+      
+      // 调试：打印响应状态
+      Logger.log('GLM Response - Status: ' + response.getResponseCode());
+      
+      if (response.getResponseCode() !== 200) {
+        Logger.log('GLM Error Response: ' + responseText);
+        return 'Error: HTTP ' + response.getResponseCode() + ' - ' + responseText;
+      }
+      
+      var jsonResponse = JSON.parse(responseText);
+      
+      // 检查响应结构
+      if (jsonResponse && jsonResponse.choices && jsonResponse.choices.length > 0) {
+        var choice = jsonResponse.choices[0];
+        if (choice.message && choice.message.content) {
+          return choice.message.content;
+        }
+      }
+      
+      Logger.log('Unexpected GLM response structure: ' + responseText);
+      return 'Error: Unexpected response structure from GLM';
+      
+    } catch (error) {
+      Logger.log('Error sending to GLM: ' + error.toString());
+      return 'Error: Failed to call GLM API - ' + error.toString();
+    }
+  }
+
+
+
+  // Function to send prompt to Gemini 2.5 Flash Image API
+  function sendToGeminiFlashImage(prompt, apiKey, model, opts) {
+    opts = opts || {};
+    var endpoint = "https://generativelanguage.googleapis.com/v1beta/models/" + model + ":generateContent";
+    
+    var payload = {
+      contents: [{
+        parts: [{
+          text: prompt
+        }]
+      }],
+      generationConfig: {
+        temperature: opts.temperature || 0.4,
+        topK: 32,
+        topP: 1,
+        maxOutputTokens: opts.maxTokens || 2048,
+      },
+      safetySettings: [
+        {
+          category: "HARM_CATEGORY_HARASSMENT",
+          threshold: "BLOCK_MEDIUM_AND_ABOVE"
+        },
+        {
+          category: "HARM_CATEGORY_HATE_SPEECH", 
+          threshold: "BLOCK_MEDIUM_AND_ABOVE"
+        },
+        {
+          category: "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+          threshold: "BLOCK_MEDIUM_AND_ABOVE"
+        },
+        {
+          category: "HARM_CATEGORY_DANGEROUS_CONTENT",
+          threshold: "BLOCK_MEDIUM_AND_ABOVE"
+        }
+      ]
+    };
+
+    var options = {
+      method: "post",
+      contentType: "application/json",
+      payload: JSON.stringify(payload),
+      headers: { 
+        "x-goog-api-key": apiKey
+      },
+      muteHttpExceptions: true
+    };
+
+    try {
+      var response = UrlFetchApp.fetch(endpoint, options);
+      var jsonResponse = JSON.parse(response.getContentText());
+
+      if (jsonResponse && jsonResponse.candidates && jsonResponse.candidates[0] && 
+          jsonResponse.candidates[0].content && jsonResponse.candidates[0].content.parts) {
+        
+        var parts = jsonResponse.candidates[0].content.parts;
+        var result = [];
+        
+                 for (var i = 0; i < parts.length; i++) {
+           var part = parts[i];
+           if (part.inlineData && part.inlineData.mimeType && part.inlineData.mimeType.startsWith("image/")) {
+             // 处理图片数据
+             var imageData = part.inlineData.data;
+             var mimeType = part.inlineData.mimeType;
+             
+             // 保存图片到Google Drive
+             var folder = null;
+             if (opts.driveFolderId) {
+               try { folder = DriveApp.getFolderById(String(opts.driveFolderId)); } catch (e) {}
+             }
+             
+             var blob = Utilities.newBlob(Utilities.base64Decode(imageData), mimeType, "gemini-flash-image.png");
+             var file = folder ? folder.createFile(blob) : DriveApp.createFile(blob);
+             file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+             
+             var viewUrl = "https://drive.google.com/uc?export=view&id=" + file.getId();
+             return viewUrl; // 直接返回图片链接，忽略文字描述
+           }
+         }
+         
+         // 如果没有找到图片，返回错误信息
+         return "Error: No image generated";
+      } else {
+        Logger.log('Unexpected Gemini Flash Image response: ' + response.getContentText());
+        return 'Error: Unexpected response structure from Gemini Flash Image';
+      }
+    } catch (error) {
+      Logger.log('Error sending to Gemini Flash Image: ' + error);
+      return 'Error: Failed to fetch response from Gemini Flash Image';
+    }
+  }
+
+
+// =KIMI(prompt, [model], [temperature], [maxTokens], [systemPrompt])
+function KIMI(prompt, model, temperature, maxTokens, systemPrompt) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var s = fetchGlobalSettings(ss.getSheetByName('Settings'));
+  var mdl = String(model || 'moonshot-v1-8k');
+  var temp = (typeof temperature === 'number') ? temperature : (Number(s.kimiTemperature) || 0.2);
+  var maxTok = (typeof maxTokens === 'number') ? maxTokens : (Number(s.kimiMaxTokens) || 512);
+  var sys = (systemPrompt !== undefined && systemPrompt !== null && systemPrompt !== '') ? systemPrompt : (s.kimiSystemPrompt || '');
+  return sendToKimi(String(prompt || ''), s.kimiApiKey, mdl, temp, maxTok, sys);
+}
+
+// =CLAUDE(prompt, [model], [temperature], [maxTokens], [systemPrompt])
+function CLAUDE(prompt, model, temperature, maxTokens, systemPrompt) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var s = fetchGlobalSettings(ss.getSheetByName('Settings'));
+  var mdl = String(model || 'claude-3-5-sonnet-latest');
+  var temp = (typeof temperature === 'number') ? temperature : (Number(s.claudeTemperature) || 0.2);
+  var maxTok = (typeof maxTokens === 'number') ? maxTokens : (Number(s.claudeMaxTokens) || 1024);
+  var sys = (systemPrompt !== undefined && systemPrompt !== null && systemPrompt !== '') ? systemPrompt : (s.claudeSystemPrompt || '');
+  return sendToClaude(String(prompt || ''), s.claudeApiKey, mdl, temp, maxTok, sys);
+}
+
+// =GEMINI(prompt, [model], [temperature], [maxTokens])
+function GEMINI(prompt, model, temperature, maxTokens) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var s = fetchGlobalSettings(ss.getSheetByName('Settings'));
+  var mdl = String(model || 'gemini-1.5-pro-latest');
+  var temp = (typeof temperature === 'number') ? temperature : (Number(s.geminiTemperature) || 0.2);
+  var maxTok = (typeof maxTokens === 'number') ? maxTokens : (Number(s.geminiMaxTokens) || 1024);
+  return sendToGeminiPro(String(prompt || ''), s.geminiApiKey, mdl, temp, maxTok);
+}
+
+// =DEEPSEEK(prompt, [model], [temperature], [maxTokens], [systemPrompt])
+function DEEPSEEK(prompt, model, temperature, maxTokens, systemPrompt) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var s = fetchGlobalSettings(ss.getSheetByName('Settings'));
+  var mdl = String(model || 'deepseek-chat');
+  var temp = (typeof temperature === 'number') ? temperature : (Number(s.deepseekTemperature) || 0.2);
+  var maxTok = (typeof maxTokens === 'number') ? maxTokens : (Number(s.deepseekMaxTokens) || 1024);
+  var sys = (systemPrompt !== undefined && systemPrompt !== null && systemPrompt !== '') ? systemPrompt : (s.deepseekSystemPrompt || '');
+  return sendToDeepSeek(String(prompt || ''), s.deepseekApiKey, mdl, temp, maxTok, sys);
+}
+
+// =IMAGEN(prompt, [model], [sampleCount], [aspectRatio], [size], [personGen], [driveFolderId])
+function IMAGEN(prompt, model, sampleCount, aspectRatio, size, personGen, driveFolderId) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var s = fetchGlobalSettings(ss.getSheetByName('Settings'));
+  var mdl = String(model || 'imagen-4.0-generate-001');
+  var opts = {
+    sampleCount: Number(sampleCount) || Number(s.imagenSampleCount) || 1,
+    aspectRatio: String(aspectRatio || s.imagenAspectRatio || '1:1'),
+    sampleImageSize: String(size || s.imagenSize || '1K'),
+    personGeneration: String(personGen || s.imagenPersonGen || 'allow_adult'),
+    driveFolderId: String(driveFolderId || s.driveFolderId || '')
+  };
+  return sendToImagen(String(prompt || ''), s.geminiApiKey, mdl, opts);
+}
+
+
+
+// =GEMINIFLASHIMAGE(prompt, [model], [temperature], [maxTokens], [driveFolderId])
+function GEMINIFLASHIMAGE(prompt, model, temperature, maxTokens, driveFolderId) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var s = fetchGlobalSettings(ss.getSheetByName('Settings'));
+  var mdl = String(model || 'gemini-2.5-flash-image-preview');
+  var temp = (typeof temperature === 'number') ? temperature : (Number(s.geminiTemperature) || 0.4);
+  var maxTok = (typeof maxTokens === 'number') ? maxTokens : (Number(s.geminiMaxTokens) || 2048);
+  var opts = {
+    temperature: temp,
+    maxTokens: maxTok,
+    driveFolderId: String(driveFolderId || s.driveFolderId || '')
+  };
+  return sendToGeminiFlashImage(String(prompt || ''), s.geminiApiKey, mdl, opts);
+}
+
+// =ZHIPU(prompt, [model], [temperature], [maxTokens], [systemPrompt])
+function ZHIPU(prompt, model, temperature, maxTokens, systemPrompt) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var s = fetchGlobalSettings(ss.getSheetByName('Settings'));
+  var mdl = String(model || 'glm-4.6'); // 修改默认模型为 glm-4.6
+  var temp = (typeof temperature === 'number') ? temperature : (Number(s.zhipuTemperature) || 0.7);
+  var maxTok = (typeof maxTokens === 'number') ? maxTokens : (Number(s.zhipuMaxTokens) || 1024);
+  var sys = (systemPrompt !== undefined && systemPrompt !== null && systemPrompt !== '') ? systemPrompt : (s.zhipuSystemPrompt || '');
+  return sendToZhipu(String(prompt || ''), s.zhipuApiKey, mdl, temp, maxTok, sys);
+}
