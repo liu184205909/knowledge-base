@@ -198,6 +198,124 @@ Agent 3: 专注文档更新
 
 ---
 
+## 🔄 高级工具：Ralph Wiggum（自动迭代插件）
+
+### 什么是Ralph Wiggum？
+
+> **让 Claude 不断尝试，直到成功为止**
+
+Ralph Wiggum 是官方 Claude Code 插件，基于 **Stop Hook 机制**实现自动循环：
+- 执行 → 失败 → 分析 → 再执行 → 成功
+- 无需手动复制错误信息重新提问
+- 适合 Bug 修复、补充测试、依赖迁移等需要反复尝试的任务
+
+### 核心特性
+
+**自动循环**：
+```
+尝试1：运行测试 → 失败 → 分析错误日志
+尝试2：修改代码 → 运行测试 → 仍然失败 → 调整策略
+尝试3：再次修改 → 运行测试 → 成功！✅
+```
+
+**智能理解**：
+- Claude 能理解错误信息并自动调整策略
+- 不需要人工干预，直到成功或达到最大次数
+
+**可控制**：
+```bash
+/ralph-loop "修复测试" --completion-promise "所有测试通过" --max-iterations 10
+```
+
+### 安装使用
+
+**前置要求**：
+- ✅ 已安装 Claude Code
+- ✅ 已配置 API Key
+- ✅ 项目已初始化 Git 仓库
+
+**安装步骤**：
+
+1. **克隆 Ralph Wiggum 仓库**
+   ```bash
+   git clone https://github.com/anthropics/ralph-wiggum.git
+   cd ralph-wiggum
+   npm install
+   ```
+
+2. **配置 Claude Code Hooks**
+
+   在项目根目录创建 `.claude/hooks.json`：
+   ```json
+   {
+     "hooks": {
+       "pre-stop": "node /path/to/ralph-wiggum/index.js"
+     }
+   }
+   ```
+
+   或使用命令行：
+   ```bash
+   claude hooks set pre-stop "node /path/to/ralph-wiggum/index.js"
+   ```
+
+3. **验证安装**
+   ```bash
+   /ralph-loop "测试安装"
+   ```
+
+### 使用示例
+
+**场景1：修复 Bug**
+```bash
+/ralph-loop "运行测试并修复所有失败的测试" --completion-promise "所有测试通过"
+```
+
+**场景2：补充测试**
+```bash
+/ralph-loop "为 src/auth.ts 添加单元测试" --completion-promise "测试覆盖率 > 80%"
+```
+
+**场景3：代码重构**
+```bash
+/ralph-loop "重构 src/user.ts，提高代码可读性" --max-iterations 20
+```
+
+### 推荐使用场景
+
+✅ **非常适合**：
+- **Bug 修复**：自动执行"测试→修复→再测试"循环
+- **补充测试**：不断添加测试用例，直到覆盖所有分支
+- **依赖迁移**：逐步解决迁移过程中的问题
+- **代码重构**：多轮迭代优化代码，直到满足质量标准
+
+❌ **不推荐**：
+- 需要人工决策的任务（架构设计、技术选型）
+- 创意性任务（UI设计、文案撰写）
+- 一次性任务（读取文件、生成代码）
+
+### 与其他工具的对比
+
+| 维度 | Ralph Wiggum | Schaltwerk | 自动化流水线 |
+|------|-------------|-----------|-------------|
+| **功能** | AI 自动重试 | 多 AI 管理 | 多任务批处理 |
+| **并行方式** | 串行（1个AI循环） | 并行（多个AI同时） | 并行（多个任务同时） |
+| **适用** | 单任务多次迭代 | 多任务并行开发 | 重复性任务（50+个） |
+| **难度** | 中（需理解 Stop Hook） | 低（图形界面） | 高（需MCP+测试） |
+
+### 详细文档
+
+📖 **完整文档**：[06-工具-Ralph Wiggum自动迭代插件.md](../../02-AI开发实战/AI开发方式/06-工具-Ralph%20Wiggum自动迭代插件.md)
+
+**包含内容**：
+- 技术原理（Stop Hook 机制详解）
+- 高级参数说明（`--completion-promise`、`--max-iterations`）
+- 最佳实践和注意事项
+- 与 feature-dev 流程的集成
+- 更多实战示例
+
+---
+
 ## 🔍 发现更多插件和MCP
 
 ### 方法1: Claude官方插件市场
