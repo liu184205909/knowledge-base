@@ -48,6 +48,30 @@ claude mcp add -s user -t http web-search-prime https://web-search.xdai.dev
 claude mcp add -s user playwright -- npx -y "@playwright/mcp@latest"
 ```
 
+**💡 高级配置：保持浏览器登录状态**
+
+如果你需要频繁访问需要登录的网站（如 GitHub、内部系统），可以配置浏览器保持登录状态：
+
+修改 `~/.claude.json`，在 playwright 配置中添加 `--user-data-dir` 参数：
+
+```json
+{
+  "mcpServers": {
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest",
+        "--user-data-dir=/Users/你的用户名/.claude-playwright-profile"
+      ]
+    }
+  }
+}
+```
+
+**效果**：浏览器的 Cookies、LocalStorage、登录态会保存在指定目录，下次启动时自动复用，无需重复登录。
+
 #### 2.4 视觉理解（需要API Key）
 ```bash
 claude mcp add -s user zai-mcp-server --env Z_AI_API_KEY=your_key -- npx -y "@z_ai/mcp-server"
