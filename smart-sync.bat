@@ -1,10 +1,14 @@
 @echo off
+setlocal EnableExtensions EnableDelayedExpansion
 chcp 65001 > nul
 echo ========================================
 echo   Smart Sync Tool
 echo   智能同步工具
 echo ========================================
 echo.
+rem Use the directory of this script as the repo root (no hard-coded paths)
+set "REPO_DIR=%~dp0"
+if "%REPO_DIR:~-1%"=="\" set "REPO_DIR=%REPO_DIR:~0,-1%"
 echo Select an option:
 echo.
 echo [1] Pull from GitHub (Download updates)
@@ -31,11 +35,16 @@ echo ========================================
 echo   Pull from GitHub
 echo ========================================
 echo.
-cd /d "d:\Program Files (x86)\Project Code\知识库"
+cd /d "%REPO_DIR%"
 
 echo [Step 1] Checking local changes...
-git diff --quiet
-if %ERRORLEVEL% EQU 1 (
+set "HAS_CHANGES="
+for /f "delims=" %%A in ('git status --porcelain') do (
+    set "HAS_CHANGES=1"
+    goto pull_has_changes
+)
+:pull_has_changes
+if defined HAS_CHANGES (
     echo.
     echo [WARNING] You have uncommitted local changes!
     echo.
@@ -80,12 +89,16 @@ echo ========================================
 echo   Push to GitHub
 echo ========================================
 echo.
-cd /d "d:\Program Files (x86)\Project Code\知识库"
+cd /d "%REPO_DIR%"
 
 echo [Step 1] Checking status...
-git status --short
-
-if %ERRORLEVEL% EQU 0 (
+set "HAS_CHANGES="
+for /f "delims=" %%A in ('git status --porcelain') do (
+    set "HAS_CHANGES=1"
+    goto push_has_changes
+)
+:push_has_changes
+if not defined HAS_CHANGES (
     echo.
     echo [WARNING] No changes to push!
     pause
@@ -142,7 +155,7 @@ echo ========================================
 echo   Two-way Sync
 echo ========================================
 echo.
-cd /d "d:\Program Files (x86)\Project Code\知识库"
+cd /d "%REPO_DIR%"
 
 echo [Step 1] Pull from GitHub...
 git pull origin main
@@ -155,9 +168,13 @@ if %ERRORLEVEL% NEQ 0 (
 
 echo.
 echo [Step 2] Check for local changes...
-git diff --quiet
-
-if %ERRORLEVEL% EQU 0 (
+set "HAS_CHANGES="
+for /f "delims=" %%A in ('git status --porcelain') do (
+    set "HAS_CHANGES=1"
+    goto sync_has_changes
+)
+:sync_has_changes
+if not defined HAS_CHANGES (
     echo No local changes to push.
     echo.
     echo [SUCCESS] Sync completed (Pull only)!
@@ -190,7 +207,7 @@ echo ========================================
 echo   Quick Commit
 echo ========================================
 echo.
-cd /d "d:\Program Files (x86)\Project Code\知识库"
+cd /d "%REPO_DIR%"
 
 git add .
 set /p message="Enter commit message: "
@@ -203,7 +220,7 @@ echo ========================================
 echo   Repository Status
 echo ========================================
 echo.
-cd /d "d:\Program Files (x86)\Project Code\知识库"
+cd /d "%REPO_DIR%"
 
 echo [Current Branch]
 git branch --show-current
@@ -229,7 +246,7 @@ echo ========================================
 echo   Recent Commits
 echo ========================================
 echo.
-cd /d "d:\Program Files (x86)\Project Code\知识库"
+cd /d "%REPO_DIR%"
 
 git log --oneline --graph --all -10
 echo.

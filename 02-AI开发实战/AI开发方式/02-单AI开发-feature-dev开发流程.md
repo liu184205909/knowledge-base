@@ -284,6 +284,37 @@ Spec 3: 搜索优化 → Agent 3
 3. **性能测试**: 响应时间、并发、内存泄漏
 4. **安全测试**: 输入验证、权限控制、SQL 注入/XSS
 
+### 🚀 自动化加速：Ralph Wiggum 插件
+
+**什么是 Ralph Wiggum？**
+- 官方 Claude Code 插件，实现自动循环：测试 → 失败 → 分析 → 修复 → 再测试
+- 基于停止钩子（Stop Hook）机制，让 Claude 自动迭代直到成功
+
+**在测试阶段使用：**
+
+```bash
+# 场景1：自动修复测试失败
+/ralph-loop "运行测试并修复所有失败的测试" --completion-promise "所有测试通过"
+
+# 场景2：补充测试覆盖率
+/ralph-loop "为 src/auth.ts 添加单元测试" --completion-promise "测试覆盖率 > 80%"
+
+# 场景3：修复 linter 错误
+/ralph-loop "修复所有 ESLint 错误" --completion-promise "0 linter 错误"
+```
+
+**优势：**
+- ✅ 自动循环：无需手动复制错误信息重新提问
+- ✅ 智能分析：Claude 理解错误日志并自动调整策略
+- ✅ 可控制：设置最大迭代次数，避免无限循环
+- ✅ 节省时间：从"手动测试→修改→再测试"变为"自动循环"
+
+**注意事项：**
+- ⚠️ 需要安装 Ralph Wiggum 插件：[详细文档](./06-工具-Ralph%20Wiggum自动迭代插件.md)
+- ⚠️ 明确完成标准（`--completion-promise`），避免提前退出或无限循环
+- ⚠️ 设置合理的最大迭代次数（`--max-iterations`），默认 50 次
+- ⚠️ 适合 Bug 修复、补充测试，不适合需要人工决策的任务
+
 ### 输出
 - 测试用例代码
 - 测试覆盖率报告
