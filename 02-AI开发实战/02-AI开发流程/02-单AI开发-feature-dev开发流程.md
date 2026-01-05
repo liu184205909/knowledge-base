@@ -139,8 +139,8 @@ Spec 3: 搜索优化 → Agent 3
 ```
 
 **相关文档**：
-- [多AI协同开发](./多AI协同开发.md) - Schaltwerk完整教程
-- [Vibe-Coding多AI协作](./Vibe-Coding多AI协作.md) - 三线并进思维
+- [多AI协同开发](./03-多AI协同-Schaltwerk工具.md) - Schaltwerk完整教程
+- [Vibe-Coding多AI协作](./01-思维方式-Vibe-Coding流水线思维.md) - 三线并进思维
 
 ---
 
