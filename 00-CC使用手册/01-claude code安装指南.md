@@ -485,6 +485,33 @@ claude plugin marketplace add https://github.com/wshobson/agents
 - test-automator (已包含)
 - debugging-toolkit (已包含)
 
+**💡 进阶选项：Dev Browser 插件（强烈推荐）**
+
+如果你需要**专业级自动化测试**，推荐安装 Dev Browser 插件：
+
+**安装命令**：
+```bash
+/plugin marketplace add sawyerhood/dev-browser
+/plugin install dev-browser@sawyerhood/dev-browser
+```
+
+**核心优势**（相比 Playwright MCP）：
+- ✅ **效率提升200%**：3分53秒 vs Playwright Skill的8分7秒
+- ✅ **一次成功率高**：有状态服务，无需反复调试
+- ✅ **Token消耗更低**：不占用13,600 Tokens（32个工具定义）
+- ✅ **基于A11y Tree**：元素定位更稳定
+- ✅ **丰富的调试信息**：网络请求/控制台日志/性能指标
+
+**适用场景**：
+- 测试人员从功能测试转型自动化测试
+- 需要长期维护的测试用例
+- 追求稳定性和可扩展性的项目
+
+**详细文档**：
+- GitHub: https://github.com/SawyerHood/dev-browser
+- 技术文档: https://zread.ai/SawyerHood/dev-browser/
+- 实战文章: [Playwright MCP/Skills/Dev Browser对比分析](https://mp.weixin.qq.com/s/N3RKHP3Eb8ZDVPMQlgjqKA)
+
 ---
 
 **创建时间**: 2026-01-02
