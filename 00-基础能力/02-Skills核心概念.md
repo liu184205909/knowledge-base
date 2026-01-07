@@ -58,25 +58,63 @@ Skills 就像是给 Claude 准备的"工作手册库":
 
 ## 2. 技术架构
 
-### 2.1 三层加载机制(Progressive Disclosure)
+### 2.1 三层加载机制(渐进式披露 Progressive Disclosure)
+
+**核心原理**: Skills 的本质就是 Context 工程，通过分层加载避免上下文过长导致模型能力下降。
+
+#### 三层架构
 
 **Level 1: 元数据 - 总是加载(~100 tokens)**
+
 ```yaml
 ---
-name: pdf-processing
-description: Extract text and tables from PDF files
+name: pdf
+description: 全面的 PDF 操作工具包，用于提取文本和表格、创建新 PDF、合并/拆分文档以及处理表单
 ---
 ```
 
-**Level 2: 指令内容 - 需要时加载(~2,000 tokens)**
+**特点**:
+- ✅ Agent 启动时就在 Context Window 中
+- ✅ AI 通过理解用户消息与 Skills 元数据的匹配情况，判断是否需要自动使用技能
+- ✅ 可以给 Agent 同时安装很多 Skills 但不影响上下文性能
+
+**Level 2: 指令 - 触发时加载(~2,000-5,000 tokens)**
+
 ```markdown
 # PDF Processing Skill
-## Quick Start
-To extract text from a PDF, run: python scripts/extract.py input.pdf
+
+## 核心功能
+- PDF 文本提取
+- 表格数据解析
+- 文档合并与拆分
+
+## 快速开始
+### 提取文本
+```bash
+python scripts/extract.py input.pdf
 ```
 
-**Level 3: 附加资源 - 按需加载(+3,000~10,000 tokens)**
-详细文档、脚本、模板
+### 合并文档
+详见 [MERGE.md](references/MERGE.md)
+```
+
+**特点**:
+- ⚡ 当用户消息与 Skill 元数据的描述匹配，Agent 才会读取文档正文
+- ⚡ Agent 用 bash 读取文档内容，加载到 Context Window 中
+- ⚡ 建议少于 5000 tokens，保持简洁
+
+**Level 3: 资源 - 按需动态加载(+3,000~无限 tokens)**
+
+包含:
+- **Sub-SKILL.md**: 独立子技能指令（避免单个 SKILL.md 过长）
+- **Scripts**: 代码脚本（不进 Context，只有输出进）
+- **Reference**: 参考文档（必要时读取）
+- **Assets**: 模板和资源（按需调用）
+
+**特点**:
+- 📦 文件在被访问前不会占用 Context 长度
+- 📦 没有内容大小限制，可按业务实际需要添加材料
+- 📦 只有脚本运行完成后的输出会进 Agent 的 Context
 
 ### 2.2 架构优势
 
@@ -592,4 +630,223 @@ code-review-pipeline/
 
 ---
 
-**核心理念**: **所有工作流都值得用 Skills 重写一遍！** 🚀
+## 8. Skills 的真实价值（来自实战验证）
+
+> 基于 Anthropic 官方博客和持续 Agent Skill 实验总结
+
+### 8.1 三大核心优势
+
+#### 1. 零代码、自然语言编写真·智能 Agent
+
+**对比此前的 AI 应用开发方法**:
+- ❌ **程序编写**: 必须懂程序逻辑、懂技术实现
+- ❌ **Workflow 平台** (Coze/Dify/N8N): 仍需理解节点配置、条件分支，还算"编程"
+
+**Skills 的创建门槛**:
+- ✅ 入门门槛极低，智能上限极高
+- ✅ 纯自然语言编写
+- ✅ 非技术人员可用
+
+**案例 1: 简单 Skill (brand-guidelines)**
+
+仅有一个 SKILL.md，纯自然语言写成:
+```yaml
+---
+name: brand-guidelines
+description: Anthropic 品牌设计规范，包含颜色、字体、Logo使用指南
+---
+
+# Anthropic Brand Guidelines
+
+## 品牌色彩
+- 主色: #D97757 (Claude Orange)
+- 辅助色: #3E3E3E (深灰)
+
+## 字体使用
+- 标题: Serif (如 Source Serif Pro)
+- 正文: Sans-serif (如 Inter)
+```
+
+**效果**: Agent 自动按照品牌规范设计网站、海报、PPT
+
+**案例 2: 复杂 Skill (AI-Partner)**
+
+一个 Skill 就是一个复杂 Agent，包含:
+- SKILL 文档
+- 向量数据库构建指南
+- AI 伴侣与用户 Persona 模板
+- 智能对话脚本
+
+**效果**: 实现懂用户的 AI 伴侣，深度学习个人记忆
+
+---
+
+#### 2. 突破预设限制，灵活应对实际情况
+
+**Workflow 或传统程序的核心问题**: 假设所有情况都能预设
+
+**现实情况**:
+- 需要教育用户在哪点击"导入"
+- 用户只有预期之外的格式 (预期 md，实际只有 doc)
+- 数据字段不符
+- 出现边缘情况
+
+**Skills 的优势**:
+- ✅ 能在统一对话框接收各类数据 (文本、文件、图片)
+- ✅ 能自主调用其他 Skill 或即时编写转换脚本
+- ✅ 能基于 LLM 推理智能，弥合各类边缘问题
+- ✅ 借 Agent 的"观察-规划-执行"动态智能应对
+
+**案例: AI-Partner 的自适应切片**
+
+不固定分隔符，而是:
+- DailyNotes: 按日期标题切分
+- 项目笔记: 按标题级别与语义切分
+
+得到更符合实际情况的 RAG 切片
+
+---
+
+#### 3. 多 Skills 自由联用
+
+**Skills 实质仍是 Context 工程**，所以在实际应用中极其灵活:
+
+**联用案例**:
+- brand-guidelines + pptx = 符合品牌规范的 PPT
+- AI-Partner-Chat + Article-Copilot = 符合个人思考与文风的内容
+
+**复杂场景: 产品分析报告**:
+1. Web Scraping Skill: 抓取竞品数据
+2. PDF Skill: 提取用户反馈
+3. Data Analysis Skill: 分析数据并生成图表
+4. Brand Guidelines + PPTX Skill: 按品牌规范制作 PPT
+
+**结论**: N 个 Skill 可以应对远超 N 的应用场景
+
+---
+
+### 8.2 Skills 对 AI 产品设计的影响
+
+#### 关键洞察
+
+**基于 Mulerun Agent 开发者 @付铖 的讨论**:
+
+1. **Skills 是非常宽容的 Agent 设计架构**
+2. **Skills 可以是很多 tokens 的指令文档** (引导模型思考)
+3. **也可以是无需思考的简单指令** (直接运行代码)
+4. **Skills 能直接调用代码逻辑，不进 Context 窗口**
+5. **Agent 也可以只承担类似 hook 的角色** (实质和正常程序运行无差别)
+
+**两个趋势的极端判断**:
+1. Token 价格会下降
+2. Agent 速度会提升
+
+**结论**: 以 Skills 为基础的垂直 Agent，在性能、开销上的问题也不是不可解决的持续性
+
+#### AI Native 产品的未来态
+
+**传统 APP 逻辑**: 新笔记 → 代码 → 处理
+
+**AI Native APP 逻辑**:
+- 内置类似 skill 的指引 (笔记入库、智能纠错、冗余笔记合并等)
+- 有些以 prompt 为主 (需要生成)
+- 有些基本只有代码逻辑 (快速响应)
+- AI 快速自行判断如何处理
+
+**结果**: 用同一个多模态输入框，处理各种不同输入，灵活应对边缘问题
+
+---
+
+### 8.3 Skills 创业机会
+
+#### 垂直 Agent 开发成本对比
+
+| 开发方式 | 周期 | 成本 | 智能上限 |
+|---------|------|------|---------|
+| **传统开发** | 数周 | 高 | 受限 |
+| **Skills 方式** | 几小时/几分钟 | 极低 | 直逼通用 Agent |
+
+#### 核心价值
+
+对于 Agent 创业者乃至非技术的领域专家:
+- ✅ **不必为了一个内部小工具开发完整产品**，打包个 Skill 就能解决
+- ✅ **不必说服 IT 团队理解你的需求**，自己就能创建工具
+- ✅ **不必等待产品迭代**，你可以随时调整 Skill 的行为
+
+#### 降低验证想法的成本
+
+**Skill 更是降低了验证想法的成本**:
+- 快速测试 MVP (几分钟到几小时)
+- 迭代优化 (随时调整)
+- 组合创新 (多 Skills 联用)
+
+#### 新思路: Skill Agent 服务打包为 API
+
+把 Skill Agent 服务打包为 AI API，快速给已有产品赋上好用的 AI 能力
+
+---
+
+## 9. 什么时候应该用 Skills？
+
+> 3 个明显信号
+
+### 信号 1: 发现自己在向 AI 反复解释同一件事
+
+**典型表现**:
+"帮我写一份技术文档"
+"不对，我们公司的技术文档格式是这样的……"
+"还有，代码示例要按这个模板来……"
+"上次不是说了吗，章节标题要三级标题……"
+
+**解决方案**: 与其每次都解释一遍，不如把这些规则打包成一个 Skill
+
+---
+
+### 信号 2: 某些任务需要特定知识、模板、材料才能做好
+
+**典型场景**:
+- **技术文档写作**: 需要代码规范、术语表、文档模板
+- **品牌设计**: 需要品牌手册、色彩规范、Logo 资源
+- **数据分析**: 需要指标定义、计算公式、报表模板
+
+**通用 Agent + 垂直知识** = 人提供材料，Agent 具备场景 Context
+
+---
+
+### 信号 3: 发现一个任务要多个流程协同完成
+
+**典型场景**:
+- **竞品分析报告**: 检索竞品数据 + 数据分析 + 制作 PPT
+- **内容生产**: 收集参考资料 + 学习风格 + 大纲协作 + 正文写作
+
+**解决方案**: 把每个环节的指令文档、脚本、材料打包成单个或多个 Skill
+
+让 Agent 根据任务描述，智能调用不同 Skill 模块，通过"规划-执行-观察"完成复杂任务
+
+---
+
+## 10. Sources & 推荐阅读
+
+**官方文档**:
+- [Agent Skills Overview - Anthropic Docs](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview)
+- [Extending Claude's capabilities with skills and MCP servers](https://claude.com/blog/extending-claude-capabilities-with-skills-mcp-servers)
+- [Skills explained: How Skills compares to prompts, Projects, MCP, and subagents](https://claude.com/blog/skills-explained)
+
+**技术深度**:
+- [Agent Skills: A First Principles Deep Dive](https://leehanchung.github.io/blogs/2025/10/26/claude-skills-deep-dive/)
+- [Equipping agents for the real world with Agent Skills - Anthropic Engineering](https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
+
+**实战案例**:
+- [Claude Skills are awesome - Simon Willison](https://simonwillison.net/2025/Oct/16/claude-skills/)
+- [How We Use Claude Code Skills to Run 1,000+ ML Experiments a Day - Sionic AI](https://huggingface.co/blog/sionic-ai/claude-code-skills-training)
+
+**中文深度指南**:
+- [Agent Skills 终极指南：入门、精通、预测 - 一泽Eze](https://mp.weixin.qq.com/s/dXtz1BZm5oCWfPdKDFLDgw)
+  - 全文 1.2w 字，全网最好的 Skills 中文指南
+  - 包含概念、价值、教程、场景识别
+
+---
+
+**核心理念**: **Claude Skills 的价值，还是被大大低估了** ✨
+
+**一个 Skill 就能实现完整的 Agent 应用，效果等同甚至超过完整的 AI 产品** 🚀
