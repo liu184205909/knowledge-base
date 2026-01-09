@@ -1,7 +1,7 @@
 # Claude Skills 核心概念与实战指南
 
-**最后更新**: 2026-01-07
-**版本**: v7.0（合并版）
+**最后更新**: 2026-01-09
+**版本**: v8.0（新增 2.1.0 功能）
 
 ---
 
@@ -64,6 +64,73 @@
 - 可安装数十个Skills但启动时<1,000 tokens
 - 避免不必要的token消耗
 - 只有脚本输出进入Context
+
+### 2.3 Skills 2.1.0 新功能 (2026-01-07)
+
+#### 🔥 Skills 热重载
+**之前的问题**：
+- 修改Skills后必须重启Claude Code会话才能生效
+- 开发体验：改代码 → 退出 → 重启 → 测试 → 再改...（浪费大量时间）
+
+**现在**：
+- ✅ 自动检测 `~/.claude/skills` 和 `.claude/skills` 目录的文件变化
+- ✅ 修改后保存，立即生效，无需重启
+- ✅ 文件系统监听 + 热加载机制
+
+#### 🚀 Fork 子代理执行
+**新配置字段**：
+
+```yaml
+---
+name: code-review
+description: 执行代码审查
+context: fork  # 在独立子代理上下文中运行
+agent: security-expert  # 指定agent类型
+allowed-tools:
+  - Read
+  - Grep
+---
+```
+
+**核心特性**：
+- **独立上下文**：Skill在子代理中运行，不污染主对话上下文
+- **继承配置**：继承sub-agent的系统提示、工具权限和模型配置
+- **上下文补充**：可以指定任务在特定类型子代理中执行
+- **避免中间输出**：不占用主会话的上下文窗口
+
+#### ⚡ Hooks 扩展支持
+**新功能**：Hooks扩展到Skill和Slash Command层面
+
+```yaml
+---
+name: deploy
+hooks:
+  PostToolUse:
+    - command: "echo 'Tool completed'"
+---
+```
+
+**之前**：Hooks只能在Agent层面定义
+**现在**：每个Skill可设置独立的前置检查、后置处理逻辑
+
+#### 🌐 语言配置
+**新增 `language` 配置**：
+
+```yaml
+---
+name: chinese-assistant
+language: chinese  # 指定响应语言
+---
+```
+
+**全局配置**：
+```json
+{
+  "language": "chinese"
+}
+```
+
+**效果**：Claude会尽量用指定语言回复（非强制，英文代码/术语除外）
 
 ---
 

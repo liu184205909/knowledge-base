@@ -1,10 +1,66 @@
 # Claude Code 安装配置指南
 
-> **AI自动执行安装** | 适用于新电脑或首次安装 | 最后更新: 2026-01-07
+> **AI自动执行安装** | 适用于新电脑或首次安装 | 最后更新: 2026-01-09
+
+---
+
+## 🎯 Claude Code 安装方式（2.1.0推荐）
+
+### ⭐ 推荐：原生安装（Native Installer）
+
+**为什么推荐原生安装？**
+- ✅ **不依赖Node.js**：无需预先安装Node.js环境
+- ✅ **更稳定**：自动更新机制更可靠
+- ✅ **路径管理清晰**：自动处理PATH，macOS/Linux基本不用手动配置
+- ✅ **启动性能更好**：配合2.1.0终端渲染优化，启动速度更快
+
+#### macOS / Linux / WSL 安装
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
+
+#### Windows (PowerShell) 安装
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
+
+#### 从 npm 版本迁移
+```bash
+claude install
+```
+这个命令会自动从npm版本迁移到原生版本，配置文件会保留。
+
+#### 更新
+```bash
+claude update
+```
+
+#### 验证安装
+```bash
+which claude
+claude --version
+```
+
+---
+
+### ⚠️ 备选：npm 安装（不推荐）
+
+**npm 安装的历史问题**：
+- GitHub上有200+个npm安装相关issues
+- 常见问题：权限错误、PATH找不到、Node版本冲突、全局安装失败、更新报错
+
+**如果你必须使用npm安装**：
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
+**但强烈建议改用原生安装**，5分钟即可搞定。
 
 ---
 
 ## 🚀 快速安装（3步）
+
+> **前提**：您已经安装了 Claude Code
 
 ### 步骤1: 安装80+专业插件
 
@@ -143,6 +199,6 @@ claude mcp list
 ---
 
 **创建时间**: 2026-01-02
-**最后更新**: 2026-01-07
+**最后更新**: 2026-01-09
 **预计安装时间**: 5-10分钟
 **难度等级**: ⭐ 简单（AI自动执行）
