@@ -185,6 +185,66 @@ claude mcp list
 - ✅ Token消耗更低
 - ✅ 基于A11y Tree，定位更稳定
 
+### 方法4: 官方代码质量插件
+
+#### code-simplifier（代码简化插件）
+
+**功能**：自动优化代码质量，在不改变功能的前提下让代码更清晰、统一
+
+**安装命令**：
+```bash
+# 先更新官方插件市场
+/plugin marketplace update claude-plugins-official
+
+# 安装插件
+/plugin install code-simplifier
+```
+
+**使用方法**：
+```
+请使用 code-simplifier 帮我整理一下刚才修改的代码
+```
+
+**核心特性**：
+- 功能守恒：只改变"怎么做"，不改变"做什么"
+- 强制规范：执行 CLAUDE.md 中的编码标准
+- 清晰度优先：避免嵌套三元运算符，选择可读性
+- 聚焦当下：只优化最近修改的代码
+
+#### Ralph Wiggum（强制迭代插件）
+
+**功能**：强制AI持续优化代码，直到达成目标（治好AI的"交差心态"）
+
+**安装命令**：
+```bash
+/plugin install ralph-wiggum@anthropics
+```
+
+**使用方法**：
+```bash
+/ralph-loop "任务描述" --completion-promise "DONE" --max-iterations 20
+```
+
+**参数说明**：
+- `任务描述`：希望AI完成的目标
+- `--completion-promise`：通关密语（AI输出这个词才停止）
+- `--max-iterations`：最大迭代次数（安全网，防止烧光预算）
+
+**适用场景**：
+- ✅ 大规模重构（框架迁移、API升级）
+- ✅ 测试覆盖（补充单元测试直到达标）
+- ✅ Greenfield 搭建（从零开始的项目）
+
+**不适用场景**：
+- ❌ 架构决策（需要人类直觉）
+- ❌ 模糊需求（无法定义成功标准）
+- ❌ 安全敏感代码（必须人工审核）
+
+**成本控制**：
+- 务必设置 `--max-iterations`
+- 建议分批次运行
+- 监控 Token 使用量
+
 ---
 
 ## 📚 相关文档
