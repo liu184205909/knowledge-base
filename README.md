@@ -260,6 +260,7 @@
 | 文档 | 说明 |
 |-----|------|
 | [README.md](04-团队协作/README.md) | 团队协作框架 |
+| [Agent-Native架构实践指南.md](04-团队协作/Agent-Native架构实践指南.md) | **Agent Native架构实战** ⭐ |
 
 ---
 
