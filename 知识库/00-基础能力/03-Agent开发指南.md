@@ -316,8 +316,10 @@ AI 能够：
 ## 📚 相关文档
 
 ### CC 使用手册
-- [01-claude code安装指南](./01-claude%20code安装指南.md) - MCP 和 Skills 安装
-- [02-Skills核心概念](./02-Skills核心概念.md) - 工作流的标准化
+- [01-Claude-Code安装配置](./01-Claude-Code安装配置.md) - AI自动安装脚本
+
+### Skills创建
+- **直接让AI帮你创建** - 告诉我"帮我创建一个[功能]的Skill"
 
 ### AI 开发方式
 - [04-自动化流水线-CSV+MCP系统.md](../02-AI开发实战/AI开发方式/04-自动化流水线-CSV+MCP系统.md) - Agent 的特殊应用场景

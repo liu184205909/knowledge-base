@@ -604,7 +604,7 @@ Agent 5: Claude Code (文档)
 - 门槛：中（需训练思维）
 
 ### 工具相关
-- [01-claude code安装指南](../../00-CC使用手册/01-claude%20code安装指南.md) - Schaltwerk工具介绍
+- [01-claude code安装指南](../../00-基础能力/01-Claude-Code安装配置.md) - Schaltwerk工具介绍
 - [应用产品开发需求发现指南](../01-产品设计/应用产品开发需求发现指南.md) - 需求发现方法
 
 ---

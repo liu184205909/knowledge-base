@@ -342,7 +342,7 @@ A: 可以减少AI专家数量，使用单AI+人工审核的模式，但保持文
 - [04-自动化流水线-CSV+MCP系统.md](./04-自动化流水线-CSV+MCP系统.md) - CSV+MCP系统
 
 ### 工具配置
-- [Claude Code安装指南](../../00-CC使用手册/01-claude%20code安装指南.md)
+- [Claude Code安装指南](../../00-基础能力/01-Claude-Code安装配置.md)
 
 ---
 

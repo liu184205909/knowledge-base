@@ -126,7 +126,7 @@
 
 ### Schaltwerk（多AI协同）
 - 文档：[03-多AI协同-Schaltwerk工具.md](./03-多AI协同-Schaltwerk工具.md)
-- 安装：[01-claude code安装指南](../../00-CC使用手册/01-claude%20code安装指南.md)
+- 安装：[01-claude code安装指南](../../00-基础能力/01-Claude-Code安装配置.md)
 - 系统：Mac / Windows
 
 ### Ralph Wiggum（自动迭代插件）
@@ -255,10 +255,11 @@
 ## 🔗 相关文档
 
 ### 工具配置
-- [01-claude code安装指南](../../00-CC使用手册/01-claude%20code安装指南.md) - Schaltwerk工具介绍
+- [01-claude code安装指南](../../00-基础能力/01-Claude-Code安装配置.md) - Schaltwerk工具介绍
 
-### 产品设计
-- [应用产品开发需求发现指南](../01-产品设计/应用产品开发需求发现指南.md) - 需求发现方法
+### 实战辅助
+- [01-产品需求发现指南](../01-实战辅助/01-产品需求发现指南.md) - 需求发现方法
+- [02-Prompt模板库.md](../01-实战辅助/02-Prompt模板库.md) - 开发专用Prompt
 
 ### 总目录
 - [知识库首页](../../../README.md) - 知识库总导航
