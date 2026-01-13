@@ -69,23 +69,47 @@ claude mcp add -s user -t http web-search-prime https://web-search.xdai.dev
 claude mcp add -s user playwright -- npx -y "@playwright/mcp@latest"
 ```
 
-**方式2: agent-browser（推荐，Token节省98.7%）⭐**
+**方式2: agent-browser（推荐，Token节省93%）⭐**
 
+#### 安装步骤：
 ```bash
-# 安装
+# 1. 全局安装
 npm install -g agent-browser
 
-# 下载Chromium
+# 2. 下载Chromium（方式1：自动下载）
 agent-browser install
 
-# 配套Skills下载
-# https://link.bytenote.net/note
+# 如果自动下载失败，使用方式2：手动安装
+# 下载 Playwright 并安装 Chromium
+npx playwright install chromium
 ```
+
+#### Windows 用户注意事项：
+⚠️ 如果遇到 `npx: program not found` 错误：
+1. 确认 Node.js 和 npm 已安装：`node --version`
+2. 检查 npx 路径：`where npx`（Windows）或 `which npx`（Mac/Linux）
+3. 使用完整路径：`C:\Program Files\nodejs\npx.exe playwright install chromium`
+4. 或者使用 npx 直接安装：`npx agent-browser install`
+
+#### 验证安装：
+```bash
+# 查看版本
+agent-browser --version
+
+# 测试运行（需要Chromium已安装）
+agent-browser open https://example.com
+```
+
+#### 配套Skills（可选）：
+- **作用**：预定义的浏览器自动化工作流模板
+- **下载地址**：https://link.bytenote.net/note
+- **安装方法**：将下载的 Skills 文件放入 `~/.claude/skills/` 或项目 `.claude/skills/` 目录
+- **详细说明**：见 [05-Skills完整指南.md](./05-Skills完整指南.md)
 
 **对比**:
 | 维度 | Playwright MCP | agent-browser |
 |------|--------------|---------------|
-| Token效率 | 低（整个DOM树） | 高（节省98.7%） |
+| Token效率 | 低（整个DOM树） | 高（节省93%） |
 | 响应速度 | 慢（秒级） | 快（毫秒级） |
 | 配置复杂度 | 高（JSON/TOML） | 低（一条命令） |
 | 网页改版 | 容易崩溃 | 不影响（Refs抽象） |
