@@ -63,9 +63,42 @@ claude mcp add -s user -t http web-search-prime https://web-search.xdai.dev
 ```
 
 ### 3.3 浏览器自动化
+
+**方式1: Playwright MCP（传统方式）**
 ```bash
 claude mcp add -s user playwright -- npx -y "@playwright/mcp@latest"
 ```
+
+**方式2: agent-browser（推荐，Token节省98.7%）⭐**
+
+```bash
+# 安装
+npm install -g agent-browser
+
+# 下载Chromium
+agent-browser install
+
+# 配套Skills下载
+# https://link.bytenote.net/note
+```
+
+**对比**:
+| 维度 | Playwright MCP | agent-browser |
+|------|--------------|---------------|
+| Token效率 | 低（整个DOM树） | 高（节省98.7%） |
+| 响应速度 | 慢（秒级） | 快（毫秒级） |
+| 配置复杂度 | 高（JSON/TOML） | 低（一条命令） |
+| 网页改版 | 容易崩溃 | 不影响（Refs抽象） |
+| 多会话 | 困难 | 原生支持 |
+
+**应用场景**:
+- 社媒自动发布（小红书、微信公众号等）
+- 网页数据抓取
+- SEO自动化检查
+- 跨境电商运营自动化
+- 知识星球/社群内容浏览
+
+**相关文章**: https://mp.weixin.qq.com/s/vNVSHfjKchDDniWGNdlxjg
 
 ### 3.4 视觉理解(需API Key)
 ```bash
@@ -113,7 +146,7 @@ claude plugin list
 | 类别 | 数量 |
 |------|------|
 | Plugins | 3个 |
-| MCP | 6个 |
+| MCP | 6个（浏览器自动化有2种方案可选） |
 | 插件集合 | 80+ |
 
 预计耗时: 8-10分钟
