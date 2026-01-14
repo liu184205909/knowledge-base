@@ -1,16 +1,95 @@
 # Skills 完整指南
 
-> **开发 + 同步 + 推荐** | 当需要创建新Skill时参考
+> **推荐 → 使用 → 开发** | Skills模块化能力完整手册
+
+---
+
+## 推荐Skills
+
+**核心原则**: 优先使用现成Skills，需要时再创建
+
+### 官方推荐
+
+| Skill | 功能 | 来源 |
+|-------|------|------|
+| **Superpowers** | 全流程开发增强 | GitHub 1.6万Star |
+| **planning-with-files** | 基于文件的任务规划 | 社区 |
+| **skill-creator** | 创建Skills的元Skill | 官方 |
+
+### 社区热门
+
+**文档处理类**:
+- `pdf`: PDF合并/拆分/文本提取
+- `docsx`: Word合同模板生成
+- `pptx`: PPT自动生成+品牌规范
+
+**数据分析类**:
+- `xlsx`: 非标表格处理（外贸PI单、财务报表）
+- `brand-guidelines`: 品牌设计规范
+
+**研究创作类**:
+- `research-to-diagram`: 一句话调研+自动画图
+- `article-copilot`: 素材→正文自动化
+
+**个性化AI**:
+- `ai-partner`: 基于记忆的AI伴侣
+
+### 获取方式
+
+**方法1: AI帮你安装**
+```
+"帮我安装Superpowers skill"
+```
+
+**方法2: 手动克隆**
+```bash
+cd ~/.claude/skills
+git clone https://github.com/anthropics/superpowers.git
+```
+
+---
+
+## 如何使用Skills
+
+### 自动触发
+
+Claude会根据description中的触发关键词自动识别并加载Skill：
+
+```
+用户: "帮我分析这个产品"
+→ Claude识别到关键词"分析产品"
+→ 自动加载product-analysis Skill
+→ 执行分析流程
+```
+
+### 手动指定
+
+```
+"使用pdf skill合并这些文件"
+"用research-to-diagram skill画个架构图"
+```
+
+### Skills位置
+
+| 位置 | 作用 | 适用场景 |
+|-----|------|---------|
+| `~/.claude/skills/` | 全局Skills | 所有项目通用 |
+| `.claude/skills/` | 项目级Skills | 项目特定需求 |
 
 ---
 
 ## 什么时候需要创建Skill？
 
-| 信号 | 说明 |
-|-----|------|
-| 反复解释同一件事 | 把规则打包成Skill |
-| 需要特定知识/模板 | 固化为Skill |
-| 多流程协同完成 | 用主控Skill串联 |
+| 信号 | 说明 | 示例 |
+|-----|------|------|
+| 反复解释同一件事 | 把规则打包成Skill | "每次都要说导出PDF的格式" |
+| 需要特定知识/模板 | 固化为Skill | "合同模板、品牌规范" |
+| 多流程协同完成 | 用主控Skill串联 | "内容生产流水线" |
+
+**判断标准**:
+- ✅ 同一件事解释3次以上
+- ✅ 有固定模板/规范可遵循
+- ✅ 多步骤流程需要标准化
 
 ---
 
@@ -23,9 +102,7 @@
 └── references/        # 参考文档（可选）
 ```
 
----
-
-## SKILL.md模板
+**SKILL.md模板**:
 
 ```yaml
 ---
@@ -75,6 +152,28 @@ description: Product analysis
 
 ---
 
+## 创建新Skill
+
+### 方式1: 让AI帮你创建（推荐）
+
+```
+"帮我创建一个[XX功能]的Skill"
+```
+
+AI会自动：
+1. 创建skill目录
+2. 生成SKILL.md模板
+3. 填写description和执行流程
+
+### 方式2: 手动创建
+
+```bash
+mkdir -p ~/.claude/skills/my-skill
+# 创建SKILL.md，按上面的模板填写
+```
+
+---
+
 ## 高级功能
 
 ### 热重载
@@ -90,6 +189,8 @@ allowed-tools:
   - Grep
 ---
 ```
+
+**用途**: 代码审查、长时间任务，不污染主对话上下文
 
 ### 语言配置
 ```yaml
@@ -109,34 +210,10 @@ language: chinese  # 用中文回复
 | 增强 | 1-2天 | 添加脚本 |
 | 完整 | 1-2周 | 多Skills组合 |
 
-**原则**：
+**核心原则**：
 - 单一职责（一个Skill只做一件事）
 - SKILL.md保持简洁（<2000 tokens）
 - 复杂内容放references/
-
----
-
-## Skills位置
-
-| 位置 | 作用 |
-|-----|------|
-| `~/.claude/skills/` | 全局Skills |
-| `.claude/skills/` | 项目级Skills |
-
----
-
-## 创建新Skill
-
-**方式1: 让AI帮你创建**
-```
-"帮我创建一个[XX功能]的Skill"
-```
-
-**方式2: 手动创建**
-```bash
-mkdir -p ~/.claude/skills/my-skill
-# 创建SKILL.md，按上面的模板填写
-```
 
 ---
 
@@ -153,15 +230,8 @@ git push -u origin main
 git clone https://github.com/yourname/my-skills.git ~/.claude/skills
 ```
 
----
-
-## 推荐Skills
-
-| Skill | 功能 | 来源 |
-|-------|------|------|
-| **Superpowers** | 全流程开发增强 | GitHub 1.6万Star |
-| **planning-with-files** | 基于文件的任务规划 | 社区 |
-| **skill-creator** | 创建Skills的元Skill | 官方 |
+**方法2: 云同步**
+将`~/.claude/skills`放入iCloud/OneDrive/坚果云同步文件夹
 
 ---
 
@@ -177,6 +247,10 @@ git clone https://github.com/yourname/my-skills.git ~/.claude/skills
 "测试my-skill skill"
 ```
 
+**Q: Skills冲突怎么办？**
+- 全局Skills和项目级Skills可以共存
+- 项目级Skills优先级更高
+
 ---
 
-**核心原则**: 不要重复造轮子，优先使用现成Skills，需要时再创建。
+**总结**: 推荐Skills → 开箱即用 → 需要时再创建 → 持续迭代优化
