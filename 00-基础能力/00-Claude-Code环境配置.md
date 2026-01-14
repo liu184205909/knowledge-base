@@ -98,6 +98,16 @@ agent-browser install  # 下载Chromium
 | 配置复杂度 | 高（JSON/TOML） | 低（一条命令） |
 | 网页改版 | 容易崩溃 | 不影响（Refs抽象） |
 | 多会话 | 困难 | 原生支持 |
+| 稳定性 | 成熟稳定 | ⚠️ 新工具,可能有安装问题 |
+
+**⚠️ 实际安装经验 (2026-01-14测试)**:
+- **问题**: Windows环境可能遇到daemon启动失败 ("Daemon failed to start")
+- **原因**: Chromium Headless Shell下载失败 (网络ECONNRESET错误)
+- **影响**: 主Chromium已下载(169.8MB),但Headless Shell缺失导致daemon无法启动
+- **建议**:
+  - 网络不稳定地区建议使用Playwright MCP (更稳定)
+  - agent-browser适合网络良好环境,追求极致Token效率
+  - GitHub仓库: [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser)
 
 **应用场景**: 小红书/微信公众号自动发布、网页数据抓取、SEO检查、跨境电商运营
 
@@ -178,14 +188,10 @@ claude plugin list
 ### Skills快速开始
 
 **想要了解**:
-- Skills开发指南 → 见 [05-Skills完整指南.md](./05-Skills完整指南.md#第一部分-skills开发指南)
-- 推荐Skills列表 → 见 [05-Skills完整指南.md](./05-Skills完整指南.md#1-推荐skills清单)
-- Skills分享方法 → 见 [05-Skills完整指南.md](./05-Skills完整指南.md#2-skills分享方法)
-- 多设备同步 → 见 [05-Skills完整指南.md](./05-Skills完整指南.md#23-多设备同步)
+- Skills开发指南 → 见 [04-Skills完整指南.md](./04-Skills完整指南.md)
 
 **想要使用**:
-- 安装官方Skills → 见 [05-Skills完整指南.md](./05-Skills完整指南.md#11-官方skills-anthropic)
-- 安装社区Skills → 见 [05-Skills完整指南.md](./05-Skills完整指南.md#12-社区热门skills)
+- 推荐Skills → 见 [04-Skills完整指南.md](./04-Skills完整指南.md#推荐skills)
 
 ---
 
@@ -283,6 +289,6 @@ python3 -c "print('test')" (1次上下文消耗)
 
 ## 相关文档
 
-- [05-Skills完整指南.md](./05-Skills完整指南.md) - Skills完整指南(开发、推荐、分享)
-- [02-Agent开发与系统搭建.md](./02-Agent开发与系统搭建.md) - Agent开发与个人系统
-- [03-RLM递归思想.md](./03-RLM递归思想.md) - RLM方法论
+- [04-Skills完整指南.md](./04-Skills完整指南.md) - Skills完整指南(开发、推荐、分享)
+- [01-Agent开发与系统搭建.md](./01-Agent开发与系统搭建.md) - Agent开发与个人系统
+- [02-RLM递归思想.md](./02-RLM递归思想.md) - RLM方法论

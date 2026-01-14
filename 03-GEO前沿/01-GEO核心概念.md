@@ -324,8 +324,8 @@ M - Monitor（监测）：持续跟踪优化
 - Agent Skills终极指南
 
 ### 知识库相关
-- [Claude-Code安装配置](../00-基础能力/01-Claude-Code安装配置.md) - AI自动安装脚本
-- [RLM递归思想](../00-基础能力/03-RLM递归思想.md) - RLM理论核心
+- [Claude-Code安装配置](../00-基础能力/00-Claude-Code环境配置.md) - AI自动安装脚本
+- [RLM递归思想](../00-基础能力/02-RLM递归思想.md) - RLM理论核心
 
 ---
 
