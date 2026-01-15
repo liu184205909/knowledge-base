@@ -1,4 +1,4 @@
-# Claude Code 防封号指南
+# Claude Code 第三方API配置指南
 
 **版本**: v1.0
 **分类**: Claude Code进阶配置
@@ -6,7 +6,7 @@
 
 ## 🎯 核心价值
 
-> **通过Google AI Ultra + Antigravity Tools实现稳定不掉号的Claude Code使用**
+> **通过Google AI Ultra + Antigravity Tools接入第三方API，实现稳定不掉号的Claude Code使用**
 
 **问题**：
 - Claude Code官方订阅容易被封号
