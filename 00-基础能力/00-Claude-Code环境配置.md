@@ -7,7 +7,7 @@
 ## 安装清单
 
 - Claude Code主程序
-- 3个核心Plugins
+- 4个核心Plugins (代码简化、自动迭代、Dev Browser、Superpowers)
 - 6个核心MCP(网页读取、搜索、浏览器、视觉、GitHub、YouTube)
 - 80+插件集合
 
@@ -47,6 +47,59 @@ claude plugin install ralph-wiggum@anthropics
 claude plugin marketplace add sawyerhood/dev-browser
 claude plugin install dev-browser@sawyerhood/dev-browser
 ```
+
+### 2.4 Superpowers - AI编程工作流系统 ⭐
+
+**核心价值**: 让AI编程助手像高级工程师一样工作,而不是缺乏经验的新手
+
+**安装**:
+```bash
+# 注册Superpowers marketplace
+claude plugin marketplace add obra/superpowers-marketplace
+
+# 安装Superpowers插件
+claude plugin install superpowers@superpowers-marketplace
+```
+
+**验证安装**:
+```bash
+# 查看可用命令
+claude plugin list
+# 应该看到: superpowers@superpowers-marketplace
+
+# 查看slash命令
+# 在Claude Code中输入以下命令验证:
+/superpowers:brainstorm    - 交互式设计优化
+/superpowers:write-plan    - 创建实施计划
+/superpowers:execute-plan  - 批量执行计划
+```
+
+**四大核心原则**:
+1. **TDD驱动开发**: RED-GREEN-REFACTOR循环,先写测试再写代码
+2. **系统性胜过临时性**: 系统化调试,不是临时修复表面症状
+3. **复杂度降低**: 模块化、抽象、单一职责
+4. **证据胜过声明**: 用测试证明,不用语言说服
+
+**五阶段工作流**:
+1. **头脑风暴**: 苏格拉底式对话明确需求
+2. **Worktree隔离**: Git Worktree并行开发
+3. **计划撰写**: 拆分为2-5分钟任务
+4. **子代理开发**: 两阶段评审(规范+质量)
+5. **收尾**: 合并/保持开放/放弃决策
+
+**14个核心技能**:
+- 开发流程: test-driven-development, systematic-debugging, brainstorming, writing-plans
+- 代码质量: code-review, test-automation, documentation
+- 工程实践: refactoring, dependency-management, continuous-integration
+- 团队协作: code-changes, knowledge-sharing, mentoring, troubleshooting
+
+**量化效果**:
+- Bug密度 ↓ 60-80%
+- 测试覆盖率 ↑ 80-95%
+- 维护成本 ↓ 50%
+- 长期开发效率 ↑ 20-30%
+
+**详细使用指南**: [06-Superpowers-AI编程工作流系统.md](./06-Superpowers-AI编程工作流系统.md)
 
 ---
 
@@ -158,7 +211,7 @@ claude plugin list
 
 | 类别 | 数量 |
 |------|------|
-| Plugins | 3个 |
+| Plugins | 4个 |
 | MCP | 6个（浏览器自动化有2种方案可选） |
 | 插件集合 | 80+ |
 
