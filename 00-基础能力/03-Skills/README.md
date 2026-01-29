@@ -213,6 +213,13 @@
 - 安装: `claude plugin marketplace add https://github.com/wshobson/agents`
 - 搜索: `claude plugin marketplace search`
 
+**SkillsLM** - 可视化桌面管理工具 ⭐
+- 来源: 社区开发的桌面客户端
+- 功能: 连接Vercel官方Skills商店、本地Skills统一管理、多端一键同步（Cursor/Claude Code/Cline）
+- 特点: Wails编写，轻量级（< 20MB）、跨平台支持
+- 下载: https://link.bytenote.net/note
+- Mac系统提示: 首次运行需执行 `xattr -d com.apple.quarantine /Users/xxx/Downloads/SkillsLM.app`
+
 ### 社区资源
 
 **Superpowers Marketplace**
