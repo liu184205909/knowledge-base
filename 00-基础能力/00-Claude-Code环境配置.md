@@ -8,9 +8,8 @@
 
 - ✅ Claude Code主程序
 - ✅ **全局CLAUDE.md配置** ⭐ **第一步必须配置**
-- 4个核心Plugins (代码简化、自动迭代、Dev Browser、Superpowers)
-- 6个核心MCP(网页读取、搜索、浏览器、视觉、GitHub、YouTube)
-- 80+插件集合
+- ✅ 6个核心MCP(网页读取、搜索、浏览器、视觉、GitHub、YouTube)
+- 80+插件集合（可选）
 
 > **重要**: CLAUDE.md配置是环境配置的基础，建议在安装完Claude Code主程序后**立即配置**，确保AI行为符合你的预期。
 
@@ -51,57 +50,19 @@
 
 ---
 
-## 2. 安装4个核心Plugins
+## 2. 安装6个核心MCP
 
-### 2.1 代码简化插件
-```bash
-claude plugin marketplace update claude-plugins-official
-claude plugin install code-simplifier
-```
-
-### 2.2 自动迭代插件(可选)
-```bash
-claude plugin install ralph-wiggum@anthropics
-```
-
-### 2.3 Dev Browser
-```bash
-claude plugin marketplace add sawyerhood/dev-browser
-claude plugin install dev-browser@sawyerhood/dev-browser
-```
-
-### 2.4 Superpowers - AI编程工作流系统 ⭐
-
-让AI编程助手像高级工程师一样工作（TDD驱动、系统性调试、证据胜过声明）
-
-**安装**:
-```bash
-claude plugin marketplace add obra/superpowers-marketplace
-claude plugin install superpowers@superpowers-marketplace
-```
-
-**主要命令**:
-- `/superpowers:brainstorm` - 交互式设计优化
-- `/superpowers:write-plan` - 创建实施计划
-- `/superpowers:execute-plan` - 批量执行计划
-
-**详细指南**: [05-Superpowers-AI编程工作流系统.md](./05-Superpowers-AI编程工作流系统.md)
-
----
-
-## 3. 安装6个核心MCP
-
-### 3.1 网页读取
+### 2.1 网页读取
 ```bash
 claude mcp add -s user -t http web-reader https://web-reader.xdai.dev
 ```
 
-### 3.2 联网搜索
+### 2.2 联网搜索
 ```bash
 claude mcp add -s user -t http web-search-prime https://web-search.xdai.dev
 ```
 
-### 3.3 浏览器自动化
+### 2.3 浏览器自动化
 
 **方案对比**：
 
@@ -142,30 +103,43 @@ Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
 
 ---
 
-**方式3: Dev Browser Plugin（仅CLI）**
+**方式3: browser-use **
 
-⚠️ **Windows兼容性问题**（2026-01-26测试）：`lsof`命令不存在，暂不可用
 
-待版本稳定后再测试
 
-### 3.4 视觉理解（需替换API Key）
+### 2.4 视觉理解（需替换API Key）
 ```bash
 claude mcp add -s user zai-mcp-server --env Z_AI_API_KEY=your_key -- npx -y "@z_ai/mcp-server"
 ```
 
-### 3.5 GitHub深度访问（需替换API Key）
+### 2.5 GitHub深度访问（需替换API Key）
 ```bash
 claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp --header "Authorization: Bearer your_api_key"
 ```
 
-### 3.6 YouTube字幕提取
+### 2.6 官方插件仓库（可选）
+
+Anthropic 官方维护的插件目录（7.2k stars），包含高质量插件：
+
 ```bash
-claude mcp add -s user youtube-transcript -- npx -y @sinco-lab/mcp-youtube-transcript
+# 添加官方插件仓库
+/plugin marketplace add anthropics/claude-plugins-official
+/plugin install <plugin-name>@claude-plugins-official
 ```
+
+**热门官方插件**：
+- `ralph-loop` - AI自我迭代开发（已在技巧3介绍）
+- `code-review` - 代码审查
+- `feature-dev` - 功能开发工作流
+- `pr-review-toolkit` - PR审查工具包
+- `security-guidance` - 安全指导
+- `frontend-design` - 前端设计
+
+> 💡 **提示**：大多数情况下内置Subagents已够用，按需安装插件即可。完整列表：https://github.com/anthropics/claude-plugins-official
 
 ---
 
-## 4. 安装80+插件集合
+## 3. 安装80+插件集合（可选）
 
 ```bash
 claude plugin marketplace add https://github.com/wshobson/agents
@@ -173,7 +147,7 @@ claude plugin marketplace add https://github.com/wshobson/agents
 
 ---
 
-## 5. 验证安装
+## 4. 验证安装
 
 ```bash
 # 查看MCP
@@ -216,64 +190,9 @@ alias zc="cd ../project-c"
 **执行受阻时**：立即切回plan模式重排计划
 
 **双Claude协作**：Claude 1写计划，Claude 2像主任工程师一样审阅
-
 ---
 
-### 技巧3：持续打磨CLAUDE.md ⭐⭐⭐⭐⭐
-
-**每次修正错误后**：对Claude说"更新你的CLAUDE.md，避免再犯"
-
-**进阶技巧**：让Claude为每个项目维护笔记目录，项目级别的规则管理
-
----
-
-### 技巧4：善用自动化Bug修复 ⭐⭐⭐⭐
-
-**场景**：遇到测试失败或错误时，直接把错误信息抛给Claude，让它分析并修复
-
-```bash
-# 直接粘贴错误信息
-Test failed: Expected 200 but got 500
-Error: Cannot read property 'id' of undefined
-```
-
----
-
-### 技巧5：充分利用终端环境 ⭐⭐⭐⭐
-
-**核心价值**：Claude Code是"有终端的AI"，比Web版强大得多
-
-**优势**：可以直接读写文件、运行命令和脚本、访问数据库、调试代码
-
----
-
-### 技巧6：使用专业Subagents ⭐⭐⭐⭐⭐
-
-**核心思想**：遇到专业任务时，使用专门优化的AI agents
-
-**可用专业agents**：code-reviewer、debugger、test-automator、backend-architect、frontend-developer、security-auditor
-
-**使用方法**：Claude会自动识别任务类型并调用专业agent
-
----
-
-### 技巧7：数据驱动的决策 ⭐⭐⭐
-
-**场景**：需要基于数据做决策时，让Claude分析数据，提供决策建议
-
-```bash
-> "分析过去30天的用户留存数据，找出流失原因"
-```
-
----
-
-### 技巧8：利用MCP扩展能力 ⭐⭐⭐⭐
-
-**核心MCP**：playwright（浏览器自动化）、web-reader（网页读取）、web-search（联网搜索）、zread（GitHub深度访问）、youtube-transcript（YouTube字幕提取）
-
----
-
-### 技巧9：Ralph Loop - AI自我迭代开发 ⭐⭐⭐
+### 技巧3：Ralph Loop - AI自我迭代开发 ⭐⭐⭐
 
 **功能**：让AI反复尝试直到完成任务，适合明确的开发任务
 

@@ -3,6 +3,8 @@
 **版本**: v1.0
 **分类**: Claude Code进阶配置
 **来源**: 刘小排 - 不会封号的Claude Code使用方法（已稳定测试一个月）
+https://mp.weixin.qq.com/s/beGkRVva7gtwv2iVxFJCnw
+
 
 ## 🎯 核心价值
 
