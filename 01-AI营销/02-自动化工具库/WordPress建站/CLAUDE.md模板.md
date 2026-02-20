@@ -1,22 +1,183 @@
 # WordPress AI建站规则模板
 
 > **放在项目根目录，命名为 `CLAUDE.md`，AI会自动读取遵守**
->
-> 核心用途：指导AI帮你完成WordPress建站（WoodMart + Elementor方案）
 
 ---
 
-## 项目概述
+# 两种AI辅助建站方式
+
+| 方式 | 适用场景 | AI操作 | 是否需要JSON文件 |
+|------|---------|--------|-----------------|
+| **直接写库** | 本地开发（Local） | AI直接写入数据库 | ❌ 不需要 |
+| **JSON导入** | 线上网站 | AI生成JSON → 手动导入 | ✅ 需要 |
+
+## 如何选择
+
+```
+本地开发？
+├── 是 → 直接写库（推荐）
+│         Local创建站点 → AI写数据库 → WPvivid部署
+└── 否 → JSON导入
+          AI生成JSON → 复制到Elementor → 导入
+```
+
+---
+
+# 方式1：本地开发流程（Local + AI）⭐推荐
+
+## 完整工作流
+
+```
+┌──────────────────────────────────────────────────────────┐
+│                Local + AI建站流程                         │
+├──────────────────────────────────────────────────────────┤
+│                                                          │
+│  第一步：Local创建站点（手动）                             │
+│  └→ Local一键创建WordPress环境（PHP+MySQL+Web服务器）     │
+│                                                          │
+│  第二步：安装主题和插件（手动）                            │
+│  └→ WoodMart主题 + Elementor Pro                         │
+│                                                          │
+│  第三步：AI直接写数据库（AI辅助）⭐                        │
+│  └→ 根据RLM营销方法论规划页面                             │
+│  └→ AI按照Elementor规则生成数据                          │
+│  └→ 直接写入wp_postmeta表                                │
+│                                                          │
+│  第四步：本地预览测试（手动）                              │
+│  └→ 浏览器访问 xxx.local 查看效果                        │
+│                                                          │
+│  第五步：部署到线上（手动）                                │
+│  └→ WPvivid备份 → 上传服务器 → 恢复                      │
+│                                                          │
+└──────────────────────────────────────────────────────────┘
+```
+
+## 第一步：Local创建站点
+
+**操作步骤**：
+1. 打开Local → 点击"+"创建新站点
+2. 输入站点名称（如：my-product-site）
+3. 选择环境（Preferred: PHP 8.x）
+4. 设置管理员账号
+5. 等待创建完成
+
+**创建后获得**：
+- 本地域名：`my-product-site.local`
+- WordPress后台：`my-product-site.local/wp-admin`
+- 数据库配置：`wp-config.php` 中查看
+
+## 第二步：安装主题和插件
+
+**必需安装**：
+- WoodMart主题（多功能主题）
+- Elementor Pro（页面编辑器）
+- WooCommerce（产品展示，可选）
+
+## 第三步：AI直接写数据库⭐核心
+
+**AI做的事情**：
+1. 根据需求规划页面结构（基于RLM营销方法论）
+2. 按照Elementor的数据格式生成内容
+3. **直接写入WordPress数据库**
+
+**技术原理**：
+```
+AI写入 → wp_postmeta表
+         meta_key: _elementor_data
+         meta_value: Elementor格式的JSON数据
+```
+
+## 第四步：本地预览测试
+
+- 浏览器访问 `xxx.local` 查看效果
+- 后台调整内容和样式
+- 测试移动端响应式
+
+## 第五步：部署到线上
+
+**使用WPvivid插件**：
+1. Local站点 → 安装WPvivid插件
+2. WPvivid → 备份 → 下载备份文件
+3. 线上服务器 → 安装WordPress + WPvivid
+4. WPvivid → 恢复 → 上传备份文件
+
+---
+
+# 方式2：JSON导入流程（线上网站）
+
+## 适用场景
+- 已有线上WordPress站点
+- 不方便直接操作数据库
+
+## 流程
+
+```
+第一步：AI生成JSON（AI辅助）
+└→ 描述需求 → AI生成Elementor JSON
+
+第二步：导入Elementor（手动）
+└→ 页面 → 用Elementor编辑 → 导入模板
+└→ 粘贴JSON → 导入
+
+第三步：调整发布（手动）
+└→ 修改内容 → 调整样式 → 发布
+```
+
+## 操作步骤
+
+1. **AI生成JSON**
+```
+你：帮我生成一个Hero区的Elementor JSON，标题是"XX"，按钮是"立即咨询"
+
+AI：生成Elementor格式的JSON代码...
+```
+
+2. **导入Elementor**
+   - WordPress后台 → 页面 → 新建
+   - 用Elementor编辑
+   - 点击"..." → 导入模板
+   - 粘贴JSON代码 → 导入
+
+---
+
+# AI写数据库规则
+
+## 必需的Meta字段
+
+创建Elementor页面时，必须同时写入：
+
+| meta_key | meta_value | 说明 |
+|----------|------------|------|
+| `_elementor_data` | JSON布局数据 | 页面结构 |
+| `_elementor_edit_mode` | `builder` | 编辑模式 |
+| `_elementor_template_type` | `wp-page` | 模板类型 |
+| `_elementor_version` | `3.x.x` | Elementor版本 |
+
+## 数据库配置
+
+Local站点的数据库配置在 `wp-config.php` 中：
+```php
+define( 'DB_NAME', 'local' );
+define( 'DB_USER', 'root' );
+define( 'DB_PASSWORD', 'root' );
+define( 'DB_HOST', 'localhost' );
+$table_prefix = 'wp_';
+```
+
+## 技术参考
+
+完整Widget列表、JSON结构、写入方式详见：
+→ [Elementor数据库存储格式.md](./Elementor数据库存储格式.md)
+
+---
+
+# 项目概述
 
 - **环境**: Local by Flywheel 本地开发
 - **CMS**: WordPress 6.x
 - **主题**: WoodMart（多功能主题，支持C端/B端）
 - **编辑器**: Elementor Pro（默认）
 - **产品展示**: WooCommerce
-
-> WoodMart + WooCommerce 不限于电商，B端产品展示同样适用
-
----
 
 ## 环境要求
 
@@ -35,7 +196,7 @@
 - `wp-admin/` - WordPress 后台核心
 - `wp-includes/` - WordPress 核心功能
 - `wp-config.php` - 站点配置
-- `wp-content/plugins/**` - 所有插件源码（用后台配置，不改代码）
+- `wp-content/plugins/**` - 所有插件源码
 - `wp-content/uploads/**` - 媒体文件目录
 - 任何 WordPress 核心文件
 
@@ -45,85 +206,38 @@
 wp-content/themes/woodmart-child/
 ```
 
-仅限WoodMart子主题目录，其他一律不碰。
-
-> WoodMart主题设置通过WP Admin后台配置，不直接改源码
-
 ---
 
-# 工作方式
+# 开发规则
 
-## 开发规则检查清单（每次开发必读）
+## 5条铁律（违反任何一条 = 不合格）
 
-### 开发前 (2分钟)
+- [ ] **颜色**：只用全局颜色，禁止硬编码`#FFFFFF`、`rgb()`等
+- [ ] **间距**：使用Elementor间距设置（必须是8的倍数）
+- [ ] **文字**：项目指定语言，禁止Emoji
+- [ ] **响应式**：使用Elementor响应式断点，测试移动端
+- [ ] **组件选择**：WoodMart → Elementor Pro → WooCommerce
 
-确认本次任务需要的组件类型：
+## 组件选择优先级
 
-| 任务类型 | 优先选择 |
-|---------|---------|
-| 产品展示 | WoodMart Elementor组件 |
-| 通用布局 | Elementor Pro组件 |
-| 购物功能 | WooCommerce组件 |
-| 表单/CTA | Elementor Pro组件 |
+```
+1. WoodMart Elementor组件（电商/产品专用）⭐优先
+2. Elementor Pro组件（通用）
+3. WooCommerce组件（产品相关）
+```
 
-### 开发中（每个Section完成后检查）
+## 常用模块
 
-**5条铁律 - 违反任何一条 = 不合格，必须重做**：
-
-- [ ] **颜色**：只用WoodMart全局颜色或Elementor全局颜色，禁止硬编码`#FFFFFF`、`rgb()`等
-- [ ] **间距**：使用Elementor间距设置（必须是8的倍数），不用硬编码像素值
-- [ ] **文字**：项目指定语言（如英文、简体中文），禁止Emoji
-- [ ] **响应式**：使用Elementor响应式断点，测试移动端效果
-- [ ] **组件选择**：优先WoodMart组件 → Elementor Pro组件 → WooCommerce组件
-
-### 开发后（提交前最终检查）
-
-1. 检查是否有硬编码颜色
-2. 检查移动端显示效果
-3. 检查是否有未使用的临时文件
-
----
-
-## 媒体与图片规则
-
-### 图片位置决策表
-
-| 图片类型 | 位置 | 原因 |
-|---------|------|------|
-| Logo、品牌图标 | 媒体库 | 通过主题设置引用 |
-| 产品图片 | 媒体库 | WooCommerce标准流程 |
-| 文章配图/封面 | 媒体库 | 内容层面，需缩略图 |
-| 客户评价头像 | 媒体库 | 内容会更新 |
-| Banner/Hero背景 | 媒体库 | 便于管理替换 |
-
-**简单记忆**：所有图片统一走媒体库
-
-### 图片规范
-
-- **格式**：WebP优先，JPG/PNG备选
-- **尺寸**：Hero背景1920x1080，产品图800x800，缩略图400x400
-- **压缩**：上传前压缩，单张不超过200KB
-
----
-
-## 每次修改前
-
-1. **给出计划**: 要改哪些文件、改什么、为什么
-2. **等待确认**: 重要修改需用户同意
-
-## 每次修改后
-
-1. **改动清单**: 列出所有修改的内容
-2. **验证步骤**: 说明如何在本地确认效果
-
-## 任务完成后
-
-**清理临时产物** - 任务完成后必须删除：
-- 测试页面（如有）
-- 临时草稿
-- 未使用的媒体文件
-
-**原则**：只保留最终交付物，不留中间产物
+| 模块 | 内容 | 常用Widget |
+|------|------|------------|
+| Hero | 首屏大图+标语 | heading, image, button |
+| 特性 | 3列图标卡片 | icon-box, image-box |
+| 产品 | 网格展示 | woocommerce-products, image-gallery |
+| 评价 | 轮播/卡片 | testimonial, image-carousel |
+| 数据 | 统计数字 | counter, progress |
+| FAQ | 手风琴 | accordion, toggle |
+| CTA | 转化按钮 | call-to-action, button |
+| 表单 | 询价入口 | form |
 
 ---
 
@@ -144,127 +258,14 @@ wp-content/themes/woodmart-child/
 }
 ```
 
-## 组件选择优先级
+## 常用flex属性
 
-```
-1. WoodMart Elementor组件（电商/产品专用）⭐优先
-2. Elementor Pro组件（通用）
-3. WooCommerce组件（产品相关）
-```
-
-## Elementor Pro组件
-
-| 模块 | Widget | 用途 |
-|------|--------|------|
-| 标题 | heading | 各级标题 |
-| 图片 | image | 单张图片 |
-| 按钮 | button | CTA按钮 |
-| 图标卡片 | icon-box | 特性展示 |
-| 图片卡片 | image-box | 图文卡片 |
-| 评价 | testimonial | 客户评价 |
-| 表单 | form | 询价/联系表单 |
-| 计数器 | counter | 数据统计 |
-| 手风琴 | accordion | FAQ |
-| 轮播 | image-carousel | 图片轮播 |
-
-## WoodMart Elementor组件（80+）
-
-**产品展示类**：
-| 组件 | 用途 |
-|------|------|
-| Products | 产品网格/列表 |
-| Products Carousel | 产品轮播 |
-| Product Categories | 产品分类 |
-| Products Brands | 品牌展示 |
-| Product Grid | 产品网格 |
-
-**功能类**：
-| 组件 | 用途 |
-|------|------|
-| AJAX Search | 实时搜索 |
-| Advanced Filters | 高级筛选 |
-| Shopping Cart | 购物车 |
-| Wishlist | 收藏夹 |
-| Compare | 产品对比 |
-| Stock Progress | 库存进度条 |
-
-**布局类**：
-| 组件 | 用途 |
-|------|------|
-| Banner | 横幅广告 |
-| Info Box | 信息盒子 |
-| Team Member | 团队成员 |
-| Instagram | Instagram展示 |
-| 3D View | 3D产品展示 |
-
-## WooCommerce组件
-
-| 组件 | 用途 |
-|------|------|
-| woocommerce-products | 产品列表 |
-| woocommerce-product-add-to-cart | 加购按钮 |
-| woocommerce-product-price | 产品价格 |
-| woocommerce-product-images | 产品图片 |
-| woocommerce-cart | 购物车 |
-| woocommerce-checkout | 结账 |
-
-## 颜色规范
-
-- 在WoodMart主题设置中配置全局颜色
-- Elementor中引用主题颜色
-- 避免硬编码颜色值
-
----
-
-# 页面模板
-
-WoodMart提供88+演示模板，导入方式：
-```
-WoodMart → Install Required Plugins → Import Demo
-```
-
-选择Elementor版本的演示模板
-
----
-
-# 部署规则
-
-## 本地开发
-```
-WPvivid导出 → 上传服务器 → 导入备份
-```
-
-## 线上网站
-```
-AI生成JSON → 导入Elementor → 发布
-```
-
-## 推送到生产环境
-
-**只推送**:
-- WoodMart子主题（如有自定义）
-- 必需的插件配置
-
-**不推送**:
-- WordPress 核心文件
-- wp-config.php
-- uploads/（媒体文件单独处理）
-
----
-
-# 安全原则
-
-**目录隔离 > 权限配置**
-
-通过只在WoodMart后台配置和Elementor编辑器工作，自然避免误操作核心文件。
-
-**插件配置在后台做**
-
-表单、支付、商城等功能用成熟插件（WooCommerce、WPForms等），在WP Admin后台配置。
-
-**小步快跑，随时可回滚**
-
-每次改动小而完整，出问题容易定位和恢复。
+| 属性 | 值 |
+|------|-----|
+| `flex_direction` | `row`, `column` |
+| `flex_wrap` | `wrap`, `nowrap` |
+| `justify_content` | `flex-start`, `center`, `flex-end`, `space-between` |
+| `align_items` | `flex-start`, `center`, `flex-end`, `stretch` |
 
 ---
 
@@ -273,7 +274,6 @@ AI生成JSON → 导入Elementor → 发布
 - 不改 WordPress 核心文件
 - 不改插件源码
 - 不执行 `rm -rf`、`git push`
-- 不修改数据库（除非明确要求写入Elementor数据）
 - 不写自定义"支付/表单后端逻辑"（用成熟插件解决）
 - **不删除 CLAUDE.md**（核心文档）
 
@@ -281,17 +281,17 @@ AI生成JSON → 导入Elementor → 发布
 
 # 常见问题
 
-**Q: 需要创建新页面怎么办？**
-A: 在WordPress后台创建页面，使用Elementor编辑，选择合适的WoodMart模板。
+**Q: 本地生成的页面能同步到线上吗？**
+A: 可以，使用WPvivid备份迁移
 
-**Q: 图片应该放哪里？**
-A: 所有图片统一通过媒体库上传。
+**Q: 生成后能修改吗？**
+A: 可以，在Elementor编辑器中正常编辑
 
-**Q: 如何确保符合设计规范？**
-A: 开发前查阅WoodMart主题设置，使用全局颜色和字体，开发后用5条铁律自查。
+**Q: 图片从哪里来？**
+A: AI使用占位图片，你在Elementor中替换
 
-**Q: WooCommerce相关的开发AI能做什么？**
-A: AI负责页面布局和Elementor配置，商品管理、支付配置、物流设置等在WP Admin后台操作。
+**Q: AI没有记忆怎么办？**
+A: 本文档（CLAUDE.md）放在项目根目录，AI每次开发会自动读取
 
 ---
 
