@@ -31,39 +31,40 @@ from typing import List, Dict, Optional
 # 配置
 # ============================================
 
-# 域名候选列表（综合推荐TOP 20）
+# 域名候选列表（球衣独立站 - 第二批变体）
 DOMAIN_CANDIDATES = [
-    # Tier 1: 之前确认可用的最佳选择
-    "sealvantage.com",  # ✅ 已确认可用
-    "sealelite.com",    # ✅ 已确认可用
-    "sealvertex.com",   # ✅ 已确认可用
-    "fortisseal.com",   # ✅ 已确认可用
-    "aegisseal.com",    # ✅ 已确认可用
+    # 可能可用的4个（需确认）
+    "diehardkits.com",   # Die Hard Kits（死忠球迷）
+    "kultkits.com",      # Kult Kits（潮流球衣）
+    "boldjersey.com",    # Bold Jersey（大胆球衣）
+    "soccio.com",        # Soccer + io
 
-    # Tier 2: 新增优质域名（全球化友好）
-    "sealprime.com",    # Seal + Prime（首要、最佳）
-    "sealcrest.com",    # Seal + Crest（顶峰、顶部）
-    "sealnexus.com",    # Seal + Nexus（连接、核心）
-    "sealdynamics.com", # Seal + Dynamics（动力、活力）
-    "sealpuls.com",     # Seal + Puls（脉冲）
+    # 新变体：加后缀
+    "goaldealshop.com",  # GoalDeal + Shop
+    "kitdealstore.com",  # KitDeal + Store
+    "truefanjersey.com", # TrueFan + Jersey
+    "fankitshop.com",    # FanKit + Shop
+    "worldkitshop.com",  # WorldKit + Shop
 
-    # Tier 3: 拉丁词根/国际化
-    "optiseal.com",     # Opti（最佳）+ Seal
-    "novaseal.com",     # Nova（新星）+ Seal
-    "primaseal.com",    # Prima（第一）+ Seal
-    "altusseal.com",    # Altus（高）+ Seal
-    "veloxseal.com",    # Velox（快速）+ Seal
+    # 新变体：加前缀
+    "mygoaldeal.com",    # My + GoalDeal
+    "thekultkits.com",   # The + KultKits
+    "getkultkits.com",   # Get + KultKits
+    "buyboldjersey.com", # Buy + BoldJersey
 
-    # Tier 4: 隐喻/保护类
-    "sentinseal.com",   # Sentinel（哨兵）+ Seal
-    "armorseal.com",    # Armor（装甲）+ Seal
-    "shieldseal.com",   # Shield（盾）+ Seal
-    "citadelseal.com",  # Citadel（城堡）+ Seal
+    # 新变体：其他后缀
+    "goaldeals.com",     # GoalDeals（复数）
+    "kitdeals.com",      # KitDeals（复数）
+    "fankitsonline.com", # FanKits + Online
+    "jerseykult.com",    # Jersey + Kult
+    "kitculture.com",    # Kit + Culture
 
-    # Tier 5: 工程/技术类
-    "engiseal.com",     # Engine（工程）+ Seal
-    "valveseal.com",    # Valve（阀）+ Seal（垂直领域）
-    "polymseal.com",    # Polymer（聚合物）+ Seal
+    # 新变体：创意组合
+    "goalsgear.com",     # Goals + Gear
+    "kitforce.com",      # Kit + Force
+    "jerseyvault.com",   # Jersey + Vault
+    "kitleague.com",     # Kit + League
+    "soccerkult.com",    # Soccer + Kult
 ]
 
 # 输出文件
