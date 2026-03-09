@@ -319,14 +319,17 @@ tmux attach -t ralph  # 重连查看进度
 - [03-Skills使用指南.md](./03-Skills使用指南.md) - Skills安装、协作模式、最佳实践
 - [01-RLM递归思想.md](./01-RLM递归思想.md) - RLM方法论
 - [02-去除AI编程UI味儿的实战方法.md](./02-去除AI编程UI味儿的实战方法.md) - 实战方法
-- [05-Claude-Code第三方API配置.md](./05-Claude-Code第三方API配置.md) - 第三方API接入
+- [05-OpenClaw实战案例.md](./05-OpenClaw实战案例.md) - 云端Agent实战案例
 
-AI编程工具进化阶段
+---
 
-阶段	工具	特点
-0 Web IDE	v0、Lovable、Bolt.new	网页生成，难以做商业产品
-1 一站式 AI IDE	Cursor、Windsurf、Antigravity	新手友好，一站式搞定
-2 VS Code + AI 插件	Claude Code Extension、Cline	灵活，AI与界面解耦
-3 终端 CLI	Claude Code CLI、Codex CLI	纯黑框，零GUI
-4 桌面应用	Claude Cowork、Codex Desktop	自己操作电脑，代码隐形
-5 OpenClaw	云端Agent	通过IM指挥，什么都不用开
+## AI编程工具进化阶段
+
+| 阶段 | 工具 | 特点 |
+|------|------|------|
+| 0 Web IDE | v0、Lovable、Bolt.new | 网页生成，难以做商业产品 |
+| 1 一站式 AI IDE | Cursor、Windsurf、Antigravity | 新手友好，一站式搞定 |
+| 2 VS Code + AI 插件 | Claude Code Extension、Cline | 灵活，AI与界面解耦 |
+| 3 终端 CLI | Claude Code CLI、Codex CLI | 纯黑框，零GUI |
+| 4 桌面应用 | Claude Cowork、Codex Desktop | 自己操作电脑，代码隐形 |
+| 5 OpenClaw | 云端Agent | 通过IM指挥，什么都不用开 |

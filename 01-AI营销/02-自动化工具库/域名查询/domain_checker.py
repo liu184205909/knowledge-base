@@ -7,13 +7,16 @@
 日期: 2026-01-23
 
 使用方法:
-1. 安装依赖: pip install requests python-whois
-2. 修改 DOMAIN_CANDIDATES 列表
-3. 运行: python domain_checker_with_whois.py
+1. 安装依赖: pip install requests
+2. 运行: python domain_checker.py [域名列表文件.txt]
+   - 不指定文件时使用内置 DOMAIN_CANDIDATES 列表
+   - 指定文件时每行一个域名（支持 # 注释行）
+3. 结果保存至 domain_availability_with_whois.csv
 """
 
 import sys
 import io
+import argparse
 
 # 修复Windows控制台编码问题
 if sys.platform == 'win32':
@@ -107,8 +110,6 @@ class WhoisAPIClient:
         }
 
         try:
-            # RDAP API端点
-            tld = domain.split('.')[-1]
             rdap_url = f"https://rdap.org/domain/{domain}"
 
             response = requests.get(
@@ -130,14 +131,13 @@ class WhoisAPIClient:
                     for entity in data["entities"]:
                         if "role" in entity and entity["role"] == "registrar":
                             if "vcardArray" in entity:
-                                # 提取注册商名称
                                 try:
                                     vcard = entity["vcardArray"][1]
                                     for item in vcard:
                                         if item[0] == "fn":
                                             result["registrar"] = item[3]
                                             break
-                                except:
+                                except (KeyError, IndexError, TypeError):
                                     pass
 
                 # 尝试提取创建日期
@@ -261,7 +261,7 @@ class WhoisAPIClient:
 # ============================================
 
 def check_domain_dns(domain: str) -> Dict:
-    """DNS快速查询"""
+    """DNS快速查询，返回 available: "Available"/"Registered"/"Unknown" 字符串"""
     result = {
         "domain": domain,
         "available": "Unknown",
@@ -274,17 +274,15 @@ def check_domain_dns(domain: str) -> Dict:
     }
 
     try:
-        # 检查主域名DNS
         socket.setdefaulttimeout(3)
         ip = socket.gethostbyname(domain)
         result["has_dns"] = True
         result["ip_address"] = ip
-        result["available"] = False
+        result["available"] = "Registered"
         result["registrar"] = "DNS Record Found"
 
     except socket.gaierror:
-        # DNS无记录，可能可用
-        result["available"] = True
+        result["available"] = "Available"
         result["registrar"] = "No DNS Record"
 
     except Exception as e:
@@ -314,7 +312,7 @@ def check_domain_comprehensive(domain: str, whois_client: WhoisAPIClient) -> Dic
     # 综合判断
     final_result = {
         "domain": domain,
-        "dns_available": dns_result["available"],
+        "dns_status": dns_result["available"],
         "whois_available": whois_result["available"],
         "whois_registered": whois_result["registered"],
         "has_dns": dns_result["has_dns"],
@@ -326,14 +324,16 @@ def check_domain_comprehensive(domain: str, whois_client: WhoisAPIClient) -> Dic
         "confidence": "Low"
     }
 
-    # 判断逻辑
-    if dns_result["available"] == True and whois_result["available"] == True:
+    dns_avail = dns_result["available"]
+    whois_avail = whois_result["available"]
+
+    if dns_avail == "Available" and whois_avail == True:
         final_result["final_status"] = "Available"
         final_result["confidence"] = "High"
-    elif dns_result["available"] == False or whois_result["registered"] == True:
+    elif dns_avail == "Registered" or whois_result["registered"] == True:
         final_result["final_status"] = "Registered"
         final_result["confidence"] = "High"
-    elif dns_result["available"] == True and whois_result["error"]:
+    elif dns_avail == "Available" and whois_result["error"]:
         final_result["final_status"] = "Possibly Available"
         final_result["confidence"] = "Medium"
     else:
@@ -373,7 +373,7 @@ def check_domains_batch(domains: List[str], use_whois: bool = True) -> List[Dict
 
         # 显示结果
         status = result.get("final_status") or result.get("available", "Unknown")
-        status_icon = "✅" if status in ["Available", True] else "❌"
+        status_icon = "✅" if status == "Available" else "❌"
         print(f"{status_icon} {status}")
 
         # 延迟
@@ -464,9 +464,9 @@ def print_summary(results: List[Dict]):
 
     for result in results:
         status = result.get("final_status", result.get("available", "Unknown"))
-        if status in ["Available", True]:
+        if status == "Available":
             available += 1
-        elif status in ["Registered", False]:
+        elif status in ("Registered", "Possibly Available"):
             registered += 1
         else:
             unknown += 1
@@ -482,7 +482,7 @@ def print_summary(results: List[Dict]):
         print(f"\n✅ 可用的域名:")
         for result in results:
             status = result.get("final_status", result.get("available"))
-            if status in ["Available", True]:
+            if status == "Available":
                 confidence = result.get("confidence", "")
                 print(f"  • {result['domain']} (置信度: {confidence})")
 
@@ -491,23 +491,60 @@ def print_summary(results: List[Dict]):
 # 主程序
 # ============================================
 
+def load_domains_from_file(filepath: str) -> List[str]:
+    """从文本文件读取域名列表，每行一个域名，支持 # 注释"""
+    domains = []
+    with open(filepath, encoding='utf-8') as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith('#'):
+                domains.append(line)
+    return domains
+
+
 def main():
     """主程序"""
+    parser = argparse.ArgumentParser(description="域名批量查询工具（DNS + RDAP）")
+    parser.add_argument(
+        "domains_file",
+        nargs="?",
+        help="域名列表文件路径（每行一个域名，# 开头为注释）。不指定则使用内置列表。"
+    )
+    parser.add_argument(
+        "--no-whois",
+        action="store_true",
+        help="禁用 Whois/RDAP 查询，仅使用 DNS 查询（速度更快）"
+    )
+    parser.add_argument(
+        "--output",
+        default=OUTPUT_CSV,
+        help=f"CSV 输出文件路径（默认: {OUTPUT_CSV}）"
+    )
+    args = parser.parse_args()
+
+    use_whois = not args.no_whois
+
+    if args.domains_file:
+        domains = load_domains_from_file(args.domains_file)
+        if not domains:
+            print(f"❌ 文件 {args.domains_file} 中没有有效域名")
+            sys.exit(1)
+    else:
+        domains = DOMAIN_CANDIDATES
+
     print("="*70)
     print("🔍 域名批量查询工具 - 增强版（集成Whois API）")
     print("="*70)
     print(f"⏰ 开始时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print(f"📋 待查询域名: {len(DOMAIN_CANDIDATES)} 个")
-    print(f"📡 Whois API: {'启用' if USE_WHOIS_API else '禁用'}")
+    print(f"📋 待查询域名: {len(domains)} 个")
+    print(f"📡 Whois API: {'启用' if use_whois else '禁用'}")
     print("="*70)
 
-    # 显示待查询域名
     print("\n📋 待查询域名列表:")
-    for i, domain in enumerate(DOMAIN_CANDIDATES, 1):
+    for i, domain in enumerate(domains, 1):
         print(f"  {i:2d}. {domain}")
 
-    # 确认
-    if USE_WHOIS_API:
+    if use_whois:
         print(f"\n⚠️  注意: 将使用DNS + Whois API综合查询")
         print(f"   Whois API使用RDAP协议（官方推荐）")
     else:
@@ -521,22 +558,20 @@ def main():
     else:
         print("\n🚀 自动运行模式开始查询...")
 
-    # 开始查询
     start_time = time.time()
-    results = check_domains_batch(DOMAIN_CANDIDATES, use_whois=USE_WHOIS_API)
+    results = check_domains_batch(domains, use_whois=use_whois)
     end_time = time.time()
 
     # 打印摘要
     print_summary(results)
 
-    # 保存结果
     print(f"\n⏱️  查询耗时: {end_time - start_time:.2f} 秒")
-    save_to_csv(results)
-    save_to_readable_text(results)  # 保存易读格式
+    save_to_csv(results, args.output)
+    save_to_readable_text(results)
 
     print("\n✅ 查询完成!")
 
-    if USE_WHOIS_API:
+    if use_whois:
         print("\n💡 下一步:")
         print("   1. 查看CSV文件了解详情")
         print("   2. 对'可用'的域名进行最终确认")
