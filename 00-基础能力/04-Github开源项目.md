@@ -79,4 +79,39 @@
 
 ---
 
-**最后更新**: 2026-03-02
+### ebook2audiobook
+
+**GitHub**: https://github.com/DrewThomasson/ebook2audiobook
+
+**简介**: 将电子书一键转换为有声读物的开源工具，支持1100+种语言
+
+**核心功能**:
+- 电子书转有声书（支持epub、pdf、mobi、txt等20+格式）
+- 语音克隆（可上传自己的声音样本）
+- 智能章节划分
+- 多语言支持（1100+种语言）
+
+**特点**:
+- 全离线处理，隐私安全
+- 跨平台支持（Windows/macOS/Linux）
+- GPU加速，转换速度快
+- 输出m4b格式，包含完整章节信息
+
+**快速使用**:
+```bash
+# 克隆项目
+git clone https://github.com/DrewThomasson/ebook2audiobook.git
+cd ebook2audiobook
+
+# Linux/macOS
+./ebook2audiobook.sh
+
+# Windows
+ebook2audiobook.cmd
+```
+
+**适用场景**: 碎片化学习、通勤听书、技术文档转音频
+
+---
+
+**最后更新**: 2026-03-18
