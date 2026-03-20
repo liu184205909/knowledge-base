@@ -4,6 +4,16 @@
 
 **GitHub**: https://github.com/WordPress/mcp-adapter
 
+## 适用场景分析
+
+| 场景 | 适配性 | 说明 |
+|------|--------|------|
+| Elementor 建站 | ❌ 有限 | Elementor 未注册 Abilities，无法直接调用 |
+| 多站点日常运营 | ✅ 有用 | 批量管理产品、订单、内容 |
+| WooCommerce 管理 | ⚠️ 部分 | 需要 WC 注册相应 Abilities |
+
+**结论**：建站期帮助不大，多站点运营期再考虑使用。
+
 ## 核心概念
 
 将 WordPress Abilities API 桥接到 MCP 协议，让 Claude 等 AI 客户端直接操作 WordPress。
