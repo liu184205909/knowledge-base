@@ -54,6 +54,12 @@ claude mcp add -s user -t http web-search-prime-xdai https://web-search.xdai.dev
 
 > Skill 不是越多越好，功能相近会冲突，推荐 5-8 个高频使用的。
 
+### ⚠️ 安装位置说明
+
+**Skills 必须安装到用户目录**，`npx clawhub@latest install` 会将 Skill 写入**当前工作目录**，需确保不在项目目录下执行。
+- ✅ 正确路径：`~/.claude/skills/<skill-name>/SKILL.md`
+- ❌ 错误：在项目目录下运行，会在项目里误创建 `skills/` 和 `.clawhub/`
+
 ### 安全 & 基础
 
 | Skill | 用途 | 来源 |
@@ -141,13 +147,20 @@ claude mcp add -s user -t http web-search-prime-xdai https://web-search.xdai.dev
 
 ## 5. 安装命令汇总
 
+> ⚠️ **clawhub 命令必须在 `~/` 下执行**，避免 skills 误装在项目目录。
+
 ```bash
 # === MCP 验证 ===
 claude mcp list          # 预期: 所有项 ✓ Connected
 
-# === Skills 安装 ===
+# === Skills 安装（clawhub 来源）===
+# CLAWHUB_WORKDIR 指定安装目录，确保 skills 装到 ~/.claude/skills/
+$env:CLAWHUB_WORKDIR="$HOME\.claude"    # Windows PowerShell
+# export CLAWHUB_WORKDIR="$HOME/.claude"  # Mac/Linux
 npx clawhub@latest install skill-vetter
 npx clawhub@latest install image-generation
+
+# === Skills 安装（skills.sh 来源）===
 npx skills add anthropics/skills --skill pdf xlsx docx pptx frontend-design skill-creator --agent claude-code -y
 npx skills add aaron-he-zhu/seo-geo-claude-skills
 npx skills add AgriciDaniel/claude-seo
@@ -166,6 +179,52 @@ npx skills list -g
 
 ---
 
-## 相关文档
+## 6. 自建 Skill
 
-- [03-Skills使用指南.md](./03-Skills使用指南.md)
+**三原则**：① 重复3次以上才值得固化 ② 单一职责方便组合 ③ 使用中持续迭代
+
+**存放路径**：`~/.claude/skills/<name>/SKILL.md`
+
+```yaml
+---
+name: my-skill
+description: |
+  技能描述。触发关键词: "xxx"、"yyy"
+---
+
+# 技能名称
+
+## 使用场景
+- 场景1
+
+## 工作流程
+1. 步骤1
+2. 步骤2
+
+## 输出格式
+- 输出格式说明
+```
+
+---
+
+## 7. 多 Skills 协作
+
+| 模式 | 适用场景 | 特点 |
+|------|---------|------|
+| **主控 Skill** ⭐ | 固定流程（内容生产、发布） | 一次配置，标准化，可复用 |
+| **会话指定** | 探索性/一次性任务 | 灵活，直接在对话中指定 |
+| **混合模式** ⭐⭐ | 大部分场景（推荐默认） | 固定流程自动化 + 灵活环节手动 |
+
+**选择决策树**：
+```
+需要频繁重复执行？
+├─ 是 → 主控 Skill 模式
+└─ 否
+    ├─ 需要灵活探索？ → 会话指定模式
+    └─ 核心流程固定？ → 混合模式（推荐默认）
+```
+
+**最佳实践**：
+- 某操作重复 3 次以上 → 立即创建 Skill
+- <10 个 Skill：会话指定；10-30 个：创建主控 Skill；>30 个：混合模式
+- 每个 Skill 单一职责 + 明确输入/输出格式，方便串联

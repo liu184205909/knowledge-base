@@ -1,0 +1,24 @@
+domain,dns_available,whois_available,whois_registered,has_dns,ip_address,registrar,created_date,check_time,final_status,confidence
+diehardkits.com,True,False,False,False,,No DNS Record,,2026-02-28 16:08:16,Possibly Available,Medium
+kultkits.com,True,False,False,False,,No DNS Record,,2026-02-28 16:08:19,Possibly Available,Medium
+boldjersey.com,True,False,False,False,,No DNS Record,,2026-02-28 16:08:22,Possibly Available,Medium
+soccio.com,True,False,False,False,,No DNS Record,,2026-02-28 16:08:24,Possibly Available,Medium
+goaldealshop.com,True,False,False,False,,No DNS Record,,2026-02-28 16:08:27,Possibly Available,Medium
+kitdealstore.com,True,False,False,False,,No DNS Record,,2026-02-28 16:08:30,Possibly Available,Medium
+truefanjersey.com,True,False,False,False,,No DNS Record,,2026-02-28 16:08:33,Possibly Available,Medium
+fankitshop.com,False,False,False,True,172.67.139.214,DNS Record Found,,2026-02-28 16:08:36,Registered,High
+worldkitshop.com,True,False,False,False,,No DNS Record,,2026-02-28 16:08:40,Possibly Available,Medium
+mygoaldeal.com,True,False,False,False,,No DNS Record,,2026-02-28 16:08:43,Possibly Available,Medium
+thekultkits.com,True,False,False,False,,No DNS Record,,2026-02-28 16:08:46,Possibly Available,Medium
+getkultkits.com,True,False,False,False,,No DNS Record,,2026-02-28 16:08:49,Possibly Available,Medium
+buyboldjersey.com,True,False,False,False,,No DNS Record,,2026-02-28 16:08:52,Possibly Available,Medium
+goaldeals.com,False,False,False,True,13.223.25.84,DNS Record Found,,2026-02-28 16:08:55,Registered,High
+kitdeals.com,False,False,False,True,54.243.117.197,DNS Record Found,,2026-02-28 16:08:59,Registered,High
+fankitsonline.com,True,False,False,False,,No DNS Record,,2026-02-28 16:09:05,Possibly Available,Medium
+jerseykult.com,True,False,False,False,,No DNS Record,,2026-02-28 16:09:09,Possibly Available,Medium
+kitculture.com,True,False,False,False,,No DNS Record,,2026-02-28 16:09:14,Possibly Available,Medium
+goalsgear.com,False,False,False,True,76.223.54.146,DNS Record Found,,2026-02-28 16:09:17,Registered,High
+kitforce.com,False,False,False,True,8.219.97.144,DNS Record Found,,2026-02-28 16:09:20,Registered,High
+jerseyvault.com,False,False,False,True,76.223.54.146,DNS Record Found,,2026-02-28 16:09:25,Registered,High
+kitleague.com,True,False,False,False,,No DNS Record,,2026-02-28 16:09:33,Possibly Available,Medium
+soccerkult.com,True,False,False,False,,No DNS Record,,2026-02-28 16:09:36,Possibly Available,Medium
