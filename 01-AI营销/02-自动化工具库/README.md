@@ -18,18 +18,23 @@
 
 ## 标准工作流
 
-```
-关键词输入
-    ↓
-02-竞品挖掘 (SERP发现竞品)
-    ↓ competitor_urls.txt
-03-Sitemap解析 (还原内容架构)
-    ↓ blog_urls.csv
-05-内容模式分析 (找蓝海方向)
-    ↓ content_pattern_report.md
+### 1. 宏观流程拆解
 
-同步进行:
-01-域名查询 → 04-WordPress建站
+| 阶段 | 工具 / 环节 | 核心目标 |
+|------|------------|---------|
+| 步骤1 | `02-竞品挖掘工具` | SERP批量拉竞品 |
+| 步骤2 | `03-竞品分析工具` | Sitemap解析网站结构 |
+| 步骤3 | `01-域名查询` / `04-WordPress建站` | 域名选择 + 建站 |
+| 步骤4 | `SEMrush + AI` | 关键词数据获取与分析 |
+
+### 2. 核心脚本执行链路
+
+```text
+02-竞品挖掘工具/serp_competitor_finder.py   ← SERP 批量拉竞品
+    ↓ competitor_urls.txt
+03-竞品分析工具/sitemap_parser.py           ← Sitemap 解析内容架构
+    ↓ blog_urls.csv
+05-竞品内容分析工具/content_analyzer.py     ← 批量抓取 title/H1/H2，输出内容模式报告
 ```
 
 ---
