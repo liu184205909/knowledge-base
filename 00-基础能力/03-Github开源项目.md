@@ -138,4 +138,38 @@ ebook2audiobook.cmd
 
 ---
 
-**最后更新**: 2026-03-20
+### bb-browser（坏孩子浏览器）
+
+**GitHub**: https://github.com/epiral/bb-browser
+
+**简介**: 通过复用真实 Chrome 浏览器登录态进行网站自动化操作的工具，专为 AI Agent 和开发者设计，天然绕过反爬检测
+
+**核心功能**: 平台数据抓取、浏览器自动化（打开/点击/输入/执行JS/抓包/截图）、结构化JSON输出、MCP模式接入AI编辑器
+
+**特点**:
+- 复用真实浏览器登录态，无需重新登录或导出Cookie
+- 内置36大平台、103条命令（知乎/微博/Twitter/GitHub/YouTube/雪球等）
+- CLI直接调用 + MCP模式，可接入Claude Code、Cursor
+- AI可在10分钟内自动逆向新网站生成适配命令（`bb-browser guide`）
+- 支持`jq`过滤与多标签页并发，方便Agent批量处理
+
+**快速使用**:
+```bash
+# 安装
+npm install -g bb-browser
+
+# 更新适配器并查看推荐站点
+bb-browser site update
+bb-browser site recommend
+
+# 示例：知乎热榜 / Twitter搜索 / 股票行情
+bb-browser site zhihu/hot
+bb-browser site twitter/search "RAG"
+bb-browser site eastmoney/stock "茅台"
+```
+
+**适用场景**: 需要登录态的平台数据采集、AI Agent信息调研、跨平台批量数据抓取
+
+---
+
+**最后更新**: 2026-04-16
