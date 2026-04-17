@@ -58,211 +58,32 @@
 
 ---
 
-## 2. Skill 安装
+## 2. Skill 安装与管理
 
-> ⚠️ **Skills 必须安装到用户目录**，两种安装方式注意事项：
-> - `npx clawhub@latest install` 会将 Skill 写入**当前工作目录**，需确保不在项目目录下执行
-> - `npx skills add` 默认安装到**当前项目目录**，**必须加 `-g` 参数**才安装到全局目录
-> - ✅ 正确路径：`~/.claude/skills/<skill-name>/SKILL.md`
-> - ❌ 错误：不加 `-g` 会在项目的 `.claude/skills/` 下误创建
+> ⚠️ **安装注意事项**：
+> - `npx skills add` 默认装到**项目目录**，必须加 **`-g`** 才装到全局 `~/.claude/skills/`
+> - `npx clawhub@latest install` 装到**当前工作目录**，建议 `cd ~/` 后执行
+> - Skill 触发原理：Agent 匹配 `description` 中的关键词，显示 `[command-message]xxx skill is loading` 即为成功触发
 
-### 2.1 安装位置说明
+### 2.1 Web Access（首要安装）
 
-**clawhub 命令必须在 `~/` 下执行**，避免 skills 误装在项目目录。
+搜索 + 浏览器 + 登录态 + 社媒发布一体化。通过 CDP 直连你的 Chrome，复用登录态。
+
+**安装**（已安装）：
+```bash
+git clone https://github.com/eze-is/web-access ~/.claude/skills/web-access
+```
+
+**前置条件**：Chrome 打开 `chrome://inspect/#remote-debugging`，勾选 Allow remote debugging。
+
+**安装命令汇总**：
 
 ```bash
-# 指定安装目录，确保 skills 装到 ~/.claude/skills/
-$env:CLAWHUB_WORKDIR="$HOME\.claude"    # Windows PowerShell
-# export CLAWHUB_WORKDIR="$HOME/.claude"  # Mac/Linux
-```
-
-### 2.2 首要安装：Web Access Skill
-
-> **优先级最高**，建议优先安装。
-
-**Web Access** 是一个通用联网 Skill，让 Agent 拥有搜索、阅读、浏览器操作（点击/填表/上传/发布）的完整能力，并复用你 Chrome 的登录态，支持 Sub-Agent 并行、自动经验沉淀。
-
-**安装方式**：把下面这段话发给 Agent：
-
-```
-帮我安装 web-access skill，仓库地址是 https://github.com/eze-is/web-access。
-这个 skill 原为 Claude Code 设计，安装前请先理解其核心原理和工作逻辑，
-再结合你的 Agent 架构与电脑环境进行适配，使其真正融入当前环境，而非生硬移植。
-```
-
-**前置条件**：
-- 安装 Chrome 浏览器并更新到最新版本
-- Chrome 地址栏输入 `chrome://inspect/#remote-debugging`，勾选 `Allow remote debugging for this browser instance`
-
-**使用方式**：
-- 安装后直接下达联网任务即可，Agent 会自动加载 Skill
-- 示例：`帮我查xx`、`打开xx`、`帮我在xx平台写xx`
-- Agent 操作浏览器时 Chrome 会弹窗提示，点击"允许"即可
-- 推荐使用大参数多模态模型（Claude、Kimi K2.5），效果最佳
-
-**GitHub**: https://github.com/eze-is/web-access
-
-### 2.3 Skill 目录
-
-> Skill 不是越多越好，功能相近会冲突，推荐 5-8 个高频使用的。
-
-#### 安全 & 基础
-
-| Skill | 用途 | 来源 |
-|-------|------|------|
-| **Skill Vetter** | 安装前安全审查 | [clawhub](https://clawhub.ai/spclaudehome/skill-vetter) |
-| **Frontend Design** | 前端审美约束 | [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/frontend-design) |
-| **办公四件套** (pdf/xlsx/docx/pptx) | 文档生成 | [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills) |
-| **Skill-Creator** | 自建 Skill | [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/skill-creator) |
-
-#### 联网 & 信息
-
-| Skill | 用途 | 来源 |
-|-------|------|------|
-| ⭐ **Web Access** | **首要安装**，搜索+浏览器+登录态+社媒发布 | [eze-is/web-access](https://github.com/eze-is/web-access) |
-| **Tavily Search** | AI优化搜索（Web Access 未安装时的备选） | [tavily-ai/skills](https://github.com/tavily-ai/skills) |
-| **last30days** | 海外社区讨论数据（选品/竞品） | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) |
-
-#### 调试 & 记忆
-
-| Skill | 用途 | 来源 |
-|-------|------|------|
-| **PUA** | 卡住时 `/pua` 强制换思路 | [tanweai/pua](https://github.com/tanweai/pua) |
-| **Claude-mem** | 跨会话长期记忆 | [thedotmack/claude-mem](https://github.com/thedotmack/claude-mem) |
-
-#### SEO & 营销
-
-| Skill | 用途 | 来源 |
-|-------|------|------|
-| **seo-geo-claude-skills** | 20个SEO/GEO技能，零依赖 | [GitHub](https://github.com/aaron-he-zhu/seo-geo-claude-skills) ⭐899 |
-| **claude-seo** | 19技能+12代理，E-E-A-T/Schema/PDF报告 | [GitHub](https://github.com/AgriciDaniel/claude-seo) ⭐4.3k |
-| **Agentic-SEO-Skill** | 16技能+10代理+33脚本 | [GitHub](https://github.com/Bhanunamikaze/Agentic-SEO-Skill) ⭐300+ |
-| **marketingskills** | 34个营销技能全家桶 | [GitHub](https://github.com/coreyhaines31/marketingskills) ⭐19.7k |
-| **typefully/agent-skills** | 社媒发布(X/LinkedIn/Threads等) | [GitHub](https://github.com/typefully/agent-skills) |
-| **claude-blog** | 博客创作+SEO+AEO | [GitHub](https://github.com/AgriciDaniel/claude-blog) ⭐432 |
-| **claude-ads** | 付费广告审计(186项检查) | [GitHub](https://github.com/AgriciDaniel/claude-ads) |
-
-#### 建站 & 电商
-
-| Skill | 用途 | 来源 |
-|-------|------|------|
-| **wordpress-agent-skills** | WordPress主题/站点(Automattic官方) | [GitHub](https://github.com/Automattic/wordpress-agent-skills) |
-
-#### 邮件 & 配图
-
-| Skill | 用途 | 来源 |
-|-------|------|------|
-| **email-marketing-bible** | 5.5万字邮件营销知识库 | [GitHub](https://github.com/CosmoBlk/email-marketing-bible) |
-| **image-generation** | 多模型配图(GPT/Gemini/FLUX/MJ) | [clawhub](https://clawhub.ai/ivangdavila/image-generation) |
-
-> **配图备选**: [deapi-ai/claude-code-skills](https://github.com/deapi-ai/claude-code-skills)（$0.002/张起） | [free-image-generation-skill](https://clawhub.ai/mrilaikram/free-image-generation-skill)（免费，稳定性一般）
-
-#### 远程操控（按需）
-
-| Skill | 用途 | 来源 |
-|-------|------|------|
-| **Claude-to-IM** | 飞书桥接，手机远程操控 | [GitHub](https://github.com/op7418/Claude-to-IM-skill) |
-
-### 2.4 中文创作链（花叔 huashu-skills，备用）
-
-> 来源: [alchaincyf/huashu-skills](https://github.com/alchaincyf/huashu-skills) | 路径: `~/.claude/skills/<skill-name>/SKILL.md`
-
-| Skill | 用途 | 触发词 |
-|-------|------|--------|
-| **topic-generation** | 选题方向+标题+大纲 | "选题"/"写什么" |
-| **article-to-x** | 长文转微博/小红书 | "转微博"/"发小红书" |
-| **ai-proofreading** | 降AI检测率至30%以下 | "AI味太重" |
-| **image-generation** | 配图+上传ImgBB | "配图"/"插图" |
-| **video-outline-generation** | 视频脚本大纲 | "视频大纲" |
-| **video-script-collaborial** | 脚本口语化 | "口语化" |
-| **video-thumbnail-check** | 封面/CTR检查 | "缩略图"/"点击率" |
-| **personal-material-search** | 个人素材库搜索 | "真实经历" |
-| **info-search-knowledge** | 多渠道信息搜索 | "查资料" |
-| **product-analysis** *(自建)* | 产品评估(100分制) | "分析产品" |
-
-> ⚠️ 本地 `image-generation` 与 ClawHub 版同名冲突：英文配图用 ClawHub 版，中文配图用本地版。
-
-### 2.5 Skill 触发词速查表
-
-> Skill 根据 `description` 字段中的关键词自动匹配用户消息。**不需要背触发词**，正常描述需求即可。以下速查表按使用场景分类，方便快速查阅。
-
-#### 联网 & 搜索
-
-| Skill | 示例说法 |
-|-------|---------|
-| **web-access** | "帮我搜索xxx" / "打开xxx网页" / "去小红书搜xxx" / "帮我在这个平台发xxx" |
-| **info-search-knowledge** | "查一下xxx的最新资料" / "帮我调研xxx" |
-
-#### 内容创作
-
-| Skill | 示例说法 |
-|-------|---------|
-| **topic-generation** | "给我几个选题方向" / "写什么好" |
-| **ai-proofreading** | "这段文字AI味太重" / "帮我降AI检测率" / "改得更自然一些" |
-| **article-to-x** | "转成微博" / "发小红书" / "缩短内容" |
-| **claude-blog** | "帮我写一篇博客" / "博客大纲" / "博客SEO" |
-| **copywriting** (marketingskills) | "帮我写一段文案" / "产品描述" |
-
-#### 视频创作
-
-| Skill | 示例说法 |
-|-------|---------|
-| **video-outline-generation** | "帮我策划一个视频" / "视频大纲" |
-| **video-script-collaborial** | "这个脚本口语化一下" / "更像说话一样" |
-| **video-thumbnail-check** | "检查一下封面" / "点击率怎么样" |
-
-#### SEO & 流量
-
-| Skill | 示例说法 |
-|-------|---------|
-| **claude-seo** | "做SEO审计" / "分析页面SEO" / "检查技术SEO" |
-| **seo** (Agentic-SEO) | "SEO分析" / "运行SEO审计" / "检查Core Web Vitals" |
-| **seo-geo** | "GEO优化" / "生成优化内容" |
-
-#### 广告投放
-
-| Skill | 示例说法 |
-|-------|---------|
-| **claude-ads** | "审计广告账户" / "创建广告" / "广告投放策略" |
-| **typefully** | "发一条推文" / "排期社媒帖子" / "写LinkedIn帖子" |
-
-#### 营销策略
-
-| Skill | 示例说法 |
-|-------|---------|
-| **content-strategy** | "内容策略" / "内容规划" |
-| **launch-strategy** | "产品发布计划" / "launch策略" |
-| **paid-ads** | "付费广告方案" |
-| **pricing-strategy** | "定价策略" / "价格优化" |
-
-#### 调试 & 记忆
-
-| Skill | 示例说法 |
-|-------|---------|
-| **pua** | "不行啊" / "你又在原地打转" / "认真点" / "/pua" |
-| **mem-search** (claude-mem) | "上次怎么解决的xxx" / "之前我们做过xxx吗" |
-| **make-plan** | "帮我制定执行计划" |
-| **do** | "执行这个计划" |
-
-#### 文档 & 设计
-
-| Skill | 示例说法 |
-|-------|---------|
-| **pdf / xlsx / docx / pptx** | "生成PDF" / "创建Excel" / "写Word文档" / "做PPT" |
-| **frontend-design** | "设计一个网页" / "做一个落地页" |
-| **image-generation** | "配图" / "生成插图" |
-| **skill-creator** | "创建一个skill" / "写skill提示词" |
-
-> 💡 **触发原理**：Agent 匹配到用户消息中的关键词后，会显示 `[command-message]xxx skill is loading` 并加载对应 SKILL.md。如果没出现这条提示，说明未触发，可尝试换一个说法或直接提 skill 名称。
-
-### 2.6 安装命令汇总
-
-```bash
-# === Skills 安装（clawhub 来源）===
+# clawhub 来源
 npx clawhub@latest install skill-vetter
 npx clawhub@latest install image-generation
 
-# === Skills 安装（skills.sh 来源，加 -g 全局安装）===
+# skills.sh 来源（全部加 -g 全局安装）
 npx skills add anthropics/skills --skill pdf xlsx docx pptx frontend-design skill-creator --agent claude-code -y -g
 npx skills add aaron-he-zhu/seo-geo-claude-skills -g
 npx skills add AgriciDaniel/claude-seo -g
@@ -276,11 +97,91 @@ npx skills add Bhanunamikaze/Agentic-SEO-Skill --agent claude-code -y -g
 npx skills add Automattic/wordpress-agent-skills --agent claude-code -y -g
 npx skills add alchaincyf/huashu-skills --agent claude-code -y -g
 
-# === 验证 ===
+# 验证
 npx skills list -g
 ```
 
 > Skill 探索: [skills.sh](https://skills.sh/) | [agentskills.so](https://agentskills.so) | [clawhub.ai](https://clawhub.ai)
+
+### 2.2 Skill 速查表
+
+> 按使用场景分类。Skill 不是越多越好，功能相近会冲突，推荐 5-8 个高频使用的。
+
+#### 联网 & 搜索
+
+| Skill | 用途 | 触发词 | 来源 |
+|-------|------|--------|------|
+| ⭐ **web-access** | 搜索+浏览器+登录态+社媒发布 | "帮我搜索" / "打开网页" / "去小红书搜" | [GitHub](https://github.com/eze-is/web-access) |
+| **info-search-knowledge** | 多渠道信息搜索 | "查资料" / "调研" | 花叔 huashu-skills |
+
+#### 内容创作
+
+| Skill | 用途 | 触发词 | 来源 |
+|-------|------|--------|------|
+| **topic-generation** | 选题方向+标题+大纲 | "选题" / "写什么" | 花叔 huashu-skills |
+| **ai-proofreading** | 降AI检测率至30%以下 | "AI味太重" / "更自然" | 花叔 huashu-skills |
+| **article-to-x** | 长文转微博/小红书 | "转微博" / "发小红书" | 花叔 huashu-skills |
+| **claude-blog** | 博客创作+SEO+AEO | "写博客" / "博客大纲" | [GitHub](https://github.com/AgriciDaniel/claude-blog) ⭐432 |
+| **copywriting** | 文案撰写 | "写文案" / "产品描述" | marketingskills |
+| **product-analysis** *(自建)* | 产品评估(100分制) | "分析产品" | 自建 |
+
+#### 视频创作
+
+| Skill | 用途 | 触发词 | 来源 |
+|-------|------|--------|------|
+| **video-outline-generation** | 视频脚本大纲 | "视频大纲" / "策划视频" | 花叔 huashu-skills |
+| **video-script-collaborial** | 脚本口语化 | "口语化" / "像说话一样" | 花叔 huashu-skills |
+| **video-thumbnail-check** | 封面/CTR检查 | "封面" / "点击率" | 花叔 huashu-skills |
+
+#### SEO & 流量
+
+| Skill | 用途 | 触发词 | 来源 |
+|-------|------|--------|------|
+| **claude-seo** | 19技能+12代理，E-E-A-T/Schema/PDF报告 | "SEO审计" / "分析SEO" | [GitHub](https://github.com/AgriciDaniel/claude-seo) ⭐4.3k |
+| **seo** (Agentic-SEO) | 16技能+10代理+33脚本 | "SEO分析" / "Core Web Vitals" | [GitHub](https://github.com/Bhanunamikaze/Agentic-SEO-Skill) |
+| **seo-geo** | GEO生成优化 | "GEO优化" | seo-geo-claude-skills |
+
+#### 广告投放
+
+| Skill | 用途 | 触发词 | 来源 |
+|-------|------|--------|------|
+| **claude-ads** | 付费广告审计(186项检查) | "审计广告" / "广告策略" | [GitHub](https://github.com/AgriciDaniel/claude-ads) |
+| **typefully** | 社媒发布(X/LinkedIn/Threads等) | "发推文" / "排期帖子" | [GitHub](https://github.com/typefully/agent-skills) |
+
+#### 营销策略
+
+| Skill | 用途 | 触发词 | 来源 |
+|-------|------|--------|------|
+| **marketingskills** | 34个营销技能全家桶 | "营销策略" / "定价" / "launch" | [GitHub](https://github.com/coreyhaines31/marketingskills) ⭐19.7k |
+| **content-strategy** | 内容规划 | "内容策略" / "内容规划" | marketingskills |
+
+#### 调试 & 记忆
+
+| Skill | 用途 | 触发词 | 来源 |
+|-------|------|--------|------|
+| **pua** | 卡住时强制换思路 | "不行啊" / "原地打转" / "/pua" | [GitHub](https://github.com/tanweai/pua) |
+| **mem-search** (claude-mem) | 跨会话长期记忆 | "上次怎么解决的" | [GitHub](https://github.com/thedotmack/claude-mem) |
+| **make-plan** | 制定执行计划 | "制定计划" | claude-mem |
+| **do** | 执行计划 | "执行计划" | claude-mem |
+
+#### 文档 & 设计
+
+| Skill | 用途 | 触发词 | 来源 |
+|-------|------|--------|------|
+| **pdf/xlsx/docx/pptx** | 办公文档生成 | "生成PDF" / "创建Excel" | [anthropics/skills](https://github.com/anthropics/skills) |
+| **frontend-design** | 前端审美约束 | "设计网页" / "落地页" | [anthropics/skills](https://github.com/anthropics/skills) |
+| **image-generation** | 多模型配图(GPT/Gemini/FLUX/MJ) | "配图" / "插图" | [clawhub](https://clawhub.ai/ivangdavila/image-generation) |
+| **skill-creator** | 自建 Skill | "创建skill" | [anthropics/skills](https://github.com/anthropics/skills) |
+| **skill-vetter** | 安装前安全审查 | — | [clawhub](https://clawhub.ai/spclaudehome/skill-vetter) |
+
+#### 其他
+
+| Skill | 用途 | 触发词 | 来源 |
+|-------|------|--------|------|
+| **wordpress-block-theming** | WordPress主题(Automattic官方) | — | [GitHub](https://github.com/Automattic/wordpress-agent-skills) |
+| **personal-material-search** | 个人素材库搜索 | "真实经历" / "找例子" | 花叔 huashu-skills |
+
+> ⚠️ 本地 `image-generation`（花叔版，中文配图）与 ClawHub 版同名冲突：中文配图用本地版，英文配图用 ClawHub 版。
 
 ---
 
