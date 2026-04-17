@@ -138,38 +138,41 @@ ebook2audiobook.cmd
 
 ---
 
-### bb-browser（坏孩子浏览器）
+### Voicebox
 
-**GitHub**: https://github.com/epiral/bb-browser
+**GitHub**: https://github.com/jamiepine/voicebox
 
-**简介**: 通过复用真实 Chrome 浏览器登录态进行网站自动化操作的工具，专为 AI Agent 和开发者设计，天然绕过反爬检测
+**简介**: 本地优先的开源语音克隆桌面应用，免费版 ElevenLabs，支持声音克隆、文本转语音、音频后期处理与多轨叙事编辑，全程不上云
 
-**核心功能**: 平台数据抓取、浏览器自动化（打开/点击/输入/执行JS/抓包/截图）、结构化JSON输出、MCP模式接入AI编辑器
+**核心功能**: 声音克隆、文本转语音（TTS）、多轨叙事编辑、音频后期处理、本地API服务
 
 **特点**:
-- 复用真实浏览器登录态，无需重新登录或导出Cookie
-- 内置36大平台、103条命令（知乎/微博/Twitter/GitHub/YouTube/雪球等）
-- CLI直接调用 + MCP模式，可接入Claude Code、Cursor
-- AI可在10分钟内自动逆向新网站生成适配命令（`bb-browser guide`）
-- 支持`jq`过滤与多标签页并发，方便Agent批量处理
+- 17.4K+ star
+- 全本地运行，隐私安全，无需联网
+- 基于 Tauri (Rust) + React 构建，跨平台（macOS/Windows/Linux）
+- 支持多种语音引擎（Qwen3-TTS等）
+- 提供本地 API 接口，可二次集成
+- 几秒音频样本即可克隆声音
+- GPU加速（CUDA/Metal/XPU），CPU兼容运行
+
+**系统要求**: 8GB+内存（推荐16GB），5GB+存储空间
 
 **快速使用**:
 ```bash
-# 安装
-npm install -g bb-browser
+# 开发部署
+git clone https://github.com/jamiepine/voicebox.git
+cd voicebox
+just setup
+just dev
 
-# 更新适配器并查看推荐站点
-bb-browser site update
-bb-browser site recommend
-
-# 示例：知乎热榜 / Twitter搜索 / 股票行情
-bb-browser site zhihu/hot
-bb-browser site twitter/search "RAG"
-bb-browser site eastmoney/stock "茅台"
+# API 调用示例
+curl -X POST http://localhost:17493/generate \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Hello world", "profile_id": "abc123", "language": "en"}'
 ```
 
-**适用场景**: 需要登录态的平台数据采集、AI Agent信息调研、跨平台批量数据抓取
+**适用场景**: 视频配音、有声书制作、播客制作、语音克隆、内容创作
 
 ---
 
-**最后更新**: 2026-04-16
+**最后更新**: 2026-04-17
