@@ -182,7 +182,80 @@ $env:CLAWHUB_WORKDIR="$HOME\.claude"    # Windows PowerShell
 
 > ⚠️ 本地 `image-generation` 与 ClawHub 版同名冲突：英文配图用 ClawHub 版，中文配图用本地版。
 
-### 2.5 安装命令汇总
+### 2.5 Skill 触发词速查表
+
+> Skill 根据 `description` 字段中的关键词自动匹配用户消息。**不需要背触发词**，正常描述需求即可。以下速查表按使用场景分类，方便快速查阅。
+
+#### 联网 & 搜索
+
+| Skill | 示例说法 |
+|-------|---------|
+| **web-access** | "帮我搜索xxx" / "打开xxx网页" / "去小红书搜xxx" / "帮我在这个平台发xxx" |
+| **info-search-knowledge** | "查一下xxx的最新资料" / "帮我调研xxx" |
+
+#### 内容创作
+
+| Skill | 示例说法 |
+|-------|---------|
+| **topic-generation** | "给我几个选题方向" / "写什么好" |
+| **ai-proofreading** | "这段文字AI味太重" / "帮我降AI检测率" / "改得更自然一些" |
+| **article-to-x** | "转成微博" / "发小红书" / "缩短内容" |
+| **claude-blog** | "帮我写一篇博客" / "博客大纲" / "博客SEO" |
+| **copywriting** (marketingskills) | "帮我写一段文案" / "产品描述" |
+
+#### 视频创作
+
+| Skill | 示例说法 |
+|-------|---------|
+| **video-outline-generation** | "帮我策划一个视频" / "视频大纲" |
+| **video-script-collaborial** | "这个脚本口语化一下" / "更像说话一样" |
+| **video-thumbnail-check** | "检查一下封面" / "点击率怎么样" |
+
+#### SEO & 流量
+
+| Skill | 示例说法 |
+|-------|---------|
+| **claude-seo** | "做SEO审计" / "分析页面SEO" / "检查技术SEO" |
+| **seo** (Agentic-SEO) | "SEO分析" / "运行SEO审计" / "检查Core Web Vitals" |
+| **seo-geo** | "GEO优化" / "生成优化内容" |
+
+#### 广告投放
+
+| Skill | 示例说法 |
+|-------|---------|
+| **claude-ads** | "审计广告账户" / "创建广告" / "广告投放策略" |
+| **typefully** | "发一条推文" / "排期社媒帖子" / "写LinkedIn帖子" |
+
+#### 营销策略
+
+| Skill | 示例说法 |
+|-------|---------|
+| **content-strategy** | "内容策略" / "内容规划" |
+| **launch-strategy** | "产品发布计划" / "launch策略" |
+| **paid-ads** | "付费广告方案" |
+| **pricing-strategy** | "定价策略" / "价格优化" |
+
+#### 调试 & 记忆
+
+| Skill | 示例说法 |
+|-------|---------|
+| **pua** | "不行啊" / "你又在原地打转" / "认真点" / "/pua" |
+| **mem-search** (claude-mem) | "上次怎么解决的xxx" / "之前我们做过xxx吗" |
+| **make-plan** | "帮我制定执行计划" |
+| **do** | "执行这个计划" |
+
+#### 文档 & 设计
+
+| Skill | 示例说法 |
+|-------|---------|
+| **pdf / xlsx / docx / pptx** | "生成PDF" / "创建Excel" / "写Word文档" / "做PPT" |
+| **frontend-design** | "设计一个网页" / "做一个落地页" |
+| **image-generation** | "配图" / "生成插图" |
+| **skill-creator** | "创建一个skill" / "写skill提示词" |
+
+> 💡 **触发原理**：Agent 匹配到用户消息中的关键词后，会显示 `[command-message]xxx skill is loading` 并加载对应 SKILL.md。如果没出现这条提示，说明未触发，可尝试换一个说法或直接提 skill 名称。
+
+### 2.6 安装命令汇总
 
 ```bash
 # === Skills 安装（clawhub 来源）===
