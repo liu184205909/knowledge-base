@@ -1,6 +1,6 @@
 # Claude Code 环境配置
 
-> 最后更新: 2026-04-13
+> 最后更新: 2026-04-17
 
 ---
 
@@ -12,7 +12,35 @@
 
 ---
 
-## 2. MCP 安装
+## 2. 首要安装：Web Access Skill
+
+> **优先级最高**，建议优先安装。
+
+**Web Access** 是一个通用联网 Skill，让 Agent 拥有搜索、阅读、浏览器操作（点击/填表/上传/发布）的完整能力，并复用你 Chrome 的登录态，支持 Sub-Agent 并行、自动经验沉淀。
+
+**安装方式**：把下面这段话发给 Agent：
+
+```
+帮我安装 web-access skill，仓库地址是 https://github.com/eze-is/web-access。
+这个 skill 原为 Claude Code 设计，安装前请先理解其核心原理和工作逻辑，
+再结合你的 Agent 架构与电脑环境进行适配，使其真正融入当前环境，而非生硬移植。
+```
+
+**前置条件**：
+- 安装 Chrome 浏览器并更新到最新版本
+- Chrome 地址栏输入 `chrome://inspect/#remote-debugging`，勾选 `Allow remote debugging for this browser instance`
+
+**使用方式**：
+- 安装后直接下达联网任务即可，Agent 会自动加载 Skill
+- 示例：`帮我查xx`、`打开xx`、`帮我在xx平台写xx`
+- Agent 操作浏览器时 Chrome 会弹窗提示，点击"允许"即可
+- 推荐使用大参数多模态模型（Claude、Kimi K2.5），效果最佳
+
+**GitHub**: https://github.com/eze-is/web-access
+
+---
+
+## 3. MCP 安装
 
 > 将 `your_api_key` 替换为智谱AI API Key。
 
@@ -36,16 +64,6 @@ claude mcp add -s user playwright -- npx -y "@playwright/mcp@latest"
 ```bash
 claude mcp add -s user -t http web-reader-xdai https://web-reader.xdai.dev
 claude mcp add -s user -t http web-search-prime-xdai https://web-search.xdai.dev
-```
-
-### Agent Reach（多平台联网）
-
-调用小红书、B站、YouTube、Twitter 等平台内容。[GitHub](https://github.com/Panniantong/Agent-Reach)
-
-```bash
-# 让 Claude Code 读取安装文档并执行
-帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md
-# 验证: agent-reach doctor
 ```
 
 ---
@@ -74,10 +92,9 @@ claude mcp add -s user -t http web-search-prime-xdai https://web-search.xdai.dev
 
 | Skill | 用途 | 来源 |
 |-------|------|------|
-| **Web Access** | 搜索+浏览器+登录态 | [eze-is/web-access](https://github.com/eze-is/web-access) |
-| **Tavily Search** | AI优化搜索 | [tavily-ai/skills](https://github.com/tavily-ai/skills) |
+| ⭐ **Web Access** | **首要安装**，搜索+浏览器+登录态+社媒发布 | [eze-is/web-access](https://github.com/eze-is/web-access) |
+| **Tavily Search** | AI优化搜索（Web Access 未安装时的备选） | [tavily-ai/skills](https://github.com/tavily-ai/skills) |
 | **last30days** | 海外社区讨论数据（选品/竞品） | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) |
-| **agent-browser** | Vercel 自动化浏览器 | [vercel-labs/agent-browser](https://github.com/vercel-labs/agent-browser) |
 | **summarize** | 长文/视频摘要 | [skills.sh](https://skills.sh/steipete/clawdis/summarize) |
 
 ### 调试 & 记忆
@@ -168,7 +185,6 @@ npx skills add coreyhaines31/marketingskills --agent claude-code -y
 npx skills add typefully/agent-skills
 npx skills add AgriciDaniel/claude-blog
 npx skills add AgriciDaniel/claude-ads
-npx skills add vercel-labs/agent-browser@agent-browser -g -y
 npx skills add alchaincyf/huashu-skills --agent claude-code -y
 
 # === 验证 ===

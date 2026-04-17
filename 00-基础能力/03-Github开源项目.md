@@ -175,4 +175,22 @@ curl -X POST http://localhost:17493/generate \
 
 ---
 
+### BuilderPulse
+
+**GitHub**: https://github.com/builderpulse/builderpulse
+
+**简介**: 每日精选 AI 创业者资讯报告，通过 GitHub 仓库每日自动发布，帮独立开发者和创业者快速获取行业动态
+
+**核心功能**: 每日 AI 创业新闻精选、趋势分析、工具与产品推荐
+
+**特点**:
+- 全自动内容生成，每日定时发布
+- 覆盖 AI 创业、独立开发、SaaS 等领域
+- 通过 GitHub Issues/Releases 分发，订阅方便
+- 可作为行业信息源，辅助选题和趋势判断
+
+**适用场景**: 行业信息获取、选题灵感、趋势追踪
+
+---
+
 **最后更新**: 2026-04-17
