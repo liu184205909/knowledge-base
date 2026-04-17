@@ -13,6 +13,7 @@
 | **03** | 竞品分析工具 | Sitemap 解析，还原竞品内容架构 | `sitemap_parser.py` |
 | **04** | WordPress建站 | AI 操作 WordPress，Elementor 建站规则 | 文档为主 |
 | **05** | 竞品内容分析工具 | 批量抓取 title/H1/H2，输出内容模式报告 | `content_analyzer.py` |
+| **06** | WordPress插件 | TranslatePress AI翻译方案等插件调研 | 文档为主 |
 
 ---
 
