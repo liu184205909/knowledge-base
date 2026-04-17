@@ -22,14 +22,14 @@
 | `web-search-prime` | 联网搜索 |
 | `web-reader` | 抓取网页正文 |
 | `zread` | 读取 GitHub 仓库 |
-| `playwright` | 浏览器自动化 |
+
+> **浏览器自动化**: 由 Web Access Skill 提供（CDP 直连 Chrome，含登录态），无需单独安装 Playwright MCP。
 
 ```bash
 claude mcp add -s user zai-mcp-server --env Z_AI_API_KEY=your_api_key -- npx -y "@z_ai/mcp-server"
 claude mcp add -s user -t http web-search-prime https://open.bigmodel.cn/api/mcp/web_search_prime/mcp --header "Authorization: Bearer your_api_key"
 claude mcp add -s user -t http web-reader https://open.bigmodel.cn/api/mcp/web_reader/mcp --header "Authorization: Bearer your_api_key"
 claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp --header "Authorization: Bearer your_api_key"
-claude mcp add -s user playwright -- npx -y "@playwright/mcp@latest"
 ```
 
 **备用（无需 API Key）**:
