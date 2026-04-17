@@ -60,9 +60,11 @@
 
 ## 2. Skill 安装
 
-> ⚠️ **Skills 必须安装到用户目录**，`npx clawhub@latest install` 会将 Skill 写入**当前工作目录**，需确保不在项目目录下执行。
+> ⚠️ **Skills 必须安装到用户目录**，两种安装方式注意事项：
+> - `npx clawhub@latest install` 会将 Skill 写入**当前工作目录**，需确保不在项目目录下执行
+> - `npx skills add` 默认安装到**当前项目目录**，**必须加 `-g` 参数**才安装到全局目录
 > - ✅ 正确路径：`~/.claude/skills/<skill-name>/SKILL.md`
-> - ❌ 错误：在项目目录下运行，会在项目里误创建 `skills/` 和 `.clawhub/`
+> - ❌ 错误：不加 `-g` 会在项目的 `.claude/skills/` 下误创建
 
 ### 2.1 安装位置说明
 
@@ -112,7 +114,6 @@ $env:CLAWHUB_WORKDIR="$HOME\.claude"    # Windows PowerShell
 | **Frontend Design** | 前端审美约束 | [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/frontend-design) |
 | **办公四件套** (pdf/xlsx/docx/pptx) | 文档生成 | [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills) |
 | **Skill-Creator** | 自建 Skill | [anthropics/skills](https://github.com/anthropics/skills/tree/main/skills/skill-creator) |
-| **self-improving-agent** | 自我进化/记忆偏好 | [clawhub](https://clawhub.ai/pskoett/self-improving-agent) |
 
 #### 联网 & 信息
 
@@ -121,7 +122,6 @@ $env:CLAWHUB_WORKDIR="$HOME\.claude"    # Windows PowerShell
 | ⭐ **Web Access** | **首要安装**，搜索+浏览器+登录态+社媒发布 | [eze-is/web-access](https://github.com/eze-is/web-access) |
 | **Tavily Search** | AI优化搜索（Web Access 未安装时的备选） | [tavily-ai/skills](https://github.com/tavily-ai/skills) |
 | **last30days** | 海外社区讨论数据（选品/竞品） | [mvanhorn/last30days-skill](https://github.com/mvanhorn/last30days-skill) |
-| **summarize** | 长文/视频摘要 | [skills.sh](https://skills.sh/steipete/clawdis/summarize) |
 
 #### 调试 & 记忆
 
@@ -147,8 +147,6 @@ $env:CLAWHUB_WORKDIR="$HOME\.claude"    # Windows PowerShell
 | Skill | 用途 | 来源 |
 |-------|------|------|
 | **wordpress-agent-skills** | WordPress主题/站点(Automattic官方) | [GitHub](https://github.com/Automattic/wordpress-agent-skills) |
-| **Shopify三件套** | 店铺连接+产品管理+内容SEO | [GitHub](https://github.com/jezweb/claude-skills) |
-| **shopifyql-skill** | ShopifyQL查询/报告/客户分群 | [GitHub](https://github.com/devkindhq/shopifyql-skill) |
 
 #### 邮件 & 配图
 
@@ -191,15 +189,19 @@ $env:CLAWHUB_WORKDIR="$HOME\.claude"    # Windows PowerShell
 npx clawhub@latest install skill-vetter
 npx clawhub@latest install image-generation
 
-# === Skills 安装（skills.sh 来源）===
-npx skills add anthropics/skills --skill pdf xlsx docx pptx frontend-design skill-creator --agent claude-code -y
-npx skills add aaron-he-zhu/seo-geo-claude-skills
-npx skills add AgriciDaniel/claude-seo
-npx skills add coreyhaines31/marketingskills --agent claude-code -y
-npx skills add typefully/agent-skills
-npx skills add AgriciDaniel/claude-blog
-npx skills add AgriciDaniel/claude-ads
-npx skills add alchaincyf/huashu-skills --agent claude-code -y
+# === Skills 安装（skills.sh 来源，加 -g 全局安装）===
+npx skills add anthropics/skills --skill pdf xlsx docx pptx frontend-design skill-creator --agent claude-code -y -g
+npx skills add aaron-he-zhu/seo-geo-claude-skills -g
+npx skills add AgriciDaniel/claude-seo -g
+npx skills add coreyhaines31/marketingskills --agent claude-code -y -g
+npx skills add typefully/agent-skills --agent claude-code -y -g
+npx skills add AgriciDaniel/claude-blog -g
+npx skills add AgriciDaniel/claude-ads -g
+npx skills add tanweai/pua --agent claude-code -y -g
+npx skills add thedotmack/claude-mem --agent claude-code -y -g
+npx skills add Bhanunamikaze/Agentic-SEO-Skill --agent claude-code -y -g
+npx skills add Automattic/wordpress-agent-skills --agent claude-code -y -g
+npx skills add alchaincyf/huashu-skills --agent claude-code -y -g
 
 # === 验证 ===
 npx skills list -g
