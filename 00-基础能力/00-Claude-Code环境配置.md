@@ -1,6 +1,6 @@
 # Claude Code 环境配置
 
-> 换电脑恢复指南 | 最后更新: 2026-04-20
+> 换电脑恢复指南 | 最后更新: 2026-04-21
 
 ---
 
@@ -22,9 +22,44 @@ Claude Code 会自动完成以下所有操作：
 | 检测并安装 Node.js、Git 等依赖 | 缺什么装什么 |
 | 创建 `~/.claude/settings.json` | 使用下方模板，填入你的 Key |
 | 创建 `~/.claude/CLAUDE.md` | 全局指令文件 |
-| 安装 MCP（4 个） | zai-mcp-server、web-search-prime、web-reader、zread |
+| 安装 MCP（4+1 个） | 4个基础 + n8n（可选），见下方详细配置 |
 | 安装 Skills | 按 [01-Skill设计与管理](./01-Skill设计与管理.md) 自动安装 |
-| 克隆知识库 | git clone knowledge-base |
+
+---
+
+## MCP 服务器配置
+
+> 通过 `claude mcp add` 安装到用户级，不在 settings.json 内。`{{API_KEY}}` = 智谱 API Key。
+
+| MCP | 安装命令 | 用途 |
+|-----|---------|------|
+| zai-mcp-server | `claude mcp add -s user zai-mcp-server --env Z_AI_API_KEY={{API_KEY}} -- npx -y "@z_ai/mcp-server"` | 图片/截图视觉理解 |
+| web-search-prime | `claude mcp add -s user -t http web-search-prime https://open.bigmodel.cn/api/mcp/web_search_prime/mcp --header "Authorization: Bearer {{API_KEY}}"` | 联网搜索 |
+| web-reader | `claude mcp add -s user -t http web-reader https://open.bigmodel.cn/api/mcp/web_reader/mcp --header "Authorization: Bearer {{API_KEY}}"` | 网页正文抓取 |
+| zread | `claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp --header "Authorization: Bearer {{API_KEY}}"` | GitHub 仓库阅读 |
+
+> 备用方案（无需 API Key）：`web-search-prime-xdai` → `https://web-search.xdai.dev`，`web-reader-xdai` → `https://web-reader.xdai.dev`
+
+### 可选：n8n 工作流
+
+[n8n-mcp](https://github.com/czlonkowski/n8n-mcp) — 让 Claude Code 管理/执行 n8n 工作流（39个工具）。
+
+```bash
+claude mcp add -s user n8n-mcp \
+  -e MCP_MODE=stdio \
+  -e LOG_LEVEL=error \
+  -e DISABLE_CONSOLE_OUTPUT=true \
+  -e N8N_API_URL=https://your-n8n.com \
+  -e N8N_API_KEY=your_key \
+  -- npx n8n-mcp
+```
+
+### 管理命令
+
+```bash
+claude mcp list              # 查看已安装
+claude mcp remove <name>     # 移除
+```
 
 ---
 
