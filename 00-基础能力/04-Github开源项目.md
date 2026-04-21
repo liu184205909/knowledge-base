@@ -193,4 +193,35 @@ curl -X POST http://localhost:17493/generate \
 
 ---
 
-**最后更新**: 2026-04-17
+### video-use
+
+**GitHub**: https://github.com/browser-use/video-use
+
+**简介**: Claude Code Skill，用自然语言剪辑视频，自动去口癖、加字幕、调色，完全免费开源
+
+**核心功能**: 自动剪辑、去口头禅、自动调色、烧录字幕、音频淡入淡出、动画叠加、渲染自评
+
+**特点**:
+- 来自 browser-use 团队，Claude Code 原生 Skill
+- LLM 不看视频帧，通过音频转录（12KB 文本）+ 按需视觉合成图剪辑，节省 token
+- 支持 ElevenLabs Scribe 逐词时间戳 + 说话人分离
+- 渲染后自动自评（画面跳变、音频爆音、字幕遮挡），不通过则自动修复
+- 会话持久化（project.md），支持中断续剪
+
+**依赖**: Python、ffmpeg、ElevenLabs API Key（可选）
+
+**快速使用**:
+```bash
+git clone https://github.com/browser-use/video-use
+cd video-use
+ln -s "$(pwd)" ~/.claude/skills/video-use
+pip install -e .
+brew install ffmpeg
+```
+然后进入素材文件夹，对 Claude Code 说：`将这些素材剪辑成一条发布视频`
+
+**适用场景**: 短视频制作、播客剪辑、口播去口癖、自媒体内容生产
+
+---
+
+**最后更新**: 2026-04-21
