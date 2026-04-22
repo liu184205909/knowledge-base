@@ -224,6 +224,66 @@ Schema → 实体消歧加速 → 实体权威建立 → Knowledge Graph 认可 
 
 ---
 
+## 实操检查清单
+
+### 第1层：实体健康
+
+| 检查项 | 做法 | 工具 |
+|--------|------|------|
+| 实体是否被识别 | 查询品牌名，是否有 @id: "kg:/m/..." | [audits.com KG Search](https://audits.com/tools/knowledge-graph-search) / [PlePer KG Tool](https://pleper.com/index.php?do=tools&sdo=google_knowledge_graph_raw) |
+| 搜品牌名官网排第几 | Google 搜索品牌名 | 直接搜索 |
+| 实体信息一致性 | 检查 About 页、LinkedIn、Crunchbase、Wikidata 信息是否完全一致 | 人工检查 |
+| sameAs 部署 | Organization/Person schema 中 sameAs 字段是否连接了 Wikidata、LinkedIn 等 | 查看页面源码 schema |
+
+**时间预期**：schema + sameAs 部署 → Google 处理 4-8 周 → KG 实体识别 3-6 个月
+
+### 第2层：站级质量 Q*
+
+| 检查项 | 做法 | 工具 |
+|--------|------|------|
+| Branded Search 量 | 品牌名有多少搜索量 | Google Search Console（搜索效果报告） |
+| Selection Rate | 不在第1位时用户是否主动选你 | GSC → 效果报告 → 按查询查看 CTR vs 排名位置 |
+| SERP features 资格 | 是否出现 Featured Snippet / PAA | 手动搜索目标关键词 |
+
+> Q* 无公开直接检测工具（MWC 漏洞已修复）。间接判断：如果排第5-10位但 CTR 异常高 → Selection Rate 可能不错 → Q* 可能健康。如果排第1-3位但 CTR 低 → Q* 可能有问题。
+
+### 第3层：站级权威
+
+| 检查项 | 做法 | 工具 |
+|--------|------|------|
+| 锚文本品牌占比 | 外链锚文本中包含品牌名的比例 | Ahrefs / SEMrush 锚文本报告 |
+| 主题聚焦度 | 站点内容是否围绕核心主题 | 人工判断 |
+| DA:BA 比值 | Domain Authority vs Brand Authority 是否失衡 | Ahrefs（DA）+ 品牌搜索量 |
+
+**高风险信号**：DA 远高于 BA（如 2:1+），说明外链攒得快但没人搜你的品牌 → HCU 高风险。
+
+### 第4层：用户信号 P*
+
+| 检查项 | 做法 | 工具 |
+|--------|------|------|
+| 页面停留时间 | 用户点击后停留多久 | GSC → 网页体验 → 互动数据 |
+| Pogo-sticking | 用户点击后是否立刻返回 SERP | GSC → CTR vs 平均排名位对比（排第3但 CTR 接近第10位 = pogo-stick） |
+| 分市场表现 | 不同国家/语言的排名差异 | GSC 按国家筛选对比 |
+
+### 第5层：单页内容 T*
+
+| 检查项 | 做法 | 工具 |
+|--------|------|------|
+| 查询分类 | 关键词属于8类中哪一类 | [MWC Refined Query Classifier](https://rqpredictor.streamlit.app)（免费，基于4.6M英文查询训练） |
+| 内容与查询匹配 | 页面是否精准回答目标查询 | AI 搜索平台（ChatGPT / Perplexity）直接搜目标关键词 |
+| lastmod 信任 | 是否在不改内容的情况下更新了日期 | 对比页面 Wayback Machine 快照 vs lastmod 日期 |
+| Schema 实施 | 关键页面是否有正确 schema | [Schema Markup Validator](https://validator.schema.org) / GSC 增强体验报告 |
+
+### 新站专项检查
+
+| 检查项 | 做法 |
+|--------|------|
+| 是否被索引 | Google 搜索 `site:yourdomain.com` |
+| 是否被 sandbox | 有索引但完全无排名 + 不是 spam 内容 → 可能只是缺少 PR 信号（非惩罚） |
+| 初始评分预测 | 内容主题是否聚焦 + 有真实业务实体（About/schema/sameAs） → 避免继承低质量邻居分数 |
+
+---
+
 ## 参考来源
 
 - DOJ 反垄断案 Pandu Nayak 证词
