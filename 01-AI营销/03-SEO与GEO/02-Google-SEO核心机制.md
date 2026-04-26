@@ -14,6 +14,27 @@ Crawling → Indexing → Query Processing → Core Ranking(T*×Q*×P*) → Post
 - **Post-Ranking Twiddler** 决定你在候选池里排第几
 - AIO、Featured Snippet、PAA 都是 Twiddler 层的产物
 
+### SegIndexer：索引分层机制
+
+> 页面不是"被索引了就有机会排名"。Google 内部的 SegIndexer 系统将已抓取页面分配到不同 serving tier，不同层级获得的排名机会天差地别。（来源：2004 年 Google Index Partitioning 专利 + 2024 年 Content Warehouse API Leak 中的 SegIndexer 模块）
+
+**分层逻辑**：
+
+| 层级 | 质量定位 | 排名机会 |
+|------|---------|---------|
+| **高 tier** | 高质量页面 | 用户查询时**优先搜索**，绝大多数搜索结果来源 |
+| **中 tier** | 中等质量页面 | 仅当高 tier 结果不够时才扩展搜索，机会大幅减少 |
+| **低 tier** | 低质量/重复/thin content | **排名过程开始前就被跳过**，等同"已抓取-未编入索引" |
+
+**核心影响**：
+
+- **站点级信号决定新页面初始分配**：整站 static rank 低 → 新页面默认进低 tier → 没有曝光 → 没有用户信号 → 继续低 tier（自我强化的死循环）
+- **"Crawl Budget 不够"是常见误诊**：真正瓶颈在 serving 层而非 crawling 层。Google 抓了你的页面但分配到低 tier，优化 crawl budget 无济于事
+- **HCU 的本质就是站点级 tier 重新分配**：整站被标记为"unhelpful" → 所有页面的 tier 被整体压低（Glenn Gabe 追踪数据：被 HCU 打击的站近两年大部分未恢复）
+- **翻盘路径**：唯一有效的是改变 static rank 的底层信号——外链质量、用户行为、站点 authority 积累。对已在低 tier 的单个页面反复修改，ROI 通常不如把精力花在新页面上
+
+> ⚠️ 注：具体分为几层、内部名称是什么，是外部基于专利和 API 文档的推演。分层机制本身可靠，但精确层级划分不应被视为 Google 官方确认。
+
 ---
 
 ## 排名公式：T* × Q* × P*
@@ -152,6 +173,10 @@ Gary Illyes 原话："It's binary. We either trust it or we don't."
 ### Parasite SEO：已死
 
 2024.3 Site Reputation Abuse 政策 → 2024.11 人工处罚 Forbes/WSJ/Time/CNN → 2025.8 算法化执行 → 2026.3 Core Update 强化。
+
+### Crawl Budget：多数情况下是误诊
+
+页面没排名，多数人归因于"crawl budget 不够"。但真正瓶颈在 serving tier（见上方 SegIndexer），不在 crawling。Google 抓了你的页面但分到低 tier，优化 robots.txt / sitemap / 服务器速度都无济于事。**把 serving 层的分区问题错误诊断成 crawling 层的资源分配问题，是治错了病。**
 
 ---
 
@@ -293,4 +318,5 @@ Schema → 实体消歧加速 → 实体权威建立 → Knowledge Graph 认可 
 - Tom Capper（Moz）Synthetic Gap 研究
 - Ahrefs Patrick Stox Top 10 年龄研究
 - Gary Illyes lastmod 信任机制（LinkedIn 对话）
-- 鸭老师SEO 三源整合原文
+- Google 2004 Index Partitioning 专利（Bill Slawski / SEO by the Sea 解读）
+- 鸭老师SEO 三源整合原文 + 分层索引分析
