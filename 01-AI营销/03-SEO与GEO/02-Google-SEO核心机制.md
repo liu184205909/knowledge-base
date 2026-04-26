@@ -16,7 +16,7 @@ Crawling → Indexing → Query Processing → Core Ranking(T*×Q*×P*) → Post
 
 ### SegIndexer：索引分层机制
 
-> 页面不是"被索引了就有机会排名"。Google 内部的 SegIndexer 系统将已抓取页面分配到不同 serving tier，不同层级获得的排名机会天差地别。（来源：2004 年 Google Index Partitioning 专利 + 2024 年 Content Warehouse API Leak 中的 SegIndexer 模块）
+> 页面不是"被索引了就有机会排名"。Google 内部的 SegIndexer 系统将已抓取页面分配到不同 serving tier，不同层级获得的排名机会天差地别。（来源：2004 年 Google Index Partitioning 专利 + 2024 年 Content Warehouse API Leak 中的 SegIndexer 模块。2026.4 Google Search Central Live Toronto 官方确认：AI 降低了内容创作门槛，迫使 Google 提高了索引标准。）
 
 **分层逻辑**：
 
@@ -178,6 +178,26 @@ Gary Illyes 原话："It's binary. We either trust it or we don't."
 
 页面没排名，多数人归因于"crawl budget 不够"。但真正瓶颈在 serving tier（见上方 SegIndexer），不在 crawling。Google 抓了你的页面但分到低 tier，优化 robots.txt / sitemap / 服务器速度都无济于事。**把 serving 层的分区问题错误诊断成 crawling 层的资源分配问题，是治错了病。**
 
+### llms.txt 和 Markdown 转换：对 SEO 无用
+
+> 2026.4 Google Search Central Live Toronto 官方确认：创建 llms.txt 文件对 SEO 没有任何好处。将网站转换为 Markdown 格式对于 LLM 或 SEO 也无任何好处。
+
+这两个是 GEO 领域流传甚广的做法，Google 官方直接否定了。**不要在这两件事上浪费时间。**
+
+### data-nosnippet：阻止 AI 引用的唯一方法
+
+屏蔽 Google 扩展搜索机器人（Extended Search Bot）**不会阻止 AI 在 AIO/AI Mode 中使用你的内容**——因为你的网站已经在搜索索引中，Google 仍然可以在"分页搜索"中使用这些数据生成 AI 答案。
+
+**唯一真正有效的方法是 `data-nosnippet`**。但这把双刃剑：阻止了 AI 引用，同时也会降低传统 SEO 效果（SERP 中不显示摘要）。
+
+> 实操判断：如果你的流量主要依赖传统搜索 → 不建议用。如果你的内容被 AI 大量引用但不带来点击 → 可考虑对特定段落使用。
+
+### 规模化内容滥用 vs AI 使用
+
+Google **不反对 AI 本身**。AI 内容流量下降的根因是**规模化内容滥用算法**（Scaled Content Abuse），不是"你用了 AI"。
+
+区别：用 AI 写 1 篇高质量内容 = 没问题。用 AI 批量生成 1000 篇内容 = 触发规模化滥用检测。
+
 ---
 
 ## Schema 和实体建设
@@ -231,7 +251,7 @@ Schema → 实体消歧加速 → 实体权威建立 → Knowledge Graph 认可 
 
 ---
 
-## 13 条硬事实
+## 18 条硬事实
 
 1. Q* 真实存在，subdomain 级别，0.4 是 SERP features 硬门槛
 2. Q* 核心输入 = Brand Visibility + Selection Rate + Anchor Text Brand Prevalence
@@ -246,6 +266,11 @@ Schema → 实体消歧加速 → 实体权威建立 → Knowledge Graph 认可 
 11. Schema 对实体消歧有加速作用，对 LLM 引用是间接影响
 12. 8 种查询分类决定不同算法权重
 13. **实用指标是"搜品牌名官网排第一"，不是追求 Knowledge Panel**
+14. **llms.txt 对 SEO 无用**（Google 官方确认，2026.4 Toronto）
+15. **网站转 Markdown 对 LLM/SEO 无用**（Google 官方确认，2026.4 Toronto）
+16. **屏蔽扩展搜索机器人不会阻止 AI 使用你的内容，data-nosnippet 是唯一方法**（但伤害传统 SEO）
+17. **Google 不反对 AI 本身，反对的是规模化内容滥用**
+18. **"已抓取-未索引"很少是技术问题，通常是质量信号**（Google 官方确认，2026.4 Toronto）
 
 ---
 
@@ -320,3 +345,4 @@ Schema → 实体消歧加速 → 实体权威建立 → Knowledge Graph 认可 
 - Gary Illyes lastmod 信任机制（LinkedIn 对话）
 - Google 2004 Index Partitioning 专利（Bill Slawski / SEO by the Sea 解读）
 - 鸭老师SEO 三源整合原文 + 分层索引分析
+- Google Search Central Live Toronto 2026（Danny Sullivan / Daniel Waisberg / Ryan Levering 发言，2026.4.21）
