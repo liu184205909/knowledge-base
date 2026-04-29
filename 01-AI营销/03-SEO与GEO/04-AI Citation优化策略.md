@@ -81,6 +81,8 @@
 
 **社区内容平台**：Perplexity — Reddit占46.7%，社区真实讨论比机构权威更重要。
 
+**注意**：Google AI Overviews 和 AI Mode 引用相同 URL 的重叠率仅 **13.7%**（Ahrefs），但语义结论 86% 一致。两者独立检索，需要**同时在两个生态中保持可见**。
+
 ---
 
 ## Princeton GEO论文核心发现
@@ -113,18 +115,68 @@
 
 ---
 
+## Google 官方 GEO 立场（Search Central Live Toronto 2026）
+
+> 来源：Google Danny Sullivan 在 Search Central Live Toronto 的分享《AI in Google Search》
+
+### AI 搜索如何工作：通识 + Query Fan-out
+
+1. **AI 模型具备通识**：通过学习大量内容获得的通用知识（如"太阳从哪边升起"）
+2. **特定知识从传统搜索获取**：通过 Query Fan-out（查询扇出）将用户原始查询扩展为多个相关查询
+3. **底层依赖传统搜索** → 核心结论：**好 SEO = 好 GEO**
+
+> 例：`适合 6 分配的慢跑跑鞋` → `最佳慢跑跑鞋`、`6 分配跑鞋`、`慢跑跑鞋推荐` 等子查询
+
+### 取胜关键："非同质化"内容
+
+AI 搜索时代，Google 强调内容的三个核心特质（E-E-A-T 中第一个 E"经验"的放大）：
+
+| 特征 | 说明 |
+|------|------|
+| **独特性** | 他人没有、难以轻易复制的观点、信息或内容 |
+| **具体性** | 具体情境或事物，非泛泛而谈的通用信息 |
+| **真实性** | 第一手知识或亲身经验 |
+
+#### 同质化 vs 非同质化对比
+
+| 行业 | ❌ 同质化内容 | ✅ 非同质化内容 |
+|------|--------------|----------------|
+| **跑鞋店** | 《购买跑鞋时要考虑的 10 件事》— 标准建议 | 《为什么这位顾客的跑鞋在 400 英里后塌陷了：磨损模式分析》— 深度分析特定跑姿导致的鞋底泡棉塌陷 |
+| **房产中介** | 《首次购房者的 7 个建议》— 通用建议 | 《为什么我们放弃了房屋检查却省下 1.5 万美元：下水管道内幕》— 包含亲自爬管道检查的实操经验 |
+| **室内设计师** | 《厨房设计趋势》— 从 Pinterest 扒图 | 《大理石 vs 葡萄汁：为什么我拒绝给一家五口安装石材台面》— 用葡萄汁和姜黄做污渍测试的实战 |
+
+### Google 明确否认的四个误区
+
+| 误区 | Google 官方回应 |
+|------|----------------|
+| 需要为 AI 把内容"切块" | 没必要拆分小块，按用户良好阅读体验来组织 |
+| H1/H2 需要做到"语义精确" | 标题目的是帮助用户阅读，不需为 AI 做到极其精准 |
+| 需要堆砌对话式关键词/穷尽同义词 | Google 语言匹配系统已很成熟，无需刻意覆盖每种表达 |
+| JS 网站需要为 AI 做特殊改造 | 只要 Google 能像真实用户一样正常访问即可 |
+
+> **注意**：这与 Princeton GEO 论文的"可提取结构"建议有部分冲突。Princeton 建议 chunk 化和问题式标题有数据支撑（+40%引用概率），但 Google 官方认为不需要刻意改造。实操中建议平衡：**保持用户阅读体验的前提下，适当优化结构可解析性**。
+
+### 警惕第三方 GEO 评分工具
+
+Google 明确表示第三方工具的指标和建议（如"EEAT 得分 89 分""GEO 评分 65 分"）都是**非官方的**，需谨慎参考。
+
+### AI 创作内容的红线
+
+- ✅ 可以：用 AI 做资料调研、为原创内容梳理框架
+- ❌ 违规：**批量生成大量页面却没有为用户增加真正价值**（已有多个站点因此被算法打击）
+
+### 访问质量 vs 流量数量
+
+- 用户从 AI Overviews 点击进入网站后停留时间更长（已有前置了解）
+- 建议从"看流量大小"转向"看流量质量"（销售额、注册、用户参与度）
+
+---
+
 ## 核心概念：实体（Entity）与共识层（Consensus）
 
 ### 实体（Entity）
 
-**实体**就是AI理解的"概念"。AI靠概念之间的关联网络来选择引用来源。传统SEO优化"关键词"，GEO优化"实体网络"。
-
-| 维度 | 传统SEO | AI Citation/GEO |
-|------|---------|----------------|
-| 优化单位 | 关键词（crystals for anxiety） | 实体（水晶+焦虑+紫水晶+脉轮+冥想） |
-| 衡量标准 | 关键词出现次数/密度 | 实体覆盖广度/关联深度 |
-| 页面评估 | "这个页面针对什么关键词" | "这个页面覆盖了什么知识网络" |
-| 竞争壁垒 | 容易模仿（堆关键词） | 难以模仿（需要内容深度） |
+> AI 不读关键词，读实体——概念之间的关联网络决定了你是否被引用。完整的 6 信号模型和 6 步优化工作流见 [05-实体与知识图谱理论](./05-实体与知识图谱理论.md)。
 
 ### 共识层（Consensus Layer）
 
@@ -136,6 +188,8 @@
 - 40-60%的AI引用每月会变化，但底层共识模式稳定
 
 **启示**：数字PR、评论平台、行业媒体、社区运营不再是"品牌建设"，而是**直接的GEO信号**。
+
+**"媒体阶梯翻转"**（Forbes 2026.03）：传统路径是"媒体报道 → 社区讨论"，AI 时代反过来了——"真实用户讨论 → AI 引用 → 记者注意到 AI 中的模式 → 媒体报道"。对话赢得媒体，不是媒体创造对话。
 
 ---
 
@@ -258,6 +312,7 @@
 
 | 指标 | 定义 | 追踪方法 |
 |------|------|---------|
+| **Citation Share（引用份额）** | 网站在 AI 某扩展查询所有引用来源中的占比（百分比） | **Bing Webmaster Tools 即将上线** |
 | **Share of Model (SoM)** | AI回答中品牌出现的频率 | 20-30个目标关键词定期查询 |
 | **引用频率** | AI链接到你域名的次数 | Profound/Otterly |
 | **归因质量** | 是否包含品牌名、URL、内容引用 | 定性审查AI回答 |
@@ -275,6 +330,54 @@
 - 情绪倾向
 
 > **注意**：单次快照不可靠。SparkToro研究显示需要60-100次重复查询才能得到统计显著的数据。每月一次测量会错过重大变化。
+
+### Bing Citation Share 详解
+
+> 来源：Bing SEO Week 2026，即将上线于 Bing Webmaster Tools
+
+**Citation Share** 是 Bing 提出的 GEO 核心指标，反映网站在 AI 检索词中所有引用来源里所占的比例。
+
+**三个核心特征：**
+- 按每个扩展查询（Grounding Query）单独计算
+- 以百分比形式呈现
+- 衡量的是"实际引用份额"——不是"是否有资格被引用"或"被引用的频率"
+
+> **Citation Share 可能是 GEO 时代的"平均排名"。** AI 搜索答案不固定，引用份额基本相当于 SEO 时期的平均排名，很可能成为未来 GEO 报告的核心 KPI。
+
+#### 示例：天气类网站引用份额
+
+| 扩展查询（Grounding Query） | 意图类型 | Citation Share |
+|---|---|---|
+| 各类天气查询 | Informational Search | **97.61%** |
+| 风暴追踪 | Informational Search | **91.07%** |
+| 洪水预警 | Utility | **92.69%** |
+| 天气预报 / 雷达 | Navigational | **94.29%** |
+| 季节性天气 | Informational Search | **95.45%** |
+
+### Bing AI 检索词：意图分类
+
+Bing 将 AI 检索词按用户核心目的分为 **15 种意图类型**：
+
+| Grounding Query 示例 | 意图（Intent） | 主题（Topic） |
+|---|---|---|
+| best ebikes under 1500 | **Comparison（对比）** | E-bikes / Pricing |
+| ebike commute hills | **Research（研究）** | E-bikes / Performance |
+| ebike battery range | **Informational Search** | E-bikes / Specs |
+| Trek vs Specialized ebike | **Comparison** | E-bikes / Brands |
+| how to choose commuter bike | **Learning（学习）** | Cycling / Commuting |
+| ebike maintenance cost | **Planning（规划）** | E-bikes / Ownership |
+| bike shop near me | **Navigational（导航）** | Local / Retail |
+
+其他意图类型：对话式、内容筛选、实用工具等。
+
+### Bing GEO 优化建议（4 维度）
+
+| 维度 | 要求 |
+|------|------|
+| **内容结构与可抓取性** | 网站结构清晰；robots.txt 没屏蔽重要内容；AI 爬虫能抓到核心内容 |
+| **索引与规范化信号** | canonical 标签正确配置；sitemap 完整 |
+| **结构化数据采用与更新** | 用 JSON-LD；覆盖 Article、Product、FAQ、HowTo、Organization、BreadcrumbList；跟进 Schema.org 更新 |
+| **结构化数据质量与有效性** | 字段填写完整；不用过时 Schema 类型；通过 Schema Markup Validator 验证 |
 
 ---
 
@@ -420,6 +523,21 @@
 
 ---
 
+## 传统 SEO vs GEO 对照表（Google 官方）
+
+| 传统 SEO 关注点 | GEO 时代的做法 |
+|---|---|
+| 内容 | 优先做"非同质化"内容（独特、具体、真实） |
+| 页面体验 | 依然是成功的基础 |
+| SEO 基本优化 | 检查是否有缺漏 |
+| 结构化数据 | 检查是否有缺漏 |
+| 购物/本地/视频/图片 SEO | 复盘新的机会点 |
+| **Agentic（智能体化）← 新增维度** | 持续关注 + 把握新机会 |
+
+> **核心观点：SEO 和 GEO 的大多数策略都是一样的，只是需要在内容、目标等方向做迭代和进化。**
+
+---
+
 ## 持续关注
 
 - Christian Ward 的3800万数据点研究详细数据待发布
@@ -429,12 +547,23 @@
 - llms.txt标准的发展（专门为AI爬虫设计的内容声明格式）
 - AI引用监测工具生态快速成熟（Profound/Otterly/ZipTie等）
 
+### SEO Week 2026 新观点
+
+- **Relevance Engineering（相关性工程）**（Mike King/iPullRank）：SEO 不再是"优化"，而是"工程"——构建 AI 可以理解的品牌实体和语义关系网络。GEO/AEO 是这一工程的子集。
+- **SEO 是品牌渠道，不是免费流量渠道**：对话式搜索发送有限的推荐流量反而证实了这一点。投资应该反映品牌价值，而非"免费流量"心态。
+- **AI Sitemaps**：专门为 AI 爬虫创建的站点地图，引导模型到关键页面（新兴实践）。
+- **审查 log files 中的 LLM 幻觉**（Aleyda Solís）：通过服务器日志发现 AI 对你品牌的错误描述，追溯到源头修正（Aleyda Solís, SEO Week 2026）。
+- **OpenAI 搜索机器人覆盖率已达 55.67%**（279 亿次请求），TikTok 爬虫也在成为重要信号源（LinkedIn 2026.02 数据）。
+- **AVO（Agentic Visibility Optimization）**（Manick Bhan）：面向 AI Agent 的可见性优化框架，Agentic Commerce 的延伸。
+
 ---
 
 ## 参考来源
 
 | 来源 | 数据规模 | 说明 |
 |------|---------|------|
+| **Google Search Central Live Toronto** | 官方分享 | Danny Sullivan《AI in Google Search》，2026.04 |
+| **Bing SEO Week 2026** | 官方分享 | Citation Share、意图分类、GEO优化建议 |
 | Profound (tryprofound.com) | **6.8亿条citation** | 跨ChatGPT/Perplexity/Google AI Overviews |
 | **Scrunch/Stacker** | **350万条citation事件** | 引用耐久性/半衰期研究，120K+域名，2025.9-2026.3 |
 | ZipTie.dev | 综合分析 | 平台对比+Mention-Source Divide |
@@ -455,9 +584,11 @@
 - [01-内容质量标准.md](./01-内容质量标准.md)
 - [02-Google-SEO核心机制.md](./02-Google-SEO核心机制.md)
 - [03-SEO全链路工作流.md](./03-SEO全链路工作流.md)
+- [05-实体与知识图谱理论.md](./05-实体与知识图谱理论.md)
 
 ---
 
 **创建时间**: 2026-04-28
+**最后更新**: 2026-04-29
 **文档类型**: GEO - AI Citation优化策略
-**信息来源**: SEO Week 2026 + Princeton GEO论文 + 6.8亿条citation数据集 + 行业研究
+**信息来源**: Google Search Central Live Toronto 2026 + Bing SEO Week 2026 + SEO Week 2026 + Princeton GEO论文 + 6.8亿条citation数据集 + 行业研究
