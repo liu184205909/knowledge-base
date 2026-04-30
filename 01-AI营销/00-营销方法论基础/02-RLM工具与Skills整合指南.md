@@ -139,9 +139,9 @@ claude mcp add gsc -- npx -y gsc-mcp-server
    ```
 2. **操作 WordPress（推荐全 AI 介入）**：
    - 核心工具：`02-自动化工具库/04-WordPress建站` 文档规范
-   - 触发 Skill：`wordpress-agent-skills` (专门的WP建站Skill)
+   - 触发 Skill：`wordpress-block-theming` (WP 全站编辑主题架构)
    - 辅助功能：结合 `playwright` MCP 直接由 AI 测试后台操作结果。
-   - 话术："参考我们刚设计的网站结构，使用 wordpress-agent-skills 帮我在 WooCommerce 中批量创建这些分类层级。"
+   - 话术："参考我们刚设计的网站结构，使用 wordpress-block-theming 技能帮我在 WooCommerce 中批量创建这些分类层级。"
 
 ---
 
@@ -159,7 +159,7 @@ claude mcp add gsc -- npx -y gsc-mcp-server
    - 话术："用 GSC 分析我的 Content Gaps" — 发现有需求但未覆盖的话题
    - 话术："用 GSC 检查 Cannibalisation" — 排查页面间关键词内耗
 3. **SEO 技能全面介入**：
-   - 触发 Skills组合：`claude-seo` (E-E-A-T标准) 或 `Agentic-SEO-Skill`
+   - 触发 Skills组合：`claude-seo` (E-E-A-T标准) 或 `seo-geo-claude-skills` (GEO优化)
    - 话术："读取 SEMrush 导出的关键词 CSV，跳过高 KD 词。挑选出搜索意图为'信息型'和'购买型'的长尾词，按主题集群(Topic Clusters)进行分组，并输出优先级策略。"
 
 ---
@@ -179,13 +179,13 @@ claude mcp add gsc -- npx -y gsc-mcp-server
    python 02-自动化工具库/05-竞品内容分析工具/content_analyzer.py --input 03-sitemap_results/blog_urls.csv
    ```
 3. **生产高转化博客/内容**：
-   - 触发 Skill组合：`claude-blog` + `seo-geo-claude-skills` + `huashu-skills (中文环境)`
+   - 触发 Skill组合：`claude-blog` + `seo-geo-claude-skills`
    - 话术："基于 content_pattern_report.md 里的『竞品内容空白区』，使用 claude-blog 技能，以 [目标关键词] 为核心，写一篇符合 E-E-A-T 规范的万字选购指南。注意，请重点在正文中埋入我们的『差异化清单』策略。"
 4. **发布后索引提交（GSC MCP）**：
    - 话术："用 GSC Submit URL 提交这篇文章的链接" — 加速收录
    - 话术："用 GSC 检查这篇文章是否已被索引" — 验证收录状态
 5. **社交媒体同步裂变（分发）**：
-   - 触发 Skill：`typefully/agent-skills` (社媒分发) 或 `article-to-x` (转推文)
+   - 触发 Skill：`typefully` (社媒分发) 或 `article-to-x` (转推文)
    - 话术："把刚写好的博客摘要提取出来，生成符合 Twitter 和 LinkedIn 用户偏好的多图文 Thread 设计并发推。"
 
 ---
