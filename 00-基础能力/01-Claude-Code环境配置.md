@@ -24,6 +24,7 @@ Claude Code 会自动完成以下所有操作：
 | 创建 `~/.claude/CLAUDE.md` | 全局指令文件 |
 | 安装 MCP（4+1 个） | 4个基础 + n8n（可选），见下方详细配置 |
 | 安装 Skills | 按 [01-Skill设计与管理](./01-Skill设计与管理.md) 自动安装 |
+| 安装 Codex 插件 | 见下方 Codex 插件配置章节 |
 
 ---
 
@@ -59,6 +60,49 @@ claude mcp add -s user n8n-mcp \
 ```bash
 claude mcp list              # 查看已安装
 claude mcp remove <name>     # 移除
+```
+
+---
+
+## Codex 插件配置
+
+> OpenAI 官方插件，在 Claude Code 中调用 Codex 做代码审查或任务委托。需要 ChatGPT 账号或 OpenAI API Key。
+
+### 安装步骤
+
+| 步骤 | 命令/操作 |
+|------|----------|
+| 安装 Codex CLI | `npm install -g @openai/codex` |
+| 登录 Codex | `codex login` |
+| 克隆插件仓库 | `git clone https://github.com/openai/codex-plugin-cc ~/.claude/plugins/marketplaces/openai-codex` |
+| 注册命令/技能/代理 | 将 `plugins/codex/` 下的 commands、agents、skills 复制到 `~/.claude/` 对应目录 |
+
+> **注意**: VS Code 版 Claude Code 不支持 `/plugin` 斜杠命令，需手动复制文件到 `~/.claude/commands/`、`~/.claude/agents/`、`~/.claude/skills/` 目录完成注册。
+
+### 可用命令
+
+| 命令 | 用途 |
+|------|------|
+| `/codex-review` | Codex 代码审查（只读，建议加 `--background`） |
+| `/codex-adversarial-review` | 对抗性审查，质疑设计决策 |
+| `/codex-rescue` | 委托任务给 Codex（修 bug、调查等） |
+| `/codex-status` | 查看后台任务进度 |
+| `/codex-result` | 查看任务结果 |
+| `/codex-cancel` | 取消后台任务 |
+| `/codex-setup` | 检查 Codex 是否就绪 |
+
+### 典型用法
+
+```bash
+# 代码审查（后台运行）
+/codex-review --background
+
+# 委托任务给 Codex
+/codex-rescue investigate why the tests are failing
+
+# 查看结果
+/codex-status
+/codex-result
 ```
 
 ---
