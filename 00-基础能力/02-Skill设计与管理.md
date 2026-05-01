@@ -173,6 +173,9 @@ npx skills list -g
 |-------|------|--------|------|
 | **marketingskills** | 34个营销技能全家桶 | "营销策略" / "定价" / "launch" | [GitHub](https://github.com/coreyhaines31/marketingskills) ⭐19.7k |
 | **content-strategy** | 内容规划 | "内容策略" / "内容规划" | marketingskills |
+| **afa-dtc-skills** 📦 | DTC全链路增长(30模块+Hub路由) | "/afa" | [GitHub](https://github.com/afadtc/afa-dtc-skills) |
+
+> 📦 **储备**（未安装）：afa-dtc-skills — 独立站操盘10年沉淀，三层架构（Hub→Supervisor→Worker），30个模块覆盖市场洞察/广告投放/CRO/留存扩张。与我方SEO内容驱动体系互补（自然流量+付费流量=增长闭环）。30个模块可能与我方现有 Skill 重叠较多，后期按需选择性安装。许可证 CC BY-NC 4.0（个人免费）。
 
 #### 调试 & 记忆
 

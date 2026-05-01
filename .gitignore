@@ -1,0 +1,22 @@
+# API credentials - sensitive data, DO NOT commit
+config/api-credentials.json
+config/api-credentials*.json
+**/config/api-credentials*.json
+
+# Environment variables
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.bak
+*.log
