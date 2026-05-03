@@ -233,12 +233,30 @@ Google 明确表示第三方工具的指标和建议（如"EEAT 得分 89 分""G
 | **15+实体/页面** | Google AI Overviews引用概率提升4.8倍 | 实体密度关键 |
 | **FAQ部分** | Schema标记的FAQ | 虽然有争议但整体正面 |
 
+### AI引用的真正决定因素
+
+> 来源：BrightonSEO April 2026，AirOps × Kevin Indig 研究（16,851 queries, 354,000 pages）
+
+| 因素 | 影响力 | 关键数据 |
+|------|--------|----------|
+| **检索排名（Retrieval Rank）** | 最强 | Position 1 = 58%引用率，Position 10 = 14% |
+| **标题结构（Heading Match）** | 最强页面因素 | 匹配查询 = 41%引用 vs 不匹配 = 29% |
+| **域名权重/外链** | 几乎无正相关 | 甚至呈轻微负相关 |
+| **内容覆盖度** | 非线性 | 覆盖26-50%子查询 > 覆盖100% |
+
+**核心发现**：
+- LLM不读整页——只读**个别段落**，按段落优化而非按页面
+- 使用**BLUF写法**（Bottom-Line Up Front，结论前置）
+- 使用**肯定式、声明式句子**，具体、精确（不要模糊）
+- **"终极指南"模式有害**：大而全的页面在控制查询相关性后反而降低引用率，精准聚焦 > 大而全
+
 ### 引用密度优化
 
 - 每篇文章嵌入**25-40个超链接统计数据**
 - 每个关键段落至少**1个可验证数据**（"According to Pew Research 2025, 21%..."）
 - 添加**方法论说明和样本量**（数据可信度的信号）
 - 去掉"opinion-y language"，改为**事实密集的陈述性写作**
+- 标题匹配用户的 Fan-Out 查询（AI将用户问题拆分为多个子查询，标题需对齐这些子查询）
 
 ### 新鲜度策略
 
@@ -257,8 +275,16 @@ Google 明确表示第三方工具的指标和建议（如"EEAT 得分 89 分""G
 | **robots.txt** | 放行GPTBot、ClaudeBot、PerplexityBot、Google-Extended | 很多网站默认屏蔽了AI爬虫而不自知 |
 | **服务器端渲染** | SSR/SSG，不要纯CSR | AI爬虫无法执行JavaScript |
 | **Schema.org标记** | Organization、FAQ、HowTo、Article | 帮助AI提取结构化信息 |
-| **llms.txt** | 新兴标准，专门为AI爬虫声明内容结构 | 可选但推荐 |
+| **llms.txt** | 新兴标准，专门为AI爬虫声明内容结构 | ⚠️ **BrightonSEO实验显示效果不佳**（见下方） |
 | **页面速度** | 爬虫可能在页面加载完成前放弃 | 影响内容被索引的概率 |
+
+#### llms.txt 实验结果
+
+> 来源：BrightonSEO April 2026，Thomas Peham / otterly.ai「GEO Experiments 2026」
+
+- **llms.txt 整体效果不佳**（Thomas Peham 原话："looking at you, llms.txt"）
+- 实验中有一个成功案例让 otterly.ai 被ChatGPT引用，但整体结论不支持将 llms.txt 作为GEO主要策略
+- 实操建议：llms.txt 可作为辅助工具部署，但不应期望它显著提升AI引用率
 
 ### 第三方平台布局
 
@@ -292,6 +318,8 @@ Google 明确表示第三方工具的指标和建议（如"EEAT 得分 89 分""G
 - 你自己的内容可能被AI**张冠李戴**给竞品
 - 需要监控AI对你的品牌说了什么，而不只是"有没有引用你"
 - 负面共识信号会压制推荐概率
+
+> LLM 的理解力局限（无法处理隐含情感、经常遗漏前提和例外、被提及≠被推荐）以及这对人类原创内容的启示，详见 [08-BrightonSEO-April-2026核心论点](./08-BrightonSEO-April-2026核心论点.md)。
 
 ---
 
@@ -576,6 +604,8 @@ Bing 将 AI 检索词按用户核心目的分为 **15 种意图类型**：
 | Adobe Digital Insights | 行业数据 | AI推荐流量增长 |
 | Semrush | 13周纵向研究 | 平台引用偏好变化（Reddit 60%→10%） |
 | AirOps | 2026 AI Search报告 | AI引用持续性 |
+| **BrightonSEO April 2026** | AirOps × Kevin Indig 16,851 queries | AI引用决定因素、终极指南有害、BLUF写法 |
+| **BrightonSEO April 2026** | Thomas Peham / otterly.ai | llms.txt实验失败 |
 
 ---
 
