@@ -2,7 +2,53 @@
 
 > **GEO (Generative Engine Optimization)**：优化内容被AI引用，而非传统搜索排名
 > **信息来源**: SEO Week 2026 + Princeton GEO论文 + 6.8亿条citation数据集 + 行业研究
-> **最后更新**: 2026-04-28
+> **最后更新**: 2026-05-03（并入 SEO×GEO 双入口战略框架）
+
+---
+
+## 战略背景：为什么 GEO 是 2026 年必须做的事
+
+> 来源：Lois《海外SEO与ASO》WebFX 23 亿会话数据 + BrightonSEO April 2026
+
+AI 流量两年增长 **796%**，但仅占总会话份额的 **0.18%**。增速确定、体量仍小。SEO 负责规模，AI 搜索负责高意向。
+
+### 关键数据
+
+| 指标 | 数值 | 含义 |
+|------|------|------|
+| AI 流量两年增长 | **796%** | ChatGPT/Perplexity/Gemini/Copilot 等正在形成可观推荐流量 |
+| AI 占总会话份额 | 仅 **0.18%** | 绝大多数网站 AI 流量还不足以替代 Google |
+| AI 访客转化率 | 自然搜索的 **1.2 倍** | AI 用户更靠近决策阶段 |
+| Organic + Direct | **60%+** | 仍是网站流量底盘 |
+
+### SEO × GEO × AEO × HEO 生态
+
+> 来源：BrightonSEO April 2026 多位演讲者共识
+
+```
+Tech SEO = 地基（Foundation）
+Content & PR = 催化剂（Catalyst）
+Social = 放大器（Amplifier）
+GEO = 新阵地（Growing real estate）
+```
+
+### BrightonSEO April 2026 补充
+
+| 指标 | 数值 | 来源 |
+|------|------|------|
+| SEO 与 GEO 流量相关性 | **逐季度增强** | Malte Landwehr |
+| AI Overviews 引用中 Google Top 20 占比 | **43%** | Malte Landwehr |
+| AI Mode 引用中 Google Top 20 占比 | 仅 **20%** | Malte Landwehr |
+| AI Search 点击流向首页 | **60%**（传统 SEO <20%） | Malte Landwehr |
+| ChatGPT 外链流向 Google | **20%+**（最大单一外链方向） | Semrush |
+
+**关键洞察**：AI Overviews 和 AI Mode 推荐逻辑高度不同（43% vs 20% 重叠率），需要分别优化。做好 SEO 基础 = 自动提升 GEO。
+
+### 管理层沟通建议
+
+- 将 AI 流量定义为"早期战略指标"，不要求承担主要线索目标
+- 0.18% 份额 = 还小，不要夸大；796% 增速 = 不能被忽略
+- **成熟团队会在 AI 流量变大之前把基础设施搭好**
 
 ---
 
@@ -319,7 +365,7 @@ Google 明确表示第三方工具的指标和建议（如"EEAT 得分 89 分""G
 - 需要监控AI对你的品牌说了什么，而不只是"有没有引用你"
 - 负面共识信号会压制推荐概率
 
-> LLM 的理解力局限（无法处理隐含情感、经常遗漏前提和例外、被提及≠被推荐）以及这对人类原创内容的启示，详见 [08-BrightonSEO-April-2026核心论点](./08-BrightonSEO-April-2026核心论点.md)。
+> LLM 的理解力局限（无法处理隐含情感、经常遗漏前提和例外、被提及≠被推荐）以及这对人类原创内容的启示，详见 [08-BrightonSEO-April-2026-数据溯源](./08-BrightonSEO-April-2026-数据溯源.md)。
 
 ---
 
