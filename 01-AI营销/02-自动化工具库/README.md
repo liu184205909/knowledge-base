@@ -1,6 +1,6 @@
 # 02-自动化工具库
 
-> 服务于 RLM 营销流程的自动化脚本与工具集合 | 最后更新: 2026-04-13
+> 服务于 RLM 营销流程的自动化脚本与工具集合 | 最后更新: 2026-05-04
 
 ---
 
@@ -14,6 +14,7 @@
 | **04** | WordPress建站 | AI 操作 WordPress，Elementor 建站规则 | 文档为主 |
 | **05** | 竞品内容分析工具 | 批量抓取 title/H1/H2，输出内容模式报告 | `content_analyzer.py` |
 | **06** | WordPress插件 | TranslatePress AI翻译方案等插件调研 | 文档为主 |
+| **07** | 数据分析工具 | Google Data Studio 数据可视化，SEO/流量仪表盘 | 文档为主 |
 
 ---
 
@@ -36,6 +37,8 @@
 03-竞品分析工具/sitemap_parser.py           ← Sitemap 解析内容架构
     ↓ blog_urls.csv
 05-竞品内容分析工具/content_analyzer.py     ← 批量抓取 title/H1/H2，输出内容模式报告
+    ↓ 网站上线后
+07-数据分析工具/Data Studio                 ← GSC/GA4 数据可视化，驱动内容迭代
 ```
 
 ---
@@ -144,6 +147,25 @@ python 05-竞品内容分析工具/content_analyzer.py --input urls.csv --limit 
 输出：
 - `results/content_pattern_report_<时间>.md`：内容类型分布 + 各竞品对比 + 内容空白
 - `results/articles_detail_<时间>.csv`：所有文章原始数据
+
+---
+
+## 07 数据分析工具
+
+**文件**：`07-数据分析工具/01-Google-Data-Studio使用指南.md`
+
+**定位**：网站上线后的数据可视化中心，连接 GSC + GA4 + Sheets 搭建 SEO/流量仪表盘。
+
+**核心数据流**：
+
+```
+竞品分析数据（CSV）→ Google Sheets → Data Studio 仪表盘
+                                        ↑
+GSC 搜索排名 ─────────────────────── 原生连接
+GA4 流量行为 ─────────────────────── 原生连接
+```
+
+**当前状态**：基础文档已创建，等网站上线有数据后补充仪表盘模板和进阶分析。
 
 ---
 

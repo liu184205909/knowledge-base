@@ -14,6 +14,29 @@ Crawling → Indexing → Query Processing → Core Ranking(T*×Q*×P*) → Post
 - **Post-Ranking Twiddler** 决定你在候选池里排第几
 - AIO、Featured Snippet、PAA 都是 Twiddler 层的产物
 
+### Firefly：规模化内容滥用检测引擎
+
+> 基于 Content Warehouse API Leak 中的 `QualityCopiaFireflySiteSignal` 模块（Shaun Anderson 取证分析）。Firefly 是**站点级信号**，直接影响排名。
+
+**模块命名解读**：Quality（质量生态）+ Copia（拉丁语"过量"，对应 scaled）+ Firefly（萤火虫算法，在海量数据中发现微弱操纵信号）+ SiteSignal（站点级聚合）
+
+**追踪的关键属性**：
+
+| 属性 | 机制 | 意义 |
+|------|------|------|
+| **内容生产速度** | 连续 30 天内新发现 URL 数量突变即触发审查 | 从每天 1 篇变 50 篇 = 立刻跳变 |
+| **高质量内容占比** | 内部评分 ≥0.8 的页面数量 / 总页面数 | 发 1000 篇但只有 5 篇达标 = 强信号 |
+| **dailyClicks vs dailyGoodClicks** | 来自 NavBoost，goodClicks = 用户未立即返回搜索 | **大量点击 + 低 goodClicks = 低质量的数学证据** |
+| **临时排名提升追踪** | `impressionsInBoostedPeriod` + `firstBoostedTimeSec` | 新内容"测试窗口"表现不佳 → 后续机会递减 |
+| **展示量突增预警** | `recentImpForQuotaSystem` 触发资源配额审核 | 突然几千新页面 = 潜在垃圾来源 |
+| **AI 生成内容评分** | `racterScores`（AGC 分类评分，带版本历史） | 追踪 AI 内容比例趋势，突变即跳变 |
+
+**关键影响**：Firefly 是站点级信号——一个站上的规模化滥用行为不只影响被标记的页面，而是影响**整个站点**的排名。（Patrick Stox / Ahrefs 确认：Ahrefs 把有风险的 programmatic 内容搬到独立域名 ahrefstop.com，避免站点级信号污染主站。）
+
+**规模化策略的时间差本质**：Relevance Systems 快速找到相关内容，Quality Systems（含 Firefly）需要几周到几个月完成评估。黑帽策略赌的就是这个时间差——流量是真实的，但排名崩溃是必然的。这也解释了为什么需要不断注册新域名——每个站都是消耗品。
+
+---
+
 ### SegIndexer：索引分层机制
 
 > 页面不是"被索引了就有机会排名"。Google 内部的 SegIndexer 系统将已抓取页面分配到不同 serving tier，不同层级获得的排名机会天差地别。（来源：2004 年 Google Index Partitioning 专利 + 2024 年 Content Warehouse API Leak 中的 SegIndexer 模块。2026.4 Google Search Central Live Toronto 官方确认：AI 降低了内容创作门槛，迫使 Google 提高了索引标准。）
@@ -89,6 +112,27 @@ Google 有"predicting site quality"专利，新站初始分继承自向量相似
 
 > 核心判断："如果因为任何原因你失去可见度，Google 发现没人主动搜你——你就不存在——那你的站就完了。"
 
+### siteQualityStddev：一致性比最高质量更重要
+
+> 来源：Content Warehouse API Leak。John Mueller 2025 年说"一致性是技术 SEO 最重要的因素"，描述的就是这个属性。
+
+`siteQualityStddev` 是网站页面级 PQ 评分（pqData）的**标准差估计值**——衡量站内页面质量波动程度。标准差越高，说明站内页面质量越参差不齐。
+
+**核心逻辑**：
+
+```
+低质量内容 = 低 pqData 整数值
+"影响整个网站" = 高 siteQualityStddev
+"删除、合并或迁移" = 降低标准差的唯一统计学方法
+```
+
+**实操意义**：
+
+- **你的排名不仅取决于你最好的作品，还取决于你与卓越水平的偏差**
+- 一个站上有 10 篇优秀文章和 100 篇垃圾 → siteQualityStddev 很高 → 那 10 篇优秀的排名潜力会被拖垮
+- 删除/合并低质量页面、将内容单薄页面合并为更有用页面、将低质量页面迁移到不同域名 → 这些都是降低标准差的手段
+- Google 2011 年 Panda 指南就已明确说了这个逻辑，Leak 只是揭示了具体执行属性
+
 ---
 
 ## 8 种查询分类
@@ -134,6 +178,53 @@ Google 官方说 HCU 评估"内容是否为人写的"，三源真相：
 HCU 受害者共性：**Domain Authority 远高于 Brand Authority**（DA:BA = 2:1+）。
 - 你外链攒得快，但没人搜你的品牌 = 高风险
 - HCU losers 平均 Brand Authority 37，winners 50-52
+
+---
+
+## 三层链接索引机制
+
+> 来源：Content Warehouse API Leak。Google 维护三个不同层级的链接索引，链接页面在层级中的位置由 `SourceType` 属性决定。
+
+| 层级 | 条件 | 效果 |
+|------|------|------|
+| **高质量** | 页面上的链接获得真实用户点击 | 正常传递 PageRank 和锚文本信号 |
+| **中质量** | 少量互动 | 部分传递 |
+| **低质量** | 页面上链接 **TotalClicks 为零** | **排名算法实际上忽略该链接**，不传递 PageRank，不传递锚文本信号 |
+
+**核心机制**：零点击页面上的所有内链和外链都不传递任何价值。你以为在通过内链把权重导向 money page，实际上这些链接被归入了低质量层，什么都没传递。
+
+**anchorMismatchDemotion**：在完全不相关的页面上放置精确匹配锚文本的链接不只是浪费——**可能对排名造成实际损害**。
+
+**实操结论**：获取链接不再是终点。让链接所在的页面获得真实用户互动验证，才是让链接产生价值的前提条件。批量发布几千个无人访问的页面，页面上的所有内链和外链全部失效。
+
+---
+
+## 虚伪惩罚：声称与实际不匹配
+
+> 来源：Shaun Anderson Contextual SEO 框架 + Quality Rater Guidelines Section 7.0
+
+Google 的 Quality Raters 被训练去寻找**网站声明和实际行为之间的不匹配**。Section 7.0 明确指出：声明目的与实际内容之间存在不匹配的页面应被评为最低质量。
+
+**触发条件**：About 页面写着"资深专家团队，每篇内容严格审核"，实际每天发 50 篇未编辑 AI 内容 = Deceptive Page Purpose。
+
+**Leak 属性对应**：可能触发 `scamness`（欺骗性评分）和 `unauthoritativeScore`（非权威评分）。
+
+**核心原则**：内容生产价值必须与政策声明对齐。不能用精心制作的 About 页面伪造 E-E-A-T，如果实际产出与声明严重不符。
+
+---
+
+## 四种系统性失败模式
+
+> 来源：Shaun Anderson Contextual SEO 框架。这四种不是内容问题，而是系统性问题，**单靠改进内容无法解决**。
+
+| 模式 | 表现 | 根因 |
+|------|------|------|
+| **语境过度延伸**（Context Overreach） | 个人博客排名"心脏病治疗方案"等 YMYL 查询 | 网站试图在需要更多信任/权威的查询中排名，超出了合理范围 |
+| **实体膨胀**（Entity Inflation） | 没有外部证据却以权威机构身份出现 | 通过 EntityAnnotations 和 Knowledge Graph 验证身份，无证据 = 信任摩擦 + 排名阻力 |
+| **意图漂移**（Intent Drift） | 页面对不满足的查询暂时排名靠前，最终下降 | NavBoost 的 `lastLongestClicks` 机制——用户搜索任务未在你的页面完成 → 排名随时间衰减 |
+| **信任信号债务**（Trust Signal Debt） | UX 问题、激进盈利、信息不透明侵蚀信任 | `clutterScore`（杂乱度评分）等属性追踪，悄无声息地累积 |
+
+**共同特点**：都不是内容质量问题，是系统性和背景性问题，单靠写更好的内容或获取更多外链无法解决。需要从站点定位、实体定义、用户验证等层面系统性地修复。
 
 ---
 
@@ -251,7 +342,7 @@ Schema → 实体消歧加速 → 实体权威建立 → Knowledge Graph 认可 
 
 ---
 
-## 18 条硬事实
+## 24 条硬事实
 
 1. Q* 真实存在，subdomain 级别，0.4 是 SERP features 硬门槛
 2. Q* 核心输入 = Brand Visibility + Selection Rate + Anchor Text Brand Prevalence
@@ -271,6 +362,12 @@ Schema → 实体消歧加速 → 实体权威建立 → Knowledge Graph 认可 
 16. **屏蔽扩展搜索机器人不会阻止 AI 使用你的内容，data-nosnippet 是唯一方法**（但伤害传统 SEO）
 17. **Google 不反对 AI 本身，反对的是规模化内容滥用**
 18. **"已抓取-未索引"很少是技术问题，通常是质量信号**（Google 官方确认，2026.4 Toronto）
+19. **Firefly（QualityCopiaFireflySiteSignal）是站点级规模化滥用检测引擎**，追踪内容生产速度、高质量占比、dailyClicks/goodClicks 比率、AI 内容比例趋势
+20. **siteQualityStddev 衡量站内页面质量一致性**，标准差越高排名越不利，一致性比最高质量更重要
+21. **三层链接索引机制**：零点击页面上的链接不传递任何 PageRank 和锚文本信号
+22. **anchorMismatchDemotion**：不相关页面上的精确匹配锚文本不只是浪费，可能造成实际损害
+23. **虚伪惩罚**：网站声明（About 页）与实际内容生产行为不匹配，可触发 scamness + unauthoritativeScore
+24. **四种系统性失败模式**（语境过度延伸、实体膨胀、意图漂移、信任信号债务）单靠改进内容无法解决
 
 ---
 
@@ -315,6 +412,28 @@ Schema → 实体消歧加速 → 实体权威建立 → Knowledge Graph 认可 
 | Pogo-sticking | 用户点击后是否立刻返回 SERP | GSC → CTR vs 平均排名位对比（排第3但 CTR 接近第10位 = pogo-stick） |
 | 分市场表现 | 不同国家/语言的排名差异 | GSC 按国家筛选对比 |
 
+### 站点一致性检查（siteQualityStddev）
+
+| 检查项 | 做法 | 工具 |
+|--------|------|------|
+| 低质量页面占比 | 识别站内流量极低 + 停留时间短的页面 | GSC → 按页面查看低效页面 |
+| 内容合并/删除 | 将内容单薄页面合并为更有用页面，或直接删除 | 人工判断 |
+| 高风险内容隔离 | 把批量产出的有风险内容搬到独立域名 | — |
+
+> 如果站内有大量低质量页面拉高 siteQualityStddev，优先处理这些比优化少数好页面 ROI 更高。
+
+### 链接有效性检查（三层链接索引）
+
+| 检查项 | 做法 | 工具 |
+|--------|------|------|
+| 内链页面是否有真实流量 | 内链指向的页面是否有用户访问 | GSC → 页面流量报告 |
+| 锚文本相关性 | 内链锚文本是否与目标页面主题相关 | 人工检查 / Screaming Frog |
+| 外链所在页面质量 | 外链来源页面是否有用户互动 | Ahrefs / SEMrush 外链报告 |
+
+> 零点击页面上的链接不传递任何权重。重点不是建更多内链，而是让已有内链所在的页面获得真实用户访问。
+
+---
+
 ### 第5层：单页内容 T*
 
 | 检查项 | 做法 | 工具 |
@@ -346,3 +465,5 @@ Schema → 实体消歧加速 → 实体权威建立 → Knowledge Graph 认可 
 - Google 2004 Index Partitioning 专利（Bill Slawski / SEO by the Sea 解读）
 - 鸭老师SEO 三源整合原文 + 分层索引分析
 - Google Search Central Live Toronto 2026（Danny Sullivan / Daniel Waisberg / Ryan Levering 发言，2026.4.21）
+- Shaun Anderson（Hobo-Web）Contextual SEO 框架（虚伪惩罚、四种系统性失败模式、Firefly 取证分析）
+- 鸭老师SEO「谷歌如何识别规模化内容滥用（Scaled Content Abuse）」原文
