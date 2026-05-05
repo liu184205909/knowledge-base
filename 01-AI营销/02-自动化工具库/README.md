@@ -15,6 +15,7 @@
 | **05** | 竞品内容分析工具 | 批量抓取 title/H1/H2，输出内容模式报告 | `content_analyzer.py` |
 | **06** | WordPress插件 | TranslatePress AI翻译方案等插件调研 | 文档为主 |
 | **07** | 数据分析工具 | Google Data Studio 数据可视化，SEO/流量仪表盘 | 文档为主 |
+| **08** | 短视频工具 | 素材采集/拆解/创作/分发全链路 | 文档为主 |
 
 ---
 
