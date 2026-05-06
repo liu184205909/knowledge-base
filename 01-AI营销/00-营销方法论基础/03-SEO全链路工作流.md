@@ -1,6 +1,6 @@
 # SEO 全链路工作流
 
-> 基于 Claude Code Skills + n8n 自动化模板构建的七步闭环 SEO 工作流。
+> 基于 Claude Code + Skills + MCP 构建的七步闭环 SEO 工作流。
 
 ---
 
@@ -48,13 +48,6 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 | blog-persona | 目标用户画像构建 |
 | blog-calendar | 内容日历规划 |
 
-**n8n 自动化模板：**
-
-| 模板 | ID | 用途 |
-|------|----|------|
-| Comprehensive SEO Strategy | 6908 | O3 总监 + 6 个专家 Agent 并行生成完整策略 |
-| Multi-Domain SEO Analysis | 7010 | Ahrefs + Google Sheet 批量域名分析 |
-
 **产出物：** 12 周路线图（含每周任务、优先级、KPI）。
 
 ---
@@ -70,12 +63,6 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 | seo-sitemap | 生成/验证 XML Sitemap、提交到 GSC |
 | seo-technical | robots.txt、meta 标签、canonical、HTTPS、重定向 |
 | seo-schema | 生成缺失的 Schema JSON-LD（Organization、FAQ、HowTo 等） |
-
-**n8n 自动化模板：**
-
-| 模板 | ID | 用途 |
-|------|----|------|
-| WordPress SEO + Yoast | 8423 | 自动优化 meta 标题/描述并更新到 Yoast SEO |
 
 **产出物：** 按优先级排序的修复清单 + 每条修复指南。
 
@@ -97,13 +84,6 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 | blog-geo | 地理定向内容优化 |
 | seo-geo | GEO/AI 搜索优化（ChatGPT、Perplexity、AIO 引用就绪） |
 | seo-image-gen | OG/Social 预览图片分析与生成计划 |
-
-**n8n 自动化模板：**
-
-| 模板 | ID | 用途 |
-|------|----|------|
-| SEO Blog Publishing (36K views) | 3085 | Google Sheet → AI 写作 → WordPress 全自动发布 |
-| SEO Blog Auto-Publish | 7038 | 定时 + Telegram 触发 → 1500-2500 词 → WordPress |
 
 **产出物：** 带 Schema 的完整内容文件（Markdown / HTML）。
 
@@ -129,7 +109,7 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 
 ## 第六步：Monitoring（持续监控）
 
-> 原工作流缺失的环节。SEO 是持续性的，"做一次"不够。
+> SEO 是持续性的，"做一次"不够。
 
 **做什么：** 持续追踪排名变化、流量波动、技术问题、竞品动态。
 
@@ -142,13 +122,6 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 | seo-performance | Core Web Vitals 趋势 |
 | seo-backlinks | 外链增长/丢失监控 |
 | seo-dataforseo | 竞品排名追踪 |
-
-**n8n 自动化模板：**
-
-| 模板 | ID | 用途 |
-|------|----|------|
-| SEO Ranking Monitor | 10412 | 每日排名检查 + Slack/Gmail 自动告警 |
-| SEO Strategy Reports (SerpApi) | 11109 | AI Agent 团队 + 实时搜索数据持续分析 |
 
 **产出物：** 周报/月报 + 异常告警。
 
@@ -168,29 +141,6 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 | 内容文件 | Markdown + Schema JSON-LD | 第四步 content 输出 |
 | 质量报告 | PDF | 第五步 quality 输出 |
 | 监控仪表盘 | Interactive Dashboard | 第六步 monitoring 输出 |
-
-**发布渠道：**
-
-| 渠道 | 方式 |
-|------|------|
-| WordPress | n8n + WordPress MCP 一键发布 |
-| GitHub Pages | n8n + GitHub 节点自动提交 |
-| 社交媒体 | n8n + Twitter/LinkedIn 节点同步分发 |
-
----
-
-## n8n 模板速查表
-
-| 模板名称 | ID | 覆盖步骤 | Views |
-|---------|----|----|-------|
-| Comprehensive SEO Strategy | 6908 | 1 + 2 | 204 |
-| WordPress SEO + Yoast | 8423 | 3 + 7 | 65 |
-| SEO Ranking Monitor | 10412 | 5 + 6 | 45 |
-| SEO Blog Publishing | 3085 | 4 + 7 | 36,976 |
-| SEO Blog Auto-Publish | 7038 | 4 + 7 | 96 |
-| Multi-Domain Analysis | 7010 | 1 | 656 |
-| SEO Strategy Reports | 11109 | 1 + 2 | 12 |
-| Content Scraper + Keyword | 5657 | 1 + 2 | 21,070 |
 
 ---
 
@@ -242,65 +192,37 @@ seo-dataforseo   → 竞品追踪
 
 ---
 
-## MCP 工具生态
+## MCP 工具配置
 
-> MCP（Model Context Protocol）是 Anthropic 于2024年发布的开放标准，允许 AI 助手通过统一协议连接外部数据源和工具。以下为 2026 年主流 SEO MCP 工具一览。
+本工作流依赖两个 MCP 数据源：
 
-### 主流 SEO MCP 工具
+| MCP Server | 定位 | 状态 | 安装指南 |
+|------------|------|------|----------|
+| **DataForSEO MCP** | 第三方 SEO 数据（关键词/SERP/趋势/竞品） | 必装 | [Claude Code 环境配置](../../00-基础能力/01-Claude-Code环境配置.md) |
+| **GSC MCP** (suganthan-gsc-mcp) | 自有网站数据（GSC 流量/索引/排名） | 后期按需安装 | [RLM 工具与 Skills 整合指南](./02-RLM工具与Skills整合指南.md) |
 
-| MCP Server | 核心能力 | 费用 | 本工作流中的对应 Skill |
-|------------|---------|------|----------------------|
-| **DataForSEO MCP** | 8大API族：关键词/SERP/外链/OnPage/Local/域名分析/Labs/内容分析 | 按查询付费（单次 <$0.01） | `seo-dataforseo` |
-| **GSC MCP** (suganthan-gsc-mcp) | 20个工具：分析/监控/报告/索引，直接读取 GSC 数据 | 免费开源 | `seo-google` |
-| **Google Analytics MCP** | GA4 数据直连（Google 官方维护） | 免费 | 补充监控阶段 |
-| **Semrush MCP** | 关键词研究、竞品对比、关键词聚类、趋势分析 | 消耗 API credits | 补充规划阶段 |
-| **SEOptimer SEO MCP** | 网站审计 + 性能数据检索 | 付费 | 补充审计阶段 |
-| **Nightwatch SEO MCP** | 排名追踪（200+国家）+ AI搜索可见性监控 | 付费 | 补充监控阶段 |
-| **Coupler.io MCP** | 400+应用数据整合（含 GSC + GA4 + GBP） | 付费 | 跨平台数据汇总 |
+### DataForSEO MCP（必装）
 
-### GSC MCP 工具速查（免费，最实用）
+按查询付费（单次 < $0.01），覆盖工作流中 `seo-dataforseo` Skill 的所有数据需求。
 
-suganthan-gsc-mcp 内置 20 个工具，覆盖 SEO 工作流的核心环节：
+**核心模块：** `KEYWORDS_DATA`（关键词研究）+ `SERP`（搜索结果分析）
 
-**分析类（11个）**
+**典型用途：**
+- 关键词搜索量、CPC、竞争度查询
+- Google/YouTube SERP 实时数据
+- Google Trends 趋势分析
+- 地区关注度与人群画像
 
-| 工具 | 作用 | 示例提问 |
-|------|------|---------|
-| Site Snapshot | 整体表现 vs 上一周期 | "网站整体表现如何？" |
-| Quick Wins | 排名4-15位、高展现量的关键词 | "哪些关键词可以快速冲首页？" |
-| Content Gaps | 有展现但排名>20的主题 | "应该创建什么内容？" |
-| Traffic Drops | 流量下降页面 + 原因诊断 | "哪些页面流量下降了？" |
-| CTR Opportunities | CTR 低于该位置基准线的页面 | "哪些页面 CTR 偏低？" |
-| Cannibalisation Check | 多页面竞争同一关键词 | "有没有页面互相蚕食？" |
-| Content Decay | 连续3个月流量下滑的页面 | "哪些页面在衰退？" |
-| URL Inspection | 索引状态、抓取信息、canonical问题 | "这个URL被收录了吗？" |
-| Topic Clusters | 指定路径下的页面聚合表现 | "/blog/ 栏目表现如何？" |
-| CTR vs Benchmarks | 实际CTR vs 行业基准 | "我的CTR和行业水平比怎么样？" |
-| Advanced Search Analytics | 自定义维度/过滤器/排序的灵活查询 | "过去90天美国移动端Top20查询" |
+> 详见 [Claude Code 环境配置 - DataForSEO MCP 章节](../../00-基础能力/01-Claude-Code环境配置.md)
 
-**监控类（2个）**：Check Alerts（排名下降/CTR崩塌/点击损失告警）、Verify Claim（AI自校验数据准确性）
+### GSC MCP（后期按需）
 
-**报告类（3个）**：Content Recommendations（交叉分析输出行动建议）、Generate Report（完整Markdown报告）、Multi-site Dashboard（多站点健康总览）
+当网站接入 Google Search Console 后安装，用于读取自有网站的真实流量和索引数据。免费开源，内置 20 个工具（分析 11 + 监控 2 + 报告 3 + 索引 4）。
 
-**索引类（4个）**：Submit URL、Batch Submit（200 URLs/天）、Submit Sitemap、List Sitemaps
-
-### 成本对比
-
-| 场景 | DataForSEO MCP | Ahrefs | Semrush |
-|------|---------------|--------|---------|
-| 50关键词批量查询 | ~$0.005-0.02 | $129/月包含 | $139/月包含 |
-| 100页网站审计 | ~$0.05-0.15 | $129/月包含 | $249/月包含 |
-| 外链档案查询 | ~$0.003-0.01 | $129/月包含 | $139/月包含 |
-| GSC数据分析 | 免费（GSC MCP） | — | — |
-
-> MCP 按查询付费适合中小项目和探索性分析；大量高频使用场景下，传统 SaaS 订阅仍可能更经济。
+> 详见 [RLM 工具与 Skills 整合指南 - GSC MCP 章节](./02-RLM工具与Skills整合指南.md)
 
 ### 局限性
 
-- **设置门槛**：需要配置 API 密钥、OAuth 认证，非技术人员有学习曲线
-- **工具覆盖不全**：并非所有 SEO 工具都已支持 MCP（如 Ahrefs、Screaming Frog 暂无）
-- **API 费用控制**：AI Agent 自主运行时可能产生意外调用，需用 ENABLED_MODULES 限制权限范围
 - **AI 解读准确性**：MCP 返回的数据是精确的，但 AI 的解读可能出错（过度归因、编造解释）——需人工审核
 - **数据权限边界**：只能访问 API 暴露的数据，无法替代专业工具的私有数据库（如 Ahrefs 的外链库）
-
-> **来源**：SEOptimer "Top SEO MCP Servers in 2026"、NextGrowth.ai "DataForSEO MCP Server Setup"、Suganthan "Google Search Console MCP Server Setup Guide"（2026年3-4月）
+- **API 费用控制**：AI Agent 自主运行时可能产生意外调用，需用 `ENABLED_MODULES` 限制范围
