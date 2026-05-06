@@ -38,8 +38,24 @@ Claude Code 会自动完成以下所有操作：
 | web-reader | `claude mcp add -s user -t http web-reader https://open.bigmodel.cn/api/mcp/web_reader/mcp --header "Authorization: Bearer {{API_KEY}}"` | 网页正文抓取 |
 | zread | `claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp --header "Authorization: Bearer {{API_KEY}}"` | GitHub 仓库阅读 |
 | dataforseo | 见下方 DataForSEO 专项配置 | SEO 关键词/SERP 数据 |
+| gsc | 见下方 GSC MCP 选配（网站上线后安装） | Google Search Console 实时数据 |
 
 > 备用方案（无需 API Key）：`web-search-prime-xdai` → `https://web-search.xdai.dev`，`web-reader-xdai` → `https://web-reader.xdai.dev`
+
+### GSC MCP（选配 — 网站上线有流量后再安装）
+
+> 让 Claude Code 直连 Google Search Console，用自然语言查询 SEO 数据。
+
+**安装**:
+```bash
+claude mcp add gsc -- npx -y gsc-mcp-server
+# 需配置环境变量: GSC_AUTH_MODE=oauth, GSC_OAUTH_SECRETS_FILE=路径, GSC_SITE_URL=sc-domain:域名
+```
+
+**前置准备**（15 分钟）:
+1. Google Cloud 创建项目 → 启用 `Google Search Console API`
+2. 创建 OAuth 凭据（Desktop app）→ 下载 JSON
+3. 配置环境变量 → 首次授权（弹出 Google 登录窗口）
 
 ### DataForSEO MCP（必装）
 
