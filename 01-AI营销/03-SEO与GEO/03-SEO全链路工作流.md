@@ -239,3 +239,68 @@ seo-performance  → CWV 趋势
 seo-backlinks    → 外链监控
 seo-dataforseo   → 竞品追踪
 ```
+
+---
+
+## MCP 工具生态
+
+> MCP（Model Context Protocol）是 Anthropic 于2024年发布的开放标准，允许 AI 助手通过统一协议连接外部数据源和工具。以下为 2026 年主流 SEO MCP 工具一览。
+
+### 主流 SEO MCP 工具
+
+| MCP Server | 核心能力 | 费用 | 本工作流中的对应 Skill |
+|------------|---------|------|----------------------|
+| **DataForSEO MCP** | 8大API族：关键词/SERP/外链/OnPage/Local/域名分析/Labs/内容分析 | 按查询付费（单次 <$0.01） | `seo-dataforseo` |
+| **GSC MCP** (suganthan-gsc-mcp) | 20个工具：分析/监控/报告/索引，直接读取 GSC 数据 | 免费开源 | `seo-google` |
+| **Google Analytics MCP** | GA4 数据直连（Google 官方维护） | 免费 | 补充监控阶段 |
+| **Semrush MCP** | 关键词研究、竞品对比、关键词聚类、趋势分析 | 消耗 API credits | 补充规划阶段 |
+| **SEOptimer SEO MCP** | 网站审计 + 性能数据检索 | 付费 | 补充审计阶段 |
+| **Nightwatch SEO MCP** | 排名追踪（200+国家）+ AI搜索可见性监控 | 付费 | 补充监控阶段 |
+| **Coupler.io MCP** | 400+应用数据整合（含 GSC + GA4 + GBP） | 付费 | 跨平台数据汇总 |
+
+### GSC MCP 工具速查（免费，最实用）
+
+suganthan-gsc-mcp 内置 20 个工具，覆盖 SEO 工作流的核心环节：
+
+**分析类（11个）**
+
+| 工具 | 作用 | 示例提问 |
+|------|------|---------|
+| Site Snapshot | 整体表现 vs 上一周期 | "网站整体表现如何？" |
+| Quick Wins | 排名4-15位、高展现量的关键词 | "哪些关键词可以快速冲首页？" |
+| Content Gaps | 有展现但排名>20的主题 | "应该创建什么内容？" |
+| Traffic Drops | 流量下降页面 + 原因诊断 | "哪些页面流量下降了？" |
+| CTR Opportunities | CTR 低于该位置基准线的页面 | "哪些页面 CTR 偏低？" |
+| Cannibalisation Check | 多页面竞争同一关键词 | "有没有页面互相蚕食？" |
+| Content Decay | 连续3个月流量下滑的页面 | "哪些页面在衰退？" |
+| URL Inspection | 索引状态、抓取信息、canonical问题 | "这个URL被收录了吗？" |
+| Topic Clusters | 指定路径下的页面聚合表现 | "/blog/ 栏目表现如何？" |
+| CTR vs Benchmarks | 实际CTR vs 行业基准 | "我的CTR和行业水平比怎么样？" |
+| Advanced Search Analytics | 自定义维度/过滤器/排序的灵活查询 | "过去90天美国移动端Top20查询" |
+
+**监控类（2个）**：Check Alerts（排名下降/CTR崩塌/点击损失告警）、Verify Claim（AI自校验数据准确性）
+
+**报告类（3个）**：Content Recommendations（交叉分析输出行动建议）、Generate Report（完整Markdown报告）、Multi-site Dashboard（多站点健康总览）
+
+**索引类（4个）**：Submit URL、Batch Submit（200 URLs/天）、Submit Sitemap、List Sitemaps
+
+### 成本对比
+
+| 场景 | DataForSEO MCP | Ahrefs | Semrush |
+|------|---------------|--------|---------|
+| 50关键词批量查询 | ~$0.005-0.02 | $129/月包含 | $139/月包含 |
+| 100页网站审计 | ~$0.05-0.15 | $129/月包含 | $249/月包含 |
+| 外链档案查询 | ~$0.003-0.01 | $129/月包含 | $139/月包含 |
+| GSC数据分析 | 免费（GSC MCP） | — | — |
+
+> MCP 按查询付费适合中小项目和探索性分析；大量高频使用场景下，传统 SaaS 订阅仍可能更经济。
+
+### 局限性
+
+- **设置门槛**：需要配置 API 密钥、OAuth 认证，非技术人员有学习曲线
+- **工具覆盖不全**：并非所有 SEO 工具都已支持 MCP（如 Ahrefs、Screaming Frog 暂无）
+- **API 费用控制**：AI Agent 自主运行时可能产生意外调用，需用 ENABLED_MODULES 限制权限范围
+- **AI 解读准确性**：MCP 返回的数据是精确的，但 AI 的解读可能出错（过度归因、编造解释）——需人工审核
+- **数据权限边界**：只能访问 API 暴露的数据，无法替代专业工具的私有数据库（如 Ahrefs 的外链库）
+
+> **来源**：SEOptimer "Top SEO MCP Servers in 2026"、NextGrowth.ai "DataForSEO MCP Server Setup"、Suganthan "Google Search Console MCP Server Setup Guide"（2026年3-4月）

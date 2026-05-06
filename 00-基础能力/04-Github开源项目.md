@@ -115,29 +115,6 @@ ebook2audiobook.cmd
 
 ---
 
-### AiToEarn
-
-**GitHub**: https://github.com/yikart/AiToEarn
-
-**简介**: AI 驱动的内容增长与变现平台，一站式搞定创作、发布、互动、变现
-
-**核心功能**:
-- 多平台一键分发（抖音、小红书、B站、TikTok、YouTube等）
-- 热点灵感智能挖掘（爆款案例库 + 实时热点雷达）
-- 精准评论挖掘转化（识别高转化意向评论）
-- AI 全流程内容创作（文案、图片、视频生成）
-- 统一互动管理后台
-- 跨平台数据复盘
-
-**特点**:
-- 11.5K+ star
-- Docker 一键部署
-- 对接主流 AI 模型（OpenAI、DeepSeek、Claude、Gemini）
-- 面向自媒体博主、品牌方、电商商家
-
-**适用场景**: 自媒体运营、内容分发、流量变现
-
----
 
 ### Voicebox
 
@@ -225,4 +202,51 @@ brew install ffmpeg
 
 ---
 
-**最后更新**: 2026-05-01
+### system_prompts_leaks
+
+**GitHub**: https://github.com/asgeirtj/system_prompts_leaks
+
+**简介**: 收集主流 AI 产品系统提示词的开放仓库，涵盖 ChatGPT、Claude、Gemini、Grok、Codex、Perplexity 等，40K+ Stars
+
+**核心价值**:
+- 按产品分类收录完整的 system prompt，持续更新
+- 学习顶级 AI 公司如何设计"好的 AI 行为"
+- 为自建 Skill/System Prompt 提供设计参考
+
+**关键设计模式**（从泄露的 prompt 中提炼）:
+
+| 模式 | 说明 | 典型产品 |
+|------|------|---------|
+| 人格与生产分离 | 人格描述和行为规范独立维护 | ChatGPT（GPT-5） |
+| 权限分层 | 工具调用需要显式授权 | Claude Code |
+| 安全边界条件触发 | 遇特定输入时切换安全模式 | Claude、Gemini |
+| 多 Agent 协作 | 不同角色分工协作 | Codex |
+| 迭代式输出控制 | 分步骤输出而非一次性生成 | Perplexity |
+
+**适用场景**: Skill/System Prompt 设计参考、Prompt 工程学习、AI 行为研究
+
+---
+
+### superpowers-zh
+
+**GitHub**: https://github.com/jnMetaCode/superpowers-zh
+
+**简介**: 178K Stars 的 `superpowers` 中文本地化版本。编码纪律型 Skill 集合，核心理念："AI 缺的不是能力而是纪律"
+
+**核心功能**: 14 个核心 Skill + 6 个中文本地化 Skill，覆盖代码规范、测试纪律、安全审查、架构决策
+
+**特点**:
+- 自动上下文激活（根据项目语言、文件类型自动触发）
+- 强调纪律 > 能力：不教 AI 怎么写代码，而是约束 AI 怎么交付代码
+- 与本知识库 `02-Skill设计与管理.md` 的"三层结构（触发→执行→验收）"理念高度一致
+
+**快速使用**:
+```bash
+npx superpowers-zh
+```
+
+**适用场景**: AI 编码纪律强化、Skill 设计参考、团队代码规范自动化
+
+---
+
+**最后更新**: 2026-05-06
