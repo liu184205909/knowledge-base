@@ -199,7 +199,7 @@ seo-dataforseo   → 竞品追踪
 | MCP Server | 定位 | 状态 | 安装指南 |
 |------------|------|------|----------|
 | **DataForSEO MCP** | 第三方 SEO 数据（关键词/SERP/趋势/竞品） | 必装 | [Claude Code 环境配置](../../00-基础能力/01-Claude-Code环境配置.md) |
-| **GSC MCP** (suganthan-gsc-mcp) | 自有网站数据（GSC 流量/索引/排名） | 后期按需安装 | [RLM 工具与 Skills 整合指南](./02-RLM工具与Skills整合指南.md) |
+| **GSC MCP** (suganthan-gsc-mcp) | 自有网站数据（GSC 流量/索引/排名） | 后期按需安装 | [RLM营销方法论 - GSC MCP 配置](./00-RLM营销方法论核心.md#gsc-mcp-配置网站上线后必装) |
 
 ### DataForSEO MCP（必装）
 
@@ -219,7 +219,7 @@ seo-dataforseo   → 竞品追踪
 
 当网站接入 Google Search Console 后安装，用于读取自有网站的真实流量和索引数据。免费开源，内置 20 个工具（分析 11 + 监控 2 + 报告 3 + 索引 4）。
 
-> 详见 [RLM 工具与 Skills 整合指南 - GSC MCP 章节](./02-RLM工具与Skills整合指南.md)
+> 详见 [RLM营销方法论 - GSC MCP 配置](./00-RLM营销方法论核心.md#gsc-mcp-配置网站上线后必装)
 
 ### 局限性
 
