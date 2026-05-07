@@ -14,9 +14,10 @@
 | **04** | WordPress建站 | AI 操作 WordPress，Elementor 建站规则 | 文档为主 |
 | **05** | 竞品内容分析工具 | 批量抓取 title/H1/H2，输出内容模式报告 | `content_analyzer.py` |
 | **06** | WordPress插件 | TranslatePress AI翻译方案等插件调研 | 文档为主 |
-| **07** | 数据分析工具 | Google Data Studio 数据可视化，SEO/流量仪表盘 | 文档为主 |
-| **08** | 短视频工具 | 素材采集/拆解/创作/分发全链路 | 文档为主 |
-| **09** | SEO数据API | DR/流量/流量渠道获取（DataForSEO + RapidAPI + Apify） | 文档为主 |
+| **07** | 图片生成 | AI图片生成，用于社媒配图、信息图、幻灯片配图 | 待建设 |
+| **08** | 数据分析工具 | Google Data Studio 数据可视化，SEO/流量仪表盘 | 文档为主 |
+| **09** | 短视频工具 | 素材采集/拆解/创作/分发全链路（配合步骤4C音视频再加工） | 文档为主 |
+| **10** | SEO数据API | DR/流量/流量渠道获取（DataForSEO + RapidAPI + Apify） | 文档为主 |
 
 ---
 
@@ -40,7 +41,7 @@
     ↓ blog_urls.csv
 05-竞品内容分析工具/content_analyzer.py     ← 批量抓取 title/H1/H2，输出内容模式报告
     ↓ 网站上线后
-07-数据分析工具/Data Studio                 ← GSC/GA4 数据可视化，驱动内容迭代
+08-数据分析工具/Data Studio                 ← GSC/GA4 数据可视化，驱动内容迭代
 ```
 
 ---
@@ -154,9 +155,9 @@ python 05-竞品内容分析工具/content_analyzer.py --input urls.csv --limit 
 
 ---
 
-## 07 数据分析工具
+## 08 数据分析工具
 
-**文件**：`07-数据分析工具/01-Google-Data-Studio使用指南.md`
+**文件**：`08-数据分析工具/01-Google-Data-Studio使用指南.md`
 
 **定位**：网站上线后的数据可视化中心，连接 GSC + GA4 + Sheets 搭建 SEO/流量仪表盘。
 
@@ -173,9 +174,9 @@ GA4 流量行为 ─────────────────────
 
 ---
 
-## 09 SEO 数据 API
+## 10 SEO 数据 API
 
-**文件**：`09-SEO数据API/DR与流量数据获取方案.md`
+**文件**：`10-SEO数据API/DR与流量数据获取方案.md`
 
 **定位**：竞品分析阶段（RLM 步骤 1B）批量获取域名权重、流量、流量渠道等指标的 API 方案。
 
@@ -187,7 +188,7 @@ GA4 流量行为 ─────────────────────
 | 流量渠道拆分 | RapidAPI Similarweb API | 6 渠道占比 + Engagement + 关键词 | 待接入 |
 | AI流量 + 竞品 | Apify Similarweb Actor | ChatGPT/Perplexity 流量、Top5 竞品 | 按需 |
 
-**详细文档**：[DR与流量数据获取方案.md](09-SEO数据API/DR与流量数据获取方案.md)
+**详细文档**：[DR与流量数据获取方案.md](10-SEO数据API/DR与流量数据获取方案.md)
 
 ---
 
