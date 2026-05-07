@@ -1,6 +1,6 @@
 # 02-自动化工具库
 
-> 服务于 RLM 营销流程的自动化脚本与工具集合 | 最后更新: 2026-05-04
+> 服务于 RLM 营销流程的自动化脚本与工具集合 | 最后更新: 2026-05-07
 
 ---
 
@@ -9,13 +9,14 @@
 | 序号 | 工具 | 核心功能 | 脚本文件 |
 |------|------|---------|---------|
 | **01** | 域名查询 | 批量检测域名可用性，WHOIS 查询 | `domain_checker.py` |
-| **02** | 竞品挖掘工具 | 通过 SERP 批量发现竞品独立站 | `serp_competitor_finder.py` |
+| **02** | 竞品挖掘工具 | 通过 SERP 批量发现竞品独立站（6家免费API轮询+DataForSEO兜底） | `serp_competitor_finder.py` |
 | **03** | 竞品分析工具 | Sitemap 解析，还原竞品内容架构 | `sitemap_parser.py` |
 | **04** | WordPress建站 | AI 操作 WordPress，Elementor 建站规则 | 文档为主 |
 | **05** | 竞品内容分析工具 | 批量抓取 title/H1/H2，输出内容模式报告 | `content_analyzer.py` |
 | **06** | WordPress插件 | TranslatePress AI翻译方案等插件调研 | 文档为主 |
 | **07** | 数据分析工具 | Google Data Studio 数据可视化，SEO/流量仪表盘 | 文档为主 |
 | **08** | 短视频工具 | 素材采集/拆解/创作/分发全链路 | 文档为主 |
+| **09** | SEO数据API | DR/流量/流量渠道获取（DataForSEO + RapidAPI + Apify） | 文档为主 |
 
 ---
 
@@ -73,6 +74,8 @@ python 01-域名查询/domain_checker.py
 **文件**：`02-竞品挖掘工具/serp_competitor_finder.py`
 
 **原理**：搜索目标关键词，过滤 Amazon/Reddit 等大平台，只保留独立站竞品。
+
+**SERP 数据源**：6 家免费 API 轮询 + DataForSEO 付费兜底，详见 [SERP数据源选型方案.md](02-竞品挖掘工具/SERP数据源选型方案.md)
 
 ```bash
 # 单个关键词
@@ -167,6 +170,24 @@ GA4 流量行为 ─────────────────────
 ```
 
 **当前状态**：基础文档已创建，等网站上线有数据后补充仪表盘模板和进阶分析。
+
+---
+
+## 09 SEO 数据 API
+
+**文件**：`09-SEO数据API/DR与流量数据获取方案.md`
+
+**定位**：竞品分析阶段（RLM 步骤 1B）批量获取域名权重、流量、流量渠道等指标的 API 方案。
+
+**三层工具组合**：
+
+| 层级 | 工具 | 提供数据 | 状态 |
+|------|------|---------|------|
+| DR + 反链 + ETV | DataForSEO MCP（已有） | rank、backlinks、referring_domains、etv | 已集成 |
+| 流量渠道拆分 | RapidAPI Similarweb API | 6 渠道占比 + Engagement + 关键词 | 待接入 |
+| AI流量 + 竞品 | Apify Similarweb Actor | ChatGPT/Perplexity 流量、Top5 竞品 | 按需 |
+
+**详细文档**：[DR与流量数据获取方案.md](09-SEO数据API/DR与流量数据获取方案.md)
 
 ---
 

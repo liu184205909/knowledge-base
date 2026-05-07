@@ -227,3 +227,97 @@ const AUTH = 'Basic ' + Buffer.from('username:app_password').toString('base64');
 | 编辑器兼容 | 完美 | 可打开编辑，但随机 ID 不可追溯 |
 
 **最佳工作流**：代码生成 80% 框架 → 编辑器精修 20% 细节。
+
+---
+
+## 11. Elementor 模板（Templates）创建
+
+> Elementor 模板存储为自定义文章类型 `elementor_library`，与 Page 共享同一套 `?context=edit` 机制。
+> 已验证 luckycrystals.org 的 `/wp-json/wp/v2/elementor_library` 端点可用。
+
+### Page vs Template 端点对比
+
+| 维度 | Page | Template |
+|------|------|----------|
+| REST API 端点 | `/wp-json/wp/v2/pages` | `/wp-json/wp/v2/elementor_library` |
+| `_elementor_template_type` | `wp-page` | `section` / `container` / `widget` / `page` 等 |
+| 出现位置 | WordPress → Pages | Elementor → Templates → My Templates |
+| 复用性 | 单页独占 | **全局可复用** |
+
+### 创建模板完整流程
+
+```
+1. POST /wp-json/wp/v2/elementor_library           → 创建空白模板，获得 template ID
+2. 生成 Elementor JSON（与 Page 完全相同的格式）      → Node.js 脚本生成
+3. POST /wp-json/wp/v2/elementor_library/{id}?context=edit  → 注入数据
+4. Elementor 编辑器 → Templates → My Templates 中可见
+```
+
+### 创建模板 API 示例
+
+```javascript
+// Step 1: 创建空白模板
+const tpl = await apiRequest('/wp-json/wp/v2/elementor_library', 'POST', {
+  title: 'Hero Section',
+  status: 'publish',
+  content: ''
+});
+const tplId = tpl.id;
+
+// Step 2: 注入 Elementor 数据
+await apiRequest('/wp-json/wp/v2/elementor_library/' + tplId + '?context=edit', 'POST', {
+  title: 'Hero Section',
+  status: 'publish',
+  content: '',
+  meta: {
+    _elementor_data: JSON.stringify(sections),   // 与 Page 格式完全一致
+    _elementor_edit_mode: 'builder',
+    _elementor_template_type: 'section'           // 模板类型，见下表
+  }
+});
+```
+
+### 模板类型（`_elementor_template_type`）
+
+| 值 | 含义 | 使用场景 |
+|----|------|---------|
+| `section` | 区块模板 | Hero、CTA、特性展示等可复用区块 |
+| `container` | 容器模板 | 更小的布局单元 |
+| `widget` | 全局 Widget | 统一的表单、按钮组等 |
+| `page` | 页面模板 | 完整页面模板 |
+| `header` | 页眉模板 | Theme Builder 通用页眉 |
+| `footer` | 页脚模板 | Theme Builder 通用页脚 |
+| `single` | 文章模板 | 文章详情页布局 |
+| `archive` | 归档模板 | 分类/标签归档页布局 |
+
+### 模板在页面中引用（3 种方式）
+
+**方式 1：Elementor 编辑器内插入**
+> 打开页面编辑 → 点「+」→ Templates → My Templates → 选择模板
+
+**方式 2：Shortcode**
+```
+[elementor-template id="XXXX"]
+```
+
+**方式 3：API 注入页面时引用（适合自动化）**
+```javascript
+// 在页面的 _elementor_data 中直接引用模板 ID
+// 页面会自动渲染该模板的内容
+const pageData = [
+  {
+    elType: 'container',
+    settings: { templateID: tplId },  // 引用已创建的模板
+    elements: [],
+    isInner: false
+  }
+];
+```
+
+### 踩坑提醒
+
+| # | 坑 | 解决方案 |
+|---|---|---------|
+| 1 | 模板类型写错 | `section` 不是 `sections`，注意单数 |
+| 2 | 模板不显示在列表中 | 确认 `status` 为 `publish`，不是 `draft` |
+| 3 | 页面引用模板后编辑器报错 | 先确保模板本身可正常打开预览 |
