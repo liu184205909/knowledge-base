@@ -4,6 +4,19 @@
 
 ---
 
+## 与 RLM 流程的关系
+
+本文件不替代 RLM 的竞品分析、网站规划和内容策略。它主要用于两个场景：
+
+1. **网站上线前**：检查技术 SEO、页面结构、Schema、Sitemap、性能、移动端体验
+2. **网站上线后**：监控索引、排名、流量、外链、内容质量和竞品变化
+
+**输入/输出关系**：
+- RLM 产出的关键词库、网站规划、内容清单 → 是本工作流的输入
+- 本工作流产出的审计报告、修复清单、监控报告 → 反向更新 RLM 的策略和内容优先级
+
+---
+
 ## 工作流总览
 
 ```
@@ -12,6 +25,17 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 ```
 
 所有步骤均可在 Claude Code 中用自然语言调用对应 Skill 完成，无需编写代码。
+
+### 按项目阶段选择流程
+
+不是每个项目都需要完整跑七步。根据当前阶段选择执行范围：
+
+| 场景 | 应执行步骤 | 可暂缓 |
+|------|----------|--------|
+| 新站上线前 | Audit → Optimization → Quality → Delivery | Monitoring 上线后再做 |
+| 已上线但没流量 | Audit → Strategy → Content → Monitoring | Delivery 可简化 |
+| 已有流量要增长 | Strategy → Content → Quality → Monitoring | 基础 Audit 可抽样 |
+| 流量下跌 | Audit → Monitoring → Optimization | 新内容生产可暂缓 |
 
 ---
 
