@@ -37,10 +37,47 @@ Claude Code 会自动完成以下所有操作：
 | web-search-prime | `claude mcp add -s user -t http web-search-prime https://open.bigmodel.cn/api/mcp/web_search_prime/mcp --header "Authorization: Bearer {{API_KEY}}"` | 联网搜索 |
 | web-reader | `claude mcp add -s user -t http web-reader https://open.bigmodel.cn/api/mcp/web_reader/mcp --header "Authorization: Bearer {{API_KEY}}"` | 网页正文抓取 |
 | zread | `claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp --header "Authorization: Bearer {{API_KEY}}"` | GitHub 仓库阅读 |
+| google-workspace | 见下方 Google Workspace MCP 配置 | Google 表格/文档/硬盘/Gmail |
 | dataforseo | 见下方 DataForSEO 专项配置 | SEO 关键词/SERP 数据 |
 | gsc | 见下方 GSC MCP 选配（网站上线后安装） | Google Search Console 实时数据 |
 
 > 备用方案（无需 API Key）：`web-search-prime-xdai` → `https://web-search.xdai.dev`，`web-reader-xdai` → `https://web-reader.xdai.dev`
+
+### Google Workspace MCP（必装）
+
+> 让 Claude Code 直接操作 Google 表格、文档、硬盘、Gmail。[GitHub](https://github.com/taylorwilsdon/google_workspace_mcp) | MIT 协议 | 支持 12 个服务、100+ 工具
+
+**前置条件**（一次性操作，详见 `00-基础能力/02-Google-Cloud凭证创建指南.md`）：
+
+1. Google Cloud 创建项目
+2. 启用 API：Google Drive API、Google Sheets API、Google Docs API、Gmail API
+3. 配置 OAuth 同意屏幕（外部 → 测试模式）
+4. 创建 OAuth 客户端凭据（桌面应用）→ 下载 JSON
+5. 设置 3 个环境变量：`GOOGLE_OAUTH_CLIENT_ID`、`GOOGLE_OAUTH_CLIENT_SECRET`、`OAUTHLIB_INSECURE_TRANSPORT=1`
+
+**安装**：
+
+```bash
+claude mcp add -s user google-workspace \
+  -e GOOGLE_OAUTH_CLIENT_ID=你的客户端ID \
+  -e GOOGLE_OAUTH_CLIENT_SECRET=你的客户端密钥 \
+  -e OAUTHLIB_INSECURE_TRANSPORT=1 \
+  -- uvx workspace-mcp --tools drive sheets docs gmail --tool-tier core
+```
+
+> `--tool-tier core` 只加载核心工具。如需全部工具改为 `extended` 或 `complete`。
+> 首次使用时会弹出浏览器进行 Google 授权，授权一次后自动缓存。
+
+**已启用的服务与工具**：
+
+| 服务 | 核心工具 |
+|------|---------|
+| Drive | 搜索文件、读取内容、创建文件/文件夹、获取分享链接、导入为 Google Doc |
+| Sheets | 读取单元格、写入/更新/清空单元格、创建表格 |
+| Docs | 提取文档文本、创建文档、插入/替换/格式化文本 |
+| Gmail | 搜索邮件、获取邮件内容、发送邮件 |
+
+---
 
 ### GSC MCP（选配 — 网站上线有流量后再安装）
 
