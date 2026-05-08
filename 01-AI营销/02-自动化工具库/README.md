@@ -118,13 +118,23 @@ python 03-竞品分析工具/sitemap_parser.py --file 02-竞品挖掘工具/comp
 
 ## 04 WordPress 建站
 
-**文件**：`04-WordPress建站/` 下均为文档，无脚本。
+**文件**：`04-WordPress建站/` 下以文档为主，含 1 个 Node.js 脚本。
 
 | 文档 | 内容 |
 |------|------|
 | `AI操作WordPress.md` | Claude Code 操作 WP 的完整指南 |
 | `ELE建站规则.md` | Elementor 页面建设规范 |
 | `Elementor数据库存储格式.md` | Elementor 数据库结构参考 |
+| `Elementor REST API 操作手册.md` | Elementor 模板创建 + Flexbox 布局 + Widget 列表 + 踩坑清单 |
+| `elementor-upload.js` | Homepage V3 页面生成与上传脚本 |
+| `页面内容指南/` | 各类页面的内容框架（RLM 步骤 2A/2B 引用） |
+
+**页面内容指南**：
+- [About Us 页面指南](04-WordPress建站/页面内容指南/About-Us页面指南.md) — 8 要素 + 设计要点 + 5 错误
+- [Homepage 页面指南（B2B vs B2C）](04-WordPress建站/页面内容指南/Homepage页面指南（B2B-vs-B2C）.md) — 核心差异 + 各自设计要点 + 共同原则
+- [Landing Page 页面指南](04-WordPress建站/页面内容指南/Landing-Page页面指南.md) — 五大支柱 + 4 大板块框架 + 7 优化秘诀
+- [Product Detail Page 页面指南](04-WordPress建站/页面内容指南/Product-Detail-Page页面指南.md) — FABE 法则 + 卖点三分类 + UX 设计要点
+- [Checkout Page 页面指南](04-WordPress建站/页面内容指南/Checkout-Page页面指南.md) — Baymard 10 大最佳实践 + 减少摩擦要点
 
 ---
 
