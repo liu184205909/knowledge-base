@@ -77,7 +77,7 @@
 - 过滤明显无关网站和纯平台聚合页
 - 暂不做 P0/P1/P2/P3 分级，分级在 1B 阶段完成
 
-**关键输出**：`01-竞品分析/竞品清单.xlsx`（原始竞品池，40+家）
+**关键输出**：[竞品清单（Google Sheets）](https://docs.google.com/spreadsheets/d/1zcWFPw7lFq_L6aBpEEpBhU0FKf7uJi6hiQYCVoah_vA/edit)（原始竞品池，40+家）
 
 **工具链**：
 ```bash
@@ -319,7 +319,7 @@ python 02-自动化工具库/05-竞品内容分析工具/content_analyzer.py --i
 
 | 子阶段 | 输入 | 输出 |
 |--------|------|------|
-| 1A 竞品发现 | 项目简报、种子关键词、目标市场 | `01-竞品分析/竞品清单.xlsx`（原始竞品池） |
+| 1A 竞品发现 | 项目简报、种子关键词、目标市场 | [竞品清单（Google Sheets）](https://docs.google.com/spreadsheets/d/1zcWFPw7lFq_L6aBpEEpBhU0FKf7uJi6hiQYCVoah_vA/edit)（原始竞品池） |
 | 1B 竞品筛选 | 原始竞品清单 | 更新竞品清单（DR、流量、优先级）、`竞品优先级说明.md`、P0 拆解计划 |
 | 1C 网站结构 | P0/P1竞品网站 | `网站结构分析.md` |
 | 1D 内容策略 | P0/P1竞品内容 | `内容策略分析.md` |
@@ -371,7 +371,7 @@ python 02-自动化工具库/05-竞品内容分析工具/content_analyzer.py --i
 XX产品/
 ├── 00-项目简报.md
 ├── 01-竞品分析/
-│   ├── 竞品清单.xlsx
+│   ├── 竞品清单（Google Sheets）
 │   ├── 竞品优先级说明.md
 │   ├── 竞品深度拆解/
 │   │   ├── P0-1-竞品A.md

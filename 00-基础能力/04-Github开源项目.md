@@ -249,4 +249,28 @@ npx superpowers-zh
 
 ---
 
-**最后更新**: 2026-05-06
+### Telegram-Drive
+
+**GitHub**: https://github.com/caamer20/Telegram-Drive
+
+**简介**: 把 Telegram 账号变成无限、安全的私人云盘，开源跨平台桌面应用
+
+**核心功能**: 无限云存储、媒体流播放、PDF阅读器、拖拽上传、文件夹管理、缩略图预览
+
+**特点**:
+- 利用 Telegram API，将 "Saved Messages" 和私有 Channel 作为文件夹
+- 媒体文件可直接流式播放，无需下载
+- 高性能虚拟滚动，数千文件即时加载
+- 隐私优先：API 密钥和数据留在本地，无第三方服务器
+- 自动更新（Windows/macOS/Linux）
+- 2.5K+ Stars，MIT 协议
+
+**技术栈**: Tauri (Rust) + React + TypeScript + TailwindCSS + Vite
+
+**适用场景**: 个人轻量化资料存储、多端文件同步、替代付费网盘
+
+**备注**: 适合个人场景；团队场景建议群晖等 NAS 方案。另有 VPN 优化版本：[Telegram-Drive-ForVPNs](https://github.com/caamer20/Telegram-Drive-ForVPNs)
+
+---
+
+**最后更新**: 2026-05-09

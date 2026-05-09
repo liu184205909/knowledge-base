@@ -1,497 +1,366 @@
 # Google Cloud 凭证创建指南
 
-> 本文档面向 GSC MCP + GA4 API 的前置配置 | 中文界面操作步骤 | 最后更新: 2026-05-08
+> Google Workspace MCP（表格/文档/硬盘/Gmail）前置配置 | GSC/GA4 可选扩展 | 最后更新: 2026-05-09
 
 ---
 
-## 前置说明
-
-完成本文档后你将获得：
+## 完成后产出
 
 | 产出物 | 用途 |
 |--------|------|
-| 一个 Google Cloud 项目 | 承载所有 API 和凭据 |
-| 已启用的 3 个 API | Google Search Console API、Google Analytics Data API、Google Analytics Reporting API |
-| OAuth 客户端 JSON 文件 | 给 GSC MCP 和后续 API 调用使用 |
-| OAuth 同意屏幕配置 | 让 Google 允许你的应用访问数据 |
+| Google Cloud 项目 | 承载所有 API 和凭据 |
+| 4 个已启用的 API | Drive、Sheets、Docs、Gmail |
+| OAuth 客户端 | Claude Code 访问 Google 数据的"钥匙" |
 
-**所需时间**：约 15-20 分钟（一次性操作）
-
-**前提条件**：一个 Google 账号（Gmail 即可）
+**所需时间**：15-20 分钟（一次性） | **前提**：一个 Google 账号
 
 ---
 
-## 第一步：打开 Google Cloud 控制台
+## 第一步：创建 Google Cloud 项目
 
-1. 浏览器访问 [console.cloud.google.com](https://console.cloud.google.com)
-2. 用你的 Google 账号登录
-3. 界面左上角会看到 Google Cloud 的 logo
+1. 访问 [console.cloud.google.com](https://console.cloud.google.com)，登录 Google 账号
+2. 点击左上角项目选择器 → **"新建项目"**
+3. 填项目名（如 `seo-tools`）→ 点击 **"创建"**
+4. 再次点击项目选择器，**选中刚创建的项目**
 
-> 如果界面显示的是英文，点击右上角头像左边的 **齿轮图标** → **Language（语言）** → 选择 **中文（简体）** → 刷新页面。
-
----
-
-## 第二步：创建项目
-
-1. 点击页面 **左上角** 的项目选择器（显示当前项目名称或"选择一个项目"的位置）
-2. 在弹出的窗口右上角，点击 **"新建项目"**
-3. 填写：
-   - **项目名称**：填一个你能认出来的名字，比如 `seo-tools` 或 `水晶站工具`
-   - **组织/位置**：不用改，保持默认
-4. 点击 **"创建"**
-5. 等几秒，右上角会出现通知"已创建项目"
-6. 再次点击左上角项目选择器，**选中刚创建的项目**（很重要，确保你正在操作的是新项目）
+> 英文界面？右上角齿轮 → Language → 中文（简体）→ 刷新
 
 ---
 
-## 第三步：启用 3 个 API
+## 第二步：启用 API
 
-> 这一步要让 Google 知道你的项目需要用哪些 API。每个 API 需要单独启用。
+☰ → **"API 和服务"** → **"库"**，逐个搜索并启用：
 
-### 3.1 进入 API 库
+**必须（Google Workspace MCP）：**
 
-1. 点击页面左上角的 **☰（三横线菜单）** 打开侧边栏
-2. 找到并点击 **"API 和服务"** → **"库"**
+| 搜索关键词 | 用途 |
+|-----------|------|
+| `Google Drive API` | 硬盘文件读写 |
+| `Google Sheets API` | 表格读写 |
+| `Google Docs API` | 文档读写 |
+| `Gmail API` | 邮件搜索/发送 |
 
-> 如果侧边栏菜单太长，"API 和服务"通常在中间偏上的位置，图标是一个菱形。
+**可选（GSC/GA4 自动化）：** `Google Search Console API`、`Google Analytics Data API`
 
-### 3.2 启用 Google Search Console API
-
-1. 在 **搜索 API 和服务** 框中输入：`Google Search Console API`
-2. 点击搜索结果中的 **"Google Search Console API"**
-3. 点击 **"启用"** 按钮
-4. 页面会自动跳转到该 API 的概览页（表示已启用成功）
-
-### 3.3 启用 Google Analytics Data API
-
-1. 再次点击左上角 **☰** → **"API 和服务"** → **"库"**
-2. 在搜索框输入：`Google Analytics Data API`
-3. 点击搜索结果中的 **"Google Analytics Data API"**
-4. 点击 **"启用"**
-
-### 3.4 启用 Google Analytics Reporting API
-
-1. 再次点击 **☰** → **"API 和服务"** → **"库"**
-2. 在搜索框输入：`Google Analytics Reporting API`
-3. 点击搜索结果中的 **"Google Analytics Reporting API"**
-4. 点击 **"启用"**
-
-### 验证已启用的 API
-
-点击 **☰** → **"API 和服务"** → **"已启用的 API 和服务"**，你应该能看到这 3 个 API 列在其中。
+验证：☰ → "API 和服务" → "已启用的 API 和服务"，至少看到上面 4 个。
 
 ---
 
-## 第四步：配置 OAuth 同意屏幕（创建品牌信息）
+## 第三步：配置 OAuth 同意屏幕
 
-> **你现在在哪**：你的页面标题应该显示 **"项目配置"**，左侧有 **"概览"** 被蓝色高亮选中，右侧内容区标题是 **"项目配置"**，下面有 **4 个步骤圆圈**（1 应用信息、2 受众群体、3 联系信息、4 完成）。如果你看到的是"尚未配置 Google Auth Platform"页面，先点中间的蓝色 **"开始"** 按钮就会来到这里。
+☰ → **"API 和服务"** → **"OAuth 同意屏幕"**（如果提示"尚未配置"，点"开始"）
 
-> **为什么需要这步**：Google 要求任何通过 OAuth 访问数据的应用都必须有一个"品牌信息"——就是用户授权时看到的那个页面。你个人使用也需要配置它，否则无法创建 OAuth 凭据。
+1. **应用名称**：填 `SEO Tools`
+2. **用户支持邮箱**：选你的 Gmail（已自动填好）
+3. 点 **"下一步"** → 保持"测试模式" → **"下一步"**
+4. **联系邮箱**：填你的 Gmail → **"下一步"**
+5. 确认信息 → 点击 **"创建"**
 
----
+**添加测试用户（必须）**：左侧菜单点"目标对象" → "测试用户" → "+ 添加用户" → 输入你的 Gmail → "添加"
 
-### 步骤 1/4：应用信息 ← 你现在在这里
-
-页面右侧内容区，你会看到：
-
-#### 字段①：应用名称（必填，有红色 * 号）
-
-- **你在页面上看到**：一个输入框，标签写着"应用名称 *"，目前是**红色边框**，下面有红色提示"应用名称不能为空"
-- **怎么填**：
-  1. 用鼠标**点击**那个红色边框的输入框（光标会闪烁）
-  2. 在输入框里**打字**输入：`SEO Tools`
-- **命名规则**：
-  - 这个名字是你自己给应用起的名字，**没有任何技术限制**
-  - 可以用中文、英文、数字、空格、符号，长度 1-100 个字符都行
-  - 只有你自己在授权时会看到这个名字，其他人看不到
-  - 比如 `SEO Tools`、`我的SEO工具`、`水晶站后台` 都可以
-  - **推荐填**：`SEO Tools`（简单好记就行）
-
-#### 字段②：用户支持邮箱（必填，有红色 * 号）
-
-- **你在页面上看到**：一个下拉框，标签写着"用户支持邮箱 *"，里面已经显示 `lzn184205909@gmail.com`
-- **怎么填**：
-  - 这个已经帮你**自动填好了**，**不用动它**
-  - 如果你想确认一下，可以点下拉框看看，里面应该只有你的这一个邮箱
-  - 如果有多个邮箱，选 `lzn184205909@gmail.com` 这一个
-
-#### 然后点"下一步"
-
-- 两个字段都填好后（应用名称不再显示红色错误），找到页面上那个 **蓝色边框的按钮"下一步"**
-- 它在"用户支持邮箱"字段下面
-- **用鼠标点击**"下一步"按钮
+> 测试模式下只有添加的用户才能授权，不需要发布到生产。
 
 ---
 
-### 步骤 2/4：受众群体
+## 第四步：创建 OAuth 客户端
 
-点击"下一步"后，页面会刷新，你会看到：
-- 步骤圆圈中"2 受众群体"变成蓝色（当前激活）
-- 页面显示一个新表单
+☰ → **"API 和服务"** → **"凭据"** → **"+ 创建凭据"** → **"OAuth 客户端 ID"**
 
-#### 字段①：应用模式
+1. **应用类型**：选 **"桌面应用"**
+2. **名称**：填 `seo-tools-client`
+3. 点击 **"创建"**
+4. 弹窗中点击 **"下载 JSON"** → 保存到 `C:\Users\你的用户名\.claude\gsc-oauth.json`
+5. 点"确定"关闭弹窗
 
-- **你会看到**：一个单选选项，有"生产模式"和"测试模式"两个选项
-- **怎么选**：保持默认的 **"测试模式"** 不用改
-- **为什么**：测试模式下只有你自己（和后面添加的测试用户）能使用，完全够用。生产模式需要 Google 审核，没必要。
-
-#### 然后点"下一步"
-
-- 点击页面底部的 **"下一步"** 按钮
+> `.claude` 文件夹不存在就手动创建：在 `C:\Users\你的用户名\` 下新建文件夹，命名 `.claude`
 
 ---
 
-### 步骤 3/4：联系信息
+## 第五步：配置环境变量
 
-点击"下一步"后，页面会刷新到联系信息页。
+打开 **PowerShell**（Win 键 → 输入 `powershell` → 点击打开）
 
-#### 字段①：联系电子邮件地址（必填）
+### 5.1 Google Workspace MCP（必须）
 
-- **你会看到**：一个输入框，标签写着"联系电子邮件地址"或类似文字
-- **怎么填**：
-  1. 点击输入框
-  2. 输入你的邮箱：`lzn184205909@gmail.com`
-  - 如果有一个下拉框自动出现了你的邮箱，直接选它
+打开下载的 JSON 文件，找到 `client_id` 和 `client_secret` 的值，替换下面命令：
 
-#### 然后点"下一步"
-
-- 点击页面底部的 **"下一步"** 按钮
-
----
-
-### 步骤 4/4：完成
-
-点击"下一步"后，页面会显示一个摘要/预览页面。
-
-- **你会看到**：你刚才填的所有信息的汇总
-- **怎么操作**：
-  1. 快速扫一眼，确认信息没问题
-  2. 找到页面底部的 **"创建"** 按钮（蓝色背景白色文字的大按钮）
-  3. **点击"创建"**
-
-> 点击"创建"后，页面可能会稍微加载一下，然后跳转到 Google Auth Platform 的信息中心页面。你会看到左侧菜单里"概览"下面多了几个选项（品牌塑造、目标对象、客户端、数据访问等）。
->
-> 这时候状态会显示为 **"测试中"**，这是完全正常的。你的应用只有你自己用，不需要发布。
-
----
-
-### 4-附加：添加测试用户（非常重要！）
-
-> 因为你的应用处于"测试"状态，Google 只允许你添加的用户才能授权使用。必须把你自己的邮箱加进去，否则后面授权时会报错。
-
-1. 在左侧导航菜单中，找到并 **点击"目标对象"**（图标是一个小人头）
-2. 你会看到"测试用户"区域
-3. 点击 **"+ 添加用户"** 按钮（或"添加用户"链接）
-4. 弹出一个输入框，在里面输入：`lzn184205909@gmail.com`
-5. 点击 **"添加"** 按钮
-6. 你会看到你的邮箱出现在测试用户列表中
-7. 页面可能会自动保存，也可能有一个 **"保存"** 按钮，如果有就点它
-
-> 到这里，第四步全部完成。
-
----
-
-## 第五步：创建 OAuth 客户端凭据
-
-> **这步做什么**：创建一个"OAuth 客户端 ID"——相当于给你的工具（Claude Code）一把钥匙，让它能以你的身份访问 Google 数据。
-> 第四步是告诉 Google"我这个应用叫什么名字"，第五步才是真正创建那把"钥匙"。
-
-> **你现在应该在哪**：完成第四步后，你应该在 Google Auth Platform 的信息中心页面。
-
-### 5.1 回到凭据页面
-
-1. 点击页面 **左上角的 ☰（三横线菜单）**
-2. 在弹出的侧边栏中找到 **"API 和服务"**，点击它
-3. 在展开的子菜单中点击 **"凭据"**
-4. 你会看到凭据页面，上面有 3 个空的表格区域：
-   - "API 密钥" — 下面写着"没有要显示的 API 密钥"
-   - "OAuth 2.0 客户端 ID" — 下面写着"没有要显示的 OAuth 客户端"
-   - "服务账号" — 下面写着"没有要显示的服务账号"
-
-### 5.2 点击"创建凭据"
-
-1. 在页面顶部，标题 **"凭据"** 的右边，有一个蓝色按钮写着 **"+ 创建凭据"**
-2. **点击这个按钮**（点按钮的文字或图标都可以）
-3. 会弹出一个下拉菜单，里面有 3 个选项：
-   ```
-   API 密钥
-   OAuth 客户端 ID    ← 你要选这个
-   服务账号
-   ```
-4. **点击"OAuth 客户端 ID"**
-
-> 如果点击后弹出提示说"需要先配置同意屏幕"，说明第四步没完成。回到第四步重来。
-
-### 5.3 选择应用类型（关键步骤！）
-
-点击"OAuth 客户端 ID"后，页面会跳转到一个新页面，标题是"创建 OAuth 客户端 ID"。
-
-1. 页面上半部分有一个 **"应用类型"** 下拉菜单，目前显示的可能是一段说明文字
-2. **点击这个下拉菜单**（点击后会展开一个选项列表）
-3. 你会看到以下选项（从上到下）：
-
-   ```
-   Web 应用
-   桌面应用              ← 选这个！
-   电视和受限输入设备
-   Android
-   Chrome 应用
-   iOS
-   通用 Windows 平台 (UWP)
-   其他
-   ```
-
-4. **点击"桌面应用"**
-
-> **为什么选"桌面应用"**：因为 GSC MCP 是在你的电脑上本地运行的命令行工具，不是一个网站。选"桌面应用"才能生成正确的 JSON 文件格式。如果选了"Web 应用"，后面下载的文件格式会不对，GSC MCP 无法使用。
-
-### 5.4 填写名称
-
-1. 选择"桌面应用"后，下拉菜单下方会出现一个 **"名称"** 输入框
-2. **点击输入框**，输入：`seo-tools-client`
-3. 这个名字只是一个标识，方便你在凭据列表中认出它，**没有命名规则限制**，填什么都行
-4. 下方可能还有一个"已授权的重定向 URI"的区域，**完全不用管它，不用填任何东西**
-
-### 5.5 点击"创建"
-
-1. 检查一下：应用类型选的是"桌面应用"，名称填了 `seo-tools-client`
-2. 找到页面底部的蓝色按钮 **"创建"**
-3. **点击"创建"**
-4. 页面加载 2-3 秒
-
-### 5.6 下载 JSON 文件（这一步最重要！）
-
-点击"创建"后，会弹出一个窗口，标题是"OAuth 客户端已创建"。窗口里显示：
-
-```
-您的客户端 ID
-123456789-xxxxx.apps.googleusercontent.com
-
-您的客户端密钥
-GOCSPX-xxxxxxxxxxxxxxxxx
+```powershell
+[System.Environment]::SetEnvironmentVariable("GOOGLE_OAUTH_CLIENT_ID", "你的客户端ID", "User")
+[System.Environment]::SetEnvironmentVariable("GOOGLE_OAUTH_CLIENT_SECRET", "你的客户端密钥", "User")
+[System.Environment]::SetEnvironmentVariable("OAUTHLIB_INSECURE_TRANSPORT", "1", "User")
 ```
 
-> **这些信息不用记**，JSON 文件里都有。但你需要下载它。
+### 5.2 GSC MCP（可选 — 网站上线后）
 
-**操作步骤：**
-
-1. 在弹窗的 **右下角**，找到 **"下载 JSON"** 按钮
-2. **点击"下载 JSON"**
-3. 浏览器会下载一个文件，名字类似：`client_secret_123456789-xxxxx.apps.googleusercontent.com.json`
-4. 下载完成后，点击弹窗右下角的 **"确定"** 关闭弹窗
-
-### 5.7 把 JSON 文件放到正确位置
-
-> 下载的文件默认在你的"下载"文件夹里，需要移动到 Claude Code 能找到的位置。
-
-**操作步骤：**
-
-1. 按 **Win + E** 打开文件资源管理器
-2. 进入你的"下载"文件夹（通常在左侧栏或 `C:\Users\你的用户名\Downloads`）
-3. 找到刚才下载的那个 `.json` 文件，名字很长，以 `client_secret_` 开头
-4. **右键点击**这个文件 → **重命名** → 改名为 `gsc-oauth.json`
-5. 现在，你需要把它移动到 `C:\Users\你的用户名\.claude\` 文件夹里：
-
-   **先确认你的用户名：**
-   - 按 Win 键，输入 `cmd`，回车打开命令提示符
-   - 输入 `echo %USERNAME%` 然后回车
-   - 屏幕上显示的就是你的用户名（比如 `Dylan`）
-
-   **然后移动文件：**
-   - 回到文件资源管理器
-   - 在地址栏输入：`C:\Users\你的用户名\.claude\` 然后回车
-     - 比如你的用户名是 Dylan，就输入 `C:\Users\Dylan\.claude\`
-   - 如果提示"找不到文件夹"，说明 `.claude` 文件夹还没创建：
-     - 在地址栏输入 `C:\Users\你的用户名\` 回车
-     - 在空白处 **右键 → 新建 → 文件夹**
-     - 文件夹名输入 `.claude`（注意前面有个点）
-     - 按回车确认
-   - 现在打开 `.claude` 文件夹
-   - 把重命名后的 `gsc-oauth.json` 文件 **拖到** 这个文件夹里（或者右键复制 → 粘贴）
-
-6. 最终文件的完整路径应该是：`C:\Users\你的用户名\.claude\gsc-oauth.json`
-
-### 5.8 验证第五步是否成功
-
-1. 回到浏览器，你应该在凭据页面
-2. 看中间的 **"OAuth 2.0 客户端 ID"** 表格
-3. 你应该能看到一行新记录：
-   - 名称：`seo-tools-client`
-   - 类型：`桌面应用`
-   - 客户端 ID：一串 `xxxxx.apps.googleusercontent.com`
-4. **看到这行记录，就说明第五步成功了**
-
----
-
-## 第六步：配置环境变量
-
-> **这步做什么**：告诉 Claude Code 你刚下载的 JSON 文件放在哪里，以及要查询哪个网站的数据。
-> 环境变量就像是给程序设置的"配置信息"，设好一次以后就不用再管了。
-
-> **你需要准备好的信息**（前面步骤已经完成的）：
-> - JSON 文件的完整路径，比如 `C:\Users\Dylan\.claude\gsc-oauth.json`（第五步完成的）
-> - 你的网站域名：`luckycrystals.org`
-
-### 6.1 打开 PowerShell
-
-1. 按键盘上的 **Win 键**（键盘左下角，有 Windows 图标的键）
-2. 屏幕上出现搜索框后，**输入**：`powershell`
-3. 在搜索结果中你会看到 **"Windows PowerShell"**（蓝色图标）
-4. **点击它**打开
-5. 你会看到一个蓝色背景的窗口，前面有 `PS` 字样
-
-> **为什么用 PowerShell 而不用 CMD**：PowerShell 设置的环境变量是永久保存的，CMD 关闭就没了。我们用的是 PowerShell 的 `SetEnvironmentVariable` 方法，写入了系统注册表，重启也不会丢。
-
-### 6.2 设置第一个环境变量
-
-在 PowerShell 窗口中，**用鼠标选中下面的命令，右键复制**：
-
-```
+```powershell
 [System.Environment]::SetEnvironmentVariable("GSC_AUTH_MODE", "oauth", "User")
-```
-
-然后切换到 PowerShell 窗口，**在蓝色窗口里右键点击一下**（这会自动粘贴命令），然后 **按回车键**。
-
-> **执行后会怎样**：没有任何输出。光标直接跳到下一行出现新的 `PS` 提示符。**没有输出就是成功了**，不用怀疑。
-
-### 6.3 设置第二个环境变量（需要改路径！）
-
-> 这条命令需要你把"你的用户名"替换成实际的用户名！
-
-先确认你的用户名：在 PowerShell 里输入 `echo $env:USERNAME` 然后回车，屏幕会显示你的用户名。
-
-然后复制下面的命令，**先在记事本里把"你的用户名"改成实际的**，再复制到 PowerShell 执行：
-
-```
 [System.Environment]::SetEnvironmentVariable("GSC_OAUTH_SECRETS_FILE", "C:\Users\你的用户名\.claude\gsc-oauth.json", "User")
-```
-
-比如你的用户名是 `Dylan`，那这条命令就是：
-
-```
-[System.Environment]::SetEnvironmentVariable("GSC_OAUTH_SECRETS_FILE", "C:\Users\Dylan\.claude\gsc-oauth.json", "User")
-```
-
-粘贴到 PowerShell 后，**按回车键**。同样没有任何输出就是成功了。
-
-> **路径中的反斜杠 `\` 是正确的**，不要改成 `/`。Windows 用反斜杠作为路径分隔符。
-
-### 6.4 设置第三个环境变量
-
-复制下面的命令，粘贴到 PowerShell，按回车：
-
-```
 [System.Environment]::SetEnvironmentVariable("GSC_SITE_URL", "sc-domain:luckycrystals.org", "User")
 ```
 
-> **域名格式说明**：
-> - `sc-domain:luckycrystals.org` 中 `sc-domain:` 是固定前缀，后面跟你的域名
-> - 这个格式是给"网域资源"用的（你在 GSC 里选"网域"方式添加的）
-> - 如果以后添加其他网站用的是"网址前缀"方式，格式改为 `https://你的域名.com`（末尾不加 `/`）
+### 5.3 验证
 
-### 6.5 验证 3 个环境变量都设置成功了
-
-在同一个 PowerShell 窗口中，**逐行**复制粘贴以下命令，每条按回车：
-
+```powershell
+[System.Environment]::GetEnvironmentVariable("GOOGLE_OAUTH_CLIENT_ID", "User")   # 应输出客户端 ID
+[System.Environment]::GetEnvironmentVariable("GOOGLE_OAUTH_CLIENT_SECRET", "User") # 应输出客户端密钥
 ```
-[System.Environment]::GetEnvironmentVariable("GSC_AUTH_MODE", "User")
+
+> 没有输出 = 设置失败，检查拼写后重试。
+
+### 5.4 安装 uv
+
+```powershell
+irm https://astral.sh/uv/install.ps1 | iex
 ```
-→ 应该输出：`oauth`
 
-```
-[System.Environment]::GetEnvironmentVariable("GSC_OAUTH_SECRETS_FILE", "User")
-```
-→ 应该输出：`C:\Users\你的用户名\.claude\gsc-oauth.json`
+关掉 PowerShell 重开，验证：`uvx --version`
 
-```
-[System.Environment]::GetEnvironmentVariable("GSC_SITE_URL", "User")
-```
-→ 应该输出：`sc-domain:luckycrystals.org`
+### 5.5 重启 VSCode
 
-> **如果某一条输出为空**：说明没设置成功。检查命令中的拼写有没有错，然后重新执行对应的 6.2 / 6.3 / 6.4 步骤。
+环境变量写入后，**已打开的程序不会自动读取**，必须完全关闭并重新打开 VSCode。
 
-### 6.6 重启 VSCode（必须做！）
-
-> **为什么要重启**：环境变量虽然已经写入系统了，但已经打开的程序（包括 VSCode）不会自动读取新设置的环境变量。必须关掉重新打开才行。
-
-1. **保存** VSCode 中所有打开的文件
-2. **完全关闭 VSCode**：点击右上角 X，或者菜单"文件" → "退出"
-3. **关闭刚才打开的 PowerShell 窗口**（点右上角 X）
-4. **重新打开 VSCode**
-5. 在 VSCode 中重新打开 Claude Code
-
-> macOS / Linux 用户把以下命令逐行粘贴到终端执行：
+> **macOS / Linux** 环境变量写入方式：
 > ```bash
-> echo 'export GSC_AUTH_MODE="oauth"' >> ~/.zshrc
-> echo 'export GSC_OAUTH_SECRETS_FILE="$HOME/.claude/gsc-oauth.json"' >> ~/.zshrc
-> echo 'export GSC_SITE_URL="sc-domain:luckycrystals.org"' >> ~/.zshrc
+> echo 'export GOOGLE_OAUTH_CLIENT_ID="你的客户端ID"' >> ~/.zshrc
+> echo 'export GOOGLE_OAUTH_CLIENT_SECRET="你的客户端密钥"' >> ~/.zshrc
+> echo 'export OAUTHLIB_INSECURE_TRANSPORT="1"' >> ~/.zshrc
 > source ~/.zshrc
+> curl -LsSf https://astral.sh/uv/install.sh | sh
 > ```
 
 ---
 
-## 第七步：安装 GSC MCP
+## 第六步：安装 MCP 服务
 
-环境变量设置好后，安装 MCP 服务：
+### 6.1 Google Workspace MCP（必须）
+
+```bash
+claude mcp add -s user google-workspace \
+  -e GOOGLE_OAUTH_CLIENT_ID=你的客户端ID \
+  -e GOOGLE_OAUTH_CLIENT_SECRET=你的客户端密钥 \
+  -e OAUTHLIB_INSECURE_TRANSPORT=1 \
+  -- uvx workspace-mcp --tools drive sheets docs gmail --tool-tier core
+```
+
+首次使用时弹出浏览器进行 Google 授权，授权一次后自动缓存。
+
+### 6.2 GSC MCP（可选）
 
 ```bash
 claude mcp add -s user gsc -- npx -y gsc-mcp-server
 ```
 
-### 首次授权
+---
 
-安装完成后，在 Claude Code 中使用 GSC 相关功能时，会自动弹出浏览器窗口让你登录 Google 账号并授权。授权完成后会生成一个 token 文件，之后就不需要再授权了。
+## 第七步（中国大陆必须）：代理补丁
+
+> **问题**：在中国大陆，Google 服务被 GFW 屏蔽。MCP 的 Python 进程（`httplib2`）不会自动走系统代理，导致连接超时（`WinError 10060`）。
+>
+> **症状**：MCP 安装成功，首次调用 Google 工具时报 `connection timeout` 或 `SSLEOFError`。
+>
+> **原理**：MCP 使用 `httplib2` 发起 Google API 请求，但 `httplib2` 不读取 `HTTPS_PROXY` 环境变量，需要手动注入代理配置。
+
+### 7.1 前提
+
+确保本地已有 HTTP 代理（如 V2RayN），默认地址 `http://127.0.0.1:10808`。验证：
+
+```powershell
+curl -x http://127.0.0.1:10808 -s -o NUL -w "%{http_code}" https://www.googleapis.com/
+```
+
+返回 `404` 或 `200` 即代理正常。
+
+### 7.2 补丁步骤
+
+找到 MCP 的安装目录（路径中的哈希值 `NiLXFnQ_-dRwqxzg` 因版本而异）：
+
+```
+C:\Users\你的用户名\AppData\Local\uv\cache\archive-v0\NiLXFnQ_-dRwqxzg\Lib\site-packages\
+```
+
+> 不确定具体目录？在 PowerShell 中运行：
+> ```powershell
+> Get-ChildItem "C:\Users\$env:USERNAME\AppData\Local\uv\cache\archive-v0" -Directory | ForEach-Object { if (Test-Path "$($_.FullName)\Lib\site-packages\httplib2") { Write-Host $_.FullName } }
+> ```
+
+#### 补丁 1：安装 PySocks
+
+```powershell
+pip install PySocks --target "上面找到的路径\Lib\site-packages"
+```
+
+#### 补丁 2：修改 `core/server.py`
+
+文件：`...Lib\site-packages\core\server.py`
+
+在 `import os` 那一行后面（其他 `import` 之前），加入：
+
+```python
+# === Proxy patch ===
+_PROXY_URL = os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy") or "http://127.0.0.1:10808"
+os.environ.setdefault("HTTPS_PROXY", _PROXY_URL)
+os.environ.setdefault("HTTP_PROXY", _PROXY_URL)
+os.environ.setdefault("https_proxy", _PROXY_URL)
+os.environ.setdefault("http_proxy", _PROXY_URL)
+# === End proxy patch ===
+```
+
+> 作用：确保 `requests` 库（token 刷新）走代理。
+
+#### 补丁 3：修改 `googleapiclient/http.py`
+
+文件：`...Lib\site-packages\googleapiclient\http.py`
+
+找到 `build_http()` 函数（约在 1933 行），将函数替换为：
+
+```python
+def build_http():
+    if socket.getdefaulttimeout() is not None:
+        http_timeout = socket.getdefaulttimeout()
+    else:
+        http_timeout = DEFAULT_HTTP_TIMEOUT_SEC
+
+    # === Proxy patch: read proxy from env vars for httplib2 ===
+    proxy_info = None
+    _proxy_url = os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy") or os.environ.get("HTTP_PROXY") or os.environ.get("http_proxy")
+    if _proxy_url:
+        from urllib.parse import urlparse as _urlparse
+        try:
+            _parsed = _urlparse(_proxy_url)
+            import socks
+            proxy_info = httplib2.ProxyInfo(
+                proxy_type=socks.PROXY_TYPE_HTTP,
+                proxy_host=_parsed.hostname or "127.0.0.1",
+                proxy_port=_parsed.port or 10808,
+            )
+        except Exception:
+            pass
+    # === End proxy patch ===
+
+    http = httplib2.Http(timeout=http_timeout, proxy_info=proxy_info)
+    try:
+        http.redirect_codes = http.redirect_codes - {308}
+    except AttributeError:
+        pass
+    return http
+```
+
+> 作用：让 `httplib2`（Google API 调用）通过代理连接 Google 服务器。
+
+#### 补丁 4：MCP 配置加入代理环境变量
+
+```bash
+claude mcp add -s user google-workspace \
+  -e GOOGLE_OAUTH_CLIENT_ID=你的客户端ID \
+  -e GOOGLE_OAUTH_CLIENT_SECRET=你的客户端密钥 \
+  -e OAUTHLIB_INSECURE_TRANSPORT=1 \
+  -e HTTPS_PROXY=http://127.0.0.1:10808 \
+  -e HTTP_PROXY=http://127.0.0.1:10808 \
+  -- uvx workspace-mcp --tools drive sheets docs gmail --tool-tier core
+```
+
+> 如果代理端口不是 10808，改成你的实际端口。
+
+### 7.3 重启验证
+
+1. 完全关闭并重新打开 VSCode
+2. 在 Claude Code 中测试：`搜索我的 Google Sheets`
+3. 如果返回表格列表，说明补丁成功
+
+### 7.4 首次授权（大陆用户必看）
+
+> 代理补丁只解决了 API 调用和 token 自动刷新的问题。**首次 OAuth 授权**（MCP 弹出浏览器让你点"允许"）仍然会失败，因为 OAuth 回调服务器的 token 交换代码没有被补丁覆盖。
+
+**解决方法**：让 Claude Code 用 curl 通过代理手动完成授权。操作步骤：
+
+1. 当 MCP 弹出授权链接时，告诉 Claude Code "授权失败了"
+2. Claude Code 会用 `curl -x http://127.0.0.1:10808` 通过代理完成 token 交换
+3. 授权成功后，后续使用由代理补丁自动处理，**不需要再手动授权**
+
+> 此操作只需一次。只要 refresh_token 不失效（6 个月不用才会失效），就永远不需要再次授权。
+
+### 7.5 注意事项
+
+- **MCP 更新后补丁会失效**：`uvx` 更新 `workspace-mcp` 包时会覆盖补丁文件，需要重新执行补丁 2 和补丁 3
+- **代理地址变更时**：修改 `core/server.py` 中的 `127.0.0.1:10808` 为新地址，并重新执行补丁 4
+- **海外用户不需要此补丁**
 
 ---
 
 ## 验证清单
 
-完成所有步骤后，逐项检查：
-
-| # | 检查项 | 怎么验证 |
+| # | 检查项 | 验证方式 |
 |---|--------|---------|
-| 1 | 项目已创建 | 控制台左上角能看到你的项目名 |
-| 2 | 3 个 API 已启用 | ☰ → API和服务 → 已启用的API和服务，能看到 3 个 API |
-| 3 | OAuth 同意屏幕已配置 | ☰ → API和服务 → OAuth同意屏幕，状态为"测试中" |
-| 4 | OAuth 客户端已创建 | ☰ → API和服务 → 凭据，能看到你创建的桌面应用客户端 |
-| 5 | JSON 文件已下载 | 找到保存的 JSON 文件，内容包含 `client_id` 和 `client_secret` |
-| 6 | 环境变量已设置 | 终端运行 `echo $GSC_OAUTH_SECRETS_FILE`（Mac）或 `echo %GSC_OAUTH_SECRETS_FILE%`（Windows CMD）能看到路径 |
-| 7 | GSC MCP 已安装 | 运行 `claude mcp list`，能看到 `gsc` |
+| 1 | 项目已创建 | 控制台左上角显示项目名 |
+| 2 | API 已启用 | ☰ → API和服务 → 已启用的API，有 Drive/Sheets/Docs/Gmail |
+| 3 | OAuth 同意屏幕 | 状态为"测试中"，测试用户已添加 |
+| 4 | OAuth 客户端 | 凭据页面能看到桌面应用类型的客户端 |
+| 5 | 环境变量 | PowerShell `GetEnvironmentVariable` 有输出 |
+| 6 | uv 已安装 | `uvx --version` 有版本号 |
+| 7 | MCP 已安装 | `claude mcp list` 能看到 `google-workspace` |
+| 8 | 代理补丁（大陆） | 调用 Google 工具不报 timeout |
 
 ---
 
 ## 常见问题
 
-### Q: 创建 OAuth 客户端时提示"如需创建 OAuth 客户端 ID，必须先配置同意屏幕"
-**A**: 回到第四步，先配置 OAuth 同意屏幕。
-
-### Q: 启用 API 时找不到对应的 API
-**A**: 确保搜索关键词完全匹配：`Google Search Console API`（不是 Google Search API）。也可以直接访问快捷链接：
-- Search Console API: [console.cloud.google.com/apis/library/searchconsole.googleapis.com](https://console.cloud.google.com/apis/library/searchconsole.googleapis.com)
-- Analytics Data API: [console.cloud.google.com/apis/library/analyticsdata.googleapis.com](https://console.cloud.google.com/apis/library/analyticsdata.googleapis.com)
-
-### Q: 授权后仍然无法访问数据
-**A**: 确保：
-1. 你的网站已在 [Google Search Console](https://search.google.com/search-console) 中验证所有权
-2. `GSC_SITE_URL` 的格式与 GSC 中注册的资源完全一致
-3. OAuth 同意屏幕的测试用户中包含你的 Gmail
-
 ### Q: "此应用未经验证"警告
-**A**: 这是正常的，因为你创建的是个人使用的应用，没有经过 Google 审核。点击"高级"→"前往（不安全）"即可继续。这个"不安全"只是指未经过 Google 审核，应用是你自己创建的，没有安全风险。
+**A**: 正常。点击"高级" → "前往（不安全）"继续。应用是你自己创建的，没有安全风险。
+
+### Q: OAuth 授权后仍无法访问
+**A**: 检查 3 点：
+1. OAuth 同意屏幕的测试用户包含你的 Gmail
+2. `GSC_SITE_URL` 格式与 GSC 注册的资源一致
+3. 网站已在 Search Console 验证所有权
+
+### Q: `WinError 10060` 连接超时（中国大陆）
+**A**: 需要打代理补丁，见第七步。
+
+### Q: `SSLEOFError` 或 `SSL: UNEXPECTED_EOF_WHILE_READING`
+**A**: 同上，代理未配置导致无法连接 Google 服务器。
+
+### Q: MCP 更新后补丁失效
+**A**: 重新执行第七步的补丁 2 和补丁 3。
 
 ---
 
-## 后续：GA4 Data API 使用
+## 后续：GSC + GA4 自动化（服务账号方式）
 
-GA4 API 的使用方式不同于 GSC，不需要单独的 MCP。使用场景：
+> 适用场景：服务器脚本、定时任务、无人值守 | 前提：第一~二步已完成
 
-| 场景 | 使用方式 |
-|------|---------|
-| Claude Code 查询 GA4 数据 | 通过 Python 脚本 + google-analytics-data 库 |
-| Google Data Studio 可视化 | 直接在 Data Studio 中连接 GA4 数据源（原生支持，无需 API 凭据） |
-| 自动化报表 | Python 脚本 + 服务账号（Service Account） |
+| 对比 | OAuth（前文） | 服务账号（本节） |
+|------|-------------|----------------|
+| 场景 | Claude Code 交互 | 服务器脚本、定时任务 |
+| 授权 | 弹浏览器 | JSON 密钥自动认证 |
+| 身份 | 你自己 | 机器人账号 |
 
-> GA4 Data API 的详细使用方法见 `01-AI营销/02-自动化工具库/08-数据分析工具/` 下的相关文档。
+### 1. 创建服务账号
+
+☰ → "API 和服务" → "凭据" → "+ 创建凭据" → "服务账号" → 填名称 → "创建并继续" → "完成"
+
+### 2. 下载密钥
+
+点击服务账号名称 → "密钥"标签 → "添加密钥" → "创建新密钥" → JSON → 保存到项目目录，**加入 `.gitignore`**
+
+### 3. 授权 GSC
+
+Search Console → 设置 → 用户和权限 → "添加用户" → 输入服务账号邮箱 → 权限选"受限"或"完整"
+
+### 4. 授权 GA4
+
+Google Analytics → 管理 → 访问权限管理 → 添加用户 → 角色选"查看者"
+
+### 5. 常见错误
+
+| 报错 | 原因 | 解决 |
+|------|------|------|
+| 403 permission denied | 服务账号没加权限 | 回到第 3/4 步 |
+| property not found | GA4 未授权或 ID 错误 | 检查授权和 property ID |
+| no matching site | GSC 资源类型不匹配 | URL资源 vs domain资源 |
+
+### 安全提醒
+
+不要公开：`service_account.json`、`client_secret.json`、`refresh_token`、`private_key`。
 
 ---
 
@@ -500,6 +369,6 @@ GA4 API 的使用方式不同于 GSC，不需要单独的 MCP。使用场景：
 | 资源 | 链接 |
 |------|------|
 | Google Cloud 控制台 | [console.cloud.google.com](https://console.cloud.google.com) |
-| Google Search Console | [search.google.com/search-console](https://search.google.com/search-console) |
-| GSC MCP GitHub | [github.com/suganthan-gsc-mcp](https://github.com/suganthan-gsc-mcp) |
+| Google Workspace MCP | [github.com/taylorwilsdon/google_workspace_mcp](https://github.com/taylorwilsdon/google_workspace_mcp) |
+| GSC MCP | [github.com/drewbeechler/gsc-mcp-server](https://github.com/drewbeechler/gsc-mcp-server) |
 | Google OAuth 文档 | [developers.google.com/identity/protocols/oauth2](https://developers.google.com/identity/protocols/oauth2?hl=zh-cn) |

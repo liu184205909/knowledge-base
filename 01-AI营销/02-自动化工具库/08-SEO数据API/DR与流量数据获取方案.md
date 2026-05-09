@@ -254,7 +254,7 @@ for item in apify_client.dataset(run["defaultDatasetId"]).iterate_items():
     ├── RapidAPI Similarweb → 流量渠道拆分 + Engagement 指标
     └── (可选) Apify Actor → AI流量 + 竞品发现
     ↓
-输出: 竞品清单.xlsx（补充 DR/流量/渠道字段） → P0/P1/P2/P3 分级
+输出: 竞品清单 Google Sheets（补充 DR/流量/渠道字段） → P0/P1/P2/P3 分级
 ```
 
 ---
