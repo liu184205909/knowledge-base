@@ -273,4 +273,38 @@ npx superpowers-zh
 
 ---
 
+### Fooocus
+
+**GitHub**: https://github.com/lllyasviel/Fooocus
+
+**简介**: 本地部署的 AI 图片生成与编辑工具，基于 Stable Diffusion XL，类似 Midjourney 的体验但完全免费离线运行
+
+**核心功能**: 文生图、图片变体（Vary）、高清放大（Upscale）、局部重绘（Inpaint）、边缘扩展（Outpaint）、图生图（Image Prompt）、人脸替换（FaceSwap）
+
+**特点**:
+- 类 Midjourney 体验，无需复杂参数调优，专注 Prompt 即可
+- 内置 GPT-2 提示词处理引擎，短提示也能出高质量结果
+- 三种预设模式：通用（run.bat）、写实（run_realistic.bat）、动漫（run_anime.bat）
+- 自研 Inpaint 算法，效果优于标准 SDXL Inpaint
+- 支持自定义 LoRA、Style、模型（兼容 Civitai SDXL 模型）
+- 完全离线、开源、免费，无需联网
+
+**系统要求**: 最低 4GB NVIDIA VRAM + 8GB 内存 | Windows/Linux/Mac
+
+**快速使用**:
+```bash
+# Windows：下载解压后直接运行
+run.bat            # 通用模式
+run_realistic.bat  # 写实模式（适合商品图）
+run_anime.bat      # 动漫模式
+```
+
+**电商场景**: 商品图片换背景、扩展边缘、重新生成更清晰的视觉素材、产品图变体生成
+
+**项目状态**: LTS（长期支持），仅修复 Bug，暂无迁移到新架构的计划。如需 Flux 等新模型推荐 WebUI Forge / ComfyUI
+
+**适用场景**: 电商产品图处理、内容创作配图、营销素材生成
+
+---
+
 **最后更新**: 2026-05-09
