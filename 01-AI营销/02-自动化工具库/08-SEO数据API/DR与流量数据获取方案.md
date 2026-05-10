@@ -7,8 +7,9 @@
 ## 方案总览
 
 ```
-DR + 自然流量（ETV）  →  DataForSEO MCP（已有）
+DR                    →  DataForSEO backlinks/bulk_ranks（需激活 Backlinks 订阅） / Ahrefs 手动查询
 流量渠道拆分          →  traffic.cv + Web Access CDP（免费）
+补充参考              →  DataForSEO MCP domain_rank_overview（ETV，已有）
 备用                 →  RapidAPI Similarweb（$19/月） / Apify（按量）
 ```
 
@@ -18,14 +19,14 @@ DR + 自然流量（ETV）  →  DataForSEO MCP（已有）
 
 ### DataForSEO MCP（DR + ETV）
 
-已集成，直接使用。
+已集成。两个可用端点：
 
-| 指标 | 端点 | 说明 |
-|------|------|------|
-| 自然流量（ETV） | `/v3/dataforseo_labs/google/domain_rank_overview/live` | 基于 CTR x 搜索量估算的月自然流量 |
-| 排名分布 | 同上 | `pos_1` ~ `pos_91_100` 各排名区间关键词数 |
+| 指标 | 端点 | 模块 | 状态 |
+|------|------|------|------|
+| DR（权重 0-100） | `/v3/backlinks/bulk_ranks/live` | Backlinks | **需激活 Backlinks 订阅** |
+| 自然流量（ETV） | `/v3/dataforseo_labs/google/domain_rank_overview/live` | DataForSEO Labs | 可用 |
 
-> **限制**：DataForSEO Backlinks 模块未激活，无法获取 DR（rank）和反链数。ETV 可正常使用。
+> `bulk_ranks` 支持一次最多 1000 个域名批量查询，`rank_scale: "one_hundred"` 转为 0-100 量表（与 Ahrefs DR 一致）。
 
 ### traffic.cv + CDP（流量渠道拆分）
 
@@ -71,10 +72,10 @@ curl -s "http://localhost:3456/close?target={targetId}"
 步骤1A: 竞品发现 → 40+ 竞品域名
     ↓
 步骤1B: 竞品筛选 → 批量获取 DR + 流量 + 渠道数据
-    ├── DataForSEO MCP → ETV（自然流量）
+    ├── Ahrefs/Semrush → DR（手动查询）
     └── traffic.cv + CDP → 月访问量 + 流量渠道拆分
     ↓
-输出: 竞品清单 Google Sheets（补充流量/渠道字段） → P0/P1/P2/P3 分级
+输出: 竞品清单 Google Sheets（补充DR/流量/渠道字段） → P0/P1/P2/P3 分级
 ```
 
 ---
@@ -83,14 +84,16 @@ curl -s "http://localhost:3456/close?target={targetId}"
 
 | 字段 | 列号 | 数据来源 | 格式 |
 |------|------|---------|------|
-| 月访问量 | M | traffic.cv | 如 233.06K、2.71M |
-| 搜索% | N | traffic.cv | 如 53.80% |
-| 直接% | O | traffic.cv | 如 14.63% |
-| 社交% | P | traffic.cv | 如 16.26% |
-| 引荐% | Q | traffic.cv | 如 12.83% |
-| 邮件% | R | traffic.cv | 如 1.75% |
-| 付费% | S | traffic.cv | 如 0.17% |
-| 有机ETV | T | DataForSEO | 如 3500000 |
+| DR | E | Ahrefs/Semrush 手动查询 | 0-100 |
+| 月访问量 | G | traffic.cv | 如 233.06K、2.71M |
+| 搜索% | H | traffic.cv | 如 53.80% |
+| 直接% | I | traffic.cv | 如 14.63% |
+| 社交% | J | traffic.cv | 如 16.26% |
+| 引荐% | K | traffic.cv | 如 12.83% |
+| 邮件% | L | traffic.cv | 如 1.75% |
+| 付费% | M | traffic.cv | 如 0.17% |
+
+> DR 数据来源说明：DataForSEO 的 `backlinks/bulk_ranks/live` 端点可批量获取 DR（0-100 量表，一次最多 1000 域名），但需要激活 Backlinks 订阅。当前 DR 值通过 Ahrefs/Semrush 免费版手动查询获取。如需批量自动获取 DR，激活 Backlinks 模块即可。
 
 ---
 
