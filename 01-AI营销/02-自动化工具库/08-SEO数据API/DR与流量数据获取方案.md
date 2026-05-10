@@ -27,16 +27,6 @@ DataForSEO API 默认返回 **0-1000** 量表值，需转换为 0-100：
 
 > 示例：rank=479（0-1000）→ round(sin(479/636.62) × 100) = 68（0-100）
 
-### 费用
-
-| 项目 | 费用 |
-|------|------|
-| 充值最低金额 | $50（余额不过期） |
-| Bulk Backlink Rank Checker | $0.02/RUN + $0.00003/target |
-| 40 个域名单次查询成本 | 约 $0.02 |
-
-> DataForSEO DR 基于 Google 原始 PageRank（阻尼因子 0.5），与 Ahrefs/Semrush 算法不同，数值偏低属正常，仅适合同批查询内的相对排序。
-
 ---
 
 ## 流量数据获取：traffic.cv
