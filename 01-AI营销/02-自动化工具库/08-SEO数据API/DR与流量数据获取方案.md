@@ -15,29 +15,19 @@
 
 ## DR 获取：DataForSEO Google Sheets Connector
 
-### 操作流程
+通过 Google Sheets 插件批量查询域名 DR，无需 Backlinks 订阅。
 
-1. **准备工作**：在 DataForSEO 官网注册账号并充值（最低 $50，余额不过期）
-2. **安装插件**：在 Google Sheets 中安装 DataForSEO Connector 插件（扩展程序 → 获取插件 → 搜索 "DataForSEO"）
-3. **导入模板**：复制 DataForSEO 官方模板到自己的 Google Sheets
-   - 模板地址：`https://docs.google.com/spreadsheets/d/17erVBDKaIfCwicM2sbEVS1xihGu-_diMWQ20JdpCOs0/template/preview`
-4. **选择工具**：在插件侧边栏选择 **Bulk Backlink Rank Checker**
-5. **输入域名**：在绿色列（A 列，从第 12 行开始）粘贴待查询域名
-6. **点击 Run**：插件自动批量查询，结果显示在 B 列
-7. **量表转换**：API 默认返回 0-1000 量表值，需用公式转换为 0-100：
-   ```
-   转换公式：round(sin(rank / 636.62) × 100)
-   ```
-8. **复制结果**：将转换后的 DR 值复制到竞品清单的 E 列
+### 量表转换
 
-### 注意事项
+DataForSEO API 默认返回 **0-1000** 量表值，需转换为 0-100：
 
-- **无需 Backlinks 订阅**：Connector 方式不需要激活 $100/月的 Backlinks 订阅
-- **模板 sheet 不可删除**：DataForSEO Connector 的 Google Apps Script 依赖模板中的 sheet 结构，删除模板 sheet 会导致侧边栏无法加载
-- **rank_scale 说明**：默认 `one_thousand`（0-1000），Connector 不支持传入 `rank_scale: "one_hundred"` 参数，需要手动转换
-- **DataForSEO DR 与 Ahrefs/Semrush 差异**：算法和数据库不同，DataForSEO 基于 Google 原始 PageRank（阻尼因子 0.5），数值偏低属正常，仅适合同批查询内的相对排序
+```
+转换公式：round(sin(rank / 636.62) × 100)
+```
 
-### 费用说明
+> 示例：rank=479（0-1000）→ round(sin(479/636.62) × 100) = 68（0-100）
+
+### 费用
 
 | 项目 | 费用 |
 |------|------|
@@ -45,30 +35,13 @@
 | Bulk Backlink Rank Checker | $0.02/RUN + $0.00003/target |
 | 40 个域名单次查询成本 | 约 $0.02 |
 
+> DataForSEO DR 基于 Google 原始 PageRank（阻尼因子 0.5），与 Ahrefs/Semrush 算法不同，数值偏低属正常，仅适合同批查询内的相对排序。
+
 ---
 
 ## 流量数据获取：traffic.cv
 
-### 操作流程
-
-1. 访问 `https://traffic.cv/{domain}`（如 `https://traffic.cv/lonerwolf.com`）
-2. 页面显示该域名的流量数据：
-   - **Total Visits**（月访问量）
-   - **Traffic Sources**：search%、direct%、social%、referrals%、mail%、paidReferrals%
-3. 手动将数据填入竞品清单对应列
-
-### 数据覆盖情况
-
-| 结果 | 说明 |
-|------|------|
-| 完整数据（visits + 6 渠道%） | traffic.cv 有完整数据 |
-| 部分数据 | 仅 Semrush 免费页有基础数据 |
-| 无数据 | 流量太小或域名不在数据库 |
-
-### 注意事项
-
-- traffic.cv 有 Cloudflare 保护，连续访问多个域名可能触发验证
-- 无付费 API，数据只能通过网页手动获取
+在浏览器访问 `https://traffic.cv/{domain}` 获取月访问量和流量渠道拆分（search%、direct%、social%、referrals%、mail%、paidReferrals%）。免费，数据覆盖情况因域名而异。
 
 ---
 
