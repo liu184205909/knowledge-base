@@ -4,65 +4,71 @@
 
 ---
 
-## 方案总览
+## 数据来源总览
 
-```
-DR                    →  DataForSEO backlinks/bulk_ranks（需激活 Backlinks 订阅） / Ahrefs 手动查询
-流量渠道拆分          →  traffic.cv + Web Access CDP（免费）
-补充参考              →  DataForSEO MCP domain_rank_overview（ETV，已有）
-备用                 →  RapidAPI Similarweb（$19/月） / Apify（按量）
-```
+| 数据 | 获取方式 | 操作方式 | 费用 |
+|------|---------|---------|------|
+| DR（域名权重 0-100） | DataForSEO Google Sheets Connector | 手动在 Google Sheets 侧边栏操作 | 按次付费（~$0.02/40域名） |
+| 月访问量 + 流量渠道拆分 | traffic.cv | 手动在浏览器访问 | 免费 |
 
 ---
 
-## 主方案：DataForSEO + traffic.cv
+## DR 获取：DataForSEO Google Sheets Connector
 
-### DataForSEO MCP（DR + ETV）
+### 操作流程
 
-已集成。两个可用端点：
+1. **准备工作**：在 DataForSEO 官网注册账号并充值（最低 $50，余额不过期）
+2. **安装插件**：在 Google Sheets 中安装 DataForSEO Connector 插件（扩展程序 → 获取插件 → 搜索 "DataForSEO"）
+3. **导入模板**：复制 DataForSEO 官方模板到自己的 Google Sheets
+   - 模板地址：`https://docs.google.com/spreadsheets/d/17erVBDKaIfCwicM2sbEVS1xihGu-_diMWQ20JdpCOs0/template/preview`
+4. **选择工具**：在插件侧边栏选择 **Bulk Backlink Rank Checker**
+5. **输入域名**：在绿色列（A 列，从第 12 行开始）粘贴待查询域名
+6. **点击 Run**：插件自动批量查询，结果显示在 B 列
+7. **量表转换**：API 默认返回 0-1000 量表值，需用公式转换为 0-100：
+   ```
+   转换公式：round(sin(rank / 636.62) × 100)
+   ```
+8. **复制结果**：将转换后的 DR 值复制到竞品清单的 E 列
 
-| 指标 | 端点 | 模块 | 状态 |
-|------|------|------|------|
-| DR（权重 0-100） | `/v3/backlinks/bulk_ranks/live` | Backlinks | **需激活 Backlinks 订阅** |
-| 自然流量（ETV） | `/v3/dataforseo_labs/google/domain_rank_overview/live` | DataForSEO Labs | 可用 |
+### 注意事项
 
-> `bulk_ranks` 支持一次最多 1000 个域名批量查询，`rank_scale: "one_hundred"` 转为 0-100 量表（与 Ahrefs DR 一致）。
+- **无需 Backlinks 订阅**：Connector 方式不需要激活 $100/月的 Backlinks 订阅
+- **模板 sheet 不可删除**：DataForSEO Connector 的 Google Apps Script 依赖模板中的 sheet 结构，删除模板 sheet 会导致侧边栏无法加载
+- **rank_scale 说明**：默认 `one_thousand`（0-1000），Connector 不支持传入 `rank_scale: "one_hundred"` 参数，需要手动转换
+- **DataForSEO DR 与 Ahrefs/Semrush 差异**：算法和数据库不同，DataForSEO 基于 Google 原始 PageRank（阻尼因子 0.5），数值偏低属正常，仅适合同批查询内的相对排序
 
-### traffic.cv + CDP（流量渠道拆分）
+### 费用说明
 
-通过 Web Access skill 的 CDP 连接真实 Chrome 浏览器访问 [traffic.cv](https://traffic.cv/{domain})，绕过 Cloudflare 保护提取数据。
+| 项目 | 费用 |
+|------|------|
+| 充值最低金额 | $50（余额不过期） |
+| Bulk Backlink Rank Checker | $0.02/RUN + $0.00003/target |
+| 40 个域名单次查询成本 | 约 $0.02 |
 
-**返回数据**：
-- Total Visits（月访问量）
-- Traffic Sources：search%、direct%、social%、referrals%、mail%、paidReferrals%
+---
 
-**操作方式**：
+## 流量数据获取：traffic.cv
 
-```bash
-# 1. 检查 CDP 环境
-node ~/.claude/skills/web-access/scripts/check-deps.mjs
+### 操作流程
 
-# 2. 打开域名页面
-curl -s "http://localhost:3456/new?url=https://traffic.cv/{domain}"
+1. 访问 `https://traffic.cv/{domain}`（如 `https://traffic.cv/lonerwolf.com`）
+2. 页面显示该域名的流量数据：
+   - **Total Visits**（月访问量）
+   - **Traffic Sources**：search%、direct%、social%、referrals%、mail%、paidReferrals%
+3. 手动将数据填入竞品清单对应列
 
-# 3. 提取数据（通过 /eval 读取 DOM）
-# 4. 关闭 tab
-curl -s "http://localhost:3456/close?target={targetId}"
-```
+### 数据覆盖情况
 
-**实际验证结果**（2026-05-10，40 个竞品域名）：
+| 结果 | 说明 |
+|------|------|
+| 完整数据（visits + 6 渠道%） | traffic.cv 有完整数据 |
+| 部分数据 | 仅 Semrush 免费页有基础数据 |
+| 无数据 | 流量太小或域名不在数据库 |
 
-| 结果 | 数量 | 说明 |
-|------|------|------|
-| 完整数据（visits + 6 渠道%） | 20 | traffic.cv 有完整数据 |
-| 部分数据（visits + 部分%） | 11 | 仅 Semrush 免费页有基础数据 |
-| 仅 visits | 3 | traffic.cv 有访问量但无渠道拆分 |
-| 无数据 | 6 | 流量太小或域名不在数据库 |
+### 注意事项
 
-**注意事项**：
-- 连续访问 ~6-7 个域名后可能触发 Cloudflare Turnstile 验证，需间隔操作
-- 可用并行子 Agent 加速，每个 Agent 操作独立 tab
-- traffic.cv 无付费 API，数据只能通过网页抓取
+- traffic.cv 有 Cloudflare 保护，连续访问多个域名可能触发验证
+- 无付费 API，数据只能通过网页手动获取
 
 ---
 
@@ -72,47 +78,25 @@ curl -s "http://localhost:3456/close?target={targetId}"
 步骤1A: 竞品发现 → 40+ 竞品域名
     ↓
 步骤1B: 竞品筛选 → 批量获取 DR + 流量 + 渠道数据
-    ├── Ahrefs/Semrush → DR（手动查询）
-    └── traffic.cv + CDP → 月访问量 + 流量渠道拆分
+    ├── DataForSEO Connector → DR（手动在 Google Sheets 操作）
+    └── traffic.cv → 月访问量 + 流量渠道拆分（手动在浏览器获取）
     ↓
-输出: 竞品清单 Google Sheets（补充DR/流量/渠道字段） → P0/P1/P2/P3 分级
+输出: 竞品清单 Google Sheets（补充 DR/流量/渠道字段） → P0/P1/P2/P3 分级
+    ↓
+同步: 竞品优先级说明文档（1B）DR 值同步更新
 ```
 
 ---
 
-## 数据输出格式（竞品清单字段）
+## 竞品清单字段格式
 
 | 字段 | 列号 | 数据来源 | 格式 |
 |------|------|---------|------|
-| DR | E | Ahrefs/Semrush 手动查询 | 0-100 |
-| 月访问量 | G | traffic.cv | 如 233.06K、2.71M |
+| DR | E | DataForSEO Connector（手动操作） | 0-100 |
+| 月访问量 | G | traffic.cv | 如 233K、2.71M |
 | 搜索% | H | traffic.cv | 如 53.80% |
 | 直接% | I | traffic.cv | 如 14.63% |
 | 社交% | J | traffic.cv | 如 16.26% |
 | 引荐% | K | traffic.cv | 如 12.83% |
 | 邮件% | L | traffic.cv | 如 1.75% |
 | 付费% | M | traffic.cv | 如 0.17% |
-
-> DR 数据来源说明：DataForSEO 的 `backlinks/bulk_ranks/live` 端点可批量获取 DR（0-100 量表，一次最多 1000 域名），但需要激活 Backlinks 订阅。当前 DR 值通过 Ahrefs/Semrush 免费版手动查询获取。如需批量自动获取 DR，激活 Backlinks 模块即可。
-
----
-
-## 备用方案
-
-### RapidAPI Similarweb（需付费）
-
-| 项目 | 详情 |
-|------|------|
-| API | `oceanrock/similarweb-api1` |
-| 定价 | Basic $0（50次/月）/ Pro $19（15,000次/月） |
-| 优势 | 结构化 JSON，含 Engagement + TopKeywords |
-| 端点 | `POST /v1/visitsInfo`，Host: `similarweb-api1.p.rapidapi.com` |
-| 限制 | Basic 配额太少（40 个域名就超限），Pro 需月费 |
-
-### Apify Similarweb Actor（按量付费）
-
-| 项目 | 详情 |
-|------|------|
-| Actor | `just_scrape/similarweb-advanced-scraper` |
-| 定价 | ~$1.05/1000 域名 |
-| 独有数据 | AI 流量、竞品发现、历史趋势 |
