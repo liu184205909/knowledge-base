@@ -66,13 +66,17 @@
 
 ☰ → **"API 和服务"** → **"凭据"** → **"+ 创建凭据"** → **"OAuth 客户端 ID"**
 
-1. **应用类型**：选 **"桌面应用"**
+1. **应用类型**：选 **"Web 应用"**（不是"桌面应用"）
 2. **名称**：填 `seo-tools-client`
-3. 点击 **"创建"**
-4. 弹窗中点击 **"下载 JSON"** → 保存到 `C:\Users\你的用户名\.claude\gsc-oauth.json`
-5. 点"确定"关闭弹窗
+3. **已获授权的重定向 URI**：点击"添加 URI"，填入 `http://localhost:8000/oauth2callback`
+4. **已获授权的 JavaScript 来源**：点击"添加"，填入 `http://localhost:8000`
+5. 点击 **"创建"**
+6. 弹窗中点击 **"下载 JSON"** → 保存到 `C:\Users\你的用户名\.claude\gsc-oauth.json`
+7. 点"确定"关闭弹窗
 
 > `.claude` 文件夹不存在就手动创建：在 `C:\Users\你的用户名\` 下新建文件夹，命名 `.claude`
+>
+> **为什么用 Web 应用而不是桌面应用？** workspace-mcp 的 OAuth 回调地址是 `http://localhost:8000/oauth2callback`（见 `auth/oauth_config.py`），桌面应用类型不支持自定义 redirect path，会导致 `redirect_uri_mismatch` 错误。
 
 ---
 
@@ -302,6 +306,54 @@ claude mcp add -s user google-workspace \
 
 ---
 
+## 踩坑记录（AI 排障参考）
+
+> 以下问题在 2026-05 实际部署中遇到，供 AI 排障时快速定位。
+
+### 1. OAuth 客户端类型选错 → `redirect_uri_mismatch`
+
+- **现象**：浏览器授权后回调报 `redirect_uri_mismatch`
+- **原因**：OAuth 客户端类型选了"桌面应用"，桌面应用的 redirect URI 只支持 `http://localhost`（无路径），而 workspace-mcp 使用 `http://localhost:8000/oauth2callback`
+- **修复**：删掉桌面应用类型的客户端，重新创建 **Web 应用** 类型，redirect URI 填 `http://localhost:8000/oauth2callback`
+
+### 2. 系统环境变量残留已删除的旧凭证 → `The OAuth client was deleted`
+
+- **现象**：MCP 报 `The OAuth client was deleted`，但 Google Cloud 控制台看不到这个客户端
+- **原因**：系统环境变量 `GOOGLE_OAUTH_CLIENT_ID` / `GOOGLE_OAUTH_CLIENT_SECRET` 指向了一个已删除的旧 OAuth 客户端（可能是之前桌面应用类型创建的），与新下载的 JSON 文件中的凭证不一致
+- **修复**：用下载的 JSON 文件中的 `client_id` 和 `client_secret` **同时更新**系统环境变量和 MCP 配置，确保两者一致
+- **验证**：`[System.Environment]::GetEnvironmentVariable("GOOGLE_OAUTH_CLIENT_ID", "User")` 输出应与 JSON 文件中一致
+
+### 3. MCP 配置与系统环境变量的凭证不一致
+
+- **现象**：MCP 配置的凭证和系统环境变量指向不同的 OAuth 客户端
+- **原因**：`claude mcp add` 的 `-e` 参数和 PowerShell `SetEnvironmentVariable` 是两套独立的配置，改了一边忘改另一边
+- **修复**：两边都用 JSON 文件中的值，或者统一只通过 MCP 配置传入（`-e` 参数），不在系统环境变量中设置
+
+### 4. 代理补丁未打 → `WinError 10060` / `SSLEOFError`
+
+- **现象**：MCP 安装成功，但首次调用 Google 工具时报连接超时
+- **原因**：第七步的三个代理补丁未执行（PySocks、server.py、http.py）
+- **修复**：按第七步完整执行所有补丁，补丁打完后 MCP 内置的 OAuth 授权流程**可以正常完成**（不需要 curl 手动交换 token）
+
+### 5. 首次 OAuth 授权流程说明（修正）
+
+- 第七步 7.4 节说"首次 OAuth 授权仍然会失败，需要用 curl 手动完成"——这是**不准确的**
+- **实际测试**：代理补丁（补丁 1-3）+ MCP 配置中传入代理环境变量（补丁 4）都正确配置后，MCP 内置的 OAuth 流程**可以自动完成**首次授权
+- 正确流程：在 Claude Code 中调用任意 Google 工具 → MCP 自动弹出授权链接 → 在浏览器中打开并授权 → 浏览器回调到 `http://localhost:8000/oauth2callback` → MCP 自动完成 token 交换 → 授权成功
+
+### 6. `user_google_email` 参数与已授权账号不匹配 → 反复触发授权
+
+- **现象**：调用 Google 工具时不断弹出 OAuth 授权链接，即使之前已成功授权过
+- **原因**：MCP 的 OAuth token 缓存按邮箱地址绑定。调用工具时传入的 `user_google_email` 参数必须与之前授权时登录的 Google 账号**完全一致**，否则 MCP 认为该邮箱未授权，重新触发 OAuth 流程
+- **实际案例**：已授权账号为 `lzn184205909@gmail.com`，但 AI 使用了 `luckycrystals.org@gmail.com`（从配置文件读取的默认值）→ 触发授权失败；改为 `lzn184205909@gmail.com` → 直接成功，无需重新授权
+- **修复**：
+  1. 确认你在 OAuth 同意屏幕中添加的**测试用户邮箱**（第三步）
+  2. 调用所有 Google Workspace MCP 工具时，`user_google_email` 参数必须使用该邮箱
+  3. 如果 MCP 配置中有默认邮箱设置，确保与测试用户一致
+- **预防**：在项目文档或 Claude Code 的 `CLAUDE.md` 中记录正确的 Google 邮箱，避免 AI 使用错误邮箱
+
+---
+
 ## 常见问题
 
 ### Q: "此应用未经验证"警告
@@ -321,6 +373,71 @@ claude mcp add -s user google-workspace \
 
 ### Q: MCP 更新后补丁失效
 **A**: 重新执行第七步的补丁 2 和补丁 3。
+
+### Q: Token 频繁过期（不足 1 小时就失效）
+
+**A**: 这是中国大陆环境下的已知严重问题，**根本原因是 MCP 的 token 自动刷新机制没有走代理**。
+
+#### 问题链路
+
+```
+access_token 过期（1小时）
+    → MCP 尝试用 refresh_token 刷新
+    → 请求 oauth2.googleapis.com/token
+    → 没有走代理 → 连不上 Google → 刷新失败
+    → MCP 报错要求重新授权
+```
+
+#### 凭证文件位置
+
+```
+~/.google_workspace_mcp/credentials/<你的邮箱>.json
+```
+
+文件内容包含 `token`（access_token，1小时有效）、`refresh_token`（长期有效）和 `expiry`（过期时间）。
+
+#### 修复方案：一键刷新脚本
+
+已部署脚本到 `C:\Users\Dylan\tools\refresh_google_token.py`，当 MCP 报授权错误时运行：
+
+```powershell
+python C:\Users\Dylan\tools\refresh_google_token.py
+```
+
+脚本会自动：扫描凭证目录 → 通过本地代理刷新 → 更新凭证文件。刷新后 MCP 立即恢复，无需重新在浏览器中授权。
+
+#### 推荐工作流：写入前自动刷新 Token
+
+在实际使用中，建议在每次需要写入 Google 表格/文档前，先运行刷新脚本：
+
+```powershell
+python C:\Users\Dylan\tools\refresh_google_token.py
+```
+
+**Claude Code 中的标准流程**：
+
+```
+1. 先运行 refresh_google_token.py 刷新 token
+2. 然后再调用 Google Workspace MCP 写入数据
+3. Token 有效期 1 小时，长会话中可能需要多次刷新
+```
+
+> 这个脚本通过本地代理（`127.0.0.1:10808`）调用 Google OAuth2 刷新端点，解决了 MCP 自身刷新机制不走代理的问题。
+
+#### 关于 OAuth 应用发布模式
+
+| 模式 | Refresh Token 有效期 | 说明 |
+|------|---------------------|------|
+| Testing（默认） | **7 天** | 每 7 天需要重新在浏览器授权一次 |
+| Production（推荐） | **永久** | 除非手动撤销或 6 个月不使用 |
+
+建议在 Google Cloud Console → OAuth consent screen 中将应用发布为 **Production** 模式：
+1. 打开 [Google Cloud Console](https://console.cloud.google.com/)
+2. APIs & Services → OAuth consent screen
+3. 找到 Publishing status，点击 **PUBLISH APP**
+4. 确认发布（忽略"未验证"警告，个人使用不受影响）
+
+发布后 refresh_token 不会过期，只需运行上面的刷新脚本就能恢复 access_token，不需要反复在浏览器中授权。
 
 ---
 
