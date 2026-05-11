@@ -307,4 +307,37 @@ run_anime.bat      # 动漫模式
 
 ---
 
-**最后更新**: 2026-05-09
+### Nanobrowser
+
+**GitHub**: https://github.com/nanobrowser/nanobrowser
+
+**简介**: 开源 AI 浏览器自动化 Chrome 扩展，OpenAI Operator 的免费替代品，支持多智能体协作
+
+**核心功能**: 网页自动化操作（点击/填表/滚动/导航）、复杂任务自动拆解、实时纠错重试、批量数据采集
+
+**特点**:
+- 多智能体协作：Planner（规划）+ Navigator（执行）+ Validator（验证）
+- 支持 OpenAI / Anthropic / Gemini / Ollama / Groq 等多种 LLM
+- 本地浏览器运行，不上传数据，隐私安全
+- 侧边栏聊天界面，自然语言指令操控浏览器
+- 自动翻页、点击分类、滚动加载、遇错自主纠错
+- 100% 免费开源（Apache 2.0），近万 Stars
+
+**推荐模型配置**:
+| 角色 | 高性能方案 | 性价比方案 | 本地方案 |
+|------|-----------|-----------|---------|
+| Planner | Claude Sonnet 4 | Claude Haiku | Qwen3-30B (Ollama) |
+| Navigator | Claude Haiku 3.5 | Gemini 2.5 Flash | Qwen 2.5 Coder 14B |
+
+**安装**: [Chrome Web Store](https://chromewebstore.google.com/detail/nanobrowser/imbddededgmcgfhfpcjmijokokekbkal) 一键安装，或从 GitHub Release 下载手动加载
+
+**与我们工具的关系**:
+- **Web Access（已装）**：轻量网页内容抓取，编程时查资料，Claude Code 内使用
+- **Nanobrowser（备选）**：复杂网页自动化（批量采集/自动填表/跨站操作），独立于 Claude 运行
+- 两者互补，非替代关系
+
+**适用场景**: 竞品产品数据批量采集、电商比价、自动化填表、跨网站数据整合
+
+---
+
+**最后更新**: 2026-05-12

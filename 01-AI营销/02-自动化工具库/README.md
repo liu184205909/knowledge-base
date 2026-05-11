@@ -9,13 +9,13 @@
 | 序号 | 工具 | 核心功能 | 脚本文件 |
 |------|------|---------|---------|
 | **01** | 域名查询 | 批量检测域名可用性，WHOIS 查询 | `domain_checker.py` |
-| **02** | 竞品研究工具 | SERP 批量发现竞品 + Sitemap 解析网站结构 | `serp_competitor_finder.py` `sitemap_parser.py` |
+| **02** | 竞品研究工具 | SERP 批量发现竞品 + SEMrush 数据采集 + Sitemap 解析网站结构 | `serp_competitor_finder.py` `semrush_to_sheets.py` `sitemap_parser.py` |
 | **03** | WordPress 建站 | AI 操作 WordPress，Elementor 建站规则 | 文档为主 |
 | **04** | 竞品内容分析工具 | 内容模式分析 + 站内重复检测 + 站外原创性检测 | `content_analyzer.py` `content_duplicate_checker.py` `content_originality_checker.py` |
 | **05** | WordPress 插件 | TranslatePress AI 翻译方案等插件调研 | 文档为主 |
 | **06** | 数据分析工具 | Google Data Studio 数据可视化，SEO/流量仪表盘 | 文档为主 |
 | **07** | 短视频工具 | 素材采集/拆解/创作/分发全链路（配合步骤4C音视频再加工） | 文档为主 |
-| **08** | SEO 数据 API | DR/流量/流量渠道获取（DataForSEO + RapidAPI + Apify） | 文档为主 |
+| **08** | SEMrush 数据采集 | 竞品 AS/流量/截图批量采集（已整合到 02-竞品研究工具） | `semrush_to_sheets.py`（在02下） |
 | **09** | SEO 审计工具 | 技术SEO审计 + On-Page SEO评分 + 关键词蚕食检测 | `seo_technical_auditor.py` `onpage_seo_checker.py` `keyword_cannibalization_checker.py` |
 | **10** | 用户洞察工具 | 采集 Reddit/竞品评论 → 分类分析 → 选题/痛点/购买意向挖掘 | `reddit_comment_collector.py` `comment_insight_analyzer.py` |
 
@@ -28,6 +28,7 @@
 ```text
 02-竞品研究工具/serp_competitor_finder.py  ← SERP 批量拉竞品
     ↓ competitor_urls.txt
+02-竞品研究工具/semrush_to_sheets.py       ← SEMrush 数据采集（AS/流量/截图 → Google Sheets）
 02-竞品研究工具/sitemap_parser.py          ← Sitemap 解析内容架构
     ↓ blog_urls.csv
 04-竞品内容分析工具/content_analyzer.py    ← 批量抓取 title/H1/H2，输出内容模式报告
@@ -54,7 +55,6 @@
 ### 4. 数据驱动阶段（有流量后）
 
 ```text
-08-SEO数据API/                              ← DR/流量/渠道数据获取
 06-数据分析工具/                            ← Data Studio 仪表盘
 10-用户洞察工具/comment_insight_analyzer.py  ← 评论/反馈分析 → 驱动下一轮内容
 ```
@@ -92,7 +92,7 @@ python 01-域名查询/domain_checker.py
 
 **原理**：搜索目标关键词，过滤 Amazon/Reddit 等大平台，只保留独立站竞品。
 
-**SERP 数据源**：6 家免费 API 轮询 + DataForSEO 付费兜底，详见 [SERP数据源选型方案.md](02-竞品研究工具/SERP数据源选型方案.md)
+**SERP 数据源**：6 家免费 API 轮询 + DataForSEO 付费兜底，详见 [竞品研究工具使用指南.md](02-竞品研究工具/竞品研究工具使用指南.md)
 
 ```bash
 # 单个关键词
@@ -230,17 +230,27 @@ GA4 流量行为 ─────────────────────
 
 ---
 
-## 08 SEO 数据 API
+## 08 SEMrush 数据采集
 
-**文件**：`08-SEO数据API/DR与流量数据获取方案.md`
+> 原 `08-SEO数据API` 目录已整合到 `02-竞品研究工具/`，详见 [竞品研究工具使用指南.md](02-竞品研究工具/竞品研究工具使用指南.md)
 
-竞品分析阶段（RLM 步骤 1B）批量获取域名权重、流量、流量渠道等指标。
+竞品分析阶段（RLM 步骤 1B）批量获取 AS、Organic Traffic、截图等数据，自动写入 Google Sheets。
 
-| 层级 | 工具 | 提供数据 | 状态 |
-|------|------|---------|------|
-| DR + 反链 + ETV | DataForSEO MCP（已有） | rank、backlinks、referring_domains、etv | 已集成 |
-| 流量渠道拆分 | RapidAPI Similarweb API | 6 渠道占比 + Engagement + 关键词 | 待接入 |
-| AI流量 + 竞品 | Apify Similarweb Actor | ChatGPT/Perplexity 流量、Top5 竞品 | 按需 |
+**前置条件**：Tabbit 带 `--remote-debugging-port=9222 --remote-allow-origins=*` 启动，并已登录 semrush.com
+
+```bash
+python 02-竞品研究工具/semrush_to_sheets.py              # 全量查询
+python 02-竞品研究工具/semrush_to_sheets.py --start 4    # 从第4行开始
+python 02-竞品研究工具/semrush_to_sheets.py --limit 5    # 只查前5个
+python 02-竞品研究工具/semrush_to_sheets.py --dry-run    # 只提取不写回 Sheets
+```
+
+| 写入字段 | 列号 | 数据来源 |
+|---------|------|---------|
+| AS（Authority Score） | E | SEMrush 自动采集 |
+| Organic Traffic | F | SEMrush 自动采集 |
+| SEMrush 截图 | G | SEMrush 自动采集 |
+| 月访问量 + 渠道拆分 | G-M | traffic.cv（手动） |
 
 ---
 
@@ -393,7 +403,7 @@ python 10-用户洞察工具/comment_insight_analyzer.py \
    - 竞品数据采集与分析（02/04）
    - SEO 技术审计与评分（09）
    - 用户评论采集与分类（10）
-   - 关键词数据批量获取（08）
+   - 关键词数据批量获取（02 semrush_to_sheets.py）
 
 ❌ 不适合自动化的环节：
    - 内容写作（应逐段人工打磨，参见 05-指令库/指令9-10）

@@ -143,6 +143,7 @@ npx skills list -g
 
 | 工具 | 说明 | 适用场景 | 何时启用 |
 |------|------|---------|---------|
+| [Nanobrowser](https://github.com/nanobrowser/nanobrowser) | AI 浏览器自动化 Chrome 扩展，多智能体协作（Planner+Navigator+Validator），自然语言操控浏览器 | 竞品批量采集、电商比价、自动填表、跨站操作 | 需要复杂网页自动化（翻页/点击/填表）时安装，与 web-access 互补 |
 | [Obscura](https://github.com/h4ckf0r0day/obscura) | Rust 无头浏览器，内存 30MB（Chrome 200MB+），内置反检测/指纹随机化，兼容 CDP | 服务器端大规模并发抓取、需反检测的批量采集 | SEO 工具需要 JS 渲染或服务器部署时引入，与 web-access 互补（web-access 负责登录态交互，Obscura 负责无状态批量抓取） |
 
 ---
