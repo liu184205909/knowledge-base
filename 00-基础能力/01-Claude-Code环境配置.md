@@ -92,6 +92,9 @@ npx skills add AgriciDaniel/claude-seo -g
 npx skills add Bhanunamikaze/Agentic-SEO-Skill --agent claude-code -y -g
 npx skills add aaron-he-zhu/seo-geo-claude-skills -g
 
+# SEO 审计工具（Script+LLM双层架构，与上面SEO Skill有功能重叠，留作架构参考）
+npx skills add JeffLi1993/seo-audit-skill -g
+
 # 博客 + 广告
 npx skills add AgriciDaniel/claude-blog -g
 npx skills add AgriciDaniel/claude-ads -g
@@ -122,7 +125,7 @@ npx skills list -g
 |------|-------|--------|
 | 浏览器操作/绕反爬 | **web-access** | "打开网页" / "去小红书搜" |
 | 博客创作+SEO | **claude-blog** | "写博客" |
-| SEO 审计 | **claude-seo** / **Agentic-SEO** | "SEO审计" |
+| SEO 审计 | **claude-seo** / **Agentic-SEO** / **seo-audit-skill** | "SEO审计" |
 | 付费广告审计 | **claude-ads** | "审计广告" |
 | 营销策略全家桶 | **marketingskills** | "营销策略" / "定价" |
 | 社媒发布 | **typefully** | "发推文" |
@@ -135,6 +138,12 @@ npx skills list -g
 | 安全审查 | **skill-vetter** | 安装前检查 |
 
 > Skill 探索: [skills.sh](https://skills.sh/) | [agentskills.so](https://agentskills.so) | [clawhub.ai](https://clawhub.ai)
+
+### 备选工具（未安装）
+
+| 工具 | 说明 | 适用场景 | 何时启用 |
+|------|------|---------|---------|
+| [Obscura](https://github.com/h4ckf0r0day/obscura) | Rust 无头浏览器，内存 30MB（Chrome 200MB+），内置反检测/指纹随机化，兼容 CDP | 服务器端大规模并发抓取、需反检测的批量采集 | SEO 工具需要 JS 渲染或服务器部署时引入，与 web-access 互补（web-access 负责登录态交互，Obscura 负责无状态批量抓取） |
 
 ---
 
