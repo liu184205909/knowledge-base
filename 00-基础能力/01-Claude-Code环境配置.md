@@ -84,6 +84,9 @@ claude mcp add gsc -- npx -y gsc-mcp-server
 # Chrome 打开 chrome://inspect/#remote-debugging，勾选 Allow remote debugging
 git clone https://github.com/eze-is/web-access ~/.claude/skills/web-access
 
+# Tabbit AI — 通过 CDP 操控 Tabbit 浏览器内置 AI 聊天（依赖 web-access）
+git clone https://github.com/liu184205909/tabbit-ai ~/.claude/skills/tabbit-ai
+
 # 文档生成
 npx skills add anthropics/skills --skill pdf xlsx docx pptx frontend-design skill-creator --agent claude-code -y -g
 
@@ -143,8 +146,8 @@ npx skills list -g
 
 | 工具 | 说明 | 适用场景 | 何时启用 |
 |------|------|---------|---------|
-| [Nanobrowser](https://github.com/nanobrowser/nanobrowser) | AI 浏览器自动化 Chrome 扩展，多智能体协作（Planner+Navigator+Validator），自然语言操控浏览器 | 竞品批量采集、电商比价、自动填表、跨站操作 | 需要复杂网页自动化（翻页/点击/填表）时安装，与 web-access 互补 |
-| [Obscura](https://github.com/h4ckf0r0day/obscura) | Rust 无头浏览器，内存 30MB（Chrome 200MB+），内置反检测/指纹随机化，兼容 CDP | 服务器端大规模并发抓取、需反检测的批量采集 | SEO 工具需要 JS 渲染或服务器部署时引入，与 web-access 互补（web-access 负责登录态交互，Obscura 负责无状态批量抓取） |
+| [Nanobrowser](https://github.com/nanobrowser/nanobrowser) | AI 浏览器自动化 Chrome 扩展，多智能体协作（Planner+Navigator+Validator），自然语言操控浏览器 | 复杂网页自动化（翻页/点击/填表） | 与 web-access 互补，需复杂网页操作时安装 |
+| [CloakBrowser](https://github.com/CloakHQ/CloakBrowser) | Chromium C++ 源码级指纹伪装（57 处补丁），过 Cloudflare/reCAPTCHA v3（0.9+），兼容 Playwright API | 需直接采集有强反爬的站点 | 当前数据走 API（SERP/SEMrush），暂不需要；备用于未来直接采集竞品电商页面 |
 
 ---
 

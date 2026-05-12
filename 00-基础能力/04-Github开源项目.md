@@ -334,9 +334,40 @@ run_anime.bat      # 动漫模式
 **与我们工具的关系**:
 - **Web Access（已装）**：轻量网页内容抓取，编程时查资料，Claude Code 内使用
 - **Nanobrowser（备选）**：复杂网页自动化（批量采集/自动填表/跨站操作），独立于 Claude 运行
-- 两者互补，非替代关系
+- **CloakBrowser（备选）**：强反爬场景的隐身采集
+- 三者互补，非替代关系
 
 **适用场景**: 竞品产品数据批量采集、电商比价、自动化填表、跨网站数据整合
+
+---
+
+### CloakBrowser
+
+**GitHub**: https://github.com/CloakHQ/CloakBrowser
+
+**简介**: Chromium 源码级指纹伪装隐身浏览器，Camoufox 停更后的继任者，4.7k+ Star
+
+**核心功能**: 反检测自动化浏览、Cloudflare/reCAPTCHA 绕过、多账号 Profile 管理
+
+**特点**:
+- 57 处 C++ 源码补丁（非 JS 注入），编译进 Chromium 二进制
+- reCAPTCHA v3 稳定 0.9+（普通 Playwright 仅 0.1），通过 Cloudflare Turnstile 非交互式挑战
+- Drop-in 替换 Playwright/Puppeteer API，只改 import
+- `humanize=True` 内置真人行为模拟（贝塞尔曲线鼠标、逐字符输入）
+- `geoip=True` 自动从代理 IP 匹配时区和语言
+- 内置 Browser Profile Manager，Multilogin/AdsPower 的免费替代
+
+**安装**:
+```bash
+pip install cloakbrowser    # Python
+npm install cloakbrowser    # Node.js
+```
+
+**与我们工具的关系**:
+- 当前数据采集走 API（DataForSEO/SEMrush），暂不需要反爬
+- 备用于未来直接采集有强反爬的竞品电商页面
+
+**适用场景**: 目标站点有 Cloudflare/reCAPTCHA 等强反爬时的自动化采集
 
 ---
 
