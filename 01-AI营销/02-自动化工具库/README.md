@@ -9,7 +9,7 @@
 | 序号 | 工具 | 核心功能 | 脚本文件 |
 |------|------|---------|---------|
 | **01** | 域名查询 | 批量检测域名可用性，WHOIS 查询 | `domain_checker.py` |
-| **02** | 竞品研究工具 | SERP 批量发现竞品 + SEMrush 数据采集 + Sitemap 解析网站结构 | `serp_competitor_finder.py` `semrush_to_sheets.py` `sitemap_parser.py` |
+| **02** | 竞品研究工具 | 人工 Google 搜索竞品 + SEMrush 数据采集 + Sitemap 解析网站结构 | `semrush_to_sheets.py` `sitemap_parser.py`（`serp_competitor_finder.py` 已退役） |
 | **03** | WordPress 建站 | AI 操作 WordPress，Elementor 建站规则 | 文档为主 |
 | **04** | 竞品内容分析工具 | 内容模式分析 + 站内重复检测 + 站外原创性检测 | `content_analyzer.py` `content_duplicate_checker.py` `content_originality_checker.py` |
 | **05** | WordPress 插件 | TranslatePress AI 翻译方案等插件调研 | 文档为主 |
@@ -26,8 +26,8 @@
 ### 1. 竞品研究阶段（建站前）
 
 ```text
-02-竞品研究工具/serp_competitor_finder.py  ← SERP 批量拉竞品
-    ↓ competitor_urls.txt
+人工 Google 搜索（排除语法过滤大平台）     ← 筛选 ~40 个竞品域名
+    ↓
 02-竞品研究工具/semrush_to_sheets.py       ← SEMrush 数据采集（AS/流量/截图 → Google Sheets）
 02-竞品研究工具/sitemap_parser.py          ← Sitemap 解析内容架构
     ↓ blog_urls.csv
@@ -88,24 +88,16 @@ python 01-域名查询/domain_checker.py
 
 ## 02 竞品研究工具
 
-### 2A 竞品挖掘：`serp_competitor_finder.py`
+### 2A 竞品挖掘：人工 Google 搜索（已替代 serp_competitor_finder.py）
 
-**原理**：搜索目标关键词，过滤 Amazon/Reddit 等大平台，只保留独立站竞品。
+**原理**：人工使用 Google 搜索 + 排除语法过滤大平台，直接筛选竞品。
 
-**SERP 数据源**：6 家免费 API 轮询 + DataForSEO 付费兜底，详见 [竞品研究工具使用指南.md](02-竞品研究工具/竞品研究工具使用指南.md)
-
-```bash
-# 单个关键词
-python 02-竞品研究工具/serp_competitor_finder.py --keyword "gel blaster gun"
-
-# 批量关键词（每行一个）
-python 02-竞品研究工具/serp_competitor_finder.py --file keywords.txt
-
-# 调整抓取页数（默认3页）
-python 02-竞品研究工具/serp_competitor_finder.py --keyword "xxx" --pages 5
+**搜索排除语法**（直接复制使用）：
+```
+关键词 -amazon.com -ebay.com -etsy.com -walmart.com -pinterest.com -reddit.com -youtube.com -facebook.com -tiktok.com -wikipedia.org -quora.com -target.com -aliexpress.com -alibaba.com
 ```
 
-输出：`competitor_urls.txt`（一行一个竞品 URL）
+> `serp_competitor_finder.py` 已退役，文件保留在目录中不再使用。详见 [竞品研究工具使用指南.md](02-竞品研究工具/竞品研究工具使用指南.md)
 
 ### 2B Sitemap 解析：`sitemap_parser.py`
 
