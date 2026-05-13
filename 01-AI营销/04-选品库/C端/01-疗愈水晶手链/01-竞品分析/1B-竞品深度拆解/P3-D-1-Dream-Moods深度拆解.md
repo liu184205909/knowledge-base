@@ -9,13 +9,13 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 核心要点 | 适用场景 |
-|--------|----------|----------|
-| **A-Z梦典** | 26字母×大量词条，6000+梦境符号 | 大规模字典/A-Z百科参考 |
-| **26主题分类** | Animals/Birds/Body Parts/Colors/Food/House等 | 内容分类维度参考 |
-| **梦境教育** | History/Research/Sleep Cycle/Mechanics/Types/Facts/Theorists | 教育内容体系参考 |
-| **论坛社区** | General/Nightmares/Cheating/Lucid Dreams版块 | 社区运营参考 |
-| **长青HTML** | 静态HTML站点，2020年停更仍高流量 | 长青SEO策略参考 |
+| 参考项 | 核心要点 | 适用场景 | 验证URL |
+|--------|----------|----------|---------|
+| **A-Z梦典** | 26字母×大量词条，6000+梦境符号 | 大规模字典/A-Z百科参考 | https://www.dreammoods.com/dreamdictionary/ |
+| **26主题分类** | Animals/Birds/Body Parts/Colors/Food/House等 | 内容分类维度参考 | https://www.dreammoods.com/dreamdictionary/ |
+| **梦境教育** | History/Research/Sleep Cycle/Mechanics/Types/Facts/Theorists | 教育内容体系参考 | https://www.dreammoods.com/dreamresearch/ |
+| **论坛社区** | General/Nightmares/Cheating/Lucid Dreams版块 | 社区运营参考 | https://www.dreammoods.com/forums/ |
+| **长青HTML** | 静态HTML站点，2020年停更仍高流量 | 长青SEO策略参考 | https://www.dreammoods.com/ |
 
 ---
 
@@ -23,13 +23,13 @@
 
 | 维度 | 详情 |
 |------|------|
-| **网站** | dreammoods.com |
-| **定位** | "Your Online Source For Dream Interpretations" |
-| **技术栈** | 静态HTML（传统网站） |
-| **内容规模** | 6000+梦境符号字典 |
-| **版权** | © 2020 Dream Moods, Inc. |
-| **最后更新** | 2020年1月（已停更5+年） |
-| **核心功能** | A-Z梦典 + 26主题分类 + 论坛 + 教育内容 |
+| **网站** | dreammoods.com | https://www.dreammoods.com/ |
+| **定位** | "Your Online Source For Dream Interpretations" | https://www.dreammoods.com/ |
+| **技术栈** | 静态HTML（传统网站） | https://www.dreammoods.com/ |
+| **内容规模** | 6000+梦境符号字典 | https://www.dreammoods.com/ |
+| **版权** | © 2020 Dream Moods, Inc. | https://www.dreammoods.com/ |
+| **最后更新** | 2020年1月（已停更5+年） | https://www.dreammoods.com/ |
+| **核心功能** | A-Z梦典 + 26主题分类 + 论坛 + 教育内容 | https://www.dreammoods.com/dreamdictionary/ |
 
 ---
 
@@ -151,8 +151,8 @@
 
 | 层级 | 变现方式 | 详情 |
 |------|---------|------|
-| **L1** | 展示广告 | 传统HTML站点广告 |
-| **L2** | 联盟营销 | 可能的联盟链接 |
+| **L1** | 展示广告 | 传统HTML站点广告 | https://www.dreammoods.com/ |
+| **L2** | 联盟营销 | 可能的联盟链接 | https://www.dreammoods.com/ |
 
 **注意**：Dream Moods 变现模式极其简单，但流量极高。这说明纯内容SEO在梦境领域的巨大价值。
 
@@ -164,21 +164,21 @@
 
 | 策略 | Dream Moods做法 | LuckyCrystals应用 |
 |------|----------------|------------------|
-| **A-Z字典** | 6000+梦境符号A-Z | 水晶A-Z百科（100+种起） |
-| **26主题分类** | 多维度主题分类 | 水晶多维分类（功效+颜色+脉轮+星座+形状） |
-| **教育内容** | 梦论理论家+研究+科学 | 水晶×科学+灵性+心理学教育 |
-| **常见内容** | 9种常见梦境深度解析 | 10-20种常见水晶需求深度解析 |
-| **论坛** | 4版块社区 | 水晶故事分享社区 |
+| **A-Z字典** | 6000+梦境符号A-Z | 水晶A-Z百科（100+种起） | https://www.dreammoods.com/ |
+| **26主题分类** | 多维度主题分类 | 水晶多维分类（功效+颜色+脉轮+星座+形状） | https://www.dreammoods.com/dreamdictionary/ |
+| **教育内容** | 梦论理论家+研究+科学 | 水晶×科学+灵性+心理学教育 | https://www.dreammoods.com/ |
+| **常见内容** | 9种常见梦境深度解析 | 10-20种常见水晶需求深度解析 | https://www.dreammoods.com/ |
+| **论坛** | 4版块社区 | 水晶故事分享社区 | https://www.dreammoods.com/forums/ |
 
 ### 5.2 Dream Moods 的弱点
 
 | 弱点 | 说明 |
 |------|------|
-| **已停更5+年** | 2020年后无更新，内容可能过时 |
-| **设计极其传统** | 纯静态HTML，无现代交互 |
-| **无变现深度** | 仅靠广告，无数字产品/课程 |
-| **论坛废弃** | 社区已死，无人维护 |
-| **无移动优化** | 静态HTML可能移动端体验差 |
+| **已停更5+年** | 2020年后无更新，内容可能过时 | https://www.dreammoods.com/ |
+| **设计极其传统** | 纯静态HTML，无现代交互 | https://www.dreammoods.com/ |
+| **无变现深度** | 仅靠广告，无数字产品/课程 | https://www.dreammoods.com/ |
+| **论坛废弃** | 社区已死，无人维护 | https://www.dreammoods.com/forums/ |
+| **无移动优化** | 静态HTML可能移动端体验差 | https://www.dreammoods.com/ |
 
 ### 5.3 关键启发
 

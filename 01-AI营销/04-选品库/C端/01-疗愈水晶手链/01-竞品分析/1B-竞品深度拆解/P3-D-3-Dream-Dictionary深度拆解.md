@@ -9,12 +9,12 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 核心要点 | 适用场景 |
-|--------|----------|----------|
-| **免费梦分析工具** | "Free Online Dream Analysis" | 互动工具引流参考 |
-| **Jung/Freud理论** | 基于Carl Jung和Sigmund Freud的梦解释 | 学术权威参考 |
-| **梦符号分类** | Animals/Nightmares/Dream Symbols/About Dreaming | 内容分类参考 |
-| **原型符号** | Ouroboros/Phoenix/Crescent Moon/Cross/Dragons | 原型符号内容参考 |
+| 参考项 | 核心要点 | 适用场景 | 验证URL |
+|--------|----------|----------|---------|
+| **免费梦分析工具** | "Free Online Dream Analysis" | 互动工具引流参考 | https://www.dreamdictionary.org/ |
+| **Jung/Freud理论** | 基于Carl Jung和Sigmund Freud的梦解释 | 学术权威参考 | https://www.dreamdictionary.org/ |
+| **梦符号分类** | Animals/Nightmares/Dream Symbols/About Dreaming | 内容分类参考 | https://www.dreamdictionary.org/ |
+| **原型符号** | Ouroboros/Phoenix/Crescent Moon/Cross/Dragons | 原型符号内容参考 | https://www.dreamdictionary.org/ |
 
 ---
 
@@ -22,13 +22,13 @@
 
 | 维度 | 详情 |
 |------|------|
-| **网站** | dreamdictionary.org |
-| **定位** | "Free Online Dream Analysis and a complete A to Z translated dictionary" |
-| **技术栈** | WordPress |
-| **核心功能** | A-Z梦典 + 在线梦分析工具 |
-| **理论基础** | Carl Jung + Sigmund Freud |
-| **内容规模** | "Over thousands of skillfully Interpreted Dream Symbols" |
-| **口号** | "Over thousands of skillfully Interpreted Dream Symbols for people who want to access the deeper parts of their minds" |
+| **网站** | dreamdictionary.org | https://www.dreamdictionary.org/ |
+| **定位** | "Free Online Dream Analysis and a complete A to Z translated dictionary" | https://www.dreamdictionary.org/ |
+| **技术栈** | WordPress | https://www.dreamdictionary.org/ |
+| **核心功能** | A-Z梦典 + 在线梦分析工具 | https://www.dreamdictionary.org/ |
+| **理论基础** | Carl Jung + Sigmund Freud | https://www.dreamdictionary.org/ |
+| **内容规模** | "Over thousands of skillfully Interpreted Dream Symbols" | https://www.dreamdictionary.org/ |
+| **口号** | "Over thousands of skillfully Interpreted Dream Symbols for people who want to access the deeper parts of their minds" | https://www.dreamdictionary.org/ |
 
 ---
 
@@ -124,9 +124,9 @@ Dream Dictionary 网站结构：
 
 | 层级 | 变现方式 | 详情 |
 |------|---------|------|
-| **L1** | 展示广告 | WordPress网站广告 |
-| **L2** | 联盟营销 | 可能的联盟链接 |
-| **L3** | 在线分析工具 | 免费工具引流（间接收变） |
+| **L1** | 展示广告 | WordPress网站广告 | https://www.dreamdictionary.org/ |
+| **L2** | 联盟营销 | 可能的联盟链接 | https://www.dreamdictionary.org/ |
+| **L3** | 在线分析工具 | 免费工具引流（间接收变） | https://www.dreamdictionary.org/ |
 
 ---
 
@@ -136,20 +136,20 @@ Dream Dictionary 网站结构：
 
 | 策略 | Dream Dictionary做法 | LuckyCrystals应用 |
 |------|---------------------|------------------|
-| **免费分析工具** | 在线梦分析工具 | 免费水晶推荐/测试工具 |
-| **心理学理论** | Jung/Freud理论基础 | 水晶×心理学/科学理论 |
-| **原型符号** | 跨文化原型符号解释 | 水晶×文化原型内容 |
-| **深度教育** | "Why we dream"教育 | "How crystals work"教育 |
-| **常见内容** | 7动物+6噩梦+5符号 | 常见水晶需求深度解析 |
+| **免费分析工具** | 在线梦分析工具 | 免费水晶推荐/测试工具 | https://www.dreamdictionary.org/ |
+| **心理学理论** | Jung/Freud理论基础 | 水晶×心理学/科学理论 | https://www.dreamdictionary.org/ |
+| **原型符号** | 跨文化原型符号解释 | 水晶×文化原型内容 | https://www.dreamdictionary.org/ |
+| **深度教育** | "Why we dream"教育 | "How crystals work"教育 | https://www.dreamdictionary.org/ |
+| **常见内容** | 7动物+6噩梦+5符号 | 常见水晶需求深度解析 | https://www.dreamdictionary.org/ |
 
 ### 5.2 Dream Dictionary 的弱点
 
 | 弱点 | 说明 |
 |------|------|
-| **内容规模小** | 明显少于Dream Moods/Bible |
-| **工具简单** | 梦分析工具可能较基础 |
-| **设计一般** | WordPress基础主题 |
-| **缺少论坛** | 无社区互动 |
+| **内容规模小** | 明显少于Dream Moods/Bible | https://www.dreamdictionary.org/ |
+| **工具简单** | 梦分析工具可能较基础 | https://www.dreamdictionary.org/ |
+| **设计一般** | WordPress基础主题 | https://www.dreamdictionary.org/ |
+| **缺少论坛** | 无社区互动 | https://www.dreamdictionary.org/ |
 
 ### 5.3 关键启发
 

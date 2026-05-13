@@ -9,14 +9,14 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 位置 | 核心要点 | 适用场景 |
-|--------|------|----------|----------|
-| **30年个人品牌** | [§1 基本信息](#1-基本信息) | Theresa Reed，30年+塔罗师 | 个人品牌长期主义参考 |
-| **10本书** | [§3.2 书籍矩阵](#32-10本书籍矩阵) | 10本已出版书籍，含儿童塔罗 | 多产品变现参考 |
-| **3个播客** | [§3.3 播客矩阵](#33-3个播客) | Tarot Bytes + Astrology Bytes + Talking Shop | 音频内容策略参考 |
-| **媒体引用** | [§1 基本信息](#1-基本信息) | Nylon/Refinery29/HuffPost/NBC Today/Mashable/Parade | 媒体引用策略参考 |
-| **Patreon** | [§4.1 变现层级](#41-变现层级) | Patreon会员制 | 付费社区参考 |
-| **免费电子书诱饵** | [§4.2 获客漏斗](#42-获客漏斗) | "The Power of Tarot"免费eBook换邮箱 | Lead Magnet策略参考 |
+| 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
+|--------|------|----------|----------|---------|
+| **30年个人品牌** | [§1 基本信息](#1-基本信息) | Theresa Reed，30年+塔罗师 | 个人品牌长期主义参考 | https://thetarotlady.com/ |
+| **10本书** | [§3.2 书籍矩阵](#32-10本书籍矩阵) | 10本已出版书籍，含儿童塔罗 | 多产品变现参考 | https://thetarotlady.com/ |
+| **3个播客** | [§3.3 播客矩阵](#33-3个播客) | Tarot Bytes + Astrology Bytes + Talking Shop | 音频内容策略参考 | https://thetarotlady.com/ |
+| **媒体引用** | [§1 基本信息](#1-基本信息) | Nylon/Refinery29/HuffPost/NBC Today/Mashable/Parade | 媒体引用策略参考 | https://thetarotlady.com/ |
+| **Patreon** | [§4.1 变现层级](#41-变现层级) | Patreon会员制 | 付费社区参考 | https://thetarotlady.com/ |
+| **免费电子书诱饵** | [§4.2 获客漏斗](#42-获客漏斗) | "The Power of Tarot"免费eBook换邮箱 | Lead Magnet策略参考 | https://thetarotlady.com/ |
 
 ---
 

@@ -9,14 +9,14 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 核心要点 | 适用场景 |
-|--------|----------|----------|
-| **简约智慧定位** | "Simple wisdom for complex lives" | 品牌定位参考 |
-| **8大博客分类** | Change/Happiness/Habits/Letting Go/Love/Mental Health/Mindfulness/Purpose | 内容分类参考 |
-| **论坛社区** | Emotional Mastery/Relationships/Tough Times 3大版块 | 社区运营参考 |
-| **Shop日记产品** | Inner Strength/Worry/Gratitude 3款日记本 | 实体产品参考 |
-| **Lori Deschene** | 创始人个人品牌，"it is not mine. It's ours" | 个人品牌定位参考 |
-| **PWYC定价** | Pay What You Can 定价模式 | 灵活定价参考 |
+| 参考项 | 核心要点 | 适用场景 | 验证URL |
+|--------|----------|----------|---------|
+| **简约智慧定位** | "Simple wisdom for complex lives" | 品牌定位参考 | https://tinybuddha.com/ |
+| **8大博客分类** | Change/Happiness/Habits/Letting Go/Love/Mental Health/Mindfulness/Purpose | 内容分类参考 | https://tinybuddha.com/ |
+| **论坛社区** | Emotional Mastery/Relationships/Tough Times 3大版块 | 社区运营参考 | https://tinybuddha.com/ |
+| **Shop日记产品** | Inner Strength/Worry/Gratitude 3款日记本 | 实体产品参考 | https://tinybuddha.com/ |
+| **Lori Deschene** | 创始人个人品牌，"it is not mine. It's ours" | 个人品牌定位参考 | https://tinybuddha.com/ |
+| **PWYC定价** | Pay What You Can 定价模式 | 灵活定价参考 | https://tinybuddha.com/ |
 
 ---
 
@@ -24,19 +24,19 @@
 
 | 维度 | 详情 |
 |------|------|
-| **网站** | tinybuddha.com |
-| **创始人** | Lori Deschene（个人品牌） |
-| **定位** | "Simple wisdom for complex lives" |
-| **口号** | "Quotes, tips & stories to help us help ourselves and each other" |
-| **技术栈** | WordPress 6.9.4 + 自定义主题 |
-| **SEO** | Site Kit by Google 1.159.0 |
-| **社交** | Twitter @tinybuddha + Facebook + YouTube + RSS |
-| **版权** | © 2025 Tiny Buddha, LLC |
-| **托管** | PressLabs |
-| **设计** | Joshua Denney |
-| **策略** | Think Web Strategy |
-| **更新频率** | 每日更新（2026年4月仍在活跃） |
-| **电商** | WooCommerce |
+| **网站** | tinybuddha.com | https://tinybuddha.com/ |
+| **创始人** | Lori Deschene（个人品牌） | https://tinybuddha.com/ |
+| **定位** | "Simple wisdom for complex lives" | https://tinybuddha.com/ |
+| **口号** | "Quotes, tips & stories to help us help ourselves and each other" | https://tinybuddha.com/ |
+| **技术栈** | WordPress 6.9.4 + 自定义主题 | https://tinybuddha.com/ |
+| **SEO** | Site Kit by Google 1.159.0 | https://tinybuddha.com/ |
+| **社交** | Twitter @tinybuddha + Facebook + YouTube + RSS | https://tinybuddha.com/ |
+| **版权** | © 2025 Tiny Buddha, LLC | https://tinybuddha.com/ |
+| **托管** | PressLabs | https://tinybuddha.com/ |
+| **设计** | Joshua Denney | https://tinybuddha.com/ |
+| **策略** | Think Web Strategy | https://tinybuddha.com/ |
+| **更新频率** | 每日更新（2026年4月仍在活跃） | https://tinybuddha.com/ |
+| **电商** | WooCommerce | https://tinybuddha.com/ |
 
 ---
 
@@ -149,12 +149,12 @@ Tiny Buddha 导航：
 
 | 层级 | 变现方式 | 详情 |
 |------|---------|------|
-| **L1** | Shop产品 | 日记本（Inner Strength/Worry/Gratitude Journal） |
-| **L2** | 展示广告 | 高流量网站广告收入 |
-| **L3** | 联盟营销 | Amazon Associate Program |
-| **L4** | 广告合作 | "Advertise" 页面 |
-| **L5** | 课程 | Tiny Buddha course（"learn to let go"） |
-| **L6** | Newsletter | 邮件订阅 |
+| **L1** | Shop产品 | 日记本（Inner Strength/Worry/Gratitude Journal） | https://tinybuddha.com/ |
+| **L2** | 展示广告 | 高流量网站广告收入 | https://tinybuddha.com/ |
+| **L3** | 联盟营销 | Amazon Associate Program | https://tinybuddha.com/ |
+| **L4** | 广告合作 | "Advertise" 页面 | https://tinybuddha.com/ |
+| **L5** | 课程 | Tiny Buddha course（"learn to let go"） | https://tinybuddha.com/ |
+| **L6** | Newsletter | 邮件订阅 | https://tinybuddha.com/ |
 
 ### 4.2 Shop产品
 
@@ -177,18 +177,18 @@ Books & Things：
 
 | 维度 | 详情 |
 |------|------|
-| **CMS** | WordPress 6.9.4 |
-| **主题** | 自定义主题（tinybuddha） |
-| **电商** | WooCommerce |
-| **SEO** | Site Kit by Google 1.159.0 |
-| **字体** | Source Sans Pro + Bitter |
-| **论坛** | bbPress |
-| **邮件** | ConvertKit |
-| **托管** | PressLabs |
-| **弹窗** | Nelio Popups |
-| **社交** | Facebook域验证 |
-| **CDN** | cdn.tinybuddha.com |
-| **缓存** | WP Rocket（推测） |
+| **CMS** | WordPress 6.9.4 | https://tinybuddha.com/ |
+| **主题** | 自定义主题（tinybuddha） | https://tinybuddha.com/ |
+| **电商** | WooCommerce | https://tinybuddha.com/ |
+| **SEO** | Site Kit by Google 1.159.0 | https://tinybuddha.com/ |
+| **字体** | Source Sans Pro + Bitter | https://tinybuddha.com/ |
+| **论坛** | bbPress | https://tinybuddha.com/ |
+| **邮件** | ConvertKit | https://tinybuddha.com/ |
+| **托管** | PressLabs | https://tinybuddha.com/ |
+| **弹窗** | Nelio Popups | https://tinybuddha.com/ |
+| **社交** | Facebook域验证 | https://tinybuddha.com/ |
+| **CDN** | cdn.tinybuddha.com | https://tinybuddha.com/ |
+| **缓存** | WP Rocket（推测） | https://tinybuddha.com/ |
 
 ---
 
@@ -198,22 +198,22 @@ Books & Things：
 
 | 策略 | Tiny Buddha做法 | LuckyCrystals应用 |
 |------|----------------|------------------|
-| **简约定位** | "Simple wisdom for complex lives" | 简洁有力的品牌定位 |
-| **8大分类** | 按心理需求分类 | 水晶按功效/需求分类 |
-| **用户投稿** | Submit a Post | "Share Your Crystal Story" |
-| **论坛社区** | 3版块 | 水晶体验分享社区 |
-| **日记产品** | 3款日记本 | 水晶日记/能量追踪本 |
-| **PWYC定价** | 自由定价 | 可选灵活定价模式 |
-| **Lori个人品牌** | "It's ours, not mine" | 创始人透明+共享精神 |
+| **简约定位** | "Simple wisdom for complex lives" | 简洁有力的品牌定位 | https://tinybuddha.com/ |
+| **8大分类** | 按心理需求分类 | 水晶按功效/需求分类 | https://tinybuddha.com/ |
+| **用户投稿** | Submit a Post | "Share Your Crystal Story" | https://tinybuddha.com/ |
+| **论坛社区** | 3版块 | 水晶体验分享社区 | https://tinybuddha.com/ |
+| **日记产品** | 3款日记本 | 水晶日记/能量追踪本 | https://tinybuddha.com/ |
+| **PWYC定价** | 自由定价 | 可选灵活定价模式 | https://tinybuddha.com/ |
+| **Lori个人品牌** | "It's ours, not mine" | 创始人透明+共享精神 | https://tinybuddha.com/ |
 
 ### 6.2 Tiny Buddha 的弱点
 
 | 弱点 | 说明 |
 |------|------|
-| **无灵性工具** | 没有测试/占卜等互动工具 |
-| **产品线极简** | 只有3款日记本 |
-| **无水晶/灵性产品** | 不涉及水晶等灵性产品 |
-| **内容偏泛** | 缺少垂直深度（如水晶专题） |
+| **无灵性工具** | 没有测试/占卜等互动工具 | https://tinybuddha.com/ |
+| **产品线极简** | 只有3款日记本 | https://tinybuddha.com/ |
+| **无水晶/灵性产品** | 不涉及水晶等灵性产品 | https://tinybuddha.com/ |
+| **内容偏泛** | 缺少垂直深度（如水晶专题） | https://tinybuddha.com/ |
 
 ### 6.3 关键启发
 

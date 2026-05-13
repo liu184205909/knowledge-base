@@ -9,15 +9,15 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 位置 | 核心要点 | 适用场景 |
-|--------|------|----------|----------|
-| **专家Faculty模式** | [§3.1 Faculty](#31-专家faculty体系) | 30+顶级专家（MD/PhD/Olympian）组成Faculty，每个专家绑定特定课程，建立权威 | 专家导流/品牌权威建设 |
-| **课程认证体系** | [§4.1 课程](#41-课程认证产品) | 3个认证课程（Health Coach/Functional Nutrition/Peri-Menopause），National Board认证 | 数字产品/课程变现 |
-| **Newsletter矩阵** | [§3.2 Newsletter](#32-newsletter矩阵) | 5个垂直Newsletter（The Long Game/Beauty Breakdown/mbg moves/The Daily/Editor's Picks），1M+订阅者 | 邮件营销策略 |
-| **媒体+电商融合** | [§2.2 首页架构](#22-首页架构) | 最新文章→Shop→Routine→Listen→Find your routine，内容→产品自然过渡 | 内容+电商转化路径 |
-| **Collective专家网络** | [§3.1 Faculty](#31-专家faculty体系) | 60+外部专家网络，名人如Gisele Bundchen/Troy Aikman/Dan Buettner，扩大品牌影响力 | 品牌合作/KOL策略 |
-| **Revitalize年度活动** | [§4.3 活动](#43-revitalize年度活动) | 线下年度健康盛会，连接专家+用户+品牌 | 线下活动/品牌事件 |
-| **Podcast内容** | [§3.3 内容频道](#33-多频道内容) | mbg podcast + 视频课程，音频内容增长渠道 | 播客/视频内容策略 |
+| 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
+|--------|------|----------|----------|---------|
+| **专家Faculty模式** | [§3.1 Faculty](#31-专家faculty体系) | 30+顶级专家（MD/PhD/Olympian）组成Faculty，每个专家绑定特定课程，建立权威 | 专家导流/品牌权威建设 | https://www.mindbodygreen.com/ |
+| **课程认证体系** | [§4.1 课程](#41-课程认证产品) | 3个认证课程（Health Coach/Functional Nutrition/Peri-Menopause），National Board认证 | 数字产品/课程变现 | https://www.mindbodygreen.com/ |
+| **Newsletter矩阵** | [§3.2 Newsletter](#32-newsletter矩阵) | 5个垂直Newsletter（The Long Game/Beauty Breakdown/mbg moves/The Daily/Editor's Picks），1M+订阅者 | 邮件营销策略 | https://www.mindbodygreen.com/ |
+| **媒体+电商融合** | [§2.2 首页架构](#22-首页架构) | 最新文章→Shop→Routine→Listen→Find your routine，内容→产品自然过渡 | 内容+电商转化路径 | https://www.mindbodygreen.com/ |
+| **Collective专家网络** | [§3.1 Faculty](#31-专家faculty体系) | 60+外部专家网络，名人如Gisele Bundchen/Troy Aikman/Dan Buettner，扩大品牌影响力 | 品牌合作/KOL策略 | https://www.mindbodygreen.com/ |
+| **Revitalize年度活动** | [§4.3 活动](#43-revitalize年度活动) | 线下年度健康盛会，连接专家+用户+品牌 | 线下活动/品牌事件 | https://www.mindbodygreen.com/ |
+| **Podcast内容** | [§3.3 内容频道](#33-多频道内容) | mbg podcast + 视频课程，音频内容增长渠道 | 播客/视频内容策略 | https://www.mindbodygreen.com/ |
 
 ---
 

@@ -9,14 +9,14 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 核心要点 | 适用场景 |
-|--------|----------|----------|
-| **现代巫术美学** | "Everyday magic for the modern mystic" | 品牌调性+视觉美学参考 |
-| **Witch Tips & Horoscopes** | 每周12星座运势+Witch Tips | 每周内容节奏参考 |
-| **月相仪式** | Full Moon/New Moon Ritual系列 | 仪式模板内容参考 |
-| **Lisa Stardust** | 合伙占星师Lisa Stardust | 外部专家合作参考 |
-| **Bri Luna** | 创始人，品牌美学主理 | 创始人×美学品牌参考 |
-| **Squarespace** | Squarespace建站 | 无代码建站参考 |
+| 参考项 | 核心要点 | 适用场景 | 验证URL |
+|--------|----------|----------|---------|
+| **现代巫术美学** | "Everyday magic for the modern mystic" | 品牌调性+视觉美学参考 | https://thehoodwitch.com/ |
+| **Witch Tips & Horoscopes** | 每周12星座运势+Witch Tips | 每周内容节奏参考 | https://thehoodwitch.com/ |
+| **月相仪式** | Full Moon/New Moon Ritual系列 | 仪式模板内容参考 | https://thehoodwitch.com/ |
+| **Lisa Stardust** | 合伙占星师Lisa Stardust | 外部专家合作参考 | https://thehoodwitch.com/ |
+| **Bri Luna** | 创始人，品牌美学主理 | 创始人×美学品牌参考 | https://thehoodwitch.com/ |
+| **Squarespace** | Squarespace建站 | 无代码建站参考 | https://thehoodwitch.com/ |
 
 ---
 
@@ -24,15 +24,15 @@
 
 | 维度 | 详情 |
 |------|------|
-| **网站** | thehoodwitch.com |
-| **创始人** | Bri Luna（品牌美学主理人/作者） |
-| **占星师** | Lisa Stardust（合作占星师，撰写所有星座内容） |
-| **定位** | "Everyday magic for the modern mystic" |
-| **理念** | "With intention, love, and respect for our planet we are capable of all things" |
-| **技术栈** | Squarespace |
-| **域名年龄** | 2014年（static1.squarespace.com/static/53d5b207... → 2014年7月） |
-| **设计** | 闪屏封面页 + 深色极简设计 |
-| **品牌验证** | p:domain_verify（Google） |
+| **网站** | thehoodwitch.com | https://thehoodwitch.com/ |
+| **创始人** | Bri Luna（品牌美学主理人/作者） | https://thehoodwitch.com/ |
+| **占星师** | Lisa Stardust（合作占星师，撰写所有星座内容） | https://thehoodwitch.com/ |
+| **定位** | "Everyday magic for the modern mystic" | https://thehoodwitch.com/ |
+| **理念** | "With intention, love, and respect for our planet we are capable of all things" | https://thehoodwitch.com/ |
+| **技术栈** | Squarespace | https://thehoodwitch.com/ |
+| **域名年龄** | 2014年（static1.squarespace.com/static/53d5b207... → 2014年7月） | https://thehoodwitch.com/ |
+| **设计** | 闪屏封面页 + 深色极简设计 | https://thehoodwitch.com/ |
+| **品牌验证** | p:domain_verify（Google） | https://thehoodwitch.com/ |
 
 ---
 
@@ -131,9 +131,9 @@ Full Moon in Leo Ritual示例：
 
 | 层级 | 变现方式 | 详情 |
 |------|---------|------|
-| **L1** | 博客广告 | Squarespace站点可能有的广告 |
-| **L2** | 可能的产品/服务 | 品牌相关产品（待确认） |
-| **L3** | 品牌合作 | 时尚/灵性品牌合作 |
+| **L1** | 博客广告 | Squarespace站点可能有的广告 | https://thehoodwitch.com/ |
+| **L2** | 可能的产品/服务 | 品牌相关产品（待确认） | https://thehoodwitch.com/ |
+| **L3** | 品牌合作 | 时尚/灵性品牌合作 | https://thehoodwitch.com/ |
 
 **注意**：The Hoodwitch 的变现模式从网站上看不明确，可能更多依赖品牌合作和线下活动。
 
@@ -145,22 +145,22 @@ Full Moon in Leo Ritual示例：
 
 | 策略 | The Hoodwitch做法 | LuckyCrystals应用 |
 |------|------------------|------------------|
-| **现代美学** | 深色极简+巫术美学 | 水晶品牌视觉风格 |
-| **Witch Tips** | 每周巫术+星座建议 | 每周水晶+星座推荐 |
-| **月相仪式** | 满月/新月仪式模板 | 水晶×月相仪式指南 |
-| **Lisa Stardust合作** | 外部占星师合作 | 外部灵性专家合作 |
-| **季节性内容** | 星座季节×4元素 | 水晶×季节×星座 |
-| **闪屏设计** | 封面页ENTER入口 | 品牌调性建立 |
+| **现代美学** | 深色极简+巫术美学 | 水晶品牌视觉风格 | https://thehoodwitch.com/ |
+| **Witch Tips** | 每周巫术+星座建议 | 每周水晶+星座推荐 | https://thehoodwitch.com/ |
+| **月相仪式** | 满月/新月仪式模板 | 水晶×月相仪式指南 | https://thehoodwitch.com/ |
+| **Lisa Stardust合作** | 外部占星师合作 | 外部灵性专家合作 | https://thehoodwitch.com/ |
+| **季节性内容** | 星座季节×4元素 | 水晶×季节×星座 | https://thehoodwitch.com/ |
+| **闪屏设计** | 封面页ENTER入口 | 品牌调性建立 | https://thehoodwitch.com/ |
 
 ### 5.2 The Hoodwitch 的弱点
 
 | 弱点 | 说明 |
 |------|------|
-| **内容频率不确定** | 从blog看，发布间隔不规律 |
-| **变现不清晰** | 网站上无明显变现路径 |
-| **Squarespace限制** | 功能不如WordPress/Shopify灵活 |
-| **无水晶产品** | 不涉及水晶电商 |
-| **无互动工具** | 没有测试/占卜工具 |
+| **内容频率不确定** | 从blog看，发布间隔不规律 | https://thehoodwitch.com/ |
+| **变现不清晰** | 网站上无明显变现路径 | https://thehoodwitch.com/ |
+| **Squarespace限制** | 功能不如WordPress/Shopify灵活 | https://thehoodwitch.com/ |
+| **无水晶产品** | 不涉及水晶电商 | https://thehoodwitch.com/ |
+| **无互动工具** | 没有测试/占卜工具 | https://thehoodwitch.com/ |
 
 ### 5.3 关键启发
 

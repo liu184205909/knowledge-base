@@ -9,16 +9,16 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 位置 | 核心要点 | 适用场景 |
-|--------|------|----------|----------|
-| **100+宝石A-Z** | [§2.2 按宝石分类](#22-100宝石a-z) | A-B到T-Z共100+种水晶，每种独立页面 | 水晶百科规模参考 |
-| **15+意图分类** | [§2.3 按意图分类](#23-15意图分类) | Abundance/Calming/Confidence等15+维度 | 意图导向分类参考 |
-| **17色分类** | [§2.3 按意图分类](#23-15意图分类) | 17种颜色维度（含Rainbow/Copper/Gold/Silver） | 颜色分类参考 |
-| **VIP Club** | [§4.2 VIP体系](#42-vip-club) | VIP Club Specials + Wounded Warriors专区 | 会员体系参考 |
-| **Moldavite专家** | [§2.4 特色品类](#24-moldavite专家定位) | Moldavite独立入口，专家定位 | 单品深度策略参考 |
-| **视频教程** | [§3.2 内容类型](#32-内容类型) | Video Tutorials视频教程 | 视频内容策略参考 |
-| **书籍出版** | [§3.2 内容类型](#32-内容类型) | Books + Affirmations + Meditations + Tutorials | 数字产品扩展参考 |
-| **2605评价** | [§1 基本信息](#1-基本信息) | 2,605条客户评价 | 社会证明规模参考 |
+| 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
+|--------|------|----------|----------|---------|
+| **100+宝石A-Z** | [§2.2 按宝石分类](#22-100宝石a-z) | A-B到T-Z共100+种水晶，每种独立页面 | 水晶百科规模参考 | https://satincrystals.com/ |
+| **15+意图分类** | [§2.3 按意图分类](#23-15意图分类) | Abundance/Calming/Confidence等15+维度 | 意图导向分类参考 | https://satincrystals.com/ |
+| **17色分类** | [§2.3 按意图分类](#23-15意图分类) | 17种颜色维度（含Rainbow/Copper/Gold/Silver） | 颜色分类参考 | https://satincrystals.com/ |
+| **VIP Club** | [§4.2 VIP体系](#42-vip-club) | VIP Club Specials + Wounded Warriors专区 | 会员体系参考 | https://satincrystals.com/ |
+| **Moldavite专家** | [§2.4 特色品类](#24-moldavite专家定位) | Moldavite独立入口，专家定位 | 单品深度策略参考 | https://satincrystals.com/ |
+| **视频教程** | [§3.2 内容类型](#32-内容类型) | Video Tutorials视频教程 | 视频内容策略参考 | https://satincrystals.com/ |
+| **书籍出版** | [§3.2 内容类型](#32-内容类型) | Books + Affirmations + Meditations + Tutorials | 数字产品扩展参考 | https://satincrystals.com/ |
+| **2605评价** | [§1 基本信息](#1-基本信息) | 2,605条客户评价 | 社会证明规模参考 | https://satincrystals.com/ |
 
 ---
 

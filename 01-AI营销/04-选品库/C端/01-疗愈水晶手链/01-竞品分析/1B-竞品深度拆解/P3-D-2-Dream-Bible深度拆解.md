@@ -9,13 +9,13 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 核心要点 | 适用场景 |
-|--------|----------|----------|
-| **6406符号在线** | "6406 Symbols Online"，持续更新 | 大规模符号库参考 |
-| **ChatGPT辅助** | 使用ChatGPT辅助梦境研究 | AI辅助内容生产参考 |
-| **Gillian Holloway** | 受Gillian Holloway Ph.D工作启发 | 学术权威背书参考 |
-| **多国注册** | 加拿大/英国/美国三国知识产权注册 | 品牌保护参考 |
-| **实时生活关联** | "interviewing people about events occurring in their lives" | 内容研究方法论参考 |
+| 参考项 | 核心要点 | 适用场景 | 验证URL |
+|--------|----------|----------|---------|
+| **6406符号在线** | "6406 Symbols Online"，持续更新 | 大规模符号库参考 | https://www.dreambible.com/ |
+| **ChatGPT辅助** | 使用ChatGPT辅助梦境研究 | AI辅助内容生产参考 | https://www.dreambible.com/ |
+| **Gillian Holloway** | 受Gillian Holloway Ph.D工作启发 | 学术权威背书参考 | https://www.dreambible.com/ |
+| **多国注册** | 加拿大/英国/美国三国知识产权注册 | 品牌保护参考 | https://www.dreambible.com/ |
+| **实时生活关联** | "interviewing people about events occurring in their lives" | 内容研究方法论参考 | https://www.dreambible.com/ |
 
 ---
 
@@ -23,15 +23,15 @@
 
 | 维度 | 详情 |
 |------|------|
-| **网站** | dreambible.com |
-| **定位** | "A free online A to Z dream dictionary" |
-| **技术栈** | 传统HTML + jQuery UI |
-| **内容规模** | 6406个在线符号（截至2025年12月15日） |
-| **方法论** | 基于真实生活事件×梦境报告研究 |
-| **AI工具** | 使用ChatGPT辅助创建最实用的梦典 |
-| **版权** | © 2010-2023 |
-| **商标** | ™ 2023 |
-| **注册** | 加拿大知识产权局 + 英国知识产权局 + 美国国会图书馆 |
+| **网站** | dreambible.com | https://www.dreambible.com/ |
+| **定位** | "A free online A to Z dream dictionary" | https://www.dreambible.com/ |
+| **技术栈** | 传统HTML + jQuery UI | https://www.dreambible.com/ |
+| **内容规模** | 6406个在线符号（截至2025年12月15日） | https://www.dreambible.com/ |
+| **方法论** | 基于真实生活事件×梦境报告研究 | https://www.dreambible.com/ |
+| **AI工具** | 使用ChatGPT辅助创建最实用的梦典 | https://www.dreambible.com/ |
+| **版权** | © 2010-2023 | https://www.dreambible.com/ |
+| **商标** | ™ 2023 | https://www.dreambible.com/ |
+| **注册** | 加拿大知识产权局 + 英国知识产权局 + 美国国会图书馆 | https://www.dreambible.com/ |
 
 ---
 
@@ -111,8 +111,8 @@ to create the world's most practical dream dictionary"
 
 | 层级 | 变现方式 | 详情 |
 |------|---------|------|
-| **L1** | 展示广告 | 传统HTML网站广告 |
-| **L2** | 可能的联盟营销 | 推测 |
+| **L1** | 展示广告 | 传统HTML网站广告 | https://www.dreambible.com/ |
+| **L2** | 可能的联盟营销 | 推测 | https://www.dreambible.com/ |
 
 **注意**：与Dream Moods类似的简单变现模式，但通过品牌保护（商标+多国注册）增加了品牌价值。
 
@@ -124,21 +124,21 @@ to create the world's most practical dream dictionary"
 
 | 策略 | Dream Bible做法 | LuckyCrystals应用 |
 |------|----------------|------------------|
-| **AI辅助内容** | ChatGPT辅助大规模梦典创建 | AI辅助大规模水晶内容生产 |
-| **生活关联研究** | 梦境×现实生活事件关联 | 水晶×用户真实体验关联 |
-| **品牌保护** | 加拿大/英国/美国注册 | LuckyCrystals品牌多国保护 |
-| **持续更新** | 2025年仍在更新 | 保持内容活跃度 |
-| **学术启发** | Gillian Holloway Ph.D启发 | 寻找学术权威背书 |
+| **AI辅助内容** | ChatGPT辅助大规模梦典创建 | AI辅助大规模水晶内容生产 | https://www.dreambible.com/ |
+| **生活关联研究** | 梦境×现实生活事件关联 | 水晶×用户真实体验关联 | https://www.dreambible.com/ |
+| **品牌保护** | 加拿大/英国/美国注册 | LuckyCrystals品牌多国保护 | https://www.dreambible.com/ |
+| **持续更新** | 2025年仍在更新 | 保持内容活跃度 | https://www.dreambible.com/ |
+| **学术启发** | Gillian Holloway Ph.D启发 | 寻找学术权威背书 | https://www.dreambible.com/ |
 
 ### 5.2 Dream Bible 的弱点
 
 | 弱点 | 说明 |
 |------|------|
-| **网站设计简陋** | 传统HTML，无现代设计 |
-| **变现单一** | 仅广告，无数字产品 |
-| **导航简单** | 功能不如Dream Moods丰富 |
-| **无教育内容** | 缺少Dream Moods那样的教育体系 |
-| **无社区互动** | 仅有论坛但不如Dream Moods活跃 |
+| **网站设计简陋** | 传统HTML，无现代设计 | https://www.dreambible.com/ |
+| **变现单一** | 仅广告，无数字产品 | https://www.dreambible.com/ |
+| **导航简单** | 功能不如Dream Moods丰富 | https://www.dreambible.com/ |
+| **无教育内容** | 缺少Dream Moods那样的教育体系 | https://www.dreambible.com/ |
+| **无社区互动** | 仅有论坛但不如Dream Moods活跃 | https://www.dreambible.com/ |
 
 ### 5.3 关键启发
 

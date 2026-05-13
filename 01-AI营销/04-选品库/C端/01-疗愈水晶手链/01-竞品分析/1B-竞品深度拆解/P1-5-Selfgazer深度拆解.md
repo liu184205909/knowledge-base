@@ -9,13 +9,13 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 位置 | 核心要点 | 适用场景 |
-|--------|------|----------|----------|
-| **心理学+灵性融合** | [§3.1 核心理念](#31-心理学与灵性融合) | "Psychological Tarot" — 用心理学框架重新定义塔罗，降低灵性门槛 | 水晶内容策略（科学与灵性双视角） |
-| **多工具矩阵** | [§2 产品矩阵](#2-产品矩阵) | 4个核心工具（Tarot/Birth Chart/I Ching/Horoscopes）覆盖不同需求 | 互动工具设计参考 |
-| **Selfgazer Oracle产品** | [§2 产品矩阵](#2-产品矩阵) | 付费占卜产品，AI驱动的个性化解读 | 数字产品开发思路 |
-| **博客SEO策略** | [§4 内容策略](#4-内容与seo策略) | 对比类博客文章（"AI Tarot Worth It"/"Best Birth Chart Apps"）= 高搜索量长尾词 | 内容SEO选题策略 |
-| **创作者变现** | [§5 变现](#5-变现模型) | 工具免费引流 → 博客SEO → 付费Oracle产品 → Reddit社区 | Freemium漏斗参考 |
+| 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
+|--------|------|----------|----------|---------|
+| **心理学+灵性融合** | [§3.1 核心理念](#31-心理学与灵性融合) | "Psychological Tarot" — 用心理学框架重新定义塔罗，降低灵性门槛 | 水晶内容策略（科学与灵性双视角） | https://www.selfgazer.com/ |
+| **多工具矩阵** | [§2 产品矩阵](#2-产品矩阵) | 4个核心工具（Tarot/Birth Chart/I Ching/Horoscopes）覆盖不同需求 | 互动工具设计参考 | https://www.selfgazer.com/ |
+| **Selfgazer Oracle产品** | [§2 产品矩阵](#2-产品矩阵) | 付费占卜产品，AI驱动的个性化解读 | 数字产品开发思路 | https://www.selfgazer.com/ |
+| **博客SEO策略** | [§4 内容策略](#4-内容与seo策略) | 对比类博客文章（"AI Tarot Worth It"/"Best Birth Chart Apps"）= 高搜索量长尾词 | 内容SEO选题策略 | https://www.selfgazer.com/ |
+| **创作者变现** | [§5 变现](#5-变现模型) | 工具免费引流 → 博客SEO → 付费Oracle产品 → Reddit社区 | Freemium漏斗参考 | https://www.selfgazer.com/ |
 
 ---
 

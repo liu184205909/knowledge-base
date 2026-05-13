@@ -9,15 +9,15 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 位置 | 核心要点 | 适用场景 |
-|--------|------|----------|----------|
-| **7大品类全覆盖** | [§2.1 导航架构](#21-导航架构) | 水晶+珠宝+蜡烛+香薰+能量工具+装饰+礼品 | 品类扩展路线图参考 |
-| **By Gemstone A-Z** | [§2.2 按宝石分类](#22-按宝石分类a-z) | 40+种水晶按A-Z字母分组 | A-Z宝石分类参考 |
-| **中国生肖套装** | [§2.3 特色产品](#23-特色产品) | Year of the Fire Horse Crystal Set (2026) | 生肖×水晶产品线参考 |
-| **Adopt a Stone** | [§3.1 慈善互动](#31-adopt-a-stone-help-a-pet) | $1 Adopt a Stone + 帮助宠物 | 创新慈善互动参考 |
-| **Crystal Mystery Box** | [§2.3 特色产品](#23-特色产品) | 神秘水晶盒$10.97-$179.10 | 盲盒产品价格带参考 |
-| **蜡烛×水晶交叉** | [§2.4 蜡烛产品线](#24-蜡烛产品线) | 12星座蜡烛+脉轮蜡烛+月度蜡烛+爱情蜡烛 | 蜡烛增量品类参考 |
-| **Aromatherapy** | [§2.5 香薰产品线](#25-香薰产品线) | Wax Melts/Bath Bombs/Bath Salts/Sprays/Oil Rollers | 香薰扩展品类 |
+| 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
+|--------|------|----------|----------|---------|
+| **7大品类全覆盖** | [§2.1 导航架构](#21-导航架构) | 水晶+珠宝+蜡烛+香薰+能量工具+装饰+礼品 | 品类扩展路线图参考 | https://newmoonbeginnings.com/ |
+| **By Gemstone A-Z** | [§2.2 按宝石分类](#22-按宝石分类a-z) | 40+种水晶按A-Z字母分组 | A-Z宝石分类参考 | https://newmoonbeginnings.com/ |
+| **中国生肖套装** | [§2.3 特色产品](#23-特色产品) | Year of the Fire Horse Crystal Set (2026) | 生肖×水晶产品线参考 | https://newmoonbeginnings.com/ |
+| **Adopt a Stone** | [§3.1 慈善互动](#31-adopt-a-stone-help-a-pet) | $1 Adopt a Stone + 帮助宠物 | 创新慈善互动参考 | https://newmoonbeginnings.com/ |
+| **Crystal Mystery Box** | [§2.3 特色产品](#23-特色产品) | 神秘水晶盒$10.97-$179.10 | 盲盒产品价格带参考 | https://newmoonbeginnings.com/ |
+| **蜡烛×水晶交叉** | [§2.4 蜡烛产品线](#24-蜡烛产品线) | 12星座蜡烛+脉轮蜡烛+月度蜡烛+爱情蜡烛 | 蜡烛增量品类参考 | https://newmoonbeginnings.com/ |
+| **Aromatherapy** | [§2.5 香薰产品线](#25-香薰产品线) | Wax Melts/Bath Bombs/Bath Salts/Sprays/Oil Rollers | 香薰扩展品类 | https://newmoonbeginnings.com/ |
 
 ---
 

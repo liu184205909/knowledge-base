@@ -9,15 +9,15 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 位置 | 核心要点 | 适用场景 |
-|--------|------|----------|----------|
-| **500+水晶数据库** | [§3.1 水晶数据库](#31-500水晶数据库) | 500+种水晶，每种含产地/历史/能量详细描述 | 水晶百科规模标杆 |
-| **7维度搜索** | [§3.2 多维度搜索](#32-7维度搜索系统) | 按脉轮/情绪/星座/行星/数字/元素/推荐 搜索 | 水晶发现工具核心参考 |
-| **Crystal Identifier App** | [§3.3 移动App](#33-crystal-identifier-app) | iOS+Android，拍照识别水晶，App Store ID 1553800023 | App开发可能性参考 |
-| **Premium+会员** | [§4.1 会员体系](#41-premium会员) | $2.99/周，5%off+3%返现 | 订阅制变现参考 |
-| **订阅盒** | [§4.2 订阅盒](#42-crystal-subscription-box) | Crystal Subscription Box | LuckyCrystals核心产品方向 |
-| **Chat支持** | [§2.1 客户服务](#21-客户服务设计) | 在线聊天，等待<2-3小时 | 客户服务标准参考 |
-| **Affirm分期** | [§4.3 支付方式](#43-支付方式) | Affirm分期付款 | 高客单价支付方案 |
+| 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
+|--------|------|----------|----------|---------|
+| **500+水晶数据库** | [§3.1 水晶数据库](#31-500水晶数据库) | 500+种水晶，每种含产地/历史/能量详细描述 | 水晶百科规模标杆 | https://thecrystalcouncil.com/ |
+| **7维度搜索** | [§3.2 多维度搜索](#32-7维度搜索系统) | 按脉轮/情绪/星座/行星/数字/元素/推荐 搜索 | 水晶发现工具核心参考 | https://thecrystalcouncil.com/ |
+| **Crystal Identifier App** | [§3.3 移动App](#33-crystal-identifier-app) | iOS+Android，拍照识别水晶，App Store ID 1553800023 | App开发可能性参考 | https://thecrystalcouncil.com/ |
+| **Premium+会员** | [§4.1 会员体系](#41-premium会员) | $2.99/周，5%off+3%返现 | 订阅制变现参考 | https://thecrystalcouncil.com/ |
+| **订阅盒** | [§4.2 订阅盒](#42-crystal-subscription-box) | Crystal Subscription Box | LuckyCrystals核心产品方向 | https://thecrystalcouncil.com/ |
+| **Chat支持** | [§2.1 客户服务](#21-客户服务设计) | 在线聊天，等待<2-3小时 | 客户服务标准参考 | https://thecrystalcouncil.com/ |
+| **Affirm分期** | [§4.3 支付方式](#43-支付方式) | Affirm分期付款 | 高客单价支付方案 | https://thecrystalcouncil.com/ |
 
 ---
 

@@ -9,14 +9,14 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 核心要点 | 适用场景 |
-|--------|----------|----------|
-| **免费天使牌** | Free Angel Card Reading，Ask Angels Oracle Cards | 免费互动工具参考 |
-| **Melanie Beckler** | 创始人个人品牌，"Author and Clear Channel of the Light" | 个人品牌参考 |
-| **天使传讯** | Angel Messages，每周免费天使信息 | 定期内容节奏参考 |
-| **冥想内容** | Free Angel Meditation，21分钟天使冥想 | 音频内容参考 |
-| **#1播客** | "#1 Podcast" 天使主题播客 | 播客策略参考 |
-| **11:11含义** | 11:11 Meaning 页面 | 天使号码内容参考 |
+| 参考项 | 核心要点 | 适用场景 | 验证URL |
+|--------|----------|----------|---------|
+| **免费天使牌** | Free Angel Card Reading，Ask Angels Oracle Cards | 免费互动工具参考 | https://ask-angels.com/ |
+| **Melanie Beckler** | 创始人个人品牌，"Author and Clear Channel of the Light" | 个人品牌参考 | https://ask-angels.com/ |
+| **天使传讯** | Angel Messages，每周免费天使信息 | 定期内容节奏参考 | https://ask-angels.com/ |
+| **冥想内容** | Free Angel Meditation，21分钟天使冥想 | 音频内容参考 | https://ask-angels.com/ |
+| **#1播客** | "#1 Podcast" 天使主题播客 | 播客策略参考 | https://ask-angels.com/ |
+| **11:11含义** | 11:11 Meaning 页面 | 天使号码内容参考 | https://ask-angels.com/ |
 
 ---
 
@@ -24,16 +24,16 @@
 
 | 维度 | 详情 |
 |------|------|
-| **网站** | ask-angels.com |
-| **创始人** | Melanie Beckler（"Author, angelic channel, mystic, nature lover, starseed"） |
-| **定位** | 天使传讯+灵性指导平台 |
-| **口号** | "Connect with your angels to remember the truth of your light and soul power" |
-| **技术栈** | WordPress 6.8.3 + Thrive Theme + 子主题 |
-| **缓存** | WP Rocket 3.19.4 |
-| **CDN** | askangels-a8bd.kxcdn.com (KeyCDN) |
-| **社交** | Twitter @askangels + Facebook |
-| **版权** | © 2025 Ask-Angels.com & Melanie Beckler |
-| **更新频率** | 每周多次博客更新 |
+| **网站** | ask-angels.com | https://ask-angels.com/ |
+| **创始人** | Melanie Beckler（"Author, angelic channel, mystic, nature lover, starseed"） | https://ask-angels.com/ |
+| **定位** | 天使传讯+灵性指导平台 | https://ask-angels.com/ |
+| **口号** | "Connect with your angels to remember the truth of your light and soul power" | https://ask-angels.com/ |
+| **技术栈** | WordPress 6.8.3 + Thrive Theme + 子主题 | https://ask-angels.com/ |
+| **缓存** | WP Rocket 3.19.4 | https://ask-angels.com/ |
+| **CDN** | askangels-a8bd.kxcdn.com (KeyCDN) | https://ask-angels.com/ |
+| **社交** | Twitter @askangels + Facebook | https://ask-angels.com/ |
+| **版权** | © 2025 Ask-Angels.com & Melanie Beckler | https://ask-angels.com/ |
+| **更新频率** | 每周多次博客更新 | https://ask-angels.com/ |
 
 ---
 
@@ -123,12 +123,12 @@ Spiritual Guidance Blog：
 
 | 层级 | 变现方式 | 详情 |
 |------|---------|------|
-| **L1** | 付费解读 | Angel Readings（个人天使解读） |
-| **L2** | 课程 | Angel Courses |
-| **L3** | 一对一课程 | Sessions |
-| **L4** | Shop产品 | 天使相关产品+精油 |
-| **L5** | 播客 | #1 Podcast（赞助/推广） |
-| **L6** | Newsletter | 免费天使传讯+推荐 |
+| **L1** | 付费解读 | Angel Readings（个人天使解读） | https://ask-angels.com/ |
+| **L2** | 课程 | Angel Courses | https://ask-angels.com/ |
+| **L3** | 一对一课程 | Sessions | https://ask-angels.com/ |
+| **L4** | Shop产品 | 天使相关产品+精油 | https://ask-angels.com/ |
+| **L5** | 播客 | #1 Podcast（赞助/推广） | https://ask-angels.com/ |
+| **L6** | Newsletter | 免费天使传讯+推荐 | https://ask-angels.com/ |
 
 ### 4.2 免费诱饵
 
@@ -154,12 +154,12 @@ Spiritual Guidance Blog：
 
 | 维度 | 详情 |
 |------|------|
-| **CMS** | WordPress 6.8.3 |
-| **主题** | Thrive Theme + 自定义子主题 |
-| **缓存** | WP Rocket 3.19.4 |
-| **CDN** | KeyCDN (askangels-a8bd.kxcdn.com) |
-| **社交验证** | p:domain_verify + Facebook |
-| **SEO** | robots配置完整 |
+| **CMS** | WordPress 6.8.3 | https://ask-angels.com/ |
+| **主题** | Thrive Theme + 自定义子主题 | https://ask-angels.com/ |
+| **缓存** | WP Rocket 3.19.4 | https://ask-angels.com/ |
+| **CDN** | KeyCDN (askangels-a8bd.kxcdn.com) | https://ask-angels.com/ |
+| **社交验证** | p:domain_verify + Facebook | https://ask-angels.com/ |
+| **SEO** | robots配置完整 | https://ask-angels.com/ |
 
 ---
 
@@ -169,21 +169,21 @@ Spiritual Guidance Blog：
 
 | 策略 | Ask-Angels做法 | LuckyCrystals应用 |
 |------|---------------|------------------|
-| **免费互动工具** | 免费天使牌阅读 | 免费水晶测试/推荐 |
-| **定期传讯** | 天使传讯系统 | 每日/每周水晶能量传讯 |
-| **免费音频** | 21分钟天使冥想 | 水晶冥想音频 |
-| **Melanie个人品牌** | "Clear Channel of the Light" | 创始人水晶能量导师品牌 |
-| **播客** | #1天使播客 | Crystal Energy播客 |
-| **11:11内容** | 天使号码内容 | 水晶×天使号码交叉内容 |
+| **免费互动工具** | 免费天使牌阅读 | 免费水晶测试/推荐 | https://ask-angels.com/ |
+| **定期传讯** | 天使传讯系统 | 每日/每周水晶能量传讯 | https://ask-angels.com/ |
+| **免费音频** | 21分钟天使冥想 | 水晶冥想音频 | https://ask-angels.com/ |
+| **Melanie个人品牌** | "Clear Channel of the Light" | 创始人水晶能量导师品牌 | https://ask-angels.com/ |
+| **播客** | #1天使播客 | Crystal Energy播客 | https://ask-angels.com/ |
+| **11:11内容** | 天使号码内容 | 水晶×天使号码交叉内容 | https://ask-angels.com/ |
 
 ### 6.2 Ask-Angels 的弱点
 
 | 弱点 | 说明 |
 |------|------|
-| **垂直过窄** | 只有天使主题，无其他灵性内容 |
-| **设计较传统** | Thrive Theme但设计一般 |
-| **无水晶内容** | 不涉及水晶/矿物 |
-| **无电商** | Shop产品线不清晰 |
+| **垂直过窄** | 只有天使主题，无其他灵性内容 | https://ask-angels.com/ |
+| **设计较传统** | Thrive Theme但设计一般 | https://ask-angels.com/ |
+| **无水晶内容** | 不涉及水晶/矿物 | https://ask-angels.com/ |
+| **无电商** | Shop产品线不清晰 | https://ask-angels.com/ |
 
 ### 6.3 关键启发
 

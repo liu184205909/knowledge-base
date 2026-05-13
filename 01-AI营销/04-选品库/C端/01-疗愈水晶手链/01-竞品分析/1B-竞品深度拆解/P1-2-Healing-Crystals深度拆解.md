@@ -9,15 +9,15 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 位置 | 核心要点 | 适用场景 |
-|--------|------|----------|----------|
-| **多维标签系统** | [§2.1 Tags系统](#21-tags多维标签系统) | 7维标签（按石头/脉轮/星座/颜色/病症/矿物/形状），每个维度都可作为SEO入口 | 产品标签/分类设计 |
-| **Metaphysical Guide** | [§3.1 百科体系](#31-内容百科体系) | 完整的水晶疗愈百科，每种水晶的灵性属性详解 | 水晶百科页面设计 |
-| **Crystals for Common Conditions** | [§3.1 百科体系](#31-内容百科体系) | 按身体/情绪/精神病症推荐水晶（Physical/Spiritual/Emotional） | 内容SEO长尾词策略 |
-| **批发模式** | [§4.1 批发](#41-批发模式) | 大订单折扣（$500+ 20% off, $1000+ 30% off），All Sales Final | 批发/大客户策略 |
-| **联盟营销** | [§4.2 联盟](#42-联盟营销) | Affiliate Program（注册/信息/登录），其他网站导流 | 联盟营销渠道建设 |
-| **eBook+Oracle Deck** | [§3.2 数字产品](#32-数字产品与工具) | Crystal Grid Kits & eBook、Crystal Info Cards & Oracle Decks | 数字产品/物理周边开发 |
-| **4个独立搜索框** | [§2 搜索架构](#2-网站结构) | Product Catalog / Article Database / Metaphysical Directory / Conditions = 4个搜索入口 | 网站搜索体验设计 |
+| 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
+|--------|------|----------|----------|---------|
+| **多维标签系统** | [§2.1 Tags系统](#21-tags多维标签系统) | 7维标签（按石头/脉轮/星座/颜色/病症/矿物/形状），每个维度都可作为SEO入口 | 产品标签/分类设计 | https://www.healingcrystals.com/Listing_by_Stone_Type.html |
+| **Metaphysical Guide** | [§3.1 百科体系](#31-内容百科体系) | 完整的水晶疗愈百科，每种水晶的灵性属性详解 | 水晶百科页面设计 | https://www.healingcrystals.com/Listing_by_Stone_Type.html |
+| **Crystals for Common Conditions** | [§3.1 百科体系](#31-内容百科体系) | 按身体/情绪/精神病症推荐水晶（Physical/Spiritual/Emotional） | 内容SEO长尾词策略 | https://www.healingcrystals.com/products-by-humility-ailment.html |
+| **批发模式** | [§4.1 批发](#41-批发模式) | 大订单折扣（$500+ 20% off, $1000+ 30% off），All Sales Final | 批发/大客户策略 | https://www.healingcrystals.com/How_do_I_receive_Wholesale_Prices__Articles_388.html |
+| **联盟营销** | [§4.2 联盟](#42-联盟营销) | Affiliate Program（注册/信息/登录），其他网站导流 | 联盟营销渠道建设 | https://www.healingcrystals.com/affiliate_signup.php |
+| **eBook+Oracle Deck** | [§3.2 数字产品](#32-数字产品与工具) | Crystal Grid Kits & eBook、Crystal Info Cards & Oracle Decks | 数字产品/物理周边开发 | https://www.healingcrystals.com/ |
+| **4个独立搜索框** | [§2 搜索架构](#2-网站结构) | Product Catalog / Article Database / Metaphysical Directory / Conditions = 4个搜索入口 | 网站搜索体验设计 | https://www.healingcrystals.com/ |
 
 ---
 

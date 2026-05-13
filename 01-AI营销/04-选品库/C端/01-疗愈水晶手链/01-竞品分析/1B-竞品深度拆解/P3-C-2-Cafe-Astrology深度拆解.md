@@ -15,12 +15,12 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 核心要点 | 适用场景 |
-|--------|----------|----------|
-| **免费星盘** | 免费Natal Chart生成器，高搜索意图 | 互动工具参考 |
-| **星座配对** | 12×12星座配对矩阵 | 配对内容矩阵参考 |
-| **传统占星学** | 行星/宫位/相位等传统教学 | 教育内容深度参考 |
-| **HTML长青内容** | 静态HTML页面，SEO长期价值 | 长青SEO策略参考 |
+| 参考项 | 核心要点 | 适用场景 | 验证URL |
+|--------|----------|----------|---------|
+| **免费星盘** | 免费Natal Chart生成器，高搜索意图 | 互动工具参考 | https://cafeastrology.nyc/free-birth-chart/ |
+| **星座配对** | 12×12星座配对矩阵 | 配对内容矩阵参考 | https://cafeastrology.nyc/compatibility/ |
+| **传统占星学** | 行星/宫位/相位等传统教学 | 教育内容深度参考 | https://cafeastrology.nyc/learn-astrology/ |
+| **HTML长青内容** | 静态HTML页面，SEO长期价值 | 长青SEO策略参考 | https://cafeastrology.nyc/ |
 
 ---
 
@@ -28,12 +28,12 @@
 
 | 维度 | 详情 |
 |------|------|
-| **网站** | cafeastrology.nyc（原cafeastrology.com） |
-| **DR** | ~70 |
-| **月流量** | ~3M |
-| **定位** | 免费占星学教育资源 |
-| **技术栈** | WordPress（传统设计） |
-| **核心功能** | 免费星盘生成器 + 星座配对 + 运势 |
+| **网站** | cafeastrology.nyc（原cafeastrology.com） | https://cafeastrology.nyc/ |
+| **DR** | ~70 | https://cafeastrology.nyc/ |
+| **月流量** | ~3M | https://cafeastrology.nyc/ |
+| **定位** | 免费占星学教育资源 | https://cafeastrology.nyc/ |
+| **技术栈** | WordPress（传统设计） | https://cafeastrology.nyc/ |
+| **核心功能** | 免费星盘生成器 + 星座配对 + 运势 | https://cafeastrology.nyc/free-birth-chart/ |
 
 ---
 
@@ -98,9 +98,9 @@
 
 | 层级 | 变现方式 | 详情 |
 |------|---------|------|
-| **L1** | 广告收入 | 高流量网站广告 |
-| **L2** | 付费报告 | Natal/Compatibility/Transit Report |
-| **L3** | 联盟营销 | 占星相关产品推荐 |
+| **L1** | 广告收入 | 高流量网站广告 | https://cafeastrology.nyc/ |
+| **L2** | 付费报告 | Natal/Compatibility/Transit Report | https://cafeastrology.nyc/ |
+| **L3** | 联盟营销 | 占星相关产品推荐 | https://cafeastrology.nyc/ |
 
 ---
 
@@ -110,18 +110,18 @@
 
 | 策略 | Cafe Astrology做法 | LuckyCrystals应用 |
 |------|-------------------|------------------|
-| **免费工具引流** | 免费星盘生成器 | 水晶测试/推荐工具 |
-| **配对矩阵** | 12×12星座配对 | 水晶×功效/星座配对矩阵 |
-| **教育内容** | 行星/宫位/相位教学 | 水晶×脉轮/元素/星座教育 |
-| **付费报告** | 个人星盘报告 | 个人水晶能量报告 |
+| **免费工具引流** | 免费星盘生成器 | 水晶测试/推荐工具 | https://cafeastrology.nyc/free-birth-chart/ |
+| **配对矩阵** | 12×12星座配对 | 水晶×功效/星座配对矩阵 | https://cafeastrology.nyc/compatibility/ |
+| **教育内容** | 行星/宫位/相位教学 | 水晶×脉轮/元素/星座教育 | https://cafeastrology.nyc/ |
+| **付费报告** | 个人星盘报告 | 个人水晶能量报告 | https://cafeastrology.nyc/ |
 
 ### 5.2 Cafe Astrology 的弱点
 
 | 弱点 | 说明 |
 |------|------|
-| **网站设计极其传统** | 看起来像2005年的网站 |
-| **无现代互动** | 无Quiz/App等现代工具 |
-| **内容可能过时** | 部分内容可能需要更新 |
+| **网站设计极其传统** | 看起来像2005年的网站 | https://cafeastrology.nyc/ |
+| **无现代互动** | 无Quiz/App等现代工具 | https://cafeastrology.nyc/ |
+| **内容可能过时** | 部分内容可能需要更新 | https://cafeastrology.nyc/ |
 
 ---
 

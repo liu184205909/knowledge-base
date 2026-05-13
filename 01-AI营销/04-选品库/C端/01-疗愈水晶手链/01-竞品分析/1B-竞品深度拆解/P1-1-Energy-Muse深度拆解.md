@@ -9,15 +9,15 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 位置 | 核心要点 | 适用场景 |
-|--------|------|----------|----------|
-| **Shop by Intention模式** | [§2.1 产品分类](#21-产品分类架构) | 8大意图分类（Wellness/Wealth/Protection/Calm/Love/Spirituality/Fresh Start/Personal Power），用户按需求而非水晶类型购物 | LuckyCrystals产品分类设计 |
-| **Crystal Test测试工具** | [§3.1 测试工具](#31-互动转化工具) | Crystal Test引导用户找到适合的水晶，是内容→产品转化的关键桥梁 | 设计水晶匹配测试工具 |
-| **名人背书矩阵** | [§4 品牌策略](#4-品牌信任策略) | Gabrielle Bernstein/Colette Baron-Reid等灵性领域KOL背书+媒体报道logo墙 | 品牌信任度建设 |
-| **媒体logo墙** | [§4 品牌策略](#4-品牌信任策略) | 12+主流媒体logo展示（Vogue/Forbes/Oprah等），建立品牌权威 | 首页信任元素设计 |
-| **创始人数值** | [§2.2 导航](#22-导航架构) | "Crystal Leaders with 20+ years of experience" — 创始人Heather Askinosie的Feng Shui/Healing背景 | 品牌故事构建 |
-| **邮件10%折扣** | [§5 转化漏斗](#5-转化漏斗设计) | 弹窗收集邮箱+10% off首单，Klaviyo邮件营销 | 邮件列表增长策略 |
-| **Shopify技术栈** | [§6 技术](#6-技术架构) | Shopify电商+自定义主题+Klaviyo+Google Analytics | 技术选型参考 |
+| 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
+|--------|------|----------|----------|---------|
+| **Shop by Intention模式** | [§2.1 产品分类](#21-产品分类架构) | 8大意图分类（Wellness/Wealth/Protection/Calm/Love/Spirituality/Fresh Start/Personal Power），用户按需求而非水晶类型购物 | LuckyCrystals产品分类设计 | https://www.energymuse.com/ |
+| **Crystal Test测试工具** | [§3.1 测试工具](#31-互动转化工具) | Crystal Test引导用户找到适合的水晶，是内容→产品转化的关键桥梁 | 设计水晶匹配测试工具 | https://www.energymuse.com/pages/crystal-test |
+| **名人背书矩阵** | [§4 品牌策略](#4-品牌信任策略) | Gabrielle Bernstein/Colette Baron-Reid等灵性领域KOL背书+媒体报道logo墙 | 品牌信任度建设 | https://www.energymuse.com/ |
+| **媒体logo墙** | [§4 品牌策略](#4-品牌信任策略) | 12+主流媒体logo展示（Vogue/Forbes/Oprah等），建立品牌权威 | 首页信任元素设计 | https://www.energymuse.com/ |
+| **创始人数值** | [§2.2 导航](#22-导航架构) | "Crystal Leaders with 20+ years of experience" — 创始人Heather Askinosie的Feng Shui/Healing背景 | 品牌故事构建 | https://www.energymuse.com/pages/about-gemstones |
+| **邮件10%折扣** | [§5 转化漏斗](#5-转化漏斗设计) | 弹窗收集邮箱+10% off首单，Klaviyo邮件营销 | 邮件列表增长策略 | https://www.energymuse.com/ |
+| **Shopify技术栈** | [§6 技术](#6-技术架构) | Shopify电商+自定义主题+Klaviyo+Google Analytics | 技术选型参考 | https://www.energymuse.com/ |
 
 ---
 

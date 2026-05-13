@@ -9,14 +9,14 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 位置 | 核心要点 | 适用场景 |
-|--------|------|----------|----------|
-| **月相内容节奏** | [§3.1 月相驱动内容](#31-月相驱动内容体系) | 每月满月+新月=固定内容节奏+固定流量周期 | 水晶满月仪式/新月愿望内容 |
-| **仪式型内容** | [§3.2 仪式内容模板](#32-仪式型内容模板) | 每个天文事件配套仪式指南（可复刻模板） | 设计水晶充能仪式、净化仪式等 |
-| **月历产品** | [§4.1 Moon Calendar](#41-l1-moon-astrology-calendar) | 年度月相日历（实体+数字），固定收入来源 | 设计水晶能量年度日历 |
-| **低价解读产品** | [§4.2 Lunar Readings](#42-l2-lunar-readings月相解读) | 每次$5.99的月相解读，持续产出+持续收入 | 设计每月水晶能量解读 |
-| **视频内容** | [§3.3 视频内容](#33-视频内容) | 每周塔罗视频+Cosmic Forecast视频 | TikTok/YouTube水晶内容 |
-| **创作者IP** | [§3.4 创作者IP](#34-创作者ip策略) | 创始人Tanaaz的个人品牌+多作者贡献 | 品牌创始人IP建设 |
+| 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
+|--------|------|----------|----------|---------|
+| **月相内容节奏** | [§3.1 月相驱动内容](#31-月相驱动内容体系) | 每月满月+新月=固定内容节奏+固定流量周期 | 水晶满月仪式/新月愿望内容 | https://foreverconscious.com/category/full-moon-forecasts |
+| **仪式型内容** | [§3.2 仪式内容模板](#32-仪式型内容模板) | 每个天文事件配套仪式指南（可复刻模板） | 设计水晶充能仪式、净化仪式等 | https://foreverconscious.com/category/full-moon-rituals |
+| **月历产品** | [§4.1 Moon Calendar](#41-l1-moon-astrology-calendar) | 年度月相日历（实体+数字），固定收入来源 | 设计水晶能量年度日历 | https://www.etsy.com/shop/ForeverConsciousShop |
+| **低价解读产品** | [§4.2 Lunar Readings](#42-l2-lunar-readings月相解读) | 每次$5.99的月相解读，持续产出+持续收入 | 设计每月水晶能量解读 | https://shop.foreverconscious.com/product-category/lunar-readings/ |
+| **视频内容** | [§3.3 视频内容](#33-视频内容) | 每周塔罗视频+Cosmic Forecast视频 | TikTok/YouTube水晶内容 | https://www.youtube.com/c/ForeverConscious/videos |
+| **创作者IP** | [§3.4 创作者IP](#34-创作者ip策略) | 创始人Tanaaz的个人品牌+多作者贡献 | 品牌创始人IP建设 | https://foreverconscious.com/tanaaz-chubb-biography |
 
 ---
 

@@ -9,14 +9,14 @@
 
 ## 参考索引（AI快速参考）
 
-| 参考项 | 位置 | 核心要点 | 适用场景 |
-|--------|------|----------|----------|
-| **ELLE官方占星师** | [§1 基本信息](#1-基本信息) | The AstroTwins = ELLE杂志官方占星师 | 媒体合作策略参考 |
-| **I*AM测试** | [§3.1 I*AM系统](#31-iam性格测试) | Innovator/Authority/Maven三种宇宙成功原型 | 互动测试工具参考 |
-| **每日/周/月运势矩阵** | [§3.2 运势内容矩阵](#32-运势内容矩阵) | 12星座×日/周/月×事件驱动 | 星座内容矩阵参考 |
-| **国家畅销书** | [§4.1 书籍](#41-书籍变现) | "The Astrology Advantage" 畅销书 | 出版物权威性参考 |
-| **AstroTwins Radio** | [§3.3 播客](#33-播客) | 每周播客AstroTwins Radio | 播客策略参考 |
-| **AdThrive广告** | [§4.2 广告](#42-广告变现) | AdThrive(Raptive)广告变现 | 高流量广告变现参考 |
+| 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
+|--------|------|----------|----------|---------|
+| **ELLE官方占星师** | [§1 基本信息](#1-基本信息) | The AstroTwins = ELLE杂志官方占星师 | 媒体合作策略参考 | https://astrostyle.com/ |
+| **I*AM测试** | [§3.1 I*AM系统](#31-iam性格测试) | Innovator/Authority/Maven三种宇宙成功原型 | 互动测试工具参考 | https://astrostyle.com/ |
+| **每日/周/月运势矩阵** | [§3.2 运势内容矩阵](#32-运势内容矩阵) | 12星座×日/周/月×事件驱动 | 星座内容矩阵参考 | https://astrostyle.com/ |
+| **国家畅销书** | [§4.1 书籍](#41-书籍变现) | "The Astrology Advantage" 畅销书 | 出版物权威性参考 | https://astrostyle.com/ |
+| **AstroTwins Radio** | [§3.3 播客](#33-播客) | 每周播客AstroTwins Radio | 播客策略参考 | https://astrostyle.com/ |
+| **AdThrive广告** | [§4.2 广告](#42-广告变现) | AdThrive(Raptive)广告变现 | 高流量广告变现参考 | https://astrostyle.com/ |
 
 ---
 
