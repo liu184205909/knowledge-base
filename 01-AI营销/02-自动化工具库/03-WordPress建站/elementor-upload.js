@@ -21,8 +21,18 @@
 
 const https = require('https');
 
-const SITE = 'luckycrystals.org';
-const AUTH = 'Basic ' + Buffer.from('lzn184205909@gmail.com:Yu4T lhV1 1JtP Xqpo HOvz YzGI').toString('base64');
+// ============================================================
+// 认证配置 — 从环境变量读取，不再硬编码
+// 在项目根目录创建 .env 文件（已被 .gitignore 忽略）：
+//   WP_SITE=luckycrystals.org
+//   WP_USER=your_username
+//   WP_APP_PASSWORD=xxxx xxxx xxxx xxxx xxxx xxxx
+// 运行方式：node -r dotenv/config elementor-upload.js
+// ============================================================
+const SITE = process.env.WP_SITE || 'luckycrystals.org';
+const AUTH = 'Basic ' + Buffer.from(
+  (process.env.WP_USER || '') + ':' + (process.env.WP_APP_PASSWORD || '')
+).toString('base64');
 
 // ============================================================
 // 工具函数

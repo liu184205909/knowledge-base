@@ -166,3 +166,77 @@
 [温馨提示 + FAQ]
 [底部 CTA]
 ```
+
+---
+
+## Claude Code Elementor 生成规范
+
+### 页面基础信息
+
+| 项目 | 值 |
+|------|---|
+| 页面类型 | Elementor Page |
+| REST API 端点 | `/wp-json/wp/v2/pages` |
+| 模板类型 | `wp-page` |
+| 创建方式 | 从零创建 |
+
+### 核心约束
+
+**每个 Landing Page 只有一个核心转化目标。** 不允许同时出现多个同级 CTA。
+
+| 目标类型 | CTA 示例 |
+|----------|---------|
+| 购买 | Shop Now / Add to Cart |
+| 留资 | Get Free Quote |
+| 预约 | Book a Session |
+| 下载 | Download Free Guide |
+
+### 标准 Section 结构
+
+| Section | 目标 | 推荐 Widget | 关键字段 |
+|---------|------|------------|---------|
+| **S1: Hero 首屏** | 5 秒内传达价值 | heading, text-editor, button, image | benefit_title（**利益驱动，不说"我们是谁"**）, subtitle, cta_text, cta_url, hero_image, social_proof_badge |
+| **S2: Problem → Agitate → Solve** | 痛点共鸣 | heading, text-editor, icon-box | problem_statement, pain_amplification, solution_intro |
+| **S3: Solution + Benefits（FABE）** | 核心卖点展开 | image-box, heading, text-editor | features, advantages, benefits, evidence；每个卖点用 FABE 展开 |
+| **S4: Social Proof** | 信任建设 | image, heading, text-editor, testimonial | 姓名 + 头像 + 来源 + 具体场景；**禁止匿名评价和 AI 虚构** |
+| **S5: Offer / Urgency** | 促转化 | heading, text-editor, button | offer_details, deadline, bonus_items, original_price vs offer_price |
+| **S6: FAQ** | 消除疑虑 | accordion, text-editor | 至少 5 个常见问题，覆盖价格/效果/退换/物流 |
+| **S7: Final CTA** | 最后转化 | heading, text-editor, button | 与首屏 CTA 一致，重复核心价值主张 |
+
+### 输入字段模板
+
+生成 Landing Page 前必须提供：
+
+```
+landing_page_brief:
+  offer_name:          # 产品/活动名称
+  target_audience:     # 目标用户
+  pain_point:          # 核心痛点
+  dream_result:        # 理想结果
+  primary_cta:         # 主 CTA 文案和链接
+  proof_points:        # 社会证明素材（评价/数据/案例）
+  guarantee:           # 保障承诺
+  faq:                 # 常见问题列表
+  urgency:             # 紧迫感元素（限时/限量）
+```
+
+### 数据来源规则
+
+| 内容类型 | 来源 | AI 能否生成 |
+|----------|------|-----------|
+| 利益标题 | 业务输入 + 竞品分析 | 可辅助，需人工确认 |
+| 痛点/场景 | 用户调研/评价分析 | 可辅助提炼 |
+| 卖点展开（FABE） | 产品资料 | AI 可生成文案，证据需真实 |
+| 社会证明 | 真实素材库 | 禁止 AI 虚构 |
+| 价格/优惠 | 业务配置 | 禁止 AI 编造 |
+| 保障承诺 | 业务实际政策 | 必须与实际退换政策一致 |
+| CTA 链接 | 站点实际 URL | 必须人工确认 |
+
+### 验收清单
+
+- [ ] 首屏标题是利益驱动，不是 "We are..."
+- [ ] 全页只有一个核心 CTA（同一文案重复出现可以）
+- [ ] 社会证明有姓名 + 头像 + 具体场景
+- [ ] FAQ 覆盖价格、效果、退换等关键疑虑
+- [ ] 保障承诺与实际政策一致
+- [ ] 移动端首屏可见 CTA

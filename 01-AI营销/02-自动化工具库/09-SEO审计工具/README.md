@@ -12,6 +12,16 @@
 | `onpage_seo_checker.py` | 页面级SEO检查（URL/Title/Meta/标题层级/内容质量/图片/内链/E-E-A-T） | 纯脚本 | E-E-A-T 仅为简单文本模式匹配；关键词密度为字符串匹配 |
 | `keyword_cannibalization_checker.py` | 关键词蚕食检测（从TDK提取关键词，识别多页面竞争） | 纯脚本 | 无语义分析（"best running shoes" vs "top athletic footwear" 无法识别为同义） |
 
+## 推荐商业工具
+
+| 工具 | 定位 | 核心功能 | 价格 | 适用场景 |
+|------|------|---------|------|---------|
+| **SearchAtlas** | 全能 SEO 平台 | OTTO SEO（AI 自动执行 on-page 优化）、Content Genius（AI 内容生成+优化）、LLM 可见性追踪（监控 ChatGPT/Perplexity 等是否引用你的内容）、关键词研究、反向链接分析、技术审计 | $99-$999/月 | SEO agency、内容站、SaaS 增长团队 |
+
+> SearchAtlas 的 OTTO SEO 是差异化功能——接入网站后自动执行 SEO 优化（标题/描述/Schema/内链建议），减少手动操作。LLM 可见性追踪适合关注 GEO 的项目。
+
+---
+
 ## 已安装的 SEO Skill（有功能重叠）
 
 | Skill | 来源 | 架构 | 与本目录脚本重叠 |
