@@ -126,3 +126,75 @@
 [通用型 / 参数表（折叠）]
 [底部 sticky CTA（移动端）]
 ```
+
+---
+
+## Claude Code Elementor 生成规范
+
+### 页面基础信息
+
+| 项目 | 值 |
+|------|---|
+| 页面类型 | Elementor Page（产品 Landing Page 风格）或 WooCommerce Product |
+| REST API 端点 | Elementor: `/wp-json/wp/v2/pages`；WooCommerce: `/wp-json/wc/v3/products` |
+| 模板类型 | `wp-page`（Elementor 页面）或 WooCommerce 原生产品 |
+| 创建方式 | 先区分用途再创建 |
+
+### 两种用途区分
+
+| 用途 | 说明 | 实现方式 |
+|------|------|---------|
+| **A. 产品 Landing Page** | 单品推广页，用于广告/社媒引流 | Elementor Page，完整视觉布局 |
+| **B. WooCommerce 产品页** | 电商正式产品详情页 | WooCommerce Product + 主题模板 |
+
+> 如果目标是 B，不应通过 Elementor REST API 创建普通 Page，而应操作 WooCommerce 产品数据。
+
+### 产品 Landing Page 标准 Section 结构
+
+| Section | 目标 | 推荐 Widget | 关键字段 |
+|---------|------|------------|---------|
+| **S1: Hero 产品首屏** | 第一印象 + 核心卖点 | heading, text-editor, button, image | product_name, core_benefit, price, cta_text, cta_url, main_product_image |
+| **S2: 独特型卖点（FABE）** | 选择理由 | image-box, heading, text-editor | 2-3 个核心 USP，每个用 FABE 展开 |
+| **S3: 产品细节** | 深度展示 | image, heading, text-editor, image-gallery | detail_images, materials, process |
+| **S4: Social Proof** | 购买信心 | image, heading, text-editor, testimonial | 真实评价 + UGC 图片；**禁止 AI 虚构** |
+| **S5: Complete the Look** | 提升客单价 | image-box, button | 互补产品推荐（非同类产品） |
+| **S6: 保障型卖点** | 消除顾虑 | icon-box, heading, text-editor | 退换政策、质保、物流时效；**放在 CTA 附近** |
+| **S7: FAQ（折叠）** | 解答疑虑 | accordion | 尺码、材质、养护、退换等常见问题 |
+| **S8: Final CTA** | 底部转化 | heading, button, text-editor | 与首屏 CTA 一致 |
+
+### WooCommerce 产品必填字段（用途 B）
+
+```
+product_name          # 产品名称
+price                 # 售价
+regular_price         # 原价（划线价）
+sale_price            # 促销价
+description           # 长描述
+short_description     # 短描述
+images                # 产品图库（至少 3 张）
+categories            # 产品分类 ID
+attributes            # 颜色/尺码等属性
+sku                   # SKU 编码
+stock_status          # 库存状态
+```
+
+### 数据来源规则
+
+| 内容类型 | 来源 | AI 能否生成 |
+|----------|------|-----------|
+| 产品名称/价格/SKU | WooCommerce 数据 | **禁止 AI 编造** |
+| 库存/运费 | 业务配置 | **禁止 AI 编造** |
+| 核心卖点文案 | 产品资料 + FABE 框架 | AI 可辅助组织 |
+| 产品图片 | Media Library | 必须提供 media ID |
+| 用户评价 | 真实评价 | **禁止 AI 虚构** |
+| 交叉销售产品 | WooCommerce 关联产品 | 必须来自实际数据 |
+| 退换/质保政策 | 业务实际政策 | **禁止 AI 编造** |
+
+### 验收清单
+
+- [ ] 卖点不超过 5 个（独特型 2-3 + 保障型 1-2）
+- [ ] 价格与 WooCommerce 数据一致
+- [ ] 评价来自真实素材
+- [ ] 保障型卖点出现在 CTA 附近
+- [ ] 交叉销售推荐互补产品（非同类）
+- [ ] FAQ 使用 accordion 折叠（不占大量空间）

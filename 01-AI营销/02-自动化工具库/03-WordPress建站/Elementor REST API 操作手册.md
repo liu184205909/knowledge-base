@@ -321,3 +321,79 @@ const pageData = [
 | 1 | 模板类型写错 | `section` 不是 `sections`，注意单数 |
 | 2 | 模板不显示在列表中 | 确认 `status` 为 `publish`，不是 `draft` |
 | 3 | 页面引用模板后编辑器报错 | 先确保模板本身可正常打开预览 |
+
+---
+
+## 12. 读取与更新已有页面
+
+> 真实业务中，读取和修改已有页面比从零创建更常见。
+
+### 读取页面 Elementor 数据
+
+```bash
+# 获取页面列表（找到目标页面 ID）
+GET /wp-json/wp/v2/pages?per_page=100
+
+# 读取单个页面的 Elementor 数据（必须加 ?context=edit）
+GET /wp-json/wp/v2/pages/{id}?context=edit
+```
+
+返回的 `meta._elementor_data` 字段包含完整的 Elementor JSON。
+
+### 更新已有页面
+
+```bash
+# 只更新内容，不改变页面 ID/URL
+POST /wp-json/wp/v2/pages/{id}?context=edit
+Body: {
+  "meta": {
+    "_elementor_data": "[修改后的 JSON]"
+  }
+}
+```
+
+### 常用操作场景
+
+| 场景 | 方法 | 说明 |
+|------|------|------|
+| **读取竞品/参考页面** | `GET ...?context=edit` | 提取 JSON 作为新页面参考 |
+| **修改某个 Section** | 读取 → 定位 section → 替换 → 写回 | 按 `elType` + `id` 定位 |
+| **克隆页面** | 读取旧页面 JSON → POST 新页面 → 注入数据 | slug 必须不同 |
+| **追加 Section** | 读取 → 在 JSON 数组末尾追加 → 写回 | 不要覆盖已有 sections |
+| **替换 Section** | 读取 → 找到目标 section → 替换整个对象 → 写回 | 保持 id 不变或重新生成 |
+
+### 克隆页面完整流程
+
+```javascript
+// 1. 读取源页面
+const source = await apiRequest('/wp-json/wp/v2/pages/' + sourceId + '?context=edit', 'GET');
+const elementorData = source.meta._elementor_data;
+
+// 2. 创建新页面
+const newPage = await apiRequest('/wp-json/wp/v2/pages', 'POST', {
+  title: 'Cloned: ' + source.title.rendered,
+  status: 'draft',
+  slug: 'cloned-' + Date.now(),
+  content: ''
+});
+
+// 3. 注入 Elementor 数据
+await apiRequest('/wp-json/wp/v2/pages/' + newPage.id + '?context=edit', 'POST', {
+  status: 'draft',
+  content: '',
+  meta: {
+    _elementor_data: elementorData,
+    _elementor_edit_mode: 'builder',
+    _elementor_template_type: 'wp-page'
+  }
+});
+```
+
+### 注意事项
+
+| 注意 | 说明 |
+|------|------|
+| 不要覆盖 slug | 更新内容时不要传 `slug` 字段，避免 URL 变化 |
+| 不要覆盖 featured_media | 除非明确要改，否则不传 `featured_media` |
+| 保留 SEO 字段 | `_yoast_wpseo_*` 等 meta 字段更新时要保留原值 |
+| 响应式测试 | 更新后在 `/?page_id={id}&preview=true` 检查效果 |

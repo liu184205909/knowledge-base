@@ -131,3 +131,61 @@ Solutions → Industries → Case Studies → About → Resources → Contact
 [Editor's Picks / 个性化推荐]
 [信任信号 + Footer]
 ```
+
+---
+
+## Claude Code Elementor 生成规范
+
+> B2C 首页已有实际脚本参考：`elementor-upload.js`（Homepage V3）
+
+### 页面基础信息
+
+| 项目 | 值 |
+|------|---|
+| 页面类型 | Elementor Page |
+| REST API 端点 | `/wp-json/wp/v2/pages` |
+| 模板类型 | `wp-page` |
+| 创建方式 | 从零创建（标准流程） |
+
+### B2C 首页标准 Section 结构
+
+| Section | 目标 | 推荐 Widget | 关键字段 |
+|---------|------|------------|---------|
+| **S1: Hero** | 第一印象 + 核心 CTA | heading, text-editor, button | hero_title, hero_subtitle, cta_text, cta_url, hero_image |
+| **S2: Trust Badges** | 信任快速建立 | icon-box | 4 个图标卡片，3 列→平板 2x2→手机 1 列 |
+| **S3: Products Area** | 产品展示 | wd_products_widget, wd_products_tabs | 左侧 banner + 右侧产品标签页 |
+| **S4: Shop by Intention** | 场景化导购 | image-box | 4 列→平板 2 列→手机 1 列，2 行 |
+| **S5: Testimonials** | 社会证明 | image, heading, text-editor | 3 列→平板 2 列→手机 1 列 |
+| **S6: CTA Banner** | 视差背景再次转化 | heading, text-editor, button | 全屏背景图 + 固定背景（background_attachment: fixed） |
+| **S7: Quick Shop** | 快速导购 | image-box | 4 列→平板 2 列→手机 1 列 |
+| **S8: Newsletter** | 留存 | heading, text-editor | 深色背景 |
+
+### Elementor 布局规则
+
+| 规则 | 说明 |
+|------|------|
+| 多列布局 | 纯 Flexbox：`flex_direction: 'row'` + `flex_wrap: 'wrap'`，**不用 structure** |
+| 响应式列宽 | `width: {unit:'%', size:23}` + `width_tablet: {unit:'%', size:45}` + `width_mobile: {unit:'%', size:100}` |
+| 顶层容器 | 不设 content_width，`wd_section_stretch: 'stretch'`，`isInner: false` |
+| 嵌套容器 | `content_width: 'full'`，`isInner: true` |
+| padding 值 | 必须用字符串 `"80"` 不是数字 `80` |
+
+### 数据来源规则
+
+| 内容类型 | 来源 | AI 能否生成 |
+|----------|------|-----------|
+| 标题/副标题文案 | 业务输入 | 可辅助，需人工确认语气 |
+| 产品数据 | WooCommerce 实际数据 | 禁止 AI 编造价格/库存 |
+| 用户评价 | 真实评价素材 | 禁止 AI 虚构 |
+| 图片 | Media Library 已上传 | 必须提供 media ID 或 URL |
+| CTA 链接 | 站点实际 URL | 必须人工确认 |
+
+### 验收清单
+
+- [ ] `_elementor_data` 写入成功（`?context=edit`）
+- [ ] 页面预览可访问（`/?page_id={id}&preview=true`）
+- [ ] 所有图片 200 可访问
+- [ ] 多列布局在平板/手机正确折叠
+- [ ] CTA 按钮有链接
+- [ ] 无空占位文案（如 "Lorem ipsum"）
+- [ ] 未使用 `structure` 属性

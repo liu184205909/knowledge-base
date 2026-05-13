@@ -46,7 +46,7 @@
 | [01-域名查询](01-AI营销/02-自动化工具库/01-域名查询/) | Python | 批量域名可用性与 WHOIS 排查 |
 | [02-竞品挖掘工具](01-AI营销/02-自动化工具库/02-竞品挖掘工具/) | Python | Google SERP 过滤批量挖掘独立站竞品 |
 | [03-竞品分析工具](01-AI营销/02-自动化工具库/03-竞品分析工具/) | Python | 竞品 Sitemap 结构与 URL 自动化分析 |
-| [04-WordPress建站](01-AI营销/02-自动化工具库/04-WordPress建站/) | 文档 | Elementor / WP 数据库格式 / AI 操作规则 |
+| [04-WordPress建站](01-AI营销/02-自动化工具库/03-WordPress建站/) | 文档 | Elementor / Gutenberg / WP REST API 操作规则 |
 | [05-竞品内容分析](01-AI营销/02-自动化工具库/05-竞品内容分析工具/) | Python | 批量抓取竞品博客要素、发现内容盲区 |
 | [06-WordPress插件](01-AI营销/02-自动化工具库/06-WordPress插件/) | 文档 | TranslatePress AI 翻译等插件方案 |
 | [07-数据分析工具](01-AI营销/02-自动化工具库/07-数据分析工具/) | 文档 | Google Data Studio 使用指南 |

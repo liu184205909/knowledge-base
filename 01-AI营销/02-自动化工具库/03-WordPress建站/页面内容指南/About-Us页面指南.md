@@ -60,3 +60,49 @@
 [CTA：主要 + 次要]
 [联系方式]
 ```
+
+---
+
+## Claude Code Elementor 生成规范
+
+### 页面基础信息
+
+| 项目 | 值 |
+|------|---|
+| 页面类型 | Elementor Page |
+| REST API 端点 | `/wp-json/wp/v2/pages` |
+| 模板类型 | `wp-page` |
+| 创建方式 | 从零创建 |
+
+### 标准 Section 结构
+
+| Section | 目标 | 推荐 Widget | 关键字段 |
+|---------|------|------------|---------|
+| **S1: Hero** | 品牌态度传达 | heading, text-editor, button | hero_title（**不能写"About Us"**，必须表达品牌使命或客户价值），hero_subtitle, cta_text, cta_url, hero_image |
+| **S2: Brand Story** | 情感连接 | heading, text-editor, image | founder_story 或 brand_origin；**必须包含具体时间、场景、动机，避免空话** |
+| **S3: Mission / Vision / Values** | 价值观传达 | icon-box 或 heading + text-editor | 3 列布局，移动端 1 列；`flex_direction: 'row'`，`flex_wrap: 'wrap'`，不用 structure |
+| **S4: Team** | 真实感 | image, heading, text-editor | 团队成员照片（**必须真实照片**，不用图库） |
+| **S5: Craft / Product Value** | 工艺信任 | image-box 或 image + heading + text-editor | materials, process, quality_proof |
+| **S6: Social Proof** | 第三方背书 | image, heading, text-editor | **数据来源：真实评价、媒体 logo、UGC；禁止 AI 虚构** |
+| **S7: CTA** | 引导下一步 | heading, text-editor, button | CTA 链接**必须来自站点配置或人工输入** |
+| **S8: Contact** | 联系方式 | text-editor, shortcode（如联系表单） | email, address, 社交媒体链接 |
+
+### 数据来源规则
+
+| 内容类型 | 来源 | AI 能否生成 |
+|----------|------|-----------|
+| 品牌故事 | 创始人真实经历 | 禁止 AI 编造（创始人姓名、成立年份、具体事件） |
+| 价值观文案 | 业务输入 | 可辅助润色，需人工确认 |
+| 团队照片 | 真实拍摄 | 禁止使用图库照片 |
+| 客户评价 | 真实评价素材 | 禁止 AI 虚构 |
+| 工艺/材料描述 | 业务输入 | 可辅助组织语言 |
+| CTA 链接 | 站点实际 URL | 必须人工确认 |
+
+### 验收清单
+
+- [ ] Hero 标题不是 "About Us"
+- [ ] 品牌故事包含具体细节（时间/场景/动机）
+- [ ] 所有图片有真实来源
+- [ ] 社会证明内容可追溯到真实素材
+- [ ] CTA 链接指向正确页面
+- [ ] 3 列 Values 在手机端折叠为 1 列

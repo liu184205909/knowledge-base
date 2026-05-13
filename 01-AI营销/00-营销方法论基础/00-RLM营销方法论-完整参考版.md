@@ -747,7 +747,7 @@ URL应简洁、稳定、包含关键词，并避免过深层级。
 - 网站结构体现模仿、超越、差异化策略
 - 可直接进入WordPress或其他建站系统实操
 
-**里程碑**: 网站架构确定 → 可进入WordPress建站实操（详见 [WordPress建站](../02-自动化工具库/04-WordPress建站/README.md)）
+**里程碑**: 网站架构确定 → 可进入WordPress建站实操（详见 [WordPress建站](../02-自动化工具库/03-WordPress建站/README.md)）
 
 **工具链**:
 ```bash

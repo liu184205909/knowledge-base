@@ -119,3 +119,43 @@ Step 3 - 支付信息：
 [CTA："Complete Purchase" + 加载动画]
 [信任信号：SSL + 支付 logo + 客服]
 ```
+
+---
+
+## Claude Code Elementor 生成规范
+
+### 重要说明
+
+**Checkout Page 不建议作为普通 Elementor Page 从零生成。** 它由 WooCommerce Checkout 模板、支付网关和主题控制，不是单纯写 `_elementor_data` 就能完整实现的。
+
+本文件定位为 **WooCommerce Checkout 配置优化清单**，而非 Elementor 页面生成规范。
+
+### 优化配置项
+
+| 配置项 | 位置 | 推荐值 |
+|--------|------|--------|
+| Guest Checkout | WooCommerce → Settings → Accounts | 默认开启，放最顶部 |
+| 结账流程 | WooCommerce → Settings → Advanced | 单页结账或手风琴 |
+| 支付方式 | WooCommerce → Settings → Payments | 信用卡 + PayPal + Apple Pay |
+| 表单字段 | WooCommerce → Settings → Advanced → Checkout | 隐藏 Company、Address 2 等选填字段 |
+| 运费展示 | WooCommerce → Shipping | 尽早显示，避免隐藏费用 |
+| 自动填充 | 主题/插件配置 | 启用浏览器原生 autofill + 邮编识别城市 |
+
+### Elementor Pro WooCommerce Builder（如使用）
+
+| 区域 | Elementor Widget | 说明 |
+|------|-----------------|------|
+| Checkout Form | `woocommerce-checkout` | 主结账表单 |
+| Order Summary | `woocommerce-cart` / 自定义 | 订单摘要侧栏 |
+| Trust Signals | heading, image | SSL logo + 支付方式图标 |
+| Progress Bar | heading 或 progress | Step 1/2/3 指示器 |
+
+### 验收清单
+
+- [ ] Guest Checkout 为默认选项（不强制注册）
+- [ ] 必填字段标 `*`，选填标 `(optional)`
+- [ ] 手机号旁说明用途
+- [ ] 送达日期显示具体日期（不是"2-3 天"）
+- [ ] 错误信息精确到字段级别
+- [ ] 支持多种支付方式
+- [ ] 移动端按钮 ≥ 44x44px

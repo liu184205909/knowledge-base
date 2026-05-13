@@ -124,11 +124,14 @@ python 02-竞品研究工具/sitemap_parser.py --file competitor_urls.txt
 
 **文件**：`03-WordPress建站/` 下以文档为主，含 1 个 Node.js 脚本。
 
-| 文档 | 内容 |
-|------|------|
-| `Elementor REST API 操作手册.md` | Elementor 模板创建 + Flexbox 布局 + Widget 列表 + 踩坑清单 |
-| `elementor-upload.js` | Homepage V3 页面生成与上传脚本 |
-| `页面内容指南/` | 各类页面的内容框架（RLM 步骤 2A/2B 引用） |
+| 文档 | 内容 | 适用阶段 |
+|------|------|---------|
+| `Elementor REST API 操作手册.md` | Elementor 模板创建 + Flexbox 布局 + Widget 列表 + 踩坑清单 | RLM 步骤 2B/2C（核心页面） |
+| `Gutenberg博客文章REST-API上传指南.md` | 博客文章通过 `wp-json/wp/v2/posts` 发布，Gutenberg Block HTML 格式 | RLM 步骤 3（博客文章） |
+| `elementor-upload.js` | Homepage V3 页面生成与上传脚本 | RLM 步骤 2B/2C |
+| `页面内容指南/` | 各类页面的内容框架（RLM 步骤 2A/2B 引用） | RLM 步骤 2A/2B |
+
+> **分工原则**：核心页面（首页/产品页/Landing Page）用 Elementor；博客文章（教程/指南/科普）用 Gutenberg。
 
 ---
 
