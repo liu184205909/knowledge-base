@@ -1,0 +1,114 @@
+{
+  "brand": "Tiny Rituals",
+  "domain": "tinyrituals.com",
+  "check_date": "2026-05-14 17:34:13",
+  "market": "United States",
+  "language": "en",
+  "keywords": {
+    "healing crystal bracelet": {
+      "ai_overview": {
+        "appears": false,
+        "source": "",
+        "type": "none",
+        "content": "",
+        "people_also_ask": [
+          "What crystals are good for the pancreas?",
+          "What crystal is for a healing bracelet?",
+          "What crystals are good for fibromyalgia?",
+          "What is the best crystal to wear for healing?"
+        ]
+      },
+      "brand_in_ai_overview": false,
+      "reddit": {
+        "brand_mentioned": false,
+        "mention_count": 0,
+        "top_mentions": [],
+        "total_reddit_results": 0
+      },
+      "quora": {
+        "brand_mentioned": false,
+        "mention_count": 0,
+        "top_mentions": [],
+        "total_quora_results": 0
+      },
+      "media": {
+        "media_count": 9,
+        "top_coverage": [
+          {
+            "title": "Best Sellers",
+            "url": "https://tinyrituals.co/collections/best-sellers?srsltid=AfmBOorCEsn2iJsID-WxooL-76pOY3OntD9AKc30nKdNgurOpEcJO30P",
+            "snippet": "",
+            "position": 1
+          },
+          {
+            "title": "Tiny Rituals Quartz Energy Bracelet",
+            "url": "https://www.nordstrom.com/s/quartz-energy-bracelet/8158601?srsltid=AfmBOop05PmVllN91v5JL3Ud-07CglITGpVMy5AOtBlw7DCU-2xbzKbz",
+            "snippet": "",
+            "position": 2
+          },
+          {
+            "title": "Tiny Rituals",
+            "url": "https://www.google.com/storepages?q=tinyrituals.co&c=US&v=19",
+            "snippet": "",
+            "position": 3
+          },
+          {
+            "title": "How to Find the Right Healing Bracelet for You",
+            "url": "https://tinyrituals.co/blogs/tiny-rituals/how-to-find-the-right-healing-bracelet-for-you?srsltid=AfmBOoq0GBJb-h8vFxNxIJ7fLibkLvFYmcz5GJeRwHhvW4A20EhwB0ZE",
+            "snippet": "",
+            "position": 4
+          },
+          {
+            "title": "Tiny Rituals Supplies High Quality Crystal Jewelry",
+            "url": "https://finance.yahoo.com/news/tiny-rituals-supplies-high-quality-165900154.html",
+            "snippet": "",
+            "position": 5
+          }
+        ]
+      }
+    }
+  },
+  "wikipedia": {
+    "exists": true,
+    "url": "https://en.wikipedia.org/wiki/Ceremonies_of_ancient_Greece",
+    "title": "Ceremonies of ancient Greece",
+    "snippet": ""
+  },
+  "reviews": {
+    "sites_found": [
+      {
+        "site": "trustpilot.com",
+        "title": "Read Customer Service Reviews of tinyrituals.co",
+        "url": "https://www.trustpilot.com/review/tinyrituals.co",
+        "snippet": ""
+      }
+    ],
+    "site_count": 1
+  },
+  "competitors": [
+    {
+      "competitor": "Energy Muse",
+      "comparison_count": 10,
+      "brand_mentioned": true,
+      "top_results": [
+        {
+          "title": "Crystal Bracelets: 100+ REAL Energy Gemstone Varieties!",
+          "url": "https://tinyrituals.co/collections/gemstone-bracelets?srsltid=AfmBOooa-f21Uc24r4Sr31EdzQ3jfHK6Np_siGMwk69RwbuwViQYdhUm",
+          "position": 1
+        },
+        {
+          "title": "Finding the Best Healing Crystal Bracelets for Your Journey",
+          "url": "https://evolvemala.com/blogs/1/best-healing-crystal-bracelets?srsltid=AfmBOoqOXFx1EmIovHdYbHiTG69jqhiY6nir7k_z8cdstf8g8KxIzJvi",
+          "position": 2
+        },
+        {
+          "title": "Tiny Rituals Positive Energy Bracelet for Men & Women",
+          "url": "https://www.amazon.com/Tiny-Rituals-Positive-Energy-Bracelet/dp/B0CRPS8VRZ",
+          "position": 3
+        }
+      ]
+    }
+  ],
+  "api_calls_used": 7,
+  "duration_seconds": 29
+}

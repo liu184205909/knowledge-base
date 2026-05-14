@@ -1,6 +1,6 @@
 # 02-自动化工具库
 
-> 服务于 RLM 营销流程的自动化脚本与工具集合 | 最后更新: 2026-05-09
+> 服务于 RLM 营销流程的自动化脚本与工具集合 | 最后更新: 2026-05-14
 
 ---
 
@@ -18,6 +18,7 @@
 | **08** | SEMrush 数据采集 | 竞品 AS/流量/截图批量采集（已整合到 02-竞品研究工具） | `semrush_to_sheets.py`（在02下） |
 | **09** | SEO 审计工具 | 技术SEO审计 + On-Page SEO评分 + 关键词蚕食检测 | `seo_technical_auditor.py` `onpage_seo_checker.py` `keyword_cannibalization_checker.py` |
 | **10** | 用户洞察工具 | 采集 Reddit/竞品评论 → 分类分析 → 选题/痛点/购买意向挖掘 | `reddit_comment_collector.py` `comment_insight_analyzer.py` |
+| **11** | GEO 可见性检查 | 7维度检查品牌在 AI 生态中的可见性信号（Reddit/Quora/评价站/Wikipedia/媒体/竞品对比） | `geo_visibility_checker.py` |
 
 ---
 
@@ -50,6 +51,7 @@
 09-SEO审计工具/seo_technical_auditor.py               ← 技术SEO审计
 09-SEO审计工具/onpage_seo_checker.py                  ← On-Page SEO评分
 09-SEO审计工具/keyword_cannibalization_checker.py     ← 关键词蚕食检测
+11-GEO可见性检查/geo_visibility_checker.py            ← GEO可见性检查（选品评估 + 定期监测）
 ```
 
 ### 4. 数据驱动阶段（有流量后）
@@ -57,6 +59,7 @@
 ```text
 06-数据分析工具/                            ← Data Studio 仪表盘
 10-用户洞察工具/comment_insight_analyzer.py  ← 评论/反馈分析 → 驱动下一轮内容
+11-GEO可见性检查/geo_visibility_checker.py  ← 定期跑 GEO 可见性，跟踪变化趋势
 ```
 
 ---
@@ -69,6 +72,11 @@ pip install requests beautifulsoup4 lxml pandas tqdm
 
 # 域名查询
 pip install python-whois
+
+# GEO 可见性检查（需要 DataForSEO API 凭证）
+# 复用 DataForSEO MCP 配置的账号
+# export DFS_API_LOGIN=your_login
+# export DFS_API_PASSWORD=your_password
 ```
 
 ---
@@ -399,6 +407,7 @@ python 10-用户洞察工具/comment_insight_analyzer.py \
    - SEO 技术审计与评分（09）
    - 用户评论采集与分类（10）
    - 关键词数据批量获取（02 semrush_to_sheets.py）
+   - GEO 可见性信号检查（11）
 
 ❌ 不适合自动化的环节：
    - 内容写作（应逐段人工打磨，参见 05-指令库/指令9-10）
@@ -412,7 +421,46 @@ python 10-用户洞察工具/comment_insight_analyzer.py \
 
 ---
 
+## 11 GEO 可见性检查
+
+> 详细文档见 [11-GEO可见性检查/README.md](11-GEO可见性检查/README.md)
+
+### 11A 可见性信号采集：`geo_visibility_checker.py`
+
+7 维度检查品牌在 AI 生态中的可见性信号：AI Overview、Reddit、Quora、评价网站、Wikipedia、媒体报道、竞品对比。
+
+**前置条件**：DataForSEO API 凭证（复用 MCP 配置账号）
+
+```bash
+export DFS_API_LOGIN=your_login
+export DFS_API_PASSWORD=your_password
+
+# 基本用法
+python 11-GEO可见性检查/geo_visibility_checker.py \
+  --brand "Crystal Healing" \
+  --domain "crystalhealing.com" \
+  --keywords "healing crystal bracelet"
+
+# 带竞品
+python 11-GEO可见性检查/geo_visibility_checker.py \
+  --brand "Crystal Healing" \
+  --domain "crystalhealing.com" \
+  --keywords "healing crystal bracelet" "crystal bracelet meaning" \
+  --competitors "Energy Muse" "Tiny Rituals"
+```
+
+输出：
+- `results/geo_visibility_<brand>_<time>.md`：可读报告
+- `results/geo_visibility_<brand>_<time>.json`：结构化数据（供 Layer 2 分析）
+
+### 11B Layer 2 分析（Claude Code）
+
+将 JSON 交给 Claude Code，自动生成可见性评分 + 差距分析 + 行动建议 → 写入 Google Sheets。
+
+---
+
 ## 删除历史说明
 
 > 本目录在 2026-04-12 `commit 64ee06e` 中被整体删除，原因是历次文档重构中将文件标注为"已迁移/已整合"但未真正搬移，导致内容逐步流失。2026-04-13 根据 git 日志完整恢复，并补建从未提交过的竞品挖掘和分析脚本。
 > 2026-05-09 合并原 02-竞品挖掘工具 和 03-竞品分析工具 为 02-竞品研究工具；新增 04-竞品内容分析工具 2 个检测脚本；新增 09-SEO审计工具（技术审计 + On-Page + 关键词蚕食）；新增 10-用户洞察工具。
+> 2026-05-14 新增 11-GEO可见性检查（7维度 AI 生态可见性信号采集 + Layer 2 LLM 分析）。
