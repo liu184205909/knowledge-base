@@ -1,27 +1,6 @@
 # Claude Code 环境配置
 
-> 换电脑恢复指南 | 最后更新: 2026-05-10
-
----
-
-## 恢复步骤
-
-向 Claude Code 发送：
-
-```
-请按照 00-基础能力/01-Claude-Code环境配置.md 中的模板，帮我完成环境初始化。
-我的智谱 API Key 是：xxx
-```
-
-Claude Code 会自动完成：检测依赖 → 创建配置文件 → 安装 MCP → 安装 Skills。
-
----
-
-## MCP 服务器配置
-
-> `{{API_KEY}}` = 智谱 API Key。通过 `claude mcp add` 安装到用户级。
-
-### 必装 MCP
+## 必装 MCP
 
 | MCP | 安装命令 | 用途 |
 |-----|---------|------|
@@ -141,6 +120,24 @@ npx skills list -g
 | 安全审查 | **skill-vetter** | 安装前检查 |
 
 > Skill 探索: [skills.sh](https://skills.sh/) | [agentskills.so](https://agentskills.so) | [clawhub.ai](https://clawhub.ai)
+
+### CLI 工具（钉钉/飞书）
+
+```bash
+# 钉钉 Workspace CLI — 163条命令，14个产品（聊天/文档/表格/日历/OA等）
+# 仓库: https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli
+npm install -g dingtalk-workspace-cli
+dws auth login                    # OAuth 登录（浏览器扫码）
+dws pat authorize                 # PAT 授权（聊天/文档等需要）
+# 可选：安装 Agent Skills 到 ~/.claude/skills/dws/
+dws skill install
+
+# 飞书 CLI — 飞书开放平台命令行工具
+# 仓库: https://github.com/larksuite/cli
+# 安装方式见仓库 README
+```
+
+> dws 常用命令速查：`dws chat message list --group <conversationId> --limit 50` 读群聊 | `dws doc read --node <docId>` 读文档 | `dws aitable record query --base-id <id> --table-id <id> --limit 50` 读多维表
 
 ### 备选工具（未安装）
 
