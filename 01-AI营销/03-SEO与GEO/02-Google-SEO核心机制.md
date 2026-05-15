@@ -246,6 +246,19 @@ Google 官方说 HCU 评估"内容是否为人写的"，三源真相：
 - About 页、作者信息、schema、sameAs、真实业务证据
 - Google Quality Rater Guidelines Section 2.5.2
 
+### HCU 传导机制（API Leak 证据）
+
+```
+HCU classifier → CompressedQualitySignals → scaledSelectionTierRank → 页面被分配到低 tier（如 Landfills）
+```
+
+- HCU 打击是**断崖式**的——不是慢慢下降，而是从索引层面直接被过滤掉
+- 放进 Landfills 后，检索阶段不会调出，NavBoost 数据归零，排名消失
+- Shaun Anderson（hobo-web.co.uk）对数十个 HCU 受害站分析证实：核心问题是 Entity Health 和 Trust 缺失，不是某篇文章写得好不好
+- 2024年10月 Google Creator Summit 上，搜索 VP Pandu Nayak 承认受影响站长的内容本身没有问题
+
+> 补充来源：鸭老师SEO —「Google能评判内容质量吗？」
+
 ### Synthetic Gap（Tom Capper / Moz）
 
 HCU 受害者共性：**Domain Authority 远高于 Brand Authority**（DA:BA = 2:1+）。
