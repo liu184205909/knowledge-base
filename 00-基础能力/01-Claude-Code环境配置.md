@@ -101,6 +101,20 @@ npx clawhub@latest install image-generation
 npx skills list -g
 ```
 
+### ⚠️ 第三方 Skill 安全提醒
+
+> Snyk ToxicSkills 审计（2026.02）：3984 个公开 Skill 中，**13.4% 含 critical issue**，**36.8% 含至少一种安全问题**，确认 **76 个恶意 Skill**。（来源：[Snyk Blog](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/)）
+
+**风险**：Skill 可捆绑脚本、注入上下文、在触发时执行真实动作（上传 env、外传代码、插入恶意命令）— 性质等同于 npm 供应链风险。
+
+**安全措施**：
+1. 安装前用 `skill-vetter` 审查（已配置）
+2. 优先使用 Anthropic 官方或高 Star 仓库的 Skill
+3. 审查 Skill 内的 `scripts/` 目录，确认无可疑命令
+4. 公司级使用应建立 Skill 白名单和沙箱执行权限
+
+---
+
 ### Skill 速查
 
 | 场景 | Skill | 触发词 |

@@ -6,6 +6,33 @@
 
 ## 🔖 项目列表
 
+### free-llm-api-resources
+
+**GitHub**: https://github.com/cheahjs/free-llm-api-resources
+
+**简介**: 汇总所有可通过 API 合法免费使用的 LLM 推理资源，21K+ Stars，排除不合规/逆向接口
+
+**核心价值**: 零成本调用主流大模型 API，用于 N8N 工作流、自动化脚本、原型验证
+
+**亮点资源**:
+
+| 分类 | 平台 | 免费额度 | 备注 |
+|------|------|---------|------|
+| 永久免费 | Google AI Studio (Gemini) | 25万 token/分钟 | 官方渠道，个人项目首选 |
+| 永久免费 | Groq (Llama 3.1 8B) | 14,400次请求/天 | 极低延迟，对响应速度敏感的场景 |
+| 试用赠金 | Baseten | $30 额度 | 按算力计费，赠金最高档 |
+| 试用赠金 | AI21 / Upstage | 各 $10，3个月有效 | 适合不紧不慢做实验 |
+| 试用赠金 | Scaleway | 100万免费 token | 支持 Qwen3、Llama 3.3 70B |
+
+**特点**:
+- 覆盖 Llama、Qwen、DeepSeek、Gemini、Mistral、Phi 等主流系列
+- 每个服务商的速率限制、注意事项均标注清楚
+- 400+ 次提交持续更新，社区活跃
+
+**适用场景**: N8N/自动化脚本调 LLM、原型验证、零成本内容批量生成
+
+---
+
 ### ERPNext
 
 **GitHub**: https://github.com/frappe/erpnext
