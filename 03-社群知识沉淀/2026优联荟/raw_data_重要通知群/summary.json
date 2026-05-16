@@ -1,0 +1,15 @@
+{
+  "dirName": "重要通知群",
+  "totalMessages": 13,
+  "batches": 1,
+  "dateRange": {
+    "from": "2026-05-13 09:00:49",
+    "to": "2026-05-13 09:47:30"
+  },
+  "dailyCounts": [
+    {
+      "date": "2026-05-13",
+      "count": 13
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "time": "2026-05-13 09:47:30",
+    "content": "不过为什么优联荟敢说\n\n这是我觉得，我学习的能力，我进化的速度也比一般人快\n\n现在解决一个问题，按照我这套方法，基本都能快速解决了，比人专业强多了，而且速度还快\n\n但是在解决一个具体方法之前，还有一个叫，**如何正确的学习**\n\n我还是举一个例子，没有加入优联荟之前，大家搭建工作流都是一节一节的搭建， 你很努力，但是没用\n\n但是加入优联荟之后，我们告诉你，让ai来搭建，用mcp来搭建，告诉你正确提问和输出，ai就能自己搭建一个漂亮的工作流，有问题，就截图给ai，这种方式和你原先的方法，是天壤之别\n\n类似这样的有很多，很多你看似很努力，其实不过是别人一句话，就可以完全转变你的工作质量\n\n所以，我们的价值在这里",
+    "openMessageId": "msgC6nOuy5bBTb8mqoSyy2D/g=="
+  },
+  {
+    "time": "2026-05-13 09:43:03",
+    "content": "培训机构只会回答你一个具体的问题，根本不会教你如何真正解决一套系统性的学习方法的策略\n因为大家如果都学到了这套方法，培训也没用了",
+    "openMessageId": "msgbm8JhpNHTHoegFnx2LN55A=="
+  },
+  {
+    "time": "2026-05-13 09:41:51",
+    "content": "上面这套，绝对是学习的底层逻辑\n\n一般培训机构是不可能告诉你的",
+    "openMessageId": "msgSELqLClOI9YOBIshkCBisQ=="
+  },
+  {
+    "time": "2026-05-13 09:40:34",
+    "content": "剩下的，你要做2个事\n\n第一：安装下行业的数据，类似softime，或者卖家精灵的mcp，或者cli，因为大模型在厉害，也要结合我们行业数据来判断，这个我们专题也讲过\n\n第二：你要学会提一个好问题\n\n什么是好问题，背景，问题，卡点（你害怕什么，你最坏的结果是什么） 这些提前了解，那么你就可以大胆的干",
+    "openMessageId": "msgoxcqcLo3LweGluIn+q0LEw=="
+  },
+  {
+    "time": "2026-05-13 09:37:40",
+    "content": "这些方法我全部在今年的专题里面都讲过，\n\n大家也可以想想，我上面这套方法，我可以说非常非常牛逼，能高效运用这套方法的人，绝对能力会再延伸一个新的台阶",
+    "openMessageId": "msgpVdkUEvMp0FxXjvmoccZCA=="
+  },
+  {
+    "time": "2026-05-13 09:36:01",
+    "content": "再有一个更厉害的，配合下\n\n还有notebooklm倒入的笔记，你不需要一篇篇倒入，比如你想了解YouTube上所有的视频讲到亚马逊算法，亚马逊广告，那么你可以用工具导入批量导入到相关的notebooklm 笔记中\n\n地址：[https://chromewebstore.google.com/detail/youtube-to-notebooklm/kobncfkmjelbefaoohoblamnbackjggk/reviews](https://chromewebstore.google.com/detail/youtube-to-notebooklm/kobncfkmjelbefaoohoblamnbackjggk/reviews)![图片](@lQLPJwlALAQhoQ3NA_LNCnqwBPNC4aMkFCYJ2Vy62GUBAA)",
+    "openMessageId": "msgeZmSPdM22eqCym3e5HRIHQ=="
+  },
+  {
+    "time": "2026-05-13 09:30:47",
+    "content": "当然如果你不信任Google的gemini 你想要更好的大模型，比如cluade code 或者GPT5.5的大模型\n\n那么你只要安装一个skill，叫notebooklm-py （这个我们在专题里面也说了）\n\n地址：https://github.com/teng-lin/notebooklm-py\n\n这个skill能把你notebooklm的笔记和claude code 打通，也就是授权之后，可以直接让claude code 回答你notebooklm笔记里面的问题",
+    "openMessageId": "msg7L3CUByAwsga9SJbYpnXtw=="
+  },
+  {
+    "time": "2026-05-13 09:26:53",
+    "content": "第二步：notebooklm是基于，你的知识库的内容来学习，也就是你的知识库的笔记如果是很权威，那么回答的内容就很权威，很有质量，如果你给他的内容很垃圾，他回答的内容也很垃圾\n\n这就是为什么内容质量要刷选，然后倒入\n\n有了严格的内容质量之后，如果只是用notebooklm来问问题，他只局限在他自己的知识库中的内容来回答你，不够有延伸性，\n\n那怎么办？\n\n1️⃣，可以直接把notebooklm的笔记和Google gemini打通![图片](@lQLPKGqstIGUmC3NBpTNCw6wt3RcWFTf8xEJ2Vqovi5HAA)![图片](@lQLPJxeIVz1cdy3NAYrNBLiwljHf6DzKQNEJ2VqovZbsAA)",
+    "openMessageId": "msgPtm6cYJymUD5iQGItN2BaQ=="
+  },
+  {
+    "time": "2026-05-13 09:20:31",
+    "content": "第一：用notebooklm，把亚马逊的规则都丢进去，保证你接下来做任何事情，不要违反规则。\n\nnotebooklm里面可以建立很多笔记本，比如选品的笔记本，广告的笔记本，listing优化的笔记本。。。。\n\n每个笔记本下都是一个垂直的内容，这些垂直的内容，你先从官方的链接倒入\n\n比如亚马逊广告，你不会打，官方是不是有教程，有说明，有禁止你怎么做，有鼓励你怎么做，他的教学指南都写的很清楚，你直接倒入\n\n倒入之后，那么接下来你在notebooklm中问他的所有问题，他都严格按照官方的回答来回答，这个就是保证你的执行不出错\n\n这是第一步",
+    "openMessageId": "msgl/1HyeonDdtKx8nZ2R4spg=="
+  },
+  {
+    "time": "2026-05-13 09:18:19",
+    "content": "第一：等人回复肯定是有延迟的，大家现在都在做自己的事，现在真不如问ai 来的速度快\n\n而且这种方法，也都是老的学习方法了，已经跟不上了\n\n第二：那具体问题怎么解决，我有一个比较好的方法\n\n1️⃣我建议一定要买个claude，最好max 套餐， 或者codex都可以，这是目前市面上最强的大模型，不会嫌弃你不懂，不会说你笨，你问多少次，他都很耐心， 而且他能力非常强\n\n2️⃣ 保证你做的所有事，都符合规则\n\n什么意思，你不懂的问题，肯定害怕处理错，但是如果你所有的方法都满足官方的要求来执行，那么错的概率非常低\n\n怎么做？",
+    "openMessageId": "msg9igcYAa5Tso8mfFHDxyFMw=="
+  },
+  {
+    "time": "2026-05-13 09:14:17",
+    "content": "有同学问到这个问题，好问题\n\n我回答下哈",
+    "openMessageId": "msgH87nJjDtM4AG1nhMUxMD6g=="
+  },
+  {
+    "time": "2026-05-13 09:13:57",
+    "content": "![图片](@lQLPJx2mfbTPxg3NAtTNBVKwz0axeqCXdbYJ2Vezfby9AA)",
+    "openMessageId": "msg5q8+aaE9knq08DCbBQSFjQ=="
+  },
+  {
+    "time": "2026-05-13 09:00:49",
+    "content": "各位老登们，要不要看下这个视频？ [傻笑]  https://v.douyin.com/BRQVZSYZXvg/",
+    "openMessageId": "msgw6S104Gm4wl2NhFtUgUPAA=="
+  }
+]
