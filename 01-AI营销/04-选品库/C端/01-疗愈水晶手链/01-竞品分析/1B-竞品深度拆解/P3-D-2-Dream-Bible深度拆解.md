@@ -2,7 +2,7 @@
 
 > **竞品URL**: https://www.dreambible.com
 > **分析日期**: 2026-05-04
-> **优先级**: P3-D（梦境方向 — 6406符号+ChatGPT辅助+注册商标参考）
+> **参考价值**: （梦境方向 — 6406符号+ChatGPT辅助+注册商标参考）
 > **研究重点**: 6406在线符号、ChatGPT辅助研究、Gillian Holloway Ph.D启发、多国注册
 
 ---

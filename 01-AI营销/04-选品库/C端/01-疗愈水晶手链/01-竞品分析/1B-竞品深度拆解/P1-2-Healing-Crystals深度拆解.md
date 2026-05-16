@@ -2,7 +2,7 @@
 
 > **竞品URL**: https://www.healingcrystals.com
 > **分析日期**: 2026-05-03
-> **优先级**: P1（网站架构、水晶百科模式、内容+电商模式）
+> **参考价值**: （网站架构、水晶百科模式、内容+电商模式）
 > **研究重点**: 多维标签系统、Metaphysical Guide百科、批发模式、联盟营销、内容资源体系
 
 ---
@@ -252,13 +252,13 @@ Education and the Use of Crystals to Support Healing'."
 
 ### 6.1 可直接借鉴的
 
-| 借鉴项 | 具体做法 | 优先级 |
+| 借鉴项 | 具体做法 |
 |--------|---------|--------|
-| **"By Condition"标签** | 按症状分类（Anxiety/Sleep/Love等），命中用户搜索意图 | P0 |
-| **Metaphysical Guide** | 创建完整的水晶百科页面，每种水晶详细解读 | P0 |
-| **Crystal Grid Kits** | 水晶阵套装+配套指南，增加客单价 | P1 |
-| **联盟营销** | 建立Affiliate Program，让灵性博客导流 | P2 |
-| **Newsletter Archive** | 通讯存档增加内容量和SEO | P2 |
+| **"By Condition"标签** | 按症状分类（Anxiety/Sleep/Love等），命中用户搜索意图 |
+| **Metaphysical Guide** | 创建完整的水晶百科页面，每种水晶详细解读 |
+| **Crystal Grid Kits** | 水晶阵套装+配套指南，增加客单价 |
+| **联盟营销** | 建立Affiliate Program，让灵性博客导流 |
+| **Newsletter Archive** | 通讯存档增加内容量和SEO |
 
 ### 6.2 需要差异化超越的
 

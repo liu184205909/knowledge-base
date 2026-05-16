@@ -2,7 +2,7 @@
 
 > **竞品URL**: https://thehoodwitch.com / https://www.thehoodwitch.com
 > **分析日期**: 2026-05-04
-> **优先级**: P3-E（灵性方向 — 现代巫术美学+星座运势+月相仪式+时尚风格参考）
+> **参考价值**: （灵性方向 — 现代巫术美学+星座运势+月相仪式+时尚风格参考）
 > **研究重点**: Bri Luna创始人、Lisa Stardust占星师合作、"Everyday magic for the modern mystic"定位、Squarespace平台、Witch Tips & Horoscopes系列
 
 ---

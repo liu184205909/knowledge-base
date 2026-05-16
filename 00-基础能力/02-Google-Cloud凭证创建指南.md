@@ -4,15 +4,29 @@
 
 ---
 
-## 第一步：创建 Google Cloud 项目
+## 快速参考
+
+| 项 | 值 |
+|---|---|
+| 授权账号 | `lzn184205909@gmail.com` |
+| OAuth 应用状态 | **Production**（已发布） |
+| redirect URI | `http://localhost:8000/oauth2callback` |
+| 凭证文件 | `~/.google_workspace_mcp/credentials/lzn184205909@gmail.com.json` |
+| 代理 | `http://127.0.0.1:10808` |
+
+> **关键**：所有 Google Workspace MCP 工具的 `user_google_email` 必须用 `lzn184205909@gmail.com`。
+
+---
+
+## 创建指南（首次配置）
+
+### 第一步：创建 Google Cloud 项目
 
 1. 访问 [console.cloud.google.com](https://console.cloud.google.com)，登录 Google 账号
 2. 左上角项目选择器 → **新建项目** → 填项目名（如 `seo-tools`）→ **创建**
 3. 再次点击项目选择器 → **选中刚创建的项目**
 
----
-
-## 第二步：启用 API
+### 第二步：启用 API
 
 ☰ → **API 和服务** → **库**，逐个搜索并启用：
 
@@ -25,58 +39,42 @@
 
 可选：`Google Search Console API`、`Google Analytics Data API`
 
----
-
-## 第三步：配置 OAuth 同意屏幕
+### 第三步：配置 OAuth 同意屏幕
 
 ☰ → **API 和服务** → **OAuth 同意屏幕**
 
 1. 应用名称填 `SEO Tools`，用户支持邮箱选你的 Gmail → **下一步**
-2. 保持测试模式 → **下一步**
+2. 选择 **External** → **下一步**
 3. 联系邮箱填你的 Gmail → **下一步** → **创建**
-4. 左侧 **目标对象** → 测试用户 → **+ 添加用户** → 输入你的 Gmail → **添加**
+4. **发布为 Production**（Production 模式下 refresh_token 永久有效，6 个月不用才失效）
 
-> 测试模式下只有添加的用户才能授权。建议后续发布为 **Production** 模式（见 Token 刷新方案章节）。
+发布路径：Google Cloud Console → APIs & Services → OAuth consent screen → **PUBLISH APP**
 
----
-
-## 第四步：创建 OAuth 客户端
+### 第四步：创建 OAuth 客户端
 
 ☰ → **API 和服务** → **凭据** → **+ 创建凭据** → **OAuth 客户端 ID**
 
 1. 应用类型选 **Web 应用**（不是桌面应用）
 2. 名称填 `seo-tools-client`
-3. 已获授权的重定向 URI：添加 `http://localhost:8000/oauth2callback`
-4. 已获授权的 JavaScript 来源：添加 `http://localhost:8000`
-5. 点击 **创建**
-6. 弹窗中点击 **下载 JSON** → 保存到 `C:\Users\你的用户名\.claude\gsc-oauth.json`
+3. 已获授权的重定向 URI：`http://localhost:8000/oauth2callback`
+4. 已获授权的 JavaScript 来源：`http://localhost:8000`
+5. 点击 **创建** → 下载 JSON 保存
 
-> **为什么必须选 Web 应用？** workspace-mcp 的回调地址是 `http://localhost:8000/oauth2callback`，桌面应用不支持自定义 redirect path，会导致 `redirect_uri_mismatch`。
+> **为什么必须选 Web 应用？** MCP 的回调地址是 `http://localhost:8000/oauth2callback`，桌面应用不支持自定义 redirect path。
 
----
-
-## 第五步：环境变量
+### 第五步：环境变量
 
 ```powershell
-# 必须
 [System.Environment]::SetEnvironmentVariable("GOOGLE_OAUTH_CLIENT_ID", "JSON中的client_id", "User")
 [System.Environment]::SetEnvironmentVariable("GOOGLE_OAUTH_CLIENT_SECRET", "JSON中的client_secret", "User")
 [System.Environment]::SetEnvironmentVariable("OAUTHLIB_INSECURE_TRANSPORT", "1", "User")
-
-# GSC 可选
-[System.Environment]::SetEnvironmentVariable("GSC_AUTH_MODE", "oauth", "User")
-[System.Environment]::SetEnvironmentVariable("GSC_OAUTH_SECRETS_FILE", "C:\Users\$env:USERNAME\.claude\gsc-oauth.json", "User")
-[System.Environment]::SetEnvironmentVariable("GSC_SITE_URL", "sc-domain:luckycrystals.org", "User")
 ```
 
-> 设置后必须重启 VSCode。验证：`[System.Environment]::GetEnvironmentVariable("GOOGLE_OAUTH_CLIENT_ID", "User")`
+> 设置后必须重启 VSCode。
 
----
-
-## MCP 安装
+### 第六步：MCP 安装
 
 ```bash
-# Google Workspace（必须）— 含代理环境变量（大陆用户）
 claude mcp add -s user google-workspace \
   -e GOOGLE_OAUTH_CLIENT_ID=你的客户端ID \
   -e GOOGLE_OAUTH_CLIENT_SECRET=你的客户端密钥 \
@@ -84,9 +82,6 @@ claude mcp add -s user google-workspace \
   -e HTTPS_PROXY=http://127.0.0.1:10808 \
   -e HTTP_PROXY=http://127.0.0.1:10808 \
   -- uvx workspace-mcp --tools drive sheets docs gmail --tool-tier core
-
-# GSC（可选）
-claude mcp add -s user gsc -- npx -y gsc-mcp-server
 ```
 
 ---
@@ -157,42 +152,66 @@ def build_http():
 
 ---
 
-## Token 刷新方案
+## Token 管理
 
-### 问题链路
-
-```
-access_token 过期（1小时）→ MCP 刷新 → 请求 Google → 没走代理 → 失败 → 要求重新授权
-```
-
-### 凭证文件
+### 完整故障链路
 
 ```
-~/.google_workspace_mcp/credentials/<邮箱>.json
+access_token 过期（1小时）
+  → MCP 尝试刷新 → 请求 Google → 没走代理 → 失败
+  → MCP 要求重新授权 → 浏览器授权成功
+  → MCP 交换 auth code → 也没走代理 → 凭证没保存
+  → 死循环
 ```
 
-### 一键刷新脚本
+### 三种修复方式（按场景选择）
+
+#### 方式 1：刷新 Token（日常维护）
 
 ```powershell
 python C:\Users\Dylan\tools\refresh_google_token.py
 ```
 
-脚本自动：扫描凭证目录 → 通过代理（`127.0.0.1:10808`）刷新 → 更新凭证文件。
+当 access_token 过期但 refresh_token 仍有效时使用。通过代理刷新，1 分钟搞定。
+
+#### 方式 2：完整重新授权（refresh_token 失效时）
+
+```powershell
+python C:\Users\Dylan\tools\refresh_google_token.py --reauth
+```
+
+`--reauth` 流程：打开浏览器 → 用户授权 → 复制地址栏回调 URL 粘贴到终端 → 脚本通过代理交换 Token → 保存凭证。复用 MCP 的 redirect URI，无需改 Google Cloud Console。
+
+#### 方式 3：绕过 MCP 直接用 curl（MCP 死活不认 Token 时）
+
+当 MCP 内部 OAuth 状态和凭证文件不同步，外部写入的 Token 不被 MCP 识别时：
+
+```bash
+# 1. 生成授权 URL（用凭证文件中的 client_id）
+# 2. 用户浏览器授权，复制回调 URL
+# 3. 通过代理交换 Token
+curl -s --proxy http://127.0.0.1:10808 -X POST "https://oauth2.googleapis.com/token" \
+  --data-urlencode "client_id=你的ID" \
+  --data-urlencode "client_secret=你的密钥" \
+  --data-urlencode "code=授权码" \
+  --data-urlencode "grant_type=authorization_code" \
+  --data-urlencode "redirect_uri=http://localhost:8000/oauth2callback"
+
+# 4. 拿到 access_token 后直接调用 Google API
+curl -s --proxy http://127.0.0.1:10808 \
+  "https://sheets.googleapis.com/v4/spreadsheets/表格ID/values/Sheet1!A1:Z10" \
+  -H "Authorization: Bearer 你的access_token"
+```
+
+> **核心原理**：MCP 的代理补丁只覆盖了 `googleapiclient` 的 API 调用，不覆盖 OAuth 库内部的 token 交换。所以只要涉及 OAuth 握手的环节都可能失败。用 curl + proxy 绕过是最可靠的。
 
 ### 标准工作流
 
 ```
-写入 Google 前先运行 refresh_google_token.py → 再调用 MCP → Token 有效期 1 小时
+每次会话开始 → python refresh_google_token.py → 调用 MCP（1小时内有效）
+刷新失败（invalid_grant）→ python refresh_google_token.py --reauth
+MCP 仍不认 Token → 方式 3：curl + proxy 直接调 API
 ```
-
-### OAuth 发布模式
-
-| 模式 | Refresh Token 有效期 |
-|------|---------------------|
-| Testing（默认） | 7 天，需定期浏览器重新授权 |
-| **Production（推荐）** | 永久（6 个月不用才失效） |
-
-发布路径：Google Cloud Console → APIs & Services → OAuth consent screen → **PUBLISH APP**
 
 ---
 
@@ -204,11 +223,11 @@ python C:\Users\Dylan\tools\refresh_google_token.py
 | `The OAuth client was deleted` | 环境变量指向已删除的旧凭证 | 用 JSON 文件中的值同时更新环境变量和 MCP 配置 |
 | MCP 与环境变量凭证不一致 | `claude mcp add -e` 和 PowerShell `SetEnvironmentVariable` 是两套独立配置 | 统一使用 JSON 文件中的值 |
 | `WinError 10060` / `SSLEOFError` | 代理补丁未打 | 按上面"代理补丁"完整执行 |
-| 反复弹出 OAuth 授权 | `user_google_email` 参数与已授权账号不一致 | 必须使用 `lzn184205909@gmail.com`（已授权账号） |
+| 反复弹出 OAuth 授权 | `user_google_email` 参数与已授权账号不一致 | 必须使用 `lzn184205909@gmail.com` |
 | "此应用未经验证"警告 | 正常 | 点"高级" → "前往（不安全）"继续 |
 | Token 不到 1 小时就失效 | MCP 的 token 刷新没走代理 | 运行 `refresh_google_token.py` |
-
-> **关键**：调用所有 Google Workspace MCP 工具时，`user_google_email` 必须用 `lzn184205909@gmail.com`。
+| `invalid_grant` (Token expired or revoked) | refresh_token 被撤销/失效 | 运行 `refresh_google_token.py --reauth` |
+| 浏览器授权成功但 MCP 仍要求重新授权 | MCP 内部 OAuth 状态管理不认外部写入的 Token | 用方式 3（curl + proxy）绕过 MCP |
 
 ---
 
