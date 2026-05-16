@@ -6,9 +6,71 @@
 
 ---
 
+## 当前状态
+
+| 项目 | 状态 |
+|------|------|
+| CLIProxyAPI 服务 | **已关闭**（免费账号不支持图片生成） |
+| Codex 接入 | **已断开**（config.toml 中已注释） |
+| 账号等级 | Free（升级 Plus/Pro 后可开启） |
+
+**前置条件：ChatGPT 账号需为 Plus 或 Pro，免费版无图片生成权限（会返回 403）。**
+
+---
+
 ## 简介
 
-CLIProxyAPI 是一个本地代理服务器，将 OpenAI Codex/Claude/Gemini 等 AI 服务封装为 OpenAI 兼容的 API 接口。在图片生成场景中作为**后备方案**使用，当主工具（如 Nano Banana、picset）不可用时可切换到此方案。
+CLIProxyAPI 是一个本地代理服务器，将 OpenAI Codex/Claude/Gemini 等 AI 服务封装为 OpenAI 兼容的 API 接口。在日常工作中，当需要生成产品图等图片时，可通过此代理让 Codex 调用 OpenAI 的图片生成能力。
+
+作为**后备方案**使用，主工具为 Nano Banana / picset。
+
+---
+
+## 关键文件位置
+
+| 文件 | 路径 |
+|------|------|
+| CLIProxyAPI 配置 | `C:\Users\Dylan\.cli-proxy-api\config.yaml` |
+| OAuth 认证凭证 | `C:\Users\Dylan\.cli-proxy-api\codex-lzn184205909@gmail.com-free.json` |
+| Codex 接入配置 | `C:\Users\Dylan\.codex\config.toml` |
+| 可执行文件 | `C:\Users\Dylan\AppData\Local\Temp\cliproxyapi-install-8de77ca6eed84e8d9cdfdbb0338ad377\cli-proxy-api.exe` |
+
+---
+
+## 开启/关闭操作
+
+### 开启（升级 Plus/Pro 后）
+
+1. **启动 CLIProxyAPI 服务**：双击 `cli-proxy-api.exe` 或在终端运行
+2. **恢复 Codex 配置**：编辑 `~/.codex/config.toml`，取消注释并添加：
+
+```toml
+model = "gpt-5.5"
+model_provider = "cliproxyapi"
+
+[model_providers.cliproxyapi]
+name = "CLIProxyAPI"
+base_url = "http://127.0.0.1:8317/v1"
+wire_api = "responses"
+env_key = "OPENAI_API_KEY"
+```
+
+3. **重启 Codex** 使配置生效
+
+### 关闭（当前状态）
+
+编辑 `~/.codex/config.toml`，注释掉 `model_provider` 和 `[model_providers.cliproxyapi]` 整段：
+
+```toml
+model = "gpt-5.5"
+# model_provider = "cliproxyapi"
+
+# [model_providers.cliproxyapi]
+# name = "CLIProxyAPI"
+# base_url = "http://127.0.0.1:8317/v1"
+# wire_api = "responses"
+# env_key = "OPENAI_API_KEY"
+```
 
 ---
 
@@ -33,35 +95,13 @@ api-keys:
   - "sk-local-你的密钥"
 ```
 
-### 2. Codex 接入配置
-
-在 `~/.codex/config.toml` 中配置自定义 provider：
-
-```toml
-model = "gpt-5.5"
-model_provider = "cliproxyapi"
-
-[model_providers.cliproxyapi]
-name = "CLIProxyAPI"
-base_url = "http://127.0.0.1:8317/v1"
-wire_api = "responses"
-env_key = "OPENAI_API_KEY"
-```
-
-**注意**：Codex 使用 `env_key`（指向环境变量名），而非直接写 `api_key`。
-
-### 3. 设置环境变量
+### 2. 环境变量
 
 将 config.yaml 中的 api-keys 值设为系统环境变量：
 
 **Windows（PowerShell）**：
 ```powershell
 [System.Environment]::SetEnvironmentVariable("OPENAI_API_KEY", "sk-local-你的密钥", "User")
-```
-
-**macOS/Linux**：
-```bash
-export OPENAI_API_KEY="sk-local-你的密钥"
 ```
 
 设置后需**打开新终端窗口**才能生效。
@@ -85,6 +125,7 @@ curl http://127.0.0.1:8317/v1/images/generations \
 
 ## 注意事项
 
-- 免费版 ChatGPT 账号可能有权限/配额限制，遇到 403 错误时需确认账号等级
-- OAuth 凭证文件存储在 `~/.cli-proxy-api/` 目录下，包含 `chatgpt_plan_type` 字段标识账号等级
+- **免费版 ChatGPT 账号无图片生成权限**，会返回 403 错误，需升级 Plus/Pro
+- OAuth 凭证文件名中的 `free` 后缀标识账号等级（如 `xxx@gmail.com-free.json`）
 - 服务需保持运行状态，关机或关闭终端后代理不可用
+- 升级账号后需重新通过 CLIProxyAPI 的 OAuth 登录刷新凭证

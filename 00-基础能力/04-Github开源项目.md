@@ -1,304 +1,22 @@
 # 推荐开源项目收藏
 
-> **优质GitHub项目集合** | 持续更新 | 最后更新：2026-03-02
+> **优质GitHub项目集合** | 持续更新 | 最后更新：2026-05-15
 
 ---
 
-## 🔖 项目列表
+## 分类导航
 
-### free-llm-api-resources
-
-**GitHub**: https://github.com/cheahjs/free-llm-api-resources
-
-**简介**: 汇总所有可通过 API 合法免费使用的 LLM 推理资源，21K+ Stars，排除不合规/逆向接口
-
-**核心价值**: 零成本调用主流大模型 API，用于 N8N 工作流、自动化脚本、原型验证
-
-**亮点资源**:
-
-| 分类 | 平台 | 免费额度 | 备注 |
-|------|------|---------|------|
-| 永久免费 | Google AI Studio (Gemini) | 25万 token/分钟 | 官方渠道，个人项目首选 |
-| 永久免费 | Groq (Llama 3.1 8B) | 14,400次请求/天 | 极低延迟，对响应速度敏感的场景 |
-| 试用赠金 | Baseten | $30 额度 | 按算力计费，赠金最高档 |
-| 试用赠金 | AI21 / Upstage | 各 $10，3个月有效 | 适合不紧不慢做实验 |
-| 试用赠金 | Scaleway | 100万免费 token | 支持 Qwen3、Llama 3.3 70B |
-
-**特点**:
-- 覆盖 Llama、Qwen、DeepSeek、Gemini、Mistral、Phi 等主流系列
-- 每个服务商的速率限制、注意事项均标注清楚
-- 400+ 次提交持续更新，社区活跃
-
-**适用场景**: N8N/自动化脚本调 LLM、原型验证、零成本内容批量生成
-
----
-
-### ERPNext
-
-**GitHub**: https://github.com/frappe/erpnext
-
-**简介**: 100%免费开源的企业资源计划系统（ERP）
-
-**核心功能**: 财务、销售、采购、库存、制造、人力资源、客户关系、项目管理
-
-**特点**:
-- 用户友好且可定制
-- 低代码/无代码构建器
-- API优先设计
-- 多子公司、多币种支持
-
-**适用场景**: 中小型企业资源管理
-
----
-
-### Fluent-M3U8
-
-**GitHub**: https://github.com/zhiyiYo/Fluent-M3U8
-
-**简介**: 跨平台M3U8流媒体下载工具
-
-**特点**:
-- 跨平台（Windows/macOS/Linux）
-- 多线程并发下载
-- 支持AES-128-CBC解密
-- 批量任务管理
-
-**适用场景**: 视频下载和流媒体处理
-
----
-
-### Vibe
-
-**GitHub**: https://github.com/thewh1teagle/vibe
-
-**简介**: 跨平台本地语音转录利器，基于 OpenAI Whisper 模型实现全离线音频/视频转录
-
-**核心功能**: 音频转录、视频转录、实时转录、多语言识别、说话人分离
-
-**特点**:
-- 全离线处理，数据本地完成，隐私安全
-- 支持100+种语言，可翻译为英文
-- 全格式兼容（MP4/MP3/MKV等），导出SRT/VTT/PDF等
-- GPU加速（Nvidia/AMD/Intel），转录速度提升3-5倍
-- 支持视频网站链接解析、麦克风/系统音频实时转录
-- AI增强拓展（Claude API、Ollama本地分析）
-- 跨平台（Windows/macOS/Linux）
-
-**适用场景**: 会议记录、视频字幕、语音笔记、内容转录
-
----
-
-### PlainApp
-
-**GitHub**: https://github.com/plainhub/plain-app
-
-**简介**: 用浏览器远程控制安卓手机的开源工具，手机变自托管服务器，无需数据线。替代 QtScrcpy/AirDroid 的免费方案。
-
-**核心功能**: 文件管理、收发短信、查看通讯录/通话记录、屏幕镜像（支持声音）、P2P聊天与跨网文件传输、DLNA/Chromecast投屏
-
-**特点**:
-- 无云、无账号、无广告，数据本地或端到端加密（XChaCha20-Poly1305）
-- 4.1K+ star，Google Play 下载超百万
-- 纯浏览器访问，免安装客户端
-- 内置 Markdown 笔记、RSS 阅读器、番茄钟等实用工具
-- 支持跨网穿透，不限于同一局域网
-
-**适用场景**: 手机电脑互传文件、无线投屏、短信电脑端管理、隐私优先的设备互联
-
----
-
-### ebook2audiobook
-
-**GitHub**: https://github.com/DrewThomasson/ebook2audiobook
-
-**简介**: 将电子书一键转换为有声读物的开源工具，支持1100+种语言
-
-**核心功能**:
-- 电子书转有声书（支持epub、pdf、mobi、txt等20+格式）
-- 语音克隆（可上传自己的声音样本）
-- 智能章节划分
-- 多语言支持（1100+种语言）
-
-**特点**:
-- 全离线处理，隐私安全
-- 跨平台支持（Windows/macOS/Linux）
-- GPU加速，转换速度快
-- 输出m4b格式，包含完整章节信息
-
-**快速使用**:
-```bash
-# 克隆项目
-git clone https://github.com/DrewThomasson/ebook2audiobook.git
-cd ebook2audiobook
-
-# Linux/macOS
-./ebook2audiobook.sh
-
-# Windows
-ebook2audiobook.cmd
-```
-
-**适用场景**: 碎片化学习、通勤听书、技术文档转音频
-
----
-
-
-### Voicebox
-
-**GitHub**: https://github.com/jamiepine/voicebox
-
-**简介**: 本地优先的开源语音克隆桌面应用，免费版 ElevenLabs，支持声音克隆、文本转语音、音频后期处理与多轨叙事编辑，全程不上云
-
-**核心功能**: 声音克隆、文本转语音（TTS）、多轨叙事编辑、音频后期处理、本地API服务
-
-**特点**:
-- 17.4K+ star
-- 全本地运行，隐私安全，无需联网
-- 基于 Tauri (Rust) + React 构建，跨平台（macOS/Windows/Linux）
-- 支持多种语音引擎（Qwen3-TTS等）
-- 提供本地 API 接口，可二次集成
-- 几秒音频样本即可克隆声音
-- GPU加速（CUDA/Metal/XPU），CPU兼容运行
-
-**系统要求**: 8GB+内存（推荐16GB），5GB+存储空间
-
-**快速使用**:
-```bash
-# 开发部署
-git clone https://github.com/jamiepine/voicebox.git
-cd voicebox
-just setup
-just dev
-
-# API 调用示例
-curl -X POST http://localhost:17493/generate \
-  -H "Content-Type: application/json" \
-  -d '{"text": "Hello world", "profile_id": "abc123", "language": "en"}'
-```
-
-**适用场景**: 视频配音、有声书制作、播客制作、语音克隆、内容创作
-
----
-
-### BuilderPulse
-
-**GitHub**: https://github.com/builderpulse/builderpulse
-
-**简介**: 每日精选 AI 创业者资讯报告，通过 GitHub 仓库每日自动发布，帮独立开发者和创业者快速获取行业动态
-
-**核心功能**: 每日 AI 创业新闻精选、趋势分析、工具与产品推荐
-
-**特点**:
-- 全自动内容生成，每日定时发布
-- 覆盖 AI 创业、独立开发、SaaS 等领域
-- 通过 GitHub Issues/Releases 分发，订阅方便
-- 可作为行业信息源，辅助选题和趋势判断
-
-**适用场景**: 行业信息获取、选题灵感、趋势追踪
-
----
-
-### video-use
-
-**GitHub**: https://github.com/browser-use/video-use
-
-**简介**: Claude Code Skill，用自然语言剪辑视频，自动去口癖、加字幕、调色，完全免费开源
-
-**核心功能**: 自动剪辑、去口头禅、自动调色、烧录字幕、音频淡入淡出、动画叠加、渲染自评
-
-**特点**:
-- 来自 browser-use 团队，Claude Code 原生 Skill
-- LLM 不看视频帧，通过音频转录（12KB 文本）+ 按需视觉合成图剪辑，节省 token
-- 支持 ElevenLabs Scribe 逐词时间戳 + 说话人分离
-- 渲染后自动自评（画面跳变、音频爆音、字幕遮挡），不通过则自动修复
-- 会话持久化（project.md），支持中断续剪
-
-**依赖**: Python、ffmpeg、ElevenLabs API Key（可选）
-
-**快速使用**:
-```bash
-git clone https://github.com/browser-use/video-use
-cd video-use
-ln -s "$(pwd)" ~/.claude/skills/video-use
-pip install -e .
-brew install ffmpeg
-```
-然后进入素材文件夹，对 Claude Code 说：`将这些素材剪辑成一条发布视频`
-
-**适用场景**: 短视频制作、播客剪辑、口播去口癖、自媒体内容生产
-
----
-
-### system_prompts_leaks
-
-**GitHub**: https://github.com/asgeirtj/system_prompts_leaks
-
-**简介**: 收集主流 AI 产品系统提示词的开放仓库，涵盖 ChatGPT、Claude、Gemini、Grok、Codex、Perplexity 等，40K+ Stars
-
-**核心价值**:
-- 按产品分类收录完整的 system prompt，持续更新
-- 学习顶级 AI 公司如何设计"好的 AI 行为"
-- 为自建 Skill/System Prompt 提供设计参考
-
-**关键设计模式**（从泄露的 prompt 中提炼）:
-
-| 模式 | 说明 | 典型产品 |
+| 分类 | 数量 | 典型项目 |
 |------|------|---------|
-| 人格与生产分离 | 人格描述和行为规范独立维护 | ChatGPT（GPT-5） |
-| 权限分层 | 工具调用需要显式授权 | Claude Code |
-| 安全边界条件触发 | 遇特定输入时切换安全模式 | Claude、Gemini |
-| 多 Agent 协作 | 不同角色分工协作 | Codex |
-| 迭代式输出控制 | 分步骤输出而非一次性生成 | Perplexity |
-
-**适用场景**: Skill/System Prompt 设计参考、Prompt 工程学习、AI 行为研究
+| [AI 营销工具](#ai-营销工具) | 6 | Fooocus、Nanobrowser、CloakBrowser |
+| [AI 开发工具](#ai-开发工具) | 2 | superpowers-zh、system_prompts_leaks |
+| [通用效率工具](#通用效率工具) | 7 | ERPNext、PlainApp、Vibe |
 
 ---
 
-### superpowers-zh
+## AI 营销工具
 
-**GitHub**: https://github.com/jnMetaCode/superpowers-zh
-
-**简介**: 178K Stars 的 `superpowers` 中文本地化版本。编码纪律型 Skill 集合，核心理念："AI 缺的不是能力而是纪律"
-
-**核心功能**: 14 个核心 Skill + 6 个中文本地化 Skill，覆盖代码规范、测试纪律、安全审查、架构决策
-
-**特点**:
-- 自动上下文激活（根据项目语言、文件类型自动触发）
-- 强调纪律 > 能力：不教 AI 怎么写代码，而是约束 AI 怎么交付代码
-- 与本知识库 `02-Skill设计与管理.md` 的"三层结构（触发→执行→验收）"理念高度一致
-
-**快速使用**:
-```bash
-npx superpowers-zh
-```
-
-**适用场景**: AI 编码纪律强化、Skill 设计参考、团队代码规范自动化
-
----
-
-### Telegram-Drive
-
-**GitHub**: https://github.com/caamer20/Telegram-Drive
-
-**简介**: 把 Telegram 账号变成无限、安全的私人云盘，开源跨平台桌面应用
-
-**核心功能**: 无限云存储、媒体流播放、PDF阅读器、拖拽上传、文件夹管理、缩略图预览
-
-**特点**:
-- 利用 Telegram API，将 "Saved Messages" 和私有 Channel 作为文件夹
-- 媒体文件可直接流式播放，无需下载
-- 高性能虚拟滚动，数千文件即时加载
-- 隐私优先：API 密钥和数据留在本地，无第三方服务器
-- 自动更新（Windows/macOS/Linux）
-- 2.5K+ Stars，MIT 协议
-
-**技术栈**: Tauri (Rust) + React + TypeScript + TailwindCSS + Vite
-
-**适用场景**: 个人轻量化资料存储、多端文件同步、替代付费网盘
-
-**备注**: 适合个人场景；团队场景建议群晖等 NAS 方案。另有 VPN 优化版本：[Telegram-Drive-ForVPNs](https://github.com/caamer20/Telegram-Drive-ForVPNs)
-
----
+> 内容生产、数据采集、素材生成等营销场景
 
 ### Fooocus
 
@@ -398,4 +116,305 @@ npm install cloakbrowser    # Node.js
 
 ---
 
-**最后更新**: 2026-05-12
+### video-use
+
+**GitHub**: https://github.com/browser-use/video-use
+
+**简介**: Claude Code Skill，用自然语言剪辑视频，自动去口癖、加字幕、调色，完全免费开源
+
+**核心功能**: 自动剪辑、去口头禅、自动调色、烧录字幕、音频淡入淡出、动画叠加、渲染自评
+
+**特点**:
+- 来自 browser-use 团队，Claude Code 原生 Skill
+- LLM 不看视频帧，通过音频转录（12KB 文本）+ 按需视觉合成图剪辑，节省 token
+- 支持 ElevenLabs Scribe 逐词时间戳 + 说话人分离
+- 渲染后自动自评（画面跳变、音频爆音、字幕遮挡），不通过则自动修复
+- 会话持久化（project.md），支持中断续剪
+
+**依赖**: Python、ffmpeg、ElevenLabs API Key（可选）
+
+**快速使用**:
+```bash
+git clone https://github.com/browser-use/video-use
+cd video-use
+ln -s "$(pwd)" ~/.claude/skills/video-use
+pip install -e .
+brew install ffmpeg
+```
+然后进入素材文件夹，对 Claude Code 说：`将这些素材剪辑成一条发布视频`
+
+**适用场景**: 短视频制作、播客剪辑、口播去口癖、自媒体内容生产
+
+---
+
+### free-llm-api-resources
+
+**GitHub**: https://github.com/cheahjs/free-llm-api-resources
+
+**简介**: 汇总所有可通过 API 合法免费使用的 LLM 推理资源，21K+ Stars，排除不合规/逆向接口
+
+**核心价值**: 零成本调用主流大模型 API，用于 N8N 工作流、自动化脚本、原型验证
+
+**亮点资源**:
+
+| 分类 | 平台 | 免费额度 | 备注 |
+|------|------|---------|------|
+| 永久免费 | Google AI Studio (Gemini) | 25万 token/分钟 | 官方渠道，个人项目首选 |
+| 永久免费 | Groq (Llama 3.1 8B) | 14,400次请求/天 | 极低延迟，对响应速度敏感的场景 |
+| 试用赠金 | Baseten | $30 额度 | 按算力计费，赠金最高档 |
+| 试用赠金 | AI21 / Upstage | 各 $10，3个月有效 | 适合不紧不慢做实验 |
+| 试用赠金 | Scaleway | 100万免费 token | 支持 Qwen3、Llama 3.3 70B |
+
+**特点**:
+- 覆盖 Llama、Qwen、DeepSeek、Gemini、Mistral、Phi 等主流系列
+- 每个服务商的速率限制、注意事项均标注清楚
+- 400+ 次提交持续更新，社区活跃
+
+**适用场景**: N8N/自动化脚本调 LLM、原型验证、零成本内容批量生成
+
+---
+
+### BuilderPulse
+
+**GitHub**: https://github.com/builderpulse/builderpulse
+
+**简介**: 每日精选 AI 创业者资讯报告，通过 GitHub 仓库每日自动发布，帮独立开发者和创业者快速获取行业动态
+
+**核心功能**: 每日 AI 创业新闻精选、趋势分析、工具与产品推荐
+
+**特点**:
+- 全自动内容生成，每日定时发布
+- 覆盖 AI 创业、独立开发、SaaS 等领域
+- 通过 GitHub Issues/Releases 分发，订阅方便
+- 可作为行业信息源，辅助选题和趋势判断
+
+**适用场景**: 行业信息获取、选题灵感、趋势追踪
+
+---
+
+## AI 开发工具
+
+> AI 编程辅助、Prompt 工程、Skill 设计
+
+### superpowers-zh
+
+**GitHub**: https://github.com/jnMetaCode/superpowers-zh
+
+**简介**: 178K Stars 的 `superpowers` 中文本地化版本。编码纪律型 Skill 集合，核心理念："AI 缺的不是能力而是纪律"
+
+**核心功能**: 14 个核心 Skill + 6 个中文本地化 Skill，覆盖代码规范、测试纪律、安全审查、架构决策
+
+**特点**:
+- 自动上下文激活（根据项目语言、文件类型自动触发）
+- 强调纪律 > 能力：不教 AI 怎么写代码，而是约束 AI 怎么交付代码
+- 与本知识库 `02-Skill设计与管理.md` 的"三层结构（触发→执行→验收）"理念高度一致
+
+**快速使用**:
+```bash
+npx superpowers-zh
+```
+
+**适用场景**: AI 编码纪律强化、Skill 设计参考、团队代码规范自动化
+
+---
+
+### system_prompts_leaks
+
+**GitHub**: https://github.com/asgeirtj/system_prompts_leaks
+
+**简介**: 收集主流 AI 产品系统提示词的开放仓库，涵盖 ChatGPT、Claude、Gemini、Grok、Codex、Perplexity 等，40K+ Stars
+
+**核心价值**:
+- 按产品分类收录完整的 system prompt，持续更新
+- 学习顶级 AI 公司如何设计"好的 AI 行为"
+- 为自建 Skill/System Prompt 提供设计参考
+
+**关键设计模式**（从泄露的 prompt 中提炼）:
+
+| 模式 | 说明 | 典型产品 |
+|------|------|---------|
+| 人格与生产分离 | 人格描述和行为规范独立维护 | ChatGPT（GPT-5） |
+| 权限分层 | 工具调用需要显式授权 | Claude Code |
+| 安全边界条件触发 | 遇特定输入时切换安全模式 | Claude、Gemini |
+| 多 Agent 协作 | 不同角色分工协作 | Codex |
+| 迭代式输出控制 | 分步骤输出而非一次性生成 | Perplexity |
+
+**适用场景**: Skill/System Prompt 设计参考、Prompt 工程学习、AI 行为研究
+
+---
+
+## 通用效率工具
+
+> 日常办公、设备互联、内容处理等非 AI 场景
+
+### ERPNext
+
+**GitHub**: https://github.com/frappe/erpnext
+
+**简介**: 100%免费开源的企业资源计划系统（ERP）
+
+**核心功能**: 财务、销售、采购、库存、制造、人力资源、客户关系、项目管理
+
+**特点**:
+- 用户友好且可定制
+- 低代码/无代码构建器
+- API优先设计
+- 多子公司、多币种支持
+
+**适用场景**: 中小型企业资源管理
+
+---
+
+### PlainApp
+
+**GitHub**: https://github.com/plainhub/plain-app
+
+**简介**: 用浏览器远程控制安卓手机的开源工具，手机变自托管服务器，无需数据线。替代 QtScrcpy/AirDroid 的免费方案。
+
+**核心功能**: 文件管理、收发短信、查看通讯录/通话记录、屏幕镜像（支持声音）、P2P聊天与跨网文件传输、DLNA/Chromecast投屏
+
+**特点**:
+- 无云、无账号、无广告，数据本地或端到端加密（XChaCha20-Poly1305）
+- 4.1K+ star，Google Play 下载超百万
+- 纯浏览器访问，免安装客户端
+- 内置 Markdown 笔记、RSS 阅读器、番茄钟等实用工具
+- 支持跨网穿透，不限于同一局域网
+
+**适用场景**: 手机电脑互传文件、无线投屏、短信电脑端管理、隐私优先的设备互联
+
+---
+
+### Telegram-Drive
+
+**GitHub**: https://github.com/caamer20/Telegram-Drive
+
+**简介**: 把 Telegram 账号变成无限、安全的私人云盘，开源跨平台桌面应用
+
+**核心功能**: 无限云存储、媒体流播放、PDF阅读器、拖拽上传、文件夹管理、缩略图预览
+
+**特点**:
+- 利用 Telegram API，将 "Saved Messages" 和私有 Channel 作为文件夹
+- 媒体文件可直接流式播放，无需下载
+- 高性能虚拟滚动，数千文件即时加载
+- 隐私优先：API 密钥和数据留在本地，无第三方服务器
+- 自动更新（Windows/macOS/Linux）
+- 2.5K+ Stars，MIT 协议
+
+**技术栈**: Tauri (Rust) + React + TypeScript + TailwindCSS + Vite
+
+**适用场景**: 个人轻量化资料存储、多端文件同步、替代付费网盘
+
+**备注**: 适合个人场景；团队场景建议群晖等 NAS 方案。另有 VPN 优化版本：[Telegram-Drive-ForVPNs](https://github.com/caamer20/Telegram-Drive-ForVPNs)
+
+---
+
+### Vibe
+
+**GitHub**: https://github.com/thewh1teagle/vibe
+
+**简介**: 跨平台本地语音转录利器，基于 OpenAI Whisper 模型实现全离线音频/视频转录
+
+**核心功能**: 音频转录、视频转录、实时转录、多语言识别、说话人分离
+
+**特点**:
+- 全离线处理，数据本地完成，隐私安全
+- 支持100+种语言，可翻译为英文
+- 全格式兼容（MP4/MP3/MKV等），导出SRT/VTT/PDF等
+- GPU加速（Nvidia/AMD/Intel），转录速度提升3-5倍
+- 支持视频网站链接解析、麦克风/系统音频实时转录
+- AI增强拓展（Claude API、Ollama本地分析）
+- 跨平台（Windows/macOS/Linux）
+
+**适用场景**: 会议记录、视频字幕、语音笔记、内容转录
+
+---
+
+### Voicebox
+
+**GitHub**: https://github.com/jamiepine/voicebox
+
+**简介**: 本地优先的开源语音克隆桌面应用，免费版 ElevenLabs，支持声音克隆、文本转语音、音频后期处理与多轨叙事编辑，全程不上云
+
+**核心功能**: 声音克隆、文本转语音（TTS）、多轨叙事编辑、音频后期处理、本地API服务
+
+**特点**:
+- 17.4K+ star
+- 全本地运行，隐私安全，无需联网
+- 基于 Tauri (Rust) + React 构建，跨平台（macOS/Windows/Linux）
+- 支持多种语音引擎（Qwen3-TTS等）
+- 提供本地 API 接口，可二次集成
+- 几秒音频样本即可克隆声音
+- GPU加速（CUDA/Metal/XPU），CPU兼容运行
+
+**系统要求**: 8GB+内存（推荐16GB），5GB+存储空间
+
+**快速使用**:
+```bash
+# 开发部署
+git clone https://github.com/jamiepine/voicebox.git
+cd voicebox
+just setup
+just dev
+
+# API 调用示例
+curl -X POST http://localhost:17493/generate \
+  -H "Content-Type: application/json" \
+  -d '{"text": "Hello world", "profile_id": "abc123", "language": "en"}'
+```
+
+**适用场景**: 视频配音、有声书制作、播客制作、语音克隆、内容创作
+
+---
+
+### ebook2audiobook
+
+**GitHub**: https://github.com/DrewThomasson/ebook2audiobook
+
+**简介**: 将电子书一键转换为有声读物的开源工具，支持1100+种语言
+
+**核心功能**:
+- 电子书转有声书（支持epub、pdf、mobi、txt等20+格式）
+- 语音克隆（可上传自己的声音样本）
+- 智能章节划分
+- 多语言支持（1100+种语言）
+
+**特点**:
+- 全离线处理，隐私安全
+- 跨平台支持（Windows/macOS/Linux）
+- GPU加速，转换速度快
+- 输出m4b格式，包含完整章节信息
+
+**快速使用**:
+```bash
+# 克隆项目
+git clone https://github.com/DrewThomasson/ebook2audiobook.git
+cd ebook2audiobook
+
+# Linux/macOS
+./ebook2audiobook.sh
+
+# Windows
+ebook2audiobook.cmd
+```
+
+**适用场景**: 碎片化学习、通勤听书、技术文档转音频
+
+---
+
+### Fluent-M3U8
+
+**GitHub**: https://github.com/zhiyiYo/Fluent-M3U8
+
+**简介**: 跨平台M3U8流媒体下载工具
+
+**特点**:
+- 跨平台（Windows/macOS/Linux）
+- 多线程并发下载
+- 支持AES-128-CBC解密
+- 批量任务管理
+
+**适用场景**: 视频下载和流媒体处理
+
+---
+
+**最后更新**: 2026-05-15

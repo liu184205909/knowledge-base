@@ -20,7 +20,11 @@ Desktop.ini
 __pycache__/
 *.pyc
 
-# Temporary files
+# Codex global config (local only)
+.codex/
+
+# Temporary/generated files
 *.tmp
 *.bak
 *.log
+lc_pages.json
