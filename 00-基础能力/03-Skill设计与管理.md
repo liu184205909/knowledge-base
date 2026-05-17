@@ -1,6 +1,6 @@
 # Skill 设计与管理
 
-> **Skill 设计哲学、自建方法与协作模式** | 最后更新：2026-05-11
+> **Skill 设计哲学、自建方法与协作模式** | 最后更新：2026-05-17
 
 > 安装命令和速查表见 [01-Claude-Code环境配置](./01-Claude-Code环境配置.md#skill-安装)
 
@@ -95,7 +95,9 @@
 | > 30 个 | 明显下降 | 开始误触发 |
 | 200 个 | ~20% | 速度极慢，Token 消耗爆炸 |
 
-> **建议**：常年保持在 **30 个以下**。
+> **建议**：常年保持在 **30 个以下**（同层平铺）。
+>
+> **例外**：如果用分类树结构组织（如 `seo/technical/robots`、`seo/on-page/title`），每层独立索引，总数量可以突破 30。kostja94/marketing-skills 用此方式管理 160+ Skills，靠目录隔离避免误触发。代价是索引层 token 消耗随 Skills 数量线性增长。
 >
 > **值不值建**：高频、**错不起**、做起来费劲。占一条就值得建，三条全占价值百万。
 
@@ -134,7 +136,7 @@
 
 ### 1.5 Script + LLM 双层架构
 
-> 来源：JeffLi1993/seo-audit-skill（作者手动审计几十个网站后提炼的架构）
+> 来源：JeffLi1993/seo-audit-skill 初版提出 → [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo)（650+ ⭐）生产级验证。20+ Python 脚本做确定性检查，LLM 只做语义判断，是此架构最完整的实践。
 
 **核心洞察**：审计类任务中，80% 是机械重复的确定性检查，20% 需要语义判断。把它们混在一起会让 LLM 瞎编事实，或让纯脚本漏掉理解。
 
@@ -154,6 +156,53 @@ Layer 1（Python 脚本）        Layer 2（LLM Agent）
 - 脚本做不了的判断才交给 LLM，不要让 LLM 做"文件存不存在"这种事
 
 **适用场景**：SEO 审计、代码审查、合规检查、数据验证 — 任何"大部分可机械化 + 小部分需要理解"的任务。
+
+### 1.6 GitHub 高星仓库验证的高级模式
+
+> 来源：AgriciDaniel/claude-seo（650+ ⭐）、claude-ads、kostja94/marketing-skills（160+ Skills）实际代码分析。以下模式都在生产环境中验证过。
+
+| 模式 | 说明 | 适用场景 | 来源 |
+|------|------|---------|------|
+| **编排器 + 子 Skills** | 一个主 Skill 只做编排调度，内部拆成多个 sub-skill，审计时并行触发 | 审计、分析类复杂任务 | claude-seo：1 主 + 16 sub-skills + 11 subagents |
+| **置信度加权评分** | 多数据源时，每个源赋予不同置信度（如 Moz 0.85 > Common Crawl 0.50）；数据不足时报"INSUFFICIENT DATA"而非编造分数 | 多数据源聚合、评分体系 | claude-seo 外链分析 |
+| **Quality Gates（硬规则）** | 不可违反的规则，触发时强制阻断。如"location page 50+ 硬停"、"Broad Match 必须配 Smart Bidding" | 规模化生成时的安全阀 | claude-seo / claude-ads |
+| **行业模板 + 自动检测** | 根据页面信号自动识别行业（SaaS/电商/本地），加载对应基准和模板 | 跨行业通用工具 | claude-ads：11 个行业模板 |
+| **交付前自检清单** | Skill 完成分析后，强制跑一遍自检（如"JS 渲染页面不能报 link_removed"、"schema 声明是否验证"），通过才输出 | 审计报告、分析报告 | claude-seo Pre-Delivery Review |
+| **按需加载 reference** | 参考文档不放正文，运行层按需 `read`，避免正文层膨胀 | 知识密集型 Skill | claude-ads：23 个 RAG 参考文件 |
+| **扩展插件系统** | 核心 Skill 不依赖外部 MCP，但检测到可选 MCP 时自动增强（如 DataForSEO/Firecrawl） | 开闭原则：核心可用、扩展增强 | claude-seo 的 extensions/ |
+
+**编排器模式详解**（最值得借鉴的架构）：
+
+```
+/seo audit <url>
+    ├── 检测行业类型（SaaS / 电商 / 本地 / 出版 / 代理）
+    ├── 并行启动子代理：
+    │   ├── seo-technical  → 技术SEO（9类检查）
+    │   ├── seo-content    → E-E-A-T + 内容质量
+    │   ├── seo-schema     → Schema 检测 + 验证
+    │   ├── seo-performance→ Core Web Vitals
+    │   ├── seo-geo        → AI 搜索优化
+    │   └── [条件触发] seo-local / seo-backlinks / seo-google
+    ├── 收集结果 → 统一 SEO Health Score (0-100)
+    └── 输出优先级行动清单（Critical > High > Medium > Low）
+```
+
+**关键设计决策**：
+- 子代理条件触发（local business 才启动 seo-local，有 API 凭证才启动 seo-google）— 避免无意义的空跑
+- 评分权重公开透明（Technical 22% / Content 23% / On-Page 20% / Schema 10% / CWV 10% / GEO 10% / Images 5%）— 可审计
+- 子 Skill 失败时报告部分结果 + 标记失败项，而非整体报错 — 容错
+
+**置信度加权详解**（解决"多源数据冲突"问题）：
+
+```
+因子          | 权重  | 数据源偏好                    | 置信度
+referring域数  | 20%  | DataForSEO > Moz > CC in-degree | 1.0 / 0.85 / 0.50
+域名质量分布   | 20%  | DataForSEO > Moz DA distribution| 1.0 / 0.85
+锚文本自然度   | 15%  | DataForSEO > Moz > Bing anchors | 1.0 / 0.85 / 0.70
+毒性链接比     | 20%  | DataForSEO > Moz spam score     | 1.0 / 0.85
+```
+
+数据充分性门槛：4+ 因子有数据才出数字分数，否则报 `INSUFFICIENT DATA` + 显示已有因子。**永远不用低置信度数据冒充高分**。
 
 ---
 
@@ -303,3 +352,66 @@ description: |
 - 某操作重复 3 次以上 → 立即创建 Skill
 - <10 个 Skill：会话指定；10-30 个：创建主控 Skill；>30 个：混合模式
 - 每个 Skill 单一职责 + 明确输入/输出格式，方便串联
+
+---
+
+## 4. 推荐外部 Skills
+
+> 按实际项目需求从 GitHub 高星仓库筛选，不装全量，避免索引层 token 浪费。
+
+### 4.1 执行层（有 Python 脚本，可自动化验证）
+
+| 仓库 | 安装 | 核心能力 |
+|------|------|---------|
+| [AgriciDaniel/claude-seo](https://github.com/AgriciDaniel/claude-seo) (~650⭐) | `git clone --depth 1 https://github.com/AgriciDaniel/claude-seo.git && bash claude-seo/install.sh` | `/seo audit` 全站审计 · `/seo schema` Schema生成 · `/seo backlinks` 外链分析 · `/seo geo` AI搜索优化 · `/seo google report` PDF报告 |
+| [AgriciDaniel/claude-ads](https://github.com/AgriciDaniel/claude-ads) | `git clone --depth 1 https://github.com/AgriciDaniel/claude-ads.git && bash claude-ads/install.sh` | `/ads plan <行业>` 广告策略 · `/ads audit` 多平台审计(190+检查项) · `/ads creative` 创意审计 |
+
+### 4.2 知识层（纯 Markdown 最佳实践，按需加载）
+
+| 仓库 | 推荐安装的 Skills | 覆盖领域 |
+|------|------------------|---------|
+| [kostja94/marketing-skills](https://github.com/kostja94/marketing-skills) (160+ Skills) | `schema-markup` · `robots-txt` · `xml-sitemap` · `title-tag` · `meta-description` · `keyword-research` · `content-strategy` · `internal-links` · `link-building` · `canonical-tag` · `google-search-console` · `email-marketing` · `content-optimization` | SEO技术 + 内容策略 + 外链建设 |
+
+安装命令：`npx skills add kostja94/marketing-skills --skill <空格分隔的skill名>`
+
+### 4.3 选用原则
+
+| 问题 | 答案 |
+|------|------|
+| 审计/分析类任务用哪个？ | claude-seo（有脚本验证层，不是纯 LLM 猜测） |
+| 需要 SEO/营销知识参考用哪个？ | marketing-skills（纯知识，160+ 覆盖面广） |
+| 要跑广告用哪个？ | claude-ads（投放时再装，不需要提前装） |
+| 能全装吗？ | 不要。160+ 的索引层每次对话烧 ~16000 token，只装项目需要的 10-15 个 |
+| 两层怎么搭配？ | claude-seo 跑审计 → 按 audit 报告修复 → marketing-skills 指导具体实现 |
+
+### 4.4 CLI 工具层（确定性执行，零 Token 消耗）
+
+> 对应八层模型第 5 层（Tools / MCP / CLI）。CLI 命令在本地浏览器直接执行，不经过模型推理，确定性操作零 Token 消耗。
+
+| 工具 | 安装 | 核心能力 |
+|------|------|---------|
+| [OpenCLI](https://github.com/jackwener/OpenCLI) (20k+ ⭐) | `npm install -g @jackwener/opencli`（需 Node.js 21+）+ Chrome 扩展 | 100+ 站点适配器（小红书/B站/知乎/Twitter/Reddit/HN 等）· 微信/Telegram/Discord 聊天记录导出 · 飞书/企微/钉钉办公集成 · CDP 桌面应用控制 · 社区插件系统 |
+
+**架构定位**：
+
+```
+八层模型中的位置：
+
+Layer 4: Skill（编排调度）     ← Skill 调用 OpenCLI 命令
+Layer 5: Tools / MCP / CLI     ← OpenCLI 在这里（确定性执行层）
+Layer 1.5: Script + LLM        ← OpenCLI = Script 层，零 Token；LLM 只解读结果
+```
+
+**与 MCP 的关系**：互补而非替代。OpenCLI 擅长数据采集（"读多写少"），MCP 擅长深度服务集成（工作流编排、设计编辑等），两者可在 Skill 层统一调度。
+
+**关键特性**：
+- 复用 Chrome 登录态，无需手动配 Cookie
+- 输出 JSON/CSV/Markdown，直接灌入知识库或数据分析流程
+- **adapter-author skill**：Agent 可自动编写新站点适配器（符合 1.6 编排器模式）
+- 社区插件：`opencli plugin install` 一键装适配器
+
+**注意事项**：
+- 浏览器自动化依赖页面结构，网站改版可能导致适配器失效
+- 微信聊天记录读取需 root 权限（macOS `sudo wx init`），Windows 支持待验证
+- 复用 Chrome 登录态 = 暴露所有登录身份，注意安全边界
+- 私域数据访问需自行评估合规风险
