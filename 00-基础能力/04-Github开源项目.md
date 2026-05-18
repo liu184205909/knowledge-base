@@ -9,6 +9,7 @@
 | 分类 | 数量 | 典型项目 |
 |------|------|---------|
 | [AI 营销工具](#ai-营销工具) | 6 | Fooocus、Nanobrowser、CloakBrowser |
+| [客服与消息自动化](#客服与消息自动化) | 1 | Evolution API |
 | [AI 开发工具](#ai-开发工具) | 2 | superpowers-zh、system_prompts_leaks |
 | [通用效率工具](#通用效率工具) | 7 | ERPNext、PlainApp、Vibe |
 
@@ -189,6 +190,37 @@ brew install ffmpeg
 - 可作为行业信息源，辅助选题和趋势判断
 
 **适用场景**: 行业信息获取、选题灵感、趋势追踪
+
+---
+
+## 客服与消息自动化
+
+> WhatsApp/社媒消息集成、AI 智能客服、客户沟通自动化
+
+### Evolution API
+
+**GitHub**: https://github.com/evolution-foundation/evolution-api
+
+**简介**: 开源自托管 WhatsApp 消息中枢平台，基于 TypeScript 开发，支持扫码关联 WhatsApp 账号后实现 7x24 自动回复、AI 智能客服、业务流程自动化
+
+**核心功能**:
+- **双连接模式**: 免费 Baileys（WhatsApp Web 协议）+ 官方 WhatsApp Cloud API，灵活适配不同规模
+- **多服务集成**: 原生对接 Typebot（对话机器人）、Chatwoot（客服系统）、OpenAI（AI 能力）、RabbitMQ/Kafka（消息队列）
+- **企业级架构**: 高并发、媒体存储（S3/MinIO）、WebSocket 实时推送
+- **自动化流程**: 订单确认通知、物流追踪推送、弃购挽回、关键词触发回复、客户分层标签
+
+**特点**:
+- 完全开源免费（仅服务器成本），替代官方 API 节省 90%+ 费用
+- 扫码即可关联设备，部署简单
+- 对接 AI 后可实现多语言自动翻译、智能问答、客户意图识别
+- 所有对话可接入 CRM/BI 系统，数据资产沉淀
+
+**与我们的关系**:
+- **当前阶段（B2C 独立站）**: 独立站上线后用于海外客户 WhatsApp 沟通、询盘回复、售后客服
+- **潜在业务（外贸服务）**: 可基于此搭建 WhatsApp AI 智能客服服务，面向国内外贸/跨境卖家
+- 与 Chatwoot + OpenAI 组合后可实现完整的 AI 客服工作流
+
+**适用场景**: 外贸客户询盘、独立站售后客服、订单确认通知、弃购挽回、物流追踪
 
 ---
 
@@ -417,4 +449,4 @@ ebook2audiobook.cmd
 
 ---
 
-**最后更新**: 2026-05-15
+**最后更新**: 2026-05-18
