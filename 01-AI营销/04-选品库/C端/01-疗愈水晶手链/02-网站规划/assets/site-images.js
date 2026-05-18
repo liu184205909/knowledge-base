@@ -49,67 +49,67 @@ const IMAGES = {
     hero: asset(GEN + '/about-hero-brand-story-v1.png',
       'LuckyCrystals brand story hero with crystal bracelets and ancient wisdom artifacts',
       'Premium wide hero banner for a crystal wellness brand About page: multiple healing crystal bracelets arranged on a warm wooden surface beside a small jade pendant, an open leather journal with handwritten affirmations, dried lavender sprigs, and a single burning candle. Warm golden hour light from the left. Deep moody atmosphere suitable for dark overlay text. No people, no faces, no text overlay. Photorealistic, editorial quality, 1920x900 landscape.',
-      '1920x900', needs_generation),
+      '1920x900', generated),
 
     // Section 3 Intention-Setting: craftsmanship and intention-setting workspace (no portrait, branded studio shot)
     founder: asset(GEN + '/about-intention-setting-workspace-v1.png',
       'Crystal bracelet intention-setting workspace with cleansing tools',
       'Square product photo for a crystal bracelet intention-setting section: a clean white studio workbench viewed from above, showing sorted polished rose quartz amethyst and citrine beads in small ceramic bowls, a bundle of dried white sage, a brass singing bowl, scattered affirmation cards with handwritten intentions, and one finished crystal bracelet resting on a selenite charging plate. Soft diffused natural light, warm and mindful atmosphere. No people, no faces, no hands, no text. Photorealistic, clean and trustworthy brand aesthetic, 800x800 square crop.',
-      '800x800', needs_generation),
+      '800x800', generated),
 
     // Section 6 Quality Promise icon 1: "100% Natural Crystals" — displayed as 70px circle
     natural: asset(GEN + '/about-icon-natural-crystals-v1.png',
       'Natural raw and polished crystal pair showing authentic texture',
       'Square icon image for "100% Natural Crystals" quality badge: a single raw amethyst geode half placed beside a polished amethyst bead on a clean warm beige linen surface. Top-down flat lay, centered composition, soft diffused studio light. The contrast between raw and polished forms shows authenticity and natural origin. No text, no labels, no hands. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', needs_generation),
+      '400x400', generated),
 
     // Section 6 Quality Promise icon 2: "Energetically Cleansed & Charged" — displayed as 70px circle
     cleansing: asset(GEN + '/about-icon-cleansing-charged-v1.png',
       'Crystal bracelet being cleansed with sage smoke and moonlight',
       'Square icon image for "Energetically Cleansed and Charged" quality badge: a single crystal bracelet resting on a raw selenite charging plate, with a thin wisp of dried sage smoke gently curling around it. Dark slate background for contrast, warm amber candlelight from the side. Mystical but clean and premium feel. No people, no faces, no hands, no text. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', needs_generation),
+      '400x400', generated),
 
     // Section 6 Quality Promise icon 3: "Velvet Pouch + Guide Card Included" — displayed as 70px circle
     packaging: asset(GEN + '/about-icon-velvet-pouch-guide-v1.png',
       'Velvet pouch and crystal energy guide card gift packaging',
       'Square icon image for "Velvet Pouch and Guide Card Included" quality badge: a soft dark purple velvet pouch partially open revealing a crystal bracelet inside, placed beside a cream-colored guide card with subtle crystal illustrations visible on its surface. Warm neutral linen background, top-down flat lay, soft natural window light. Premium unboxing feel. No people, no hands, no text overlay. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', needs_generation),
+      '400x400', generated),
 
     // Section 6 Quality Promise icon 4: "30-Day Worry-Free Returns" — displayed as 70px circle
     returns: asset(GEN + '/about-icon-returns-guarantee-v1.png',
       'Crystal bracelet order package with care return card',
       'Square icon image for "30-Day Worry-Free Returns" quality badge: a neatly closed kraft gift box with a subtle branded wax seal, a small handwritten thank-you card tucked under the ribbon, and a single crystal bracelet visible beside the box on a clean warm background. Conveys trust, care, and premium service. Top-down flat lay, soft diffused light. No people, no hands, no text overlay. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', needs_generation),
+      '400x400', generated),
 
     // Section 7 User Story 1: Amanda K. — Rose Quartz bracelet buyer — displayed as 60px circle
     communityRose: asset(GEN + '/about-community-rose-quartz-v1.png',
       'Rose quartz crystal bracelet with self-love journaling scene',
       'Square image for a rose quartz bracelet customer testimonial: a delicate rose quartz beaded bracelet resting on an open journal page with pink-toned handwritten gratitude notes, a pink rose petal, and a small rose quartz heart stone. Warm romantic soft light, cream and blush color palette. Conveys self-love, healing, and personal story. No people, no faces, no hands, no text overlay. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', needs_generation),
+      '400x400', generated),
 
     // Section 7 User Story 2: David R. — Black Tourmaline bracelet buyer — displayed as 60px circle
     communityProtection: asset(GEN + '/about-community-black-tourmaline-v1.png',
       'Black tourmaline crystal bracelet with grounding desk scene',
       'Square image for a black tourmaline bracelet customer testimonial: a sleek black tourmaline beaded bracelet placed on a dark walnut desk beside a minimal leather planner, a fountain pen, and a small obsidian worry stone. Masculine and grounded aesthetic, cool-toned professional lighting from a desk lamp. Conveys strength, focus, and workplace energy. No people, no faces, no hands, no text overlay. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', needs_generation),
+      '400x400', generated),
 
     // Section 7 User Story 3: Sophie L. — Amethyst bracelet buyer — displayed as 60px circle
     communityAmethyst: asset(GEN + '/about-community-amethyst-v1.png',
       'Amethyst crystal bracelet with calming study scene',
       'Square image for an amethyst bracelet customer testimonial: a purple amethyst beaded bracelet resting on a soft lavender linen cloth beside a stack of textbooks, a small amethyst cluster, and a cup of chamomile tea with gentle steam. Calm and comforting atmosphere, soft purple and cream tones, diffused afternoon light from a window. Conveys calm, focus, and student wellness. No people, no faces, no hands, no text overlay. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', needs_generation),
+      '400x400', generated),
 
     // Section 7 User Story 4: Mia T. — Citrine bracelet buyer — displayed as 60px circle
     communityCitrine: asset(GEN + '/about-community-citrine-v1.png',
       'Citrine crystal bracelet with abundance entrepreneurship scene',
       'Square image for a citrine bracelet customer testimonial: a warm golden citrine beaded bracelet placed on a clean white desk beside a small succulent plant in a terracotta pot, a laptop keyboard corner, and a raw citrine point. Bright optimistic morning light, yellow and white color palette, entrepreneurial and abundance energy. No people, no faces, no hands, no text overlay. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', needs_generation),
+      '400x400', generated),
 
     // Section 8 CTA: "Ready to Find Your Crystal?" with dark overlay 0.7
     cta: asset(GEN + '/about-cta-find-your-crystal-v1.png',
       'Discover your perfect crystal bracelet with intention-setting tools',
       'Premium wide hero banner for About page call-to-action: a serene crystal intention-setting scene viewed from slightly above, showing an arrangement of five different crystal bracelets fanned out on soft cream linen, scattered dried flowers, a white sage bundle, a small brass singing bowl, and one oracle card face-down. Warm sunset golden light, dreamy and inviting atmosphere suitable for dark overlay with white text. No people, no faces, no hands, no text overlay. Photorealistic, editorial quality, 1920x900 landscape.',
-      '1920x900', needs_generation)
+      '1920x900', generated)
   },
 
   sourcing: {
@@ -117,42 +117,42 @@ const IMAGES = {
     hero: asset(GEN + '/sourcing-hero-earth-to-wrist-v1.png',
       'Ethically sourced crystal bracelets journey from mine to wrist',
       'Premium wide hero banner for an ethical crystal sourcing page: raw unpolished crystals in natural earth tones emerging from rich dark soil at the left side, transitioning smoothly to polished crystal bracelet beads arranged on a clean linen surface at the right. A single shaft of warm sunlight illuminates the polished stones. Earthy browns and warm golds color palette, deep moody atmosphere suitable for dark overlay text. No people, no faces, no text overlay. Photorealistic, editorial quality, 1920x900 landscape.',
-      '1920x900', needs_generation),
+      '1920x900', generated),
     // Section 3 Step 1: Traceable Origins
     mining: asset(GEN + '/sourcing-step-mining-origins-v1.png',
       'Raw crystal specimens in natural mine environment showing traceable origins',
       'Educational product photo for ethical mining step: a collection of raw unpolished amethyst and rose quartz crystal specimens resting on natural dark earth and stone surface, with a small label card and a magnifying glass beside them. Warm natural outdoor light filtering through. Shows the natural origin and raw beauty of ethically mined crystals. No people, no faces, no hands, no text overlay. Photorealistic, warm earth tones, 800x600 landscape.',
-      '800x600', needs_generation),
+      '800x600', generated),
     // Section 3 Step 2: Hand-Selected Quality
     selection: asset(GEN + '/sourcing-step-hand-selection-v1.png',
       'Hand-selected polished crystal beads sorted by color and quality grade',
       'Educational product photo for crystal selection step: sorted polished crystal beads in small wooden bowls arranged by color — amethyst purple, rose quartz pink, citrine gold, clear quartz white, black tourmaline — on a clean light wood workbench. A brass loupe and a small notepad visible at the edge. Top-down flat lay, warm studio light, clean and organized aesthetic. Shows quality control and careful hand selection. No people, no faces, no hands, no text overlay. Photorealistic, 800x600 landscape.',
-      '800x600', needs_generation),
+      '800x600', generated),
     // Section 3 Step 3: Energetic Cleansing
     cleansing: asset(GEN + '/sourcing-step-energy-cleansing-v1.png',
       'Crystal bracelet being energetically cleansed with sage smoke and selenite',
       'Educational product photo for crystal cleansing step: a single crystal bracelet resting on a large flat selenite charging plate, with a thin stream of dried white sage smoke gently rising around it. A single beeswax candle providing warm amber light from the left. Dark charcoal background for contrast. Mystical yet clean and professional atmosphere. No people, no faces, no hands, no text overlay. Photorealistic, 800x600 landscape.',
-      '800x600', needs_generation),
+      '800x600', generated),
     // Section 3 Step 4: Quality Inspection
     inspection: asset(GEN + '/sourcing-step-quality-inspection-v1.png',
       'Crystal bracelet quality inspection under natural light with measurement tools',
       'Educational product photo for quality inspection step: a finished crystal bracelet lying on a white inspection mat under bright natural daylight, with a brass jeweler\'s loupe and a small digital caliper placed beside it. A quality checklist card with handwritten notes visible at the corner. Clean professional studio setting, bright and trustworthy. No people, no faces, no hands, no text overlay. Photorealistic, 800x600 landscape.',
-      '800x600', needs_generation),
+      '800x600', generated),
     // Section 3 Step 5: Eco-Friendly Packaging
     packaging: asset(GEN + '/sourcing-step-eco-packaging-v1.png',
       'Crystal bracelet in eco-friendly kraft box with velvet pouch and guide card',
       'Educational product photo for eco-friendly packaging step: an open recyclable kraft gift box containing a dark purple velvet pouch with a crystal bracelet visible inside, placed beside a cream-colored energy guide card and a small dried flower sprig. All materials look natural and sustainable. Warm neutral linen background, top-down flat lay, soft natural light. Premium yet earth-conscious brand aesthetic. No people, no faces, no hands, no text overlay. Photorealistic, 800x600 landscape.',
-      '800x600', needs_generation),
+      '800x600', generated),
     // Section 3 Step 6: Delivered to You
     delivery: asset(GEN + '/sourcing-step-delivery-reveal-v1.png',
       'Crystal bracelet order delivered in eco-friendly packaging',
       'Educational product photo for delivery step: a sealed kraft shipping box with a branded wax seal on top, placed on a warm wooden doorstep or entryway surface. The box is accompanied by a small handwritten thank-you note and a single dried lavender sprig. Warm welcoming morning light, conveying the unboxing experience and care in delivery. No people, no faces, no hands, no text overlay. Photorealistic, 800x600 landscape.',
-      '800x600', needs_generation),
+      '800x600', generated),
     // Section 5 CTA: "Shop Ethically Sourced Crystals" with dark overlay 0.7
     cta: asset(GEN + '/sourcing-cta-shop-ethical-v1.png',
       'Shop ethically sourced crystal bracelets with full supply chain transparency',
       'Premium wide hero banner for ethical crystal sourcing call-to-action: a beautiful arrangement of five different finished crystal bracelets displayed on a raw natural stone slab, surrounded by small potted succulents, dried botanicals, and scattered raw crystal chips. Warm sunset golden light, organic and earthy color palette. Inviting atmosphere suitable for dark overlay with white text. No people, no faces, no hands, no text overlay. Photorealistic, editorial quality, 1920x900 landscape.',
-      '1920x900', needs_generation)
+      '1920x900', generated)
   },
 
   blog: {

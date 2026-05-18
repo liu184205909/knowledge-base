@@ -408,7 +408,8 @@ function wdProductsTabs() {
 // ============================================================
 function apiRequest(path, method, body) {
   return new Promise((resolve, reject) => {
-    const payload = typeof body === 'string' ? body : JSON.stringify(body);
+    const hasBody = body !== undefined && body !== null;
+    const payload = hasBody ? (typeof body === 'string' ? body : JSON.stringify(body)) : '';
     const options = {
       hostname: SITE, port: 443, path: path, method: method,
       headers: { 'Authorization': AUTH, 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(payload) }
@@ -419,7 +420,7 @@ function apiRequest(path, method, body) {
       res.on('end', () => { try { resolve(JSON.parse(data)); } catch (e) { resolve({ raw: data, status: res.statusCode }); } });
     });
     req.on('error', reject);
-    req.write(payload);
+    if (payload) req.write(payload);
     req.end();
   });
 }
