@@ -1,6 +1,6 @@
 # SEO与GEO 知识库索引
 
-> 最后更新：2026-05-06（理论文档定位：算法探索、前沿理论、行业趋势）
+> 最后更新：2026-05-19（理论文档定位：算法探索、前沿理论、行业趋势）
 
 ---
 
@@ -79,6 +79,8 @@
 | BrightonSEO April 2026 | 会议 | 07（主）、01/03/05/06 |
 | SEO Week 2025 + 2026 | 会议 | 08（主）、03 |
 | Google Search Central Live Toronto 2026 | 官方 | 03 |
+| Google Search Central 官方GEO指南 (2026.5.15) | **官方** | 03 |
+| Lois / 海外SEO与ASO | 行业 | 01/03 |
 | Bing SEO Week 2026 | 官方 | 03 |
 | Princeton GEO论文（KDD 2024） | 学术 | 03 |
 | AirOps（5万查询） | 研究 | 01/03 |

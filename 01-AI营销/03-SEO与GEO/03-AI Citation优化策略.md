@@ -1,8 +1,8 @@
 # AI Citation优化策略（GEO）
 
 > **GEO (Generative Engine Optimization)**：优化内容被AI引用，而非传统搜索排名
-> **信息来源**: SEO Week 2026 + Princeton GEO论文 + 6.8亿条citation数据集 + 行业研究
-> **最后更新**: 2026-05-06
+> **信息来源**: Google Search Central 官方GEO指南(2026.5.15) + SEO Week 2026 + Princeton GEO论文 + 6.8亿条citation数据集 + 行业研究
+> **最后更新**: 2026-05-19
 
 ---
 
@@ -26,6 +26,68 @@ Tech SEO = 地基 | Content & PR = 催化剂 | Social = 放大器 | GEO = 新阵
 - AI Overviews引用中Google Top 20占**43%**，AI Mode仅**20%** → 需要分别优化
 - ChatGPT 20%+外链流向Google → 用户先用AI再回Google验证
 - **成熟团队会在AI流量变大之前把基础设施搭好**
+
+---
+
+## AI 购物旅程与内容选题映射
+
+> 来源：张友兵「兵哥说独立站」GEO 系列。核心数据：38%美国消费者已用 AI 购物（2024-2025 翻倍）；ChatGPT 日均 5000 万购物查询；72% AI 产品查询 24 小时内转化；AI 推荐转化率是传统搜索 3-23 倍。
+
+### 三阶段：用户什么时候问 AI
+
+| 阶段 | 用户心态 | 典型问题 | GEO 价值 |
+|------|---------|---------|---------|
+| **1. 开放式调研** | 还没锁定品牌，心态开放 | "Best hiking boots for wide feet?" | **最高价值曝光时机**——说服成本最低 |
+| **2. 决策核查** | 已缩到 2-3 个品牌，做最终决定 | "[品牌A] vs [品牌B], which is better?" | **直接影响购买决策**——67% 推荐指向前三 |
+| **3. 使用支持** | 已购买，遇到使用问题 | "How do I clean these hiking boots?" | 增加品牌 AI 存在感 + 客户满意度 |
+
+**关键洞察**：阶段 1 是最有价值的介入时机——用户在开放推荐阶段遇见你，比他已锁定竞品后再遇见你，说服成本低得多。阶段 2 对独立站尤其关键——独立站没有亚马逊的平台信任背书，AI 回答 "I don't have enough information about this brand" = 用户转向竞品。
+
+### 四类问题：用户问 AI 什么
+
+| 问题类型 | 频率 | 典型问题 | 对应内容类型 | 独立站优先级 |
+|---------|------|---------|------------|------------|
+| **推荐类** | 最高频 | "Best wireless earbuds under $50?" | 品类榜单、Top N 推荐、场景选购指南 | 高 |
+| **对比类** | 决策关键 | "[品牌A] vs [品牌B], which is better?" | 竞品对比页、差异化分析 | 高 |
+| **信任核查类** | 独立站最关键 | "Is [品牌名] legit?" "Are there complaints?" | Trustpilot 评价、媒体报道、客户案例、UGC | **最高** |
+| **解答类** | 间接建立存在感 | "How to choose running shoes for flat feet?" | 教程、选购指南、Blog 深度内容 | 中 |
+
+### 按产品类型的内容策略差异
+
+不同产品品类的四类问题权重不同，直接影响内容优先级：
+
+| 产品类型 | 高权重问题类型 | 内容重点 | 示例 |
+|---------|-------------|---------|------|
+| **C 端消费品**（低价高频） | 推荐类 > 解答类 | 场景化推荐内容 + 教程型 Blog | 水晶手链、靠垫 |
+| **C 端消费品**（高价低频） | 对比类 > 信任核查类 | 竞品对比 + 第三方评测背书 | 地图艺术海报 |
+| **B 端工业品** | 信任核查类 > 对比类 | 行业资质、案例研究、媒体报道 | 密封件、热管理 |
+| **B 端服务** | 推荐类 > 信任核查类 | 榜单型内容 + 客户证言 | 外贸服务 |
+
+### 用户行为路径
+
+```
+AI 推荐 → 用户直接搜索品牌名 → 进入品牌官网 → 快速完成购买决策
+```
+
+比传统搜索路径更短，摩擦更少。用户到达网站时已有基本信任——这也是 AI 推荐转化率远高于传统搜索的根本原因。
+
+### 15 分钟快速诊断
+
+在 ChatGPT / Perplexity 中输入以下问题，检查品牌是否出现：
+
+```
+1. "What are the best [品类] brands for [使用场景]?"
+2. "Is [品牌名] a reliable brand?"
+3. "[品牌名] vs [竞品], which is better?"
+4. "What are the most common questions before buying [品类]?"
+```
+
+对照现有内容回答：
+1. 多少个问题你的网站有直接答案？
+2. AI 回答引用了哪些来源？你有没有这些内容？
+3. 如果 AI 说 "I don't have enough information"，缺的是什么信息？
+
+**这个差距就是 GEO 内容优化的起点。**
 
 ---
 
@@ -78,14 +140,22 @@ Tech SEO = 地基 | Content & PR = 催化剂 | Social = 放大器 | GEO = 新阵
 
 ---
 
-## Google 官方 GEO 立场（Search Central Live Toronto 2026）
+## Google 官方 GEO 立场（Search Central Live Toronto 2026 + 官方GEO指南 2026.5.15）
 
-> Google Danny Sullivan《AI in Google Search》
+> 来源：Danny Sullivan《AI in Google Search》(Toronto) + Google Search Central "Optimizing your website for generative AI features on Google Search" (2026.5.15)
+
+### Google核心定调
+
+**AEO也好，GEO也好，从Google Search的角度看，本质上仍然是SEO。**
+
+Google明确表态：AI Overview和AI Mode不是凭空生成答案，依然扎根于Google核心搜索排名与质量系统，依靠RAG和Query fan-out从搜索索引调取页面。
 
 ### AI搜索工作原理
 
 1. AI模型具备通识 + 特定知识通过**Query Fan-out**（查询扇出）从传统搜索获取
 2. **好 SEO = 好 GEO**，底层依赖传统搜索
+3. 进入AI答案体系的前提：能被抓取、能被索引、能在搜索里以摘要形式展示
+4. 爬虫访问、页面结构、JS渲染、重复内容、页面体验——这些老问题没有因为AI搜索出现就自动过期
 
 ### "非同质化"内容三要素
 
@@ -95,16 +165,19 @@ Tech SEO = 地基 | Content & PR = 催化剂 | Social = 放大器 | GEO = 新阵
 | **具体性** | 具体情境，非泛泛而谈 |
 | **真实性** | 第一手经验 |
 
-### Google明确否认的四个误区
+### Google明确否认的五个误区（2026.5.15 官方文档）
 
-| 误区 | 官方回应 |
-|------|---------|
-| 需要为AI把内容"切块" | 按用户良好阅读体验组织即可 |
-| H1/H2需"语义精确" | 标题目的是帮助用户阅读 |
-| 需堆砌对话式关键词 | Google语言匹配系统已很成熟 |
-| JS网站需为AI做特殊改造 | 只要Google能正常访问即可 |
+> ⚠️ 以下为Google官方2026.5.15文档明确否定。对Google AI搜索来说，它们不是必需条件，更不是排名捷径。但注意：这份指南只针对Google Search的AI功能，不等于ChatGPT/Perplexity/Claude的逻辑完全一致。
 
-> **注意**：Princeton GEO论文的"可提取结构"有数据支撑（+40%），但Google官方认为不需要刻意改造。**保持用户体验前提下适当优化结构可解析性**。
+| # | 被否定的做法 | Google 官方说法 | 对我们的影响 |
+|---|------------|---------------|-------------|
+| 1 | **llms.txt** | 不需要为AI搜索创建新的机器可读文件，这些文件不会被特殊对待 | 无需部署llms.txt（与BrightonSEO实验结论一致） |
+| 2 | **内容强行切块** | 系统能理解页面内多个主题，短页面可以好，长页面也可以好，核心是用户和主题是否需要 | 按用户体验组织内容即可，不必刻意拆碎 |
+| 3 | **用"AI喜欢的写法"重写** | AI能理解同义词和大意，覆盖所有关键词变体反而变成低质量规模化内容 | 不要为了AI搜索单独改写风格 |
+| 4 | **追求不真实的外部提及** | 质量系统和反垃圾系统仍然会起作用，刻意制造不真实提及并不可靠 | 品牌提及必须真实，不能造假 |
+| 5 | **AI专用Schema** | 没有为生成式AI搜索必须添加的特殊schema.org标记 | 现有Schema（FAQ/Organization/Article）继续做，但不要期待"AI专用Schema" |
+
+> **注意**：Princeton GEO论文的"可提取结构"有数据支撑（+40%），但Google官方认为不需要刻意改造。**保持用户体验前提下适当优化结构可解析性**。官方否定的是"刻意切块"和"AI专用改写"，不是"合理的段落结构化"。
 
 ### 红线
 
@@ -226,8 +299,8 @@ Google在AI搜索中新增5种链接呈现方式，目的是让用户在AI生成
 |------|------|
 | robots.txt | 放行GPTBot、ClaudeBot、PerplexityBot、Google-Extended |
 | 服务器渲染 | SSR/SSG，不要纯CSR（AI爬虫无法执行JS） |
-| Schema标记 | Organization、FAQ、HowTo、Article（JSON-LD） |
-| llms.txt | ⚠️ BrightonSEO实验显示效果不佳，可辅助部署但非主要策略 |
+| Schema标记 | Organization、FAQ、HowTo、Article（JSON-LD）——为富媒体搜索结果而做，非AI专用 |
+| llms.txt | ❌ Google官方已明确否定（2026.5.15），无需部署；BrightonSEO实验同样显示效果不佳 |
 | 页面速度 | 爬虫可能在加载完成前放弃 |
 
 ---
@@ -372,7 +445,7 @@ Bing将AI检索词分为**15种意图类型**：Comparison、Research、Informat
 ### SEO Week 2026 新观点
 
 - **SEO是品牌渠道，不是免费流量渠道**
-- **AI Sitemaps**：专门为AI爬虫创建的站点地图
+- **AI Sitemaps**：~~专门为AI爬虫创建的站点地图~~ ⚠️ Google官方已否定llms.txt等AI专用文件的必要性（2026.5.15），AI Sitemap价值存疑，标准sitemap已足够
 - **审查log files中的LLM幻觉**（Aleyda Solís）：通过服务器日志发现AI错误描述
 - OpenAI搜索机器人覆盖率已达**55.67%**（279亿次请求）
 - **AVO**（Agentic Visibility Optimization）：面向AI Agent的可见性优化框架
@@ -396,13 +469,15 @@ Bing将AI检索词分为**15种意图类型**：Comparison、Research、Informat
 | 来源 | 数据规模 | 说明 |
 |------|---------|------|
 | Google Search Central Live Toronto | 官方 | Danny Sullivan, 2026.04 |
+| Google Search Central 官方GEO指南 | **官方** | "Optimizing your website for generative AI features", 2026.05.15 |
+| Lois / 海外SEO与ASO | 行业分析 | Google官方GEO指南解读、GEO 4类信任信号 |
 | Bing SEO Week 2026 | 官方 | Citation Share、意图分类 |
 | Profound | **6.8亿条citation** | 跨平台分析 |
 | Scrunch/Stacker | **350万条citation** | 引用耐久性研究 |
 | Princeton GEO论文 | 10000条查询 | 学术基准, KDD 2024 |
 | WLDM (Brie Moreau) | **1100万条citation** | 6平台交叉分析 |
 | BrightonSEO April 2026 | AirOps×Kevin Indig 16,851 queries | AI引用决定因素 |
-| Lois / 海外SEO与ASO | 行业分析 | GEO 4类信任信号 |
+| 张友兵「兵哥说独立站」GEO 系列 | 行业研究 | AI购物三阶段 + 四类问题 + 用户行为路径 |
 
 ---
 
@@ -415,4 +490,4 @@ Bing将AI检索词分为**15种意图类型**：Comparison、Research、Informat
 
 ---
 
-**创建时间**: 2026-04-28 | **最后更新**: 2026-05-06
+**创建时间**: 2026-04-28 | **最后更新**: 2026-05-19（+ AI购物旅程与内容选题映射）
