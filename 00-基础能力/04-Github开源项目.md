@@ -11,7 +11,7 @@
 | [AI 营销工具](#ai-营销工具) | 6 | Fooocus、Nanobrowser、CloakBrowser |
 | [客服与消息自动化](#客服与消息自动化) | 1 | Evolution API |
 | [AI 开发工具](#ai-开发工具) | 2 | superpowers-zh、system_prompts_leaks |
-| [通用效率工具](#通用效率工具) | 7 | ERPNext、PlainApp、Vibe |
+| [通用效率工具](#通用效率工具) | 8 | ERPNext、PlainApp、Vibe、PDFCraft |
 
 ---
 
@@ -449,4 +449,48 @@ ebook2audiobook.cmd
 
 ---
 
-**最后更新**: 2026-05-18
+### PDFCraft
+
+**GitHub**: https://github.com/PDFCraftTool/pdfcraft
+
+**简介**: 浏览器本地运行的 PDF 工具箱，90+ 工具 + 可视化工作流自动化编辑器，5.9K+ Stars
+
+**核心功能**: OCR 文字识别、PDF 对比（差异高亮）、表单创建与填写、格式转换全家桶（Word/Excel/PPT/EPUB/Markdown 互转）、合并/拆分/压缩/水印/加密
+
+**核心亮点——工作流自动化（Beta）**:
+- 可视化拖拽节点界面，把多个 PDF 操作串成流水线（如 OCR → 合并 → 加水印 → 压缩，一键跑完）
+- 23+ 预设模板，支持批量处理、保存复用、格式兼容性校验
+- 类似 n8n 的"搭积木"思路，但专注 PDF 场景
+
+**特点**:
+- 完全浏览器本地运行（WebAssembly），文件不上传服务器，隐私最高
+- Next.js 15 + TypeScript + Tailwind CSS，支持 Docker（约800MB）/Vercel/Netlify 部署
+- 9 种语言支持（含中文）
+- 与同类对比：Stirling-PDF 老牌但笨重（2GB）、无可视化工作流；补丁丁仅 Windows
+
+**同类对比**:
+
+| 对比项 | PDFCraft | Stirling-PDF | 补丁丁 |
+|--------|----------|--------------|--------|
+| 处理方式 | 浏览器本地WASM | 服务端Docker | 纯Windows桌面 |
+| 工作流 | ✅ 可视化拖拽+模板 | ⚠️ 简单队列 | ❌ 无 |
+| 工具数量 | 90+ | 60+ | 偏深度编辑 |
+| Docker大小 | ~800MB | ~2GB | 仅Windows |
+
+**快速使用**:
+```bash
+# Docker 部署（推荐）
+docker pull ghcr.io/pdfcrafttool/pdfcraft:latest
+docker run -d -p 8080:80 --name pdfcraft ghcr.io/pdfcrafttool/pdfcraft:latest
+
+# 在线使用（无需注册）
+# https://pdfcraft.devtoolcafe.com/en/
+```
+
+**适用场景**: 客户报告 PDF 处理、批量合同 OCR、SEO 审计报告合并压缩、格式转换
+
+**来源**: [开源先锋 - 90+工具，还带工作流自动化，这款开源PDF新秀火了!](https://mp.weixin.qq.com/s/vqOxDZErXKACmNDjR-9vxg)
+
+---
+
+**最后更新**: 2026-05-19
