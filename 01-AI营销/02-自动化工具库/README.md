@@ -12,10 +12,10 @@
 | **02** | 竞品研究工具 | 人工 Google 搜索竞品 + SEMrush 数据采集 + Sitemap 解析网站结构 | `semrush_to_sheets.py` `sitemap_parser.py`（`serp_competitor_finder.py` 已退役） |
 | **03** | WordPress 建站 | AI 操作 WordPress，Elementor 建站规则 | 文档为主 |
 | **04** | 竞品内容分析工具 | 内容模式分析 + 站内重复检测 + 站外原创性检测 | `content_analyzer.py` `content_duplicate_checker.py` `content_originality_checker.py` |
-| **05** | WordPress 插件 | TranslatePress AI 翻译方案等插件调研 | 文档为主 |
+| **05** | 图片生成 | AI 图片生成工具（待建设，目录预留） | — |
 | **06** | 数据分析工具 | Google Data Studio 数据可视化，SEO/流量仪表盘 | 文档为主 |
 | **07** | 短视频工具 | 素材采集/拆解/创作/分发全链路（配合步骤4C音视频再加工） | 文档为主 |
-| **08** | SEMrush 数据采集 | 竞品 AS/流量/截图批量采集（已整合到 02-竞品研究工具） | `semrush_to_sheets.py`（在02下） |
+| **08** | 外链工具 | 外链建设辅助工具（占坑，待建设） | 文档为主 |
 | **09** | SEO 审计工具 | 技术SEO审计 + On-Page SEO评分 + 关键词蚕食检测 | `seo_technical_auditor.py` `onpage_seo_checker.py` `keyword_cannibalization_checker.py` |
 | **10** | 用户洞察工具 | 采集 Reddit/竞品评论 → 分类分析 → 选题/痛点/购买意向挖掘 | `reddit_comment_collector.py` `comment_insight_analyzer.py` |
 | **11** | GEO 可见性检查 | 7维度检查品牌在 AI 生态中的可见性信号（Reddit/Quora/评价站/Wikipedia/媒体/竞品对比） | `geo_visibility_checker.py` |
@@ -200,11 +200,11 @@ python 04-竞品内容分析工具/content_originality_checker.py \
 
 ---
 
-## 05 WordPress 插件
+## 05 图片生成
 
-**文件**：`05-WordPress插件/TranslatePress-AI翻译方案.md`
+> **状态**：目录预留，待建设。AI 图片生成工具未来将放在此目录。
 
-TranslatePress AI 翻译方案调研，含 API 成本对比、自动翻译流程。
+TranslatePress AI 翻译方案文档目前存放在 `03-WordPress建站/TranslatePress-AI翻译方案.md`。
 
 ---
 
@@ -233,27 +233,11 @@ GA4 流量行为 ─────────────────────
 
 ---
 
-## 08 SEMrush 数据采集
+## 08 外链工具
 
-> 原 `08-SEO数据API` 目录已整合到 `02-竞品研究工具/`，详见 [竞品研究工具使用指南.md](02-竞品研究工具/竞品研究工具使用指南.md)
+> **状态**：占坑，待外链建设指南验证后启动开发。详见 [README.md](08-外链工具/README.md)。
 
-竞品分析阶段（RLM 步骤 1B）批量获取 AS、Organic Traffic、截图等数据，自动写入 Google Sheets。
-
-**前置条件**：Tabbit 带 `--remote-debugging-port=9222 --remote-allow-origins=*` 启动，并已登录 semrush.com
-
-```bash
-python 02-竞品研究工具/semrush_to_sheets.py              # 全量查询
-python 02-竞品研究工具/semrush_to_sheets.py --start 4    # 从第4行开始
-python 02-竞品研究工具/semrush_to_sheets.py --limit 5    # 只查前5个
-python 02-竞品研究工具/semrush_to_sheets.py --dry-run    # 只提取不写回 Sheets
-```
-
-| 写入字段 | 列号 | 数据来源 |
-|---------|------|---------|
-| AS（Authority Score） | E | SEMrush 自动采集 |
-| Organic Traffic | F | SEMrush 自动采集 |
-| SEMrush 截图 | G | SEMrush 自动采集 |
-| 月访问量 + 渠道拆分 | G-M | traffic.cv（手动） |
+SEMrush 数据采集功能已整合到 `02-竞品研究工具/`，详见 [竞品研究工具使用指南.md](02-竞品研究工具/竞品研究工具使用指南.md)。
 
 ---
 
