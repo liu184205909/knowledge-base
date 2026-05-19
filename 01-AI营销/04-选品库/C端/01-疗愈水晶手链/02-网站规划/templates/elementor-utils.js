@@ -162,8 +162,10 @@ function heading(title, opts) {
 function textEditor(content, opts) {
   const o = opts || {};
   const fs = o.fontSize || 16;
+  const editorHtml = '<p>' + content + '</p>';
   const settings = {
-    editor_content: '<p>' + content + '</p>',
+    editor: editorHtml,
+    editor_content: editorHtml,
     align: o.align || 'center',
     text_color: o.color || '#666666',
     typography_typography: 'custom',
@@ -362,6 +364,19 @@ function htmlWidget(code) {
     settings: { html: code, scroll_y: -80 },
     elements: [],
     widgetType: 'html'
+  };
+}
+
+/**
+ * shortcode widget - use for real WordPress/WooCommerce dynamic modules.
+ */
+function shortcodeWidget(shortcode) {
+  return {
+    id: uid(),
+    elType: 'widget',
+    settings: { shortcode: shortcode, scroll_y: -80 },
+    elements: [],
+    widgetType: 'shortcode'
   };
 }
 
@@ -588,7 +603,7 @@ module.exports = {
   uid, section, wrap, rPadding, rWidth, gap,
   heading, textEditor, imageWidget, imageBox, iconBox,
   buttonWidget, spacer, divider, accordion, socialIcons,
-  htmlWidget, wdProductsWidget, wdProductsTabs,
+  htmlWidget, shortcodeWidget, wdProductsWidget, wdProductsTabs,
   apiRequest, createPage, uploadMedia, uploadMediaBatch, checkConnection,
   SITE, AUTH
 };

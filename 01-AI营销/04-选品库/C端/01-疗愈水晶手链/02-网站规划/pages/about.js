@@ -327,8 +327,8 @@ function generateAboutUs() {
           }),
           E.textEditor(
             'We are committed to responsible sourcing, fair labor practices, and environmental stewardship. ' +
-            'Every crystal in our collection is traceable to its origin, ensuring no conflict minerals and ' +
-            'no exploitation at any point in the supply chain.',
+            'We work with suppliers who can speak clearly about origin, handling, and labor practices, ' +
+            'and we keep improving our standards as our collection grows.',
             { fontSize: 14, color: '#666666', align: 'center', lineHeight: 24 }
           )
         ]),
@@ -400,10 +400,13 @@ function generateAboutUs() {
           width: { unit: '%', size: 23, sizes: [] },
           width_tablet: { unit: '%', size: 45, sizes: [] },
           width_mobile: { unit: '%', size: 100, sizes: [] },
+          background_background: 'classic',
+          background_color: '#23233b',
+          border_radius: { unit: 'px', top: '12', right: '12', bottom: '12', left: '12', isLinked: true },
           padding: E.rPadding('25', '20', '25', '20'),
           border_border: 'solid',
-          border_width: { unit: 'px', top: '0', right: '0', bottom: '0', left: '0', isLinked: true },
-          border_color: '#2a2a4e'
+          border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true },
+          border_color: '#333454'
         }, [
           E.heading('Traceable Origins', {
             fontSize: 18, color: '#c9a96e', align: 'center', fontWeight: '600',
@@ -413,9 +416,8 @@ function generateAboutUs() {
           }),
           E.textEditor(
             'Every crystal can be traced back to its mine of origin — whether that\'s amethyst from ' +
-            'southern Brazil, rose quartz from Madagascar, or black tourmaline from Sri Lanka. We partner ' +
-            'with suppliers who provide full documentation of where and how each stone was extracted, ' +
-            'ensuring complete transparency from the earth to your wrist.',
+            'Brazil, rose quartz from Madagascar, or black tourmaline from Sri Lanka. We prioritize ' +
+            'suppliers who can share clear origin details, handling notes, and responsible sourcing context.',
             { fontSize: 14, color: '#b0b0c0', align: 'center', lineHeight: 24 }
           )
         ]),
@@ -425,6 +427,12 @@ function generateAboutUs() {
           width: { unit: '%', size: 23, sizes: [] },
           width_tablet: { unit: '%', size: 45, sizes: [] },
           width_mobile: { unit: '%', size: 100, sizes: [] },
+          background_background: 'classic',
+          background_color: '#23233b',
+          border_border: 'solid',
+          border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true },
+          border_color: '#333454',
+          border_radius: { unit: 'px', top: '12', right: '12', bottom: '12', left: '12', isLinked: true },
           padding: E.rPadding('25', '20', '25', '20')
         }, [
           E.heading('Fair Labor Practices', {
@@ -434,9 +442,9 @@ function generateAboutUs() {
             }
           }),
           E.textEditor(
-            'We ensure that every person in our supply chain is treated with dignity and paid fair wages. ' +
-            'Our partners undergo regular audits, and we maintain long-term relationships built on mutual ' +
-            'respect and shared values of ethical business.',
+            'We choose long-term supplier relationships over anonymous bulk buying. Our goal is to work ' +
+            'with partners who treat people with dignity, communicate clearly, and share our respect for ' +
+            'responsible crystal handling.',
             { fontSize: 14, color: '#b0b0c0', align: 'center', lineHeight: 24 }
           )
         ]),
@@ -446,6 +454,12 @@ function generateAboutUs() {
           width: { unit: '%', size: 23, sizes: [] },
           width_tablet: { unit: '%', size: 45, sizes: [] },
           width_mobile: { unit: '%', size: 100, sizes: [] },
+          background_background: 'classic',
+          background_color: '#23233b',
+          border_border: 'solid',
+          border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true },
+          border_color: '#333454',
+          border_radius: { unit: 'px', top: '12', right: '12', bottom: '12', left: '12', isLinked: true },
           padding: E.rPadding('25', '20', '25', '20')
         }, [
           E.heading('Environmental Responsibility', {
@@ -455,9 +469,9 @@ function generateAboutUs() {
             }
           }),
           E.textEditor(
-            'From eco-friendly mining techniques to recyclable kraft packaging, we minimize our ' +
-            'environmental footprint at every stage. Our velvet pouches are made from sustainably sourced ' +
-            'fabric, and we ship in plastic-free, biodegradable materials wherever possible.',
+            'We keep packaging intentional and low-waste wherever possible, choosing protective materials ' +
+            'that feel beautiful without becoming excessive. Small operational choices matter when they are ' +
+            'repeated with care.',
             { fontSize: 14, color: '#b0b0c0', align: 'center', lineHeight: 24 }
           )
         ]),
@@ -467,6 +481,12 @@ function generateAboutUs() {
           width: { unit: '%', size: 23, sizes: [] },
           width_tablet: { unit: '%', size: 45, sizes: [] },
           width_mobile: { unit: '%', size: 100, sizes: [] },
+          background_background: 'classic',
+          background_color: '#23233b',
+          border_border: 'solid',
+          border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true },
+          border_color: '#333454',
+          border_radius: { unit: 'px', top: '12', right: '12', bottom: '12', left: '12', isLinked: true },
           padding: E.rPadding('25', '20', '25', '20')
         }, [
           E.heading('Conflict-Free Guarantee', {
@@ -476,15 +496,14 @@ function generateAboutUs() {
             }
           }),
           E.textEditor(
-            'We have a zero-tolerance policy for conflict minerals. Every supplier signs our strict ' +
-            'ethical sourcing agreement, and we conduct independent third-party verification to ensure ' +
-            'that no crystal in our collection funds violence or exploitation.',
+            'We avoid suppliers who cannot answer basic questions about origin, handling, or labor context. ' +
+            'When a source feels unclear, we would rather pass on a stone than build a collection on uncertainty.',
             { fontSize: 14, color: '#b0b0c0', align: 'center', lineHeight: 24 }
           )
         ])
       ]),
       E.spacer('20'),
-      E.buttonWidget('Learn More About Our Sourcing', '/about/ethical-sourcing')
+      E.buttonWidget('Shop Natural Crystal Bracelets', '/shop')
     ]),
 
     // ===================== Section 6: 品质承诺 =====================
@@ -530,17 +549,17 @@ function generateAboutUs() {
         }, [
           E.wrap({
             content_width: 'full',
-            width: { unit: '%', size: 15, sizes: [] },
-            width_mobile: { unit: '%', size: 20, sizes: [] }
+            width: { unit: '%', size: 32, sizes: [] },
+            width_mobile: { unit: '%', size: 100, sizes: [] }
           }, [
             E.imageWidget(IMAGES.about.natural.url, {
-              id: 0, alt: IMAGES.about.natural.alt, radius: 50, width: 70
+              id: 0, alt: IMAGES.about.natural.alt, radius: 8, width: 100
             })
           ]),
           E.wrap({
             content_width: 'full',
-            width: { unit: '%', size: 80, sizes: [] },
-            width_mobile: { unit: '%', size: 75, sizes: [] }
+            width: { unit: '%', size: 63, sizes: [] },
+            width_mobile: { unit: '%', size: 100, sizes: [] }
           }, [
             E.heading('100% Natural Crystals', {
               fontSize: 18, color: '#2d2d2d', align: 'left', fontWeight: '600',
@@ -573,17 +592,17 @@ function generateAboutUs() {
         }, [
           E.wrap({
             content_width: 'full',
-            width: { unit: '%', size: 15, sizes: [] },
-            width_mobile: { unit: '%', size: 20, sizes: [] }
+            width: { unit: '%', size: 32, sizes: [] },
+            width_mobile: { unit: '%', size: 100, sizes: [] }
           }, [
             E.imageWidget(IMAGES.about.cleansing.url, {
-              id: 0, alt: IMAGES.about.cleansing.alt, radius: 50, width: 70
+              id: 0, alt: IMAGES.about.cleansing.alt, radius: 8, width: 100
             })
           ]),
           E.wrap({
             content_width: 'full',
-            width: { unit: '%', size: 80, sizes: [] },
-            width_mobile: { unit: '%', size: 75, sizes: [] }
+            width: { unit: '%', size: 63, sizes: [] },
+            width_mobile: { unit: '%', size: 100, sizes: [] }
           }, [
             E.heading('Energetically Cleansed & Charged', {
               fontSize: 18, color: '#2d2d2d', align: 'left', fontWeight: '600',
@@ -615,17 +634,17 @@ function generateAboutUs() {
         }, [
           E.wrap({
             content_width: 'full',
-            width: { unit: '%', size: 15, sizes: [] },
-            width_mobile: { unit: '%', size: 20, sizes: [] }
+            width: { unit: '%', size: 32, sizes: [] },
+            width_mobile: { unit: '%', size: 100, sizes: [] }
           }, [
             E.imageWidget(IMAGES.about.packaging.url, {
-              id: 0, alt: IMAGES.about.packaging.alt, radius: 50, width: 70
+              id: 0, alt: IMAGES.about.packaging.alt, radius: 8, width: 100
             })
           ]),
           E.wrap({
             content_width: 'full',
-            width: { unit: '%', size: 80, sizes: [] },
-            width_mobile: { unit: '%', size: 75, sizes: [] }
+            width: { unit: '%', size: 63, sizes: [] },
+            width_mobile: { unit: '%', size: 100, sizes: [] }
           }, [
             E.heading('Velvet Pouch + Guide Card Included', {
               fontSize: 18, color: '#2d2d2d', align: 'left', fontWeight: '600',
@@ -657,17 +676,17 @@ function generateAboutUs() {
         }, [
           E.wrap({
             content_width: 'full',
-            width: { unit: '%', size: 15, sizes: [] },
-            width_mobile: { unit: '%', size: 20, sizes: [] }
+            width: { unit: '%', size: 32, sizes: [] },
+            width_mobile: { unit: '%', size: 100, sizes: [] }
           }, [
             E.imageWidget(IMAGES.about.returns.url, {
-              id: 0, alt: IMAGES.about.returns.alt, radius: 50, width: 70
+              id: 0, alt: IMAGES.about.returns.alt, radius: 8, width: 100
             })
           ]),
           E.wrap({
             content_width: 'full',
-            width: { unit: '%', size: 80, sizes: [] },
-            width_mobile: { unit: '%', size: 75, sizes: [] }
+            width: { unit: '%', size: 63, sizes: [] },
+            width_mobile: { unit: '%', size: 100, sizes: [] }
           }, [
             E.heading('30-Day Worry-Free Returns', {
               fontSize: 18, color: '#2d2d2d', align: 'left', fontWeight: '600',
@@ -707,7 +726,7 @@ function generateAboutUs() {
           _margin: { unit: 'px', top: '0', right: '0', bottom: '40', left: '0', isLinked: '' }
         }
       }),
-      // 3列→平板2列→手机1列
+      // 2x2网格：4条故事避免出现3+1失衡
       E.wrap({
         content_width: 'full',
         flex_direction: 'row',
@@ -717,7 +736,7 @@ function generateAboutUs() {
         // 故事1
         E.wrap({
           content_width: 'full',
-          width: { unit: '%', size: 30, sizes: [] },
+          width: { unit: '%', size: 45, sizes: [] },
           width_tablet: { unit: '%', size: 45, sizes: [] },
           width_mobile: { unit: '%', size: 100, sizes: [] },
           background_background: 'classic',
@@ -741,15 +760,15 @@ function generateAboutUs() {
           }),
           E.textEditor(
             '"I was going through a difficult breakup when I ordered the Rose Quartz bracelet. ' +
-            'Wearing it became my daily reminder to love myself first. Three months later, I\'ve never ' +
-            'felt more at peace. It\'s more than jewelry — it\'s a daily anchor for my heart."',
+            'Wearing it became a small daily reminder to be gentle with myself. I keep it on my nightstand ' +
+            'when I journal, and it has become part of how I return to myself."',
             { fontSize: 14, color: '#555555', align: 'center', lineHeight: 23 }
           )
         ]),
         // 故事2
         E.wrap({
           content_width: 'full',
-          width: { unit: '%', size: 30, sizes: [] },
+          width: { unit: '%', size: 45, sizes: [] },
           width_tablet: { unit: '%', size: 45, sizes: [] },
           width_mobile: { unit: '%', size: 100, sizes: [] },
           background_background: 'classic',
@@ -773,15 +792,15 @@ function generateAboutUs() {
           }),
           E.textEditor(
             '"As someone who works in a high-stress corporate job, I was skeptical about crystals. ' +
-            'But my Black Tourmaline bracelet has become my secret weapon — I touch it during tense ' +
-            'meetings and feel this grounding energy. My colleagues have noticed I\'m calmer."',
+            'My Black Tourmaline bracelet has become a grounding cue during busy workdays. When I notice ' +
+            'it on my wrist, I pause, breathe, and come back to the present moment."',
             { fontSize: 14, color: '#555555', align: 'center', lineHeight: 23 }
           )
         ]),
         // 故事3
         E.wrap({
           content_width: 'full',
-          width: { unit: '%', size: 30, sizes: [] },
+          width: { unit: '%', size: 45, sizes: [] },
           width_tablet: { unit: '%', size: 45, sizes: [] },
           width_mobile: { unit: '%', size: 100, sizes: [] },
           background_background: 'classic',
@@ -805,15 +824,15 @@ function generateAboutUs() {
           }),
           E.textEditor(
             '"I bought the Amethyst bracelet for my daughter who was struggling with anxiety before ' +
-            'exams. She wears it every day now and says it reminds her to breathe and stay calm. ' +
-            'Her test scores have improved, and honestly, so has her confidence."',
+            'exams. She wears it while studying and says it reminds her to slow down, breathe, and trust ' +
+            'herself. The guide card made it feel thoughtful and easy to use."',
             { fontSize: 14, color: '#555555', align: 'center', lineHeight: 23 }
           )
         ]),
         // 故事4
         E.wrap({
           content_width: 'full',
-          width: { unit: '%', size: 30, sizes: [] },
+          width: { unit: '%', size: 45, sizes: [] },
           width_tablet: { unit: '%', size: 45, sizes: [] },
           width_mobile: { unit: '%', size: 100, sizes: [] },
           background_background: 'classic',
@@ -837,8 +856,8 @@ function generateAboutUs() {
           }),
           E.textEditor(
             '"I set an intention with my Citrine bracelet when I started my small business. ' +
-            'Six months later, I hit my first $10K month. Coincidence? Maybe. But I\'m not taking ' +
-            'it off. The velvet pouch and guide card were such a thoughtful touch."',
+            'Now I wear it when I plan, package orders, or need a little courage. The velvet pouch and ' +
+            'guide card made the whole experience feel personal, not mass-produced."',
             { fontSize: 14, color: '#555555', align: 'center', lineHeight: 23 }
           )
         ])
@@ -878,7 +897,7 @@ function generateAboutUs() {
             }
           }
         ),
-        E.buttonWidget('Take the Crystal Quiz', '/crystal-quiz')
+        E.buttonWidget('Shop Crystal Bracelets', '/shop')
       ])
     ])
   ];
@@ -891,4 +910,8 @@ async function main() {
   await E.createPage('About Us', 'about', generateAboutUs(), 'draft');
 }
 
-main().catch(err => { console.error('Error:', err.message || err); process.exit(1); });
+if (require.main === module) {
+  main().catch(err => { console.error('Error:', err.message || err); process.exit(1); });
+}
+
+module.exports = generateAboutUs;
