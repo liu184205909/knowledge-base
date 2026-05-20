@@ -192,17 +192,44 @@ sitemap_index.xml (主索引)
 
 ## 六、数据文件索引
 
-> 已有详细解析文件的竞品（编号对应1A竞品清单序号）
+> 所有35家竞品均有独立解析文件（编号对应报告表格序号）
 
-| 文件 | 竞品 | 页面数 |
-|------|------|--------|
-| [01-Tiny-Rituals.md](./01-Tiny-Rituals.md) | Tiny Rituals | 1,520 |
-| [02-Energy-Muse.md](./02-Energy-Muse.md) | Energy Muse | 4,094 |
-| [04-Crystal-Vaults.md](./04-Crystal-Vaults.md) | Crystal Vaults | 8,204 |
-| [06-My-Crystals.md](./06-My-Crystals.md) | My Crystals | 325 |
-| [07-Conscious-Items.md](./07-Conscious-Items.md) | Conscious Items | 17,026 |
-| [08-Moonrise-Crystals.md](./08-Moonrise-Crystals.md) | Moonrise Crystals | 失败 |
-| [10-Beadage.md](./10-Beadage.md) | Beadage | 133,962 |
-| [11-Satin-Crystals.md](./11-Satin-Crystals.md) | Satin Crystals | 55,744 |
+| 文件 | 竞品 | 页面数 | 状态 |
+|------|------|--------|------|
+| [01-Tiny-Rituals.md](./01-Tiny-Rituals.md) | Tiny Rituals | 1,520 | 成功 |
+| [02-Energy-Muse.md](./02-Energy-Muse.md) | Energy Muse | 4,094 | 成功 |
+| [03-Crystal-Vaults.md](./04-Crystal-Vaults.md) | Crystal Vaults | 8,204 | 成功 |
+| [04-The-Crystal-Council.md](./04-The-Crystal-Council.md) | The Crystal Council | 15,738 | 成功 |
+| [05-My-Crystals.md](./06-My-Crystals.md) | My Crystals | 325 | 成功 |
+| [06-Beads-of-Cambay.md](./06-Beads-of-Cambay.md) | Beads of Cambay | 18,686 | 成功 |
+| [07-Conscious-Items.md](./07-Conscious-Items.md) | Conscious Items | 17,026 | 成功 |
+| [08-Moonrise-Crystals.md](./08-Moonrise-Crystals.md) | Moonrise Crystals | — | 失败 |
+| [09-New-Moon-Beginnings.md](./09-New-Moon-Beginnings.md) | New Moon Beginnings | 14,014 | 成功 |
+| [10-Beadage.md](./10-Beadage.md) | Beadage | 133,962 | 成功 |
+| [11-Satin-Crystals.md](./11-Satin-Crystals.md) | Satin Crystals | 55,744 | 成功 |
+| [12-Healing-Crystals.md](./12-Healing-Crystals.md) | Healing Crystals | 28,718 | 成功 |
+| [13-Selfgazer.md](./13-Selfgazer.md) | Selfgazer | 1,020 | 成功 |
+| [14-Loner-Wolf.md](./14-Loner-Wolf.md) | Loner Wolf | 521 | 成功 |
+| [15-Forever-Conscious.md](./15-Forever-Conscious.md) | Forever Conscious | 8,853 | 成功 |
+| [16-Moon-Omens.md](./16-Moon-Omens.md) | Moon Omens | 2,449 | 成功 |
+| [17-Tarot-com.md](./17-Tarot-com.md) | Tarot.com | 1,349 | 成功 |
+| [18-Anahana.md](./18-Anahana.md) | Anahana | 38,581 | 成功 |
+| [19-The-Secret-of-the-Tarot.md](./19-The-Secret-of-the-Tarot.md) | The Secret of the Tarot | 3,192 | 成功 |
+| [20-Biddy-Tarot.md](./20-Biddy-Tarot.md) | Biddy Tarot | 2,050 | 成功 |
+| [21-Labyrinthos.md](./21-Labyrinthos.md) | Labyrinthos | 415 | 成功 |
+| [22-The-Tarot-Lady.md](./22-The-Tarot-Lady.md) | The Tarot Lady | 8,608 | 成功 |
+| [23-Astrostyle.md](./23-Astrostyle.md) | Astrostyle | 3,629 | 成功 |
+| [24-Dream-Moods.md](./24-Dream-Moods.md) | Dream Moods | — | 失败(无sitemap) |
+| [25-Dream-Bible.md](./25-Dream-Bible.md) | Dream Bible | 96 | 成功 |
+| [26-Dream-Dictionary.md](./26-Dream-Dictionary.md) | Dream Dictionary | 487 | 成功 |
+| [27-Tiny-Buddha.md](./27-Tiny-Buddha.md) | Tiny Buddha | 50,000+(估) | 超限(仅结构) |
+| [28-Ask-Angels.md](./28-Ask-Angels.md) | Ask Angels | 1,774 | 成功 |
+| [29-The-Hoodwitch.md](./29-The-Hoodwitch.md) | The Hoodwitch | 1,779 | 成功 |
+| [30-All-Crystal.md](./30-All-Crystal.md) | All Crystal | 2,022 | 成功(双路径) |
+| [31-Lifehacks-io.md](./31-Lifehacks-io.md) | Lifehacks.io | 771 | 成功 |
+| [32-What-Ever-Your-Dose.md](./32-What-Ever-Your-Dose.md) | What Ever Your Dose | 67 | 部分 |
+| [33-A-Little-Spark-of-Joy.md](./33-A-Little-Spark-of-Joy.md) | A Little Spark of Joy | 510 | 成功 |
+| [34-Daily-Horoscope.md](./34-Daily-Horoscope.md) | Daily Horoscope | — | 失败(Invalid) |
+| [35-Soul-Path.md](./35-Soul-Path.md) | Soul Path | 73 | 成功 |
 
-> 其余27家竞品数据在本报告中有完整统计。如需为特定竞品创建详细解析文件，可后续按需生成。
+> **覆盖率**: 35/35 家竞品均有独立解析文件。32家成功获取sitemap数据（91%），2家sitemap无效（#8 Moonrise Crystals, #34 Daily Horoscope），1家无sitemap（#24 Dream Moods）。
