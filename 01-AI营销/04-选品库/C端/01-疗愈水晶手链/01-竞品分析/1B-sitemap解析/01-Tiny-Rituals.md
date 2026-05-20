@@ -4,8 +4,8 @@
 > **1A清单序号**: #1（直接竞品 · 最高流量）
 > **建站平台**: Shopify
 > **Sitemap URL**: https://tinyrituals.co/sitemap.xml
-> **解析状态**: 成功（2026-05-19 手动验证+webReader抓取）
-> **解析时间**: 2026-05-19
+> **解析状态**: 成功（2026-05-19 手动验证 + 2026-05-20 sitemap-mcp-server 精确解析）
+> **解析时间**: 2026-05-20（sitemap MCP 精确数据）
 
 ---
 
@@ -23,17 +23,18 @@ Sitemap Index，包含5个子sitemap：
 
 > **注意**：2026-05-18 首次解析时 MCP webReader 报"超时/SSL错误"，实际 sitemap 完全可访问。Shopify 站 sitemap 结构标准，应优先使用浏览器验证。
 
-## 页面分类统计
+## 页面分类统计（sitemap MCP 精确数据）
 
-| 页面类型 | 数量 | 说明 |
-|---------|------|------|
-| 博客文章(Blog) | **200+** | 水晶含义+功效+天使号码+星座+脉轮+颜色+教程 |
-| 产品页(Products) | **800+** | 宝石手链132款+项链+耳环+原石等 |
-| 集合页(Collections) | **20+** | 按类别/宝石/用途分组 |
-| 静态页面(Pages) | **~15** | 品牌页+政策页 |
-| **合计(估)** | **~1000+** | 全站 |
+| 页面类型 | 数量 | 子sitemap |
+|---------|------|-----------|
+| 博客文章(Blog) | **386** | `sitemap_blogs_1.xml` |
+| 产品页(Products) | **964** | `sitemap_products_1.xml` |
+| 集合页(Collections) | **149** | `sitemap_collections_1.xml` |
+| 静态页面(Pages) | **20** | `sitemap_pages_1.xml` |
+| AI发现页 | **1** | `sitemap_agentic_discovery.xml` |
+| **合计** | **1,520** | 7个sitemap文件 |
 
-## Blog sitemap 关键URL清单（200+篇）
+## Blog sitemap 关键URL清单（386篇）
 
 ### 水晶含义文章（30+篇）
 

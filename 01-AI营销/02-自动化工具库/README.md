@@ -9,7 +9,7 @@
 | 序号 | 工具 | 核心功能 | 脚本文件 |
 |------|------|---------|---------|
 | **01** | 域名查询 | 批量检测域名可用性，WHOIS 查询 | `domain_checker.py` |
-| **02** | 竞品研究工具 | 人工 Google 搜索竞品 + SEMrush 数据采集 + Sitemap 解析网站结构 | `semrush_to_sheets.py` `sitemap_parser.py`（`serp_competitor_finder.py` 已退役） |
+| **02** | 竞品研究工具 | 人工 Google 搜索竞品 + SEMrush 数据采集 + Sitemap 解析（sitemap-mcp-server） | `semrush_to_sheets.py`（`serp_competitor_finder.py` `sitemap_parser.py` 已退役） |
 | **03** | WordPress 建站 | AI 操作 WordPress，Elementor 建站规则 | 文档为主 |
 | **04** | 竞品内容分析工具 | 内容模式分析 + 站内重复检测 + 站外原创性检测 | `content_analyzer.py` `content_duplicate_checker.py` `content_originality_checker.py` |
 | **05** | 图片生成 | AI 图片生成工具（待建设，目录预留） | — |
@@ -30,8 +30,8 @@
 人工 Google 搜索（排除语法过滤大平台）     ← 筛选 ~40 个竞品域名
     ↓
 02-竞品研究工具/semrush_to_sheets.py       ← SEMrush 数据采集（AS/流量/截图 → Google Sheets）
-02-竞品研究工具/sitemap_parser.py          ← Sitemap 解析内容架构
-    ↓ blog_urls.csv
+sitemap-mcp-server（MCP）                  ← Sitemap 解析内容架构（详见 1B数据采集工具手册）
+    ↓
 04-竞品内容分析工具/content_analyzer.py    ← 批量抓取 title/H1/H2，输出内容模式报告
 ```
 
@@ -105,26 +105,13 @@ python 01-域名查询/domain_checker.py
 关键词 -amazon.com -ebay.com -etsy.com -walmart.com -pinterest.com -reddit.com -youtube.com -facebook.com -tiktok.com -wikipedia.org -quora.com -target.com -aliexpress.com -alibaba.com
 ```
 
-> `serp_competitor_finder.py` 已退役，文件保留在目录中不再使用。详见 [竞品研究工具使用指南.md](02-竞品研究工具/竞品研究工具使用指南.md)
+> `serp_competitor_finder.py` 和 `sitemap_parser.py` 已退役，不再使用。详见 [1B数据采集工具手册.md](02-竞品研究工具/1B数据采集工具手册.md)
 
-### 2B Sitemap 解析：`sitemap_parser.py`
+### 2B Sitemap 解析：sitemap-mcp-server（MCP）
 
-**原理**：自动发现并解析竞品 sitemap.xml，支持 sitemap index 嵌套，按 URL pattern 分类内容。
+**原理**：通过 sitemap-mcp-server（MCP 服务）自动发现并解析竞品 sitemap.xml，支持子sitemap过滤、路径过滤、分页。
 
-```bash
-# 单个竞品（自动发现 sitemap）
-python 02-竞品研究工具/sitemap_parser.py --url https://competitor.com
-
-# 直接指定 sitemap.xml
-python 02-竞品研究工具/sitemap_parser.py --url https://competitor.com/sitemap.xml
-
-# 批量（接 2A 的输出）
-python 02-竞品研究工具/sitemap_parser.py --file competitor_urls.txt
-```
-
-输出：
-- `sitemap_results/<domain>_sitemap_report.md`：内容架构分析
-- `sitemap_results/<domain>_blog_urls.csv`：博客 URL 列表，供 04 使用
+详见 [1B数据采集工具手册.md](02-竞品研究工具/1B数据采集工具手册.md) 轨道D章节。
 
 ---
 
@@ -237,7 +224,7 @@ GA4 流量行为 ─────────────────────
 
 > **状态**：占坑，待外链建设指南验证后启动开发。详见 [README.md](08-外链工具/README.md)。
 
-SEMrush 数据采集功能已整合到 `02-竞品研究工具/`，详见 [竞品研究工具使用指南.md](02-竞品研究工具/竞品研究工具使用指南.md)。
+SEMrush 数据采集功能已整合到 `02-竞品研究工具/`，详见 [1B数据采集工具手册.md](02-竞品研究工具/1B数据采集工具手册.md)。
 
 ---
 
