@@ -4,14 +4,14 @@
 > **1A清单序号**: #6（直接竞品）
 > **建站平台**: Webflow
 > **Sitemap URL**: https://mycrystals.com/sitemap.xml
-> **解析状态**: 成功
-> **解析时间**: 2026-05-18
+> **解析状态**: 成功（2026-05-20 sitemap-mcp-server 精确解析）
+> **解析时间**: 2026-05-20
 
 ---
 
 ## Sitemap结构
 
-单文件sitemap，包含全部URL（约250个），无需子sitemap
+单文件sitemap，包含全部URL（325个），无需子sitemap
 
 ## 页面分类统计
 
@@ -23,7 +23,7 @@
 | Crystal Shapes | ~12 | `/buy/[shape-type]` 格式 |
 | Zodiac | 12 | `/zodiacs/[sign]` 格式 |
 | 其他静态页面 | ~15 | About/Contact/Guide等 |
-| **合计(估)** | **~250** | 全站 |
+| **合计** | **325** | 全站 |
 
 ## 关键URL清单
 

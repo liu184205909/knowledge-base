@@ -4,24 +4,32 @@
 > **1A清单序号**: #7（直接竞品）
 > **建站平台**: Shopify
 > **Sitemap URL**: https://consciousitems.com/sitemap.xml
-> **解析状态**: 成功
-> **解析时间**: 2026-05-18
+> **解析状态**: 成功（2026-05-20 sitemap-mcp-server 精确解析）
+> **解析时间**: 2026-05-20
 
 ---
 
 ## Sitemap结构
 
-多语言Sitemap（EN/DE/FR/ES/PT + 地区变体），EN版5个子sitemap
+多语言Sitemap（EN/DE/FR/ES/PT + 地区变体），共15个语言地区 x 4个子sitemap = 63个子sitemap
+
+EN版4个子sitemap：
+- `products` - 产品页（281页）
+- `pages` - 静态页面（140页）
+- `collections` - 产品集合页（241页）
+- `blogs` - 博客文章（473页）
 
 ## 页面分类统计
 
 | 页面类型 | 数量 | 说明 |
 |---------|------|------|
-| 静态页面(Pages) | ~110 | EN版Pages sitemap |
-| 产品页 | ~300+ | 珠宝产品 |
-| 集合页 | ~40 | 按分类/意图/星座 |
-| 博客页 | ~50 | 知识文章 |
-| **合计(估)** | **~400+** | EN版 |
+| 产品页(Products) | 281 | EN版 |
+| 静态页面(Pages) | 140 | EN版 |
+| 集合页(Collections) | 241 | EN版 |
+| 博客页(Blogs) | 473 | EN版 |
+| **EN版小计** | **1,135** | EN版4个子sitemap |
+| 多语言合计 | 17,026 | 15个语言地区 x 4个子sitemap = 63个子sitemap |
+| **合计** | **17,026** | 全站（含所有语言） |
 
 ## Pages sitemap关键URL清单
 

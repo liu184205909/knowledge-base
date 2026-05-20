@@ -4,29 +4,31 @@
 > **1A清单序号**: #2（直接竞品）
 > **建站平台**: Shopify
 > **Sitemap URL**: https://energymuse.com/sitemap.xml
-> **解析状态**: 成功
-> **解析时间**: 2026-05-18
+> **解析状态**: 成功（2026-05-20 sitemap-mcp-server 精确解析）
+> **解析时间**: 2026-05-20
 
 ---
 
 ## Sitemap结构
 
-Sitemap Index，包含6个子sitemap：
-- `agentic_discovery` - AI发现页
-- `products` x2 - 产品页（按分页拆分）
-- `pages` - 静态页面
-- `collections` - 产品集合页
-- `blogs` - 博客文章
+Sitemap Index，包含8个子sitemap：
+- `agentic_discovery` - AI发现页（1页）
+- `products_1` - 产品页（2,432页）
+- `products_2` - 产品页（553页）
+- `pages` - 静态页面（230页）
+- `collections` - 产品集合页（504页）
+- `blogs` - 博客文章（374页）
 
 ## 页面分类统计
 
 | 页面类型 | 数量 | 说明 |
 |---------|------|------|
-| 静态页面(Pages) | ~120 | 含FAQ、Guide、Crystal Meaning等 |
-| 产品页(Products) | ~800+ | 珠宝、水晶产品 |
-| 集合页(Collections) | ~50 | 按类别/用途/宝石分组 |
-| 博客页(Blog) | ~200+ | 水晶知识文章 |
-| **合计(估)** | **~350+ (Pages sitemap)** | 仅统计Pages sitemap |
+| 产品页(Products) | 2,985 | products_1=2,432 + products_2=553 |
+| 静态页面(Pages) | 230 | 含FAQ、Guide、Crystal Meaning等 |
+| 集合页(Collections) | 504 | 按类别/用途/宝石分组 |
+| 博客页(Blog) | 374 | 水晶知识文章 |
+| AI发现页(AI Discovery) | 1 | AI发现页 |
+| **合计** | **4,094** | 全站（8个子sitemap） |
 
 ## Pages sitemap关键URL清单
 

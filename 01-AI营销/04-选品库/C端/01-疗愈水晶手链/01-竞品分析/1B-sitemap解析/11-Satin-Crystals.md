@@ -4,24 +4,32 @@
 > **1A清单序号**: #11（直接竞品）
 > **建站平台**: Shopify
 > **Sitemap URL**: https://satincrystals.com/sitemap.xml
-> **解析状态**: 成功
-> **解析时间**: 2026-05-18
+> **解析状态**: 成功（2026-05-20 sitemap-mcp-server 精确解析）
+> **解析时间**: 2026-05-20
 
 ---
 
 ## Sitemap结构
 
-多地区Sitemap（US/CA/GB/AU/SG/JP/DE/FR/NZ/NL/CH/SE），每个地区5个子sitemap
+多地区Sitemap（12个地区：US/CA/GB/AU/SG/JP/DE/FR/NZ/NL/CH/SE），每个地区5个子sitemap = 63个子sitemap
+
+EN版（US）5个子sitemap：
+- `products` x2 - 产品页（2,501+838 = 3,339页）
+- `pages` - 静态页面（167页）
+- `collections` - 产品集合页（422页）
+- `blogs` - 博客文章（734页）
 
 ## 页面分类统计
 
 | 页面类型 | 数量 | 说明 |
 |---------|------|------|
-| 静态页面(Pages) | ~120 | US版Pages sitemap |
-| 产品页 | ~500+ | 水晶/珠宝产品 |
-| 集合页 | ~60 | 按分类/意图/形状 |
-| 博客页 | ~200+ | 水晶知识文章 |
-| **合计(估)** | **~600+** | US版（多地区则~7000+） |
+| 产品页(Products) | 3,339 | US版（2,501+838） |
+| 静态页面(Pages) | 167 | US版 |
+| 集合页(Collections) | 422 | US版 |
+| 博客页(Blogs) | 734 | US版 |
+| **US版小计** | **4,662** | US版5个子sitemap |
+| 多地区合计 | 55,744 | 12个地区 x 5个子sitemap = 63个子sitemap |
+| **合计** | **55,744** | 全站（含所有地区） |
 
 ## Pages sitemap关键URL清单
 

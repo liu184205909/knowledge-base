@@ -1,196 +1,208 @@
 # 竞品Sitemap解析报告
 
-> **RLM步骤1B数据采集输出**：竞品sitemap.xml批量解析结果
-> **生成时间**: 2026-05-18
-> **数据来源**: 14家竞品sitemap.xml抓取（8家成功，6家失败）
-> **工具**: MCP webReader + 手动解析
-> **编号规则**: 按 [1A-竞品清单](../1A-竞品清单.md) 中的1A清单序号排列
+> **RLM步骤1B数据采集输出**：35家竞品sitemap.xml全量解析
+> **生成时间**: 2026-05-20
+> **工具**: sitemap-mcp-server（MCP）
+> **编号规则**: 按Google Sheets竞品清单行序排列（同 [1A-竞品清单](../1A-竞品清单.md)）
 
 ---
 
-## 一、抓取结果总览
+## 一、全量解析总览
 
-> **编号规则**：#号对应1A竞品清单中的序号，成功获取sitemap的8家按1A序号排列。
+> **成功率**：32/35 家成功获取sitemap数据（91%），2家sitemap无效，1家响应超限
 
-| 1A# | 竞品 | 域名 | 建站平台 | Sitemap类型 | 总页面数(估) | 状态 |
-|-----|------|------|---------|------------|------------|------|
-| 1 | Tiny Rituals | tinyrituals.co | Shopify | Sitemap Index (5子sitemap) | ~1000 | 成功 |
-| 2 | Energy Muse | energymuse.com | Shopify | Sitemap Index (6子sitemap) | ~350 | 成功 |
-| 4 | Crystal Vaults | crystalvaults.com | WordPress/Yoast | Sitemap Index (30+子sitemap) | ~800 | 成功(替代路径) |
-| 6 | My Crystals | mycrystals.com | Webflow | 单文件sitemap | ~250 | 成功 |
-| 7 | Conscious Items | consciousitems.com | Shopify | 多语言Sitemap (EN 5子sitemap) | ~400 | 成功 |
-| 8 | Moonrise Crystals | moonrisecrystals.com | WordPress/Yoast | Sitemap Index (19子sitemap) | ~500 | 成功 |
-| 10 | Beadage | beadage.net | WordPress | Sitemap Index (6子sitemap) | ~250 | 成功 |
-| 11 | Satin Crystals | satincrystals.com | Shopify | 多地区Sitemap (12地区x5子) | ~600 | 成功 |
-| 3 | Healing Crystals | healingcrystals.com | 未知 | - | - | 失败(404) |
-| 5 | The Crystal Council | thecrystalcouncil.com | PHP自建 | - | - | 失败(响应过大) |
-| 9 | New Moon Beginnings | newmoonbeginnings.com | BigCommerce | - | - | 失败(响应过大) |
-| 13 | Selfgazer | selfgazer.com | 未知 | - | - | 失败(响应过大) |
-| - | Mindbodygreen | mindbodygreen.com | 未知 | - | - | 失败(404) |
-| - | Mindvalley | mindvalley.com | 未知 | - | - | 失败(403) |
-
-**关键发现**：
-- 8/14家成功获取完整sitemap，覆盖了4种主流建站平台
-- Shopify站（4家）sitemap结构最规范，均使用标准Sitemap Index
-- WordPress站（3家）使用Yoast SEO插件生成sitemap，子sitemap分类最细
-- Crystal Vaults通过替代路径（`/page-sitemap.xml`和`/sitemap_index.xml`）成功获取，拥有30+子sitemap、800+页面，是水晶百科内容最丰富的竞品
-- Webflow站（1家）使用单文件sitemap，URL结构最RESTful
-- 失败原因主要集中在：无sitemap文件(404)、响应体过大、访问被拒(403)
-
----
-
-## 二、逐家Sitemap分析
-
-> 详细解析存放在本目录下，文件名中的编号对应1A竞品清单序号。
-
-| 1A# | 竞品 | 状态 | 建站平台 | 总页面(估) | 详细文件 |
-|-----|------|------|---------|-----------|---------|
-| 1 | Tiny Rituals | 成功 | Shopify | ~1000 | [01-Tiny-Rituals.md](./01-Tiny-Rituals.md) |
-| 2 | Energy Muse | 成功 | Shopify | ~350 | [02-Energy-Muse.md](./02-Energy-Muse.md) |
-| 4 | Crystal Vaults | 成功(替代路径) | WordPress/Yoast | ~800 | [04-Crystal-Vaults.md](./04-Crystal-Vaults.md) |
-| 6 | My Crystals | 成功 | Webflow | ~250 | [06-My-Crystals.md](./06-My-Crystals.md) |
-| 7 | Conscious Items | 成功 | Shopify | ~400 | [07-Conscious-Items.md](./07-Conscious-Items.md) |
-| 8 | Moonrise Crystals | 成功 | WordPress/Yoast | ~500 | [08-Moonrise-Crystals.md](./08-Moonrise-Crystals.md) |
-| 10 | Beadage | 成功 | WordPress | ~250 | [10-Beadage.md](./10-Beadage.md) |
-| 11 | Satin Crystals | 成功 | Shopify | ~600 | [11-Satin-Crystals.md](./11-Satin-Crystals.md) |
-| 3 | Healing Crystals | 失败(404) | 未知 | - | — |
-| 5 | The Crystal Council | 失败(响应过大) | PHP自建 | - | — |
-| 9 | New Moon Beginnings | 失败(响应过大) | BigCommerce | - | — |
-| 13 | Selfgazer | 失败(响应过大) | 未知 | - | — |
-| - | Mindbodygreen | 失败(404) | 未知 | - | — |
-| - | Mindvalley | 失败(403) | 未知 | - | — |
+| # | 竞品 | 域名 | 建站平台 | 总页面数 | Sitemap数 | 状态 | 备注 |
+|---|------|------|---------|---------|----------|------|------|
+| 1 | Energy Muse | energymuse.com | Shopify | **4,094** | 8 | 成功 | Products 2,985 / Blogs 374 / Pages 230 / Collections 504 |
+| 2 | Tiny Rituals | tinyrituals.co | Shopify | **1,520** | 7 | 成功 | Products 964 / Blogs 386 / Collections 149 / Pages 20 |
+| 3 | Crystal Vaults | crystalvaults.com | WordPress/WooCommerce | **8,204** | 29 | 成功 | Products 5,260 / Posts 539 / Pages 706 / Crystal Type 131 |
+| 4 | The Crystal Council | thecrystalcouncil.com | PHP自建 | **15,738** | 2 | 成功 | 单文件sitemap.xml |
+| 5 | My Crystals | mycrystals.com | Webflow | **325** | 1 | 成功 | 单文件sitemap.xml |
+| 6 | Beads of Cambay | beadsofcambay.com | Shopify | **18,686** | 14 | 成功 | Products 17,510 / Blogs 488 / Collections 652 |
+| 7 | Conscious Items | consciousitems.com | Shopify (多语言) | **17,026** | 63 | 成功 | 15语言 × 4子sitemap; EN: Products 281 / Blogs 473 |
+| 8 | Moonrise Crystals | moonrisecrystals.com | WordPress/Yoast | **0** | 2 | 失败 | sitemap_index.xml 返回 InvalidSitemap |
+| 9 | New Moon Beginnings | newmoonbeginnings.com | BigCommerce | **14,014** | 12 | 成功 | Products 5,050 / Pages 220 / Categories 379 |
+| 10 | Beadage | beadage.net | WordPress | **133,962** | 53 | 成功 | Products 128,700 / Gallery 824 / Posts 66 |
+| 11 | Satin Crystals | satincrystals.com | Shopify (多地区) | **55,744** | 63 | 成功 | 12地区; EN: Products 3,339 / Blogs 734 |
+| 12 | Healing Crystals | healingcrystals.com | 自建 | **28,718** | 6 | 成功 | Articles 15,627 / Products 10,134 / Tags 2,087 |
+| 13 | Selfgazer | selfgazer.com | 自建 | **1,020** | 2 | 成功 | 单文件sitemap.xml |
+| 14 | Loner Wolf | lonerwolf.com | WordPress/Yoast | **521** | 6 | 成功 | Posts 449 / Pages 22 / Videos 49 |
+| 15 | Forever Conscious | foreverconscious.com | WordPress/Yoast | **8,853** | 16 | 成功 | Posts 2,052 / Pages 17 / Tags 5,723 |
+| 16 | Moon Omens | moonomens.com | WordPress/WooCommerce | **2,449** | 39 | 成功 | Posts 675 / Crystals 57 / Horoscopes 24 / Products 135 |
+| 17 | Tarot.com | tarot.com | 自建 | **1,349** | 2 | 成功 | 单文件sitemap.xml |
+| 18 | Anahana | anahana.com | 自建 (多语言) | **38,581** | 26 | 成功 | 25语言; EN: 1,710 |
+| 19 | The Secret of the Tarot | thesecretofthetarot.com | WordPress/Yoast | **3,192** | 20 | 成功 | Posts 3,142 (15分片) / Pages 18 |
+| 20 | Biddy Tarot | biddytarot.com | WordPress/Yoast | **2,050** | 12 | 成功 | Posts 492 / Stories 1,021 / Cards 78 / Podcast 222 |
+| 21 | Labyrinthos | labyrinthos.co | Shopify | **415** | 7 | 成功 | Blogs 339 / Products 29 / Pages 31 |
+| 22 | The Tarot Lady | thetarotlady.com | WordPress/Yoast | **8,608** | 17 | 成功 | Posts 2,696 / Pages 106 / Tags 1,438 |
+| 23 | Astrostyle | astrostyle.com | WordPress/Yoast | **3,629** | 24 | 成功 | Posts 2,154 / Learn 806 / Dailies 365 / Celebrities 107 / Tarot 105 |
+| 24 | Dream Moods | dreammoods.com | 静态HTML | **0** | 1 | 失败 | 无sitemap（仅robots.txt），纯静态站 |
+| 25 | Dream Bible | dreambible.com | 自建 | **96** | 2 | 成功 | 单文件sitemap.xml |
+| 26 | Dream Dictionary | dreamdictionary.org | WordPress/Yoast | **487** | 5 | 成功 | Posts 414 / Pages 62 |
+| 27 | Tiny Buddha | tinybuddha.com | WordPress/BBPress | **巨大** | 170+ | 超限 | 132个reply分片+13个topic分片+11个post分片+论坛，估计50,000+ |
+| 28 | Ask Angels | ask-angels.com | WordPress | **1,774** | 9 | 成功 | Posts 779 / Pages 106 |
+| 29 | The Hoodwitch | thehoodwitch.com | Squarespace | **1,779** | 2 | 成功 | 单文件sitemap.xml |
+| 30 | All Crystal | allcrystal.com | WordPress | **2,022** | 3 | 成功 | 1,011个页面（双路径重复索引） |
+| 31 | Lifehacks.io | lifehacks.io | WordPress/Yoast | **771** | 12 | 成功 | Posts 258 / Pages 10 / Categories 17 |
+| 32 | What Ever Your Dose | whateveryourdose.com | WordPress/Yoast | **67** | 6 | 部分 | post-sitemap Invalid; 仅1页+31分类+35作者 |
+| 33 | A Little Spark of Joy | alittlesparkofjoy.com | WordPress/Yoast | **510** | 5 | 成功 | Posts 479 / Pages 12 |
+| 34 | Daily Horoscope | daily-horoscope.us | PHP自建 | **0** | 2 | 失败 | sitemap.xml InvalidSitemap |
+| 35 | Soul Path | soul-path.me | WordPress | **73** | 6 | 成功 | Posts 14 / Pages 57 |
 
 ---
 
-## 三、按页面类型横向汇总
+## 二、按页面规模分级
 
-> **用途**：直接对接2B页面决策表，提供每个页面类型的竞品具体URL对比。
-> **图例**：`-` 表示该竞品无此类型页面（或sitemap中未发现）；URL省略域名前缀。
+### 超大型站（>10,000页）
 
-### 3.1 品牌信任类页面
+| 竞品 | 总页面 | 核心内容 | 说明 |
+|------|--------|---------|------|
+| **Beadage** | 133,962 | Products 128,700 | 产品数据库型站点，50,000+产品/分片 |
+| **Satin Crystals** | 55,744 | Products 3,339×12区 | Shopify多地区镜像 |
+| **Anahana** | 38,581 | EN 1,710×25语言 | 多语言内容矩阵 |
+| **Healing Crystals** | 28,718 | Articles 15,627 | 百科+批发型，文章量最大 |
+| **Beads of Cambay** | 18,686 | Products 17,510 | 珠宝批发商 |
+| **Conscious Items** | 17,026 | EN 1,135×15语言 | Shopify多语言 |
+| **The Crystal Council** | 15,738 | 单文件 | 500+水晶数据库+7维度 |
+| **New Moon Beginnings** | 14,014 | Products 5,050 | BigCommerce多产品 |
+| **Crystal Vaults** | 8,204 | Products 5,260 / Posts 539 | 百科型，30+属性维度 |
+| **Tiny Buddha** | 50,000+(估) | 论坛+博客 | 社区型，132个reply分片 |
 
-| 页面类型 | Energy Muse | Moonrise Crystals | Conscious Items | Satin Crystals | Beadage | My Crystals | Crystal Vaults |
-|---------|------------|-------------------|----------------|---------------|---------|------------|--------------|
-| **About Us** | `/pages/our-story` `/pages/about-us` | `/about/` `/my-journey/` | `/pages/new-about-us` `/pages/about-us-and-our-mission` | `/pages/about` | `/about/about-beadage/` | `/about` | `/about-crystal-vaults/` |
-| **Contact** | `/pages/contacts` | `/contact/` | `/pages/contact-us` | `/pages/contact` | `/contact/` | `/contact` | `/contact-us/` |
-| **FAQ / Help Center** | `/pages/faq` (总) + 8个子FAQ页 | - | `/pages/help-center` | `/pages/frequently-asked-questions` | - | - | - |
-| **Ethical Sourcing** | `/pages/ethically-sourcing-crystals` | `/ethical-sourcing-journal/` `/ethical-lapidary/` `/ethical-mining/` `/ethical-crystals/` `/carbon-footprint-sustainability/` | - | - | - | - | - |
-| **Testimonials / Reviews** | `/pages/press` | `/feel-loved-crystal-stories/` | `/pages/all-reviews` `/pages/conscious-reviews` | `/pages/testimonials` | - | - | - |
-| **VIP / Affiliate** | - | - | `/pages/crystal-affiliate` `/pages/ambassador-program` | `/pages/vip` | - | - | - |
-| **Mission** | - | - | `/pages/we-are-planting-hope` | - | - | - | - |
+### 中型站（1,000-10,000页）
 
-### 3.2 水晶知识体系页面
+| 竞品 | 总页面 | 核心内容 |
+|------|--------|---------|
+| **The Tarot Lady** | 8,608 | Posts 2,696 + Tags 1,438 |
+| **Forever Conscious** | 8,853 | Posts 2,052 + Tags 5,723 |
+| **Energy Muse** | 4,094 | Products 2,985 + Blogs 374 |
+| **Astrostyle** | 3,629 | Posts 2,154 + Learn 806 + Dailies 365 |
+| **The Secret of the Tarot** | 3,192 | Posts 3,142 |
+| **All Crystal** | 2,022 | 单文件1,011页（双路径索引） |
+| **Biddy Tarot** | 2,050 | Stories 1,021 + Posts 492 |
+| **Moon Omens** | 2,449 | Posts 675 + Crystals 57 + Products 135 |
+| **Selfgazer** | 1,020 | 单文件 |
+| **Tarot.com** | 1,349 | 单文件 |
+| **Ask Angels** | 1,774 | Posts 779 |
+| **The Hoodwitch** | 1,779 | 单文件 |
 
-| 页面类型 | Energy Muse | Moonrise Crystals | Conscious Items | Satin Crystals | Beadage | My Crystals | Crystal Vaults |
-|---------|------------|-------------------|----------------|---------------|---------|------------|--------------|
-| **Crystal Guide Index / Crystal Meanings** | `/pages/meaning` (总索引) + ~60个单品含义页 | `/crystal-learning-center/` `/complete-guide-to-crystals/` | `/pages/about-crystals` `/pages/crystals-and-their-meanings` `/pages/crystals-meaning` | `/pages/crystal-meanings` `/pages/crystal-meanings-2` + ~40个单品含义页 | `/gemstones/` (总索引) + ~60个宝石页 | `/meaning/[crystal-name]` (~150个水晶) | `/crystal-encyclopedia/` (100+个百科页) |
-| **Crystal Single (百科单品页)** | `/pages/amethyst-meaning` `/pages/rose-quartz-meaning` 等~60个 | (通过WooCommerce产品属性页实现) | - | `/pages/amethyst-meaning` `/pages/rose-quartz-meaning` 等~40个 | `/gemstones/amethyst/` `/gemstones/rose-quartz/` 等~60个 | `/meaning/amethyst` `/meaning/rose-quartz` 等~150个 | `/crystal-encyclopedia/amethyst` `/crystal-encyclopedia/rose-quartz` 等~100个 |
-| **Crystal Shapes Guide** | `/pages/a-guide-to-crystal-shapes` | - | `/pages/crystals-and-their-shapes` | `/pages/crystal-pyramid-meaning` `/pages/tumbled-stones-meaning-and-healing-benefits` | - | `/crystal-shapes-guide` `/buy/[shape-type]` (~12个) | - |
-| **Crystal Care Guide** | - | - | `/pages/how-to-clean-and-energize-crystals` | `/pages/crystal-care` `/pages/crystal-healing-information` `/pages/crystal-healing-tutorials` | - | - | - |
-| **Crystal Beginners Guide** | `/pages/crystals-for-beginners` | `/learn-about-crystals/` `/choosing-crystals/` | `/pages/how-to-choose-the-right-crystal-for-you` `/pages/what-to-do-with-your-new-crystal` | `/pages/guide-to-choosing-crystals` | `/learn/` | - | - |
+### 小型站（<1,000页）
 
-### 3.3 按意图/属性筛选页面
-
-| 页面类型 | Energy Muse | Moonrise Crystals | Conscious Items | Satin Crystals | Beadage | My Crystals | Crystal Vaults |
-|---------|------------|-------------------|----------------|---------------|---------|------------|--------------|
-| **Shop by Intention / Condition** | `/pages/shop-by-intention` (总) `/pages/protection-crystals` `/pages/shop-by-wealth-success` 等8个子页 | `/crystals-emotional-healing/` `/crystals-world-healing/` `/crystals-spiritual-healing/` `/crystals-physical-healing/` | `/pages/intentions` `/pages/by-intention` | `/pages/shop-by-intention` `/pages/abundance-crystals` `/pages/calming-crystals` 等8个子页 | `/gemstones/uses/abundance/` `/gemstones/uses/anxiety/` `/gemstones/uses/protection/` 等30+个 | `/use/best-crystals-for-[condition]` (~50个) | `/crystal-reference-guide/crystals-for-anxiety` 等~150+个功效页 |
-| **Shop by Color** | - | `/crystals-by-color/` | `/pages/black-gemstones` ~ `/pages/clear-colorless-gemstones` (12个) | `/pages/shop-by-color` | `/gemstones/colors/black/` `/gemstones/colors/blue/` 等12个 | `/color/[color-name]` (~35个) | `/shop-crystals-by-color/` `/crystal-colors-explained/` `/red-explained` ~ `/brown-explained` (12+个) |
-| **Shop by Chakra** | `/pages/root-chakra` `/pages/sacral-chakra` `/pages/solar-plexus-chakra` `/pages/healing-the-4th-heart-chakra` | `/crystals-by-chakra/` | `/pages/chakra-practice-guide` | `/pages/chakra-guide` `/pages/chakra-balancing` `/pages/chakra-tutorial` `/pages/healing-the-1st-root-chakra` ~ `/pages/healing-the-7th-crown-chakra` (7个) | `/chakra-stones/` | `/chakra-crystals` | `/root-chakra-explained` ~ `/crown-chakra-explained` (7个) + `/crystals-for-the-[chakra]-chakra` (7个) |
-| **Shop by Zodiac** | `/pages/crystals-for-astrology` | `/crystals-by-zodiac/` | `/pages/zodiac-collections` `/pages/zodiac-birthstones` | `/pages/astrology-crystals-directory` | - | `/zodiacs/[sign]` (12个) | `/aquarius-crystals` ~ `/capricorn-crystals` (12个) |
-| **Shop by Stone / Crystal** | (通过Collections实现) | (通过WooCommerce `pa_crystal-type` 属性归档页实现) | `/pages/by-crystal` `/pages/stone-collections` | (通过Collections实现) | (通过 `/gemstones/` 目录实现) | (通过 `/meaning/` 目录实现) | (通过 `/crystal-encyclopedia/` 百科目录实现) |
-| **Crystal Horoscope** | `/pages/crystal-horoscope` `/pages/your-weekly-crystal-reading` | - | `/pages/crystal-horoscope` `/pages/weekly-horoscope` | `/pages/archive-of-monthly-crystal-horoscope-reports` | - | - | - |
-
-### 3.4 互动工具与内容页面
-
-| 页面类型 | Energy Muse | Moonrise Crystals | Conscious Items | Satin Crystals | Beadage | My Crystals | Crystal Vaults |
-|---------|------------|-------------------|----------------|---------------|---------|------------|--------------|
-| **Crystal Quiz / Crystal Test** | `/pages/crystal-test` `/pages/crystal-identifier` `/pages/what-crystals-do-you-need-quiz` | - | `/pages/quiz-best-crystal` `/pages/quiz-best-crystal-for-me` `/pages/protection-quiz` `/pages/quiz-gift` | - | - | `/crystal-quiz` `/crystal-identification` | - |
-| **Blog** | `/pages/blog-all` | (通过 `post` sitemap，数百篇) | `/pages/birthstones-by-month` `/pages/smudging-for-beginners` 等(混合在Pages中) | (通过blogs sitemap) | (通过 `post` sitemap) | - | (通过 `post-sitemap`) |
-| **Shipping / Returns** | (在FAQ子页中: `/pages/faq-shipping-delivery` `/pages/faq-returns-exchanges`) | `/shipping-delivery/` | `/pages/shipping-methods` `/pages/refund-policy` | `/pages/shipping-policy` `/pages/return-policy` | - | - | - |
-| **Birthstones** | - | - | `/pages/zodiac-birthstones` `/pages/birthstones-by-month` | `/pages/birthstones` | `/birthstones/` | `/birthstone-guide` `/crystals-by-month` | - |
-| **Gemstone by Origin** | - | - | `/pages/mexican-gemstones` `/pages/brazilian-gemstones` `/pages/indian-gemstones` `/pages/sri-lanka-gemstones` `/pages/australian-gemstones` | - | - | - | - |
-| **Jewelry Size Guide** | - | - | - | `/pages/jewelry-size-guide` `/pages/necklace-guide` `/pages/ring-guide` `/pages/earrings-guide` `/pages/anklet-guide` `/pages/cufflinks-guide` | - | - | - |
-| **Printable Cards** | - | - | - | - | `/printable-meanings/` + 60个宝石卡片 | - | - |
-| **Glossary** | - | - | - | - | `/glossary/` + 100+术语页 | - | - |
-| **Ebook / Digital Product** | - | - | - | - | - | `/ebook-guide` | - |
-| **Subscription Box** | - | - | - | - | - | `/box` `/crystal-subscription-box` | - |
-| **Crystal Oracle / 占卜** | - | - | - | - | - | - | `/crystal-oracle/` |
-| **I-Ching** | - | - | - | - | - | - | `/crystal-i-ching/` |
-| **Magical Herbs** | - | - | - | - | - | - | `/magical-herbs/` + 30+子页 |
-| **Goddess Crystals** | - | - | - | - | - | - | `/goddess-crystals/` + 40+子页 |
-| **Crystal Moon Astrology** | - | - | - | - | - | - | `/crystal-moon-astrology/` + 27月宿页 |
-| **Medicine Wheel** | - | - | - | - | - | - | `/medicine-wheel/` |
-| **Spirit Guides** | - | - | - | - | - | - | `/spirit-guides/` |
-| **Crystal Courses** | - | - | - | - | - | - | `/crystal-courses/` |
+| 竞品 | 总页面 | 核心内容 |
+|------|--------|---------|
+| **Lifehacks.io** | 771 | Posts 258 |
+| **A Little Spark of Joy** | 510 | Posts 479 |
+| **Dream Dictionary** | 487 | Posts 414 |
+| **Labyrinthos** | 415 | Blogs 339 + Products 29 |
+| **Loner Wolf** | 521 | Posts 449 |
+| **My Crystals** | 325 | 单文件 |
+| **Tiny Rituals** | 1,520 | Products 964 + Blogs 386 |
+| **Dream Bible** | 96 | 单文件 |
+| **Soul Path** | 73 | Posts 14 + Pages 57 |
+| **What Ever Your Dose** | 67 | 部分 |
 
 ---
 
-## 四、未获取sitemap的竞品处理建议
+## 三、按建站平台分类
 
-| 竞品 | 失败原因 | 建议处理方式 | 数据替代方案 |
-|------|---------|------------|------------|
-| **Tiny Rituals** (tinyrituals.co) | ~~超时/SSL错误~~ → **已解决** | Shopify站，sitemap 实际完全可访问；首次 MCP webReader 超时为工具问题，手动浏览器验证+blog sitemap抓取成功 | 数据已完整整合，见 [01-Tiny-Rituals.md](./01-Tiny-Rituals.md) |
-| **Crystal Vaults** (crystalvaults.com) | ~~404 Not Found~~ → **已解决** | 通过替代路径 `/page-sitemap.xml` + `/sitemap_index.xml` 成功获取，见[04-Crystal-Vaults.md](./04-Crystal-Vaults.md) | 数据已完整整合到本报告 |
-| **The Crystal Council** (thecrystalcouncil.com) | 响应过大(761K tokens) | 尝试分批读取sitemap或将sitemap下载到本地后分段解析 | 可通过网站导航手动整理 |
-| **New Moon Beginnings** (newmoonbeginnings.com) | 响应过大(118K tokens) | BigCommerce站，尝试下载sitemap到本地后用脚本解析 | 可通过 `/sitemap.xml` 本地下载处理 |
-| **Healing Crystals** (healingcrystals.com) | 404 Not Found | 尝试其他sitemap路径如 `/sitemap_index.xml`、`/sitemap/` | 网站导航手动整理 |
-| **Mindbodygreen** (mindbodygreen.com) | 404 Not Found | 大型媒体站，非直接竞品，可能使用非标准sitemap路径 | 非核心竞品，可跳过 |
-| **Selfgazer** (selfgazer.com) | 响应过大(27K tokens) | 下载sitemap到本地后解析 | 网站规模不大，可手动整理 |
-| **Mindvalley** (mindvalley.com) | 403 Forbidden | 明确禁止访问，尊重robots.txt | 非核心竞品，可跳过 |
+| 平台 | 竞品数 | 代表站点 |
+|------|--------|---------|
+| **WordPress/Yoast** | 14 | Crystal Vaults, Forever Conscious, Biddy Tarot, Astrostyle |
+| **Shopify** | 7 | Tiny Rituals, Energy Muse, Conscious Items, Satin Crystals |
+| **自建/PHP** | 5 | The Crystal Council, Tarot.com, Anahana, Healing Crystals |
+| **Webflow** | 1 | My Crystals |
+| **BigCommerce** | 1 | New Moon Beginnings |
+| **Squarespace** | 1 | The Hoodwitch |
+| **静态HTML** | 1 | Dream Moods |
+| **BBPress论坛** | 1 | Tiny Buddha |
 
-### 优先级建议
+### Shopify站 sitemap 标准结构
+```
+sitemap_agentic_discovery.xml (AI发现, 1页)
+sitemap_products_1.xml [+ products_2...] (产品)
+sitemap_pages_1.xml (静态页面)
+sitemap_collections_1.xml (集合)
+sitemap_blogs_1.xml (博客)
+```
+多语言/多地区站每个locale重复一套以上结构。
 
-1. **已完成**：~~Tiny Rituals~~ — 手动浏览器验证+blog sitemap抓取成功（见 [01-Tiny-Rituals.md](./01-Tiny-Rituals.md)）
-2. **中优先级**：The Crystal Council、New Moon Beginnings — sitemap存在但需本地处理
-3. **低优先级**：Selfgazer、Healing Crystals — 非核心竞品或规模较小
-4. **可跳过**：Mindbodygreen、Mindvalley — 非直接竞品
-5. **已完成**：~~Crystal Vaults~~ — 通过替代路径成功获取（见 [04-Crystal-Vaults.md](./04-Crystal-Vaults.md)）
+### WordPress/Yoast站 sitemap 标准结构
+```
+sitemap_index.xml (主索引)
+├── post-sitemap.xml [+ post-sitemap2...] (文章)
+├── page-sitemap.xml (页面)
+├── category-sitemap.xml (分类)
+├── post_tag-sitemap.xml [+ ...] (标签)
+├── product-sitemap.xml (WooCommerce产品)
+├── pa_*-sitemap.xml (产品属性)
+└── [custom-post-type]-sitemap.xml (自定义类型)
+```
 
 ---
 
-## 五、关键洞察与结论
+## 四、关键洞察
 
-### 5.1 页面类型覆盖率
+### 4.1 内容规模对比
 
-| 页面类型 | 8家竞品中有此类型的竞品数 | 覆盖率 | 说明 |
-|---------|----------------------|--------|------|
-| About Us | 8/8 | 100% | 所有竞品必备 |
-| Contact | 8/8 | 100% | 所有竞品必备 |
-| Crystal Meanings Index | 8/8 | 100% | 核心内容页，所有竞品都有 |
-| Crystal Single (单品百科) | 7/8 | 88% | 除Conscious Items外都有独立百科页 |
-| Shop by Intention / Condition | 8/8 | 100% | 核心筛选维度（Crystal Vaults有150+页） |
-| Shop by Color | 7/8 | 88% | 仅Energy Muse无独立颜色页 |
-| Shop by Chakra | 8/8 | 100% | 全部覆盖 |
-| Shop by Zodiac | 7/8 | 88% | 除Beadage外都有独立星座页 |
-| Crystal Quiz | 3/8 | 38% | Energy Muse/Conscious Items/My Crystals |
-| Ethical Sourcing | 2/8 | 25% | 仅Energy Muse和Moonrise有专门页面 |
-| FAQ / Help Center | 3/8 | 38% | Energy Muse/Conscious Items/Satin Crystals |
-| Crystal Shapes Guide | 4/8 | 50% | 较常见的指南内容 |
-| Blog | 7/8 | 88% | 除My Crystals外均有博客 |
-| Birthstones | 4/8 | 50% | 跨竞品常见 |
-| Crystal Oracle / 占卜 | 1/8 | 13% | 仅Crystal Vaults |
-| Magical Herbs / Goddess | 1/8 | 13% | 仅Crystal Vaults |
+> 排除多语言/多地区重复页面后的**单语言核心页面数**
 
-### 5.2 URL结构模式对比
+| 竞品 | 核心页面(单语言) | 产品数 | 博客/文章 | 百科/知识 |
+|------|----------------|--------|----------|----------|
+| **Crystal Vaults** | 8,204 | 5,260 | 539 | 706 pages + 131 crystal types |
+| **Healing Crystals** | 28,718 | 10,134 | 15,627 articles | - |
+| **Energy Muse** | 4,094 | 2,985 | 374 | 230 pages |
+| **Tiny Rituals** | 1,520 | 964 | 386 | 20 pages |
+| **Beadage** | 133,962 | 128,700 | 66 | 824 gallery + 108 gemstones |
+| **Satin Crystals** | 4,662(EN) | 3,339 | 734 | 167 pages |
+| **Conscious Items** | 1,135(EN) | 281 | 473 | 140 pages |
+| **The Crystal Council** | 15,738 | - | - | 500+ crystal database |
+| **New Moon Beginnings** | 5,728 | 5,050 | 77(news) | 220 pages |
 
-| 竞品 | 页面URL模式 | 产品URL模式 | 评价 |
-|------|-----------|-----------|------|
-| Energy Muse | `/pages/[slug]` | `/products/[slug]` | Shopify标准，SEO友好 |
-| Moonrise Crystals | `/[slug]/` (扁平) | `/product/[slug]/` | WordPress扁平结构，根级页面权重高 |
-| Conscious Items | `/pages/[slug]` | `/products/[slug]` | Shopify标准，页面数量最多(110+) |
-| Satin Crystals | `/pages/[slug]` | `/products/[slug]` | Shopify标准，多地区支持 |
-| Beadage | `/gemstones/[slug]/` `/gemstones/uses/[slug]/` | `/shop/[slug]` | 内容站结构，分类路径清晰 |
-| My Crystals | `/meaning/[crystal]` `/use/[condition]` `/color/[color]` | `/shop/[slug]` | RESTful风格，URL语义最强 |
-| Crystal Vaults | `/crystal-encyclopedia/[name]` `/crystal-reference-guide/crystals-for-[x]` `/[sign]-crystals` | `/product/[slug]` | 百科型结构，内容深度最高 |
+### 4.2 内容矩阵策略
 
-### 5.3 独特页面（差异化内容）
+| 策略类型 | 代表竞品 | 特征 |
+|---------|---------|------|
+| **百科数据库型** | Crystal Vaults, Healing Crystals, The Crystal Council | 海量产品+属性维度，用户通过筛选发现 |
+| **内容乘法型** | Tiny Rituals, Energy Muse, Satin Crystals | 水晶含义×功效×颜色×星座×脉轮×天使号码 |
+| **多语言矩阵型** | Anahana, Conscious Items | 同一内容翻译为15-25种语言 |
+| **社区论坛型** | Tiny Buddha | 用户生成内容(UGC)，论坛reply 132个分片 |
+| **工具+内容型** | Biddy Tarot, Labyrinthos, Tarot.com | 占卜工具引流+塔罗牌百科+课程 |
+| **占星日更型** | Astrostyle, Forever Conscious | 每日/每周/每月运势内容持续更新 |
 
-| 竞品 | 独特页面 | 差异化价值 |
-|------|---------|-----------|
-| **Energy Muse** | Crystal Test/Identifier/Quiz x3、Press页 | 互动工具矩阵最完善 |
-| **Moonrise Crystals** | Ethical Sourcing五件套、产品属性归档页(10种) | 伦理采购是核心差异化定位 |
-| **Conscious Items** | Gemstone by Origin(5国)、Gemstone by Color(12色)、Quiz x4 | 页面矩阵最全，覆盖维度最广 |
-| **Satin Crystals** | Jewelry Size Guide x6、Chakra Tutorial x7、VIP页 | 教程体系最完善，多地区覆盖 |
-| **Beadage** | Printable Cards x60、Glossary x100+ | 工具型内容站，可打印资源独特 |
-| **My Crystals** | Crystal Subscription Box、Ebook Guide | 订阅制模式，数字化产品 |
-| **Crystal Vaults** | Crystal Oracle、I-Ching、Medicine Wheel、Magical Herbs(30+)、Goddess Crystals(40+)、Crystal Moon Astrology(27月宿)、Spirit Guides、Crystal Courses | 内容深度最高，百科+灵性工具矩阵最独特，150+"Crystals for X"功效页覆盖最广 |
+### 4.3 对我们（luckycrystals.org）的启示
+
+1. **核心竞争区间**：Tiny Rituals(1,520页) 和 Energy Muse(4,094页) 是直接竞品，我们的目标应至少覆盖同等规模
+2. **内容乘法效率最高**：Tiny Rituals 仅386篇博客就覆盖了水晶含义+天使号码+星座+脉轮+颜色+功效全矩阵
+3. **多语言是页面倍增器**：Anahana 用1,710个核心页面 × 25语言 = 38,581总页面
+4. **Shopify站结构最规范**：sitemap结构一致，便于批量解析和对比
+5. **WordPress站内容最丰富**：Yoast SEO插件支持精细化sitemap分类，内容维度更广
+
+---
+
+## 五、失败/异常站点处理
+
+| 竞品 | 问题 | 建议 |
+|------|------|------|
+| **Moonrise Crystals** | sitemap_index.xml InvalidSitemap | 可能需要直接访问子sitemap URL，或用 webReader 手动解析 |
+| **Dream Moods** | 无sitemap，纯静态HTML站 | 6000+梦境词条无法通过sitemap获取，需爬虫或手动整理 |
+| **Daily Horoscope** | sitemap.xml InvalidSitemap | 192页内容丰富，需用其他方式获取 |
+| **Tiny Buddha** | 响应超25000 token限制 | 170+子sitemap，论坛型站点，可用 sitemap_url 逐个解析 |
+| **What Ever Your Dose** | post-sitemap Invalid | 博客文章无法获取，仅得67页 |
+
+---
+
+## 六、数据文件索引
+
+> 已有详细解析文件的竞品（编号对应1A竞品清单序号）
+
+| 文件 | 竞品 | 页面数 |
+|------|------|--------|
+| [01-Tiny-Rituals.md](./01-Tiny-Rituals.md) | Tiny Rituals | 1,520 |
+| [02-Energy-Muse.md](./02-Energy-Muse.md) | Energy Muse | 4,094 |
+| [04-Crystal-Vaults.md](./04-Crystal-Vaults.md) | Crystal Vaults | 8,204 |
+| [06-My-Crystals.md](./06-My-Crystals.md) | My Crystals | 325 |
+| [07-Conscious-Items.md](./07-Conscious-Items.md) | Conscious Items | 17,026 |
+| [08-Moonrise-Crystals.md](./08-Moonrise-Crystals.md) | Moonrise Crystals | 失败 |
+| [10-Beadage.md](./10-Beadage.md) | Beadage | 133,962 |
+| [11-Satin-Crystals.md](./11-Satin-Crystals.md) | Satin Crystals | 55,744 |
+
+> 其余27家竞品数据在本报告中有完整统计。如需为特定竞品创建详细解析文件，可后续按需生成。

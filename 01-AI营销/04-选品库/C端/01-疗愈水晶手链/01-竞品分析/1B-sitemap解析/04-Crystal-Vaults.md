@@ -4,8 +4,8 @@
 > **1A清单序号**: #4（直接竞品）
 > **建站平台**: WordPress + Yoast SEO
 > **Sitemap URL**: https://crystalvaults.com/sitemap_index.xml（标准 /sitemap.xml 返回404）
-> **解析状态**: 成功（替代路径）
-> **解析时间**: 2026-05-18
+> **解析状态**: 成功（2026-05-20 sitemap-mcp-server 精确解析）
+> **解析时间**: 2026-05-20
 
 ---
 
@@ -13,29 +13,36 @@
 
 获取方式: 替代路径 `/page-sitemap.xml` + `/sitemap_index.xml`（标准 `/sitemap.xml` 返回404）
 
-Sitemap Index，包含30+子sitemap：
-- `post-sitemap` - 博客文章
-- `page-sitemap` - 静态页面（500+ URL）
-- `product-sitemap` x6 - WooCommerce产品（按分页拆分）
-- `category-sitemap` - 产品分类
-- `product_attribute-sitemap` x8 - 产品属性归档（color, crystal_type, shape, zodiac_sign等）
+Sitemap Index，包含29个子sitemap：
+- `post-sitemap` - 博客文章（539页）
+- `page-sitemap` - 静态页面（706页）
+- `product-sitemap` x6 - WooCommerce产品（993+1,000+996+975+972+324 = 5,260页）
+- `category-sitemap` - 产品分类（4页）
+- `post_tag-sitemap` - 标签（512页）
+- `product_cat-sitemap` - 产品分类（436页）
+- `product_tag-sitemap` - 产品标签（434页）
+- `product_attribute-crystal_type-sitemap` - 水晶类型属性（131页）
+- `product_attribute-shape-sitemap` - 形状属性（59页）
+- `product_attribute-color-sitemap` - 颜色属性（18页）
+- 其他属性归档 - 约55页
 - `rp_parent-sitemap` - 相关产品分组
 
 ## 页面分类统计
 
 | 页面类型 | 数量 | 说明 |
 |---------|------|------|
-| Crystal Encyclopedia (单品百科) | ~100+ | `/crystal-encyclopedia/[name]` 格式 |
-| Crystals for X (功效/意图) | ~150+ | `/crystal-reference-guide/crystals-for-[condition]` 格式 |
-| 静态页面(Pages) | ~50 | 品牌/指南/工具页面 |
-| Zodiac Pages | 12 | `/[sign]-crystals` 格式 |
-| Chakra Pages | 7+ | `/[chakra]-chakra-explained` 格式 |
-| Color Pages | 12+ | `/[color]-explained` + `/shop-crystals-by-color/` |
-| Goddess Crystals | 40+ | 女神×水晶 |
-| Magical Herbs | 30+ | 魔法草药 |
-| Crystal Moon Astrology | 27 | 月宿占星 |
-| 产品页 | ~500+ | WooCommerce产品 |
-| **合计(估)** | **~800+** | 全站 |
+| 博客文章(Posts/Blog) | 539 | 水晶知识文章 |
+| 静态页面(Pages) | 706 | 含Crystal Encyclopedia、功效页等 |
+| 产品页(Products) | 5,260 | WooCommerce产品（6个分片：993+1,000+996+975+972+324） |
+| 产品分类(Product Categories) | 436 | WooCommerce产品分类 |
+| 产品标签(Product Tags) | 434 | WooCommerce产品标签 |
+| 标签(Tags) | 512 | WordPress内容标签 |
+| 分类(Categories) | 4 | WordPress内容分类 |
+| Crystal Type属性 | 131 | 产品属性归档 |
+| Shape属性 | 59 | 产品属性归档 |
+| Color属性 | 18 | 产品属性归档 |
+| 其他属性 | ~55 | zodiac_sign等 |
+| **合计** | **8,204** | 全站（29个子sitemap） |
 
 ## page-sitemap 关键URL清单
 
@@ -61,17 +68,20 @@ Sitemap Index，包含30+子sitemap：
 | **Blog** | (通过post-sitemap) |
 | **Legal** | `/privacy-policy/`, `/terms-of-use/`, `/disclosure/` |
 
-## Sitemap Index 子sitemap清单（30+）
+## Sitemap Index 子sitemap清单（29个）
 
 | 子sitemap | 说明 |
 |-----------|------|
-| `post-sitemap.xml` | 博客文章 |
-| `page-sitemap.xml` | 静态页面（500+ URL） |
-| `product-sitemap1.xml` ~ `product-sitemap6.xml` | WooCommerce产品 |
-| `category-sitemap.xml` | 产品分类 |
-| `product_attribute-color-sitemap.xml` | 产品颜色属性 |
-| `product_attribute-crystal_type-sitemap.xml` | 水晶类型属性 |
-| `product_attribute-shape-sitemap.xml` | 形状属性 |
+| `post-sitemap.xml` | 博客文章（539） |
+| `page-sitemap.xml` | 静态页面（706） |
+| `product-sitemap1.xml` ~ `product-sitemap6.xml` | WooCommerce产品（共5,260） |
+| `category-sitemap.xml` | 内容分类（4） |
+| `post_tag-sitemap.xml` | 内容标签（512） |
+| `product_cat-sitemap.xml` | 产品分类（436） |
+| `product_tag-sitemap.xml` | 产品标签（434） |
+| `product_attribute-crystal_type-sitemap.xml` | 水晶类型属性（131） |
+| `product_attribute-shape-sitemap.xml` | 形状属性（59） |
+| `product_attribute-color-sitemap.xml` | 颜色属性（18） |
 | `product_attribute-zodiac_sign-sitemap.xml` | 星座属性 |
 | `rp_parent-sitemap.xml` | 相关产品分组 |
 
