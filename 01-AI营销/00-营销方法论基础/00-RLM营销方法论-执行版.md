@@ -37,32 +37,13 @@
 
 ## 3. 启动准备
 
-> **AI 接手项目时先检查基础设施，缺什么补什么，再进入五步流程。**
+> 项目开始时创建文件夹（§3.2）和电子表格（§3.1），AI 接手时先检查是否齐全。产品、市场等信息从竞品和项目上下文自然产生，不需要单独填表。
 
-### 3.1 启动检查与竞品清单
+### 3.1 Google Sheets 表格结构
 
-#### 启动入口原则
+项目启动时创建竞品清单；其余表格按步骤推进时按需创建。
 
-- 可以从零启动，也可以从已有竞品清单接入
-- 本地目录、Google Drive、竞品清单可以并行创建，不强制先后
-- `00-项目简报.md` 在 AI 正式接手时创建或更新，用作入口/链接索引/状态卡
-- 产品、市场、业务类型等信息从竞品和项目上下文中自然产生，AI 按需提取，不需要单独填表
-
-#### 启动检查项
-
-AI 接手时逐项检查，已存在的跳过，缺失的补建：
-
-| 检查项 | 状态 | 说明 |
-|--------|------|------|
-| 竞品清单（Google Sheets） | 已创建 / 已接入 / 待创建 | 字段需符合下方 A-Q 定义 |
-| Google Drive 文件夹 | 已创建 / 待创建 | 与本地项目同名 |
-| 本地项目目录 | 已创建 / 待创建 | 按 3.3 的标准结构 |
-| `00-项目简报.md` | AI 接手时创建/更新 | 记录所有电子表格链接、状态、下一步 |
-| 数据表 | 按阶段创建 | 见下方 Google Sheets 创建节奏，不一次全建 |
-
-#### 竞品清单字段（A-Q）
-
-在 Google Sheets 中创建竞品清单，按以下字段表建好所有列，标题行填好列名：
+**竞品清单**（A-Q 列）：
 
 | 列 | 字段 | 数据来源 | 阶段 | 方式 |
 |----|------|---------|------|------|
@@ -79,49 +60,26 @@ AI 接手时逐项检查，已存在的跳过，缺失的补建：
 | P | 深度拆解文档 | — | 1D | — |
 | Q | 参考重点 | — | 1D | — |
 
-> 1A 阶段填入 A、B、M、N 列，其余列在 1B/1D 阶段逐步填充。
+> 1A 填入 A、B、M、N 列，其余在 1B/1D 逐步填充。N 列分类：直接竞品（卖同类产品）/ 内容竞品（不卖货但覆盖关键词）/ 间接竞品（同大类不同细分）。
 
-**竞品类型分类**（供 N 列标注参考）：
+**SEMrush 表格**（进入 1B 时创建，每个竞品一个工作表，导入时按标准列精简）：
 
-| 类型 | 定义 | 示例 |
-|------|------|------|
-| 直接竞品 | 卖同类产品，抢同一批客户 | 同品类独立站、品牌官网 |
-| 内容竞品 | 不卖货但覆盖了你的关键词（博客/内容站/affiliate） | 博客、评测站、Buying Guide |
-| 间接竞品 | 同大类但不同细分定位（高端 vs 平价、不同品类） | 相邻品类的品牌站 |
+| 电子表格 | 用途 | 标准列（保留） | Semrush 导出时删除的列 |
+|------|------|--------------|----------------------|
+| SEMrush-Top-Pages | 页面级SEO价值 | URL / Traffic(%) / Number of Keywords / Traffic / Top Keyword / Primary Intent / LLM Prompts | Adwords Positions / 5×Positions by Intent / 5×Traffic by Intent / Traffic Change / Answer Engines |
+| SEMrush-Top-Keywords | 关键词排名与排名URL | Keyword / Position / Search Volume / Keyword Difficulty / CPC / URL / Traffic / Traffic(%) / Number of Results / Keyword Intents | Previous Position / Traffic Cost / Competition / Trends / Timestamp / SERP Features by Keyword / Position Type |
+| SEMrush-Seed-Keywords | 种子词导入 + 清洗后的关键词主表 | Keyword / Volume / KD / CPC / Intent / Topic Cluster / Recommended Page Type / Priority / Source Type / Source Detail / Competitor Proof / Proof URL | Competitive Density / SERP Number |
 
-#### Google Sheets 创建节奏
+> `TopPages_All`、`TopKeywords_All`、`Keyword-Page-Proof` 是 1C 数据加工结果，不是原始表格。过滤阈值见 `01-关键词研究方法论.md`。
 
-按需分批创建，不要一次全部建好：
+**数据规则**：
+- 项目简报记录所有 Google Sheets 链接，包含标准列和删除列说明
+- **AI 接手时先通过 Google Drive API 搜索所有电子表格，与项目简报索引比对，不一致时以 Google Drive 为准**
+- **读取电子表格时必须遍历所有工作表**
+- **新增竞品工作表时，原始数据按标准列精简后再导入**
+- **`1A-竞品清单.md` 只放链接和筛选口径**，不重复搬运表格数据
 
-| 时机 | 必建电子表格 | 说明 |
-|------|-----------|------|
-| 启动准备 | 竞品总表 | 按上方字段表建好 A-Q 列，1A 直接填入 |
-| 进入 1B 前 | SEMrush-Top-Pages、SEMrush-Top-Keywords、SEMrush-Seed-Keywords / Sitemap 默认输出本地报告，只有需要筛选大 URL 清单时才另建 `Sitemap-Pages` | `SEMrush-Seed-Keywords` 初始承接种子词导出，进入 1C 后在同表内清洗成关键词主表，不另建一个模糊的“最终关键词库” |
-| 进入 1C 时 | TopPages_All、TopKeywords_All、Keyword-Page-Proof | 遍历 Top Pages / Top Keywords 的所有竞品原始工作表，但只把有明确流量证据的行提升到 All 表（默认页面 Traffic >=100，Top Keywords 排除单英文词；每竞品最多300页/2000词）；Proof 视图再限定为 Seed Keywords 命中词 + 非主表 Strong/Medium 增量机会 |
-| 进入步骤3前 | 内容清单 | 步骤3内容策略的承接表，用于生成内容主题库、内容清单草案和后续 Brief 状态 |
-
-### 3.2 数据管理策略
-
-RLM 项目中有两类数据，分别用不同载体管理：
-
-| 载体 | 适用数据 | 原因 |
-|------|---------|------|
-| **Google Sheets** | 竞品清单、SEMrush Top Pages/Top Keywords 明细、Seed Keywords关键词主表、Keyword-Page-Proof验证视图、内容清单等需要**频繁筛选/排序/更新**的结构化数据 | 在线协作、实时筛选、随时更新，不会产生本地快照过时的问题 |
-| **本地 .md 文件** | 策略分析、竞品拆解、内容 Brief 等**以文字为主**的分析文档 | 方便 Git 版本管理、AI 按需读取 |
-
-**规则**：
-- 凡是会被当作"表格"反复查阅和修改的数据，优先放 Google Sheets
-- 项目简报 `00-项目简报.md` 中必须记录所有 Google Sheets 链接（见"Google Sheets 数据源"章节），**必须包含标准列和删除列说明**
-- **AI 接手项目时，先通过 Google Drive API 搜索所有电子表格，与项目简报索引比对，发现不一致时以 Google Drive 为准并补全索引**
-- AI 执行时**优先在线读取**（Google Workspace MCP 或 curl + proxy）；没有权限时，阅读 `google-cloud凭证创建指南.md`
-- **读取电子表格时必须遍历所有工作表**，不能只读第一个工作表就当作完整数据
-- 每次新建电子表格后必须立即更新项目简报索引
-- **往 SEMrush-Top-Pages 或 SEMrush-Top-Keywords 新增竞品工作表时，Semrush 导出的原始数据必须按项目简报中定义的标准列精简后再导入**
-- **`1A-竞品清单.md` 只放 Google Sheets 链接、筛选口径和状态说明**，不重复搬运表格数据
-
-### 3.3 项目文件夹结构
-
-每个RLM项目使用以下核心目录：
+### 3.2 项目文件夹结构
 
 ```text
 XX产品/
@@ -133,7 +91,7 @@ XX产品/
 └── 05-社媒分发/      ← 可选
 ```
 
-完整目录树见 `03-模板库/00-RLM项目文件夹结构模板.md`。不需要商业模式的业务可省略 `04-商业模式/`，不需要社媒分发的业务可省略 `05-社媒分发/`；不要因为省略社媒分发而把商业模式挪到其他编号。
+完整目录树见 `03-模板库/00-RLM项目文件夹结构模板.md`。
 
 ---
 
@@ -147,13 +105,7 @@ XX产品/
 步骤5: 商业模式（可选）
 ```
 
-> **步骤并行条件**：步骤2和步骤3可部分并行，但有各自的前置条件和锁定依赖：
-> - **步骤2 前置**：1E（网站结构分析）+ 1H（策略清单）完成后可启动
-> - **步骤3 前置**：
->   - **可先行部分**：1C（关键词研究）+ 1F（内容策略分析）+ 1G（用户画像）+ 1H（策略清单）完成后，可启动内容主题库、内容清单草案
->   - **需等待步骤2 部分**：最终 URL、承接页面、内链规则和内容 Brief 需等 2A（架构规划）+ 2B（页面决策）完成后才能锁定
->
-> 步骤3的博客文章作为步骤4社媒分发的"母内容"，一次创作、多平台分发。
+> **步骤并行条件**：步骤2和步骤3可部分并行，具体前置和锁定依赖见各步骤详情中的"前置输入"。步骤3的博客文章作为步骤4社媒分发的"母内容"，一次创作、多平台分发。
 
 ---
 
@@ -168,7 +120,7 @@ XX产品/
     ├── 轨道A: Google 搜索 + 排除语法 → 筛选竞品
     └── 轨道B: SEMrush Organic Competitors → 补充遗漏竞品
 1B: 多源数据采集（多条轨道可并行）
-    ├── 轨道A: 竞品总表数据 → SEMrush AS/Organic Traffic/截图 + traffic.cv月访问量/渠道拆分
+    ├── 轨道A: 竞品清单数据 → SEMrush AS/Organic Traffic/截图 + traffic.cv月访问量/渠道拆分
     ├── 轨道B: 竞品SEO明细 → SEMrush Top Pages + Top Keywords
     ├── 轨道C: 种子词关键词主表 → SEMrush/Ahrefs Seed Keywords 导入与清洗
     └── 轨道D: Sitemap解析 → 页面清单/URL结构/内容类型分布 → 竞品页面报告
@@ -184,13 +136,6 @@ XX产品/
 #### 1A 竞品发现（人工）
 
 **目标**：通过人工搜索和SEMrush双轨道发现竞品，将竞品填入启动阶段已创建的竞品清单表格。
-
-1A内部分两条轨道，可并行：
-
-```
-轨道A: Google 搜索 + 排除语法 → 筛选竞品
-轨道B: SEMrush Organic Competitors → 补充遗漏竞品（人工操作）
-```
 
 ##### 轨道A：Google 搜索
 
@@ -214,15 +159,13 @@ XX产品/
 
 从 1A 竞品清单出发，分多条轨道并行采集数据。详细操作见 `02-自动化工具库/02-竞品研究工具/1B数据采集工具手册.md`。
 
-##### 轨道A：竞品总表数据
+##### 轨道A：竞品清单数据
 
-逐个竞品填充 3.1 竞品总表中的对应列：
+逐个竞品填充 3.1 竞品清单中的对应列：
 
 - SEMrush：AS、Organic Traffic、Distribution 截图
 - traffic.cv：月访问量、搜索/直接/社交/引荐/邮件/付费渠道拆分
 - 人工/Wappalyzer：建站平台；竞品类型来自 1A 人工判断；商业模式在 1D 阶段由 AI 辅助判断
-
-> 轨道A只填总表列。Top Pages、Top Keywords、Seed Keywords 等大表数据各写入单独的电子表格，不塞进竞品总表。
 
 ##### 轨道B：竞品SEO明细数据
 
@@ -243,16 +186,7 @@ XX产品/
 
 `SEMrush-Seed-Keywords` 是步骤1中最重要的关键词主表：它初始承接种子词扩展导出，进入 1C 后在同一表中完成人工/AI清洗、去重、意图标注、主题集群、推荐页面类型和优先级排序。日常内容选题、页面关键词映射和 Brief 前置筛选，都以这张主表为入口；轨道B的竞品SEO明细只给它补充验证证据。
 
-##### 1B 建议的 Google Sheets 结构
-
-| 电子表格 | 用途 | 标准列（保留） | Semrush 导出时删除的列 |
-|------|------|--------------|----------------------|
-| 竞品总表 | 竞品筛选和状态总览 | 域名/类型/AS/Organic Traffic/SEMrush截图/traffic.cv渠道/Sitemap状态/深度拆解文档/参考重点/品类覆盖 | — |
-| SEMrush-Top-Pages | 页面级SEO价值判断；每个竞品一个工作表 | URL / Traffic(%) / Number of Keywords / Traffic / Top Keyword / Primary Intent / LLM Prompts | Adwords Positions / 5×Positions by Intent / 5×Traffic by Intent / Traffic Change / Answer Engines |
-| SEMrush-Top-Keywords | 关键词排名与排名URL；每个竞品一个工作表 | Keyword / Position / Search Volume / Keyword Difficulty / CPC / URL / Traffic / Traffic(%) / Number of Results / Keyword Intents | Previous Position / Traffic Cost / Competition / Trends / Timestamp / SERP Features by Keyword / Position Type |
-| SEMrush-Seed-Keywords | 种子词扩展导入 + 清洗后的关键词主表 | Keyword / Volume / KD / CPC / Intent / Topic Cluster / Recommended Page Type / Priority / Source Type / Source Detail / Competitor Proof / Proof URL | Competitive Density / SERP Number |
-
-> `TopPages_All`、`TopKeywords_All` 和 `Keyword-Page-Proof` 属于 1C 关键词研究的数据加工结果，不在 1B 轨道B展开。它们是过滤后的证据索引，不是原始数据全量备份；Proof 还要控制为主表命中证据和高价值增量机会。默认过滤阈值见 `01-关键词研究方法论.md`。
+> 4张核心表格的结构定义（标准列和删除列）见 §3.1"Google Sheets 表格结构"。
 
 ##### 轨道D：Sitemap解析
 
@@ -260,7 +194,7 @@ XX产品/
 
 > Sitemap 默认输出到 `1B-sitemap解析/` 和 `1B-sitemap解析报告.md`；只有 URL 清单很大、需要频繁筛选/排序时，才可另建 `Sitemap-Pages` 电子表格。
 
-**关键输出（1B 整体）**：更新后的竞品总表 + SEMrush竞品SEO明细（Top Pages/Top Keywords，每个竞品一个工作表）+ Seed Keywords初始导入表 + Sitemap解析报告/页面清单 + `1B-数据采集索引.md`（记录各电子表格链接、采集状态、最后更新时间）
+**关键输出（1B 整体）**：更新后的竞品清单 + SEMrush竞品SEO明细（Top Pages/Top Keywords，每个竞品一个工作表）+ Seed Keywords初始导入表 + Sitemap解析报告/页面清单 + `1B-数据采集索引.md`（记录各电子表格链接、采集状态、最后更新时间）
 
 #### 1C 关键词研究
 
@@ -524,7 +458,7 @@ XX产品/
 
 **关键输出**：内容类型规划 + 选题方向 + 内容清单草案（Google Sheets，可能几百到上千条）+ 待补字段清单 + 分批内容Brief
 
-**详细操作**：内容分析工具和上线后优化工具见 `02-自动化工具库/04-竞品内容分析工具/` 与 `02-SEO全链路工作流.md`，本文档不展开命令细节。
+**详细操作**：内容分析工具和上线后优化工具见 `02-自动化工具库/05-竞品内容分析工具/` 与 `02-SEO全链路工作流.md`，本文档不展开命令细节。
 
 ---
 
@@ -564,7 +498,7 @@ XX产品/
 | 写内容Brief | `03-模板库/05-内容Brief模板.md` | `内容Brief/文章A-Brief.md` |
 | 做内容清单 | `03-模板库/04-内容清单字段模板.md` | 内容清单（Google Sheets） |
 | 社媒分发（步骤4） | `04-社媒内容分发工作流.md` | `05-社媒分发/` 下全部文件 |
-| 需要执行指令 | `05-指令库/执行指令模板集.md`（按需复制） | — |
+| 内容质检（发布前） | `02-自动化工具库/06-内容质检工具/EEAT-内容质量评估.md` | 质检报告 |
 | 做SEO上线后优化 | `02-SEO全链路工作流.md` | 审计报告、修复清单、监控周报 |
 | 外链建设 | `06-外链建设指南.md` | 外链计划 |
 | 执行版/模板库覆盖不足 | 优先补充本执行版、模板库或专项方法论 | — |
@@ -602,7 +536,7 @@ XX产品/
 |------|---------|
 | 启动准备 | 本地目录已创建；Google Drive 文件夹已创建；竞品清单空表（按 3.1 字段表建好 A-Q 列）已创建且链接已写入 `00-项目简报.md` |
 | 竞品发现（1A） | 竞品已入池，直接/内容/间接三类均有代表；每个竞品有人工标注的类型标签；大平台已过滤 |
-| 数据采集（1B） | 竞品总表字段完整（AS、Organic Traffic、截图、traffic.cv渠道）+ SEMrush Top Pages/Top Keywords/关键词排名明细各有单独电子表格 + Sitemap 解析完成（至少覆盖直接竞品）+ `1B-数据采集索引.md` 已记录各数据源链接、路径、状态和最后更新时间 |
+| 数据采集（1B） | 竞品清单字段完整（AS、Organic Traffic、截图、traffic.cv渠道）+ SEMrush Top Pages/Top Keywords/关键词排名明细各有单独电子表格 + Sitemap 解析完成（至少覆盖直接竞品）+ `1B-数据采集索引.md` 已记录各数据源链接、路径、状态和最后更新时间 |
 | 关键词研究（1C） | `SEMrush-Seed-Keywords` 已从种子词导入表清洗成唯一关键词主表，有来源类型、分组、意图标注、优先级、Volume/KD/CPC、推荐页面类型和竞品验证字段；`TopPages_All` / `TopKeywords_All` 已按有流量证据过滤生成；`Keyword-Page-Proof` 已通过 `competitor_domain + normalized_url` 关联完成，且不包含关键词流量为0的伪证据；竞品验证中发现的增量词已补回关键词主表 |
 | 竞品深度拆解（1D） | 每个竞品有深度拆解文档（按类型侧重）；使用了1B+1C全部数据（SEMrush + traffic.cv + Sitemap + 关键词库） |
 | 网站结构分析（1E） | 能提炼竞品导航、URL、类目、页面层级、页面类型频率和SEO页面价值；有结构图；架构模仿点使用"候选"语气，不含最终网站方案 |
@@ -641,7 +575,7 @@ XX产品/
 |----------|----------|----------|
 | 改变RLM通用流程、边界或验收标准 | 本执行版 | 新增一条规则、检查项或路由链接 |
 | 改变交付物格式 | `00-营销方法论基础/03-模板库/` | 修改模板字段或模板说明 |
-| 改变AI执行方式 | `00-营销方法论基础/05-指令库/` | 修改可复制执行指令 |
+| 改变AI执行方式 | 本执行版对应步骤（直接修改步骤说明） | 修改步骤中的执行规则 |
 | 改变脚本、API、工具操作方式 | `02-自动化工具库/` | 修改工具README、脚本说明或操作手册 |
 | 只属于某个项目的事实、过程或决策 | 对应项目目录，如 `04-选品库/具体项目/` | 只更新项目文件，不回流通用方法论 |
 
@@ -659,5 +593,5 @@ XX产品/
 发现问题
 → 先在项目中解决
 → 判断是否跨项目复发
-→ 是：抽象成规则，更新执行版/模板库/指令库/工具库
+→ 是：抽象成规则，更新执行版/模板库/工具库
 → 否：只留在项目文件或不记录
