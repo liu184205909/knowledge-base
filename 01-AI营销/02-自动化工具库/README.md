@@ -20,6 +20,7 @@
 | **10** | SEO 审计工具 | 技术SEO审计 + On-Page SEO评分 + 关键词蚕食检测 | `seo_technical_auditor.py` `onpage_seo_checker.py` `keyword_cannibalization_checker.py` |
 | **11** | 用户洞察工具 | 采集 Reddit/竞品评论 → 分类分析 → 选题/痛点/购买意向挖掘 | `reddit_comment_collector.py` `comment_insight_analyzer.py` |
 | **12** | GEO 可见性检查 | 7维度检查品牌在 AI 生态中的可见性信号（Reddit/Quora/评价站/Wikipedia/媒体/竞品对比） | `geo_visibility_checker.py` |
+| **13** | Open Design（设计工具） | AI 驱动的开源设计工具，生成落地页/PPT/移动端原型/营销海报（本地部署，支持 Codex/BYOK 智谱） | [GitHub](https://github.com/nexu-io/open-design) |
 
 ---
 
@@ -438,3 +439,4 @@ python 12-GEO可见性检查/geo_visibility_checker.py \
 > 本目录在 2026-04-12 `commit 64ee06e` 中被整体删除，原因是历次文档重构中将文件标注为"已迁移/已整合"但未真正搬移，导致内容逐步流失。2026-04-13 根据 git 日志完整恢复，并补建从未提交过的竞品挖掘和分析脚本。
 > 2026-05-09 合并原 02-竞品挖掘工具 和 03-竞品分析工具 为 02-竞品研究工具；新增 04-竞品内容分析工具 2 个检测脚本；新增 09-SEO审计工具（技术审计 + On-Page + 关键词蚕食）；新增 10-用户洞察工具。
 > 2026-05-14 新增 11-GEO可见性检查（7维度 AI 生态可见性信号采集 + Layer 2 LLM 分析）。
+> 2026-05-23 新增 13-Open Design 设计工具（占坑，后期安装部署）。
