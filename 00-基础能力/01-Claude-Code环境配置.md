@@ -22,8 +22,10 @@ claude mcp add -s user google-workspace \
   -e OAUTHLIB_INSECURE_TRANSPORT=1 \
   -e HTTPS_PROXY=http://127.0.0.1:10808 \
   -e HTTP_PROXY=http://127.0.0.1:10808 \
-  -- uvx workspace-mcp --tools drive sheets docs gmail --tool-tier core
+  -- uvx workspace-mcp --tools drive sheets docs gmail --tool-tier extended
 ```
+
+> **中国大陆代理**：除上面 MCP 安装命令中的 `-e` 参数外，还需将 `HTTPS_PROXY` / `HTTP_PROXY` / `ALL_PROXY` 加到 `~/.claude/settings.json` 的全局 `env` 中（VSCode 扩展会读取该文件的 env，但不一定传递 MCP server 的 `env` 块）。
 
 > Token 过期时运行 `python C:\Users\Dylan\tools\refresh_google_token.py` 刷新（中国大陆必须）。
 

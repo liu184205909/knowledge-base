@@ -33,6 +33,7 @@
 | 场景 | 看哪个文档 | 具体章节 |
 |------|-----------|---------|
 | 写一篇SEO文章 | [01](./01-内容质量标准.md) | Answer Capsule结构、写作流程 |
+| 判断内容是否可替代 | [01](./01-内容质量标准.md) | Commodity vs Non-Commodity 框架 |
 | 文章要被AI引用 | [01](./01-内容质量标准.md) + [03](./03-AI%20Citation优化策略.md) | 01的BLUF方法论 → 03的平台差异化 |
 | 网站技术审计 | [02](./02-Google-SEO核心机制.md) | SegIndexer索引层级、Firefly检测 |
 | 做GEO优化（被ChatGPT/Perplexity引用） | [03](./03-AI%20Citation优化策略.md) | GEO 7大支柱、各平台引用机制 |
@@ -91,7 +92,7 @@
 | BrightonSEO April 2026 | 会议 | 07（主）、01/03/05/06 |
 | SEO Week 2025 + 2026 | 会议 | 08（主）、03/11 |
 | Athens SEO 2026 | 会议 | 11/12/13 |
-| Google Search Central Live Toronto 2026 | 官方 | 03 |
+| Google Search Central Live Toronto 2026 | 官方 | 01（Commodity Content）/ 03 |
 | Google Search Central 官方GEO指南 (2026.5.15) | **官方** | 03/12 |
 | Lois / 海外SEO与ASO | 行业 | 01/03 |
 | Bing SEO Week 2026 | 官方 | 03 |

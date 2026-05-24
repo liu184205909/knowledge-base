@@ -13,6 +13,7 @@
 | redirect URI | `http://localhost:8000/oauth2callback` |
 | 凭证文件 | `~/.google_workspace_mcp/credentials/lzn184205909@gmail.com.json` |
 | 代理 | `http://127.0.0.1:10808` |
+| MCP 配置 | `~/.claude.json`（args）+ `~/.claude/settings.json`（env） |
 
 > **关键**：所有 Google Workspace MCP 工具的 `user_google_email` 必须用 `lzn184205909@gmail.com`。
 
@@ -37,8 +38,6 @@
 | `Google Docs API` | 文档读写 |
 | `Gmail API` | 邮件搜索/发送 |
 
-可选：`Google Search Console API`、`Google Analytics Data API`
-
 ### 第三步：配置 OAuth 同意屏幕
 
 ☰ → **API 和服务** → **OAuth 同意屏幕**
@@ -62,17 +61,7 @@
 
 > **为什么必须选 Web 应用？** MCP 的回调地址是 `http://localhost:8000/oauth2callback`，桌面应用不支持自定义 redirect path。
 
-### 第五步：环境变量
-
-```powershell
-[System.Environment]::SetEnvironmentVariable("GOOGLE_OAUTH_CLIENT_ID", "JSON中的client_id", "User")
-[System.Environment]::SetEnvironmentVariable("GOOGLE_OAUTH_CLIENT_SECRET", "JSON中的client_secret", "User")
-[System.Environment]::SetEnvironmentVariable("OAUTHLIB_INSECURE_TRANSPORT", "1", "User")
-```
-
-> 设置后必须重启 VSCode。
-
-### 第六步：MCP 安装
+### 第五步：安装 MCP
 
 ```bash
 claude mcp add -s user google-workspace \
@@ -81,136 +70,66 @@ claude mcp add -s user google-workspace \
   -e OAUTHLIB_INSECURE_TRANSPORT=1 \
   -e HTTPS_PROXY=http://127.0.0.1:10808 \
   -e HTTP_PROXY=http://127.0.0.1:10808 \
-  -- uvx workspace-mcp --tools drive sheets docs gmail --tool-tier core
+  -- uvx workspace-mcp --tools drive sheets docs gmail --tool-tier extended
 ```
 
----
+将代理 env vars 同步加入 `~/.claude/settings.json` 的全局 `env`：
 
-## 代理补丁（中国大陆必须）
-
-**问题**：`httplib2` 不读 `HTTPS_PROXY` 环境变量 → Google API 调用超时。
-
-### 定位 MCP 安装目录
-
-```powershell
-Get-ChildItem "C:\Users\$env:USERNAME\AppData\Local\uv\cache\archive-v0" -Directory | ForEach-Object { if (Test-Path "$($_.FullName)\Lib\site-packages\httplib2") { Write-Host $_.FullName } }
+```json
+{
+  "env": {
+    ...现有项...,
+    "HTTPS_PROXY": "http://127.0.0.1:10808",
+    "HTTP_PROXY": "http://127.0.0.1:10808",
+    "ALL_PROXY": "http://127.0.0.1:10808"
+  }
+}
 ```
 
-### 补丁 1：安装 PySocks
+### 第六步：中国大陆代理补丁
 
-```powershell
-pip install PySocks --target "上面路径\Lib\site-packages"
-```
+`httplib2` 不读 `HTTPS_PROXY` 环境变量 → Google API 调用超时。需要打 3 个补丁：
 
-### 补丁 2：`core/server.py` — 在 `import os` 后添加
+1. **安装 PySocks**：找到 uvx 缓存目录（含 `Lib/site-packages/httplib2`），执行 `pip install PySocks --target "该目录/Lib/site-packages"`
+2. **`core/server.py`**：在 `import os` 后添加代理 env vars 设置（`setdefault` 方式）
+3. **`googleapiclient/http.py`**：在 `build_http()` 函数中添加 `proxy_info` 参数（用 `socks.PROXY_TYPE_HTTP`）
 
-```python
-# === Proxy patch ===
-_PROXY_URL = os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy") or "http://127.0.0.1:10808"
-os.environ.setdefault("HTTPS_PROXY", _PROXY_URL)
-os.environ.setdefault("HTTP_PROXY", _PROXY_URL)
-os.environ.setdefault("https_proxy", _PROXY_URL)
-os.environ.setdefault("http_proxy", _PROXY_URL)
-# === End proxy patch ===
-```
-
-### 补丁 3：`googleapiclient/http.py` — 替换 `build_http()` 函数
-
-```python
-def build_http():
-    if socket.getdefaulttimeout() is not None:
-        http_timeout = socket.getdefaulttimeout()
-    else:
-        http_timeout = DEFAULT_HTTP_TIMEOUT_SEC
-
-    # === Proxy patch ===
-    proxy_info = None
-    _proxy_url = os.environ.get("HTTPS_PROXY") or os.environ.get("https_proxy") or os.environ.get("HTTP_PROXY") or os.environ.get("http_proxy")
-    if _proxy_url:
-        from urllib.parse import urlparse as _urlparse
-        try:
-            _parsed = _urlparse(_proxy_url)
-            import socks
-            proxy_info = httplib2.ProxyInfo(
-                proxy_type=socks.PROXY_TYPE_HTTP,
-                proxy_host=_parsed.hostname or "127.0.0.1",
-                proxy_port=_parsed.port or 10808,
-            )
-        except Exception:
-            pass
-    # === End proxy patch ===
-
-    http = httplib2.Http(timeout=http_timeout, proxy_info=proxy_info)
-    try:
-        http.redirect_codes = http.redirect_codes - {308}
-    except AttributeError:
-        pass
-    return http
-```
-
-**注意事项**：`uvx` 更新 workspace-mcp 后补丁会失效，需重新执行补丁 2 和 3。
+> **注意**：`uvx` 更新 workspace-mcp 后补丁会失效，需重新执行。详细补丁代码见 Git 历史或询问 AI。
 
 ---
 
 ## Token 管理
-
-### 完整故障链路
-
-```
-access_token 过期（1小时）
-  → MCP 尝试刷新 → 请求 Google → 没走代理 → 失败
-  → MCP 要求重新授权 → 浏览器授权成功
-  → MCP 交换 auth code → 也没走代理 → 凭证没保存
-  → 死循环
-```
-
-### 三种修复方式（按场景选择）
-
-#### 方式 1：刷新 Token（日常维护）
-
-```powershell
-python C:\Users\Dylan\tools\refresh_google_token.py
-```
-
-当 access_token 过期但 refresh_token 仍有效时使用。通过代理刷新，1 分钟搞定。
-
-#### 方式 2：完整重新授权（refresh_token 失效时）
-
-```powershell
-python C:\Users\Dylan\tools\refresh_google_token.py --reauth
-```
-
-`--reauth` 流程：打开浏览器 → 用户授权 → 复制地址栏回调 URL 粘贴到终端 → 脚本通过代理交换 Token → 保存凭证。复用 MCP 的 redirect URI，无需改 Google Cloud Console。
-
-#### 方式 3：绕过 MCP 直接用 curl（MCP 死活不认 Token 时）
-
-当 MCP 内部 OAuth 状态和凭证文件不同步，外部写入的 Token 不被 MCP 识别时：
-
-```bash
-# 1. 生成授权 URL（用凭证文件中的 client_id）
-# 2. 用户浏览器授权，复制回调 URL
-# 3. 通过代理交换 Token
-curl -s --proxy http://127.0.0.1:10808 -X POST "https://oauth2.googleapis.com/token" \
-  --data-urlencode "client_id=你的ID" \
-  --data-urlencode "client_secret=你的密钥" \
-  --data-urlencode "code=授权码" \
-  --data-urlencode "grant_type=authorization_code" \
-  --data-urlencode "redirect_uri=http://localhost:8000/oauth2callback"
-
-# 4. 拿到 access_token 后直接调用 Google API
-curl -s --proxy http://127.0.0.1:10808 \
-  "https://sheets.googleapis.com/v4/spreadsheets/表格ID/values/Sheet1!A1:Z10" \
-  -H "Authorization: Bearer 你的access_token"
-```
-
-> **核心原理**：MCP 的代理补丁只覆盖了 `googleapiclient` 的 API 调用，不覆盖 OAuth 库内部的 token 交换。所以只要涉及 OAuth 握手的环节都可能失败。用 curl + proxy 绕过是最可靠的。
 
 ### 标准工作流
 
 ```
 每次会话开始 → python refresh_google_token.py → 调用 MCP（1小时内有效）
 刷新失败（invalid_grant）→ python refresh_google_token.py --reauth
-MCP 仍不认 Token → 方式 3：curl + proxy 直接调 API
+MCP 仍不认 Token → curl + proxy 直接调 API（见下方方式 3）
+```
+
+### 方式 1：刷新 Token（日常维护）
+
+```powershell
+python C:\Users\Dylan\tools\refresh_google_token.py
+```
+
+### 方式 2：完整重新授权（refresh_token 失效时）
+
+```powershell
+python C:\Users\Dylan\tools\refresh_google_token.py --reauth
+```
+
+`--reauth` 流程：打开浏览器 → 用户授权 → 复制地址栏回调 URL 粘贴到终端 → 脚本通过代理交换 Token → 保存凭证。
+
+### 方式 3：绕过 MCP 直接用 curl
+
+当 MCP 内部 OAuth 状态和凭证文件不同步时：
+
+```bash
+curl -s --proxy http://127.0.0.1:10808 \
+  "https://sheets.googleapis.com/v4/spreadsheets/表格ID/values/Sheet1!A1:Z10" \
+  -H "Authorization: Bearer $(python -c "import json,os; print(json.load(open(os.path.expanduser('~/.google_workspace_mcp/credentials/lzn184205909@gmail.com.json')))['token'])")"
 ```
 
 ---
@@ -219,34 +138,20 @@ MCP 仍不认 Token → 方式 3：curl + proxy 直接调 API
 
 | 错误 | 原因 | 修复 |
 |------|------|------|
-| `redirect_uri_mismatch` | OAuth 客户端选了"桌面应用" | 删掉重建为 **Web 应用**，redirect URI 填 `http://localhost:8000/oauth2callback` |
-| `The OAuth client was deleted` | 环境变量指向已删除的旧凭证 | 用 JSON 文件中的值同时更新环境变量和 MCP 配置 |
-| MCP 与环境变量凭证不一致 | `claude mcp add -e` 和 PowerShell `SetEnvironmentVariable` 是两套独立配置 | 统一使用 JSON 文件中的值 |
-| `WinError 10060` / `SSLEOFError` | 代理补丁未打 | 按上面"代理补丁"完整执行 |
-| 反复弹出 OAuth 授权 | `user_google_email` 参数与已授权账号不一致 | 必须使用 `lzn184205909@gmail.com` |
-| "此应用未经验证"警告 | 正常 | 点"高级" → "前往（不安全）"继续 |
-| Token 不到 1 小时就失效 | MCP 的 token 刷新没走代理 | 运行 `refresh_google_token.py` |
-| `invalid_grant` (Token expired or revoked) | refresh_token 被撤销/失效 | 运行 `refresh_google_token.py --reauth` |
-| 浏览器授权成功但 MCP 仍要求重新授权 | MCP 内部 OAuth 状态管理不认外部写入的 Token | 用方式 3（curl + proxy）绕过 MCP |
+| `redirect_uri_mismatch` | OAuth 客户端选了"桌面应用" | 重建为 **Web 应用** |
+| `WinError 10060` | 代理补丁未打或 PySocks 未安装 | 按第六步执行补丁 |
+| MCP 每次要求 OAuth 授权 | 凭证文件缺少 `scopes` 字段或格式错误（必须是列表不是字符串） | `refresh_google_token.py` 已自动补全 |
+| Token 不到 1 小时就失效 | MCP 刷新没走代理 | 运行 `refresh_google_token.py` |
+| `invalid_grant` | refresh_token 失效 | 运行 `refresh_google_token.py --reauth` |
+| 代理 env vars 未生效 | VSCode 扩展未传递 MCP server 的 `env` 块 | 确认 `~/.claude/settings.json` 全局 env 中有代理设置 |
 
 ---
 
-## 服务账号方式（GSC/GA4 自动化）
+## 已知限制
 
-| 对比 | OAuth | 服务账号 |
-|------|-------|----------|
-| 场景 | Claude Code 交互 | 服务器脚本、定时任务 |
-| 授权 | 弹浏览器 | JSON 密钥自动认证 |
-
-步骤：创建服务账号 → 下载 JSON 密钥（加入 `.gitignore`）→ GSC/GA4 添加服务账号邮箱权限
-
-| 报错 | 解决 |
-|------|------|
-| 403 permission denied | 服务账号未加权限 |
-| property not found | GA4 未授权或 ID 错误 |
-| no matching site | GSC 资源类型不匹配（URL vs domain） |
-
-**安全提醒**：不要公开 `service_account.json`、`client_secret.json`、`refresh_token`、`private_key`。
+1. **MCP 内部 OAuth 不走代理**：proxy 补丁只覆盖 `googleapiclient` 的 API 调用，不覆盖 OAuth 库内部 token 交换 → 所以每次会话必须外部刷新 Token
+2. **uvx 更新清补丁**：workspace-mcp 更新后代理补丁和 PySocks 失效，需重新打
+3. **VSCode 扩展 env 传递**：MCP server 的 `env` 块可能不被传递，代理 env vars 需同时放在 `~/.claude/settings.json` 全局 env 中
 
 ---
 
@@ -254,5 +159,4 @@ MCP 仍不认 Token → 方式 3：curl + proxy 直接调 API
 
 - [Google Cloud Console](https://console.cloud.google.com)
 - [Google Workspace MCP](https://github.com/taylorwilsdon/google_workspace_mcp)
-- [GSC MCP](https://github.com/drewbeechler/gsc-mcp-server)
 - [Google OAuth 文档](https://developers.google.com/identity/protocols/oauth2?hl=zh-cn)
