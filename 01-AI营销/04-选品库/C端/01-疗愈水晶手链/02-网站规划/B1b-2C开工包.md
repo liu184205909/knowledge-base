@@ -43,7 +43,7 @@ B1b每个页面进入2C前必须同时满足以下条件：
 
 ## 3. 首批 Crystal Single(×15) 建议清单
 
-> 清单来源优先使用 `03-内容策略/内容清单.csv` 的P0 Crystal Meaning排序，因为B1b是核心SEO模板，页面数量和顺序应由关键词数据驱动，而不是由现有图片资产倒推。
+> 清单来源优先使用项目简报登记的内容清单 Google Sheet；本地 `03-内容策略/内容清单.csv` 未重新导出前仅作旧快照。B1b是核心SEO模板，页面数量和顺序应由关键词数据驱动，而不是由现有图片资产倒推。
 
 | # | Crystal | 主关键词 | 搜索量 | 内容清单URL | B1b建议URL | 当前图片资产 | 竞品URL核验状态 |
 |---|---|---:|---:|---|---|---|---|
@@ -65,7 +65,7 @@ B1b每个页面进入2C前必须同时满足以下条件：
 
 ### Crystal Single 必须先解决的URL归属冲突
 
-当前 `内容清单.csv` 把 Crystal Meaning 系列规划为 `/blog/[crystal]-meaning`，而 `crystal-single.js` 注释中使用 `/crystal-guide/[crystal]-meaning`。这会形成同一关键词的两个潜在目标页：
+当前内容清单口径把 Crystal Meaning 系列规划为 `/blog/[crystal]-meaning`，而 `crystal-single.js` 注释中使用 `/crystal-guide/[crystal]-meaning`。这会形成同一关键词的两个潜在目标页：
 
 - 博客文章: `/blog/amethyst-meaning`
 - B1b Elementor百科页: `/crystal-guide/amethyst-meaning`
@@ -173,7 +173,7 @@ B1b每个页面进入2C前必须同时满足以下条件：
 - 文件末尾直接执行 `main()`，一旦被加载可能自动创建默认Amethyst draft。
 - 图片使用 `IMAGES.products.bracelet.url` 和 `IMAGES.shared.wide.url`，会导致15种水晶共用通用图。
 - 默认内容只覆盖Amethyst，不是15种水晶的可配置内容源。
-- URL策略与 `内容清单.csv` 冲突：脚本偏 `/crystal-guide/[crystal]-meaning`，内容清单偏 `/blog/[crystal]-meaning`。
+- URL策略与当前内容清单口径冲突：脚本偏 `/crystal-guide/[crystal]-meaning`，内容清单偏 `/blog/[crystal]-meaning`。
 
 开工前建议改造：
 
