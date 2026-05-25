@@ -1,6 +1,6 @@
 # SEO与GEO 知识库索引
 
-> 最后更新：2026-05-24（理论文档定位：算法探索、前沿理论、行业趋势）
+> 最后更新：2026-05-25（理论文档定位：算法探索、前沿理论、行业趋势）
 
 ---
 
@@ -32,20 +32,21 @@
 |------|-----------|---------|
 | 写一篇SEO文章 | [01](./01-内容质量标准.md) | Answer Capsule结构、写作流程 |
 | 判断内容是否可替代 | [01](./01-内容质量标准.md) | Commodity vs Non-Commodity 框架 |
+| 理解AI搜索渲染差异 | [02](./02-Google-SEO核心机制.md) | Googlebot vs Gemini基础设施、Less JS = More LLM Retrieval |
 | 文章要被AI引用 | [01](./01-内容质量标准.md) + [03](./03-AI%20Citation优化策略.md) | 01的BLUF方法论 → 03的平台差异化 |
 | 网站技术审计 | [02](./02-Google-SEO核心机制.md) | SegIndexer索引层级、Firefly检测 |
-| 做GEO优化（被ChatGPT/Perplexity引用） | [03](./03-AI%20Citation优化策略.md) | GEO 7大支柱、各平台引用机制 |
+| 做GEO优化（被ChatGPT/Perplexity引用） | [03](./03-AI%20Citation优化策略.md) | GEO 7大支柱、各平台引用机制、Athens SEO共识 |
 | 做实体优化 | [04](./04-实体与知识图谱理论.md) | 6信号模型 + 6步工作流 |
-| 老板问流量为什么下降 | [05](./05-SEO测量危机与新指标.md) | 流量下降判断矩阵、三层测量模型 |
-| 汇报SEO ROI | [05](./05-SEO测量危机与新指标.md) | RIF框架、AI可见性指标 |
+| 老板问流量为什么下降 | [05](./05-SEO测量危机与新指标.md) | 流量下降判断矩阵、三层测量模型、3R框架 |
+| 汇报SEO ROI | [05](./05-SEO测量危机与新指标.md) | RIF框架、AI可见性指标、AI Measurement Chasm |
 | 优化Google Business Profile | [06](./06-AI时代的Local-SEO.md) | GBP优化清单、Schema标记模板 |
 | 多地点品牌GEO | [06](./06-AI时代的Local-SEO.md) | 品牌层/区域层/门店层框架 |
 | 了解Relevance Engineering | [08](./08-SEO-Week核心知识.md) | Mike King框架、向量嵌入 |
 | 了解Agent Experience (AX) | [08](./08-SEO-Week核心知识.md) | James Cadwallader概念 |
 | 审计页面质量 | [09](./09-内容审计与优化工具包.md) | 100分评分体系、否决项、5维度 |
 | 执行内容优化 | [09](./09-内容审计与优化工具包.md) | 行动动词、单页简报、4周冲刺 |
-| 理解向量搜索/嵌入原理 | [11](./11-向量搜索与嵌入优化.md) | 向量嵌入、余弦相似度、竞品分析 |
-| 让内容被AI检索到 | [12](./12-内容可检索性框架.md) | 5要素诊断、Test-and-Learn |
+| 理解向量搜索/嵌入原理 | [11](./11-向量搜索与嵌入优化.md) | 向量嵌入、余弦相似度、向量化SEO框架 |
+| 让内容被AI检索到 | [12](./12-内容可检索性框架.md) | 5要素诊断、AI Readiness 10项评估、Test-and-Learn |
 | 诊断内容策略成熟度 | [13](./13-内容成熟度模型.md) | 5级模型、升级路径、Barbell Strategy |
 
 ---
@@ -93,8 +94,8 @@
 |------|------|---------|
 | BrightonSEO April 2026 | 会议 | 03（已并入）/ 01/05/06 |
 | SEO Week 2025 + 2026 | 会议 | 08（主）/ 03/11 |
-| Athens SEO 2026 | 会议 | 11/12/13 |
-| Google Search Central Live Toronto 2026 | 官方 | 01（Commodity Content）/ 03 |
+| Athens SEO 2026 | 会议 | 02/03/05/11/12 |
+| Google I/O 2026 | **官方** | 01/02/03/12 |
 | Google Search Central 官方GEO指南 (2026.5.15) | **官方** | 03/12 |
 | Lois / 海外SEO与ASO | 行业 | 01/03 |
 | Bing SEO Week 2026 | 官方 | 03 |

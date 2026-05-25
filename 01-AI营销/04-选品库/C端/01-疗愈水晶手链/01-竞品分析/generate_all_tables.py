@@ -25,11 +25,11 @@ TOP_KEYWORDS_ID = '18CqR8GzvsonO5zYUaodDPB3oiIcdjdeCVJZn5BaPJng'
 EXCLUDED_SHEETS = {'README', '字段说明', 'TopPages_All', 'TopKeywords_All', 'Keyword-Page-Proof'}
 
 # Column specs: (header_name, url_col_index)
-TOP_PAGES_HEADER = ['URL', 'Traffic(%)', 'Number of Keywords', 'Traffic', 'Top Keyword', 'Primary Intent', 'LLM Prompts']
+TOP_PAGES_HEADER = ['URL', 'Traffic(%)', 'Traffic', 'Top Keyword', 'Primary Intent', 'LLM Prompts']
 TOP_PAGES_URL_COL = 0  # Column A
 
-TOP_KEYWORDS_HEADER = ['Keyword', 'Position', 'Search Volume', 'Keyword Difficulty', 'CPC', 'URL', 'Traffic', 'Traffic(%)', 'Number of Results', 'Keyword Intents']
-TOP_KEYWORDS_URL_COL = 5  # Column F
+TOP_KEYWORDS_HEADER = ['Keyword', 'Search Volume', 'Keyword Difficulty', 'CPC', 'URL', 'Traffic', 'Traffic(%)', 'Number of Results', 'Keyword Intents']
+TOP_KEYWORDS_URL_COL = 4  # Column E
 
 EXTRA_COLS = ['competitor_domain', 'source_sheet', 'normalized_url']
 

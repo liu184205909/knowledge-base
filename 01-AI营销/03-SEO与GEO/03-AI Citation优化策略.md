@@ -206,6 +206,65 @@ Google在AI搜索中新增5种链接呈现方式，目的是让用户在AI生成
 
 ---
 
+## Athens SEO 2026 行业共识（2026.05.22-23）
+
+> 来源：Athens SEO 2026，雅典 The Ellinikon Experience Centre。参与者包括 Aleyda Solís、Lily Ray、Mark Williams-Cook、Dan Taylor、Judith Lewis、Jonathan Moore、Simone De Palma、Frank van Dijk 等。整理：鸭老师SEO。
+
+### 核心共识：GEO/AEO = SEO
+
+Judith Lewis 用《黑客帝国》"红裙女人"比喻开场——GEO 和 AEO 看起来性感，回头一看，本质就是 SEO。
+
+- LLM 通过 tokenization 把内容拆碎放进多维向量空间，存储的是分布式表征而非事实。**幻觉不是 bug，是架构固有特性**
+- LLM 必须依赖外部检索获取可靠信息 → 检索来源主要是传统搜索引擎索引
+- ChatGPT（尤其 Plus 版本）使用 SerpApi 抓取 Google 搜索结果；当 Bing 索引找不到 URL 时回退到 Google 索引
+- **结论：Rank well on Google, surface well in AI**
+
+### ChatGPT 引用率 vs Google 排名
+
+Lily Ray 用 Accuranker 对比数据：**ChatGPT 引用率和 Google 排名"非常非常相似"**，进一步佐证 Bogdan Babiak 的 r=0.720 相关系数。
+
+- Lily Ray 将 GEO 的 listicle 操纵手法定性为 "gray hat scaled content"——等同于 Google 2024 年创建的 scaled content abuse 分类
+- 真实案例：某品牌过去一年在 Google 和 ChatGPT 上大量使用 AI 内容，Panel 举办前两天刚被 Google 惩罚，整个博客从搜索结果中消失
+- **美国 80-85% 的人还没用过 AI**（Panel 数据）→ 传统 Google SEO 在相当长时间内仍是流量主力
+
+### cats.txt 实验：拆穿低证据门槛
+
+Mark Williams-Cook 创建了 cats.txt "标准"——描述公司猫咪信息的文件（名字、品种、PurrLevel 等字段）。
+
+- **结果**：Anthropic、OpenAI、Google、Perplexity 爬虫全部爬取，每天数百次
+- 朋友放到网站后，Google AI Overview 直接从中抽取猫咪信息返回
+- ChatGPT 被问"cats.txt 能帮排名吗"时回答"Yes"并给出一堆理由
+- **论证链条**：用与 llms.txt 支持者完全相同的逻辑——"被爬了所以有用""被索引了所以影响排名""ChatGPT 说有效"——"证明"了 cats.txt 的价值
+- **如果 cats.txt 的证据不成立，llms.txt 的也不成立**
+- 彩蛋：搜 catstxt 排名第一的 catstxt.org 是 Google Earth 团队工程师做的
+
+### OpenAI 的态度
+
+OpenAI 没有把 GEO 式 SEO 操纵仅当 spam，而是归类为 **prompt injection attacks**——安全威胁级别定性。
+
+### 职场策略
+
+> 把以前一直催 CMO 要做但被忽视的 SEO ticket，重新标记为"AI 优化需要"提交。内容完全一样，换个标签突然就被优先处理了。
+
+### Google I/O 2026 新动态
+
+#### 智能体电商与通用购物车（Agentic Commerce）
+
+依托通用商业协议（UCP）扩展，Google 推出跨 Search/Gemini/YouTube/Gmail 的**通用购物车（Universal Cart）**。
+
+- AI 全网比价 → 直接代劳完成酒店预订、本地服务约单和外卖配送
+- 电商独立站流量从"目的地"降级为"数据源"——用户甚至不需要看你的网站
+- **自救**：优化 Merchant Center Feed、产品 Schema、本地服务 Schema 格式。优化机器可读性——让交易智能体能无障碍抓取价格、库存和规格属性
+
+#### 个人智能与隐形流量
+
+搜索向全球 200 个国家落地"个人智能"接口，直接读取用户 Gmail/相册/日历回答个人问题。
+
+- 公开网络流量被私域数据"截流"——大量消耗用户在搜索框内的注意力
+- **新战场：邮件营销 SEO**——确保 Newsletter/Order Confirmation/Receipt 使用规范 Email Schema，品牌邮件能在个人搜索中被 AI 优先提取
+
+---
+
 ## 共识层（Consensus Layer）
 
 > AI不只看你的网站，而是看**整个互联网多个独立来源**怎么说。
@@ -514,6 +573,8 @@ Bing将AI检索词分为**15种意图类型**：Comparison、Research、Informat
 | BrightonSEO April 2026 | AirOps×Kevin Indig 16,851 queries | AI引用决定因素 |
 | 张友兵「兵哥说独立站」GEO 系列 | 行业研究 | AI购物三阶段 + 四类问题 + 用户行为路径 |
 | DTC AI运营自动化分享会（Louis Liu / Impact.com） | 行业活动 | 合作伙伴营销作为GEO渠道，2026.05.23 |
+| Athens SEO 2026（鸭老师SEO整理） | **会议** | GEO=SEO共识、cats.txt实验、ChatGPT引用vs Google排名、3R框架、AI Readiness、向量化SEO，2026.05.22-23 |
+| Google I/O 2026（John/英文SEO实战派整理） | **官方** | Agentic AI时代、生成式UI/Mini Apps、智能体电商/Universal Cart、Gemini 3.5 Flash、SynthID/C2PA、个人智能，2026.05.19-20 |
 
 ---
 
@@ -526,4 +587,4 @@ Bing将AI检索词分为**15种意图类型**：Comparison、Research、Informat
 
 ---
 
-**创建时间**: 2026-04-28 | **最后更新**: 2026-05-24（+ 合作伙伴营销作为GEO渠道）
+**创建时间**: 2026-04-28 | **最后更新**: 2026-05-25（+ Athens SEO 2026 行业共识 + Google I/O 2026 动态）

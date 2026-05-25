@@ -4,9 +4,9 @@ For each keyword with traffic, checks if its ranking URL exists as a top page
 with traffic. Keyword-Page-Proof is an evidence view, not a raw keyword dump.
 
 Output columns:
-  Keyword | Competitor Domain | Ranking URL | Normalized URL | Position |
+  Keyword | Competitor Domain | Ranking URL | Normalized URL |
   Search Volume | KD | CPC | Keyword Traffic | Keyword Traffic(%) |
-  Page Traffic | Page Keywords | Page Top Keyword | Proof Level
+  Page Traffic | Page Top Keyword | Proof Level
 """
 
 import json
@@ -103,21 +103,17 @@ def normalize_keyword(keyword):
     return re.sub(r'\s+', ' ', str(keyword or '').lower().strip())
 
 
-def classify_proof(keyword_traffic, page_traffic, position):
-    """Classify proof level based on traffic and position."""
+def classify_proof(keyword_traffic, page_traffic):
+    """Classify proof level based on traffic thresholds."""
     kt = to_number(keyword_traffic)
     pt = to_number(page_traffic)
-    try:
-        pos = int(position) if position else 99
-    except ValueError:
-        pos = 99
 
     if kt < MIN_KEYWORD_TRAFFIC or pt < MIN_PAGE_TRAFFIC:
         return 'None'
 
-    if kt >= 100 and pt >= 1000 and pos <= 5:
+    if kt >= 100 and pt >= 1000:
         return 'Strong'
-    elif kt >= 10 and pt >= 100 and pos <= 10:
+    elif kt >= 10 and pt >= 100:
         return 'Medium'
     elif kt >= MIN_KEYWORD_TRAFFIC and pt >= MIN_PAGE_TRAFFIC:
         return 'Weak'
@@ -158,15 +154,14 @@ def main():
     print(f'  TopPages_All: {len(tp_values)-1} rows, columns: {tp_header}')
 
     # Column indices for TopPages_All
-    # URL=0, Traffic(%)=1, Number of Keywords=2, Traffic=3, Top Keyword=4,
-    # Primary Intent=5, LLM Prompts=6, competitor_domain=7, source_sheet=8, normalized_url=9
+    # URL=0, Traffic(%)=1, Traffic=2, Top Keyword=3,
+    # Primary Intent=4, LLM Prompts=5, competitor_domain=6, source_sheet=7, normalized_url=8
     TP_URL = 0
     TP_TRAFFIC_PCT = 1
-    TP_NUM_KEYWORDS = 2
-    TP_TRAFFIC = 3
-    TP_TOP_KEYWORD = 4
-    TP_COMPETITOR_DOMAIN = 7
-    TP_NORMALIZED_URL = 9
+    TP_TRAFFIC = 2
+    TP_TOP_KEYWORD = 3
+    TP_COMPETITOR_DOMAIN = 6
+    TP_NORMALIZED_URL = 8
 
     # Build lookup: (competitor_domain, normalized_url) -> page data
     page_lookup = {}
@@ -181,7 +176,6 @@ def main():
         if key not in page_lookup:
             page_lookup[key] = {
                 'page_traffic': page_traffic,
-                'page_keywords': row[TP_NUM_KEYWORDS] if len(row) > TP_NUM_KEYWORDS else '',
                 'page_top_keyword': row[TP_TOP_KEYWORD] if len(row) > TP_TOP_KEYWORD else '',
             }
     print(f'  Built lookup with {len(page_lookup)} unique pages')
@@ -195,16 +189,16 @@ def main():
     data2 = api_get(url, token, opener)  # This might be too large for one call
     # Actually let's use a different approach - read the keyword data directly
 
-    # TopKeywords_All columns:
-    # 0:Keyword 1:Position 2:Search Volume 3:KD 4:CPC 5:URL 6:Traffic 7:Traffic(%)
-    # 8:Number of Results 9:Keyword Intents 10:competitor_domain 11:source_sheet 12:normalized_url
+    # TopKeywords_All columns (after Position/Competition removal):
+    # 0:Keyword 1:Search Volume 2:KD 3:CPC 4:URL 5:Traffic 6:Traffic(%)
+    # 7:Number of Results 8:Keyword Intents 9:competitor_domain 10:source_sheet 11:normalized_url
 
     # Read in chunks
     all_proof_rows = []
     header = ['Keyword', 'Competitor Domain', 'Ranking URL', 'Normalized URL',
-              'Position', 'Search Volume', 'KD', 'CPC',
+              'Search Volume', 'KD', 'CPC',
               'Keyword Traffic', 'Keyword Traffic(%)',
-              'Page Traffic', 'Page Keywords', 'Page Top Keyword', 'Proof Level']
+              'Page Traffic', 'Page Top Keyword', 'Proof Level']
     all_proof_rows.append(header)
 
     batch_size = 10000
@@ -238,22 +232,21 @@ def main():
                 continue
 
             total_keywords += 1
-            # Pad row to 13 columns
-            padded = row + [''] * (13 - len(row))
+            # Pad row to 12 columns
+            padded = row + [''] * (12 - len(row))
 
             keyword = padded[0]
             normalized_keyword = normalize_keyword(keyword)
-            position = padded[1]
-            search_vol = padded[2]
-            kd = padded[3]
-            cpc = padded[4]
-            url = padded[5]
-            traffic = padded[6]
-            traffic_pct = padded[7]
-            # num_results = padded[8]
-            # intents = padded[9]
-            domain = padded[10]
-            norm_url = padded[12]
+            search_vol = padded[1]
+            kd = padded[2]
+            cpc = padded[3]
+            url = padded[4]
+            traffic = padded[5]
+            traffic_pct = padded[6]
+            # num_results = padded[7]
+            # intents = padded[8]
+            domain = padded[9]
+            norm_url = padded[11]
 
             if not keyword or not url or to_number(traffic) < MIN_KEYWORD_TRAFFIC:
                 skipped_zero_keyword_traffic += 1
@@ -266,13 +259,12 @@ def main():
             if page_data:
                 matched += 1
                 page_traffic = page_data['page_traffic']
-                page_keywords = page_data['page_keywords']
                 page_top_kw = page_data['page_top_keyword']
             else:
                 unmatched += 1
                 continue
 
-            proof_level = classify_proof(traffic, page_traffic, position)
+            proof_level = classify_proof(traffic, page_traffic)
             if proof_level == 'None':
                 continue
 
@@ -288,9 +280,9 @@ def main():
 
             proof_row = [
                 keyword, domain, url, norm_url,
-                position, search_vol, kd, cpc,
+                search_vol, kd, cpc,
                 traffic, traffic_pct,
-                page_traffic, page_keywords, page_top_kw, proof_level
+                page_traffic, page_top_kw, proof_level
             ]
             all_proof_rows.append(proof_row)
             written_rows += 1

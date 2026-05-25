@@ -87,6 +87,83 @@ Authority × Relevance = Ranking
 
 ---
 
+### Googlebot vs Gemini：两套基础设施
+
+> 来源：Athens SEO 2026（Judith Lewis、Simone De Palma、Serge Bezborodov），Martin Splitt 半公开确认
+
+**Google 传统搜索和 Gemini/AI 搜索用的是不同的基础设施**，这直接决定了技术 SEO 的优先级。
+
+| 维度 | Googlebot（传统搜索） | Gemini / AI 搜索 |
+|------|----------------------|-----------------|
+| 触发方式 | 批量爬取、定期调度 | 用户 prompt 触发、按需访问 |
+| 基础设施 | Chromium 渲染、完整 rendering pipeline | 轻量基础设施、**不经过 rendering infrastructure** |
+| JS 处理 | 执行 JS、hydration、API 请求 | **可能只读初始 HTML / SSR 内容** |
+| 能看到的内容 | CSR 内容、lazy load、infinite scroll、delayed API | **静态 DOM、server-rendered text** |
+| 看不到的内容 | — | hydration 后内容、React client state、delayed API content |
+
+**Martin Splitt 基本已半公开确认："Gemini fetch 当前不 render。"**
+
+### Less JavaScript = More LLM Retrieval
+
+Simone De Palma 的 TUI 实际数据验证：
+- JS 内容多的页面 → ChatGPT-User 检索更少
+- JS 内容少、信息自包含的页面 → 检索更多
+
+**实操检查清单**：
+
+| 检查项 | 行动 |
+|--------|------|
+| CDN/WAF 层面 | Cloudflare 等可能默认 block AI bots → 需与 DevOps/SRE 沟通白名单 AI 爬虫 IP |
+| 渲染方式 | 避免纯客户端渲染——AI 看不到 |
+| noindex 检查 | 是否有页面被误设 noindex |
+| nosnippet 规则 | 避免使用——会阻止内容被 AI Overviews 和 AI Mode 引用 |
+| robots.txt | "I'm fine, we don't block AI bots"是**危险的**——真正阻断往往在 WAF/CDN 层面 |
+
+**渲染成本问题**：不是"能不能 render"而是"render 成本有多高"。CSR 导致更多 network requests、API calls、hydration、JS execution。尤其大型网站的 GraphQL/React hydration/chained requests 让处理成本暴涨。GraphQL 和 JSON RPC 默认使用 POST Requests（不可缓存），每个页面重新请求 API。
+
+**现代 SEO 已进入"渲染工程"时代**：Google Search 可以"运行你的应用"，但 Gemini 更像"读取你的 HTML"。对于 WordPress + Astra + Elementor 这类 SSR 技术栈的网站来说，这是天然优势。
+
+---
+
+### Google I/O 2026：搜索进入 Agentic AI 时代
+
+> 来源：Google I/O 2026（2026.05.19-20），搜索副总裁 Liz Reid 演讲。整理：John / 英文SEO实战派
+
+Google 明确宣告搜索从**生成式 AI 阶段**正式跨入**智能体 AI 时代（Agentic AI Era）**。未来的 Google 搜索 = 动态 UI + 自主智能体 + 原生交易。
+
+#### 生成式 UI 与 Mini Apps（杀伤力 5/5）
+
+**Google Antigravity 技术**：当用户搜索复杂问题或需要工具时，SERP 不再呈现网页，而是直接在搜索框里动态编写代码，生成定制交互式"微型应用（Mini App）"或动态仪表盘。
+
+- **工具类网站和 Programmatic SEO 灭顶之灾**——计算器、文件格式转换器、大量模板页面直接在 SERP 被复刻
+- 用户在搜索框里完成所有交互，根本不需要点击进入你的网站
+- **自救路径**：融入独家私域数据（Proprietary Data）、用户社区互动、核心价值前置 + 会员锁（Gated Experience），将搜索流量沉淀为私域资产
+
+#### 智能搜索框与多模态查询（杀伤力 4/5）
+
+搜索框被彻底重构：随用户输入动态扩展，支持文本/图片/长视频/Chrome 标签页作为上下文，进行多轮自然语言对话。
+
+- **短尾关键词加速失效**——用户不再浓缩为 2-3 个词，而是用自然语言描述复杂需求
+- 用户会丢一张图片 + 一个工作软件标签页，直接问"我的电脑跑这个软件卡，怎么升级？性价比最高"
+- **影响**：传统关键词研究工具的数据价值持续下降，语义理解和意图覆盖变得更加重要
+
+#### 信息智能体 7×24 后台运行（杀伤力 3.5/5）
+
+搜索引入 7×24 在后台持续运行的 AI 智能体。用户设定一次参数（如"监控西雅图某街区新出的、租金低于 $2000 且允许养狗的公寓"），智能体持续扫描全网，满足条件时弹窗通知。
+
+- **静态/过期内容被无情抛弃**——智能体高频扫描时，信息过时会被瞬间踢出筛选清单
+- 要求内容有持续刷新机制，尤其是价格、库存、行业报告、政策变动等时效性数据
+
+#### Gemini 3.5 Flash 成为默认引擎
+
+AI Mode 全球默认引擎升级为 Gemini 3.5 Flash，4 倍速度提升 + 极强多步骤推理能力。
+
+- **可引证性（Citability）门槛暴增**——毫秒级对比几十个网页，洗稿/无独家观点内容被轻易剔除
+- Google 加大 SynthID（内容水印）和 C2PA（来源追踪）普及 → 纯 AI 生成无背书站点引用权重跌入谷底
+- SynthID 已打标超 **1000亿** 张图片和视频 + **6万年** 音频；C2PA 即将进入 Search 和 Chrome
+
+---
+
 ### Firefly：规模化内容滥用检测引擎
 
 > 基于 Content Warehouse API Leak 中的 `QualityCopiaFireflySiteSignal` 模块（Shaun Anderson 取证分析）。Firefly 是**站点级信号**，直接影响排名。

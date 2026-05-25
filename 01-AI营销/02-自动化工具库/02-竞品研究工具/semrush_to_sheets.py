@@ -3,8 +3,23 @@ SEMrush 竞品数据采集工具
 从 Google Sheets 读取域名 → SEMrush 查询 → 提取 AS + Traffic + 截图 → 写回 Sheets
 
 前置条件:
-  1. Tabbit 带 --remote-debugging-port=9222 --remote-allow-origins=* 启动
+  1. Tabbit 开启 Debug 模式（端口 9222）
   2. 已在 Tabbit 中登录 semrush.com
+  3. Google API Token 有效（见下方认证说明）
+
+Tabbit Debug 模式启动:
+  Tabbit 是单实例浏览器，--remote-debugging-port 仅在首个实例启动时生效。
+  如果已有 Tabbit 在运行，再次启动只会打开新标签页，不会携带 debug 参数。
+
+  方法一（推荐）: 在 Tabbit 地址栏输入 tabbit://settings/debug 启用
+  方法二: 先关闭所有 Tabbit 进程，再用命令行启动:
+    "D:\\Program Files (x86)\\Tabbit\\Application\\Tabbit.exe" --remote-debugging-port=9222 --remote-allow-origins=*
+  验证: 浏览器访问 http://localhost:9222/json 应返回标签页列表
+
+认证:
+  脚本从本地凭证文件直接读取 token，无需硬编码 OAuth 密钥。
+  Token 有效期 1 小时，过期前运行: python C:\\Users\\Dylan\\tools\\refresh_google_token.py
+  完整配置和故障排查见: 00-基础能力/02-Google-Cloud凭证创建指南.md
 
 使用方式:
   python semrush_to_sheets.py              # 全量查询
@@ -36,7 +51,7 @@ CLIENT_ID = "704571210228-ek6e7lqq593uognb1po775rbi529mu9g.apps.googleuserconten
 CLIENT_SECRET = "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"
 REFRESH_TOKEN = "1//090CsFxcT-5CRCgYIARAAGAkSNwF-L9IrSv0WVd6vv--MLMU9OhSVXHP2EGWJgK_Cm94StT1LEqlt46WvQzDWzF3yeJbt_zWawqc"
 SHEET_ID = "1zcWFPw7lFq_L6aBpEEpBhU0FKf7uJi6hiQYCVoah_vA"
-SHEET_NAME = "竟对清单"
+SHEET_NAME = "竞品清单"
 
 # Tabbit / Chrome DevTools 直连
 BROWSER_DEBUG_PORT = 9222
@@ -156,28 +171,21 @@ def ensure_browser_ready():
 
 # ========== Google API ==========
 def get_access_token():
-    """刷新 Google OAuth access token"""
-    print("[Auth] 刷新 Token...")
-    for attempt in range(TOKEN_RETRY):
-        try:
-            resp = requests.post(
-                "https://oauth2.googleapis.com/token",
-                data={
-                    "client_id": CLIENT_ID,
-                    "client_secret": CLIENT_SECRET,
-                    "refresh_token": REFRESH_TOKEN,
-                    "grant_type": "refresh_token",
-                },
-                proxies=PROXY, timeout=15, verify=False,
-            )
-            token = resp.json()["access_token"]
-            print("[Auth] Token OK")
-            return token
-        except Exception as e:
-            print(f"[Auth] 第 {attempt+1}/{TOKEN_RETRY} 次失败: {e}")
-            if attempt < TOKEN_RETRY - 1:
-                time.sleep(5)
-    raise Exception("Token 刷新失败")
+    """从本地凭证文件读取 Google OAuth access token"""
+    cred_path = os.path.expanduser("~/.google_workspace_mcp/credentials/lzn184205909@gmail.com.json")
+    print(f"[Auth] 读取凭证: {cred_path}")
+    try:
+        with open(cred_path, "r", encoding="utf-8") as f:
+            cred = json.load(f)
+        token = cred.get("token")
+        if not token:
+            raise Exception("凭证文件中未找到 token 字段")
+        print("[Auth] Token OK")
+        return token
+    except FileNotFoundError:
+        raise Exception(f"凭证文件不存在: {cred_path}\n请先运行 token 刷新脚本")
+    except json.JSONDecodeError:
+        raise Exception(f"凭证文件格式错误: {cred_path}")
 
 
 def read_domains(token):

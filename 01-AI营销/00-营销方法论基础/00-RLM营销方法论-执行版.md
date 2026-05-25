@@ -66,8 +66,8 @@
 
 | 表格名称 | 用途 | 标准列（保留） | Semrush 导出时删除的列 |
 |------|------|--------------|----------------------|
-| SEMrush-Top-Pages | 页面级SEO价值 | URL / Traffic(%) / Number of Keywords / Traffic / Top Keyword / Primary Intent / LLM Prompts | Adwords Positions / 5×Positions by Intent / 5×Traffic by Intent / Traffic Change / Answer Engines |
-| SEMrush-Top-Keywords | 关键词排名与排名URL | Keyword / Position / Search Volume / Keyword Difficulty / CPC / URL / Traffic / Traffic(%) / Number of Results / Keyword Intents | Previous Position / Traffic Cost / Competition / Trends / Timestamp / SERP Features by Keyword / Position Type |
+| SEMrush-Top-Pages | 页面级SEO价值 | URL / Traffic(%) / Traffic / Top Keyword / Primary Intent / LLM Prompts | Adwords Positions / Number of Keywords / 5×Positions by Intent / 5×Traffic by Intent / Traffic Change / Answer Engines |
+| SEMrush-Top-Keywords | 关键词排名与排名URL | Keyword / Search Volume / Keyword Difficulty / CPC / URL / Traffic / Traffic(%) / Number of Results / Keyword Intents | Position / Competition / Previous Position / Traffic Cost / Trends / Timestamp / SERP Features by Keyword / Position Type |
 | SEMrush-Seed-Keywords | 种子词导入 + 清洗后的关键词主表 | Keyword / Volume / KD / CPC / Intent / Topic Cluster / Recommended Page Type / Priority / Source Type / Source Detail / Competitor Proof / Proof URL | Competitive Density / SERP Number |
 
 > `TopPages_All`、`TopKeywords_All`、`Keyword-Page-Proof` 是 1C 数据加工结果，不是原始表格。过滤阈值见 `01-关键词研究方法论.md`。
