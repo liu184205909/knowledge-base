@@ -1,12 +1,12 @@
 # 1C 关键词研究说明
 
-> **RLM步骤1C输出**：把 `SEMrush-Seed-Keywords` 清洗成项目关键词主表，并用竞品验证视图补充关键词证据。
+> **RLM步骤1C输出**：把 `SEMrush-Seed-Keywords` 中的 `Seed-*` 暂存表合并为 `Seed-Master` 项目关键词主表，并用竞品验证视图补充关键词证据。
 
 ## 当前项目口径
 
-- `semrush volume>100` Google Sheet 是当前水晶品类关键词主表，包含 4,391 条关键词数据。
+- `semrush volume>100` / Seed-Crystals 是当前水晶品类导入暂存表，包含 4,391 条关键词数据。
 - 本目录的 `Semrush排除关键词列表.md` 用于 Semrush 导出前过滤明显无关词。
-- Seed Keywords 不是一次性原始池。它初始承接种子词导出，经过人工/AI清洗、去重、聚类、意图判断和页面类型映射后，就是项目唯一关键词主表。
+- Seed-* 不是最终主表。它们承接种子词导出和初筛，经过人工/AI清洗、去重、聚类、意图判断和页面类型映射后，合并到 Seed-Master；Seed-Master 才是项目唯一关键词主表。
 - Top Pages / Top Keywords 不直接合并进关键词主表。它们需要先生成过滤后的 `TopPages_All` 和 `TopKeywords_All`，再通过 `competitor_domain + normalized_url` 生成 `Keyword-Page-Proof`，用于判断关键词是否已有竞品页面实际拿到流量。
 
 ## 数据层
@@ -25,12 +25,12 @@
 
 - Seed-Crystals（暂存表）：4,391 条关键词，14 列，待合并到 Seed-Master
 - 合并规则：迁移基础字段（Keyword / Volume / KD / CPC / Intent），自动填 Topic Pillar = Crystals / Status = Approved / Source Type = Seed。Competitor Proof 等字段留空，待新 Proof 重跑后回填。
-- Topic Cluster / Recommended Page Type：待 AI 聚类分析后填充
+- Topic Pillar / Subtopic / Recommended Page Type：Seed-Master 合并后待 AI 聚类分析和页面类型映射
 - 非水晶品类（天使数字 / MBTI / 星座配对 / 月相 / 塔罗 / 灵性）：执行前需要单独补充种子词导出和筛选
 
 ## 待补充
 
-当前关键词主表主要覆盖水晶品类。项目简报中已标注：天使数字、MBTI、星座配对、月相、塔罗、灵性等非水晶跨界内容，执行前需要单独补充种子词导出和筛选。
+当前 Seed-Crystals 暂存表主要覆盖水晶品类。项目简报中已标注：天使数字、MBTI、星座配对、月相、塔罗、灵性等非水晶跨界内容，执行前需要单独补充种子词导出和筛选。
 
 正式进入批量 Brief 前，需要补齐：
 

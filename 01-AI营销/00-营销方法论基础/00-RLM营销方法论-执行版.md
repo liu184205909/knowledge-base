@@ -32,6 +32,7 @@
 4. **不输出空泛策略**：模仿、超越、差异化必须具体到竞品、页面、内容、结构、关键词或转化路径。禁止"提升品牌力""优化用户体验"等无动作表述。RLM主流程围绕SEO内容展开，付费广告、社媒、邮件等渠道按需扩展。
 5. **每次输出必须有明确文件名和路径**：输出不仅要解决问题，还要明确写到哪个文件。模糊的"输出一份分析"不算合格。
 6. **输出即动作**：每阶段结束时的交付物必须能作为下一步输入；若仅停留在分析，补任务清单或验收项。
+7. **素材有源，语气有参照**：进入 Brief、页面文案或正式内容生成前，必须声明素材证据来源和语气参考；具体字段写入模板库或单页依据包。
 
 ---
 
@@ -123,10 +124,10 @@ XX产品/
 1B: 多源数据采集（多条轨道可并行）
     ├── 轨道A: 竞品清单数据 → SEMrush AS/Organic Traffic/截图 + traffic.cv月访问量/渠道拆分
     ├── 轨道B: 竞品SEO明细 → SEMrush Top Pages + Top Keywords
-    ├── 轨道C: 种子词关键词主表 → SEMrush/Ahrefs Seed Keywords 导入与清洗
+    ├── 轨道C: 种子词导入暂存 → SEMrush/Ahrefs Seed Keywords 导入与清洗
     └── 轨道D: Sitemap解析 → 页面清单/URL结构/内容类型分布 → 竞品页面报告
 1C: 关键词研究       → Seed-Master 关键词主表 + Topic-Discovery 主题发现与确认 + Keyword-Page-Proof 竞品验证 → 主题集群/意图/推荐页面类型/优先级
-1D: 竞品深度拆解     → 核心输入（Top Pages + Top Keywords + Sitemap + Seed Keywords + Keyword-Page-Proof）+ 辅助输入（竞品清单汇总）
+1D: 竞品深度拆解     → 核心输入（Top Pages + Top Keywords + Sitemap + Seed-Master + Keyword-Page-Proof）+ 辅助输入（竞品清单汇总）
                      → 每个竞品逐个深度拆解，回答：X靠什么拿流量、X建了什么、X覆盖/遗漏了什么
 1E: 网站结构分析（综合1B+1C+1D做结构对比）→ 可进入步骤2
 1F: 内容策略分析     → 可进入步骤3
@@ -192,7 +193,7 @@ XX产品/
 
 > Sitemap 默认输出到 `1B-sitemap解析/` 和 `1B-sitemap解析报告.md`；只有 URL 清单很大、需要频繁筛选/排序时，才可另建 `Sitemap-Pages` 电子表格。
 
-**关键输出（1B 整体）**：更新后的竞品清单 + SEMrush竞品SEO明细（Top Pages/Top Keywords，每个竞品一个工作表）+ `Competitor-Sheet-Map` 白名单配置 + Seed Keywords 暂存表初始导入 + Sitemap解析报告/页面清单 + `1B-数据采集索引.md`（记录各电子表格链接、采集状态、最后更新时间）
+**关键输出（1B 整体）**：更新后的竞品清单 + SEMrush竞品SEO明细（Top Pages/Top Keywords，每个竞品一个工作表）+ `Competitor-Sheet-Map` 白名单配置 + `Seed-*` 暂存表初始导入 + Sitemap解析报告/页面清单 + `1B-数据采集索引.md`（记录各电子表格链接、采集状态、最后更新时间）
 
 #### 1C 关键词研究
 
@@ -403,6 +404,7 @@ XX产品/
 - **禁止占位文本**：不使用 Lorem ipsum、placeholder、"Coming Soon"
 - **禁止图片复用**：关键视觉位（Hero、CTA、产品展示、信任背书）每张图必须有独立 prompt
 - **依据可追溯**：内容基于单页依据包 + 1H 策略 + 业务事实，不凭通用知识编造
+- **素材证据声明**：单页依据包必须包含"本页可用素材证据"，用于约束页面文案、图片 prompt 和差异化表达
 - **先依据后构建**：每个页面先完成单页依据包再进入构建，不能跳过
 - **动态区数据源在构建时决定**：产品区、博客区、相关文章/相关产品、分类导航等动态区域，必须在构建阶段就选定数据接入方式（shortcode / WP Query / REST API / 空容器人工占位），不得先用静态假卡片占位再等 2D 处理
 
