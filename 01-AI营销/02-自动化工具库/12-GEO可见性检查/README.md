@@ -59,20 +59,20 @@ export DFS_API_PASSWORD=your_password
 
 ```bash
 # 单关键词，无竞品（最少 API 调用：~6次）
-python 11-GEO可见性检查/geo_visibility_checker.py \
+python 12-GEO可见性检查/geo_visibility_checker.py \
   --brand "Crystal Healing" \
   --domain "crystalhealing.com" \
   --keywords "healing crystal bracelet"
 
 # 多关键词 + 竞品（API 调用 = 4×关键词数 + 2 + 竞品数）
-python 11-GEO可见性检查/geo_visibility_checker.py \
+python 12-GEO可见性检查/geo_visibility_checker.py \
   --brand "Crystal Healing" \
   --domain "crystalhealing.com" \
   --keywords "healing crystal bracelet" "crystal bracelet meaning" \
   --competitors "Energy Muse" "Tiny Rituals"
 
 # 欧洲市场（德国）
-python 11-GEO可见性检查/geo_visibility_checker.py \
+python 12-GEO可见性检查/geo_visibility_checker.py \
   --brand "Crystal Healing" \
   --domain "crystalhealing.com" \
   --keywords "healing crystal bracelet" \
@@ -119,10 +119,10 @@ Claude Code 会分析 JSON 后通过 Google Workspace MCP 写入你的 Google Sh
 
 ```text
 现有流程：
-  02-竞品研究 → 04-内容分析 → 建站 → 09-SEO审计 → 10-用户洞察
+  02-竞品研究 → 05-内容分析 → 建站 → 10-SEO审计 → 11-用户洞察
 
 插入后：
-  02-竞品研究 → 04-内容分析 → 11-GEO可见性 → 建站 → 09-SEO审计 → 10-用户洞察
+  02-竞品研究 → 05-内容分析 → 12-GEO可见性 → 建站 → 10-SEO审计 → 11-用户洞察
                                     ↑
                           建站前评估品类的 AI 推荐格局
                           运营期定期监测品牌 AI 可见性变化
@@ -151,6 +151,6 @@ Claude Code 会分析 JSON 后通过 Google Workspace MCP 写入你的 Google Sh
 | 工具 | 关系 |
 |------|------|
 | **02-竞品研究** | 11 在 02 之后使用，补充 AI 可见性维度 |
-| **09-SEO审计** | 09 检查技术 SEO，11 检查 GEO 可见性，互补 |
-| **10-用户洞察** | 10 采集 Reddit 评论做内容分析，11 检查品牌在 Reddit 的可见性 |
-| **09-SEO审计/README 提到的 SearchAtlas** | SearchAtlas 的 LLM 可见性追踪是商业版功能，本工具是免费自建替代 |
+| **10-SEO审计** | 10 检查技术 SEO，12 检查 GEO 可见性，互补 |
+| **11-用户洞察** | 11 采集 Reddit 评论做内容分析，12 检查品牌在 Reddit 的可见性 |
+| **10-SEO审计/README 提到的 SearchAtlas** | SearchAtlas 的 LLM 可见性追踪是商业版功能，本工具是免费自建替代 |

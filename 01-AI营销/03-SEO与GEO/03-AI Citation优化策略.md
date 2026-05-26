@@ -526,7 +526,7 @@ Bing将AI检索词分为**15种意图类型**：Comparison、Research、Informat
 
 ## SEO Week 关键研究
 
-> 详细内容见 [09-SEO-Week核心知识.md](./08-SEO-Week核心知识.md)
+> 详细内容见 [07-SEO-Week核心知识.md](./07-SEO-Week核心知识.md)
 
 | 演讲者 | 核心发现 |
 |--------|---------|
@@ -581,9 +581,9 @@ Bing将AI检索词分为**15种意图类型**：Comparison、Research、Informat
 ## 相关文档
 
 - [01-内容质量标准.md](./01-内容质量标准.md) — 写作标准和流程
-- [05-实体与知识图谱理论.md](./04-实体与知识图谱理论.md) — 实体优化工作流
-- [06-SEO测量危机与新指标.md](./05-SEO测量危机与新指标.md) — AI可见性测量体系
-- [09-SEO-Week核心知识.md](./08-SEO-Week核心知识.md) — SEO Week详细内容
+- [04-实体与知识图谱理论.md](./04-实体与知识图谱理论.md) — 实体优化工作流
+- [05-SEO测量危机与新指标.md](./05-SEO测量危机与新指标.md) — AI可见性测量体系
+- [07-SEO-Week核心知识.md](./07-SEO-Week核心知识.md) — SEO Week详细内容
 
 ---
 

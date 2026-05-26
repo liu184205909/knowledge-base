@@ -33,7 +33,7 @@
 人工 Google 搜索（排除语法过滤大平台）     ← 筛选 ~40 个竞品域名
     ↓
 02-竞品研究工具/semrush_to_sheets.py       ← SEMrush 数据采集（AS/流量/截图 → Google Sheets）
-sitemap-mcp-server（MCP）                  ← Sitemap 解析内容架构（详见 1B数据采集工具手册）
+sitemap-mcp-server（MCP）                  ← Sitemap 解析内容架构（详见 1B数据处理工具手册）
     ↓
 05-竞品内容分析工具/content_analyzer.py    ← 批量抓取 title/H1/H2，输出内容模式报告
 ```
@@ -110,13 +110,13 @@ python 01-域名查询/domain_checker.py
 关键词 -amazon.com -ebay.com -etsy.com -walmart.com -pinterest.com -reddit.com -youtube.com -facebook.com -tiktok.com -wikipedia.org -quora.com -target.com -aliexpress.com -alibaba.com
 ```
 
-> `serp_competitor_finder.py` 和 `sitemap_parser.py` 已退役，不再使用。详见 [1B数据采集工具手册.md](02-竞品研究工具/1B数据采集工具手册.md)
+> `serp_competitor_finder.py` 和 `sitemap_parser.py` 已退役，不再使用。详见 [1B数据处理工具手册.md](02-竞品研究工具/1B数据处理工具手册.md)
 
 ### 2B Sitemap 解析：sitemap-mcp-server（MCP）
 
 **原理**：通过 sitemap-mcp-server（MCP 服务）自动发现并解析竞品 sitemap.xml，支持子sitemap过滤、路径过滤、分页。
 
-详见 [1B数据采集工具手册.md](02-竞品研究工具/1B数据采集工具手册.md) 轨道D章节。
+详见 [1B数据处理工具手册.md](02-竞品研究工具/1B数据处理工具手册.md) 轨道D章节。
 
 ---
 
@@ -202,7 +202,7 @@ python 05-竞品内容分析工具/content_originality_checker.py \
 
 ---
 
-## 06 数据分析工具
+## 07 数据分析工具
 
 **文件**：`07-数据分析工具/01-Google-Data-Studio使用指南.md`
 
@@ -219,7 +219,7 @@ GA4 流量行为 ─────────────────────
 
 ---
 
-## 07 短视频工具
+## 08 短视频工具
 
 **文件**：`08-短视频工具/短视频工具与自动化流程.md`
 
@@ -227,15 +227,15 @@ GA4 流量行为 ─────────────────────
 
 ---
 
-## 08 外链工具
+## 09 外链工具
 
 > **状态**：占坑，待外链建设指南验证后启动开发。详见 [README.md](09-外链工具/README.md)。
 
-SEMrush 数据采集功能已整合到 `02-竞品研究工具/`，详见 [1B数据采集工具手册.md](02-竞品研究工具/1B数据采集工具手册.md)。
+SEMrush 数据采集功能已整合到 `02-竞品研究工具/`，详见 [1B数据处理工具手册.md](02-竞品研究工具/1B数据处理工具手册.md)。
 
 ---
 
-## 10 SEO 审计工具
+## 10 SEO审计工具
 
 ### 10A 技术 SEO 审计：`seo_technical_auditor.py`
 
@@ -440,7 +440,7 @@ python 12-GEO可见性检查/geo_visibility_checker.py \
 ## 删除历史说明
 
 > 本目录在 2026-04-12 `commit 64ee06e` 中被整体删除，原因是历次文档重构中将文件标注为"已迁移/已整合"但未真正搬移，导致内容逐步流失。2026-04-13 根据 git 日志完整恢复，并补建从未提交过的竞品挖掘和分析脚本。
-> 2026-05-09 合并原 02-竞品挖掘工具 和 03-竞品分析工具 为 02-竞品研究工具；新增 04-竞品内容分析工具 2 个检测脚本；新增 09-SEO审计工具（技术审计 + On-Page + 关键词蚕食）；新增 10-用户洞察工具。
-> 2026-05-14 新增 11-GEO可见性检查（7维度 AI 生态可见性信号采集 + Layer 2 LLM 分析）。
+> 2026-05-09 合并原 02-竞品挖掘工具 和 03-竞品分析工具 为 02-竞品研究工具；新增 04-竞品内容分析工具 2 个检测脚本；新增 10-SEO审计工具（技术审计 + On-Page + 关键词蚕食）；新增 11-用户洞察工具。
+> 2026-05-14 新增 12-GEO可见性检查（7维度 AI 生态可见性信号采集 + Layer 2 LLM 分析）。
 > 2026-05-23 新增 13-Open Design 设计工具（占坑，后期安装部署）。
 > 2026-05-24 新增 14-Web-to-App（网站打包安卓 APK 开源工具）。

@@ -173,4 +173,4 @@ Simone De Palma 的工程方案：
 ## 相关文档
 
 - [03-AI Citation优化策略.md](./03-AI%20Citation优化策略.md) — Citation Share测量方法
-- [08-SEO-Week核心知识.md](./08-SEO-Week核心知识.md) — SEO Week详细内容
+- [07-SEO-Week核心知识.md](./07-SEO-Week核心知识.md) — SEO Week详细内容
