@@ -17,7 +17,7 @@
 | Seed-Crystals 暂存表 | Semrush Keyword Magic 导出 | 水晶品类导入暂存表 | 已有 4,391 条 × 14列；合并到 Seed-Master 后仍保留为暂存表 |
 | TopPages_All | SEMrush-Top-Pages | 汇总竞品页面级SEO价值 | **旧版**: 289行 × 9列（仅 thecrystalcouncil），待按 Competitor-Sheet-Map 重新生成 |
 | TopKeywords_All | SEMrush-Top-Keywords | 汇总竞品关键词排名与排名URL | **旧版**: 2,000行 × 13列（仅 thecrystalcouncil），待按 Competitor-Sheet-Map 重新生成 |
-| Competitor-Sheet-Map | SEMrush-Top-Keywords | 竞品工作表配置与主题分类 | **草案** (2026-05-26): 31 个竞品已分类，待人工审核 |
+| Competitor-Sheet-Map | SEMrush-Top-Keywords | 竞品工作表配置（读取白名单） | **草案** (2026-05-26): 31 个竞品，`known_topic_hint` 为可选提示，待人工审核 |
 | Topic-Discovery | TopKeywords_All + Competitor-Sheet-Map | 主题发现报告 | 待生成 |
 | Keyword-Page-Proof | TopKeywords_All x TopPages_All | 给关键词主表补竞品成功证据 | **旧版**: 1,913行 × 14列（仅 thecrystalcouncil），待重跑 |
 
