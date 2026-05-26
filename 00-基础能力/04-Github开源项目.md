@@ -10,7 +10,7 @@
 |------|------|---------|
 | [AI 营销工具](#ai-营销工具) | 6 | Fooocus、Nanobrowser、CloakBrowser |
 | [客服与消息自动化](#客服与消息自动化) | 1 | Evolution API |
-| [AI 开发工具](#ai-开发工具) | 2 | superpowers-zh、system_prompts_leaks |
+| [AI 开发工具](#ai-开发工具) | 4 | superpowers-zh、TokenTracker、ccusage |
 | [通用效率工具](#通用效率工具) | 8 | ERPNext、PlainApp、Vibe、PDFCraft |
 
 ---
@@ -226,7 +226,7 @@ brew install ffmpeg
 
 ## AI 开发工具
 
-> AI 编程辅助、Prompt 工程、Skill 设计
+> AI 编程辅助、Prompt 工程、Skill 设计、Token 用量追踪
 
 ### superpowers-zh
 
@@ -272,6 +272,64 @@ npx superpowers-zh
 | 迭代式输出控制 | 分步骤输出而非一次性生成 | Perplexity |
 
 **适用场景**: Skill/System Prompt 设计参考、Prompt 工程学习、AI 行为研究
+
+---
+
+### TokenTracker（已安装）
+
+**GitHub**: https://github.com/mm7894215/TokenTracker
+
+**简介**: 带 Web Dashboard 的 Vibe Coding token 用量追踪工具，覆盖 CLI + IDE 类 AI 编程工具，一行命令安装
+
+**核心功能**: token 用量统计、成本估算、Rate limit 实时进度条、GitHub 风格热力图、按模型/项目归因分析
+
+**特点**:
+- 本地优先（Local-first），只传 token 计数，不传提示词或响应内容
+- 自动注入 SessionEnd Hook（Claude Code、Codex、Gemini CLI）
+- 被动读取 SQLite/JSONL（Cursor、Roo Code、Zed Agent、Goose 等）
+- 覆盖 16 个工具：Claude Code、Codex、Cursor、Gemini CLI、OpenCode、Kiro、Roo Code 等
+- Dashboard 热力图 + 成本饼图 + 项目柱状图 + rate limit 进度条
+- 依赖 LiteLLM 定价库，新模型定价 1-3 天内更新
+
+**安装运行**:
+```bash
+npx tokentracker-cli          # 首次安装 + 同步历史 + 启动 Dashboard
+npx tokentracker-cli serve --port 7860 --no-open  # 指定端口启动
+npx tokentracker-cli wrapped --year 2026          # 年度用量报告
+npx tokentracker-cli status                       # 查看状态
+```
+
+**实测记录（2026-05-26）**:
+- 版本：0.24.6，首次即检测到 4.99 亿 tokens（2 个 provider）
+- 自动注入 Hooks：Claude Code / Codex / Gemini CLI / OpenCode
+- 本机 Wrapped 2026：499.53M tokens / 2,063 会话 / 13 活跃天 / glm-5.1 占 72%
+- 端口 7680 在 Windows 上可能 EACCES，建议用 `serve --port 7860`
+- Cursor 数据读取需 sqlite3 CLI 加入 PATH（当前跳过）
+- 数据目录：`C:\Users\Dylan\.tokentracker\tracker\queue.jsonl`
+
+**适用场景**: Vibe Coding token 成本追踪、多工具用量对比、Rate limit 监控
+
+---
+
+### ccusage
+
+**GitHub**: https://github.com/ryoppippi/ccusage
+
+**简介**: 纯命令行的 Coding Agent CLI token 用量与成本报表工具，Unix 哲学——专注一件事做好
+
+**核心功能**: 日/周/月/会话维度的 token 消耗报表，JSON 导出
+
+**特点**:
+- 纯命令行，无 Web 界面，轻量快速
+- 覆盖 15 个 CLI 工具：Claude Code、Codex、OpenCode、Amp、Droid、Goose、Kimi、Qwen、Copilot CLI、Gemini CLI 等
+- 与 TokenTracker 互补：ccusage 看日常消耗，TokenTracker 做可视化深度分析
+
+**安装运行**:
+```bash
+npx ccusage@latest
+```
+
+**适用场景**: 快速查看 token 消耗、命令行报表、脚本集成
 
 ---
 
@@ -493,4 +551,4 @@ docker run -d -p 8080:80 --name pdfcraft ghcr.io/pdfcrafttool/pdfcraft:latest
 
 ---
 
-**最后更新**: 2026-05-19
+**最后更新**: 2026-05-26

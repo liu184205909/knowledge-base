@@ -13,20 +13,20 @@
 
 | 数据层 | 上游位置 | 用途 | 当前状态 |
 |------|---------|------|---------|
-| Seed Keywords 主表 | Semrush Keyword Magic / Keyword Overview 导出 | 回答"市场有什么需求、我们最终做哪些词" | 已有 4,391 条 × 14列；Priority/Source/Proof 已回填；Topic Cluster/Recommended Page Type 待填充 |
-| TopPages_All | SEMrush-Top-Pages 遍历所有竞品原始工作表，只保留 Traffic >=100 的页面，每竞品最多300页 | 汇总竞品页面级SEO价值 | 已生成 289行 × 10列（当前仅 thecrystalcouncil） |
-| TopKeywords_All | SEMrush-Top-Keywords 遍历所有竞品原始工作表，只保留有流量证据、有URL、且英文词数不少于2的关键词，每竞品最多2000词 | 汇总竞品关键词排名与排名URL | 已生成 2,000行 × 13列（当前仅 thecrystalcouncil） |
-| Keyword-Page-Proof | 过滤后的 TopKeywords_All x TopPages_All；范围限定为 Seed Keywords 命中词 + 非主表 Strong/Medium 增量机会 | 给关键词主表补竞品成功证据 | 已生成 1,913行 × 14列；Strong(299)/Medium(1,614)/Weak(0)/None(0) |
-| 人工/AI候选词 | 项目种子关键词、内容策略候选方向 | 只能作为候选，必须补数据验证 | 按需补入主表 |
+| Seed-Master 主表 | 暂存表合并 + 竞品增量词 | 回答"市场有什么需求、我们最终做哪些词" | **表头已创建** (2026-05-26): 19 列空表；Seed-Crystals（4,391 条）待合并 |
+| Seed-Crystals 暂存表 | Semrush Keyword Magic 导出 | 水晶品类导入暂存表 | 已有 4,391 条 × 14列；合并到 Seed-Master 后仍保留为暂存表 |
+| TopPages_All | SEMrush-Top-Pages | 汇总竞品页面级SEO价值 | **旧版**: 289行 × 9列（仅 thecrystalcouncil），待按 Competitor-Sheet-Map 重新生成 |
+| TopKeywords_All | SEMrush-Top-Keywords | 汇总竞品关键词排名与排名URL | **旧版**: 2,000行 × 13列（仅 thecrystalcouncil），待按 Competitor-Sheet-Map 重新生成 |
+| Competitor-Sheet-Map | SEMrush-Top-Keywords | 竞品工作表配置与主题分类 | **草案** (2026-05-26): 31 个竞品已分类，待人工审核 |
+| Topic-Discovery | TopKeywords_All + Competitor-Sheet-Map | 主题发现报告 | 待生成 |
+| Keyword-Page-Proof | TopKeywords_All x TopPages_All | 给关键词主表补竞品成功证据 | **旧版**: 1,913行 × 14列（仅 thecrystalcouncil），待重跑 |
 
-## Seed Keywords 竞品验证统计
+## Seed-Master 状态
 
-- 总关键词：4,391
-- 有竞品验证：277（6.3%）
-  - 已从过滤版 Keyword-Page-Proof 匹配并回填 Competitor Proof / Proof URL / Source Detail
-- 无竞品验证：4,114（93.7%）
-  - 仅来自 Semrush 种子词导出，尚未在竞品数据中出现
-- Priority 分布：P0(13) / P1(1,103) / P2(3,175) / P3(100)
+- Seed-Crystals（暂存表）：4,391 条关键词，14 列，待合并到 Seed-Master
+- 合并规则：迁移基础字段（Keyword / Volume / KD / CPC / Intent），自动填 Topic Pillar = Crystals / Status = Approved / Source Type = Seed。Competitor Proof 等字段留空，待新 Proof 重跑后回填。
+- Topic Cluster / Recommended Page Type：待 AI 聚类分析后填充
+- 非水晶品类（天使数字 / MBTI / 星座配对 / 月相 / 塔罗 / 灵性）：执行前需要单独补充种子词导出和筛选
 
 ## 待补充
 
@@ -34,14 +34,19 @@
 
 正式进入批量 Brief 前，需要补齐：
 
-- Topic Cluster / Recommended Page Type（AI 聚类分析）
-- 内容清单中的 KD / CPC / 竞品验证字段
-- 非水晶品类种子词导出（天使数字/MBTI/星座配对/月相/塔罗/灵性）
+- Competitor-Sheet-Map 人工审核
+- TopKeywords_All / TopPages_All 按新流程重新生成
+- Topic-Discovery 主题确认
+- Seed-Crystals 合并到 Seed-Master
+- Topic Pillar / Subtopic / Recommended Page Type（AI 聚类分析）
+- 非水晶品类暂存表导入（天使数字 / MBTI / 星座配对 / 月相 / 塔罗 / 灵性）
+- 新 Keyword-Page-Proof 生成并回填 Seed-Master
 
 ## 维护脚本
 
 脚本位于 `01-竞品分析/` 目录：
 
-- `generate_all_tables.py` — 生成 TopPages_All / TopKeywords_All
+- `generate_all_tables.py` — 生成 TopPages_All / TopKeywords_All（需先审核 Competitor-Sheet-Map）
+- `generate_topic_discovery.py` — 生成 Topic-Discovery
 - `generate_keyword_page_proof.py` — 生成 Keyword-Page-Proof
-- `backfill_seed_keywords.py` — 回填 Seed Keywords 竞品验证
+- `backfill_seed_keywords.py` — 回填 Seed-Master 竞品验证
