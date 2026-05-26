@@ -432,6 +432,7 @@ AI 推荐商品时，本质上是在"替用户做选择"，需要六个维度的
 | **Otterly.AI** | AI可见性追踪 |
 | **ZipTie.dev** | 跨平台citation+上下文定位 |
 | **Bing Webmaster Tools** | Citation Share即将上线 |
+| **Microsoft Clarity** | 免费AI可见性报告（2026.5发布），见下方详述 |
 
 ### 关键指标
 
@@ -442,6 +443,23 @@ AI 推荐商品时，本质上是在"替用户做选择"，需要六个维度的
 | 引用位置 | 主要来源 vs 辅助提及 |
 | 情绪分析 | 审查AI回答措辞 |
 | 幻觉率 | 监控错误描述 |
+
+### Microsoft Clarity AI Visibility Report（2026.5）
+
+微软免费分析工具 Clarity 新增 AI Visibility 模块，是当前唯一**免费**的 AI 引用追踪方案。
+
+| 指标 | 说明 |
+|------|------|
+| **Page Citations** | 页面被 AI 引用的次数 |
+| **Share of Authority** | 网站在 AI 引用来源中的权威占比（类似 Citation Share） |
+| **AI Referral Traffic** | AI 平台带来的引荐流量及占比 |
+| **Queries** | 触发引用的查询词 |
+| **My Cited Pages** | 被引用的具体页面清单 |
+| **Trendlines** | AI 可见性趋势图 |
+
+**定位**：免费入门级 AI 可见性测量。精度不如付费工具（Profound/Otterly），但零成本即可开始追踪，适合小站和验证阶段。
+
+---
 
 ### Bing Citation Share
 

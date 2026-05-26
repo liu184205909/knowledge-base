@@ -29,6 +29,7 @@
 | **AI引用持续性** | 追踪连续出现次数而非单次快照 |
 | **像素位置** | 比排名数字更准确（Tom Capper） |
 | **品牌搜索量** | Google Trends间接反映AI推荐效果 |
+| **AI可见性（免费方案）** | Microsoft Clarity AI Visibility Report（2026.5发布）— Page Citations / Share of Authority / AI Referral Traffic / Queries / Trendlines |
 
 **Tom Capper洞察**：排名第1但用户要滚动3屏 = 比排名靠后但像素位更高的结果**价值更低**。**像素位置 + 排名位置联合分析**才准确。
 
