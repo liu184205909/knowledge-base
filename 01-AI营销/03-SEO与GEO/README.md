@@ -101,6 +101,9 @@
 | Bing SEO Week 2026 | 官方 | 03 |
 | Princeton GEO论文（KDD 2024） | 学术 | 03/10 |
 | AirOps（5万查询） | 研究 | 01/03/10 |
+| Surfer SEO（173,902 URLs Fan-out研究） | 研究 | 01 |
+| Wellows（15,847 AI Overview 引用因子） | 研究 | 01 |
+| iPullRank（Fan-out 8种变体/平台差异） | 研究 | 01 |
 | Averi.ai（6.8亿引用） | 研究 | 01/03 |
 | WLDM/Brie Moreau（1100万引用） | 研究 | 07 |
 | Bogdan Babiak（10万网站） | 研究 | 05 |
