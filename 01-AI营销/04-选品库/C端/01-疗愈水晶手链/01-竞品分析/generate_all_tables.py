@@ -1,7 +1,7 @@
 """
 Generate filtered TopPages_All and TopKeywords_All evidence worksheets.
-Reads all competitor worksheets, keeps only rows with traffic evidence, adds
-competitor_domain/source_sheet/normalized_url, and writes to the _All worksheet.
+Reads competitor worksheets directly, keeps only rows with traffic evidence,
+adds source_sheet/normalized_url, and writes to the _All worksheet.
 
 Usage: python generate_all_tables.py [--top-pages | --top-keywords | --both]
 """
@@ -21,17 +21,31 @@ PROXY = 'http://127.0.0.1:10808'
 TOP_PAGES_ID = '1x__cXM-FCmTe_BjTND0nG0VhWrjbVl8iFajtXGE854U'
 TOP_KEYWORDS_ID = '18CqR8GzvsonO5zYUaodDPB3oiIcdjdeCVJZn5BaPJng'
 
-# Worksheets to exclude from aggregation
-EXCLUDED_SHEETS = {'README', '字段说明', 'TopPages_All', 'TopKeywords_All', 'Keyword-Page-Proof'}
-
 # Column specs: (header_name, url_col_index)
 TOP_PAGES_HEADER = ['URL', 'Traffic(%)', 'Traffic', 'Top Keyword', 'Primary Intent', 'LLM Prompts']
 TOP_PAGES_URL_COL = 0  # Column A
+TOP_PAGES_TRAFFIC_PCT_COL = 1
+TOP_PAGES_TRAFFIC_COL = 2
 
 TOP_KEYWORDS_HEADER = ['Keyword', 'Search Volume', 'Keyword Difficulty', 'CPC', 'URL', 'Traffic', 'Traffic(%)', 'Number of Results', 'Keyword Intents']
+TOP_KEYWORDS_KEYWORD_COL = 0
+TOP_KEYWORDS_VOLUME_COL = 1
+TOP_KEYWORDS_KD_COL = 2
+TOP_KEYWORDS_CPC_COL = 3
 TOP_KEYWORDS_URL_COL = 4  # Column E
+TOP_KEYWORDS_TRAFFIC_COL = 5
+TOP_KEYWORDS_TRAFFIC_PCT_COL = 6
 
-EXTRA_COLS = ['competitor_domain', 'source_sheet', 'normalized_url']
+EXTRA_COLS = ['source_sheet', 'normalized_url']
+EXCLUDED_SHEETS = {
+    'TopKeywords_All',
+    'TopPages_All',
+    'Competitor-Sheet-Map',
+    'Topic-Discovery',
+    'Keyword-Page-Proof',
+    'README',
+    '字段说明',
+}
 
 # _All sheets are evidence indexes, not raw backups. Low-signal rows stay in
 # each competitor's raw worksheet and are not promoted here.
@@ -60,10 +74,9 @@ def get_token(opener):
         )
         resp = opener.open(req)
         refreshed = json.loads(resp.read().decode())
+        # Use the refreshed access token in memory. Do not write the Google
+        # Workspace credential file from this project script.
         c['token'] = refreshed['access_token']
-        c['expiry'] = time.strftime('%Y-%m-%dT%H:%M:%S', time.localtime(time.time() + refreshed.get('expires_in', 3600)))
-        with open(TOKEN_FILE, 'w', encoding='utf-8') as f:
-            json.dump(c, f, ensure_ascii=False, indent=2)
 
     return c['token']
 
@@ -84,17 +97,6 @@ def normalize_url(url):
     url = url.split('#')[0]
     url = url.rstrip('/')
     return url
-
-
-def extract_domain(url):
-    """Extract domain from URL."""
-    if not url:
-        return ''
-    url = url.lower().strip()
-    url = re.sub(r'^https?://', '', url)
-    url = re.sub(r'^www\.', '', url)
-    domain = url.split('/')[0]
-    return domain
 
 
 def to_number(value):
@@ -122,37 +124,36 @@ def word_count(text):
 
 def should_keep_top_page(row):
     url = row[TOP_PAGES_URL_COL] if TOP_PAGES_URL_COL < len(row) else ''
-    traffic = to_number(row[3]) if len(row) > 3 else 0.0
+    traffic = to_number(row[TOP_PAGES_TRAFFIC_COL]) if TOP_PAGES_TRAFFIC_COL < len(row) else 0.0
     return bool(url) and traffic >= MIN_PAGE_TRAFFIC
 
 
 def should_keep_top_keyword(row):
     url = row[TOP_KEYWORDS_URL_COL] if TOP_KEYWORDS_URL_COL < len(row) else ''
-    keyword = row[0] if row else ''
+    keyword = row[TOP_KEYWORDS_KEYWORD_COL] if TOP_KEYWORDS_KEYWORD_COL < len(row) else ''
     return (
         bool(keyword)
         and word_count(keyword) >= MIN_KEYWORD_WORDS
         and bool(url)
-        and has_traffic(row, traffic_index=6, traffic_pct_index=7)
+        and has_traffic(row, traffic_index=TOP_KEYWORDS_TRAFFIC_COL, traffic_pct_index=TOP_KEYWORDS_TRAFFIC_PCT_COL)
     )
 
 
 def sort_key_top_page(row):
     return (
-        -to_number(row[3] if len(row) > 3 else 0),
-        -to_number(row[1] if len(row) > 1 else 0),
-        -to_number(row[2] if len(row) > 2 else 0),
+        -to_number(row[TOP_PAGES_TRAFFIC_COL] if len(row) > TOP_PAGES_TRAFFIC_COL else 0),
+        -to_number(row[TOP_PAGES_TRAFFIC_PCT_COL] if len(row) > TOP_PAGES_TRAFFIC_PCT_COL else 0),
     )
 
 
 def sort_key_top_keyword(row):
-    position = to_number(row[1] if len(row) > 1 else 999)
-    if position <= 0:
-        position = 999
+    kd_raw = row[TOP_KEYWORDS_KD_COL] if len(row) > TOP_KEYWORDS_KD_COL else ''
+    kd = to_number(kd_raw) if str(kd_raw).strip() else 999
     return (
-        -to_number(row[6] if len(row) > 6 else 0),
-        -to_number(row[2] if len(row) > 2 else 0),
-        position,
+        -to_number(row[TOP_KEYWORDS_TRAFFIC_COL] if len(row) > TOP_KEYWORDS_TRAFFIC_COL else 0),
+        -to_number(row[TOP_KEYWORDS_VOLUME_COL] if len(row) > TOP_KEYWORDS_VOLUME_COL else 0),
+        kd,
+        -to_number(row[TOP_KEYWORDS_CPC_COL] if len(row) > TOP_KEYWORDS_CPC_COL else 0),
     )
 
 
@@ -259,21 +260,21 @@ def write_data(spreadsheet_id, sheet_title, values, token, opener):
 
 
 def generate_all_table(spreadsheet_id, all_sheet_name, original_headers, url_col_index, token, opener, row_filter):
-    """Generate an _All summary table from all competitor worksheets."""
+    """Generate an _All summary table from competitor worksheets."""
     print(f'\n{"="*60}')
     print(f'Generating {all_sheet_name} in spreadsheet {spreadsheet_id}')
     print(f'{"="*60}')
 
-    # 1. List all worksheets
-    worksheets = list_worksheets(spreadsheet_id, token, opener)
-    print(f'Found {len(worksheets)} worksheets: {[w[0] for w in worksheets]}')
+    # 1. List competitor worksheets directly. Output, helper, and docs sheets
+    # are excluded by name; real competitor worksheet count is not hard-coded.
+    all_sheets = list_worksheets(spreadsheet_id, token, opener)
+    competitor_sheets = [
+        title for title, _ in all_sheets
+        if title not in EXCLUDED_SHEETS
+    ]
+    print(f'Competitor sheets to read: {len(competitor_sheets)}')
 
-    # 2. Find competitor worksheets (exclude system sheets)
-    competitor_sheets = [(title, sid) for title, sid in worksheets
-                         if title not in EXCLUDED_SHEETS and not title.endswith('_All')]
-    print(f'Competitor sheets to aggregate: {[s[0] for s in competitor_sheets]}')
-
-    # 3. Read data from each competitor sheet
+    # 2. Read data from each competitor sheet
     all_rows = []
     new_headers = original_headers + EXTRA_COLS
     all_rows.append(new_headers)
@@ -282,9 +283,15 @@ def generate_all_table(spreadsheet_id, all_sheet_name, original_headers, url_col
     total_kept_rows = 0
     total_skipped_rows = 0
     total_capped_rows = 0
-    for sheet_title, sheet_id in competitor_sheets:
+    total_errors = 0
+    for sheet_title in competitor_sheets:
         print(f'  Reading {sheet_title}...')
-        result = get_all_sheet_data(spreadsheet_id, sheet_title, token, opener)
+        try:
+            result = get_all_sheet_data(spreadsheet_id, sheet_title, token, opener)
+        except Exception as e:
+            print(f'    ERROR reading {sheet_title}: {e}')
+            total_errors += 1
+            continue
         values = result.get('values', [])
         if len(values) <= 1:
             print(f'    Empty or header-only, skipping')
@@ -304,10 +311,8 @@ def generate_all_table(spreadsheet_id, all_sheet_name, original_headers, url_col
 
             url = padded[url_col_index] if url_col_index < len(padded) else ''
 
-            # Add extra columns
-            padded.append(extract_domain(url))        # competitor_domain
-            padded.append(sheet_title)                  # source_sheet
-            padded.append(normalize_url(url))           # normalized_url
+            padded.append(sheet_title)                 # source_sheet
+            padded.append(normalize_url(url))          # normalized_url
 
             sheet_rows.append(padded[:len(new_headers)])
             kept_rows += 1
@@ -323,14 +328,15 @@ def generate_all_table(spreadsheet_id, all_sheet_name, original_headers, url_col
         total_capped_rows += capped_rows
         print(f'    {data_rows} data rows read, candidates={kept_rows}, kept={len(capped_sheet_rows)}, skipped_low_signal={skipped_rows}, capped={capped_rows}')
 
-    print(f'\nTotal: {total_data_rows} data rows read, {total_kept_rows} kept, {total_skipped_rows} skipped, {total_capped_rows} capped ({len(new_headers)} columns)')
+    print(f'\nTotal: {total_data_rows} data rows read, {total_kept_rows} kept, {total_skipped_rows} skipped, {total_capped_rows} capped, {total_errors} errors ({len(new_headers)} columns)')
 
     if total_kept_rows == 0:
         print('No data to write!')
         return
 
     # 4. Check if _All worksheet already exists, delete if so
-    existing_all = [(title, sid) for title, sid in worksheets if title == all_sheet_name]
+    existing_sheets = list_worksheets(spreadsheet_id, token, opener)
+    existing_all = [(title, sid) for title, sid in existing_sheets if title == all_sheet_name]
     if existing_all:
         print(f'Deleting existing {all_sheet_name} (id={existing_all[0][1]})...')
         delete_worksheet(spreadsheet_id, existing_all[0][1], token, opener)

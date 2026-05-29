@@ -33,6 +33,7 @@
 5. **每次输出必须有明确文件名和路径**：输出不仅要解决问题，还要明确写到哪个文件。模糊的"输出一份分析"不算合格。
 6. **输出即动作**：每阶段结束时的交付物必须能作为下一步输入；若仅停留在分析，补任务清单或验收项。
 7. **素材有源，语气有参照**：进入 Brief、页面文案或正式内容生成前，必须声明素材证据来源和语气参考；具体字段写入模板库或单页依据包。
+8. **不一次性输出大而全**：先写 spec（规格/框架），拆成小块，逐步实现，持续测试，每步 review。AI 越强，流程反而越要保守。（Addy Osmani）
 
 ---
 
@@ -63,20 +64,20 @@
 
 > 1A 填入 A、B、M、N 列，其余在 1B/1D 逐步填充。N 列分类：直接竞品（卖同类产品）/ 内容竞品（不卖货但覆盖关键词）/ 间接竞品（同大类不同细分）。
 
-**分析数据表**（进入 1B 时创建，每个竞品一个工作表，导入时按标准列精简）：
+**分析数据表**（进入 1B 时创建，导入时按标准列精简）：
 
 | 表格名称 | 用途 | 标准列（保留） | Semrush 导出时删除的列 |
 |------|------|--------------|----------------------|
+| SEMrush-Seed-Keywords | Seed-* 主题关键词池 | Keyword / 中文 / Subtopic / Volume / KD / CPC / Number of Results / Intent | Competitive Density / SERP Features / Updated / Priority / Recommended Page Type |
 | SEMrush-Top-Pages | 页面级SEO价值 | URL / Traffic(%) / Traffic / Top Keyword / Primary Intent / LLM Prompts | Adwords Positions / Number of Keywords / 5×Positions by Intent / 5×Traffic by Intent / Traffic Change / Answer Engines |
 | SEMrush-Top-Keywords | 关键词排名与排名URL | Keyword / Search Volume / Keyword Difficulty / CPC / URL / Traffic / Traffic(%) / Number of Results / Keyword Intents | Position / Competition / Previous Position / Traffic Cost / Trends / Timestamp / SERP Features by Keyword / Position Type |
-| SEMrush-Seed-Keywords | 种子词导入暂存 + Seed-Master 关键词主表 | 见 `01-关键词研究方法论.md` 附录A（Seed-Master 19列标准） | Competitive Density / SERP Number |
 
-> `TopPages_All`、`TopKeywords_All`、`Keyword-Page-Proof` 是 1C 数据加工结果，不是原始表格。`Competitor-Sheet-Map` 是竞品工作表的白名单配置（位于 SEMrush-Top-Keywords）。`Topic-Discovery` 是 1C 主题发现报告。过滤阈值和端到端 SOP 见 `01-关键词研究方法论.md` 和 `02-自动化工具库/02-竞品研究工具/1B数据处理工具手册.md`。
+> `SEMrush-Seed-Keywords` 中每个 `Seed-*` 工作表代表一个 Topic Pillar。`Seed-Master v1` 由 1B 轨道B 构建，后续竞品证据增强由 1B 轨道D 承接。
 
 **数据规则**：
 - 项目简报记录所有 Google Sheets 链接，包含标准列和删除列说明
 - **AI 接手时先通过 Google Workspace MCP 搜索谷歌对应项目文件夹、遍历本地对应项目文件夹，与项目简报索引比对，不一致时以实际为准更新索引**
-- **读取竞品原始表时必须以 `Competitor-Sheet-Map`（位于 SEMrush-Top-Keywords Google Sheet）中 `status=Active` 且 `include_in_*=TRUE` 的白名单为准**，不得遍历所有工作表
+- 竞品 Top Pages / Top Keywords 后续如何汇总、筛选和验证，待 1C 关键词研究流程重新梳理后再写入细则
 - **`1A-竞品清单.md` 只放链接和筛选口径**，不重复搬运表格数据
 
 ### 3.2 项目文件夹结构
@@ -103,6 +104,13 @@ XX产品/
 步骤3: 内容策略 → 开始创作
 步骤4: 社媒内容分发（可选）← 步骤3的博客文章再加工为多平台社媒内容
 步骤5: 商业模式（可选）
+─────────────────────────────────────
+后续: 用户经营模块 ← 流量获取之后的增长闭环（见 06-RLM用户经营模块.md）
+  Phase A: 转化提升（CRO）
+  Phase B: 用户研究（一手调研方法）
+  Phase C: 私域与邮件营销
+  Phase D: 复购与 LTV 提升
+  Phase E: 营销漏斗优化
 ```
 
 > **步骤并行条件**：步骤2和步骤3可部分并行，具体前置和锁定依赖见各步骤详情中的"前置输入"。步骤3的博客文章作为步骤4社媒分发的"母内容"，一次创作、多平台分发。
@@ -123,11 +131,12 @@ XX产品/
     └── 轨道B: SEMrush Organic Competitors → 补充遗漏竞品
 1B: 多源数据采集（多条轨道可并行）
     ├── 轨道A: 竞品清单数据 → SEMrush AS/Organic Traffic/截图 + traffic.cv月访问量/渠道拆分
-    ├── 轨道B: 竞品SEO明细 → SEMrush Top Pages + Top Keywords
-    ├── 轨道C: 种子词导入暂存 → SEMrush/Ahrefs Seed Keywords 导入与清洗
-    └── 轨道D: Sitemap解析 → 页面清单/URL结构/内容类型分布 → 竞品页面报告
-1C: 关键词研究       → Seed-Master 关键词主表 + Topic-Discovery 主题发现与确认 + Keyword-Page-Proof 竞品验证 → 主题集群/意图/推荐页面类型/优先级
-1D: 竞品深度拆解     → 核心输入（Top Pages + Top Keywords + Sitemap + Seed-Master + Keyword-Page-Proof）+ 辅助输入（竞品清单汇总）
+    ├── 轨道B: Seed-* 主题关键词池 → SEMrush/Ahrefs 相关关键词导入与清洗 → Seed-Master v1
+    ├── 轨道C: 竞品SEO明细数据 → SEMrush Top Pages（页面级流量证据）+ SEMrush Top Keywords（关键词级排名证据）→ All 表
+    ├── 轨道D: Seed-Master 竞品证据增强 → TopKeywords_All + TopPages_All 补充关键词/页面证据
+    └── 轨道E: Sitemap解析 → 页面清单/URL结构/内容类型分布 → 竞品页面报告
+1C: 关键词研究       → 读取 Seed-Master 和竞品证据结果，做主题集群/意图/推荐页面类型/优先级分析
+1D: 竞品深度拆解     → 核心输入（Top Pages + Top Keywords + Sitemap + Seed-Master）+ 辅助输入（竞品清单汇总；竞品验证视图待1C重构后补）
                      → 每个竞品逐个深度拆解，回答：X靠什么拿流量、X建了什么、X覆盖/遗漏了什么
 1E: 网站结构分析（综合1B+1C+1D做结构对比）→ 可进入步骤2
 1F: 内容策略分析     → 可进入步骤3
@@ -170,49 +179,58 @@ XX产品/
 - Wappalyzer / 人工 → 建站平台（M 列）
 
 
-##### 轨道B：竞品SEO明细数据
+##### 轨道B：Seed-* 主题关键词池与 Seed-Master v1
+
+按主题从 SEMrush/Ahrefs 大范围导出相关关键词，写入 `SEMrush-Seed-Keywords` 中对应的 `Seed-*` 工作表。
+
+- 每个 `Seed-*` 工作表代表一个 Topic Pillar，例如 `Seed-Crystals`、`Seed-Chakra`、`Seed-Dreams`、`Seed-Angel-Numbers`
+- 空的 `Seed-*` 工作表也要保留，用于后续手动导入对应主题关键词，不得因为暂无数据而删除
+- `Seed-*` 中先完成 AI + 人工清洗，删除不相关词、无效词、重复词和明显低价值词
+- 标准字段：Keyword / 中文 / Subtopic / Volume / KD / CPC / Number of Results / Intent
+- `Number of Results` 必须保留
+- 清洗后的 `Seed-*` 去重并继承 Topic Pillar 后，构建 `Seed-Master v1`
+
+##### 轨道C：竞品SEO明细数据
 
 从 SEMrush 导出竞品的 Top Pages 和 Top Keywords，分别写入 `SEMrush-Top-Pages` 和 `SEMrush-Top-Keywords`，每个竞品一个工作表。
 
-- **后续处理以 `Competitor-Sheet-Map`（位于 SEMrush-Top-Keywords）中 `status=Active` 的白名单为准**（竞品数量不固定，白名单配置方式见工具手册）
-- 新增竞品后的端到端 SOP（Phase 0-7）见 `02-自动化工具库/02-竞品研究工具/1B数据处理工具手册.md`
-- `TopPages_All`、`TopKeywords_All`、`Keyword-Page-Proof` 的生成规则见 `01-关键词研究方法论.md`
-- 轨道B数据被 1C（竞品验证视图）、1D（竞品SEO结构）、1E（页面类型与价值）复用
-
-##### 轨道C：种子词关键词主表
-
-用产品词、类目词、场景词、用户问题等种子词在 SEMrush/Ahrefs 中导出关键词列表，写入 `SEMrush-Seed-Keywords`。
-
-`SEMrush-Seed-Keywords` 中的 `Seed-*` 工作表是**导入暂存表**，不是最终主表。`Seed-Master` 工作表才是项目唯一关键词主表。种子词扩展导出后进入暂存表，经 1C 清洗、去重、主题确认后合并到 Seed-Master。日常内容选题、页面关键词映射和 Brief 前置筛选，都以 Seed-Master 为入口；轨道B的竞品SEO明细只给它补充验证证据。
+- 本轨道只定义原始竞品数据如何采集和标准列保留
+- 本轨道生成 `TopKeywords_All` 和 `TopPages_All`
+- 轨道C数据被轨道D、1C、1D、1E 复用，用于判断竞品关键词、页面流量和页面类型
 
 > 4张核心表格的结构定义（标准列和删除列）见 §3.1"Google Sheets 表格结构"。
 
-##### 轨道D：Sitemap解析
+##### 轨道D：Seed-Master 竞品证据增强
 
-调用 `sitemap-mcp-server` MCP 解析每个竞品的 sitemap.xml，获取页面清单、URL 路径模式和内容类型分布，结果存放在项目 `1B-sitemap解析/` 目录下。详细工具说明见 `02-自动化工具库/02-竞品研究工具/1B数据处理工具手册.md` 的“轨道D：Sitemap解析”。
+用 `TopKeywords_All` 先匹配 `Seed-Master v1`，找出已有关键词的竞品关键词证据；再用命中的 URL 去 `TopPages_All` 补页面级价值证据。
+
+- TopKeywords_All 补关键词证据：竞品 URL、关键词流量、命中竞品数量等
+- TopPages_All 补页面证据：页面流量、页面主要意图、页面类型线索等
+- 未命中 Seed-Master 的竞品关键词暂不直接写入 Seed-Master，后续如何处理需继续讨论
+
+##### 轨道E：Sitemap解析
+
+调用 `sitemap-mcp-server` MCP 解析每个竞品的 sitemap.xml，获取页面清单、URL 路径模式和内容类型分布，结果存放在项目 `1B-sitemap解析/` 目录下。详细工具说明见 `02-自动化工具库/02-竞品研究工具/1B数据处理工具手册.md` 的“轨道E：Sitemap解析”。
 
 > Sitemap 默认输出到 `1B-sitemap解析/` 和 `1B-sitemap解析报告.md`；只有 URL 清单很大、需要频繁筛选/排序时，才可另建 `Sitemap-Pages` 电子表格。
 
-**关键输出（1B 整体）**：更新后的竞品清单 + SEMrush竞品SEO明细（Top Pages/Top Keywords，每个竞品一个工作表）+ `Competitor-Sheet-Map` 白名单配置 + `Seed-*` 暂存表初始导入 + Sitemap解析报告/页面清单 + `1B-数据采集索引.md`（记录各电子表格链接、采集状态、最后更新时间）
+**关键输出（1B 整体）**：更新后的竞品清单 + `Seed-Master v1` + SEMrush竞品SEO明细（Top Pages/Top Keywords，每个竞品一个工作表）+ `TopKeywords_All` + `TopPages_All` + Seed-Master 竞品证据增强结果 + Sitemap解析报告/页面清单 + `1B-数据采集索引.md`（记录各电子表格链接、采集状态、最后更新时间）
 
 #### 1C 关键词研究
 
 **核心任务**：
-- 建立关键词主表、主题发现报告和竞品验证视图：
-  - **关键词主表**：`Seed-Master`（位于 SEMrush-Seed-Keywords）是项目唯一关键词主表。`Seed-*` 暂存表承接种子词扩展导出，经清洗、去重、主题确认后合并到 Seed-Master，回答"市场有什么需求、我们应该做哪些词"
-  - **主题发现报告**：`Topic-Discovery` 从 TopKeywords_All 中自动分析关键词主题分布，结合关键词文本、URL 路径、页面主题聚类。人工确认后主题才进入 Seed-Master。主题是关键词级属性，不是竞品级属性
-  - **竞品验证视图**：来自 1B 的过滤后 `TopKeywords_All × TopPages_All`，通过 `competitor_domain + normalized_url` 关联，回答"竞品哪些页面和关键词已经被验证有流量"
-- 不能把工具原始导出直接当作最终关键词主表；竞品验证中发现的增量词，应补回关键词主表并标记 `Source Type` / `Source Detail`
+- 读取 1B 产出的 `Seed-Master` 及其竞品证据增强结果
+- 不能把工具原始导出直接当作最终关键词主表；1C 从 1B 数据底座开始做研究分析
 - 对关键词进行主题集群、搜索意图、商业价值、难度和推荐页面类型标注
 - 识别哪些关键词应由产品类目页、产品页、博客、指南页、工具页或信任页承接
 - 详细流程参见 `01-关键词研究方法论.md`
 
-**关键输出**：`Seed-Master` 关键词主表（含来源类型、分组、意图标注、优先级、Volume/KD/CPC、推荐页面类型、竞品验证字段）+ `Topic-Discovery` 主题发现报告（人工确认后）+ `Keyword-Page-Proof` 竞品验证视图 + `关键词分组与优先级.md`
+**关键输出**：`Seed-Master` 关键词主表 + `关键词分组与优先级.md`。竞品证据视图和补词机制待 1C 流程梳理完成后再补充。
 
 **工具链**：
 - 数据获取: SEMrush/Ahrefs 导出 CSV → AI 分析
 
-> 1C 不是最终内容策略，只是把关键词机会变成可筛选、可分组、可映射页面类型的数据底座。`Seed-Master` 是唯一关键词主表；`Seed-*` 暂存表只做导入区；Top Pages / Top Keywords 不直接合并成库，只通过 `Keyword-Page-Proof` 提供竞品成功证据。关键词必须保留来源标记：`competitor_top_page`、`competitor_top_keyword`、`seed_expansion` 或 `manual/AI_candidate`。端到端 SOP（Phase 0-7）见 `02-自动化工具库/02-竞品研究工具/1B数据处理工具手册.md`。
+> 1C 不是最终内容策略，只是读取 1B 产出的 Seed-Master 和竞品证据结果，把关键词机会变成可筛选、可分组、可映射页面类型的数据底座。
 
 #### 1D 竞品深度拆解
 
@@ -223,11 +241,11 @@ XX产品/
 1D 数据输入不是按 1B/1C 分层使用，而是按分析问题组合使用。每个竞品深度拆解必须同时使用竞品自身表现数据、站点结构数据、市场关键词参照数据和竞品验证数据。站点级概览数据只用于判断竞品权重和背景，不作为内容/页面机会判断的核心依据。
 
 **核心输入**：
-- 该竞品的 SEMrush Top Pages（1B 轨道B）：判断高流量页面、页面类型、流量集中度
-- 该竞品的 SEMrush Top Keywords（1B 轨道B）：判断排名关键词、排名 URL、关键词意图和页面承接关系
-- 该竞品的 Sitemap 解析结果（1B 轨道D）：判断网站结构、页面清单、URL 规则、内容类型分布
+- 该竞品的 SEMrush Top Pages（1B 轨道C）：判断高流量页面、页面类型、流量集中度
+- 该竞品的 SEMrush Top Keywords（1B 轨道C）：判断排名关键词、排名 URL、关键词意图和页面承接关系
+- 该竞品的 Sitemap 解析结果（1B 轨道E）：判断网站结构、页面清单、URL 规则、内容类型分布
 - Seed-Master 关键词主表（1C）：作为市场需求参照，判断该竞品覆盖了哪些主题/意图/页面类型，遗漏了哪些机会
-- Keyword-Page-Proof 竞品验证视图（1C）：判断哪些关键词-页面组合已被竞品流量验证，并定位该竞品是否提供了有效样本
+- 1C 后续竞品验证结果（待1C重构后补）：判断哪些关键词-页面组合已被竞品流量验证
 
 **辅助输入**：
 - 竞品清单表中的 AS、Organic Traffic、月访问量、竞品类型等汇总信息（1B 轨道A）：仅用于判断竞品权重、参考优先级和背景定位
@@ -283,7 +301,7 @@ XX产品/
 
 #### 1F 内容策略分析
 
-**输入来源**：1D 单竞品深度拆解文档（内容类型、内容优势、内容缺口、§9 候选策略点）+ 1C Seed-Master 关键词主表 + Topic-Discovery 确认主题 + `Keyword-Page-Proof` 竞品验证视图 + 必要的核心页面轻量复核。
+**输入来源**：1D 单竞品深度拆解文档（内容类型、内容优势、内容缺口、§9 候选策略点）+ 1C Seed-Master 关键词主表 + 1C 后续竞品证据结果（待重构后补）+ 必要的核心页面轻量复核。
 
 **核心任务**：
 - 内容类型分析（博客/案例/教程/指南）
@@ -296,7 +314,7 @@ XX产品/
 
 #### 1G 用户画像
 
-**输入来源**：1C Seed-Master 关键词主表中的意图、问题和主题集群 + Topic-Discovery 确认主题 + `Keyword-Page-Proof`/Top Pages/Top Keywords 暴露的页面需求 + 1D/1F 中反复出现的痛点、场景、FAQ、评论和转化路径观察。
+**输入来源**：1C Seed-Master 关键词主表中的意图、问题和主题集群 + 1C 后续竞品证据结果（待重构后补）+ Top Pages/Top Keywords 暴露的页面需求 + 1D/1F 中反复出现的痛点、场景、FAQ、评论和转化路径观察。
 
 **核心任务**（基于上述输入推导，不凭空想象）：
 - 目标用户画像
@@ -439,7 +457,7 @@ XX产品/
 
 **目标**：基于 Seed-Master 关键词主表和竞品策略，先生成覆盖搜索意图的内容清单草案，再补齐SEO字段、竞品验证和页面承接信息后进入 Brief。
 
-**前置输入**：来自步骤1的 Seed-Master 关键词主表 + Topic-Discovery 确认主题 + `Keyword-Page-Proof` 竞品验证视图 + 用户画像 + 策略清单。内容清单草案可先启动；最终 URL、承接页面、内链规则和内容 Brief 需等步骤2（2A+2B）完成后锁定或复核。
+**前置输入**：来自步骤1的 Seed-Master 关键词主表 + 1C 后续竞品证据结果（待重构后补） + 用户画像 + 策略清单。内容清单草案可先启动；最终 URL、承接页面、内链规则和内容 Brief 需等步骤2（2A+2B）完成后锁定或复核。
 
 **核心原则：一次性做草案，分批进入正式Brief**
 
@@ -474,7 +492,7 @@ XX产品/
    - 从关键词主表中按搜索意图分类（信息型/对比型/交易型）
    - 按关键词模式批量生成选题（如 `xxx meaning` → 水晶百科系列，`crystals for xxx` → 场景应用系列）
    - 每条选题必须绑定关键词主表中的具体关键词（Volume/KD/CPC；缺失时标记待补）
-   - 值得优先进入 Brief 的选题必须参考 `Keyword-Page-Proof` 的竞品验证证据
+   - 值得优先进入 Brief 的选题必须参考 1C 后续竞品证据结果
    - 补充竞品内容缺口和差异化选题
 
 3. **内容清单草案** — 不分P0/P1/P2，先生成全部候选选题清单，字段包括：
@@ -520,9 +538,8 @@ XX产品/
 |------|----------|----------|
 | 启动新项目 | 本文档 §3（启动准备，含字段表）+ `03-模板库/00-RLM项目文件夹结构模板.md` | 本地项目目录 + Google Drive 文件夹 + Google Sheets 竞品清单空表 + `00-项目简报.md` |
 | 找竞品 | 本文档 §3.1（字段定义已含在启动准备中）+ 自动化工具库 README | 竞品清单（Google Sheets）+ `1A-竞品清单.md` |
-| 拆解竞品（1D） | `03-模板库/01-竞品深度拆解模板.md` + 核心输入（该竞品 Top Pages + Top Keywords + Sitemap + Seed-Master 关键词主表 + Keyword-Page-Proof）+ 辅助输入（竞品清单表） | `1D-竞品深度拆解/竞品名称.md`（单竞品证据包 + §9 候选策略点） |
-| 做关键词研究（1C） | `01-关键词研究方法论.md` | `Seed-Master` 关键词主表、`Topic-Discovery` 主题发现报告、`Keyword-Page-Proof` 验证视图、`1C-关键词研究/关键词分组与优先级.md` |
-| 新增竞品数据处理 / 刷新竞品SEO证据层 | `02-自动化工具库/02-竞品研究工具/1B数据处理工具手册.md`（按 SOP 分阶段执行，不可一次全跑） | `Competitor-Sheet-Map` / dry-run 报告 / `TopKeywords_All` / `TopPages_All` / `Topic-Discovery` / `Keyword-Page-Proof` |
+| 拆解竞品（1D） | `03-模板库/01-竞品深度拆解模板.md` + 核心输入（该竞品 Top Pages + Top Keywords + Sitemap + Seed-Master 关键词主表）+ 辅助输入（竞品清单表；竞品证据视图待1C重构后补） | `1D-竞品深度拆解/竞品名称.md`（单竞品证据包 + §9 候选策略点） |
+| 做关键词研究（1C） | `01-关键词研究方法论.md` | `Seed-Master` 关键词主表、`1C-关键词研究/关键词分组与优先级.md`；竞品证据视图待 1C 流程重构后补 |
 | 做用户画像（1G） | `03-模板库/02-用户画像模板.md` | `1G-用户画像.md` |
 | 做策略清单（1H） | `03-模板库/03-策略清单模板.md` | `1H-策略清单.md` |
 | 逐页生成（2C） | `02-自动化工具库/03-WordPress建站/页面内容指南/` + `02-自动化工具库/03-WordPress建站/Elementor REST API 操作手册.md` + `elementor-upload.js` | `pages/*.js` + `templates/*.js` |

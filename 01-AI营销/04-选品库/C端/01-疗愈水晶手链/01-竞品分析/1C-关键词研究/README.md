@@ -44,6 +44,8 @@
 
 ## 维护脚本
 
+> 脚本实现状态以 `01-AI营销/02-自动化工具库/02-竞品研究工具/1B数据处理工具手册.md` 第 6 节为准。当前新架构脚本尚未全部实现，Seed-Master 合并和 Proof 回填前必须先确认脚本已适配。
+
 脚本位于 `01-竞品分析/` 目录：
 
 - `generate_all_tables.py` — 生成 TopPages_All / TopKeywords_All（需先审核 Competitor-Sheet-Map）

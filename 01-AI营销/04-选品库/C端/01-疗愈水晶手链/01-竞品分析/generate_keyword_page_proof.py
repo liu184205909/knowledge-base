@@ -1,7 +1,10 @@
 """
 Generate Keyword-Page-Proof from filtered TopKeywords_All x TopPages_All.
+Reads the filtered _All evidence tables generated from Competitor-Sheet-Map.
 For each keyword with traffic, checks if its ranking URL exists as a top page
 with traffic. Keyword-Page-Proof is an evidence view, not a raw keyword dump.
+
+Scope: reads Seed-Master if non-empty, otherwise reads all Seed-* staging sheets.
 
 Output columns:
   Keyword | Competitor Domain | Ranking URL | Normalized URL |
@@ -23,8 +26,6 @@ PROXY = 'http://127.0.0.1:10808'
 TOP_PAGES_ID = '1x__cXM-FCmTe_BjTND0nG0VhWrjbVl8iFajtXGE854U'
 TOP_KEYWORDS_ID = '18CqR8GzvsonO5zYUaodDPB3oiIcdjdeCVJZn5BaPJng'
 SEED_KEYWORDS_ID = '1HhKDz7_LlY1V1_wMSCLn4-8ASoI64u6MuW7iOkKAFDc'
-
-EXCLUDED_SHEETS = {'README', '字段说明', 'TopPages_All', 'TopKeywords_All', 'Keyword-Page-Proof'}
 
 MIN_KEYWORD_TRAFFIC = 1
 MIN_PAGE_TRAFFIC = 100
@@ -126,21 +127,45 @@ def main():
     token = get_token(opener)
 
     # ==========================================
-    # Step 0: Read Seed Keywords for proof scoping
+    # Step 0: Read keyword scope (Seed-Master if non-empty, else Seed-* staging sheets)
     # ==========================================
-    print('Step 0: Reading Seed Keywords scope...')
+    print('Step 0: Reading keyword scope...')
     seed_meta_url = f'https://sheets.googleapis.com/v4/spreadsheets/{SEED_KEYWORDS_ID}?fields=sheets.properties(title,sheetId)'
     seed_meta = api_get(seed_meta_url, token, opener)
-    seed_sheet_title = seed_meta['sheets'][0]['properties']['title']
-    encoded_seed_sheet = urllib.request.quote(seed_sheet_title, safe='')
-    seed_url = f'https://sheets.googleapis.com/v4/spreadsheets/{SEED_KEYWORDS_ID}/values/{encoded_seed_sheet}%21A%3AA'
-    seed_data = api_get(seed_url, token, opener)
-    seed_keywords = {
-        normalize_keyword(row[0])
-        for row in seed_data.get('values', [])[1:]
-        if row and normalize_keyword(row[0])
-    }
-    print(f'  Seed keyword scope: {len(seed_keywords)} keywords')
+    all_sheets = [(s['properties']['title'], s['properties']['sheetId']) for s in seed_meta['sheets']]
+
+    seed_keywords = set()
+
+    # Try Seed-Master first
+    master_title = 'Seed-Master'
+    master_sheet = [t for t, sid in all_sheets if t == master_title]
+
+    if master_sheet:
+        encoded = urllib.request.quote(master_title, safe='')
+        master_url = f'https://sheets.googleapis.com/v4/spreadsheets/{SEED_KEYWORDS_ID}/values/{encoded}%21A%3AA'
+        master_data = api_get(master_url, token, opener)
+        master_values = master_data.get('values', [])
+        if len(master_values) > 1:
+            # Seed-Master has data rows — use it as scope
+            for row in master_values[1:]:
+                if row and normalize_keyword(row[0]):
+                    seed_keywords.add(normalize_keyword(row[0]))
+            print(f'  Seed-Master scope: {len(seed_keywords)} keywords')
+        else:
+            print('  Seed-Master is empty, falling back to Seed-* staging sheets')
+
+    # If Seed-Master is empty, read all Seed-* staging sheets
+    if not seed_keywords:
+        staging_sheets = [t for t, sid in all_sheets if t.startswith('Seed-') and t != 'Seed-Master']
+        for sheet_title in staging_sheets:
+            encoded = urllib.request.quote(sheet_title, safe='')
+            sheet_url = f'https://sheets.googleapis.com/v4/spreadsheets/{SEED_KEYWORDS_ID}/values/{encoded}%21A%3AA'
+            sheet_data = api_get(sheet_url, token, opener)
+            for row in sheet_data.get('values', [])[1:]:
+                if row and normalize_keyword(row[0]):
+                    seed_keywords.add(normalize_keyword(row[0]))
+            print(f'  Read {sheet_title}')
+        print(f'  Seed-* staging scope: {len(seed_keywords)} keywords from {len(staging_sheets)} sheets')
 
     # ==========================================
     # Step 1: Read TopPages_All and build lookup
@@ -185,9 +210,6 @@ def main():
     # ==========================================
     print('\nStep 2: Reading TopKeywords_All...')
     sheet2 = urllib.request.quote('TopKeywords_All', safe='')
-    url2 = f'https://sheets.googleapis.com/v4/spreadsheets/{TOP_KEYWORDS_ID}/values/{sheet2}%21A%3AM'
-    data2 = api_get(url, token, opener)  # This might be too large for one call
-    # Actually let's use a different approach - read the keyword data directly
 
     # TopKeywords_All columns (after Position/Competition removal):
     # 0:Keyword 1:Search Volume 2:KD 3:CPC 4:URL 5:Traffic 6:Traffic(%)
@@ -346,13 +368,14 @@ def main():
 
     # Print proof level distribution
     proof_counts = {}
+    proof_level_index = len(header) - 1
     for row in all_proof_rows[1:]:
-        level = row[13]
+        level = row[proof_level_index] if len(row) > proof_level_index else ''
         proof_counts[level] = proof_counts.get(level, 0) + 1
     print('  Proof Level distribution:')
     for level in ['Strong', 'Medium', 'Weak', 'None']:
         count = proof_counts.get(level, 0)
-        pct = count / len(data_rows) * 100
+        pct = count / len(data_rows) * 100 if data_rows else 0
         print(f'    {level}: {count} ({pct:.1f}%)')
 
 

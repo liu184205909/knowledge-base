@@ -116,7 +116,7 @@ python 01-域名查询/domain_checker.py
 
 **原理**：通过 sitemap-mcp-server（MCP 服务）自动发现并解析竞品 sitemap.xml，支持子sitemap过滤、路径过滤、分页。
 
-详见 [1B数据处理工具手册.md](02-竞品研究工具/1B数据处理工具手册.md) 轨道D章节。
+详见 [1B数据处理工具手册.md](02-竞品研究工具/1B数据处理工具手册.md) 的“5.4 轨道D：Sitemap解析”章节。
 
 ---
 
