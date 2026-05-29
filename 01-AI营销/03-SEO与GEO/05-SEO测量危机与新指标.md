@@ -13,8 +13,14 @@
 | **AI Overviews截流** | 减少点击约**36%** | Malte Landwehr |
 | **Zero-click常态化** | 64%的Google AI Mode会话无外链 | Growth Memo |
 | **归因链断裂** | 80%转化旅程涉及LLM | Malte Landwehr |
+| **AI Mode 搜索词无意义化** | 多模态搜索（图片+描述）导致 GSC 记录 "find a pink one like this" 等无意义词 | Simon，Google I/O 2026 |
+| **Universal Cart 无站交易** | 用户在搜索/Gemini/YouTube 中多品牌加购 → Google Wallet 结算，**无需访问品牌站** | Simon，Google I/O 2026 |
 
 **根本问题**：用户在ChatGPT看到品牌 → Google搜品牌名 → 直接输入URL → 购买。传统归因把转化算给"直接流量"，完全忽略AI的作用。
+
+**2026 I/O 新增威胁**：
+1. **搜索词无意义化**：Gemini 3.5 Flash 成为搜索默认模型后，多模态输入（图片/语音）都导向 AI Mode，GSC 中的搜索词越来越难以解读，传统关键词追踪接近失效
+2. **Universal Cart 归因黑洞**：用户在搜索结果中直接完成跨品牌购物（Google Wallet 结算），品牌站看不到访问，订单转化无法归因到搜索行为。电商站流量下降但实际转化可能不变——只是测量不到
 
 ---
 

@@ -118,4 +118,5 @@
 | Content Science（内容成熟度） | 研究 | 11 |
 | DTC AI运营自动化分享会（2026.05.23） | 行业活动 | 01（DREAM模型）/ 03（六大证据维度） |
 | 赛门快跑 EP.139（2026.05） | 行业 | 03（Clarity AI Visibility）/ 05（免费测量方案） |
+| 赛门快跑 Google I/O 2026 解读（2026.05） | 行业 | 02（Vibe Coding冲击 + AI内容检测升级）/ 05（AI Mode搜索词无意义化 + Universal Cart归因黑洞） |
 | 是丹总 / SEOdaniel（2026.05） | 行业 | 03（GEO合规红线：滥用做法与历史教训） |

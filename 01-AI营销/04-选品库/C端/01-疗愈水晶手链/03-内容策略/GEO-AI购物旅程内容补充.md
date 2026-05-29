@@ -14,7 +14,7 @@
 | 问题类型 | 现有内容覆盖 | 覆盖度 | 关键缺口 |
 |---------|------------|-------|---------|
 | **推荐类** | 场景应用系列(10)、选购指南(10)、水晶含义(15) | **高** | 缺少 "Best crystal bracelet brands" 榜单型内容 |
-| **对比类** | 竞品对比系列(6)、场景应用部分 | **中** | 缺少具体品牌对比（我们 vs 竞品）、缺少同品类产品对比页 |
+| **对比类** | 品类对比/选购评测、场景应用部分 | **中** | 缺少同品类产品、材质、购买渠道对比页；竞品品牌 `vs` 不作为默认路线 |
 | **信任核查类** | 用户故事系列(10)、E-E-A-T 框架 | **低** | **最关键缺口**——缺 Trustpilot/第三方评测、缺 "is LuckyCrystals legit" 信任内容、缺 UGC |
 | **解答类** | 教程系列(8)、水晶百科(15)、场景应用(10)、灵性生活内容 | **高** | 基本完整 |
 
@@ -44,11 +44,11 @@
 
 ### 阶段 2：决策核查（关键缺口）
 
-用户问 AI："Is LuckyCrystals legit?" / "Energy Muse vs LuckyCrystals?"
+用户问 AI："Is LuckyCrystals legit?" / "What is the best place to buy crystal bracelets online?"
 
 | 现有内容 | 覆盖情况 |
 |---------|---------|
-| 竞品对比系列(6篇) | 部分覆盖对比类 |
+| 品类对比/选购评测系列 | 部分覆盖决策类 |
 | 用户故事系列(10篇) | 部分覆盖信任 |
 | E-E-A-T 框架 | 框架有，执行内容缺 |
 
@@ -60,7 +60,7 @@
 | **品牌信任页（About/Why Trust Us）** | **最高** | 独立站必须有的信任锚点页面，AI 引用的高频来源 |
 | **真实客户评价/UGC 收集机制** | 高 | 37%消费者因真实评价增加对 AI 推荐的信任。评价也是 AI 信任核查的核心素材 |
 | **媒体报道/行业背书** | 高 | 数字 PR 获取的媒体报道，AI 引用权重极高 |
-| **具体品牌对比页** | 中 | "Energy Muse vs Tiny Rituals vs LuckyCrystals" —— 对比类问题 AI 直接推荐 |
+| **品类级选购对比页** | 中 | C端电商默认做品类/材质/购买渠道对比，不默认做竞品品牌 `vs` 页面 |
 
 ### 阶段 3：使用支持（覆盖较好）
 
@@ -110,7 +110,7 @@
 
 | 文章 | 目标关键词 | 格式 |
 |------|-----------|------|
-| "Best Crystal Bracelet Brands 2026: Top 10 Reviewed" | best crystal bracelet brands | 榜单 + 品牌对比 |
+| "Best Crystal Bracelet Brands 2026: Top 10 Reviewed" | best crystal bracelet brands | 榜单 + 选购维度说明 |
 | "Best Online Crystal Shops: Honest Review" | best online crystal shops | 综合评测 |
 | "Best Crystal Bracelets for Anxiety: Tested and Reviewed" | best crystal bracelets for anxiety | 场景榜单 |
 | "Best Crystal Gifts 2026: Complete Guide by Occasion" | best crystal gifts | 场景榜单 |
@@ -120,13 +120,15 @@
 - 结论前置：开篇直接说"我们的 Top 3 榜单是..."
 - 引用第三方数据增加置信度
 
-#### 5. 品牌对比内容
+#### 5. 品类对比与选购评测内容
 
 | 文章 | 目标关键词 |
 |------|-----------|
-| "Energy Muse vs Tiny Rituals vs LuckyCrystals: Which Is Best?" | energy muse vs tiny rituals |
 | "LuckyCrystals Review: Is It Worth It?" | luckycrystals review |
 | "Best Place to Buy Crystal Bracelets Online" | best place to buy crystal bracelets |
+| "Online Crystal Store vs Marketplace: How to Choose Safely" | buy crystals online safely |
+
+> 第三方品牌词和 `Brand A vs Brand B` 不作为默认内容路线。只有在已有真实评测资产、合作授权、用户明确搜索需求且项目负责人批准时，才作为例外处理。
 
 ### P2 — 可选做（增强 AI 存在感）
 
@@ -147,7 +149,7 @@
 
 | 现有规划 | GEO 补充建议 | 关系 |
 |---------|------------|------|
-| 竞品对比系列(6篇) | 补充品牌对比型内容(P1) | 扩展对比维度 |
+| 品类对比/选购评测系列 | 补充购买渠道、材质、用途对比(P1) | 扩展决策维度 |
 | 用户故事系列(10篇) | 补充第三方评价 + UGC 机制(P0) | 从"自说自话"升级为"多方验证" |
 | E-E-A-T 框架 | 补充 About/Trust/Reviews 信任页面(P0) | 框架落地为具体页面 |
 | 内容矩阵 300+ 页 | 榜单型内容(4篇) | 新增内容类型 |
@@ -164,7 +166,7 @@
 | **网站上线前** | 部署 Trustpilot + 注册 GBP + 规划 About/Trust 页 | 无 |
 | **上线后第 1 个月** | 发布 About Us + Why Trust Us + Crystal Authenticity Guide | 产品上线 |
 | **上线后第 1-2 月** | 写 4 篇榜单型内容（P1） | 基础内容(15篇)完成 |
-| **上线后第 2-3 月** | 写品牌对比内容 + 启动 UGC 收集 | 有真实客户和评价 |
+| **上线后第 2-3 月** | 写品类对比/选购评测内容 + 启动 UGC 收集 | 有真实客户和评价 |
 | **第 3 个月起** | 启动 Reddit 真实参与 + YouTube 开箱 | 有产品实拍素材 |
 | **每季度** | AI 声誉审计（15分钟快速诊断） | 持续 |
 
@@ -181,7 +183,7 @@
 3. "Best crystal bracelets for anxiety?"
 
 对比类：
-4. "Energy Muse vs Tiny Rituals, which is better?"
+4. "Online crystal store vs marketplace, which is safer?"
 5. "Best place to buy healing crystals online?"
 
 信任核查类：

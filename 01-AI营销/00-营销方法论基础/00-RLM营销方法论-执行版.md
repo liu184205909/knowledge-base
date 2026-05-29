@@ -185,7 +185,11 @@ XX产品/
 
 - 每个 `Seed-*` 工作表代表一个 Topic Pillar，例如 `Seed-Crystals`、`Seed-Chakra`、`Seed-Dreams`、`Seed-Angel-Numbers`
 - 空的 `Seed-*` 工作表也要保留，用于后续手动导入对应主题关键词，不得因为暂无数据而删除
-- `Seed-*` 中先完成 AI + 人工清洗，删除不相关词、无效词、重复词和明显低价值词
+- `Seed-*` 中先补 `中文` 和 `Subtopic`，再完成 AI + 人工清洗，删除不相关词、无效词、重复词和明显低价值词
+- 第三方平台词、社媒平台词、第三方品牌词默认不进入 `Seed-*` 正式池；C 端电商不把竞品品牌 `vs` 内容作为默认 SEO 路线，除非项目负责人明确批准
+- `Seed-*` 应保持小而准；清洗后的工作表应默认整表可进入 `Seed-Master v1`，不把无效词留到主表里再依赖状态字段过滤
+- `Suggested Action / Reason / Confidence / Reviewed` 可作为清洗辅助列保留在 `Seed-*`，但不进入 `Seed-Master`
+- `near me` 等本地意图词不要在数据清洗阶段误删；具体承接策略属于项目内容策略，不在 1B 展开
 - 标准字段：Keyword / 中文 / Subtopic / Volume / KD / CPC / Number of Results / Intent
 - `Number of Results` 必须保留
 - 清洗后的 `Seed-*` 去重并继承 Topic Pillar 后，构建 `Seed-Master v1`

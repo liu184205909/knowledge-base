@@ -591,6 +591,8 @@ Schema → 实体消歧加速 → 实体权威建立 → Knowledge Graph 认可 
 25. **内链置信度三层累加模型**（Google 专利 US 7,590,628）：页面标题含实体 + 同站 peer documents + 站内锚文本用实体名称 → 置信度最高
 26. **内链不是 PageRank 管道，是意图收窄的路标**：锚文本精确描述目标页面 → 用户信心和 Google 置信度同步提升
 27. **统一 CTA 和"点击这里"是零置信度锚文本**：不携带主题信号，Google 实体提取时直接删除
+28. **搜索结果中 Vibe Coding 将冲击信息站和低门槛 Micro SaaS**：Google I/O 2026 发布 Antigravity 能力，搜索结果中直接生成定制工具 App（如健身计划管理器），用户无需离开搜索即可解决需求。信息类网站和依赖 SEO 的简单工具站流量将进一步被截流（Simon，赛门快跑）
+29. **Gemini 检测 AI 内容能力已覆盖 SynthID + C2PA 双标准**：Google I/O 2026 确认 Gemini 可识别自家 SynthID 水印 + 行业 C2PA 标准，OpenAI 也已在图片中加入 SynthID。AIGC 内容检测门槛大幅提升，去 AI 化策略需更加重视（Simon，赛门快跑）
 
 ---
 

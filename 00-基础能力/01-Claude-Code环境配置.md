@@ -79,9 +79,10 @@ npx skills add aaron-he-zhu/seo-geo-claude-skills -g
 # SEO 审计工具（Script+LLM双层架构，与上面SEO Skill有功能重叠，留作架构参考）
 npx skills add JeffLi1993/seo-audit-skill -g
 
-# 博客 + 广告
+# 博客 + 广告 + 内容改写
 npx skills add AgriciDaniel/claude-blog -g
 npx skills add AgriciDaniel/claude-ads -g
+npx skills add AgriciDaniel/claude-repurpose -g   # 1篇内容→18平台30+条原生帖子（MIT，20子Skill+6并行Agent）
 
 # 营销策略 + 社媒发布
 npx skills add coreyhaines31/marketingskills --agent claude-code -y -g
@@ -126,6 +127,7 @@ npx skills list -g
 | SEO 审计 | **claude-seo** / **Agentic-SEO** / **seo-audit-skill** | "SEO审计" |
 | 付费广告审计 | **claude-ads** | "审计广告" |
 | 营销策略全家桶 | **marketingskills** | "营销策略" / "定价" |
+| 内容改写（1→18平台） | **claude-repurpose** | `/repurpose <URL>` |
 | 社媒发布 | **typefully** | "发推文" |
 | 降 AI 味 | **ai-proofreading** | "AI味太重" |
 | 长文转社媒 | **article-to-x** | "转微博" / "发小红书" |

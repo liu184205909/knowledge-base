@@ -22,6 +22,16 @@
 | **12** | GEO 可见性检查 | 7维度检查品牌在 AI 生态中的可见性信号（Reddit/Quora/评价站/Wikipedia/媒体/竞品对比） | `geo_visibility_checker.py` |
 | **13** | Open Design（设计工具） | AI 驱动的开源设计工具，生成落地页/PPT/移动端原型/营销海报（本地部署，支持 Codex/BYOK 智谱） | [GitHub](https://github.com/nexu-io/open-design) |
 | **14** | Web-to-App（网站打包App） | 手机端一键把独立站/HTML项目打包成安卓 APK，无需电脑和 IDE（Kotlin + GeckoView 双内核，内置 AI 能力） | [GitHub](https://github.com/shiahonb777/web-to-app) |
+| **15** | 达人BD工具 | AI 驱动的达人（KOL/红人）商务拓展自动化 — 账号分析、个性化邮件、AB测试、合作追踪 | 方法论文档（工具待建） |
+
+### 补充：非编号工具 / 备选方案
+
+| 工具 | 定位 | 适用场景 | 费用 |
+|------|------|---------|------|
+| **Google AI Studio** | 零代码 AI 应用构建，与 Google Workspace 深度打通 | 读取 Google Sheets 数据生成 Dashboard → 自动发 Gmail；零 API 调试，零 Token 费用，全在谷歌生态内完成 | 免费（有额度限制） |
+| **NotebookLM** | 谷歌免费 AI 研究助手，上传文档后可对话提问 | 快速消化长文档/发布会内容/行业报告；Google I/O 2026 官方也用它做互动文档 | 免费 |
+
+> **AI Studio 适用场景**：需要连接 Google Sheets/Gmail/Docs 的轻量自动化（如数据 Dashboard、邮件通知），且不想折腾跨平台 API 的场景。Claude Code/Codex 适合复杂开发，AI Studio 适合谷歌生态内的快速原型。
 
 ---
 
@@ -444,3 +454,4 @@ python 12-GEO可见性检查/geo_visibility_checker.py \
 > 2026-05-14 新增 12-GEO可见性检查（7维度 AI 生态可见性信号采集 + Layer 2 LLM 分析）。
 > 2026-05-23 新增 13-Open Design 设计工具（占坑，后期安装部署）。
 > 2026-05-24 新增 14-Web-to-App（网站打包安卓 APK 开源工具）。
+> 2026-05-29 新增 15-达人BD工具（AI 驱动达人商务拓展自动化方法论）。新增 AI Studio / NotebookLM 备选方案。
