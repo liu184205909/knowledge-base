@@ -22,12 +22,12 @@ TOP_PAGES_ID = '1x__cXM-FCmTe_BjTND0nG0VhWrjbVl8iFajtXGE854U'
 TOP_KEYWORDS_ID = '18CqR8GzvsonO5zYUaodDPB3oiIcdjdeCVJZn5BaPJng'
 
 # Column specs: (header_name, url_col_index)
-TOP_PAGES_HEADER = ['URL', 'Traffic(%)', 'Traffic', 'Top Keyword', 'Primary Intent', 'LLM Prompts']
+TOP_PAGES_HEADER = ['URL', 'Traffic(%)', 'Traffic', 'Top Keyword', 'Intent', 'LLM Prompts']
 TOP_PAGES_URL_COL = 0  # Column A
 TOP_PAGES_TRAFFIC_PCT_COL = 1
 TOP_PAGES_TRAFFIC_COL = 2
 
-TOP_KEYWORDS_HEADER = ['Keyword', 'Search Volume', 'Keyword Difficulty', 'CPC', 'URL', 'Traffic', 'Traffic(%)', 'Number of Results', 'Keyword Intents']
+TOP_KEYWORDS_HEADER = ['Keyword', 'Search Volume', 'Keyword Difficulty', 'CPC', 'URL', 'Traffic', 'Traffic(%)', 'Number of Results', 'Intent']
 TOP_KEYWORDS_KEYWORD_COL = 0
 TOP_KEYWORDS_VOLUME_COL = 1
 TOP_KEYWORDS_KD_COL = 2
