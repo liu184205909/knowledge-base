@@ -3,7 +3,7 @@
 > **目的**：将「AI 购物旅程三阶段 + 四类问题」框架应用到水晶项目，识别现有内容策略中的空白，并结合最新 GEO 电商研究给出可执行建议。
 > **理论依据**：[03-AI Citation优化策略.md](../../../03-SEO与GEO/03-AI%20Citation优化策略.md) § AI购物旅程与内容选题映射
 > **数据来源**：BigCommerce GEO 电商指南、Shopify × Perplexity Shopping 研究、Semrush AI Citation 报告
-> **最后更新**: 2026-05-19
+> **最后更新**: 2026-06-01（补充结构化评价方案 §3.1、Pinterest 渠道发现 §3.2、C端水晶站GEO定位校准 §7）
 
 ---
 
@@ -103,6 +103,105 @@
 | 开箱激励 | 随单附卡片"分享你的水晶照片获得 10% 折扣码" | 积累真实用户照片 |
 | 邮件序列 Day 14 | "展示你如何使用水晶" + 引导社交分享 | 持续 UGC |
 | Instagram/TikTok 标签 | #LuckyCrystals 标签聚合 | AI 可索引的社交信任信号 |
+
+### 3.1 结构化评价体系（P0 延伸 — 2026-06-01补充）
+
+> **来源**：C端水晶站 GEO 优化策略 — "C端GEO很需要真实用户内容，把评价从简单星级改成更有结构的信息"
+> **问题**：当前产品评价只有星级+文字，AI 无法从中提取结构化信息（佩戴场景、适用人群、尺寸体验等）。结构化评价 = AI 可以总结引用的高密度信任素材。
+
+#### WooCommerce 产品页评价字段设计
+
+| 字段 | 类型 | 选项/示例 | AI Citation 价值 |
+|------|------|---------|-----------------|
+| **Wearing Scenario** | 单选标签 | Daily Wear / Sleep / Meditation / Gift / Work / Ritual | AI 可按场景总结推荐 |
+| **Purchase Purpose** | 单选标签 | Self-Care / Gift for Someone / Emotional Support / Style / Spiritual Practice | AI 可按意图分类用户反馈 |
+| **Wrist Size** | 数字输入 | 14cm / 15cm / 16cm / 17cm / 18cm | 对接 Bracelet Size Calculator 数据，形成"真实用户尺寸反馈"闭环 |
+| **Comfort Rating** | 1-5星 | — | 购买决策核心指标 |
+| **Overall Rating** | 1-5星 | — | Trustpilot 同步 |
+| **Photo Upload** | 图片 | 用户佩戴照片（可选） | UGC 视觉信任素材 |
+| **Free-text Review** | 文本 | 用户自由评价 | AI 引用原始内容 |
+| **Reviewer Name** | 文本 | 可选昵称 | 个性化信任信号 |
+
+#### Review Schema 标记
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "review": [{
+    "@type": "Review",
+    "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+    "author": {"@type": "Person", "name": "Sarah M."},
+    "reviewBody": "Love this amethyst bracelet for my meditation practice...",
+    "additionalProperty": [
+      {"@type": "PropertyValue", "name": "Wearing Scenario", "value": "Meditation"},
+      {"@type": "PropertyValue", "name": "Purchase Purpose", "value": "Self-Care"},
+      {"@type": "PropertyValue", "name": "Wrist Size", "value": "15cm"}
+    ]
+  }]
+}
+```
+
+#### 评价引导 CTA 设计
+
+| 触发时机 | 引导方式 | 目的 |
+|---------|---------|------|
+| 购买后 Day 7 邮件 | "How are you wearing your crystal bracelet? Leave a review and get 10% off" | 首批评价积累 |
+| 订单完成页 | 弹窗/内嵌："Quick review — What's your wrist size?" | 降低评价门槛（先填结构化字段，再写文字） |
+| 产品页评价区 | "Share your experience" 按钮，预填 Wrist Size（从订单数据自动带入） | 提高评价完成率 |
+| Bracelet Size Calculator 结果页 | "Help future buyers — share your wrist size and fit experience" | 从工具页导流到评价 |
+
+#### Bracelet Size Calculator × 评价闭环
+
+> **来源**：[2E-页面工具规划.md](../02-网站规划/2E-页面工具规划.md) T1 设计修订
+> **闭环设计**：用户用 Size Calculator 测量 → 购买对应尺寸手链 → 收到评价邀请时自动带入 Wrist Size → 评价中包含真实尺寸数据 → 未来用户参考真实用户尺寸反馈做购买决策
+
+```
+Size Calculator → 输入手腕尺寸 → 推荐产品 → 购买
+  → Day 7 评价邀请（自动预填 Wrist Size）
+    → 评价发布（含结构化数据）
+      → 产品页展示"15cm 用户的评价"摘要
+        → AI 可索引结构化评价数据
+```
+
+### 3.2 Pinterest 渠道发现（P0 延伸 — 2026-06-01补充）
+
+> **来源**：跨境电商营销通用方法论 — "社交媒体营销需通过Facebook、Instagram、TikTok等平台"
+> **发现**：现有内容策略和 GEO 分析完全未提及 Pinterest，但 Pinterest 是水晶/灵性品类的**第一大流量来源型社交平台**。
+> **证据**：Crystal/Vision Board/Spiritual 等灵性类关键词在 Pinterest 搜索量极大；Energy Muse 和 Tiny Rituals 的 Pinterest 账号贡献大量外链和品牌曝光。
+
+#### Pinterest 对水晶项目的战略价值
+
+| 维度 | Pinterest 的价值 | 对比 Instagram |
+|------|-----------------|----------------|
+| **内容生命周期** | Pin 可持续引流 6-12 个月（长尾） | Post 24-48 小时后衰减 |
+| **搜索意图** | 用户主动搜索"crystal bracelet""chakra"（类 Google） | 算法推荐为主，非搜索驱动 |
+| **SEO 协同** | Pinterest Pin 链接到网站 = 高质量外链 + 流量 | Instagram bio link 只有一个 |
+| **内容格式** | 信息图、教程步骤、搭配灵感板 — 水晶内容天然适合 | Stories/Reels 短视频为主 |
+| **AI Citation** | Pinterest 被 Perplexity、Google AIO 引用（作为图片/视觉来源） | 较少被 AI 引用 |
+| **用户画像** | 70%+ 女性，25-54 岁，高消费力 — 完美匹配水晶站目标用户 | 偏年轻，内容消费为主 |
+
+#### 建议 Pinterest 内容矩阵
+
+| 内容类型 | 示例 | 制作方式 | 链接目标 |
+|---------|------|---------|---------|
+| **水晶信息图** | "7 Chakras + Corresponding Crystals" 彩色图 | Canva/AI 生图 + 文字叠加 | Crystal Guide Index 或 Chakra 页面 |
+| **搭配灵感板** | "Crystal Bracelet Stacking Guide: 5 Looks" | 产品实拍 + 风格拼图 | Shop by Stone 或产品页 |
+| **教程步骤图** | "How to Cleanse Crystals: 5 Steps" | 分步骤图文 | 博客教程文章 |
+| **星座水晶推荐** | "Best Crystals for Each Zodiac Sign" 年度 Pin | 12 宫格信息图 | Zodiac 页面或博客 |
+| **仪式指南** | "Full Moon Crystal Ritual: Step by Step" | 流程图 + 水晶图 | 月相内容博客 |
+| **产品目录** | 单品 Pin（美图+价格+品牌水印） | 产品实拍 | Product Detail 页面 |
+
+#### 执行时机
+
+| 阶段 | 行动 |
+|------|------|
+| **网站上线前** | 创建 Pinterest Business 账号，完成品牌资料设置，Rich Pins 验证 |
+| **上线后第 1 个月** | 上传首批 30-50 个 Pin（信息图为主），建立内容库 |
+| **持续** | 每篇博客文章发布时同步创建 2-3 个 Pinterest Pin |
+| **月度** | 分析 Pinterest Analytics，优化 Pin 表现 |
+
+---
 
 ### P1 — 应该做（推荐类 + 对比类，阶段1-2）
 
@@ -206,4 +305,43 @@
 
 **创建时间**: 2026-05-19
 **文档类型**: GEO 内容补充建议（非替代现有内容策略）
-**关联文档**: [内容策略.md](./内容策略.md) | [03-AI Citation优化策略.md](../../../03-SEO与GEO/03-AI%20Citation优化策略.md)
+**关联文档**: [内容策略.md](./内容策略.md) | [03-AI Citation优化策略.md](../../../03-SEO与GEO/03-AI%20Citation优化策略.md) | [品牌语调配置.md](./品牌语调配置.md)
+
+---
+
+## 七、C端水晶站 GEO 定位校准（2026-06-01补充）
+
+> **来源**：C端水晶站 GEO 优化策略 — 核心定位判断
+> **问题**：我们的页面决策表规划了大量"水晶百科"页面（Crystal Single × 15、Crystals by Condition × 30+、Crystals by Zodiac × 12 等），如果只做成百科站，有流量但没转化。
+> **校准方向**：参照该策略建议，确保每个内容页面都包含"购买决策"元素，不做成纯百科。
+
+### B端 vs C端水晶站 GEO 定位差异
+
+| 维度 | B端GEO | C端水晶站GEO（我们） |
+|------|--------|---------------------|
+| AI认为我们是 | 行业问题的专业答案源 | 消费者选择、佩戴、送礼、保养、真假判断的**可靠答案源** |
+| 内容重心 | 解决行业痛点、技术问题 | 解决**购买决策**问题 + 提供使用场景指导 |
+| AI引用动机 | 引用作为行业权威 | 引用作为**消费指南** + 信任核查素材 |
+| 网站栏目结构 | 方案/案例/白皮书/行业报告 | Shop + Crystal Guide + Find Your Crystal + Stories & Rituals + Trust Center |
+
+### 最佳内容方向（优先级排序）
+
+| 方向 | 说明 | 对应现有页面/内容 | 差距 |
+|------|------|-----------------|------|
+| **购买决策类** | 帮用户选对水晶（对比、推荐、榜单） | 选购指南(10篇) + 品类对比(6篇) | 需确保每个页面有产品推荐CTA |
+| **场景推荐类** | 帮用户找到适合场景的水晶 | 场景应用(10篇) + 灵性生活(80+篇) | 需强化"Stories & Rituals"仪式感内容 |
+| **对比内容** | 帮用户在不同选项间做选择 | Crystal Single × 15（含三视角） | 需增加水晶间对比（Amethyst vs Lepidolite） |
+| **信任内容** | 让用户相信这个品牌/产品 | About + Ethical Sourcing + FAQ | **最大缺口**：缺 Trustpilot、缺 UGC |
+| **产品页深度解释** | 产品页不只是卖货，是AI引用来源 | Product Detail（WooCommerce） | 需确保产品页有三视角百科摘要 + 结构化评价 |
+
+### 与现有内容策略的对齐检查
+
+> 以下检查确认现有内容策略已基本覆盖 GEO 最佳方向，标注需要补强的项目：
+
+| GEO最佳方向 | 现有内容覆盖 | 需要补强 |
+|------------|------------|---------|
+| 购买决策类 | ✅ 选购指南(10篇) + 榜单型内容(P1) | 每篇文章末尾必须有产品推荐CTA（不是纯教育） |
+| 场景推荐类 | ✅ 场景应用(10篇) + 灵性生活(80+篇) | 增加"Stories & Rituals"博客系列（仪式感内容） |
+| 对比内容 | ⚠️ 品类对比(6篇)，但缺水晶间对比 | 在内容清单中补充 10-15 篇"A vs B"水晶对比文章 |
+| 信任内容 | ✅ About + Ethical Sourcing + FAQ | **P0缺口**：Trustpilot + 结构化评价 + UGC（见 §3.1） |
+| 产品页深度 | ⚠️ Product Detail 模板已有三视角摘要 | 在 WooCommerce 模板中落实结构化评价字段（见 §3.1） |

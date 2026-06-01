@@ -1,5 +1,10 @@
 # Claude Code 环境配置
 
+> **运行方式**：本文档配置同时适用于 Claude Code CLI 和 VSCode 插件，共用 `~/.claude/` 下所有配置文件。
+>
+> - **CLI**：`npm install -g @anthropic-ai/claude-code`
+> - **权限模式**：`settings.json` 设置 `"permissions": { "defaultMode": "bypassPermissions" }` 全局免确认
+
 ## 必装 MCP
 
 | MCP | 安装命令 | 用途 |
@@ -13,7 +18,7 @@
 
 ### Google Workspace MCP
 
-**前置条件**：详见 [02-Google-Cloud凭证创建指南.md](./02-Google-Cloud凭证创建指南.md)（创建项目、启用 API、配置 OAuth、中国大陆代理补丁）。
+前置条件：[02-Google-Cloud凭证创建指南.md](./02-Google-Cloud凭证创建指南.md)
 
 ```bash
 claude mcp add -s user google-workspace \
@@ -25,20 +30,15 @@ claude mcp add -s user google-workspace \
   -- uvx workspace-mcp --tools drive sheets docs gmail --tool-tier extended
 ```
 
-> **中国大陆代理**：除上面 MCP 安装命令中的 `-e` 参数外，还需将 `HTTPS_PROXY` / `HTTP_PROXY` / `ALL_PROXY` 加到 `~/.claude/settings.json` 的全局 `env` 中（VSCode 扩展会读取该文件的 env，但不一定传递 MCP server 的 `env` 块）。
-
-> Token 过期时运行 `python C:\Users\Dylan\tools\refresh_google_token.py` 刷新（中国大陆必须）。
+> Token 过期运行 `python C:\Users\Dylan\tools\refresh_google_token.py` 刷新。
 
 ### DataForSEO MCP
 
-> [官方仓库](https://github.com/dataforseo/mcp-server-typescript) | 按 API 调用付费（单次 < $0.01） | Node.js >= 20
+[官方仓库](https://github.com/dataforseo/mcp-server-typescript) | 按调用付费（< $0.01/次）
 
 ```bash
-# 1. 注册账号获取 API 凭据：app.dataforseo.com/api-access
-# 2. 构建服务
 git clone https://github.com/dataforseo/mcp-server-typescript.git ~/tools/mcp-server-typescript
 cd ~/tools/mcp-server-typescript && npm install && npm run build
-# 3. 安装
 claude mcp add -s user dataforseo \
   -e DATAFORSEO_USERNAME=你的邮箱 \
   -e DATAFORSEO_PASSWORD=你的API密码 \
@@ -49,7 +49,7 @@ claude mcp add -s user dataforseo \
 
 ```bash
 claude mcp add gsc -- npx -y gsc-mcp-server
-# 需配置环境变量: GSC_AUTH_MODE=oauth, GSC_OAUTH_SECRETS_FILE=路径, GSC_SITE_URL=sc-domain:域名
+# 需配置: GSC_AUTH_MODE=oauth, GSC_OAUTH_SECRETS_FILE=路径, GSC_SITE_URL=sc-domain:域名
 ```
 
 ---
@@ -58,67 +58,44 @@ claude mcp add gsc -- npx -y gsc-mcp-server
 
 > `npx skills add` 加 `-g` 装全局；`npx clawhub@latest install` 建议 `cd ~/` 后执行。
 
-### 核心安装
-
 ```bash
-# Web Access — CDP 直连真实 Chrome（首要安装）
-# Chrome 打开 chrome://inspect/#remote-debugging，勾选 Allow remote debugging
+# 浏览器（CDP 直连 Chrome，需开启 chrome://inspect 远程调试）
 git clone https://github.com/eze-is/web-access ~/.claude/skills/web-access
-
-# Tabbit AI — 通过 CDP 操控 Tabbit 浏览器内置 AI 聊天（依赖 web-access）
 git clone https://github.com/liu184205909/tabbit-ai ~/.claude/skills/tabbit-ai
 
 # 文档生成
 npx skills add anthropics/skills --skill pdf xlsx docx pptx frontend-design skill-creator --agent claude-code -y -g
 
-# SEO（claude-seo: 19技能+12代理 | Agentic-SEO: 16技能+10代理）
+# SEO
 npx skills add AgriciDaniel/claude-seo -g
 npx skills add Bhanunamikaze/Agentic-SEO-Skill --agent claude-code -y -g
 npx skills add aaron-he-zhu/seo-geo-claude-skills -g
-
-# SEO 审计工具（Script+LLM双层架构，与上面SEO Skill有功能重叠，留作架构参考）
 npx skills add JeffLi1993/seo-audit-skill -g
 
 # 博客 + 广告 + 内容改写
 npx skills add AgriciDaniel/claude-blog -g
 npx skills add AgriciDaniel/claude-ads -g
-npx skills add AgriciDaniel/claude-repurpose -g   # 1篇内容→18平台30+条原生帖子（MIT，20子Skill+6并行Agent）
+npx skills add AgriciDaniel/claude-repurpose -g
 
-# 营销策略 + 社媒发布
+# 营销 + 社媒
 npx skills add coreyhaines31/marketingskills --agent claude-code -y -g
 npx skills add typefully/agent-skills --agent claude-code -y -g
 
-# 花叔中文技能包（选题/降AI味/视频/搜索等）
+# 中文技能包（选题/降AI味/视频等）
 npx skills add alchaincyf/huashu-skills -g
 
-# 调试辅助 + 记忆
+# 辅助工具
 npx skills add tanweai/pua --agent claude-code -y -g
 npx skills add thedotmack/claude-mem --agent claude-code -y -g
-
-# 其他
 npx skills.add Automattic/wordpress-agent-skills --agent claude-code -y -g
-npx clawhub@latest install skill-vetter
-npx clawhub@latest install image-generation
-
-# 验证
-npx skills list -g
+npx clawhub@latest install skill-vetter image-generation
 ```
 
-### ⚠️ 第三方 Skill 安全提醒
-
-> Snyk ToxicSkills 审计（2026.02）：3984 个公开 Skill 中，**13.4% 含 critical issue**，**36.8% 含至少一种安全问题**，确认 **76 个恶意 Skill**。（来源：[Snyk Blog](https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/)）
-
-**风险**：Skill 可捆绑脚本、注入上下文、在触发时执行真实动作（上传 env、外传代码、插入恶意命令）— 性质等同于 npm 供应链风险。
-
-**安全措施**：
-1. 安装前用 `skill-vetter` 审查（已配置）
-2. 优先使用 Anthropic 官方或高 Star 仓库的 Skill
-3. 审查 Skill 内的 `scripts/` 目录，确认无可疑命令
-4. 公司级使用应建立 Skill 白名单和沙箱执行权限
+> ⚠️ 第三方 Skill 存在供应链风险，安装前用 `skill-vetter` 审查，优先选官方或高 Star 仓库。
 
 ---
 
-### Skill 速查
+## Skill 速查
 
 | 场景 | Skill | 触发词 |
 |------|-------|--------|
@@ -137,39 +114,9 @@ npx skills list -g
 | 跨会话记忆 | **claude-mem** | "上次怎么解决的" |
 | 安全审查 | **skill-vetter** | 安装前检查 |
 
-> Skill 探索: [skills.sh](https://skills.sh/) | [agentskills.so](https://agentskills.so) | [clawhub.ai](https://clawhub.ai)
+## 备选工具
 
-### CLI 工具（钉钉/飞书）
-
-```bash
-# 钉钉 Workspace CLI — 163条命令，14个产品（聊天/文档/表格/日历/OA等）
-# 仓库: https://github.com/DingTalk-Real-AI/dingtalk-workspace-cli
-npm install -g dingtalk-workspace-cli
-dws auth login                    # OAuth 登录（浏览器扫码）
-dws pat authorize                 # PAT 授权（聊天/文档等需要）
-# 可选：安装 Agent Skills 到 ~/.claude/skills/dws/
-dws skill install
-
-# 飞书 CLI — 飞书开放平台命令行工具
-# 仓库: https://github.com/larksuite/cli
-# 安装方式见仓库 README
-```
-
-> dws 常用命令速查：`dws chat message list --group <conversationId> --limit 50` 读群聊 | `dws doc read --node <docId>` 读文档 | `dws aitable record query --base-id <id> --table-id <id> --limit 50` 读多维表
-
-### 备选工具（未安装）
-
-| 工具 | 说明 | 适用场景 | 何时启用 |
-|------|------|---------|---------|
-| [Nanobrowser](https://github.com/nanobrowser/nanobrowser) | AI 浏览器自动化 Chrome 扩展，多智能体协作（Planner+Navigator+Validator），自然语言操控浏览器 | 复杂网页自动化（翻页/点击/填表） | 与 web-access 互补，需复杂网页操作时安装 |
-| [CloakBrowser](https://github.com/CloakHQ/CloakBrowser) | Chromium C++ 源码级指纹伪装（57 处补丁），过 Cloudflare/reCAPTCHA v3（0.9+），兼容 Playwright API | 需直接采集有强反爬的站点 | 当前数据走 API（SERP/SEMrush），暂不需要；备用于未来直接采集竞品电商页面 |
-
----
-
-## 参考资源
-
-| 资源 | 链接 |
-|------|------|
-| Google Cloud 凭证配置 | [02-Google-Cloud凭证创建指南.md](./02-Google-Cloud凭证创建指南.md) |
-| Skill 设计与自建 | [02-Skill设计与管理.md](./02-Skill设计与管理.md) |
-| 官方文档 | [code.claude.com/docs](https://code.claude.com/docs/en) |
+| 工具 | 说明 | 何时启用 |
+|------|------|---------|
+| [Nanobrowser](https://github.com/nanobrowser/nanobrowser) | AI 浏览器自动化 Chrome 扩展，多智能体协作，自然语言操控 | 与 web-access 互补，需复杂网页操作时 |
+| [CloakBrowser](https://github.com/CloakHQ/CloakBrowser) | Chromium 源码级指纹伪装，过 Cloudflare/reCAPTCHA v3 | 需直接采集强反爬站点时 |
