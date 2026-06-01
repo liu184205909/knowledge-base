@@ -25,7 +25,8 @@
 - `Seed-Master` 当前不是完成态；它必须由清洗后的 `Seed-*` 合并得到。
 - 每个 `Seed-*` 在合并前必须尽量清零 `Delete / Review`，并删除跨主题词。
 - 例如：`Seed-Tarot` 只保留主意图为 Tarot 的关键词；星座、生日、月份等词回到对应主题池或删除。
-- `Seed-Master v1` 先承接基础字段：Keyword / 中文 / Topic Pillar / Subtopic / Volume / KD / CPC / Number of Results / Intent。
+- `Seed-Master v1` 先承接基础字段：Keyword / 中文 / Topic Pillar / Entity / Subtopic / Content Role / Volume / KD / CPC / Number of Results / Intent。
+- `Entity` 用于记录关键词明确指向的水晶、对象或主题实体；`Subtopic` 记录内容角度；`Content Role` 记录承接角色，例如 Main Article、H2 Section、Child Article Candidate、Product / Category Page、Local SEO Candidate、Guide Index / Hub。
 - 竞品证据字段、Priority、Recommended Page Type、Status 等研究字段在 `Seed-Master v1` 后再补。
 
 ## 当前待办

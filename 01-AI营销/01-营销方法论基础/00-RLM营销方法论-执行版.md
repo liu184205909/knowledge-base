@@ -68,11 +68,11 @@
 
 | 表格名称 | 用途 | 标准列（保留） | Semrush 导出时删除的列 |
 |------|------|--------------|----------------------|
-| SEMrush-Seed-Keywords | Seed-* 主题关键词池 | Keyword / 中文 / Subtopic / Volume / KD / CPC / Number of Results / Intent | Competitive Density / SERP Features / Updated / Priority / Recommended Page Type |
+| SEMrush-Seed-Keywords | Seed-* 主题关键词池 | Keyword / 中文 / Entity / Subtopic / Content Role / Volume / KD / CPC / Number of Results / Intent | Competitive Density / SERP Features / Updated / Priority / Recommended Page Type |
 | SEMrush-Top-Pages | 页面级SEO价值 | URL / Traffic(%) / Traffic / Top Keyword / Primary Intent / LLM Prompts | Adwords Positions / Number of Keywords / 5×Positions by Intent / 5×Traffic by Intent / Traffic Change / Answer Engines |
 | SEMrush-Top-Keywords | 关键词排名与排名URL | Keyword / Search Volume / Keyword Difficulty / CPC / URL / Traffic / Traffic(%) / Number of Results / Keyword Intents | Position / Competition / Previous Position / Traffic Cost / Trends / Timestamp / SERP Features by Keyword / Position Type |
 
-> `SEMrush-Seed-Keywords` 中每个 `Seed-*` 工作表代表一个 Topic Pillar。`Seed-Master v1` 由 1B 轨道B 构建，后续竞品证据增强由 1B 轨道D 承接。
+> `SEMrush-Seed-Keywords` 中每个 `Seed-*` 工作表代表一个 Topic Pillar。`Entity / Subtopic / Content Role` 是通用字段，但 `Subtopic` 的可选值由各 Topic Pillar 自己定义，不能把 Crystals 的 Meaning/Benefits/Properties 等分类硬套到 Chakra、Tarot、Dreams 等主题。`Seed-Master v1` 由 1B 轨道B 构建，后续竞品证据增强由 1B 轨道D 承接。
 
 **数据规则**：
 - 项目简报记录所有 Google Sheets 链接，包含标准列和删除列说明
@@ -530,7 +530,7 @@ XX产品/
 
 适用于SaaS、内容站、Affiliate等需要设计变现路径的项目。B2B外贸站通常可跳过。
 
-> **步骤 3/4/5 的操作细节不在本文档展开**。执行到对应步骤时，参照步骤2的做法：本文档只定义目标、核心规则和输出，具体的工具操作、模板选择、平台规范等内容写入 `02-自动化工具库/` 或 `00-营销方法论基础/03-模板库/`，按需读取。不在本文档中堆叠每一步的操作手册。
+> **步骤 3/4/5 的操作细节不在本文档展开**。执行到对应步骤时，参照步骤2的做法：本文档只定义目标、核心规则和输出，具体的工具操作、模板选择、平台规范等内容写入 `02-自动化工具库/` 或 `01-营销方法论基础/03-模板库/`，按需读取。不在本文档中堆叠每一步的操作手册。
 
 ---
 
