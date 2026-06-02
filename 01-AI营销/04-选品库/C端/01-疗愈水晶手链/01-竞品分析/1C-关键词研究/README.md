@@ -1,6 +1,6 @@
 # 1C 关键词研究说明
 
-> **RLM步骤1C当前主线**：逐表清洗 `SEMrush-Seed-Keywords` 中的 `Seed-*` 暂存表，删除跨主题词和无效词，构建 `Seed-Master v1` 项目关键词主表；竞品证据回填在主表完成后再执行。
+> **RLM步骤1C当前主线**：`Seed-Master v1` 已由 `Seed-Crystals + Seed-Chakra + Seed-Angel-Numbers` 构建完成，当前覆盖 Crystals / Chakra / Angel Numbers 三个主题共 6,349 条；后续继续逐表清洗其他 `Seed-*` 暂存表并扩展主表，竞品证据回填在主表批次稳定后执行。
 
 ## 当前项目口径
 
@@ -14,29 +14,30 @@
 
 | 数据层 | 上游位置 | 用途 | 当前状态 |
 |------|---------|------|---------|
-| Seed-Master 主表 | 清洗后的 `Seed-*` 合并 | 回答“市场有什么需求、我们最终做哪些词” | 表头已创建，待合并；当前不得作为内容 Brief 或 Proof scope 的完成依据 |
-| Seed-* 暂存表 | Semrush Keyword Magic / Keyword Overview 导出 | 各 Topic Pillar 的小而准关键词池 | 正在逐表清洗；已清理完成的表可进入 `Seed-Master v1` |
+| Seed-Master 主表 | 清洗后的 `Seed-*` 合并 | 回答“市场有什么需求、我们最终做哪些词” | v1 已写入 6,349 条，当前覆盖 Crystals + Chakra + Angel Numbers；可作为后续证据回填 scope，但内容 Brief 仍需等竞品证据和页面策略稳定 |
+| Seed-* 暂存表 | Semrush Keyword Magic / Keyword Overview 导出 | 各 Topic Pillar 的小而准关键词池 | Crystals / Chakra / Angel Numbers 已合并；其他主题仍在逐表清洗 |
 | TopPages_All | SEMrush-Top-Pages | 汇总竞品页面级 SEO 价值 | 作为后续证据增强输入；不直接创建关键词主表 |
 | TopKeywords_All | SEMrush-Top-Keywords | 汇总竞品关键词排名与排名 URL | 作为后续证据增强输入；未命中词不直接进入 Seed-Master |
 | Keyword-Page-Proof / 证据回填 | TopKeywords_All x TopPages_All | 给关键词主表补竞品成功证据 | `Seed-Master v1` 完成后再执行 |
 
 ## Seed-Master 状态
 
-- `Seed-Master` 当前不是完成态；它必须由清洗后的 `Seed-*` 合并得到。
+- `Seed-Master v1` 当前是阶段性完成态，已由 `Seed-Crystals + Seed-Chakra + Seed-Angel-Numbers` 合并得到 6,349 条。
 - 每个 `Seed-*` 在合并前必须尽量清零 `Delete / Review`，并删除跨主题词。
 - 例如：`Seed-Tarot` 只保留主意图为 Tarot 的关键词；星座、生日、月份等词回到对应主题池或删除。
 - `Seed-Master v1` 先承接基础字段：Keyword / 中文 / Topic Pillar / Entity / Subtopic / Content Role / Volume / KD / CPC / Number of Results / Intent。
 - `Entity` 用于记录关键词明确指向的水晶、对象或主题实体；`Subtopic` 记录内容角度；`Content Role` 记录承接角色，例如 Main Article、H2 Section、Child Article Candidate、Product / Category Page、Local SEO Candidate、Guide Index / Hub。
 - 竞品证据字段、Priority、Recommended Page Type、Status 等研究字段在 `Seed-Master v1` 后再补。
+- 该版本只代表 Crystals / Chakra / Angel Numbers 三个已清洗主题，不代表全项目关键词库完成。
 
 ## 当前待办
 
-当前重点不是生成内容 Brief，而是完成 `Seed-*` 清洗和 `Seed-Master v1`。
+当前重点不是生成内容 Brief，而是继续清洗其他 `Seed-*` 并扩展 `Seed-Master v1`。
 
 正式进入批量 Brief 前，需要按顺序完成：
 
 1. 逐表清理 `Seed-*` 的 Delete / Review / 跨主题词。
-2. 合并清洗后的 `Seed-*` 到 `Seed-Master v1`。
+2. 已完成：`Seed-Crystals` 与 `Seed-Chakra` 已合并到 `Seed-Master v1`，导入 Entity / Subtopic / Content Role 等核心字段，未导入审核辅助列。
 3. 运行或刷新 `TopKeywords_All / TopPages_All` 证据层。
 4. 把竞品关键词证据和页面证据回填到 `Seed-Master`。
 5. 再做 Priority / Recommended Page Type / 内容 Brief。
@@ -58,4 +59,4 @@
 - `generate_all_tables.py`：生成 TopPages_All / TopKeywords_All。
 - `generate_keyword_page_proof.py`：生成 Keyword-Page-Proof。
 - `backfill_seed_keywords.py`：回填 Seed-Master 竞品验证，需确认已适配当前字段。
-- `scripts/translate_seed_keywords.py`：从知识库根目录执行，批量补 `Seed-*` 的中文翻译列。
+- `01-AI营销/02-自动化工具库/02-竞品研究工具/scripts/translate_seed_keywords.py`：从知识库根目录执行，批量补 `Seed-*` 的中文翻译列。

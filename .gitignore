@@ -28,3 +28,4 @@ __pycache__/
 *.bak
 *.log
 lc_pages.json
+**/translate_progress.json

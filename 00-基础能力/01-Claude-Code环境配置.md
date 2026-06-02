@@ -15,6 +15,7 @@
 | zread | `claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp --header "Authorization: Bearer {{API_KEY}}"` | GitHub 仓库阅读 |
 | google-workspace | 见下方 | Google 表格/文档/硬盘/Gmail |
 | dataforseo | 见下方 | SEO 关键词/SERP 数据 |
+| seoctopus | 见下方 | SEO 关键词聚类/搜索意图检测/网站审计 |
 
 ### Google Workspace MCP
 
@@ -51,6 +52,30 @@ claude mcp add -s user dataforseo \
 claude mcp add gsc -- npx -y gsc-mcp-server
 # 需配置: GSC_AUTH_MODE=oauth, GSC_OAUTH_SECRETS_FILE=路径, GSC_SITE_URL=sc-domain:域名
 ```
+
+### SEOctopus MCP（关键词聚类/SEO 审计）
+
+[官方仓库](https://github.com/AgrimCltv/seoctopus) | 开源免费 | 23 个 SEO 工具
+
+```bash
+git clone https://github.com/AgrimCltv/seoctopus.git ~/tools/seoctopus
+cd ~/tools/seoctopus && npm install && npm run build
+claude mcp add -s user seoctopus -- node ~/tools/seoctopus/dist/index.js
+```
+
+**核心工具**（与关键词清洗流程相关）：
+
+| 工具 | 功能 | 典型用法 |
+|------|------|---------|
+| `keywords_cluster` | Jaccard 词相似度聚类 + 搜索意图检测 | 近重复检测、语义分组验证 |
+| `keyword_suggestions` | 关键词建议 | 补充长尾词 |
+| `content_gap_analysis` | 内容缺口分析 | 竞品关键词差距 |
+| `on_page_audit` | 页面 SEO 审计 | 内容优化 |
+| `rank_check` | 排名检查（需 Playwright，可用 web-access 替代） | SERP 排名追踪 |
+
+> `keywords_cluster` 使用 Union-Find + Jaccard 相似度（默认阈值 0.3）自动聚类，同时推断每个聚类的搜索意图（informational/commercial/transactional/navigational）。适合 Seed-* 近重复检测和 Entity 分组交叉验证。
+>
+> `rank_check` 工具依赖 Playwright，但本项目已有 `web-access` skill 替代浏览器操作，无需安装 Playwright。
 
 ---
 
