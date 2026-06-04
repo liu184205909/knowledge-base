@@ -6,6 +6,8 @@ Usage:
     python update_seed_structure.py --topic feng-shui
     python update_seed_structure.py --topic angel-numbers
     python update_seed_structure.py --topic palmistry
+    python update_seed_structure.py --topic tarot
+    python update_seed_structure.py --topic astrology
     python update_seed_structure.py --all
 
 Adds/fills Entity and Content Role based on topic-specific regex rules.
@@ -188,6 +190,199 @@ def _palmistry_role(keyword, subtopic):
     return "Review"
 
 
+# --- Tarot ---
+
+_TAROT_MAJOR_ARCANA = {
+    "fool": "The Fool", "magician": "The Magician", "high priestess": "The High Priestess",
+    "empress": "The Empress", "emperor": "The Emperor", "hierophant": "The Hierophant",
+    "lovers": "The Lovers", "chariot": "The Chariot", "strength": "Strength",
+    "hermit": "The Hermit", "wheel of fortune": "Wheel of Fortune", "justice": "Justice",
+    "hanged man": "The Hanged Man", "death": "Death", "temperance": "Temperance",
+    "devil": "The Devil", "tower": "The Tower", "star": "The Star",
+    "moon": "The Moon", "sun": "The Sun", "judgement": "Judgement", "world": "The World",
+}
+
+_TAROT_SUIT_MAP = {
+    "wands": "Suit of Wands", "cups": "Suit of Cups",
+    "swords": "Suit of Swords", "pentacles": "Suit of Pentacles",
+    "coins": "Suit of Pentacles",
+}
+
+_TAROT_COURT = {
+    "page of": "Court Cards", "knight of": "Court Cards",
+    "queen of": "Court Cards", "king of": "Court Cards",
+}
+
+
+def _tarot_entity(keyword):
+    text = keyword.lower()
+    # Major Arcana cards
+    for key, name in _TAROT_MAJOR_ARCANA.items():
+        if key in text:
+            return name
+    # Suits (Minor Arcana)
+    for key, name in _TAROT_SUIT_MAP.items():
+        if key in text:
+            return name
+    # Court cards
+    for key, name in _TAROT_COURT.items():
+        if key in text:
+            return name
+    # Numbered Minor Arcana (ace-10 of ...)
+    if re.search(r"\b(ace|two|three|four|five|six|seven|eight|nine|ten)\s+of\b", text):
+        return "Numbered Minor Arcana"
+    if re.search(r"\b\d+\s+of\s+(wands|cups|swords|pentacles|coins)\b", text):
+        return "Numbered Minor Arcana"
+    # Specific concepts
+    rules = [
+        (r"major arcana", "Major Arcana"),
+        (r"minor arcana", "Minor Arcana"),
+        (r"spread|layout|pull|draw|position", "Tarot Spreads"),
+        (r"yes.{0,5}no|yes or no|yes no", "Yes/No Tarot"),
+        (r"love|relationship|soulmate|ex\b|breakup|crush|dating|marriage|couple", "Love Tarot"),
+        (r"career|job|work|money|finance|business", "Career / Money Tarot"),
+        (r"health|wellness|healing", "Health Tarot"),
+        (r"deck|cards?\s*(?:list|set|collection)", "Tarot Cards & Decks"),
+        (r"rider.?waite|rw\b|rws\b|thoth|marseille", "Tarot Deck Tradition"),
+        (r"read|reader|reading|interpret", "Tarot Reading"),
+        (r"meaning|symbol|symbolis|interpret", "Tarot Meaning"),
+        (r"learn|study|guide|beginner|how to|course", "Tarot Learning"),
+        (r"free|online|app", "Free / Online Tarot"),
+        (r"revers|upright|inverse", "Tarot Reversals"),
+        (r"combination|combo|pair|together", "Tarot Combinations"),
+        (r"element|elemental|fire|water|air|earth", "Tarot Elements"),
+        (r"numerolog|number", "Tarot Numerology"),
+        (r"astrolog|zodiac|sign|planet", "Tarot & Astrology"),
+        (r"horoscope", "Horoscope"),
+        (r"biddy|lotus|labyrinthos|gal\s*tarot|keeno", "Tarot Brand / Platform"),
+    ]
+    for pattern, value in rules:
+        if re.search(pattern, text):
+            return value
+    return "Tarot"
+
+
+def _tarot_role(keyword, subtopic):
+    text = keyword.lower()
+    if re.search(r"near me|shop|buy|for sale|store|price|cheap|best.*deck", text):
+        return "Product / Category Page"
+    if re.search(r"free.*read|online.*tarot|tarot.*app|tarot.*game", text):
+        return "Tool / Quiz Candidate"
+    if text.strip() in {"tarot", "tarot cards", "tarot card", "tarot reading"}:
+        return "Guide Index / Hub"
+    # Major Arcana specific card
+    for key in _TAROT_MAJOR_ARCANA:
+        if key in text and not re.search(r"combination|combo|together|pair", text):
+            return "Main Article"
+    # Specific suit card
+    for key in _TAROT_SUIT_MAP:
+        if key in text:
+            return "Main Article"
+    for key in _TAROT_COURT:
+        if key in text:
+            return "Main Article"
+    if re.search(r"meaning|symbol|interpret|what.*mean|definition", text):
+        return "Main Article / Guide Section"
+    if re.search(r"spread|layout|how to read|learn|guide|beginner|tutorial", text):
+        return "Separate Article Candidate"
+    if re.search(r"yes.{0,5}no", text):
+        return "Separate Article Candidate"
+    if re.search(r"love|relationship|career|money|health", text):
+        return "Separate Article Candidate"
+    if subtopic and subtopic != "Tarot Basics":
+        return "Topic Keyword"
+    return "Topic Keyword"
+
+
+# --- Astrology ---
+
+_ZODIAC_SIGNS = {
+    "aries": "Aries", "taurus": "Taurus", "gemini": "Gemini", "cancer": "Cancer",
+    "leo": "Leo", "virgo": "Virgo", "libra": "Libra", "scorpio": "Scorpio",
+    "sagittarius": "Sagittarius", "capricorn": "Capricorn", "aquarius": "Aquarius", "pisces": "Pisces",
+}
+
+
+def _astrology_entity(keyword):
+    text = keyword.lower()
+    for key, name in _ZODIAC_SIGNS.items():
+        if re.search(rf"\b{key}\b", text):
+            return name
+    if re.search(r"chinese zodiac|chinese astrology|year of the|rat\b|ox\b|tiger\b|rabbit\b|dragon\b|snake\b|horse\b|goat\b|sheep\b|monkey\b|rooster\b|dog\b|pig\b", text):
+        return "Chinese Zodiac"
+    if re.search(r"\b\d{1,2}(?:st|nd|rd|th)?\s+house", text):
+        return "Astrology Houses"
+    if re.search(r"house", text):
+        return "Astrology Houses"
+    planet_rules = [
+        (r"moon\b", "Moon in Astrology"),
+        (r"mercury\b", "Mercury"), (r"venus\b", "Venus"), (r"mars\b", "Mars"),
+        (r"jupiter\b", "Jupiter"), (r"saturn\b", "Saturn"), (r"uranus\b", "Uranus"),
+        (r"neptune\b", "Neptune"), (r"pluto\b", "Pluto"),
+        (r"rising\b|ascendant", "Rising Sign / Ascendant"),
+        (r"midheaven|mc\b", "Midheaven"),
+    ]
+    for pattern, value in planet_rules:
+        if re.search(pattern, text):
+            return value
+    if re.search(r"conjunct|opposition|trine|square|sextile|quincunx|aspect", text):
+        return "Astrology Aspects"
+    rules = [
+        (r"birth\s*chart|natal\s*chart", "Birth / Natal Chart"),
+        (r"horoscope", "Horoscope"),
+        (r"compatib|match|couple|love|relationship", "Zodiac Compatibility"),
+        (r"retrograd|retro", "Retrograde"),
+        (r"eclipse", "Eclipse"),
+        (r"transit", "Astrology Transits"),
+        (r"progress", "Progressed Chart"),
+        (r"synastr", "Synastry"),
+        (r"solar\s*return", "Solar Return"),
+        (r"moon\s*phase|new\s*moon|full\s*moon", "Moon Phases"),
+        (r"mercury\s*retrograde", "Mercury Retrograde"),
+        (r"element|fire\s*sign|earth\s*sign|air\s*sign|water\s*sign", "Zodiac Elements"),
+        (r"modality|cardinal|fixed|mutable", "Zodiac Modalities"),
+        (r"north\s*node|south\s*node", "Lunar Nodes"),
+        (r"chiron", "Chiron"),
+        (r"tarot", "Tarot & Astrology"),
+        (r"numerolog", "Numerology & Astrology"),
+        (r"crystal|gem|stone", "Crystals & Astrology"),
+    ]
+    for pattern, value in rules:
+        if re.search(pattern, text):
+            return value
+    return "Astrology"
+
+
+def _astrology_role(keyword, subtopic):
+    text = keyword.lower()
+    if re.search(r"near me|shop|buy|store|for sale", text):
+        return "Local SEO Candidate"
+    if re.search(r"free.*horoscope|online.*chart|calculator|quiz|test", text):
+        return "Tool / Quiz Candidate"
+    if text.strip() in {"astrology", "zodiac signs", "horoscope", "zodiac"}:
+        return "Guide Index / Hub"
+    for key in _ZODIAC_SIGNS:
+        if re.search(rf"\b{key}\b", text) and not re.search(r"compatib|match|couple", text):
+            if re.search(r"meaning|personality|trait|character", text):
+                return "Main Article"
+            if re.search(r"love|career|money|health", text):
+                return "Separate Article Candidate"
+            return "Main Article"
+    if re.search(r"birth\s*chart|natal\s*chart|how to read", text):
+        return "Main Article / Guide Section"
+    if re.search(r"compatib|match|love.*sign", text):
+        return "Separate Article Candidate"
+    if re.search(r"retrograde|eclipse|transit", text):
+        return "Separate Article Candidate"
+    if re.search(r"house\b|planet|aspect|element|modality", text):
+        return "Main Article / Guide Section"
+    if re.search(r"horoscope", text):
+        return "Topic Keyword"
+    if subtopic and subtopic not in ("Astrology Basics", "Horoscope"):
+        return "Topic Keyword"
+    return "Topic Keyword"
+
+
 TOPICS = {
     "chakra": {
         "sheet_name": "Seed-Chakra",
@@ -203,7 +398,7 @@ TOPICS = {
     },
     "angel-numbers": {
         "sheet_name": "Seed-Angel-Numbers",
-        "sheet_id": 1849388684,
+        "sheet_id": 1745476761,
         "entity_fn": _angel_numbers_entity,
         "role_fn": _angel_numbers_role,
     },
@@ -212,6 +407,18 @@ TOPICS = {
         "sheet_id": 48805297,
         "entity_fn": _palmistry_entity,
         "role_fn": _palmistry_role,
+    },
+    "tarot": {
+        "sheet_name": "Seed-Tarot",
+        "sheet_id": 738830481,
+        "entity_fn": _tarot_entity,
+        "role_fn": _tarot_role,
+    },
+    "astrology": {
+        "sheet_name": "Seed-Astrology",
+        "sheet_id": 95613431,
+        "entity_fn": _astrology_entity,
+        "role_fn": _astrology_role,
     },
 }
 

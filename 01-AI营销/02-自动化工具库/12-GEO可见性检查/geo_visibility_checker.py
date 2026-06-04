@@ -12,6 +12,23 @@ import argparse
 import os
 import time
 from datetime import datetime
+from pathlib import Path
+
+# ── 加载项目根目录 .env ───────────────────────────────────────────────────────
+def _load_env_file(path):
+    if path.exists():
+        for line in path.read_text(encoding='utf-8').splitlines():
+            line = line.strip()
+            if line and not line.startswith('#') and '=' in line:
+                key, val = line.split('=', 1)
+                os.environ.setdefault(key.strip(), val.strip())
+
+_root = Path(__file__).resolve()
+for parent in _root.parents:
+    if (parent / '.gitignore').exists() or (parent / '.git').exists():
+        _load_env_file(parent / '.env')
+        break
+_load_env_file(Path(__file__).parent / '.env')
 
 # ── 配置 ──────────────────────────────────────────────────────────────────────
 DFS_API_LOGIN = os.environ.get("DFS_API_LOGIN", "")
