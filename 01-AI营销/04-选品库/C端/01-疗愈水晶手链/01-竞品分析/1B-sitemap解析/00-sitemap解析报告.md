@@ -198,9 +198,9 @@ sitemap_index.xml (主索引)
 |------|------|--------|------|
 | [01-Tiny-Rituals.md](./01-Tiny-Rituals.md) | Tiny Rituals | 1,520 | 成功 |
 | [02-Energy-Muse.md](./02-Energy-Muse.md) | Energy Muse | 4,094 | 成功 |
-| [03-Crystal-Vaults.md](./04-Crystal-Vaults.md) | Crystal Vaults | 8,204 | 成功 |
+| [03-Crystal-Vaults.md](./03-Crystal-Vaults.md) | Crystal Vaults | 8,204 | 成功 |
 | [04-The-Crystal-Council.md](./04-The-Crystal-Council.md) | The Crystal Council | 15,738 | 成功 |
-| [05-My-Crystals.md](./06-My-Crystals.md) | My Crystals | 325 | 成功 |
+| [05-My-Crystals.md](./05-My-Crystals.md) | My Crystals | 325 | 成功 |
 | [06-Beads-of-Cambay.md](./06-Beads-of-Cambay.md) | Beads of Cambay | 18,686 | 成功 |
 | [07-Conscious-Items.md](./07-Conscious-Items.md) | Conscious Items | 17,026 | 成功 |
 | [08-Moonrise-Crystals.md](./08-Moonrise-Crystals.md) | Moonrise Crystals | — | 失败 |
