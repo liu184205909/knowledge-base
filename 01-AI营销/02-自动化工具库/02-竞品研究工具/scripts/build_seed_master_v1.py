@@ -1,14 +1,15 @@
 """
-Build Seed-Master v1 from cleaned Seed-* sheets.
+Build Seed-Master v2 from cleaned Seed-* sheets.
 
-Current scope:
-- Seed-Crystals
-- Seed-Chakra
+Scope: all 12 Seed-* topics (Crystals, Chakra, Tarot, Astrology, Zodiac,
+Numerology, Angel Numbers, Feng Shui, Meditation, Moon Phases, Palmistry,
+Spirituality).
 
 Imports only core fields:
 Keyword / 中文 / Topic Pillar / Entity / Subtopic / Content Role / Volume / KD /
 CPC / Number of Results / Intent
 
+Cross-topic dedup: normalized keyword -> keep highest Volume.
 Does not import cleaning helper columns:
 Suggested Action / Reason / Confidence / Reviewed
 """
@@ -33,7 +34,16 @@ CREDENTIALS_FILE = os.path.expanduser(
 SOURCE_SHEETS = [
     ("Seed-Crystals", "Crystals"),
     ("Seed-Chakra", "Chakra"),
+    ("Seed-Tarot", "Tarot"),
+    ("Seed-Astrology", "Astrology"),
+    ("Seed-Zodiac", "Zodiac"),
+    ("Seed-Numerology", "Numerology"),
     ("Seed-Angel-Numbers", "Angel Numbers"),
+    ("Seed-Feng-Shui", "Feng Shui"),
+    ("Seed-Meditation", "Meditation"),
+    ("Seed-Moon-Phases", "Moon Phases"),
+    ("Seed-Palmistry", "Palmistry"),
+    ("Seed-Spirituality", "Spirituality"),
 ]
 
 MASTER_SHEET = "Seed-Master"
@@ -218,6 +228,7 @@ def row_value(row, index):
 
 def source_records(token):
     records = {}
+    topic_overlaps = {}  # normalized_keyword -> set of topic pillars
     stats = {}
     required = [
         "Keyword",
@@ -268,11 +279,21 @@ def source_records(token):
                 row_value(row, indexes["Intent"]),
             ]
             key = normalize_keyword(keyword)
+            # Track topic overlaps (a keyword naturally spans multiple topics)
+            if key not in topic_overlaps:
+                topic_overlaps[key] = set()
+            topic_overlaps[key].add(topic_pillar)
+
             existing = records.get(key)
             if existing is None or to_number(record[6]) > to_number(existing[6]):
                 records[key] = record
             kept += 1
         stats[sheet_name] = {"kept": kept, "skipped": skipped}
+
+    # Count cross-topic overlaps (normal: keywords naturally span multiple topics)
+    overlaps = {k: list(v) for k, v in topic_overlaps.items() if len(v) > 1}
+    stats["_cross_topic_overlaps"] = len(overlaps)
+    stats["_overlap_samples"] = dict(list(overlaps.items())[:20])
 
     return list(records.values()), stats
 
