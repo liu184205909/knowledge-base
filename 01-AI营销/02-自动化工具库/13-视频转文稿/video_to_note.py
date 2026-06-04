@@ -523,7 +523,7 @@ def main():
 
     args = parser.parse_args()
 
-    # 加载环境变量：命令行 > 环境变量 > 项目根目录 .env
+    # 加载环境变量：命令行 > 环境变量 > 项目根目录 .env > 全局 .env
     def _load_env_file(path):
         if path.exists():
             for line in path.read_text(encoding='utf-8').splitlines():
@@ -532,13 +532,17 @@ def main():
                     key, val = line.split('=', 1)
                     os.environ.setdefault(key.strip(), val.strip())
 
-    # 优先项目根目录 .env（向上查找含 .gitignore 的目录）
+    # 1) 全局凭证（所有项目共享，优先级最低）
+    _global_env = Path.home() / 'tools' / '.env'
+    _load_env_file(_global_env)
+
+    # 2) 项目根目录 .env（向上查找含 .gitignore/.git 的目录）
     _root = Path(__file__).resolve()
     for parent in _root.parents:
         if (parent / '.gitignore').exists() or (parent / '.git').exists():
             _load_env_file(parent / '.env')
             break
-    # 回退到脚本所在目录
+    # 3) 脚本所在目录 .env
     _load_env_file(Path(__file__).parent / '.env')
 
     if args.api_key:

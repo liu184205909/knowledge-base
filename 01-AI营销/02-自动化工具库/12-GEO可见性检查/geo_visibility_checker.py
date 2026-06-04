@@ -14,7 +14,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-# ── 加载项目根目录 .env ───────────────────────────────────────────────────────
+# ── 加载环境变量：项目根目录 .env > 全局 .env ──────────────────────────────────
 def _load_env_file(path):
     if path.exists():
         for line in path.read_text(encoding='utf-8').splitlines():
@@ -23,6 +23,10 @@ def _load_env_file(path):
                 key, val = line.split('=', 1)
                 os.environ.setdefault(key.strip(), val.strip())
 
+# 1) 全局凭证（所有项目共享，优先级最低）
+_load_env_file(Path.home() / 'tools' / '.env')
+
+# 2) 项目根目录 .env（向上查找含 .gitignore/.git 的目录）
 _root = Path(__file__).resolve()
 for parent in _root.parents:
     if (parent / '.gitignore').exists() or (parent / '.git').exists():

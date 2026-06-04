@@ -383,6 +383,358 @@ def _astrology_role(keyword, subtopic):
     return "Topic Keyword"
 
 
+# ---------------------------------------------------------------------------
+# Zodiac
+# ---------------------------------------------------------------------------
+
+_CHINESE_ZODIAC = {
+    "rat": "Rat", "ox": "Ox", "tiger": "Tiger", "rabbit": "Rabbit",
+    "dragon": "Dragon", "snake": "Snake", "horse": "Horse",
+    "goat": "Goat", "sheep": "Sheep", "monkey": "Monkey",
+    "rooster": "Rooster", "dog": "Dog", "pig": "Pig",
+}
+
+
+def _zodiac_entity(keyword):
+    text = keyword.lower()
+    # Western zodiac signs
+    for key, name in _ZODIAC_SIGNS.items():
+        if re.search(rf"\b{key}\b", text):
+            return name
+    # Ophiuchus
+    if "ophiuchus" in text:
+        return "Ophiuchus"
+    # Chinese zodiac animals
+    for key, name in _CHINESE_ZODIAC.items():
+        if re.search(rf"\b{key}\b", text) and ("chinese" in text or "year of" in text or "zodiac" in text):
+            return f"Chinese {name}"
+    if re.search(r"chinese zodiac|chinese new year|chinese year|lunar new year|year of the", text):
+        return "Chinese Zodiac"
+    # Horoscope
+    if re.search(r"horoscope|daily.*sign|weekly.*sign|monthly.*sign", text):
+        return "Horoscope"
+    # Compatibility
+    if re.search(r"compatib|match|couple|duo|pair|together|soulmate", text):
+        return "Zodiac Compatibility"
+    # Dates & Calendar
+    if re.search(r"date|month|born|birthday|season|start|end|cusp", text):
+        return "Zodiac Signs & Dates"
+    # Elements & Modalities
+    if re.search(r"element|fire sign|earth sign|air sign|water sign|cardinal|fixed|mutable", text):
+        return "Zodiac Elements"
+    # Entertainment / Off-topic indicators
+    if re.search(r"manhwa|manga|anime|tattoo|game|app|emoji|memes|aesthetic|wallpaper|drawing|coloring|craft|diy|cake|cookie|cocktail|drink|food|nail|outfit|shirt|merch", text):
+        return "Off-topic / Entertainment"
+    return "Zodiac"
+
+
+def _zodiac_role(keyword, subtopic):
+    text = keyword.lower()
+    if re.search(r"near me|reader|reading|tattoo.*artist|psychic", text):
+        return "Local SEO Candidate"
+    if re.search(r"tattoo|jewelry|necklace|ring|bracelet|shirt|merch|poster|sticker|cake|cookie|craft|diy|aesthetic|wallpaper", text):
+        return "Product / Category Page"
+    if re.search(r"manhwa|manga|anime|game|emoji|memes|coloring|nail|outfit|cocktail|drink|food|rib boat", text):
+        return "Delete"
+    if text.strip() in {"zodiac signs", "zodiac", "star signs", "the zodiac", "12 zodiac signs"}:
+        return "Guide Index / Hub"
+    # Specific sign articles
+    for key in _ZODIAC_SIGNS:
+        if re.search(rf"\b{key}\b", text) and re.search(r"meaning|personality|trait|character|symbol|fact", text):
+            return "Main Article"
+    # Compatibility articles
+    if re.search(r"compatib|match|couple|duo|pair", text):
+        return "Separate Article Candidate"
+    # Horoscope
+    if re.search(r"horoscope", text):
+        return "Topic Keyword"
+    # Date/Calendar queries
+    if re.search(r"what month|when is|when are|what sign|dates|born|birthday|start|end", text):
+        return "Main Article / Guide Section"
+    # Chinese zodiac
+    if re.search(r"chinese zodiac|chinese new year|year of the|lunar", text):
+        return "Main Article / Guide Section"
+    if subtopic in ("Zodiac Basics",):
+        return "Topic Keyword"
+    return "Topic Keyword"
+
+
+# ---------------------------------------------------------------------------
+# Numerology
+# ---------------------------------------------------------------------------
+
+
+def _numerology_entity(keyword):
+    text = keyword.lower()
+    # Life path / expression / soul urge specific numbers
+    m = re.search(r"\b(life path|life-path|expression|soul urge|soul-urge|personality|birthday|birth day|destiny|maturity|balance)\s*(number\s*)?(\d{1,2})\b", text)
+    if m:
+        num = m.group(3)
+        if num in ("11", "22", "33"):
+            return f"Master Number {num}"
+        return f"{m.group(1).strip().title()} Number"
+    # Master numbers
+    if re.search(r"\b(11|22|33)\b", text) and "numerolog" in text:
+        return "Master Numbers"
+    # Angel numbers (3-4 digit patterns)
+    m2 = re.search(r"\b(\d{3,4})\s*(angel|meaning|numerolog)", text)
+    if m2:
+        return f"Angel Number {m2.group(1)}"
+    m3 = re.search(r"angel\s*(?:number\s*)?(\d{3,4})", text)
+    if m3:
+        return f"Angel Number {m3.group(1)}"
+    # Life path calculation
+    if re.search(r"life path|calculate.*number|numerolog.*calculator|what.*my.*number", text):
+        return "Life Path Number"
+    # Repeating/sequential numbers
+    m4 = re.search(r"\b(\d)\1{2,}\b", text)  # 111, 222, etc.
+    if m4:
+        return f"Angel Number {m4.group(0)}"
+    # Single digit meanings
+    m5 = re.search(r"\b(number|numeral)\s*(\d)\b", text)
+    if m5:
+        return f"Number {m5.group(2)} Meaning"
+    # House numbers
+    if re.search(r"house\s*number|address.*number", text):
+        return "House Number Numerology"
+    # Name numerology
+    if re.search(r"name|baby.*name|business.*name", text):
+        return "Name Numerology"
+    # Compatibility
+    if re.search(r"compatib|match|couple|relationship|love", text):
+        return "Numerology Compatibility"
+    if re.search(r"calculator|calculate|chart|meaning|what does", text):
+        return "Numerology Calculator"
+    return "Numerology"
+
+
+def _numerology_role(keyword, subtopic):
+    text = keyword.lower()
+    if re.search(r"near me|reader|service", text):
+        return "Local SEO Candidate"
+    if text.strip() in {"numerology", "numerology numbers", "number meaning"}:
+        return "Guide Index / Hub"
+    if re.search(r"calculator|calculate|what.*my|find.*my|check.*my", text):
+        return "Tool / Quiz Candidate"
+    if re.search(r"life path|expression|soul urge|destiny|personality|birthday|master number", text):
+        return "Main Article"
+    if re.search(r"meaning|what does|what.*mean|significance", text):
+        return "Main Article / Guide Section"
+    if re.search(r"compatib|match|love|relationship", text):
+        return "Separate Article Candidate"
+    if re.search(r"house|name|baby|business|car", text):
+        return "Separate Article Candidate"
+    if re.search(r"angel|repeating|sequence|111|222|333|444|555|666|777|888|999", text):
+        return "Topic Keyword"
+    if subtopic == "Life Path & Core Numbers":
+        return "Main Article"
+    return "Topic Keyword"
+
+
+# ---------------------------------------------------------------------------
+# Meditation
+# ---------------------------------------------------------------------------
+
+
+def _meditation_entity(keyword):
+    text = keyword.lower()
+    rules = [
+        (r"mindfulness|mindful", "Mindfulness Meditation"),
+        (r"transcendental|tm\b", "Transcendental Meditation"),
+        (r"zen\b|zazen|vipassana|samatha", "Zen / Buddhist Meditation"),
+        (r"yoga.*meditation|yoga.*nidra|yoga.*medit", "Yoga Nidra"),
+        (r"chakra.*meditation|chakra.*medit", "Chakra Meditation"),
+        (r"guided.*meditation|guided.*medit", "Guided Meditation"),
+        (r"sleep.*meditation|insomnia|meditation.*sleep", "Sleep Meditation"),
+        (r"anxiety|stress|panic|worry|overwhelm", "Anxiety & Stress Relief"),
+        (r"depression|sadness|grief|emotion", "Emotional Healing"),
+        (r"focus|concentrat|productiv|attention", "Focus & Concentration"),
+        (r"pain|chronic|healing|recovery", "Pain Management"),
+        (r"meditation.*app|app.*meditation|headspace|calm|insight|waking up", "Meditation Apps"),
+        (r"music|sound|frequency|binaural|solfeggio|singing bowl|tibetan bowl", "Meditation Music & Sound"),
+        (r"mantra|chant|affirmation|japa", "Mantra Meditation"),
+        (r"breath|breathing|pranayama", "Breathing Meditation"),
+        (r"meditation.*timer|timer|clock", "Meditation Timer / Tool"),
+        (r"candle|incense|essential oil|diffuser|smudge|sage|palo santo", "Meditation Accessories"),
+        (r"meditation.*cushion|zafu|zabuton|mat|bench|bolster", "Meditation Equipment"),
+        (r"walking|running|movement|active", "Movement Meditation"),
+        (r"loving.kindness|metta|compassion|heart", "Loving-Kindness Meditation"),
+        (r"visualization|creative|imagery", "Visualization Meditation"),
+        (r"body\s*scan|progressive.*relax|relaxation", "Body Scan Meditation"),
+        (r"spiritual|spirit|awakening|enlightenment|inner.*peace", "Spiritual Meditation"),
+        (r"morning|daily|routine|habit", "Morning Meditation"),
+        (r"beginner|how to|start|learn|guide", "Meditation Basics"),
+        (r"meditation.*benefit|benefit.*meditation|why.*meditat|science|research|study", "Meditation Benefits"),
+    ]
+    for pattern, value in rules:
+        if re.search(pattern, text):
+            return value
+    if re.search(r"meditation\b", text):
+        return "Meditation"
+    return "Meditation"
+
+
+def _meditation_role(keyword, subtopic):
+    text = keyword.lower()
+    if re.search(r"near me|class|studio|retreat|center|teacher|course|workshop", text):
+        return "Local SEO Candidate"
+    if re.search(r"app|download|online|free|subscription|price|cost|review|best.*app|headspace|calm", text):
+        return "Product / Category Page"
+    if text.strip() in {"meditation", "how to meditate", "meditation guide"}:
+        return "Guide Index / Hub"
+    if re.search(r"calculator|quiz|test|what.*type|find.*type", text):
+        return "Tool / Quiz Candidate"
+    if re.search(r"how to|guide|step|begin|learn|start|technique|practice", text):
+        return "Main Article"
+    if re.search(r"benefit|science|research|why|effect|prove|improve|help", text):
+        return "Main Article / Guide Section"
+    if re.search(r"music|sound|binaural|solfeggio|frequency", text):
+        return "Separate Article Candidate"
+    if re.search(r"candle|incense|cushion|mat|bench|timer|accessory|equipment|tool", text):
+        return "Product / Category Page"
+    if subtopic in ("Meditation Tools",):
+        return "Product / Category Page"
+    if subtopic == "Guided Meditation & Music":
+        return "Separate Article Candidate"
+    if subtopic == "Meditation Techniques":
+        return "Separate Article Candidate"
+    return "Topic Keyword"
+
+
+# ---------------------------------------------------------------------------
+# Moon Phases
+# ---------------------------------------------------------------------------
+
+
+def _moon_phases_entity(keyword):
+    text = keyword.lower()
+    # Specific moon phases
+    if re.search(r"new moon|dark moon|black moon", text):
+        return "New Moon"
+    if re.search(r"waxing crescent", text):
+        return "Waxing Crescent"
+    if re.search(r"first quarter|half moon", text):
+        return "First Quarter"
+    if re.search(r"waxing gibbous", text):
+        return "Waxing Gibbous"
+    if re.search(r"full moon\b|full.moon|supermoon|blood moon|blue moon|harvest moon|worm moon|snow moon|pink moon|flower moon|strawberry moon|buck moon|sturgeon moon|corn moon|harvest moon|hunter moon|beaver moon|cold moon|wolf moon", text):
+        return "Full Moon"
+    if re.search(r"waning gibbous", text):
+        return "Waning Gibbous"
+    if re.search(r"last quarter|third quarter", text):
+        return "Last Quarter"
+    if re.search(r"waning crescent", text):
+        return "Waning Crescent"
+    # Calendar / scheduling
+    if re.search(r"calendar|schedule|tonight|today|this month|next moon|moon cycle|lunar cycle|lunar calendar", text):
+        return "Moon Phase Calendar"
+    # Rituals / manifestation
+    if re.search(r"ritual|manifest|intention|spell|ceremony|wish|pray|charge|crystal.*moon", text):
+        return "Moon Ritual & Manifestation"
+    # Fishing / gardening (practical uses)
+    if re.search(r"fishing|garden|plant|seed|harvest|farmer|almanac", text):
+        return "Practical Moon Lore"
+    # General
+    if re.search(r"moon phase|phase.*moon|phases.*moon|lunar phase", text):
+        return "Moon Phases"
+    if re.search(r"moon", text):
+        return "Moon"
+    return "Moon Phases"
+
+
+def _moon_phases_role(keyword, subtopic):
+    text = keyword.lower()
+    if re.search(r"near me|event|workshop|retreat|class", text):
+        return "Local SEO Candidate"
+    if text.strip() in {"moon phases", "phases of the moon", "lunar phases", "moon cycle", "8 moon phases"}:
+        return "Guide Index / Hub"
+    if re.search(r"calendar|schedule|tonight|today|this month|next full|upcoming|when is|date|time", text):
+        return "Tool / Quiz Candidate"
+    if re.search(r"meaning|significance|what does|symbolism|spiritual", text):
+        return "Main Article / Guide Section"
+    if re.search(r"how to|guide|ritual|manifest|intention|ceremony|charge", text):
+        return "Separate Article Candidate"
+    if re.search(r"fishing|garden|plant|seed|harvest|hair|cut", text):
+        return "Separate Article Candidate"
+    if re.search(r"full moon|new moon", text):
+        return "Main Article"
+    if subtopic == "Full Moon":
+        return "Main Article"
+    if subtopic == "New Moon":
+        return "Main Article"
+    if subtopic == "Moon Phase Calendar":
+        return "Topic Keyword"
+    return "Topic Keyword"
+
+
+# ---------------------------------------------------------------------------
+# Spirituality
+# ---------------------------------------------------------------------------
+
+
+def _spirituality_entity(keyword):
+    text = keyword.lower()
+    rules = [
+        (r"meditation|mindfulness|yoga|breath", "Meditation & Mindfulness"),
+        (r"crystal|gem|stone|healing stone", "Crystals & Spirituality"),
+        (r"angel|guardian.*angel|archangel", "Angels & Spirit Guides"),
+        (r"tarot|oracle|card.*reading", "Tarot & Divination"),
+        (r"numerolog|life path|number.*meaning", "Numerology & Spirituality"),
+        (r"astrolog|zodiac|horoscope|birth.*chart", "Astrology & Spirituality"),
+        (r"chakra|aura|energy.*heal|reiki|pranic", "Energy Healing"),
+        (r"feng shui|vastu|space.*cleans", "Sacred Space"),
+        (r"prayer|chant|mantra|affirmation", "Prayer & Mantra"),
+        (r"mind.*body.*spirit|holistic|wholeness", "Mind-Body-Spirit"),
+        (r"awakening|enlightenment|kundalini|third eye|ascension", "Spiritual Awakening"),
+        (r"past life|regression|reincarn|karma|soul.*contract", "Past Lives & Karma"),
+        (r"sacred.*geometry|flower.*of.*life|metatron|mandala", "Sacred Geometry"),
+        (r"smudge|sage|palo santo|cleans|purif|incense", "Spiritual Cleansing"),
+        (r"gratitude|thankful|blessing|abundance mindset", "Gratitude & Blessings"),
+        (r"law.*attract|manifest|visuali|intention|affirm", "Law of Attraction"),
+        (r"spirit.*animal|totem|power.*animal|animal.*spirit", "Spirit Animals"),
+        (r"synchronicity|coincidence|sign.*from.*universe|11:11|angel.*number", "Signs & Synchronicity"),
+        (r"intuition|psychic|clair|empath|medium|sixth.*sense", "Intuition & Psychic"),
+        (r"shadow.*work|inner.*child|journal|self.*reflect", "Shadow Work"),
+        (r"solstic|equinox|sabbat|wheel.*year|pagan|wicca|wiccan", "Seasonal & Pagan Spirituality"),
+        (r"bible|christian|muslim|islam|buddh|hindu|sufi|jewish|taoist|zen|monk|nun|monastery|temple|church|mosque", "Organized Religion"),
+    ]
+    for pattern, value in rules:
+        if re.search(pattern, text):
+            return value
+    if re.search(r"meaning|spiritual.*meaning|what.*mean", text):
+        return "Spiritual Meaning"
+    if re.search(r"spirit", text):
+        return "Spirituality"
+    return "Spirituality"
+
+
+def _spirituality_role(keyword, subtopic):
+    text = keyword.lower()
+    if re.search(r"near me|church|temple|mosque|center|retreat|teacher|guru|class|workshop", text):
+        return "Local SEO Candidate"
+    if re.search(r"shop|buy|store|price|best|review|amazon|etsy|book|course|program|app", text):
+        return "Product / Category Page"
+    if text.strip() in {"spirituality", "spiritual", "what is spirituality"}:
+        return "Guide Index / Hub"
+    if re.search(r"how to|guide|learn|start|begin|practice|way.*to", text):
+        return "Main Article"
+    if re.search(r"meaning|significance|what does|symbolism", text):
+        return "Main Article / Guide Section"
+    if re.search(r"awakening|enlightenment|kundalini|third eye", text):
+        return "Main Article"
+    if re.search(r"prayer|chant|ritual|ceremony|cleans|sage|smudge", text):
+        return "Separate Article Candidate"
+    if re.search(r"angel|tarot|numerolog|astrolog|crystal", text):
+        return "Topic Keyword"
+    if re.search(r"bible|christian|muslim|hindu|buddh|jewish|taoist|sufi|pagan|wicca", text):
+        return "Separate Article Candidate"
+    if subtopic == "Spiritual Practice":
+        return "Topic Keyword"
+    if subtopic == "Spiritual Meaning":
+        return "Main Article / Guide Section"
+    return "Topic Keyword"
+
+
 TOPICS = {
     "chakra": {
         "sheet_name": "Seed-Chakra",
@@ -419,6 +771,36 @@ TOPICS = {
         "sheet_id": 95613431,
         "entity_fn": _astrology_entity,
         "role_fn": _astrology_role,
+    },
+    "zodiac": {
+        "sheet_name": "Seed-Zodiac",
+        "sheet_id": 66189221,
+        "entity_fn": _zodiac_entity,
+        "role_fn": _zodiac_role,
+    },
+    "numerology": {
+        "sheet_name": "Seed-Numerology",
+        "sheet_id": 258720785,
+        "entity_fn": _numerology_entity,
+        "role_fn": _numerology_role,
+    },
+    "meditation": {
+        "sheet_name": "Seed-Meditation",
+        "sheet_id": 1750161576,
+        "entity_fn": _meditation_entity,
+        "role_fn": _meditation_role,
+    },
+    "moon-phases": {
+        "sheet_name": "Seed-Moon-Phases",
+        "sheet_id": 1845236016,
+        "entity_fn": _moon_phases_entity,
+        "role_fn": _moon_phases_role,
+    },
+    "spirituality": {
+        "sheet_name": "Seed-Spirituality",
+        "sheet_id": 2074692649,
+        "entity_fn": _spirituality_entity,
+        "role_fn": _spirituality_role,
     },
 }
 

@@ -50,6 +50,46 @@ TOPICS = {
         "fallback_subtopic": "Tarot Basics",
         "fallback_entity": "Tarot",
     },
+    "zodiac": {
+        "sheet_name": "Seed-Zodiac",
+        "label": "Zodiac",
+        "label_cn": "星座",
+        "fallback_subtopic": "Zodiac Basics",
+        "fallback_entity": "Zodiac",
+        "entity_only": True,
+    },
+    "numerology": {
+        "sheet_name": "Seed-Numerology",
+        "label": "Numerology",
+        "label_cn": "数字命理学",
+        "fallback_subtopic": "Numerology Basics",
+        "fallback_entity": "Numerology",
+        "entity_only": True,
+    },
+    "meditation": {
+        "sheet_name": "Seed-Meditation",
+        "label": "Meditation",
+        "label_cn": "冥想",
+        "fallback_subtopic": "Meditation Basics",
+        "fallback_entity": "Meditation",
+        "entity_only": True,
+    },
+    "moon-phases": {
+        "sheet_name": "Seed-Moon-Phases",
+        "label": "Moon Phases",
+        "label_cn": "月相",
+        "fallback_subtopic": "Moon Phases Basics",
+        "fallback_entity": "Moon Phases",
+        "entity_only": True,
+    },
+    "spirituality": {
+        "sheet_name": "Seed-Spirituality",
+        "label": "Spirituality",
+        "label_cn": "灵性",
+        "fallback_subtopic": "Spiritual Practice",
+        "fallback_entity": "Spirituality",
+        "entity_only": True,
+    },
 }
 
 # ── Google Sheets API ────────────────────────────────────────────────────────
@@ -57,6 +97,37 @@ TOPICS = {
 def get_token():
     with open(CREDENTIALS_FILE, "r", encoding="utf-8") as f:
         return json.load(f)["token"]
+
+def refresh_access_token():
+    """Use refresh_token to get a new access_token, update credentials file."""
+    with open(CREDENTIALS_FILE, "r", encoding="utf-8") as f:
+        cred = json.load(f)
+    data = json.dumps({
+        "client_id": cred["client_id"],
+        "client_secret": cred["client_secret"],
+        "refresh_token": cred["refresh_token"],
+        "grant_type": "refresh_token",
+    }).encode("utf-8")
+    tmp = tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False, encoding="utf-8")
+    tmp.write(data)
+    tmp.close()
+    r = subprocess.run(["curl", "-s", "--proxy", PROXY,
+        "https://oauth2.googleapis.com/token", "-X", "POST",
+        "-H", "Content-Type: application/json",
+        "-d", f"@{tmp.name}"], capture_output=True, timeout=30)
+    os.unlink(tmp.name)
+    resp = json.loads(r.stdout.decode("utf-8")) if r.stdout else {}
+    if "access_token" in resp:
+        cred["token"] = resp["access_token"]
+        if "refresh_token" in resp:
+            cred["refresh_token"] = resp["refresh_token"]
+        cred["expiry"] = resp.get("expires_in", 3600)
+        with open(CREDENTIALS_FILE, "w", encoding="utf-8") as f:
+            json.dump(cred, f, indent=2)
+        print("[Token refreshed for long-running tasks]")
+    else:
+        print(f"[WARN] Token refresh failed: {resp.get('error', 'unknown')}")
+    return cred["token"]
 
 def sheets_get(sheet_name, range_a1):
     t = get_token()
@@ -165,7 +236,21 @@ def step1_define_categories(keywords_sample, label, label_cn):
 
 # ── Step 2: AI batch classify ────────────────────────────────────────────────
 
-def build_classify_prompt(label, label_cn, fallback_entity, categories_text):
+def build_classify_prompt(label, label_cn, fallback_entity, categories_text, entity_only=False):
+    if entity_only:
+        return f"""你是 SEO 关键词分类专家。将以下 {label} 关键词分类到 Entity。
+
+Entity 类别列表：
+{categories_text}
+
+规则：
+1. 每个关键词必须归入上面列出的某个 Entity
+2. Entity 是细粒度的实体（如特定星座名、数字、概念名）
+3. 如果关键词太泛无法确定具体实体，Entity 填 "{fallback_entity}"
+4. Entity 必须是列表中已有的名称，不得自创新 Entity
+
+严格按 JSON 数组格式返回，不要有任何其他文字：
+[{{"keyword": "...", "entity": "..."}}]"""
     return f"""你是 SEO 关键词分类专家。将以下 {label} 关键词分类到 Subtopic 和 Entity。
 
 类别列表：
@@ -180,12 +265,12 @@ def build_classify_prompt(label, label_cn, fallback_entity, categories_text):
 严格按 JSON 数组格式返回，不要有任何其他文字：
 [{{"keyword": "...", "subtopic": "...", "entity": "..."}}]"""
 
-def step2_classify_batch(keywords, categories, label, label_cn, fallback_entity):
+def step2_classify_batch(keywords, categories, label, label_cn, fallback_entity, entity_only=False):
     categories_text = "\n".join(
         f"- **{c['subtopic']}**: {c['description']} (如 {', '.join(c['sample_keywords'][:3])})"
         for c in categories
     )
-    prompt = build_classify_prompt(label, label_cn, fallback_entity, categories_text)
+    prompt = build_classify_prompt(label, label_cn, fallback_entity, categories_text, entity_only=entity_only)
     user_msg = f"分类以下 {len(keywords)} 个关键词：\n{json.dumps(keywords, ensure_ascii=False)}"
     result = llm_call(prompt, user_msg)
     try:
@@ -298,6 +383,113 @@ REGEX_MAP = {
     "tarot": TAROT_REGEX_ENTITY,
 }
 
+# Zodiac regex
+ZODIAC_REGEX_ENTITY = [
+    (r"\baries\b", "Aries"), (r"\btaurus\b", "Taurus"),
+    (r"\bgemini\b", "Gemini"), (r"\bcancer zodiac\b", "Cancer"),
+    (r"\bcancer\b", "Cancer"), (r"\bleo\b", "Leo"),
+    (r"\bvirgo\b", "Virgo"), (r"\blibra\b", "Libra"),
+    (r"\bscorpio\b", "Scorpio"), (r"\bsagittarius\b", "Sagittarius"),
+    (r"\bcapricorn\b", "Capricorn"), (r"\baquarius\b", "Aquarius"),
+    (r"\bpisces\b", "Pisces"),
+    (r"\bophiuchus\b", "Ophiuchus"),
+    (r"\bchinese zodiac\b", "Chinese Zodiac"),
+    (r"\byear of the (rat|ox|tiger|rabbit|dragon|snake|horse|goat|sheep|monkey|rooster|dog|pig)\b", "Chinese Zodiac"),
+    (r"\blunar new year\b", "Chinese Zodiac"),
+    (r"\bchinese new year\b", "Chinese Zodiac"),
+    (r"\bhoroscope\b", "Horoscope"),
+    (r"\bcompatib\w*\b", "Zodiac Compatibility"),
+    (r"\bmatch\b", "Zodiac Compatibility"),
+]
+REGEX_MAP["zodiac"] = ZODIAC_REGEX_ENTITY
+
+# Numerology regex
+NUMEROLOGY_REGEX_ENTITY = [
+    (r"\b(life\s*path|life-path)\s*(number\b)?\s*(\d{1,2})\b", None),  # handled by special logic
+    (r"\blife\s*path\b", "Life Path Number"),
+    (r"\bmaster\s*number\b", "Master Numbers"),
+    (r"\b(11|22|33)\b", "Master Numbers"),
+    (r"\bexpression\s*number\b", "Expression Number"),
+    (r"\bsoul\s*urge\b", "Soul Urge Number"),
+    (r"\bhouse\s*number\b", "House Number Numerology"),
+    (r"\bname\s*numerolog", "Name Numerology"),
+    (r"\bbaby\s*name\b", "Name Numerology"),
+    (r"\bcalculator\b", "Numerology Calculator"),
+    (r"\bangel\s*(?:number)?\s*(\d{3,4})\b", "Angel Number"),
+    (r"\bcompatib\w*\b", "Numerology Compatibility"),
+    (r"\b\d{3}\b.*\bmeaning\b", "Angel Number"),
+]
+REGEX_MAP["numerology"] = NUMEROLOGY_REGEX_ENTITY
+
+# Meditation regex
+MEDITATION_REGEX_ENTITY = [
+    (r"\bmindful", "Mindfulness Meditation"),
+    (r"\btranscendental\b|\btm\b", "Transcendental Meditation"),
+    (r"\bzen\b|\bzazen\b|\bvipassana\b", "Zen / Buddhist Meditation"),
+    (r"\byoga\s*nidra\b", "Yoga Nidra"),
+    (r"\bchakra.*meditat", "Chakra Meditation"),
+    (r"\bsleep.*meditat|meditat.*sleep|\binsomnia\b", "Sleep Meditation"),
+    (r"\banxiety\b|\bstress\b|\bpanic\b", "Anxiety & Stress Relief"),
+    (r"\bdepression\b|\bgrief\b|\bemotional\b", "Emotional Healing"),
+    (r"\bfocus\b|\bconcentrat", "Focus & Concentration"),
+    (r"\bmeditation\s*app\b|\bheadspace\b|\bcalm\b|\binsight timer\b", "Meditation Apps"),
+    (r"\b(binaural|solfeggio|singing bowl|tibetan bowl|frequency)\b", "Meditation Music & Sound"),
+    (r"\bmantra\b|\bchant\b|\bjapa\b", "Mantra Meditation"),
+    (r"\bbreath\w*\s*(meditation|technique|exercise|practice)\b|\bpranayama\b", "Breathing Meditation"),
+    (r"\bcandle\b|\bincense\b|\bessential oil\b|\bsmudge\b|\bsage\b|\bpalo santo\b", "Meditation Accessories"),
+    (r"\bwalking.*meditation\b|\bmovement.*meditation\b", "Movement Meditation"),
+    (r"\bloving.kindness\b|\bmetta\b|\bcompassion.*meditation\b", "Loving-Kindness Meditation"),
+    (r"\bvisualization\b|\bguided.*imagery\b", "Visualization Meditation"),
+    (r"\bbody\s*scan\b|\bprogressive.*relax", "Body Scan Meditation"),
+    (r"\bmeditation.*cushion\b|\bzafu\b|\bzabuton\b|\bmeditation.*mat\b", "Meditation Equipment"),
+]
+REGEX_MAP["meditation"] = MEDITATION_REGEX_ENTITY
+
+# Moon Phases regex
+MOON_PHASES_REGEX_ENTITY = [
+    (r"\bnew\s*moon\b|\bdark\s*moon\b", "New Moon"),
+    (r"\bwaxing\s*crescent\b", "Waxing Crescent"),
+    (r"\bfirst\s*quarter\b|\bhalf\s*moon\b", "First Quarter"),
+    (r"\bwaxing\s*gibbous\b", "Waxing Gibbous"),
+    (r"\bfull\s*moon\b|\bsupermoon\b|\bblood moon\b|\bblue moon\b", "Full Moon"),
+    (r"\bwaning\s*gibbous\b", "Waning Gibbous"),
+    (r"\blast\s*quarter\b|\bthird\s*quarter\b", "Last Quarter"),
+    (r"\bwaning\s*crescent\b", "Waning Crescent"),
+    (r"\bharvest\s*moon\b|\bworm\s*moon\b|\bsnow\s*moon\b|\bpink\s*moon\b", "Full Moon"),
+    (r"\bstrawberry\s*moon\b|\bbuck\s*moon\b|\bsturgeon\s*moon\b|\bbee\s*moon\b", "Full Moon"),
+    (r"\bflower\s*moon\b|\bgoose\s*moon\b|\bbarley\s*moon\b|\bworm\s*moon\b", "Full Moon"),
+    (r"\bmoon.*calendar\b|\bcalendar.*moon\b|\blunar\s*calendar\b", "Moon Phase Calendar"),
+    (r"\bmoon\s*cycle\b|\blunar\s*cycle\b|\b8\s*moon\s*phases\b", "Moon Phase Calendar"),
+    (r"\b(ritual|manifest|intention|ceremony|wish)\b.*\b(moon|full|new)\b", "Moon Ritual & Manifestation"),
+    (r"\bfishing\b|\bgarden\w*\b|\bplant\w*\b|\bseed\b|\bharvest\w*\b", "Practical Moon Lore"),
+]
+REGEX_MAP["moon-phases"] = MOON_PHASES_REGEX_ENTITY
+
+# Spirituality regex
+SPIRITUALITY_REGEX_ENTITY = [
+    (r"\bmeditation\b|\bmindfulness\b|\byoga\b", "Meditation & Mindfulness"),
+    (r"\bcrystal\w*\b|\bgem\w*\b|\bhealing\s*stone\b", "Crystals & Spirituality"),
+    (r"\bangel\w*\b|\bguardian.*angel\b|\barchangel\b", "Angels & Spirit Guides"),
+    (r"\btarot\b|\boracle\b|\bcard.*reading\b", "Tarot & Divination"),
+    (r"\bnumerolog\w*\b|\blife\s*path\b", "Numerology & Spirituality"),
+    (r"\bastrolog\w*\b|\bzodiac\b|\bhoroscope\b|\bbirth.*chart\b", "Astrology & Spirituality"),
+    (r"\bchakra\w*\b|\baura\b|\benergy.*heal\w*\b|\breiki\b", "Energy Healing"),
+    (r"\bfeng\s*shui\b|\bvastu\b", "Sacred Space"),
+    (r"\bprayer\b|\bchant\b|\bmantra\b|\baffirmation\b", "Prayer & Mantra"),
+    (r"\bawakening\b|\benlightenment\b|\bkundalini\b|\bthird\s*eye\b|\bascension\b", "Spiritual Awakening"),
+    (r"\bpast\s*life\b|\bregression\b|\breincarn\w*\b|\bkarma\b", "Past Lives & Karma"),
+    (r"\bsacred.*geometry\b|\bflower.*of.*life\b|\bmandala\b", "Sacred Geometry"),
+    (r"\bsmudge\b|\bsage\b|\bpalo\s*santo\b|\bcleans\w*\b", "Spiritual Cleansing"),
+    (r"\bgratitude\b|\bblessing\w*\b", "Gratitude & Blessings"),
+    (r"\blaw.*of.*attract\b|\bmanifest\w*\b|\bvisuali\w*\b|\bintention\b", "Law of Attraction"),
+    (r"\bspirit.*animal\b|\btotem\b|\bpower.*animal\b", "Spirit Animals"),
+    (r"\bsynchronicity\b|\b11:11\b|\bsign.*from.*universe\b", "Signs & Synchronicity"),
+    (r"\bintuition\b|\bpsychic\b|\bclair\w*\b|\bempath\b|\bmedium\b", "Intuition & Psychic"),
+    (r"\bshadow.*work\b|\binner.*child\b|\bjournal\w*\b|\bself.*reflect", "Shadow Work"),
+    (r"\bsolstic\w*\b|\bequinox\w*\b|\bsabbat\b|\bpagan\w*\b|\bwicca\w*\b", "Seasonal & Pagan Spirituality"),
+]
+REGEX_MAP["spirituality"] = SPIRITUALITY_REGEX_ENTITY
+
 def regex_correct(kw, subtopic, entity, topic):
     """Apply deterministic regex corrections for Entity."""
     text = kw.lower()
@@ -321,6 +513,7 @@ def main():
     label_cn = cfg["label_cn"]
     fallback_st = cfg["fallback_subtopic"]
     fallback_ent = cfg["fallback_entity"]
+    entity_only = cfg.get("entity_only", False)
 
     # Read all keywords
     print(f"Reading keywords from {sheet_name}...")
@@ -328,7 +521,8 @@ def main():
     rows = data.get("values", [])
     keywords = [row[0].strip() for row in rows if row and row[0].strip()]
     N = len(keywords)
-    print(f"Total keywords: {N}\n")
+    print(f"Total keywords: {N}")
+    print(f"Mode: {'Entity only (Subtopic preserved)' if entity_only else 'Subtopic + Entity'}\n")
 
     # Step 1: Define categories
     categories = step1_define_categories(keywords, label, label_cn)
@@ -348,7 +542,7 @@ def main():
         batch_kws = keywords[start:end]
 
         print(f"  Batch {batch_idx+1}/{total_batches} ({start+1}-{end})...", end=" ", flush=True)
-        results = step2_classify_batch(batch_kws, categories, label, label_cn, fallback_ent)
+        results = step2_classify_batch(batch_kws, categories, label, label_cn, fallback_ent, entity_only=entity_only)
 
         if not results:
             print("FAILED")
@@ -361,7 +555,10 @@ def main():
         for item in results:
             kw = item.get("keyword", "").strip()
             if kw:
-                all_results[kw] = (item.get("subtopic", ""), item.get("entity", ""))
+                if entity_only:
+                    all_results[kw] = item.get("entity", "")
+                else:
+                    all_results[kw] = (item.get("subtopic", ""), item.get("entity", ""))
 
         matched = sum(1 for kw in batch_kws if kw in all_results)
         print(f"OK ({matched}/{len(batch_kws)} matched)")
@@ -374,34 +571,45 @@ def main():
 
     # Step 3: Regex correction + build write columns
     print("\n=== Step 3: Regex correction + building columns ===")
-    subtopic_col = []
     entity_col = []
-    st_counter = Counter()
+    subtopic_col = []
     ent_counter = Counter()
+    st_counter = Counter()
     unmatched = []
 
     for kw in keywords:
         if kw in all_results:
-            st, ent = all_results[kw]
-            st, ent = regex_correct(kw, st, ent, args.topic)
+            if entity_only:
+                ent = all_results[kw]
+                _, ent = regex_correct(kw, "", ent, args.topic)
+            else:
+                st, ent = all_results[kw]
+                st, ent = regex_correct(kw, st, ent, args.topic)
         else:
-            st = fallback_st
-            ent = fallback_ent
+            if entity_only:
+                ent = fallback_ent
+            else:
+                st = fallback_st
+                ent = fallback_ent
             unmatched.append(kw)
-        subtopic_col.append([st])
+
         entity_col.append([ent])
-        st_counter[st] += 1
         ent_counter[ent] += 1
 
-    print(f"\n  Subtopic distribution:")
-    for k, v in st_counter.most_common():
+        if not entity_only:
+            subtopic_col.append([st])
+            st_counter[st] += 1
+
+    print(f"\n  Entity distribution:")
+    for k, v in ent_counter.most_common(20):
         pct = v / N * 100
         print(f"    {v:5d} ({pct:5.1f}%)  {k}")
 
-    print(f"\n  Entity top 15:")
-    for k, v in ent_counter.most_common(15):
-        pct = v / N * 100
-        print(f"    {v:5d} ({pct:5.1f}%)  {k}")
+    if not entity_only:
+        print(f"\n  Subtopic distribution:")
+        for k, v in st_counter.most_common():
+            pct = v / N * 100
+            print(f"    {v:5d} ({pct:5.1f}%)  {k}")
 
     if unmatched:
         print(f"\n  Unmatched keywords: {len(unmatched)}")
@@ -412,8 +620,9 @@ def main():
     WRITE_BATCH = 500
     for start in range(0, N, WRITE_BATCH):
         end = min(start + WRITE_BATCH, N)
-        sheets_write(sheet_name, f"D{start+2}:D{end+1}", subtopic_col[start:end])
         sheets_write(sheet_name, f"C{start+2}:C{end+1}", entity_col[start:end])
+        if not entity_only:
+            sheets_write(sheet_name, f"D{start+2}:D{end+1}", subtopic_col[start:end])
         print(f"  Written rows {start+2}-{end+1}")
 
     print("\n=== DONE ===")
