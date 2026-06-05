@@ -735,6 +735,215 @@ def _spirituality_role(keyword, subtopic):
     return "Topic Keyword"
 
 
+# ---------------------------------------------------------------------------
+# Dreams
+# ---------------------------------------------------------------------------
+
+
+def _dreams_entity(keyword):
+    text = keyword.lower()
+    rules = [
+        (r"teeth|tooth", "Teeth Dreams"),
+        (r"\bfly|flying|float|floating", "Flying Dreams"),
+        (r"fall|falling|dropping", "Falling Dreams"),
+        (r"snake|serpent", "Snake Dreams"),
+        (r"water|ocean|sea|swim|swimming|drown|flooding|flood", "Water Dreams"),
+        (r"chase|chasing|running|fleeing|escap", "Chase Dreams"),
+        (r"death|die|dying|dead|funeral|coffin", "Death Dreams"),
+        (r"baby|pregnant|pregnancy|birth|child", "Baby / Pregnancy Dreams"),
+        (r"house|home|mansion|room|basement|attic|building", "House Dreams"),
+        (r"\bcar|driving|vehicle|truck|bus", "Car / Vehicle Dreams"),
+        (r"\bex\b|ex.?boyfriend|ex.?girlfriend|ex.?husband|ex.?wife|ex.?lover", "Ex Dreams"),
+        (r"marry|marriage|wedding", "Marriage Dreams"),
+        (r"cheat|cheating|affair|infidelity|adultery", "Cheating Dreams"),
+        (r"fire|burn|burning|flame", "Fire Dreams"),
+        (r"blood|bleed|bleeding", "Blood Dreams"),
+        (r"lost|losing|can'?t find", "Lost Dreams"),
+        (r"naked|nude|undress|clothes|clothing", "Naked Dreams"),
+        (r"tornado|hurricane|storm|cyclone", "Storm Dreams"),
+        (r"\bcat\b|cats|kitten", "Cat Dreams"),
+        (r"\bdog\b|dogs|puppy", "Dog Dreams"),
+        (r"\bspider\b|spiders|web", "Spider Dreams"),
+        (r"\bbird\b|birds|eagle|hawk|owl", "Bird Dreams"),
+        (r"\bbee\b|bees|wasp|insect", "Insect Dreams"),
+        (r"alligator|crocodile", "Alligator Dreams"),
+        (r"mirror|mirrors|reflection", "Mirror Dreams"),
+        (r"hair|haircut|shaving|bald", "Hair Dreams"),
+        (r"school|class|exam|test|teacher|college|university", "School Dreams"),
+        (r"zombie|zombies|apocalypse|monster|demon", "Horror Dreams"),
+        (r"kiss|kissing|hug|cuddl|love|romance", "Love / Romance Dreams"),
+        (r"mountain|climb|climbing|hiking", "Mountain Dreams"),
+        (r"ghost|ghosts|spirit|haunt|paranormal", "Ghost Dreams"),
+        (r"earthquake|tsunami|disaster|volcano", "Disaster Dreams"),
+        (r"\bring\b|jewelry|necklace|bracelet|diamond", "Jewelry Dreams"),
+        (r"lucid", "Lucid Dreaming"),
+        (r"nightmare|night.terror|bad dream", "Nightmares"),
+        (r"recurring|repeating|recurrent", "Recurring Dreams"),
+        (r"prophetic|premonition|predictive|vision", "Prophetic Dreams"),
+        (r"dream.?catcher|dreamcatcher", "Dream Catcher"),
+        (r"dream.?dictionary|dream.?encyclopedia", "Dream Dictionary"),
+        (r"dream.?interpret|dream.?meaning|dream.?symbol|dream.?analy", "Dream Interpretation"),
+        (r"sleep\s*paralysis", "Sleep Paralysis"),
+        (r"out.of.body|astral|near death", "Out-of-Body / Astral"),
+    ]
+    for pattern, value in rules:
+        if re.search(pattern, text):
+            return value
+    if re.search(r"dream|nightmare|asleep", text):
+        return "Dreams (General)"
+    return "Dreams (General)"
+
+
+def _dreams_role(keyword, subtopic):
+    text = keyword.lower()
+    if re.search(r"near me|therapist|counselor|clinic|doctor", text):
+        return "Local SEO Candidate"
+    if re.search(r"dream.?catcher|dreamcatcher|buy|shop|store|necklace|bracelet", text):
+        return "Product / Category Page"
+    if re.search(r"dictionary|encyclopedia|a.?to.?z|list of|types of|all dream", text):
+        return "Guide Index / Hub"
+    if re.search(r"dream interpretation|dream meaning|what.*mean|symbol", text):
+        return "Guide Index / Hub"
+    if re.search(r"lucid|how to.*lucid|control.*dream|induce|technique", text):
+        return "Main Article / Guide Section"
+    if re.search(r"how to|guide|learn|technique|method|practice|step", text):
+        return "Main Article"
+    if re.search(r"quiz|test|calculator|find out", text):
+        return "Tool / Quiz Candidate"
+    if re.search(r"bible|biblical|christian|spiritual meaning", text):
+        return "Separate Article Candidate"
+    return "Topic Keyword"
+
+
+# ---------------------------------------------------------------------------
+# Enneagram
+# ---------------------------------------------------------------------------
+
+
+def _enneagram_entity(keyword):
+    text = keyword.lower()
+    type_names = {
+        "1": "Enneagram Type 1 (Reformer)",
+        "2": "Enneagram Type 2 (Helper)",
+        "3": "Enneagram Type 3 (Achiever)",
+        "4": "Enneagram Type 4 (Individualist)",
+        "5": "Enneagram Type 5 (Investigator)",
+        "6": "Enneagram Type 6 (Loyalist)",
+        "7": "Enneagram Type 7 (Enthusiast)",
+        "8": "Enneagram Type 8 (Challenger)",
+        "9": "Enneagram Type 9 (Peacemaker)",
+    }
+    for num, name in type_names.items():
+        if re.search(rf"type\s*{num}\b|{num}\s*w\s*\d|{num}w", text):
+            return name
+    if re.search(r"wing|w\d", text):
+        return "Enneagram Wings"
+    if re.search(r"self.preservation|sexual|social|instinct|sp/sx|sx/sp|so/sp", text):
+        return "Enneagram Instinctual Variants"
+    if re.search(r"subtype|sub.type", text):
+        return "Enneagram Subtypes"
+    if re.search(r"tritype|tri.type", text):
+        return "Enneagram Tritype"
+    if re.search(r"compatib|match|relationship|love|pair", text):
+        return "Enneagram Compatibility"
+    if re.search(r"enneagram", text):
+        return "Enneagram (General)"
+    return "Enneagram (General)"
+
+
+def _enneagram_role(keyword, subtopic):
+    text = keyword.lower()
+    if re.search(r"test|quiz|free.*test|online.*test|assessment|accurate", text):
+        return "Tool / Quiz Candidate"
+    if re.search(r"compatib|match|relationship|love|pair", text):
+        return "Separate Article Candidate"
+    if text.strip() in {"enneagram", "what is enneagram", "enneagram guide"}:
+        return "Guide Index / Hub"
+    if re.search(r"type\s*\d|meaning|what.*type|overview|description|personality", text):
+        return "Main Article / Guide Section"
+    if re.search(r"how to|guide|learn|understand|use|growth", text):
+        return "Main Article"
+    return "Topic Keyword"
+
+
+# ---------------------------------------------------------------------------
+# Animal Symbolism
+# ---------------------------------------------------------------------------
+
+
+def _animal_symbolism_entity(keyword):
+    text = keyword.lower()
+    rules = [
+        (r"butterfly|butterflies", "Butterfly"),
+        (r"hummingbird", "Hummingbird"),
+        (r"\braven\b|ravens", "Raven"),
+        (r"\bcrow\b|crows", "Crow"),
+        (r"\bwolf\b|wolves", "Wolf"),
+        (r"\bdragon\b|dragons", "Dragon"),
+        (r"\bsnake\b|serpent", "Snake"),
+        (r"\bspider\b|spiders", "Spider"),
+        (r"\bowl\b|owls", "Owl"),
+        (r"\bdeer\b", "Deer"),
+        (r"\bfox\b", "Fox"),
+        (r"\bbear\b|bears", "Bear"),
+        (r"\bhawk\b", "Hawk"),
+        (r"\beagle\b", "Eagle"),
+        (r"\bdolphin\b|dolphins", "Dolphin"),
+        (r"\bmoth\b", "Moth"),
+        (r"ladybug|lady bird|ladybug", "Ladybug"),
+        (r"\bhorse\b", "Horse"),
+        (r"\bcat\b|cats|kitten|kitty|feline", "Cat"),
+        (r"\bdog\b|dogs|puppy|canine", "Dog"),
+        (r"turtle|tortoise", "Turtle"),
+        (r"rabbit|bunny|hare", "Rabbit"),
+        (r"\bfrog\b|toad", "Frog"),
+        (r"\bbee\b|bees", "Bee"),
+        (r"\blion\b", "Lion"),
+        (r"\btiger\b", "Tiger"),
+        (r"\belephant\b", "Elephant"),
+        (r"\bphoenix\b", "Phoenix"),
+        (r"\bunicorn\b", "Unicorn"),
+        (r"\bpeacock\b", "Peacock"),
+        (r"\bflamingo\b", "Flamingo"),
+        (r"dragonfly", "Dragonfly"),
+        (r"firefly|lightning bug", "Firefly"),
+        (r"\bsparrow\b", "Sparrow"),
+        (r"\brobin\b", "Robin"),
+        (r"\bcrane\b", "Crane"),
+        (r"\bheron\b", "Heron"),
+        (r"\bswan\b", "Swan"),
+        (r"\bdove\b", "Dove"),
+        (r"\bcardinal\b", "Cardinal"),
+        (r"bluebird|blue bird", "Bluebird"),
+        (r"woodpecker", "Woodpecker"),
+        (r"mythical|mythological|myth|legend|creature|creatures", "Mythical Creatures"),
+        (r"totem|power animal|spirit animal|animal spirit|spirit guide", "Totem / Spirit Animal"),
+    ]
+    for pattern, value in rules:
+        if re.search(pattern, text):
+            return value
+    return "Animal Symbolism (General)"
+
+
+def _animal_symbolism_role(keyword, subtopic):
+    text = keyword.lower()
+    if re.search(r"near me|sanctuary|zoo|rescue|shelter|vet|veterinar", text):
+        return "Local SEO Candidate"
+    if re.search(r"buy|shop|store|price|cost|jewelry|bracelet|necklace|ring|figurine|statue|tattoo|art|poster", text):
+        return "Product / Category Page"
+    if re.search(r"quiz|test|what.*spirit|what.*animal|find.*spirit|calculator", text):
+        return "Tool / Quiz Candidate"
+    if re.search(r"list of|types of|all spirit|all animal|a.?to.?z|guide|index", text):
+        return "Guide Index / Hub"
+    if re.search(r"meaning|symbol|spiritual|sign|significance|what.*mean|represent", text):
+        return "Main Article / Guide Section"
+    if re.search(r"myth|legend|lore|folklore|story|stories|tale", text):
+        return "Separate Article Candidate"
+    if re.search(r"dream|dreaming|asleep|nightmare", text):
+        return "Separate Article Candidate"
+    return "Topic Keyword"
+
+
 TOPICS = {
     "chakra": {
         "sheet_name": "Seed-Chakra",
@@ -801,6 +1010,24 @@ TOPICS = {
         "sheet_id": 2074692649,
         "entity_fn": _spirituality_entity,
         "role_fn": _spirituality_role,
+    },
+    "dreams": {
+        "sheet_name": "Seed-Dreams",
+        "sheet_id": 1128217808,
+        "entity_fn": _dreams_entity,
+        "role_fn": _dreams_role,
+    },
+    "enneagram": {
+        "sheet_name": "Seed-Enneagram",
+        "sheet_id": 465605182,
+        "entity_fn": _enneagram_entity,
+        "role_fn": _enneagram_role,
+    },
+    "animal-symbolism": {
+        "sheet_name": "Seed-Animal-Symbolism",
+        "sheet_id": 1353828896,
+        "entity_fn": _animal_symbolism_entity,
+        "role_fn": _animal_symbolism_role,
     },
 }
 
@@ -924,8 +1151,11 @@ def update_topic(token, topic_key):
             output.append([entity_fn(keyword), role_fn(keyword, subtopic)])
 
     if output:
-        update_values(token, sheet_name, f"C2:C{len(output) + 1}", [[r[0]] for r in output])
-        update_values(token, sheet_name, f"E2:E{len(output) + 1}", [[r[1]] for r in output])
+        # Use dynamic column positions from header
+        entity_col = chr(65 + indexes["Entity"])  # e.g. D
+        role_col = chr(65 + indexes["Content Role"])  # e.g. F
+        update_values(token, sheet_name, f"{entity_col}2:{entity_col}{len(output) + 1}", [[r[0]] for r in output])
+        update_values(token, sheet_name, f"{role_col}2:{role_col}{len(output) + 1}", [[r[1]] for r in output])
     print(f"Updated {sheet_name}: {len(output)} rows")
 
 

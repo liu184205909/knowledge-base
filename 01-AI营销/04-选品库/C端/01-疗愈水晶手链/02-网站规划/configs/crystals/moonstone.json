@@ -1,0 +1,135 @@
+{
+  "crystal": "Moonstone",
+  "slug": "moonstone",
+  "url": "/crystal-guide/moonstone-meaning",
+  "subtitle": "A luminous whisper of lunar magic, new beginnings, and inner knowing",
+  "heroDesc": "Moonstone glows with an otherworldly adularescence, a soft blue-white light that drifts across its surface like moonlight on still water. Revered since antiquity as a stone of divine femininity and new beginnings, it has been worn by Roman royalty, Art Nouveau jewelers, and modern seekers alike. Whether you are navigating a life transition or simply yearning for deeper emotional honesty, Moonstone opens the heart to the quiet wisdom of cycles, tides, and intuition.",
+  "perspectives": {
+    "scientific": "Moonstone is a variety of orthoclase feldspar with the chemical formula KAlSi₃O₈. Its signature adularescence, a glowing billowy light that moves across the surface, is caused by light scattering between microscopic layers of albite and orthoclase intergrowths formed during cooling. It rates 6 to 6.5 on the Mohs hardness scale, making it suitable for protective-set jewelry but less ideal for rough daily wear. Premium deposits are found in Sri Lanka, India, Madagascar, and Myanmar, with rainbow moonstone (actually labradorite) offering a multi-color flash variety.",
+    "spiritual": "Moonstone is intimately connected to both the crown chakra and the sacral chakra, bridging divine inspiration with creative, emotional expression. Associated with the zodiac signs of Cancer, Libra, and Scorpio, it carries the nurturing, reflective energy of the moon itself. In Vedic astrology, Moonstone has been prescribed for centuries to strengthen a weak Moon in the birth chart, promoting emotional stability and intuitive clarity. Ancient Romans believed it was formed from solidified moonbeams.",
+    "psychological": "The soft, iridescent glow of Moonstone activates associations with calm, mystery, and emotional receptivity in color psychology. Mindfulness practitioners often use Moonstone as a focus object for emotional processing exercises, as its shifting light mirrors the fluid nature of feelings themselves. Therapists working with life transitions recommend Moonstone to help clients embrace change with grace rather than resistance, fostering self-acceptance during uncertain periods."
+  },
+  "attributes": {
+    "origin": "Sri Lanka, India, Madagascar, Myanmar",
+    "hardness": "6-6.5 (Mohs scale)",
+    "formula": "KAlSi₃O₈ (Potassium Aluminum Silicate)",
+    "chakra": "Crown, Sacral",
+    "zodiac": "Cancer, Libra, Scorpio",
+    "element": "Water",
+    "number": "2",
+    "bestPairing": "Rose Quartz, Amethyst, Labradorite"
+  },
+  "benefits": [
+    {
+      "title": "Supports New Beginnings",
+      "desc": "Moonstone is renowned as the stone of new beginnings, helping you release what no longer serves you and step forward into fresh chapters with grace and optimism."
+    },
+    {
+      "title": "Enhances Intuition and Insight",
+      "desc": "By activating the crown and third eye, Moonstone heightens your intuitive senses and helps you trust the subtle inner voice that guides you toward the right path."
+    },
+    {
+      "title": "Balances Emotional Cycles",
+      "desc": "Just as the moon governs the tides, Moonstone helps stabilize emotional highs and lows, promoting inner harmony during hormonal shifts or stressful transitions."
+    },
+    {
+      "title": "Nurtures Divine Feminine Energy",
+      "desc": "Moonstone channels gentle, receptive feminine energy that encourages compassion, patience, and self-nurturing regardless of gender identity."
+    },
+    {
+      "title": "Promotes Restful Sleep and Vivid Dreams",
+      "desc": "Placing Moonstone under your pillow is believed to invite peaceful sleep and more lucid, meaningful dreams that carry messages from your subconscious."
+    },
+    {
+      "title": "Fosters Love and Emotional Openness",
+      "desc": "Moonstone softens defensive walls around the heart, encouraging vulnerability and authentic emotional connection in romantic and platonic relationships."
+    },
+    {
+      "title": "Aids in Fertility and Hormonal Balance",
+      "desc": "Traditionally linked to the female reproductive system, Moonstone has been carried for centuries as a fertility charm and is used by women seeking hormonal equilibrium."
+    }
+  ],
+  "usageScenes": [
+    {
+      "title": "Wear It Daily",
+      "desc": "Wear a Moonstone bracelet on your left wrist to absorb its nurturing energy throughout the day. It pairs beautifully with Rose Quartz for a soothing heart-centered vibration.",
+      "icon": "💎"
+    },
+    {
+      "title": "Meditation Companion",
+      "desc": "Hold Moonstone at your crown or sacral center during meditation. Visualize its moonlit glow washing through your body, dissolving tension and illuminating hidden truths.",
+      "icon": "🧘"
+    },
+    {
+      "title": "Home Sanctuary",
+      "desc": "Place Moonstone on your nightstand or bedroom altar to create a serene, dream-friendly atmosphere. Its calming presence helps transform any sleeping space into a restorative retreat.",
+      "icon": "🏠"
+    },
+    {
+      "title": "Ritual & Ceremony",
+      "desc": "Charge Moonstone under the full moon overnight and use it in intention-setting rituals for new cycles, new jobs, or new relationships. Its energy peaks during the waning and new moon phases.",
+      "icon": "🌙"
+    }
+  ],
+  "pairings": [
+    {
+      "name": "Rose Quartz",
+      "why": "Rose Quartz and Moonstone create a gentle, heart-opening synergy that nurtures self-love and emotional healing while softening the edges of grief or heartbreak.",
+      "slug": "rose-quartz"
+    },
+    {
+      "name": "Amethyst",
+      "why": "Amethyst deepens Moonstone's intuitive properties with its own crown chakra activation, creating a powerful duo for dream work, meditation, and spiritual insight.",
+      "slug": "amethyst"
+    },
+    {
+      "name": "Lapis Lazuli",
+      "why": "Lapis Lazuli adds articulate self-expression to Moonstone's emotional depth, helping you translate the feelings and intuitions Moonstone stirs into clear, honest communication.",
+      "slug": "lapis-lazuli"
+    }
+  ],
+  "relatedCrystals": [
+    {
+      "name": "Rose Quartz",
+      "slug": "rose-quartz",
+      "benefit": "Deepens unconditional love and emotional healing with gentle heart energy"
+    },
+    {
+      "name": "Amethyst",
+      "slug": "amethyst",
+      "benefit": "Amplifies spiritual awareness and calming intuition alongside Moonstone's lunar magic"
+    },
+    {
+      "name": "Selenite",
+      "slug": "selenite",
+      "benefit": "Purifies and charges Moonstone while enhancing its crown chakra connection"
+    },
+    {
+      "name": "Lapis Lazuli",
+      "slug": "lapis-lazuli",
+      "benefit": "Strengthens third eye communication and supports authentic self-expression"
+    }
+  ],
+  "faqs": [
+    {
+      "title": "How do I cleanse Moonstone?",
+      "content": "The gentlest way to cleanse Moonstone is to place it under moonlight overnight, especially during the full moon. You can also smudge it with sage or rest it on a Selenite charging plate. Avoid harsh chemicals, ultrasonic cleaners, and prolonged sun exposure, which can fade its adularescent glow."
+    },
+    {
+      "title": "Can Moonstone get wet?",
+      "content": "Brief contact with water is safe, but Moonstone should not be soaked or submerged for long periods due to its relatively modest hardness of 6 to 6.5. Remove your Moonstone bracelet before swimming, bathing, or washing dishes to preserve its polish and structural integrity."
+    },
+    {
+      "title": "What chakra is Moonstone associated with?",
+      "content": "Moonstone resonates primarily with the crown chakra and the sacral chakra. The crown connection supports spiritual insight and higher consciousness, while the sacral alignment nurtures creativity, emotional flow, and feminine energy."
+    },
+    {
+      "title": "Is rainbow Moonstone the same as regular Moonstone?",
+      "content": "Rainbow Moonstone is technically a variety of labradorite feldspar that displays multi-color flashes, whereas true Moonstone is orthoclase feldspar with a blue-white adularescence. Both carry similar lunar energy, but rainbow Moonstone tends to exhibit a broader spectrum of color play."
+    },
+    {
+      "title": "When is the best time to charge Moonstone?",
+      "content": "Moonstone charges most effectively under natural moonlight, particularly during the full moon. Place it on a windowsill or outdoors where it can absorb the lunar rays overnight. New moon charging is also potent if your intention is focused on new beginnings and fresh starts."
+    }
+  ]
+}

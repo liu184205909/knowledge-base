@@ -91,6 +91,20 @@ PAGE_TYPES = [
     # 手相
     'Palmistry Guide Page',          # 手相指南
 
+    # 解梦
+    'Dream Interpretation Page',     # 解梦综合页 (dream meaning, dream dictionary)
+    'Dream Subject Page',            # 梦境主题页 (dreams about snakes, teeth, flying)
+    'Lucid Dream Guide Page',        # 清明梦指南
+    'Nightmare Guide Page',          # 噩梦指南
+
+    # 九型人格
+    'Enneagram Type Page',           # 九型人格类型页 (type 1-9, wings)
+    'Enneagram Guide Page',          # 九型人格指南页
+
+    # 动物象征
+    'Spirit Animal Page',            # 灵兽/图腾页 (spirit animal, power animal, totem)
+    'Animal Symbolism Page',         # 动物象征页 (butterfly meaning, wolf symbolism)
+
     # 交互工具
     'Tool / Quiz Page',              # 工具/测验页 (crystal quiz, chakra test, etc.)
     'Calculator Page',               # 计算器页 (numerology calculator, etc.)
@@ -393,6 +407,85 @@ def classify_page_type(keyword, topic, entity, subtopic, content_role, intent, c
             return 'Palmistry Guide Page'
         if 'mount' in kw or 'finger' in kw or 'thumb' in kw:
             return 'Palmistry Guide Page'
+        return 'Blog Article'
+
+    # DREAMS topic
+    if tp == 'Dreams':
+        if 'lucid dream' in kw or 'lucid dreaming' in kw:
+            return 'Lucid Dream Guide Page'
+        if 'nightmare' in kw:
+            return 'Nightmare Guide Page'
+        if 'dream catcher' in kw or 'dreamcatcher' in kw:
+            return 'Blog Article'
+        if 'dream interpretation' in kw or 'dream dictionary' in kw or 'dream symbol' in kw:
+            return 'Dream Interpretation Page'
+        if 'dream meaning' in kw or 'dreams meaning' in kw:
+            return 'Dream Interpretation Page'
+        if 'biblical dream' in kw or 'biblical meaning' in kw:
+            return 'Dream Interpretation Page'
+        if 'prophetic dream' in kw or 'recurring dream' in kw or 'false awakening' in kw:
+            return 'Dream Interpretation Page'
+        if 'dream about' in kw or 'dreams about' in kw or 'dreaming of' in kw or 'dream of' in kw:
+            return 'Dream Subject Page'
+        if 'teeth' in kw and ('dream' in kw or 'falling' in kw):
+            return 'Dream Subject Page'
+        if 'flying dream' in kw or 'falling dream' in kw or 'chased' in kw or 'drowning' in kw:
+            return 'Dream Subject Page'
+        if 'snake' in kw and 'dream' in kw:
+            return 'Dream Subject Page'
+        if 'water' in kw and 'dream' in kw:
+            return 'Dream Subject Page'
+        if 'death' in kw and 'dream' in kw:
+            return 'Dream Subject Page'
+        if 'pregnancy' in kw and 'dream' in kw:
+            return 'Dream Subject Page'
+        if 'test' in kw or 'quiz' in kw or 'journal' in kw:
+            return 'Tool / Quiz Page'
+        if 'guide' in kw or 'how to' in kw or 'tips' in kw or 'beginner' in kw:
+            return 'Blog Article'
+        return 'Dream Interpretation Page'
+
+    # ENNEAGRAM topic
+    if tp == 'Enneagram':
+        if 'test' in kw or 'quiz' in kw or 'free' in kw:
+            return 'Tool / Quiz Page'
+        if 'type 1' in kw or 'type 2' in kw or 'type 3' in kw or 'type 4' in kw or \
+           'type 5' in kw or 'type 6' in kw or 'type 7' in kw or 'type 8' in kw or 'type 9' in kw:
+            return 'Enneagram Type Page'
+        if re.search(r'\b(1w2|2w1|2w3|3w2|3w4|4w3|4w5|5w4|5w6|6w5|6w7|7w6|7w8|8w7|8w9|9w8|9w1)\b', kw):
+            return 'Enneagram Type Page'
+        if 'one ' in kw or 'two ' in kw or 'three' in kw or 'four ' in kw or \
+           'five ' in kw or 'six ' in kw or 'seven' in kw or 'eight' in kw or 'nine' in kw:
+            if 'enneagram' in kw or 'personality' in kw:
+                return 'Enneagram Type Page'
+        if 'wings' in kw or 'wing' in kw or 'tritype' in kw or 'instinct' in kw or 'variant' in kw:
+            return 'Enneagram Type Page'
+        if 'compatibility' in kw or 'relationship' in kw:
+            return 'Enneagram Guide Page'
+        if 'meaning' in kw or 'overview' in kw or 'what is' in kw or 'chart' in kw:
+            return 'Enneagram Guide Page'
+        return 'Enneagram Guide Page'
+
+    # ANIMAL SYMBOLISM topic
+    if tp == 'Animal Symbolism':
+        if 'spirit animal' in kw or 'power animal' in kw or 'animal totem' in kw or \
+           'totem animal' in kw or 'animal spirit guide' in kw:
+            return 'Spirit Animal Page'
+        if 'quiz' in kw or 'test' in kw or 'what is my' in kw or 'find your' in kw:
+            return 'Tool / Quiz Page'
+        # Specific animals -> Animal Symbolism Page
+        animal_words = ['butterfly', 'wolf', 'dragon', 'snake', 'spider', 'owl', 'deer',
+                        'fox', 'bear', 'hawk', 'eagle', 'dolphin', 'moth', 'ladybug', 'horse',
+                        'crow', 'raven', 'hummingbird', 'cardinal', 'heron', 'loon', 'turtle',
+                        'frog', 'bee', 'ant', 'scorpion', 'lion', 'tiger', 'panther', 'jaguar',
+                        'peacock', 'swan', 'crane', 'phoenix', 'unicorn', 'griffin']
+        if any(a in kw for a in animal_words):
+            if 'meaning' in kw or 'symbolism' in kw or 'spiritual' in kw or 'symbol' in kw or \
+               'totem' in kw or 'represents' in kw or 'sign' in kw or 'omen' in kw:
+                return 'Animal Symbolism Page'
+            return 'Animal Symbolism Page'
+        if 'mythical' in kw or 'mythological' in kw or 'creature' in kw or 'supernatural' in kw:
+            return 'Animal Symbolism Page'
         return 'Blog Article'
 
     # --- Rule 3: Intent supplement ---

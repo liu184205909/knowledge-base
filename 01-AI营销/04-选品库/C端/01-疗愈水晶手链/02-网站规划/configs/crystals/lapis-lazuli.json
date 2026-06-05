@@ -1,0 +1,135 @@
+{
+  "crystal": "Lapis Lazuli",
+  "slug": "lapis-lazuli",
+  "url": "/crystal-guide/lapis-lazuli-meaning",
+  "subtitle": "A celestial tapestry of truth, wisdom, and the infinite night sky",
+  "heroDesc": "Lapis Lazuli is not merely a gemstone but an entire cosmos captured in rock, its deep celestial blue flecked with veins of glittering pyrite that shimmer like distant stars. Treasured for over 6,000 years from the temples of Mesopotamia to the tombs of Egyptian pharaohs, it has always been a stone of royalty, truth-seekers, and visionaries. When you hold Lapis Lazuli, you hold a piece of the oldest known gem trade, a fragment of ancient wisdom that still speaks to those who dare to listen.",
+  "perspectives": {
+    "scientific": "Lapis Lazuli is technically a metamorphic rock rather than a single mineral, composed primarily of lazurite (Na₃CaSi₃Al₃O₁₂S) along with pyrite inclusions, calcite veining, and occasional diopside or mica. It rates 5 to 5.5 on the Mohs hardness scale, requiring protective settings for daily jewelry use. The finest material has been mined in the Sar-e-Sang deposits of Badakhshan, Afghanistan, for over six millennia, with additional sources in Chile, Russia, and Myanmar. Its iconic ultramarine pigment was historically more expensive than gold during the Renaissance.",
+    "spiritual": "Lapis Lazuli resonates with both the throat chakra and the third eye chakra, making it one of the most powerful stones for authentic communication and expanded awareness. Associated with the zodiac sign of Sagittarius, it encourages honest self-expression and philosophical exploration. In ancient Egypt, Lapis Lazuli was carved into scarabs and amulets placed on the dead to guide the soul through the afterlife, while Buddhist traditions have long valued it as a stone of inner peace and freedom from negative thought patterns.",
+    "psychological": "The deep blue of Lapis Lazuli is psychologically linked to trust, depth, and intellectual rigor in color studies. The golden pyrite flecks add a dimension of warmth and optimism that prevents the blue from feeling cold or distant. Therapists recommend Lapis Lazuli for clients working on assertiveness and authentic self-expression, as its energy encourages speaking one's truth without aggression. It is also used as a focus stone during journaling and reflective writing exercises to unlock subconscious insights."
+  },
+  "attributes": {
+    "origin": "Afghanistan (Badakhshan), Chile, Russia, Myanmar",
+    "hardness": "5-5.5 (Mohs scale)",
+    "formula": "Na₃CaSi₃Al₃O₁₂S (Lazurite, with Pyrite and Calcite)",
+    "chakra": "Throat, Third Eye",
+    "zodiac": "Sagittarius",
+    "element": "Water, Air",
+    "number": "3",
+    "bestPairing": "Clear Quartz, Amethyst, Selenite"
+  },
+  "benefits": [
+    {
+      "title": "Encourages Honest Communication",
+      "desc": "Lapis Lazuli activates the throat chakra, empowering you to express your thoughts and feelings with clarity, confidence, and unwavering authenticity."
+    },
+    {
+      "title": "Expands Spiritual Awareness",
+      "desc": "By stimulating the third eye chakra, Lapis Lazuli opens the gateway to higher consciousness, visionary thinking, and deeper understanding of universal truths."
+    },
+    {
+      "title": "Boosts Intellectual Clarity",
+      "desc": "Lapis Lazuli sharpens the mind and enhances analytical thinking, making it an excellent study companion for students and professionals tackling complex problems."
+    },
+    {
+      "title": "Deepens Meditation and Inner Vision",
+      "desc": "Holding Lapis Lazuli during meditation helps quiet external noise and activates inner sight, guiding you toward profound self-discovery and spiritual insight."
+    },
+    {
+      "title": "Promotes Emotional Honesty",
+      "desc": "The truth-telling energy of Lapis Lazuli dissolves self-deception and encourages you to confront and release suppressed emotions with courage and compassion."
+    },
+    {
+      "title": "Supports Leadership and Confidence",
+      "desc": "Historically the stone of kings and queens, Lapis Lazuli instills a quiet authority that helps you lead with wisdom, fairness, and grace under pressure."
+    },
+    {
+      "title": "Fosters Creative Inspiration",
+      "desc": "Artists and writers have turned to Lapis Lazuli for millennia to unlock creative blocks and channel visionary ideas from the deeper layers of the imagination."
+    }
+  ],
+  "usageScenes": [
+    {
+      "title": "Wear It Daily",
+      "desc": "Wear a Lapis Lazuli bracelet on your left wrist to absorb its truth-activating energy, or on your right wrist when you need courage to speak up in meetings or difficult conversations.",
+      "icon": "💎"
+    },
+    {
+      "title": "Meditation Companion",
+      "desc": "Place Lapis Lazuli on your third eye or throat during meditation. Breathe into its deep blue stillness and allow any unspoken truths or creative visions to surface naturally.",
+      "icon": "🧘"
+    },
+    {
+      "title": "Home Sanctuary",
+      "desc": "Display Lapis Lazuli in your workspace or study area to promote intellectual clarity and honest communication. Pair it with a Selenite tower to keep its energy cleansed and vibrant.",
+      "icon": "🏠"
+    },
+    {
+      "title": "Ritual & Ceremony",
+      "desc": "Use Lapis Lazuli in truth and release rituals by writing what you need to express on paper, pressing the stone against your throat, and speaking your truth aloud under the open sky.",
+      "icon": "🌙"
+    }
+  ],
+  "pairings": [
+    {
+      "name": "Clear Quartz",
+      "why": "Clear Quartz amplifies Lapis Lazuli's intellectual and spiritual properties, sharpening its truth-telling energy and extending the reach of your intentions.",
+      "slug": "clear-quartz"
+    },
+    {
+      "name": "Amethyst",
+      "why": "Amethyst complements Lapis Lazuli's third eye activation with its own crown chakra energy, creating a powerful spiritual duo for deep meditation and dream work.",
+      "slug": "amethyst"
+    },
+    {
+      "name": "Selenite",
+      "why": "Selenite keeps Lapis Lazuli cleansed and charged while adding a layer of pure, high-vibrational light that elevates its throat and third eye resonance.",
+      "slug": "selenite"
+    }
+  ],
+  "relatedCrystals": [
+    {
+      "name": "Amethyst",
+      "slug": "amethyst",
+      "benefit": "Deepens spiritual awareness and crown chakra connection for expanded consciousness"
+    },
+    {
+      "name": "Selenite",
+      "slug": "selenite",
+      "benefit": "Cleanses and purifies energy fields while amplifying third eye communication"
+    },
+    {
+      "name": "Tiger Eye",
+      "slug": "tiger-eye",
+      "benefit": "Adds grounded confidence and solar plexus power to complement Lapis Lazuli's wisdom"
+    },
+    {
+      "name": "Moonstone",
+      "slug": "moonstone",
+      "benefit": "Enhances intuition and emotional flow alongside Lapis Lazuli's truth-telling clarity"
+    }
+  ],
+  "faqs": [
+    {
+      "title": "How do I cleanse Lapis Lazuli?",
+      "content": "Lapis Lazuli is a porous rock, so avoid water and salt cleansing methods. Instead, smudge it with sage or palo santo, place it on a Selenite charging plate, or rest it in moonlight overnight. These gentle methods preserve its structure while clearing absorbed energy."
+    },
+    {
+      "title": "Can Lapis Lazuli get wet?",
+      "content": "It is best to keep Lapis Lazuli away from water. Because it is a composite rock containing calcite, prolonged moisture exposure can weaken the stone and affect its polish. Remove your Lapis Lazuli bracelet before washing hands, swimming, or showering."
+    },
+    {
+      "title": "What chakra is Lapis Lazuli associated with?",
+      "content": "Lapis Lazuli resonates primarily with the throat chakra and the third eye chakra. The throat connection supports honest communication and self-expression, while the third eye alignment enhances intuition, inner vision, and spiritual awareness."
+    },
+    {
+      "title": "How can I tell real Lapis Lazuli from dyed stones?",
+      "content": "Genuine Lapis Lazuli contains natural golden pyrite flecks and white calcite veining. If the color is perfectly uniform without any inclusions, it may be dyed howlite or jasper. A loupe inspection should reveal the characteristic pyrite sparkles and slight calcite patches of authentic material."
+    },
+    {
+      "title": "Why is Lapis Lazuli considered a stone of royalty?",
+      "content": "Lapis Lazuli was prized by the pharaohs of Egypt, the kings of Mesopotamia, and Renaissance aristocracy. Its ultramarine pigment was reserved for painting the robes of the Virgin Mary and was literally worth more than gold. This deep historical association with power, wisdom, and divine favor earned it the title of a royal stone."
+    }
+  ]
+}

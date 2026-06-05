@@ -1,0 +1,61 @@
+{
+  "intention": "Anxiety & Stress Relief",
+  "slug": "anxiety-relief",
+  "url": "/collections/anxiety-relief",
+  "heroSubtitle": "Discover hand-selected crystals to support your journey toward calm and balance. Whether you are navigating daily stress or seeking a deeper sense of peace, these stones are here to ground and center you.",
+  "description": "Anxiety and stress are among the most common challenges people face in today's fast-paced world. In the practice of crystal healing, these feelings are often associated with an overactive mind and energy imbalances in the root, sacral, and solar plexus chakras. When these energy centers become blocked or overwhelmed, we may experience restlessness, racing thoughts, and a persistent sense of unease. Working with calming crystals can help restore equilibrium to these chakras, encouraging a natural shift from tension to tranquility.\n\nEach crystal carries its own unique vibrational frequency. Stones like Amethyst are revered for their ability to quiet the mind and soothe emotional turbulence, while Howlite encourages patience and helps dissolve anger. Black Tourmaline acts as a protective shield, absorbing negative energy before it can take root in your aura. Rose Quartz gently opens the heart chakra, replacing fear with self-compassion and emotional warmth. Clear Quartz amplifies the healing properties of any stone it is paired with, making it an excellent companion in any anti-anxiety crystal practice. Selenite, with its luminous high-vibration energy, cleanses the surrounding environment and promotes a meditative state.\n\nChoosing the right crystal for anxiety relief is a deeply personal process. Start by holding a few different stones and noticing which one resonates with you most strongly. You might feel a subtle warmth, a tingling sensation, or simply a sense of calm. Trust your intuition — there is no single correct choice. Many people find it helpful to carry their selected crystal in a pocket or wear it as a bracelet, allowing its energy to remain close throughout the day. Placing crystals on your nightstand or under your pillow can also support restful sleep and a quieter mind at night.\n\nIncorporating crystals into a mindfulness routine enhances their effectiveness. Try holding your chosen stone during meditation, setting a clear intention to release stress with each exhale. You can also create a calming crystal grid by arranging several stones in a geometric pattern that amplifies their collective energy. Regularly cleanse your crystals by placing them on a Selenite charging plate or rinsing them under cool running water to keep their vibrations clear and potent.\n\nWhether you are new to crystal healing or a seasoned practitioner, our curated collection of anxiety-relief crystals offers something for everyone. Each piece has been carefully selected for its quality, energetic integrity, and beauty — because feeling calm should also feel special.",
+  "crystals": [
+    {
+      "name": "Amethyst",
+      "subtitle": "The Stone of Tranquility",
+      "benefits": "Calms an overactive mind, dissolves anxiety, promotes peaceful sleep and spiritual awareness.",
+      "image": "",
+      "link": "/crystal-guide/amethyst-meaning"
+    },
+    {
+      "name": "Howlite",
+      "subtitle": "The Stone of Patience",
+      "benefits": "Absorbs anger and tension, quiets racing thoughts, encourages emotional expression and patience.",
+      "image": "",
+      "link": "/crystal-guide/howlite-meaning"
+    },
+    {
+      "name": "Black Tourmaline",
+      "subtitle": "The Ultimate Protector",
+      "benefits": "Shields against negative energy, grounds anxious thoughts, creates a sense of safety and stability.",
+      "image": "",
+      "link": "/crystal-guide/black-tourmaline-meaning"
+    },
+    {
+      "name": "Rose Quartz",
+      "subtitle": "The Stone of Unconditional Love",
+      "benefits": "Soothes emotional wounds, replaces fear with self-compassion, promotes inner peace and emotional healing.",
+      "image": "",
+      "link": "/crystal-guide/rose-quartz-meaning"
+    },
+    {
+      "name": "Clear Quartz",
+      "subtitle": "The Master Healer",
+      "benefits": "Amplifies the calming energy of other crystals, clears mental fog, brings clarity and focus to an overwhelmed mind.",
+      "image": "",
+      "link": "/crystal-guide/clear-quartz-meaning"
+    },
+    {
+      "name": "Selenite",
+      "subtitle": "The Liquid Light Crystal",
+      "benefits": "Cleanses the aura of stagnant energy, promotes deep peace, supports meditation and spiritual connection.",
+      "image": "",
+      "link": "/crystal-guide/selenite-meaning"
+    }
+  ],
+  "blogPosts": [
+    {"title": "7 Best Crystals for Anxiety Relief That Actually Work", "image": "", "link": "/blog/best-crystals-for-anxiety-relief"},
+    {"title": "How to Use Crystals for Stress Management: A Beginner's Guide", "image": "", "link": "/blog/crystals-for-stress-management-guide"},
+    {"title": "Amethyst vs. Howlite: Which Calming Crystal Is Right for You?", "image": "", "link": "/blog/amethyst-vs-howlite-calming-crystals"}
+  ],
+  "relatedIntentions": [
+    {"name": "Sleep & Calm", "slug": "sleep-calm", "image": ""},
+    {"name": "Protection & Clearing", "slug": "protection-clearing", "image": ""},
+    {"name": "Love & Relationships", "slug": "love-relationships", "image": ""}
+  ]
+}

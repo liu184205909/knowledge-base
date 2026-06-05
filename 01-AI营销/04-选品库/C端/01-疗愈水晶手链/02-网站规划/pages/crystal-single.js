@@ -20,9 +20,9 @@
 const E = require('../templates/elementor-utils');
 const IMAGES = require('../assets/site-images');
 
-// 占位图 URL
-const IMG = IMAGES.products.bracelet.url;
-const IMG_WIDE = IMAGES.shared.wide.url;
+// 默认占位图 URL（当 config 未指定时回退）
+const DEFAULT_PRODUCT_IMG = IMAGES.products.bracelet.url;
+const DEFAULT_WIDE_IMG = IMAGES.shared.wide.url;
 
 /**
  * 生成 Crystal Guide 单品百科页 Elementor 数据
@@ -115,7 +115,7 @@ function generateCrystalSingle(config) {
         fontSize: 16, align: 'center', color: '#555', lineHeight: 28
       }),
       E.spacer('20'),
-      E.imageWidget(IMG_WIDE, { alt: c.crystal, width: 80, radius: 12 })
+      E.imageWidget(c.heroImage || DEFAULT_WIDE_IMG, { alt: c.crystal, width: 80, radius: 12 })
     ]),
 
     // ===================== Section 2: 三视角介绍 =====================
@@ -313,7 +313,7 @@ function generateCrystalSingle(config) {
           border_radius: { unit: 'px', size: 8, sizes: [] },
           flex_align_items: 'center'
         }, E.rWidth('25', '50', '100')), [
-          E.imageWidget(IMG, { alt: p.name, width: 60, radius: 50 }),
+          E.imageWidget(c.productImage || DEFAULT_PRODUCT_IMG, { alt: p.name, width: 60, radius: 50 }),
           E.heading(p.name, { fontSize: 18, align: 'center', fontWeight: '600' }),
           E.textEditor(p.why, { fontSize: 14, align: 'center', color: '#666', lineHeight: 22 }),
           E.buttonWidget('Learn More \u2192', '/crystal-guide/' + p.slug + '-meaning')
@@ -342,7 +342,7 @@ function generateCrystalSingle(config) {
           border_radius: { unit: 'px', size: 8, sizes: [] },
           flex_align_items: 'center'
         }, E.rWidth('25', '50', '100')), [
-          E.imageWidget(IMG, { alt: rc.name, width: 50, radius: 50 }),
+          E.imageWidget(c.productImage || DEFAULT_PRODUCT_IMG, { alt: rc.name, width: 50, radius: 50 }),
           E.heading(rc.name, { fontSize: 18, align: 'center', fontWeight: '600' }),
           E.textEditor(rc.benefit, { fontSize: 14, align: 'center', color: '#888' }),
           E.buttonWidget('Explore \u2192', '/crystal-guide/' + rc.slug + '-meaning')
@@ -466,4 +466,9 @@ async function main() {
   );
 }
 
-main().catch(err => { console.error('Error:', err.message || err); process.exit(1); });
+// 防止被 require 时自动执行
+if (require.main === module) {
+  main().catch(err => { console.error('Error:', err.message || err); process.exit(1); });
+}
+
+module.exports = generateCrystalSingle;

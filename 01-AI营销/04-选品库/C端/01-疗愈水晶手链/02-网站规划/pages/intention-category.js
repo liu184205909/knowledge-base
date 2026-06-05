@@ -220,8 +220,8 @@ function generateIntentionPage(config) {
   const defaultRelated = [
     { name: 'Love & Relationships', slug: 'love-relationships', image: PLACEHOLDER },
     { name: 'Sleep & Calm', slug: 'sleep-calm', image: PLACEHOLDER },
-    { name: 'Protection & Grounding', slug: 'protection-grounding', image: PLACEHOLDER },
-    { name: 'Wealth & Prosperity', slug: 'wealth-prosperity', image: PLACEHOLDER }
+    { name: 'Protection & Clearing', slug: 'protection-clearing', image: PLACEHOLDER },
+    { name: 'Abundance & Success', slug: 'abundance-success', image: PLACEHOLDER }
   ];
   const relatedItems = relatedIntentions.length > 0 ? relatedIntentions : defaultRelated;
 
@@ -302,7 +302,7 @@ async function main() {
     ],
     relatedIntentions: [
       { name: 'Sleep & Calm', slug: 'sleep-calm' },
-      { name: 'Protection & Grounding', slug: 'protection-grounding' },
+      { name: 'Protection & Clearing', slug: 'protection-clearing' },
       { name: 'Focus & Clarity', slug: 'focus-clarity' }
     ]
   };
@@ -316,9 +316,12 @@ async function main() {
   );
 }
 
-main().catch(function (err) {
-  console.error('Error:', err.message || err);
-  process.exit(1);
-});
+// 防止被 require 时自动执行
+if (require.main === module) {
+  main().catch(function (err) {
+    console.error('Error:', err.message || err);
+    process.exit(1);
+  });
+}
 
 module.exports = generateIntentionPage;

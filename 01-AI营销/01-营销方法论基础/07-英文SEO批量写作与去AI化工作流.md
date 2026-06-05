@@ -8,7 +8,7 @@
 
 ## 与 RLM 流程的关系
 
-本文件是 `00-RLM营销方法论-执行版.md` 中**步骤3：内容策略 → 开始创作**的专项展开，同时对接 `02-SEO全链路工作流.md` 的 Content Generation、Quality Check、Monitoring 环节。
+本文件是 `00-RLM营销方法论-执行版.md` 中**步骤3：内容策略与内容营销总控**的执行层展开，同时对接 `02-SEO全链路工作流.md` 的 Content Generation、Quality Check、Monitoring 环节。
 
 **输入/输出关系**：
 - 输入：`Seed-Master` 关键词主表、`Topic-Discovery`、`Keyword-Page-Proof`、1F 内容策略分析、1H 策略清单、页面承接关系、`05-内容Brief模板.md`

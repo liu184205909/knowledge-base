@@ -100,7 +100,7 @@ def main():
         if v > 0:
             topic_data[t]['vol_sum'] += v
             topic_data[t]['vol_valid'] += 1
-        if col(r, 11):
+        if col(r, 11) == 'Yes':
             topic_data[t]['matched'] += 1
 
     for t in sorted(topic_data.keys(), key=lambda x: -topic_data[x]['count']):
@@ -162,7 +162,7 @@ def main():
                 'vol': v,
                 'kd': safe_int(col(r, 7)),
                 'intent': col(r, 10),
-                'matched': bool(col(r, 11)),
+                'matched': col(r, 11) == 'Yes',
             })
 
     high_vol.sort(key=lambda x: -x['vol'])
@@ -203,7 +203,7 @@ def main():
 
     for t in sorted(topic_data.keys(), key=lambda x: -topic_data[x]['matched']):
         d = topic_data[t]
-        matched_rows = [r for r in all_rows if col(r, 2) == t and col(r, 11)]
+        matched_rows = [r for r in all_rows if col(r, 2) == t and col(r, 11) == 'Yes']
         avg_vol = sum(safe_int(col(r, 6)) for r in matched_rows) // len(matched_rows) if matched_rows else 0
         print(f'| {t} | {d["count"]:,} | {d["matched"]:,} | {d["matched"]/d["count"]*100:.1f}% | {avg_vol:,} |')
 
@@ -218,7 +218,7 @@ def main():
 
     gaps = []
     for r in all_rows:
-        if not col(r, 11):  # No competitor match
+        if col(r, 11) != 'Yes':  # No competitor match
             v = safe_int(col(r, 6))
             if v >= 500:  # Decent volume
                 gaps.append({
@@ -250,7 +250,7 @@ def main():
         entity = col(r, 3)
         if entity:
             pt_plan[pt]['entities'].add(entity)
-        if col(r, 11):
+        if col(r, 11) == 'Yes':
             pt_plan[pt]['matched'] += 1
 
     print('| Page Type | Keywords | Unique Entities | Total Volume | Has Evidence | Content Priority |')

@@ -1,0 +1,135 @@
+{
+  "crystal": "Obsidian",
+  "slug": "obsidian",
+  "url": "/crystal-guide/obsidian-meaning",
+  "subtitle": "A mirror of absolute truth forged in the fire of transformation",
+  "heroDesc": "Born from the molten heart of volcanoes, Obsidian is nature's own black mirror, a volcanic glass so sharp that ancient surgeons carved scalpels from it and so dark that Mesoamerican priests used it to peer into other worlds. Its glossy, light-absorbing surface holds no illusions and makes no apologies. When you are ready to face your shadow self, cut away what no longer serves you, and build an impenetrable fortress of energetic protection, Obsidian is the ally that stands beside you.",
+  "perspectives": {
+    "scientific": "Obsidian is an extrusive igneous rock formed when silica-rich lava cools so rapidly that mineral crystals cannot form, resulting in an amorphous volcanic glass composed primarily of SiO₂ with various impurities. It rates 5 to 5.5 on the Mohs hardness scale but exhibits conchoidal fracture, meaning it breaks with extremely sharp, curved edges that can rival surgical steel in thinness. Major deposits are found in Mexico, the United States, Iceland, Japan, and Italy, with color variations including black, rainbow, snowflake, and mahogany depending on trace mineral inclusions and crystallization patterns.",
+    "spiritual": "Obsidian resonates deeply with the root chakra, anchoring the spirit to the physical body and the earth itself. Associated with the zodiac signs of Scorpio and Sagittarius, it carries the transformative fire of its volcanic origins into the realm of shadow work and energetic cleansing. Pre-Columbian Mesoamerican cultures used Obsidian mirrors for divination and considered it a portal to the spirit world, while Tibetan Buddhist traditions incorporate Obsidian into protective rituals that ward off negative entities and psychic attack.",
+    "psychological": "The absolute black of Obsidian represents the psychological void, the container that holds everything while reflecting nothing back but truth. Therapists who work with shadow integration often recommend Obsidian as a grounding touchstone during sessions that explore repressed trauma or difficult truths. Its weight and darkness provide a sense of psychological containment and safety, helping clients feel held and protected while they examine the darker corners of their inner landscape."
+  },
+  "attributes": {
+    "origin": "Mexico, United States, Iceland, Japan, Italy",
+    "hardness": "5-5.5 (Mohs scale)",
+    "formula": "Amorphous SiO₂ (Volcanic Glass, ~70-75% Silica)",
+    "chakra": "Root",
+    "zodiac": "Scorpio, Sagittarius",
+    "element": "Earth, Fire",
+    "number": "1",
+    "bestPairing": "Clear Quartz, Rose Quartz, Selenite"
+  },
+  "benefits": [
+    {
+      "title": "Provides Powerful Energetic Protection",
+      "desc": "Obsidian forms an impenetrable energetic shield around the aura, absorbing and dissolving negativity, psychic attacks, and environmental stress before they can reach you."
+    },
+    {
+      "title": "Facilitates Shadow Work and Self-Discovery",
+      "desc": "By reflecting your inner truth without distortion, Obsidian forces you to confront hidden fears, suppressed emotions, and self-sabotaging patterns with unflinching honesty."
+    },
+    {
+      "title": "Grounds and Stabilizes Energy",
+      "desc": "Obsidian's deep root chakra connection anchors scattered energy into the earth, helping you feel present, stable, and firmly rooted in the here and now."
+    },
+    {
+      "title": "Cuts Energetic Cords and Ties",
+      "desc": "Just as Obsidian can be sharpened to a molecular edge, it severs unhealthy energetic attachments to people, places, and past experiences that drain your vitality."
+    },
+    {
+      "title": "Releases Emotional Blockages",
+      "desc": "Obsidian draws deeply buried emotional pain to the surface where it can be acknowledged, processed, and finally released, clearing the path for genuine healing."
+    },
+    {
+      "title": "Enhances Clarity and Truth-Seeing",
+      "desc": "Working with Obsidian sharpens your discernment, helping you see through deception, self-delusion, and illusion to find the clear truth beneath."
+    },
+    {
+      "title": "Supports Physical Detoxification",
+      "desc": "In crystal healing traditions, Obsidian is associated with detoxifying the body, improving digestion, and supporting the circulatory system by promoting energetic flow."
+    }
+  ],
+  "usageScenes": [
+    {
+      "title": "Wear It Daily",
+      "desc": "Wear an Obsidian bracelet on your left wrist for continuous energetic protection throughout the day. Its shielding properties are especially valuable in crowded or high-stress environments.",
+      "icon": "💎"
+    },
+    {
+      "title": "Meditation Companion",
+      "desc": "Hold Obsidian in both hands or place it at the base of your spine during grounding meditation. Visualize its dark, solid energy extending roots deep into the earth beneath you.",
+      "icon": "🧘"
+    },
+    {
+      "title": "Home Sanctuary",
+      "desc": "Place Obsidian near the front door or at the four corners of your home to create a protective grid that absorbs negativity before it enters your living space.",
+      "icon": "🏠"
+    },
+    {
+      "title": "Ritual & Ceremony",
+      "desc": "Use Obsidian in cord-cutting ceremonies by holding it while visualizing the energetic ties you wish to sever. State your intention aloud and imagine the stone's sharp edge cleanly cutting each attachment.",
+      "icon": "🌙"
+    }
+  ],
+  "pairings": [
+    {
+      "name": "Clear Quartz",
+      "why": "Clear Quartz brings light and clarity to Obsidian's deep protective darkness, ensuring that your grounding does not become heavy and that insight flows freely through cleared channels.",
+      "slug": "clear-quartz"
+    },
+    {
+      "name": "Rose Quartz",
+      "why": "Rose Quartz softens Obsidian's intensity with unconditional love, creating a balanced dynamic where deep healing is possible without being overwhelmed by what surfaces.",
+      "slug": "rose-quartz"
+    },
+    {
+      "name": "Selenite",
+      "why": "Selenite continuously cleanses and charges Obsidian, preventing the absorbed negativity from accumulating and keeping the stone's protective properties at peak effectiveness.",
+      "slug": "selenite"
+    }
+  ],
+  "relatedCrystals": [
+    {
+      "name": "Black Tourmaline",
+      "slug": "black-tourmaline",
+      "benefit": "Adds electromagnetic shielding and dispels negative energy with complementary root chakra grounding"
+    },
+    {
+      "name": "Tiger Eye",
+      "slug": "tiger-eye",
+      "benefit": "Brings warmth, confidence, and solar plexus empowerment to balance Obsidian's intense shadow work"
+    },
+    {
+      "name": "Amethyst",
+      "slug": "amethyst",
+      "benefit": "Provides spiritual elevation and calming energy to temper Obsidian's raw transformative power"
+    },
+    {
+      "name": "Clear Quartz",
+      "slug": "clear-quartz",
+      "benefit": "Amplifies Obsidian's protective effects while adding clarity and light to its deep grounding energy"
+    }
+  ],
+  "faqs": [
+    {
+      "title": "How do I cleanse Obsidian?",
+      "content": "Obsidian can be cleansed by smudging with sage, rinsing briefly under running water, or placing it on a Selenite charging plate. Because it absorbs negativity so effectively, regular cleansing is important to prevent energy buildup. Moonlight charging overnight is also gentle and effective."
+    },
+    {
+      "title": "Can Obsidian get wet?",
+      "content": "Obsidian is generally water-safe for brief rinsing, but it is a volcanic glass and can be brittle. Avoid prolonged soaking, hot water, or sudden temperature changes which can cause micro-fractures. Always pat it dry gently after any water cleansing."
+    },
+    {
+      "title": "What is the difference between Black Obsidian and Snowflake Obsidian?",
+      "content": "Black Obsidian is pure volcanic glass with a uniform dark color, while Snowflake Obsidian contains white cristobalite crystals that form snowflake-like patterns as the glass partially crystallizes. Both carry grounding and protective energy, but Snowflake Obsidian is considered gentler and more balancing."
+    },
+    {
+      "title": "What chakra is Obsidian associated with?",
+      "content": "Obsidian is primarily associated with the root chakra, located at the base of the spine. This chakra governs survival, safety, grounding, and your connection to the physical world, all of which align perfectly with Obsidian's protective and stabilizing properties."
+    },
+    {
+      "title": "Is Obsidian safe to wear every day?",
+      "content": "Yes, Obsidian is safe for daily wear as a bracelet or pendant, provided it is set securely. Its hardness of 5 to 5.5 means it can scratch with rough handling, so avoid striking it against hard surfaces. With reasonable care, an Obsidian bracelet is a durable and powerful everyday protector."
+    }
+  ]
+}
