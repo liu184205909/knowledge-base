@@ -3,7 +3,7 @@
 > **页面类型**: Crystal Guide 单品百科页 (B1b)
 > **模板脚本**: `crystal-single.js`
 > **适用范围**: 15 种水晶单品页（Amethyst, Rose Quartz, Clear Quartz, Citrine, Black Tourmaline 等）
-> **RLM 引用**: §3.5 模板级依据包 + §2C "先依据后构建"
+> **RLM 引用**: §3.3 模板级依据包 + §2C "先依据后构建"
 > **创建日期**: 2026-06-05
 > **依据来源**: 从 `amethyst-crystal-single.md` 页面级依据包提炼
 

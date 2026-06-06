@@ -5,7 +5,7 @@
 > **模板**: `crystal-single.js` → 模板级依据包: [crystal-single-template.md](crystal-single-template.md)
 > **配置**: `configs/crystals/amethyst.json`
 > **创建日期**: 2026-06-05
-> **RLM引用**: §3.5 模板级依据包 + §2C "先依据后构建"
+> **RLM引用**: §3.3 模板级依据包 + §2C "先依据后构建"
 > **角色**: 本文件仅记录 Amethyst 实例与模板的差异部分。模板级通用规则（字段结构、参考竞品、采用/规避/差异化策略、图片规则）见 `crystal-single-template.md`。
 
 ---
