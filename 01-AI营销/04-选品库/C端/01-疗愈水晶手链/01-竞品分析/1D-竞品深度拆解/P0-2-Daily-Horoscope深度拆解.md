@@ -12,7 +12,7 @@
 | 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
 |--------|------|----------|----------|---------|
 | **内容矩阵乘法** | [§3.1 运势矩阵](#31-核心内容矩阵-192基础页面) | 12星座×4维度×4时间=192基础页面，每日自动更新 | 水晶内容矩阵设计（15水晶×多维度交叉） | https://www.daily-horoscope.us/ |
-| **Freemium漏斗** | [§4 变现漏斗](#4-freemium变现漏斗) | 免费→注册→低价产品→订阅→高价报告 | LuckyCrystals的免费→付费转化设计 | https://www.daily-horoscope.us/ |
+| **Freemium漏斗** | [§4 变现漏斗](#4-freemium变现漏斗) | 免费→注册→低价产品→订阅→高价报告 | Earthward的免费→付费转化设计 | https://www.daily-horoscope.us/ |
 | **交互工具矩阵** | [§3.3 交互工具](#33-交互工具矩阵) | 占卜工具既是SEO入口又是留资+导购通道 | 设计水晶能量测试、脉轮工具等 | https://www.daily-horoscope.us/ |
 | **数字产品分层** | [§4.2 Astro Store](#42-l2-astro-store数字产品) | 20+种解读，价格$3-32，Best Seller标签引导 | 设计水晶解读/能量报告等数字产品 | https://www.daily-horoscope.us/ |
 | **注册策略** | [§3.2 留资策略](#32-用户注册与留资策略) | 邮箱或美国手机号注册，SMS推送每日运势 | 注册墙设计+邮件/SMS营销 | https://www.daily-horoscope.us/ |
@@ -410,7 +410,7 @@ Daily Horoscope做法：1个模板 × 12星座 × 4维度 × 4时间 = 192个页
 
 ---
 
-## 7. 对LuckyCrystals的可操作启发
+## 7. 对Earthward的可操作启发
 
 ### 7.1 可直接借鉴的
 
@@ -467,7 +467,7 @@ Daily Horoscope做法：1个模板 × 12星座 × 4维度 × 4时间 = 192个页
 
 ## 9. 与Loner Wolf的对比总结
 
-| 维度 | Loner Wolf | Daily Horoscope | LuckyCrystals机会 |
+| 维度 | Loner Wolf | Daily Horoscope | Earthward机会 |
 |------|-----------|----------------|------------------|
 | 内容质量 | 深度长文(3000-8000字) | 模板短文(50-100字) | **中等深度+SEO覆盖** |
 | 内容数量 | 400+ | 1000+ | 目标200-400 |
@@ -478,7 +478,7 @@ Daily Horoscope做法：1个模板 × 12星座 × 4维度 × 4时间 = 192个页
 | 用户关系 | 情感连接极深 | 匿名浅层 | **社群化+个性化** |
 | 更新频率 | 每周邮件 | 每日48页 | **每周深度+每日轻量** |
 
-**核心结论**：Loner Wolf教我们"如何建立深度信任和情感连接"，Daily Horoscope教我们"如何用内容矩阵规模化获客"。LuckyCrystals应该结合两者的优势 — 用Daily Horoscope的矩阵方法获客，用Loner Wolf的深度内容建立信任，再叠加独有的实物水晶产品变现。
+**核心结论**：Loner Wolf教我们"如何建立深度信任和情感连接"，Daily Horoscope教我们"如何用内容矩阵规模化获客"。Earthward应该结合两者的优势 — 用Daily Horoscope的矩阵方法获客，用Loner Wolf的深度内容建立信任，再叠加独有的实物水晶产品变现。
 
 ---
 

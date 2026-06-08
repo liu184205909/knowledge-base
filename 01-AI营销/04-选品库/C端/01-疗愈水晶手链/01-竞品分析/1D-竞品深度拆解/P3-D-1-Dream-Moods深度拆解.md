@@ -113,7 +113,7 @@
 - 同一个符号可能出现在多个主题中
 - 例如：Snake 出现在 Animals + Common Dreams
 
-对 LuckyCrystals 的启发：
+对 Earthward 的启发：
 - 水晶也可以用多维度分类（名称A-Z + 功效 + 颜色 + 脉轮 + 星座）
 - 每个维度都是独立的SEO入口
 ```
@@ -158,11 +158,11 @@
 
 ---
 
-## 5. 对 LuckyCrystals 的启示
+## 5. 对 Earthward 的启示
 
 ### 5.1 必须学习
 
-| 策略 | Dream Moods做法 | LuckyCrystals应用 |
+| 策略 | Dream Moods做法 | Earthward应用 |
 |------|----------------|------------------|
 | **A-Z字典** | 6000+梦境符号A-Z | 水晶A-Z百科（100+种起） | https://www.dreammoods.com/ |
 | **26主题分类** | 多维度主题分类 | 水晶多维分类（功效+颜色+脉轮+星座+形状） | https://www.dreammoods.com/dreamdictionary/ |
@@ -191,7 +191,7 @@ Dream Moods = 纯内容长青SEO的极致案例
 3. 26主题分类 × A-Z = 双维度SEO覆盖
 4. 教育内容（理论家+研究）增加权威性
 
-LuckyCrystals 的"水晶×梦境"交叉机会：
+Earthward 的"水晶×梦境"交叉机会：
 - "crystals for dreams" 内容矩阵
 - "crystals for nightmares" 功效文章
 - "crystals for lucid dreaming" 专题

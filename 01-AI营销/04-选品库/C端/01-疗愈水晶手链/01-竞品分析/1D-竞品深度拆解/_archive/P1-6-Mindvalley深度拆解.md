@@ -205,7 +205,7 @@ Vishen Lakhiani提出的核心概念：
 
 ---
 
-## 6. 对LuckyCrystals的可操作启发
+## 6. 对Earthward的可操作启发
 
 ### 6.1 可直接借鉴的
 

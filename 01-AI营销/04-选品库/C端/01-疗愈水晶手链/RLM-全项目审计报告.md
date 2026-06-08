@@ -1,4 +1,4 @@
-# RLM 全项目审计报告 — LuckyCrystals (luckycrystals.org)
+# RLM 全项目审计报告 — Earthward (goearthward.com)
 
 > **审计日期**: 2026-06-05
 > **审计依据**: `01-AI营销/01-营销方法论基础/00-RLM营销方法论-执行版.md`

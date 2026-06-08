@@ -254,11 +254,11 @@ Tarot.com属于**Ruling Planet Studios**，拥有多个占卜平台：
 **技术特征**：
 - 这是所有竞品中**技术最成熟**的 — 自研前端，完全控制性能
 - 全球排名#26,058 — 专业级别技术团队
-- 对LuckyCrystals的启示：初期用WordPress即可，但长期可能需要自研
+- 对Earthward的启示：初期用WordPress即可，但长期可能需要自研
 
 ---
 
-## 7. 对LuckyCrystals的可操作启发
+## 7. 对Earthward的可操作启发
 
 ### 7.1 可直接借鉴的
 

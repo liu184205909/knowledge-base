@@ -4,7 +4,7 @@ Detailed structure analysis of the About Us page.
 from playwright.sync_api import sync_playwright
 import json
 
-URL = "https://luckycrystals.org/about/"
+URL = "https://goearthward.com/about/"
 
 with sync_playwright() as p:
     browser = p.chromium.launch(headless=True)

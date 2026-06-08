@@ -1,16 +1,16 @@
 /**
- * LuckyCrystals site image registry.
+ * Earthward site image registry.
  *
  * Page scripts should reference semantic image keys here instead of scattered
  * placeholder, stock, or one-off upload URLs.
  *
  * Status values:
  * - source_generated_wp_upload: generated asset copied to project and uploaded to WordPress media
- * - source_existing_wp_upload: existing LuckyCrystals WordPress media URL
+ * - source_existing_wp_upload: existing Earthward WordPress media URL
  * - needs_generation: prompt is ready, URL should be replaced after generation
  */
 
-const WP = 'https://luckycrystals.org/wp-content/uploads';
+const WP = 'https://goearthward.com/wp-content/uploads';
 const GEN = WP + '/2026/05';
 
 function asset(url, alt, prompt, size, status) {
@@ -25,8 +25,8 @@ const IMAGES = {
   shared: {
     card: asset(GEN + '/crystal-guide-collection-v1.png', 'Assorted healing crystals and bracelet reference tray', 'Curated reference collection of healing crystals, bracelet beads, and blank guide cards in warm natural light', '800x600', generated),
     wide: asset(GEN + '/shared-hero-bracelet-v1.png', 'Healing crystal bracelets styled in warm natural light', 'Wide hero image of healing crystal bracelets arranged with soft linen, sage, and warm window light for a premium crystal wellness brand', '1920x900', generated),
-    heroBracelet: asset(GEN + '/shared-hero-bracelet-v1.png', 'LuckyCrystals healing crystal bracelet hero image', 'Full-width hero scene with crystal bracelets, soft fabric, cleansing tools, and warm natural light', '1920x900', generated),
-    studioWorkbench: asset(GEN + '/sourcing-studio-workbench-v1.png', 'LuckyCrystals studio workbench with selected crystal materials', 'Trustworthy crystal bracelet studio workbench with sorted raw crystals, polished beads, inspection tools, and packaging', '1920x900', generated),
+    heroBracelet: asset(GEN + '/shared-hero-bracelet-v1.png', 'Earthward healing crystal bracelet hero image', 'Full-width hero scene with crystal bracelets, soft fabric, cleansing tools, and warm natural light', '1920x900', generated),
+    studioWorkbench: asset(GEN + '/sourcing-studio-workbench-v1.png', 'Earthward studio workbench with selected crystal materials', 'Trustworthy crystal bracelet studio workbench with sorted raw crystals, polished beads, inspection tools, and packaging', '1920x900', generated),
     packaging: asset(GEN + '/contact-studio-support-v1.png', 'Crystal bracelet gift packaging with care card', 'Premium crystal bracelet packaging with velvet pouch, guide card, natural stones, and customer care desk', '1200x800', generated),
     moonRitual: asset(GEN + '/moon-calendar-ritual-v1.png', 'Moonlit crystal ritual scene', 'Moon phase ritual scene with selenite, moonstone, clear quartz, candlelight, and a dark celestial background', '1920x900', generated),
     mysteryBox: asset(GEN + '/mystery-box-opened-v1.png', 'Mystery crystal box with surprise crystal bracelets', 'Mystery crystal subscription box opened to reveal bracelets, raw stones, velvet pouch, and ritual cards', '1920x900', generated),
@@ -36,18 +36,18 @@ const IMAGES = {
 
   faq: {
     hero: asset(GEN + '/faq-hero-crystal-care-v1.png', 'Crystal care cards and healing bracelets', 'FAQ hero image with crystal bracelets, care cards, cleansing tools, and calm neutral styling', '1920x900', generated),
-    cta: asset(GEN + '/contact-studio-support-v1.png', 'LuckyCrystals support studio', 'Customer support crystal studio scene with bracelet packaging and care cards', '1920x900', generated)
+    cta: asset(GEN + '/contact-studio-support-v1.png', 'Earthward support studio', 'Customer support crystal studio scene with bracelet packaging and care cards', '1920x900', generated)
   },
 
   contact: {
-    hero: asset(GEN + '/contact-studio-support-v1.png', 'LuckyCrystals studio and support desk', 'Contact page hero with warm crystal studio desk, finished bracelets, packaging, and customer care notes', '1920x900', generated),
+    hero: asset(GEN + '/contact-studio-support-v1.png', 'Earthward studio and support desk', 'Contact page hero with warm crystal studio desk, finished bracelets, packaging, and customer care notes', '1920x900', generated),
     form: asset(GEN + '/contact-studio-support-v1.png', 'Crystal order packaging ready for customer support', 'Contact form side image with crystal order packaging, guide card, and branded support desk', '800x900', generated)
   },
 
   about: {
     // Section 1 Hero: "Our Story — Ancient wisdom meets modern intention" with dark overlay 0.65
     hero: asset(GEN + '/about-hero-brand-story-v1.png',
-      'LuckyCrystals brand story hero with crystal bracelets and ancient wisdom artifacts',
+      'Earthward brand story hero with crystal bracelets and ancient wisdom artifacts',
       'Premium wide hero banner for a crystal wellness brand About page: multiple healing crystal bracelets arranged on a warm wooden surface beside a small jade pendant, an open leather journal with handwritten affirmations, dried lavender sprigs, and a single burning candle. Warm golden hour light from the left. Deep moody atmosphere suitable for dark overlay text. No people, no faces, no text overlay. Photorealistic, editorial quality, 1920x900 landscape.',
       '1920x900', generated),
 

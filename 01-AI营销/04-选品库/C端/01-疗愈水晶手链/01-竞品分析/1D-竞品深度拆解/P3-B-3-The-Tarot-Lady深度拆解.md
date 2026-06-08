@@ -204,11 +204,11 @@ Tarot IS about:
 
 ---
 
-## 6. 对 LuckyCrystals 的启示
+## 6. 对 Earthward 的启示
 
 ### 6.1 必须学习
 
-| 策略 | The Tarot Lady做法 | LuckyCrystals应用 |
+| 策略 | The Tarot Lady做法 | Earthward应用 |
 |------|-------------------|------------------|
 | **30年个人品牌** | Theresa Reed = The Tarot Lady | 创始人=品牌，长期主义 |
 | **10本书** | 覆盖入门→进阶→儿童→创作者 | 多角度/多受众产品 |
@@ -234,7 +234,7 @@ The Tarot Lady = 个人品牌
 - 优势：信任感强、温度高、媒体容易引用
 - 劣势：依赖个人时间、可扩展性有限
 
-LuckyCrystals 可以 = 个人品牌 + 系统化
+Earthward 可以 = 个人品牌 + 系统化
 - 以创始人为IP（像Theresa）
 - 但用系统/工具/AI放大个人能力（不像Theresa一个人）
 - 用内容矩阵和工具实现规模化

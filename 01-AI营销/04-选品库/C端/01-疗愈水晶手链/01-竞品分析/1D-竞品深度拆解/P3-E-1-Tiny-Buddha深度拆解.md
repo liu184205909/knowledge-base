@@ -126,7 +126,7 @@ Tiny Buddha 导航：
 - 这大幅降低了内容生产成本
 - 同时增加了社区归属感
 
-对 LuckyCrystals 的启发：
+对 Earthward 的启发：
 - 开放 "Share Your Crystal Story" 用户投稿
 - 用户故事 = 最真实的内容 = 最高转化率
 ```
@@ -192,11 +192,11 @@ Books & Things：
 
 ---
 
-## 6. 对 LuckyCrystals 的启示
+## 6. 对 Earthward 的启示
 
 ### 6.1 必须学习
 
-| 策略 | Tiny Buddha做法 | LuckyCrystals应用 |
+| 策略 | Tiny Buddha做法 | Earthward应用 |
 |------|----------------|------------------|
 | **简约定位** | "Simple wisdom for complex lives" | 简洁有力的品牌定位 | https://tinybuddha.com/ |
 | **8大分类** | 按心理需求分类 | 水晶按功效/需求分类 | https://tinybuddha.com/ |
@@ -225,7 +225,7 @@ Tiny Buddha = 简约智慧 × 社区 × 日记产品
 Submit a Post（UGC内容） → Shop日记本（变现） →
 Newsletter（邮件留存） → 课程（深度变现）
 
-LuckyCrystals 可以学习的：
+Earthward 可以学习的：
 1. 简洁定位：不搞玄学，解决实际问题
 2. 社区驱动：用户投稿+论坛=低成本内容
 3. 日记产品：水晶能量日记本（Crystal Energy Journal）

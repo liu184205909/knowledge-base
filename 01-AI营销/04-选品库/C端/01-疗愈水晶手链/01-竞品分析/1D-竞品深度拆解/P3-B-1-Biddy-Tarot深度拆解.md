@@ -12,7 +12,7 @@
 | 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
 |--------|------|----------|----------|---------|
 | **78牌×多维度内容矩阵** | [§3.1 塔罗牌内容体系](#31-塔罗牌内容体系) | 78张牌×正位/逆位×爱情/事业/通用 = 468+页面 | 水晶content矩阵可复刻：N种水晶×功效×场景 | https://biddytarot.com/ |
-| **3路径漏斗** | [§2.2 用户路径](#22-用户路径设计) | Learn → Read → Grow Business，3层渐进 | LuckyCrystals分层引导：了解水晶→选购水晶→深度灵性 | https://biddytarot.com/ |
+| **3路径漏斗** | [§2.2 用户路径](#22-用户路径设计) | Learn → Read → Grow Business，3层渐进 | Earthward分层引导：了解水晶→选购水晶→深度灵性 | https://biddytarot.com/ |
 | **个人品牌=核心信任** | [§1 基本信息](#1-基本信息) | Brigit个人品牌驱动，"As Featured In"社会认同 | 品牌人格化策略参考 | https://biddytarot.com/ |
 | **认证体系网络效应** | [§4 变现分析](#4-变现分析) | Certified Readers目录创造生态闭环 | 水晶顾问/能量顾问认证可能性 | https://biddytarot.com/ |
 | **月相内容节奏** | [§3.2 月相内容模式](#32-月相内容节奏模式) | 每个新月/满月都有对应Tarot Spread | 水晶+月相结合的内容节奏 | https://biddytarot.com/ |
@@ -79,7 +79,7 @@
 | **路径2** | Read Tarot For Yourself & Others | 已入门者 | 进阶课程→认证 |
 | **路径3** | Grow Your Intuitive Business | 塔罗从业者 | 高价课程+商业指导 |
 
-**对 LuckyCrystals 的启发**：
+**对 Earthward 的启发**：
 ```
 路径1: 了解水晶 → 免费水晶百科+测试
 路径2: 选购水晶 → 按需求/功效选购
@@ -300,11 +300,11 @@ Biddy Tarot的内容乘法公式：
 
 ---
 
-## 7. 对 LuckyCrystals 的启示
+## 7. 对 Earthward 的启示
 
 ### 7.1 可直接借鉴
 
-| 策略 | Biddy Tarot做法 | LuckyCrystals应用 |
+| 策略 | Biddy Tarot做法 | Earthward应用 |
 |------|----------------|------------------|
 | **内容矩阵乘法** | 78牌×多维度=468+页面 | N种水晶×功效×场景=大量交叉页面 |
 | **3路径漏斗** | Learn→Read→Grow | 了解水晶→选购水晶→深度灵性 |
@@ -333,7 +333,7 @@ Biddy Tarot **不涉及水晶**，这是我们的机会：
 
 ### 7.3 差异化方向
 
-| 维度 | Biddy Tarot | LuckyCrystals差异化 |
+| 维度 | Biddy Tarot | Earthward差异化 |
 |------|------------|-------------------|
 | **内容范围** | 纯塔罗 | 塔罗+水晶+号码+星座（更广） |
 | **实物产品** | 书籍/牌卡 | 实物水晶产品（更重） |

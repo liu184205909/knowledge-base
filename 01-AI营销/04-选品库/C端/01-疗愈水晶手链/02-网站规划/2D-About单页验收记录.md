@@ -8,7 +8,7 @@
 | 项目 | 状态 |
 |------|------|
 | WordPress page_id | 38289 |
-| Preview URL | https://luckycrystals.org/?page_id=38289&preview=true |
+| Preview URL | https://goearthward.com/?page_id=38289&preview=true |
 | 页面状态 | draft |
 | slug | about |
 | 当前 active draft | 仅 About Us 1 个 |
@@ -20,7 +20,7 @@
 - `textEditor()` 已同时写入 Elementor 的 `editor` 与 `editor_content` 字段。
 - `Our Quality Promise` 已从小圆图布局改为 32/63 图文布局。
 - `From Earth to You` 已改为深色卡片式四列，避免正文漂浮在深色背景上。
-- `The LuckyCrystals Community` 已从 3+1 改为 2x2 网格。
+- `The Earthward Community` 已从 3+1 改为 2x2 网格。
 - 用户故事文案已去掉考试成绩、收入增长等强结果暗示，改为更温和的陪伴/仪式感表达。
 - About 页两个 CTA 已改为 `/shop`，避免指向暂停页面。
 - Quality Promise 4 张图标 + Community 4 张评价图已上传至 WP 媒体库（media_id 38296-38303）。

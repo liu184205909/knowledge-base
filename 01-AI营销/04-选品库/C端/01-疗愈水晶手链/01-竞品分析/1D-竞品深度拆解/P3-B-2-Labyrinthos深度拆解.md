@@ -140,11 +140,11 @@ App内升级Premium → 高级功能
 
 ---
 
-## 6. 对 LuckyCrystals 的启示
+## 6. 对 Earthward 的启示
 
 ### 6.1 必须学习
 
-| 策略 | Labyrinthos做法 | LuckyCrystals应用 |
+| 策略 | Labyrinthos做法 | Earthward应用 |
 |------|----------------|------------------|
 | **免费App→付费产品** | 免费App学习→购买实体牌 | 免费水晶测试/工具→购买水晶产品 |
 | **多副牌产品线** | 6+副不同风格 | 不同系列/主题的水晶产品线 |
@@ -167,7 +167,7 @@ App内升级Premium → 高级功能
 Labyrinthos = 产品驱动（牌面精美+App配套）
 Biddy Tarot = 内容驱动（78牌详解+认证课程）
 
-LuckyCrystals 可以学习两者：
+Earthward 可以学习两者：
 1. 产品品质（像Labyrinthos一样精美的产品+包装）
 2. 免费工具引流（像Labyrinthos App一样的免费工具）
 3. 内容深度（像Biddy Tarot一样的水晶百科+教育）

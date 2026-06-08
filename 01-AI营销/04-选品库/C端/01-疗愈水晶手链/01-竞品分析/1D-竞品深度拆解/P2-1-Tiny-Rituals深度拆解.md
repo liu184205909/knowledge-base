@@ -11,7 +11,7 @@
 
 | 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
 |--------|------|----------|----------|---------|
-| **5维产品导航** | [§2.1 导航架构](#21-导航架构) | 按珠宝类型+按水晶名称+按用途+按系列+Sacred Space | LuckyCrystals导航设计核心参考 | https://tinyrituals.co/ |
+| **5维产品导航** | [§2.1 导航架构](#21-导航架构) | 按珠宝类型+按水晶名称+按用途+按系列+Sacred Space | Earthward导航设计核心参考 | https://tinyrituals.co/ |
 | **34种水晶品牌页** | [§2.2 Crystals by Name](#22-crystals-by-name体系) | 34种水晶各有独立集合页+SEO文章 | 水晶列表页设计参考 | https://tinyrituals.co/ |
 | **内容×电商双驱动** | [§3.1 SEO内容策略](#31-seo内容策略) | 天使号码文章+水晶含义文章=SEO流量→电商转化 | 内容电商模式核心参考 | https://tinyrituals.co/ |
 | **3层促销机制** | [§4.2 转化设计](#42-转化设计) | Bundle 3件20%off + $150送$50 Gift Card + $95免邮 | 促销策略参考 | https://tinyrituals.co/ |
@@ -69,7 +69,7 @@
 └── Stress & Anxiety Relief Crystals            ← 按意图入口（首页突出）
 ```
 
-**对 LuckyCrystals 的启发**：
+**对 Earthward 的启发**：
 - **双维度分类是必须的**：按产品形态（手链/项链/原石）+ 按水晶名称（紫水晶/黑碧玺等）
 - **"按意图"入口放首页最显眼位置**：Stress & Anxiety Relief Crystals
 - **Sacred Space是增量品类**：鼠尾草、香、书籍等低客单但高复购
@@ -293,11 +293,11 @@ Tiny Rituals 是"内容×电商双驱动"的典范：用免费内容获取SEO流
 
 ---
 
-## 7. 对 LuckyCrystals 的启示
+## 7. 对 Earthward 的启示
 
 ### 7.1 必须学习的
 
-| 策略 | Tiny Rituals做法 | LuckyCrystals应用 |
+| 策略 | Tiny Rituals做法 | Earthward应用 |
 |------|-----------------|------------------|
 | **双维度导航** | 按形态+按名称 | 手链/项链/原石 + A-Z水晶名称 |
 | **内容驱动电商** | 博客获客→产品转化 | 水晶含义+天使号码→产品推荐 |
@@ -310,7 +310,7 @@ Tiny Rituals 是"内容×电商双驱动"的典范：用免费内容获取SEO流
 
 ### 7.2 Tiny Rituals 的弱点（我们的机会）
 
-| 弱点 | 说明 | LuckyCrystals差异化 |
+| 弱点 | 说明 | Earthward差异化 |
 |------|------|-------------------|
 | **无数字产品** | 没有电子书/课程/解读 | 水晶指南PDF+数字解读+课程 |
 | **无订阅制** | 一次性购买 | 每月水晶盒订阅 |

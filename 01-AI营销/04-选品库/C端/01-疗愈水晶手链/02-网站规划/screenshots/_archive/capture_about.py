@@ -7,7 +7,7 @@ from playwright.sync_api import sync_playwright
 import os
 
 OUTPUT_DIR = os.path.dirname(os.path.abspath(__file__))
-URL = "https://luckycrystals.org/about/"
+URL = "https://goearthward.com/about/"
 
 def capture_fullpage(url, output_path, viewport_width, viewport_height, device_label):
     with sync_playwright() as p:

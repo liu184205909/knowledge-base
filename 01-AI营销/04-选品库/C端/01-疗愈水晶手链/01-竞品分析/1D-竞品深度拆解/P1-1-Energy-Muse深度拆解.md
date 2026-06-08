@@ -11,7 +11,7 @@
 
 | 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
 |--------|------|----------|----------|---------|
-| **Shop by Intention模式** | [§2.1 产品分类](#21-产品分类架构) | 8大意图分类（Wellness/Wealth/Protection/Calm/Love/Spirituality/Fresh Start/Personal Power），用户按需求而非水晶类型购物 | LuckyCrystals产品分类设计 | https://www.energymuse.com/ |
+| **Shop by Intention模式** | [§2.1 产品分类](#21-产品分类架构) | 8大意图分类（Wellness/Wealth/Protection/Calm/Love/Spirituality/Fresh Start/Personal Power），用户按需求而非水晶类型购物 | Earthward产品分类设计 | https://www.energymuse.com/ |
 | **Crystal Test测试工具** | [§3.1 测试工具](#31-互动转化工具) | Crystal Test引导用户找到适合的水晶，是内容→产品转化的关键桥梁 | 设计水晶匹配测试工具 | https://www.energymuse.com/pages/crystal-test |
 | **名人背书矩阵** | [§4 品牌策略](#4-品牌信任策略) | Gabrielle Bernstein/Colette Baron-Reid等灵性领域KOL背书+媒体报道logo墙 | 品牌信任度建设 | https://www.energymuse.com/ |
 | **媒体logo墙** | [§4 品牌策略](#4-品牌信任策略) | 12+主流媒体logo展示（Vogue/Forbes/Oprah等），建立品牌权威 | 首页信任元素设计 | https://www.energymuse.com/ |
@@ -268,7 +268,7 @@ Not Sure Where to Start?
 
 ---
 
-## 8. 对LuckyCrystals的可操作启发
+## 8. 对Earthward的可操作启发
 
 ### 8.1 可直接借鉴的
 
@@ -322,9 +322,9 @@ Not Sure Where to Start?
 
 ## 10. Shop by Intention 分类完整映射
 
-Energy Muse的8大意图分类可以作为LuckyCrystals产品分类的直接参考：
+Energy Muse的8大意图分类可以作为Earthward产品分类的直接参考：
 
-| Energy Muse意图 | 对应关键词 | 适用水晶 | LuckyCrystals可复刻 |
+| Energy Muse意图 | 对应关键词 | 适用水晶 | Earthward可复刻 |
 |----------------|-----------|---------|-------------------|
 | **Wellness** | 健康/疗愈/康复 | Amethyst, Clear Quartz | ✅ 直接复刻 |
 | **Wealth** | 财富/丰盛/成功 | Citrine, Pyrite, Green Jade | ✅ 直接复刻 |

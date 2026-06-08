@@ -178,11 +178,11 @@
 
 ---
 
-## 6. 对 LuckyCrystals 的启示
+## 6. 对 Earthward 的启示
 
 ### 6.1 必须学习
 
-| 策略 | My Crystals做法 | LuckyCrystals应用 |
+| 策略 | My Crystals做法 | Earthward应用 |
 |------|----------------|------------------|
 | **60+功效文章** | "Best Crystals for X" 系列 | 功效导向内容矩阵（直接参考） |
 | **10种形状指南** | 形状教育内容 | 按形状分类+教育内容 |
@@ -210,7 +210,7 @@ My Crystals 的"60+功效文章矩阵"是最值得借鉴的：
 - 水晶链接到产品购买页
 - 这是"Best Crystals for [功效]" 的完整实现
 
-LuckyCrystals 应该：
+Earthward 应该：
 1. 建立 "Best Crystals for [功效]" 文章模板
 2. 第一批覆盖30+高搜索量功效词
 3. 每篇文章内嵌3-5款产品推荐

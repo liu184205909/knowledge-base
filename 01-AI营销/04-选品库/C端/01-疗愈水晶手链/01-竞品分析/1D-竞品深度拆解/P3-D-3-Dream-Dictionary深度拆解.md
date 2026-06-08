@@ -81,7 +81,7 @@ Dream Dictionary 网站结构：
 - 系统分析并给出解读
 - 这是互动工具引流的典型案例
 
-对 LuckyCrystals 的启发：
+对 Earthward 的启发：
 - "Free Crystal Reading" 类似概念
 - 用户输入需求/感受 → AI分析 → 推荐水晶
 - 免费工具 = 高转化引流入口
@@ -98,7 +98,7 @@ Dream Dictionary 网站结构：
 - 不是"随便解释"而是"基于心理学大师"
 - 这增加了内容的可信度和权威性
 
-对 LuckyCrystals 的启发：
+对 Earthward 的启发：
 - 水晶内容也可以结合心理学/科学理论
 - 不仅说"水晶有效"而是解释"为什么可能有效"
 - 科学+灵性双视角增加可信度
@@ -130,11 +130,11 @@ Dream Dictionary 网站结构：
 
 ---
 
-## 5. 对 LuckyCrystals 的启示
+## 5. 对 Earthward 的启示
 
 ### 5.1 必须学习
 
-| 策略 | Dream Dictionary做法 | LuckyCrystals应用 |
+| 策略 | Dream Dictionary做法 | Earthward应用 |
 |------|---------------------|------------------|
 | **免费分析工具** | 在线梦分析工具 | 免费水晶推荐/测试工具 | https://www.dreamdictionary.org/ |
 | **心理学理论** | Jung/Freud理论基础 | 水晶×心理学/科学理论 | https://www.dreamdictionary.org/ |
@@ -156,7 +156,7 @@ Dream Dictionary 网站结构：
 ```
 Dream Dictionary = 互动工具 + 心理学权威 + 深度内容
 
-LuckyCrystals 可借鉴的"水晶×梦境"策略：
+Earthward 可借鉴的"水晶×梦境"策略：
 1. "Crystals for Better Dreams" 专题
 2. "Crystals for Nightmare Relief" 功效文章
 3. "Free Crystal Dream Reading" 互动工具

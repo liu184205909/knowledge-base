@@ -50,7 +50,7 @@ const faqCategories = [
       },
       {
         title: 'What\'s included in my order?',
-        content: 'Every LuckyCrystals order includes: your crystal bracelet (or selected item), a premium velvet drawstring pouch for storage, an energy guide card explaining your crystal\'s properties and best uses, a cleansing instruction card, and an authenticity certificate. Gift wrapping is available at checkout for a small additional fee.'
+        content: 'Every Earthward order includes: your crystal bracelet (or selected item), a premium velvet drawstring pouch for storage, an energy guide card explaining your crystal\'s properties and best uses, a cleansing instruction card, and an authenticity certificate. Gift wrapping is available at checkout for a small additional fee.'
       },
       {
         title: 'Can I stack multiple crystal bracelets together?',

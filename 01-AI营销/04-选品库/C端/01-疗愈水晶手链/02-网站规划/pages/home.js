@@ -46,7 +46,7 @@ try {
   _creds = require(path.resolve(__dirname, '../../config/api-credentials.json'));
 } catch (e) { /* fallback to env only */ }
 
-const SITE = process.env.WP_SITE || 'luckycrystals.org';
+const SITE = process.env.WP_SITE || 'goearthward.com';
 const AUTH = 'Basic ' + Buffer.from(
   (process.env.WP_USER || _creds.wp_username || '') + ':' + (process.env.WP_APP_PASSWORD || _creds.wp_app_password || '')
 ).toString('base64');
@@ -484,7 +484,7 @@ function generateHomepage() {
               IMAGES.crystals[intent.img].url,
               intent.name,
               intent.desc,
-              'https://luckycrystals.org/collections/' + intent.slug + '/'
+              'https://goearthward.com/collections/' + intent.slug + '/'
             )
           ]);
         })
@@ -595,7 +595,7 @@ function generateHomepage() {
               IMAGES.crystals[c.key].url,
               c.name,
               c.poetic,
-              'https://luckycrystals.org/collections/' + c.slug,
+              'https://goearthward.com/collections/' + c.slug,
               { radius: 50 }
             )
           ]);
@@ -614,7 +614,7 @@ function generateHomepage() {
       flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
     }, [
       wrap({ content_width: 'boxed' }, [
-        heading('Why Choose LuckyCrystals?', { fontSize: 36 }),
+        heading('Why Choose Earthward?', { fontSize: 36 }),
         textEditor('Why 10,000+ customers choose us over cheap alternatives', { fontSize: 18, color: '#888888' })
       ]),
       // 3x2 优势网格
@@ -661,7 +661,7 @@ function generateHomepage() {
         width_tablet: { size: '100', unit: '%' }
       }, [
         imageWidget(IMAGES.shared.studioWorkbench.url, {
-          id: 13754, alt: 'LuckyCrystals studio — handcrafting crystal bracelets with intention', radius: 12
+          id: 13754, alt: 'Earthward studio — handcrafting crystal bracelets with intention', radius: 12
         })
       ]),
       // 右侧: 文字
@@ -673,7 +673,7 @@ function generateHomepage() {
         flex_gap: { size: 10, column: '10', row: '10', unit: 'px' }
       }, [
         heading('More Than Just Crystals', { fontSize: 32, align: 'left' }),
-        textEditor('At LuckyCrystals, we believe every stone carries a story. From the mines of Brazil to the moonlit cleansing ritual in our studio, each bracelet is crafted with intention and care. Our mission is to make the healing power of crystals accessible, ethical, and deeply personal.', {
+        textEditor('At Earthward, we believe every stone carries a story. From the mines of Brazil to the moonlit cleansing ritual in our studio, each bracelet is crafted with intention and care. Our mission is to make the healing power of crystals accessible, ethical, and deeply personal.', {
           fontSize: 16, align: 'left', color: '#666666', lineHeight: 28
         }),
         textEditor('We partner with trusted, traceable suppliers and ensure every crystal is energetically cleansed before it reaches your hands.', {
@@ -777,7 +777,7 @@ function generateHomepage() {
               IMAGES.blog[post.img].url,
               post.title,
               'Read More →',
-              'https://luckycrystals.org/blog/' + post.slug
+              'https://goearthward.com/blog/' + post.slug
             )
           ]);
         })
@@ -805,7 +805,7 @@ function generateHomepage() {
       background_overlay_opacity: { unit: 'px', size: 0.7, sizes: [] }
     }, [
       wrap({ content_width: 'boxed' }, [
-        heading('Join the LuckyCrystals Community', { color: '#FFFFFF', fontSize: 32 }),
+        heading('Join the Earthward Community', { color: '#FFFFFF', fontSize: 32 }),
         textEditor('Get crystal guides, moon phase updates, and 10% off your first order.', {
           color: '#CCCCCC', fontSize: 16,
           extra: { _margin: { unit: 'px', top: '0', right: '0', bottom: '30', left: '0', isLinked: '' } }
@@ -822,7 +822,7 @@ function generateHomepage() {
       flex_gap: { size: 5, column: '5', row: '5', unit: 'px' }
     }, [
       wrap({ content_width: 'boxed' }, [
-        textEditor('LuckyCrystals offers handcrafted healing crystal bracelets made from 100% natural gemstones including amethyst, rose quartz, citrine, black tourmaline, and clear quartz. Each bracelet is ethically sourced from trusted mines, energetically cleansed with sage and moonlight, and shipped in eco-friendly packaging with a velvet pouch and energy guide card. Whether you\'re seeking crystals for anxiety relief, love, abundance, protection, or spiritual growth, our collection is designed to support your journey. Shop by intention, explore our crystal guide, or take the Crystal Quiz to find your perfect match.', {
+        textEditor('Earthward offers handcrafted healing crystal bracelets made from 100% natural gemstones including amethyst, rose quartz, citrine, black tourmaline, and clear quartz. Each bracelet is ethically sourced from trusted mines, energetically cleansed with sage and moonlight, and shipped in eco-friendly packaging with a velvet pouch and energy guide card. Whether you\'re seeking crystals for anxiety relief, love, abundance, protection, or spiritual growth, our collection is designed to support your journey. Shop by intention, explore our crystal guide, or take the Crystal Quiz to find your perfect match.', {
           fontSize: 13, align: 'left', color: '#999999', lineHeight: 22, responsive: false
         })
       ])

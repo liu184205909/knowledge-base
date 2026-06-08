@@ -15,7 +15,7 @@
 | **7维度搜索** | [§3.2 多维度搜索](#32-7维度搜索系统) | 按脉轮/情绪/星座/行星/数字/元素/推荐 搜索 | 水晶发现工具核心参考 | https://thecrystalcouncil.com/ |
 | **Crystal Identifier App** | [§3.3 移动App](#33-crystal-identifier-app) | iOS+Android，拍照识别水晶，App Store ID 1553800023 | App开发可能性参考 | https://thecrystalcouncil.com/ |
 | **Premium+会员** | [§4.1 会员体系](#41-premium会员) | $2.99/周，5%off+3%返现 | 订阅制变现参考 | https://thecrystalcouncil.com/ |
-| **订阅盒** | [§4.2 订阅盒](#42-crystal-subscription-box) | Crystal Subscription Box | LuckyCrystals核心产品方向 | https://thecrystalcouncil.com/ |
+| **订阅盒** | [§4.2 订阅盒](#42-crystal-subscription-box) | Crystal Subscription Box | Earthward核心产品方向 | https://thecrystalcouncil.com/ |
 | **Chat支持** | [§2.1 客户服务](#21-客户服务设计) | 在线聊天，等待<2-3小时 | 客户服务标准参考 | https://thecrystalcouncil.com/ |
 | **Affirm分期** | [§4.3 支付方式](#43-支付方式) | Affirm分期付款 | 高客单价支付方案 | https://thecrystalcouncil.com/ |
 
@@ -115,7 +115,7 @@ URL: thecrystalcouncil.com/crystals
 | **Element** | 火 | 按元素搜索 | 4元素落地页 |
 | **Recommended** | 星 | 编辑推荐 | 精选内容 |
 
-**对 LuckyCrystals 的启发**：
+**对 Earthward 的启发**：
 - 这是"内容矩阵乘法"的终极实现
 - 500种水晶 × 7维度 = 3,500+ 交叉页面（理论最大值）
 - 实际有效交叉 = 数百个高SEO价值页面
@@ -152,7 +152,7 @@ URL: thecrystalcouncil.com/crystals
 
 - 独立导航入口（与Shop同级）
 - 定期配送水晶盲盒
-- 这是 LuckyCrystals 可以直接对标的产品
+- 这是 Earthward 可以直接对标的产品
 
 ### 4.3 支付方式
 
@@ -187,11 +187,11 @@ URL: thecrystalcouncil.com/crystals
 
 ---
 
-## 6. 对 LuckyCrystals 的启示
+## 6. 对 Earthward 的启示
 
 ### 6.1 必须学习
 
-| 策略 | The Crystal Council做法 | LuckyCrystals应用 |
+| 策略 | The Crystal Council做法 | Earthward应用 |
 |------|----------------------|------------------|
 | **7维度搜索** | 脉轮/情绪/星座/行星/数字/元素/推荐 | 至少做4维度：功效/脉轮/星座/元素 |
 | **500+水晶数据库** | 行业最大水晶百科 | 逐步扩展到100+种，质量优先 |
@@ -218,7 +218,7 @@ The Crystal Council = 工具型（数据库+App+搜索）
 Tiny Rituals = 内容型（博客+SEO+品牌故事）
 Crystal Vaults = 百科型（百科+课程+社区）
 
-LuckyCrystals 可以 = 工具+内容+电商的融合体
+Earthward 可以 = 工具+内容+电商的融合体
 - 工具: 水晶测试/匹配/搜索（借鉴TCC的7维度搜索）
 - 内容: 博客+SEO+品牌故事（借鉴Tiny Rituals）
 - 电商: 实物+订阅盒（借鉴两者）

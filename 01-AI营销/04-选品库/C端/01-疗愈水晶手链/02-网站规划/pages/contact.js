@@ -103,17 +103,17 @@ function generateContact() {
     }, [
       // Column 1: Email
       E.wrap(contactCard(), [
-        E.iconBox('Email Us', 'support@luckycrystals.org\nWe respond to all emails within 24 hours.')
+        E.iconBox('Email Us', 'support@goearthward.com\nWe respond to all emails within 24 hours.')
       ]),
 
       // Column 2: Social Media
       E.wrap(contactCard(), [
         E.iconBox('Follow Us', 'Stay connected for crystal tips, new arrivals, and exclusive offers.'),
         E.socialIcons([
-          { name: 'instagram', url: 'https://instagram.com/luckycrystals' },
-          { name: 'facebook', url: 'https://facebook.com/luckycrystals' },
-          { name: 'pinterest', url: 'https://pinterest.com/luckycrystals' },
-          { name: 'tiktok', url: 'https://tiktok.com/@luckycrystals' }
+          { name: 'instagram', url: 'https://instagram.com/goearthward' },
+          { name: 'facebook', url: 'https://facebook.com/goearthward' },
+          { name: 'pinterest', url: 'https://pinterest.com/goearthward' },
+          { name: 'tiktok', url: 'https://tiktok.com/@goearthward' }
         ])
       ]),
 

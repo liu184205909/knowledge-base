@@ -5,7 +5,7 @@ Focus on Quality Promise section (4 icons) and Community section (4 product imag
 import time
 from playwright.sync_api import sync_playwright
 
-URL = "https://luckycrystals.org/about/"
+URL = "https://goearthward.com/about/"
 OUTPUT_DIR = r"d:\Code\knowledge-base\01-AI营销\04-选品库\C端\01-疗愈水晶手链\02-网站规划\screenshots"
 
 TARGET_IMAGES = [

@@ -249,11 +249,11 @@ VIP Club Specials:
 
 ---
 
-## 6. 对 LuckyCrystals 的启示
+## 6. 对 Earthward 的启示
 
 ### 6.1 必须学习
 
-| 策略 | Satin Crystals做法 | LuckyCrystals应用 |
+| 策略 | Satin Crystals做法 | Earthward应用 |
 |------|-------------------|------------------|
 | **15+意图分类** | Abundance/Calming/Confidence等 | 至少10种意图落地页 |
 | **17色分类** | 17种颜色（含Rainbow/Copper/Gold/Silver） | 颜色维度扩展到15+ |
@@ -288,7 +288,7 @@ Satin Crystals = 全面型（品类最广+内容较丰富+个人品牌）
 - 创始人Lisa & Sheila的个人服务品牌（评价中多次提及）
 - Moldavite专家定位（单品深度策略）
 
-LuckyCrystals 可以学习：
+Earthward 可以学习：
 1. 多维度分类体系（意图+颜色+脉轮+宝石名）
 2. 单品深度策略（选1-2种做专家定位）
 3. 内容多样性（博客+星座+月相+视频+课程）

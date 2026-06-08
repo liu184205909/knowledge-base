@@ -101,7 +101,7 @@ Full Moon in Leo Ritual示例：
 - 关注主题：Power/Leadership/Success/Creativity/Determination
 - 仪式步骤：金/橙蜡烛+乳香/肉桂/橙精油+冥想+咒语
 
-对 LuckyCrystals 的启发：
+对 Earthward 的启发：
 - "Crystal Moon Ritual" 系列
 - 每月满月/新月 × 水晶推荐
 - 结合星座的水晶仪式指南
@@ -139,11 +139,11 @@ Full Moon in Leo Ritual示例：
 
 ---
 
-## 5. 对 LuckyCrystals 的启示
+## 5. 对 Earthward 的启示
 
 ### 5.1 必须学习
 
-| 策略 | The Hoodwitch做法 | LuckyCrystals应用 |
+| 策略 | The Hoodwitch做法 | Earthward应用 |
 |------|------------------|------------------|
 | **现代美学** | 深色极简+巫术美学 | 水晶品牌视觉风格 | https://thehoodwitch.com/ |
 | **Witch Tips** | 每周巫术+星座建议 | 每周水晶+星座推荐 | https://thehoodwitch.com/ |
@@ -172,7 +172,7 @@ The Hoodwitch = 现代巫术美学 × 占星内容 × 月相仪式
 2. 巫术×星座×月相 的内容组合独一无二
 3. Bri Luna 的美学品牌 + Lisa Stardust 的占星专业 = 完美分工
 
-LuckyCrystals 的品牌美学方向：
+Earthward 的品牌美学方向：
 1. 现代简约 vs. 传统灵性 — 选择现代简约
 2. 深色系 vs. 浅色系 — 可以两种都提供
 3. 水晶×月相仪式 = 巫术×水晶的交叉内容

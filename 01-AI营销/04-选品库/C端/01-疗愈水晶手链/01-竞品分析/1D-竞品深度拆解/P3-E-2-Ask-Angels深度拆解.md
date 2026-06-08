@@ -92,7 +92,7 @@ Angel Messages：
 - "Cleanse Your Mind, Body, And Spirit Simply By Listening"
 - 21分钟天使传讯音频
 
-对 LuckyCrystals 的启发：
+对 Earthward 的启发：
 - "Crystal Energy Message" 类似概念
 - 用户输入意图 → 收到个性化水晶能量传讯
 - 免费传讯 → 邮箱收集 → 付费服务
@@ -163,11 +163,11 @@ Spiritual Guidance Blog：
 
 ---
 
-## 6. 对 LuckyCrystals 的启示
+## 6. 对 Earthward 的启示
 
 ### 6.1 必须学习
 
-| 策略 | Ask-Angels做法 | LuckyCrystals应用 |
+| 策略 | Ask-Angels做法 | Earthward应用 |
 |------|---------------|------------------|
 | **免费互动工具** | 免费天使牌阅读 | 免费水晶测试/推荐 | https://ask-angels.com/ |
 | **定期传讯** | 天使传讯系统 | 每日/每周水晶能量传讯 | https://ask-angels.com/ |
@@ -195,7 +195,7 @@ Ask-Angels = 免费互动工具 × 个人品牌 × 传讯系统
 博客内容（SEO流量） → 播客（音频触达） →
 付费解读（核心变现） → 课程（深度变现）
 
-LuckyCrystals 可以直接借鉴：
+Earthward 可以直接借鉴：
 1. "Free Crystal Reading" = Free Angel Card Reading
 2. "Crystal Energy Message" = Angel Message
 3. 水晶冥想音频 = 天使冥想音频

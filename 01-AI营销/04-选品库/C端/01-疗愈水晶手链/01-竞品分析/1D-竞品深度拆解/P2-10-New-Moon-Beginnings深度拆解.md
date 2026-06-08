@@ -153,7 +153,7 @@ Shop By:
 ├── 增加用户互动和好感度
 └── 可作为附加销售（购水晶+$1认领）
 
-对 LuckyCrystals 的启发：
+对 Earthward 的启发：
 - "Adopt a Crystal"概念比 "Donate"更有情感吸引力
 - $1门槛极低但参与感强
 - 可以做 "Adopt a Crystal, Plant a Tree" 或类似概念
@@ -217,11 +217,11 @@ Shop By:
 
 ---
 
-## 6. 对 LuckyCrystals 的启示
+## 6. 对 Earthward 的启示
 
 ### 6.1 必须学习
 
-| 策略 | New Moon Beginnings做法 | LuckyCrystals应用 |
+| 策略 | New Moon Beginnings做法 | Earthward应用 |
 |------|----------------------|------------------|
 | **7大品类全覆盖** | 水晶+珠宝+蜡烛+香薰+能量工具+装饰+礼品 | 品类扩展路线图 |
 | **中国生肖套装** | Year of the Fire Horse (2026) | 生肖×水晶产品线（华人市场） |
@@ -248,7 +248,7 @@ Shop By:
 Year of the Fire Horse Crystal Set (2026) 说明：
 - 有竞品在做中国生肖×水晶的交叉
 - 这是华人/亚裔市场的独特入口
-- LuckyCrystals 可以更深度地做这个方向：
+- Earthward 可以更深度地做这个方向：
   1. 12生肖完整水晶套装
   2. 每年更新对应生肖
   3. 中国传统元素×西方水晶疗愈

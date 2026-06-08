@@ -8,7 +8,7 @@
  *  4. 品牌理念: "What We Believe" (4个信念点)
  *  5. 道德采购: "From Earth to You" (来源可追溯→公平劳动→环保→无冲突矿物)
  *  6. 品质承诺: 100%天然/净化充能/丝绒袋+指南卡/30天退换
- *  7. 用户故事: "The LuckyCrystals Community" 3-4条故事
+ *  7. 用户故事: "The Earthward Community" 3-4条故事
  *  8. CTA: "Ready to Find Your Crystal?" → crystal-quiz
  *
  * 内容策略：
@@ -105,7 +105,7 @@ function generateAboutUs() {
         ),
         E.spacer('10'),
         E.textEditor(
-          'LuckyCrystals was created to fix that. We built this brand on a simple promise: genuine natural crystals, ethically ' +
+          'Earthward was created to fix that. We built this brand on a simple promise: genuine natural crystals, ethically ' +
           'sourced from mines in Brazil, Madagascar, India, and Uruguay, each one individually inspected, energetically cleansed, ' +
           'and paired with a guide card that teaches you how to actually use it. Not just pretty jewelry — a real tool for ' +
           'intentional living.',
@@ -714,7 +714,7 @@ function generateAboutUs() {
       background_background: 'classic',
       background_color: '#faf8f5'
     }, [
-      E.heading('The LuckyCrystals Community', {
+      E.heading('The Earthward Community', {
         fontSize: 40, color: '#2d2d2d', align: 'center',
         extra: {
           _margin: { unit: 'px', top: '0', right: '0', bottom: '10', left: '0', isLinked: '' }

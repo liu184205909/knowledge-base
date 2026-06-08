@@ -114,7 +114,7 @@ DREAM 侧重**单篇内容的结构**（确保内容覆盖决策全链路），G
 
 ### 与 RLM 内容 Brief 的对接
 
-DREAM 可直接嵌入 [05-内容Brief模板.md](03-模板库/05-内容Brief模板.md) 的大纲结构：
+DREAM 可直接嵌入 [06-内容Brief模板.md](03-模板库/06-内容Brief模板.md) 的大纲结构：
 
 ```
 H2: 需求场景（Demand）— 为什么需要
@@ -201,7 +201,7 @@ ACE 模型中人的核心职责：
 | 本文档 | 对接文档 | 关系 |
 |--------|---------|------|
 | ACE 模型 | [00-RLM营销方法论-执行版.md](00-RLM营销方法论-执行版.md) | ACE 是 RLM 内容阶段的增长引擎 |
-| DREAM 模型 | [05-内容Brief模板.md](03-模板库/05-内容Brief模板.md) | DREAM 可嵌入 Brief 的大纲结构 |
+| DREAM 模型 | [06-内容Brief模板.md](03-模板库/06-内容Brief模板.md) | DREAM 可嵌入 Brief 的大纲结构 |
 | CAST 模型 | [04-社媒内容分发工作流.md](04-社媒内容分发工作流.md) | CAST 产出短视频素材进入分发流程 |
 | 验证与放大 | [07-英文SEO批量写作与去AI化工作流.md](07-英文SEO批量写作与去AI化工作流.md) | "先验证再放大"逻辑一致 |
 | GEO 证据链 | [03-AI Citation优化策略.md](../03-SEO与GEO/03-AI%20Citation优化策略.md) | DREAM 的 Evidence 对接 GEO 六维证据 |

@@ -11,7 +11,7 @@
 - **文件名**: `about-hero-brand-story-v1.png`
 - **尺寸**: 1920 x 900
 - **用途**: About 页面 Section 1 Hero 背景图（"Our Story — Ancient wisdom meets modern intention"），深色叠层 overlay 0.65
-- **Alt**: `LuckyCrystals brand story hero with crystal bracelets and ancient wisdom artifacts`
+- **Alt**: `Earthward brand story hero with crystal bracelets and ancient wisdom artifacts`
 - **Prompt**:
 ```
 Premium wide hero banner for a crystal wellness brand About page: multiple healing crystal bracelets arranged on a warm wooden surface beside a small jade pendant, an open leather journal with handwritten affirmations, dried lavender sprigs, and a single burning candle. Warm golden hour light from the left. Deep moody atmosphere suitable for dark overlay text. No people, no faces, no text overlay. Photorealistic, editorial quality, 1920x900 landscape.

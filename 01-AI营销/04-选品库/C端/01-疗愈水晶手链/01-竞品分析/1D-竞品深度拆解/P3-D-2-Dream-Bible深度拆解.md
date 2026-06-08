@@ -99,7 +99,7 @@ to create the world's most practical dream dictionary"
 - 传统手动方式：研究→撰写→编辑→发布
 - AI辅助方式：数据库→ChatGPT分析→人工审核→发布
 
-对 LuckyCrystals 的启发：
+对 Earthward 的启发：
 - 可以用ChatGPT/Claude辅助大规模水晶内容生产
 - 但需要人工审核确保质量和准确性
 - AI辅助 = 大规模内容生产的可行性验证
@@ -118,15 +118,15 @@ to create the world's most practical dream dictionary"
 
 ---
 
-## 5. 对 LuckyCrystals 的启示
+## 5. 对 Earthward 的启示
 
 ### 5.1 必须学习
 
-| 策略 | Dream Bible做法 | LuckyCrystals应用 |
+| 策略 | Dream Bible做法 | Earthward应用 |
 |------|----------------|------------------|
 | **AI辅助内容** | ChatGPT辅助大规模梦典创建 | AI辅助大规模水晶内容生产 | https://www.dreambible.com/ |
 | **生活关联研究** | 梦境×现实生活事件关联 | 水晶×用户真实体验关联 | https://www.dreambible.com/ |
-| **品牌保护** | 加拿大/英国/美国注册 | LuckyCrystals品牌多国保护 | https://www.dreambible.com/ |
+| **品牌保护** | 加拿大/英国/美国注册 | Earthward品牌多国保护 | https://www.dreambible.com/ |
 | **持续更新** | 2025年仍在更新 | 保持内容活跃度 | https://www.dreambible.com/ |
 | **学术启发** | Gillian Holloway Ph.D启发 | 寻找学术权威背书 | https://www.dreambible.com/ |
 
@@ -151,7 +151,7 @@ Dream Bible = AI辅助内容生产 + 持续更新 + 品牌保护
 3. 品牌保护（商标+多国注册）= 长期品牌价值
 4. 基于真实生活事件的研究方法 = 比纯理论更有说服力
 
-LuckyCrystals 的AI辅助内容策略：
+Earthward 的AI辅助内容策略：
 1. 用AI辅助创建100+种水晶的基础含义页面
 2. 收集用户真实使用体验（UGC）
 3. AI分析→人工审核→发布

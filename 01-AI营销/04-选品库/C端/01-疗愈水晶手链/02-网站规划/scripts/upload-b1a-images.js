@@ -14,7 +14,7 @@ const path = require('path');
 const E = require('../templates/elementor-utils');
 const IMAGES = require('../assets/site-images');
 
-const WP_UPLOAD_BASE = 'https://luckycrystals.org/wp-content/uploads/2026/05';
+const WP_UPLOAD_BASE = 'https://goearthward.com/wp-content/uploads/2026/05';
 const GENERATED_DIR = path.resolve(__dirname, '../assets/images/generated');
 const REGISTRY_PATH = path.resolve(__dirname, '../assets/site-images.js');
 const RESULTS_PATH = path.resolve(__dirname, '../assets/upload-results-b1a-images.json');

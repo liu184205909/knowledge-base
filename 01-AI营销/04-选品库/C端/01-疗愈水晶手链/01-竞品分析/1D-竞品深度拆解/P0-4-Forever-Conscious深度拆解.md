@@ -154,7 +154,7 @@ Forever Conscious的核心内容引擎是**月相周期**：
 4. 推荐工具（水晶、蜡烛、冥想等）
 5. 肯定语/祈祷词
 
-**对LuckyCrystals的复刻**：
+**对Earthward的复刻**：
 ```
 每月固定内容：
 - Full Moon Crystal Charging Ritual（满月水晶充能仪式）
@@ -309,7 +309,7 @@ L5: 个人解读（高客单价）
 
 ---
 
-## 6. 对LuckyCrystals的可操作启发
+## 6. 对Earthward的可操作启发
 
 ### 6.1 可直接借鉴的
 

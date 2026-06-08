@@ -154,11 +154,11 @@ AdThrive (现Raptive) 广告变现：
 
 ---
 
-## 6. 对 LuckyCrystals 的启示
+## 6. 对 Earthward 的启示
 
 ### 6.1 必须学习
 
-| 策略 | Astrostyle做法 | LuckyCrystals应用 |
+| 策略 | Astrostyle做法 | Earthward应用 |
 |------|---------------|------------------|
 | **ELLE官方占星师** | 媒体合作=权威背书 | 主动寻求媒体合作建立权威 |
 | **I*AM测试** | 3种成功原型测试 | "Find Your Crystal Energy Type"测试 |
@@ -178,7 +178,7 @@ Astrostyle = 媒体品牌 × 内容矩阵 × 每日更新
 I*AM测试（互动+数据收集） → 书籍销售 →
 播客（音频触达） → 广告收入
 
-LuckyCrystals 可以借鉴的"每日内容"模式：
+Earthward 可以借鉴的"每日内容"模式：
 - 每日水晶推荐（基于月相/行星位置）
 - 12星座×每日水晶
 - 这将创造持续回访动力

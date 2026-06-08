@@ -11,7 +11,7 @@
 
 | 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
 |--------|------|----------|----------|---------|
-| **道德采购体系** | [§2.1 道德采购](#21-道德采购差异化) | 8-9条采购准则，Traceable来源透明 | LuckyCrystals采购策略参考 | https://moonrisecrystals.com/ |
+| **道德采购体系** | [§2.1 道德采购](#21-道德采购差异化) | 8-9条采购准则，Traceable来源透明 | Earthward采购策略参考 | https://moonrisecrystals.com/ |
 | **245+水晶指南** | [§3.1 水晶指南体系](#31-245水晶完整指南) | 每种水晶完整指南文章，含产地/功效/使用 | 水晶百科内容规模参考 | https://moonrisecrystals.com/ |
 | **NYT引用** | [§1 基本信息](#1-基本信息) | 被《纽约时报》引用，权威性背书 | 媒体引用策略 | https://moonrisecrystals.com/ |
 | **个人品牌** | [§1 基本信息](#1-基本信息) | Julie 创始人个人IP | 创始人故事策略参考 | https://moonrisecrystals.com/ |
@@ -58,7 +58,7 @@
 └── Sustainability 可持续性
 ```
 
-**对 LuckyCrystals 的启发**：
+**对 Earthward 的启发**：
 - 道德采购是水晶行业的**强差异化信号**
 - 消费者越来越关注产品的来源和伦理
 - "Traceable" 和 "Ethical" 关键词本身有SEO价值
@@ -171,11 +171,11 @@ URL: moonrisecrystals.com/crystal-guides/
 
 ---
 
-## 6. 对 LuckyCrystals 的启示
+## 6. 对 Earthward 的启示
 
 ### 6.1 必须学习
 
-| 策略 | Moonrise Crystals做法 | LuckyCrystals应用 |
+| 策略 | Moonrise Crystals做法 | Earthward应用 |
 |------|----------------------|------------------|
 | **道德采购定位** | Ethical Sourcing核心差异化 | 建立采购透明度，成为品牌故事的一部分 |
 | **245+系统化指南** | 每种水晶完整百科 | 逐步构建100+水晶完整指南 |
@@ -201,7 +201,7 @@ Moonrise Crystals 证明了一个关键点：
 - 但它是强有力的品牌差异化信号
 - 需要与其他策略（内容SEO/互动工具/订阅制）结合
 
-LuckyCrystals 的策略：
+Earthward 的策略：
 1. 道德采购作为"基础层"（必须有）
 2. 内容SEO作为"流量层"（学习Tiny Rituals）
 3. 互动工具作为"留存层"（学习The Crystal Council）

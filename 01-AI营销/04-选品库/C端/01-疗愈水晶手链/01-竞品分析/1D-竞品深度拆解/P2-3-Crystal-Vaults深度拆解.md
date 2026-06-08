@@ -11,7 +11,7 @@
 
 | 参考项 | 位置 | 核心要点 | 适用场景 | 验证URL |
 |--------|------|----------|----------|---------|
-| **A-Z水晶百科** | [§3.1 水晶百科体系](#31-水晶百科体系) | 100+种水晶，每种有诗意副标题+独立百科页 | LuckyCrystals水晶列表页核心参考 | https://www.crystalvaults.com/ |
+| **A-Z水晶百科** | [§3.1 水晶百科体系](#31-水晶百科体系) | 100+种水晶，每种有诗意副标题+独立百科页 | Earthward水晶列表页核心参考 | https://www.crystalvaults.com/ |
 | **字母跳转索引** | [§3.1 水晶百科体系](#31-水晶百科体系) | A-Z字母导航栏，点击跳转到对应区段 | 长列表页面UX设计 | https://www.crystalvaults.com/ |
 | **水晶诗意命名** | [§3.1 水晶百科体系](#31-水晶百科体系) | 每种水晶有独特副标题如"The Artist's Stone" | 品牌化水晶命名策略 | https://www.crystalvaults.com/ |
 | **Crystal Energy产品线** | [§2.2 特色产品线](#22-特色产品线) | 水晶茶/蜡烛/精油/灵药/香薰/脉轮 | 增量品类扩展参考 | https://www.crystalvaults.com/ |
@@ -132,7 +132,7 @@ URL: crystalvaults.com/crystal-guide/
 | Ruby | "The Gem of Kings" | 王者宝石 |
 | Selenite | "The Stone of The Moon Goddess" | 月女神 |
 
-**对 LuckyCrystals 的启发**：每种水晶都应该有一个独特的"品牌名"或"称号"，增加辨识度和情感连接。
+**对 Earthward 的启发**：每种水晶都应该有一个独特的"品牌名"或"称号"，增加辨识度和情感连接。
 
 ### 3.2 互动工具体系
 
@@ -195,11 +195,11 @@ URL: crystalvaults.com/crystal-guide/
 
 ---
 
-## 6. 对 LuckyCrystals 的启示
+## 6. 对 Earthward 的启示
 
 ### 6.1 必须学习
 
-| 策略 | Crystal Vaults做法 | LuckyCrystals应用 |
+| 策略 | Crystal Vaults做法 | Earthward应用 |
 |------|-------------------|------------------|
 | **A-Z字母索引** | 字母跳转导航 | 水晶列表页必须有A-Z快速跳转 |
 | **诗意命名** | 每种水晶独特副标题 | 每种水晶赋予品牌化称号 |

@@ -437,7 +437,7 @@ function generateProductDetail(config) {
     E.section({
       padding: E.rPadding('50', '40', '50', '40', { mobile: { t: '30', r: '15', b: '30', l: '15' } })
     }, [
-      E.heading('Why Shop With LuckyCrystals', { fontSize: 28, align: 'center' }),
+      E.heading('Why Shop With Earthward', { fontSize: 28, align: 'center' }),
       E.spacer('30'),
       E.wrap({
         flex_direction: 'row',

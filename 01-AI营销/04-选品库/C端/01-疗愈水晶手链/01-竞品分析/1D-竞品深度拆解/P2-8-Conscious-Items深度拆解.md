@@ -161,11 +161,11 @@ Step 3: "Feel the Shift"
 
 ---
 
-## 6. 对 LuckyCrystals 的启示
+## 6. 对 Earthward 的启示
 
 ### 6.1 必须学习
 
-| 策略 | Conscious Items做法 | LuckyCrystals应用 |
+| 策略 | Conscious Items做法 | Earthward应用 |
 |------|-------------------|------------------|
 | **Crystal Quiz** | 个性化水晶推荐测试 | **必做**互动工具，解决"买什么"痛点 |
 | **3步品牌叙事** | Choose→Unbox→Feel | 首页用简洁情感故事线替代复杂介绍 |
@@ -190,7 +190,7 @@ Step 3: "Feel the Shift"
 
 Conscious Items 是"纯电商+强转化"的典型。他们的首页转化设计非常优秀（Quiz/3步叙事/对比表/FAQ/种树），但缺少内容SEO是致命弱点——流量从83K暴跌到13K说明纯靠广告获客不可持续。
 
-**LuckyCrystals 必须走"内容+电商"双驱动路线**，不能只做电商。
+**Earthward 必须走"内容+电商"双驱动路线**，不能只做电商。
 
 ---
 

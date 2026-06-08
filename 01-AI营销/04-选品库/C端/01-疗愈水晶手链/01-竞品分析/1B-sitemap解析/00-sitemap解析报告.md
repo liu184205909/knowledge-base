@@ -168,7 +168,7 @@ sitemap_index.xml (主索引)
 | **工具+内容型** | Biddy Tarot, Labyrinthos, Tarot.com | 占卜工具引流+塔罗牌百科+课程 |
 | **占星日更型** | Astrostyle, Forever Conscious | 每日/每周/每月运势内容持续更新 |
 
-### 4.3 对我们（luckycrystals.org）的启示
+### 4.3 对我们（goearthward.com）的启示
 
 1. **核心竞争区间**：Tiny Rituals(1,520页) 和 Energy Muse(4,094页) 是直接竞品，我们的目标应至少覆盖同等规模
 2. **内容乘法效率最高**：Tiny Rituals 仅386篇博客就覆盖了水晶含义+天使号码+星座+脉轮+颜色+功效全矩阵

@@ -75,7 +75,7 @@
 - 免费使用，无需注册
 - 高搜索意图关键词："free birth chart", "natal chart calculator"
 
-对 LuckyCrystals 的启发：
+对 Earthward 的启发：
 - "Free Crystal Reading" 类似概念
 - 用户输入偏好/意图 → 生成个性化水晶推荐
 - 不需要注册，降低使用门槛
@@ -104,11 +104,11 @@
 
 ---
 
-## 5. 对 LuckyCrystals 的启示
+## 5. 对 Earthward 的启示
 
 ### 5.1 必须学习
 
-| 策略 | Cafe Astrology做法 | LuckyCrystals应用 |
+| 策略 | Cafe Astrology做法 | Earthward应用 |
 |------|-------------------|------------------|
 | **免费工具引流** | 免费星盘生成器 | 水晶测试/推荐工具 | https://cafeastrology.nyc/free-birth-chart/ |
 | **配对矩阵** | 12×12星座配对 | 水晶×功效/星座配对矩阵 | https://cafeastrology.nyc/compatibility/ |

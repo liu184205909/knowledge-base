@@ -1,8 +1,8 @@
 [READ] Loading Seed-Master ...
   Total data rows: 44999
-  Columns (24): ['Keyword', 'ÖÐÎÄ', 'Topic Pillar', 'Entity', 'Subtopic', 'Content Role', 'Volume', 'KD', 'CPC', 'Number of Results', 'Intent', 'Competitor Keyword Matched', 'Competitor Match Count', 'Source Count', 'Best Competitor Source', 'Best Competitor URL', 'Best Keyword Traffic', 'Best Traffic %', 'Best Page Traffic', 'Best Page Traffic %', 'Best Page Top Keyword', 'Best Page Intent', 'Evidence Updated At', 'Recommended Page Type']
+  Columns (24): ['Keyword', 'ï¿½ï¿½ï¿½ï¿½', 'Topic Pillar', 'Entity', 'Subtopic', 'Content Role', 'Volume', 'KD', 'CPC', 'Number of Results', 'Intent', 'Competitor Keyword Matched', 'Competitor Match Count', 'Source Count', 'Best Competitor Source', 'Best Competitor URL', 'Best Keyword Traffic', 'Best Traffic %', 'Best Page Traffic', 'Best Page Traffic %', 'Best Page Top Keyword', 'Best Page Intent', 'Evidence Updated At', 'Recommended Page Type']
 
-# Topic Discovery Report ¡ª LuckyCrystals Seed-Master v2
+# Topic Discovery Report ï¿½ï¿½ Earthward Seed-Master v2
 > Generated: 2026-06-04 | Data: 44999 keywords x 24 columns
 
 ## 1. Topic Pillar Distribution
@@ -21,7 +21,7 @@
 | Feng Shui | 623 | 1.4% | 362,540 | 581 | 0 (0.0%) |
 | Palmistry | 619 | 1.4% | 707,630 | 1,143 | 7 (1.1%) |
 | Angel Numbers | 332 | 0.7% | 340,320 | 1,025 | 57 (17.2%) |
-| **TOTAL** | **44,999** | **100%** | **65,870,370** | ¡ª | **4,230 (9.4%)** |
+| **TOTAL** | **44,999** | **100%** | **65,870,370** | ï¿½ï¿½ | **4,230 (9.4%)** |
 
 ## 2. Page Type Distribution
 

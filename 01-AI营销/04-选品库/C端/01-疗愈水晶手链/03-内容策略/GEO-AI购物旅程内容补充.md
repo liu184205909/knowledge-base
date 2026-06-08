@@ -9,13 +9,13 @@
 
 ## 一、现状诊断：四类问题覆盖度
 
-> 诊断方法：用 ChatGPT/Perplexity 输入四类问题，看 LuckyCrystals（或竞品）是否出现。
+> 诊断方法：用 ChatGPT/Perplexity 输入四类问题，看 Earthward（或竞品）是否出现。
 
 | 问题类型 | 现有内容覆盖 | 覆盖度 | 关键缺口 |
 |---------|------------|-------|---------|
 | **推荐类** | 场景应用系列(10)、选购指南(10)、水晶含义(15) | **高** | 缺少 "Best crystal bracelet brands" 榜单型内容 |
 | **对比类** | 品类对比/选购评测、场景应用部分 | **中** | 缺少同品类产品、材质、购买渠道对比页；竞品品牌 `vs` 不作为默认路线 |
-| **信任核查类** | 用户故事系列(10)、E-E-A-T 框架 | **低** | **最关键缺口**——缺 Trustpilot/第三方评测、缺 "is LuckyCrystals legit" 信任内容、缺 UGC |
+| **信任核查类** | 用户故事系列(10)、E-E-A-T 框架 | **低** | **最关键缺口**——缺 Trustpilot/第三方评测、缺 "is Earthward legit" 信任内容、缺 UGC |
 | **解答类** | 教程系列(8)、水晶百科(15)、场景应用(10)、灵性生活内容 | **高** | 基本完整 |
 
 **结论**：最大缺口在**信任核查类**。对独立站来说，这是 AI 购物旅程中「决策核查」阶段的核心问题。灵性/神秘学品类的信任门槛比普通消费品更高——用户更担心"这个网站是不是骗人的"。
@@ -44,7 +44,7 @@
 
 ### 阶段 2：决策核查（关键缺口）
 
-用户问 AI："Is LuckyCrystals legit?" / "What is the best place to buy crystal bracelets online?"
+用户问 AI："Is Earthward legit?" / "What is the best place to buy crystal bracelets online?"
 
 | 现有内容 | 覆盖情况 |
 |---------|---------|
@@ -102,7 +102,7 @@
 |------|------|------|
 | 开箱激励 | 随单附卡片"分享你的水晶照片获得 10% 折扣码" | 积累真实用户照片 |
 | 邮件序列 Day 14 | "展示你如何使用水晶" + 引导社交分享 | 持续 UGC |
-| Instagram/TikTok 标签 | #LuckyCrystals 标签聚合 | AI 可索引的社交信任信号 |
+| Instagram/TikTok 标签 | #Earthward 标签聚合 | AI 可索引的社交信任信号 |
 
 ### 3.1 结构化评价体系（P0 延伸 — 2026-06-01补充）
 
@@ -223,7 +223,7 @@ Size Calculator → 输入手腕尺寸 → 推荐产品 → 购买
 
 | 文章 | 目标关键词 |
 |------|-----------|
-| "LuckyCrystals Review: Is It Worth It?" | luckycrystals review |
+| "Earthward Review: Is It Worth It?" | earthward review |
 | "Best Place to Buy Crystal Bracelets Online" | best place to buy crystal bracelets |
 | "Online Crystal Store vs Marketplace: How to Choose Safely" | buy crystals online safely |
 
@@ -273,7 +273,7 @@ Size Calculator → 输入手腕尺寸 → 推荐产品 → 购买
 
 ## 六、AI 声誉快速诊断模板
 
-每月在 ChatGPT / Perplexity 中执行以下查询，记录 LuckyCrystals 是否出现：
+每月在 ChatGPT / Perplexity 中执行以下查询，记录 Earthward 是否出现：
 
 ```
 推荐类：
@@ -286,8 +286,8 @@ Size Calculator → 输入手腕尺寸 → 推荐产品 → 购买
 5. "Best place to buy healing crystals online?"
 
 信任核查类：
-6. "Is [LuckyCrystals] a legit crystal shop?"
-7. "What do people say about [LuckyCrystals]?"
+6. "Is [Earthward] a legit crystal shop?"
+7. "What do people say about [Earthward]?"
 
 解答类：
 8. "How to choose authentic crystal bracelets?"

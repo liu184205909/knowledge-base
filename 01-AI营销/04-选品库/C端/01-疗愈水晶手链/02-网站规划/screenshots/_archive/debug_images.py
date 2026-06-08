@@ -4,7 +4,7 @@ Debug: check actual image URLs, response status, and console errors.
 import time
 from playwright.sync_api import sync_playwright
 
-URL = "https://luckycrystals.org/about/"
+URL = "https://goearthward.com/about/"
 TARGET_IMAGES = [
     "about-icon-natural-crystals-v1.png",
     "about-icon-cleansing-charged-v1.png",

@@ -65,7 +65,7 @@ When The Fool appears upright, it is an invitation to **take a leap of faith**. 
 
 **In a daily draw:** Expect the unexpected. Stay open to surprise invitations, spontaneous opportunities, or a sudden change in plans that leads somewhere wonderful.
 
-> **Editor's Note:** "The Fool card appeared in my first-ever tarot reading during a period when I was debating whether to start LuckyCrystals. That image of stepping off a cliff with a smile became my personal reminder that sometimes the most transformative journeys begin with a leap of faith." — Elena R.
+> **Editor's Note:** "The Fool card appeared in my first-ever tarot reading during a period when I was debating whether to start Earthward. That image of stepping off a cliff with a smile became my personal reminder that sometimes the most transformative journeys begin with a leap of faith." — Elena R.
 
 ## The Fool Reversed Meaning
 

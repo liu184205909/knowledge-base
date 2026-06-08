@@ -713,7 +713,7 @@ function generateEthicalSourcing() {
       E.wrap({ content_width: 'boxed' }, [
         E.textEditor(
           'We publish an annual Impact Report detailing our environmental and social contributions. ' +
-          'Transparency is not just a policy — it\'s a promise. When you choose LuckyCrystals, ' +
+          'Transparency is not just a policy — it\'s a promise. When you choose Earthward, ' +
           'you\'re choosing a brand that cares about the planet as much as it cares about your wellbeing.',
           { fontSize: 15, color: '#666666', align: 'center', lineHeight: 26 }
         )

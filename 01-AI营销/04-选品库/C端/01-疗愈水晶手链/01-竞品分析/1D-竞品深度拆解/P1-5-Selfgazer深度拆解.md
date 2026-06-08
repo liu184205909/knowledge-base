@@ -146,16 +146,16 @@ L2: （推测）广告/联盟收入
 
 ---
 
-## 6. 对LuckyCrystals的可操作启发
+## 6. 对Earthward的可操作启发
 
 ### 6.1 可直接借鉴的
 
 | 借鉴项 | 具体做法 |
 |--------|---------|--------|
 | **心理学+灵性双视角** | 水晶百科同时提供科学和灵性视角的解释 |
-| **竞品对比文章** | 写"LuckyCrystals vs Energy Muse"或"Best Crystal Apps 2026"类文章 |
+| **竞品对比文章** | 写"Earthward vs Energy Muse"或"Best Crystal Apps 2026"类文章 |
 | **图表可视化** | 水晶能量测试结果用图表/视觉化展示 |
-| **Reddit社区** | 创建r/LuckyCrystals子版块 |
+| **Reddit社区** | 创建r/Earthward子版块 |
 | **AI工具概念** | AI水晶推荐/能量分析工具 |
 
 ### 6.2 需要差异化超越的
@@ -191,15 +191,15 @@ L2: （推测）广告/联盟收入
 
 ---
 
-## 8. 心理学+灵性双视角 — 对LuckyCrystals内容的具体应用
+## 8. 心理学+灵性双视角 — 对Earthward内容的具体应用
 
-Selfgazer的"心理学+灵性"融合理念可以直接应用到LuckyCrystals的水晶百科内容：
+Selfgazer的"心理学+灵性"融合理念可以直接应用到Earthward的水晶百科内容：
 
 ```
 传统水晶百科：
   "Rose Quartz is the stone of unconditional love."
 
-LuckyCrystals双视角百科：
+Earthward双视角百科：
   科学视角：Rose Quartz is a variety of quartz composed of silicon dioxide.
     Its pink color comes from trace amounts of titanium, iron, or manganese.
   灵性视角：Rose Quartz is known as the stone of unconditional love,

@@ -28,7 +28,7 @@ try {
   _creds = require(path.resolve(__dirname, '../../config/api-credentials.json'));
 } catch (e) { /* fallback to env only */ }
 
-const SITE = process.env.WP_SITE || 'luckycrystals.org';
+const SITE = process.env.WP_SITE || 'goearthward.com';
 const AUTH = 'Basic ' + Buffer.from(
   (process.env.WP_USER || _creds.wp_username || '') + ':' + (process.env.WP_APP_PASSWORD || _creds.wp_app_password || '')
 ).toString('base64');
