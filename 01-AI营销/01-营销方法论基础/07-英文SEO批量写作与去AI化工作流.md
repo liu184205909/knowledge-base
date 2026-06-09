@@ -8,10 +8,10 @@
 
 ## 与 RLM 流程的关系
 
-本文件是 `00-RLM营销方法论-执行版.md` 中**步骤3：内容策略与内容营销总控**的执行层展开，同时对接 `02-SEO全链路工作流.md` 的 Content Generation、Quality Check、Monitoring 环节。
+本文件是 `00-RLM营销方法论-执行版.md` 中**步骤 3.5（内容生产边界）**的执行层展开，对应执行版分层关系中的"07-批量写作 = 执行层"。同时对接 `02-SEO全链路工作流.md` 的 Content Generation、Quality Check、Monitoring 环节。
 
 **输入/输出关系**：
-- 输入：`Seed-Master` 关键词主表、`Topic-Discovery`、`Keyword-Page-Proof`、1F 内容策略分析、1H 策略清单、页面承接关系、`05-内容Brief模板.md`
+- 输入：`Seed-Master` 关键词主表（1B 轨道B/D 提供）、竞品证据增强结果、1F 内容策略分析、1H 策略清单、页面承接关系、`06-内容Brief模板.md`
 - 输出：内容清单批次、内容 Brief、英文初稿、编辑稿、质检报告、发布记录、内链地图、复盘更新项
 - 反向更新：质检和发布表现反向更新关键词主表、内容清单、Brief 模板和后续发布节奏
 
