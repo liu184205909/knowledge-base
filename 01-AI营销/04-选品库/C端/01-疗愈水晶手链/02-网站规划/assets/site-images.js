@@ -34,6 +34,61 @@ const IMAGES = {
     cta: asset(GEN + '/interactive-oracle-celestial-v1.png', 'Crystal guidance tools and bracelets for personal intention setting', 'Warm mystical crystal guidance scene with oracle cards, zodiac accents, bracelets, and intention-setting tools', '1920x900', generated)
   },
 
+  home: {
+    hero: asset(GEN + '/home-hero-intentional-living-v2.png',
+      'Natural crystal bracelets for intentional living',
+      'Premium wide homepage hero for Earthward: several natural crystal bracelets arranged on soft cream linen with raw mineral pieces, a blank intention card, and warm morning light. Grounded, honest, premium, calm, suitable for dark overlay text. No people, no faces, no hands, no smoke, no sage, no text overlay, no mystical effects. Photorealistic, 1920x900 landscape.',
+      '1920x900', needs_generation),
+    intentionCalm: asset(GEN + '/home-intention-calm-v2.png',
+      'Amethyst bracelet for calm daily intention',
+      'Square product image: amethyst bracelet on lavender linen beside a small amethyst cluster and a closed journal. Calm evening ritual mood, soft natural light, clean premium styling, no people, no hands, no text overlay. Photorealistic, suitable for card crop, 800x800 square.',
+      '800x800', needs_generation),
+    intentionLove: asset(GEN + '/home-intention-love-v2.png',
+      'Rose quartz bracelet for self-compassion intention',
+      'Square product image: rose quartz bracelet with a small rose quartz heart stone, pale linen, and a blank note card. Gentle self-compassion mood, blush and cream palette, no people, no hands, no readable text. Photorealistic, suitable for card crop, 800x800 square.',
+      '800x800', needs_generation),
+    intentionAbundance: asset(GEN + '/home-intention-abundance-v2.png',
+      'Citrine bracelet for abundance intention',
+      'Square product image: citrine bracelet on a clean white desk with a raw citrine point, small succulent, and blank planning card. Optimistic growth and creative planning mood, warm golden light, no people, no hands, no readable text. Photorealistic, suitable for card crop, 800x800 square.',
+      '800x800', needs_generation),
+    intentionGrounding: asset(GEN + '/home-intention-grounding-v2.png',
+      'Black tourmaline bracelet for grounding intention',
+      'Square product image: black tourmaline bracelet on a dark wood desk beside a smooth grounding stone and folded cotton cloth. Grounded, quiet, protective visual mood without dramatic effects, no people, no hands, no text overlay. Photorealistic, 800x800 square.',
+      '800x800', needs_generation),
+    intentionSleep: asset(GEN + '/home-intention-sleep-v2.png',
+      'Moonstone bracelet for evening ritual',
+      'Square product image: moonstone bracelet on soft white bedding beside a small moonstone, herbal tea, and warm bedside light. Gentle evening ritual mood, restful and natural, no people, no hands, no text overlay. Photorealistic, 800x800 square.',
+      '800x800', needs_generation),
+    intentionFocus: asset(GEN + '/home-intention-focus-v2.png',
+      'Fluorite bracelet for focus intention',
+      'Square product image: fluorite bracelet on a neat study desk beside a blank notebook, clear quartz point, and soft daylight. Clean focus and clarity mood, no people, no hands, no readable text. Photorealistic, 800x800 square.',
+      '800x800', needs_generation),
+    quiz: asset(GEN + '/home-crystal-guide-entry-v2.png',
+      'Crystal guide cards and bracelets for choosing by intention',
+      'Homepage guide entry image: natural crystal bracelets, blank guide cards, and small raw stones arranged on warm linen. Clear educational browsing feeling, modern wellness brand, no readable text, no people, no hands, no mystical effects. Photorealistic, 1200x900 landscape.',
+      '1200x900', needs_generation),
+    brandStory: asset(GEN + '/home-brand-story-workbench-v2.png',
+      'Earthward crystal bracelet workbench with origin notes',
+      'Brand story image for Earthward homepage: a trustworthy studio workbench with sorted crystal beads, raw mineral specimens, a jeweler loupe, cotton pouch, blank origin note card, and finished bracelets. Clean natural light, transparent sourcing and careful inspection mood, no people, no hands, no readable text. Photorealistic, 1200x900 landscape.',
+      '1200x900', needs_generation),
+    useCalm: asset(GEN + '/home-usecase-calm-evening-v2.png',
+      'Amethyst bracelet as an evening wind-down cue',
+      'Square use-case image: amethyst bracelet beside herbal tea and a closed journal on lavender linen. Quiet evening wind-down mood, no people, no hands, no readable text, no testimonial styling. Photorealistic, 400x400 square.',
+      '400x400', needs_generation),
+    useWorkday: asset(GEN + '/home-usecase-workday-grounding-v2.png',
+      'Black tourmaline bracelet as a workday grounding cue',
+      'Square use-case image: black tourmaline bracelet on a tidy work desk with a closed planner, pen, and grounding stone. Professional calm reset mood, no people, no hands, no readable text, no testimonial styling. Photorealistic, 400x400 square.',
+      '400x400', needs_generation),
+    useCompassion: asset(GEN + '/home-usecase-self-compassion-v2.png',
+      'Rose quartz bracelet as a self-compassion reminder',
+      'Square use-case image: rose quartz bracelet beside a blank journal, soft pink stone, and warm linen. Gentle self-compassion ritual mood, no people, no hands, no readable text, no testimonial styling. Photorealistic, 400x400 square.',
+      '400x400', needs_generation),
+    newsletter: asset(GEN + '/home-launch-cta-crystal-bracelets-v2.png',
+      'Natural crystal bracelets and guide cards for choosing an Earthward piece',
+      'Wide launch CTA background for Earthward: natural crystal bracelets, blank guide cards, raw stones, linen, and soft dusk light. Grounded shopping and guide feeling, suitable for dark overlay text. No people, no faces, no hands, no smoke, no sage, no readable text, no mystical effects. Photorealistic, 1920x900 landscape.',
+      '1920x900', needs_generation)
+  },
+
   faq: {
     hero: asset(GEN + '/faq-hero-crystal-care-v1.png', 'Crystal care cards and healing bracelets', 'FAQ hero image with crystal bracelets, care cards, cleansing tools, and calm neutral styling', '1920x900', generated),
     cta: asset(GEN + '/contact-studio-support-v1.png', 'Earthward support studio', 'Customer support crystal studio scene with bracelet packaging and care cards', '1920x900', generated)
@@ -45,71 +100,50 @@ const IMAGES = {
   },
 
   about: {
-    // Section 1 Hero: "Our Story — Ancient wisdom meets modern intention" with dark overlay 0.65
-    hero: asset(GEN + '/about-hero-brand-story-v1.png',
-      'Earthward brand story hero with crystal bracelets and ancient wisdom artifacts',
-      'Premium wide hero banner for a crystal wellness brand About page: multiple healing crystal bracelets arranged on a warm wooden surface beside a small jade pendant, an open leather journal with handwritten affirmations, dried lavender sprigs, and a single burning candle. Warm golden hour light from the left. Deep moody atmosphere suitable for dark overlay text. No people, no faces, no text overlay. Photorealistic, editorial quality, 1920x900 landscape.',
-      '1920x900', generated),
-
-    // Section 3 Intention-Setting: craftsmanship and intention-setting workspace (no portrait, branded studio shot)
-    founder: asset(GEN + '/about-intention-setting-workspace-v1.png',
-      'Crystal bracelet intention-setting workspace with cleansing tools',
-      'Square product photo for a crystal bracelet intention-setting section: a clean white studio workbench viewed from above, showing sorted polished rose quartz amethyst and citrine beads in small ceramic bowls, a bundle of dried white sage, a brass singing bowl, scattered affirmation cards with handwritten intentions, and one finished crystal bracelet resting on a selenite charging plate. Soft diffused natural light, warm and mindful atmosphere. No people, no faces, no hands, no text. Photorealistic, clean and trustworthy brand aesthetic, 800x800 square crop.',
-      '800x800', generated),
-
-    // Section 6 Quality Promise icon 1: "100% Natural Crystals" — displayed as 70px circle
-    natural: asset(GEN + '/about-icon-natural-crystals-v1.png',
-      'Natural raw and polished crystal pair showing authentic texture',
-      'Square icon image for "100% Natural Crystals" quality badge: a single raw amethyst geode half placed beside a polished amethyst bead on a clean warm beige linen surface. Top-down flat lay, centered composition, soft diffused studio light. The contrast between raw and polished forms shows authenticity and natural origin. No text, no labels, no hands. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', generated),
-
-    // Section 6 Quality Promise icon 2: "Energetically Cleansed & Charged" — displayed as 70px circle
-    cleansing: asset(GEN + '/about-icon-cleansing-charged-v1.png',
-      'Crystal bracelet being cleansed with sage smoke and moonlight',
-      'Square icon image for "Energetically Cleansed and Charged" quality badge: a single crystal bracelet resting on a raw selenite charging plate, with a thin wisp of dried sage smoke gently curling around it. Dark slate background for contrast, warm amber candlelight from the side. Mystical but clean and premium feel. No people, no faces, no hands, no text. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', generated),
-
-    // Section 6 Quality Promise icon 3: "Velvet Pouch + Guide Card Included" — displayed as 70px circle
-    packaging: asset(GEN + '/about-icon-velvet-pouch-guide-v1.png',
-      'Velvet pouch and crystal energy guide card gift packaging',
-      'Square icon image for "Velvet Pouch and Guide Card Included" quality badge: a soft dark purple velvet pouch partially open revealing a crystal bracelet inside, placed beside a cream-colored guide card with subtle crystal illustrations visible on its surface. Warm neutral linen background, top-down flat lay, soft natural window light. Premium unboxing feel. No people, no hands, no text overlay. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', generated),
-
-    // Section 6 Quality Promise icon 4: "30-Day Worry-Free Returns" — displayed as 70px circle
-    returns: asset(GEN + '/about-icon-returns-guarantee-v1.png',
-      'Crystal bracelet order package with care return card',
-      'Square icon image for "30-Day Worry-Free Returns" quality badge: a neatly closed kraft gift box with a subtle branded wax seal, a small handwritten thank-you card tucked under the ribbon, and a single crystal bracelet visible beside the box on a clean warm background. Conveys trust, care, and premium service. Top-down flat lay, soft diffused light. No people, no hands, no text overlay. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', generated),
-
-    // Section 7 User Story 1: Amanda K. — Rose Quartz bracelet buyer — displayed as 60px circle
-    communityRose: asset(GEN + '/about-community-rose-quartz-v1.png',
-      'Rose quartz crystal bracelet with self-love journaling scene',
-      'Square image for a rose quartz bracelet customer testimonial: a delicate rose quartz beaded bracelet resting on an open journal page with pink-toned handwritten gratitude notes, a pink rose petal, and a small rose quartz heart stone. Warm romantic soft light, cream and blush color palette. Conveys self-love, healing, and personal story. No people, no faces, no hands, no text overlay. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', generated),
-
-    // Section 7 User Story 2: David R. — Black Tourmaline bracelet buyer — displayed as 60px circle
-    communityProtection: asset(GEN + '/about-community-black-tourmaline-v1.png',
-      'Black tourmaline crystal bracelet with grounding desk scene',
-      'Square image for a black tourmaline bracelet customer testimonial: a sleek black tourmaline beaded bracelet placed on a dark walnut desk beside a minimal leather planner, a fountain pen, and a small obsidian worry stone. Masculine and grounded aesthetic, cool-toned professional lighting from a desk lamp. Conveys strength, focus, and workplace energy. No people, no faces, no hands, no text overlay. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', generated),
-
-    // Section 7 User Story 3: Sophie L. — Amethyst bracelet buyer — displayed as 60px circle
-    communityAmethyst: asset(GEN + '/about-community-amethyst-v1.png',
-      'Amethyst crystal bracelet with calming study scene',
-      'Square image for an amethyst bracelet customer testimonial: a purple amethyst beaded bracelet resting on a soft lavender linen cloth beside a stack of textbooks, a small amethyst cluster, and a cup of chamomile tea with gentle steam. Calm and comforting atmosphere, soft purple and cream tones, diffused afternoon light from a window. Conveys calm, focus, and student wellness. No people, no faces, no hands, no text overlay. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', generated),
-
-    // Section 7 User Story 4: Mia T. — Citrine bracelet buyer — displayed as 60px circle
-    communityCitrine: asset(GEN + '/about-community-citrine-v1.png',
-      'Citrine crystal bracelet with abundance entrepreneurship scene',
-      'Square image for a citrine bracelet customer testimonial: a warm golden citrine beaded bracelet placed on a clean white desk beside a small succulent plant in a terracotta pot, a laptop keyboard corner, and a raw citrine point. Bright optimistic morning light, yellow and white color palette, entrepreneurial and abundance energy. No people, no faces, no hands, no text overlay. Photorealistic, suitable for circular crop. 400x400 square.',
-      '400x400', generated),
-
-    // Section 8 CTA: "Ready to Find Your Crystal?" with dark overlay 0.7
-    cta: asset(GEN + '/about-cta-find-your-crystal-v1.png',
-      'Discover your perfect crystal bracelet with intention-setting tools',
-      'Premium wide hero banner for About page call-to-action: a serene crystal intention-setting scene viewed from slightly above, showing an arrangement of five different crystal bracelets fanned out on soft cream linen, scattered dried flowers, a white sage bundle, a small brass singing bowl, and one oracle card face-down. Warm sunset golden light, dreamy and inviting atmosphere suitable for dark overlay with white text. No people, no faces, no hands, no text overlay. Photorealistic, editorial quality, 1920x900 landscape.',
-      '1920x900', generated)
+    hero: asset(GEN + '/about-hero-brand-story-v2.png',
+      'Earthward brand story with natural crystal bracelets and traceable materials',
+      'Premium wide hero image for Earthward About page: natural crystal bracelets arranged on warm wood beside raw mineral specimens, a simple origin note card, linen fabric, and a closed journal. Calm natural light, grounded earthy palette, honest and editorial, suitable for dark overlay text. No people, no faces, no hands, no smoke, no text overlay, no mystical effects. Photorealistic, 1920x900 landscape.',
+      '1920x900', needs_generation),
+    founder: asset(GEN + '/about-intention-setting-workspace-v2.png',
+      'Crystal bracelet workspace with beads, selenite plate, and intention cards',
+      'Square product photo of a clean crystal bracelet workspace: sorted polished amethyst, rose quartz, and citrine beads in small ceramic bowls, a finished bracelet resting on a selenite plate, blank intention cards, a cotton cloth, and simple inspection tools. Warm diffused daylight, calm trustworthy studio feeling. No sage, no smoke, no people, no faces, no hands, no readable text. Photorealistic, 800x800 square crop.',
+      '800x800', needs_generation),
+    natural: asset(GEN + '/about-icon-natural-crystals-v2.png',
+      'Raw and polished natural crystal showing authentic texture',
+      'Square icon image for a genuine natural crystals quality badge: one raw amethyst geode piece beside one polished amethyst bracelet bead on warm beige linen. Centered flat lay, soft studio light, authentic texture, simple and premium. No text, no labels, no hands. Photorealistic, suitable for circular crop, 400x400 square.',
+      '400x400', needs_generation),
+    cleansing: asset(GEN + '/about-icon-prepared-with-care-v2.png',
+      'Crystal bracelet prepared with selenite and care card',
+      'Square icon image for "Prepared With Care": a crystal bracelet resting on a white selenite charging plate beside a folded cotton cloth, small blank intention card, and a soft candle glow in the background. Clean, calm, grounded, no smoke, no sage, no mystical effects, no people, no hands, no readable text. Photorealistic, suitable for circular crop, 400x400 square.',
+      '400x400', needs_generation),
+    packaging: asset(GEN + '/about-icon-velvet-pouch-guide-v2.png',
+      'Velvet pouch and intention guide card gift packaging',
+      'Square icon image of Earthward-style crystal bracelet packaging: a soft dark velvet pouch partly open with a crystal bracelet inside, a cream blank intention guide card, and natural paper packaging on warm linen. Premium unboxing feel, no hands, no text overlay, no readable text. Photorealistic, suitable for circular crop, 400x400 square.',
+      '400x400', needs_generation),
+    returns: asset(GEN + '/about-icon-returns-care-v2.png',
+      'Crystal bracelet package with simple care card',
+      'Square icon image for a calm returns and care promise: neatly closed kraft gift box, ribbon, small blank care card, and a crystal bracelet beside the box on a clean warm background. Trustworthy, simple, premium service feeling. No hands, no text overlay, no readable text. Photorealistic, suitable for circular crop, 400x400 square.',
+      '400x400', needs_generation),
+    communityRose: asset(GEN + '/about-usecase-rose-quartz-transition-v2.png',
+      'Rose quartz bracelet with journaling scene for self-compassion',
+      'Square use-case image: rose quartz bracelet on an open blank journal beside a rose quartz heart stone and soft linen. Gentle self-compassion mood, warm blush and cream palette, quiet everyday ritual, no people, no faces, no hands, no readable text, no testimonial styling. Photorealistic, suitable for circular crop, 400x400 square.',
+      '400x400', needs_generation),
+    communityProtection: asset(GEN + '/about-usecase-black-tourmaline-workday-v2.png',
+      'Black tourmaline bracelet on a calm work desk',
+      'Square use-case image: black tourmaline bracelet on a tidy dark wood desk beside a closed planner, pen, and small grounding stone. Calm workday reset mood, professional and grounded, no people, no faces, no hands, no readable text, no testimonial styling. Photorealistic, suitable for circular crop, 400x400 square.',
+      '400x400', needs_generation),
+    communityAmethyst: asset(GEN + '/about-usecase-amethyst-evening-v2.png',
+      'Amethyst bracelet beside evening tea and a journal',
+      'Square use-case image: amethyst bracelet resting on soft lavender linen beside a cup of herbal tea, a closed journal, and a small amethyst cluster. Quiet evening wind-down mood, soft purple and cream tones, no people, no faces, no hands, no readable text. Photorealistic, suitable for circular crop, 400x400 square.',
+      '400x400', needs_generation),
+    communityCitrine: asset(GEN + '/about-usecase-citrine-creative-courage-v2.png',
+      'Citrine bracelet with creative planning workspace',
+      'Square use-case image: citrine bracelet on a clean white desk beside a blank planning card, small succulent, raw citrine point, and warm morning light. Optimistic creative-start mood, yellow and white palette, no people, no faces, no hands, no readable text. Photorealistic, suitable for circular crop, 400x400 square.',
+      '400x400', needs_generation),
+    cta: asset(GEN + '/about-cta-find-your-crystal-v2.png',
+      'Crystal bracelets and intention cards for finding your crystal',
+      'Premium wide CTA image: five natural crystal bracelets arranged on cream linen with blank intention cards, raw mineral pieces, dried lavender, and warm sunset light. Inviting, calm, grounded, suitable for dark overlay text. No sage, no smoke, no people, no faces, no hands, no readable text, no mystical effects. Photorealistic, 1920x900 landscape.',
+      '1920x900', needs_generation)
   },
 
   sourcing: {

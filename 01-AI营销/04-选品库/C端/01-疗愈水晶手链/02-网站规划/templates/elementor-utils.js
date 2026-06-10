@@ -19,9 +19,35 @@ const https = require('https');
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
 
 // ============================================================
-// 认证配置 — 优先环境变量，fallback 到 api-credentials.json
+// 加载全局凭证 — C:\Users\Dylan\.env（或 HOME/.env）
+// ============================================================
+function loadGlobalEnv() {
+  const envPaths = [
+    path.join(os.homedir(), '.env'),
+    path.join('D:', '.env')
+  ];
+  for (const p of envPaths) {
+    try {
+      const content = fs.readFileSync(p, 'utf-8');
+      content.split('\n').forEach(function(line) {
+        line = line.trim();
+        if (!line || line.startsWith('#')) return;
+        const eq = line.indexOf('=');
+        if (eq < 1) return;
+        const key = line.slice(0, eq).trim();
+        if (!process.env[key]) { process.env[key] = line.slice(eq + 1).trim(); }
+      });
+      break; // 找到第一个就停
+    } catch (e) { /* file not found, skip */ }
+  }
+}
+loadGlobalEnv();
+
+// ============================================================
+// 认证配置 — 优先环境变量（已含全局 .env），fallback 到项目 config
 // ============================================================
 let _creds = { wp_username: '', wp_app_password: '' };
 try {

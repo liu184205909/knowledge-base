@@ -33,7 +33,7 @@ var BIRTHSTONES = [
     properties: ['Passion', 'Energy', 'Creativity', 'Protection'],
     description: 'Garnet is a stone of deep, passionate energy. It revitalizes your spirit, boosts confidence, and inspires love and devotion. Known as a powerful protection stone, Garnet has been treasured since ancient Egyptian times for its ability to ward off negative energy and attract abundance.',
     affirmation: 'I am filled with passionate energy and my creative fire burns bright.',
-    productLink: '/collections/garnet-crystals'
+    productLink: '/product-category/garnet-crystals'
   },
   {
     month: 'February',
@@ -45,7 +45,7 @@ var BIRTHSTONES = [
     properties: ['Calm', 'Intuition', 'Spiritual Growth', 'Clarity'],
     description: 'Amethyst is the ultimate stone of peace and spiritual awareness. Its soothing violet energy calms the mind, enhances intuition, and connects you to higher states of consciousness. Ancient Greeks believed Amethyst could prevent intoxication, symbolizing clarity of thought and sobriety of spirit.',
     affirmation: 'I am at peace, and my inner wisdom guides me clearly.',
-    productLink: '/collections/amethyst-crystals'
+    productLink: '/product-category/amethyst-crystals'
   },
   {
     month: 'March',
@@ -57,7 +57,7 @@ var BIRTHSTONES = [
     properties: ['Courage', 'Communication', 'Calm', 'Clarity'],
     description: 'Aquamarine, the treasure of mermaids, carries the calming energy of the ocean. It is a stone of courage and clear communication, helping you speak your truth with confidence. Sailors once carried Aquamarine as a talisman of protection and safe passage across treacherous waters.',
     affirmation: 'I speak my truth with courage and my words flow like calm waters.',
-    productLink: '/collections/aquamarine-crystals'
+    productLink: '/product-category/aquamarine-crystals'
   },
   {
     month: 'April',
@@ -69,7 +69,7 @@ var BIRTHSTONES = [
     properties: ['Strength', 'Purity', 'Eternity', 'Clarity'],
     description: 'Diamond is the hardest natural substance on Earth, symbolizing unbreakable strength and eternal love. It amplifies the energy of all other crystals and brings clarity to the mind. As the April birthstone, Diamond represents purity of intention and the infinite potential within you.',
     affirmation: 'I am strong, pure, and radiant. My inner light shines brightly.',
-    productLink: '/collections/clear-quartz-crystals'
+    productLink: '/product-category/clear-quartz-crystals'
   },
   {
     month: 'May',
@@ -81,7 +81,7 @@ var BIRTHSTONES = [
     properties: ['Love', 'Abundance', 'Wisdom', 'Harmony'],
     description: 'Emerald is the stone of unconditional love and abundance. Its lush green energy opens the heart to deep compassion and draws prosperity into your life. Cleopatra treasured Emeralds above all other gemstones, believing they held the power of eternal youth and fertility.',
     affirmation: 'My heart is open to love, and abundance flows to me naturally.',
-    productLink: '/collections/emerald-crystals'
+    productLink: '/product-category/emerald-crystals'
   },
   {
     month: 'June',
@@ -93,7 +93,7 @@ var BIRTHSTONES = [
     properties: ['Purity', 'Wisdom', 'Integrity', 'Calming'],
     description: 'Pearl is the only gemstone created by a living creature, making it a symbol of natural purity and wisdom born from experience. Like the oyster that transforms an irritant into something beautiful, Pearl teaches you to turn challenges into strengths and find inner calm amidst chaos.',
     affirmation: 'I transform challenges into wisdom and shine with inner purity.',
-    productLink: '/collections/moonstone-crystals'
+    productLink: '/product-category/moonstone-crystals'
   },
   {
     month: 'July',
@@ -105,7 +105,7 @@ var BIRTHSTONES = [
     properties: ['Vitality', 'Passion', 'Protection', 'Leadership'],
     description: 'Ruby is the king of gemstones, radiating fierce vitality and life-force energy. It activates your root chakra for grounding and your heart chakra for passionate love. Ancient warriors wore Ruby into battle, believing it granted invincibility and protected against physical harm.',
     affirmation: 'I am filled with vibrant life energy and I lead with passion.',
-    productLink: '/collections/ruby-crystals'
+    productLink: '/product-category/ruby-crystals'
   },
   {
     month: 'August',
@@ -117,7 +117,7 @@ var BIRTHSTONES = [
     properties: ['Compassion', 'Abundance', 'Joy', 'Healing'],
     description: 'Peridot is a stone of warm, joyful energy that dissolves emotional blockages and invites abundance. Known as the evening emerald, Peridot was Cleopatra\'s favorite gemstone. It carries the energy of sunshine and new growth, helping you release jealousy and resentment while embracing gratitude.',
     affirmation: 'I release what no longer serves me and embrace joy and abundance.',
-    productLink: '/collections/peridot-crystals'
+    productLink: '/product-category/peridot-crystals'
   },
   {
     month: 'September',
@@ -129,7 +129,7 @@ var BIRTHSTONES = [
     properties: ['Wisdom', 'Focus', 'Truth', 'Spiritual Insight'],
     description: 'Sapphire is the stone of mental clarity and spiritual wisdom. Its deep blue energy activates the third eye, enhancing intuition and focus. Ancient kings wore Sapphire as protection from envy and harm. It is said to attract divine favor and align you with your highest purpose.',
     affirmation: 'I see clearly, speak truthfully, and trust my inner knowing.',
-    productLink: '/collections/lapis-lazuli-crystals'
+    productLink: '/product-category/lapis-lazuli-crystals'
   },
   {
     month: 'October',
@@ -141,7 +141,7 @@ var BIRTHSTONES = [
     properties: ['Creativity', 'Inspiration', 'Originality', 'Emotional Balance'],
     description: 'Opal is a kaleidoscope of color, representing the full spectrum of human emotion and experience. It amplifies your unique gifts and stimulates originality and creativity. Opal helps you release inhibitions and express your true self with confidence and joy.',
     affirmation: 'I embrace my unique gifts and express my creativity freely.',
-    productLink: '/collections/opal-crystals'
+    productLink: '/product-category/opal-crystals'
   },
   {
     month: 'November',
@@ -153,7 +153,7 @@ var BIRTHSTONES = [
     properties: ['Abundance', 'Confidence', 'Joy', 'Manifestation'],
     description: 'Citrine is the merchant\'s stone, renowned for attracting wealth, success, and positive energy. Its warm golden vibration activates the solar plexus, empowering you with confidence and willpower. Citrine never needs cleansing because it naturally transmutes negative energy into positive light.',
     affirmation: 'I am a magnet for abundance and my confidence radiates like sunlight.',
-    productLink: '/collections/citrine-crystals'
+    productLink: '/product-category/citrine-crystals'
   },
   {
     month: 'December',
@@ -165,7 +165,7 @@ var BIRTHSTONES = [
     properties: ['Protection', 'Communication', 'Healing', 'Friendship'],
     description: 'Turquoise is one of the oldest protection stones, revered by Native American cultures for thousands of years. It guards against negative energy, promotes honest communication, and strengthens friendships. Turquoise changes color to warn its wearer of danger, making it a living talisman of protection.',
     affirmation: 'I am protected, I speak honestly, and I attract true friendship.',
-    productLink: '/collections/turquoise-crystals'
+    productLink: '/product-category/turquoise-crystals'
   }
 ];
 

@@ -17,7 +17,7 @@ const E = require('../templates/elementor-utils');
 const IMAGES = require('../assets/site-images');
 
 // ============================================================
-// 占位图片
+// Draft-only fallback. B2正式进入2C前，每个推荐水晶都必须传入真实图片。
 // ============================================================
 const PLACEHOLDER = IMAGES.shared.card.url;
 
@@ -25,7 +25,7 @@ const PLACEHOLDER = IMAGES.shared.card.url;
 // 12星座完整数据
 // ============================================================
 const ALL_ZODIAC = [
-  { name: 'Aries',       symbol: '\u2648', dates: 'Mar 21 \u2013 Apr 19',  element: 'Fire',    ruler: 'Mars',    traits: 'Courageous, Energetic, Optimistic, Confident' },
+  { name: 'Aries',       symbol: '\u2648', dates: 'Mar 21 \u2013 Apr 19',  element: 'Fire',    ruler: 'Mars',    traits: 'Courageous, Active, Optimistic, Confident' },
   { name: 'Taurus',      symbol: '\u2649', dates: 'Apr 20 \u2013 May 20',  element: 'Earth',   ruler: 'Venus',   traits: 'Reliable, Patient, Devoted, Sensual' },
   { name: 'Gemini',      symbol: '\u264A', dates: 'May 21 \u2013 Jun 20',  element: 'Air',     ruler: 'Mercury', traits: 'Adaptable, Curious, Witty, Expressive' },
   { name: 'Cancer',      symbol: '\u264B', dates: 'Jun 21 \u2013 Jul 22',  element: 'Water',   ruler: 'Moon',    traits: 'Intuitive, Nurturing, Empathic, Protective' },
@@ -56,7 +56,7 @@ function generateZodiacPage(config) {
   var dates = config.dates || 'Mar 21 \u2013 Apr 19';
   var element = config.element || 'Fire';
   var ruler = config.ruler || 'Mars';
-  var traits = config.traits || 'Courageous, Energetic, Optimistic';
+  var traits = config.traits || 'Courageous, Active, Optimistic';
   var crystals = config.crystals || [];
   var slug = zodiac.toLowerCase();
 
@@ -87,7 +87,7 @@ function generateZodiacPage(config) {
       padding: { unit: 'px', top: '0', right: '0', bottom: '15', left: '0', isLinked: '' }
     }),
     E.textEditor(
-      config.description || 'Discover the crystals that resonate most powerfully with the energy of ' + zodiac + '. These carefully selected stones align with your celestial blueprint, amplifying your natural strengths and supporting your growth areas.',
+      config.description || 'Explore crystals commonly associated with ' + zodiac + ' in modern crystal and astrology guides. Use these stones as symbolic reminders for the traits and intentions connected with this sign.',
       { fontSize: 17, color: '#CCCCCC', lineHeight: 26 }
     )
   ]);
@@ -139,7 +139,7 @@ function generateZodiacPage(config) {
           padding: { unit: 'px', top: '0', right: '0', bottom: '10', left: '0', isLinked: '' }
         }),
         E.textEditor(
-          'As a ' + element + ' sign, ' + zodiac + ' carries the dynamic energy of ' + element.toLowerCase() + ' \u2014 ' + (element === 'Fire' ? 'passionate, transformative, and full of vitality' : element === 'Earth' ? 'grounded, nurturing, and deeply connected to the material world' : element === 'Air' ? 'intellectual, communicative, and ever-seeking truth' : 'intuitive, emotional, and flowing with deep wisdom') + '.',
+          'In traditional astrology, ' + zodiac + ' is grouped with the ' + element + ' element, often described as ' + (element === 'Fire' ? 'bold, expressive, and action-oriented' : element === 'Earth' ? 'grounded, practical, and steady' : element === 'Air' ? 'curious, communicative, and idea-driven' : 'intuitive, emotional, and reflective') + '. These associations can help frame your crystal choice as a personal reminder rather than a fixed rule.',
           { align: 'left', fontSize: 15, color: '#666666', lineHeight: 24 }
         )
       ]),
@@ -156,7 +156,7 @@ function generateZodiacPage(config) {
           padding: { unit: 'px', top: '0', right: '0', bottom: '10', left: '0', isLinked: '' }
         }),
         E.textEditor(
-          'Guided by ' + ruler + ', ' + zodiac + ' embodies qualities of ' + ruler.toLowerCase() + ' energy. Understanding this celestial influence helps you choose crystals that harmonize with your astrological DNA.',
+          'Traditional astrology associates ' + zodiac + ' with ' + ruler + '. This does not determine who you are, but it offers a symbolic language for choosing crystals that reflect the qualities you want to practice.',
           { align: 'left', fontSize: 15, color: '#666666', lineHeight: 24 }
         )
       ])
@@ -199,7 +199,7 @@ function generateZodiacPage(config) {
         { align: 'center', fontSize: 14, color: '#999999' }
       ),
       E.textEditor(
-        crystal.reason || 'This crystal resonates deeply with ' + zodiac + ' energy, providing support and alignment.',
+        crystal.reason || 'This crystal is commonly associated with ' + zodiac + ' themes and can serve as a meaningful reminder for related intentions.',
         { align: 'left', fontSize: 15, color: '#666666', lineHeight: 23 }
       ),
       E.buttonWidget('Explore ' + crystal.name, crystal.link || '/crystal-guide/' + crystal.name.toLowerCase().replace(/\s+/g, '-') + '-meaning')
@@ -217,7 +217,7 @@ function generateZodiacPage(config) {
       padding: { unit: 'px', top: '0', right: '0', bottom: '10', left: '0', isLinked: '' }
     }),
     E.textEditor(
-      'Each of these crystals has been chosen for its unique resonance with ' + zodiac + ' energy. Discover why they are the perfect companions for your zodiac journey.',
+      'Each of these crystals is commonly paired with ' + zodiac + ' themes in modern crystal guides. Use this as a starting point for choosing a stone that reflects your current intention.',
       { fontSize: 16, color: '#888888', lineHeight: 24 }
     ),
     E.wrap({
@@ -239,7 +239,7 @@ function generateZodiacPage(config) {
       padding: { unit: 'px', top: '0', right: '0', bottom: '5', left: '0', isLinked: '' }
     }),
     E.textEditor(
-      'Browse our curated selection of crystal bracelets and sets, hand-picked to align with ' + zodiac + ' energy.',
+      'Browse crystal bracelets and sets selected around the traditional colors, symbols, and intentions often connected with ' + zodiac + '.',
       { fontSize: 16, color: '#888888', lineHeight: 24 }
     ),
     E.wdProductsWidget(6)
@@ -282,7 +282,7 @@ function generateZodiacPage(config) {
       padding: { unit: 'px', top: '0', right: '0', bottom: '10', left: '0', isLinked: '' }
     }),
     E.textEditor(
-      'Every zodiac sign has its own unique crystal allies. Discover the stones that resonate with each sign\'s celestial energy.',
+      'Every zodiac sign has its own symbolic language. Explore the stones commonly associated with each sign and choose the one that fits your current intention.',
       { fontSize: 16, color: '#AAAAAA', lineHeight: 24 }
     ),
     E.wrap({
@@ -310,31 +310,31 @@ async function main() {
     dates: 'Mar 21 \u2013 Apr 19',
     element: 'Fire',
     ruler: 'Mars',
-    traits: 'Courageous, Energetic, Optimistic, Confident, Passionate',
-    description: 'Aries, the first sign of the zodiac, blazes with the fire of new beginnings. Ruled by Mars, the planet of action and desire, Aries energy is bold, ambitious, and fearless. Discover the crystals that amplify your natural courage and help channel your powerful energy with intention.',
+    traits: 'Courageous, Active, Optimistic, Confident, Passionate',
+    description: 'Aries, the first sign of the zodiac, is traditionally associated with new beginnings, courage, and direct action. These crystals are commonly paired with Aries themes as reminders for confidence, focus, and intentional momentum.',
     crystals: [
       {
         name: 'Carnelian',
         subtitle: 'The Stone of Motivation',
-        reason: 'Carnelian\'s fiery orange energy perfectly matches Aries\' passionate nature. It boosts confidence, creativity, and courage, helping you take bold action toward your dreams.',
+        reason: 'Carnelian is often associated with motivation, courage, and creative movement. For Aries themes, it works as a reminder to begin with intention rather than rush without direction.',
         link: '/crystal-guide/carnelian-meaning'
       },
       {
         name: 'Red Jasper',
         subtitle: 'The Stone of Endurance',
-        reason: 'A grounding stone that channels Aries\' intense energy into sustained, focused action. Red Jasper provides stability and stamina for your ambitious pursuits.',
+        reason: 'Red Jasper is commonly linked with endurance and steady effort. It can balance the fast-starting Aries archetype with a reminder to pace the work.',
         link: '/crystal-guide/red-jasper-meaning'
       },
       {
         name: 'Bloodstone',
         subtitle: 'The Stone of Courage',
-        reason: 'Bloodstone has been worn by warriors for centuries. For Aries, it enhances courage, dispels negative energy, and promotes wise decision-making in the heat of passion.',
+        reason: 'Bloodstone has long been associated with courage and resilience. For Aries themes, it can symbolize brave action paired with thoughtful decision-making.',
         link: '/crystal-guide/bloodstone-meaning'
       },
       {
         name: 'Clear Quartz',
-        subtitle: 'The Master Healer',
-        reason: 'Clear Quartz amplifies Aries\' natural leadership energy while bringing clarity of purpose. It helps you focus your abundant energy on what truly matters.',
+        subtitle: 'The Clarity Stone',
+        reason: 'Clear Quartz is often used as a symbol of clarity and focus. For Aries intentions, it can serve as a simple reminder to choose what matters before moving quickly.',
         link: '/crystal-guide/clear-quartz-meaning'
       }
     ]
@@ -349,9 +349,11 @@ async function main() {
   );
 }
 
-main().catch(function (err) {
-  console.error('Error:', err.message || err);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch(function (err) {
+    console.error('Error:', err.message || err);
+    process.exit(1);
+  });
+}
 
 module.exports = generateZodiacPage;

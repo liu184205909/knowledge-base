@@ -39,9 +39,9 @@ var CHAKRAS = [
       { value: '4', label: 'Always — I feel deeply rooted, safe, and connected to the physical world' }
     ],
     crystals: [
-      { name: 'Black Tourmaline', link: '/collections/black-tourmaline-crystals' },
-      { name: 'Hematite', link: '/collections/hematite-crystals' },
-      { name: 'Red Jasper', link: '/collections/red-jasper-crystals' }
+      { name: 'Black Tourmaline', link: '/product-category/black-tourmaline-crystals' },
+      { name: 'Hematite', link: '/product-category/hematite-crystals' },
+      { name: 'Red Jasper', link: '/product-category/red-jasper-crystals' }
     ]
   },
   {
@@ -60,9 +60,9 @@ var CHAKRAS = [
       { value: '4', label: 'Always — My creative and emotional energy flows freely and abundantly' }
     ],
     crystals: [
-      { name: 'Carnelian', link: '/collections/carnelian-crystals' },
-      { name: 'Orange Calcite', link: '/collections/orange-calcite-crystals' },
-      { name: 'Moonstone', link: '/collections/moonstone-crystals' }
+      { name: 'Carnelian', link: '/product-category/carnelian-crystals' },
+      { name: 'Orange Calcite', link: '/product-category/orange-calcite-crystals' },
+      { name: 'Moonstone', link: '/product-category/moonstone-crystals' }
     ]
   },
   {
@@ -81,9 +81,9 @@ var CHAKRAS = [
       { value: '4', label: 'Always — I am deeply empowered and trust my inner strength completely' }
     ],
     crystals: [
-      { name: 'Citrine', link: '/collections/citrine-crystals' },
-      { name: 'Tiger Eye', link: '/collections/tiger-eye-crystals' },
-      { name: 'Yellow Jasper', link: '/collections/yellow-jasper-crystals' }
+      { name: 'Citrine', link: '/product-category/citrine-crystals' },
+      { name: 'Tiger Eye', link: '/product-category/tiger-eye-crystals' },
+      { name: 'Yellow Jasper', link: '/product-category/yellow-jasper-crystals' }
     ]
   },
   {
@@ -102,9 +102,9 @@ var CHAKRAS = [
       { value: '4', label: 'Always — My heart is fully open to unconditional love and compassion' }
     ],
     crystals: [
-      { name: 'Rose Quartz', link: '/collections/rose-quartz-crystals' },
-      { name: 'Green Aventurine', link: '/collections/green-aventurine-crystals' },
-      { name: 'Rhodonite', link: '/collections/rhodonite-crystals' }
+      { name: 'Rose Quartz', link: '/product-category/rose-quartz-crystals' },
+      { name: 'Green Aventurine', link: '/product-category/green-aventurine-crystals' },
+      { name: 'Rhodonite', link: '/product-category/rhodonite-crystals' }
     ]
   },
   {
@@ -123,9 +123,9 @@ var CHAKRAS = [
       { value: '4', label: 'Always — I speak my truth with confidence, clarity, and compassion' }
     ],
     crystals: [
-      { name: 'Aquamarine', link: '/collections/aquamarine-crystals' },
-      { name: 'Lapis Lazuli', link: '/collections/lapis-lazuli-crystals' },
-      { name: 'Blue Lace Agate', link: '/collections/blue-lace-agate-crystals' }
+      { name: 'Aquamarine', link: '/product-category/aquamarine-crystals' },
+      { name: 'Lapis Lazuli', link: '/product-category/lapis-lazuli-crystals' },
+      { name: 'Blue Lace Agate', link: '/product-category/blue-lace-agate-crystals' }
     ]
   },
   {
@@ -144,9 +144,9 @@ var CHAKRAS = [
       { value: '4', label: 'Always — My intuition is strong and clear, guiding me with precision' }
     ],
     crystals: [
-      { name: 'Amethyst', link: '/collections/amethyst-crystals' },
-      { name: 'Fluorite', link: '/collections/fluorite-crystals' },
-      { name: 'Labradorite', link: '/collections/labradorite-crystals' }
+      { name: 'Amethyst', link: '/product-category/amethyst-crystals' },
+      { name: 'Fluorite', link: '/product-category/fluorite-crystals' },
+      { name: 'Labradorite', link: '/product-category/labradorite-crystals' }
     ]
   },
   {
@@ -165,9 +165,9 @@ var CHAKRAS = [
       { value: '4', label: 'Always — I am deeply connected to divine consciousness and my highest self' }
     ],
     crystals: [
-      { name: 'Clear Quartz', link: '/collections/clear-quartz-crystals' },
-      { name: 'Selenite', link: '/collections/selenite-crystals' },
-      { name: 'Amethyst', link: '/collections/amethyst-crystals' }
+      { name: 'Clear Quartz', link: '/product-category/clear-quartz-crystals' },
+      { name: 'Selenite', link: '/product-category/selenite-crystals' },
+      { name: 'Amethyst', link: '/product-category/amethyst-crystals' }
     ]
   }
 ];

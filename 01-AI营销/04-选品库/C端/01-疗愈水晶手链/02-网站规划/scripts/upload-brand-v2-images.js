@@ -1,12 +1,12 @@
 /**
- * Upload B1a generated images and update the central image registry.
+ * Upload Earthward brand v2 images and update the central image registry.
  *
  * Scope:
- * - About Us: 11 images
- * - Ethical Sourcing: 8 images
+ * - Homepage v2 narrative images
+ * - About v2 narrative images
  *
- * This script does not create or update pages. It only uploads media assets and
- * changes matching site-images.js entries from needs_generation to generated.
+ * This script only uploads media assets and updates assets/site-images.js.
+ * It does not create or update WordPress pages.
  */
 
 const fs = require('fs');
@@ -17,28 +17,34 @@ const IMAGES = require('../assets/site-images');
 const WP_UPLOAD_BASE = 'https://goearthward.com/wp-content/uploads/2026/05';
 const GENERATED_DIR = path.resolve(__dirname, '../assets/images/generated');
 const REGISTRY_PATH = path.resolve(__dirname, '../assets/site-images.js');
-const RESULTS_PATH = path.resolve(__dirname, '../assets/upload-results-b1a-images.json');
+const RESULTS_PATH = path.resolve(__dirname, '../assets/upload-results-brand-v2-images.json');
 
 const IMAGE_LIST = [
-  { section: 'about', key: 'hero', file: 'about-hero-brand-story-v1.png' },
-  { section: 'about', key: 'founder', file: 'about-intention-setting-workspace-v1.png' },
-  { section: 'about', key: 'natural', file: 'about-icon-natural-crystals-v1.png' },
-  { section: 'about', key: 'cleansing', file: 'about-icon-cleansing-charged-v1.png' },
-  { section: 'about', key: 'packaging', file: 'about-icon-velvet-pouch-guide-v1.png' },
-  { section: 'about', key: 'returns', file: 'about-icon-returns-guarantee-v1.png' },
-  { section: 'about', key: 'communityRose', file: 'about-community-rose-quartz-v1.png' },
-  { section: 'about', key: 'communityProtection', file: 'about-community-black-tourmaline-v1.png' },
-  { section: 'about', key: 'communityAmethyst', file: 'about-community-amethyst-v1.png' },
-  { section: 'about', key: 'communityCitrine', file: 'about-community-citrine-v1.png' },
-  { section: 'about', key: 'cta', file: 'about-cta-find-your-crystal-v1.png' },
-  { section: 'sourcing', key: 'hero', file: 'sourcing-hero-earth-to-wrist-v1.png' },
-  { section: 'sourcing', key: 'mining', file: 'sourcing-step-mining-origins-v1.png' },
-  { section: 'sourcing', key: 'selection', file: 'sourcing-step-hand-selection-v1.png' },
-  { section: 'sourcing', key: 'cleansing', file: 'sourcing-step-energy-cleansing-v1.png' },
-  { section: 'sourcing', key: 'inspection', file: 'sourcing-step-quality-inspection-v1.png' },
-  { section: 'sourcing', key: 'packaging', file: 'sourcing-step-eco-packaging-v1.png' },
-  { section: 'sourcing', key: 'delivery', file: 'sourcing-step-delivery-reveal-v1.png' },
-  { section: 'sourcing', key: 'cta', file: 'sourcing-cta-shop-ethical-v1.png' }
+  { section: 'home', key: 'hero', file: 'home-hero-intentional-living-v2.png' },
+  { section: 'home', key: 'intentionCalm', file: 'home-intention-calm-v2.png' },
+  { section: 'home', key: 'intentionLove', file: 'home-intention-love-v2.png' },
+  { section: 'home', key: 'intentionAbundance', file: 'home-intention-abundance-v2.png' },
+  { section: 'home', key: 'intentionGrounding', file: 'home-intention-grounding-v2.png' },
+  { section: 'home', key: 'intentionSleep', file: 'home-intention-sleep-v2.png' },
+  { section: 'home', key: 'intentionFocus', file: 'home-intention-focus-v2.png' },
+  { section: 'home', key: 'quiz', file: 'home-crystal-guide-entry-v2.png' },
+  { section: 'home', key: 'brandStory', file: 'home-brand-story-workbench-v2.png' },
+  { section: 'home', key: 'useCalm', file: 'home-usecase-calm-evening-v2.png' },
+  { section: 'home', key: 'useWorkday', file: 'home-usecase-workday-grounding-v2.png' },
+  { section: 'home', key: 'useCompassion', file: 'home-usecase-self-compassion-v2.png' },
+  { section: 'home', key: 'newsletter', file: 'home-launch-cta-crystal-bracelets-v2.png' },
+
+  { section: 'about', key: 'hero', file: 'about-hero-brand-story-v2.png' },
+  { section: 'about', key: 'founder', file: 'about-intention-setting-workspace-v2.png' },
+  { section: 'about', key: 'natural', file: 'about-icon-natural-crystals-v2.png' },
+  { section: 'about', key: 'cleansing', file: 'about-icon-prepared-with-care-v2.png' },
+  { section: 'about', key: 'packaging', file: 'about-icon-velvet-pouch-guide-v2.png' },
+  { section: 'about', key: 'returns', file: 'about-icon-returns-care-v2.png' },
+  { section: 'about', key: 'communityRose', file: 'about-usecase-rose-quartz-transition-v2.png' },
+  { section: 'about', key: 'communityProtection', file: 'about-usecase-black-tourmaline-workday-v2.png' },
+  { section: 'about', key: 'communityAmethyst', file: 'about-usecase-amethyst-evening-v2.png' },
+  { section: 'about', key: 'communityCitrine', file: 'about-usecase-citrine-creative-courage-v2.png' },
+  { section: 'about', key: 'cta', file: 'about-cta-find-your-crystal-v2.png' }
 ];
 
 function jsString(value) {
@@ -81,7 +87,7 @@ function updateRegistry(uploaded) {
 }
 
 async function main() {
-  console.log('=== Upload B1a generated images ===');
+  console.log('=== Upload Earthward brand v2 images ===');
 
   const connected = await E.checkConnection();
   if (!connected) {
@@ -100,7 +106,9 @@ async function main() {
   });
 
   if (missing.length) {
-    throw new Error('Missing generated images: ' + missing.join(', '));
+    console.error('Missing generated images:');
+    missing.forEach(file => console.error('  - ' + file));
+    throw new Error('Missing ' + missing.length + ' generated images in ' + GENERATED_DIR);
   }
 
   const uploaded = [];

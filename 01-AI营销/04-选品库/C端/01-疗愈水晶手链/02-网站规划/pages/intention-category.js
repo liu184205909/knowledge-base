@@ -1,6 +1,6 @@
 /**
  * Shop by Intention 分类页模板
- * URL: /collections/[intention-slug]
+ * URL: /product-category/[intention-slug]
  *
  * 6个Section:
  * 1. Hero — 意图名称+描述+面包屑
@@ -234,7 +234,7 @@ function generateIntentionPage(config) {
         item.image || PLACEHOLDER,
         item.name,
         'Explore crystals for ' + item.name.toLowerCase(),
-        '/collections/' + item.slug
+        '/product-category/' + item.slug
       )
     ]);
   });

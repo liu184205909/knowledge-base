@@ -1,6 +1,6 @@
 /**
  * Shop by Stone 分类页模板
- * URL: /collections/[crystal-name]-crystals
+ * URL: /product-category/[crystal-name]-crystals
  *
  * 5个Section:
  * 1. Hero — 水晶名+诗意副标题+描述
@@ -279,7 +279,7 @@ function generateStonePage(config) {
         stone.subtitle || 'Explore this crystal collection.',
         { align: 'center', fontSize: 14, color: '#777777', lineHeight: 21 }
       ),
-      E.buttonWidget('View Collection', '/collections/' + stoneSlug + '-crystals')
+      E.buttonWidget('View Collection', '/product-category/' + stoneSlug + '-crystals')
     ]);
   });
 

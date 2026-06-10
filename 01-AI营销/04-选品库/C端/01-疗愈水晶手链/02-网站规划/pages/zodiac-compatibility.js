@@ -250,7 +250,7 @@ function generateZodiacCompatPage(config) {
         crystal.reason || 'A harmonizing crystal that bridges the energy of ' + sign1 + ' and ' + sign2 + ', creating balance and understanding between these two signs.',
         { align: 'left', fontSize: 15, color: '#666666', lineHeight: 23 }
       ),
-      E.buttonWidget('Shop ' + crystal.name, crystal.productLink || '/collections/' + crystal.name.toLowerCase().replace(/\s+/g, '-') + '-crystals')
+      E.buttonWidget('Shop ' + crystal.name, crystal.productLink || '/product-category/' + crystal.name.toLowerCase().replace(/\s+/g, '-') + '-crystals')
     ]);
   });
 
@@ -395,19 +395,19 @@ async function main() {
         name: 'Rose Quartz',
         subtitle: 'The Stone of Unconditional Love',
         reason: 'Rose Quartz opens the heart chakra for both Leo and Libra, fostering the deep emotional connection that underpins their passionate bond. It softens Leo\'s pride and encourages Libra to express needs more directly, creating a love built on genuine vulnerability and trust.',
-        productLink: '/collections/rose-quartz-crystals'
+        productLink: '/product-category/rose-quartz-crystals'
       },
       {
         name: 'Citrine',
         subtitle: 'The Stone of Abundance',
         reason: 'Citrine carries the radiant energy of the Sun (Leo\'s ruler) while promoting the positivity and joy that Libra craves. Together, it amplifies their shared optimism and attracts abundance into their partnership, both emotionally and materially.',
-        productLink: '/collections/citrine-crystals'
+        productLink: '/product-category/citrine-crystals'
       },
       {
         name: 'Lapis Lazuli',
         subtitle: 'The Stone of Truth & Friendship',
         reason: 'Lapis Lazuli enhances honest communication between Leo and Libra, helping them express their needs without ego or avoidance. It deepens their intellectual connection and supports the meaningful conversations that keep their bond strong.',
-        productLink: '/collections/lapis-lazuli-crystals'
+        productLink: '/product-category/lapis-lazuli-crystals'
       }
     ],
     usageGuide: 'Leo and Libra can create a beautiful crystal practice together that celebrates their unique dynamic. Here are tailored ways for this Fire-Air pair to work with crystals:<br><br><strong>The Couples\' Bracelet Ritual</strong> — Each partner chooses a crystal bracelet that resonates with their own sign, then exchanges it with their partner. Leo might wear Rose Quartz (Libra\'s stone of love) while Libra wears Citrine (Leo\'s stone of radiance). This exchange symbolizes carrying each other\'s energy.<br><br><strong>Evening Wind-Down</strong> — Place a shared Selenite crystal between you during evening conversations or dinner. Selenite\'s purifying energy clears the day\'s stress and creates a sacred space for authentic connection.<br><br><strong>Creative Vision Board</strong> — As a couple known for your shared love of beauty, create a vision board together adorned with crystals. Place Citrine for abundance, Rose Quartz for love, and Lapis Lazuli for clear communication around your shared goals and dreams.'

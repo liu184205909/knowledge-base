@@ -220,7 +220,7 @@ function generateMbtiPage(config) {
         crystal.reason || 'This crystal aligns beautifully with ' + mbtiType + ' energy, providing the exact support your personality type needs.',
         { align: 'left', fontSize: 15, color: '#666666', lineHeight: 23 }
       ),
-      E.buttonWidget('Shop ' + crystal.name, crystal.productLink || '/collections/' + crystal.name.toLowerCase().replace(/\s+/g, '-') + '-crystals')
+      E.buttonWidget('Shop ' + crystal.name, crystal.productLink || '/product-category/' + crystal.name.toLowerCase().replace(/\s+/g, '-') + '-crystals')
     ]);
   });
 
@@ -402,25 +402,25 @@ async function main() {
         name: 'Amethyst',
         subtitle: 'The Stone of Peace',
         reason: 'Amethyst resonates deeply with the INFJ\'s spiritual nature, enhancing your already powerful intuition while providing the calm and clarity you need to navigate your complex inner world. It protects your energy from overwhelm.',
-        productLink: '/collections/amethyst-crystals'
+        productLink: '/product-category/amethyst-crystals'
       },
       {
         name: 'Labradorite',
         subtitle: 'The Stone of Magic',
         reason: 'Labradorite is the ultimate stone for the INFJ\'s transformative energy. It strengthens your natural psychic abilities, protects your aura from energy drain, and helps you trust the insights that flow from your deep intuition.',
-        productLink: '/collections/labradorite-crystals'
+        productLink: '/product-category/labradorite-crystals'
       },
       {
         name: 'Rose Quartz',
         subtitle: 'The Stone of Love',
         reason: 'As an INFJ, you pour so much love into others. Rose Quartz reminds you to extend that same compassion to yourself. It supports self-love, emotional healing, and the heart-centered living that comes naturally to you.',
-        productLink: '/collections/rose-quartz-crystals'
+        productLink: '/product-category/rose-quartz-crystals'
       },
       {
         name: 'Black Tourmaline',
         subtitle: 'The Shield Stone',
         reason: 'INFJs are highly sensitive to the energies of people around them. Black Tourmaline creates a powerful protective boundary, grounding your energy and shielding you from absorbing others\' negativity or emotional weight.',
-        productLink: '/collections/black-tourmaline-crystals'
+        productLink: '/product-category/black-tourmaline-crystals'
       }
     ],
     usageGuide: 'As an INFJ, your relationship with crystals is uniquely profound. Your natural intuition allows you to sense the subtle energy of each stone in ways other types may not experience. Here is how to deepen your crystal practice:<br><br><strong>The Morning Ritual</strong> — Before putting on your bracelet each morning, hold it in your hands, close your eyes, and set a specific intention. INFJs thrive when their actions are aligned with meaning, and this small ritual transforms a simple accessory into a powerful tool for purposeful living.<br><br><strong>The Evening Release</strong> — At night, remove your crystal bracelet and place it on a Selenite charging plate. As you do, consciously release any emotional weight you\'ve absorbed during the day. This practice is essential for INFJs, who tend to carry the world\'s burdens on their shoulders.<br><br><strong>Meditation Amplifier</strong> — During meditation, hold a crystal that resonates with your current focus. Your rich inner world and natural visualization abilities make you uniquely equipped to receive the crystal\'s messages and integrate its energy.'

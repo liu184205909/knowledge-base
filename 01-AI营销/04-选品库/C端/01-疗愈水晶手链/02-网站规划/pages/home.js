@@ -2,25 +2,25 @@
  * Homepage — Elementor V3 (Flexbox) + B1a 2C执行版
  *
  * 基于 16-Section 布局方案（页面布局方案.md Section 1）
- * 竞品参考: Energy Muse(首页结构) + Conscious Items(转化设计) + Tiny Rituals(社交证明) + Moonrise Crystals(道德采购)
+ * 竞品参考: Energy Muse(首页结构) + Conscious Items(转化设计) + Tiny Rituals(电商导航) + Moonrise Crystals(品牌信任)
  *
  * Elementor V3 说明：所有多列布局用纯 Flexbox 模式（flex_direction: "row"），不用 structure
  *
  * Section Map (S1公告栏+S16 Footer 由主题处理):
- *  S2  Hero Banner       ← Energy Muse + 差异化"Find Your Crystal"入口
+ *  S2  Hero Banner       ← brand positioning + guide/product-category入口
  *  S3  Trust Score Bar   ← Tiny Rituals + Conscious Items
- *  S4  Shop by Intention ← Energy Muse "Shop by Intention" (6卡片)
- *  S5  Best Sellers      ← Tiny Rituals (WooCommerce产品网格)
- *  S6  Quiz Tool Entry   ← Conscious Items + Energy Muse (差异化核心)
+ *  S4  Shop by Intention ← 6个核心意图入口
+ *  S5  Product Browse    ← WooCommerce产品网格
+ *  S6  Guide Entry       ← B1a可兑现入口
  *  S7  Shop by Stone     ← Tiny Rituals + Crystal Vaults诗意命名 (16水晶)
  *  S8  Comparison Table  ← Conscious Items "Why Choose Us"
- *  S9  Brand Story       ← Energy Muse + Moonrise Crystals
- *  S10 Testimonials      ← Energy Muse + Tiny Rituals
+ *  S9  Brand Story       ← Earthward品牌预览
+ *  S10 Use Cases         ← everyday intention scenarios
  *  S11 FAQ               ← Conscious Items (6-FAQ手风琴)
- *  S12 Blog              ← Energy Muse (4篇博客卡片)
- *  S13 Newsletter        ← 标准
+ *  S12 Guide Preview     ← Crystal Guide入口
+ *  S13 Launch CTA        ← guide入口
  *  S14 SEO Content       ← Tiny Rituals
- *  S15 Trust Guarantees  ← Tiny Rituals + Moonrise Crystals (6项)
+ *  S15 Trust Signals     ← 可兑现信任信号
  *
  * Widget 选择策略：
  * - heading     → 标题（Elementor 标准）
@@ -36,10 +36,36 @@
 
 const https = require('https');
 const path = require('path');
+const fs = require('fs');
+const os = require('os');
 const IMAGES = require('../assets/site-images');
 
 // ============================================================
-// 认证配置 — 优先环境变量，fallback 到 api-credentials.json
+// 加载全局凭证 — C:\Users\Dylan\.env（或 HOME/.env）
+// ============================================================
+(function loadGlobalEnv() {
+  var envPaths = [
+    path.join(os.homedir(), '.env'),
+    path.join('D:', '.env')
+  ];
+  for (var i = 0; i < envPaths.length; i++) {
+    try {
+      var content = fs.readFileSync(envPaths[i], 'utf-8');
+      content.split('\n').forEach(function(line) {
+        line = line.trim();
+        if (!line || line.startsWith('#')) return;
+        var eq = line.indexOf('=');
+        if (eq < 1) return;
+        var key = line.slice(0, eq).trim();
+        if (!process.env[key]) { process.env[key] = line.slice(eq + 1).trim(); }
+      });
+      break;
+    } catch (e) { /* skip */ }
+  }
+})();
+
+// ============================================================
+// 认证配置 — 优先环境变量（已含全局 .env），fallback 到项目 config
 // ============================================================
 let _creds = { wp_username: '', wp_app_password: '' };
 try {
@@ -260,12 +286,12 @@ function wdProductsTabs() {
     id: uid(),
     elType: 'widget',
     settings: {
-      title: 'Healing Crystal',
+      title: 'Crystal Bracelets',
       design: 'simple',
       color: '#007bc4',
       tabs_items: [
         { _id: uid(), image_size: 'custom', title: 'New', items_per_page: '8', pagination: 'arrows', columns: { size: '4' }, orderby: 'post__in' },
-        { _id: uid(), image_size: 'custom', title: 'BEST SELLERS', items_per_page: '8', pagination: 'arrows', columns: { size: '4' }, orderby: 'rand', query_type: 'AND', order: 'DESC' }
+        { _id: uid(), image_size: 'custom', title: 'Featured', items_per_page: '8', pagination: 'arrows', columns: { size: '4' }, orderby: 'rand', query_type: 'AND', order: 'DESC' }
       ],
       scroll_y: -80,
       items_per_page: '8',
@@ -303,7 +329,7 @@ var CRYSTALS = [
   { key: 'roseQuartz',      name: 'Rose Quartz',      poetic: 'The Stone of Love',           slug: 'rose-quartz-crystals' },
   { key: 'citrine',         name: 'Citrine',          poetic: 'The Stone of Abundance',      slug: 'citrine-crystals' },
   { key: 'blackTourmaline', name: 'Black Tourmaline', poetic: 'The Shield Stone',            slug: 'black-tourmaline-crystals' },
-  { key: 'clearQuartz',     name: 'Clear Quartz',     poetic: 'The Master Healer',           slug: 'clear-quartz-crystals' },
+  { key: 'clearQuartz',     name: 'Clear Quartz',     poetic: 'The Clarity Stone',           slug: 'clear-quartz-crystals' },
   { key: 'tigerEye',        name: 'Tiger Eye',        poetic: 'The Stone of Courage',        slug: 'tiger-eye-crystals' },
   { key: 'moonstone',       name: 'Moonstone',        poetic: 'The Stone of New Beginnings', slug: 'moonstone-crystals' },
   { key: 'obsidian',        name: 'Obsidian',         poetic: 'The Mirror Stone',            slug: 'obsidian-crystals' },
@@ -319,49 +345,41 @@ var CRYSTALS = [
 
 /** S4 Shop by Intention — 6个核心意图 */
 var INTENTIONS = [
-  { name: 'Anxiety & Stress Relief', desc: 'Find your calm with soothing crystals',   slug: 'anxiety-relief',     img: 'amethyst' },
-  { name: 'Love & Relationships',    desc: 'Open your heart to deeper connections',    slug: 'love-relationships', img: 'roseQuartz' },
-  { name: 'Wealth & Prosperity',     desc: 'Manifest abundance and success',           slug: 'wealth-prosperity',  img: 'citrine' },
-  { name: 'Protection & Grounding',  desc: 'Shield your energy from negativity',       slug: 'protection-grounding', img: 'blackTourmaline' },
-  { name: 'Sleep & Calm',            desc: 'Rest deeply with calming stones',          slug: 'sleep-calm',         img: 'moonstone' },
-  { name: 'Focus & Clarity',         desc: 'Clear the noise and sharpen your mind',    slug: 'focus-clarity',      img: 'fluorite' }
+  { name: 'Calm & Steady Days',      desc: 'Build a simple ritual for steadier days',      slug: 'anxiety-relief',      img: 'amethyst',        homeImg: 'intentionCalm' },
+  { name: 'Love & Self-Compassion',  desc: 'Practice tenderness toward yourself and others', slug: 'love-relationships',  img: 'roseQuartz',      homeImg: 'intentionLove' },
+  { name: 'Wealth & Prosperity',     desc: 'Set intentions around abundance and success',  slug: 'wealth-prosperity',   img: 'citrine',         homeImg: 'intentionAbundance' },
+  { name: 'Protection & Grounding',  desc: 'Create a tangible cue for steadiness',         slug: 'protection-grounding', img: 'blackTourmaline', homeImg: 'intentionGrounding' },
+  { name: 'Sleep & Evening Ritual',  desc: 'Mark the transition into a quieter evening',   slug: 'sleep-calm',          img: 'moonstone',       homeImg: 'intentionSleep' },
+  { name: 'Focus & Clarity',         desc: 'Choose a daily reminder for clearer attention', slug: 'focus-clarity',       img: 'fluorite',        homeImg: 'intentionFocus' }
 ];
 
 /** S11 FAQ — 6个核心问题 ← Conscious Items */
 var FAQ_ITEMS = [
-  { q: 'Are your crystals real?', a: 'Absolutely. Every crystal bracelet is made with 100% natural, genuine gemstones. We never use dyed, synthetic, or imitation stones. Each piece is hand-selected and visually inspected for authenticity before it reaches you.' },
-  { q: 'How are crystals cleansed before shipping?', a: 'Every bracelet is energetically cleansed using a combination of dried white sage smoke and selenite charging, then placed under moonlight. This process clears any accumulated energy so your crystal arrives ready for your personal intention.' },
-  { q: 'Do crystal bracelets actually work?', a: 'Crystal bracelets work as mindfulness tools — wearing one serves as a daily reminder of your intention, whether that\'s calm, love, or focus. Many of our customers report feeling more grounded and connected to their goals. Think of crystals as partners in your personal growth journey.' },
-  { q: 'What\'s included in my order?', a: 'Every order includes your crystal bracelet in a premium velvet pouch, an energy guide card explaining your crystal\'s properties and care instructions, and a cleansing guide. Orders over $75 also receive free shipping.' },
-  { q: 'How do I choose the right crystal?', a: 'Take our 2-minute Crystal Quiz for a personalized recommendation based on your current needs, or browse by intention to find crystals for specific goals like anxiety relief, love, or abundance.' },
+  { q: 'Are your crystals real?', a: 'Absolutely. Every crystal bracelet is made with genuine, natural gemstones. We never use dyed, synthetic, or imitation stones. Each piece is hand-selected and visually inspected for authenticity before it reaches you.' },
+  { q: 'How are crystals prepared before shipping?', a: 'Every bracelet is inspected, prepared with care, and packed with simple guidance for setting your own intention. We use neutral, low-drama preparation practices such as selenite-based resting and careful handling.' },
+  { q: 'Do crystal bracelets actually work?', a: 'Crystal bracelets are not medical tools and cannot promise a specific result. Many people use them as tactile reminders for intentions such as calm, love, or focus, similar to how a journal, ring, or ritual object can support a mindfulness practice.' },
+  { q: 'What\'s included in my order?', a: 'Every order includes your crystal bracelet in a premium velvet pouch, an intention guide card with traditional meaning and care notes, and practical instructions for wearing and storing your piece. Orders over $75 receive free shipping.' },
+  { q: 'How do I choose the right crystal?', a: 'Start with your current intention, then browse by stone or read the crystal guide before choosing a bracelet. The goal is not to find a perfect answer, but to choose a piece whose meaning feels useful in your daily life.' },
   { q: 'What\'s your return policy?', a: 'We offer a 30-day worry-free return policy. If your crystal doesn\'t feel like the right match, simply send it back within 30 days for a full refund — no questions asked.' }
 ];
 
 /** S8 Comparison — 6个对比维度 ← Conscious Items */
 var COMPARISON = [
-  { ours: '100% Natural Crystals', theirs: 'Dyed or synthetic stones' },
-  { ours: 'Energetically cleansed & charged', theirs: 'Shipped without any energy work' },
-  { ours: 'Ethically sourced, traceable origins', theirs: 'Unknown supply chain' },
-  { ours: 'Energy guide card included', theirs: 'No information provided' },
+  { ours: 'Genuine Natural Crystals', theirs: 'Dyed or synthetic stones' },
+  { ours: 'Prepared with care', theirs: 'Shipped without any preparation' },
+  { ours: 'Origin and handling notes where available', theirs: 'Little sourcing context' },
+  { ours: 'Intention guide card included', theirs: 'No information provided' },
   { ours: 'Premium velvet pouch packaging', theirs: 'Plastic bag packaging' },
   { ours: '30-day worry-free returns', theirs: 'No returns accepted' }
 ];
 
-/** S12 Blog — 4篇占位博客 */
-var BLOG_POSTS = [
-  { title: 'The Complete Beginner\'s Guide to Healing Crystals',      slug: 'beginners-guide-healing-crystals',   img: 'beginnerGuide' },
-  { title: 'How to Cleanse and Charge Your Crystal Bracelet',         slug: 'how-to-cleanse-crystal-bracelet',    img: 'fullMoon' },
-  { title: '7 Crystals for Better Sleep and Calm Nights',             slug: 'crystals-for-better-sleep',          img: 'sleep' },
-  { title: 'What Your Birth Month Says About Your Perfect Crystal',   slug: 'birth-month-crystal',                img: 'angelNumbers' }
-];
-
-/** S15 Trust Guarantees — 6项 ← Tiny Rituals + Moonrise Crystals */
+/** S15 Trust Signals — 可兑现信任信号 */
 var TRUST_ITEMS = [
   { title: 'Genuine Crystals',       desc: 'Every stone is hand-selected and verified authentic' },
-  { title: 'Cleansed & Charged',     desc: 'Purified with sage and charged under moonlight before shipping' },
-  { title: 'Ethically Sourced',      desc: 'Traceable supply chain, fair labor, no conflict minerals' },
+  { title: 'Prepared With Care',     desc: 'Gently cleansed, inspected, and paired with an intention guide' },
+  { title: 'Responsible Sourcing',   desc: 'We ask suppliers clear questions about origin, handling, and labor context' },
   { title: 'Free Shipping $75+',     desc: 'Fast, tracked delivery on all US orders over $75' },
-  { title: '30-Day Returns',         desc: 'Not the right energy? Return within 30 days' },
+  { title: '30-Day Returns',         desc: 'Not the right fit? Return within 30 days' },
   { title: 'Eco-Friendly Packaging', desc: 'Recyclable materials, velvet pouch included' }
 ];
 
@@ -387,7 +405,7 @@ function mobileWidth100() {
 function generateHomepage() {
   return [
 
-    // ===================== S2: Hero Banner ← Energy Muse + 差异化 =====================
+    // ===================== S2: Hero Banner =====================
     section({
       padding: rPadding('150', '0', '150', '0', {
         tablet: { t: '100', r: '0', b: '100', l: '0' },
@@ -395,9 +413,9 @@ function generateHomepage() {
       }),
       background_background: 'classic',
       background_image: {
-        url: IMAGES.shared.heroBracelet.url,
-        id: 16850, size: '',
-        alt: 'Crystals That Work With Your Energy',
+        url: IMAGES.home.hero.url,
+        id: 0, size: '',
+        alt: IMAGES.home.hero.alt,
         source: 'library'
       },
       background_position: 'center center',
@@ -407,22 +425,22 @@ function generateHomepage() {
       background_overlay_color: '#060000'
     }, [
       wrap({ content_width: 'boxed' }, [
-        heading('Crystals That Work With <u>Your Energy</u>', {
+        heading('Real Crystals for <u>Intentional Living</u>', {
           color: '#FFFFFF', fontSize: 48, align: 'center',
           extra: {
             typography_font_size_tablet: { unit: 'px', size: 36, sizes: [] },
             typography_font_size_mobile: { unit: 'px', size: 28, sizes: [] }
           }
         }),
-        textEditor('Handcrafted crystal bracelets, ethically sourced and energetically cleansed. Each piece is ready to support your journey.', {
+        textEditor('Genuine natural crystal bracelets, individually inspected and chosen for everyday intention. Each piece arrives with a guide card to help you understand its traditional meaning and care.', {
           color: '#FFFFFF', fontSize: 18, align: 'center',
           extra: {
             _margin: { unit: 'px', top: '0', right: '0', bottom: '30', left: '0', isLinked: '' }
           }
         }),
         wrap({ flex_direction: 'row', flex_justify_content: 'center', flex_gap: { size: 15, column: '15', row: '15', unit: 'px' } }, [
-          buttonWidget('FIND YOUR CRYSTAL', '/crystal-quiz', { size: 'lg' }),
-          buttonWidget('SHOP BY INTENTION', '/collections/', { size: 'lg' })
+          buttonWidget('START WITH THE GUIDE', '/crystal-guide/', { size: 'lg' }),
+          buttonWidget('BROWSE BY INTENTION', '/product-category/anxiety-relief/', { size: 'lg' })
         ])
       ])
     ]),
@@ -440,22 +458,22 @@ function generateHomepage() {
       flex_wrap: 'wrap',
       flex_gap: { size: 30, column: '30', row: '15', unit: 'px' }
     }, [
-      // 4 trust metrics
+      // 4 trust metrics — no fabricated numbers
       wrap({ content_width: 'full', width: cardWidth4(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
-        iconBox('4.9 / 5 Stars', 'Based on 10,000+ verified reviews')
+        iconBox('Genuine Natural Crystals', 'Hand-selected and verified authentic')
       ]),
       wrap({ content_width: 'full', width: cardWidth4(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
-        iconBox('10,000+ Happy Customers', 'Join our growing crystal community')
+        iconBox('Sourcing With Context', 'Origin and handling notes are reviewed wherever suppliers can provide them')
       ]),
       wrap({ content_width: 'full', width: cardWidth4(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
-        iconBox('Ethically Sourced', 'Traceable origins from trusted mines worldwide')
+        iconBox('Cleansed & Guide Card Included', 'Ready for your intention from day one')
       ]),
       wrap({ content_width: 'full', width: cardWidth4(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
-        iconBox('Free Shipping $75+', 'Fast tracked delivery across the US')
+        iconBox('30-Day Worry-Free Returns', 'No questions asked')
       ])
     ]),
 
-    // ===================== S4: Shop by Intention ← Energy Muse (6卡片) =====================
+    // ===================== S4: Shop by Intention =====================
     section({
       padding: rPadding('80', '10', '80', '10', {
         tablet: { t: '50', r: '10', b: '50', l: '10' },
@@ -464,8 +482,8 @@ function generateHomepage() {
       flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
     }, [
       wrap({ content_width: 'boxed' }, [
-        heading('What Energy Do You Need Today?', { fontSize: 36 }),
-        textEditor('Find the crystal that resonates with your intention', { fontSize: 18, color: '#888888' })
+        heading('What Intention Fits Today?', { fontSize: 36 }),
+        textEditor('Start with the feeling, habit, or reminder you want to carry', { fontSize: 18, color: '#888888' })
       ]),
       wrap({
         content_width: 'full',
@@ -481,17 +499,17 @@ function generateHomepage() {
             width_mobile: mobileWidth100()
           }, [
             imageBox(
-              IMAGES.crystals[intent.img].url,
+              IMAGES.home[intent.homeImg].url,
               intent.name,
               intent.desc,
-              'https://goearthward.com/collections/' + intent.slug + '/'
+              'https://goearthward.com/product-category/' + intent.slug + '/'
             )
           ]);
         })
       )
     ]),
 
-    // ===================== S5: Best Sellers ← Tiny Rituals =====================
+    // ===================== S5: Product Browse =====================
     section({
       padding: rPadding('80', '10', '80', '10', {
         tablet: { t: '50', r: '10', b: '50', l: '10' },
@@ -500,8 +518,8 @@ function generateHomepage() {
       flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
     }, [
       wrap({ content_width: 'boxed' }, [
-        heading("Our Community's Favorites", { fontSize: 36 }),
-        textEditor('The crystal bracelets our customers love most', { fontSize: 18, color: '#888888' })
+        heading('Explore Crystal Bracelets', { fontSize: 36 }),
+        textEditor('A simple starting point for browsing current Earthward pieces', { fontSize: 18, color: '#888888' })
       ]),
       wdProductsTabs()
     ]),
@@ -525,8 +543,8 @@ function generateHomepage() {
         width_tablet: { size: '100', unit: '%' },
         flex_direction: 'column'
       }, [
-        imageWidget(IMAGES.crystalQuiz.hero.url, {
-          id: 0, alt: 'Crystal Quiz - Find your perfect crystal match', radius: 12
+        imageWidget(IMAGES.home.quiz.url, {
+          id: 0, alt: IMAGES.home.quiz.alt, radius: 12
         })
       ]),
       // 右侧: 文字 + 4工具入口 + CTA
@@ -538,7 +556,7 @@ function generateHomepage() {
         flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
       }, [
         heading('Not Sure Where to Start?', { fontSize: 36, align: 'left' }),
-        textEditor('Take our 2-minute energy quiz and discover the crystals that align with your current needs.', {
+        textEditor('Use the guide paths that are ready now: browse by intention, explore by stone, or read the crystal meaning index before choosing a bracelet.', {
           fontSize: 16, align: 'left', color: '#666666'
         }),
         // 4工具入口 2x2
@@ -549,19 +567,19 @@ function generateHomepage() {
           flex_gap: { size: 10, column: '10', row: '10', unit: 'px' }
         }, [
           wrap({ content_width: 'full', width: { unit: '%', size: 47, sizes: [] }, width_mobile: mobileWidth100() }, [
-            iconBox('Crystal Quiz', 'Answer 5 questions, get your personalized recommendation')
+            iconBox('Browse by Intention', 'Start with calm, love, abundance, grounding, sleep, or focus')
           ]),
           wrap({ content_width: 'full', width: { unit: '%', size: 47, sizes: [] }, width_mobile: mobileWidth100() }, [
-            iconBox('Chakra Guide', 'Learn which chakras need balancing and the crystals to help')
+            iconBox('Shop by Stone', 'Choose directly from familiar crystals such as Amethyst or Rose Quartz')
           ]),
           wrap({ content_width: 'full', width: { unit: '%', size: 47, sizes: [] }, width_mobile: mobileWidth100() }, [
-            iconBox('Crystal Oracle', 'Get a free crystal reading for today\'s energy')
+            iconBox('Crystal Guide A-Z', 'Read traditional meanings before you buy')
           ]),
           wrap({ content_width: 'full', width: { unit: '%', size: 47, sizes: [] }, width_mobile: mobileWidth100() }, [
-            iconBox('Crystal Guide A-Z', 'Explore 100+ crystal meanings and properties')
+            iconBox('Our Sourcing Approach', 'See how Earthward thinks about origin, care, and realistic expectations')
           ])
         ]),
-        buttonWidget('TAKE THE QUIZ', '/crystal-quiz', { size: 'lg', align: 'left' })
+        buttonWidget('EXPLORE THE GUIDE', '/crystal-guide/', { size: 'lg', align: 'left' })
       ])
     ]),
 
@@ -575,7 +593,7 @@ function generateHomepage() {
     }, [
       wrap({ content_width: 'boxed' }, [
         heading('Shop by Crystal', { fontSize: 36 }),
-        textEditor('Explore 16 hand-selected gemstones, each with its own unique energy', { fontSize: 18, color: '#888888' })
+        textEditor('Explore 16 hand-selected gemstones, each with its own traditional meaning', { fontSize: 18, color: '#888888' })
       ]),
       // 4x4 网格 → 平板 3x6 → 手机 2x8
       wrap({
@@ -595,7 +613,7 @@ function generateHomepage() {
               IMAGES.crystals[c.key].url,
               c.name,
               c.poetic,
-              'https://goearthward.com/collections/' + c.slug,
+              'https://goearthward.com/product-category/' + c.slug + '/',
               { radius: 50 }
             )
           ]);
@@ -615,7 +633,7 @@ function generateHomepage() {
     }, [
       wrap({ content_width: 'boxed' }, [
         heading('Why Choose Earthward?', { fontSize: 36 }),
-        textEditor('Why 10,000+ customers choose us over cheap alternatives', { fontSize: 18, color: '#888888' })
+        textEditor('What sets a careful crystal bracelet experience apart from anonymous marketplace listings', { fontSize: 18, color: '#888888' })
       ]),
       // 3x2 优势网格
       wrap({
@@ -644,7 +662,7 @@ function generateHomepage() {
       )
     ]),
 
-    // ===================== S9: Brand Story Preview ← Energy Muse + Moonrise Crystals =====================
+    // ===================== S9: Brand Story Preview =====================
     section({
       padding: rPadding('80', '10', '80', '10', {
         tablet: { t: '50', r: '10', b: '50', l: '10' },
@@ -660,8 +678,8 @@ function generateHomepage() {
         width: { size: '45', unit: '%' },
         width_tablet: { size: '100', unit: '%' }
       }, [
-        imageWidget(IMAGES.shared.studioWorkbench.url, {
-          id: 13754, alt: 'Earthward studio — handcrafting crystal bracelets with intention', radius: 12
+        imageWidget(IMAGES.home.brandStory.url, {
+          id: 0, alt: IMAGES.home.brandStory.alt, radius: 12
         })
       ]),
       // 右侧: 文字
@@ -672,11 +690,8 @@ function generateHomepage() {
         flex_direction: 'column',
         flex_gap: { size: 10, column: '10', row: '10', unit: 'px' }
       }, [
-        heading('More Than Just Crystals', { fontSize: 32, align: 'left' }),
-        textEditor('At Earthward, we believe every stone carries a story. From the mines of Brazil to the moonlit cleansing ritual in our studio, each bracelet is crafted with intention and care. Our mission is to make the healing power of crystals accessible, ethical, and deeply personal.', {
-          fontSize: 16, align: 'left', color: '#666666', lineHeight: 28
-        }),
-        textEditor('We partner with trusted, traceable suppliers and ensure every crystal is energetically cleansed before it reaches your hands.', {
+        heading('Why Earthward?', { fontSize: 32, align: 'left' }),
+        textEditor('In a world of synthetic shortcuts, we chose a different direction: genuine stones, clear guidance, careful preparation, and realistic expectations. Earthward is not about promising outcomes. It is about giving you something real to hold while you practice intention.', {
           fontSize: 16, align: 'left', color: '#666666', lineHeight: 28
         }),
         wrap({ flex_direction: 'row', flex_gap: { size: 15, column: '15', row: '15', unit: 'px' } }, [
@@ -686,7 +701,7 @@ function generateHomepage() {
       ])
     ]),
 
-    // ===================== S10: Testimonials ← Energy Muse + Tiny Rituals =====================
+    // ===================== S10: How People Use Their Crystals ← Use-case scenarios =====================
     section({
       padding: rPadding('70', '10', '70', '10', {
         tablet: { t: '50', r: '10', b: '50', l: '10' },
@@ -695,33 +710,33 @@ function generateHomepage() {
       background_background: 'classic',
       background_color: '#fafafa'
     }, [
-      heading('Real Stories, Real Energy Shifts', { fontSize: 36, color: '#333333' }),
-      textEditor('Hear from customers who found their perfect crystal match', { fontSize: 16, color: '#888888' }),
+      heading('How People Use Their Crystals', { fontSize: 36, color: '#333333' }),
+      textEditor('Real moments where a crystal bracelet became part of everyday intention', { fontSize: 16, color: '#888888' }),
       spacer(20),
       wrap({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: { size: 20, column: '20', row: '20', unit: 'px' } }, [
-        // Testimonial 1
+        // Scenario 1
         wrap({ content_width: 'full', width: cardWidth3(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
-          imageWidget(IMAGES.about.communityRose.url, { radius: 50, width: 60 }),
-          heading('Sarah M.', { fontSize: 18, align: 'center', color: '#333333' }),
-          textEditor('My Rose Quartz bracelet helped me open up to self-love during a really tough transition. I wear it every day as a reminder to be gentle with myself.', {
+          imageWidget(IMAGES.home.useCalm.url, { alt: IMAGES.home.useCalm.alt, radius: 50, width: 60 }),
+          heading('For Calm Evenings', { fontSize: 18, align: 'center', color: '#333333' }),
+          textEditor('A common Amethyst ritual is to keep the bracelet on a nightstand and touch it before bed as a reminder to let the day settle.', {
             fontSize: 14, align: 'center',
             extra: { _padding: { unit: 'px', top: '0', right: '10', bottom: '0', left: '10', isLinked: '' } }
           })
         ]),
-        // Testimonial 2
+        // Scenario 2
         wrap({ content_width: 'full', width: cardWidth3(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
-          imageWidget(IMAGES.about.communityAmethyst.url, { radius: 50, width: 60 }),
-          heading('Michael T.', { fontSize: 18, align: 'center', color: '#333333' }),
-          textEditor('Since wearing my Amethyst bracelet, I sleep more deeply and feel calmer during stressful work meetings. It\'s become an essential part of my daily routine.', {
+          imageWidget(IMAGES.home.useWorkday.url, { alt: IMAGES.home.useWorkday.alt, radius: 50, width: 60 }),
+          heading('For Stressful Workdays', { fontSize: 18, align: 'center', color: '#333333' }),
+          textEditor('Black Tourmaline is often chosen as a workday grounding cue: a small physical reminder to pause, breathe, and reset.', {
             fontSize: 14, align: 'center',
             extra: { _padding: { unit: 'px', top: '0', right: '10', bottom: '0', left: '10', isLinked: '' } }
           })
         ]),
-        // Testimonial 3
+        // Scenario 3
         wrap({ content_width: 'full', width: cardWidth3(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
-          imageWidget(IMAGES.about.communityCitrine.url, { radius: 50, width: 60 }),
-          heading('Emma L.', { fontSize: 18, align: 'center', color: '#333333' }),
-          textEditor('The Citrine bracelet was my first purchase, and I immediately felt a shift in my confidence. Three months later, I got the promotion I\'d been working toward!', {
+          imageWidget(IMAGES.home.useCompassion.url, { alt: IMAGES.home.useCompassion.alt, radius: 50, width: 60 }),
+          heading('For Self-Compassion', { fontSize: 18, align: 'center', color: '#333333' }),
+          textEditor('Rose Quartz is a popular choice for people navigating transitions. Wearing it can serve as a gentle daily prompt to be kinder to yourself.', {
             fontSize: 14, align: 'center',
             extra: { _padding: { unit: 'px', top: '0', right: '10', bottom: '0', left: '10', isLinked: '' } }
           })
@@ -746,7 +761,7 @@ function generateHomepage() {
       ])
     ]),
 
-    // ===================== S12: Blog ← Energy Muse =====================
+    // ===================== S12: Crystal Guide Preview =====================
     section({
       padding: rPadding('80', '10', '80', '10', {
         tablet: { t: '50', r: '10', b: '50', l: '10' },
@@ -757,37 +772,31 @@ function generateHomepage() {
       flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
     }, [
       wrap({ content_width: 'boxed' }, [
-        heading('Learn & Explore', { fontSize: 36 }),
-        textEditor('Discover the wisdom behind every crystal', { fontSize: 18, color: '#888888' })
+        heading('Start With Crystal Meanings', { fontSize: 36 }),
+        textEditor('Our guide is being built around clear mineral facts, traditional meanings, and everyday intention practices.', { fontSize: 18, color: '#888888' })
       ]),
       wrap({
         content_width: 'full',
         flex_direction: 'row',
         flex_wrap: 'wrap',
         flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
-      },
-        BLOG_POSTS.map(function(post) {
-          return wrap({
-            content_width: 'full',
-            width: cardWidth4(),
-            width_tablet: tabletWidth2(),
-            width_mobile: mobileWidth100()
-          }, [
-            imageBox(
-              IMAGES.blog[post.img].url,
-              post.title,
-              'Read More →',
-              'https://goearthward.com/blog/' + post.slug
-            )
-          ]);
-        })
-      ),
+      }, [
+        wrap({ content_width: 'full', width: cardWidth3(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
+          iconBox('Mineral Facts', 'Simple identifiers such as color, hardness, formation, and care notes')
+        ]),
+        wrap({ content_width: 'full', width: cardWidth3(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
+          iconBox('Traditional Meaning', 'How each crystal has commonly been associated with intention and ritual')
+        ]),
+        wrap({ content_width: 'full', width: cardWidth3(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
+          iconBox('Everyday Use', 'Practical ways to wear, store, cleanse, and pair your bracelet')
+        ])
+      ]),
       wrap({ content_width: 'boxed' }, [
-        buttonWidget('VIEW ALL ARTICLES', '/blog/')
+        buttonWidget('EXPLORE CRYSTAL GUIDE', '/crystal-guide/')
       ])
     ]),
 
-    // ===================== S13: Newsletter =====================
+    // ===================== S13: Launch CTA =====================
     section({
       padding: rPadding('80', '10', '80', '10', {
         tablet: { t: '50', r: '10', b: '50', l: '10' },
@@ -795,8 +804,8 @@ function generateHomepage() {
       }),
       background_background: 'classic',
       background_image: {
-        url: IMAGES.shared.moonRitual.url,
-        id: 16974, size: '', alt: '', source: 'library'
+        url: IMAGES.home.newsletter.url,
+        id: 0, size: '', alt: IMAGES.home.newsletter.alt, source: 'library'
       },
       background_repeat: 'no-repeat',
       background_size: 'cover',
@@ -805,12 +814,12 @@ function generateHomepage() {
       background_overlay_opacity: { unit: 'px', size: 0.7, sizes: [] }
     }, [
       wrap({ content_width: 'boxed' }, [
-        heading('Join the Earthward Community', { color: '#FFFFFF', fontSize: 32 }),
-        textEditor('Get crystal guides, moon phase updates, and 10% off your first order.', {
+        heading('Choose Something Real to Carry', { color: '#FFFFFF', fontSize: 32 }),
+        textEditor('Begin with a stone, an intention, or the guide path that helps you make a grounded choice.', {
           color: '#CCCCCC', fontSize: 16,
           extra: { _margin: { unit: 'px', top: '0', right: '0', bottom: '30', left: '0', isLinked: '' } }
         }),
-        buttonWidget('SUBSCRIBE & GET 10% OFF', '/#newsletter')
+        buttonWidget('EXPLORE CRYSTAL GUIDE', '/crystal-guide/')
       ])
     ]),
 
@@ -822,13 +831,13 @@ function generateHomepage() {
       flex_gap: { size: 5, column: '5', row: '5', unit: 'px' }
     }, [
       wrap({ content_width: 'boxed' }, [
-        textEditor('Earthward offers handcrafted healing crystal bracelets made from 100% natural gemstones including amethyst, rose quartz, citrine, black tourmaline, and clear quartz. Each bracelet is ethically sourced from trusted mines, energetically cleansed with sage and moonlight, and shipped in eco-friendly packaging with a velvet pouch and energy guide card. Whether you\'re seeking crystals for anxiety relief, love, abundance, protection, or spiritual growth, our collection is designed to support your journey. Shop by intention, explore our crystal guide, or take the Crystal Quiz to find your perfect match.', {
+        textEditor('Earthward offers crystal bracelets made from genuine natural gemstones including amethyst, rose quartz, citrine, black tourmaline, and clear quartz. Each bracelet is selected with care, paired with practical guidance, and designed for everyday intention. Whether you are choosing a stone for calm, love, abundance, grounding, or personal reflection, start by browsing by intention, exploring the crystal guide, or reading how Earthward approaches sourcing and care.', {
           fontSize: 13, align: 'left', color: '#999999', lineHeight: 22, responsive: false
         })
       ])
     ]),
 
-    // ===================== S15: Trust Guarantees ← Tiny Rituals + Moonrise Crystals =====================
+    // ===================== S15: Trust Signals =====================
     section({
       padding: rPadding('60', '10', '60', '10', {
         tablet: { t: '40', r: '10', b: '40', l: '10' },

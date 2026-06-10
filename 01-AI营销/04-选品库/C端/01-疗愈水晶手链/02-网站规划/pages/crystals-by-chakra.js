@@ -18,7 +18,7 @@ const E = require('../templates/elementor-utils');
 const IMAGES = require('../assets/site-images');
 
 // ============================================================
-// 占位图片
+// Draft-only fallback. B2正式进入2C前，每个推荐水晶都必须传入真实图片。
 // ============================================================
 const PLACEHOLDER = IMAGES.shared.card.url;
 
@@ -33,12 +33,12 @@ const ALL_CHAKRAS = [
     color: '#FF0000',
     colorName: 'Red',
     location: 'Base of the Spine',
-    description: 'The Root Chakra is your foundation. When balanced, it provides a sense of security, stability, and groundedness. It connects you to the earth and your basic survival instincts.',
+    description: 'The Root Chakra is traditionally associated with foundation, steadiness, and feeling grounded in daily life. Many people choose red or dark stones as tactile reminders to slow down and return to the present moment.',
     crystals: [
-      { name: 'Black Tourmaline', subtitle: 'The Shield Stone', reason: 'Black Tourmaline is one of the most powerful grounding stones. It creates a protective energy shield around the root chakra, dispelling fear and enhancing security.', link: '/crystal-guide/black-tourmaline-meaning' },
-      { name: 'Hematite', subtitle: 'The Grounding Stone', reason: 'Hematite anchors your energy to the earth, providing stability and strength. It is ideal for those feeling scattered or disconnected.', link: '/crystal-guide/hematite-meaning' },
-      { name: 'Red Jasper', subtitle: 'The Stone of Endurance', reason: 'Red Jasper stimulates the root chakra with its deep earth energy, promoting courage, stamina, and a strong sense of self.', link: '/crystal-guide/red-jasper-meaning' },
-      { name: 'Smoky Quartz', subtitle: 'The Stone of Serenity', reason: 'Smoky Quartz gently grounds and neutralizes negative energy, helping you feel safe and secure in your physical body.', link: '/crystal-guide/smoky-quartz-meaning' }
+      { name: 'Black Tourmaline', subtitle: 'The Grounding Stone', reason: 'Black Tourmaline is commonly chosen for grounding intentions. Its dark color and weight make it a natural reminder to pause, breathe, and feel steady.', link: '/crystal-guide/black-tourmaline-meaning' },
+      { name: 'Hematite', subtitle: 'The Grounding Stone', reason: 'Hematite is traditionally linked with stability and focus. Many people use it as a pocket stone or bracelet when they want a tangible cue for steadiness.', link: '/crystal-guide/hematite-meaning' },
+      { name: 'Red Jasper', subtitle: 'The Stone of Endurance', reason: 'Red Jasper is often associated with patience and stamina. For root chakra work, it can serve as a reminder to move slowly and stay consistent.', link: '/crystal-guide/red-jasper-meaning' },
+      { name: 'Smoky Quartz', subtitle: 'The Stone of Release', reason: 'Smoky Quartz is often used in grounding rituals. Its muted tone supports a visual language of calm, release, and returning to basics.', link: '/crystal-guide/smoky-quartz-meaning' }
     ]
   },
   {
@@ -48,11 +48,11 @@ const ALL_CHAKRAS = [
     color: '#FF8C00',
     colorName: 'Orange',
     location: 'Lower Abdomen',
-    description: 'The Sacral Chakra governs creativity, passion, and emotional flow. When open, it allows you to experience pleasure, embrace change, and express your authentic self.',
+    description: 'The Sacral Chakra is traditionally connected with creativity, emotional expression, and openness to change. Orange and warm-toned stones are often used as reminders to make space for play, movement, and creative practice.',
     crystals: [
-      { name: 'Carnelian', subtitle: 'The Stone of Motivation', reason: 'Carnelian ignites the creative fire within the sacral chakra, boosting confidence, passion, and the courage to take action.', link: '/crystal-guide/carnelian-meaning' },
-      { name: 'Moonstone', subtitle: 'The Stone of New Beginnings', reason: 'Moonstone harmonizes with the sacral chakra\'s watery energy, enhancing intuition, emotional balance, and feminine power.', link: '/crystal-guide/moonstone-meaning' },
-      { name: 'Orange Calcite', subtitle: 'The Stone of Joy', reason: 'Orange Calcite energizes the sacral chakra, releasing blockages around creativity and inviting playfulness and joy back into your life.', link: '/crystal-guide/orange-calcite-meaning' }
+      { name: 'Carnelian', subtitle: 'The Stone of Motivation', reason: 'Carnelian is traditionally associated with motivation and creative momentum. It works well as a daily reminder to begin before every detail feels settled.', link: '/crystal-guide/carnelian-meaning' },
+      { name: 'Moonstone', subtitle: 'The Stone of New Beginnings', reason: 'Moonstone is often connected with cycles, change, and intuition. It can support a gentler ritual language for transitions and emotional reflection.', link: '/crystal-guide/moonstone-meaning' },
+      { name: 'Orange Calcite', subtitle: 'The Stone of Joy', reason: 'Orange Calcite is commonly used in creativity-focused rituals. Its bright color makes it a useful symbolic cue for playfulness and renewed attention.', link: '/crystal-guide/orange-calcite-meaning' }
     ]
   },
   {
@@ -62,12 +62,12 @@ const ALL_CHAKRAS = [
     color: '#FFD700',
     colorName: 'Yellow',
     location: 'Upper Abdomen',
-    description: 'The Solar Plexus Chakra is your center of personal power, willpower, and self-confidence. When balanced, it fuels your ambition and helps you take decisive action.',
+    description: 'The Solar Plexus Chakra is traditionally associated with confidence, self-direction, and purposeful action. Yellow stones are often chosen as visual reminders for courage, planning, and follow-through.',
     crystals: [
-      { name: 'Citrine', subtitle: 'The Stone of Abundance', reason: 'Citrine radiates the warm, confident energy of the sun. It activates the solar plexus, enhancing self-esteem and manifestation power.', link: '/crystal-guide/citrine-meaning' },
-      { name: 'Tiger Eye', subtitle: 'The Stone of Courage', reason: 'Tiger Eye empowers the solar plexus with grounded confidence, helping you face challenges with clarity and determination.', link: '/crystal-guide/tiger-eye-meaning' },
-      { name: 'Yellow Jasper', subtitle: 'The Stone of Protection', reason: 'Yellow Jasper provides a steady, nurturing energy to the solar plexus, building inner strength and emotional resilience.', link: '/crystal-guide/yellow-jasper-meaning' },
-      { name: 'Pyrite', subtitle: 'The Stone of Action', reason: 'Pyrite stimulates the solar plexus with its bold, masculine energy, inspiring leadership and the pursuit of goals.', link: '/crystal-guide/pyrite-meaning' }
+      { name: 'Citrine', subtitle: 'The Stone of Abundance', reason: 'Citrine is often associated with optimism, abundance, and creative planning. It can serve as a bright reminder to make choices that support growth.', link: '/crystal-guide/citrine-meaning' },
+      { name: 'Tiger Eye', subtitle: 'The Stone of Courage', reason: 'Tiger Eye is traditionally linked with courage and practical confidence. Its banded surface makes it a strong visual cue for grounded decision-making.', link: '/crystal-guide/tiger-eye-meaning' },
+      { name: 'Yellow Jasper', subtitle: 'The Stone of Endurance', reason: 'Yellow Jasper is often used as a steadying stone in confidence rituals. It pairs well with intentions around patience and self-trust.', link: '/crystal-guide/yellow-jasper-meaning' },
+      { name: 'Pyrite', subtitle: 'The Stone of Action', reason: 'Pyrite is commonly associated with action, ambition, and clear goals. In bracelet form, it can become a small reminder to follow through.', link: '/crystal-guide/pyrite-meaning' }
     ]
   },
   {
@@ -77,12 +77,12 @@ const ALL_CHAKRAS = [
     color: '#00CC00',
     colorName: 'Green',
     location: 'Center of the Chest',
-    description: 'The Heart Chakra is the bridge between the physical and spiritual. It governs love, compassion, and forgiveness. When open, it allows deep connection with yourself and others.',
+    description: 'The Heart Chakra is traditionally connected with love, compassion, and forgiveness. Green and pink stones are often used as reminders to soften, listen, and practice care toward yourself and others.',
     crystals: [
-      { name: 'Rose Quartz', subtitle: 'The Stone of Love', reason: 'Rose Quartz is the ultimate heart chakra stone. It opens the heart to all forms of love \u2014 self-love, romantic love, and universal compassion.', link: '/crystal-guide/rose-quartz-meaning' },
-      { name: 'Green Aventurine', subtitle: 'The Stone of Luck', reason: 'Green Aventurine soothes the heart chakra, releasing old patterns and inviting in new opportunities with an open heart.', link: '/crystal-guide/green-aventurine-meaning' },
-      { name: 'Rhodonite', subtitle: 'The Stone of Compassion', reason: 'Rhodonite heals emotional wounds stored in the heart chakra, nurturing forgiveness and compassion for yourself and others.', link: '/crystal-guide/rhodonite-meaning' },
-      { name: 'Malachite', subtitle: 'The Stone of Transformation', reason: 'Malachite clears and activates the heart chakra, encouraging deep emotional healing and the release of guarded heart patterns.', link: '/crystal-guide/malachite-meaning' }
+      { name: 'Rose Quartz', subtitle: 'The Stone of Love', reason: 'Rose Quartz is widely associated with love and self-compassion. Many people wear it as a gentle reminder to speak to themselves with more care.', link: '/crystal-guide/rose-quartz-meaning' },
+      { name: 'Green Aventurine', subtitle: 'The Stone of Luck', reason: 'Green Aventurine is often connected with renewal and opportunity. For heart intentions, it can symbolize openness to growth and possibility.', link: '/crystal-guide/green-aventurine-meaning' },
+      { name: 'Rhodonite', subtitle: 'The Stone of Compassion', reason: 'Rhodonite is traditionally associated with compassion and emotional repair. It works well for rituals centered on forgiveness and gentleness.', link: '/crystal-guide/rhodonite-meaning' },
+      { name: 'Malachite', subtitle: 'The Stone of Transformation', reason: 'Malachite is often linked with transformation and courage. Its strong green pattern makes it a bold reminder to meet change with honesty.', link: '/crystal-guide/malachite-meaning' }
     ]
   },
   {
@@ -92,11 +92,11 @@ const ALL_CHAKRAS = [
     color: '#0099FF',
     colorName: 'Blue',
     location: 'Throat',
-    description: 'The Throat Chakra governs communication, truth, and self-expression. When balanced, it empowers you to speak your truth with clarity and authenticity.',
+    description: 'The Throat Chakra is traditionally associated with communication, truth, and self-expression. Blue stones are often chosen as reminders to speak clearly, listen carefully, and choose words with intention.',
     crystals: [
-      { name: 'Lapis Lazuli', subtitle: 'The Stone of Truth', reason: 'Lapis Lazuli activates the throat chakra, encouraging honest communication and the courage to express your inner truth.', link: '/crystal-guide/lapis-lazuli-meaning' },
-      { name: 'Aquamarine', subtitle: 'The Stone of Courage', reason: 'Aquamarine clears the throat chakra, soothing communication anxiety and helping you articulate your thoughts with grace.', link: '/crystal-guide/aquamarine-meaning' },
-      { name: 'Sodalite', subtitle: 'The Stone of Logic', reason: 'Sodalite balances the throat chakra, promoting rational thinking and clear, effective communication.', link: '/crystal-guide/sodalite-meaning' }
+      { name: 'Lapis Lazuli', subtitle: 'The Stone of Truth', reason: 'Lapis Lazuli is traditionally associated with truth, wisdom, and expression. It can serve as a reminder to speak with clarity and care.', link: '/crystal-guide/lapis-lazuli-meaning' },
+      { name: 'Aquamarine', subtitle: 'The Stone of Courage', reason: 'Aquamarine is often connected with calm communication. Its watery blue tone supports intentions around steadiness before speaking.', link: '/crystal-guide/aquamarine-meaning' },
+      { name: 'Sodalite', subtitle: 'The Stone of Logic', reason: 'Sodalite is commonly linked with reason and clear thought. It pairs well with communication rituals that ask for patience and precision.', link: '/crystal-guide/sodalite-meaning' }
     ]
   },
   {
@@ -106,12 +106,12 @@ const ALL_CHAKRAS = [
     color: '#4B0082',
     colorName: 'Indigo',
     location: 'Between the Eyebrows',
-    description: 'The Third Eye Chakra is the seat of intuition, insight, and inner wisdom. When activated, it enhances your ability to see beyond the physical and trust your inner guidance.',
+    description: 'The Third Eye Chakra is traditionally connected with intuition, insight, and reflection. Indigo and purple stones are often used as quiet cues for journaling, meditation, and inner listening.',
     crystals: [
-      { name: 'Amethyst', subtitle: 'The Stone of Peace', reason: 'Amethyst opens the third eye, deepening meditation and enhancing intuition while keeping the mind calm and focused.', link: '/crystal-guide/amethyst-meaning' },
-      { name: 'Fluorite', subtitle: 'The Stone of Focus', reason: 'Fluorite stimulates the third eye chakra, sharpening mental clarity and enhancing your ability to process spiritual insights.', link: '/crystal-guide/fluorite-meaning' },
-      { name: 'Labradorite', subtitle: 'The Stone of Magic', reason: 'Labradorite activates the third eye, awakening mystical abilities and enhancing your connection to higher realms of consciousness.', link: '/crystal-guide/labradorite-meaning' },
-      { name: 'Lepidolite', subtitle: 'The Stone of Transition', reason: 'Lepidolite calms the third eye chakra, easing mental overwhelm and supporting deep, restorative meditation.', link: '/crystal-guide/lepidolite-meaning' }
+      { name: 'Amethyst', subtitle: 'The Stone of Peace', reason: 'Amethyst is commonly associated with calm, reflection, and spiritual practice. It is a natural fit for meditation or evening journaling rituals.', link: '/crystal-guide/amethyst-meaning' },
+      { name: 'Fluorite', subtitle: 'The Stone of Focus', reason: 'Fluorite is often linked with clarity and organization. Its layered colors make it a useful symbol for sorting through thoughts with patience.', link: '/crystal-guide/fluorite-meaning' },
+      { name: 'Labradorite', subtitle: 'The Stone of Mystery', reason: 'Labradorite is traditionally associated with intuition and inner change. Its shifting flash gives it a reflective, contemplative quality.', link: '/crystal-guide/labradorite-meaning' },
+      { name: 'Lepidolite', subtitle: 'The Stone of Transition', reason: 'Lepidolite is often chosen for transition rituals. Its soft purple tone supports intentions around slowing down and making room for change.', link: '/crystal-guide/lepidolite-meaning' }
     ]
   },
   {
@@ -121,11 +121,11 @@ const ALL_CHAKRAS = [
     color: '#9400D3',
     colorName: 'Violet',
     location: 'Top of the Head',
-    description: 'The Crown Chakra is your gateway to divine consciousness and universal connection. When open, it brings enlightenment, spiritual awakening, and a deep sense of oneness.',
+    description: 'The Crown Chakra is traditionally associated with meaning, perspective, and spiritual connection. Clear and violet stones are often used as simple reminders to make room for reflection and humility.',
     crystals: [
-      { name: 'Clear Quartz', subtitle: 'The Master Healer', reason: 'Clear Quartz amplifies the crown chakra\'s connection to higher consciousness, serving as a bridge between the physical and spiritual realms.', link: '/crystal-guide/clear-quartz-meaning' },
-      { name: 'Selenite', subtitle: 'The Stone of Clarity', reason: 'Selenite opens and cleanses the crown chakra, allowing divine light to flow through and illuminating your spiritual path.', link: '/crystal-guide/selenite-meaning' },
-      { name: 'Amethyst', subtitle: 'The Stone of Peace', reason: 'Amethyst elevates the crown chakra, facilitating spiritual awareness, deep meditation, and connection to universal wisdom.', link: '/crystal-guide/amethyst-meaning' }
+      { name: 'Clear Quartz', subtitle: 'The Clarity Stone', reason: 'Clear Quartz is often associated with clarity and intention. Its transparent form makes it a useful symbol for focus, simplicity, and reflection.', link: '/crystal-guide/clear-quartz-meaning' },
+      { name: 'Selenite', subtitle: 'The Stone of Clarity', reason: 'Selenite is traditionally used in cleansing and clarity rituals. Its pale surface supports a visual language of simplicity and reset.', link: '/crystal-guide/selenite-meaning' },
+      { name: 'Amethyst', subtitle: 'The Stone of Peace', reason: 'Amethyst is commonly used in spiritual and meditative traditions. For crown chakra content, it works best as a reminder of calm reflection.', link: '/crystal-guide/amethyst-meaning' }
     ]
   }
 ];
@@ -182,7 +182,7 @@ function generateChakraPage(config) {
       padding: { unit: 'px', top: '0', right: '0', bottom: '15', left: '0', isLinked: '' }
     }),
     E.textEditor(
-      config.description || 'Discover the crystals that resonate with the ' + name + '. These stones help balance and activate this vital energy center.',
+      config.description || 'Discover crystals traditionally associated with the ' + name + '. These stones can serve as symbolic reminders for the intentions connected with this chakra.',
       { fontSize: 17, color: '#CCCCCC', lineHeight: 26 }
     )
   ]);
@@ -217,7 +217,7 @@ function generateChakraPage(config) {
         { align: 'center', fontSize: 14, color: '#999999' }
       ),
       E.textEditor(
-        crystal.reason || 'This crystal resonates deeply with the ' + name + ', providing support and energetic alignment.',
+        crystal.reason || 'This crystal is traditionally associated with the ' + name + ' and can serve as a meaningful reminder for related intentions.',
         { align: 'left', fontSize: 15, color: '#666666', lineHeight: 23 }
       ),
       E.buttonWidget('Explore ' + crystal.name, crystal.link || '/crystal-guide/' + crystal.name.toLowerCase().replace(/\s+/g, '-') + '-meaning')
@@ -235,7 +235,7 @@ function generateChakraPage(config) {
       padding: { unit: 'px', top: '0', right: '0', bottom: '10', left: '0', isLinked: '' }
     }),
     E.textEditor(
-      'Each of these crystals has been carefully selected for its unique resonance with the ' + name + '. Discover how they can support your energetic balance.',
+      'Each of these crystals is commonly associated with the ' + name + ' in modern chakra practice. Use this guide as a starting point for choosing a stone that fits your intention.',
       { fontSize: 16, color: '#888888', lineHeight: 24 }
     ),
     E.wrap({
@@ -257,7 +257,7 @@ function generateChakraPage(config) {
       padding: { unit: 'px', top: '0', right: '0', bottom: '5', left: '0', isLinked: '' }
     }),
     E.textEditor(
-      'Browse our curated selection of crystal bracelets and sets designed to balance and activate your ' + name + '.',
+      'Browse crystal bracelets and sets selected around the traditional color, symbolism, and intentions of the ' + name + '.',
       { fontSize: 16, color: '#888888', lineHeight: 24 }
     ),
     E.wdProductsWidget(6)
@@ -303,7 +303,7 @@ function generateChakraPage(config) {
       padding: { unit: 'px', top: '0', right: '0', bottom: '10', left: '0', isLinked: '' }
     }),
     E.textEditor(
-      'Every chakra plays a vital role in your energetic health. Discover the crystals that resonate with each energy center.',
+      'Each chakra carries its own symbolic language. Explore the crystals commonly associated with each center and choose the path that fits your current intention.',
       { fontSize: 16, color: '#AAAAAA', lineHeight: 24 }
     ),
     E.wrap({
@@ -335,9 +335,11 @@ async function main() {
   );
 }
 
-main().catch(function (err) {
-  console.error('Error:', err.message || err);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch(function (err) {
+    console.error('Error:', err.message || err);
+    process.exit(1);
+  });
+}
 
 module.exports = { generateChakraPage: generateChakraPage, ALL_CHAKRAS: ALL_CHAKRAS };

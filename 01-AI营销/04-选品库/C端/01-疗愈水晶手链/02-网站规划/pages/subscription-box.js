@@ -1,6 +1,6 @@
 /**
  * Subscription Box 页面
- * URL: /collections/subscription-box
+ * URL: /product-category/subscription-box
  *
  * 4个Section:
  * 1. Hero — "Monthly Crystal Subscription"
@@ -38,7 +38,7 @@ var DEFAULT_TIERS = [
       'Free shipping in the US'
     ],
     color: '#E8F5E9',
-    link: '/collections/subscription-box/basic'
+    link: '/product-category/subscription-box/basic'
   },
   {
     name: 'Premium',
@@ -57,7 +57,7 @@ var DEFAULT_TIERS = [
     ],
     color: '#E3F2FD',
     popular: true,
-    link: '/collections/subscription-box/premium'
+    link: '/product-category/subscription-box/premium'
   },
   {
     name: 'Deluxe',
@@ -76,7 +76,7 @@ var DEFAULT_TIERS = [
       'Early access to new collections'
     ],
     color: '#FFF3E0',
-    link: '/collections/subscription-box/deluxe'
+    link: '/product-category/subscription-box/deluxe'
   }
 ];
 

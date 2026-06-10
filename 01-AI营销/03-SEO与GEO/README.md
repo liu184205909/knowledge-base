@@ -1,6 +1,6 @@
 # SEO与GEO 知识库索引
 
-> 最后更新：2026-06-02（+ 2026 SEO 基准数据整合到 01/02/03/05/06 + 参考底本）
+> 最后更新：2026-06-10（+ 14-AI搜索数据驱动策略与Prompt执行库）
 
 ---
 
@@ -21,7 +21,8 @@
 ├── 10-内容可检索性框架.md          ← 让内容被AI检索到时看这个
 ├── 11-内容成熟度模型.md            ← 诊断内容策略成熟度时看这个
 ├── 12-过程内容策略-B2B信任建设.md   ← B2B品牌信任建设时看这个
-└── 13-大规模关键词排名策略.md       ← 从数百到数百万索引关键词（电商/通用）
+├── 13-大规模关键词排名策略.md       ← 从数百到数百万索引关键词（电商/通用）
+└── 14-AI搜索数据驱动策略与Prompt执行库.md  ← X研究数据+影响力者框架+工具生态+Claude Prompt（核心文档）
 ```
 
 > **执行层文档**（工作流、工具配置）已迁移至 [01-营销方法论基础/](../01-营销方法论基础/)
@@ -53,6 +54,13 @@
 | 做B2B品牌信任建设 | [12](./12-过程内容策略-B2B信任建设.md) | Show Your Work、过程内容公式、E-E-A-T信号 |
 | 大规模关键词排名 | [13](./13-大规模关键词排名策略.md) | 关键词家族、程序化SEO、四阶段扩展模型 |
 | Reddit GEO优化 | [外链库/Reddit GEO](../05-外链资产库/01-Reddit-AI可见度GEO战略指南.md) | Prompt Mapping、Jolly AEO Framework、品牌植入 |
+| 做AI可见性诊断 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | AI可见性诊断Prompt、Ghost Citation检测、引用就绪审计 |
+| 选择AI可见性工具 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | 工具生态对比、Profound/Peec/Otterly分层选型 |
+| 理解Ghost Citation | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | 四引擎差异化、引用vs提及分离策略 |
+| Perplexity专项优化 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | AED内容模板、60天新鲜度循环 |
+| 用Claude做SEO | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | 8个SEO Prompt执行模板 |
+| 了解AI Overviews流量影响 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) + [05](./05-SEO测量危机与新指标.md) | CTR硬数据、覆盖率增长、零点击率 |
+| 对比影响力者方法论 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | Aleyda/Lily Ray/Kevin Indig/Glenn Gabe框架对比 |
 
 ---
 
@@ -129,3 +137,12 @@
 | Zack Franklin / SmartEcomSEO | 实践 | 13（关键词家族 + 程序化SEO + 四阶段扩展） |
 | Muskaan Rana / Jolly Search | 实践 | 14（Reddit AI可见度 + Prompt Mapping） |
 | Greg Heilers / Jolly SEO | 实践 | [外链SOP](../05-外链资产库/自动化客座外链建设SOP.md)（零付费客座外链自动化） |
+| X/Twitter SEO社区研究（2025-2026） | 社区 | 14（Ghost Citation/Ski Ramp/AED模板/CTR数据/工具生态） |
+| Aleyda Solis / Orainti | 实践 | 14（12步清单 + 三层KPI + learningaisearch.com） |
+| Lily Ray / Algorythmic | 实践 | 14（引用-排名关联 + Fan-out工具链 + E-E-A-T方法论） |
+| Kevin Indig / Growth Memo | 研究 | 14（Ghost Citation 3981域名 + Ski Ramp 1.2M引用 + 四引擎差异化） |
+| Glenn Gabe / GSQi | 研究 | 14（June Core Update HCU恢复 + Gray Area理论 + AI Overview测量） |
+| Semrush AI Toolkit研究 | 研究 | 14（1亿引用 + 最被引用域名 + AI Mode零点击93%） |
+| BrightEdge AI搜索报告 | 研究 | 14（AI流量+527%YoY + 覆盖率增长） |
+| Seer Interactive CTR研究 | 研究 | 14（有机CTR -61% + 541K LLM回复验证） |
+| Machine Relations引用因子 | 研究 | 14（680品牌分析 + 品牌搜索量最强预测因子 + YouTube 0.737相关） |

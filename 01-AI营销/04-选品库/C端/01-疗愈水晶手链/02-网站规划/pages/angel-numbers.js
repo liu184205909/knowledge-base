@@ -53,9 +53,9 @@ var DEFAULT_CONFIG = {
       heading: 'Best Crystals for Angel Number 111',
       content: 'Angel Number 111 carries the energy of new beginnings and manifestation. These crystals amplify that energy and help you align with the divine messages you are receiving.',
       items: [
-        { name: 'Clear Quartz', reason: 'The Master Healer amplifies your intentions and clarifies the messages from your angels. Use Clear Quartz during meditation to strengthen your connection to divine guidance.', link: '/collections/clear-quartz-crystals' },
-        { name: 'Citrine', reason: 'The Stone of Abundance resonates with 111\'s manifestation energy. Citrine helps you attract the new opportunities and wealth that this angel number is bringing into your life.', link: '/collections/citrine-crystals' },
-        { name: 'Selenite', reason: 'The Stone of Clarity opens your crown chakra to receive angelic messages more clearly. Selenite creates a peaceful, high-vibration space for spiritual communication.', link: '/collections/selenite-crystals' }
+        { name: 'Clear Quartz', reason: 'The Master Healer amplifies your intentions and clarifies the messages from your angels. Use Clear Quartz during meditation to strengthen your connection to divine guidance.', link: '/product-category/clear-quartz-crystals' },
+        { name: 'Citrine', reason: 'The Stone of Abundance resonates with 111\'s manifestation energy. Citrine helps you attract the new opportunities and wealth that this angel number is bringing into your life.', link: '/product-category/citrine-crystals' },
+        { name: 'Selenite', reason: 'The Stone of Clarity opens your crown chakra to receive angelic messages more clearly. Selenite creates a peaceful, high-vibration space for spiritual communication.', link: '/product-category/selenite-crystals' }
       ]
     },
     meditation: {

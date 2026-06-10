@@ -1,6 +1,6 @@
 /**
  * Mystery Crystal Box 页面模板
- * URL: /collections/mystery-box
+ * URL: /product-category/mystery-box
  *
  * 6个Section:
  * 1. Hero — "Mystery Crystal Box"
@@ -165,7 +165,7 @@ function generateMysteryBoxPage(config) {
         tier.description || '',
         { align: 'center', fontSize: 15, color: '#666666', lineHeight: 23 }
       ),
-      E.buttonWidget('Select ' + tier.name, '/collections/mystery-box/' + (tier.name || '').toLowerCase().replace(/\s+/g, '-'))
+      E.buttonWidget('Select ' + tier.name, '/product-category/mystery-box/' + (tier.name || '').toLowerCase().replace(/\s+/g, '-'))
     ]);
   });
 
@@ -245,7 +245,7 @@ function generateMysteryBoxPage(config) {
           '<strong>What\'s inside (hint):</strong><ul style="padding-left:20px;margin-top:8px;">' + teaserHtml + '</ul>',
           { align: 'left', fontSize: 15, color: '#666666', lineHeight: 24 }
         ),
-        E.buttonWidget('Order This Month\'s Box \u2192', '/collections/mystery-box')
+        E.buttonWidget('Order This Month\'s Box \u2192', '/product-category/mystery-box')
       ])
     ])
   ]);
