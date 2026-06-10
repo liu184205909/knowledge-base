@@ -1,0 +1,8 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">EarthWard icon</title>
+  <desc id="desc">Minimal stone icon with moss and copper strata lines.</desc>
+  <rect width="128" height="128" rx="24" fill="#FFFFFF"/>
+  <path d="M64 19C88 19 106 41 106 67C106 94 88 109 64 109C40 109 22 94 22 67C22 41 40 19 64 19Z" stroke="#2B2A27" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34 74C48 68 51 57 63 54C77 50 80 36 94 30" stroke="#596B4C" stroke-width="7" stroke-linecap="round"/>
+  <path d="M42 94C56 87 60 76 72 72C86 67 89 55 100 48" stroke="#A66A43" stroke-width="7" stroke-linecap="round"/>
+</svg>

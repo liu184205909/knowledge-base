@@ -356,343 +356,1320 @@ Depth（剩余内容）：扩展上下文、示例、边界情况、相关概念
 
 ---
 
-## 八、Claude SEO Prompt执行库
+## 八、Schema与AI引用争议 — 实验定论
 
-> 资源来源：Sarvesh Shrivastava (@bloggersarvesh) 20+ prompt模板、Charles_SEO 10 prompt系统、社区实践
+> 来源：OtterlyAI控制实验（2025.12-2026.3，319个prompt，7个AI平台）+ Ahrefs大规模研究 + Gianluca Fiorelli调和分析
+
+### 争议现状
+
+| 研究 | 结论 | 规模 |
+|------|------|------|
+| **OtterlyAI实验** | Schema对AI搜索**无直接效果**，+1500%是SEO间接路径 | 319 prompts，7平台，3个月 |
+| **Ahrefs研究** | JSON-LD Schema**无可测量影响** | 1,885处理页 + 4,000对照页 |
+| **Cyrus Shepard汇编** | 22个AI引用因子中Schema是顶级因子之一 | 54+实验编译 |
+| **Semrush数据** | Organization/Article/BreadcrumbList在被引用页出现最频繁 | 1亿引用分析 |
+
+### OtterlyAI三项实验结果
+
+**实验1：AI平台能否读取Schema？** → 6/7失败
+
+| AI平台 | 能否读取 | 详情 |
+|--------|---------|------|
+| **Gemini** | ✅ 唯一成功 | 准确返回JSON-LD |
+| Claude | ❌ | 声称页面上没有Schema |
+| ChatGPT | ❌ | 无法检测Schema（包括Deep Research模式） |
+| Perplexity | ❌ | 服务器阻止抓取 |
+| **Google AI Mode** | ⚠️ 幻觉 | 返回了**不存在的"Service"Schema** |
+| Microsoft Copilot | ❌ | 只能读取文本，无法读HTML |
+| Google AI Overviews | 不适用 | 不以同样方式"抓取" |
+
+**原因**：多数AI平台的HTML→Markdown转换管道会**丢弃`<script>`标签**，JSON-LD在模型看到页面之前就被移除了。
+
+**实验2：Schema实施后AI可见性变化**
+
+| AI平台 | 变化 | %变化（3个月） |
+|--------|------|---------------|
+| Google AI Overviews | ↑ 大幅增长 | **+611%**（但基线很低） |
+| Google AI Mode | ↑ 增长 | +42% |
+| ChatGPT | ↓ 下降 | -71% |
+| Gemini | ↓ 下降 | -35% |
+| Perplexity | → 无变化 | 0% |
+| Copilot | ↓ 下降 | -64% |
+
+**关键发现**：12月品牌覆盖增长与竞争对手同步发生（竞品没有做Schema变更）→ 增长是**算法层面的**，不是Schema驱动的。
+
+**实验3：只有Schema中存在的信息**（"How many OtterlyAI employees live in Portugal?"）→ **所有AI平台都无法回答**。Schema中的独有信息对AI平台完全不可见。
+
+### 定论：Schema是SEO杠杆，不是GEO杠杆
+
+```
+Schema的直接路径（被AI直接消费）→ 不存在（6/7平台无法读取）
+Schema的间接路径 → 存在且有效：
+  Schema → 更好的富摘要 → 更强的有机排名 → AI平台引用概率增加
+
+AI Overviews的+1500%增长 = 传统SEO机制，不是GEO机制
+```
+
+### 实操建议
+
+| 行动 | 优先级 | 原因 |
+|------|--------|------|
+| 保留并维护Schema | 高 | 对SEO/富摘要仍然关键，间接提升AI可见性 |
+| 为AI搜索专门优化Schema | 低 | 投资回报不如内容清晰度和外部引用建设 |
+| 用清晰结构化散文替代依赖Schema | 高 | AI平台原生处理自然语言，不需要结构化标注 |
+| 产品品牌申请AI Merchant Programs | 高 | ChatGPT Merchant Program + Perplexity Buy with Pro是更直接路径 |
+
+---
+
+## 九、实体优化与KGMID实操工作流
+
+> 来源：Jason Barnard / Kalicube（8种KGMID查找方法）、Szymon Slowik（实体显著度框架）、Zoran Spirov（GEO三信号模型）
+
+### KGMID是什么
+
+KGMID（Knowledge Graph Machine ID）是Google知识库中实体的唯一标识符。每个知识面板都有一个KGMID。
+
+- `/m/` 开头 = 来自Freebase（2015年前）
+- `/g/` 开头 = 2015年后创建
+
+**为什么重要**：拥有KGMID = Google已识别你的实体 = 知识面板可能触发 = 信任信号。
+
+### 8种查找KGMID的方法
+
+#### 方法1-2：最快（1分钟）
+
+**方法1：页面源代码**
+1. Google搜索`[品牌名] [城市]`
+2. 如果出现知识面板：右键 → 查看页面源代码（Ctrl+U）
+3. 搜索 `/g/` 或 `/m/`
+4. 找到 `null, \x22` 后面的序列 → 就是KGMID
+5. 验证：下一个 `\x22` 后面应该是实体名称
+
+**方法2：知识面板分享按钮**
+1. 点击知识面板右上角三个点 → 分享
+2. 复制URL → 粘贴到地址栏
+3. URL重定向后格式：`https://www.google.com/search?kgmid=/g/11p187zfbt`
+4. `/g/11p187zfbt` 就是KGMID
+
+#### 方法3-5：进阶
+
+**方法3：Google Stick参数解码**
+1. 点击知识面板中的相关实体链接
+2. 复制URL中 `stick=` 后面的部分
+3. 用Base64解码器解码 → 获得语义三元组（主语-谓语-宾语）
+
+**方法4：检查搜索结果元素**
+1. 右键点击"Claim this knowledge panel"→ 检查
+2. 在HTML中找到 `/claim/?mid=` 后面的值
+
+**方法5：点击Claim按钮**
+1. 点击"Claim this knowledge panel"
+2. 重定向URL中直接包含KGMID
+
+#### 方法6-8：工具辅助
+
+**方法6：Kalicube Pro Knowledge Vault Explorer**（免费工具）
+- 搜索实体名 → 返回所有匹配实体 + KGMID + 关联实体
+- 可以区分同名实体（同音异义词）
+
+**方法7：Kalicube Pro NLP描述分析**
+- 输入描述文本 → Google NLP识别已知实体（蓝色链接=有KGMID，灰色=被猜测但无KGMID）
+
+**方法8：Google Knowledge Graph API**
+- 免费API：`https://kgsearch.googleapis.com/v1/entities:search?query=[品牌名]&key=[API_KEY]`
+- 返回JSON中包含 `@id` 字段 = KGMID
+
+### 实体优化工作流（6步）
+
+```
+步骤1：查找KGMID
+  → 用方法1-2快速查找，确认实体存在
+
+步骤2：验证Google理解
+  → 访问 https://www.google.com/search?kgmid=[你的KGMID]
+  → 对比正常搜索结果：如果一致=Google理解正确；不一致=需要修正
+
+步骤3：审计实体一致性
+  → 搜索品牌名（加引号）→ 检查所有出现位置的NAP是否一致
+  → 跨平台检查：Google、Bing、Facebook、LinkedIn、Crunchbase、行业目录
+
+步骤4：实施LocalBusiness Schema
+  → JSON-LD标记包含：name、address、phone、url、logo、sameAs（所有社交链接）
+  → 在首页添加完整标记
+
+步骤5：建设实体信号
+  → 在权威平台创建/认领：Wikipedia（如符合条件）、Wikidata、Crunchbase、LinkedIn公司页
+  → 确保每个平台的描述使用一致的关键词和措辞
+  → 外部引用使用一致的锚文本
+
+步骤6：触发/维护知识面板
+  → 如果没有知识面板：持续步骤3-5，Google会在足够信号后自动触发
+  → 如果有知识面板：定期检查信息准确性，通过Google的Claim流程获取编辑权
+```
+
+### 实体饱和度审计
+
+> 来源：Zoran Spirov — AI搜索优化三信号：Entity Saturation、Content Clarity、Source Authority
+
+**目标**：每个页面包含30-50个被识别实体
+
+**审计工具**：
+- Google Natural Language API（免费额度）
+- AlchemyAPI / Watson NLU
+- WordLift插件（WordPress）
+- InLinks（自动实体标注）
+
+**审计步骤**：
+1. 提取页面文本 → 通过NLP API分析 → 获得实体列表
+2. 对比排名前5的竞品页面的实体列表
+3. 识别缺失实体（竞品有你没有）
+4. 在内容中自然地补充缺失实体
+5. 确保关键实体在Schema中也有对应
+
+---
+
+## 十、Claude SEO Prompt执行库
+
+> **来源覆盖**：Sarvesh 21 Prompt（GBP/本地SEO）+ Lawrence Clinton 25 Prompt（通用SEO）+ AI Maker Apify管道 + Christopher Alarcon工作流 + 自研GEO Prompt
 
 ### 使用原则
 
-1. **Claude Cowork（Computer Use）**是这些prompt的最佳运行环境，需Claude Pro/Team
-2. 所有prompt均可适配到普通Claude对话中使用（去掉Computer Use指令即可）
-3. 对于通用知识库用户：**核心价值在于prompt的设计思路**，而非特定工具
+1. **Claude Cowork（Computer Use）**是本地SEO prompt的最佳运行环境，需Claude Pro/Team
+2. 所有prompt均可适配到普通Claude对话中使用（去掉"Open Chrome"等Computer Use指令即可）
+3. **对于通用知识库用户：核心价值在于prompt的设计思路**（竞品拆解→差距诊断→优先级排序的思路链），而非特定工具
+4. 自研GEO Prompt（8.10-8.16）不依赖Computer Use，任何Claude对话均可使用
 
-### 8.1 AI可见性诊断Prompt
+### 8.0 前置设置：业务上下文加载（必须先运行）
 
-```
-你是一位AI搜索优化专家。请分析以下品牌在AI搜索引擎中的表现。
-
-品牌名：[品牌名]
-网站：[URL]
-目标品类：[品类]
-目标市场：[国家/语言]
-
-请执行以下诊断：
-
-1. **Prompt测试矩阵**
-   生成20个目标prompt，按以下维度分组：
-   - 推荐类（"Best [品类] for [场景]"）
-   - 对比类（"[品牌] vs [竞品]"）
-   - 信任类（"Is [品牌] legit?"）
-   - 解答类（"How to choose [品类]"）
-   每组5个，覆盖用户旅程各阶段。
-
-2. **存在感评分框架**
-   对每个prompt，评估：
-   - 是否出现（0/1）
-   - 被推荐还是仅被提及（0-2分）
-   - 是否有可点击链接（0/1）
-   - 比较中是否胜出（0/1）
-   - 描述是否准确（0/1）
-   总分 = /6
-
-3. **差距诊断**
-   将每个缺口映射到修复类型：
-   - A类：自有页面/内容问题
-   - B类：第三方来源生态问题
-   - C类：数据/实体/商业清晰度问题
-
-4. **优先级排序**
-   可见性缺口严重程度 × 业务重要性 × 影响可能性 / 实施工作量
-
-输出格式：Markdown表格 + 行动清单（按优先级排序）
-```
-
-### 8.2 Ghost Citation检测Prompt
+> 来源：Sarvesh Shrivastava — 让Claude认识你的业务，后续所有prompt都基于真实数据
 
 ```
-分析[品牌名]在AI搜索中的Ghost Citation问题。
-
-步骤1：在以下4个平台分别搜索10个与[品牌]相关的prompt
-- ChatGPT
-- Gemini
-- Google AI Overviews
-- Perplexity
-
-步骤2：对每个回答记录：
-| 平台 | Prompt | 是否被引用 | 是否被提及品牌名 | Ghost Citation? | 回答中的措辞 |
-|------|--------|-----------|----------------|----------------|------------|
-
-步骤3：计算各平台的：
-- 引用率（cited率）
-- 品牌提及率（mentioned率）
-- Ghost Citation率 = 引用但未提及的比例
-
-步骤4：针对Ghost Citation率高的平台，制定差异化策略：
-- ChatGPT（学术模式）→ 优化：结构化引用格式、数据支撑、权威来源
-- Gemini（对话模式）→ 优化：品牌故事、比较内容、第三方背书
-
-输出：分平台的优化策略清单
-```
-
-### 8.3 内容引用就绪审计Prompt
-
-```
-审计以下URL的内容是否"引用就绪"（citation-ready）。
-
-URL：[URL]
-目标关键词：[关键词]
-目标AI平台：[ChatGPT/Gemini/Perplexity]
-
-审计维度（13项）：
-
-1. Answer-first原则：答案是否在前50词内？（Y/N）
-2. AED结构：是否有Answer-Evidence-Depth三段式结构？
-3. 语义概念密度：是否包含足够显式概念？（目标：比竞品高32%）
-4. 结构化格式：是否有列表、表格、数据块？
-5. 内联引用：是否包含可验证的数据/统计？
-6. 新鲜度信号：是否有明确的"Last Updated"日期？
-7. E-E-A-T信号：是否有作者信息、专业资质？
-8. Schema标记：是否有FAQPage/Article/Organization Schema？
-9. 实体密度：是否包含30-50个可识别实体？
-10. Q&A格式：是否以问题-答案对组织内容？
-11. 可读性：Flesch评分是否足够高？
-12. 比较内容：是否包含竞品对比？
-13. 多模态：是否有图片ALT、视频转录？
-
-每项0-2分（0=缺失 1=部分 2=完整），总分/26
-
-关键优化建议：
-- 如果得分 < 16：需要全面重构
-- 如果得分 16-20：针对性优化即可
-- 如果得分 > 20：仅微调
-
-输出：评分表 + 按优先级排列的具体修改建议
-```
-
-### 8.4 竞品AI可见性逆向工程Prompt
-
-```
-分析以下竞品在AI搜索中胜出的原因。
-
-我的品牌：[品牌名]
-竞品：[竞品名]（最多3个）
-品类：[品类]
-
-分析步骤：
-
-1. **Prompt矩阵测试**
-   生成15个品类prompt（推荐类5 + 对比类5 + 信任类5）
-   记录每个prompt中各品牌的表现
-
-2. **引用源逆向工程**
-   对竞品被引用的回答，分析：
-   - 引用了哪些第三方来源？
-   - 竞品在这些第三方来源中是如何出现的？
-   - 我们是否也出现在这些来源中？
-
-3. **内容差距分析**
-   - 竞品有哪些我们缺少的内容类型？
-   - 竞品的比较页/评测页覆盖了哪些关键词？
-   - 竞品在哪些平台被偏好？为什么？
-
-4. **行动建议**
-   按影响力排序的10项行动清单：
-   - 快赢（1-2周可执行）
-   - 中期（1-2月）
-   - 长期（3-6月）
-
-输出：竞品对比矩阵 + 内容差距地图 + 行动清单
-```
-
-### 8.5 Perplexity专项优化Prompt
-
-```
-为以下内容执行Perplexity专项优化。
-
-URL：[URL]
-目标关键词：[关键词]
-
-优化框架：
-
-A. 技术前提审计
-   - PerplexityBot是否在robots.txt中被允许？
-   - 服务器日志中是否有PerplexityBot的200状态码？
-   - XML sitemap是否可访问？
-   - 页面加载速度是否合格？
-
-B. AED内容重构
-   重写页面内容为AED模式：
-   - Answer（前50词）：直接回答目标查询
-   - Evidence（100-150词）：数据支撑
-   - Depth（剩余）：扩展内容
-
-C. Schema标记
-   - 添加FAQPage Schema（如果是FAQ内容）
-   - 添加HowTo Schema（如果是教程）
-   - 添加Article Schema（含datePublished/dateModified）
-
-D. 新鲜度循环设置
-   - 设置60天内容刷新日历
-   - 创建数据点更新清单
-   - 制定"As of [date]"语言模板
-
-输出：优化后的内容草稿 + Schema代码 + 刷新日历
-```
-
-### 8.6 品牌E-E-A-T页面建设Prompt
-
-> 基于Lily Ray品牌E-E-A-T方法论
-
-```
-为[品牌名]设计一套完整的品牌E-E-A-T页面体系。
-
-品牌信息：
-- 名称：[品牌名]
-- 行业：[行业]
-- 目标市场：[市场]
-- 核心产品：[产品列表]
-- 创始人/团队：[信息]
-
-请设计以下页面类型的内容框架：
-
-1. **关于我们页**
-   - 品牌故事（起源、使命、价值观）
-   - 创始人背景（专业资质、行业经验）
-   - 团队专长
-   - 生产/交付过程展示
-
-2. **竞品对比页**（每个核心竞品一个）
-   - 功能对比表
-   - 定价对比
-   - 适用场景对比
-   - 客户评价对比
-
-3. **集成/兼容页**（如果是SaaS/工具）
-   - 与主流工具的集成说明
-   - API文档
-   - 使用案例
-
-4. **信任页**
-   - 客户案例/证言
-   - 媒体报道/提及
-   - 认证/奖项
-   - 评价聚合（Trustpilot/Google Reviews）
-
-5. **领导团队页**
-   - 每位领导的专业背景
-   - 行业贡献（演讲、发表、专利）
-   - 社交媒体链接
-
-每个页面需包含：
-- AI引用就绪的内容结构
-- Schema标记建议
-- 关键实体和信号词
-
-输出：每个页面的内容大纲 + Schema代码 + SEO标题/描述
-```
-
-### 8.7 SEO Pre-Mortem策略诊断Prompt
-
-> 基于Sarvesh Shrivastava的Pre-Mortem技巧
-
-```
-对以下SEO/GEO策略执行Pre-Mortem（事前剖析）分析。
-
-策略描述：[描述你的SEO/GEO策略]
-目标：[预期结果]
-时间线：[执行周期]
-
-假设现在是[时间线结束日期]，策略已经**彻底失败**。
-
-请分析失败的可能原因：
-
-1. **技术层面失败原因**
-   - 哪些技术问题可能导致失败？
-   - 网站速度、渲染、索引问题？
-
-2. **内容层面失败原因**
-   - 内容质量、深度、原创性不足？
-   - 目标关键词选择错误？
-   - AI引用就绪度不够？
-
-3. **竞争层面失败原因**
-   - 竞品做了什么我们没做的？
-   - 我们低估了哪些竞争因素？
-
-4. **外部因素**
-   - Google算法更新风险？
-   - AI引擎行为变化？
-   - 市场趋势变化？
-
-5. **执行层面失败原因**
-   - 资源不足？
-   - 优先级排序错误？
-   - 测量和反馈机制缺失？
-
-对每个失败原因，提供：
-- 发生概率（高/中/低）
-- 影响严重程度（高/中/低）
-- 预防措施
-- 应急方案
-
-输出：风险矩阵 + 预防行动清单
-```
-
-### 8.8 AI搜索月度报告Prompt
-
-```
-生成[品牌名]的AI搜索月度表现报告。
-
-数据来源：
-- AI可见性平台数据（如有）
-- Google Search Console数据
-- Google Analytics数据
-- 手动测试结果
-
-报告结构：
-
-## 1. 执行摘要
-- 本月AI可见性总评分变化
-- 关键正面/负面变化
-- 与上月对比趋势
-
-## 2. Presence指标
-| 指标 | 上月 | 本月 | 变化 |
-|------|------|------|------|
-| Prompt Coverage | | | |
-| Recommendation Rate | | | |
-| Linked Citation Rate | | | |
-| Comparative Win Rate | | | |
-| Representation Accuracy | | | |
-
-## 3. 平台差异化分析
-- ChatGPT表现
-- Gemini表现
-- Perplexity表现
-- Google AI Overviews表现
-
-## 4. 竞品对比
-- 主要竞品AI可见性变化
-- 我们赢得的prompt
-- 我们失去的prompt
-- 新机会prompt
-
-## 5. 内容优化效果追踪
-- 已优化页面的引用率变化
-- 新发布内容的AI引用表现
-- Ghost Citation率变化
-
-## 6. 下月行动清单
-- Top 3优先行动
-- 资源需求
-- 预期效果
-
-输出：完整报告（可直接发送给团队/客户）
+Here is everything you need to know about my business before we start any SEO work. Reference this every time I ask you to run an audit, build a strategy, or analyze competitors. Never ask me for this information again.
+
+BUSINESS BASICS:
+Business name: [your business name]
+Address: [full address]
+Phone: [phone number]
+Website: [website URL]
+Google Business Profile: [GBP URL]
+Years in business: [X years]
+Team size: [solo / small team / large team]
+
+SERVICES + MARKET:
+Primary service: [what you do]
+Secondary services: [service 2], [service 3], [service 4]
+Service areas: [city 1], [city 2], [city 3], [city 4], [city 5]
+Target customer: [who your best customer is]
+Average job value: [$X]
+
+SEO GOALS:
+Top 5 keywords I want to rank for: [keyword 1-5]
+Keywords I currently rank for: [keyword 1-2]
+Keywords I should rank for but don't: [keyword 1-2]
+
+CURRENT STANDINGS:
+Google reviews: [X] total, [X] star rating, [X] new reviews per month
+GBP monthly views: [X impressions if known]
+Monthly website traffic: [X visits if known]
+Current map pack status: [ranking for X, not ranking for Y]
+Biggest SEO problem right now: [one sentence]
+
+COMPETITORS:
+[competitor name] - [GBP URL] - [website] - [why they're beating you]
+[competitor name] - [GBP URL] - [website] - [why they're beating you]
+[competitor name] - [GBP URL] - [website] - [why they're beating you]
+
+WHAT I'VE ALREADY TRIED:
+[List any SEO work already done]
+
+HOW I WANT YOU TO WORK:
+Always prioritize quick wins over long-term plays unless I ask otherwise.
+When you give me a recommendation, tell me the impact level (high/medium/low) and how long it will take.
+Always output data in spreadsheet format when comparing competitors.
+When you're unsure, tell me - don't guess.
+Never ask me for this information again.
 ```
 
 ---
 
-## 九、关键资源索引
+### A组：GBP本地SEO Prompt（Sarvesh 1-8）
+
+#### Prompt 1: GBP Category Audit
+
+```
+Open Chrome and go to Google Maps. Search '[service] in [city]' for these 3 keywords: [kw1], [kw2], [kw3].
+For each search, note which competitors show up in the Map Pack. Open each competitor's GBP listing and extract their primary category and all secondary categories.
+
+Put everything in a spreadsheet. One tab per keyword. Columns: business name, primary category, secondary categories, star rating, review count, ranking position.
+Highlight any categories my competitors have that I'm missing.
+
+Then give me a prioritized list of categories I should add, ranked by how many top competitors have them:
+- ALL 3 share → non-negotiable
+- 2 of 3 share → strong recommendation
+- Only 1 has → differentiation opportunity
+```
+
+#### Prompt 2: GBP Attributes Audit
+
+```
+Open Chrome and go to my GBP at [URL] and these competitors: [URL1], [URL2], [URL3].
+For each listing, extract every visible attribute — 'veteran-owned,' 'free estimates,' 'online appointments,' 'wheelchair accessible,' '24/7,' etc.
+
+Spreadsheet: attribute name | my listing (yes/no) | comp1 | comp2 | comp3
+
+Three priority lists:
+1. ALL competitors have → table stakes, need immediately
+2. 2 of 3 have → strong recommendation
+3. Only 1 has → differentiation opportunity
+
+For each missing attribute: likely ranking impact (high/med/low) + CTR impact
+```
+
+#### Prompt 3: Competitor Review Teardown
+
+```
+Open Chrome and go to these competitor GBP listings: [URL1], [URL2], [URL3].
+For each, read their last 50 reviews. Extract:
+- Total review count, average stars
+- Reviews in last 30/60/90 days
+- Top 5 most mentioned services
+- Top 5 most mentioned neighborhoods/cities
+- Top mentioned staff names
+- Recurring complaints or negative themes
+- Top 5 keywords/phrases I should train MY customers to mention in reviews
+```
+
+#### Prompt 4: Review Response Strategy
+
+```
+Open Chrome and go to my GBP at [URL] and competitors: [URL1], [URL2], [URL3].
+Analyze the last 30 review responses from each business owner:
+- Response rate %, estimated response time
+- Whether responses mention services/locations
+- Average response length, tone (formal/casual/personal)
+- How negative reviews are handled
+
+Then build me 12 review response templates:
+- 3 for 5-star reviews (naturally include [service keyword] + [city])
+- 3 for 4-star reviews (acknowledge gap, invite return)
+- 3 for 3-star reviews (accountability + resolution)
+- 3 for 1-2 star reviews (professional, empathetic, defuse)
+
+Each template: 40-80 words. Sound like a real person, not a robot.
+```
+
+#### Prompt 5: GBP Posts Strategy（8周日历）
+
+```
+Open Chrome and check GBP posts for my listing [URL] and competitors [URL1], [URL2], [URL3].
+For each, record: posts in last 90 days, frequency, types (offer/update/event/product), image usage, CTA usage, topics, seasonal patterns.
+
+Then build me a complete 8-week posting calendar, 2-3 posts/week:
+- Seasonal service promotions
+- Before/after showcases
+- Neighborhood-specific posts ([area1], [area2], [area3])
+- Review highlights
+- Team spotlights
+- Educational posts
+
+Each post: 100-150 words + CTA + image description. Include target keyword. Write full copy for weeks 1-4, detailed outlines for 5-8.
+```
+
+#### Prompt 6: Services Section Optimization
+
+```
+Open Chrome and audit services sections on my GBP [URL] vs competitors [URL1-3].
+For each listing extract: every service, whether it has a description, description structure, which services appear in ALL competitors (non-negotiable) vs some (opportunity).
+
+Cross-reference with my website [URL] — find services on site but NOT in GBP, services in GBP with no description, descriptions weaker than competitors.
+
+Write optimized descriptions for all my services: 2-3 sentences, 40-60 words each, naturally include service keyword + one service area + specific customer benefit. Core services: [list].
+```
+
+#### Prompt 7: GBP Description Optimization（3个版本）
+
+```
+Open Chrome and extract GBP descriptions from my listing [URL] and competitors [URL1-3].
+Spreadsheet: business name | full description | char count | primary keyword? | secondary keywords | service areas | trust signals | USPs | CTA | tone.
+
+Write me 3 versions, each under 750 characters:
+- V1: Keyword-focused (every character = ranking signal)
+- V2: Conversion-focused (make them pick up the phone)
+- V3: Trust-focused (years, reviews, local credibility)
+
+All must include [kw1], [kw2], [kw3] and areas [area1], [area2], [area3].
+Sound like a human wrote it, not a marketing team.
+```
+
+#### Prompt 8: GBP Photo Audit（8周拍摄计划）
+
+```
+Open Chrome and analyze photo sections for my GBP [URL] vs competitors [URL1-3].
+Record: total photos, uploads in last 30/90 days, photo types (team/jobsite/before-after/trucks/equipment/office/close-ups), quality, stock photo usage, people/faces, local landmarks, avg photos/week.
+
+Build me an 8-week photo upload plan:
+- Number of photos/week to beat top competitor's velocity by 50%
+- Specific shot list per week (what/where/why)
+- Which weeks for before-afters vs team vs trucks
+- Naming convention with service keywords + location
+- Geotagging instructions for neighborhoods: [area1-3]
+No generic office photos — every photo works as a ranking signal.
+```
+
+---
+
+### B组：关键词/竞品/网站 Prompt（Sarvesh 9-16）
+
+#### Prompt 9: Keyword Gap Audit（需SEMrush）
+
+```
+Open Chrome, log into SEMrush. Go to Keyword Gap tool.
+Enter my domain [domain] vs [comp1], [comp2], [comp3].
+Filter: competitors rank 1-20 but I don't rank at all.
+Further filter: volume 100-2,000 (local sweet spot) + keyword contains [city/service/"near me"/"emergency"/"best"/"local"] + difficulty under 40.
+
+For top 20 keywords: search volume, difficulty, which competitors rank + position, whether I have an existing page to optimize or need a new page.
+
+Output: spreadsheet sorted by opportunity score (high volume + low difficulty + multiple competitors). Column 'Action Required': 'Optimize existing page' or 'Create new page'.
+```
+
+#### Prompt 10: Money Page Audit（需GSC）
+
+```
+Open Chrome, log into Google Search Console for [domain].
+Export last 3 months: all queries, pages, clicks, impressions, CTR, position.
+
+Find page 2 goldmine: keywords ranking 11-20 with 100+ impressions/month.
+For each: is keyword in title? in H1? in first 100 words? word count? internal links? meta description?
+
+Build a 30-day sprint:
+- Week 1: title + H1 fixes for top 10 page-2 keywords
+- Week 2: content additions for thin pages (under 500 words)
+- Week 3: internal linking fixes (which page links to which)
+- Week 4: meta description rewrites for high-impression/low-CTR pages
+
+For every fix, write the EXACT new copy — not instructions, the actual text to paste.
+```
+
+#### Prompt 11: Service + City Page Builder
+
+```
+Build location-specific service pages for: [service] in [city1-5].
+Keyword pattern: [service] + [city], [service] near [city], best [service] in [city].
+
+First check my site [URL] — which combinations already exist, which are missing.
+
+For each missing combination, write:
+- SEO title (under 60 chars, service + city)
+- Meta description (under 155 chars)
+- H1 with service + city
+- Opening 100 words: specific pain point for that city
+- "Why choose us" 150 words: local landmarks, area challenges
+- Service details 200 words
+- Social proof placeholder
+- 3 FAQ specific to that city
+- CTA: "Call now for same-day service in [city]"
+- URL slug + 3 internal linking opportunities + 2 local citation targets
+```
+
+#### Prompt 12: GSC深度分析
+
+```
+Open Chrome, log into GSC for [domain]. Export last 90 days: all queries, pages, clicks, impressions, CTR, position.
+
+Find every keyword ranking 11-20 with 100+ impressions. For each, check the ranking page: keyword in title? in H1? in first 100 words? word count? internal links?
+
+Build 30-day sprint:
+Week 1: title+H1 fixes (top 10 page-2 keywords)
+Week 2: content additions (thin pages <500 words)
+Week 3: internal linking (exact page→page map)
+Week 4: meta description rewrites (high impression, low CTR)
+For EVERY fix: write the actual copy to paste.
+```
+
+#### Prompt 13: Review Sentiment Analysis（评论情感→文案转化）
+
+```
+Open Chrome. Read last 100 reviews for each competitor: [URL1-3].
+
+Extract across all reviews:
+- Top 20 emotional words ('relieved', 'impressed', 'finally', 'trustworthy')
+- Top 10 specific outcomes ('fixed in one visit', 'no mess left', 'arrived on time')
+- Top 5 pre-service fears ('worried about cost', 'other companies kept canceling')
+- Exact phrases customers use when recommending (money phrases)
+- Language in 5-star reviews but NOT in 3-star reviews
+
+Do same for my reviews at [my GBP URL]. Compare sentiment gaps.
+
+Use all data to rewrite:
+1. My GBP description (using real customer emotional language)
+2. Homepage headline + subheadline
+3. Review request script (train customers to use right words)
+4. 3 social proof statements mirroring how customers talk
+```
+
+#### Prompt 14: Competitor Backlink Audit（需Ahrefs）
+
+```
+Open Chrome, log into Ahrefs. Site Explorer for [comp1], [comp2], [comp3].
+Export: dofollow, DR 20+, traffic 100+/month, not sitewide.
+
+Find opportunities:
+- Domains linking to ALL 3 but not me → highest priority
+- Domains linking to 2 of 3 but not me → medium
+- Domains linking to 1 but not me → review
+
+For each: domain, DR, site type, how competitor earned it, my chance (high/med/low), exact outreach strategy.
+
+Build 90-day link plan:
+- Month 1: 5 easiest (directories, citations, associations)
+- Month 2: 5 medium (local news, sponsorships, guest posts)
+- Month 3: 5 authority (industry publications, gov, edu)
+Include full outreach email for each.
+```
+
+#### Prompt 15: Local Citation Audit（NAP一致性）
+
+```
+Search my business across: Google GBP, Yelp, Bing Places, Apple Maps, Facebook, BBB, Angi, HomeAdvisor, Thumbtack, Houzz, Yellow Pages, Manta, Foursquare, Superpages.
+
+For each: listing exists? | business name exact? | address exact? | phone exact? | website URL? | duplicates? | rating?
+
+Flag every inconsistency in red. Priority fix list + step-by-step correction + missing high-value directories + monthly maintenance checklist.
+```
+
+#### Prompt 16: Local Search Intent Mapping
+
+```
+My business: [type] in [city]. Core services: [list].
+Pull all niche keywords with 20+ monthly volume.
+
+Categorize every keyword into 4 stages:
+- Stage 1 Problem-unaware: 'water coming through ceiling'
+- Stage 2 Problem-aware: 'how to fix leaking roof'
+- Stage 3 Solution-aware: 'plumber vs DIY pipe repair'
+- Stage 4 Ready to hire: 'emergency plumber [city]'
+
+For each stage: keyword count, combined volume, avg difficulty, top 10 keywords.
+
+Content strategy per stage:
+- Stage 4 → service pages + GBP (where the money is)
+- Stage 3 → comparison + FAQ pages
+- Stage 2 → educational blog → funnel to service pages
+- Stage 1 → problem-identification content → early trust
+
+Top 5 Stage 4 keywords to rank in 90 days + exact action plan.
+```
+
+---
+
+### C组：高级分析 Prompt（Sarvesh 17-21）
+
+#### Prompt 17: Content Gap Analysis
+
+```
+Open Chrome, log into SEMrush. Content Gap: my domain [domain] vs [comp1-3].
+Filter: competitors rank but I don't + volume 50-500 + question words (how/why/what/when/is/can/does).
+
+Categorize top 20 into: problem-awareness / solution-comparison / local-service.
+For each: suggested title, URL slug, 200-word brief (target kw, secondary kws, questions to answer, word count, internal links, CTA).
+```
+
+#### Prompt 18: Entity Optimization（知识面板触发）
+
+```
+My business: [name], [address], [phone], [URL], [GBP], Founded [year], Owner [name].
+
+Check: Knowledge Panel exists? Search '[business] [city]' + '[owner] [business]'.
+Check: Wikidata entry? Search wikidata.org.
+Audit: schema markup via Rich Results Test. What's missing?
+Check: brand consistency across web — NAP consistent everywhere?
+
+Build complete entity optimization plan:
+- Full LocalBusiness JSON-LD code (ready to paste)
+- Authoritative sites to create/claim (Wikipedia if eligible, Crunchbase, LinkedIn, associations)
+- Anchor text + brand mentions to build across web
+- Instructions for triggering knowledge panel
+This is the SEO work that compounds for years. Almost no local business does it.
+```
+
+#### Prompt 19: Competitor GBP Posting Pattern Forensics
+
+```
+Open Chrome. Forensic analysis of competitor GBP post history for [URL1-3].
+For each post: date, day of week, type, word count, image, CTA, topic, neighborhood mention, price/offer, formatting.
+
+Analyze patterns: posting days, time patterns, type frequency, seasonal topics, frequency by month, gaps in schedule I can exploit.
+
+Build posting strategy from this data (not generic advice): optimal days, times, types, topic mix. Write first 4 weeks of posts in full.
+```
+
+#### Prompt 20: Monthly SEO Performance Report
+
+```
+Pull data from GSC [domain] + GBP [URL] + GA4 (if available). Last 30 days vs previous 30 days.
+
+GSC: clicks, impressions, CTR, position changes, top 10 gaining/losing keywords, top gaining/losing pages.
+GBP: profile views, branded vs discovery searches, calls, directions, website clicks, photo views, review count change.
+GA4: organic sessions, conversion rate, top landing pages, bounce rate.
+
+One-page report:
+- 3 wins this month
+- 3 problems to address
+- Single most important action for next month
+- GBP calls up or down?
+Format: readable in 5 minutes, shareable with team.
+```
+
+#### Prompt 21: Detailed On-Page SEO Audit（7部分深度审计）
+
+```
+You are my Head of On-Page SEO. 14 years experience. You speak in specifics — when something is broken, you tell me exactly what to replace it with, not the principle.
+
+Open Chrome and fetch: [URL]. Target keyword: [KEYWORD].
+Also open top 5 ranking pages in incognito — benchmark against what actually ranks.
+
+SECTION 1: NON-NEGOTIABLES
+Table: Element | Current | Char Count | Score 0-10 | What's Wrong | Exact Rewrite | Why This Wins
+- Title tag (under 60 chars, lead with keyword, include hook)
+- Meta description (under 155 chars, keyword once, CTA)
+- URL slug (short, keyword, no stop words)
+- H1 (exactly one, contains keyword, matches intent)
+
+SECTION 2: HEADING STRUCTURE
+Pull every heading. Show current hierarchy vs correct hierarchy.
+
+SECTION 3: BODY COPY CRITIQUE
+- Opening 100 words assessment
+- Flag paragraphs over 4 lines
+- Keyword density, exact-match count, semantic variations
+- Top 10 NLP entities ranking pages cover that this page misses
+- Thin sections (under 75 words)
+- Fluff / AI-tell sentences
+- CTA count (above fold / mid-page / bottom)
+
+SECTION 4: SUPPORTING ELEMENTS
+Image alt text, file names, internal links, external links, schema (write JSON-LD if missing), OG tags, word count vs competitors, TOC, featured snippet opportunity.
+
+SECTION 5: SEARCH INTENT MATCH
+
+SECTION 6: SCORECARD
+Area | Score/10 | Priority | Time to Fix
+
+SECTION 7: FIX-IT CHECKLIST
+For every fix: What to do | Where to click | What to paste | Time | Impact
+Order by impact. End with: "If you only do the first three, you'll still see movement within 14-30 days."
+```
+
+### 12周执行路线图（Sarvesh推荐）
+
+| 周次 | Prompts | 重点 |
+|------|---------|------|
+| Week 1 | 1, 2 | GBP类别+属性（最快见效） |
+| Week 2 | 3, 4, 5 | 评论策略+GBP帖子 |
+| Week 3 | 6, 7, 8 | 服务板块+描述+照片 |
+| Week 4 | 9, 12 | 关键词缺口+GSC分析 |
+| Week 5-6 | 10, 11, 13 | 网站审计+城市页面+评论情感 |
+| Week 7-8 | 14, 15, 16 | 外链+引用+搜索意图映射 |
+| Week 9-10 | 17, 18, 19 | 内容缺口+实体优化+发帖模式 |
+| Week 11-12 | 20 | 月度报告 |
+
+---
+
+### D组：通用SEO Prompt（Lawrence Clinton 25选）
+
+> 来源：https://lawrenceclinton.medium.com — 覆盖通用SEO全流程，适用于SaaS/电商/内容站
+
+#### 站点审计类
+
+**技术SEO分诊**：
+```
+Act as an SEO strategist. Technical audit found: [list issues — 404s, redirect chains, slow speed, missing canonicals, duplicate content, crawl errors]. Rank by SEO impact. Tell me which to fix first, what fixing each achieves, and flag anything causing immediate ranking loss.
+```
+
+**页面速度+CWV策略**：
+```
+Act as technical SEO specialist. PageSpeed: mobile [X], desktop [X]. CWV: LCP [X], FID [X], CLS [X]. Flagged issues: [list]. Which directly impact rankings vs just UX? Prioritize fixes by SEO impact + realistic action plan.
+```
+
+**内链+站点架构审查**：
+```
+Audit internal linking for: [list topics/key pages]. Which should be pillar pages? Which cluster pages? How to link? What anchor text? Find orphan pages and diluted link equity.
+```
+
+#### 关键词研究类
+
+**Featured Snippet关键词发现**：
+```
+Give me 15 keywords likely to trigger featured snippets or PAA boxes for [industry]. Focus on W-questions and step-by-step queries. For each: intent, snippet type, 50-word answer optimized for that snippet.
+```
+
+**Topic Cluster Builder**：
+```
+Build topical authority for [main keyword]. 1 pillar + 10 cluster topics. For each: primary kw, secondary kws, intent, content format, how it connects to pillar. Cover full buyer journey.
+```
+
+#### 内容创作类
+
+**SEO Blog大纲生成器**：
+```
+Create outline for blog targeting [keyword] with [intent] intent. Audience: [describe]. Include: headline, opening hook, H2/H3 subheadings, key points per section, internal link suggestions, featured snippet target section, recommended word count. Tone: [casual/professional/authoritative].
+```
+
+**Meta批量生成**：
+```
+For [page type] targeting [keyword], write:
+- 5 meta titles under 60 chars (curiosity/benefit/question/urgency/direct angles)
+- 5 meta descriptions under 155 chars
+- Recommended schema type + why
+```
+
+#### 外链策略类
+
+**Broken Link Building Campaign**：
+```
+Step-by-step broken link building for [industry]: how to find broken links, identify replacement content, write outreach that gets response. Include outreach email template + what makes it work when most get ignored.
+```
+
+---
+
+### E组：AI搜索/GEO专项Prompt（自研，不依赖Computer Use）
+
+#### Prompt G1: AI可见性诊断
+
+```
+你是一位AI搜索优化专家。分析以下品牌在AI搜索引擎中的表现。
+
+品牌名：[品牌名] | 网站：[URL] | 品类：[品类] | 市场：[国家]
+
+1. 生成20个目标prompt，分为：推荐类5 + 对比类5 + 信任类5 + 解答类5
+2. 每个prompt评分：出现(0/1) + 推荐(0-2) + 可点击链接(0/1) + 比较胜出(0/1) + 描述准确(0/1) = /6
+3. 差距诊断：A类(自有内容) / B类(第三方来源) / C类(实体/数据清晰度)
+4. 优先级：可见性缺口 × 业务重要性 × 影响可能性 / 工作量
+
+输出：评分表 + 行动清单
+```
+
+#### Prompt G2: Ghost Citation检测
+
+```
+分析[品牌]在4个平台的Ghost Citation问题。每个平台10个prompt。
+
+| 平台 | 引用率 | 品牌提及率 | Ghost Citation率 |
+|------|--------|-----------|-----------------|
+| ChatGPT | | | |
+| Gemini | | | |
+| AI Overviews | | | |
+| Perplexity | | | |
+
+针对高Ghost Citation率平台制定差异化策略：
+- ChatGPT（学术模式）→ 结构化引用、数据、权威来源
+- Gemini（对话模式）→ 品牌故事、比较内容、第三方背书
+```
+
+#### Prompt G3: 内容引用就绪审计（13项评分）
+
+```
+审计[URL]的AI引用就绪度。目标关键词：[kw]。平台：[ChatGPT/Gemini/Perplexity]
+
+13项评分（每项0-2分，总分/26）：
+1. Answer-first（前50词内有答案）
+2. AED结构（Answer-Evidence-Depth）
+3. 语义概念密度（目标比竞品高32%）
+4. 结构化格式（列表/表格/数据块）
+5. 内联引用（可验证数据/统计）
+6. 新鲜度（明确Last Updated日期）
+7. E-E-A-T（作者信息+资质）
+8. Schema标记（FAQPage/Article/Organization）
+9. 实体密度（30-50个可识别实体）
+10. Q&A格式
+11. 可读性（Flesch评分）
+12. 竞品对比内容
+13. 多模态（图片ALT/视频转录）
+
+<16分=全面重构 | 16-20=针对性优化 | >20=仅微调
+```
+
+#### Prompt G4: 竞品AI可见性逆向工程
+
+```
+分析竞品在AI搜索中胜出的原因。我的品牌：[品牌]。竞品：[竞品1-3]。品类：[品类]。
+
+1. 15个品类prompt测试（推荐5+对比5+信任5）
+2. 引用源逆向工程：竞品被引用的回答用了哪些第三方来源？
+3. 内容差距：竞品有哪些我们缺少的内容类型？
+4. 10项行动清单：快赢(1-2周) / 中期(1-2月) / 长期(3-6月)
+```
+
+#### Prompt G5: Perplexity专项优化
+
+```
+为[URL]执行Perplexity优化。关键词：[kw]
+
+A. 技术审计：PerplexityBot在robots.txt？200状态码？sitemap可访问？
+B. AED重构：Answer(50词) + Evidence(150词) + Depth(剩余)
+C. Schema：FAQPage/HowTo/Article + datePublished/dateModified
+D. 60天新鲜度循环：刷新日历 + 数据点清单 + "As of [date]"模板
+```
+
+#### Prompt G6: 品牌E-E-A-T页面建设
+
+```
+为[品牌]设计E-E-A-T页面体系。行业：[行业]。产品：[列表]。创始人：[信息]。
+
+5种页面框架：
+1. 关于我们（品牌故事+创始人+团队+过程展示）
+2. 竞品对比（功能/定价/场景/评价对比表）
+3. 集成/兼容页（如适用）
+4. 信任页（案例+媒体+认证+评价聚合）
+5. 领导团队（背景+行业贡献+社交链接）
+
+每个页面：内容大纲 + Schema代码 + SEO标题/描述 + 关键实体词
+```
+
+#### Prompt G7: SEO Pre-Mortem
+
+```
+对SEO/GEO策略执行Pre-Mortem。策略：[描述]。目标：[预期]。时间线：[周期]。
+
+假设策略已彻底失败。分析5层原因：
+1. 技术（速度/渲染/索引）
+2. 内容（质量/关键词/AI引用就绪度）
+3. 竞争（竞品做了什么我们没做）
+4. 外部（算法更新/AI行为变化/市场）
+5. 执行（资源/优先级/反馈机制）
+
+每个原因：概率(高/中/低) × 严重程度(高/中/低) + 预防措施 + 应急方案
+```
+
+#### Prompt G8: AI搜索月度报告
+
+```
+[品牌]AI搜索月报。数据源：AI平台+GSC+GA4+手动测试。
+
+报告结构：
+1. 执行摘要（总评分变化+关键变动+趋势）
+2. Presence指标（Prompt Coverage / Recommendation Rate / Citation Rate / Win Rate / Accuracy）
+3. 平台差异（ChatGPT / Gemini / Perplexity / AI Overviews）
+4. 竞品对比（赢得/失去的prompt + 新机会）
+5. 优化追踪（已优化页面引用率 + Ghost Citation率变化）
+6. 下月行动（Top 3 + 资源需求 + 预期效果）
+```
+
+---
+
+### F组：Apify + Claude Cowork 自动化管道
+
+> 来源：AI Maker — SERP数据抓取+内容生成自动化
+
+**工具**：Claude Cowork + Apify（Google Search Results Scraper + Keyword Data Scraper）
+
+```
+Prompt A（SERP抓取）:
+"My content idea: [TOPIC]. Use Google Search Results Scraper to analyze what's ranking.
+Derive 5 queries, scrape results, give me: query | organic results | top sources | AI Overview triggered?"
+
+Prompt B（缺口分析）:
+"Read SERP data. Find 3 biggest content gaps — thin, outdated, or missing depth.
+For each: topic + why it's a gap + suggested angle."
+
+Prompt C（关键词验证）:
+"Going with Gap 1: [TOPIC]. Use Keyword Data Scraper for 10 keyword variations.
+Show volume + difficulty + which I can realistically rank for."
+
+Prompt D（文章生成）:
+"Read SERP + keyword data. Write 1500-word article:
+Primary kw in H1 + first 100 words. Secondary kws in H2s.
+Include PAA section. Meta description under 155 chars.
+Save to /workspace/articles/[date]/"
+```
+
+---
+
+### G组：Claude Code SEO 工作流框架
+
+> 来源：Christopher Alarcon — Claude不是聊天机器人，是工作流节点
+
+```
+工作流架构：
+Trigger → weekly cron 或 新GSC机会
+Inputs → GSC query + 目标页面 + 内链地图 + Schema规则 + 品牌语调
+Decision → 答案页 / 对比页 / 工作流页 / 工具页 / 刷新？
+Claude Step → 基于 brief 草拟，以 repo 为上下文
+Artifact → markdown + frontmatter + 内链 + FAQ schema
+Approval → 人工审核语调、声明、证据
+Output → commit → build → deploy → ping IndexNow
+Feedback → GSC impressions/CTR/position at 14/30/50 days
+
+Claude Code命令：
+claude --model opus -p "Read brief at outputs/aeo-page-briefs/<run>/briefs.md.
+Read voice profile. Read existing posts in src/content/posts/.
+Draft page per AEO standard. Return markdown only."
+```
+
+---
+
+## 十一、向量嵌入 + Screaming Frog 实战工作流
+
+> 来源：Mike King / iPullRank — [Vector Embeddings Is All You Need](https://ipullrank.com/vector-embeddings-is-all-you-need)（2025-2026）
+> 交叉参考：[09-向量搜索与嵌入优化.md](./09-向量搜索与嵌入优化.md)（理论层）
+
+### 核心理念：从词法匹配到语义检索
+
+Google的检索架构已从纯BM25关键词匹配演进为**混合检索**：
+
+```
+用户查询
+  ├─ BM25（词法检索）→ 精确/短语匹配
+  ├─ SCaNN（向量搜索）→ 语义近邻检索
+  ├─ BERT（稠密嵌入）→ 查询理解
+  └─ RM3（重排序）→ 结果融合
+```
+
+**关键洞察**：即使你的页面没有包含查询关键词，只要语义嵌入足够近，仍然可以排名。这意味着SEO需要从"关键词覆盖"转向"语义覆盖"。
+
+### Screaming Frog + 向量嵌入 4步工作流
+
+**前提**：Screaming Frog v20+ 支持Custom JavaScript，可在爬取时执行自定义JS函数。
+
+```
+Step 1: Custom JS → 设置嵌入提取函数
+Step 2: ChatGPT Embeddings模板 → 配置API调用
+Step 3: API Key → 输入OpenAI/Google密钥
+Step 4: 爬取 → 每个页面自动生成向量嵌入
+```
+
+### 三种嵌入提供商对比
+
+| 提供商 | 模型 | 成本 | Token上限 | 特点 |
+|--------|------|------|-----------|------|
+| **OpenAI** | text-embedding-3-small | $0.00002/1K tokens | 8,191 | 最成熟、生态最好 |
+| **Google Vertex AI** | text-embedding-preview-0409 | $0.000025/1K tokens | 3,071 | Google原生、需Flask中间件 |
+| **ollama** | 本地模型 | 免费 | 取决于模型 | 无API成本、隐私安全 |
+
+**超出Token限制的处理**：将长文本分块（chunking），分别生成嵌入后取平均值。Screaming Frog Custom JS模板已内置chunking逻辑。
+
+### SCaNN索引构建
+
+Google开源的向量搜索包，用于构建近邻索引：
+
+```python
+# 核心流程
+import scann
+import numpy as np
+
+# normalized_embeddings: (N, dim) 的嵌入矩阵
+searcher = scann.scann_ops_pybind.builder(
+    normalized_embeddings, 10, "dot_product"
+).score_brute_force().build()
+
+# 查询最近邻
+query_embedding = get_embedding("目标关键词")
+indices, distances = searcher.search_batched(query_embedding)
+```
+
+### 5大SEO应用场景（含代码逻辑）
+
+#### 1. 关键词映射（Keyword Mapping）
+
+**目标**：为每个关键词自动匹配最相关的落地页。
+
+```
+逻辑：
+- 为所有页面URL生成向量嵌入
+- 为所有目标关键词生成向量嵌入
+- SCaNN最近邻检索：每个关键词 → 最相似的页面
+- 输出：keyword → best_page 映射表
+```
+
+**SEO价值**：替代人工关键词-页面映射，处理10K+关键词时效率提升100倍。
+
+#### 2. 关键词相关性评分（Relevance Scoring）
+
+**目标**：量化关键词与页面的语义相关性。
+
+```
+逻辑：
+- 计算关键词嵌入与页面嵌入的余弦相似度
+- 转换为0-100分数：score = (similarity + 1) / 2 * 100
+- 输出：keyword × page 相关性矩阵
+```
+
+**SEO价值**：识别"高搜索量但低相关性"的错配，指导内容重构。
+
+#### 3. 内链与重定向映射（Internal Linking & Redirects）
+
+**目标**：找到语义最相似的页面对，建立内链或301重定向。
+
+```
+逻辑：
+- 计算所有页面之间的余弦相似度
+- 过滤：相似度 > 阈值 且 非同一路径
+- 输出：source_page → target_page 候选对
+```
+
+**SEO价值**：自动化内链建设，替代人工"相关文章"推荐。
+
+#### 4. 外链建设目标识别（Link Building Targets）
+
+**目标**：在外部网站中找到与你的页面语义相关的潜在链接目标。
+
+```
+逻辑：
+- 为你的页面和外部候选页面分别生成嵌入
+- 余弦相似度 ≥ 0.6 → 高价值链接目标
+- 0.3-0.6 → 中等价值
+- < 0.3 → 不相关
+```
+
+**SEO价值**：从"DA分数"转向"语义相关性"评估外链质量，更符合Google的链接评估逻辑。
+
+#### 5. 内容聚类（Content Clustering）
+
+**目标**：用BERTopic发现内容主题集群，可视化内容覆盖盲区。
+
+```
+逻辑：
+- 所有页面嵌入 → BERTopic建模
+- t-SNE降维 → 2D可视化
+- ChatGPT自动生成聚类标签
+- 输出：topic clusters + 孤立页面识别
+```
+
+**SEO价值**：发现内容孤岛、识别主题覆盖缺口、优化hub-and-spoke结构。
+
+### 执行建议
+
+| 阶段 | 动作 | 工具 | 时间 |
+|------|------|------|------|
+| 基线 | Screaming Frog爬取 + OpenAI嵌入提取 | SF v20+ / OpenAI API | 1-2天 |
+| 分析 | 关键词映射 + 相关性评分 | Python + SCaNN | 1天 |
+| 优化 | 内链重构 + 内容聚类 | Python + BERTopic | 2-3天 |
+| 监控 | 月度重新嵌入 + 趋势对比 | 自动化脚本 | 持续 |
+
+> **成本估算**：10,000页面 × 平均1,500 tokens ≈ 15M tokens ≈ $0.30（OpenAI）
+
+---
+
+## 十二、learningaisearch.com 学习路线图与专家实践技巧
+
+> 来源：Aleyda Solis — [learningaisearch.com](https://learningaisearch.com/)（2026年推出，免费学习平台）
+> 交叉参考：[03-AI Citation优化策略.md](./03-AI%20Citation优化策略.md)
+
+### 路线图结构（3大模块）
+
+```
+学习路径：
+├── 1. Fundamentals（基础）
+│   ├── AI Search Landscape — 搜索生态全景
+│   ├── Introduction to AI Search Optimization — 入门
+│   ├── Content Optimization for AI Search — 内容优化
+│   ├── Brand Authority for AI Search — 品牌权威
+│   └── Technical Optimization for AI Search — 技术优化
+├── 2. Measurement（测量）
+│   ├── AI Search Performance Tracking — 表现追踪
+│   └── AI Search Analytics — 数据分析
+└── 3. Tools（工具）
+    ├── AI Search Optimization Tools — 优化工具
+    ├── AI Search Tracking Tools — 追踪工具
+    └── LLMs.txt Generators — 生成器工具
+```
+
+**配套资源**：Content Optimization Checklist（Google Sheets模板，可复制使用）
+
+### 9位专家的核心实践技巧
+
+#### Gianluca Fiorelli — 语义上下文与Query Fan-out
+
+- AI搜索中的**品牌提及（mention）** 比直接链接更重要
+- 提及的**语义上下文**决定是否被AI引用为来源
+- **Query Fan-out分析**：用户一个查询 → AI拆分为多个子查询 → 你需要覆盖所有子意图
+- 策略：不是为单一关键词优化，而是为"查询扇面"优化
+
+#### Krinal Mehta — Conquest Content（征服内容）
+
+- **新品牌/小品牌**的AI可见性策略：创建"conquest content"
+- 针对竞品品牌词创建对比内容，截获AI搜索中的品牌查询
+- 核心原则：不是抢排名，而是在AI回答品牌相关问题时被引用为替代方案
+
+#### Daniel K. Cheung — 声明式文案与定义层
+
+- **Declarative Copy（声明式文案）**：AI更喜欢引用明确、断言式的陈述
+- "X是Y" 格式比 "X可能是Y" 更容易被AI引用
+- **定义层优先**：在内容中先给出清晰定义，再展开讨论
+- Schema标记中使用**唯一ID**（如ISBN、GTIN、URI），增强实体识别
+
+#### David Hunter — 评论是AI火箭燃料
+
+- **详细评论（Reviews）**是本地AI答案的"火箭燃料"
+- 不是星级评分，而是包含具体体验的**长文评论**
+- 配合Review Schema标记，AI在回答"推荐"类查询时直接引用
+- 策略：鼓励客户在Google Business Profile、Trustpilot、行业平台写详细评论
+
+#### Simon Vreeman — AI爬虫日志分析
+
+- **服务器日志分析**是验证AI爬虫行为的基础
+- 识别ChatGPT-User、PerplexityBot、Google-Extended、Applebot-Extended的爬取模式
+- 关键指标：爬取频率、响应码分布、爬取深度、被忽略的页面
+- 策略：像优化Googlebot爬取一样优化AI爬虫的爬取效率
+
+#### Ben Goodey — 逆向工程AI来源
+
+- **反向工程**AI搜索引用来源是最高效的优化起点
+- 在ChatGPT/Perplexity中输入目标查询 → 记录被引用的来源
+- 分析被引用页面的共同特征（结构、格式、深度、E-E-A-T信号）
+- 策略：不猜测AI想要什么，直接观察AI实际引用什么
+
+#### Hailey Novak — 实体SEO审计
+
+- **Entity SEO审计**：知识面板（Knowledge Panel）管理是AI可见性的基础
+- 检查Wikipedia、Wikidata中的品牌信息准确性
+- 策略：确保Google Knowledge Graph中的实体信息完整且正确
+- Google Business Profile + Schema标记 → 实体信号一致性
+
+#### Emily Richardson — 第一手经验内容
+
+- **第一手经验（First-hand Experience）**内容在AI搜索中表现显著更好
+- AI模型倾向于引用包含"我们测试了""我用过""我们的客户发现"的内容
+- 策略：在内容中加入具体的个人/团队经验、真实数据、案例研究
+- 这与Google E-E-A-T中的第一个"E"（Experience）完全一致
+
+#### Nikola Roza — 短依赖树与单句单问
+
+- **短依赖树（Short Dependency Trees）**：让AI更容易解析你的内容
+- 一个句子只回答一个问题，避免嵌套从句和复杂句式
+- **定义先行**：每个术语第一次出现时立即给出定义
+- 策略：AI模型处理简单句式比复杂句式更准确，引用概率更高
+
+### 学习路线图执行建议
+
+| 周次 | 模块 | 关键动作 |
+|------|------|----------|
+| 第1-2周 | Fundamentals | 完成Content Optimization Checklist审计 |
+| 第3周 | Measurement | 设置AI可见性基线（30-50 prompt测试） |
+| 第4周 | Tools | 选型1-2个AI可见性追踪工具 |
+| 第5-8周 | 持续优化 | 基于专家技巧重构Top 20高价值页面 |
+
+---
+
+## 十三、Programmatic SEO 2.0 — 三层解耦与JSON Schema驱动
+
+> 来源：Jake Ward / Byword — [Programmatic SEO in 2026](https://www.linkedin.com/pulse/programmatic-seo-2026-how-i-built-13000-pages-3-hours-jake-ward-pcjke)
+> 辅助来源：[get-ryze.ai pSEO完整指南](https://www.get-ryze.ai/blog/what-is-programmatic-seo)
+> 交叉参考：[13-大规模关键词排名策略.md](./13-大规模关键词排名策略.md)（宏观策略层）
+
+### 核心成果：pSEO 2.0 实验
+
+| 指标 | 数值 |
+|------|------|
+| 生成页面数 | 13,000+ |
+| 生成耗时 | < 3小时 |
+| 60天流量增长 | +466%（971→5,500周点击） |
+| 已索引率 | ~50%（仍在增长） |
+| AI模型 | Gemini Flash |
+| 并发Worker | 100 |
+| 内容类型 | 6大类、34种子类型 |
+| 覆盖利基 | 309个垂直行业 |
+| 前端组件 | 20+ 专用React渲染器 |
+
+### pSEO 1.0 vs 2.0：范式转移
+
+| 维度 | pSEO 1.0（传统） | pSEO 2.0（Schema驱动） |
+|------|-----------------|----------------------|
+| 内容生成 | 变量替换（模板填词） | JSON Schema约束 + AI填充 |
+| 输出质量 | 不可控、不一致 | 结构一致、可验证 |
+| 页面差异 | 仅关键词不同 | 每个页面有真正不同的内容 |
+| 验证方式 | 人工抽查 | Schema校验（自动化） |
+| 前端 | 统一模板 | 每种内容类型专用组件 |
+| 维护 | 改模板=改全部页面 | 内容/展示层独立迭代 |
+| Google风险 | 高（ doorway page判定） | 低（每页有真实价值） |
+
+### 三层解耦架构
+
+```
+┌─────────────────────────────────────────────────────┐
+│  Layer 1: 内容层（Content = JSON）                   │
+│  ┌─────────────────────────────────────────────────┐ │
+│  │ 严格JSON Schema → Gemini Flash填充 → 验证       │ │
+│  │ • 309个利基上下文 × 34种内容类型                  │ │
+│  │ • 可独立重新生成，不影响前端                      │ │
+│  └─────────────────────────────────────────────────┘ │
+│                        ↕ 不耦合                       │
+│  Layer 2: 结构层（Schema = 约束）                     │
+│  ┌─────────────────────────────────────────────────┐ │
+│  │ 定义字段、类型、数量约束                          │ │
+│  │ • 每节15-20个条目、5个专业提示                    │ │
+│  │ • 难度/潜力评级、关键词数组                       │ │
+│  │ • 标题由模板生成（非AI），保证SEO一致性            │ │
+│  └─────────────────────────────────────────────────┘ │
+│                        ↕ 不耦合                       │
+│  Layer 3: 展示层（Presentation = React组件）           │
+│  ┌─────────────────────────────────────────────────┐ │
+│  │ 20+专用渲染器：                                  │ │
+│  │ • 博客创意页 → 分类/难度筛选                     │ │
+│  │ • SEO清单页 → 交互式复选框                        │ │
+│  │ • 工具对比页 → 结构化表格                         │ │
+│  │ • 可独立改版，不影响内容                          │ │
+│  └─────────────────────────────────────────────────┘ │
+└─────────────────────────────────────────────────────┘
+```
+
+### 关键组件详解
+
+#### 1. 利基分类法（Niche Taxonomy）— 60%的工作量
+
+**这是整个系统最重要的部分**。Jake Ward团队为309个垂直行业构建了结构化上下文：
+
+```json
+{
+  "slug": "travel",
+  "name": "Travel",
+  "context": {
+    "audience": "Armchair travelers, digital nomads, family vacation planners",
+    "pain_points": "Seasonal traffic swings, high competition for destination keywords",
+    "monetization": "Affiliate (booking, gear), display ads, sponsored trips",
+    "content_that_works": "Itineraries, cost breakdowns, off-the-beaten-path guides",
+    "subtopics": ["budget travel", "luxury travel", "adventure travel", "solo travel"]
+  }
+}
+```
+
+**效果**：生成"旅行博主的SEO清单"时，AI不只替换"旅行"二字，而是基于整个利基上下文生成完全不同的内容。健康博主的清单聚焦E-E-A-T/YMYL合规，旅行博主的清单聚焦季节性关键词/目的地竞争。
+
+**投入分配**：Jake Ward明确建议将60%的时间花在利基分类法上，这是区分"有用内容"和"关键词垃圾"的关键。
+
+#### 2. JSON Schema示例
+
+```typescript
+interface ResourceArticle {
+  meta: {
+    content_type: string;
+    niche: string;
+  };
+  seo: {
+    title: string;        // 模板生成，非AI
+    description: string;
+    keywords: string[];
+  };
+  content: {
+    intro: string;
+    sections: {
+      heading: string;
+      items: {             // 每节精确15-20个
+        title: string;
+        description: string;
+        difficulty?: 'beginner' | 'intermediate' | 'advanced';
+        potential?: 'high' | 'medium' | 'standard';
+      }[];
+    }[];
+    pro_tips: string[];    // 精确5个
+  };
+}
+```
+
+**约束即质量**：每节15-20条、5个专业提示等硬性约束，防止AI输出不一致（8条vs 40条的问题）。
+
+#### 3. 标题模板（非AI生成）
+
+```
+模板："100 Blog Post Ideas for {Niche} Bloggers in 2026"
+示例："100 Blog Post Ideas for Travel Bloggers in 2026"
+```
+
+标题用确定性模板生成，而非AI自由发挥。原因：
+- 保持SEO一致性
+- 可预测的URL结构
+- 模板产出的标题比AI更好
+
+#### 4. 批量生成技术栈
+
+```
+100并发Worker → Gemini Flash API → 结构化JSON输出
+  ↓
+验证（Schema校验）→ 通过 → 保存为JSON文件
+                    → 失败 → 重试
+  ↓
+前端组件读取JSON → 渲染专用页面
+  ↓
+IndexNow通知Bing/Yandex即时索引
+```
+
+**成本**：Gemini Flash的JSON输出成本极低，13,000页 ≈ $5-15 API费用。
+
+### 发布节奏与风险管理
+
+#### 渐进式发布（关键！）
+
+```
+第1周：发布50-100页
+  ↓
+第2-3周：监控GSC索引率、展示量、点击率
+  ↓
+索引正常 → 发布500页
+  ↓
+继续监控 → 逐步放大到数千页
+  ↓
+绝对不要：一夜发布10,000页（触发人工审核）
+```
+
+#### Google合规判断标准
+
+Jake Ward的两个测试问题：
+1. **"如果搜索引擎不存在，这个页面仍然有用吗？"**
+2. **"如果有人收藏了这个页面并回来查看，它仍然有价值吗？"**
+
+| 做法 | 判定 |
+|------|------|
+| 仅替换关键词的模板页 | ❌ Doorway Page |
+| 没有用户价值、仅为排名而存在 | ❌ 垃圾内容 |
+| 捏造/过期/无意义数据 | ❌ 虚假内容 |
+| 每页服务不同意图、有真实数据 | ✅ 合规 |
+| AI内容经过结构化验证 | ✅ 合规 |
+| 模板页有真实差异化的数据 | ✅ 合规 |
+
+### 6大内容类型分布
+
+| 类型 | 占比 | 说明 |
+|------|------|------|
+| **资源页**（创意列表/清单/日历/指南/模板） | ~58% | 34种子类型 × 309利基 = 最大流量来源 |
+| **免费工具** | ~20% | 实际可用的交互式工具，参与度最高 |
+| **术语页** | ~10% | 行业术语定义 |
+| **案例研究** | ~8% | 真实案例展示 |
+| **操作指南** | ~3% | 分步骤教程 |
+| **对比页** | ~1% | 出人意料的最小类别 |
+
+**反直觉发现**：对比页是最常见的pSEO起点，但实际只贡献1%的页面。资源页和免费工具才是流量主力。
+
+### 常见失败原因（60%的pSEO项目失败）
+
+| 失败原因 | 占比 | 解决方案 |
+|----------|------|----------|
+| **薄内容**：仅关键词不同 | 40% | 30%+内容差异化，500词以上独特内容 |
+| **一夜爆发**：10,000页同时上线 | 25% | 渐进式发布：50→500→5000 |
+| **无内链**：孤立页面 | 20% | Hub-and-spoke架构 + XML分类型站点地图 |
+| **无反馈循环**：发布后不追踪 | 15% | 每周GSC检查：索引率/展示量/CTR |
+
+### 技术栈选型
+
+| 规模 | 方案 | 成本 |
+|------|------|------|
+| < 5,000页（无代码） | Airtable + Webflow + Whalesync + Make.com | ~$150-300/月 |
+| WordPress生态 | Google Sheets + WP All Import Pro + ACF | ~$200一次性 |
+| 10,000+页（开发者） | Next.js ISR + Gemini Flash + PostgreSQL + Python | 按API用量 |
+
+### Jake Ward的5条复盘建议
+
+1. **从分类法开始**：利基上下文是基础，投入60%时间
+2. **多做页面类型**：对比页看起来很"显然"，但资源页和工具才是主力
+3. **分批发布**：渐进式上线，监控索引，逐步放大
+4. **用原生JSON输出**：Gemini Flash的结构化响应避免解析问题
+5. **投资前端**：专用组件是把pSEO从"关键词填充"变成"真正有用"的关键
+
+> **核心理念**：AI内容应该是 **"Built, not written"（构建而非撰写）**。AI在约束条件下表现最好——不是写自由格式内容，而是填充人类设计的结构化系统。
+
+---
+
+## 十四、关键资源索引
 
 ### 影响力者核心资源
 
@@ -748,7 +1725,7 @@ D. 新鲜度循环设置
 
 ---
 
-## 十、核心行动清单（综合所有研究）
+## 十五、核心行动清单（综合所有研究）
 
 ### 立即行动（0-2周）
 

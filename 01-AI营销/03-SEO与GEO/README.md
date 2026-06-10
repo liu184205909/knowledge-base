@@ -61,6 +61,9 @@
 | 用Claude做SEO | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | 8个SEO Prompt执行模板 |
 | 了解AI Overviews流量影响 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) + [05](./05-SEO测量危机与新指标.md) | CTR硬数据、覆盖率增长、零点击率 |
 | 对比影响力者方法论 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | Aleyda/Lily Ray/Kevin Indig/Glenn Gabe框架对比 |
+| 用向量嵌入做SEO分析 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) + [09](./09-向量搜索与嵌入优化.md) | Screaming Frog嵌入提取、SCaNN索引、5大应用场景 |
+| 学习AI搜索优化体系 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | learningaisearch.com路线图、9位专家实践技巧 |
+| 做Programmatic SEO | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) + [13](./13-大规模关键词排名策略.md) | 三层解耦架构、JSON Schema驱动、渐进式发布 |
 
 ---
 
@@ -146,3 +149,6 @@
 | BrightEdge AI搜索报告 | 研究 | 14（AI流量+527%YoY + 覆盖率增长） |
 | Seer Interactive CTR研究 | 研究 | 14（有机CTR -61% + 541K LLM回复验证） |
 | Machine Relations引用因子 | 研究 | 14（680品牌分析 + 品牌搜索量最强预测因子 + YouTube 0.737相关） |
+| Mike King / iPullRank（向量嵌入实战） | 实践 | 14（Screaming Frog嵌入提取 + SCaNN索引 + 5大SEO应用） |
+| Jake Ward / Byword（pSEO 2.0） | 实践 | 14（三层解耦 + JSON Schema驱动 + 13K页+466%流量） |
+| learningaisearch.com 专家社区 | 社区 | 14（9位专家技巧 + 3模块路线图 + 内容优化清单） |

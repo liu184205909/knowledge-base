@@ -1,0 +1,12 @@
+<svg width="1920" height="600" viewBox="0 0 1920 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">EarthWard logo reversed</title>
+  <desc id="desc">EarthWard reversed wordmark with a minimal stone strata icon for dark backgrounds.</desc>
+  <rect width="1920" height="600" fill="#2B2A27"/>
+  <g transform="translate(270 160)">
+    <path d="M120 0C185 0 235 64 235 140C235 217 188 260 120 260C52 260 5 217 5 140C5 64 55 0 120 0Z" stroke="#F7F3EA" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M34 164C69 149 83 118 113 111C148 103 160 68 211 48" stroke="#9AAA87" stroke-width="16" stroke-linecap="round"/>
+    <path d="M55 216C97 196 109 164 145 153C184 140 196 106 230 94" stroke="#A66A43" stroke-width="16" stroke-linecap="round"/>
+  </g>
+  <text x="590" y="365" fill="#F7F3EA" font-family="Inter, Avenir Next, Montserrat, Arial, sans-serif" font-size="230" font-weight="500" letter-spacing="-12">Earth</text>
+  <text x="1112" y="365" fill="#9AAA87" font-family="Inter, Avenir Next, Montserrat, Arial, sans-serif" font-size="230" font-weight="500" letter-spacing="-12">Ward</text>
+</svg>
