@@ -50,3 +50,77 @@ seo-audit-skill：  脚本(确定性) + LLM(语义) → 两者优势结合
 3. **整合 Skill**：从 claude-seo / Agentic-SEO / seo-audit-skill 中提取有用模式，整合为一个自建 SEO 审计 Skill
 
 **优先级**：低。等 SEO 实际项目需要时再启动，避免过早优化。
+
+---
+
+## 架构参考：codex-seo 的 Orchestrator + Specialist + Cache 模式
+
+> 来源：[AgriciDaniel/codex-seo](https://github.com/AgriciDaniel/codex-seo)（230 stars, MIT 协议）— Codex CLI 的 SEO Skill 套件，26 个专项工作流 + 24 个 TOML Agent
+
+### 三层架构
+
+```
+┌─────────────────────────────────────────────────────┐
+│  Orchestrator（SKILL.md）                           │
+│  • 自然语言路由：检测意图 → 选择专项工作流            │
+│  • 行业检测：SaaS / Local / E-commerce / Publisher   │
+│  • 条件式 Agent 调度（不是所有 agent 都跑）           │
+├─────────────────────────────────────────────────────┤
+│  Specialist Skills（26 个 seo-* SKILL.md）          │
+│  • seo-technical / seo-content / seo-schema / ...   │
+│  • 每个 specialist 独立可调用，也可被 orchestrator 编排│
+│  • 确定性脚本（scripts/）+ LLM 语义判断 双层         │
+├─────────────────────────────────────────────────────┤
+│  Shared Cache（.seo-cache/）                        │
+│  • site-meta.json       → 域名/行业/业务类型          │
+│  • audit-scores.json    → 审计评分汇总               │
+│  • pages/{slug}/        → 页面级分析上下文            │
+│  • 跨 skill 复用，避免重复 API 调用                  │
+└─────────────────────────────────────────────────────┘
+```
+
+### 条件式调度逻辑（值得借鉴）
+
+| 条件 | 额外 spawn 的 Agent |
+|------|-------------------|
+| 行业 == Local | seo-local |
+| 行业 == Local AND DataForSEO 可用 | seo-maps |
+| Google API 凭证存在 | seo-google |
+| 电商信号检测到 | seo-ecommerce |
+| 内容策略信号（blog/pillar） | seo-cluster |
+| 有 drift 基线 | seo-drift |
+
+### Quality Gates 硬性规则
+
+| 规则 | 阈值 | 动作 |
+|------|------|------|
+| 位置页数量 | 30+ | WARNING（强制 60%+ 独特内容） |
+| 位置页数量 | 50+ | HARD STOP（需用户确认） |
+| HowTo Schema | 废弃 | 不推荐（2023.9 起） |
+| FAQPage Schema | 受限 | 仅政府和医疗站（2023.8）；商业站已有 → 标记 Info 优先级；新增 → 不推荐 |
+| CWV 指标 | 统一 | 一律使用 INP，不再用 FID |
+
+### SEO Health Score 权重
+
+| 类别 | 权重 |
+|------|------|
+| Content Quality | 23% |
+| Technical SEO | 22% |
+| On-Page SEO | 20% |
+| Schema / Structured Data | 10% |
+| Performance (CWV) | 10% |
+| AI Search Readiness | 10% |
+| Images | 5% |
+
+### 与本目录的差距
+
+| 能力 | 本目录 | codex-seo |
+|------|--------|-----------|
+| 确定性技术审计 | 有（Python 脚本） | 有（Python 脚本） |
+| 语义内容分析 | 无 | 有（LLM + E-E-A-T） |
+| GEO / AI 搜索就绪度 | 无 | 有（seo-geo） |
+| 跨 skill 共享缓存 | 无 | 有（.seo-cache/） |
+| 条件式调度 | 无 | 有 |
+| 漂移监控（Drift） | 无 | 有（seo-drift） |
+
+**自建时建议**：优先引入 .seo-cache 共享缓存层和条件式调度逻辑，这两个设计模式的 ROI 最高。

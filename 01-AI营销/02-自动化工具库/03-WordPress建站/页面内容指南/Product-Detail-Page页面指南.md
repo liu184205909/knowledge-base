@@ -366,3 +366,156 @@ stock_status          # 库存状态
 - [ ] 保障型卖点出现在 CTA 附近
 - [ ] 交叉销售推荐互补产品（非同类）
 - [ ] FAQ 使用 accordion 折叠（不占大量空间）
+
+---
+
+## WooCommerce 产品 SEO 字段模板
+
+> RLM 步骤 3.7 要求发布前检查 "Title/Description/H1/canonical 已设置"，本节提供**怎么设置**的标准化格式。
+> 核心原则：产品 SEO 字段用**确定性模板**填入，而非 AI 自由发挥（与 `14-AI搜索数据驱动策略` 博客标题模板同理）。
+
+### Title Tag（≤ 60 字符）
+
+**B2C 消费品模板**：
+
+```
+{核心关键词} - {核心卖点/情感价值} | {品牌名}
+```
+
+| 字段 | 说明 | 示例（水晶手链） |
+|------|------|-----------------|
+| 核心关键词 | 用户搜索的产品词 | Amethyst Bracelet |
+| 核心卖点 | 1 个最有差异化的利益点 | Natural Healing Crystal |
+| 品牌名 | 站点名 | Earthward |
+
+> 示例：`Amethyst Bracelet - Natural Healing Crystal | Earthward`（56 字符）
+
+**B2B 工业品模板**：
+
+```
+{替换型号/标准名称} {产品品类} - {核心规格} | {品牌名}
+```
+
+| 字段 | 说明 | 示例（密封件） |
+|------|------|---------------|
+| 替换型号 | 兼容的 OEM 型号（B2B 核心搜索词） | John Crane Type 1 |
+| 产品品类 | 产品分类词 | Mechanical Seal |
+| 核心规格 | 最关键的 1 个技术参数 | Carbon/Silicon Carbide |
+| 品牌名 | 站点名 | JR Seal |
+
+> 示例：`John Crane Type 1 Mechanical Seal - Carbon/SiC | JR Seal`（57 字符）
+> B2B 搜索者通常直接搜型号，**替换型号必须放在最前面**。
+
+### Meta Description（≤ 155 字符）
+
+**B2C 模板**：
+
+```
+Shop {品类词} made with {材质/工艺}. {核心利益 x1}. {保障/CTA}.
+```
+
+> 示例：`Shop genuine Amethyst bracelets, handcrafted with natural crystals. Promotes calm, clarity and inner peace. Free shipping over $50.`（123 字符）
+
+**B2B 模板**：
+
+```
+{替换型号} replacement {品类词}. {核心规格 x2-3}. {MOQ/交期/保障}.
+```
+
+> 示例：`John Crane Type 1 replacement mechanical seal. Carbon/SiC faces, -30°C to 200°C. In stock, ships within 48 hours.`（112 字符）
+
+**B2B vs B2C 写法差异**：
+
+| 维度 | B2C | B2B |
+|------|-----|-----|
+| 语气 | 情感化、生活场景 | 技术化、规格导向 |
+| CTA | "Shop now" / "Free shipping" | "In stock" / "Request quote" / "Ships within X" |
+| 关键信息 | 材质、用途、情感利益 | 型号兼容、技术参数、交期 |
+| 禁忌 | 不要堆砌参数（吓跑消费者） | 不要用情感化语言（降低专业感） |
+
+### Short Description（WooCommerce 列表页展示，2-3 句话）
+
+**B2C 模板**：
+
+```
+{一句话核心卖点}. {材质/工艺亮点}. {适用场景/人群}.
+```
+
+> 示例：`Genuine amethyst crystal bracelet for calm and clarity. 8mm natural beads, hand-strung on elastic cord. Perfect for meditation or daily wear.`
+
+**B2B 模板**：
+
+```
+{兼容型号} direct replacement. {2-3 核心技术参数}. {适用设备/行业}.
+```
+
+> 示例：`Direct replacement for John Crane Type 1. Carbon/SiC faces, NBR elastomer, fits shaft sizes 3/4" to 3". Widely used in pumps, compressors and mixers.`
+
+### Description（长描述，产品页正文）
+
+**B2C 结构（500+ 字）**：
+
+```
+1. 开场利益段（1段）：情感化描述产品解决的核心痛点
+2. 核心卖点 x3-5（FABE 展开，每个卖点 1 段）
+3. 材质/工艺说明（体现品质）
+4. 使用场景 x3（帮用户想象拥有后的生活）
+5. 规格参数表（折叠）
+6. 护理/使用说明
+7. FAQ x3-5（accordion）
+```
+
+**B2B 结构（300-500 字）**：
+
+```
+1. 产品定位（1段）：兼容型号 + 适用设备，让采购快速确认"这是我要的"
+2. 技术规格表（非折叠，B2B 采购第一眼看的就是参数）
+3. 核心优势 x3（对比 OEM 的性价比/交期/服务）
+4. 应用场景（设备类型 + 行业）
+5. 质量保障（认证、检测、质保）
+6. 相关型号推荐（交叉销售，内链）
+```
+
+**B2B vs B2C 长描述结构差异**：
+
+| 维度 | B2C | B2B |
+|------|-----|-----|
+| 开篇 | 情感化痛点 | 型号兼容确认 |
+| 规格表位置 | 折叠放最后 | 展开放第二段 |
+| 核心内容 | FABE（利益为主） | 规格 + 优势对比 |
+| CTA | "Add to Cart" | "Request Quote" / "Get Sample" |
+| FAQ 主题 | 使用/护理/退货 | MOQ/交期/定制/认证 |
+
+### URL Slug
+
+```
+B2C: /product/{核心关键词}-{属性}
+B2B: /product/{替换型号}-{品类}
+```
+
+> B2C 示例：`/product/amethyst-bracelet-natural`
+> B2B 示例：`/product/john-crane-type-1-mechanical-seal`
+
+### 图片 Alt 文本
+
+```
+B2C: {产品名} {材质} {用途/场景} - {品牌名}
+B2B: {替换型号} {品类} {核心规格}
+```
+
+> B2C 示例：`Amethyst crystal bracelet natural stone for meditation - Earthward`
+> B2B 示例：`John Crane Type 1 mechanical seal carbon silicon carbide faces`
+
+### 批量填写工作流
+
+当 SKU 数量超过 20 个时，按以下流程操作：
+
+```
+1. 准备产品数据表（SKU / 型号 / 核心参数 / 材质 / 价格）→ 这是输入，禁止 AI 编造
+2. 按上述模板批量生成 Title / Meta Description / Short Description / Alt 文本
+3. 长描述（Description）按 B2B/B2C 结构模板，逐条用 AI 辅助填充（基于真实产品数据）
+4. 导出为 CSV，通过 WooCommerce Products → Import 批量导入
+5. 逐条抽检：Title ≤ 60 字符 | Meta Description ≤ 155 字符 | 长描述 ≥ 300 字 | Alt 文本已填写
+```
+
+> **注意**：Title 和 Meta Description 使用确定性模板生成（非 AI 改写），保证 SEO 一致性。长描述可以 AI 辅助，但必须基于真实产品数据，不得 AI 编造参数/价格/认证。

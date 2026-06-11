@@ -83,6 +83,7 @@
 | Queryfanout.ai | 识别内容集群中缺失的子意图 |
 | iPullRank Qforia | 逆向工程Gemini响应和扇出查询 |
 | Profound Query Fanout Feature | 捕获ChatGPT/Gemini/Claude的底层搜索行为 |
+| **zhidaow.com AI提纲工具** | 免费。一键生成兼顾SEO+GEO的英文文章提纲：Fan-out需求扩展 → 竞手差距分析 → PAA FAQ生成，输出含建议字数和段落简介的完整提纲（中文呈现） |
 
 ---
 
@@ -1348,6 +1349,81 @@ indices, distances = searcher.search_batched(query_embedding)
 | 监控 | 月度重新嵌入 + 趋势对比 | 自动化脚本 | 持续 |
 
 > **成本估算**：10,000页面 × 平均1,500 tokens ≈ 15M tokens ≈ $0.30（OpenAI）
+
+### Screaming Frog Visualisations 实操指南（SF v22+）
+
+> SF v22+ 内置了 Embedding 功能和 Visualisations 模块，不再需要 Custom JS。以下是完整操作方法。
+
+#### Content Cluster Diagram 配置步骤
+
+```
+Config > API Access > AI → 连接 AI Provider（推荐 Gemini，便宜且效果好）
+Config > Content > Area → 框定正文区域，排除导航/页脚/弹窗（关键！否则共享模板文本会让所有页面被拉紧）
+Config > Spider > Extraction → 勾选 Store HTML
+Config > Content > Embeddings → 勾选 Enable + Semantic Similarity + Low Relevance
+     → 相似度阈值默认 0.95（蚕食检测），低相关性阈值默认 0.4（离群点）
+爬取网站 → 等待爬取和 API 进度条都到 100%
+Crawl Analysis → Start（可设置自动运行）
+Visualisations > Content Cluster Diagram（最多显示 10,000 页面）
+```
+
+#### 关键优化技巧
+
+| 技巧 | 说明 |
+|------|------|
+| **精炼 Content Area** | 排除导航栏、页脚、Cookie 提示等重复文本。否则全站页面因共享模板文本被强行拉紧，聚类结果失真 |
+| **降低 Embedding 维度** | 1024 维降到 256 维不损失精度，Crawl Analysis 速度提升 30%，t-SNE 降维速度提升 55%。OpenAI 参数 `dimensions`，Gemini 参数 `outputDimensionality` |
+| **处理大页面 Token 限制** | Advanced 标签启用 `Limit Page Content`（默认 5000 字符）。缺少 embedding 的页面可右键 `Request API Data` 批量重请求 |
+| **Gemini RPM 注意** | 免费层实际限制约 20 RPM，付费 Tier 1 可到 3000 RPM |
+| **画布自动缩放陷阱** | 聚类图会自动缩放铺满视图，看起来松散的点云未必真发散。判断聚合程度要看坐标的实际数值范围，不能凭视觉印象 |
+
+#### 内容蚕食检测
+
+**Semantically Similar 过滤器**（Content Tab）比可视化图更实用：
+- 相似度 > 0.95 的页面对 = 高度蚕食嫌疑
+- `Bulk Export > Content > Semantically Similar` 导出完整列表
+- 结合 GSC/GA4 流量数据，对每组相似页面做决策：
+
+| 决策 | 条件 | 操作 |
+|------|------|------|
+| **Merge** | 两篇覆盖相同主题，各自分流搜索可见性 | 合并为一篇综合指南，弱 URL 做 301 |
+| **Refresh** | 离群但有潜力，缺少正确术语/案例 | 重写对齐主题簇，不是删除 |
+| **Prune** | 离群 + 无流量 + 无战略价值 | 删除/noindex，释放爬取预算 |
+
+#### Force-Directed Crawl Diagram 六大应用场景
+
+| 场景 | 操作方法 | 发现 |
+|------|---------|------|
+| **未收录重要页面** | 绿色=可索引，浅红=不可索引 | 首页被意外 noindex、404 但被多个高流量页面链接的旧页 |
+| **深埋的重要页面** | 看外围浅绿色节点（远离首页的深层页面） | 核心服务页被埋在 4 层深度下 |
+| **GSC 流量热点** | Settings 选 GSC Clicks 缩放，深绿=高点击 | 20 分钟完成全站点击分布分析 |
+| **外链实力分布** | 连接 Ahrefs API，URL Rating 缩放 | 哪些博客开始自然获得外链 |
+| **全站速度审查** | 连接 PSI API | 迁移前发现首页和关键页面速度差 |
+| **内链分布审查** | Unique Inlinks 或 LinkScore 缩放，浅绿=内链少 | 商业价值博文只有 3 个内链 |
+
+#### 基于语义的内链优化流程
+
+```
+1. Content Cluster Diagram 中右键节点 → Show Inlinks Within Cluster
+   → 检查语义相似的页面是否互相链接
+2. 两个语义相似但在不同 Segment 的页面 = 明确的内链机会
+3. Bulk Export > Links > All Inlinks → 导出锚文本
+4. 用 Custom Search 找正文中反复出现但未链接的术语
+5. 非描述性锚文本（"点击这里"/"阅读更多"）→ 替换为 2-5 词的描述性锚文本
+6. 内链建设优先级：强簇锚点页 → 向弱/新页面注入链接
+```
+
+#### 可视化选择指南
+
+| 目标 | 推荐可视化 |
+|------|-----------|
+| 看主题分布 + 离群点 | Content Cluster Diagram |
+| 看爬虫视角的链接架构 | Force-Directed Crawl Diagram |
+| 看 URL 目录结构 | Force-Directed Directory Diagram |
+| 大型站点（10000+页面） | 3D Force-Directed Diagram |
+| 内链分析 | Force-Directed Crawl Diagram + Content Cluster 交叉 |
+
+**交叉验证原则**：当 Content Cluster Diagram 里的离群页面，同时也是 Crawl Diagram 里深度最深、内链最少的边缘节点时，两个独立数据源收敛，修剪决策的置信度远高于单一证据。语义上偏题 + 结构上边缘化 = 几乎不存在误判空间。
 
 ---
 

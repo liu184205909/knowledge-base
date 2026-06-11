@@ -8,7 +8,7 @@
 
 | 分类 | 数量 | 典型项目 |
 |------|------|---------|
-| [AI 营销工具](#ai-营销工具) | 6 | Fooocus、Nanobrowser、CloakBrowser |
+| [AI 营销工具](#ai-营销工具) | 7 | Fooocus、Nanobrowser、CloakBrowser、XHS-Crawler-to-Base |
 | [客服与消息自动化](#客服与消息自动化) | 1 | Evolution API |
 | [AI 开发工具](#ai-开发工具) | 4 | superpowers-zh、TokenTracker、ccusage |
 | [通用效率工具](#通用效率工具) | 8 | ERPNext、PlainApp、Vibe、PDFCraft |
@@ -114,6 +114,61 @@ npm install cloakbrowser    # Node.js
 - 备用于未来直接采集有强反爬的竞品电商页面
 
 **适用场景**: 目标站点有 Cloudflare/reCAPTCHA 等强反爬时的自动化采集
+
+---
+
+### XHS-Crawler-to-Base
+
+**GitHub**: https://github.com/xisheng687/xhs-crawler-to-base
+
+**简介**: 轻量级小红书笔记爬虫工具 + Codex Skill，输入笔记链接即可提取标题、正文、互动数据和图片/视频，支持飞书多维表格输出
+
+**核心功能**: 短链接解析、笔记元数据提取（标题/正文/类型/互动数/作者）、图片和视频下载、结构化 JSON 输出、飞书多维表格写入
+
+**特点**:
+- **无需登录账号**，只解析公开页面中 `window.__INITIAL_STATE__` 的数据
+- 纯 Python 标准库实现，零第三方依赖，开箱即用
+- 支持 `xhslink.com` 短链接和 `xiaohongshu.com` 长链接
+- 自动下载图片/视频到本地，输出标准化 `records.json`
+- 内置 Codex / WorkBuddy Skill，可用自然语言触发采集流程
+- 不可见字段标记为"未公开/未抓到"，不编造数据
+- MIT 协议
+
+**快速使用**:
+```bash
+# 单条笔记采集
+python3 scripts/crawl_xhs_notes.py \
+  --output-dir ./xhs-output/batch-001 \
+  "http://xhslink.com/o/example"
+
+# 跳过媒体下载，仅提取元数据
+python3 scripts/crawl_xhs_notes.py \
+  --output-dir ./xhs-output/batch-001 \
+  --skip-media \
+  "https://www.xiaohongshu.com/discovery/item/xxxxx"
+```
+
+**输出示例**:
+```json
+{
+  "id": "笔记ID",
+  "title": "笔记标题",
+  "desc": "正文内容",
+  "type": "多图",
+  "interaction": "点赞数: 145；收藏数: 94；评论数: 498；分享数: 62",
+  "author": "作者昵称",
+  "imageUrls": ["..."],
+  "videoUrls": [],
+  "mediaFiles": ["note-id/image-1.jpg"]
+}
+```
+
+**与现有工具的关系**:
+- **Nanobrowser**：通用网页自动化，适合复杂交互采集
+- **CloakBrowser**：强反爬场景，修改 Chromium 源码级伪装
+- **XHS-Crawler-to-Base**：小红书专用轻量采集，零依赖零配置，适合快速抓取单条/少量笔记
+
+**适用场景**: 小红书竞品笔记分析、爆款内容拆解、笔记素材采集、小红书内容整理归档
 
 ---
 
@@ -551,4 +606,4 @@ docker run -d -p 8080:80 --name pdfcraft ghcr.io/pdfcrafttool/pdfcraft:latest
 
 ---
 
-**最后更新**: 2026-05-26
+**最后更新**: 2026-06-11

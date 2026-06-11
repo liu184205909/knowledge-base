@@ -29,3 +29,6 @@ __pycache__/
 *.log
 lc_pages.json
 **/translate_progress.json
+
+# Terminal Paste Image folder
+.cp-images/
