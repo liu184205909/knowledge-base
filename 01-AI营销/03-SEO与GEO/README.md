@@ -1,6 +1,6 @@
 # SEO与GEO 知识库索引
 
-> 最后更新：2026-06-10（+ 14-AI搜索数据驱动策略与Prompt执行库）
+> 最后更新：2026-06-12（+ 03-AI Citation优化策略 补充 9 项新数据）
 
 ---
 
@@ -152,3 +152,6 @@
 | Mike King / iPullRank（向量嵌入实战） | 实践 | 14（Screaming Frog嵌入提取 + SCaNN索引 + 5大SEO应用） |
 | Jake Ward / Byword（pSEO 2.0） | 实践 | 14（三层解耦 + JSON Schema驱动 + 13K页+466%流量） |
 | learningaisearch.com 专家社区 | 社区 | 14（9位专家技巧 + 3模块路线图 + 内容优化清单） |
+| llmrefs.com（GEO实操指南） | 实践 | 03（Query Fan-out + 325%多平台分发 + Cloudflare屏蔽 + 进入已引用来源策略） |
+| controlaltdigital.com（AI Search 2026） | 研究 | 03（44.2%前置引用 + 87% ChatGPT引用来自Bing Top 10 + 3月新鲜度悬崖） |
+| GenOptima（GEO Agency实测数据） | 实践 | 03（Definition Lead句式 + Schema Stacking 3.1× + 85%第三方提及 + 6.5×外部来源 + 各平台引用风格 + 季度更新3×失引用） |

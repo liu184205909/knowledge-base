@@ -32,3 +32,7 @@ lc_pages.json
 
 # Terminal Paste Image folder
 .cp-images/
+
+# Scraping tools and output (local only)
+google-maps-scraper/
+xhs-output/

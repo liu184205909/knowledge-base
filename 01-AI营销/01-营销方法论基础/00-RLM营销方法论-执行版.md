@@ -155,6 +155,8 @@ XX产品/
 
 按主题从 SEMrush 导出相关关键词，清洗后构建 `Seed-Master v1`。Entity / Subtopic / Content Role 在本阶段作为**初步标注/清洗辅助字段**，服务于底座构建质量，不代表最终关键词研究结论（1C 负责验证和深化）。详细操作见 `1B数据处理工具手册.md` 轨道B。
 
+> **知识体系增强**：如果已构建行业 Taxonomy/Ontology（见 [03-SEO与GEO/04-实体与知识图谱理论.md](../03-SEO与GEO/04-实体与知识图谱理论.md) 的「知识体系构建 4 步法」），可以用它作为 Entity/Subtopic 分类的上游框架，减少主观标注偏差。
+
 ##### 轨道C：竞品SEO明细数据
 
 从 SEMrush 导出竞品的 Top Pages 和 Top Keywords，生成 `TopKeywords_All` 和 `TopPages_All`。结构定义见 §3.1。
@@ -246,6 +248,8 @@ XX产品/
 **工具链**：
 - Skills: `frontend-design` — 分析竞品目录结构的 UX 优劣
 - MCP: `webReader` — 按需复核竞品具体页面结构（轻量复核，不重新抓取全站 sitemap）
+
+> **知识体系增强**：1E 的"分类模式识别"可以借助行业 Taxonomy/Ontology（见 [03-SEO与GEO/04-实体与知识图谱理论.md](../03-SEO与GEO/04-实体与知识图谱理论.md) 的「知识体系构建 4 步法」）来理解竞品分类背后的概念层级——不仅看竞品"怎么分"，还看"为什么这样分"，以及"哪些概念被遗漏了"。
 
 > 1E + 1H 完成后可进入步骤2网站规划与建设。
 

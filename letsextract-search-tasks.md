@@ -396,7 +396,37 @@ Solothurn
 
 ---
 
-## 执行建议
+## 执行方案
+
+### 方案 A：gosom 批量脚本（推荐，免费）
+
+**前置条件：** 安装 Go + gosom
+
+```bash
+# 1. 安装 Go（Windows: https://go.dev/dl/ 或 winget install GoLang.Go）
+# 2. 安装 gosom
+go install github.com/gosom/google-maps-scraper@latest
+
+# 3. 用批量脚本执行
+cd google-maps-scraper
+python batch_scraper.py --method gosom --group P0-A           # 跑单组
+python batch_scraper.py --method gosom --group all            # 跑全部
+python batch_scraper.py --dry-run --group all                 # 预览所有查询
+python batch_scraper.py --merge --results-dir results/P0-A    # 合并去重
+```
+
+**优势：** 完全免费，自带反检测，不需要代理，自动去重
+
+### 方案 B：Apify API（省心，约 $5-8）
+
+```bash
+# 1. 注册 https://apify.com（免费送 $5 额度）
+# 2. pip install apify-client
+# 3. set APIFY_API_TOKEN=your_token
+# 4. python batch_scraper.py --method apify --group all
+```
+
+### 方案 C：LetsExtract（备选）
 
 1. **操作方式**：每组关键词 + 城市直接批量粘贴到工具里，一次跑完该组全部组合
 2. **每天执行量**：建议每天跑 1-2 组（避免Google封IP）

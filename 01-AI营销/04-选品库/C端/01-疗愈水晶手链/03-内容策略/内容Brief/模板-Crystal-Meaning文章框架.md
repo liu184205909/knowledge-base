@@ -2,17 +2,17 @@
 
 > 适用范围：通过 ACF 自定义 post type `gemstone` 发布的 Crystal Meaning 百科页。
 > URL：`/gemstone/{crystal-slug}-meaning`
-> 展示层：Elementor Crystal Single 模板读取 ACF 字段渲染。
+> 展示层：Elementor Crystal Single 模板通过 ACF Dynamic Tag 绑定字段值。
 > 字段协议：以 [ACF-Field-Group设计-Gemstone-Meaning.md](../../02-网站规划/ACF-Field-Group设计-Gemstone-Meaning.md) 为准。
 
 ## 1. 执行顺序
 
 1. **文章框架**：套用本文档 14 模块结构，确定 Tier 与内容边界。
 2. **单篇 Brief**：确定目标水晶、关键词、搜索量、竞品参考、Tier 等级。
-3. **内容生成**：按文章框架生成各模块内容，全部写入 ACF 字段（结构化数据 + 叙述性正文）。`post_content` 由上传脚本自动拼接所有正文模块 HTML 作为 SEO fallback。
+3. **内容生成**：按文章框架生成各模块内容，全部写入 ACF 字段（结构化数据 + 叙述性正文）。`post_content` 留空，SEO 元数据直接写入 Rank Math 字段。
 4. **图片配置**：正文结构稳定后，逐张定义 `key / placement / size / alt / prompt`。
 5. **生图入库**：生成候选图，上传 WordPress 媒体库，记录媒体 ID。
-6. **REST API 上传**：通过 `/wp-json/wp/v2/gemstone` 创建 `draft` 条目，写入 ACF 字段和 WordPress `content`。
+6. **REST API 上传**：通过 `/wp-json/wp/v2/gemstone` 创建 `draft` 条目，写入 ACF 字段和 Rank Math SEO 元数据。
 
 ## 2. 文章元信息
 
@@ -29,7 +29,7 @@
 
 ## 3. 固定文章框架
 
-> **标题归模板**：下表"标题规则"列是给 Elementor 模板看的，模板负责渲染 H2/H3。ACF 字段只存正文段落 HTML，不含模块标题。
+> **标题归模板**：下表"标题规则"列是给模板看的，H2/H3 标题是模板固定文本，不从 ACF 字段读取。ACF 字段只存正文段落 HTML，不含模块标题。
 
 | 顺序 | 模块 | 标题规则 | 内容要求 |
 |---|---|---|---|
@@ -76,15 +76,16 @@
 
 ## 4. 图片配置
 
-正文图片嵌入对应模块的 Wysiwyg HTML（见 ACF 字段协议"图片规则"）。单篇 Brief 定义图片位、alt、prompt 和尺寸。
+每个含配图的模块使用独立 ACF Image 字段，图片与正文分离（见 ACF 字段协议"图片规则"）。前端每个模块的显示顺序固定：**标题 → 配图 → 正文**。单篇 Brief 定义图片位、alt、prompt 和尺寸。
 
-| 图片位 | 嵌入位置 | 尺寸 | 必需 | alt pattern |
-|--------|---------|------|------|-------------|
-| Featured image | `featured_media`（Hero） | 1600×900 或 1200×630 | ✅ | `{Crystal} meaning guide with {visual descriptors}` |
-| Properties 图 | `meaning_overview` 或 `metaphysical_properties` Wysiwyg | 1200×900 | ✅ | `{Crystal} color and texture close-up for crystal properties` |
-| Usage 图 | `how_to_use` Wysiwyg | 1200×900 | ✅ | `{Crystal} bracelet used for meditation and daily intention setting` |
-| Pairings 图 | `pairing_reason`（可选） | 1200×900 | 可选 | `{Crystal} paired with complementary healing crystals` |
-| OG 社交图 | SEO 插件字段 | 1200×630 | 可选 | `{Crystal} meaning social preview image` |
+| 图片位 | ACF 字段名 | 尺寸 | 必需 | alt pattern |
+|--------|-----------|------|------|-------------|
+| Featured image | `featured_media`（WP 原生，Hero） | 1600×900 或 1200×630 | ✅ | `{Crystal} meaning guide with {visual descriptors}` |
+| Overview 图 | `overview_image`（Module 4） | 1200×900 | ✅ | `{Crystal} meaning and symbolism visual guide` |
+| Properties 图 | `properties_image`（Module 5） | 1200×900 | ✅ | `{Crystal} color and texture close-up for crystal properties` |
+| Benefits 图 | `benefits_image`（Module 6） | 1200×900 | 推荐 | `{Crystal} bracelet benefits for meditation and calm` |
+| Usage 图 | `how_to_use_image`（Module 8） | 1200×900 | ✅ | `{Crystal} bracelet used for meditation and daily intention setting` |
+| Pairings 图 | `pairings_image`（Module 10） | 1200×900 | 可选 | `{Crystal} paired with complementary healing crystals` |
 
 > 图片 prompt 模板在单篇 Brief 中定义，不在本文展开。图片生成发生在文章框架和 Brief 之后。
 
@@ -95,18 +96,18 @@
 | `title` | Brief | 与 H1 一致 |
 | `slug` | Brief | `{crystal-slug}-meaning` |
 | `status` | 固定 | `draft` |
-| `content` | 自动拼接 | SEO fallback，按白名单拼接：intro → meaning_overview → metaphysical_properties → chakra_zodiac_detail → how_to_use → cleanse_charge → who_should_use → closing → benefits（列表）→ faqs（列表）。不含 quick_answer、safety_jewelry_care、矿物数据、pairing 描述 |
+| `content` | 留空 | `post_content` 不参与前端显示，留空即可 |
 | `excerpt` | Brief | 140-160字符英文摘要，用于 SERP snippet |
 | `featured_media` | 图片配置 | 使用 featured 图媒体 ID |
-| `acf` | ACF Field Group "Gemstone Meaning" | 所有字段通过 `acf` 键写入（结构化 + 正文，见 §6） |
+| `acf` | ACF Field Group "Gemstone Meaning" | 所有字段通过 `acf` 键写入（结构化 + 正文 + 图片 ID，见 §6） |
 
 ## 6. REST API 上传流程
 
-> 所有操作通过 `/wp-json/wp/v2/gemstone` 端点完成。
+> 所有操作通过 `/wp-json/wp/v2/gemstone` 端点完成。完整 JSON 输入格式和上传脚本逻辑见 ACF 字段协议文档 §8。
 
 1. **上传图片**：逐张上传到 `POST /wp-json/wp/v2/media`，记录每个媒体 ID。
-2. **创建草稿**：`POST /wp-json/wp/v2/gemstone`，`status` 固定为 `draft`，写入 `title / slug / content / excerpt / featured_media` + `acf` 键中的所有结构化字段。
-3. **上传后校验**：读取返回的 draft 链接，检查 H1/H2/H3、图片 URL、alt、featured image、FAQ、内链、ACF 字段值是否完整。
+2. **创建草稿**：`POST /wp-json/wp/v2/gemstone`，`status` 固定为 `draft`，写入 `title / slug / excerpt / featured_media` + `acf` 键中的所有结构化字段和图片 ID。
+3. **上传后校验**：读取返回的 draft 链接，检查 H1/H2/H3、图片显示、alt、featured image、FAQ、内链、ACF 字段值是否完整。
 
 最小 payload 结构：
 
@@ -115,7 +116,7 @@
   "title": "{Crystal} Meaning: Healing Properties & Uses",
   "slug": "{crystal-slug}-meaning",
   "status": "draft",
-  "content": "{SEO fallback: 按白名单自动拼接}",
+  "content": "",
   "excerpt": "{140-160 character summary}",
   "featured_media": 12345,
   "acf": {
@@ -127,14 +128,22 @@
     "attr_chakra": "crown",
     "attr_zodiac": "pisces",
     "attr_element": "water",
+    "overview_image": 23456,
     "meaning_overview": "<p>...</p>",
+    "properties_image": 23457,
     "metaphysical_properties": "<p>...</p>",
+    "benefits_image": 23458,
     "benefits": [
       {"benefit_title": "Calms the Mind", "benefit_description": "..."}
     ],
+    "how_to_use_image": 23459,
     "how_to_use": "<p>...</p>",
     "safety_water": "safe", "safety_sunlight": "fades",
     "cleanse_charge": "<p>...</p>",
+    "pairings_image": 23460,
+    "pairings": [
+      {"pairing_crystal_name": "...", "pairing_reason": "...", "pairing_link": "..."}
+    ],
     "faqs": [
       {"faq_question": "Can amethyst go in water?", "faq_answer": "..."}
     ],
@@ -143,7 +152,7 @@
 }
 ```
 
-> **注意**：ACF Repeater 字段（`benefits`、`pairings`、`faqs`）通过 REST API 写入时，格式为对象数组。所有 ACF 字段必须在 Field Group 中开启 "Show in REST API"。
+> **注意**：Image 字段值为整数（媒体 ID），非 URL。ACF Repeater 字段（`benefits`、`pairings`、`faqs`）通过 REST API 写入时，格式为对象数组。所有 ACF 字段必须在 Field Group 中开启 "Show in REST API"。
 
 ## 7. 单篇 Brief 必填项
 
@@ -167,7 +176,8 @@
 - [ ] 模块 4 历史内容有可靠来源支撑，无编造。
 - [ ] 模块 5b、6、11 边界清晰：Metaphysical = 传统象征，Benefits = 日常场景收益，Who Should Use = 人群匹配。
 - [ ] 模块 9 安全字段使用 §3.2 标准化格式。
-- [ ] Wysiwyg 字段不含模块标题（H2/H3），标题由 Elementor 模板渲染。
+- [ ] Wysiwyg 字段不含模块标题（H2/H3），模块标题是模板固定文本。
+- [ ] Wysiwyg 字段不含 `<img>` 标签，图片由独立 Image 字段管理。
 - [ ] 不包含无法证实的医学、历史、矿物学断言。
 
 ### ACF & 上传
@@ -175,9 +185,10 @@
 - [ ] 文章发布到 `gemstone` 自定义 post type，状态为 `draft`。
 - [ ] ACF 结构化字段已通过 REST API 写入，Repeater 格式为对象数组。
 - [ ] Select 字段写入 key（如 `crown`）而非显示值（如 `Crown`）。
-- [ ] `post_content` fallback 已按白名单自动拼接。
+- [ ] `post_content` 已留空，SEO 元数据通过 Rank Math REST API 写入。
 - [ ] Featured image 已上传媒体库并设置 `featured_media`。
-- [ ] 正文图片使用媒体库 URL，带 `alt` 和 `loading="lazy"`。
+- [ ] 模块配图已上传媒体库，Image 字段值为媒体 ID（整数）。
+- [ ] 所有图片有 `alt` 文本，WordPress 自动生成 srcset。
 - [ ] Product CTA：Tier A 如果为空打了 warning；有 type 时 url/text 已填。
 
 ### SEO & 合规
