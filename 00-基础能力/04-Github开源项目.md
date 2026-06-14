@@ -8,7 +8,7 @@
 
 | 分类 | 数量 | 典型项目 |
 |------|------|---------|
-| [AI 营销工具](#ai-营销工具) | 7 | Fooocus、Nanobrowser、CloakBrowser、XHS-Crawler-to-Base |
+| [AI 营销工具](#ai-营销工具) | 8 | Fooocus、MoneyPrinterTurbo、Nanobrowser、CloakBrowser、XHS-Crawler-to-Base |
 | [客服与消息自动化](#客服与消息自动化) | 1 | Evolution API |
 | [AI 开发工具](#ai-开发工具) | 4 | superpowers-zh、TokenTracker、ccusage |
 | [通用效率工具](#通用效率工具) | 8 | ERPNext、PlainApp、Vibe、PDFCraft |
@@ -200,6 +200,29 @@ brew install ffmpeg
 然后进入素材文件夹，对 Claude Code 说：`将这些素材剪辑成一条发布视频`
 
 **适用场景**: 短视频制作、播客剪辑、口播去口癖、自媒体内容生产
+
+---
+
+### MoneyPrinterTurbo
+
+**GitHub**: https://github.com/harry0703/MoneyPrinterTurbo
+
+**简介**: 基于 AI 大模型一键生成高清短视频的开源工具，86.8K+ Stars，输入主题或关键词即可自动完成文案、素材、字幕、配乐、合成全流程
+
+**特点**:
+- 双尺寸输出：竖屏 9:16 适配抖音/小红书/Shorts，横屏 16:9 适配 YouTube/B站
+- 批量生成多个版本，挑最满意的一条
+- 视频素材来自 Pexels、Pixabay 等无版权站点，也支持本地素材
+- 接入十几种大模型：OpenAI、DeepSeek、通义千问、Gemini、文心一言、MiniMax 等
+
+**快速使用**:
+```bash
+git clone https://github.com/harry0703/MoneyPrinterTurbo.git
+cd MoneyPrinterTurbo
+docker-compose up  # 访问 http://127.0.0.1:8501
+```
+
+**适用场景**: 自媒体批量短视频生产、产品宣传视频、知识科普视频、社媒内容矩阵运营
 
 ---
 
@@ -606,4 +629,4 @@ docker run -d -p 8080:80 --name pdfcraft ghcr.io/pdfcrafttool/pdfcraft:latest
 
 ---
 
-**最后更新**: 2026-06-11
+**最后更新**: 2026-06-14

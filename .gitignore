@@ -34,5 +34,7 @@ lc_pages.json
 .cp-images/
 
 # Scraping tools and output (local only)
-google-maps-scraper/
+B2B-LeadGen/
+
 xhs-output/
+nul
