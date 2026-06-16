@@ -22,12 +22,13 @@ const fs = require('fs');
 const os = require('os');
 
 // ============================================================
-// 加载全局凭证 — C:\Users\Dylan\.env（或 HOME/.env）
+// 加载全局凭证 — D:\Code\.env（优先，git 仓库外）或 C:\Users\Dylan\.env（fallback）
 // ============================================================
 function loadGlobalEnv() {
+  const overrideKeys = new Set(['WP_SITE', 'WP_USER', 'WP_APP_PASSWORD']);
   const envPaths = [
-    path.join(os.homedir(), '.env'),
-    path.join('D:', '.env')
+    path.join('D:', 'Code', '.env'),   // D:\Code\.env（工作根，仓库外，推荐）
+    path.join(os.homedir(), '.env')     // C:\Users\Dylan\.env（fallback）
   ];
   for (const p of envPaths) {
     try {
@@ -38,7 +39,9 @@ function loadGlobalEnv() {
         const eq = line.indexOf('=');
         if (eq < 1) return;
         const key = line.slice(0, eq).trim();
-        if (!process.env[key]) { process.env[key] = line.slice(eq + 1).trim(); }
+        if (overrideKeys.has(key) || !process.env[key]) {
+          process.env[key] = line.slice(eq + 1).trim();
+        }
       });
       break; // 找到第一个就停
     } catch (e) { /* file not found, skip */ }

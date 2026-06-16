@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Homepage V3 - 关键修正：
  * 1. 所有多列布局用纯 Flexbox 模式（flex_direction: "row"），不用 structure
  * 2. Widget 以 Elementor 标准为主，WoodMart 仅用于 WooCommerce 场景
@@ -24,12 +24,12 @@ const https = require('https');
 // ============================================================
 // 认证配置 — 从环境变量读取，不再硬编码
 // 在项目根目录创建 .env 文件（已被 .gitignore 忽略）：
-//   WP_SITE=luckycrystals.org
+//   WP_SITE=goearthward.com
 //   WP_USER=your_username
 //   WP_APP_PASSWORD=xxxx xxxx xxxx xxxx xxxx xxxx
 // 运行方式：node -r dotenv/config elementor-upload.js
 // ============================================================
-const SITE = process.env.WP_SITE || 'luckycrystals.org';
+const SITE = process.env.WP_SITE || 'goearthward.com';
 const AUTH = 'Basic ' + Buffer.from(
   (process.env.WP_USER || '') + ':' + (process.env.WP_APP_PASSWORD || '')
 ).toString('base64');
@@ -340,7 +340,7 @@ function generateHomepage() {
       }),
       background_background: 'classic',
       background_image: {
-        url: 'https://luckycrystals.org/wp-content/uploads/2025/05/home.png',
+        url: 'https://goearthward.com/wp-content/uploads/2025/05/home.png',
         id: 16850, size: '',
         alt: 'Every Healing Crystal, A Companion for Your Heart',
         source: 'library'
@@ -465,7 +465,7 @@ function generateHomepage() {
         flex_gap: { size: 10, column: '10', row: '10', unit: 'px' }
       }, [
         // Banner 图片
-        imageWidget('https://luckycrystals.org/wp-content/uploads/2023/03/StudioSession-18791-1.jpg', {
+        imageWidget('https://goearthward.com/wp-content/uploads/2023/03/StudioSession-18791-1.jpg', {
           id: 13754, alt: 'Crystals Meaning', radius: 8
         }),
         heading('FEATURED PRODUCTS', { fontSize: 20, color: '#333333',
@@ -509,10 +509,10 @@ function generateHomepage() {
         flex_wrap: 'wrap',
         flex_gap: { size: 10, column: '10', row: '10', unit: 'px' }
       }, [
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://luckycrystals.org/wp-content/uploads/2025/05/home.jpeg', 'Love & Relationships', 'Connect deeply and attract harmonious relationships', 'https://luckycrystals.org/love-relationships/')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://luckycrystals.org/wp-content/uploads/2025/05/home-2.jpeg', 'Health & Vitality', 'Support your wellbeing and enhance natural energy', 'https://luckycrystals.org/health-vitality/')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://luckycrystals.org/wp-content/uploads/2025/05/home-3.jpeg', 'Abundance & Success', 'Attract prosperity and unlock your potential', 'https://luckycrystals.org/abundance-success/')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://luckycrystals.org/wp-content/uploads/2025/05/home-5.jpeg', 'Protection & Clearing', 'Shield your energy and cleanse negative influences', 'https://luckycrystals.org/protection-clearing/')])
+        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home.jpeg', 'Love & Relationships', 'Connect deeply and attract harmonious relationships', 'https://goearthward.com/love-relationships/')]),
+        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-2.jpeg', 'Health & Vitality', 'Support your wellbeing and enhance natural energy', 'https://goearthward.com/health-vitality/')]),
+        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-3.jpeg', 'Abundance & Success', 'Attract prosperity and unlock your potential', 'https://goearthward.com/abundance-success/')]),
+        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-5.jpeg', 'Protection & Clearing', 'Shield your energy and cleanse negative influences', 'https://goearthward.com/protection-clearing/')])
       ]),
 
       // 第二行（同样的响应式逻辑）
@@ -522,10 +522,10 @@ function generateHomepage() {
         flex_wrap: 'wrap',
         flex_gap: { size: 10, column: '10', row: '10', unit: 'px' }
       }, [
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://luckycrystals.org/wp-content/uploads/2025/05/home-4.jpeg', 'Calm & Mindfulness', 'Find inner peace and emotional balance', 'https://luckycrystals.org/calm-mindfulness/')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://luckycrystals.org/wp-content/uploads/2025/05/home-6.jpeg', 'Spiritual Connection', 'Elevate consciousness and deepen your spiritual journey', 'https://luckycrystals.org/spiritual-connection/')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://luckycrystals.org/wp-content/uploads/2025/05/home-7.jpeg', 'Transformation', 'Embrace change and welcome fresh opportunities', 'https://luckycrystals.org/transformation/')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://luckycrystals.org/wp-content/uploads/2025/05/home-8.jpeg', 'Personal Empowerment', 'Strengthen your resolve and amplify your inner power', 'https://luckycrystals.org/personal-empowerment/')])
+        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-4.jpeg', 'Calm & Mindfulness', 'Find inner peace and emotional balance', 'https://goearthward.com/calm-mindfulness/')]),
+        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-6.jpeg', 'Spiritual Connection', 'Elevate consciousness and deepen your spiritual journey', 'https://goearthward.com/spiritual-connection/')]),
+        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-7.jpeg', 'Transformation', 'Embrace change and welcome fresh opportunities', 'https://goearthward.com/transformation/')]),
+        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-8.jpeg', 'Personal Empowerment', 'Strengthen your resolve and amplify your inner power', 'https://goearthward.com/personal-empowerment/')])
       ])
     ]),
 
@@ -544,7 +544,7 @@ function generateHomepage() {
       // 3列→平板2列→手机1列（flex_wrap: 'wrap' + width 响应式）
       wrap({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: { size: 20, column: '20', row: '20', unit: 'px' } }, [
         wrap({ content_width: 'full', width: { unit: '%', size: 30, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [
-          imageWidget('https://luckycrystals.org/wp-content/uploads/2025/05/cars-testimon-3.jpg', { radius: 50, width: 80 }),
+          imageWidget('https://goearthward.com/wp-content/uploads/2025/05/cars-testimon-3.jpg', { radius: 50, width: 80 }),
           heading('Sarah M', { fontSize: 18, align: 'center', color: '#333333' }),
           textEditor('My Moonstone bracelet accompanied me through the most confusing period of my life. It always brings me clear guidance and inspiration.', {
             fontSize: 14, align: 'center',
@@ -552,7 +552,7 @@ function generateHomepage() {
           })
         ]),
         wrap({ content_width: 'full', width: { unit: '%', size: 30, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [
-          imageWidget('https://luckycrystals.org/wp-content/uploads/2025/05/fashion-testimon-1.jpg', { radius: 50, width: 80 }),
+          imageWidget('https://goearthward.com/wp-content/uploads/2025/05/fashion-testimon-1.jpg', { radius: 50, width: 80 }),
           heading('Michael T', { fontSize: 18, align: 'center', color: '#333333' }),
           textEditor('Since placing a Citrine cluster on my desk, my business has improved significantly. Lucky Crystals truly changed my career path.', {
             fontSize: 14, align: 'center',
@@ -560,7 +560,7 @@ function generateHomepage() {
           })
         ]),
         wrap({ content_width: 'full', width: { unit: '%', size: 30, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [
-          imageWidget('https://luckycrystals.org/wp-content/uploads/2025/05/cars-testimon-1.jpg', { radius: 50, width: 80 }),
+          imageWidget('https://goearthward.com/wp-content/uploads/2025/05/cars-testimon-1.jpg', { radius: 50, width: 80 }),
           heading('Emma L', { fontSize: 18, align: 'center', color: '#333333' }),
           textEditor('My Black Obsidian bracelet is like my guardian angel. During an important meeting, touching the bracelet suddenly calmed me down.', {
             fontSize: 14, align: 'center',
@@ -578,7 +578,7 @@ function generateHomepage() {
       }),
       background_background: 'classic',
       background_image: {
-        url: 'https://luckycrystals.org/wp-content/uploads/2025/05/homepage-light_2592x.webp',
+        url: 'https://goearthward.com/wp-content/uploads/2025/05/homepage-light_2592x.webp',
         id: 16974, size: '', alt: '', source: 'library'
       },
       background_attachment: 'fixed',
@@ -619,10 +619,10 @@ function generateHomepage() {
         flex_wrap: 'wrap',
         flex_gap: { size: 10, column: '10', row: '10', unit: 'px' }
       }, [
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://luckycrystals.org/wp-content/uploads/2025/05/home-9.jpeg', 'Starter Kits', 'Curated Sets for Your First Steps', '')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://luckycrystals.org/wp-content/uploads/2025/05/home-10.jpeg', 'By Intention', 'Find the Perfect Crystal for Your Intention', '')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://luckycrystals.org/wp-content/uploads/2025/05/home.jpeg', 'Best Sellers', 'Our Most Loved Crystal Bracelets', '')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://luckycrystals.org/wp-content/uploads/2025/05/home-2.jpeg', 'New Arrivals', 'Fresh Crystal Treasures Just Added', '')])
+        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-9.jpeg', 'Starter Kits', 'Curated Sets for Your First Steps', '')]),
+        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-10.jpeg', 'By Intention', 'Find the Perfect Crystal for Your Intention', '')]),
+        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home.jpeg', 'Best Sellers', 'Our Most Loved Crystal Bracelets', '')]),
+        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-2.jpeg', 'New Arrivals', 'Fresh Crystal Treasures Just Added', '')])
       ])
     ]),
 

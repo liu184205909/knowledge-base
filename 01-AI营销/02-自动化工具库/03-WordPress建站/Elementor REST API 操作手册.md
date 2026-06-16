@@ -1,6 +1,6 @@
-# Elementor REST API 操作手册
+﻿# Elementor REST API 操作手册
 
-> 基于 luckycrystals.org（Elementor 3.34.0 + WoodMart 8.2.0）实战验证。
+> 基于 goearthward.com（Elementor 3.34.0 + WoodMart 8.2.0）实战验证。
 > 只记录试错出来的经验，不记录常识。
 
 ---
@@ -233,7 +233,7 @@ const AUTH = 'Basic ' + Buffer.from('username:app_password').toString('base64');
 ## 11. Elementor 模板（Templates）创建
 
 > Elementor 模板存储为自定义文章类型 `elementor_library`，与 Page 共享同一套 `?context=edit` 机制。
-> 已验证 luckycrystals.org 的 `/wp-json/wp/v2/elementor_library` 端点可用。
+> 已验证 goearthward.com 的 `/wp-json/wp/v2/elementor_library` 端点可用。
 
 ### Page vs Template 端点对比
 

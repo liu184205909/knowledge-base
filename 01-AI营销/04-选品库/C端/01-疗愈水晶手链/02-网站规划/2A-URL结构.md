@@ -36,7 +36,7 @@
 
 | 页面类型 | URL 模板 | 实例 | slug 规则 |
 |---------|---------|------|----------|
-| Crystal Single | `/crystals/{slug}-meaning/` | `/crystals/amethyst-meaning` | 水晶英文名小写 |
+| Crystal Single | `/gemstone/{slug}-meaning/` | `/gemstone/amethyst-meaning` | 水晶英文名小写（`gemstone` CPT permalink 决定前缀） |
 | Intention Category | `/collections/{intention-slug}` | `/collections/anxiety-relief` | 意图关键词 |
 
 ### 内容分类页（B2）
@@ -106,8 +106,9 @@
 
 | 旧路径 | 重定向到 | 原因 |
 |--------|---------|------|
-| `/crystal-guide/{crystal}-meaning` | `/crystals/{crystal}-meaning` | B1b Crystal Single 统一到 `/crystals/` |
-| `/collections/{crystal}-crystals` | `/crystals/{crystal}-meaning` | 水晶浏览页统一到百科页 |
+| `/crystal-guide/{crystal}-meaning` | `/gemstone/{crystal}-meaning` | B1b Crystal Single 统一到 `/gemstone/`（`gemstone` CPT permalink） |
+| `/crystals/{crystal}-meaning` | `/gemstone/{crystal}-meaning` | 旧规划路径统一到实际 CPT 路径 |
+| `/collections/{crystal}-crystals` | `/gemstone/{crystal}-meaning` | 水晶浏览页统一到百科页 |
 
 ---
 
