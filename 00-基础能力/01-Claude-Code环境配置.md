@@ -136,6 +136,21 @@ npx clawhub@latest install image-generation
 
 > ⚠️ 第三方 Skill 存在供应链风险，安装前审查源码和 Star 数，优先选官方或高 Star 仓库。
 
+### fable-discipline（执行纪律 — 已移植，非第三方直装）
+
+[源头 FableCodex](https://github.com/baskduf/FableCodex) | AGPL-3.0 | Claude Code 移植版
+
+**定位**：把 Fable 5 的"先检查 → 收集证据 → 用真实工具 → 目标账本 → 审查门禁 → 验证后才完成"执行纪律套到任何多步任务上，防止 AI 假完成（声称完成但没验证/没改对）。源自 Claude 的 `CLAUDE-FABLE-5.md`，FableCodex 是它的 Codex 适配版，本 skill 是**移植回 Claude Code** 的版本——Codex 插件（`codex plugin add`）不能直装 Claude Code，格式和机制都不同。
+
+**位置**：`~/.claude/skills/fable-discipline/SKILL.md`（已就位）
+
+**机制适配**（Codex → Claude Code）：
+- goal ledger（`codex_goals.py`）→ **TodoWrite**
+- findings gate（`codex_findings.py`）→ 工作区 `.fable/findings.md` + 完成前自查清单
+- `apply_patch` → **Edit/Write**；读图 → **zai-mcp**（不用 Read）；Browser → **web-access**
+
+**触发**：说"fable 风格严格执行这个任务"或"先验证再完成，建目标账本"。
+
 ---
 
 ## Skill 速查
@@ -152,6 +167,7 @@ npx clawhub@latest install image-generation
 | 办公文档生成 | **pdf/xlsx/docx/pptx** | "生成PDF" |
 | 配图 | **image-generation** | "配图" |
 | 跨会话记忆 | **claude-mem** | "上次怎么解决的" |
+| 多步任务防假完成 / 严格执行 | **fable-discipline** | "fable风格" / "严格执行" / "先验证再完成" / "防假完成" / "建目标账本" |
 
 ### 按需安装（未本地部署，需时再装）
 

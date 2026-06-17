@@ -1,0 +1,54 @@
+{
+  "intention": "Protection & Clearing",
+  "slug": "protection-clearing",
+  "url": "/collections/protection-clearing",
+  "heroSubtitle": "Surround yourself with an energetic shield of strength and purity. These powerful protective crystals help clear negativity, establish healthy boundaries, and keep your personal energy field vibrant and secure.",
+  "description": "In a world where we constantly interact with other people, environments, and digital frequencies, our personal energy field can easily become contaminated with negativity, stagnant vibrations, and unwanted influences. Crystal practitioners have long relied on specific stones to create protective barriers and cleanse both the aura and physical spaces. In the crystal healing framework, protection work primarily engages the root chakra, which governs our sense of safety, grounding, and connection to the physical world. A strong, balanced root chakra forms the foundation upon which all other energy centers can thrive.\n\nBlack Tourmaline is widely regarded as the most powerful protective crystal available. Its dense, iron-rich composition acts as an energetic sponge, absorbing and transmuting negative energy before it can penetrate your aura. Obsidian, formed from rapidly cooled volcanic lava, carries a similarly potent frequency that grounds scattered energy and shields against psychic attack. Together, these two stones form an impenetrable barrier against external negativity.\n\nClear Quartz serves as the ultimate energetic cleanser in any crystal collection. Its pure silicon dioxide structure can be programmed with specific protective intentions and amplifies the energy of any stone placed nearby. Amethyst, while best known for its calming properties, also creates a protective bubble of high-vibration spiritual light around the wearer, making it an excellent choice for empaths and highly sensitive individuals. Tiger Eye combines protective qualities with grounding earth energy, giving you the confidence and courage to face challenging situations without absorbing the negativity of others.\n\nBuilding a daily protection practice with crystals is straightforward. Start each morning by holding your chosen protective stone and visualizing a shield of white or golden light surrounding your entire body. Wear a Black Tourmaline bracelet on your left wrist, which is the receiving side of the body, to filter incoming energy throughout the day. Place Obsidian near the entrance of your home to create a protective threshold that negative energy cannot cross.\n\nFor space clearing, arrange Clear Quartz and Amethyst in the four corners of any room to establish a grid of purified, high-vibration energy. You can also use Selenite towers to continuously cleanse the surrounding environment. Regularly cleanse your protective crystals themselves by placing them in moonlight overnight or burying them in dry sea salt for 24 hours.\n\nOur Protection & Clearing collection brings together the most effective shielding stones available, each one hand-selected for its energetic potency and natural beauty. Whether you are an empath seeking relief from sensory overload or simply want to maintain a clean, positive energy field, these crystals are your allies.",
+  "crystals": [
+    {
+      "name": "Black Tourmaline",
+      "subtitle": "The Ultimate Energy Shield",
+      "benefits": "Absorbs and transmutes negative energy, creates a protective barrier around the aura, grounds scattered energy to the earth.",
+      "image": "",
+      "link": "/gemstone/black-tourmaline-meaning"
+    },
+    {
+      "name": "Obsidian",
+      "subtitle": "The Stone of Truth and Protection",
+      "benefits": "Forms a shield against psychic attack, grounds spiritual energy, reveals hidden truths and blockages that need clearing.",
+      "image": "",
+      "link": "/gemstone/obsidian-meaning"
+    },
+    {
+      "name": "Clear Quartz",
+      "subtitle": "The Master Cleanser",
+      "benefits": "Purifies energy fields, amplifies protective intentions, programs easily with specific clearing affirmations.",
+      "image": "",
+      "link": "/gemstone/clear-quartz-meaning"
+    },
+    {
+      "name": "Amethyst",
+      "subtitle": "The Spiritual Shield",
+      "benefits": "Creates a bubble of high-vibration light around the wearer, protects empaths from energy drain, promotes spiritual clarity.",
+      "image": "",
+      "link": "/gemstone/amethyst-meaning"
+    },
+    {
+      "name": "Tiger Eye",
+      "subtitle": "The Stone of Courage and Grounding",
+      "benefits": "Combines protective earth energy with solar confidence, helps maintain boundaries, shields against jealousy and ill will.",
+      "image": "",
+      "link": "/gemstone/tiger-eye-meaning"
+    }
+  ],
+  "blogPosts": [
+    {"title": "Black Tourmaline vs. Obsidian: Which Protection Crystal Is Stronger?", "image": "", "link": "/blog/black-tourmaline-vs-obsidian-protection"},
+    {"title": "How to Cleanse Your Crystals and Clear Negative Energy at Home", "image": "", "link": "/blog/how-to-cleanse-crystals-clear-negative-energy"},
+    {"title": "The Complete Guide to Creating a Crystal Protection Grid", "image": "", "link": "/blog/crystal-protection-grid-guide"}
+  ],
+  "relatedIntentions": [
+    {"name": "Anxiety & Stress Relief", "slug": "anxiety-relief", "image": ""},
+    {"name": "Focus & Clarity", "slug": "focus-clarity", "image": ""},
+    {"name": "Sleep & Calm", "slug": "sleep-calm", "image": ""}
+  ]
+}
