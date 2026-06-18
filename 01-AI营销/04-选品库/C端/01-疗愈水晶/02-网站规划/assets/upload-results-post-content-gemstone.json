@@ -1,33 +1,33 @@
 {
-  "uploaded_at": "2026-06-17T05:35:36.923Z",
-  "source_json": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\crystal-meaning\\amethyst-meaning.json",
+  "uploaded_at": "2026-06-18T01:29:20.087Z",
+  "source_json": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\crystal-meaning\\que-sera-meaning.json",
   "mode": "updated",
   "status": "draft",
   "gemstone": {
-    "id": 38661,
-    "slug": "amethyst-meaning",
-    "link": "https://goearthward.com/?post_type=gemstone&p=38661"
+    "id": 38729,
+    "slug": "que-sera-meaning",
+    "link": "https://goearthward.com/?post_type=gemstone&p=38729"
   },
   "media": {
     "featured": {
-      "id": 38648,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-hero-4.webp"
+      "id": 38712,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/citrine-hero.webp"
     },
     "overview": {
-      "id": 38649,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-overview-4.webp"
+      "id": 38732,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/que-sera-overview.webp"
     },
     "properties": {
-      "id": 38650,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-properties-4.webp"
+      "id": 38733,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/que-sera-properties.webp"
     },
     "benefits": {
-      "id": 38651,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-benefits-4.webp"
+      "id": 38734,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/que-sera-benefits.webp"
     },
     "how_to_use": {
-      "id": 38652,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-how-to-use-4.webp"
+      "id": 38735,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/que-sera-how-to-use.webp"
     },
     "pairings": {
       "id": 38653,
@@ -38,8 +38,8 @@
       "source_url": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-quality.webp"
     },
     "form_bracelet": {
-      "id": 38676,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp"
+      "id": 38726,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/coral-form-bracelet-4.webp"
     },
     "form_anklet": {
       "id": 38677,

@@ -185,3 +185,4 @@ npx clawhub@latest install image-generation
 |------|------|---------|
 | [Nanobrowser](https://github.com/nanobrowser/nanobrowser) | AI 浏览器自动化 Chrome 扩展，多智能体协作，自然语言操控 | 与 web-access 互补，需复杂网页操作时 |
 | [CloakBrowser](https://github.com/CloakHQ/CloakBrowser) | Chromium 源码级指纹伪装，过 Cloudflare/reCAPTCHA v3 | 需直接采集强反爬站点时 |
+| [BrowserAct](https://github.com/browser-act/skills) | 面向 Agent 的反检测浏览器 + 动态/静态代理池 + 多账号隔离 + 人机接力；官网 browseract.ai（**Stealth 浏览器/代理为付费服务**） | web-access 撞 Cloudflare 强反爬、需 IP 轮换大规模采集、或多账号运营时 |

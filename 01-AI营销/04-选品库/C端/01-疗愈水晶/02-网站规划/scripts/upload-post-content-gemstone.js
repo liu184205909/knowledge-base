@@ -53,12 +53,12 @@ const RESULTS_PATH = path.resolve(PROJECT_ROOT, 'assets/upload-results-post-cont
 
 // 图片 key -> content 占位符
 const IMAGE_PLACEHOLDERS = {
-  featured:   { urlToken: 'FEATURED_IMAGE_URL',   idToken: 'wp-image-FEATURED_ID' },
-  overview:   { urlToken: 'OVERVIEW_IMAGE_URL',   idToken: 'wp-image-OVERVIEW_ID' },
-  properties: { urlToken: 'PROPERTIES_IMAGE_URL', idToken: 'wp-image-PROPERTIES_ID' },
-  benefits:   { urlToken: 'BENEFITS_IMAGE_URL',   idToken: 'wp-image-BENEFITS_ID' },
-  how_to_use: { urlToken: 'HOW_TO_USE_IMAGE_URL', idToken: 'wp-image-HOW_TO_USE_ID' },
-  form_bracelet: { urlToken: 'FORM_BRACELET_IMAGE_URL', idToken: 'wp-image-FORM_BRACELET_ID' }
+  featured:   { urlToken: '{FEATURED_IMAGE_URL}',   idToken: 'wp-image-FEATURED_ID' },
+  overview:   { urlToken: '{OVERVIEW_IMAGE_URL}',   idToken: 'wp-image-OVERVIEW_ID' },
+  properties: { urlToken: '{PROPERTIES_IMAGE_URL}', idToken: 'wp-image-PROPERTIES_ID' },
+  benefits:   { urlToken: '{BENEFITS_IMAGE_URL}',   idToken: 'wp-image-BENEFITS_ID' },
+  how_to_use: { urlToken: '{HOW_TO_USE_IMAGE_URL}', idToken: 'wp-image-HOW_TO_USE_ID' },
+  form_bracelet: { urlToken: '{FORM_BRACELET_IMAGE_URL}', idToken: 'wp-image-FORM_BRACELET_ID' }
 };
 
 function parseArgs() {
@@ -295,6 +295,16 @@ async function main() {
     media: outputMedia
   };
   fs.writeFileSync(RESULTS_PATH, JSON.stringify(output, null, 2), 'utf8');
+
+  // 写回本地 json：content 替换为 wp-image + media id 回填，让下次 --skip-images 可用（避免重复传图）
+  if (useImages) {
+    data.content = content;
+    for (const [k, v] of Object.entries(mediaIds)) {
+      if (data.images && data.images[k]) data.images[k].wp_id = v.id;
+    }
+    fs.writeFileSync(opts.jsonPath, JSON.stringify(data, null, 2), 'utf8');
+    console.log('Wrote back to JSON (content + wp_id): ' + opts.jsonPath);
+  }
 
   console.log((existing ? 'Updated' : 'Created') + ' gemstone [' + opts.status + ']: ' + result.id);
   console.log('Rank Math meta updated.');

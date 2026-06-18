@@ -164,7 +164,7 @@
 - 单一矿物可写完整矿物数据；岩石/集合体/贸易名只写适用字段。
 - sidebar 的 hardness/origin 必须与 Mineral Data 一致。
 - 不能核验的字段不要补空话，也不要编数值。
-- 矿物数据用 HTML `<table class="mineral-table">` 输出，落位 Properties 模块顶部，样式由全局 CSS 控制。
+- 矿物数据**不再用表格**——只在右侧 sidebar 的 Material/Mineral 区展示（对齐 amethyst 实践，避免正文表格与 sidebar 数据重复/不一致）。Properties 模块**只写三视角 H3 小节**（The Science / Traditional / Mindfulness），顶部不放 mineral-table。
 
 ### §3.2 Properties 三视角写作规则（H3 小节）⭐ 差异化核心
 
@@ -296,6 +296,15 @@ NEVER use these in any lens unless backed by credible peer-reviewed sources:
 > **真实素材优先级**：真实佩戴图（手链、项链/吊坠、耳环、脚链）、真实产品细节图、珠子近距离图、颜色深浅对比图、天然色带/色区示例图、床边/办公桌场景图，优先替换 AI 图。Quality Notes 的真假辨别图只有在有可信对比素材时再放；没有可信素材时，宁可暂不放图，也不要用容易误导的 AI 对比图。
 >
 > 图片 prompt 在单篇图片清单中定义。图片生成发生在文章框架和 Brief 之后。
+
+> **⚠ 踩坑规则（2026-06-18 补充，下一篇起强制）**：
+> - **featured image 不要放进 content**：hero 图由 WP `featured_media`（特色图片）负责，上传脚本设 `payload.featured_media`。**content 里不放** `<img class="featured-image">`——否则前台 hero 区（featured_media）和正文重复显示同一张图。早期 amethyst/coral/citrine 已修正。
+> - **图片占位符用花括号 + 上传脚本 urlToken 也含花括号**：content 占位符写 `{FEATURED_IMAGE_URL}`（含 `{}`）。上传脚本的 `IMAGE_PLACEHOLDERS.urlToken` **也必须含花括号**（`{FEATURED_IMAGE_URL}`），否则 `split('FEATURED_IMAGE_URL').join(url)` 会把中间替换但**花括号残留** → `{https://...}` → 编辑器/前台破损。这是 coral/citrine 编辑器图片破损的根因（已修）。
+> - **图片尺寸 gpt-image 不严格，sharp cover 兜底**：gpt-image-2 的 `size` 参数不保证（请求 1536×1024 可能返回竖图/方图）。生图脚本用 **sharp `resize(1536,864,{fit:'cover'})`** 强制 16:9，不靠原图方向判断。
+> - **图片文件夹两级**：`assets/images/generated/crystal-meaning/{crystal}/`（对齐 amethyst），不要用一级 `generated/{crystal}/`。
+> - **图片上传后脚本写回本地 json**：`--upload-images` 时把替换后的 content（wp-image）+ media id 写回 json，让下次 `--skip-images` 可用、不重复传图。
+> - **⚠ 稀有/贸易名石头必须查命名者原著**：Que Sera、Llanite、Azeztulie 等是市场/贸易名，矿物学描述各流派不一（Melody 正宗 vs 市场叙事常有冲突）。**写 Scientific lens 前必须查命名者原著或权威源**（Melody《Love Is In The Earth》/Mindat/GIA），不能用网络 crystal lore 博客或卖家叙事。例：Que Sera 正宗是蓝粉棕砾岩（无 lepidolite），但市场常当 lavender 锂质岩卖——两套叙事。写时用正宗矿物学，市场叙事降级为"some sellers describe..."。
+> - **⚠ 不写幻觉来源**：`eeat.fact_sources` 只填**真实存在的权威条目**（Mindat 矿物条目 URL、GIA 页面、可查的 Wikipedia 条目）。不要编"Wikipedia: Que Sera (crystal)"这种不存在的条目。不确定就留空或标"待验证"。
 
 ---
 

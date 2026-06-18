@@ -21,6 +21,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const os = require('os');
+const sharp = require('sharp');
 
 // ---- 读 ~/.env 的 OPENAI_* ----
 function loadEnv() {
@@ -42,7 +43,7 @@ const API_KEY = process.env.OPENAI_API_KEY;
 const MODEL = process.env.IMAGE_MODEL || 'gpt-image-2';
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
-const OUT_DIR = path.resolve(PROJECT_ROOT, 'assets/images/generated');
+const GENERATED_DIR = path.resolve(PROJECT_ROOT, 'assets/images/generated');
 
 // source_type → 摄影风格修饰
 function styleFor(sourceType) {
@@ -93,19 +94,23 @@ function requestImage(prompt, size, quality) {
 
 async function main() {
   const args = process.argv.slice(2);
-  const jsonPath = path.resolve(args.find(a => !a.startsWith('--')) || path.resolve(PROJECT_ROOT, '../04-内容生产/crystal-meaning/coral-meaning.json'));
+  const jsonPath = path.resolve(args.find((a, i) => !a.startsWith('--') && args[i - 1] !== '--quality' && args[i - 1] !== '--only') || path.resolve(PROJECT_ROOT, '../04-内容生产/crystal-meaning/coral-meaning.json'));
   const qualityIdx = args.indexOf('--quality');
   const quality = qualityIdx >= 0 ? args[qualityIdx + 1] : 'medium'; // low | medium | high
   const dryRun = args.includes('--dry-run');
+  const onlyIdx = args.indexOf('--only');
+  const onlyKey = onlyIdx >= 0 ? args[onlyIdx + 1] : null;  // --only benefits 只生指定图
 
   if (!API_KEY) { console.error('✗ ~/.env 缺 OPENAI_API_KEY'); process.exit(1); }
   console.log(`base_url=${BASE_URL}\nmodel=${MODEL}\nquality=${quality}\ndry_run=${dryRun}\n`);
 
   const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
   const images = data.images || {};
-  fs.mkdirSync(OUT_DIR, { recursive: true });
+  const outDir = path.join(GENERATED_DIR, 'crystal-meaning', data.slug.replace(/-meaning$/, '')); // generated/crystal-meaning/{crystal}/ 对齐 amethyst
+  fs.mkdirSync(outDir, { recursive: true });
 
   for (const [key, img] of Object.entries(images)) {
+    if (onlyKey && key !== onlyKey) continue;  // --only 只生指定图
     const prompt = buildPrompt(img.alt, img.preferred_source_type || img.source_type, data.slug);
     const size = sizeFor(key);
     console.log(`[${key}] size=${size}\n  prompt: ${prompt}`);
@@ -117,8 +122,8 @@ async function main() {
       const b64 = item.b64_json || (item.url ? null : null); // gpt-image 系列返回 b64_json
       if (!b64 && !item.url) { console.error('  ✗ 无 b64_json/url:', JSON.stringify(res).slice(0, 200)); continue; }
 
-      const outName = (img.file || key + '.png').replace(/\.(webp|png|jpg|jpeg)$/i, '') + '.png';
-      const outPath = path.join(OUT_DIR, outName);
+      const outName = path.basename(img.file || key + '.png').replace(/\.(webp|png|jpg|jpeg)$/i, '') + '.png';
+      const outPath = path.join(outDir, outName);
       if (b64) {
         fs.writeFileSync(outPath, Buffer.from(b64, 'base64'));
       } else {
@@ -126,12 +131,24 @@ async function main() {
         const r = await new Promise((rs, rj) => { https.get(item.url, (x) => { const c=[]; x.on('data',(d)=>c.push(d)); x.on('end',()=>rs(Buffer.concat(c))); }).on('error', rj); });
         fs.writeFileSync(outPath, r);
       }
-      console.log(`  ✓ 保存 ${outPath}\n`);
+      // sharp: 按 key 强制目标尺寸（form 方图，其余 16:9 横幅）+ 转 webp + 删 png
+      // gpt-image-2 的 size 参数不严格（返回方向乱），用 resize cover 兜底统一尺寸
+      const webpPath = outPath.replace(/\.png$/i, '.webp');
+      const tw = 1536;  // 全部 16:9 横幅（含 form_bracelet，按用户要求统一）
+      const th = 864;
+      await sharp(outPath)
+        .resize(tw, th, { fit: 'cover', position: 'center' })
+        .webp({ quality: 82 })
+        .toFile(webpPath);
+      fs.unlinkSync(outPath); // 删 png，只留 webp
+      img.file = path.relative(PROJECT_ROOT, webpPath).replace(/\\/g, '/'); // 回填 webp 路径，供上传脚本找图
+      console.log(`  ✓ 保存 ${webpPath}\n`);
     } catch (e) {
       console.error(`  ✗ 生图失败: ${e.message}\n`);
     }
   }
-  console.log('完成。图片在 assets/images/generated/，后续用 upload-post-content-gemstone.js --upload-images 上传。');
+  fs.writeFileSync(jsonPath, JSON.stringify(data, null, 2), 'utf8'); // 回填 images.file（完整相对路径 + png）到 json
+  console.log('完成。json images.file 已回填相对路径（含 png 扩展名）。后续用 upload-post-content-gemstone.js --upload-images 上传。');
 }
 
 main().catch(e => { console.error(e); process.exit(1); });
