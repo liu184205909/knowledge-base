@@ -96,6 +96,29 @@ claude mcp add -s user google-workspace \
 
 > **注意**：`uvx` 更新 workspace-mcp 后补丁会失效，需重新执行。详细补丁代码见 Git 历史或询问 AI。
 
+### 第六步补遗：google-seo-mcp（Mario 版）同款补丁
+
+Mario 版（google-seo-mcp）同样用 `googleapiclient + httplib2`，httplib2 不读 `HTTPS_PROXY` → GSC/GA4 API 调用 `WinError 10060` 直连超时（2026-06-22 实测）。注意它的 OAuth 登录/token 刷新走 `requests`（读 HTTPS_PROXY），所以登录能成功、卡在 API 调用那步。补丁：
+
+```bash
+# 1. 装 PySocks 到 Mario venv
+pipx runpip google-seo-mcp install pysocks
+
+# 2. patch build_http() 走代理
+#    文件：C:\Users\Dylan\pipx\venvs\google-seo-mcp\Lib\site-packages\googleapiclient\http.py
+#    找到 def build_http() 里的：
+#        http = httplib2.Http(timeout=http_timeout)
+#    改成：
+#        http = httplib2.Http(
+#            timeout=http_timeout,
+#            proxy_info=httplib2.proxy_info_from_url("http://127.0.0.1:10808"),
+#        )
+# 3. 重启 Claude Code 让 Mario 进程重新加载补丁后的库
+# 4. 验证：gsc_list_sites 返回站点列表（不再 WinError 10060）
+```
+
+> **注意**：`pipx upgrade google-seo-mcp` 会覆盖 googleapiclient、清掉补丁，需重打上面 2 步。补丁只影响 Mario venv，不影响系统其他 Python。
+
 ---
 
 ## Token 管理

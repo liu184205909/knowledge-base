@@ -66,12 +66,37 @@ claude mcp add -s user dataforseo \
   -- node ~/tools/mcp-server-typescript/build/main/main/cli.js
 ```
 
-### GSC MCP（选配 — 网站上线后安装）
+### Google SEO MCP（GSC+GA4+100 SEO 工具，已替代轻量 gsc-mcp-server）
+
+[官方仓库 mario-hernandez/google-seo-mcp-claude-code](https://github.com/mario-hernandez/google-seo-mcp-claude-code) | MIT | v0.8.x | 二进制名 `google-seo-mcp` | 装出来的命令就叫 google-seo-mcp（不是另一个工具）
+
+GSC + GA4 + Lighthouse/CrUX/Schema/AEO/迁移 全家桶，102 工具，含 `gsc_quick_wins`/`gsc_traffic_drops`/`gsc_cannibalization`/`cross_opportunity_matrix` 等高阶分析。Google 官方只有 GA4 MCP（裸接口），无官方 GSC MCP；这是当前最全的统一方案。
 
 ```bash
-claude mcp add gsc -- npx -y gsc-mcp-server
-# 需配置: GSC_AUTH_MODE=oauth, GSC_OAUTH_SECRETS_FILE=路径, GSC_SITE_URL=sc-domain:域名
+# 1. 安装（Python 3.11+，pipx）
+pipx install git+https://github.com/mario-hernandez/google-seo-mcp-claude-code
+#    → 二进制 C:\Users\Dylan\.local\bin\google-seo-mcp.exe，venv 在 C:\Users\Dylan\pipx\venvs\google-seo-mcp
+
+# 2. 认证（OAuth Desktop，最简）：Cloud Console 建「桌面应用」OAuth client（project 704571210228）
+#    下载 client_secret.json 存 C:\Users\Dylan\tools\google-seo-oauth.json
+#    client_id/secret 已登记 ~/.env（GOOGLE_SEO_CLIENT_ID/SECRET）
+
+# 3. 注册 MCP（带代理 + DataForSEO env）
+#    ⚠️ 路径用正斜杠 / —— git bash 下反斜杠会被吞（C:\Users→C:Users）导致 Status: ✘ Failed to connect
+#    DataForSEO 凭证：值取自 ~/.env 的 DFS_API_LOGIN/DFS_API_PASSWORD，字段名映射成 DATAFORSEO_LOGIN/DATAFORSEO_PASSWORD
+#    （Mario 的 serp_check/serp_aio_monitor/serp_paa_extractor 后端是 DataForSEO，无此 env 报 credentials_missing）
+claude mcp add -s user google-seo-mcp \
+  -e GOOGLE_SEO_OAUTH_CLIENT_FILE=C:/Users/Dylan/tools/google-seo-oauth.json \
+  -e HTTPS_PROXY=http://127.0.0.1:10808 \
+  -e HTTP_PROXY=http://127.0.0.1:10808 \
+  -e DATAFORSEO_LOGIN={{DFS_API_LOGIN}} \
+  -e DATAFORSEO_PASSWORD={{DFS_API_PASSWORD}} \
+  -- C:/Users/Dylan/.local/bin/google-seo-mcp.exe
+
+# 4. 重启 Claude Code → 调 gsc_list_sites 触发首次浏览器登录 lzn184205909@gmail.com（一次覆盖全部站）
 ```
+
+⚠️ **中国大陆代理补丁（必做）**：Mario 版用 google-auth-httplib2，httplib2 不读 HTTPS_PROXY → API 调用 `WinError 10060` 直连超时。必须 patch `build_http()` 走代理，见 [02-Google-Cloud凭证创建指南.md](./02-Google-Cloud凭证创建指南.md) 第六步补遗。与 google-workspace MCP 不冲突（各管一摊：本 MCP 管 GSC/GA4，workspace-mcp 管 Drive/Sheets/Docs/Gmail）。
 
 ### SEOctopus MCP（关键词聚类/SEO 审计）
 
@@ -151,6 +176,18 @@ npx clawhub@latest install image-generation
 
 **触发**：说"fable 风格严格执行这个任务"或"先验证再完成，建目标账本"。
 
+### gsc-radar（GSC 数据驱动 SEO 工作流 — 自建）
+
+[配套方法论文档](../01-AI营销/01-营销方法论基础/10-GSC数据驱动SEO深度研究.md) | 基于 google-seo-mcp（必装+代理补丁）
+
+**定位**：GSC 数据驱动的 SEO 自动化，**单 skill 两阶段**。阶段1扫描（quick_wins/ctr_opportunities/content_decay/traffic_drops/cannibalization + 品牌词过滤 → 出「本周优化清单」）；阶段2深挖（针对目标拉 SERP+AI Overview+竞品 top3 → 生成具体改进：改 title/H1/补子主题/内链）。把"发现机会→诊断→生成改进→验证闭环"自动化。
+
+**位置**：`~/.claude/skills/gsc-radar/SKILL.md`（已就位）
+
+**依赖**：google-seo-mcp（上方必装，含中国大陆代理补丁）+ web-reader/web-access（阶段2抓竞品）+ 可选 content-refresher/competitor-analysis（落地刷新/竞品深挖）
+
+**触发**：`/gsc-radar 站点`、"扫一下 X 的机会"、"X 站 SEO 体检"、"深挖这个关键词"、"这个词怎么救"。
+
 ---
 
 ## Skill 速查
@@ -168,6 +205,7 @@ npx clawhub@latest install image-generation
 | 配图 | **image-generation** | "配图" |
 | 跨会话记忆 | **claude-mem** | "上次怎么解决的" |
 | 多步任务防假完成 / 严格执行 | **fable-discipline** | "fable风格" / "严格执行" / "先验证再完成" / "防假完成" / "建目标账本" |
+| GSC 数据驱动 SEO（扫机会+深挖竞品） | **gsc-radar** | "扫一下X的机会" / "X站SEO体检" / "深挖这个关键词" |
 
 ### 按需安装（未本地部署，需时再装）
 
