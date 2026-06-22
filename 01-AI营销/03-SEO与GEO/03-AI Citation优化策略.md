@@ -709,14 +709,14 @@ AI 推荐商品时，本质上是在"替用户做选择"，需要六个维度的
 | **Profound** | 跨平台citation监测（6.8亿数据） |
 | **Otterly.AI** | AI可见性追踪 |
 | **ZipTie.dev** | 跨平台citation+上下文定位 |
-| **Bing Webmaster Tools** | Citation Share即将上线 |
+| **Bing Webmaster Tools** | 已上线 GEO 报告（2026.6）：意图/主题/Citation Share/时段对比（免费官方，全球全站） |
 | **Microsoft Clarity** | 免费AI可见性报告（2026.5发布），见下方详述 |
 
 ### 关键指标
 
 | 指标 | 追踪方法 |
 |------|---------|
-| **Citation Share** | Bing即将上线；GEO时代的"平均排名" |
+| **Citation Share** | Bing Webmaster Tools 已上线（2026.6）；GEO时代的"平均排名" |
 | **Share of Model (SoM)** | 20-30个目标关键词定期查询 |
 | 引用位置 | 主要来源 vs 辅助提及 |
 | 情绪分析 | 审查AI回答措辞 |

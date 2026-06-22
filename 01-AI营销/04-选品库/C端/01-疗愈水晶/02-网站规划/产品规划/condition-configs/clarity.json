@@ -1,0 +1,164 @@
+{
+  "condition_title": "Clarity",
+  "title": "7 Best Crystals for Clarity: A Complete Guide",
+  "excerpt": "7 best crystals for clarity — clear quartz, selenite, fluorite, herkimer diamond, prehnite, lapis lazuli, apatite. Choose stones for a clear mind.",
+  "rank_math_title": "7 Best Crystals for Clarity: A Complete Guide",
+  "rank_math_description": "7 best crystals for clarity — clear quartz, selenite, fluorite, herkimer diamond, prehnite, lapis lazuli, apatite. Choose stones for a clear mind.",
+  "rank_math_focus_keyword": "crystals for clarity",
+  "featured_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/quartz/quartz-overview.webp",
+  "featured_alt": "clear quartz and crystals for clarity and mental sharpness",
+  "category_ids": "1514,1491,1502,1521,1528,1506,1508",
+  "crystals": [
+    {
+      "slug": "clear-quartz",
+      "name": "Clear Quartz",
+      "subtitle": "The Master Stone",
+      "best_for": "mental clarity, seeing straight",
+      "why": "The classic clarity stone — clear, neutral, and a steady cue.",
+      "how_to_use": "Hold it when foggy, or keep it on your desk.",
+      "desc": "The classic clarity stone, clear quartz is what many reach for when the mind feels clouded. Many hold it as a cue to see one thing at a time, not all of them at once.",
+      "cat_id": 1514,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/quartz/quartz-overview.webp",
+      "image_alt": "clear quartz crystal for clarity and mental sharpness"
+    },
+    {
+      "slug": "selenite",
+      "name": "Selenite",
+      "subtitle": "The Stone of Clarity",
+      "best_for": "clearing mental fog",
+      "why": "Its luminous calm makes it a visual cue to clear the mind.",
+      "how_to_use": "Place it where you work, or hold it to reset.",
+      "desc": "With its pale, luminous look, selenite is often used to clear mental fog. Many place it nearby as a reminder to set the clutter down and see straight.",
+      "care_note": "Selenite is soft and water-sensitive — keep it dry and cleanse with smoke, sound, or moonlight instead of water.",
+      "cat_id": 1491,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/selenite/selenite-overview.webp",
+      "image_alt": "selenite crystal for clarity and clearing mental fog"
+    },
+    {
+      "slug": "rainbow-fluorite",
+      "name": "Rainbow Fluorite",
+      "subtitle": "The Stone of Focus",
+      "best_for": "decisions, ordering thoughts",
+      "why": "Its tie to clear decisions makes it a stone for sorting tangled thinking.",
+      "how_to_use": "Hold it when weighing a choice, or keep it on your desk.",
+      "desc": "Often turned to for focus and clear decisions, rainbow fluorite suits people sorting tangled thoughts. Many keep it nearby as a reminder to follow one line to its end.",
+      "care_note": "Fluorite is relatively soft (Mohs 4) and slightly soluble — handle it gently and avoid long water soaks.",
+      "cat_id": 1502,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/fluorite/fluorite-overview.webp",
+      "image_alt": "rainbow fluorite crystal for clarity and clear decisions"
+    },
+    {
+      "slug": "herkimer-diamond",
+      "name": "Herkimer Diamond",
+      "subtitle": "The Stone of Attunement",
+      "best_for": "sharp, crisp clarity",
+      "why": "Its clarity makes it a stone for crisp, precise seeing.",
+      "how_to_use": "Hold it before detail work, or keep it for sharpness.",
+      "desc": "Bright and clear in the hand, herkimer diamond suits people who need crisp clarity. Many use it when a fuzzy situation needs to come into focus.",
+      "cat_id": 1521
+    },
+    {
+      "slug": "prehnite",
+      "name": "Prehnite",
+      "subtitle": "The Stone of Calm",
+      "best_for": "decluttering the mind",
+      "why": "Its tie to decluttering makes it a stone for a clearer mind.",
+      "how_to_use": "Hold it when overwhelmed, or place it where you sit.",
+      "desc": "Reached for calm and decluttering, prehnite suits people whose clarity is buried under noise. Many use it to mark a pause and let the clutter settle.",
+      "cat_id": 1528
+    },
+    {
+      "slug": "lapis-lazuli",
+      "name": "Lapis Lazuli",
+      "subtitle": "The Stone of Wisdom",
+      "best_for": "clarity through depth",
+      "why": "Its tie to insight makes it a stone for seeing beneath the surface.",
+      "how_to_use": "Hold it when a situation needs depth, or keep it for insight.",
+      "desc": "A stone of wisdom and insight, lapis lazuli suits people who need clarity that comes from depth, not speed. Many use it when a quick read would miss the point.",
+      "cat_id": 1506,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/lapis/lapis-overview.webp",
+      "image_alt": "lapis lazuli crystal for clarity and insight"
+    },
+    {
+      "slug": "apatite",
+      "name": "Apatite",
+      "subtitle": "The Stone of Motivation",
+      "best_for": "clarity that leads to action",
+      "why": "Its tie to expression makes it a stone for clarity that leads to action.",
+      "how_to_use": "Carry it when you see clearly but stall, or hold it for drive.",
+      "desc": "Often reached for motivation and expression, apatite suits people who have clarity but can't act on it. Many carry it as a cue to turn a clear thought into a next step.",
+      "cat_id": 1508
+    }
+  ],
+  "scene_table": [
+    [
+      "Mental clarity, seeing straight",
+      "Clear Quartz, Selenite"
+    ],
+    [
+      "Decisions, ordering thoughts",
+      "Rainbow Fluorite"
+    ],
+    [
+      "Sharp, crisp clarity",
+      "Herkimer Diamond"
+    ],
+    [
+      "Decluttering the mind",
+      "Prehnite"
+    ],
+    [
+      "Clarity through depth",
+      "Lapis Lazuli, Apatite"
+    ]
+  ],
+  "m1_quick": "Clear quartz, selenite, rainbow fluorite, herkimer diamond, prehnite, lapis lazuli, and apatite are among the most commonly carried crystals for clarity. Many people hold one as a cue to clear the fog and see one thing at a time. Crystals are complementary wellness tools; clarity comes from rest, attention, and sometimes stepping back — not from a stone.",
+  "m2_understanding": "Clarity isn't a permanent state; it comes and goes with rest, stress, and how much is on your plate. When it's gone, the world feels like a smudge — too much at once, nothing in focus. A small, tangible cue can mark a pause: a stone held while you step back, a reminder to set the clutter down and look at one thing, then the next.",
+  "m25_chose": "We chose these seven because they speak to the most common clarity-related intentions in crystal practice: mental sharpness, clearing fog, ordering thoughts, crisp seeing, decluttering, depth, and clarity that leads to action. Their meanings come from crystal tradition and personal practice, not clinical evidence.",
+  "m5_use": [
+    "<strong>Hold it when foggy.</strong> A stone in the palm as a cue to step back.",
+    "<strong>Keep it on your desk.</strong> Where a glance prompts a clearer look.",
+    "<strong>Carry it through heavy days.</strong> A pocket stone when too much is on the plate.",
+    "<strong>Pair it with a pause.</strong> A few breaths with the stone before deciding."
+  ],
+  "m6_combos": "Pairing is about layering intentions. A popular combination is <strong>Clear Quartz + Selenite</strong> — sharp clarity paired with clearing. <strong>Rainbow Fluorite + Lapis Lazuli</strong> is another, chosen for ordering thoughts and seeing depth.",
+  "m8_intro": "Explore genuine natural crystal pieces chosen for a clear mind — stones, bracelets, and forms you can hold or keep nearby, spanning the seven crystals above.",
+  "closing": "Clarity comes and goes — and a real stone can be a steady cue to step back and see one thing at a time. Start with one and let small pauses help. For more, explore <a href=\"/calm-mindfulness/\">Calm &amp; Mindfulness</a>.",
+  "faq": [
+    {
+      "q": "Can crystals give me mental clarity?",
+      "a": "Not directly. Crystals can't grant clarity. Many people use them as tangible cues to pause and step back; clarity usually returns with rest, attention, and sometimes a break — not from a stone."
+    },
+    {
+      "q": "Are crystals scientifically proven to improve clarity?",
+      "a": "No. There is no clinical evidence that crystals sharpen clarity. Any felt benefit usually comes from the ritual of pausing, not a proven effect of the stone."
+    },
+    {
+      "q": "Which crystal is best for mental clarity and focus?",
+      "a": "Clear quartz and selenite — clear quartz for sharp seeing, selenite to clear the fog."
+    },
+    {
+      "q": "What is the best crystal for making clear decisions?",
+      "a": "Rainbow fluorite is the most commonly chosen — long tied to ordering thoughts and clear choices."
+    },
+    {
+      "q": "Which crystal helps when my mind feels cluttered?",
+      "a": "Prehnite and selenite — prehnite to help the clutter settle, selenite to clear it."
+    },
+    {
+      "q": "How should I cleanse clarity crystals?",
+      "a": "Smoke (sage, palo santo), sound (singing bowl), or moonlight work for most stones. Note that fluorite is relatively soft — handle it gently; keep selenite dry as it's water-sensitive."
+    },
+    {
+      "q": "What is the best crystal bracelet for clarity?",
+      "a": "A clear quartz bracelet is the most common first choice — neutral, durable, and easy to wear as a cue to see one thing at a time."
+    }
+  ],
+  "related": [
+    "focus",
+    "meditation",
+    "stress",
+    "peace",
+    "intuition"
+  ]
+}

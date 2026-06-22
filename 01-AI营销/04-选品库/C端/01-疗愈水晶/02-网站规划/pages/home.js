@@ -133,6 +133,7 @@ function heading(title, opts) {
   const fs = o.fontSize || 32;
   const settings = {
     title: title,
+    header_size: o.headerSize || 'h2',
     align: o.align || 'center',
     title_color: o.color || '#333333',
     typography_typography: 'custom',
@@ -144,8 +145,8 @@ function heading(title, opts) {
     scroll_y: -80
   };
   if (o.responsive !== false) {
-    settings.typography_font_size_tablet = { unit: 'px', size: Math.round(fs * 0.75), sizes: [] };
-    settings.typography_font_size_mobile = { unit: 'px', size: Math.round(fs * 0.6), sizes: [] };
+    settings.typography_font_size_tablet = { unit: 'px', size: Math.max(22, Math.round(fs * 0.85)), sizes: [] };
+    settings.typography_font_size_mobile = { unit: 'px', size: Math.max(20, Math.round(fs * 0.75)), sizes: [] };
   }
   return {
     id: uid(),
@@ -160,8 +161,10 @@ function heading(title, opts) {
 function textEditor(content, opts) {
   const o = opts || {};
   const fs = o.fontSize || 16;
+  const editorHtml = '<p>' + content + '</p>';
   const settings = {
-    editor_content: '<p>' + content + '</p>',
+    editor: editorHtml,
+    editor_content: editorHtml,
     align: o.align || 'center',
     text_color: o.color || '#666666',
     typography_typography: 'custom',
@@ -171,8 +174,8 @@ function textEditor(content, opts) {
     scroll_y: -80
   };
   if (o.responsive !== false) {
-    settings.typography_font_size_tablet = { unit: 'px', size: Math.max(14, Math.round(fs * 0.9)), sizes: [] };
-    settings.typography_font_size_mobile = { unit: 'px', size: Math.max(13, Math.round(fs * 0.85)), sizes: [] };
+    settings.typography_font_size_tablet = { unit: 'px', size: Math.max(16, Math.round(fs * 0.9)), sizes: [] };
+    settings.typography_font_size_mobile = { unit: 'px', size: Math.max(16, Math.round(fs * 0.85)), sizes: [] };
   }
   return {
     id: uid(),
@@ -214,6 +217,14 @@ function imageBox(url, title, desc, linkUrl, opts) {
       description_text: desc,
       link: { url: linkUrl || '', is_external: '', nofollow: '', custom_attributes: '' },
       title_bottom_space: { unit: 'px', size: 10, sizes: [] },
+      title_typography_typography: 'custom',
+      title_typography_font_size: { unit: 'px', size: 18, sizes: [] },
+      title_typography_font_size_tablet: { unit: 'px', size: 18, sizes: [] },
+      title_typography_font_size_mobile: { unit: 'px', size: 16, sizes: [] },
+      description_typography_typography: 'custom',
+      description_typography_font_size: { unit: 'px', size: 16, sizes: [] },
+      description_typography_font_size_tablet: { unit: 'px', size: 16, sizes: [] },
+      description_typography_font_size_mobile: { unit: 'px', size: 16, sizes: [] },
       image_size: { unit: '%', size: 100, sizes: [] },
       image_border_radius: o.radius ? { unit: '%', size: o.radius, sizes: [] } : { unit: 'px', size: 5, sizes: [] },
       hover_animation: 'pulse-shrink',
@@ -225,19 +236,37 @@ function imageBox(url, title, desc, linkUrl, opts) {
   };
 }
 
+/** shortcode widget（嵌 WooCommerce 动态组件，如 [product_categories]） */
+function shortcodeWidget(shortcode) {
+  return {
+    id: uid(),
+    elType: 'widget',
+    settings: { shortcode: shortcode, scroll_y: -80 },
+    elements: [],
+    widgetType: 'shortcode'
+  };
+}
+
 /** icon-box widget（图标+标题+描述） */
 function iconBox(title, desc) {
   return {
     id: uid(),
     elType: 'widget',
     settings: {
-      selected_icon: { value: '', library: '' },
+      selected_icon: { value: 'eicon-check-circle', library: 'eicons' },
       title_text: title,
       description_text: desc,
       text_align: 'center',
       icon_space: { unit: 'px', size: 10, sizes: [] },
       title_bottom_space: { unit: 'px', size: 10, sizes: [] },
       title_typography_typography: 'custom',
+      title_typography_font_size: { unit: 'px', size: 18, sizes: [] },
+      title_typography_font_size_tablet: { unit: 'px', size: 18, sizes: [] },
+      title_typography_font_size_mobile: { unit: 'px', size: 16, sizes: [] },
+      description_typography_typography: 'custom',
+      description_typography_font_size: { unit: 'px', size: 16, sizes: [] },
+      description_typography_font_size_tablet: { unit: 'px', size: 16, sizes: [] },
+      description_typography_font_size_mobile: { unit: 'px', size: 16, sizes: [] },
       text_stroke_text_stroke_type: 'yes',
       text_stroke_text_stroke: { unit: 'px', size: 1, sizes: [] },
       text_stroke_text_stroke_tablet: { unit: 'em', size: '', sizes: [] },
@@ -345,17 +374,17 @@ var CRYSTALS = [
 
 /** S4 Shop by Intention — 6个核心意图 */
 var INTENTIONS = [
-  { name: 'Calm & Steady Days',      desc: 'Build a simple ritual for steadier days',      slug: 'anxiety-relief',      img: 'amethyst',        homeImg: 'intentionCalm' },
-  { name: 'Love & Self-Compassion',  desc: 'Practice tenderness toward yourself and others', slug: 'love-relationships',  img: 'roseQuartz',      homeImg: 'intentionLove' },
-  { name: 'Wealth & Prosperity',     desc: 'Set intentions around abundance and success',  slug: 'wealth-prosperity',   img: 'citrine',         homeImg: 'intentionAbundance' },
-  { name: 'Protection & Grounding',  desc: 'Create a tangible cue for steadiness',         slug: 'protection-grounding', img: 'blackTourmaline', homeImg: 'intentionGrounding' },
-  { name: 'Sleep & Evening Ritual',  desc: 'Mark the transition into a quieter evening',   slug: 'sleep-calm',          img: 'moonstone',       homeImg: 'intentionSleep' },
-  { name: 'Focus & Clarity',         desc: 'Choose a daily reminder for clearer attention', slug: 'focus-clarity',       img: 'fluorite',        homeImg: 'intentionFocus' }
+  { name: 'Calm & Steady Days',      desc: 'Stones like amethyst are traditionally used to quiet the mind — a gentle reminder to slow down and let the day settle', slug: 'calm-mindfulness', img: 'amethyst', homeImg: 'intentionCalm' },
+  { name: 'Love & Connection',       desc: 'Rose quartz has symbolized compassion for centuries, carried as a daily prompt to treat yourself and others with kindness', slug: 'love-relationships', img: 'roseQuartz', homeImg: 'intentionLove' },
+  { name: 'Abundance & Success',     desc: 'Set intentions around growth with citrine, long associated with warmth, vitality, and new opportunity', slug: 'abundance-success', img: 'citrine', homeImg: 'intentionAbundance' },
+  { name: 'Protection & Grounding',  desc: 'Stay grounded with protective stones like black tourmaline, used across traditions as a steadying anchor in busy days', slug: 'protection-clearing', img: 'blackTourmaline', homeImg: 'intentionGrounding' },
+  { name: 'Sleep & Evening Ritual',  desc: 'Ease into rest with moonstone and similar stones traditionally paired with calming evening routines', slug: 'health-vitality', img: 'moonstone', homeImg: 'intentionSleep' },
+  { name: 'Focus & Clarity',         desc: 'Choose stones traditionally linked to clear thinking and steady, focused attention when it matters most', slug: 'personal-empowerment', img: 'fluorite', homeImg: 'intentionFocus' }
 ];
 
 /** S11 FAQ — 6个核心问题 ← Conscious Items */
 var FAQ_ITEMS = [
-  { q: 'Are your crystals real?', a: 'Absolutely. Every crystal bracelet is made with genuine, natural gemstones. We never use dyed, synthetic, or imitation stones. Each piece is hand-selected and visually inspected for authenticity before it reaches you.' },
+  { q: 'Are your crystals real?', a: 'We prioritize genuine natural gemstones and do not sell glass or synthetic materials as natural crystals. Each bracelet is hand-selected and visually inspected for quality, color, and material consistency. If a design includes a treated, man-made, or decorative accent material, we label it clearly.' },
   { q: 'How are crystals prepared before shipping?', a: 'Every bracelet is inspected, prepared with care, and packed with simple guidance for setting your own intention. We use neutral, low-drama preparation practices such as selenite-based resting and careful handling.' },
   { q: 'Do crystal bracelets actually work?', a: 'Crystal bracelets are not medical tools and cannot promise a specific result. Many people use them as tactile reminders for intentions such as calm, love, or focus, similar to how a journal, ring, or ritual object can support a mindfulness practice.' },
   { q: 'What\'s included in my order?', a: 'Every order includes your crystal bracelet in a premium velvet pouch, an intention guide card with traditional meaning and care notes, and practical instructions for wearing and storing your piece. Orders over $75 receive free shipping.' },
@@ -375,12 +404,10 @@ var COMPARISON = [
 
 /** S15 Trust Signals — 可兑现信任信号 */
 var TRUST_ITEMS = [
-  { title: 'Genuine Crystals',       desc: 'Every stone is hand-selected and verified authentic' },
-  { title: 'Prepared With Care',     desc: 'Gently cleansed, inspected, and paired with an intention guide' },
-  { title: 'Responsible Sourcing',   desc: 'We ask suppliers clear questions about origin, handling, and labor context' },
-  { title: 'Free Shipping $75+',     desc: 'Fast, tracked delivery on all US orders over $75' },
-  { title: '30-Day Returns',         desc: 'Not the right fit? Return within 30 days' },
-  { title: 'Eco-Friendly Packaging', desc: 'Recyclable materials, velvet pouch included' }
+  { title: 'Genuine Crystals',       desc: 'Hand-selected and visually inspected' },
+  { title: 'Prepared With Care',     desc: 'Cleansed, inspected, intention guide included' },
+  { title: 'Free Shipping $95+',     desc: 'Tracked delivery on US orders over $95' },
+  { title: '30-Day Returns',         desc: 'Not the right fit? Return within 30 days' }
 ];
 
 // ============================================================
@@ -426,21 +453,21 @@ function generateHomepage() {
     }, [
       wrap({ content_width: 'boxed' }, [
         heading('Real Crystals for <u>Intentional Living</u>', {
-          color: '#FFFFFF', fontSize: 48, align: 'center',
+          headerSize: 'h1', color: '#FFFFFF', fontSize: 50, align: 'center',
           extra: {
-            typography_font_size_tablet: { unit: 'px', size: 36, sizes: [] },
-            typography_font_size_mobile: { unit: 'px', size: 28, sizes: [] }
+            typography_font_size_tablet: { unit: 'px', size: 45, sizes: [] },
+            typography_font_size_mobile: { unit: 'px', size: 40, sizes: [] }
           }
         }),
-        textEditor('Genuine natural crystal bracelets, individually inspected and chosen for everyday intention. Each piece arrives with a guide card to help you understand its traditional meaning and care.', {
-          color: '#FFFFFF', fontSize: 18, align: 'center',
+        textEditor('Genuine natural crystal bracelets, individually inspected and prepared with care. Each piece comes with a guide card to its traditional meaning and everyday use. Return to what\'s real.', {
+          color: '#FFFFFF', fontSize: 20, align: 'center',
           extra: {
             _margin: { unit: 'px', top: '0', right: '0', bottom: '30', left: '0', isLinked: '' }
           }
         }),
         wrap({ flex_direction: 'row', flex_justify_content: 'center', flex_gap: { size: 15, column: '15', row: '15', unit: 'px' } }, [
-          buttonWidget('START WITH THE GUIDE', '/crystal-guide/', { size: 'lg' }),
-          buttonWidget('BROWSE BY INTENTION', '/product-category/anxiety-relief/', { size: 'lg' })
+          buttonWidget('SHOP CRYSTAL BRACELETS', '/shop/', { size: 'lg' }),
+          buttonWidget('BROWSE BY INTENTION', '/calm-mindfulness/', { size: 'lg' })
         ])
       ])
     ]),
@@ -460,7 +487,7 @@ function generateHomepage() {
     }, [
       // 4 trust metrics — no fabricated numbers
       wrap({ content_width: 'full', width: cardWidth4(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
-        iconBox('Genuine Natural Crystals', 'Hand-selected and verified authentic')
+        iconBox('Genuine Natural Crystals', 'Hand-selected and visually inspected')
       ]),
       wrap({ content_width: 'full', width: cardWidth4(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
         iconBox('Sourcing With Context', 'Origin and handling notes are reviewed wherever suppliers can provide them')
@@ -482,8 +509,8 @@ function generateHomepage() {
       flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
     }, [
       wrap({ content_width: 'boxed' }, [
-        heading('What Intention Fits Today?', { fontSize: 36 }),
-        textEditor('Start with the feeling, habit, or reminder you want to carry', { fontSize: 18, color: '#888888' })
+        heading('What Intention Fits Today?', { fontSize: 35 }),
+        textEditor('Start with the feeling, habit, or reminder you want to carry', { fontSize: 20, color: '#888888' })
       ]),
       wrap({
         content_width: 'full',
@@ -494,7 +521,7 @@ function generateHomepage() {
         INTENTIONS.map(function(intent) {
           return wrap({
             content_width: 'full',
-            width: { unit: '%', size: 30, sizes: [] },
+            width: { unit: '%', size: 22, sizes: [] },
             width_tablet: tabletWidth2(),
             width_mobile: mobileWidth100()
           }, [
@@ -502,7 +529,7 @@ function generateHomepage() {
               IMAGES.home[intent.homeImg].url,
               intent.name,
               intent.desc,
-              'https://goearthward.com/product-category/' + intent.slug + '/'
+              '/' + intent.slug + '/'
             )
           ]);
         })
@@ -518,8 +545,8 @@ function generateHomepage() {
       flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
     }, [
       wrap({ content_width: 'boxed' }, [
-        heading('Explore Crystal Bracelets', { fontSize: 36 }),
-        textEditor('A simple starting point for browsing current Earthward pieces', { fontSize: 18, color: '#888888' })
+        heading('Explore Crystal Bracelets', { fontSize: 35 }),
+        textEditor('A simple starting point for browsing current Earthward pieces', { fontSize: 20, color: '#888888' })
       ]),
       wdProductsTabs()
     ]),
@@ -555,7 +582,7 @@ function generateHomepage() {
         flex_direction: 'column',
         flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
       }, [
-        heading('Not Sure Where to Start?', { fontSize: 36, align: 'left' }),
+        heading('Not Sure Where to Start?', { fontSize: 35, align: 'left' }),
         textEditor('Use the guide paths that are ready now: browse by intention, explore by stone, or read the crystal meaning index before choosing a bracelet.', {
           fontSize: 16, align: 'left', color: '#666666'
         }),
@@ -579,7 +606,7 @@ function generateHomepage() {
             iconBox('Our Sourcing Approach', 'See how Earthward thinks about origin, care, and realistic expectations')
           ])
         ]),
-        buttonWidget('EXPLORE THE GUIDE', '/crystal-guide/', { size: 'lg', align: 'left' })
+        buttonWidget('EXPLORE THE GUIDE', '/gemstones/', { size: 'lg', align: 'left' })
       ])
     ]),
 
@@ -592,33 +619,10 @@ function generateHomepage() {
       flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
     }, [
       wrap({ content_width: 'boxed' }, [
-        heading('Shop by Crystal', { fontSize: 36 }),
-        textEditor('Explore 16 hand-selected gemstones, each with its own traditional meaning', { fontSize: 18, color: '#888888' })
+        heading('Shop by Crystal', { fontSize: 35 }),
+        textEditor('Browse genuine crystals by stone — categories update live from our inventory', { fontSize: 20, color: '#888888' })
       ]),
-      // 4x4 网格 → 平板 3x6 → 手机 2x8
-      wrap({
-        content_width: 'full',
-        flex_direction: 'row',
-        flex_wrap: 'wrap',
-        flex_gap: { size: 12, column: '12', row: '12', unit: 'px' }
-      },
-        CRYSTALS.map(function(c) {
-          return wrap({
-            content_width: 'full',
-            width: { unit: '%', size: 22, sizes: [] },
-            width_tablet: { unit: '%', size: 30, sizes: [] },
-            width_mobile: { unit: '%', size: 47, sizes: [] }
-          }, [
-            imageBox(
-              IMAGES.crystals[c.key].url,
-              c.name,
-              c.poetic,
-              'https://goearthward.com/product-category/' + c.slug + '/',
-              { radius: 50 }
-            )
-          ]);
-        })
-      )
+      shortcodeWidget('[product_categories parent="981" number="16" columns="4" hide_empty="1" orderby="count" order="DESC"]')
     ]),
 
     // ===================== S8: Comparison Table ← Conscious Items =====================
@@ -632,8 +636,8 @@ function generateHomepage() {
       flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
     }, [
       wrap({ content_width: 'boxed' }, [
-        heading('Why Choose Earthward?', { fontSize: 36 }),
-        textEditor('What sets a careful crystal bracelet experience apart from anonymous marketplace listings', { fontSize: 18, color: '#888888' })
+        heading('Why Choose Earthward?', { fontSize: 35 }),
+        textEditor('What sets a careful crystal bracelet experience apart from anonymous marketplace listings', { fontSize: 20, color: '#888888' })
       ]),
       // 3x2 优势网格
       wrap({
@@ -662,44 +666,7 @@ function generateHomepage() {
       )
     ]),
 
-    // ===================== S9: Brand Story Preview =====================
-    section({
-      padding: rPadding('80', '10', '80', '10', {
-        tablet: { t: '50', r: '10', b: '50', l: '10' },
-        mobile: { t: '30', r: '5', b: '30', l: '5' }
-      }),
-      flex_direction: 'row',
-      flex_align_items: 'center',
-      flex_gap: { size: 40, column: '40', row: '40', unit: 'px' }
-    }, [
-      // 左侧: 图片
-      wrap({
-        content_width: 'full',
-        width: { size: '45', unit: '%' },
-        width_tablet: { size: '100', unit: '%' }
-      }, [
-        imageWidget(IMAGES.home.brandStory.url, {
-          id: 0, alt: IMAGES.home.brandStory.alt, radius: 12
-        })
-      ]),
-      // 右侧: 文字
-      wrap({
-        content_width: 'full',
-        width: { size: '50', unit: '%' },
-        width_tablet: { size: '100', unit: '%' },
-        flex_direction: 'column',
-        flex_gap: { size: 10, column: '10', row: '10', unit: 'px' }
-      }, [
-        heading('Why Earthward?', { fontSize: 32, align: 'left' }),
-        textEditor('In a world of synthetic shortcuts, we chose a different direction: genuine stones, clear guidance, careful preparation, and realistic expectations. Earthward is not about promising outcomes. It is about giving you something real to hold while you practice intention.', {
-          fontSize: 16, align: 'left', color: '#666666', lineHeight: 28
-        }),
-        wrap({ flex_direction: 'row', flex_gap: { size: 15, column: '15', row: '15', unit: 'px' } }, [
-          buttonWidget('LEARN OUR STORY', '/about', { size: 'md', align: 'left' }),
-          buttonWidget('ETHICAL SOURCING', '/about/ethical-sourcing', { size: 'md', align: 'left' })
-        ])
-      ])
-    ]),
+    // S9 Brand Story 已删（品牌故事压缩到 About Us，home 不重复）
 
     // ===================== S10: How People Use Their Crystals ← Use-case scenarios =====================
     section({
@@ -710,36 +677,39 @@ function generateHomepage() {
       background_background: 'classic',
       background_color: '#fafafa'
     }, [
-      heading('How People Use Their Crystals', { fontSize: 36, color: '#333333' }),
+      heading('How People Use Their Crystals', { fontSize: 35, color: '#333333' }),
       textEditor('Real moments where a crystal bracelet became part of everyday intention', { fontSize: 16, color: '#888888' }),
       spacer(20),
       wrap({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: { size: 20, column: '20', row: '20', unit: 'px' } }, [
         // Scenario 1
         wrap({ content_width: 'full', width: cardWidth3(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
           imageWidget(IMAGES.home.useCalm.url, { alt: IMAGES.home.useCalm.alt, radius: 50, width: 60 }),
-          heading('For Calm Evenings', { fontSize: 18, align: 'center', color: '#333333' }),
+          heading('For Calm Evenings', { headerSize: 'h3', fontSize: 22, align: 'center', color: '#333333' }),
           textEditor('A common Amethyst ritual is to keep the bracelet on a nightstand and touch it before bed as a reminder to let the day settle.', {
-            fontSize: 14, align: 'center',
+            fontSize: 16, align: 'center',
             extra: { _padding: { unit: 'px', top: '0', right: '10', bottom: '0', left: '10', isLinked: '' } }
-          })
+          }),
+          buttonWidget('SHOP AMETHYST', '/product-category/amethyst-crystals/', { size: 'sm', align: 'center' })
         ]),
         // Scenario 2
         wrap({ content_width: 'full', width: cardWidth3(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
           imageWidget(IMAGES.home.useWorkday.url, { alt: IMAGES.home.useWorkday.alt, radius: 50, width: 60 }),
-          heading('For Stressful Workdays', { fontSize: 18, align: 'center', color: '#333333' }),
+          heading('For Stressful Workdays', { headerSize: 'h3', fontSize: 22, align: 'center', color: '#333333' }),
           textEditor('Black Tourmaline is often chosen as a workday grounding cue: a small physical reminder to pause, breathe, and reset.', {
-            fontSize: 14, align: 'center',
+            fontSize: 16, align: 'center',
             extra: { _padding: { unit: 'px', top: '0', right: '10', bottom: '0', left: '10', isLinked: '' } }
-          })
+          }),
+          buttonWidget('SHOP BLACK TOURMALINE', '/product-category/black-tourmaline-crystals/', { size: 'sm', align: 'center' })
         ]),
         // Scenario 3
         wrap({ content_width: 'full', width: cardWidth3(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
           imageWidget(IMAGES.home.useCompassion.url, { alt: IMAGES.home.useCompassion.alt, radius: 50, width: 60 }),
-          heading('For Self-Compassion', { fontSize: 18, align: 'center', color: '#333333' }),
+          heading('For Self-Compassion', { headerSize: 'h3', fontSize: 22, align: 'center', color: '#333333' }),
           textEditor('Rose Quartz is a popular choice for people navigating transitions. Wearing it can serve as a gentle daily prompt to be kinder to yourself.', {
-            fontSize: 14, align: 'center',
+            fontSize: 16, align: 'center',
             extra: { _padding: { unit: 'px', top: '0', right: '10', bottom: '0', left: '10', isLinked: '' } }
-          })
+          }),
+          buttonWidget('SHOP ROSE QUARTZ', '/product-category/rose-quartz-crystals/', { size: 'sm', align: 'center' })
         ])
       ])
     ]),
@@ -753,48 +723,15 @@ function generateHomepage() {
       flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
     }, [
       wrap({ content_width: 'boxed' }, [
-        heading('Common Questions', { fontSize: 36 }),
-        textEditor('Everything you need to know about our crystal bracelets', { fontSize: 18, color: '#888888' })
+        heading('Common Questions', { fontSize: 35 }),
+        textEditor('Everything you need to know about our crystal bracelets', { fontSize: 20, color: '#888888' })
       ]),
       wrap({ content_width: 'boxed' }, [
         accordionWidget(FAQ_ITEMS)
       ])
     ]),
 
-    // ===================== S12: Crystal Guide Preview =====================
-    section({
-      padding: rPadding('80', '10', '80', '10', {
-        tablet: { t: '50', r: '10', b: '50', l: '10' },
-        mobile: { t: '30', r: '5', b: '30', l: '5' }
-      }),
-      background_background: 'classic',
-      background_color: '#FAFAFA',
-      flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
-    }, [
-      wrap({ content_width: 'boxed' }, [
-        heading('Start With Crystal Meanings', { fontSize: 36 }),
-        textEditor('Our guide is being built around clear mineral facts, traditional meanings, and everyday intention practices.', { fontSize: 18, color: '#888888' })
-      ]),
-      wrap({
-        content_width: 'full',
-        flex_direction: 'row',
-        flex_wrap: 'wrap',
-        flex_gap: { size: 15, column: '15', row: '15', unit: 'px' }
-      }, [
-        wrap({ content_width: 'full', width: cardWidth3(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
-          iconBox('Mineral Facts', 'Simple identifiers such as color, hardness, formation, and care notes')
-        ]),
-        wrap({ content_width: 'full', width: cardWidth3(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
-          iconBox('Traditional Meaning', 'How each crystal has commonly been associated with intention and ritual')
-        ]),
-        wrap({ content_width: 'full', width: cardWidth3(), width_tablet: tabletWidth2(), width_mobile: mobileWidth100() }, [
-          iconBox('Everyday Use', 'Practical ways to wear, store, cleanse, and pair your bracelet')
-        ])
-      ]),
-      wrap({ content_width: 'boxed' }, [
-        buttonWidget('EXPLORE CRYSTAL GUIDE', '/crystal-guide/')
-      ])
-    ]),
+    // S12 Crystal Guide Preview 已删（移到 /gemstones/ Guide 页，home 不重复）
 
     // ===================== S13: Launch CTA =====================
     section({
@@ -814,56 +751,17 @@ function generateHomepage() {
       background_overlay_opacity: { unit: 'px', size: 0.7, sizes: [] }
     }, [
       wrap({ content_width: 'boxed' }, [
-        heading('Choose Something Real to Carry', { color: '#FFFFFF', fontSize: 32 }),
-        textEditor('Begin with a stone, an intention, or the guide path that helps you make a grounded choice.', {
+        heading('Choose Something Real to Carry', { color: '#FFFFFF', fontSize: 35 }),
+        textEditor('Begin with a stone, an intention, or the guide path that helps you make a grounded choice. Go Earthward. Return to what\'s real.', {
           color: '#CCCCCC', fontSize: 16,
           extra: { _margin: { unit: 'px', top: '0', right: '0', bottom: '30', left: '0', isLinked: '' } }
         }),
-        buttonWidget('EXPLORE CRYSTAL GUIDE', '/crystal-guide/')
+        buttonWidget('EXPLORE CRYSTAL GUIDE', '/gemstones/')
       ])
     ]),
 
-    // ===================== S14: SEO Content Block ← Tiny Rituals =====================
-    section({
-      padding: rPadding('40', '10', '40', '10', {
-        mobile: { t: '20', r: '10', b: '20', l: '10' }
-      }),
-      flex_gap: { size: 5, column: '5', row: '5', unit: 'px' }
-    }, [
-      wrap({ content_width: 'boxed' }, [
-        textEditor('Earthward offers crystal bracelets made from genuine natural gemstones including amethyst, rose quartz, citrine, black tourmaline, and clear quartz. Each bracelet is selected with care, paired with practical guidance, and designed for everyday intention. Whether you are choosing a stone for calm, love, abundance, grounding, or personal reflection, start by browsing by intention, exploring the crystal guide, or reading how Earthward approaches sourcing and care.', {
-          fontSize: 13, align: 'left', color: '#999999', lineHeight: 22, responsive: false
-        })
-      ])
-    ]),
-
-    // ===================== S15: Trust Signals =====================
-    section({
-      padding: rPadding('60', '10', '60', '10', {
-        tablet: { t: '40', r: '10', b: '40', l: '10' },
-        mobile: { t: '20', r: '5', b: '20', l: '5' }
-      }),
-      background_background: 'classic',
-      background_color: '#111111',
-      flex_direction: 'row',
-      flex_align_items: 'stretch',
-      flex_wrap: 'wrap',
-      flex_gap: { size: 10, column: '10', row: '10', unit: 'px' }
-    },
-      TRUST_ITEMS.map(function(item) {
-        return wrap({
-          content_width: 'full',
-          width: cardWidth4(),
-          width_tablet: tabletWidth2(),
-          width_mobile: mobileWidth100(),
-          padding: { unit: 'px', top: '15', right: '10', bottom: '15', left: '10', isLinked: false }
-        }, [
-          iconBox(item.title, item.desc)
-        ]);
-      }).concat([
-        // Fix: iconBox in dark section needs white text - handled via extra overrides below
-      ])
-    )
+    // S14 SEO Content Block 已删（SEO 关键词移到 Rank Math meta description）
+    // S15 Trust Signals 已删（与 S3 重复）
 
   ];
 }
@@ -873,7 +771,7 @@ function generateHomepage() {
 // ============================================================
 function apiRequest(path, method, body) {
   return new Promise(function(resolve, reject) {
-    var payload = typeof body === 'string' ? body : JSON.stringify(body);
+    var payload = body === undefined ? '' : (typeof body === 'string' ? body : JSON.stringify(body));
     var options = {
       hostname: SITE, port: 443, path: path, method: method,
       headers: { 'Authorization': AUTH, 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(payload) }
@@ -893,15 +791,30 @@ function apiRequest(path, method, body) {
 }
 
 async function main() {
+  var mode = process.argv[2];
+  var HOME_PAGE_ID = 42428;
+  if (mode === 'replace') {
+    var dataR = generateHomepage();
+    var jsonStrR = JSON.stringify(dataR);
+    console.log('Replacing home page id=' + HOME_PAGE_ID + ' (' + dataR.length + ' sections, ' + jsonStrR.length + ' chars)');
+    var resultR = await apiRequest('/wp-json/wp/v2/pages/' + HOME_PAGE_ID + '?context=edit', 'POST', {
+      title: 'Home', status: 'publish', content: '',
+      meta: { _elementor_data: jsonStrR, _elementor_edit_mode: 'builder', _elementor_template_type: 'wp-page' }
+    });
+    if (resultR && resultR.id) console.log('REPLACED & PUBLISHED: https://goearthward.com/');
+    else { console.error('FAILED: ' + JSON.stringify(resultR).slice(0, 500)); process.exit(1); }
+    return;
+  }
   console.log('=== Homepage Upload (Elementor V3 + B1a 2C) ===\n');
 
-  // Step 1: Create page
-  console.log('1. Creating page...');
+  // Step 1: 每次创建新版本 page（V3/V4...），content 空 + 新 _data
+  // 避免 REST 改老 page 的 _data 但 post_content(Elementor渲染缓存)不同步的问题
+  console.log('1. Creating NEW version page (home-v12)...');
   var page = await apiRequest('/wp-json/wp/v2/pages', 'POST', {
-    title: 'Homepage (B1a 2C)', status: 'draft', slug: 'homepage-b1a-2c', content: ''
+    title: 'Homepage', status: 'draft', slug: 'home-v12', content: ''
   });
   var pageId = page.id;
-  console.log('   Page ID: ' + pageId);
+  console.log('   Created home-v12: ' + pageId);
 
   // Step 2: Generate data
   console.log('2. Generating Elementor data...');
@@ -932,7 +845,7 @@ async function main() {
   // Step 4: Upload
   console.log('4. Injecting via context=edit...');
   var result = await apiRequest('/wp-json/wp/v2/pages/' + pageId + '?context=edit', 'POST', {
-    title: 'Homepage (B1a 2C)', status: 'draft', content: '',
+    title: 'Homepage', status: 'publish', content: '',
     meta: { _elementor_data: jsonStr, _elementor_edit_mode: 'builder', _elementor_template_type: 'wp-page' }
   });
 

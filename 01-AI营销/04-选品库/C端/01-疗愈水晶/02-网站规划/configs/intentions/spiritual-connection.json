@@ -1,0 +1,61 @@
+{
+  "intention": "Spiritual Connection",
+  "slug": "spiritual-connection",
+  "url": "/spiritual-connection",
+  "heroSubtitle": "Remember your connection to something larger. These high-vibration crystals have guided seekers across traditions, opening intuition, inner vision, and a sense of coming home.",
+  "description": "Spiritual connection is the quiet remembering that we are part of something larger than the individual self. Across the meditation traditions of the East and the contemplative practices of the West, seekers have always turned to crystals as bridges between the everyday mind and the deeper awareness beneath it. In the energy framework, this connection flows through the third eye and crown chakras — the centers of intuition, inner vision, and unity consciousness. When they are open, we sense guidance, meaning, and a feeling of coming home; when they are clouded, life can feel flat, disconnected, and merely mechanical.\n\nAmethyst has been used for millennia to support meditation and spiritual awareness, its violet frequency opening the crown chakra and calming the mental chatter that blocks deeper states. Clear Quartz is the universal amplifier and the most programmable of stones, focusing intention and clarifying the inner voice. Selenite, named for the Greek goddess of the moon, carries one of the highest and purest vibrations in the mineral kingdom, clearing the energy field and lifting awareness toward the subtle realms.\n\nLapis Lazuli, the stone of royalty and seekers in ancient traditions, activates the third eye and throat chakras, linking inner vision with the courage to speak one's truth. Labradorite opens the door to intuition, higher knowing, and the synchronicities that mark a life lived in dialogue with the unseen. Kyanite, rare among crystals in that it never needs cleansing, instantly aligns all the chakras and opens clear channels for meditation and spiritual insight.\n\nTo deepen your spiritual connection with crystals, begin with stillness. Hold Amethyst or Selenite during meditation and let its presence anchor your awareness beyond the thinking mind. Place Clear Quartz at the crown of your meditation space to focus and amplify your practice. Create a simple altar with Lapis Lazuli and Labradorite, returning to it each morning or evening for a few conscious breaths. There is no single right way — only the practice of turning inward, again and again, until the connection becomes something you carry with you.\n\nOur Spiritual Connection collection gathers the stones most honored across traditions for awakening inner vision, each cleansed and ready to support your path of remembering.",
+  "crystals": [
+    {
+      "name": "Amethyst",
+      "subtitle": "The Stone of Spiritual Awareness",
+      "benefits": "Used for millennia in meditation, opens the crown chakra, calms mental chatter to access deeper spiritual states.",
+      "image": "",
+      "link": "/gemstone/amethyst-meaning"
+    },
+    {
+      "name": "Clear Quartz",
+      "subtitle": "The Master Amplifier",
+      "benefits": "The universal amplifier and most programmable stone, focuses intention and clarifies the inner voice.",
+      "image": "",
+      "link": "/gemstone/clear-quartz-meaning"
+    },
+    {
+      "name": "Selenite",
+      "subtitle": "The Stone of Higher Realms",
+      "benefits": "Carries one of the purest vibrations in the mineral kingdom, clears the energy field, lifts awareness toward the subtle.",
+      "image": "",
+      "link": "/gemstone/selenite-meaning"
+    },
+    {
+      "name": "Lapis Lazuli",
+      "subtitle": "The Stone of the Seeker",
+      "benefits": "Activates the third eye and throat chakras, links inner vision with the courage to speak your truth.",
+      "image": "",
+      "link": "/gemstone/lapis-lazuli-meaning"
+    },
+    {
+      "name": "Labradorite",
+      "subtitle": "The Stone of Intuition",
+      "benefits": "Opens the door to intuition and higher knowing, attunes you to synchronicity and the wisdom of the unseen.",
+      "image": "",
+      "link": "/gemstone/labradorite-meaning"
+    },
+    {
+      "name": "Kyanite",
+      "subtitle": "The Stone of Alignment",
+      "benefits": "Never needs cleansing, instantly aligns all chakras, opens clear channels for meditation and spiritual insight.",
+      "image": "",
+      "link": "/gemstone/kyanite-meaning"
+    }
+  ],
+  "blogPosts": [
+    {"title": "Best Crystals for Meditation: A Guide to Deepening Your Practice", "image": "", "link": "/blog/best-crystals-for-meditation-guide"},
+    {"title": "How to Open Your Third Eye Chakra with Crystals", "image": "", "link": "/blog/open-third-eye-chakra-crystals"},
+    {"title": "Selenite: The High-Vibration Crystal for Spiritual Cleansing", "image": "", "link": "/blog/selenite-spiritual-cleansing-guide"}
+  ],
+  "relatedIntentions": [
+    {"name": "Calm & Mindfulness", "slug": "calm-mindfulness", "image": ""},
+    {"name": "Transformation", "slug": "transformation", "image": ""},
+    {"name": "Personal Empowerment", "slug": "personal-empowerment", "image": ""}
+  ]
+}

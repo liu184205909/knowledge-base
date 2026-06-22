@@ -1,0 +1,164 @@
+{
+  "condition_title": "Balance",
+  "title": "7 Best Crystals for Balance: A Complete Guide",
+  "excerpt": "Discover the 7 best crystals for balance — jade, lepidolite, moonstone, larimar, amethyst, citrine, aventurine. Choose stones to steady yourself.",
+  "rank_math_title": "7 Best Crystals for Balance: A Complete Guide",
+  "rank_math_description": "Discover the 7 best crystals for balance — jade, lepidolite, moonstone, larimar, amethyst, citrine, aventurine. Choose stones to steady yourself.",
+  "rank_math_focus_keyword": "crystals for balance",
+  "featured_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/jade/jade-overview.webp",
+  "featured_alt": "jade and crystals for balance and harmony",
+  "category_ids": "1498,1512,1503,1525,1489,1496,1519",
+  "crystals": [
+    {
+      "slug": "jade",
+      "name": "Jade",
+      "subtitle": "The Stone of Harmony",
+      "best_for": "harmony, steady balance",
+      "why": "The classic balance stone — calm, steady, and tied to harmony.",
+      "how_to_use": "Wear it as a bracelet, or keep a piece where you steady yourself.",
+      "desc": "The classic balance stone, jade is long tied to harmony across many cultures. Many keep it close as a reminder that balance favors the steady, not the extreme.",
+      "cat_id": 1498,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/jade/jade-overview.webp",
+      "image_alt": "jade crystal for balance and harmony"
+    },
+    {
+      "slug": "lepidolite",
+      "name": "Lepidolite",
+      "subtitle": "The Stone of Transition",
+      "best_for": "emotional balance, even keel",
+      "why": "Its tie to emotional steadiness makes it a stone for an even keel.",
+      "how_to_use": "Hold it during ups and downs, or carry it for steadiness.",
+      "desc": "Many keep lepidolite close for a steadier emotional keel. As a gentle cue to soften, it suits people whose balance tips with their feelings.",
+      "mineral_note": "Lepidolite is a lithium-bearing mica, but wearing or holding it does not deliver lithium to the body — that is a common misunderstanding. In crystal practice it is valued symbolically for softness and emotional steadiness.",
+      "cat_id": 1512,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/lepidolite/lepidolite-overview.webp",
+      "image_alt": "lepidolite crystal for balance and an even keel"
+    },
+    {
+      "slug": "rainbow-moonstone",
+      "name": "Rainbow Moonstone",
+      "subtitle": "The Stone of New Beginnings",
+      "best_for": "cycles, ebb and flow",
+      "why": "Its tie to cycles makes it a stone for balance through change.",
+      "how_to_use": "Carry it during shifts, or keep it for steady rhythms.",
+      "desc": "Tied to cycles and inner tides, rainbow moonstone suits people learning to balance through ebb and flow. Many carry it as a reminder that balance moves, it isn't held still.",
+      "cat_id": 1503,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/moonstone/moonstone-overview.webp",
+      "image_alt": "rainbow moonstone crystal for balance and cycles"
+    },
+    {
+      "slug": "larimar",
+      "name": "Larimar",
+      "subtitle": "The Stone of Calm Waters",
+      "best_for": "soothing, even mood",
+      "why": "Its ocean-blue tone makes it a stone for an even, calm mood.",
+      "how_to_use": "Wear it as a pendant, or hold it to settle.",
+      "desc": "Found only in the Dominican Republic, larimar carries the soft blues of shallow sea and is tied to an even mood. Many reach for it when balance means a calmer, steadier feeling.",
+      "mineral_note": "Because larimar is rare and can be expensive, buy from sellers who provide clear photos, origin information, and treatment disclosure.",
+      "cat_id": 1525
+    },
+    {
+      "slug": "amethyst",
+      "name": "Amethyst",
+      "subtitle": "The Stone of Peace",
+      "best_for": "calm equilibrium",
+      "why": "Its calming tie makes it a stone for calm equilibrium.",
+      "how_to_use": "Keep it where you rest, or hold it to settle.",
+      "desc": "Known for calm, amethyst suits people whose balance starts with a quieter mind. Many keep it nearby as a gentle nudge to let the mind settle before deciding what balance looks like.",
+      "cat_id": 1489,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/amethyst/amethyst-overview.webp",
+      "image_alt": "amethyst crystal for balance and calm equilibrium"
+    },
+    {
+      "slug": "citrine",
+      "name": "Citrine",
+      "subtitle": "The Stone of Abundance",
+      "best_for": "sunny, lifted balance",
+      "why": "Its tie to a sunny outlook makes it a stone for lifted balance.",
+      "how_to_use": "Wear it on days you want to feel brighter, or carry it for warmth.",
+      "desc": "Long tied to a warm, sunny outlook, citrine suits people whose balance dips toward the low. Many carry it in the belief that balance sometimes means lifting as well as calming.",
+      "cat_id": 1496
+    },
+    {
+      "slug": "aventurine",
+      "name": "Aventurine",
+      "subtitle": "The Stone of Opportunity",
+      "best_for": "easy, open balance",
+      "why": "Its tie to calm and optimism makes it a stone for easy balance.",
+      "how_to_use": "Carry it daily, or keep it where you steady yourself.",
+      "desc": "Popular for calm and optimism, aventurine suits people who want an easier, lighter balance. Many carry it with the thought that steadiness can feel open, not heavy.",
+      "cat_id": 1519
+    }
+  ],
+  "scene_table": [
+    [
+      "Harmony, steady balance",
+      "Jade"
+    ],
+    [
+      "Emotional balance, even keel",
+      "Lepidolite, Amethyst"
+    ],
+    [
+      "Balance through cycles, change",
+      "Rainbow Moonstone"
+    ],
+    [
+      "Even, calm mood",
+      "Larimar"
+    ],
+    [
+      "Lifted, easy balance",
+      "Citrine, Aventurine"
+    ]
+  ],
+  "m1_quick": "Jade, lepidolite, rainbow moonstone, larimar, amethyst, citrine, and aventurine are among the most commonly carried crystals for balance. Many people keep one close as a cue to steady themselves through ups and downs. Crystals are complementary wellness tools; balance is a daily practice of noticing and adjusting, not something a stone holds for you.",
+  "m2_understanding": "Balance isn't a still point you arrive at and stay; it's a constant small adjusting, like standing on a moving train. Some days you tip toward stress, some toward low mood, some toward too much of one thing. A small, tangible cue can mark the noticing: a stone held when you feel the tilt, a reminder to pause and ask what this moment needs to come back toward center.",
+  "m25_chose": "We chose these seven because they speak to the most common balance intentions in crystal practice: harmony, an even keel, balance through cycles, an even mood, and lifted or easy balance. Their meanings come from crystal tradition and personal practice, not clinical evidence.",
+  "m5_use": [
+    "<strong>Hold it when you feel the tilt.</strong> A stone in the palm as a cue to pause.",
+    "<strong>Wear it daily.</strong> A bracelet as a reminder to steady yourself.",
+    "<strong>Keep it where you steady yourself.</strong> On a desk or bedside, as a cue.",
+    "<strong>Pair it with noticing.</strong> A few breaths to ask what center needs."
+  ],
+  "m6_combos": "Pairing is about layering intentions. A popular combination is <strong>Jade + Lepidolite</strong> — harmony paired with an even keel. <strong>Amethyst + Citrine</strong> is another, chosen to balance calm and lift.",
+  "m8_intro": "Explore genuine natural crystal pieces chosen for balance — stones, bracelets, and forms you can hold or wear, spanning the seven crystals above.",
+  "closing": "Balance is a daily adjusting, not a fixed point — and a real stone can be a steady cue to notice the tilt. Start with one and let small adjustments add up. For more, explore <a href=\"/calm-mindfulness/\">Calm &amp; Mindfulness</a>.",
+  "faq": [
+    {
+      "q": "Can crystals help me find balance?",
+      "a": "Not on their own. Crystals can't grant balance. Many people use them as tangible cues to pause and notice the tilt; balance is a daily practice of adjusting, not something a stone holds."
+    },
+    {
+      "q": "Are crystals scientifically proven to bring balance?",
+      "a": "No. There is no clinical evidence that crystals create balance. Any felt benefit usually comes from the ritual of pausing and noticing, not a proven effect of the stone."
+    },
+    {
+      "q": "Which crystal is best for balance and harmony?",
+      "a": "Jade is the most commonly chosen — long tied to harmony and a steady, even stance."
+    },
+    {
+      "q": "What is the best crystal for emotional balance?",
+      "a": "Lepidolite and amethyst — lepidolite for an even keel, amethyst for calm equilibrium."
+    },
+    {
+      "q": "Which crystal helps me balance through change?",
+      "a": "Rainbow moonstone — tied to cycles and learning to balance through ebb and flow."
+    },
+    {
+      "q": "How should I cleanse balance crystals?",
+      "a": "Smoke (sage, palo santo), sound (singing bowl), or moonlight work for most stones. Handle soft pieces gently and keep them dry."
+    },
+    {
+      "q": "What is the best crystal bracelet for balance?",
+      "a": "A jade bracelet is the most common first choice — widely worn for harmony and easy to wear daily as a reminder to steady yourself."
+    }
+  ],
+  "related": [
+    "peace",
+    "grounding",
+    "stress",
+    "meditation",
+    "emotional-healing"
+  ]
+}

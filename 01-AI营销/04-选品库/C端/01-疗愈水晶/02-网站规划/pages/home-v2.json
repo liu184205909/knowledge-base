@@ -1,0 +1,5538 @@
+[
+  {
+    "id": "5210602",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "150",
+        "right": "0",
+        "bottom": "150",
+        "left": "0",
+        "isLinked": "",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "100",
+          "right": "0",
+          "bottom": "100",
+          "left": "0",
+          "isLinked": ""
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "80",
+          "right": "10",
+          "bottom": "80",
+          "left": "10",
+          "isLinked": ""
+        }
+      },
+      "background_background": "classic",
+      "background_image": {
+        "url": "https://goearthward.com/wp-content/uploads/2026/05/home-hero-intentional-living-v2.png",
+        "id": 0,
+        "size": "",
+        "alt": "Natural crystal pieces for intentional living",
+        "source": "library"
+      },
+      "background_position": "center center",
+      "background_repeat": "no-repeat",
+      "background_size": "cover",
+      "background_overlay_background": "classic",
+      "background_overlay_color": "#060000"
+    },
+    "elements": [
+      {
+        "id": "7a04705",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "scroll_y": -80
+        },
+        "elements": [
+          {
+            "id": "a193bc7",
+            "elType": "widget",
+            "settings": {
+              "title": "Real Crystals for <u>Intentional Living</u>",
+              "align": "center",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 48,
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "_element_width": "initial",
+              "_element_vertical_alignment": "",
+              "_padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "10",
+                "left": "0",
+                "isLinked": ""
+              },
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 36,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 28,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "2193efe",
+            "elType": "widget",
+            "settings": {
+              "editor_content": "<p>Genuine natural crystal jewelry and stones, individually inspected and chosen for everyday intention. Each piece arrives with a guide card to help you understand its traditional meaning and care.</p>",
+              "align": "center",
+              "text_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 18,
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "px",
+                "size": 26,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 16,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 15,
+                "sizes": []
+              },
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "30",
+                "left": "0",
+                "isLinked": ""
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "3ac5449",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "flex_direction": "row",
+              "flex_justify_content": "center",
+              "flex_gap": {
+                "size": 15,
+                "column": "15",
+                "row": "15",
+                "unit": "px"
+              }
+            },
+            "elements": [
+              {
+                "id": "1fecf53",
+                "elType": "widget",
+                "settings": {
+                  "text": "START WITH THE GUIDE",
+                  "link": {
+                    "url": "/crystal-guide/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "size": "lg",
+                  "align": "center",
+                  "scroll_y": -80,
+                  "background_background": "classic",
+                  "background_color": "#2D6A4F",
+                  "text_color": "#FFFFFF",
+                  "border_radius": {
+                    "unit": "px",
+                    "top": "4",
+                    "right": "4",
+                    "bottom": "4",
+                    "left": "4",
+                    "isLinked": true
+                  },
+                  "typography_typography": "custom",
+                  "typography_font_weight": "700"
+                },
+                "elements": [],
+                "widgetType": "button"
+              },
+              {
+                "id": "6974c2a",
+                "elType": "widget",
+                "settings": {
+                  "text": "BROWSE BY INTENTION",
+                  "link": {
+                    "url": "/calm-mindfulness/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "size": "lg",
+                  "align": "center",
+                  "scroll_y": -80
+                },
+                "elements": [],
+                "widgetType": "button"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "79614f0",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "row",
+      "padding": {
+        "unit": "px",
+        "top": "40",
+        "right": "10",
+        "bottom": "40",
+        "left": "10",
+        "isLinked": "",
+        "padding_mobile": {
+          "unit": "px",
+          "top": "20",
+          "right": "10",
+          "bottom": "20",
+          "left": "10",
+          "isLinked": ""
+        }
+      },
+      "background_background": "classic",
+      "background_color": "#F0F7F4",
+      "flex_align_items": "center",
+      "flex_justify_content": "center",
+      "flex_wrap": "wrap",
+      "flex_gap": {
+        "size": 30,
+        "column": "30",
+        "row": "15",
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "928fb48",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "width_tablet": {
+            "unit": "%",
+            "size": 45,
+            "sizes": []
+          },
+          "width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          }
+        },
+        "elements": [
+          {
+            "id": "866ab95",
+            "elType": "widget",
+            "settings": {
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              },
+              "title_text": "Genuine Natural Crystals",
+              "description_text": "Hand-selected and verified authentic",
+              "text_align": "center",
+              "icon_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_bottom_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_typography_typography": "custom",
+              "scroll_y": -80,
+              "__globals__": {
+                "title_color": "globals/colors?id=4616873"
+              }
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "a51e844",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "width_tablet": {
+            "unit": "%",
+            "size": 45,
+            "sizes": []
+          },
+          "width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          }
+        },
+        "elements": [
+          {
+            "id": "17292a0",
+            "elType": "widget",
+            "settings": {
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              },
+              "title_text": "Sourcing With Context",
+              "description_text": "Origin and handling notes are reviewed wherever suppliers can provide them",
+              "text_align": "center",
+              "icon_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_bottom_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_typography_typography": "custom",
+              "scroll_y": -80,
+              "__globals__": {
+                "title_color": "globals/colors?id=4616873"
+              }
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "820f185",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "width_tablet": {
+            "unit": "%",
+            "size": 45,
+            "sizes": []
+          },
+          "width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          }
+        },
+        "elements": [
+          {
+            "id": "08104f7",
+            "elType": "widget",
+            "settings": {
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              },
+              "title_text": "Inspected & Guide Card Included",
+              "description_text": "Ready for your intention from day one",
+              "text_align": "center",
+              "icon_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_bottom_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_typography_typography": "custom",
+              "scroll_y": -80,
+              "__globals__": {
+                "title_color": "globals/colors?id=4616873"
+              }
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "a921a6f",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "width_tablet": {
+            "unit": "%",
+            "size": 45,
+            "sizes": []
+          },
+          "width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          }
+        },
+        "elements": [
+          {
+            "id": "52bd4db",
+            "elType": "widget",
+            "settings": {
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              },
+              "title_text": "30-Day Worry-Free Returns",
+              "description_text": "No questions asked",
+              "text_align": "center",
+              "icon_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_bottom_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_typography_typography": "custom",
+              "scroll_y": -80,
+              "__globals__": {
+                "title_color": "globals/colors?id=4616873"
+              }
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "28189ff",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "10",
+        "bottom": "80",
+        "left": "10",
+        "isLinked": "",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "50",
+          "right": "10",
+          "bottom": "50",
+          "left": "10",
+          "isLinked": ""
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "30",
+          "right": "5",
+          "bottom": "30",
+          "left": "5",
+          "isLinked": ""
+        }
+      },
+      "flex_gap": {
+        "size": 15,
+        "column": "15",
+        "row": "15",
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "2dd338a",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "scroll_y": -80
+        },
+        "elements": [
+          {
+            "id": "a5de58e",
+            "elType": "widget",
+            "settings": {
+              "title": "What Intention Fits Today?",
+              "align": "center",
+              "title_color": "#1A1A2E",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 36,
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "_element_width": "initial",
+              "_element_vertical_alignment": "",
+              "_padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "10",
+                "left": "0",
+                "isLinked": ""
+              },
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 27,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 22,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "df90140",
+            "elType": "widget",
+            "settings": {
+              "editor_content": "<p>Start with the feeling, habit, or reminder you want to carry</p>",
+              "align": "center",
+              "text_color": "#888888",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 18,
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "px",
+                "size": 26,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 16,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 15,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "6c387b6",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "flex_direction": "row",
+          "flex_wrap": "wrap",
+          "flex_gap": {
+            "size": 15,
+            "column": "15",
+            "row": "15",
+            "unit": "px"
+          }
+        },
+        "elements": [
+          {
+            "id": "553257a",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "a84e76b",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/home-intention-calm-v2.png",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Calm & Mindfulness",
+                  "description_text": "Build a simple ritual for steadier days",
+                  "link": {
+                    "url": "https://goearthward.com/calm-mindfulness/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "px",
+                    "size": 5,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "b5cb9e9",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "a828c2a",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/home-intention-love-v2.png",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Love & Relationships",
+                  "description_text": "Practice tenderness toward yourself and others",
+                  "link": {
+                    "url": "https://goearthward.com/love-relationships/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "px",
+                    "size": 5,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "0a3c31a",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "69cbf0e",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/home-intention-abundance-v2.png",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Abundance & Success",
+                  "description_text": "Set intentions around abundance and success",
+                  "link": {
+                    "url": "https://goearthward.com/abundance-success/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "px",
+                    "size": 5,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "27561a8",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "6c6dca1",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/home-intention-grounding-v2.png",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Protection & Clearing",
+                  "description_text": "Create a tangible cue for steadiness",
+                  "link": {
+                    "url": "https://goearthward.com/protection-clearing/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "px",
+                    "size": 5,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "abfb273",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "15605cb",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/home-intention-sleep-v2.png",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Spiritual Connection",
+                  "description_text": "Mark space for reflection and inner focus",
+                  "link": {
+                    "url": "https://goearthward.com/spiritual-connection/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "px",
+                    "size": 5,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "bda542e",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "62daebb",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/home-intention-focus-v2.png",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Health & Vitality",
+                  "description_text": "Choose a daily reminder for steadier energy",
+                  "link": {
+                    "url": "https://goearthward.com/health-vitality/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "px",
+                    "size": 5,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "33bc7ae",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "10",
+        "bottom": "80",
+        "left": "10",
+        "isLinked": "",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "50",
+          "right": "10",
+          "bottom": "50",
+          "left": "10",
+          "isLinked": ""
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "30",
+          "right": "5",
+          "bottom": "30",
+          "left": "5",
+          "isLinked": ""
+        }
+      },
+      "flex_gap": {
+        "size": 15,
+        "column": "15",
+        "row": "15",
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "ae8d7db",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "scroll_y": -80
+        },
+        "elements": [
+          {
+            "id": "8782058",
+            "elType": "widget",
+            "settings": {
+              "title": "Explore Crystal Jewelry",
+              "align": "center",
+              "title_color": "#1A1A2E",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 36,
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "_element_width": "initial",
+              "_element_vertical_alignment": "",
+              "_padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "10",
+                "left": "0",
+                "isLinked": ""
+              },
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 27,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 22,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "f247a6b",
+            "elType": "widget",
+            "settings": {
+              "editor_content": "<p>A simple starting point for browsing current Earthward pieces</p>",
+              "align": "center",
+              "text_color": "#888888",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 18,
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "px",
+                "size": 26,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 16,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 15,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "e3a6057",
+        "elType": "widget",
+        "settings": {
+          "title": "Crystal Jewelry",
+          "design": "simple",
+          "color": "#2D6A4F",
+          "tabs_items": [
+            {
+              "_id": "bd1e93e",
+              "image_size": "custom",
+              "title": "New",
+              "items_per_page": "8",
+              "pagination": "arrows",
+              "columns": {
+                "size": "4"
+              },
+              "orderby": "post__in"
+            },
+            {
+              "_id": "ff68ad4",
+              "image_size": "custom",
+              "title": "Featured",
+              "items_per_page": "8",
+              "pagination": "arrows",
+              "columns": {
+                "size": "4"
+              },
+              "orderby": "rand",
+              "query_type": "AND",
+              "order": "DESC"
+            }
+          ],
+          "scroll_y": -80,
+          "items_per_page": "8",
+          "pagination": "arrows",
+          "columns": {
+            "unit": "px",
+            "size": "4",
+            "sizes": []
+          }
+        },
+        "elements": [],
+        "widgetType": "wd_products_tabs"
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "b7c6b2a",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "row",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "10",
+        "bottom": "80",
+        "left": "10",
+        "isLinked": "",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "50",
+          "right": "10",
+          "bottom": "50",
+          "left": "10",
+          "isLinked": ""
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "30",
+          "right": "5",
+          "bottom": "30",
+          "left": "5",
+          "isLinked": ""
+        }
+      },
+      "background_background": "classic",
+      "background_color": "#F0F7F4",
+      "flex_align_items": "center",
+      "flex_gap": {
+        "size": 30,
+        "column": "30",
+        "row": "30",
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "f654cac",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "size": "45",
+            "unit": "%"
+          },
+          "width_tablet": {
+            "size": "100",
+            "unit": "%"
+          },
+          "flex_direction": "column"
+        },
+        "elements": [
+          {
+            "id": "a48e7ed",
+            "elType": "widget",
+            "settings": {
+              "image": {
+                "url": "https://goearthward.com/wp-content/uploads/2026/05/home-crystal-guide-entry-v2.png",
+                "id": 0,
+                "alt": "Crystal guide cards and pieces for choosing by intention",
+                "source": "library",
+                "size": ""
+              },
+              "image_size": "full",
+              "align": "center",
+              "width": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              },
+              "image_border_radius": {
+                "unit": "px",
+                "size": 12,
+                "sizes": []
+              },
+              "scroll_y": -80
+            },
+            "elements": [],
+            "widgetType": "image"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "12cd92f",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "size": "50",
+            "unit": "%"
+          },
+          "width_tablet": {
+            "size": "100",
+            "unit": "%"
+          },
+          "flex_direction": "column",
+          "flex_gap": {
+            "size": 15,
+            "column": "15",
+            "row": "15",
+            "unit": "px"
+          }
+        },
+        "elements": [
+          {
+            "id": "20285ee",
+            "elType": "widget",
+            "settings": {
+              "title": "Not Sure Where to Start?",
+              "align": "left",
+              "title_color": "#1A1A2E",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 36,
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "_element_width": "initial",
+              "_element_vertical_alignment": "",
+              "_padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "10",
+                "left": "0",
+                "isLinked": ""
+              },
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 27,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 22,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "e879367",
+            "elType": "widget",
+            "settings": {
+              "editor_content": "<p>Use the guide paths that are ready now: browse by intention, explore by stone, or read the crystal meaning index before choosing a piece.</p>",
+              "align": "left",
+              "text_color": "#444444",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 16,
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "px",
+                "size": 26,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 14,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 14,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "9f21c48",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "flex_direction": "row",
+              "flex_wrap": "wrap",
+              "flex_gap": {
+                "size": 10,
+                "column": "10",
+                "row": "10",
+                "unit": "px"
+              }
+            },
+            "elements": [
+              {
+                "id": "faffe1e",
+                "elType": "container",
+                "settings": {
+                  "content_width": "full",
+                  "scroll_y": -80,
+                  "width": {
+                    "unit": "%",
+                    "size": 47,
+                    "sizes": []
+                  },
+                  "width_mobile": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  }
+                },
+                "elements": [
+                  {
+                    "id": "e1e1025",
+                    "elType": "widget",
+                    "settings": {
+                      "selected_icon": {
+                        "value": "",
+                        "library": ""
+                      },
+                      "title_text": "Browse by Intention",
+                      "description_text": "Start with calm, love, abundance, protection, or spiritual focus",
+                      "text_align": "center",
+                      "icon_space": {
+                        "unit": "px",
+                        "size": 10,
+                        "sizes": []
+                      },
+                      "title_bottom_space": {
+                        "unit": "px",
+                        "size": 10,
+                        "sizes": []
+                      },
+                      "title_typography_typography": "custom",
+                      "scroll_y": -80,
+                      "__globals__": {
+                        "title_color": "globals/colors?id=4616873"
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "icon-box"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "be03a67",
+                "elType": "container",
+                "settings": {
+                  "content_width": "full",
+                  "scroll_y": -80,
+                  "width": {
+                    "unit": "%",
+                    "size": 47,
+                    "sizes": []
+                  },
+                  "width_mobile": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  }
+                },
+                "elements": [
+                  {
+                    "id": "79400cc",
+                    "elType": "widget",
+                    "settings": {
+                      "selected_icon": {
+                        "value": "",
+                        "library": ""
+                      },
+                      "title_text": "Shop by Stone",
+                      "description_text": "Choose directly from familiar crystals such as Amethyst or Rose Quartz",
+                      "text_align": "center",
+                      "icon_space": {
+                        "unit": "px",
+                        "size": 10,
+                        "sizes": []
+                      },
+                      "title_bottom_space": {
+                        "unit": "px",
+                        "size": 10,
+                        "sizes": []
+                      },
+                      "title_typography_typography": "custom",
+                      "scroll_y": -80,
+                      "__globals__": {
+                        "title_color": "globals/colors?id=4616873"
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "icon-box"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "5224f99",
+                "elType": "container",
+                "settings": {
+                  "content_width": "full",
+                  "scroll_y": -80,
+                  "width": {
+                    "unit": "%",
+                    "size": 47,
+                    "sizes": []
+                  },
+                  "width_mobile": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  }
+                },
+                "elements": [
+                  {
+                    "id": "203bd9c",
+                    "elType": "widget",
+                    "settings": {
+                      "selected_icon": {
+                        "value": "",
+                        "library": ""
+                      },
+                      "title_text": "Crystal Guide A-Z",
+                      "description_text": "Read traditional meanings before you buy",
+                      "text_align": "center",
+                      "icon_space": {
+                        "unit": "px",
+                        "size": 10,
+                        "sizes": []
+                      },
+                      "title_bottom_space": {
+                        "unit": "px",
+                        "size": 10,
+                        "sizes": []
+                      },
+                      "title_typography_typography": "custom",
+                      "scroll_y": -80,
+                      "__globals__": {
+                        "title_color": "globals/colors?id=4616873"
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "icon-box"
+                  }
+                ],
+                "isInner": true
+              },
+              {
+                "id": "cd543b1",
+                "elType": "container",
+                "settings": {
+                  "content_width": "full",
+                  "scroll_y": -80,
+                  "width": {
+                    "unit": "%",
+                    "size": 47,
+                    "sizes": []
+                  },
+                  "width_mobile": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  }
+                },
+                "elements": [
+                  {
+                    "id": "17848cc",
+                    "elType": "widget",
+                    "settings": {
+                      "selected_icon": {
+                        "value": "",
+                        "library": ""
+                      },
+                      "title_text": "Our Sourcing Approach",
+                      "description_text": "See how Earthward thinks about origin, care, and realistic expectations",
+                      "text_align": "center",
+                      "icon_space": {
+                        "unit": "px",
+                        "size": 10,
+                        "sizes": []
+                      },
+                      "title_bottom_space": {
+                        "unit": "px",
+                        "size": 10,
+                        "sizes": []
+                      },
+                      "title_typography_typography": "custom",
+                      "scroll_y": -80,
+                      "__globals__": {
+                        "title_color": "globals/colors?id=4616873"
+                      }
+                    },
+                    "elements": [],
+                    "widgetType": "icon-box"
+                  }
+                ],
+                "isInner": true
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "f2f17d4",
+            "elType": "widget",
+            "settings": {
+              "text": "EXPLORE THE GUIDE",
+              "link": {
+                "url": "/crystal-guide/",
+                "is_external": "",
+                "nofollow": "",
+                "custom_attributes": ""
+              },
+              "size": "lg",
+              "align": "left",
+              "scroll_y": -80,
+              "background_background": "classic",
+              "background_color": "#2D6A4F",
+              "text_color": "#FFFFFF",
+              "border_radius": {
+                "unit": "px",
+                "top": "4",
+                "right": "4",
+                "bottom": "4",
+                "left": "4",
+                "isLinked": true
+              },
+              "typography_typography": "custom",
+              "typography_font_weight": "700"
+            },
+            "elements": [],
+            "widgetType": "button"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "710ade7",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "10",
+        "bottom": "80",
+        "left": "10",
+        "isLinked": "",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "50",
+          "right": "10",
+          "bottom": "50",
+          "left": "10",
+          "isLinked": ""
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "30",
+          "right": "5",
+          "bottom": "30",
+          "left": "5",
+          "isLinked": ""
+        }
+      },
+      "flex_gap": {
+        "size": 15,
+        "column": "15",
+        "row": "15",
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "e800049",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "scroll_y": -80
+        },
+        "elements": [
+          {
+            "id": "b6e9ea2",
+            "elType": "widget",
+            "settings": {
+              "title": "Shop by Crystal",
+              "align": "center",
+              "title_color": "#1A1A2E",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 36,
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "_element_width": "initial",
+              "_element_vertical_alignment": "",
+              "_padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "10",
+                "left": "0",
+                "isLinked": ""
+              },
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 27,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 22,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "149d9c2",
+            "elType": "widget",
+            "settings": {
+              "editor_content": "<p>Explore 16 hand-selected gemstones, each with its own traditional meaning</p>",
+              "align": "center",
+              "text_color": "#888888",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 18,
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "px",
+                "size": 26,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 16,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 15,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "86fb734",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "flex_direction": "row",
+          "flex_wrap": "wrap",
+          "flex_gap": {
+            "size": 12,
+            "column": "12",
+            "row": "12",
+            "unit": "px"
+          }
+        },
+        "elements": [
+          {
+            "id": "932e3a3",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "60a6333",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2025/05/home-4.jpeg",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Amethyst",
+                  "description_text": "The Stone of Peace",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/amethyst-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "c5a4d92",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "c460106",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2025/05/home-2.jpeg",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Rose Quartz",
+                  "description_text": "The Stone of Love",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/rose-quartz-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "22e7abe",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "4ba80c9",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2025/05/home-3.jpeg",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Citrine",
+                  "description_text": "The Stone of Abundance",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/citrine-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "ed9823d",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "2222334",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2025/05/home-5.jpeg",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Black Tourmaline",
+                  "description_text": "The Shield Stone",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/black-tourmaline-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "66c6288",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "ca08f00",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/shared-hero-bracelet-v1.png",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Clear Quartz",
+                  "description_text": "The Clarity Stone",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/clear-quartz-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "0073046",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "564cd9f",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/crystal-guide-collection-v1.png",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Tiger Eye",
+                  "description_text": "The Stone of Courage",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/tiger-eye-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "4f83b4b",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "15f54e8",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/moon-calendar-ritual-v1.png",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Moonstone",
+                  "description_text": "The Stone of New Beginnings",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/rainbow-moonstone-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "0fe82de",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "b2596bd",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2025/05/home-5.jpeg",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Obsidian",
+                  "description_text": "The Mirror Stone",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/obsidian-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "fd227c9",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "b88c160",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2025/05/home-4.jpeg",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Lepidolite",
+                  "description_text": "The Stone of Transition",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/lepidolite-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "a6efce7",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "6520c84",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/moon-calendar-ritual-v1.png",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Selenite",
+                  "description_text": "The Stone of Clarity",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/selenite-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "ccabb55",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "c765d40",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2025/05/home-3.jpeg",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Green Aventurine",
+                  "description_text": "The Stone of Luck",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/aventurine-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "63c3648",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "ecfedfc",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/crystal-guide-collection-v1.png",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Fluorite",
+                  "description_text": "The Stone of Focus",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/rainbow-fluorite-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "4558339",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "ed61c6c",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/shared-hero-bracelet-v1.png",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Carnelian",
+                  "description_text": "The Stone of Motivation",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/carnelian-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "9d224ec",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "bd945c2",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2025/05/home-2.jpeg",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Rhodonite",
+                  "description_text": "The Stone of Compassion",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/rhodonite-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "9bad9c7",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "3e784c3",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/sourcing-studio-workbench-v1.png",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Malachite",
+                  "description_text": "The Stone of Transformation",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/malachite-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "cd21df7",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 22,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 47,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "ebe6509",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2025/05/home-5.jpeg",
+                    "id": 0,
+                    "size": "",
+                    "source": "library"
+                  },
+                  "title_text": "Hematite",
+                  "description_text": "The Grounding Stone",
+                  "link": {
+                    "url": "https://goearthward.com/crystals-stones/by-stone/hematite-crystals/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "image_size": {
+                    "unit": "%",
+                    "size": 100,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "%",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "hover_animation": "pulse-shrink",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "image-box"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "f4ac5d2",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "10",
+        "bottom": "80",
+        "left": "10",
+        "isLinked": "",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "50",
+          "right": "10",
+          "bottom": "50",
+          "left": "10",
+          "isLinked": ""
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "30",
+          "right": "5",
+          "bottom": "30",
+          "left": "5",
+          "isLinked": ""
+        }
+      },
+      "background_background": "classic",
+      "background_color": "#F0F7F4",
+      "flex_gap": {
+        "size": 15,
+        "column": "15",
+        "row": "15",
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "f35beae",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "scroll_y": -80
+        },
+        "elements": [
+          {
+            "id": "6cdbc13",
+            "elType": "widget",
+            "settings": {
+              "title": "Why Choose Earthward?",
+              "align": "center",
+              "title_color": "#1A1A2E",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 36,
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "_element_width": "initial",
+              "_element_vertical_alignment": "",
+              "_padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "10",
+                "left": "0",
+                "isLinked": ""
+              },
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 27,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 22,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "edadc5e",
+            "elType": "widget",
+            "settings": {
+              "editor_content": "<p>What sets a careful crystal experience apart from anonymous marketplace listings</p>",
+              "align": "center",
+              "text_color": "#888888",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 18,
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "px",
+                "size": 26,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 16,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 15,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "ae1ef7f",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "flex_direction": "row",
+          "flex_wrap": "wrap",
+          "flex_gap": {
+            "size": 15,
+            "column": "15",
+            "row": "15",
+            "unit": "px"
+          }
+        },
+        "elements": [
+          {
+            "id": "0ce0dee",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              },
+              "background_background": "classic",
+              "background_color": "#FFFFFF",
+              "border_border": "solid",
+              "border_width": {
+                "unit": "px",
+                "top": "1",
+                "right": "1",
+                "bottom": "1",
+                "left": "1",
+                "isLinked": true
+              },
+              "border_color": "#E0E0E0",
+              "border_radius": {
+                "unit": "px",
+                "top": "8",
+                "right": "8",
+                "bottom": "8",
+                "left": "8",
+                "isLinked": true
+              },
+              "padding": {
+                "unit": "px",
+                "top": "20",
+                "right": "15",
+                "bottom": "20",
+                "left": "15",
+                "isLinked": false
+              }
+            },
+            "elements": [
+              {
+                "id": "8c82372",
+                "elType": "widget",
+                "settings": {
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "title_text": "Genuine Natural Crystals",
+                  "description_text": "Unlike: Dyed or synthetic stones",
+                  "text_align": "center",
+                  "icon_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_typography_typography": "custom",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "icon-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "48ac241",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              },
+              "background_background": "classic",
+              "background_color": "#FFFFFF",
+              "border_border": "solid",
+              "border_width": {
+                "unit": "px",
+                "top": "1",
+                "right": "1",
+                "bottom": "1",
+                "left": "1",
+                "isLinked": true
+              },
+              "border_color": "#E0E0E0",
+              "border_radius": {
+                "unit": "px",
+                "top": "8",
+                "right": "8",
+                "bottom": "8",
+                "left": "8",
+                "isLinked": true
+              },
+              "padding": {
+                "unit": "px",
+                "top": "20",
+                "right": "15",
+                "bottom": "20",
+                "left": "15",
+                "isLinked": false
+              }
+            },
+            "elements": [
+              {
+                "id": "4fe3a59",
+                "elType": "widget",
+                "settings": {
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "title_text": "Prepared with care",
+                  "description_text": "Unlike: Shipped without any preparation",
+                  "text_align": "center",
+                  "icon_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_typography_typography": "custom",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "icon-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "4697cd5",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              },
+              "background_background": "classic",
+              "background_color": "#FFFFFF",
+              "border_border": "solid",
+              "border_width": {
+                "unit": "px",
+                "top": "1",
+                "right": "1",
+                "bottom": "1",
+                "left": "1",
+                "isLinked": true
+              },
+              "border_color": "#E0E0E0",
+              "border_radius": {
+                "unit": "px",
+                "top": "8",
+                "right": "8",
+                "bottom": "8",
+                "left": "8",
+                "isLinked": true
+              },
+              "padding": {
+                "unit": "px",
+                "top": "20",
+                "right": "15",
+                "bottom": "20",
+                "left": "15",
+                "isLinked": false
+              }
+            },
+            "elements": [
+              {
+                "id": "a7f8bb4",
+                "elType": "widget",
+                "settings": {
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "title_text": "Origin and handling notes where available",
+                  "description_text": "Unlike: Little sourcing context",
+                  "text_align": "center",
+                  "icon_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_typography_typography": "custom",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "icon-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "a0a860d",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              },
+              "background_background": "classic",
+              "background_color": "#FFFFFF",
+              "border_border": "solid",
+              "border_width": {
+                "unit": "px",
+                "top": "1",
+                "right": "1",
+                "bottom": "1",
+                "left": "1",
+                "isLinked": true
+              },
+              "border_color": "#E0E0E0",
+              "border_radius": {
+                "unit": "px",
+                "top": "8",
+                "right": "8",
+                "bottom": "8",
+                "left": "8",
+                "isLinked": true
+              },
+              "padding": {
+                "unit": "px",
+                "top": "20",
+                "right": "15",
+                "bottom": "20",
+                "left": "15",
+                "isLinked": false
+              }
+            },
+            "elements": [
+              {
+                "id": "8a900ed",
+                "elType": "widget",
+                "settings": {
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "title_text": "Intention guide card included",
+                  "description_text": "Unlike: No information provided",
+                  "text_align": "center",
+                  "icon_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_typography_typography": "custom",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "icon-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "8128f88",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              },
+              "background_background": "classic",
+              "background_color": "#FFFFFF",
+              "border_border": "solid",
+              "border_width": {
+                "unit": "px",
+                "top": "1",
+                "right": "1",
+                "bottom": "1",
+                "left": "1",
+                "isLinked": true
+              },
+              "border_color": "#E0E0E0",
+              "border_radius": {
+                "unit": "px",
+                "top": "8",
+                "right": "8",
+                "bottom": "8",
+                "left": "8",
+                "isLinked": true
+              },
+              "padding": {
+                "unit": "px",
+                "top": "20",
+                "right": "15",
+                "bottom": "20",
+                "left": "15",
+                "isLinked": false
+              }
+            },
+            "elements": [
+              {
+                "id": "6385b49",
+                "elType": "widget",
+                "settings": {
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "title_text": "Premium velvet pouch packaging",
+                  "description_text": "Unlike: Plastic bag packaging",
+                  "text_align": "center",
+                  "icon_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_typography_typography": "custom",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "icon-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "ce2ff7a",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              },
+              "background_background": "classic",
+              "background_color": "#FFFFFF",
+              "border_border": "solid",
+              "border_width": {
+                "unit": "px",
+                "top": "1",
+                "right": "1",
+                "bottom": "1",
+                "left": "1",
+                "isLinked": true
+              },
+              "border_color": "#E0E0E0",
+              "border_radius": {
+                "unit": "px",
+                "top": "8",
+                "right": "8",
+                "bottom": "8",
+                "left": "8",
+                "isLinked": true
+              },
+              "padding": {
+                "unit": "px",
+                "top": "20",
+                "right": "15",
+                "bottom": "20",
+                "left": "15",
+                "isLinked": false
+              }
+            },
+            "elements": [
+              {
+                "id": "9a6278f",
+                "elType": "widget",
+                "settings": {
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "title_text": "30-day worry-free returns",
+                  "description_text": "Unlike: No returns accepted",
+                  "text_align": "center",
+                  "icon_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_typography_typography": "custom",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "icon-box"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "caefdf2",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "row",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "10",
+        "bottom": "80",
+        "left": "10",
+        "isLinked": "",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "50",
+          "right": "10",
+          "bottom": "50",
+          "left": "10",
+          "isLinked": ""
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "30",
+          "right": "5",
+          "bottom": "30",
+          "left": "5",
+          "isLinked": ""
+        }
+      },
+      "flex_align_items": "center",
+      "flex_gap": {
+        "size": 40,
+        "column": "40",
+        "row": "40",
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "4685824",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "size": "45",
+            "unit": "%"
+          },
+          "width_tablet": {
+            "size": "100",
+            "unit": "%"
+          }
+        },
+        "elements": [
+          {
+            "id": "953c9d9",
+            "elType": "widget",
+            "settings": {
+              "image": {
+                "url": "https://goearthward.com/wp-content/uploads/2026/05/home-brand-story-workbench-v2.png",
+                "id": 0,
+                "alt": "Earthward crystal piece workbench with origin notes",
+                "source": "library",
+                "size": ""
+              },
+              "image_size": "full",
+              "align": "center",
+              "width": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              },
+              "image_border_radius": {
+                "unit": "px",
+                "size": 12,
+                "sizes": []
+              },
+              "scroll_y": -80
+            },
+            "elements": [],
+            "widgetType": "image"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "5c64ebe",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "size": "50",
+            "unit": "%"
+          },
+          "width_tablet": {
+            "size": "100",
+            "unit": "%"
+          },
+          "flex_direction": "column",
+          "flex_gap": {
+            "size": 10,
+            "column": "10",
+            "row": "10",
+            "unit": "px"
+          }
+        },
+        "elements": [
+          {
+            "id": "6533a96",
+            "elType": "widget",
+            "settings": {
+              "title": "Why Earthward?",
+              "align": "left",
+              "title_color": "#1A1A2E",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 32,
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "_element_width": "initial",
+              "_element_vertical_alignment": "",
+              "_padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "10",
+                "left": "0",
+                "isLinked": ""
+              },
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 24,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 19,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "5a091af",
+            "elType": "widget",
+            "settings": {
+              "editor_content": "<p>In a world of synthetic shortcuts, we chose a different direction: genuine stones, clear guidance, careful preparation, and realistic expectations. Earthward is not about promising outcomes. It is about giving you something real to hold while you practice intention.</p>",
+              "align": "left",
+              "text_color": "#444444",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 16,
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "px",
+                "size": 28,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 14,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 14,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "0030f86",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "flex_direction": "row",
+              "flex_gap": {
+                "size": 15,
+                "column": "15",
+                "row": "15",
+                "unit": "px"
+              }
+            },
+            "elements": [
+              {
+                "id": "9cb0354",
+                "elType": "widget",
+                "settings": {
+                  "text": "LEARN OUR STORY",
+                  "link": {
+                    "url": "/about-us/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "size": "md",
+                  "align": "left",
+                  "scroll_y": -80,
+                  "background_background": "classic",
+                  "background_color": "#2D6A4F",
+                  "text_color": "#FFFFFF",
+                  "border_radius": {
+                    "unit": "px",
+                    "top": "4",
+                    "right": "4",
+                    "bottom": "4",
+                    "left": "4",
+                    "isLinked": true
+                  },
+                  "typography_typography": "custom",
+                  "typography_font_weight": "700"
+                },
+                "elements": [],
+                "widgetType": "button"
+              },
+              {
+                "id": "a94680d",
+                "elType": "widget",
+                "settings": {
+                  "text": "CONTACT US",
+                  "link": {
+                    "url": "/contact-us/",
+                    "is_external": "",
+                    "nofollow": "",
+                    "custom_attributes": ""
+                  },
+                  "size": "md",
+                  "align": "left",
+                  "scroll_y": -80
+                },
+                "elements": [],
+                "widgetType": "button"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "da37212",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "70",
+        "right": "10",
+        "bottom": "70",
+        "left": "10",
+        "isLinked": "",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "50",
+          "right": "10",
+          "bottom": "50",
+          "left": "10",
+          "isLinked": ""
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "30",
+          "right": "10",
+          "bottom": "30",
+          "left": "10",
+          "isLinked": ""
+        }
+      },
+      "background_background": "classic",
+      "background_color": "#F8F8F8"
+    },
+    "elements": [
+      {
+        "id": "0cf14d3",
+        "elType": "widget",
+        "settings": {
+          "title": "How People Use Their Crystals",
+          "align": "center",
+          "title_color": "#1A1A2E",
+          "typography_typography": "custom",
+          "typography_font_size": {
+            "unit": "px",
+            "size": 36,
+            "sizes": []
+          },
+          "typography_font_weight": "700",
+          "_element_width": "initial",
+          "_element_vertical_alignment": "",
+          "_padding": {
+            "unit": "px",
+            "top": "0",
+            "right": "0",
+            "bottom": "10",
+            "left": "0",
+            "isLinked": ""
+          },
+          "scroll_y": -80,
+          "typography_font_size_tablet": {
+            "unit": "px",
+            "size": 27,
+            "sizes": []
+          },
+          "typography_font_size_mobile": {
+            "unit": "px",
+            "size": 22,
+            "sizes": []
+          }
+        },
+        "elements": [],
+        "widgetType": "heading"
+      },
+      {
+        "id": "2de08dd",
+        "elType": "widget",
+        "settings": {
+          "editor_content": "<p>Real moments where a crystal piece became part of everyday intention</p>",
+          "align": "center",
+          "text_color": "#888888",
+          "typography_typography": "custom",
+          "typography_font_size": {
+            "unit": "px",
+            "size": 16,
+            "sizes": []
+          },
+          "typography_line_height": {
+            "unit": "px",
+            "size": 26,
+            "sizes": []
+          },
+          "_element_width": "initial",
+          "scroll_y": -80,
+          "typography_font_size_tablet": {
+            "unit": "px",
+            "size": 14,
+            "sizes": []
+          },
+          "typography_font_size_mobile": {
+            "unit": "px",
+            "size": 14,
+            "sizes": []
+          }
+        },
+        "elements": [],
+        "widgetType": "text-editor"
+      },
+      {
+        "id": "fc7f57b",
+        "elType": "widget",
+        "settings": {
+          "spacer": 20
+        },
+        "elements": [],
+        "widgetType": "spacer"
+      },
+      {
+        "id": "4edb8d0",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "flex_direction": "row",
+          "flex_wrap": "wrap",
+          "flex_gap": {
+            "size": 20,
+            "column": "20",
+            "row": "20",
+            "unit": "px"
+          }
+        },
+        "elements": [
+          {
+            "id": "731351d",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "d413440",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/home-usecase-calm-evening-v2.png",
+                    "id": 0,
+                    "alt": "Amethyst piece as an evening wind-down cue",
+                    "source": "library",
+                    "size": ""
+                  },
+                  "image_size": "full",
+                  "align": "center",
+                  "width": {
+                    "unit": "%",
+                    "size": 60,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "px",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "scroll_y": -80
+                },
+                "elements": [],
+                "widgetType": "image"
+              },
+              {
+                "id": "4f9cb2c",
+                "elType": "widget",
+                "settings": {
+                  "title": "For Calm Evenings",
+                  "align": "center",
+                  "title_color": "#1A1A2E",
+                  "typography_typography": "custom",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": 18,
+                    "sizes": []
+                  },
+                  "typography_font_weight": "700",
+                  "_element_width": "initial",
+                  "_element_vertical_alignment": "",
+                  "_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "10",
+                    "left": "0",
+                    "isLinked": ""
+                  },
+                  "scroll_y": -80,
+                  "typography_font_size_tablet": {
+                    "unit": "px",
+                    "size": 14,
+                    "sizes": []
+                  },
+                  "typography_font_size_mobile": {
+                    "unit": "px",
+                    "size": 11,
+                    "sizes": []
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "d2baea9",
+                "elType": "widget",
+                "settings": {
+                  "editor_content": "<p>A common Amethyst ritual is to keep a piece on a nightstand and touch it before bed as a reminder to let the day settle.</p>",
+                  "align": "center",
+                  "text_color": "#666666",
+                  "typography_typography": "custom",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": 14,
+                    "sizes": []
+                  },
+                  "typography_line_height": {
+                    "unit": "px",
+                    "size": 26,
+                    "sizes": []
+                  },
+                  "_element_width": "initial",
+                  "scroll_y": -80,
+                  "typography_font_size_tablet": {
+                    "unit": "px",
+                    "size": 14,
+                    "sizes": []
+                  },
+                  "typography_font_size_mobile": {
+                    "unit": "px",
+                    "size": 13,
+                    "sizes": []
+                  },
+                  "_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "10",
+                    "bottom": "0",
+                    "left": "10",
+                    "isLinked": ""
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "0f50f95",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "eb26b69",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/home-usecase-workday-grounding-v2.png",
+                    "id": 0,
+                    "alt": "Black tourmaline piece as a workday grounding cue",
+                    "source": "library",
+                    "size": ""
+                  },
+                  "image_size": "full",
+                  "align": "center",
+                  "width": {
+                    "unit": "%",
+                    "size": 60,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "px",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "scroll_y": -80
+                },
+                "elements": [],
+                "widgetType": "image"
+              },
+              {
+                "id": "72607dd",
+                "elType": "widget",
+                "settings": {
+                  "title": "For Stressful Workdays",
+                  "align": "center",
+                  "title_color": "#1A1A2E",
+                  "typography_typography": "custom",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": 18,
+                    "sizes": []
+                  },
+                  "typography_font_weight": "700",
+                  "_element_width": "initial",
+                  "_element_vertical_alignment": "",
+                  "_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "10",
+                    "left": "0",
+                    "isLinked": ""
+                  },
+                  "scroll_y": -80,
+                  "typography_font_size_tablet": {
+                    "unit": "px",
+                    "size": 14,
+                    "sizes": []
+                  },
+                  "typography_font_size_mobile": {
+                    "unit": "px",
+                    "size": 11,
+                    "sizes": []
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "32f0414",
+                "elType": "widget",
+                "settings": {
+                  "editor_content": "<p>Black Tourmaline is often chosen as a workday grounding cue: a small physical reminder to pause, breathe, and reset.</p>",
+                  "align": "center",
+                  "text_color": "#666666",
+                  "typography_typography": "custom",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": 14,
+                    "sizes": []
+                  },
+                  "typography_line_height": {
+                    "unit": "px",
+                    "size": 26,
+                    "sizes": []
+                  },
+                  "_element_width": "initial",
+                  "scroll_y": -80,
+                  "typography_font_size_tablet": {
+                    "unit": "px",
+                    "size": 14,
+                    "sizes": []
+                  },
+                  "typography_font_size_mobile": {
+                    "unit": "px",
+                    "size": 13,
+                    "sizes": []
+                  },
+                  "_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "10",
+                    "bottom": "0",
+                    "left": "10",
+                    "isLinked": ""
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "0314642",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "1c1f7a4",
+                "elType": "widget",
+                "settings": {
+                  "image": {
+                    "url": "https://goearthward.com/wp-content/uploads/2026/05/home-usecase-self-compassion-v2.png",
+                    "id": 0,
+                    "alt": "Rose quartz piece as a self-compassion reminder",
+                    "source": "library",
+                    "size": ""
+                  },
+                  "image_size": "full",
+                  "align": "center",
+                  "width": {
+                    "unit": "%",
+                    "size": 60,
+                    "sizes": []
+                  },
+                  "image_border_radius": {
+                    "unit": "px",
+                    "size": 50,
+                    "sizes": []
+                  },
+                  "scroll_y": -80
+                },
+                "elements": [],
+                "widgetType": "image"
+              },
+              {
+                "id": "da62899",
+                "elType": "widget",
+                "settings": {
+                  "title": "For Self-Compassion",
+                  "align": "center",
+                  "title_color": "#1A1A2E",
+                  "typography_typography": "custom",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": 18,
+                    "sizes": []
+                  },
+                  "typography_font_weight": "700",
+                  "_element_width": "initial",
+                  "_element_vertical_alignment": "",
+                  "_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "0",
+                    "bottom": "10",
+                    "left": "0",
+                    "isLinked": ""
+                  },
+                  "scroll_y": -80,
+                  "typography_font_size_tablet": {
+                    "unit": "px",
+                    "size": 14,
+                    "sizes": []
+                  },
+                  "typography_font_size_mobile": {
+                    "unit": "px",
+                    "size": 11,
+                    "sizes": []
+                  }
+                },
+                "elements": [],
+                "widgetType": "heading"
+              },
+              {
+                "id": "cd8b281",
+                "elType": "widget",
+                "settings": {
+                  "editor_content": "<p>Rose Quartz is a popular choice for people navigating transitions. Carrying it can serve as a gentle daily prompt to be kinder to yourself.</p>",
+                  "align": "center",
+                  "text_color": "#666666",
+                  "typography_typography": "custom",
+                  "typography_font_size": {
+                    "unit": "px",
+                    "size": 14,
+                    "sizes": []
+                  },
+                  "typography_line_height": {
+                    "unit": "px",
+                    "size": 26,
+                    "sizes": []
+                  },
+                  "_element_width": "initial",
+                  "scroll_y": -80,
+                  "typography_font_size_tablet": {
+                    "unit": "px",
+                    "size": 14,
+                    "sizes": []
+                  },
+                  "typography_font_size_mobile": {
+                    "unit": "px",
+                    "size": 13,
+                    "sizes": []
+                  },
+                  "_padding": {
+                    "unit": "px",
+                    "top": "0",
+                    "right": "10",
+                    "bottom": "0",
+                    "left": "10",
+                    "isLinked": ""
+                  }
+                },
+                "elements": [],
+                "widgetType": "text-editor"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "bf7d844",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "10",
+        "bottom": "80",
+        "left": "10",
+        "isLinked": "",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "50",
+          "right": "10",
+          "bottom": "50",
+          "left": "10",
+          "isLinked": ""
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "30",
+          "right": "5",
+          "bottom": "30",
+          "left": "5",
+          "isLinked": ""
+        }
+      },
+      "flex_gap": {
+        "size": 15,
+        "column": "15",
+        "row": "15",
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "ac6abd7",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "scroll_y": -80
+        },
+        "elements": [
+          {
+            "id": "0093912",
+            "elType": "widget",
+            "settings": {
+              "title": "Common Questions",
+              "align": "center",
+              "title_color": "#1A1A2E",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 36,
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "_element_width": "initial",
+              "_element_vertical_alignment": "",
+              "_padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "10",
+                "left": "0",
+                "isLinked": ""
+              },
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 27,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 22,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "10f3639",
+            "elType": "widget",
+            "settings": {
+              "editor_content": "<p>Everything you need to know about our crystals</p>",
+              "align": "center",
+              "text_color": "#888888",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 18,
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "px",
+                "size": 26,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 16,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 15,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "da46d07",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "scroll_y": -80
+        },
+        "elements": [
+          {
+            "id": "da7c0cc",
+            "elType": "widget",
+            "settings": {
+              "tabs": [
+                {
+                  "_id": "2525a2a",
+                  "tab_title": "Are your crystals real?",
+                  "tab_content": "<p>Every crystal piece is selected as a genuine natural stone and visually inspected for authenticity before it reaches you. During inspection we look for natural formation and set aside any stone that shows signs of dye or synthetic treatment.</p>"
+                },
+                {
+                  "_id": "c7c5f27",
+                  "tab_title": "How are crystals prepared before shipping?",
+                  "tab_content": "<p>Every piece is physically cleaned, inspected, and packed with simple guidance for setting your own intention. As a low-key preparation step, we rest stones on selenite and handle them with care before they ship.</p>"
+                },
+                {
+                  "_id": "11f3f1e",
+                  "tab_title": "Do crystals actually work?",
+                  "tab_content": "<p>Crystals are not medical tools and cannot promise a specific result. Many people use them as tactile reminders for intentions such as calm, love, or focus, similar to how a journal, ring, or ritual object can support a mindfulness practice.</p>"
+                },
+                {
+                  "_id": "6142076",
+                  "tab_title": "What's included in my order?",
+                  "tab_content": "<p>Every order includes your crystal piece in a premium velvet pouch, an intention guide card with traditional meaning and care notes, and practical instructions for wearing and storing it. Orders over $75 receive free shipping.</p>"
+                },
+                {
+                  "_id": "a66383a",
+                  "tab_title": "How do I choose the right crystal?",
+                  "tab_content": "<p>Start with your current intention, then browse by stone or read the crystal guide before choosing a piece. The goal is not to find a perfect answer, but to choose a piece whose meaning feels useful in your daily life.</p>"
+                },
+                {
+                  "_id": "45baeb0",
+                  "tab_title": "What's your return policy?",
+                  "tab_content": "<p>We offer a 30-day worry-free return policy. If your crystal doesn't feel like the right match, simply send it back within 30 days for a full refund — no questions asked.</p>"
+                }
+              ],
+              "scroll_y": -80
+            },
+            "elements": [],
+            "widgetType": "accordion"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "2f97767",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "10",
+        "bottom": "80",
+        "left": "10",
+        "isLinked": "",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "50",
+          "right": "10",
+          "bottom": "50",
+          "left": "10",
+          "isLinked": ""
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "30",
+          "right": "5",
+          "bottom": "30",
+          "left": "5",
+          "isLinked": ""
+        }
+      },
+      "background_background": "classic",
+      "background_color": "#F0F7F4",
+      "flex_gap": {
+        "size": 15,
+        "column": "15",
+        "row": "15",
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "c4d2227",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "scroll_y": -80
+        },
+        "elements": [
+          {
+            "id": "87fe4fc",
+            "elType": "widget",
+            "settings": {
+              "title": "Start With Crystal Meanings",
+              "align": "center",
+              "title_color": "#1A1A2E",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 36,
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "_element_width": "initial",
+              "_element_vertical_alignment": "",
+              "_padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "10",
+                "left": "0",
+                "isLinked": ""
+              },
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 27,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 22,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "78123e8",
+            "elType": "widget",
+            "settings": {
+              "editor_content": "<p>Our guide is being built around clear mineral facts, traditional meanings, and everyday intention practices.</p>",
+              "align": "center",
+              "text_color": "#888888",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 18,
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "px",
+                "size": 26,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 16,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 15,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "aacc356",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "flex_direction": "row",
+          "flex_wrap": "wrap",
+          "flex_gap": {
+            "size": 15,
+            "column": "15",
+            "row": "15",
+            "unit": "px"
+          }
+        },
+        "elements": [
+          {
+            "id": "78eea0c",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "de7caac",
+                "elType": "widget",
+                "settings": {
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "title_text": "Mineral Facts",
+                  "description_text": "Simple identifiers such as color, hardness, formation, and care notes",
+                  "text_align": "center",
+                  "icon_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_typography_typography": "custom",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "icon-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "6226eaf",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "664bd58",
+                "elType": "widget",
+                "settings": {
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "title_text": "Traditional Meaning",
+                  "description_text": "How each crystal has commonly been associated with intention and ritual",
+                  "text_align": "center",
+                  "icon_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_typography_typography": "custom",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "icon-box"
+              }
+            ],
+            "isInner": true
+          },
+          {
+            "id": "da4e82f",
+            "elType": "container",
+            "settings": {
+              "content_width": "full",
+              "scroll_y": -80,
+              "width": {
+                "unit": "%",
+                "size": 30,
+                "sizes": []
+              },
+              "width_tablet": {
+                "unit": "%",
+                "size": 45,
+                "sizes": []
+              },
+              "width_mobile": {
+                "unit": "%",
+                "size": 100,
+                "sizes": []
+              }
+            },
+            "elements": [
+              {
+                "id": "c4eae98",
+                "elType": "widget",
+                "settings": {
+                  "selected_icon": {
+                    "value": "",
+                    "library": ""
+                  },
+                  "title_text": "Everyday Use",
+                  "description_text": "Practical ways to wear, store, cleanse, and pair your crystal piece",
+                  "text_align": "center",
+                  "icon_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_bottom_space": {
+                    "unit": "px",
+                    "size": 10,
+                    "sizes": []
+                  },
+                  "title_typography_typography": "custom",
+                  "scroll_y": -80,
+                  "__globals__": {
+                    "title_color": "globals/colors?id=4616873"
+                  }
+                },
+                "elements": [],
+                "widgetType": "icon-box"
+              }
+            ],
+            "isInner": true
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "5b85bd7",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "scroll_y": -80
+        },
+        "elements": [
+          {
+            "id": "4e13f47",
+            "elType": "widget",
+            "settings": {
+              "text": "EXPLORE CRYSTAL GUIDE",
+              "link": {
+                "url": "/crystal-guide/",
+                "is_external": "",
+                "nofollow": "",
+                "custom_attributes": ""
+              },
+              "size": "md",
+              "align": "center",
+              "scroll_y": -80,
+              "background_background": "classic",
+              "background_color": "#2D6A4F",
+              "text_color": "#FFFFFF",
+              "border_radius": {
+                "unit": "px",
+                "top": "4",
+                "right": "4",
+                "bottom": "4",
+                "left": "4",
+                "isLinked": true
+              },
+              "typography_typography": "custom",
+              "typography_font_weight": "700"
+            },
+            "elements": [],
+            "widgetType": "button"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "67d8323",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "80",
+        "right": "10",
+        "bottom": "80",
+        "left": "10",
+        "isLinked": "",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "50",
+          "right": "10",
+          "bottom": "50",
+          "left": "10",
+          "isLinked": ""
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "30",
+          "right": "10",
+          "bottom": "30",
+          "left": "10",
+          "isLinked": ""
+        }
+      },
+      "background_background": "classic",
+      "background_image": {
+        "url": "https://goearthward.com/wp-content/uploads/2026/05/home-launch-cta-crystal-bracelets-v2.png",
+        "id": 0,
+        "size": "",
+        "alt": "Natural crystal pieces and guide cards for choosing an Earthward piece",
+        "source": "library"
+      },
+      "background_repeat": "no-repeat",
+      "background_size": "cover",
+      "background_overlay_background": "classic",
+      "background_overlay_color": "#000000",
+      "background_overlay_opacity": {
+        "unit": "px",
+        "size": 0.7,
+        "sizes": []
+      }
+    },
+    "elements": [
+      {
+        "id": "6511e87",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "scroll_y": -80
+        },
+        "elements": [
+          {
+            "id": "4c85267",
+            "elType": "widget",
+            "settings": {
+              "title": "Choose Something Real to Carry",
+              "align": "center",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 32,
+                "sizes": []
+              },
+              "typography_font_weight": "700",
+              "_element_width": "initial",
+              "_element_vertical_alignment": "",
+              "_padding": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "10",
+                "left": "0",
+                "isLinked": ""
+              },
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 24,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 19,
+                "sizes": []
+              }
+            },
+            "elements": [],
+            "widgetType": "heading"
+          },
+          {
+            "id": "45be804",
+            "elType": "widget",
+            "settings": {
+              "editor_content": "<p>Begin with a stone, an intention, or the guide path that helps you make a grounded choice.</p>",
+              "align": "center",
+              "text_color": "#CCCCCC",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 16,
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "px",
+                "size": 26,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "scroll_y": -80,
+              "typography_font_size_tablet": {
+                "unit": "px",
+                "size": 14,
+                "sizes": []
+              },
+              "typography_font_size_mobile": {
+                "unit": "px",
+                "size": 14,
+                "sizes": []
+              },
+              "_margin": {
+                "unit": "px",
+                "top": "0",
+                "right": "0",
+                "bottom": "30",
+                "left": "0",
+                "isLinked": ""
+              }
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          },
+          {
+            "id": "1928682",
+            "elType": "widget",
+            "settings": {
+              "text": "EXPLORE CRYSTAL GUIDE",
+              "link": {
+                "url": "/crystal-guide/",
+                "is_external": "",
+                "nofollow": "",
+                "custom_attributes": ""
+              },
+              "size": "md",
+              "align": "center",
+              "scroll_y": -80,
+              "background_background": "classic",
+              "background_color": "#2D6A4F",
+              "text_color": "#FFFFFF",
+              "border_radius": {
+                "unit": "px",
+                "top": "4",
+                "right": "4",
+                "bottom": "4",
+                "left": "4",
+                "isLinked": true
+              },
+              "typography_typography": "custom",
+              "typography_font_weight": "700"
+            },
+            "elements": [],
+            "widgetType": "button"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "34e67e5",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "column",
+      "padding": {
+        "unit": "px",
+        "top": "40",
+        "right": "10",
+        "bottom": "40",
+        "left": "10",
+        "isLinked": "",
+        "padding_mobile": {
+          "unit": "px",
+          "top": "20",
+          "right": "10",
+          "bottom": "20",
+          "left": "10",
+          "isLinked": ""
+        }
+      },
+      "flex_gap": {
+        "size": 5,
+        "column": "5",
+        "row": "5",
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "85de34f",
+        "elType": "container",
+        "settings": {
+          "content_width": "boxed",
+          "scroll_y": -80
+        },
+        "elements": [
+          {
+            "id": "9e90713",
+            "elType": "widget",
+            "settings": {
+              "editor_content": "<p>Earthward offers crystal jewelry and natural stones — including amethyst, rose quartz, citrine, black tourmaline, and clear quartz — alongside handcrafted copper pieces. Each piece is selected with care, paired with practical guidance, and designed for everyday intention. Whether you are choosing a stone for calm, love, abundance, grounding, or personal reflection, start by browsing by intention, exploring the crystal guide, or reading how Earthward approaches sourcing and care.</p>",
+              "align": "left",
+              "text_color": "#999999",
+              "typography_typography": "custom",
+              "typography_font_size": {
+                "unit": "px",
+                "size": 13,
+                "sizes": []
+              },
+              "typography_line_height": {
+                "unit": "px",
+                "size": 22,
+                "sizes": []
+              },
+              "_element_width": "initial",
+              "scroll_y": -80
+            },
+            "elements": [],
+            "widgetType": "text-editor"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  },
+  {
+    "id": "5087d61",
+    "elType": "container",
+    "settings": {
+      "wd_section_stretch": "stretch",
+      "scroll_y": -80,
+      "flex_direction": "row",
+      "padding": {
+        "unit": "px",
+        "top": "60",
+        "right": "10",
+        "bottom": "60",
+        "left": "10",
+        "isLinked": "",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "40",
+          "right": "10",
+          "bottom": "40",
+          "left": "10",
+          "isLinked": ""
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "20",
+          "right": "5",
+          "bottom": "20",
+          "left": "5",
+          "isLinked": ""
+        }
+      },
+      "background_background": "classic",
+      "background_color": "#F0F7F4",
+      "flex_align_items": "stretch",
+      "flex_wrap": "wrap",
+      "flex_gap": {
+        "size": 10,
+        "column": "10",
+        "row": "10",
+        "unit": "px"
+      }
+    },
+    "elements": [
+      {
+        "id": "2107fe0",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "width_tablet": {
+            "unit": "%",
+            "size": 45,
+            "sizes": []
+          },
+          "width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "padding": {
+            "unit": "px",
+            "top": "15",
+            "right": "10",
+            "bottom": "15",
+            "left": "10",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "10492d4",
+            "elType": "widget",
+            "settings": {
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              },
+              "title_text": "Genuine Crystals",
+              "description_text": "Every stone is hand-selected and verified authentic",
+              "text_align": "center",
+              "icon_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_bottom_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_typography_typography": "custom",
+              "scroll_y": -80,
+              "__globals__": {
+                "title_color": "globals/colors?id=4616873"
+              }
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "ff33626",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "width_tablet": {
+            "unit": "%",
+            "size": 45,
+            "sizes": []
+          },
+          "width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "padding": {
+            "unit": "px",
+            "top": "15",
+            "right": "10",
+            "bottom": "15",
+            "left": "10",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "e82e4db",
+            "elType": "widget",
+            "settings": {
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              },
+              "title_text": "Prepared With Care",
+              "description_text": "Physically cleaned, inspected, and paired with an intention guide",
+              "text_align": "center",
+              "icon_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_bottom_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_typography_typography": "custom",
+              "scroll_y": -80,
+              "__globals__": {
+                "title_color": "globals/colors?id=4616873"
+              }
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "862ad23",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "width_tablet": {
+            "unit": "%",
+            "size": 45,
+            "sizes": []
+          },
+          "width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "padding": {
+            "unit": "px",
+            "top": "15",
+            "right": "10",
+            "bottom": "15",
+            "left": "10",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "64d3a0e",
+            "elType": "widget",
+            "settings": {
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              },
+              "title_text": "Responsible Sourcing",
+              "description_text": "We ask suppliers clear questions about origin, handling, and labor context",
+              "text_align": "center",
+              "icon_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_bottom_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_typography_typography": "custom",
+              "scroll_y": -80,
+              "__globals__": {
+                "title_color": "globals/colors?id=4616873"
+              }
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "dca4a12",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "width_tablet": {
+            "unit": "%",
+            "size": 45,
+            "sizes": []
+          },
+          "width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "padding": {
+            "unit": "px",
+            "top": "15",
+            "right": "10",
+            "bottom": "15",
+            "left": "10",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "c925e05",
+            "elType": "widget",
+            "settings": {
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              },
+              "title_text": "Free Shipping $75+",
+              "description_text": "Fast, tracked delivery on all US orders over $75",
+              "text_align": "center",
+              "icon_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_bottom_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_typography_typography": "custom",
+              "scroll_y": -80,
+              "__globals__": {
+                "title_color": "globals/colors?id=4616873"
+              }
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "092230d",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "width_tablet": {
+            "unit": "%",
+            "size": 45,
+            "sizes": []
+          },
+          "width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "padding": {
+            "unit": "px",
+            "top": "15",
+            "right": "10",
+            "bottom": "15",
+            "left": "10",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "bc0ce95",
+            "elType": "widget",
+            "settings": {
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              },
+              "title_text": "30-Day Returns",
+              "description_text": "Not the right fit? Return within 30 days",
+              "text_align": "center",
+              "icon_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_bottom_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_typography_typography": "custom",
+              "scroll_y": -80,
+              "__globals__": {
+                "title_color": "globals/colors?id=4616873"
+              }
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          }
+        ],
+        "isInner": true
+      },
+      {
+        "id": "ca44c0a",
+        "elType": "container",
+        "settings": {
+          "content_width": "full",
+          "scroll_y": -80,
+          "width": {
+            "unit": "%",
+            "size": 23,
+            "sizes": []
+          },
+          "width_tablet": {
+            "unit": "%",
+            "size": 45,
+            "sizes": []
+          },
+          "width_mobile": {
+            "unit": "%",
+            "size": 100,
+            "sizes": []
+          },
+          "padding": {
+            "unit": "px",
+            "top": "15",
+            "right": "10",
+            "bottom": "15",
+            "left": "10",
+            "isLinked": false
+          }
+        },
+        "elements": [
+          {
+            "id": "9649aa4",
+            "elType": "widget",
+            "settings": {
+              "selected_icon": {
+                "value": "",
+                "library": ""
+              },
+              "title_text": "Eco-Friendly Packaging",
+              "description_text": "Recyclable materials, velvet pouch included",
+              "text_align": "center",
+              "icon_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_bottom_space": {
+                "unit": "px",
+                "size": 10,
+                "sizes": []
+              },
+              "title_typography_typography": "custom",
+              "scroll_y": -80,
+              "__globals__": {
+                "title_color": "globals/colors?id=4616873"
+              }
+            },
+            "elements": [],
+            "widgetType": "icon-box"
+          }
+        ],
+        "isInner": true
+      }
+    ],
+    "isInner": false
+  }
+]

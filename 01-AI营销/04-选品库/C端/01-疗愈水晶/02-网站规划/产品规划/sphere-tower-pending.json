@@ -1,0 +1,12 @@
+{
+  "note": "sphere/tower 6组价格差异大，用户选【都保留去重命名】。批量优化 name+slug 时，同名两个加区分后缀（按价格/规格判断：基础版 vs 含tripod套装版）",
+  "groups": [
+    {"name": "Lepidolite Sphere with Tripod", "ids": [24174, 24029], "diff": "24174 $58 img3 desc781 | 24029 $98 img12 desc1926"},
+    {"name": "Labradorite Blue Flame Sphere with Tripod", "ids": [21465, 24068], "diff": "21465 $138 crystal-flames img5 | 24068 $128 crystal-spheres img12"},
+    {"name": "Grounded & Anxiety Free Gemstone Tower", "ids": [22139, 22145], "diff": "22139 $68 | 22145 $265 (4x)"},
+    {"name": "EMF Protection Tower", "ids": [21833, 21825], "diff": "21833 $68 | 21825 $295 (4x)"},
+    {"name": "Serene & Stress Free Tower", "ids": [21153, 21158], "diff": "21153 $68 | 21158 $295 (4x)"},
+    {"name": "Prosperity & Success Tower", "ids": [20882, 20748], "diff": "20882 $68 | 20748 $265 (4x)"}
+  ],
+  "action": "批量优化时拉每组详情(描述/规格/图片)判断区分后缀，如 -with-tripod / -deluxe-set / -basic，或按实际套装内容命名"
+}

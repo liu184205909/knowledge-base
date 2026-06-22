@@ -162,6 +162,7 @@ function heading(title, opts) {
   const fs = o.fontSize || 32;
   const settings = {
     title: title,
+    header_size: o.headerSize || 'h2',
     align: o.align || 'center',
     title_color: o.color || '#333333',
     typography_typography: 'custom',
@@ -173,8 +174,8 @@ function heading(title, opts) {
     scroll_y: -80
   };
   if (o.responsive !== false) {
-    settings.typography_font_size_tablet = { unit: 'px', size: Math.round(fs * 0.75), sizes: [] };
-    settings.typography_font_size_mobile = { unit: 'px', size: Math.round(fs * 0.6), sizes: [] };
+    settings.typography_font_size_tablet = { unit: 'px', size: Math.max(16, Math.round(fs * 0.75)), sizes: [] };
+    settings.typography_font_size_mobile = { unit: 'px', size: Math.max(16, Math.round(fs * 0.6)), sizes: [] };
   }
   return {
     id: uid(),
@@ -204,8 +205,8 @@ function textEditor(content, opts) {
     scroll_y: -80
   };
   if (o.responsive !== false) {
-    settings.typography_font_size_tablet = { unit: 'px', size: Math.max(14, Math.round(fs * 0.9)), sizes: [] };
-    settings.typography_font_size_mobile = { unit: 'px', size: Math.max(13, Math.round(fs * 0.85)), sizes: [] };
+    settings.typography_font_size_tablet = { unit: 'px', size: Math.max(16, Math.round(fs * 0.9)), sizes: [] };
+    settings.typography_font_size_mobile = { unit: 'px', size: Math.max(16, Math.round(fs * 0.85)), sizes: [] };
   }
   return {
     id: uid(),
@@ -229,7 +230,7 @@ function imageWidget(url, opts) {
       image_size: o.imageSize || 'full',
       align: o.align || 'center',
       width: o.width ? { unit: '%', size: o.width, sizes: [] } : { unit: '%', size: 100, sizes: [] },
-      image_border_radius: o.radius ? { unit: 'px', size: o.radius, sizes: [] } : { unit: 'px', size: 5, sizes: [] },
+      image_border_radius: o.radius ? { unit: o.radiusUnit || 'px', size: o.radius, sizes: [] } : { unit: 'px', size: 5, sizes: [] },
       scroll_y: -80
     },
     elements: [],

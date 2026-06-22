@@ -1,6 +1,6 @@
 /**
  * Shop by Intention 分类页模板
- * URL: /product-category/[intention-slug]
+ * URL: /[intention-slug]（根级 WordPress page，如 /calm-mindfulness，非 /product-category/）
  *
  * 6个Section:
  * 1. Hero — 意图名称+描述+面包屑
@@ -60,7 +60,7 @@ function generateIntentionPage(config) {
     background_color: '#F9F5FF'
   }, [
     E.textEditor(
-      '<a href="/">Home</a> &gt; <a href="/collections">Shop by Intention</a> &gt; ' + intention,
+      '<a href="/">Home</a> &gt; Shop by Intention &gt; ' + intention,
       { align: 'left', fontSize: 14, color: '#999999' }
     ),
     E.heading('Crystals for ' + intention, {
@@ -218,8 +218,8 @@ function generateIntentionPage(config) {
   // Section 6: 相关意图推荐
   // ----------------------------------------------------------
   const defaultRelated = [
+    { name: 'Calm & Mindfulness', slug: 'calm-mindfulness', image: PLACEHOLDER },
     { name: 'Love & Relationships', slug: 'love-relationships', image: PLACEHOLDER },
-    { name: 'Sleep & Calm', slug: 'sleep-calm', image: PLACEHOLDER },
     { name: 'Protection & Clearing', slug: 'protection-clearing', image: PLACEHOLDER },
     { name: 'Abundance & Success', slug: 'abundance-success', image: PLACEHOLDER }
   ];
@@ -234,7 +234,7 @@ function generateIntentionPage(config) {
         item.image || PLACEHOLDER,
         item.name,
         'Explore crystals for ' + item.name.toLowerCase(),
-        '/product-category/' + item.slug
+        '/' + item.slug
       )
     ]);
   });
@@ -271,9 +271,9 @@ function generateIntentionPage(config) {
 // ============================================================
 async function main() {
   const config = {
-    intention: 'Anxiety & Stress Relief',
-    slug: 'anxiety-relief',
-    heroSubtitle: 'Find your calm. Discover powerful crystals hand-selected to ease anxiety, release stress, and restore inner peace.',
+    intention: 'Calm & Mindfulness',
+    slug: 'calm-mindfulness',
+    heroSubtitle: 'Find your center. Discover crystals hand-selected to quiet a busy mind, ease stress, and anchor you gently in the present moment.',
     crystals: [
       {
         name: 'Amethyst',
@@ -301,9 +301,9 @@ async function main() {
       }
     ],
     relatedIntentions: [
-      { name: 'Sleep & Calm', slug: 'sleep-calm' },
+      { name: 'Spiritual Connection', slug: 'spiritual-connection' },
       { name: 'Protection & Clearing', slug: 'protection-clearing' },
-      { name: 'Focus & Clarity', slug: 'focus-clarity' }
+      { name: 'Health & Vitality', slug: 'health-vitality' }
     ]
   };
 

@@ -30,7 +30,7 @@
 
 | 指标 | 追踪方式 |
 |------|---------|
-| **AI引用率（Citation Share）** | Bing Webmaster Tools即将上线 |
+| **AI引用率（Citation Share）** | Bing Webmaster Tools 已上线（2026.6，含意图/主题/引用份额/时段对比） |
 | **Share of Model (SoM)** | 20-30个目标关键词定期查询 |
 | **AI引用持续性** | 追踪连续出现次数而非单次快照 |
 | **像素位置** | 比排名数字更准确（Tom Capper） |

@@ -397,3 +397,68 @@ await apiRequest('/wp-json/wp/v2/pages/' + newPage.id + '?context=edit', 'POST',
 | 不要覆盖 featured_media | 除非明确要改，否则不传 `featured_media` |
 | 保留 SEO 字段 | `_yoast_wpseo_*` 等 meta 字段更新时要保留原值 |
 | 响应式测试 | 更新后在 `/?page_id={id}&preview=true` 检查效果 |
+
+---
+
+## 13. 字体三端规范（电脑 / 平板 / 手机）
+
+> 2026-06-21 about/home 重构踩坑后，用户确认的字体标准。**非固定**，按文字长短可微调，但这是 baseline。
+
+| 元素 | 电脑 desktop | 平板 tablet | 手机 mobile |
+|------|------|------|------|
+| **H1**（Hero） | 50px | 45px | 40px |
+| **H2**（section 主标题） | 35px | 30px | 25px |
+| **H3**（section 子标题） | 22-25px | 22px | 20-22px |
+| **H2 下的正文** text-editor | 20px | ≈20 | ≈20 |
+| **H3 下的正文** text-editor | 16px | ≈16 | ≈16 |
+| **base 下限** | ≥16 | ≥16 | ≥16 |
+
+**关键**：heading 函数按 `header_size` 设字体——**H3 千万别设成 H2 的值（35）**（曾 S6/S7 的 6 个 H3 串成 35，前端像 H2）。textEditor 字体按"它在 H2 下还是 H3 下"定 20/16。
+
+heading/textEditor 函数的 mobile 下限用 `Math.max(16, round(fs*系数))`，确保手机端不低于 16（曾 14×0.85=11，手机端灾难）。
+
+## 14. 样式规范
+
+| 项 | 规范 | 原因 |
+|---|---|---|
+| 圆形/圆角图 `border-radius` | **用 %**（圆形 50%） | px（如 150px）对大图不够圆；em 不必要；% 任意尺寸都圆 |
+| heading advanced `margin` | **0**（别设 10） | 用户偏好，间距用 spacer/padding 控 |
+| section `margin-top` | **-40px** | WoodMart 主题约定（抵消主题默认间距） |
+| 多列布局 | 纯 Flexbox（`flex_direction:"row"` 无 structure） | 见 §3，REST 注入 structure 的 CSS 不生成 |
+| container `scroll_y` | -80 | 主题默认 |
+| 字体单位 | px（具体值）或主题 Global Fonts | 项目用具体 px baseline |
+
+**绝对不要 REST 清 `_elementor_css` meta**——会让前端样式全丢变乱码，且 REST 不触发重生成，只能 Elementor 编辑器更新恢复。
+
+## 15. 设计原则
+
+1. **图文左右交替**：相邻叙事 section 方向交替（S2 图左文右 → S3 文左图右），打破单调。手机端都图上文下（`flex_direction_mobile:"column-reverse"`）。
+2. **并列要点文字等长**：S6 4 承诺 / S7 4 场景 这类并列项的标题+描述长度必须接近，否则卡片高度参差难看。
+3. **相邻 section 风格交替**：背景色/布局方向/结构上下交替（白→浅灰→白→深色→白→浅灰），避免连续同风格。
+4. **图文比例按文字长短**：文字短→图 4:3，文字长→图 1:1（让图文左右等高平衡）。
+5. **列表 vs 叙事**：要点列表（4 承诺/4 场景）用**紧凑网格 2×2 + 文字等长**，**不要图文交替**（会占近 4 屏太冗长）；叙事 section（品牌故事/工艺）才用图文交替。
+6. **一个 textEditor 放多段**：textEditor 是富文本，一个 widget 内可多段 `<p>`（content 用 `段1</p><p>段2` 拼接），**不要每段单独做一个 textEditor widget**。
+7. **缺图就生成/找，不要挪用**：A section 缺 1:1 图就 moleapi 生成或本地找，不要把 B section 的图挪过来（会破坏 B + 主题不符）。
+
+## 16. 生成检查清单（.js 上传前必自检）
+
+上传前拉生成结果（_data 或 JSON），逐项核对：
+
+- [ ] 每个 heading 的 `header_size`（H1/H2/H3）**不串档**（H3 不能是 35=H2值）
+- [ ] 每个 heading 三端字体值符合 §13 规范（统计 `h1/h2/h3 各自 desktop 值分布`，无串档）
+- [ ] 所有字体三端都设且 ≥16（mobile 下限 16）
+- [ ] 圆形/圆角图 `border-radius` 用 %
+- [ ] 图文 section 方向交替 + mobile 图上文下（column-reverse）
+- [ ] 并列要点（4 承诺/4 场景）文字长度接近
+- [ ] 相邻 section 背景/布局风格交替
+- [ ] section margin-top -40、heading margin 0
+- [ ] 图文比例按内容（短 4:3 / 长 1:1）
+- [ ] 多段文字合在 1 个 textEditor（非每段一个 widget）
+
+## 17. WoodMart 主题补充（8.2.0 + Elementor 3.34.0）
+
+- **Widget 策略**（§4）：Elementor 标准优先（heading/image/text-editor/button/spacer/image-box/icon-box），WoodMart 仅功能必需（`wd_products_widget`/`wd_products_tabs` 产品网格/标签）。**`wd_title` 不用**，用标准 `heading`。
+- **Container**（§5）：顶层 `wd_section_stretch:"stretch"` + `scroll_y:-80`；`content_width` 顶层不设（boxed）/嵌套 `"full"`；嵌套必 `isInner:true`。
+- **Page Title 区**：WoodMart 每个 page 顶部（导航下、Hero 上）有 Page Title section（标题+面包屑）。per-page 关闭：编辑页面 → WoodMart 设置 → Disable Page title（protected meta，REST 写不了）。全局关闭会影响 product/post/page 所有（主题设置），慎用。REST 改不了，只能编辑器设或 per-page CSS。
+- **REST 改 _data 后前端不更新**：WoodMart+Elementor 缓存 CSS（post-XXXX.css），REST 改不重编译。解法：**WP 后台 → Elementor → 工具 → 「重新生成文件与数据」**（一次清所有 CSS 缓存），比每次编辑器 save 彻底。
+- **REST 改 vs 编辑器 save 冲突**：用户在 Elementor 编辑器（旧 _data）点保存会**覆盖** REST 改动。REST 改后要让用户**重新加载编辑器**（关闭重开加载最新 _data）再保存。

@@ -1,0 +1,166 @@
+{
+  "condition_title": "Peace",
+  "title": "7 Best Crystals for Peace: A Complete Guide",
+  "excerpt": "Discover the 7 best crystals for peace — chrysocolla, angelite, amethyst, selenite, lepidolite, prehnite, larimar. How to choose calming, soothing stones.",
+  "rank_math_title": "7 Best Crystals for Peace: A Complete Guide",
+  "rank_math_description": "Discover the 7 best crystals for peace — chrysocolla, angelite, amethyst, selenite, lepidolite, prehnite, larimar. How to choose calming, soothing stones.",
+  "rank_math_focus_keyword": "crystals for peace",
+  "featured_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/chrysocolla/chrysocolla-overview.webp",
+  "featured_alt": "chrysocolla and crystals for peace and inner calm",
+  "category_ids": "1495,1511,1489,1491,1512,1528,1525",
+  "crystals": [
+    {
+      "slug": "chrysocolla",
+      "name": "Chrysocolla",
+      "subtitle": "The Stone of Peace",
+      "best_for": "inner calm, soothing",
+      "why": "The most carried peace stone — soft blue-green and a steady calming cue.",
+      "how_to_use": "Hold it when tense, or keep it where you unwind.",
+      "desc": "The most carried peace stone, chrysocolla is what many reach for when calm feels out of reach. Many hold it as a reminder to soften the grip the day has on them.",
+      "cat_id": 1495,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/chrysocolla/chrysocolla-overview.webp",
+      "image_alt": "chrysocolla crystal for peace and inner calm"
+    },
+    {
+      "slug": "angelite",
+      "name": "Angelite",
+      "subtitle": "The Stone of Gentleness",
+      "best_for": "gentle calm, a soft landing",
+      "why": "Its soft blue tone and gentle reputation make it a quiet peace stone.",
+      "how_to_use": "Hold it as you settle, or keep it nearby.",
+      "desc": "A soft blue stone long tied to gentle calm, angelite suits people who need to soften rather than switch off. Many keep it close as a reminder that letting up is allowed.",
+      "care_note": "Angelite is water-sensitive, so avoid soaking or rinsing it; cleanse with smoke, sound, or moonlight.",
+      "cat_id": 1511,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/angelite/angelite-overview.webp",
+      "image_alt": "angelite crystal for peace and gentle calm"
+    },
+    {
+      "slug": "amethyst",
+      "name": "Amethyst",
+      "subtitle": "The Stone of Serenity",
+      "best_for": "settling a busy mind",
+      "why": "Its calming tie makes it a steady stone for a busy mind.",
+      "how_to_use": "Keep it on a nightstand, or hold it when thoughts race.",
+      "desc": "Known for calm, amethyst is a steady stone for a busy mind. Many keep it where they rest as a gentle nudge to let the day's chatter settle.",
+      "cat_id": 1489,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/amethyst/amethyst-overview.webp",
+      "image_alt": "amethyst crystal for peace and a settling mind"
+    },
+    {
+      "slug": "selenite",
+      "name": "Selenite",
+      "subtitle": "The Stone of Clarity",
+      "best_for": "clearing, creating space",
+      "why": "Its luminous calm makes it a visual cue to clear the mind.",
+      "how_to_use": "Place it where you rest, or hold it to reset.",
+      "desc": "With its pale, luminous look, selenite is often used to clear mental clutter and make space for calm. Many place it nearby as a quiet prompt to set the day down.",
+      "care_note": "Selenite is soft and water-sensitive — keep it dry and cleanse with smoke, sound, or moonlight instead of water.",
+      "cat_id": 1491
+    },
+    {
+      "slug": "lepidolite",
+      "name": "Lepidolite",
+      "subtitle": "The Stone of Transition",
+      "best_for": "even emotional keel",
+      "why": "Its tie to emotional steadiness makes it a stone for an even keel.",
+      "how_to_use": "Hold it during a spike, or carry it on up-and-down days.",
+      "desc": "Many keep lepidolite close for a steadier emotional keel. As a gentle cue to soften, it suits days when feelings rise and fall without much warning.",
+      "mineral_note": "Lepidolite is a lithium-bearing mica, but holding or placing it does not deliver lithium to the body — that is a common misunderstanding. In crystal practice it is valued symbolically for softness and emotional steadiness.",
+      "cat_id": 1512
+    },
+    {
+      "slug": "prehnite",
+      "name": "Prehnite",
+      "subtitle": "The Stone of Calm",
+      "best_for": "letting the mind rest",
+      "why": "Its tie to calm and decluttering makes it a stone for a quiet mind.",
+      "how_to_use": "Hold it as you settle, or place it where you sit.",
+      "desc": "Reached for calm and decluttering, prehnite suits people whose peace starts with a quieter mind. Many use it to mark a pause and let the noise settle.",
+      "cat_id": 1528
+    },
+    {
+      "slug": "larimar",
+      "name": "Larimar",
+      "subtitle": "The Stone of Calm Waters",
+      "best_for": "soothing held tension",
+      "why": "Its ocean-blue tone and tie to calm make it a stone for soothing.",
+      "how_to_use": "Wear it as a pendant, or hold it during reflection.",
+      "desc": "Found only in the Dominican Republic, larimar carries the soft blues of shallow sea and is tied to soothing. Many reach for it when tension sits heavy and a softer feeling would help.",
+      "mineral_note": "Because larimar is rare and can be expensive, buy from sellers who provide clear photos, origin information, and treatment disclosure.",
+      "cat_id": 1525,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/larimar/larimar-overview.webp",
+      "image_alt": "larimar crystal for peace and soothing"
+    }
+  ],
+  "scene_table": [
+    [
+      "Inner calm, soothing",
+      "Chrysocolla, Larimar"
+    ],
+    [
+      "Gentle, a soft landing",
+      "Angelite"
+    ],
+    [
+      "Settling a busy mind",
+      "Amethyst, Prehnite"
+    ],
+    [
+      "Clearing, creating space",
+      "Selenite"
+    ],
+    [
+      "Even emotional keel",
+      "Lepidolite"
+    ]
+  ],
+  "m1_quick": "Chrysocolla, angelite, amethyst, selenite, lepidolite, prehnite, and larimar are among the most commonly carried crystals for peace. Many people keep one close as a gentle cue to soften, set the day down, and let the mind settle. Crystals are complementary wellness tools, not medical treatments — for lasting unease or anxiety, a healthcare professional is the right call.",
+  "m2_understanding": "Peace isn't the absence of noise; it's the ability to rest inside it. Some days the world is loud and the mind matches it — tight, braced, running a list that never ends. A small, tangible cue can mark a different stance: a stone held as a reminder to soften the grip, to set the day down, to let this moment be a little less defended.",
+  "m25_chose": "We chose these seven because they speak to the most common peace-related intentions in crystal practice: inner calm, gentle softening, settling a busy mind, clearing space, and an even keel. Their meanings come from crystal tradition and personal practice, not clinical evidence.",
+  "m5_use": [
+    "<strong>Hold it when tense.</strong> A smooth stone as a cue to soften the grip.",
+    "<strong>Keep it where you rest.</strong> On a nightstand or in a quiet corner, as a steady cue.",
+    "<strong>Carry it through loud days.</strong> A pocket stone when the world won't quiet.",
+    "<strong>Mark a pause.</strong> A few breaths with the stone to reset."
+  ],
+  "m6_combos": "Pairing is about layering intentions. A popular combination is <strong>Chrysocolla + Selenite</strong> — calm paired with clearing, often kept together where you rest. <strong>Amethyst + Lepidolite</strong> is another, chosen for a busy mind and an uneven keel.",
+  "m8_intro": "Explore genuine natural crystal pieces chosen for peace — stones, bracelets, and forms you can hold or keep nearby, spanning the seven crystals above.",
+  "closing": "Peace is a stance more than a setting — and a real stone can be a steady cue to soften inside the noise. Start with one and let small pauses add up. For more, explore <a href=\"/calm-mindfulness/\">Calm &amp; Mindfulness</a>.",
+  "faq": [
+    {
+      "q": "Can crystals bring me peace or calm?",
+      "a": "Not on their own. Crystals can't grant peace. Many people use them as tangible cues to pause and soften; lasting calm comes from habits, rest, and sometimes support. For persistent unease or anxiety, a healthcare professional is the right call."
+    },
+    {
+      "q": "Are crystals scientifically proven to bring peace?",
+      "a": "No. There is no clinical evidence that crystals themselves create peace. Any felt benefit usually comes from the ritual of pausing, not a proven effect of the stone."
+    },
+    {
+      "q": "Which crystal is best for peace and calm?",
+      "a": "Chrysocolla and angelite are the most commonly chosen — chrysocolla for inner calm, angelite for a gentle, soft landing."
+    },
+    {
+      "q": "What is the best crystal for a busy, racing mind?",
+      "a": "Amethyst and prehnite — amethyst to let the chatter settle, prehnite to help the noise quiet."
+    },
+    {
+      "q": "Which crystal helps me clear mental clutter?",
+      "a": "Selenite is often used to clear the mind and make space for calm."
+    },
+    {
+      "q": "How should I cleanse peace crystals?",
+      "a": "Smoke (sage, palo santo), sound (singing bowl), or moonlight work for most stones. Note that selenite and angelite are water-sensitive — keep them dry and avoid water cleansing."
+    },
+    {
+      "q": "What is the best crystal bracelet for peace?",
+      "a": "An amethyst bracelet is the most common first choice — durable, widely available, and easy to wear daily as a quiet reminder to soften."
+    }
+  ],
+  "related": [
+    "anxiety",
+    "stress",
+    "sleep",
+    "meditation",
+    "balance"
+  ]
+}

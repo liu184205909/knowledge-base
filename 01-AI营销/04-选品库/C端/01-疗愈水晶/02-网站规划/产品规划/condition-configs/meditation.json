@@ -1,0 +1,164 @@
+{
+  "condition_title": "Meditation",
+  "title": "7 Best Crystals for Meditation: A Complete Guide",
+  "excerpt": "Discover the 7 best crystals for meditation — amethyst, lapis lazuli, kyanite, selenite, angelite, prehnite, labradorite. How to choose a stone for your sit.",
+  "rank_math_title": "7 Best Crystals for Meditation: A Complete Guide",
+  "rank_math_description": "Discover the 7 best crystals for meditation — amethyst, lapis lazuli, kyanite, selenite, angelite, prehnite, labradorite. How to choose a stone for your sit.",
+  "rank_math_focus_keyword": "crystals for meditation",
+  "featured_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/amethyst/amethyst-overview.webp",
+  "featured_alt": "amethyst and crystals for meditation and settling into stillness",
+  "category_ids": "1489,1506,1520,1491,1511,1528,1505",
+  "crystals": [
+    {
+      "slug": "amethyst",
+      "name": "Amethyst",
+      "subtitle": "The Stone of Peace",
+      "best_for": "settling into stillness, beginners",
+      "why": "The most reached-for meditation stone — calm, affordable, and forgiving for beginners.",
+      "how_to_use": "Hold it in your palms, or place it nearby as you sit.",
+      "desc": "The most reached-for meditation stone, amethyst is what many begin with. Many use it to mark the shift from doing to sitting — a steady, gentle cue to let the mind settle rather than wrestle it quiet.",
+      "cat_id": 1489,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/amethyst/amethyst-overview.webp",
+      "image_alt": "amethyst crystal for meditation and settling into stillness"
+    },
+    {
+      "slug": "lapis-lazuli",
+      "name": "Lapis Lazuli",
+      "subtitle": "The Stone of Wisdom",
+      "best_for": "insight, deeper inner work",
+      "why": "Its tie to inner vision makes it a stone for reflective, deeper sits.",
+      "how_to_use": "Hold it, or place it on your brow during insight practice.",
+      "desc": "A stone of wisdom and inner vision, lapis lazuli suits sittings that ask for depth. Many use it when they want to listen inward rather than just quiet the surface.",
+      "cat_id": 1506,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/lapis/lapis-overview.webp",
+      "image_alt": "lapis lazuli crystal for meditation and inner vision"
+    },
+    {
+      "slug": "kyanite",
+      "name": "Kyanite",
+      "subtitle": "The Stone of Calm Focus",
+      "best_for": "calm focus, staying present",
+      "why": "Its tie to calm focus makes it a stone for presence without tension.",
+      "how_to_use": "Hold it during sitting, or keep it on your lap as an anchor.",
+      "desc": "Known for calm focus, kyanite suits people who want presence without bracing. Many use it to settle into the breath rather than force concentration.",
+      "cat_id": 1520,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/kyanite/kyanite-overview.webp",
+      "image_alt": "kyanite crystal for meditation and calm focus"
+    },
+    {
+      "slug": "selenite",
+      "name": "Selenite",
+      "subtitle": "The Stone of Clarity",
+      "best_for": "clearing, creating space",
+      "why": "Its luminous, calm quality makes it a visual cue to clear the mind.",
+      "how_to_use": "Place it where you sit, or lay it nearby as a clearing cue.",
+      "desc": "With its pale, luminous look, selenite is often used to clear mental clutter before a sit. Many place it nearby as a reminder to set the day down and make room for stillness.",
+      "care_note": "Selenite is soft and water-sensitive — keep it dry and cleanse with smoke, sound, or moonlight instead of water.",
+      "cat_id": 1491
+    },
+    {
+      "slug": "angelite",
+      "name": "Angelite",
+      "subtitle": "The Stone of Gentleness",
+      "best_for": "gentle, receptive calm",
+      "why": "Its soft blue tone and gentle reputation make it a quiet support for sitting.",
+      "how_to_use": "Hold it in your hands, or keep it where you meditate.",
+      "desc": "A soft blue stone long tied to gentle calm, angelite suits people who want a softer entry into stillness. Many keep it close as a reminder that receptivity, not effort, is what lets the mind rest.",
+      "care_note": "Angelite is also water-sensitive, so avoid soaking or rinsing it; cleanse with smoke, sound, or moonlight.",
+      "cat_id": 1511
+    },
+    {
+      "slug": "prehnite",
+      "name": "Prehnite",
+      "subtitle": "The Stone of Calm",
+      "best_for": "letting go, quieting a busy mind",
+      "why": "Its tie to calm and decluttering makes it a stone for a quieter mind.",
+      "how_to_use": "Hold it as you settle, or place it where you sit.",
+      "desc": "Often used for calm and decluttering, prehnite suits people whose minds fill the moment they sit down. Many use it to mark a deliberate pause and let the noise settle.",
+      "cat_id": 1528
+    },
+    {
+      "slug": "labradorite",
+      "name": "Labradorite",
+      "subtitle": "The Stone of Transformation",
+      "best_for": "intuition, inner exploration",
+      "why": "Its flash and tie to intuition make it a stone for inner work.",
+      "how_to_use": "Hold it during reflective sits, or keep it for evening practice.",
+      "desc": "A flash of blue and gold in the hand, labradorite suits sittings that lean into intuition and inner work. Many use it when they want to sit with what surfaces rather than empty the mind.",
+      "cat_id": 1505,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/labradorite/labradorite-overview.webp",
+      "image_alt": "labradorite crystal for meditation and intuition"
+    }
+  ],
+  "scene_table": [
+    [
+      "Settling into stillness, beginners",
+      "Amethyst, Angelite"
+    ],
+    [
+      "Insight and inner vision",
+      "Lapis Lazuli, Labradorite"
+    ],
+    [
+      "Calm focus, staying present",
+      "Kyanite"
+    ],
+    [
+      "Clearing mental clutter",
+      "Selenite, Prehnite"
+    ],
+    [
+      "Gentle, receptive calm",
+      "Angelite, Prehnite"
+    ]
+  ],
+  "m1_quick": "Amethyst, lapis lazuli, kyanite, selenite, angelite, prehnite, and labradorite are among the most commonly used crystals for meditation. Many people hold one or place it nearby as a tangible anchor for their sit. Crystals are complementary wellness tools, not medical treatments — meditation itself is a well-studied practice, and the stone is simply a focus aid, not the source of the benefit.",
+  "m2_understanding": "Meditation is the practice of sitting with what is — the breath, the body, the chatter of the mind — without chasing it away. Most people find it simple to understand and hard to do, because the mind would rather be anywhere but here. A small, tangible anchor helps: something to rest the attention on when it drifts, a physical cue that this short stretch of time is set aside for nothing but sitting.",
+  "m25_chose": "We chose these seven because they speak to the most common meditation-related intentions in crystal practice: settling into stillness, calm focus, clearing mental clutter, insight, and gentle receptivity. Their meanings come from crystal tradition and personal practice; meditation's benefits come from the practice itself, not the stone.",
+  "m5_use": [
+    "<strong>Hold it in your palms.</strong> A smooth stone gives the attention somewhere to rest when it drifts.",
+    "<strong>Place it nearby.</strong> On a cushion or low table, as a visual anchor for your sit.",
+    "<strong>Set it on a chakra point.</strong> A stone on the brow or chest as a focus for body-based practice.",
+    "<strong>Begin and end with it.</strong> Holding the stone marks the start and close of a sit."
+  ],
+  "m6_combos": "Pairing is about layering intentions. A popular combination is <strong>Amethyst + Selenite</strong> — calm paired with clearing, often used together at the start of a sit. <strong>Lapis Lazuli + Labradorite</strong> is another, chosen for sittings that lean into insight and intuition.",
+  "m8_intro": "Explore genuine natural crystal pieces chosen for sitting practice — palm stones, bracelets, and forms you can hold or place, spanning the seven crystals above.",
+  "closing": "Meditation does the work; the stone just gives your attention somewhere gentle to land. Pick one that feels right in the hand and let the practice carry the rest. For more, explore <a href=\"/calm-mindfulness/\">Calm &amp; Mindfulness</a>.",
+  "faq": [
+    {
+      "q": "Do I need crystals to meditate?",
+      "a": "No. Meditation needs nothing but your attention and a few minutes. Some people like a stone as a tangible anchor for the attention; it's an aid, not a requirement."
+    },
+    {
+      "q": "Are crystals scientifically proven to deepen meditation?",
+      "a": "No. There is no strong evidence that crystals themselves deepen meditation. Meditation's benefits come from the practice; a stone, when it helps, works as a focus object that steadies attention."
+    },
+    {
+      "q": "Which crystal is best for beginners learning to meditate?",
+      "a": "Amethyst is the most common first choice — calm, affordable, and easy to hold as the mind settles."
+    },
+    {
+      "q": "What is the best crystal for insight or deeper meditation?",
+      "a": "Lapis lazuli and labradorite — lapis for inner vision, labradorite for sitting with what surfaces intuitively."
+    },
+    {
+      "q": "Which crystal helps when my mind won't stop during meditation?",
+      "a": "Selenite and prehnite — selenite to clear mental clutter, prehnite to help the noise settle."
+    },
+    {
+      "q": "How should I cleanse meditation crystals?",
+      "a": "Smoke (sage, palo santo), sound (singing bowl), or moonlight work for most stones. Note that selenite and angelite are water-sensitive — keep them dry and avoid water cleansing."
+    },
+    {
+      "q": "What is the best crystal bracelet for meditation?",
+      "a": "An amethyst bracelet is the most common first choice — easy to wear into a sit and glance at as a cue to settle."
+    }
+  ],
+  "related": [
+    "spiritual",
+    "focus",
+    "peace",
+    "anxiety",
+    "intuition"
+  ]
+}

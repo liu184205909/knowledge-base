@@ -1,0 +1,5504 @@
+[
+  {
+    "id": 25354,
+    "name": "Om Namah Shivay Mantra Copper Bangle",
+    "old_slug": "om-namah-shivay-mantra-copper-bangle",
+    "new_slug": "om-namah-shivay-mantra-copper-bangle",
+    "changed": false
+  },
+  {
+    "id": 25340,
+    "name": "Samsara Copper Necklace",
+    "old_slug": "samsara-copper-necklace",
+    "new_slug": "samsara-copper-necklace",
+    "changed": false
+  },
+  {
+    "id": 25325,
+    "name": "Fair Trade Copper Bracelet",
+    "old_slug": "fair-trade-mystical-magnetic-copper-bracelet",
+    "new_slug": "fair-trade-copper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 25319,
+    "name": "Eternal Knot Copper Bracelet",
+    "old_slug": "eternal-knot-magnetic-copper-bracelet",
+    "new_slug": "eternal-knot-copper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 25304,
+    "name": "Aztec Copper Bangle",
+    "old_slug": "aztec-copper-bangle",
+    "new_slug": "aztec-copper-bangle",
+    "changed": false
+  },
+  {
+    "id": 25297,
+    "name": "Tibetan Handcrafted Twisted Copper Bracelet",
+    "old_slug": "tibetan-handcrafted-twisted-copper-healing-bracelet",
+    "new_slug": "tibetan-handcrafted-twisted-copper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 25290,
+    "name": "Tibetan Handcrafted Brass & Copper Bracelet",
+    "old_slug": "tibetan-handcrafted-brass-copper-healing-bracelet",
+    "new_slug": "tibetan-handcrafted-brass-copper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 25284,
+    "name": "Fair Trade 3 Metal Twisted Bangle",
+    "old_slug": "fair-trade-3-metal-twisted-bangle",
+    "new_slug": "fair-trade-3-metal-twisted-bangle",
+    "changed": false
+  },
+  {
+    "id": 25261,
+    "name": "Brass Diamond Copper Bracelet",
+    "old_slug": "brass-diamond-magnetic-copper-bracelet",
+    "new_slug": "brass-diamond-copper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 25253,
+    "name": "Pure Copper Bracelet",
+    "old_slug": "pure-copper-magnetic-bracelet",
+    "new_slug": "pure-copper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 25246,
+    "name": "Tibetan Handcrafted Copper Infinity Bracelet",
+    "old_slug": "tibetan-handcrafted-copper-infinity-bracelet",
+    "new_slug": "tibetan-handcrafted-copper-infinity-bracelet",
+    "changed": false
+  },
+  {
+    "id": 25238,
+    "name": "Tibetan Handcrafted Copper Braided Rope Bracelet",
+    "old_slug": "tibetan-handcrafted-copper-braided-rope-healing-bracelet",
+    "new_slug": "tibetan-handcrafted-copper-braided-rope-bracelet",
+    "changed": true
+  },
+  {
+    "id": 25234,
+    "name": "Textured Copper Bangle",
+    "old_slug": "astro-healing-copper-bangle",
+    "new_slug": "textured-copper-bangle",
+    "changed": true
+  },
+  {
+    "id": 25229,
+    "name": "Copper Coil Cuff",
+    "old_slug": "copper-coil-cuff",
+    "new_slug": "copper-coil-cuff",
+    "changed": false
+  },
+  {
+    "id": 25224,
+    "name": "Tibetan Beaded Copper Bracelet",
+    "old_slug": "tibetan-mystic-bracelet",
+    "new_slug": "tibetan-beaded-copper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 23586,
+    "name": "Black Copper Earrings",
+    "old_slug": "black-copper-earrings-limited-edition",
+    "new_slug": "black-copper-earrings",
+    "changed": true
+  },
+  {
+    "id": 23555,
+    "name": "Copper Hammered Earrings",
+    "old_slug": "copper-hammered-earrings-limited-edition",
+    "new_slug": "copper-hammered-earrings",
+    "changed": true
+  },
+  {
+    "id": 20111,
+    "name": "Copper Ring",
+    "old_slug": "copper-healing-ring",
+    "new_slug": "copper-ring",
+    "changed": true
+  },
+  {
+    "id": 25200,
+    "name": "Moss Agate Flame",
+    "old_slug": "moss-agate-flame-freeform-crystal",
+    "new_slug": "moss-agate-flame",
+    "changed": true
+  },
+  {
+    "id": 25194,
+    "name": "Silver Obsidian Flame",
+    "old_slug": "silver-obsidian-freeform-flame-crystal",
+    "new_slug": "silver-obsidian-flame",
+    "changed": true
+  },
+  {
+    "id": 25188,
+    "name": "Amazonite Merkaba",
+    "old_slug": "amazonite-merkaba",
+    "new_slug": "amazonite-merkaba",
+    "changed": false
+  },
+  {
+    "id": 25182,
+    "name": "Tiger Eye Merkaba",
+    "old_slug": "tiger-eye-merkaba",
+    "new_slug": "tiger-eye-merkaba",
+    "changed": false
+  },
+  {
+    "id": 25128,
+    "name": "Tiger Eye Angel",
+    "old_slug": "tiger-eye-angel",
+    "new_slug": "tiger-eye-angel",
+    "changed": false
+  },
+  {
+    "id": 25127,
+    "name": "Yellow Jade Angel",
+    "old_slug": "yellow-jade-angel",
+    "new_slug": "yellow-jade-angel",
+    "changed": false
+  },
+  {
+    "id": 25126,
+    "name": "Lapis Lazuli Angel",
+    "old_slug": "lapis-lazuli-angel",
+    "new_slug": "lapis-lazuli-angel",
+    "changed": false
+  },
+  {
+    "id": 25124,
+    "name": "Opalite Angel",
+    "old_slug": "opalite-angel",
+    "new_slug": "opalite-angel",
+    "changed": false
+  },
+  {
+    "id": 24833,
+    "name": "Red Jasper Crystal Point",
+    "old_slug": "red-jasper-crystal-point-aaa-premium-quality",
+    "new_slug": "red-jasper-crystal-point",
+    "changed": true
+  },
+  {
+    "id": 24829,
+    "name": "Serpentine Tower",
+    "old_slug": "serpentine-tower",
+    "new_slug": "serpentine-tower",
+    "changed": false
+  },
+  {
+    "id": 24826,
+    "name": "Rose Quartz Tower",
+    "old_slug": "rose-quartz-tower",
+    "new_slug": "rose-quartz-tower",
+    "changed": false
+  },
+  {
+    "id": 24821,
+    "name": "Amazonite Tower",
+    "old_slug": "amazonite-tower",
+    "new_slug": "amazonite-tower",
+    "changed": false
+  },
+  {
+    "id": 24814,
+    "name": "Lapis Lazuli Tower",
+    "old_slug": "lapis-lazuli-tower",
+    "new_slug": "lapis-lazuli-tower",
+    "changed": false
+  },
+  {
+    "id": 24809,
+    "name": "Sunstone Tower",
+    "old_slug": "sunstone-tower",
+    "new_slug": "sunstone-tower",
+    "changed": false
+  },
+  {
+    "id": 24804,
+    "name": "Angelite Tower",
+    "old_slug": "angelite-tower",
+    "new_slug": "angelite-tower",
+    "changed": false
+  },
+  {
+    "id": 24798,
+    "name": "Lepidolite Tower",
+    "old_slug": "lepidolite-tower",
+    "new_slug": "lepidolite-tower",
+    "changed": false
+  },
+  {
+    "id": 24794,
+    "name": "Apatite Tower",
+    "old_slug": "apatite-tower",
+    "new_slug": "apatite-tower",
+    "changed": false
+  },
+  {
+    "id": 24789,
+    "name": "Bloodstone Tower",
+    "old_slug": "bloodstone-tower",
+    "new_slug": "bloodstone-tower",
+    "changed": false
+  },
+  {
+    "id": 24782,
+    "name": "Afghan Jade Crystal Point",
+    "old_slug": "afghan-jade-crystal-point-aaa-premium-quality",
+    "new_slug": "afghan-jade-crystal-point",
+    "changed": true
+  },
+  {
+    "id": 24776,
+    "name": "Silver Obsidian Tower",
+    "old_slug": "silver-obsidian-tower",
+    "new_slug": "silver-obsidian-tower",
+    "changed": false
+  },
+  {
+    "id": 24771,
+    "name": "Rainbow Moonstone Tower",
+    "old_slug": "rainbow-moonstone-tower",
+    "new_slug": "rainbow-moonstone-tower",
+    "changed": false
+  },
+  {
+    "id": 24766,
+    "name": "Hematite Tower",
+    "old_slug": "hematite-tower",
+    "new_slug": "hematite-tower",
+    "changed": false
+  },
+  {
+    "id": 24761,
+    "name": "Garnet Tower",
+    "old_slug": "garnet-tower",
+    "new_slug": "garnet-tower",
+    "changed": false
+  },
+  {
+    "id": 24756,
+    "name": "Chrysocolla Tower",
+    "old_slug": "chrysocolla-tower",
+    "new_slug": "chrysocolla-tower",
+    "changed": false
+  },
+  {
+    "id": 24749,
+    "name": "Ruby-Kyanite Tower",
+    "old_slug": "ruby-kyanite-tower",
+    "new_slug": "ruby-kyanite-tower",
+    "changed": false
+  },
+  {
+    "id": 24742,
+    "name": "Tree Agate Tower",
+    "old_slug": "tree-agate-tower",
+    "new_slug": "tree-agate-tower",
+    "changed": false
+  },
+  {
+    "id": 24730,
+    "name": "Tiger Eye Obelisk",
+    "old_slug": "tiger-eye-obelisk",
+    "new_slug": "tiger-eye-obelisk",
+    "changed": false
+  },
+  {
+    "id": 24725,
+    "name": "Red Jasper Obelisk",
+    "old_slug": "red-jasper-obelisk-aaa-premium-quality",
+    "new_slug": "red-jasper-obelisk",
+    "changed": true
+  },
+  {
+    "id": 24720,
+    "name": "Snowflake Obsidian Stone Set",
+    "old_slug": "snowflake-obsidian-stone-set",
+    "new_slug": "snowflake-obsidian-stone-set",
+    "changed": false
+  },
+  {
+    "id": 24716,
+    "name": "Green Aventurine Stone Set",
+    "old_slug": "green-aventurine-stone-set",
+    "new_slug": "green-aventurine-stone-set",
+    "changed": false
+  },
+  {
+    "id": 24712,
+    "name": "Unakite Stone Set",
+    "old_slug": "unakite-stone-set",
+    "new_slug": "unakite-stone-set",
+    "changed": false
+  },
+  {
+    "id": 24708,
+    "name": "Lepidolite Stone Set",
+    "old_slug": "lepidolite-stone-set",
+    "new_slug": "lepidolite-stone-set",
+    "changed": false
+  },
+  {
+    "id": 24703,
+    "name": "Amazonite Stone Set",
+    "old_slug": "amazonite-stone-set",
+    "new_slug": "amazonite-stone-set",
+    "changed": false
+  },
+  {
+    "id": 24699,
+    "name": "Clear Quartz Stone Set",
+    "old_slug": "clear-quartz-stone-set",
+    "new_slug": "clear-quartz-stone-set",
+    "changed": false
+  },
+  {
+    "id": 24695,
+    "name": "Amethyst Stone Set",
+    "old_slug": "amethyst-stone-set",
+    "new_slug": "amethyst-stone-set",
+    "changed": false
+  },
+  {
+    "id": 24691,
+    "name": "Red Tiger Eye Stone Set",
+    "old_slug": "red-tiger-eye-stone-set",
+    "new_slug": "red-tiger-eye-stone-set",
+    "changed": false
+  },
+  {
+    "id": 24686,
+    "name": "Opalite Stone Set",
+    "old_slug": "opalite-stone-set",
+    "new_slug": "opalite-stone-set",
+    "changed": false
+  },
+  {
+    "id": 24682,
+    "name": "Smoky Quartz Stone Set",
+    "old_slug": "smoky-quartz-stone-set",
+    "new_slug": "smoky-quartz-stone-set",
+    "changed": false
+  },
+  {
+    "id": 24675,
+    "name": "Carnelian Stone Set",
+    "old_slug": "carnelian-stone-set",
+    "new_slug": "carnelian-stone-set",
+    "changed": false
+  },
+  {
+    "id": 24670,
+    "name": "Selenite Stone Set",
+    "old_slug": "selenite-stone-set",
+    "new_slug": "selenite-stone-set",
+    "changed": false
+  },
+  {
+    "id": 24666,
+    "name": "Turquoise Howlite Tumbled Stone Set",
+    "old_slug": "turquoise-howlite-stone-set",
+    "new_slug": "turquoise-howlite-tumbled-stone-set",
+    "changed": true
+  },
+  {
+    "id": 24662,
+    "name": "Howlite Tumbled Stone Set",
+    "old_slug": "howlite-stone-set",
+    "new_slug": "howlite-tumbled-stone-set",
+    "changed": true
+  },
+  {
+    "id": 24657,
+    "name": "Tiger Eye Tumbled Stone Set",
+    "old_slug": "tiger-eye-stone-set",
+    "new_slug": "tiger-eye-tumbled-stone-set",
+    "changed": true
+  },
+  {
+    "id": 24653,
+    "name": "Moss Agate Tumbled Stone Set",
+    "old_slug": "moss-agate-stone-set",
+    "new_slug": "moss-agate-tumbled-stone-set",
+    "changed": true
+  },
+  {
+    "id": 24649,
+    "name": "Black Tourmaline Tumbled Stone Set",
+    "old_slug": "black-tourmaline-stone-set",
+    "new_slug": "black-tourmaline-tumbled-stone-set",
+    "changed": true
+  },
+  {
+    "id": 24641,
+    "name": "Silver Obsidian Cube",
+    "old_slug": "silver-obsidian-cube",
+    "new_slug": "silver-obsidian-cube",
+    "changed": false
+  },
+  {
+    "id": 24637,
+    "name": "Purple Rainbow Fluorite Cube",
+    "old_slug": "purple-rainbow-fluorite-cube",
+    "new_slug": "purple-rainbow-fluorite-cube",
+    "changed": false
+  },
+  {
+    "id": 24633,
+    "name": "Green Jade Cube",
+    "old_slug": "green-jade-cube",
+    "new_slug": "green-jade-cube",
+    "changed": false
+  },
+  {
+    "id": 24626,
+    "name": "Chrysocolla Cube",
+    "old_slug": "chrysocolla-cube",
+    "new_slug": "chrysocolla-cube",
+    "changed": false
+  },
+  {
+    "id": 24622,
+    "name": "Serpentine Cube",
+    "old_slug": "serpentine-cube",
+    "new_slug": "serpentine-cube",
+    "changed": false
+  },
+  {
+    "id": 24619,
+    "name": "Rose Quartz Cube",
+    "old_slug": "rose-quartz-cube",
+    "new_slug": "rose-quartz-cube",
+    "changed": false
+  },
+  {
+    "id": 24612,
+    "name": "Hematite Cube",
+    "old_slug": "hematite-cube",
+    "new_slug": "hematite-cube",
+    "changed": false
+  },
+  {
+    "id": 24608,
+    "name": "Lapis Lazuli Cube",
+    "old_slug": "lapis-lazuli-cube",
+    "new_slug": "lapis-lazuli-cube",
+    "changed": false
+  },
+  {
+    "id": 24604,
+    "name": "Tiger Eye Cube",
+    "old_slug": "tiger-eye-cube",
+    "new_slug": "tiger-eye-cube",
+    "changed": false
+  },
+  {
+    "id": 24599,
+    "name": "Rainbow Moonstone Cube",
+    "old_slug": "rainbow-moonstone-cube",
+    "new_slug": "rainbow-moonstone-cube",
+    "changed": false
+  },
+  {
+    "id": 24596,
+    "name": "Amethyst Cube",
+    "old_slug": "amethyst-cube",
+    "new_slug": "amethyst-cube",
+    "changed": false
+  },
+  {
+    "id": 24593,
+    "name": "Shungite Cube",
+    "old_slug": "shungite-cube",
+    "new_slug": "shungite-cube",
+    "changed": false
+  },
+  {
+    "id": 24589,
+    "name": "Black Tourmaline Cube",
+    "old_slug": "black-tourmaline-cube",
+    "new_slug": "black-tourmaline-cube",
+    "changed": false
+  },
+  {
+    "id": 24583,
+    "name": "Garnet Cube",
+    "old_slug": "garnet-cube",
+    "new_slug": "garnet-cube",
+    "changed": false
+  },
+  {
+    "id": 24519,
+    "name": "Lepidolite Pyramid",
+    "old_slug": "lepidolite-pyramid",
+    "new_slug": "lepidolite-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24509,
+    "name": "Carnelian Pyramid",
+    "old_slug": "carnelian-pyramid",
+    "new_slug": "carnelian-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24502,
+    "name": "Yellow Calcite Pyramid",
+    "old_slug": "yellow-calcite-pyramid",
+    "new_slug": "yellow-calcite-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24494,
+    "name": "Rose Quartz Pyramid",
+    "old_slug": "rose-quartz-pyramid",
+    "new_slug": "rose-quartz-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24486,
+    "name": "Amazonite Pyramid",
+    "old_slug": "amazonite-pyramid",
+    "new_slug": "amazonite-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24456,
+    "name": "Chrysocolla Pyramid",
+    "old_slug": "chrysocolla-pyramid",
+    "new_slug": "chrysocolla-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24452,
+    "name": "Mini Gemstone Orgone Pyramid",
+    "old_slug": "mini-gemstone-orgone-pyramid",
+    "new_slug": "mini-gemstone-orgone-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24437,
+    "name": "Amethyst Pyramid",
+    "old_slug": "amethyst-pyramid",
+    "new_slug": "amethyst-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24431,
+    "name": "Silver Obsidian Pyramid",
+    "old_slug": "silver-obsidian-pyramid",
+    "new_slug": "silver-obsidian-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24427,
+    "name": "Lapis Lazuli Pyramid",
+    "old_slug": "lapis-lazuli-pyramid",
+    "new_slug": "lapis-lazuli-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24419,
+    "name": "Rainbow Moonstone Pyramid",
+    "old_slug": "rainbow-moonstone-pyramid",
+    "new_slug": "rainbow-moonstone-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24414,
+    "name": "Ruby-Kyanite Pyramid",
+    "old_slug": "ruby-kyanite-pyramid",
+    "new_slug": "ruby-kyanite-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24407,
+    "name": "Green Jade Pyramid",
+    "old_slug": "green-jade-pyramid",
+    "new_slug": "green-jade-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24401,
+    "name": "Purple Rainbow Fluorite Pyramid",
+    "old_slug": "purple-rainbow-fluorite-pyramid",
+    "new_slug": "purple-rainbow-fluorite-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24399,
+    "name": "Tiger Eye Pyramid",
+    "old_slug": "tiger-eye-pyramid",
+    "new_slug": "tiger-eye-pyramid",
+    "changed": false
+  },
+  {
+    "id": 24395,
+    "name": "Amethyst Mini Heart Set",
+    "old_slug": "amethyst-mini-heart-set",
+    "new_slug": "amethyst-mini-heart-set",
+    "changed": false
+  },
+  {
+    "id": 24385,
+    "name": "Rose Quartz Mini Heart Set",
+    "old_slug": "rose-quartz-mini-heart-set",
+    "new_slug": "rose-quartz-mini-heart-set",
+    "changed": false
+  },
+  {
+    "id": 24377,
+    "name": "Bloodstone Mini Heart Set",
+    "old_slug": "bloodstone-mini-heart-set",
+    "new_slug": "bloodstone-mini-heart-set",
+    "changed": false
+  },
+  {
+    "id": 24373,
+    "name": "Red Jasper Mini Heart Set",
+    "old_slug": "red-jasper-mini-heart-set",
+    "new_slug": "red-jasper-mini-heart-set",
+    "changed": false
+  },
+  {
+    "id": 24365,
+    "name": "Unakite Mini Heart Set",
+    "old_slug": "unakite-mini-heart-set",
+    "new_slug": "unakite-mini-heart-set",
+    "changed": false
+  },
+  {
+    "id": 24360,
+    "name": "Lapis Lazuli Mini Heart Set",
+    "old_slug": "lapis-lazuli-mini-heart-set",
+    "new_slug": "lapis-lazuli-mini-heart-set",
+    "changed": false
+  },
+  {
+    "id": 24356,
+    "name": "Ruby-Kyanite Heart",
+    "old_slug": "ruby-kyanite-heart",
+    "new_slug": "ruby-kyanite-heart",
+    "changed": false
+  },
+  {
+    "id": 24348,
+    "name": "Tiger Eye Heart",
+    "old_slug": "tiger-eye-heart",
+    "new_slug": "tiger-eye-heart",
+    "changed": false
+  },
+  {
+    "id": 24344,
+    "name": "Serpentine Heart",
+    "old_slug": "serpentine-heart",
+    "new_slug": "serpentine-heart",
+    "changed": false
+  },
+  {
+    "id": 24340,
+    "name": "Tiger Eye Mini Heart Set",
+    "old_slug": "tiger-eye-mini-heart-set",
+    "new_slug": "tiger-eye-mini-heart-set",
+    "changed": false
+  },
+  {
+    "id": 24335,
+    "name": "Rainbow Moonstone Mini Heart Set",
+    "old_slug": "rainbow-moonstone-mini-heart-set",
+    "new_slug": "rainbow-moonstone-mini-heart-set",
+    "changed": false
+  },
+  {
+    "id": 24332,
+    "name": "Rhodonite Mini Heart Set",
+    "old_slug": "rhodonite-mini-heart-set",
+    "new_slug": "rhodonite-mini-heart-set",
+    "changed": false
+  },
+  {
+    "id": 24327,
+    "name": "Silver Obsidian Heart",
+    "old_slug": "silver-obsidian-heart",
+    "new_slug": "silver-obsidian-heart",
+    "changed": false
+  },
+  {
+    "id": 24321,
+    "name": "Amethyst Heart",
+    "old_slug": "amethyst-heart",
+    "new_slug": "amethyst-heart",
+    "changed": false
+  },
+  {
+    "id": 24319,
+    "name": "Hematite Heart",
+    "old_slug": "hematite-heart",
+    "new_slug": "hematite-heart",
+    "changed": false
+  },
+  {
+    "id": 24316,
+    "name": "Black Obsidian Heart",
+    "old_slug": "black-obsidian-heart",
+    "new_slug": "black-obsidian-heart",
+    "changed": false
+  },
+  {
+    "id": 24311,
+    "name": "Sunstone Heart",
+    "old_slug": "sunstone-heart",
+    "new_slug": "sunstone-heart",
+    "changed": false
+  },
+  {
+    "id": 24307,
+    "name": "Clear Quartz Mini Heart Set",
+    "old_slug": "clear-quartz-mini-heart-set",
+    "new_slug": "clear-quartz-mini-heart-set",
+    "changed": false
+  },
+  {
+    "id": 24302,
+    "name": "Amazonite Heart",
+    "old_slug": "amazonite-heart",
+    "new_slug": "amazonite-heart",
+    "changed": false
+  },
+  {
+    "id": 24291,
+    "name": "Lepidolite Heart",
+    "old_slug": "lepidolite-heart",
+    "new_slug": "lepidolite-heart",
+    "changed": false
+  },
+  {
+    "id": 24288,
+    "name": "Crystal Quartz Heart",
+    "old_slug": "crystal-quartz-heart",
+    "new_slug": "crystal-quartz-heart",
+    "changed": false
+  },
+  {
+    "id": 24276,
+    "name": "Selenite Heart",
+    "old_slug": "selenite-heart",
+    "new_slug": "selenite-heart",
+    "changed": false
+  },
+  {
+    "id": 24275,
+    "name": "Lepidolite Hearts - AAA Premium Quality",
+    "old_slug": "lepidolite-hearts-aaa-premium-quality",
+    "new_slug": "lepidolite-hearts-aaa-premium-quality",
+    "changed": false
+  },
+  {
+    "id": 24244,
+    "name": "Natural Peruvian Turquoise Hearts - AAA Premium Quality",
+    "old_slug": "natural-peruvian-turquoise-hearts-aaa-premium-quality",
+    "new_slug": "natural-peruvian-turquoise-hearts-aaa-premium-quality",
+    "changed": false
+  },
+  {
+    "id": 24225,
+    "name": "Apatite Heart",
+    "old_slug": "apatite-heart",
+    "new_slug": "apatite-heart",
+    "changed": false
+  },
+  {
+    "id": 24221,
+    "name": "Rose Quartz Heart",
+    "old_slug": "rose-quartz-heart",
+    "new_slug": "rose-quartz-heart",
+    "changed": false
+  },
+  {
+    "id": 24219,
+    "name": "Rhodonite Heart",
+    "old_slug": "peruvian-rhodonite-hearts-aaa-premium-quality",
+    "new_slug": "rhodonite-heart",
+    "changed": true
+  },
+  {
+    "id": 24214,
+    "name": "Golden Obsidian Sphere",
+    "old_slug": "golden-obsidian-gemstone-sphere-1-of-a-kind",
+    "new_slug": "golden-obsidian-sphere",
+    "changed": true
+  },
+  {
+    "id": 24209,
+    "name": "Serpentine Sphere with Tripod",
+    "old_slug": "serpentine-sphere-with-tripod",
+    "new_slug": "serpentine-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24179,
+    "name": "Rainbow Moonstone Sphere with Tripod",
+    "old_slug": "rainbow-moonstone-sphere-with-tripod",
+    "new_slug": "rainbow-moonstone-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24174,
+    "name": "Lepidolite Sphere with Tripod",
+    "old_slug": "lepidolite-sphere-with-tripod",
+    "new_slug": "lepidolite-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24168,
+    "name": "Silver Obsidian Sphere with Tripod",
+    "old_slug": "silver-obsidian-sphere-with-tripod",
+    "new_slug": "silver-obsidian-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24157,
+    "name": "Purple Rainbow Fluorite Sphere with Tripod",
+    "old_slug": "purple-rainbow-fluorite-sphere-with-tripod",
+    "new_slug": "purple-rainbow-fluorite-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24153,
+    "name": "Bloodstone Sphere with Tripod",
+    "old_slug": "bloodstone-sphere-with-tripod",
+    "new_slug": "bloodstone-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24150,
+    "name": "Sunstone Sphere with Tripod",
+    "old_slug": "sunstone-sphere-with-tripod",
+    "new_slug": "sunstone-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24136,
+    "name": "Black Obsidian Sphere with Tripod",
+    "old_slug": "black-obsidian-sphere-with-tripod",
+    "new_slug": "black-obsidian-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24135,
+    "name": "Orange Calcite Sphere with Tripod",
+    "old_slug": "orange-calcite-sphere-with-tripod",
+    "new_slug": "orange-calcite-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24127,
+    "name": "Angelite Sphere with Tripod",
+    "old_slug": "angelite-sphere-with-tripod",
+    "new_slug": "angelite-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24110,
+    "name": "Ruby-Kyanite Sphere with Tripod",
+    "old_slug": "ruby-kyanite-sphere-with-tripod",
+    "new_slug": "ruby-kyanite-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24095,
+    "name": "Lapis Lazuli Sphere with Tripod",
+    "old_slug": "lapis-lazuli-sphere-with-tripod",
+    "new_slug": "lapis-lazuli-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24090,
+    "name": "Plum Tourmaline Sphere with Tripod",
+    "old_slug": "plum-tourmaline-sphere-with-tripod-aaa-premium-quality",
+    "new_slug": "plum-tourmaline-sphere-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 24071,
+    "name": "Chrysocolla Sphere with Tripod",
+    "old_slug": "chrysocolla-sphere-with-tripod",
+    "new_slug": "chrysocolla-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24070,
+    "name": "Sodalite Sphere with Tripod",
+    "old_slug": "sodalite-sphere-with-tripod",
+    "new_slug": "sodalite-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24069,
+    "name": "Apatite Sphere with Tripod",
+    "old_slug": "apatite-sphere-with-tripod",
+    "new_slug": "apatite-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24068,
+    "name": "Labradorite Blue Flame Sphere with Tripod",
+    "old_slug": "labradorite-blue-flame-sphere-with-tripod-2",
+    "new_slug": "labradorite-blue-flame-sphere-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 24049,
+    "name": "Amazonite Sphere with Tripod",
+    "old_slug": "amazonite-sphere-with-tripod",
+    "new_slug": "amazonite-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24031,
+    "name": "Green Jade Sphere with Tripod",
+    "old_slug": "green-jade-sphere-with-tripod",
+    "new_slug": "green-jade-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24029,
+    "name": "Extra Large Lepidolite Sphere with Tripod",
+    "old_slug": "lepidolite-sphere-with-tripod-2",
+    "new_slug": "extra-large-lepidolite-sphere-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 24028,
+    "name": "Peach Moonstone Sphere",
+    "old_slug": "peach-moonstone-spheres",
+    "new_slug": "peach-moonstone-sphere",
+    "changed": true
+  },
+  {
+    "id": 24022,
+    "name": "Amethyst Sphere with Tripod",
+    "old_slug": "amethyst-sphere-with-tripod",
+    "new_slug": "amethyst-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 24013,
+    "name": "Polychrome Jasper Sphere with Tripod",
+    "old_slug": "polychrome-desert-magic-jasper-sphere-with-tripod",
+    "new_slug": "polychrome-jasper-sphere-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 24009,
+    "name": "Green Rainbow Fluorite Sphere with Tripod",
+    "old_slug": "green-rainbow-fluorite-sphere-with-tripod-aaa-premium-quality",
+    "new_slug": "green-rainbow-fluorite-sphere-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 23993,
+    "name": "Rose Quartz Sphere",
+    "old_slug": "rose-quartz-sphere-large-aaa-premium-quality-1-of-a-kind",
+    "new_slug": "rose-quartz-sphere",
+    "changed": true
+  },
+  {
+    "id": 23958,
+    "name": "Labradorite Ganesh",
+    "old_slug": "labradorite-ganesh",
+    "new_slug": "labradorite-ganesh",
+    "changed": false
+  },
+  {
+    "id": 23938,
+    "name": "Carnelian Ganesh",
+    "old_slug": "carnelian-ganesh",
+    "new_slug": "carnelian-ganesh",
+    "changed": false
+  },
+  {
+    "id": 23937,
+    "name": "Lapis Lazuli Ganesh",
+    "old_slug": "lapis-lazuli-ganesh",
+    "new_slug": "lapis-lazuli-ganesh",
+    "changed": false
+  },
+  {
+    "id": 23936,
+    "name": "Tiger Eye Ganesh",
+    "old_slug": "tiger-eye-ganesh",
+    "new_slug": "tiger-eye-ganesh",
+    "changed": false
+  },
+  {
+    "id": 23914,
+    "name": "Black Obsidian Ganesh",
+    "old_slug": "black-obsidian-ganesh",
+    "new_slug": "black-obsidian-ganesh",
+    "changed": false
+  },
+  {
+    "id": 23913,
+    "name": "Howlite Ganesh",
+    "old_slug": "howlite-ganesh",
+    "new_slug": "howlite-ganesh",
+    "changed": false
+  },
+  {
+    "id": 23912,
+    "name": "Rose Quartz Ganesh",
+    "old_slug": "rose-quartz-ganesh",
+    "new_slug": "rose-quartz-ganesh",
+    "changed": false
+  },
+  {
+    "id": 23911,
+    "name": "Clear Quartz Ganesh",
+    "old_slug": "clear-quartz-ganesh",
+    "new_slug": "clear-quartz-ganesh",
+    "changed": false
+  },
+  {
+    "id": 23910,
+    "name": "Yellow Aventurine Ganesh",
+    "old_slug": "yellow-aventurine-ganesh",
+    "new_slug": "yellow-aventurine-ganesh",
+    "changed": false
+  },
+  {
+    "id": 23904,
+    "name": "Blue Lace Agate Worry Stone",
+    "old_slug": "blue-lace-agate-worry-stone",
+    "new_slug": "blue-lace-agate-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23896,
+    "name": "Yellow Calcite Worry Stone",
+    "old_slug": "yellow-calcite-worry-stone",
+    "new_slug": "yellow-calcite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23890,
+    "name": "Labradorite Worry Stone",
+    "old_slug": "labradorite-worry-stone",
+    "new_slug": "labradorite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23883,
+    "name": "Smoky Quartz Worry Stone",
+    "old_slug": "smoky-quartz-worry-stone",
+    "new_slug": "smoky-quartz-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23877,
+    "name": "Serpentine Worry Stone",
+    "old_slug": "serpentine-worry-stone",
+    "new_slug": "serpentine-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23872,
+    "name": "Dragon's Blood Worry Stone",
+    "old_slug": "dragons-blood-worry-stone",
+    "new_slug": "dragons-blood-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23868,
+    "name": "Howlite Worry Stone",
+    "old_slug": "howlite-worry-stone",
+    "new_slug": "howlite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23866,
+    "name": "Sunstone Worry Stone",
+    "old_slug": "sunstone-worry-stone",
+    "new_slug": "sunstone-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23865,
+    "name": "Tree Agate Worry Stone",
+    "old_slug": "tree-agate-worry-stone",
+    "new_slug": "tree-agate-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23860,
+    "name": "Amazonite Worry Stone",
+    "old_slug": "amazonite-worry-stone",
+    "new_slug": "amazonite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23853,
+    "name": "Green Aventurine Worry Stone",
+    "old_slug": "green-aventurine-worry-stone",
+    "new_slug": "green-aventurine-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23845,
+    "name": "Rainbow Moonstone Worry Stone",
+    "old_slug": "rainbow-moonstone-worry-stone",
+    "new_slug": "rainbow-moonstone-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23840,
+    "name": "Tiger Eye Worry Stone",
+    "old_slug": "tiger-eye-worry-stone",
+    "new_slug": "tiger-eye-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23833,
+    "name": "Red Jasper Worry Stone",
+    "old_slug": "red-jasper-worry-stone",
+    "new_slug": "red-jasper-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23829,
+    "name": "Sodalite Worry Stone",
+    "old_slug": "sodalite-worry-stone",
+    "new_slug": "sodalite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23825,
+    "name": "Hematite Worry Stone",
+    "old_slug": "hematite-worry-stone",
+    "new_slug": "hematite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23823,
+    "name": "Rhodonite Worry Stone",
+    "old_slug": "rhodonite-worry-stone",
+    "new_slug": "rhodonite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23819,
+    "name": "Unakite Worry Stone",
+    "old_slug": "unakite-worry-stone",
+    "new_slug": "unakite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23806,
+    "name": "Moss Agate Worry Stone",
+    "old_slug": "moss-agate-worry-stone",
+    "new_slug": "moss-agate-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23800,
+    "name": "Indian Agate Worry Stone",
+    "old_slug": "indian-agate-worry-stone",
+    "new_slug": "indian-agate-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23794,
+    "name": "Black Obsidian Worry Stone",
+    "old_slug": "black-obsidian-worry-stone",
+    "new_slug": "black-obsidian-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23789,
+    "name": "Chrysocolla Worry Stone",
+    "old_slug": "chrysocolla-worry-stone",
+    "new_slug": "chrysocolla-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23774,
+    "name": "Dalmatian Jasper Worry Stone",
+    "old_slug": "dalmatian-jasper-worry-stone",
+    "new_slug": "dalmatian-jasper-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23766,
+    "name": "Clear Quartz Worry Stone",
+    "old_slug": "clear-quartz-worry-stone",
+    "new_slug": "clear-quartz-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23762,
+    "name": "Lapis Lazuli Worry Stone",
+    "old_slug": "lapis-lazuli-worry-stone",
+    "new_slug": "lapis-lazuli-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23753,
+    "name": "Carnelian Worry Stone",
+    "old_slug": "carnelian-worry-stone",
+    "new_slug": "carnelian-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23747,
+    "name": "Opalite Worry Stone",
+    "old_slug": "opalite-worry-stone",
+    "new_slug": "opalite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23745,
+    "name": "Yellow Aventurine Worry Stone",
+    "old_slug": "yellow-aventurine-worry-stone",
+    "new_slug": "yellow-aventurine-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23744,
+    "name": "Rainbow Fluorite Worry Stone",
+    "old_slug": "rainbow-fluorite-worry-stone",
+    "new_slug": "rainbow-fluorite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23741,
+    "name": "Apatite Worry Stone",
+    "old_slug": "apatite-worry-stone",
+    "new_slug": "apatite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23731,
+    "name": "Bloodstone Worry Stone",
+    "old_slug": "bloodstone-worry-stone",
+    "new_slug": "bloodstone-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23729,
+    "name": "Blue Aventurine Worry Stone",
+    "old_slug": "blue-aventurine-worry-stone",
+    "new_slug": "blue-aventurine-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23728,
+    "name": "Rose Quartz Worry Stone",
+    "old_slug": "rose-quartz-worry-stone",
+    "new_slug": "rose-quartz-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23727,
+    "name": "Polychrome Jasper Worry Stone",
+    "old_slug": "polychrome-desert-magic-jasper-worry-stone",
+    "new_slug": "polychrome-jasper-worry-stone",
+    "changed": true
+  },
+  {
+    "id": 23723,
+    "name": "Shungite Worry Stone",
+    "old_slug": "shungite-worry-stone",
+    "new_slug": "shungite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23721,
+    "name": "Garnet Worry Stone",
+    "old_slug": "garnet-worry-stone",
+    "new_slug": "garnet-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23715,
+    "name": "Angelite Worry Stone",
+    "old_slug": "angelite-worry-stone",
+    "new_slug": "angelite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23708,
+    "name": "Ruby-Kyanite Worry Stone",
+    "old_slug": "ruby-kyanite-worry-stone",
+    "new_slug": "ruby-kyanite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23704,
+    "name": "Black Tourmaline Worry Stone",
+    "old_slug": "black-tourmaline-worry-stone",
+    "new_slug": "black-tourmaline-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23699,
+    "name": "Amethyst Worry Stone",
+    "old_slug": "amethyst-worry-stone",
+    "new_slug": "amethyst-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23697,
+    "name": "Green Jade Worry Stone",
+    "old_slug": "green-jade-worry-stone",
+    "new_slug": "green-jade-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23696,
+    "name": "Silver Obsidian Worry Stone",
+    "old_slug": "silver-obsidian-worry-stone",
+    "new_slug": "silver-obsidian-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23695,
+    "name": "Selenite Worry Stone",
+    "old_slug": "selenite-worry-stone",
+    "new_slug": "selenite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23694,
+    "name": "Lepidolite Worry Stone",
+    "old_slug": "lepidolite-worry-stone",
+    "new_slug": "lepidolite-worry-stone",
+    "changed": false
+  },
+  {
+    "id": 23693,
+    "name": "Seven Chakra Gemstone Worry Stone",
+    "old_slug": "chakra-worry-stone",
+    "new_slug": "seven-chakra-gemstone-worry-stone",
+    "changed": true
+  },
+  {
+    "id": 22282,
+    "name": "Black Rutilated Quartz Crystal Point",
+    "old_slug": "black-rutilated-quartz-crystal-point",
+    "new_slug": "black-rutilated-quartz-crystal-point",
+    "changed": false
+  },
+  {
+    "id": 22279,
+    "name": "Rhodonite Crystal Point",
+    "old_slug": "rhodonite-crystal-point-towel",
+    "new_slug": "rhodonite-crystal-point",
+    "changed": true
+  },
+  {
+    "id": 22276,
+    "name": "Apatite Crystal Point",
+    "old_slug": "apatite-crystal-point-towel",
+    "new_slug": "apatite-crystal-point",
+    "changed": true
+  },
+  {
+    "id": 22273,
+    "name": "Sunstone Crystal Point",
+    "old_slug": "sunstone-crystal-point-aaa-premium-quality",
+    "new_slug": "sunstone-crystal-point",
+    "changed": true
+  },
+  {
+    "id": 22270,
+    "name": "Black Obsidian Crystal Point",
+    "old_slug": "black-obsidian-crystal-point-towel",
+    "new_slug": "black-obsidian-crystal-point",
+    "changed": true
+  },
+  {
+    "id": 22266,
+    "name": "Green Fluorite Crystal Point",
+    "old_slug": "green-fluorite-crystal-point-towel",
+    "new_slug": "green-fluorite-crystal-point",
+    "changed": true
+  },
+  {
+    "id": 22262,
+    "name": "Angelite Cube",
+    "old_slug": "angelite-cube",
+    "new_slug": "angelite-cube",
+    "changed": false
+  },
+  {
+    "id": 22251,
+    "name": "Black Obsidian Merkaba",
+    "old_slug": "black-obsidian-merkaba",
+    "new_slug": "black-obsidian-merkaba",
+    "changed": false
+  },
+  {
+    "id": 22245,
+    "name": "Amethyst Merkaba",
+    "old_slug": "amethyst-merkaba",
+    "new_slug": "amethyst-merkaba",
+    "changed": false
+  },
+  {
+    "id": 22167,
+    "name": "Green Jade Heart",
+    "old_slug": "green-jade-heart",
+    "new_slug": "green-jade-heart",
+    "changed": false
+  },
+  {
+    "id": 22162,
+    "name": "Rainbow Fluorite Tumbled Stone Set",
+    "old_slug": "rainbow-fluorite-stone-set",
+    "new_slug": "rainbow-fluorite-tumbled-stone-set",
+    "changed": true
+  },
+  {
+    "id": 22152,
+    "name": "Green Jade Ganesh",
+    "old_slug": "green-jade-ganesh",
+    "new_slug": "green-jade-ganesh",
+    "changed": false
+  },
+  {
+    "id": 22151,
+    "name": "Selenite Moon Bowl",
+    "old_slug": "selenite-moon-crystal-recharging-bowl",
+    "new_slug": "selenite-moon-bowl",
+    "changed": true
+  },
+  {
+    "id": 22150,
+    "name": "Rose Quartz Sphere with Tripod",
+    "old_slug": "rose-quartz-sphere-with-tripod",
+    "new_slug": "rose-quartz-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 22145,
+    "name": "Grounded Anxiety Free Gemstone Tower with Tripod",
+    "old_slug": "grounded-anxiety-free-gemstone-tower-2",
+    "new_slug": "grounded-anxiety-free-gemstone-tower-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 22139,
+    "name": "Grounded Anxiety Free Gemstone Tower",
+    "old_slug": "grounded-anxiety-free-gemstone-tower",
+    "new_slug": "grounded-anxiety-free-gemstone-tower",
+    "changed": true
+  },
+  {
+    "id": 22122,
+    "name": "Carnelian Heart",
+    "old_slug": "carnelian-hearts",
+    "new_slug": "carnelian-heart",
+    "changed": true
+  },
+  {
+    "id": 22099,
+    "name": "Rainbow Fluorite Tower",
+    "old_slug": "rainbow-fluorite-tower",
+    "new_slug": "rainbow-fluorite-tower",
+    "changed": false
+  },
+  {
+    "id": 22038,
+    "name": "Shungite Palm Stone",
+    "old_slug": "shungite-palm-stone",
+    "new_slug": "shungite-palm-stone",
+    "changed": false
+  },
+  {
+    "id": 22034,
+    "name": "Pendulum Mat",
+    "old_slug": "pendulum-mats",
+    "new_slug": "pendulum-mat",
+    "changed": true
+  },
+  {
+    "id": 22016,
+    "name": "Honey Jade Sphere with Tripod",
+    "old_slug": "honey-jade-sphere-with-tripod",
+    "new_slug": "honey-jade-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 22014,
+    "name": "Crystal Pendulum",
+    "old_slug": "crystal-pendulums",
+    "new_slug": "crystal-pendulum",
+    "changed": true
+  },
+  {
+    "id": 22010,
+    "name": "Citrine Sphere with Tripod",
+    "old_slug": "rare-genuine-citrine-sphere-with-tripod",
+    "new_slug": "citrine-sphere-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 22005,
+    "name": "Gemstone Intention Tower",
+    "old_slug": "fertility-tower",
+    "new_slug": "gemstone-intention-tower",
+    "changed": true
+  },
+  {
+    "id": 21999,
+    "name": "Amethyst Geode with Tripod",
+    "old_slug": "genuine-amethyst-geode-with-tripod",
+    "new_slug": "amethyst-geode-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 21994,
+    "name": "Orgone Crystal Pendulum",
+    "old_slug": "crystal-orgone-pendulums",
+    "new_slug": "orgone-crystal-pendulum",
+    "changed": true
+  },
+  {
+    "id": 21964,
+    "name": "Green Jade Tower",
+    "old_slug": "green-jade-tower",
+    "new_slug": "green-jade-tower",
+    "changed": false
+  },
+  {
+    "id": 21959,
+    "name": "Blue Aventurine Palm Stone",
+    "old_slug": "blue-aventurine-palm-stone",
+    "new_slug": "blue-aventurine-palm-stone",
+    "changed": false
+  },
+  {
+    "id": 21951,
+    "name": "Peruvian Turquoise Sphere",
+    "old_slug": "natural-peruvian-turquoise-sphere",
+    "new_slug": "peruvian-turquoise-sphere",
+    "changed": true
+  },
+  {
+    "id": 21925,
+    "name": "Labradorite Mini Heart Set",
+    "old_slug": "labradorite-mini-heart-set",
+    "new_slug": "labradorite-mini-heart-set",
+    "changed": false
+  },
+  {
+    "id": 21910,
+    "name": "Shungite Sphere with Tripod",
+    "old_slug": "shungite-sphere-w-tripod",
+    "new_slug": "shungite-sphere-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 21898,
+    "name": "Rainbow Fluorite Flame",
+    "old_slug": "rainbow-fluorite-flame-freeform-crystal",
+    "new_slug": "rainbow-fluorite-flame",
+    "changed": true
+  },
+  {
+    "id": 21888,
+    "name": "Rainbow Fluorite Angel",
+    "old_slug": "rainbow-fluorite-angel",
+    "new_slug": "rainbow-fluorite-angel",
+    "changed": false
+  },
+  {
+    "id": 21886,
+    "name": "Labradorite Pyramid",
+    "old_slug": "labradorite-blue-flame-pyramid",
+    "new_slug": "labradorite-pyramid",
+    "changed": true
+  },
+  {
+    "id": 21881,
+    "name": "Rose Quartz Obelisk",
+    "old_slug": "rose-quartz-obelisk-towel",
+    "new_slug": "rose-quartz-obelisk",
+    "changed": true
+  },
+  {
+    "id": 21876,
+    "name": "Blue Tiger Eye Tumbled Stone Set",
+    "old_slug": "blue-tiger-eye-stone-set",
+    "new_slug": "blue-tiger-eye-tumbled-stone-set",
+    "changed": true
+  },
+  {
+    "id": 21869,
+    "name": "Selenite Tower",
+    "old_slug": "selenite-tower",
+    "new_slug": "selenite-tower",
+    "changed": false
+  },
+  {
+    "id": 21859,
+    "name": "Chrysocolla Heart",
+    "old_slug": "chrysocolla-heart",
+    "new_slug": "chrysocolla-heart",
+    "changed": false
+  },
+  {
+    "id": 21843,
+    "name": "Selenite Heart Bowl",
+    "old_slug": "selenite-crystal-recharging-heart-bowl",
+    "new_slug": "selenite-heart-bowl",
+    "changed": true
+  },
+  {
+    "id": 21841,
+    "name": "Pyrite Sphere",
+    "old_slug": "natural-pyrite-sphere-aaa-premium-quality",
+    "new_slug": "pyrite-sphere",
+    "changed": true
+  },
+  {
+    "id": 21838,
+    "name": "Bloodstone Heart",
+    "old_slug": "bloodstone-heart",
+    "new_slug": "bloodstone-heart",
+    "changed": false
+  },
+  {
+    "id": 21833,
+    "name": "EMF Protection Gemstone Tower",
+    "old_slug": "emf-protection-tower",
+    "new_slug": "emf-protection-gemstone-tower",
+    "changed": true
+  },
+  {
+    "id": 21831,
+    "name": "Pyrite Pyramid",
+    "old_slug": "natural-pyrite-pyramid",
+    "new_slug": "pyrite-pyramid",
+    "changed": true
+  },
+  {
+    "id": 21825,
+    "name": "Large EMF Protection Gemstone Tower",
+    "old_slug": "emf-protection-tower-2",
+    "new_slug": "large-emf-protection-gemstone-tower",
+    "changed": true
+  },
+  {
+    "id": 21806,
+    "name": "Rose Quartz Point",
+    "old_slug": "rose-quartz-crystal-point-towel",
+    "new_slug": "rose-quartz-point",
+    "changed": true
+  },
+  {
+    "id": 21801,
+    "name": "Hematite Pyramid",
+    "old_slug": "hematite-pyramid",
+    "new_slug": "hematite-pyramid",
+    "changed": false
+  },
+  {
+    "id": 21799,
+    "name": "Gemstone Orgone Merkaba",
+    "old_slug": "tiny-gemstone-orgone-merkaba",
+    "new_slug": "gemstone-orgone-merkaba",
+    "changed": true
+  },
+  {
+    "id": 21796,
+    "name": "Citrine Point",
+    "old_slug": "citrine-crystal-point-towel",
+    "new_slug": "citrine-point",
+    "changed": true
+  },
+  {
+    "id": 21791,
+    "name": "Amethyst Point",
+    "old_slug": "amethyst-crystal-point-towel",
+    "new_slug": "amethyst-point",
+    "changed": true
+  },
+  {
+    "id": 21776,
+    "name": "Selenite Heart Plate",
+    "old_slug": "selenite-heart-recharging-stone",
+    "new_slug": "selenite-heart-plate",
+    "changed": true
+  },
+  {
+    "id": 21771,
+    "name": "Clear Quartz Merkaba",
+    "old_slug": "clear-quartz-merkaba",
+    "new_slug": "clear-quartz-merkaba",
+    "changed": false
+  },
+  {
+    "id": 21757,
+    "name": "Citrine Obelisk",
+    "old_slug": "genuine-citrine-obelisk-towel",
+    "new_slug": "citrine-obelisk",
+    "changed": true
+  },
+  {
+    "id": 21753,
+    "name": "Rainbow Moonstone Heart",
+    "old_slug": "rainbow-moonstone-heart",
+    "new_slug": "rainbow-moonstone-heart",
+    "changed": false
+  },
+  {
+    "id": 21743,
+    "name": "Black Tourmaline Sphere",
+    "old_slug": "black-tourmaline-sphere-with-tripod",
+    "new_slug": "black-tourmaline-sphere",
+    "changed": true
+  },
+  {
+    "id": 21735,
+    "name": "Seven Chakra Recharging Stone Set",
+    "old_slug": "chakra-set-7-recharging-stones",
+    "new_slug": "seven-chakra-recharging-stone-set",
+    "changed": true
+  },
+  {
+    "id": 21733,
+    "name": "Selenite Recharging Wands",
+    "old_slug": "selenite-crystal-recharging-wands",
+    "new_slug": "selenite-recharging-wands",
+    "changed": true
+  },
+  {
+    "id": 21727,
+    "name": "Dream Amethyst Tower",
+    "old_slug": "dream-amethyst-tower-aaa-premium-quality",
+    "new_slug": "dream-amethyst-tower",
+    "changed": true
+  },
+  {
+    "id": 21722,
+    "name": "Yellow Aventurine Tower",
+    "old_slug": "yellow-aventurine-tower",
+    "new_slug": "yellow-aventurine-tower",
+    "changed": false
+  },
+  {
+    "id": 21713,
+    "name": "Selenite Recharging Bowl",
+    "old_slug": "selenite-crystal-recharging-bowl",
+    "new_slug": "selenite-recharging-bowl",
+    "changed": true
+  },
+  {
+    "id": 21694,
+    "name": "Shell Fossil Sphere with Tripod",
+    "old_slug": "shell-fossil-sphere-with-tripod-aaa-premium-quality",
+    "new_slug": "shell-fossil-sphere-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 21687,
+    "name": "Black Stripe Agate Sphere with Tripod",
+    "old_slug": "black-stripe-agate-sphere-with-tripod",
+    "new_slug": "black-stripe-agate-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 21685,
+    "name": "Amazonite Ganesh",
+    "old_slug": "amazonite-ganesh",
+    "new_slug": "amazonite-ganesh",
+    "changed": false
+  },
+  {
+    "id": 21680,
+    "name": "Shungite Tower",
+    "old_slug": "shungite-tower",
+    "new_slug": "shungite-tower",
+    "changed": false
+  },
+  {
+    "id": 21675,
+    "name": "Yellow Aventurine Sphere with Tripod",
+    "old_slug": "yellow-aventurine-sphere-with-tripod",
+    "new_slug": "yellow-aventurine-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 21660,
+    "name": "Natural Citrine Tower",
+    "old_slug": "natural-citrine-tower",
+    "new_slug": "natural-citrine-tower",
+    "changed": false
+  },
+  {
+    "id": 21633,
+    "name": "Peach Selenite Bowl",
+    "old_slug": "peach-selenite-crystal-recharging-bowl",
+    "new_slug": "peach-selenite-bowl",
+    "changed": true
+  },
+  {
+    "id": 21627,
+    "name": "Sakura Cherry Blossom Agate Sphere with Tripod",
+    "old_slug": "sakura-cherry-blossom-agate-sphere-with-tripod-aaa-premium-quality",
+    "new_slug": "sakura-cherry-blossom-agate-sphere-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 21625,
+    "name": "Red Jasper Angel",
+    "old_slug": "red-jasper-angel",
+    "new_slug": "red-jasper-angel",
+    "changed": false
+  },
+  {
+    "id": 21619,
+    "name": "Mookaite Jasper Sphere with Tripod",
+    "old_slug": "mookaite-jasper-sphere-with-tripod",
+    "new_slug": "mookaite-jasper-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 21605,
+    "name": "Polychrome Jasper Palm Stone",
+    "old_slug": "polychrome-desert-magic-jasper-palm-stone",
+    "new_slug": "polychrome-jasper-palm-stone",
+    "changed": true
+  },
+  {
+    "id": 21590,
+    "name": "Ruby-Kyanite Flame",
+    "old_slug": "ruby-kyanite-flame-freeform-crystal",
+    "new_slug": "ruby-kyanite-flame",
+    "changed": true
+  },
+  {
+    "id": 21584,
+    "name": "Cobalt Blue Quartz Sphere with Tripod",
+    "old_slug": "cobalt-blue-quartz-sphere-with-tripod",
+    "new_slug": "cobalt-blue-quartz-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 21565,
+    "name": "Celestine Sphere with Tripod",
+    "old_slug": "celestine-sphere-with-tripod",
+    "new_slug": "celestine-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 21554,
+    "name": "Dream Amethyst Sphere with Tripod",
+    "old_slug": "dream-amethyst-sphere-with-tripod",
+    "new_slug": "dream-amethyst-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 21550,
+    "name": "Garnet Sphere with Tripod",
+    "old_slug": "garnet-sphere-with-tripod",
+    "new_slug": "garnet-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 21549,
+    "name": "Natural Pyrite Tower",
+    "old_slug": "natural-pyrite-tower",
+    "new_slug": "natural-pyrite-tower",
+    "changed": false
+  },
+  {
+    "id": 21527,
+    "name": "Clear Quartz Flame",
+    "old_slug": "crystal-quartz-flame-freeform-crystal",
+    "new_slug": "clear-quartz-flame",
+    "changed": true
+  },
+  {
+    "id": 21482,
+    "name": "Natural Pyrite Heart",
+    "old_slug": "natural-pyrite-heart",
+    "new_slug": "natural-pyrite-heart",
+    "changed": false
+  },
+  {
+    "id": 21481,
+    "name": "Peruvian Rhodonite Sphere with Tripod",
+    "old_slug": "peruvian-rhodonite-sphere-with-tripod",
+    "new_slug": "peruvian-rhodonite-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 21480,
+    "name": "Clear Quartz Sphere with Tripod",
+    "old_slug": "clear-quartz-sphere-with-tripod",
+    "new_slug": "clear-quartz-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 21472,
+    "name": "Green Aventurine Sphere with Tripod",
+    "old_slug": "green-aventurine-sphere-with-tripod",
+    "new_slug": "green-aventurine-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 21465,
+    "name": "Labradorite Flame with Tripod",
+    "old_slug": "labradorite-blue-flame-sphere-with-tripod",
+    "new_slug": "labradorite-flame-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 21443,
+    "name": "Labradorite Freeform Crystal",
+    "old_slug": "labradorite-blue-flame-freeform-crystals",
+    "new_slug": "labradorite-freeform-crystal",
+    "changed": true
+  },
+  {
+    "id": 21380,
+    "name": "Rose Quartz Palm Stone",
+    "old_slug": "rose-quartz-palm-stone",
+    "new_slug": "rose-quartz-palm-stone",
+    "changed": false
+  },
+  {
+    "id": 21349,
+    "name": "Clear Quartz Obelisk",
+    "old_slug": "clear-quartz-obelisk-towel",
+    "new_slug": "clear-quartz-obelisk",
+    "changed": true
+  },
+  {
+    "id": 21344,
+    "name": "Rainbow Fluorite Obelisk",
+    "old_slug": "rainbow-fluorite-obelisk-towel",
+    "new_slug": "rainbow-fluorite-obelisk",
+    "changed": true
+  },
+  {
+    "id": 21337,
+    "name": "Clear Quartz Pyramid",
+    "old_slug": "crystal-quartz-pyramid",
+    "new_slug": "clear-quartz-pyramid",
+    "changed": true
+  },
+  {
+    "id": 21335,
+    "name": "Polychrome Jasper Flame",
+    "old_slug": "polychrome-desert-magic-jasper-freeform-flame-crystals",
+    "new_slug": "polychrome-jasper-flame",
+    "changed": true
+  },
+  {
+    "id": 21334,
+    "name": "Black Septarian Palm Stone",
+    "old_slug": "21334",
+    "new_slug": "black-septarian-palm-stone",
+    "changed": true
+  },
+  {
+    "id": 21333,
+    "name": "Petrified Wood Palm Stone",
+    "old_slug": "petrified-wood-palm-stones",
+    "new_slug": "petrified-wood-palm-stone",
+    "changed": true
+  },
+  {
+    "id": 21326,
+    "name": "Black Rutilated Quartz Tower",
+    "old_slug": "black-rutilated-quartz-tower",
+    "new_slug": "black-rutilated-quartz-tower",
+    "changed": false
+  },
+  {
+    "id": 21298,
+    "name": "Black Tourmaline Flame",
+    "old_slug": "black-tourmaline-flame-freeform-crystal",
+    "new_slug": "black-tourmaline-flame",
+    "changed": true
+  },
+  {
+    "id": 21240,
+    "name": "Caribbean Jasper Obelisk",
+    "old_slug": "caribbean-jasper-obelisk-towel",
+    "new_slug": "caribbean-jasper-obelisk",
+    "changed": true
+  },
+  {
+    "id": 21235,
+    "name": "Dragon Bloodstone Obelisk",
+    "old_slug": "dragon-bloodstone-obelisk",
+    "new_slug": "dragon-bloodstone-obelisk",
+    "changed": false
+  },
+  {
+    "id": 21230,
+    "name": "Pine Jasper Obelisk",
+    "old_slug": "pine-jasper-obelisk",
+    "new_slug": "pine-jasper-obelisk",
+    "changed": false
+  },
+  {
+    "id": 21225,
+    "name": "Pink Scenery Jasper Sphere with Tripod",
+    "old_slug": "pink-scenery-jasper-sphere-with-tripod",
+    "new_slug": "pink-scenery-jasper-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 21219,
+    "name": "Kyanite Sphere with Tripod",
+    "old_slug": "rare-kyanite-sphere-with-tripod",
+    "new_slug": "kyanite-sphere-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 21207,
+    "name": "Rose Quartz Bowl",
+    "old_slug": "rose-quartz-crystal-bowls",
+    "new_slug": "rose-quartz-bowl",
+    "changed": true
+  },
+  {
+    "id": 21163,
+    "name": "Polychrome Jasper Cube",
+    "old_slug": "polychrome-desert-magic-jasper-cube",
+    "new_slug": "polychrome-jasper-cube",
+    "changed": true
+  },
+  {
+    "id": 21158,
+    "name": "Serene Stress Free Tower with Tripod",
+    "old_slug": "serene-stress-free-tower-2",
+    "new_slug": "serene-stress-free-tower-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 21153,
+    "name": "Serene Stress Free Tower",
+    "old_slug": "serene-stress-free-tower",
+    "new_slug": "serene-stress-free-tower",
+    "changed": true
+  },
+  {
+    "id": 21146,
+    "name": "Carnelian Bowl",
+    "old_slug": "carnelian-crystal-bowls",
+    "new_slug": "carnelian-bowl",
+    "changed": true
+  },
+  {
+    "id": 21092,
+    "name": "Citrine Tumbled Stone Set",
+    "old_slug": "citrine-stone-set",
+    "new_slug": "citrine-tumbled-stone-set",
+    "changed": true
+  },
+  {
+    "id": 21080,
+    "name": "Carnelian Flame",
+    "old_slug": "carnelian-flame-crystal",
+    "new_slug": "carnelian-flame",
+    "changed": true
+  },
+  {
+    "id": 20974,
+    "name": "Gemstone Orgonite Pyramid",
+    "old_slug": "orgone-pyramid",
+    "new_slug": "gemstone-orgonite-pyramid",
+    "changed": true
+  },
+  {
+    "id": 20973,
+    "name": "Black Tourmaline Palm Stone",
+    "old_slug": "black-tourmaline-palm-stones",
+    "new_slug": "black-tourmaline-palm-stone",
+    "changed": true
+  },
+  {
+    "id": 20956,
+    "name": "Carnelian Mini Heart Set",
+    "old_slug": "carnelian-mini-heart-set",
+    "new_slug": "carnelian-mini-heart-set",
+    "changed": false
+  },
+  {
+    "id": 20939,
+    "name": "Honey Jade Point",
+    "old_slug": "honey-jade-crystal-point",
+    "new_slug": "honey-jade-point",
+    "changed": true
+  },
+  {
+    "id": 20935,
+    "name": "Clear Quartz Point",
+    "old_slug": "clear-quartz-crystal-point",
+    "new_slug": "clear-quartz-point",
+    "changed": true
+  },
+  {
+    "id": 20898,
+    "name": "Yellow Aventurine Pyramid",
+    "old_slug": "yellow-aventurine-pyramid",
+    "new_slug": "yellow-aventurine-pyramid",
+    "changed": false
+  },
+  {
+    "id": 20888,
+    "name": "Carnelian Freeform",
+    "old_slug": "carnelian-freeform-crystals",
+    "new_slug": "carnelian-freeform",
+    "changed": true
+  },
+  {
+    "id": 20882,
+    "name": "Prosperity Success Tower",
+    "old_slug": "prosperity-success-tower",
+    "new_slug": "prosperity-success-tower",
+    "changed": true
+  },
+  {
+    "id": 20858,
+    "name": "Pocket Ganesh",
+    "old_slug": "pocket-baby-ganesh",
+    "new_slug": "pocket-ganesh",
+    "changed": true
+  },
+  {
+    "id": 20854,
+    "name": "Rose Quartz Angel",
+    "old_slug": "rose-quartz-angel",
+    "new_slug": "rose-quartz-angel",
+    "changed": false
+  },
+  {
+    "id": 20853,
+    "name": "Red Jasper Sphere with Tripod",
+    "old_slug": "red-jasper-sphere-with-tripod",
+    "new_slug": "red-jasper-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 20822,
+    "name": "Apatite Freeform",
+    "old_slug": "apatite-freeform-crystal",
+    "new_slug": "apatite-freeform",
+    "changed": true
+  },
+  {
+    "id": 20818,
+    "name": "Shungite Pyramid",
+    "old_slug": "shungite-pyramid",
+    "new_slug": "shungite-pyramid",
+    "changed": false
+  },
+  {
+    "id": 20814,
+    "name": "Scolecite Sphere with Tripod",
+    "old_slug": "scolecite-sphere-with-tripod",
+    "new_slug": "scolecite-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 20807,
+    "name": "Labradorite Blue Flame Palm Stone",
+    "old_slug": "labradorite-blue-flame-palm-stone",
+    "new_slug": "labradorite-blue-flame-palm-stone",
+    "changed": false
+  },
+  {
+    "id": 20803,
+    "name": "Peach Moonstone Hearts",
+    "old_slug": "peach-moonstone-hearts",
+    "new_slug": "peach-moonstone-hearts",
+    "changed": false
+  },
+  {
+    "id": 20802,
+    "name": "Clear Quartz Angel",
+    "old_slug": "clear-quartz-angel",
+    "new_slug": "clear-quartz-angel",
+    "changed": false
+  },
+  {
+    "id": 20774,
+    "name": "Selenite Sphere with Tripod",
+    "old_slug": "selenite-sphere-with-tripod",
+    "new_slug": "selenite-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 20773,
+    "name": "Amethyst Flame",
+    "old_slug": "amethyst-flame-freeform-crystal",
+    "new_slug": "amethyst-flame",
+    "changed": true
+  },
+  {
+    "id": 20768,
+    "name": "Carnelian Sphere with Tripod",
+    "old_slug": "carnelian-sphere-with-tripod",
+    "new_slug": "carnelian-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 20755,
+    "name": "Black Tourmaline Tower",
+    "old_slug": "black-tourmaline-tower",
+    "new_slug": "black-tourmaline-tower",
+    "changed": false
+  },
+  {
+    "id": 20748,
+    "name": "Prosperity Success Tower with Tripod",
+    "old_slug": "prosperity-success-tower-2",
+    "new_slug": "prosperity-success-tower-with-tripod",
+    "changed": true
+  },
+  {
+    "id": 20746,
+    "name": "Black Obsidian Obelisk",
+    "old_slug": "black-obsidian-obelisk-towel",
+    "new_slug": "black-obsidian-obelisk",
+    "changed": true
+  },
+  {
+    "id": 20741,
+    "name": "Ruby in Kyanite Cube",
+    "old_slug": "ruby-kyanite-cube",
+    "new_slug": "ruby-in-kyanite-cube",
+    "changed": true
+  },
+  {
+    "id": 20737,
+    "name": "Green Aventurine Merkaba",
+    "old_slug": "green-aventurine-merkaba",
+    "new_slug": "green-aventurine-merkaba",
+    "changed": false
+  },
+  {
+    "id": 20732,
+    "name": "Sodalite Merkaba",
+    "old_slug": "sodalite-merkaba",
+    "new_slug": "sodalite-merkaba",
+    "changed": false
+  },
+  {
+    "id": 20730,
+    "name": "Carnelian Palm Stones",
+    "old_slug": "carnelian-palm-stones",
+    "new_slug": "carnelian-palm-stones",
+    "changed": false
+  },
+  {
+    "id": 20729,
+    "name": "Peach Selenite Sphere with Tripod",
+    "old_slug": "peach-selenite-sphere-with-tripod",
+    "new_slug": "peach-selenite-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 20728,
+    "name": "Lepidolite Palm Stone",
+    "old_slug": "lepidolite-palm-stone",
+    "new_slug": "lepidolite-palm-stone",
+    "changed": false
+  },
+  {
+    "id": 20727,
+    "name": "Blue Apatite Palm Stone",
+    "old_slug": "blue-apatite-palm-stone",
+    "new_slug": "blue-apatite-palm-stone",
+    "changed": false
+  },
+  {
+    "id": 20726,
+    "name": "Peach Selenite Heart",
+    "old_slug": "peach-selenite-heart",
+    "new_slug": "peach-selenite-heart",
+    "changed": false
+  },
+  {
+    "id": 20718,
+    "name": "Red Jasper Pyramid",
+    "old_slug": "red-jasper-pyramid",
+    "new_slug": "red-jasper-pyramid",
+    "changed": false
+  },
+  {
+    "id": 20714,
+    "name": "Unakite Heart",
+    "old_slug": "unakite-heart",
+    "new_slug": "unakite-heart",
+    "changed": false
+  },
+  {
+    "id": 20708,
+    "name": "Red Jasper Tower",
+    "old_slug": "red-jasper-tower",
+    "new_slug": "red-jasper-tower",
+    "changed": false
+  },
+  {
+    "id": 20704,
+    "name": "Bloodstone Stone Set",
+    "old_slug": "bloodstone-stone-set",
+    "new_slug": "bloodstone-stone-set",
+    "changed": false
+  },
+  {
+    "id": 20700,
+    "name": "Sodalite Stone Set",
+    "old_slug": "sodalite-stone-set",
+    "new_slug": "sodalite-stone-set",
+    "changed": false
+  },
+  {
+    "id": 20696,
+    "name": "Red Jasper Stone Set",
+    "old_slug": "red-jasper-stone-set",
+    "new_slug": "red-jasper-stone-set",
+    "changed": false
+  },
+  {
+    "id": 20691,
+    "name": "Black Obsidian Tower",
+    "old_slug": "black-obsidian-tower",
+    "new_slug": "black-obsidian-tower",
+    "changed": false
+  },
+  {
+    "id": 20686,
+    "name": "Tiger Eye Tower",
+    "old_slug": "tiger-eye-tower",
+    "new_slug": "tiger-eye-tower",
+    "changed": false
+  },
+  {
+    "id": 20663,
+    "name": "Amazonite Cube",
+    "old_slug": "amazonite-cube",
+    "new_slug": "amazonite-cube",
+    "changed": false
+  },
+  {
+    "id": 20657,
+    "name": "Selenite Cube",
+    "old_slug": "selenite-cube",
+    "new_slug": "selenite-cube",
+    "changed": false
+  },
+  {
+    "id": 20652,
+    "name": "Lapis Lazuli Stone Set",
+    "old_slug": "lapis-lazuli-stone-set",
+    "new_slug": "lapis-lazuli-stone-set",
+    "changed": false
+  },
+  {
+    "id": 20648,
+    "name": "Yellow Jade Mini Heart Set",
+    "old_slug": "yellow-jade-mini-heart-set",
+    "new_slug": "yellow-jade-mini-heart-set",
+    "changed": false
+  },
+  {
+    "id": 20642,
+    "name": "Hematite Sphere with Tripod",
+    "old_slug": "hematite-sphere-with-tripod",
+    "new_slug": "hematite-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 20638,
+    "name": "Bloodstone Pyramid",
+    "old_slug": "bloodstone-pyramid",
+    "new_slug": "bloodstone-pyramid",
+    "changed": false
+  },
+  {
+    "id": 20633,
+    "name": "Tiger Eye Palm Stone",
+    "old_slug": "tiger-eye-palm-stone",
+    "new_slug": "tiger-eye-palm-stone",
+    "changed": false
+  },
+  {
+    "id": 20628,
+    "name": "Rose Quartz Freeform Flame",
+    "old_slug": "rose-quartz-flame-freeform-crystal",
+    "new_slug": "rose-quartz-freeform-flame",
+    "changed": true
+  },
+  {
+    "id": 20603,
+    "name": "Pink Opal Crystal Point",
+    "old_slug": "pink-opal-crystal-point-aaa-premium-quality",
+    "new_slug": "pink-opal-crystal-point",
+    "changed": true
+  },
+  {
+    "id": 20597,
+    "name": "Tiger Eye Sphere with Tripod",
+    "old_slug": "tiger-eye-sphere-with-tripod",
+    "new_slug": "tiger-eye-sphere-with-tripod",
+    "changed": false
+  },
+  {
+    "id": 20583,
+    "name": "Rhodonite Flame",
+    "old_slug": "rhodonite-flame-freeform-crystal",
+    "new_slug": "rhodonite-flame",
+    "changed": true
+  },
+  {
+    "id": 20578,
+    "name": "Hematite Flame",
+    "old_slug": "hematite-flame-freeform-crystal",
+    "new_slug": "hematite-flame",
+    "changed": true
+  },
+  {
+    "id": 20552,
+    "name": "Plum Blossom Tourmaline Crystal Point",
+    "old_slug": "plum-blossom-tourmaline-crystal-point",
+    "new_slug": "plum-blossom-tourmaline-crystal-point",
+    "changed": false
+  },
+  {
+    "id": 20548,
+    "name": "Amazonite Crystal Point",
+    "old_slug": "amazonite-crystal-point",
+    "new_slug": "amazonite-crystal-point",
+    "changed": false
+  },
+  {
+    "id": 20543,
+    "name": "Serpentine Flame",
+    "old_slug": "serpentine-flame-freeform-crystal",
+    "new_slug": "serpentine-flame",
+    "changed": true
+  },
+  {
+    "id": 20541,
+    "name": "Green Jade Flame",
+    "old_slug": "green-jade-flame-freeform-crystal",
+    "new_slug": "green-jade-flame",
+    "changed": true
+  },
+  {
+    "id": 20535,
+    "name": "Shungite Flame",
+    "old_slug": "shungite-flame-freeform-crystal",
+    "new_slug": "shungite-flame",
+    "changed": true
+  },
+  {
+    "id": 20519,
+    "name": "Lapis Lazuli Heart",
+    "old_slug": "lapis-lazuli-heart",
+    "new_slug": "lapis-lazuli-heart",
+    "changed": false
+  },
+  {
+    "id": 20518,
+    "name": "Black Obsidian Angel",
+    "old_slug": "black-obsidian-angel",
+    "new_slug": "black-obsidian-angel",
+    "changed": false
+  },
+  {
+    "id": 20514,
+    "name": "Purple Rainbow Fluorite Heart",
+    "old_slug": "purple-rainbow-fluorite-heart",
+    "new_slug": "purple-rainbow-fluorite-heart",
+    "changed": false
+  },
+  {
+    "id": 20505,
+    "name": "Rose Quartz Tumbled Stone Set",
+    "old_slug": "rose-quartz-stone-set",
+    "new_slug": "rose-quartz-tumbled-stone-set",
+    "changed": true
+  },
+  {
+    "id": 20493,
+    "name": "Red Jasper Flame",
+    "old_slug": "red-jasper-flame-freeform-crystal",
+    "new_slug": "red-jasper-flame",
+    "changed": true
+  },
+  {
+    "id": 20492,
+    "name": "Amazonite Flame",
+    "old_slug": "amazonite-flame-freeform-crystal",
+    "new_slug": "amazonite-flame",
+    "changed": true
+  },
+  {
+    "id": 20469,
+    "name": "Angelite Heart",
+    "old_slug": "angelite-heart",
+    "new_slug": "angelite-heart",
+    "changed": false
+  },
+  {
+    "id": 20468,
+    "name": "Tiger Eye Flame",
+    "old_slug": "tiger-eye-flame-freeform-crystal",
+    "new_slug": "tiger-eye-flame",
+    "changed": true
+  },
+  {
+    "id": 20467,
+    "name": "Green Aventurine Angel",
+    "old_slug": "green-aventurine-angel",
+    "new_slug": "green-aventurine-angel",
+    "changed": false
+  },
+  {
+    "id": 20463,
+    "name": "Amethyst Tower",
+    "old_slug": "amethyst-tower",
+    "new_slug": "amethyst-tower",
+    "changed": false
+  },
+  {
+    "id": 20456,
+    "name": "Peach Selenite Palm Stone",
+    "old_slug": "peach-selenite-palm-stone",
+    "new_slug": "peach-selenite-palm-stone",
+    "changed": false
+  },
+  {
+    "id": 20451,
+    "name": "Peach Selenite Tumbled Stone Set",
+    "old_slug": "peach-selenite-stone-set",
+    "new_slug": "peach-selenite-tumbled-stone-set",
+    "changed": true
+  },
+  {
+    "id": 20436,
+    "name": "Angelite Flame",
+    "old_slug": "angelite-flame-freeform-crystal",
+    "new_slug": "angelite-flame",
+    "changed": true
+  },
+  {
+    "id": 20391,
+    "name": "Rose Quartz Merkaba Star",
+    "old_slug": "rose-quartz-merkaba",
+    "new_slug": "rose-quartz-merkaba-star",
+    "changed": true
+  },
+  {
+    "id": 20388,
+    "name": "Lapis Lazuli Crystal Point",
+    "old_slug": "lapis-lazuli-crystal-point",
+    "new_slug": "lapis-lazuli-crystal-point",
+    "changed": false
+  },
+  {
+    "id": 20385,
+    "name": "Rainbow Fluorite Crystal Point",
+    "old_slug": "rainbow-fluorite-crystal-point",
+    "new_slug": "rainbow-fluorite-crystal-point",
+    "changed": false
+  },
+  {
+    "id": 20382,
+    "name": "Lepidolite Crystal Point",
+    "old_slug": "lepidolite-crystal-point",
+    "new_slug": "lepidolite-crystal-point",
+    "changed": false
+  },
+  {
+    "id": 20380,
+    "name": "Red Jasper Ganesh",
+    "old_slug": "red-jasper-ganesh",
+    "new_slug": "red-jasper-ganesh",
+    "changed": false
+  },
+  {
+    "id": 20379,
+    "name": "Amethyst Ganesh",
+    "old_slug": "amethyst-ganesh",
+    "new_slug": "amethyst-ganesh",
+    "changed": false
+  },
+  {
+    "id": 20378,
+    "name": "Amazonite Palm Stone",
+    "old_slug": "amazonite-palm-stone",
+    "new_slug": "amazonite-palm-stone",
+    "changed": false
+  },
+  {
+    "id": 20377,
+    "name": "Rose Quartz Flame",
+    "old_slug": "rose-quartz-flame-crystals",
+    "new_slug": "rose-quartz-flame",
+    "changed": true
+  },
+  {
+    "id": 25052,
+    "name": "Tiger Eye Anklet",
+    "old_slug": "tiger-eye-energy-anklet",
+    "new_slug": "tiger-eye-anklet",
+    "changed": true
+  },
+  {
+    "id": 25051,
+    "name": "Red Jasper Anklet",
+    "old_slug": "red-jasper-energy-anklet",
+    "new_slug": "red-jasper-anklet",
+    "changed": true
+  },
+  {
+    "id": 25034,
+    "name": "Rose Quartz Anklet",
+    "old_slug": "rose-quartz-energy-anklet",
+    "new_slug": "rose-quartz-anklet",
+    "changed": true
+  },
+  {
+    "id": 25033,
+    "name": "Labradorite Anklet",
+    "old_slug": "labradorite-energy-anklet",
+    "new_slug": "labradorite-anklet",
+    "changed": true
+  },
+  {
+    "id": 25016,
+    "name": "Carnelian Anklet",
+    "old_slug": "carnelian-energy-anklet",
+    "new_slug": "carnelian-anklet",
+    "changed": true
+  },
+  {
+    "id": 25015,
+    "name": "Amazonite Anklet",
+    "old_slug": "amazonite-energy-anklet",
+    "new_slug": "amazonite-anklet",
+    "changed": true
+  },
+  {
+    "id": 24998,
+    "name": "Malachite Anklet",
+    "old_slug": "genuine-malachite-energy-anklet",
+    "new_slug": "malachite-anklet",
+    "changed": true
+  },
+  {
+    "id": 24997,
+    "name": "Citrine Anklet",
+    "old_slug": "citrine-energy-anklet",
+    "new_slug": "citrine-anklet",
+    "changed": true
+  },
+  {
+    "id": 24958,
+    "name": "Black Tourmaline Anklet",
+    "old_slug": "black-tourmaline-energy-anklet",
+    "new_slug": "black-tourmaline-anklet",
+    "changed": true
+  },
+  {
+    "id": 24957,
+    "name": "Rainbow Moonstone Anklet",
+    "old_slug": "rainbow-moonstone-energy-anklet",
+    "new_slug": "rainbow-moonstone-anklet",
+    "changed": true
+  },
+  {
+    "id": 24956,
+    "name": "Garnet Anklet",
+    "old_slug": "garnet-energy-anklet",
+    "new_slug": "garnet-anklet",
+    "changed": true
+  },
+  {
+    "id": 24955,
+    "name": "Peruvian Turquoise Anklet",
+    "old_slug": "genuine-peruvian-turquoise-energy-anklet",
+    "new_slug": "peruvian-turquoise-anklet",
+    "changed": true
+  },
+  {
+    "id": 24954,
+    "name": "Ruby Anklet",
+    "old_slug": "natural-ruby-energy-anklet",
+    "new_slug": "ruby-anklet",
+    "changed": true
+  },
+  {
+    "id": 24953,
+    "name": "Tanzanite Anklet",
+    "old_slug": "tanzanite-energy-anklet-aaa-premium-quality",
+    "new_slug": "tanzanite-anklet",
+    "changed": true
+  },
+  {
+    "id": 24952,
+    "name": "Rainbow Tourmaline Anklet",
+    "old_slug": "rainbow-tourmaline-energy-anklet",
+    "new_slug": "rainbow-tourmaline-anklet",
+    "changed": true
+  },
+  {
+    "id": 24951,
+    "name": "Pink Tourmaline Anklet",
+    "old_slug": "pink-tourmaline-energy-anklet-aaa-premium-quality",
+    "new_slug": "pink-tourmaline-anklet",
+    "changed": true
+  },
+  {
+    "id": 24879,
+    "name": "Rainbow Fluorite Mala",
+    "old_slug": "rainbow-fluorite-mala-high-energy-gemstones",
+    "new_slug": "rainbow-fluorite-mala",
+    "changed": true
+  },
+  {
+    "id": 24878,
+    "name": "Hematite Mala",
+    "old_slug": "hematite-mala-high-energy-gemstones",
+    "new_slug": "hematite-mala",
+    "changed": true
+  },
+  {
+    "id": 24877,
+    "name": "Green Aventurine Mala",
+    "old_slug": "green-aventurine-mala-high-energy-gemstones",
+    "new_slug": "green-aventurine-mala",
+    "changed": true
+  },
+  {
+    "id": 24865,
+    "name": "Rudraksha Om Bracelet",
+    "old_slug": "rudraksha-om-bracelet",
+    "new_slug": "rudraksha-om-bracelet",
+    "changed": false
+  },
+  {
+    "id": 24859,
+    "name": "Rudraksha Mala",
+    "old_slug": "maha-rudraksha-mala",
+    "new_slug": "rudraksha-mala-large",
+    "changed": true
+  },
+  {
+    "id": 24854,
+    "name": "Small Rudraksha Mala",
+    "old_slug": "rudraksha-mala",
+    "new_slug": "small-rudraksha-mala",
+    "changed": true
+  },
+  {
+    "id": 24849,
+    "name": "Sandalwood Wrist Mala",
+    "old_slug": "sandalwood-wrist-mala",
+    "new_slug": "sandalwood-wrist-mala",
+    "changed": false
+  },
+  {
+    "id": 24845,
+    "name": "Sandalwood Mala",
+    "old_slug": "sandalwood-mala",
+    "new_slug": "sandalwood-mala",
+    "changed": false
+  },
+  {
+    "id": 24843,
+    "name": "Chakra Mala",
+    "old_slug": "chakra-psychic-mala-high-energy-gemstones",
+    "new_slug": "chakra-mala",
+    "changed": true
+  },
+  {
+    "id": 24842,
+    "name": "Green Jade Mala",
+    "old_slug": "green-jade-mala-high-energy-gemstones",
+    "new_slug": "green-jade-mala",
+    "changed": true
+  },
+  {
+    "id": 24841,
+    "name": "Lapis Lazuli Mala",
+    "old_slug": "lapis-lazuli-mala-high-energy-gemstones",
+    "new_slug": "lapis-lazuli-mala",
+    "changed": true
+  },
+  {
+    "id": 24840,
+    "name": "Tiger Eye Mala",
+    "old_slug": "tiger-eye-mala-high-energy-gemstones",
+    "new_slug": "tiger-eye-mala",
+    "changed": true
+  },
+  {
+    "id": 24839,
+    "name": "Amethyst Mala",
+    "old_slug": "amethyst-mala-high-energy-gemstones",
+    "new_slug": "amethyst-mala",
+    "changed": true
+  },
+  {
+    "id": 24838,
+    "name": "Clear Quartz Mala",
+    "old_slug": "clear-quartz-mala-high-energy-gemstones",
+    "new_slug": "clear-quartz-mala",
+    "changed": true
+  },
+  {
+    "id": 24837,
+    "name": "Rose Quartz Mala",
+    "old_slug": "rose-quartz-mala-high-energy-gemstones",
+    "new_slug": "rose-quartz-mala",
+    "changed": true
+  },
+  {
+    "id": 24836,
+    "name": "Carnelian Mala",
+    "old_slug": "carnelian-mala-high-energy-gemstones",
+    "new_slug": "carnelian-mala",
+    "changed": true
+  },
+  {
+    "id": 24577,
+    "name": "Malachite Sterling Silver Bracelet",
+    "old_slug": "genuine-malachite-sterling-silver-bracelet",
+    "new_slug": "malachite-sterling-silver-bracelet",
+    "changed": true
+  },
+  {
+    "id": 24573,
+    "name": "Herkimer Diamond Bracelet",
+    "old_slug": "herkimer-diamond-gold-bracelet",
+    "new_slug": "herkimer-diamond-gold-bracelet",
+    "changed": false
+  },
+  {
+    "id": 24568,
+    "name": "Citrine Gold Bracelet",
+    "old_slug": "citrine-gold-bracelet",
+    "new_slug": "citrine-gold-bracelet",
+    "changed": false
+  },
+  {
+    "id": 24564,
+    "name": "Turquoise Gold Bracelet",
+    "old_slug": "genuine-turquoise-gold-bracelet",
+    "new_slug": "turquoise-gold-bracelet",
+    "changed": true
+  },
+  {
+    "id": 24557,
+    "name": "Carnelian Gold Bracelet",
+    "old_slug": "carnelian-gold-bracelet",
+    "new_slug": "carnelian-gold-bracelet",
+    "changed": false
+  },
+  {
+    "id": 24550,
+    "name": "Amethyst Gold Bracelet",
+    "old_slug": "amethyst-gold-bracelet",
+    "new_slug": "amethyst-gold-bracelet",
+    "changed": false
+  },
+  {
+    "id": 24525,
+    "name": "Black Tourmaline Gold or Silver Bracelet",
+    "old_slug": "black-tourmaline-gold-or-silver-bracelet",
+    "new_slug": "black-tourmaline-gold-or-silver-bracelet",
+    "changed": false
+  },
+  {
+    "id": 24524,
+    "name": "Labradorite Gold or Silver Bracelet",
+    "old_slug": "labradorite-gold-or-silver-bracelet",
+    "new_slug": "labradorite-gold-or-silver-bracelet",
+    "changed": false
+  },
+  {
+    "id": 23636,
+    "name": "Rose Quartz Golden Hoop Earrings",
+    "old_slug": "rose-quartz-golden-hoop-earrings",
+    "new_slug": "rose-quartz-golden-hoop-earrings",
+    "changed": false
+  },
+  {
+    "id": 23624,
+    "name": "Carnelian Golden Hoop Earrings",
+    "old_slug": "carnelian-golden-hoop-earrings",
+    "new_slug": "carnelian-golden-hoop-earrings",
+    "changed": false
+  },
+  {
+    "id": 23619,
+    "name": "Labradorite Golden Hoop Earrings",
+    "old_slug": "labradorite-golden-hoop-earrings",
+    "new_slug": "labradorite-golden-hoop-earrings",
+    "changed": false
+  },
+  {
+    "id": 23534,
+    "name": "Black Tourmaline Hoop Earrings",
+    "old_slug": "black-tourmaline-silver-or-golden-hoop-earrings",
+    "new_slug": "black-tourmaline-hoop-earrings",
+    "changed": true
+  },
+  {
+    "id": 23523,
+    "name": "Turquoise Crystal Point Earrings",
+    "old_slug": "genuine-turquoise-crystal-point-earring",
+    "new_slug": "turquoise-crystal-point-earrings",
+    "changed": true
+  },
+  {
+    "id": 23522,
+    "name": "Green Amethyst Crystal Point Earrings",
+    "old_slug": "green-amethyst-crystal-point-earrings",
+    "new_slug": "green-amethyst-crystal-point-earrings",
+    "changed": false
+  },
+  {
+    "id": 23501,
+    "name": "Labradorite Crystal Point Earrings",
+    "old_slug": "labradorite-crystal-point-earrings",
+    "new_slug": "labradorite-crystal-point-earrings",
+    "changed": false
+  },
+  {
+    "id": 23490,
+    "name": "Rainbow Moonstone Crystal Point Earrings",
+    "old_slug": "rainbow-moonstone-crystal-point-earrings",
+    "new_slug": "rainbow-moonstone-crystal-point-earrings",
+    "changed": false
+  },
+  {
+    "id": 23489,
+    "name": "Rose Quartz Crystal Point Earrings",
+    "old_slug": "rose-quartz-crystal-point-earrings",
+    "new_slug": "rose-quartz-crystal-point-earrings",
+    "changed": false
+  },
+  {
+    "id": 23468,
+    "name": "Clear Quartz Crystal Point Earrings",
+    "old_slug": "clear-quartz-crystal-point-earrings",
+    "new_slug": "clear-quartz-crystal-point-earrings",
+    "changed": false
+  },
+  {
+    "id": 23467,
+    "name": "Tiger Eye Crystal Point Earrings",
+    "old_slug": "tiger-eye-crystal-point-earrings",
+    "new_slug": "tiger-eye-crystal-point-earrings",
+    "changed": false
+  },
+  {
+    "id": 23445,
+    "name": "Carnelian Crystal Point Earrings",
+    "old_slug": "carnelian-crystal-point-earrings",
+    "new_slug": "carnelian-crystal-point-earrings",
+    "changed": false
+  },
+  {
+    "id": 23444,
+    "name": "Malachite Crystal Point Earrings",
+    "old_slug": "genuine-malachite-crystal-point-earrings",
+    "new_slug": "malachite-crystal-point-earrings",
+    "changed": true
+  },
+  {
+    "id": 23423,
+    "name": "Larimar Crystal Point Earrings",
+    "old_slug": "rare-genuine-larimar-crystal-point-earrings",
+    "new_slug": "larimar-crystal-point-earrings",
+    "changed": true
+  },
+  {
+    "id": 23422,
+    "name": "Ruby Crystal Point Earrings",
+    "old_slug": "ruby-crystal-point-earrings",
+    "new_slug": "ruby-crystal-point-earrings",
+    "changed": false
+  },
+  {
+    "id": 23403,
+    "name": "Black Tourmaline Crystal Point Earrings",
+    "old_slug": "black-tourmaline-crystal-point-earrings",
+    "new_slug": "black-tourmaline-crystal-point-earrings",
+    "changed": false
+  },
+  {
+    "id": 23402,
+    "name": "Amethyst Crystal Point Earrings",
+    "old_slug": "amethyst-crystal-point-earrings",
+    "new_slug": "amethyst-crystal-point-earrings",
+    "changed": false
+  },
+  {
+    "id": 23379,
+    "name": "Pink Opal Stud Earrings",
+    "old_slug": "pink-opal-silver-or-gold-stud-earrings",
+    "new_slug": "pink-opal-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23378,
+    "name": "Bloodstone Stud Earrings",
+    "old_slug": "bloodstone-gold-or-silver-stud-earrings",
+    "new_slug": "bloodstone-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23358,
+    "name": "Emerald Stud Earrings",
+    "old_slug": "emerald-silver-or-gold-stud-earrings",
+    "new_slug": "emerald-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23357,
+    "name": "Blue Sapphire Stud Earrings",
+    "old_slug": "blue-sapphire-silver-or-gold-stud-earrings",
+    "new_slug": "blue-sapphire-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23338,
+    "name": "Garnet Stud Earrings",
+    "old_slug": "garnet-silver-or-gold-stud-earrings",
+    "new_slug": "garnet-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23337,
+    "name": "Blue Topaz Stud Earrings",
+    "old_slug": "blue-topaz-silver-or-gold-stud-earrings",
+    "new_slug": "blue-topaz-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23317,
+    "name": "Labradorite Stud Earrings",
+    "old_slug": "labradorite-silver-or-gold-stud-earrings",
+    "new_slug": "labradorite-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23294,
+    "name": "Citrine Stud Earrings",
+    "old_slug": "citrine-silver-or-gold-stud-earrings",
+    "new_slug": "citrine-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23293,
+    "name": "Malachite Stud Earrings",
+    "old_slug": "genuine-malachite-silver-or-gold-stud-earrings",
+    "new_slug": "malachite-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23292,
+    "name": "Amethyst Stud Earrings",
+    "old_slug": "amethyst-silver-or-gold-stud-earring",
+    "new_slug": "amethyst-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23270,
+    "name": "Peridot Stud Earrings",
+    "old_slug": "genuine-peridot-silver-or-gold-stud-earrings",
+    "new_slug": "peridot-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23269,
+    "name": "Green Jade Stud Earrings",
+    "old_slug": "green-jade-silver-or-gold-stud-earrings",
+    "new_slug": "green-jade-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23245,
+    "name": "Rainbow Moonstone Hoop Earrings",
+    "old_slug": "rainbow-moonstone-silver-and-golden-hoop-earrings",
+    "new_slug": "rainbow-moonstone-hoop-earrings",
+    "changed": true
+  },
+  {
+    "id": 23244,
+    "name": "Carnelian Stud Earrings",
+    "old_slug": "carnelian-silver-or-gold-stud-earrings",
+    "new_slug": "carnelian-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23243,
+    "name": "Rainbow Moonstone Stud Earrings",
+    "old_slug": "rainbow-moonstone-silver-or-gold-stud-earring",
+    "new_slug": "rainbow-moonstone-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23242,
+    "name": "Herkimer Diamond Stud Earrings",
+    "old_slug": "herkimer-diamond-silver-or-gold-stud-earring",
+    "new_slug": "herkimer-diamond-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23241,
+    "name": "Turquoise Stud Earrings",
+    "old_slug": "genuine-turquoise-silver-or-gold-stud-earrings",
+    "new_slug": "turquoise-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23240,
+    "name": "Ruby Stud Earrings",
+    "old_slug": "ruby-silver-or-gold-stud-earrings",
+    "new_slug": "ruby-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23239,
+    "name": "Rose Quartz Stud Earrings",
+    "old_slug": "rose-quartz-silver-or-gold-stud-earring",
+    "new_slug": "rose-quartz-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23238,
+    "name": "Black Tourmaline Stud Earrings",
+    "old_slug": "black-tourmaline-silver-or-gold-stud-earrings",
+    "new_slug": "black-tourmaline-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23237,
+    "name": "Tiger Eye Stud Earrings",
+    "old_slug": "tiger-eye-silver-or-gold-stud-earrings",
+    "new_slug": "tiger-eye-stud-earrings",
+    "changed": true
+  },
+  {
+    "id": 23236,
+    "name": "Lotus Stud Earrings",
+    "old_slug": "lotus-stud-earrings",
+    "new_slug": "lotus-stud-earrings",
+    "changed": false
+  },
+  {
+    "id": 23174,
+    "name": "Larimar Square Pendant Necklace",
+    "old_slug": "rare-genuine-larimar-square-pendant-necklace",
+    "new_slug": "larimar-square-pendant-necklace",
+    "changed": true
+  },
+  {
+    "id": 23168,
+    "name": "Charoite and Amethyst Square Pendant Necklace",
+    "old_slug": "charoite-amethyst-square-pendant-necklace",
+    "new_slug": "charoite-and-amethyst-square-pendant-necklace",
+    "changed": true
+  },
+  {
+    "id": 23162,
+    "name": "Charoite Teardrop Pendant Necklace",
+    "old_slug": "charoite-teardrop-pendant-necklace",
+    "new_slug": "charoite-teardrop-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 23138,
+    "name": "Red Tiger Eye Square Pendant Necklace",
+    "old_slug": "red-tiger-eye-square-pendant-necklace",
+    "new_slug": "red-tiger-eye-square-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 23132,
+    "name": "Aquamarine Teardrop Pendant Necklace",
+    "old_slug": "aquamarine-teardrop-pendant-necklace",
+    "new_slug": "aquamarine-teardrop-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 23126,
+    "name": "Charoite and Amethyst Pendant Necklace",
+    "old_slug": "charoite-amethyst-pendant-necklace",
+    "new_slug": "charoite-and-amethyst-pendant-necklace",
+    "changed": true
+  },
+  {
+    "id": 23120,
+    "name": "Aquamarine Rectangle Pendant Necklace",
+    "old_slug": "aquamarine-rectangle-pendant-necklace",
+    "new_slug": "aquamarine-rectangle-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 23114,
+    "name": "Aquamarine and Blue Topaz Rectangle Pendant Necklace",
+    "old_slug": "aquamarine-blue-topaz-rectangle-pendant-necklace",
+    "new_slug": "aquamarine-and-blue-topaz-rectangle-pendant-necklace",
+    "changed": true
+  },
+  {
+    "id": 23108,
+    "name": "Brecciated Mookaite Square Pendant Necklace",
+    "old_slug": "brecciated-mookaite-jasper-square-pendant-necklace",
+    "new_slug": "brecciated-mookaite-square-pendant-necklace",
+    "changed": true
+  },
+  {
+    "id": 23104,
+    "name": "Azurite Druzy Pendant Necklace",
+    "old_slug": "rare-azurite-druzy-pendant-necklaces",
+    "new_slug": "azurite-druzy-pendant-necklace",
+    "changed": true
+  },
+  {
+    "id": 23077,
+    "name": "Red Tiger Eye Teardrop Pendant Necklace",
+    "old_slug": "red-tiger-eye-teardrop-pendant-necklace",
+    "new_slug": "red-tiger-eye-teardrop-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 23076,
+    "name": "Larimar Rectangle Pendant Necklace",
+    "old_slug": "rare-genuine-larimar-rectangle-pendant-necklace",
+    "new_slug": "larimar-rectangle-pendant-necklace",
+    "changed": true
+  },
+  {
+    "id": 23026,
+    "name": "Citrine Druzy Pendant Necklace",
+    "old_slug": "citrine-druzy-pendant-necklace",
+    "new_slug": "citrine-druzy-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 23021,
+    "name": "Labradorite Diamond Pendant Necklace",
+    "old_slug": "labradorite-diamond-pendant-necklace",
+    "new_slug": "labradorite-diamond-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 23005,
+    "name": "Carnelian and Banded Agate Teardrop Pendant Necklace",
+    "old_slug": "carnelian-banded-agate-teardrop-pendant-necklace",
+    "new_slug": "carnelian-and-banded-agate-teardrop-pendant-necklace",
+    "changed": true
+  },
+  {
+    "id": 22979,
+    "name": "Rainbow Moonstone Teardrop Pendant Necklace",
+    "old_slug": "rainbow-moonstone-teardrop-pendant-necklace",
+    "new_slug": "rainbow-moonstone-teardrop-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 22978,
+    "name": "Labradorite Teardrop Pendant Necklace",
+    "old_slug": "labradorite-teardrop-pendant-necklace",
+    "new_slug": "labradorite-teardrop-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 22970,
+    "name": "Tiger Eye Square Pendant Necklace",
+    "old_slug": "tiger-eye-square-pendant-necklace",
+    "new_slug": "tiger-eye-square-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 22965,
+    "name": "Faceted Square Amethyst Pendant Necklace",
+    "old_slug": "faceted-square-amethyst-gemstone-necklace",
+    "new_slug": "faceted-square-amethyst-pendant-necklace",
+    "changed": true
+  },
+  {
+    "id": 22960,
+    "name": "Large Oval Amethyst Pendant Beaded Necklace",
+    "old_slug": "large-oval-natural-amethyst-pendant-beaded-necklace",
+    "new_slug": "large-oval-amethyst-pendant-beaded-necklace",
+    "changed": true
+  },
+  {
+    "id": 22956,
+    "name": "Tiger Eye Pendant Necklace",
+    "old_slug": "tiger-eye-pendant-necklace",
+    "new_slug": "tiger-eye-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 22943,
+    "name": "Rose Quartz Oval Pendant Necklace",
+    "old_slug": "rose-quartz-oval-pendant",
+    "new_slug": "rose-quartz-oval-pendant-necklace",
+    "changed": true
+  },
+  {
+    "id": 22939,
+    "name": "Genuine Labradorite Teardrop Pendant Necklace",
+    "old_slug": "genuine-labradorite-teardrop-pendant-necklace",
+    "new_slug": "genuine-labradorite-teardrop-pendant-necklace",
+    "changed": true
+  },
+  {
+    "id": 22938,
+    "name": "Rainbow Moonstone Oval Pendant Necklace",
+    "old_slug": "rainbow-moonstone-oval-pendant-necklace",
+    "new_slug": "rainbow-moonstone-oval-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 22908,
+    "name": "Rainbow Moonstone Square Pendant Necklace",
+    "old_slug": "rainbow-moonstone-square-pendant-necklace",
+    "new_slug": "rainbow-moonstone-square-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 22907,
+    "name": "Rainbow Moonstone Rectangle Pendant Necklace",
+    "old_slug": "rainbow-moonstone-rectangle-pendant-necklace",
+    "new_slug": "rainbow-moonstone-rectangle-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 22878,
+    "name": "Raw Amethyst Teardrop Pendant Necklace",
+    "old_slug": "raw-amethyst-teardrop-gemstone-pendant",
+    "new_slug": "raw-amethyst-teardrop-pendant-necklace",
+    "changed": true
+  },
+  {
+    "id": 22857,
+    "name": "Rose Quartz Silver Pendant Necklace",
+    "old_slug": "rose-quartz-silver-pendant-necklace",
+    "new_slug": "rose-quartz-silver-pendant-necklace",
+    "changed": false
+  },
+  {
+    "id": 22856,
+    "name": "Ruby Crystal Point Necklace",
+    "old_slug": "ruby-crystal-point-necklace",
+    "new_slug": "ruby-crystal-point-necklace",
+    "changed": false
+  },
+  {
+    "id": 22855,
+    "name": "Carnelian Crystal Point Necklace",
+    "old_slug": "carnelian-crystal-point-necklace",
+    "new_slug": "carnelian-crystal-point-necklace",
+    "changed": false
+  },
+  {
+    "id": 22824,
+    "name": "Rainbow Moonstone Crystal Point Necklace",
+    "old_slug": "rainbow-moonstone-crystal-point-necklace",
+    "new_slug": "rainbow-moonstone-crystal-point-necklace",
+    "changed": false
+  },
+  {
+    "id": 22823,
+    "name": "Tiger Eye Crystal Point Necklace",
+    "old_slug": "tiger-eye-crystal-point-necklace",
+    "new_slug": "tiger-eye-crystal-point-necklace",
+    "changed": false
+  },
+  {
+    "id": 22822,
+    "name": "Black Tourmaline Crystal Point Necklace",
+    "old_slug": "black-tourmaline-crystal-point-necklace",
+    "new_slug": "black-tourmaline-crystal-point-necklace",
+    "changed": false
+  },
+  {
+    "id": 22791,
+    "name": "Rose Quartz Crystal Point Necklace",
+    "old_slug": "rose-quartz-crystal-point-necklace",
+    "new_slug": "rose-quartz-crystal-point-necklace",
+    "changed": false
+  },
+  {
+    "id": 22790,
+    "name": "Amethyst Crystal Point Necklace",
+    "old_slug": "amethyst-crystal-point-necklace",
+    "new_slug": "amethyst-crystal-point-necklace",
+    "changed": false
+  },
+  {
+    "id": 22789,
+    "name": "Green Amethyst Crystal Point Necklace",
+    "old_slug": "green-amethyst-crystal-point-necklace",
+    "new_slug": "green-amethyst-crystal-point-necklace",
+    "changed": false
+  },
+  {
+    "id": 22758,
+    "name": "Genuine Turquoise Crystal Point Necklace",
+    "old_slug": "genuine-turquoise-crystal-point-necklace",
+    "new_slug": "genuine-turquoise-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22757,
+    "name": "Clear Quartz Crystal Point Necklace",
+    "old_slug": "clear-quartz-crystal-point-necklace",
+    "new_slug": "clear-quartz-crystal-point-necklace",
+    "changed": false
+  },
+  {
+    "id": 22736,
+    "name": "Rare Larimar Crystal Point Necklace",
+    "old_slug": "rare-genuine-larimar-crystal-point-necklace",
+    "new_slug": "rare-larimar-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22735,
+    "name": "Genuine Malachite Crystal Point Necklace",
+    "old_slug": "genuine-malachite-crystal-point-necklace",
+    "new_slug": "genuine-malachite-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22712,
+    "name": "Labradorite Crystal Point Necklace",
+    "old_slug": "labradorite-crystal-point-necklace",
+    "new_slug": "labradorite-crystal-point-necklace",
+    "changed": false
+  },
+  {
+    "id": 22711,
+    "name": "Delicate Larimar Crystal Point Necklace",
+    "old_slug": "delicate-rare-genuine-larimar-crystal-point-necklace",
+    "new_slug": "delicate-larimar-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22688,
+    "name": "Delicate Clear Quartz Crystal Point Necklace",
+    "old_slug": "delicate-clear-quartz-crystal-point-necklace",
+    "new_slug": "delicate-clear-quartz-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22673,
+    "name": "Delicate Tiger Eye Crystal Point Necklace",
+    "old_slug": "delicate-tiger-eye-crystal-point-necklace",
+    "new_slug": "delicate-tiger-eye-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22672,
+    "name": "Delicate Rainbow Moonstone Crystal Point Necklace",
+    "old_slug": "delicate-rainbow-moonstone-crystal-point-necklace",
+    "new_slug": "delicate-rainbow-moonstone-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22650,
+    "name": "Delicate Ruby Crystal Point Necklace",
+    "old_slug": "delicate-ruby-crystal-point-necklace",
+    "new_slug": "delicate-ruby-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22649,
+    "name": "Delicate Green Amethyst Crystal Point Necklace",
+    "old_slug": "delicate-green-amethyst-crystal-point-necklace",
+    "new_slug": "delicate-green-amethyst-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22628,
+    "name": "Delicate Rose Quartz Crystal Point Necklace",
+    "old_slug": "delicate-rose-quartz-crystal-point-necklace",
+    "new_slug": "delicate-rose-quartz-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22627,
+    "name": "Delicate Turquoise Crystal Point Necklace",
+    "old_slug": "delicate-genuine-turquoise-crystal-point-necklace",
+    "new_slug": "delicate-turquoise-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22606,
+    "name": "Delicate Amethyst Crystal Point Necklace",
+    "old_slug": "delicate-amethyst-crystal-point-necklace",
+    "new_slug": "delicate-amethyst-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22605,
+    "name": "Delicate Carnelian Crystal Point Necklace",
+    "old_slug": "delicate-carnelian-crystal-point-necklace",
+    "new_slug": "delicate-carnelian-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22584,
+    "name": "Delicate Malachite Crystal Point Necklace",
+    "old_slug": "delicate-genuine-malachite-crystal-point-necklace",
+    "new_slug": "delicate-malachite-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22583,
+    "name": "Delicate Black Tourmaline Crystal Point Necklace",
+    "old_slug": "delicate-black-tourmaline-crystal-point-necklace",
+    "new_slug": "delicate-black-tourmaline-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22582,
+    "name": "Delicate Labradorite Crystal Point Necklace",
+    "old_slug": "delicate-labradorite-crystal-point-necklace",
+    "new_slug": "delicate-labradorite-crystal-point-necklace",
+    "changed": true
+  },
+  {
+    "id": 22551,
+    "name": "Pink Opal Birthstone Necklace",
+    "old_slug": "october-pink-opal-birthstone-necklace",
+    "new_slug": "pink-opal-birthstone-necklace",
+    "changed": true
+  },
+  {
+    "id": 22550,
+    "name": "Blue Sapphire Birthstone Necklace",
+    "old_slug": "september-blue-sapphire-birthstone-necklace",
+    "new_slug": "blue-sapphire-birthstone-necklace",
+    "changed": true
+  },
+  {
+    "id": 22529,
+    "name": "Green Jade Birthstone Necklace",
+    "old_slug": "august-green-jade-birthstone-necklace",
+    "new_slug": "green-jade-birthstone-necklace",
+    "changed": true
+  },
+  {
+    "id": 22528,
+    "name": "Ruby Birthstone Necklace",
+    "old_slug": "july-ruby-birthstone-necklace",
+    "new_slug": "ruby-birthstone-necklace",
+    "changed": true
+  },
+  {
+    "id": 22527,
+    "name": "Rainbow Moonstone Birthstone Necklace",
+    "old_slug": "june-rainbow-moonstone-birthstone-necklace",
+    "new_slug": "rainbow-moonstone-birthstone-necklace",
+    "changed": true
+  },
+  {
+    "id": 22526,
+    "name": "Emerald Birthstone Necklace",
+    "old_slug": "may-emerald-birthstone-necklace",
+    "new_slug": "emerald-birthstone-necklace",
+    "changed": true
+  },
+  {
+    "id": 22525,
+    "name": "Herkimer Diamond Birthstone Necklace",
+    "old_slug": "april-herkimer-diamond-birthstone-necklace",
+    "new_slug": "herkimer-diamond-birthstone-necklace",
+    "changed": true
+  },
+  {
+    "id": 22524,
+    "name": "Bloodstone Birthstone Necklace",
+    "old_slug": "march-bloodstone-birthstone-necklace",
+    "new_slug": "bloodstone-birthstone-necklace",
+    "changed": true
+  },
+  {
+    "id": 22485,
+    "name": "Amethyst Birthstone Necklace",
+    "old_slug": "february-amethyst-birthstone-necklace",
+    "new_slug": "amethyst-birthstone-necklace",
+    "changed": true
+  },
+  {
+    "id": 22484,
+    "name": "Garnet Birthstone Necklace",
+    "old_slug": "january-garnet-birthstone-necklace",
+    "new_slug": "garnet-birthstone-necklace",
+    "changed": true
+  },
+  {
+    "id": 22483,
+    "name": "Turquoise Birthstone Necklace",
+    "old_slug": "december-turquoise-birthstone-necklace",
+    "new_slug": "turquoise-birthstone-necklace",
+    "changed": true
+  },
+  {
+    "id": 22440,
+    "name": "Citrine Birthstone Necklace",
+    "old_slug": "november-citrine-birthstone-necklace",
+    "new_slug": "citrine-birthstone-necklace",
+    "changed": true
+  },
+  {
+    "id": 22424,
+    "name": "Gemstone Moon Pendant Necklace",
+    "old_slug": "gemstone-silver-moon-pendant-necklace",
+    "new_slug": "gemstone-moon-pendant-necklace",
+    "changed": true
+  },
+  {
+    "id": 22386,
+    "name": "Raw Pyrite Necklace",
+    "old_slug": "pyrite-raw-crystal-necklace",
+    "new_slug": "raw-pyrite-necklace",
+    "changed": true
+  },
+  {
+    "id": 22361,
+    "name": "Raw Rose Quartz Necklace",
+    "old_slug": "rose-quartz-raw-crystal-necklace",
+    "new_slug": "raw-rose-quartz-necklace",
+    "changed": true
+  },
+  {
+    "id": 22360,
+    "name": "Raw Amethyst Necklace",
+    "old_slug": "amethyst-raw-crystal-necklace",
+    "new_slug": "raw-amethyst-necklace",
+    "changed": true
+  },
+  {
+    "id": 22343,
+    "name": "Raw Tiger Eye Necklace",
+    "old_slug": "tiger-eye-raw-crystal-necklace",
+    "new_slug": "raw-tiger-eye-necklace",
+    "changed": true
+  },
+  {
+    "id": 22342,
+    "name": "Raw Turquoise Necklace",
+    "old_slug": "real-turquoise-raw-crystal-necklace",
+    "new_slug": "raw-turquoise-necklace",
+    "changed": true
+  },
+  {
+    "id": 22341,
+    "name": "Raw Rainbow Moonstone Necklace",
+    "old_slug": "rainbow-moonstone-raw-crystal-necklace",
+    "new_slug": "raw-rainbow-moonstone-necklace",
+    "changed": true
+  },
+  {
+    "id": 22322,
+    "name": "Crescent Moon Necklace",
+    "old_slug": "crescent-moon-raw-gemstone-necklace",
+    "new_slug": "crescent-moon-necklace",
+    "changed": true
+  },
+  {
+    "id": 22299,
+    "name": "Raw Smoky Quartz Necklace",
+    "old_slug": "smoky-quartz-raw-crystal-necklace",
+    "new_slug": "raw-smoky-quartz-necklace",
+    "changed": true
+  },
+  {
+    "id": 22298,
+    "name": "Raw Pink Opal Necklace",
+    "old_slug": "pink-opal-raw-crystal-necklace",
+    "new_slug": "raw-pink-opal-necklace",
+    "changed": true
+  },
+  {
+    "id": 22297,
+    "name": "Raw Labradorite Necklace",
+    "old_slug": "labradorite-raw-crystal-necklace",
+    "new_slug": "raw-labradorite-necklace",
+    "changed": true
+  },
+  {
+    "id": 22296,
+    "name": "Raw Citrine Necklace",
+    "old_slug": "genuine-citrine-raw-crystal-necklace",
+    "new_slug": "raw-citrine-necklace",
+    "changed": true
+  },
+  {
+    "id": 22295,
+    "name": "Raw Green Amethyst Necklace",
+    "old_slug": "genuine-green-amethyst-raw-crystal-necklace",
+    "new_slug": "raw-green-amethyst-necklace",
+    "changed": true
+  },
+  {
+    "id": 22294,
+    "name": "Raw Black Tourmaline Necklace",
+    "old_slug": "black-tourmaline-raw-crystal-necklace",
+    "new_slug": "raw-black-tourmaline-necklace",
+    "changed": true
+  },
+  {
+    "id": 22293,
+    "name": "Raw Carnelian Necklace",
+    "old_slug": "carnelian-raw-crystal-necklace",
+    "new_slug": "raw-carnelian-necklace",
+    "changed": true
+  },
+  {
+    "id": 22292,
+    "name": "Prehnite Raw Crystal Necklace",
+    "old_slug": "prehnite-raw-crystal-necklace",
+    "new_slug": "prehnite-raw-crystal-necklace",
+    "changed": false
+  },
+  {
+    "id": 22291,
+    "name": "Clear Quartz Raw Crystal Necklace",
+    "old_slug": "clear-quartz-raw-crystal-necklace",
+    "new_slug": "clear-quartz-raw-crystal-necklace",
+    "changed": false
+  },
+  {
+    "id": 22290,
+    "name": "Larimar Raw Crystal Necklace",
+    "old_slug": "rare-genuine-larimar-raw-crystal-necklace",
+    "new_slug": "larimar-raw-crystal-necklace",
+    "changed": true
+  },
+  {
+    "id": 21738,
+    "name": "Malachite Tumbled Stone Set",
+    "old_slug": "real-malachite-stone-set",
+    "new_slug": "malachite-tumbled-stone-set",
+    "changed": true
+  },
+  {
+    "id": 20326,
+    "name": "Raw Amethyst Ring",
+    "old_slug": "raw-amethyst-silver-ring",
+    "new_slug": "raw-amethyst-ring",
+    "changed": true
+  },
+  {
+    "id": 20325,
+    "name": "Rainbow Moonstone Heart Ring",
+    "old_slug": "rainbow-moonstone-silver-heart-ring",
+    "new_slug": "rainbow-moonstone-heart-ring",
+    "changed": true
+  },
+  {
+    "id": 20324,
+    "name": "Carnelian Gemstone Ring",
+    "old_slug": "carnelian-gemstone-ring",
+    "new_slug": "carnelian-gemstone-ring",
+    "changed": false
+  },
+  {
+    "id": 20323,
+    "name": "Prehnite Teardrop Ring",
+    "old_slug": "prehnite-teardrop-ring",
+    "new_slug": "prehnite-teardrop-ring",
+    "changed": false
+  },
+  {
+    "id": 20319,
+    "name": "Vintage Moonstone Ring",
+    "old_slug": "vintage-moonstone-ring",
+    "new_slug": "vintage-moonstone-ring",
+    "changed": false
+  },
+  {
+    "id": 20275,
+    "name": "Amethyst Gemstone Ring",
+    "old_slug": "amethyst-gemstone-ring",
+    "new_slug": "amethyst-gemstone-ring",
+    "changed": false
+  },
+  {
+    "id": 20274,
+    "name": "Teardrop Carnelian Ring",
+    "old_slug": "teardrop-carnelian-gemstone-ring",
+    "new_slug": "teardrop-carnelian-ring",
+    "changed": true
+  },
+  {
+    "id": 20273,
+    "name": "Teardrop Rainbow Moonstone Ring",
+    "old_slug": "teardrop-rainbow-moonstone-ring-size-9",
+    "new_slug": "teardrop-rainbow-moonstone-ring",
+    "changed": true
+  },
+  {
+    "id": 20272,
+    "name": "Amethyst Gold Ring",
+    "old_slug": "amethyst-gold-ring",
+    "new_slug": "amethyst-gold-ring",
+    "changed": false
+  },
+  {
+    "id": 20237,
+    "name": "Garnet Ring",
+    "old_slug": "garnet-silver-or-gold-ring",
+    "new_slug": "garnet-ring",
+    "changed": true
+  },
+  {
+    "id": 20208,
+    "name": "Amethyst Silver Ring",
+    "old_slug": "amethyst-silver-or-gold-ring",
+    "new_slug": "amethyst-silver-ring",
+    "changed": true
+  },
+  {
+    "id": 20207,
+    "name": "Bloodstone Ring",
+    "old_slug": "bloodstone-silver-or-gold-ring",
+    "new_slug": "bloodstone-ring",
+    "changed": true
+  },
+  {
+    "id": 20206,
+    "name": "Pink Opal Ring",
+    "old_slug": "pink-opal-silver-or-gold-ring",
+    "new_slug": "pink-opal-ring",
+    "changed": true
+  },
+  {
+    "id": 20144,
+    "name": "Green Jade Ring",
+    "old_slug": "green-jade-silver-or-gold-ring",
+    "new_slug": "green-jade-ring",
+    "changed": true
+  },
+  {
+    "id": 20143,
+    "name": "Carnelian Silver Ring",
+    "old_slug": "carnelian-silver-or-gold-ring",
+    "new_slug": "carnelian-silver-ring",
+    "changed": true
+  },
+  {
+    "id": 20112,
+    "name": "Ruby Ring",
+    "old_slug": "ruby-silver-or-gold-ring",
+    "new_slug": "ruby-ring",
+    "changed": true
+  },
+  {
+    "id": 20085,
+    "name": "Rose Quartz Ring",
+    "old_slug": "rose-quartz-silver-or-gold-ring",
+    "new_slug": "rose-quartz-ring",
+    "changed": true
+  },
+  {
+    "id": 20084,
+    "name": "Lotus Gold Ring",
+    "old_slug": "lotus-gold-ring",
+    "new_slug": "lotus-gold-ring",
+    "changed": false
+  },
+  {
+    "id": 20083,
+    "name": "Citrine Ring",
+    "old_slug": "citrine-silver-or-gold-ring",
+    "new_slug": "citrine-ring",
+    "changed": true
+  },
+  {
+    "id": 20038,
+    "name": "Emerald Ring",
+    "old_slug": "emerald-silver-or-gold-ring",
+    "new_slug": "emerald-ring",
+    "changed": true
+  },
+  {
+    "id": 20037,
+    "name": "Turquoise Ring",
+    "old_slug": "natural-genuine-turquoise-silver-or-gold-ring",
+    "new_slug": "turquoise-ring",
+    "changed": true
+  },
+  {
+    "id": 20000,
+    "name": "Peridot Ring",
+    "old_slug": "genuine-peridot-silver-or-gold-ring",
+    "new_slug": "peridot-ring",
+    "changed": true
+  },
+  {
+    "id": 19999,
+    "name": "Blue Topaz Ring",
+    "old_slug": "blue-topaz-silver-or-gold-ring",
+    "new_slug": "blue-topaz-ring",
+    "changed": true
+  },
+  {
+    "id": 19959,
+    "name": "Herkimer Diamond Ring",
+    "old_slug": "herkimer-diamond-silver-or-gold-ring",
+    "new_slug": "herkimer-diamond-ring",
+    "changed": true
+  },
+  {
+    "id": 19932,
+    "name": "Blue Sapphire Ring",
+    "old_slug": "blue-sapphire-silver-or-gold-ring",
+    "new_slug": "blue-sapphire-ring",
+    "changed": true
+  },
+  {
+    "id": 19910,
+    "name": "Labradorite Silver or Gold Ring",
+    "old_slug": "labradorite-silver-or-gold-ring",
+    "new_slug": "labradorite-silver-or-gold-ring",
+    "changed": true
+  },
+  {
+    "id": 19909,
+    "name": "Labradorite Rose Gold Ring",
+    "old_slug": "labradorite-rose-gold-ring",
+    "new_slug": "labradorite-rose-gold-ring",
+    "changed": false
+  },
+  {
+    "id": 19908,
+    "name": "Turquoise Raw Freeform Ring",
+    "old_slug": "natural-turquoise-raw-freeform-gold-or-silver-ring",
+    "new_slug": "turquoise-raw-freeform-ring",
+    "changed": true
+  },
+  {
+    "id": 19869,
+    "name": "Green Amethyst Raw Freeform Ring",
+    "old_slug": "green-amethyst-raw-freeform-gold-or-silver-ring",
+    "new_slug": "green-amethyst-raw-freeform-ring",
+    "changed": true
+  },
+  {
+    "id": 19868,
+    "name": "Clear Quartz Raw Freeform Ring",
+    "old_slug": "clear-quartz-raw-freeform-gold-or-silver-ring",
+    "new_slug": "clear-quartz-raw-freeform-ring",
+    "changed": true
+  },
+  {
+    "id": 19826,
+    "name": "Rose Quartz Raw Freeform Ring",
+    "old_slug": "rose-quartz-raw-freeform-gold-or-silver-ring",
+    "new_slug": "rose-quartz-raw-freeform-ring",
+    "changed": true
+  },
+  {
+    "id": 19825,
+    "name": "Labradorite Raw Freeform Ring",
+    "old_slug": "labradorite-raw-freeform-gold-or-silver-ring",
+    "new_slug": "labradorite-raw-freeform-ring",
+    "changed": true
+  },
+  {
+    "id": 19784,
+    "name": "Larimar Raw Freeform Ring",
+    "old_slug": "rare-genuine-larimar-raw-freeform-gold-or-silver-ring",
+    "new_slug": "larimar-raw-freeform-ring",
+    "changed": true
+  },
+  {
+    "id": 19783,
+    "name": "Rainbow Moonstone Raw Freeform Ring",
+    "old_slug": "rainbow-moonstone-raw-freeform-gold-or-silver-ring",
+    "new_slug": "rainbow-moonstone-raw-freeform-ring",
+    "changed": true
+  },
+  {
+    "id": 19744,
+    "name": "Prehnite Raw Freeform Ring",
+    "old_slug": "prehnite-raw-freeform-gold-or-silver-ring",
+    "new_slug": "prehnite-raw-freeform-ring",
+    "changed": true
+  },
+  {
+    "id": 19743,
+    "name": "Carnelian Raw Freeform Ring",
+    "old_slug": "carnelian-raw-freeform-gold-or-silver-ring",
+    "new_slug": "carnelian-raw-freeform-ring",
+    "changed": true
+  },
+  {
+    "id": 19707,
+    "name": "Citrine Raw Freeform Ring",
+    "old_slug": "citrine-raw-freeform-gold-or-silver-ring",
+    "new_slug": "citrine-raw-freeform-ring",
+    "changed": true
+  },
+  {
+    "id": 19681,
+    "name": "Black Tourmaline Raw Freeform Ring",
+    "old_slug": "black-tourmaline-raw-freeform-gold-or-silver-ring",
+    "new_slug": "black-tourmaline-raw-freeform-ring",
+    "changed": true
+  },
+  {
+    "id": 19680,
+    "name": "Amethyst Raw Freeform Ring",
+    "old_slug": "amethyst-raw-freeform-gold-or-silver-ring",
+    "new_slug": "amethyst-raw-freeform-ring",
+    "changed": true
+  },
+  {
+    "id": 19650,
+    "name": "Black Tourmaline Ring",
+    "old_slug": "black-tourmaline-silver-gold-or-rose-gold-ring",
+    "new_slug": "black-tourmaline-ring",
+    "changed": true
+  },
+  {
+    "id": 19622,
+    "name": "Malachite Ring",
+    "old_slug": "genuine-malachite-silver-gold-or-rose-gold-ring",
+    "new_slug": "malachite-ring",
+    "changed": true
+  },
+  {
+    "id": 19578,
+    "name": "Rainbow Moonstone Ring",
+    "old_slug": "rainbow-moonstone-silver-gold-or-rose-gold-ring",
+    "new_slug": "rainbow-moonstone-ring",
+    "changed": true
+  },
+  {
+    "id": 19577,
+    "name": "Tiger Eye Ring",
+    "old_slug": "tiger-eye-silver-or-gold-ring",
+    "new_slug": "tiger-eye-ring",
+    "changed": true
+  },
+  {
+    "id": 19518,
+    "name": "Lotus Gemstone Ring",
+    "old_slug": "lotus-gemstone-ring-limited-edition",
+    "new_slug": "lotus-gemstone-ring",
+    "changed": true
+  },
+  {
+    "id": 19471,
+    "name": "Gemini Bracelet Set",
+    "old_slug": "gemini-bracelet-set",
+    "new_slug": "gemini-bracelet-set",
+    "changed": false
+  },
+  {
+    "id": 19458,
+    "name": "Solar Plexus Bracelet Set",
+    "old_slug": "solar-plexus-chakra-pack",
+    "new_slug": "solar-plexus-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19448,
+    "name": "Third Eye Bracelet Set",
+    "old_slug": "third-eye-chakra-pack",
+    "new_slug": "third-eye-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19439,
+    "name": "Peace and Harmony Bracelet Set",
+    "old_slug": "peace-harmony-pack",
+    "new_slug": "peace-and-harmony-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19429,
+    "name": "Creativity and Love Bracelet Set",
+    "old_slug": "creativity-love-pack",
+    "new_slug": "creativity-and-love-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19420,
+    "name": "Sagittarius Bracelet Set",
+    "old_slug": "sagittarius-bracelet-set",
+    "new_slug": "sagittarius-bracelet-set",
+    "changed": false
+  },
+  {
+    "id": 19411,
+    "name": "Libra Bracelet Set",
+    "old_slug": "libra-bracelet-set",
+    "new_slug": "libra-bracelet-set",
+    "changed": false
+  },
+  {
+    "id": 19410,
+    "name": "Capricorn Bracelet Set",
+    "old_slug": "capricorn-bracelet-set",
+    "new_slug": "capricorn-bracelet-set",
+    "changed": false
+  },
+  {
+    "id": 19391,
+    "name": "Virgo Bracelet Set",
+    "old_slug": "virgo-bracelet-set",
+    "new_slug": "virgo-bracelet-set",
+    "changed": false
+  },
+  {
+    "id": 19381,
+    "name": "Purpose and Wisdom Bracelet Set",
+    "old_slug": "purpose-wisdom-pack",
+    "new_slug": "purpose-and-wisdom-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19372,
+    "name": "Honesty and Truth Bracelet Set",
+    "old_slug": "honesty-truth-pack",
+    "new_slug": "honesty-and-truth-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19361,
+    "name": "Inner Strength and Motivation Bracelet Set",
+    "old_slug": "inner-strength-motivation-pack",
+    "new_slug": "inner-strength-and-motivation-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19360,
+    "name": "Sacral Chakra Bracelet Set",
+    "old_slug": "sacral-chakra-pack",
+    "new_slug": "sacral-chakra-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19342,
+    "name": "Crown Chakra Bracelet Set",
+    "old_slug": "crown-chakra-pack",
+    "new_slug": "crown-chakra-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19332,
+    "name": "Root Chakra Bracelet Set",
+    "old_slug": "root-chakra-pack",
+    "new_slug": "root-chakra-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19220,
+    "name": "Throat Chakra Bracelet Set",
+    "old_slug": "throat-chakra-pack",
+    "new_slug": "throat-chakra-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19331,
+    "name": "Courage and Strength Bracelet Set",
+    "old_slug": "courage-strength-pack",
+    "new_slug": "courage-and-strength-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19313,
+    "name": "Willpower and Guidance Bracelet Set",
+    "old_slug": "willpower-guidance-pack",
+    "new_slug": "willpower-and-guidance-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19312,
+    "name": "Vision and Awareness Bracelet Set",
+    "old_slug": "vision-awareness-pack",
+    "new_slug": "vision-and-awareness-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19296,
+    "name": "Clarity and Balance Bracelet Set",
+    "old_slug": "clarity-balance-pack",
+    "new_slug": "clarity-and-balance-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19286,
+    "name": "Positivity and Intuition Bracelet Set",
+    "old_slug": "positivity-intuition-pack",
+    "new_slug": "positivity-and-intuition-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19285,
+    "name": "Communication and Intuition Bracelet Set",
+    "old_slug": "communication-consciousness-pack",
+    "new_slug": "communication-and-intuition-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19183,
+    "name": "Awareness and Connection Bracelet Set",
+    "old_slug": "awareness-connection-pack",
+    "new_slug": "awareness-and-connection-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19247,
+    "name": "Intuition and Clarity Bracelet Set",
+    "old_slug": "psychic-energy-pack",
+    "new_slug": "intuition-and-clarity-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19174,
+    "name": "Clarity and Calm Bracelet Set",
+    "old_slug": "master-healing-pack",
+    "new_slug": "clarity-and-calm-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19268,
+    "name": "Aries Bracelet Set",
+    "old_slug": "aries-bracelet-set",
+    "new_slug": "aries-bracelet-set",
+    "changed": false
+  },
+  {
+    "id": 19259,
+    "name": "Scorpio Bracelet Set",
+    "old_slug": "scorpio-bracelet-set",
+    "new_slug": "scorpio-bracelet-set",
+    "changed": false
+  },
+  {
+    "id": 19248,
+    "name": "Aquarius Bracelet Set",
+    "old_slug": "aquarius-bracelet-set",
+    "new_slug": "aquarius-bracelet-set",
+    "changed": false
+  },
+  {
+    "id": 19229,
+    "name": "Pisces Bracelet Set",
+    "old_slug": "pisces-bracelet-set",
+    "new_slug": "pisces-bracelet-set",
+    "changed": false
+  },
+  {
+    "id": 19210,
+    "name": "Cancer Bracelet Set",
+    "old_slug": "cancer-bracelet-set",
+    "new_slug": "cancer-bracelet-set",
+    "changed": false
+  },
+  {
+    "id": 19200,
+    "name": "Taurus Bracelet Set",
+    "old_slug": "taurus-bracelet-set",
+    "new_slug": "taurus-bracelet-set",
+    "changed": false
+  },
+  {
+    "id": 19199,
+    "name": "Leo Bracelet Set",
+    "old_slug": "leo-bracelet-set",
+    "new_slug": "leo-bracelet-set",
+    "changed": false
+  },
+  {
+    "id": 19164,
+    "name": "Jade Bracelet Set",
+    "old_slug": "harmonizing-jade-pack",
+    "new_slug": "jade-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19154,
+    "name": "Amazonite Amethyst and Fluorite Bracelet Set",
+    "old_slug": "spirituality-serenity-pack",
+    "new_slug": "amazonite-amethyst-and-fluorite-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19142,
+    "name": "Peace and Vitality Bracelet Set",
+    "old_slug": "radiate-peace-vitality-pack",
+    "new_slug": "peace-and-vitality-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19141,
+    "name": "Prosperity Bracelet Set",
+    "old_slug": "prosperity-success-pack",
+    "new_slug": "prosperity-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19112,
+    "name": "Rose Quartz and Fluorite Bracelet Set",
+    "old_slug": "fertility-pack",
+    "new_slug": "rose-quartz-and-fluorite-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19095,
+    "name": "Serenity Bracelet Set",
+    "old_slug": "serene-stress-free-pack",
+    "new_slug": "serenity-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19094,
+    "name": "Forgiveness and Compassion Bracelet Set",
+    "old_slug": "forgiveness-compassion-pack",
+    "new_slug": "forgiveness-and-compassion-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19093,
+    "name": "Seven Stone Chakra Bracelet Set",
+    "old_slug": "chakra-bracelet-set",
+    "new_slug": "seven-stone-chakra-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19092,
+    "name": "Heart Chakra Bracelet Set",
+    "old_slug": "heart-chakra-pack",
+    "new_slug": "heart-chakra-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19091,
+    "name": "Protection Bracelet Set",
+    "old_slug": "protection-from-negativity-emf-pack",
+    "new_slug": "protection-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19090,
+    "name": "Grounding Bracelet Set",
+    "old_slug": "grounded-anxiety-free-pack",
+    "new_slug": "grounding-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 19089,
+    "name": "Self-Love Bracelet Set",
+    "old_slug": "self-love-acceptance-pack",
+    "new_slug": "self-love-bracelet-set",
+    "changed": true
+  },
+  {
+    "id": 18996,
+    "name": "Clear Quartz 8mm Bracelet",
+    "old_slug": "clear-quartz-energy-bracelet-8mm",
+    "new_slug": "clear-quartz-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18995,
+    "name": "Multi-Amazonite Bracelet",
+    "old_slug": "multi-amazonite-energy-bracelet-8mm",
+    "new_slug": "multi-amazonite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18994,
+    "name": "Lapis Lazuli 8mm Bracelet",
+    "old_slug": "lapis-lazuli-energy-bracelet-8mm",
+    "new_slug": "lapis-lazuli-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18993,
+    "name": "Flame Jasper Bracelet",
+    "old_slug": "flame-jasper-energy-bracelet-8mm",
+    "new_slug": "flame-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18992,
+    "name": "Pink Zebra Jasper 8mm Bracelet",
+    "old_slug": "pink-zebra-jasper-energy-bracelet-8mm",
+    "new_slug": "pink-zebra-jasper-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18945,
+    "name": "Blue Llanite Opal Bracelet",
+    "old_slug": "blue-llanite-opal-energy-bracelet-8mm",
+    "new_slug": "blue-llanite-opal-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18944,
+    "name": "Picture Jasper 8mm Bracelet",
+    "old_slug": "picture-jasper-energy-bracelet-8mm",
+    "new_slug": "picture-jasper-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18943,
+    "name": "Red Jasper 8mm Bracelet",
+    "old_slug": "red-jasper-energy-bracelet-8mm",
+    "new_slug": "red-jasper-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18942,
+    "name": "Tiger Eye 8mm Bracelet",
+    "old_slug": "tiger-eye-energy-bracelet-8mm",
+    "new_slug": "tiger-eye-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18941,
+    "name": "Amethyst 8mm Bracelet",
+    "old_slug": "amethyst-energy-bracelet-8mm",
+    "new_slug": "amethyst-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18917,
+    "name": "Lava Stone 8mm Bracelet",
+    "old_slug": "lava-stone-energy-bracelet-8mm",
+    "new_slug": "lava-stone-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18916,
+    "name": "Purple Rainbow Fluorite Bracelet",
+    "old_slug": "purple-rainbow-fluorite-energy-bracelet-8mm",
+    "new_slug": "purple-rainbow-fluorite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18888,
+    "name": "Black Tourmaline 8mm Bracelet",
+    "old_slug": "black-tourmaline-energy-bracelet-8mm",
+    "new_slug": "black-tourmaline-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18887,
+    "name": "Peruvian Pink Opal 8mm Bracelet",
+    "old_slug": "peruvian-pink-opal-energy-bracelet-8mm",
+    "new_slug": "peruvian-pink-opal-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18886,
+    "name": "Malachite 8mm Bracelet",
+    "old_slug": "genuine-real-malachite-energy-bracelet-8mm",
+    "new_slug": "malachite-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18830,
+    "name": "Angelite Bracelet",
+    "old_slug": "angelite-energy-bracelet",
+    "new_slug": "angelite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18812,
+    "name": "Larvikite Bracelet",
+    "old_slug": "larvikite-black-labradorite-energy-bracelet",
+    "new_slug": "larvikite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18811,
+    "name": "Seven Stone Harmony Bracelet",
+    "old_slug": "black-onyx-seven-chakra-energy-bracelet",
+    "new_slug": "seven-stone-harmony-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18810,
+    "name": "Pink Zebra Jasper Stretch Bracelet",
+    "old_slug": "pink-zebra-jasper-energy-bracelet",
+    "new_slug": "pink-zebra-jasper-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18780,
+    "name": "Yellow Dendritic Opal Bracelet",
+    "old_slug": "yellow-dendritic-opal-energy-bracelet",
+    "new_slug": "yellow-dendritic-opal-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18779,
+    "name": "Plum Blossom Tourmaline Bracelet",
+    "old_slug": "natural-plum-blossom-tourmaline-energy-bracelet",
+    "new_slug": "plum-blossom-tourmaline-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18778,
+    "name": "Rose Quartz Bracelet",
+    "old_slug": "rose-quartz-energy-bracelet",
+    "new_slug": "rose-quartz-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18777,
+    "name": "Azurite Bracelet",
+    "old_slug": "azurite-energy-bracelet",
+    "new_slug": "azurite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18776,
+    "name": "Light Blue Jade Bracelet",
+    "old_slug": "light-blue-jade-energy-bracelet",
+    "new_slug": "light-blue-jade-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18775,
+    "name": "Cherry Blossom Agate Bracelet",
+    "old_slug": "sakura-cherry-blossom-agate-energy-bracelet",
+    "new_slug": "cherry-blossom-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18774,
+    "name": "Zebra Jasper Bracelet",
+    "old_slug": "black-white-zebra-jasper-energy-bracelet",
+    "new_slug": "zebra-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18771,
+    "name": "Amber Bracelet",
+    "old_slug": "genuine-amber-energy-bracelet-8mm",
+    "new_slug": "amber-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18730,
+    "name": "Rainbow Eye Obsidian Bracelet",
+    "old_slug": "natural-rainbow-eye-obsidian-energy-bracelet-6mm",
+    "new_slug": "rainbow-eye-obsidian-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18729,
+    "name": "Purple Flower Jasper Bracelet",
+    "old_slug": "purple-flower-jasper-energy-bracelet-6mm",
+    "new_slug": "purple-flower-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18728,
+    "name": "Black Green Nephrite Jade Bracelet",
+    "old_slug": "black-green-nephrite-jade-energy-bracelet-6mm",
+    "new_slug": "black-green-nephrite-jade-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18727,
+    "name": "Hematoid Tangerine Quartz Bracelet",
+    "old_slug": "hematoid-red-tangerine-quartz-energy-bracelet-6mm",
+    "new_slug": "hematoid-tangerine-quartz-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18690,
+    "name": "Tibetan Honeycomb Agate Bracelet",
+    "old_slug": "tibetan-honeycomb-agate-energy-bracelet-6mm",
+    "new_slug": "tibetan-honeycomb-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18689,
+    "name": "Blue Ice Glacierite Bracelet",
+    "old_slug": "rare-blue-ice-glacierite-energy-bracelet-6mm",
+    "new_slug": "blue-ice-glacierite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18673,
+    "name": "African Green Phantom Quartz Bracelet",
+    "old_slug": "african-green-phantom-energy-bracelet",
+    "new_slug": "african-green-phantom-quartz-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18664,
+    "name": "Ivory Jade Bracelet",
+    "old_slug": "ivory-jade-energy-bracelet",
+    "new_slug": "ivory-jade-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18663,
+    "name": "Fire Agate Bracelet",
+    "old_slug": "natural-fire-agate-energy-bracelet",
+    "new_slug": "fire-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18645,
+    "name": "Green Nephrite Jade Bracelet",
+    "old_slug": "green-nephrite-jade-energy-bracelet",
+    "new_slug": "green-nephrite-jade-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18636,
+    "name": "Matcha Alashan Bracelet",
+    "old_slug": "rare-matcha-alashan-energy-bracelet",
+    "new_slug": "matcha-alashan-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18635,
+    "name": "Sugilite Atlantisite Bracelet",
+    "old_slug": "sugilite-atlantisite-stichtite-energy-bracelet",
+    "new_slug": "sugilite-atlantisite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18634,
+    "name": "Malachite Stretch Bracelet",
+    "old_slug": "genuine-malachite-energy-bracelet",
+    "new_slug": "malachite-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18633,
+    "name": "Dark Blue Jade Bracelet",
+    "old_slug": "dark-blue-jade-energy-bracelet",
+    "new_slug": "dark-blue-jade-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18632,
+    "name": "Red Jade Bracelet",
+    "old_slug": "red-jade-energy-bracelet",
+    "new_slug": "red-jade-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18586,
+    "name": "Green Jade Bracelet",
+    "old_slug": "green-jade-energy-bracelet",
+    "new_slug": "green-jade-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18585,
+    "name": "Black Tourmaline Stretch Bracelet",
+    "old_slug": "black-tourmaline-energy-bracelet",
+    "new_slug": "black-tourmaline-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18568,
+    "name": "Rainbow Tourmaline Bracelet",
+    "old_slug": "rainbow-tourmaline-energy-bracelet",
+    "new_slug": "rainbow-tourmaline-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18567,
+    "name": "Peruvian Pink Opal Stretch Bracelet",
+    "old_slug": "peruvian-pink-opal-energy-bracelet",
+    "new_slug": "peruvian-pink-opal-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18566,
+    "name": "Phosphosiderite Bracelet",
+    "old_slug": "rare-phosphosiderite-energy-bracelet",
+    "new_slug": "phosphosiderite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18565,
+    "name": "Larimar Bracelet",
+    "old_slug": "genuine-rare-larimar-energy-bracelet",
+    "new_slug": "larimar-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18529,
+    "name": "Genuine Turquoise Stretch Bracelet",
+    "old_slug": "real-genuine-turquoise-energy-bracelet",
+    "new_slug": "genuine-turquoise-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18528,
+    "name": "Botswana Agate Bracelet",
+    "old_slug": "botswana-agate-energy-bracelet",
+    "new_slug": "botswana-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18527,
+    "name": "Rainbow Hematite Bracelet",
+    "old_slug": "rainbow-hematite-energy-bracelet",
+    "new_slug": "rainbow-hematite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18502,
+    "name": "Coral Jade Bracelet",
+    "old_slug": "natural-coral-jade-chrysanthemum-energy-bracelet",
+    "new_slug": "coral-jade-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18501,
+    "name": "Peace Jade Bracelet",
+    "old_slug": "peace-jade-energy-bracelet",
+    "new_slug": "peace-jade-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18484,
+    "name": "Bamboo Leaf Agate Bracelet",
+    "old_slug": "bamboo-leaf-agate-energy-bracelet",
+    "new_slug": "bamboo-leaf-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18483,
+    "name": "African Pietersite Bracelet",
+    "old_slug": "natural-african-pietersite-energy-bracelet",
+    "new_slug": "african-pietersite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18457,
+    "name": "Petrified Wood Jade Bracelet",
+    "old_slug": "petrified-wood-jade-energy-bracelet",
+    "new_slug": "petrified-wood-jade-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18456,
+    "name": "Freshwater Pearl Bracelet",
+    "old_slug": "natural-freshwater-pearl-energy-bracelet-aaa-premium-quality",
+    "new_slug": "freshwater-pearl-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18455,
+    "name": "Citrine Beaded Bracelet",
+    "old_slug": "citrine-energy-bracelet",
+    "new_slug": "citrine-beaded-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18454,
+    "name": "Bloodstone Bracelet",
+    "old_slug": "bloodstone-energy-bracelet",
+    "new_slug": "bloodstone-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18453,
+    "name": "Kunzite Bracelet",
+    "old_slug": "kunzite-energy-bracelet",
+    "new_slug": "kunzite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18452,
+    "name": "Clear Quartz Stretch Bracelet",
+    "old_slug": "clear-quartz-energy-bracelet",
+    "new_slug": "clear-quartz-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18451,
+    "name": "Carnelian Bracelet",
+    "old_slug": "carnelian-energy-bracelet",
+    "new_slug": "carnelian-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18450,
+    "name": "Charoite Bracelet",
+    "old_slug": "charoite-energy-bracelet",
+    "new_slug": "charoite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18382,
+    "name": "Riverstone Jasper Bracelet",
+    "old_slug": "riverstone-jasper-energy-bracelet",
+    "new_slug": "riverstone-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18381,
+    "name": "Beryl Bracelet",
+    "old_slug": "beryl-energy-bracelet",
+    "new_slug": "beryl-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18380,
+    "name": "Iolite Bracelet",
+    "old_slug": "iolite-energy-bracelet",
+    "new_slug": "iolite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18379,
+    "name": "Dragon Vein Agate Bracelet",
+    "old_slug": "dragon-vein-agate-energy-bracelet",
+    "new_slug": "dragon-vein-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18351,
+    "name": "Black Agate Bracelet",
+    "old_slug": "black-agate-energy-bracelet",
+    "new_slug": "black-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18350,
+    "name": "Brown Agate Bracelet",
+    "old_slug": "brown-agate-energy-bracelet",
+    "new_slug": "brown-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18332,
+    "name": "Smoky Quartz Stretch Bracelet",
+    "old_slug": "smoky-quartz-energy-bracelet",
+    "new_slug": "smoky-quartz-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18331,
+    "name": "Rhodonite Bracelet",
+    "old_slug": "rhodonite-energy-bracelet",
+    "new_slug": "rhodonite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18302,
+    "name": "Hematite 8mm Bracelet",
+    "old_slug": "hematite-energy-bracelet-8mm",
+    "new_slug": "hematite-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18301,
+    "name": "Picture Jasper Stretch Bracelet",
+    "old_slug": "picture-jasper-energy-bracelet",
+    "new_slug": "picture-jasper-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18284,
+    "name": "Dumortierite Bracelet",
+    "old_slug": "dumortierite-energy-bracelet",
+    "new_slug": "dumortierite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18274,
+    "name": "Moss Agate Bracelet",
+    "old_slug": "moss-agate-energy-bracelet",
+    "new_slug": "moss-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18273,
+    "name": "Garnet Bracelet",
+    "old_slug": "garnet-energy-bracelet",
+    "new_slug": "garnet-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18254,
+    "name": "Amazonite Stretch Bracelet",
+    "old_slug": "amazonite-energy-bracelet",
+    "new_slug": "amazonite-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18253,
+    "name": "Howlite Stretch Bracelet",
+    "old_slug": "howlite-energy-bracelet",
+    "new_slug": "howlite-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18237,
+    "name": "Green Aventurine Bracelet",
+    "old_slug": "green-aventurine-energy-bracelet",
+    "new_slug": "green-aventurine-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18236,
+    "name": "Mahogany Obsidian Bracelet",
+    "old_slug": "mahogany-obsidian-energy-bracelet",
+    "new_slug": "mahogany-obsidian-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18217,
+    "name": "Snow Quartz Bracelet",
+    "old_slug": "snow-quartz-energy-bracelet",
+    "new_slug": "snow-quartz-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18216,
+    "name": "Sunstone Bracelet",
+    "old_slug": "sunstone-energy-bracelet",
+    "new_slug": "sunstone-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18215,
+    "name": "Orange Calcite Bracelet",
+    "old_slug": "orange-calcite-energy-bracelet",
+    "new_slug": "orange-calcite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18190,
+    "name": "Pyrite Bracelet",
+    "old_slug": "pyrite-energy-bracelet",
+    "new_slug": "pyrite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18189,
+    "name": "Rainbow Fluorite Bracelet",
+    "old_slug": "rainbow-fluorite-energy-bracelet",
+    "new_slug": "rainbow-fluorite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18188,
+    "name": "Moonstone Bracelet",
+    "old_slug": "moonstone-energy-bracelet",
+    "new_slug": "moonstone-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18162,
+    "name": "Hessonite Bracelet",
+    "old_slug": "hessonite-energy-bracelet",
+    "new_slug": "hessonite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18161,
+    "name": "Yellow Topaz Bracelet",
+    "old_slug": "yellow-topaz-energy-bracelet",
+    "new_slug": "yellow-topaz-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18141,
+    "name": "Citrine and Tourmaline Bracelet Pack",
+    "old_slug": "divine-joy-happiness-energy-bracelets-pack",
+    "new_slug": "citrine-and-tourmaline-bracelet-pack",
+    "changed": true
+  },
+  {
+    "id": 18140,
+    "name": "Picasso Jasper Bracelet",
+    "old_slug": "natural-picasso-jasper-energy-bracelet",
+    "new_slug": "picasso-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18139,
+    "name": "Lavender Amethyst Bracelet",
+    "old_slug": "lavender-amethyst-energy-bracelet",
+    "new_slug": "lavender-amethyst-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18114,
+    "name": "Yellow Jade Bracelet",
+    "old_slug": "yellow-jade-energy-bracelet",
+    "new_slug": "yellow-jade-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18113,
+    "name": "Rhyolite Bracelet",
+    "old_slug": "rhyolite-energy-bracelet",
+    "new_slug": "rhyolite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18095,
+    "name": "Feldspar Bracelet",
+    "old_slug": "feldspar-energy-bracelet",
+    "new_slug": "feldspar-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18094,
+    "name": "Blue Chalcedony Bracelet",
+    "old_slug": "blue-chalcedony-energy-bracelet",
+    "new_slug": "blue-chalcedony-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18075,
+    "name": "Dalmatian Jasper Bracelet",
+    "old_slug": "dalmatian-jasper-energy-bracelet",
+    "new_slug": "dalmatian-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18074,
+    "name": "Ruby Zoisite Bracelet",
+    "old_slug": "ruby-zoisite-energy-bracelet",
+    "new_slug": "ruby-zoisite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18056,
+    "name": "Moon Phase Bracelet Pack",
+    "old_slug": "moon-phase-energy-bracelets-pack",
+    "new_slug": "moon-phase-bracelet-pack",
+    "changed": true
+  },
+  {
+    "id": 18055,
+    "name": "Lava Stone Stretch Bracelet",
+    "old_slug": "lava-stone-energy-bracelet",
+    "new_slug": "lava-stone-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18037,
+    "name": "Mookaite Jasper Bracelet",
+    "old_slug": "mookaite-jasper-energy-bracelet",
+    "new_slug": "mookaite-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18036,
+    "name": "Celestine Bracelet",
+    "old_slug": "celestine-energy-bracelet",
+    "new_slug": "celestine-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18035,
+    "name": "Rainbow Jasper Bracelet",
+    "old_slug": "rainbow-jasper-energy-bracelet",
+    "new_slug": "rainbow-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18034,
+    "name": "Morganite Bracelet",
+    "old_slug": "morganite-energy-bracelet",
+    "new_slug": "morganite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18033,
+    "name": "Tree Agate Bracelet",
+    "old_slug": "tree-agate-energy-bracelet",
+    "new_slug": "tree-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18004,
+    "name": "Turquoise Howlite Bracelet",
+    "old_slug": "turquoise-howlite-energy-bracelet",
+    "new_slug": "turquoise-howlite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 18003,
+    "name": "Blue Lace Agate Bracelet",
+    "old_slug": "blue-lace-agate-energy-bracelet",
+    "new_slug": "blue-lace-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17980,
+    "name": "Chrysocolla Bracelet",
+    "old_slug": "chrysocolla-energy-bracelet",
+    "new_slug": "chrysocolla-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17979,
+    "name": "Crazy Lace Agate Bracelet",
+    "old_slug": "crazy-lace-agate-energy-bracelet",
+    "new_slug": "crazy-lace-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17978,
+    "name": "Opalite Bracelet",
+    "old_slug": "opalite-energy-bracelet",
+    "new_slug": "opalite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17977,
+    "name": "Serpentine Bracelet",
+    "old_slug": "serpentine-energy-bracelet",
+    "new_slug": "serpentine-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17976,
+    "name": "Amazonite Multi-Stone Bracelet",
+    "old_slug": "multi-amazonite-energy-bracelet",
+    "new_slug": "amazonite-multi-stone-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17975,
+    "name": "African Jade Bracelet",
+    "old_slug": "african-jade-energy-bracelet",
+    "new_slug": "african-jade-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17974,
+    "name": "Rainbow Moonstone Bracelet",
+    "old_slug": "rainbow-moonstone-energy-bracelet",
+    "new_slug": "rainbow-moonstone-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17973,
+    "name": "Kiwi Jasper Bracelet",
+    "old_slug": "kiwi-jasper-energy-bracelet",
+    "new_slug": "kiwi-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17949,
+    "name": "Lepidolite Bracelet",
+    "old_slug": "lepidolite-energy-bracelet",
+    "new_slug": "lepidolite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17948,
+    "name": "Apatite Bracelet",
+    "old_slug": "apatite-energy-bracelet",
+    "new_slug": "apatite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17947,
+    "name": "Rhodochrosite Bracelet",
+    "old_slug": "rhodochrosite-energy-bracelet",
+    "new_slug": "rhodochrosite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17946,
+    "name": "Indian Agate Bracelet",
+    "old_slug": "indian-agate-energy-bracelet",
+    "new_slug": "indian-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17945,
+    "name": "Hematite Stretch Bracelet",
+    "old_slug": "hematite-energy-bracelet",
+    "new_slug": "hematite-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17944,
+    "name": "Dream Agate Bracelet",
+    "old_slug": "dream-agate-energy-bracelet",
+    "new_slug": "dream-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17943,
+    "name": "Prehnite Bracelet",
+    "old_slug": "genuine-prehnite-energy-bracelet",
+    "new_slug": "prehnite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17920,
+    "name": "Australian Zebra Jasper Bracelet",
+    "old_slug": "natural-australian-zebra-jasper-energy-bracelet",
+    "new_slug": "australian-zebra-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17919,
+    "name": "Red Flower Jasper Bracelet",
+    "old_slug": "natural-red-flower-jasper-energy-bracelet",
+    "new_slug": "red-flower-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17918,
+    "name": "Chrysoprase Bracelet",
+    "old_slug": "chrysoprase-jasper-energy-bracelet",
+    "new_slug": "chrysoprase-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17917,
+    "name": "Aquamarine Bracelet",
+    "old_slug": "aquamarine-energy-bracelet",
+    "new_slug": "aquamarine-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17916,
+    "name": "Golden Obsidian Stretch Bracelet",
+    "old_slug": "golden-obsidian-energy-bracelet",
+    "new_slug": "golden-obsidian-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17915,
+    "name": "Black Flower Moss Agate Bracelet",
+    "old_slug": "natural-black-flower-moss-agate-energy-bracelet",
+    "new_slug": "black-flower-moss-agate-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17914,
+    "name": "Vine Flower Xiuyu Jade Bracelet",
+    "old_slug": "natural-vine-flower-xiuyu-jade-energy-bracelet",
+    "new_slug": "vine-flower-xiuyu-jade-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17913,
+    "name": "Ocean Jasper Bracelet",
+    "old_slug": "natural-ocean-jasper-energy-bracelet",
+    "new_slug": "ocean-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17889,
+    "name": "Sodalite Bracelet",
+    "old_slug": "sodalite-energy-bracelet",
+    "new_slug": "sodalite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17888,
+    "name": "Shungite Bracelet",
+    "old_slug": "shungite-energy-bracelet",
+    "new_slug": "shungite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17887,
+    "name": "Amethyst Stretch Bracelet",
+    "old_slug": "amethyst-energy-bracelet",
+    "new_slug": "amethyst-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17886,
+    "name": "9 Planet Gemstone Bracelet",
+    "old_slug": "9-planet-gemstone-energy-bracelet",
+    "new_slug": "9-planet-gemstone-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17885,
+    "name": "Yellow Rutilated Quartz Bracelet",
+    "old_slug": "yellow-rutilated-quartz-energy-bracelet",
+    "new_slug": "yellow-rutilated-quartz-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17884,
+    "name": "Blue Aventurine Bracelet",
+    "old_slug": "blue-aventurine-energy-bracelet",
+    "new_slug": "blue-aventurine-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17883,
+    "name": "Labradorite Stretch Bracelet",
+    "old_slug": "labradorite-energy-bracelet",
+    "new_slug": "labradorite-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17860,
+    "name": "African Turquoise Jasper Bracelet",
+    "old_slug": "african-turquoise-jasper-energy-bracelet",
+    "new_slug": "african-turquoise-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17859,
+    "name": "Red Tiger Eye Bracelet",
+    "old_slug": "red-tiger-eye-energy-bracelet",
+    "new_slug": "red-tiger-eye-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17858,
+    "name": "Blue Tiger Eye Bracelet",
+    "old_slug": "blue-tiger-eye-energy-bracelet",
+    "new_slug": "blue-tiger-eye-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17857,
+    "name": "Tiger Eye Stretch Bracelet",
+    "old_slug": "tiger-eye-energy-bracelet",
+    "new_slug": "tiger-eye-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17856,
+    "name": "Golden Tiger Eye Bracelet",
+    "old_slug": "golden-tiger-eye-energy-bracelet",
+    "new_slug": "golden-tiger-eye-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17855,
+    "name": "Kyanite Bracelet",
+    "old_slug": "kyanite-energy-bracelet",
+    "new_slug": "kyanite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17854,
+    "name": "Peridot Bracelet",
+    "old_slug": "peridot-energy-bracelet",
+    "new_slug": "peridot-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17853,
+    "name": "Lapis Lazuli Stretch Bracelet",
+    "old_slug": "lapis-lazuli-energy-bracelet",
+    "new_slug": "lapis-lazuli-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17830,
+    "name": "Unakite Bracelet",
+    "old_slug": "unakite-energy-bracelet",
+    "new_slug": "unakite-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17821,
+    "name": "Snowflake Obsidian Bracelet",
+    "old_slug": "snowflake-obsidian-energy-bracelet",
+    "new_slug": "snowflake-obsidian-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17460,
+    "name": "Leopard Skin Jasper Bracelet",
+    "old_slug": "leopard-skin-jasper-energy-bracelet",
+    "new_slug": "leopard-skin-jasper-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17450,
+    "name": "Red Orange Aventurine Bracelet",
+    "old_slug": "red-orange-aventurine-energy-bracelet",
+    "new_slug": "red-orange-aventurine-bracelet",
+    "changed": true
+  },
+  {
+    "id": 17449,
+    "name": "Red Jasper Stretch Bracelet",
+    "old_slug": "red-jasper-energy-bracelet",
+    "new_slug": "red-jasper-stretch-bracelet",
+    "changed": true
+  },
+  {
+    "id": 19037,
+    "name": "Smoky Quartz 8mm Bracelet",
+    "old_slug": "smoky-quartz-bracelet",
+    "new_slug": "smoky-quartz-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 19038,
+    "name": "Golden Obsidian 8mm Bracelet",
+    "old_slug": "golden-obsidian-bracelet",
+    "new_slug": "golden-obsidian-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 19039,
+    "name": "Howlite 8mm Bracelet",
+    "old_slug": "howlite-bracelet",
+    "new_slug": "howlite-8mm-bracelet",
+    "changed": true
+  },
+  {
+    "id": 20363,
+    "name": "Labradorite Statement Ring",
+    "old_slug": "labradorite-ring",
+    "new_slug": "labradorite-statement-ring",
+    "changed": true
+  },
+  {
+    "id": 22171,
+    "name": "Seven Chakra Gemstone Tower",
+    "old_slug": "seven-chakra-gemstone-tower",
+    "new_slug": "seven-chakra-gemstone-tower",
+    "changed": false
+  }
+]

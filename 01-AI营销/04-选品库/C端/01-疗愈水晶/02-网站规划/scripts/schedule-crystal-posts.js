@@ -33,32 +33,30 @@ const E = require('../templates/elementor-utils');
 
 const PROJECT_ROOT = path.resolve(__dirname, '..');
 
-// 生成排期：每天 3 篇，9:00-21:00 随机，间隔 3h+
+// 生成排期：每天 3 篇，间隔 3-6h 随机，时间随机（分钟/秒抖动）
 function genSchedule(n, startDateStr) {
   const slots = [];
   let day = new Date(startDateStr + 'T00:00:00');
   let count = 0;
   while (count < n) {
-    // 每天生成 3 个时间点，9-21 之间，间隔 3h+
-    const base = 9; // 最早 9 点
-    let last = base - 4; // 保证第一个 > base
+    // 每天第一篇：9:00-10:59 随机起始
+    let cursor = 9 + Math.random() * 2; // 9-11 (float hour)
     const dayTimes = [];
     for (let i = 0; i < 3 && count < n; i++) {
-      let h;
-      // 确保和上一个间隔 3h+
-      do {
-        h = base + Math.floor(Math.random() * (21 - base)); // 9-20 点
-      } while (h - last < 3);
-      last = h;
-      const m = Math.floor(Math.random() * 60); // 分钟随机
+      if (i > 0) {
+        // 后续篇：间隔 3-6h 随机
+        cursor += 3 + Math.random() * 3; // +3h ~ +6h
+      }
+      if (cursor > 21) break; // 超过 21 点不再排
+      const h = Math.floor(cursor);
+      const m = Math.floor((cursor - h) * 60 + Math.random() * 10); // 分钟随机抖动
+      const s = Math.floor(Math.random() * 60);
       const dt = new Date(day);
-      dt.setHours(h, m, Math.floor(Math.random() * 60), 0);
+      dt.setHours(h, m % 60, s, 0);
       dayTimes.push(dt);
       count++;
     }
-    // 打乱当天顺序（更像真人，不严格按时间升序发布）
-    dayTimes.sort(() => Math.random() - 0.5);
-    // 但 WP 要按时间触发，所以还是升序排
+    // 升序（WP 按时间触发）
     dayTimes.sort((a, b) => a - b);
     for (const dt of dayTimes) slots.push(dt);
     day = new Date(day.getTime() + 24 * 60 * 60 * 1000); // 下一天
@@ -67,9 +65,16 @@ function genSchedule(n, startDateStr) {
 }
 
 async function listDrafts() {
-  // 列所有 draft 的 gemstone post
-  const items = await E.apiRequest('/wp-json/wp/v2/gemstone?status=draft&per_page=100&context=edit', 'GET');
-  return items; // [{id, slug, title, status, date}...]
+  // 分页取所有 draft gemstone post
+  let all = [], page = 1;
+  while (true) {
+    const items = await E.apiRequest('/wp-json/wp/v2/gemstone?status=draft&per_page=100&page=' + page + '&context=edit', 'GET');
+    if (!items || !items.length) break;
+    all = all.concat(items);
+    if (items.length < 100) break;
+    page++;
+  }
+  return all;
 }
 
 async function schedulePost(id, isoDate) {

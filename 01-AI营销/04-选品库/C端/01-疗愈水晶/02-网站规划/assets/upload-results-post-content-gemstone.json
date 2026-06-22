@@ -1,33 +1,33 @@
 {
-  "uploaded_at": "2026-06-18T01:29:20.087Z",
-  "source_json": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\crystal-meaning\\que-sera-meaning.json",
+  "uploaded_at": "2026-06-20T12:32:57.755Z",
+  "source_json": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\crystal-meaning\\franklinite-meaning.json",
   "mode": "updated",
   "status": "draft",
   "gemstone": {
-    "id": 38729,
-    "slug": "que-sera-meaning",
-    "link": "https://goearthward.com/?post_type=gemstone&p=38729"
+    "id": 42020,
+    "slug": "franklinite-meaning",
+    "link": "https://goearthward.com/?post_type=gemstone&p=42020"
   },
   "media": {
     "featured": {
-      "id": 38712,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/citrine-hero.webp"
+      "id": 42081,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/franklinite-hero-1.webp"
     },
     "overview": {
-      "id": 38732,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/que-sera-overview.webp"
+      "id": 42073,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/epistilbite-overview.webp"
     },
     "properties": {
-      "id": 38733,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/que-sera-properties.webp"
+      "id": 42074,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/epistilbite-properties.webp"
     },
     "benefits": {
-      "id": 38734,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/que-sera-benefits.webp"
+      "id": 42075,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/epistilbite-benefits.webp"
     },
     "how_to_use": {
-      "id": 38735,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/que-sera-how-to-use.webp"
+      "id": 42076,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/epistilbite-how-to-use.webp"
     },
     "pairings": {
       "id": 38653,
@@ -38,8 +38,8 @@
       "source_url": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-quality.webp"
     },
     "form_bracelet": {
-      "id": 38726,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/coral-form-bracelet-4.webp"
+      "id": 42077,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/epistilbite-form-bracelet.webp"
     },
     "form_anklet": {
       "id": 38677,

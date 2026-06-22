@@ -250,6 +250,18 @@ async function main() {
   const mediaIds = {};
   if (useImages) {
     console.log('Uploading images & replacing placeholders...');
+    // featured 独立上传：content 不含 featured 占位符（踩坑规则：避免 hero 区重复显示），
+    // 但 featured_media 必须设，所以这里单独上传 featured 图，不依赖 content 占位符。
+    if (data.images && data.images.featured && data.images.featured.file) {
+      const fp = path.resolve(PROJECT_ROOT, data.images.featured.file);
+      if (fs.existsSync(fp)) {
+        const fup = await uploadMedia(fp, path.basename(fp), data.images.featured.alt || '');
+        mediaIds.featured = fup;
+        console.log('  Uploaded featured: ' + path.basename(fp) + ' -> id ' + fup.id);
+      } else {
+        console.log('  ⚠ featured file missing, featured_media not set: ' + fp);
+      }
+    }
     const r = await uploadAndReplaceImages(data);
     content = r.content;
     Object.assign(mediaIds, r.mediaIds);

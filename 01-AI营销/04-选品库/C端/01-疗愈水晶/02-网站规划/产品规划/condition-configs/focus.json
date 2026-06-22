@@ -1,0 +1,164 @@
+{
+  "condition_title": "Focus",
+  "title": "7 Best Crystals for Focus: A Complete Guide",
+  "excerpt": "The 7 best crystals for focus — clear quartz, fluorite, lapis lazuli, herkimer diamond, pyrite, hematite, kyanite. How to choose for study and deep work.",
+  "rank_math_title": "7 Best Crystals for Focus: A Complete Guide",
+  "rank_math_description": "The 7 best crystals for focus — clear quartz, fluorite, lapis lazuli, herkimer diamond, pyrite, hematite, kyanite. How to choose for study and deep work.",
+  "rank_math_focus_keyword": "crystals for focus",
+  "featured_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/quartz/quartz-overview.webp",
+  "featured_alt": "clear quartz and crystals for focus, concentration, and mental clarity",
+  "category_ids": "1514,1502,1506,1521,1523,1497,1520",
+  "crystals": [
+    {
+      "slug": "clear-quartz",
+      "name": "Clear Quartz",
+      "subtitle": "The Master Stone",
+      "best_for": "clarity, amplifying one intention",
+      "why": "The most versatile focus stone — clear, neutral, and easy to pair with any intention.",
+      "how_to_use": "Hold it during deep work, or place it on your desk as a clarity cue.",
+      "desc": "Called the master stone for clarity and amplification, clear quartz is what many reach for when they need a sharp, undistracted mind. Many use it to anchor a single intention — one thing to focus on — before sitting down to work.",
+      "cat_id": 1514,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/quartz/quartz-overview.webp",
+      "image_alt": "clear quartz crystal for focus and mental clarity"
+    },
+    {
+      "slug": "rainbow-fluorite",
+      "name": "Rainbow Fluorite",
+      "subtitle": "The Stone of Focus",
+      "best_for": "study, concentration, decision-making",
+      "why": "Its tie to focus and clear decisions makes it a classic study and work stone.",
+      "how_to_use": "Keep it on your desk during deep work, or hold it when weighing a choice.",
+      "desc": "Often turned to for focus and clear decisions, rainbow fluorite suits people who juggle many threads and need to hold one steady. Many keep it nearby during study or work as a reminder to follow a single line of thought to its end.",
+      "care_note": "Fluorite is relatively soft (Mohs 4) and slightly soluble — handle it gently and avoid long water soaks.",
+      "cat_id": 1502,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/fluorite/fluorite-overview.webp",
+      "image_alt": "rainbow fluorite crystal for focus and concentration"
+    },
+    {
+      "slug": "lapis-lazuli",
+      "name": "Lapis Lazuli",
+      "subtitle": "The Stone of Wisdom",
+      "best_for": "deep thinking, complex problems",
+      "why": "Its tie to inner vision and wisdom makes it a stone for layered work.",
+      "how_to_use": "Hold it when a problem needs depth, or keep it where you think hard.",
+      "desc": "Tied to wisdom and inner vision, lapis lazuli suits work that asks for depth rather than speed. Many keep it close when a problem has layers and a quick answer won't do.",
+      "cat_id": 1506,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/lapis/lapis-overview.webp",
+      "image_alt": "lapis lazuli crystal for focus and deep thinking"
+    },
+    {
+      "slug": "herkimer-diamond",
+      "name": "Herkimer Diamond",
+      "subtitle": "The Stone of Attunement",
+      "best_for": "sharp, precise focus",
+      "why": "Its clarity and tie to attunement make it a stone for crisp attention.",
+      "how_to_use": "Place it on your desk, or hold it before a task that needs precision.",
+      "desc": "With its bright, clear points, herkimer diamond is often reached for when focus needs to be sharp and precise. Many use it as a clarity boost before detail work.",
+      "cat_id": 1521,
+      "image_file": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/assets/images/generated/crystal-meaning/herkimer-diamond/herkimer-diamond-overview.webp",
+      "image_alt": "herkimer diamond crystal for sharp focus"
+    },
+    {
+      "slug": "pyrite",
+      "name": "Pyrite",
+      "subtitle": "The Stone of Willpower",
+      "best_for": "willpower, pushing through resistance",
+      "why": "Its tie to willpower and focus makes it a stone for staying on task.",
+      "how_to_use": "Carry it when a task feels heavy, or keep it on your desk for stamina.",
+      "desc": "Reached for willpower and a steady drive, pyrite suits people who need to push through resistance and stay on task. Many carry it when a project drags and focus keeps slipping.",
+      "cat_id": 1523
+    },
+    {
+      "slug": "hematite",
+      "name": "Hematite",
+      "subtitle": "The Stone of Grounding",
+      "best_for": "grounding a wandering mind",
+      "why": "Its weight and tie to grounding make it an anchor when the mind drifts.",
+      "how_to_use": "Hold it when thoughts wander, or keep it on your desk to stay planted.",
+      "desc": "Heavy and cool in the hand, hematite is often reached for when the mind wanders off task. It suits people whose focus problem is really a grounding problem.",
+      "care_note": "Hematite can rust if left damp — keep it dry and wipe it with a soft cloth.",
+      "cat_id": 1497
+    },
+    {
+      "slug": "kyanite",
+      "name": "Kyanite",
+      "subtitle": "The Stone of Calm Focus",
+      "best_for": "calm, steady attention",
+      "why": "Its tie to calm focus makes it a stone for attention without tension.",
+      "how_to_use": "Hold it during meditation or focused work to settle into one thing.",
+      "desc": "Known for calm focus, kyanite suits people who need attention without tension. Many use it to settle into a single task rather than brace against it.",
+      "cat_id": 1520
+    }
+  ],
+  "scene_table": [
+    [
+      "Study and deep concentration",
+      "Fluorite, Clear Quartz"
+    ],
+    [
+      "Complex problems, deep thinking",
+      "Lapis Lazuli, Clear Quartz"
+    ],
+    [
+      "Sharp, precise focus",
+      "Herkimer Diamond, Fluorite"
+    ],
+    [
+      "Pushing through resistance",
+      "Pyrite"
+    ],
+    [
+      "Wandering mind, can't settle",
+      "Hematite, Kyanite"
+    ]
+  ],
+  "m1_quick": "Clear quartz, fluorite, lapis lazuli, herkimer diamond, pyrite, hematite, and kyanite are among the most commonly reached-for crystals for focus. Many people keep them on a desk or in a study space as a clarity cue during deep work. Crystals are complementary wellness tools, not substitutes for rest or medical care — if focus problems stem from exhaustion or a health issue, a healthcare professional is the right call.",
+  "m2_understanding": "Focus is the mind choosing one thing and staying with it — easier said than done when a dozen tabs, a pinging phone, and a tired afternoon all pull at once. Most people don't lack the ability to focus; they lack the conditions. A small, tangible anchor — a stone on the desk, a bracelet glanced at before sitting down — can mark the shift from scattered to single-task, a cue that this block of time has one job.",
+  "m25_chose": "We chose these seven because they speak to the most common focus-related intentions in crystal practice: study and concentration, deep thinking, sharp precision, willpower to push through, and grounding a wandering mind. Their meanings come from crystal tradition and personal practice, not clinical evidence.",
+  "m5_use": [
+    "<strong>Place it on your desk.</strong> Where a glance marks the start of a focused block.",
+    "<strong>Hold it before deep work.</strong> A few breaths with the stone as a cue to choose one task.",
+    "<strong>Wear it.</strong> A bracelet through study sessions or heavy workdays.",
+    "<strong>Pair it with a timer.</strong> A stone in hand for a 25-minute block of single-tasking."
+  ],
+  "m6_combos": "Pairing is about layering intentions. A popular combination is <strong>Clear Quartz + Fluorite</strong> — clarity paired with holding one line of thought, often kept together on a desk. <strong>Hematite + Kyanite</strong> is another, chosen when the mind wanders and needs grounding plus calm.",
+  "m8_intro": "Explore genuine natural crystal pieces chosen for deep work and study — stones, bracelets, and forms you can keep on a desk or carry, spanning the seven crystals above.",
+  "closing": "Focus is less about forcing the mind and more about giving it one clear thing to hold — and a real stone on the desk can be that simple cue. Start with one and let a single-task block do the work. For more, explore <a href=\"/calm-mindfulness/\">Calm &amp; Mindfulness</a>.",
+  "faq": [
+    {
+      "q": "Can crystals improve my focus or concentration?",
+      "a": "Not on their own. Crystals can't sharpen focus by themselves. Many people use them as tactile cues to mark a focused block or anchor an intention; the focus itself comes from your attention and the conditions you set, not the stone."
+    },
+    {
+      "q": "Are crystals scientifically proven to improve focus?",
+      "a": "No. There is no clinical evidence that crystals improve concentration. Any felt benefit usually comes from the ritual of sitting down with a clear intention, not a proven effect of the stone."
+    },
+    {
+      "q": "Which crystal is best for studying and exams?",
+      "a": "Fluorite and clear quartz are the most commonly chosen — fluorite for holding one line of thought, clear quartz for a sharp, undistracted mind."
+    },
+    {
+      "q": "What is the best crystal for focus and deep work?",
+      "a": "Clear quartz and lapis lazuli — clear quartz for clarity, lapis lazuli for depth on layered problems."
+    },
+    {
+      "q": "Which crystal helps when my mind keeps wandering?",
+      "a": "Hematite and kyanite — hematite to ground and plant the mind, kyanite for calm attention without tension."
+    },
+    {
+      "q": "How should I cleanse focus crystals?",
+      "a": "Smoke (sage, palo santo), sound (singing bowl), or moonlight work for most stones. Note that fluorite is relatively soft — handle it gently and avoid rough knocks or long soaks; keep hematite dry as it can rust."
+    },
+    {
+      "q": "What is the best crystal bracelet for focus?",
+      "a": "A clear quartz bracelet is the most common first choice — neutral, durable, and easy to wear during study or work as a reminder to single-task."
+    }
+  ],
+  "related": [
+    "clarity",
+    "stress",
+    "meditation",
+    "confidence",
+    "grounding"
+  ]
+}
