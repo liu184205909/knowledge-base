@@ -2,60 +2,39 @@
   "intention": "Calm & Mindfulness",
   "slug": "calm-mindfulness",
   "url": "/calm-mindfulness",
-  "heroSubtitle": "Slow down, breathe, and return to the present moment. These soothing crystals are chosen to quiet an overactive mind, soften nervous tension, and gently anchor you in stillness.",
-  "description": "In a world that never stops demanding our attention, calm has become a practice rather than a default state. The mind, constantly processing notifications, worries, and plans, rarely gets the chance to rest. Crystal traditions across cultures have long turned to specific stones to support meditation, slow the breath, and bring the nervous system back into balance. In the energy framework, a calm mind depends on the harmony of the heart, third eye, and crown chakras — when these centers are overstimulated, thoughts race; when they are aligned, we access the quiet clarity at the center of our being.\n\nAmethyst is the cornerstone of any calm-focused collection. Its gentle purple frequency soothes the mind and opens the crown chakra, making it easier to slip into meditation and release the mental loops that keep us awake. Lepidolite, naturally rich in lithium, is one of the most effective stones for emotional stabilization, dissolving anxiety and smoothing the sharp edges of a stressful day. Howlite, with its marbled stillness, slows racing thoughts and teaches patience — a quiet companion for anyone whose mind refuses to settle.\n\nAmazonite carries the calm of still water, soothing the nervous system and encouraging honest, unhurried communication with oneself. Selenite works on a subtler level, clearing stagnant energy from your space and lifting the mental fog that comes from too much stimulation. Angelite, true to its name, brings a soft, elevated peace that supports mindful breathing and gentle self-compassion.\n\nBuilding a mindfulness practice with crystals is simple. Hold Amethyst or Howlite in your palms during meditation and let its cool weight draw your attention back to your hands, and back to the breath. Place Selenite beside your workspace to keep the energy clear during focused work. Create a small stillness altar with Lepidolite and Amazonite, and pause there for three conscious breaths whenever the day feels overwhelming. The crystals do not do the work for you — they are anchors, physical reminders to return, again and again, to the present moment.\n\nOur Calm & Mindfulness collection gathers the stones most trusted for stillness, each cleansed and ready to support your daily practice of presence.",
+  "heroSubtitle": "Slow down, breathe, and come back to the present. Hand-selected crystals many people keep close as a gentle reminder to stay grounded through busy days.",
+  "heroImage": "https://goearthward.com/wp-content/uploads/2026/06/intention-calm-mindfulness-hero.webp",
+  "quickAnswer": "The crystals most often chosen for calm and mindfulness are amethyst, lepidolite, howlite, amazonite, selenite, and angelite — stones long associated in crystal tradition with quieting a busy mind and supporting meditation. Many people keep one on a desk, by a bed, or in a pocket as a physical anchor for a few mindful breaths. Crystals are symbolic objects for intention-setting and a complement to rest and self-care, not a treatment for anxiety or sleep disorders.",
+  "understanding": "Calm is rarely something we stumble into anymore — it is something we make room for. Between notifications, deadlines, and the low hum of worry many people carry, the mind rarely gets permission to settle. Across crystal traditions, certain stones have been kept close during meditation and quiet moments, less as a cure and more as a small, solid reminder to pause. Holding something cool and real in the hand can draw attention back to the breath, back to the body, back to now — and that small act of returning is the heart of mindfulness. There is nothing mystical required. A stone on a nightstand becomes a cue to put the phone down; a crystal carried through a demanding day becomes a touchpoint when the mind starts to race. The comfort lives in the ritual and the pause, not in any claim that the stone itself quiets the mind.",
   "crystals": [
-    {
-      "name": "Amethyst",
-      "subtitle": "The Stone of Stillness",
-      "benefits": "Soothes an overactive mind, deepens meditation, opens the crown chakra to quiet clarity and restful awareness.",
-      "image": "",
-      "link": "/gemstone/amethyst-meaning"
-    },
-    {
-      "name": "Lepidolite",
-      "subtitle": "The Stone of Balance",
-      "benefits": "Naturally calming and stabilizing, eases anxiety and emotional turbulence, smooths the edges of a stressful day.",
-      "image": "",
-      "link": "/gemstone/lepidolite-meaning"
-    },
-    {
-      "name": "Howlite",
-      "subtitle": "The Stone of Patience",
-      "benefits": "Slows racing thoughts, quiets an overactive internal dialogue, encourages a calm and patient state of mind.",
-      "image": "",
-      "link": "/gemstone/howlite-meaning"
-    },
-    {
-      "name": "Amazonite",
-      "subtitle": "The Stone of Calm Waters",
-      "benefits": "Soothes the nervous system, eases worry, supports honest and unhurried self-expression.",
-      "image": "",
-      "link": "/gemstone/amazonite-meaning"
-    },
-    {
-      "name": "Selenite",
-      "subtitle": "The Stone of Clarity",
-      "benefits": "Clears stagnant energy from your space, lifts mental fog, creates a pure atmosphere for mindful practice.",
-      "image": "",
-      "link": "/gemstone/selenite-meaning"
-    },
-    {
-      "name": "Angelite",
-      "subtitle": "The Stone of Gentle Peace",
-      "benefits": "Brings a soft elevated calm, supports mindful breathing and self-compassion, deepens meditative stillness.",
-      "image": "",
-      "link": "/gemstone/angelite-meaning"
-    }
+    {"name": "Amethyst", "image": "https://goearthward.com/wp-content/uploads/2026/06/crystal-amethyst.webp", "link": "/gemstone/amethyst-meaning", "meanings": "Calm, Spiritual Awareness, Protection", "best_for": "Meditation, Sleep, Stress Relief", "chakras": "Crown, Third Eye", "mineral": "Purple · Hardness 7"},
+    {"name": "Lepidolite", "image": "https://goearthward.com/wp-content/uploads/2026/06/crystal-lepidolite.webp", "link": "/gemstone/lepidolite-meaning", "meanings": "Calm, Emotional balance, Transition", "best_for": "Calm, Stress relief, Transitions", "chakras": "Heart, Third Eye", "mineral": "Lavender, Purple · Hardness 2.5-4"},
+    {"name": "Howlite", "image": "https://goearthward.com/wp-content/uploads/2026/06/crystal-howlite.webp", "link": "/gemstone/howlite-meaning", "meanings": "Calm, Patience, Awareness", "best_for": "Sleep, Overthinking, Meditation", "chakras": "Crown", "mineral": "White with gray veins · Hardness 3.5"},
+    {"name": "Amazonite", "image": "https://goearthward.com/wp-content/uploads/2026/06/crystal-amazonite.webp", "link": "/gemstone/amazonite-meaning", "meanings": "Courage, Truth, Communication", "best_for": "Communication, Calm, Honesty", "chakras": "Heart, Throat", "mineral": "Blue-green, turquoise-green · Hardness 6-6.5"},
+    {"name": "Selenite", "image": "https://goearthward.com/wp-content/uploads/2026/06/crystal-selenite.webp", "link": "/gemstone/selenite-meaning", "meanings": "Clarity, Cleansing, Calm", "best_for": "Cleansing, Space clearing, Focus", "chakras": "Crown, Third Eye", "mineral": "White, pale, luminous · Hardness 2"},
+    {"name": "Angelite", "image": "https://goearthward.com/wp-content/uploads/2026/06/crystal-angelite.webp", "link": "/gemstone/angelite-meaning", "meanings": "Calm, Communication, Higher awareness", "best_for": "Calm, Communication, Sleep", "chakras": "Throat, Third Eye", "mineral": "Pale blue · Hardness 3.5"}
   ],
-  "blogPosts": [
-    {"title": "How to Build a Daily Crystal Mindfulness Practice in 10 Minutes", "image": "", "link": "/blog/crystal-mindfulness-daily-practice"},
-    {"title": "Amethyst for Meditation: A Beginner's Guide to Quieting the Mind", "image": "", "link": "/blog/amethyst-meditation-quiet-the-mind"},
-    {"title": "5 Crystals for Anxiety Relief and How to Use Them", "image": "", "link": "/blog/crystals-for-anxiety-relief-guide"}
+  "faq": [
+    {"q": "Are crystals scientifically proven to calm the mind?", "a": "No. There is no clinical evidence that crystals reduce anxiety or calm the mind directly. Many people use them as mindfulness anchors — the comfort usually comes from the meaning and the pause they prompt, not a proven effect of the stone."},
+    {"q": "Can crystals cure anxiety or replace treatment?", "a": "No. Crystals are symbolic objects for intention-setting; they cannot cure anxiety or replace professional care. For persistent or overwhelming anxiety, a doctor or therapist is the right place to turn."},
+    {"q": "Which crystal is best for a racing, overactive mind?", "a": "Howlite and amethyst are the most common choices — howlite for slowing looping thoughts, amethyst as a gentle all-around calm stone."},
+    {"q": "What's the best crystal for winding down at night?", "a": "Amethyst, howlite, and selenite. Many place one on a nightstand as part of a wind-down routine — though for ongoing sleep trouble, professional guidance is the better path."},
+    {"q": "How do I use calming crystals during the day?", "a": "Carry a small tumbled stone in a pocket and hold it for a few breaths when stress builds, or keep one on your desk as a visual cue to pause."},
+    {"q": "How should I cleanse or care for these stones?", "a": "Moonlight, sound, or smoke work for most. Note that selenite and angelite are water-soluble — keep them dry and wipe with a soft cloth."}
   ],
   "relatedIntentions": [
-    {"name": "Spiritual Connection", "slug": "spiritual-connection", "image": ""},
-    {"name": "Love & Relationships", "slug": "love-relationships", "image": ""},
-    {"name": "Health & Vitality", "slug": "health-vitality", "image": ""}
+    {"name": "Spiritual Connection", "slug": "spiritual-connection", "image": "https://goearthward.com/wp-content/uploads/2026/06/intention-spiritual-connection-hero.webp"},
+    {"name": "Love & Relationships", "slug": "love-relationships", "image": "https://goearthward.com/wp-content/uploads/2026/06/intention-love-relationships-hero.webp"},
+    {"name": "Health & Vitality", "slug": "health-vitality", "image": "https://goearthward.com/wp-content/uploads/2026/06/intention-health-vitality-hero.webp"}
+  ],
+  "relatedConditions": [
+    {"name": "Best Crystals for Anxiety", "slug": "anxiety"},
+    {"name": "Best Crystals for Stress", "slug": "stress"},
+    {"name": "Best Crystals for Sleep", "slug": "sleep"}
+  ],
+  "blogPosts": [
+    {"title": "How to Build a Daily Crystal Mindfulness Practice in 10 Minutes", "link": "/blog/crystal-mindfulness-daily-practice"},
+    {"title": "Amethyst for Meditation: A Beginner's Guide to Quieting the Mind", "link": "/blog/amethyst-meditation-quiet-the-mind"},
+    {"title": "5 Crystals for Anxiety Relief and How to Use Them", "link": "/blog/crystals-for-anxiety-relief-guide"}
   ]
 }
