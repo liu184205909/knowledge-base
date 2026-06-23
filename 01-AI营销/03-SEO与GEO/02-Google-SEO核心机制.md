@@ -1151,19 +1151,6 @@ Google 官方明确了站点信号（site-wide signals）和网页信号（page-
 
 > 与本文件已有内容的呼应：Firefly（QualityCopiaFireflySiteSignal）是站点级信号的技术实现层；HCU 判定也是 site-wide 的。Google 米兰表态从官方层面确认了站点信号和网页信号的**双层权重模型**。
 
-## 结构化数据生态：Google 2026 年重新加大投入
-
-Google 在米兰活动中表示，2026 年将**重新加大对 schema.org / 结构化数据生态的投入**：
-
-- 让开发者、SEO 工具、CMS 插件更容易知道"哪些 schema 有人用、Google 怎么验证、哪些表达方式更标准"
-- 目标：让结构化数据从"靠人工读文档、靠猜、靠工具各自实现"，变得**更透明、更标准、更容易自动校验**
-
-**对实操的影响**：结构化数据的标准化程度会提高，错误实施的容错率会降低。建议定期用 [Schema Markup Validator](https://validator.schema.org) 和 GSC 增强体验报告检查现有 schema 的有效性。
-
-## 段落分块：再次确认无意义
-
-Google 再次澄清（这是第 N 次了）：**段落分块（chunking）对搜索排名毫无意义**。内容撰写必须**方便用户阅读**，不要为了搜索引擎刻意分块。
-
 ---
 
 ## 参考来源
