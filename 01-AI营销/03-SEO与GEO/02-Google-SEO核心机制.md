@@ -1132,6 +1132,40 @@ Wikipedia 仍然是触发知识面板的**单一最强信号**——一篇 Wikip
 
 ---
 
+## 站点信号 vs 网页信号（Google Search Central Live Milan 2026）
+
+> 来源：Google Search Central Live Milan（2026.6），Google 官方 onstage 表态
+
+Google 官方明确了站点信号（site-wide signals）和网页信号（page-level signals）的关系：
+
+| 维度 | 站点信号 | 网页信号 |
+|------|---------|---------|
+| 生效速度 | **需要时间积累**，无法快速改变 | 更容易**短期优化** |
+| 影响范围 | 全站所有页面 | 单个页面 |
+| 建设方式 | 品牌建设、长期保持好评分 | 内容质量、结构化数据、页面体验 |
+
+**关键结论**：
+1. **外链、换域名、站点迁移、技术 SEO 优化，不能解决网站本身的质量问题**——这些操作改变的是站点信号的外围，不改变内容本身的质量评分
+2. **流量来源多元化**——Google 官方建议减少对搜索算法的单一依赖，拓展直接流量、社媒、邮件等渠道
+3. **品牌 = 长期站点信号**——建立品牌意味着长期保持好的站点评分，这需要持续的内容质量和用户体验投入
+
+> 与本文件已有内容的呼应：Firefly（QualityCopiaFireflySiteSignal）是站点级信号的技术实现层；HCU 判定也是 site-wide 的。Google 米兰表态从官方层面确认了站点信号和网页信号的**双层权重模型**。
+
+## 结构化数据生态：Google 2026 年重新加大投入
+
+Google 在米兰活动中表示，2026 年将**重新加大对 schema.org / 结构化数据生态的投入**：
+
+- 让开发者、SEO 工具、CMS 插件更容易知道"哪些 schema 有人用、Google 怎么验证、哪些表达方式更标准"
+- 目标：让结构化数据从"靠人工读文档、靠猜、靠工具各自实现"，变得**更透明、更标准、更容易自动校验**
+
+**对实操的影响**：结构化数据的标准化程度会提高，错误实施的容错率会降低。建议定期用 [Schema Markup Validator](https://validator.schema.org) 和 GSC 增强体验报告检查现有 schema 的有效性。
+
+## 段落分块：再次确认无意义
+
+Google 再次澄清（这是第 N 次了）：**段落分块（chunking）对搜索排名毫无意义**。内容撰写必须**方便用户阅读**，不要为了搜索引擎刻意分块。
+
+---
+
 ## 参考来源
 
 - DOJ 反垄断案 Pandu Nayak 证词
@@ -1154,3 +1188,5 @@ Wikipedia 仍然是触发知识面板的**单一最强信号**——一篇 Wikip
 - Instant Press「How to Get a Google Knowledge Panel: The Real Process」（2026-04）— 四阶段法、Wikidata 深度指南、时间线预期
 - Stay Digital Marketers「Best 8 Strategies to Get a Google Knowledge Panel in 2026」（2026-06）— KPEB 框架、信号对比表、FAQ
 - Search Engine Land「How to Optimize Your Company's Google Knowledge Panel」— 企业知识面板优化
+- Google Search Central Live Milan（2026.6）— 站点信号 vs 网页信号、结构化数据生态、段落分块澄清
+- Search Engine Roundtable「Google Speaks On Chunking, Site Signals, Content, Paywalls & AI Clicks」(seroundtable.com)

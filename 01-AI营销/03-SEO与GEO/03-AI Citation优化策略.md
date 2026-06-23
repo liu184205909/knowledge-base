@@ -843,6 +843,82 @@ Bing将AI检索词分为**15种意图类型**：Comparison、Research、Informat
 
 ---
 
+## AI 爬虫行为矩阵：robots.txt 遵守 & JS 执行（2026 实测）
+
+> 来源：Andre Alpar 实测（2026.6），SEO技术流整理
+
+### robots.txt 遵守情况
+
+**只有 3 个遵守**：ChatGPT、Claude、Perplexity。
+**不遵守**：Gemini、Microsoft Copilot、Meta AI、Mistral、Grok、DeepSeek、Qwen、ERNIE、Kimi 等。
+
+> robots.txt **不是安全机制**，只是"请不要抓取"的君子协议。
+
+### JavaScript 执行情况
+
+**能执行 JS 的**：DeepSeek、ERNIE、Qwen、Kimi、Mistral
+**不执行 JS 的**：ChatGPT、Claude、Gemini、Perplexity、Meta AI、Microsoft Copilot
+
+> **Gemini 不执行 JS——这是最反直觉的。** Googlebot 能渲染 JS，不代表 Gemini 背后的 AI 爬虫也会。搜索索引系统和 AI 产品的实时抓取系统不是一套东西。
+
+### 汇总矩阵
+
+| AI 爬虫 | 遵守 robots.txt | 执行 JS |
+|---------|:---:|:---:|
+| ChatGPT | ✅ | ❌ |
+| Claude | ✅ | ❌ |
+| Perplexity | ✅ | ❌ |
+| Gemini | ❌ | ❌ |
+| Microsoft Copilot | ❌ | ❌ |
+| Meta AI | ❌ | ❌ |
+| Mistral | ❌ | ✅ |
+| DeepSeek | ❌ | ✅ |
+| Qwen | ❌ | ✅ |
+| ERNIE | ❌ | ✅ |
+| Kimi | ❌ | ✅ |
+
+### 对 GEO 实操的影响
+
+1. **重要内容必须放在 HTML 源码里**，并尽量靠前
+2. **不要依赖 JS 才展示核心信息**（品牌、作者、价格、FAQ、结构化数据）
+3. robots.txt 可以配，但**不要当安全机制**
+4. 真要判断 AI 有没有抓取，看**服务器日志**的 User-Agent、IP、请求路径
+
+## AI 搜索流量数据 2026（SE Ranking 研究）
+
+> 来源：SE Ranking，101,574 个网站的 GA 匿名数据（2026.6）
+
+### 核心数据
+
+| 指标 | 数据 |
+|------|------|
+| AI 流量增长 | 2024→2026 增长 **16 倍** |
+| 占总流量比 | **0.32%**（2024: 0.02% → 2025: 0.24% → 2026: 0.32%） |
+| 自然搜索占比 | **42.75%**（仍是 AI 的 134 倍） |
+| AI 访客互动性 | 比自然搜索访客**高 68%**（AI 充当"意图过滤器"） |
+
+### 五大 AI 流量来源（2026）
+
+| 平台 | 份额 | 同比增长 | 趋势 |
+|------|------|---------|------|
+| ChatGPT | **74.78%** | — | 份额下降中（79.74%→74.78%），但仍是绝对主导 |
+| Gemini | **11.56%** | +231% | 增幅最大之一，已超 Perplexity 成为第二 |
+| Perplexity | **7.23%** | — | 增长几乎停滞，美国份额 11.42%→6.85% |
+| Copilot | **3.51%** | +31% | 从"看不到"变成"稳定存在" |
+| Claude | **2.62%** | **+320%** | 增长率最快，2026.3 单月飙升 159% |
+
+### 退场/边缘平台
+
+- **DeepSeek**：2025 年初曾排第四，2025.9 后网站引荐流量几乎归零
+- **Grok**：2025.7-8 短暂峰值后回到接近零
+- 声量和实际 referral traffic 不一定是一回事
+
+### 关键判断
+
+1. AI Visibility 不需要追所有新工具，**优先盯 Top 5**（ChatGPT/Gemini/Perplexity/Copilot/Claude）
+2. 现在是 **GEO 布局的好时机**——Google 和 Bing 开始开放 GEO 报告
+3. **SEO 是 GEO 的基础**——AI 流量只占 0.32%，自然搜索仍占 42.75%，两者配合而非替代
+
 ---
 
 ## 相关文档
@@ -854,4 +930,4 @@ Bing将AI检索词分为**15种意图类型**：Comparison、Research、Informat
 
 ---
 
-**创建时间**: 2026-04-28 | **最后更新**: 2026-06-12（+ Definition Lead + Schema Stacking + Bing 87% ChatGPT + 3月新鲜度悬崖 + Cloudflare屏蔽 + 多平台分发325% + 85%第三方提及 + 各平台引用风格 + 44.2%前置引用）
+**创建时间**: 2026-04-28 | **最后更新**: 2026-06-23（+ AI爬虫行为矩阵 + AI流量数据2026 + Definition Lead + Schema Stacking + Bing 87% ChatGPT + 3月新鲜度悬崖 + Cloudflare屏蔽 + 多平台分发325% + 85%第三方提及 + 各平台引用风格 + 44.2%前置引用）
