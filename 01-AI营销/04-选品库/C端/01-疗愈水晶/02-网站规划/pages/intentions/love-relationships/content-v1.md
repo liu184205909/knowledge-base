@@ -220,4 +220,3 @@ H2: Love begins with what you practice daily
 2. Love 产品在 WooCommerce/WoodMart 中对应的 tag/category/查询条件。
 3. Hero 是否由主题 Page Title 承担 H1, 还是 Elementor Hero 内输出 H1。
 4. Rose Quartz / Rhodonite / Ruby / Prehnite 的最终图片资产和 media id。
-

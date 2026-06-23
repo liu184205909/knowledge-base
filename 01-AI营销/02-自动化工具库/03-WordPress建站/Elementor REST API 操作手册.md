@@ -37,7 +37,9 @@
 → 内容方案
 → 图片需求
 → 图片生成/选择/上传
-→ UI 设计
+→ UI 设计文档
+→ HTML UI 原型
+→ 人工确认视觉方向
 → Elementor 可还原性评估
 → Elementor 组件映射
 → JS 施工
@@ -49,8 +51,10 @@
 注意：
 
 - UI 确定前，不进入 JS。
+- 文字 UI 方案不等于可视化设计；至少应有一个 HTML/Figma/截图原型供人工判断视觉。
+- HTML UI 原型只用于确认视觉，不是最终交付，不上传 WordPress。
 - Elementor 组件映射在 JS 施工之前。
-- JS 只负责施工，不负责临场决定页面目标、section 顺序和文案策略。
+- JS 只负责把已确认原型翻译成 Elementor Container / Widget，不负责临场决定页面目标、section 顺序和文案策略。
 - 生成结果只作为可编辑初稿，最终视觉允许在 Elementor 编辑器中微调。
 
 ### 0.3 Elementor-first 设计原则
@@ -63,15 +67,28 @@
 - 常规页面不要用 shortcode / HTML / CSS 兜底；否则失去 Elementor 可编辑优势。
 - 如果 UI 需要复杂叠层、绝对定位、特殊动画或像素级还原，必须先标记为“近似还原”或调整 UI。
 
-### 0.4 交付物
+### 0.4 已验证的页面交付物
 
 每个页面至少应有：
 
 1. 页面内容与布局方案：目标、关键词来源、section、文案、CTA、图片需求、内链/产品类目。
-2. Elementor 组件映射：每个 section 对应哪些 Container / widget。
-3. 页面 JS：只按映射施工。
-4. draft 预览链接。
-5. 验收记录：H1、图片、CTA、产品类目、移动端、编辑器可改、合规文案。
+2. UI 设计方案：品牌色、section 视觉、卡片/按钮/图片规则、移动端处理。
+3. HTML UI 原型：可在浏览器直接预览，用来判断是否“像一个满意的页面”。
+4. Elementor 组件映射：每个 section 对应哪些 Container / widget / WoodMart 组件。
+5. 页面 JS：只按已确认原型和映射施工。
+6. draft 预览链接。
+7. 验收记录：H1、图片、CTA、产品类目、移动端、编辑器可改、合规文案。
+
+Love & Relationships v3 已验证这条路径：
+
+```
+pages/intentions/love-relationships/content-v1.md
+→ pages/intentions/love-relationships/ui-v1.md
+→ pages/intentions/love-relationships/ui-prototype-v1.html
+→ pages/intentions/love-relationships/love-relationships.js
+→ pages/intentions/love-relationships/create-draft-v3.js
+→ draft page 43118
+```
 
 ### 0.5 文件分工
 
@@ -80,6 +97,11 @@
 | `Elementor REST API 操作手册.md` | 唯一 SOP + REST 施工规范 |
 | `01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/templates/elementor-utils.js` | 唯一 Elementor 工具库真源 |
 | `elementor-upload.js` | 旧 home 独立脚本，已废弃，不再作为工具源 |
+| `pages/intentions/{slug}/content-v1.md` | 页面内容与布局方案 |
+| `pages/intentions/{slug}/ui-v1.md` | UI 设计方案 |
+| `pages/intentions/{slug}/ui-prototype-v1.html` | 可视化 UI 原型 |
+| `pages/intentions/{slug}/{slug}.js` | 页面 Elementor 生成器 |
+| `pages/intentions/{slug}/create-draft-v*.js` | 测试 draft 创建入口 |
 
 ---
 

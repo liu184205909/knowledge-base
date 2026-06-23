@@ -1,7 +1,8 @@
 # Love & Relationships UI 设计方案 v1
 
-> 对应内容文档: `love-relationships-content-v1.md`  
-> 对应测试稿: Page ID `43112` / slug `love-relationships-v2`  
+> 对应内容文档: `content-v1.md`  
+> 对应最新测试稿: Page ID `43118` / slug `love-relationships-v3`  
+> 对应 HTML 原型: `ui-prototype-v1.html`  
 > 用途: 在 JS 施工前确认 UI, 避免“边想页面边写 JS”。
 
 ## 0. 页面视觉目标
@@ -9,7 +10,7 @@
 Love & Relationships 页面不能做成普通文章页, 也不能做成神秘玄学页。它应该像一个温柔、可信、可购买的意图入口:
 
 - 情绪: warm, gentle, honest, grounded
-- 颜色: blush / cream / rose / muted wine, 少量 gold
+- 颜色: Deep Ink / Primary Green / Pale Green 为主, cream / card / gold 为辅, rose 只做轻点缀
 - 图片: 真实晶石、自然光、产品感, 不用情侣图、不用强玄学图
 - 结构: 清晰导购路径, 不堆长文
 - 编辑性: 全部用 Elementor / WoodMart 可编辑组件
@@ -41,7 +42,7 @@ Love & Relationships 页面不能做成普通文章页, 也不能做成神秘玄
 视觉:
 
 - 全宽背景图
-- 深色 wine/black overlay
+- Deep Ink / black overlay
 - 居中文案
 - H1 + subtitle + 双按钮
 
@@ -267,25 +268,25 @@ Elementor 映射:
 - H2 控制在 28-32px
 - 背景图主体不要被裁掉
 
-## 3. v2 测试稿需要检查的问题
+## 3. 最新测试稿需要检查的问题
 
-Page ID: `43112`
+Page ID: `43118`
 
 优先检查:
 
 1. Hero H1 是否存在且视觉正常。
 2. Quick Chooser 卡片是否太像普通信息块, 是否需要更强视觉区分。
-3. S4 晶石卡片是否因为 Ruby / Prehnite 占位图显得不可信。
+3. S4 晶石卡片的 Rose Quartz / Rhodonite / Ruby / Prehnite 图片是否可信、统一。
 4. S5 WoodMart 产品分类组件是否真实显示、是否图和类目对得上。
 5. 手机端 section 间距、卡片宽度、按钮是否拥挤。
 6. 整体是否像“可购买的意图页”, 而不是文章页。
 
-## 4. v3 施工原则
+## 4. 后续施工原则
 
-v3 不重新发明页面, 只根据这个 UI 文档修正 v2:
+后续版本不重新发明页面, 只根据这个 UI 文档和 HTML 原型修正:
 
 1. 保留 8 section 顺序, 除非人工验收认为某 section 应删。
 2. 优先修视觉和组件映射, 不扩写长文。
-3. Ruby / Prehnite 图片需要补真实资产后再替换。
+3. 图片优先使用已上传 WordPress media；本地图片必须先上传后再进 Elementor。
 4. 如果 WoodMart 产品分类组件效果不好, 换 WoodMart Products 组件, 仍不使用 shortcode。
-5. v3 仍然创建测试 Draft, 不碰正式 `/love-relationships/`。
+5. 仍然创建测试 Draft, 不碰正式 `/love-relationships/`。

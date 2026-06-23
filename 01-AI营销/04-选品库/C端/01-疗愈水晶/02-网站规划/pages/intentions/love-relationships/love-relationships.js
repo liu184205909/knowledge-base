@@ -1,36 +1,55 @@
 /**
- * Love & Relationships v2 draft page.
+ * Love & Relationships draft page generator.
  *
  * Source brief:
- *   pages/intentions/love-relationships-content-v1.md
+ *   content-v1.md
  *
- * This is a test Elementor Page draft, not the final public URL.
- * Draft slug: /love-relationships-v2/
+ * This generator is now aligned with:
+ *   ui-prototype-v1.html
  */
 
-const E = require('../templates/elementor-utils');
-const IMAGES = require('../assets/site-images');
+const E = require('../../../templates/elementor-utils');
+const IMAGES = require('../../../assets/site-images');
 
 const C = {
-  ink: '#2d2d2d',
-  body: '#5f5a56',
-  muted: '#8a817b',
-  cream: '#faf7f2',
-  blush: '#f5e7e8',
+  ink: '#1A1A2E',
+  body: '#444444',
+  muted: '#666666',
+  paleGreen: '#F0F7F4',
+  deepGreen: '#1B4332',
+  green: '#2D6A4F',
+  cream: '#faf8f5',
+  card: '#f5f0eb',
+  blush: '#f7edee',
   rose: '#b76e79',
-  wine: '#6b2f45',
   gold: '#c9a96e',
   white: '#ffffff',
-  border: '#eaded9',
-  dark: '#241a22'
+  border: '#e5e0d8',
+  dark: '#1A1A2E'
 };
 
 const IMG = {
   hero: IMAGES.home.intentionLove,
-  roseQuartz: IMAGES.crystals.roseQuartz,
-  rhodonite: IMAGES.crystals.rhodonite,
-  ruby: IMAGES.shared.card,
-  prehnite: IMAGES.shared.crystalGrid,
+  roseQuartz: {
+    id: 43114,
+    url: 'https://goearthward.com/wp-content/uploads/2026/06/intention-love-rose-quartz-overview-v3.webp',
+    alt: 'Rose quartz crystal for self-love and tenderness'
+  },
+  rhodonite: {
+    id: 43115,
+    url: 'https://goearthward.com/wp-content/uploads/2026/06/intention-love-rhodonite-overview-v3.webp',
+    alt: 'Rhodonite crystal for compassion and self-worth'
+  },
+  ruby: {
+    id: 43116,
+    url: 'https://goearthward.com/wp-content/uploads/2026/06/intention-love-ruby-overview-v3.webp',
+    alt: 'Ruby crystal for passion courage and devotion'
+  },
+  prehnite: {
+    id: 43117,
+    url: 'https://goearthward.com/wp-content/uploads/2026/06/intention-love-prehnite-overview-v3.webp',
+    alt: 'Prehnite crystal for calm love and clarity'
+  },
   cta: IMAGES.home.useCompassion
 };
 
@@ -130,6 +149,19 @@ function cardStyle(widthDesktop, widthTablet) {
   };
 }
 
+function brandButton(text, linkUrl, secondary) {
+  const b = E.buttonWidget(text, linkUrl);
+  Object.assign(b.settings, {
+    border_radius: { unit: 'px', size: 4, sizes: [] },
+    button_text_color: secondary ? C.green : C.white,
+    background_color: secondary ? C.white : C.green,
+    border_border: 'solid',
+    border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true },
+    border_color: secondary ? C.border : C.green
+  });
+  return b;
+}
+
 function sectionTitle(title, subtitle, dark) {
   return [
     E.heading(title, {
@@ -151,7 +183,7 @@ function sectionTitle(title, subtitle, dark) {
   ];
 }
 
-function generateLoveRelationshipsV2() {
+function generateLoveRelationships() {
   return [
     // S1 Hero
     E.section({
@@ -182,8 +214,8 @@ function generateLoveRelationshipsV2() {
           align: 'center'
         }),
         E.buttonRow([
-          E.buttonWidget('Shop Love Crystals', '#shop-love-crystals'),
-          E.buttonWidget('Find Your Stone', '#find-your-stone')
+          brandButton('Shop Love Crystals', '#shop-love-crystals'),
+          brandButton('Find Your Stone', '#find-your-stone', true)
         ], { gap: 12 })
       ])
     ]),
@@ -195,7 +227,7 @@ function generateLoveRelationshipsV2() {
         mobile: { t: '45', r: '10', b: '45', l: '10' }
       }),
       background_background: 'classic',
-      background_color: C.cream
+      background_color: C.paleGreen
     }, sectionTitle(
       'Which crystal fits your heart right now?',
       'Start with the feeling or relationship intention that is most honest today.',
@@ -203,24 +235,24 @@ function generateLoveRelationshipsV2() {
     ).concat([
       E.flexColumns([
         [
-          E.heading('Softer with myself', { headerSize: 'h3', fontSize: 22, color: C.wine, align: 'left' }),
+          E.heading('Softer with myself', { headerSize: 'h3', fontSize: 22, color: C.deepGreen, align: 'left' }),
           E.textEditor('Rose Quartz and Prehnite for self-kindness, tenderness, and quieter self-talk.', { fontSize: 16, color: C.body, align: 'left' }),
-          E.buttonWidget('Read Self-Love Guide', '/crystals-for-self-love/')
+          brandButton('Read Self-Love Guide', '/crystals-for-self-love/', true)
         ],
         [
-          E.heading('Healing after hurt', { headerSize: 'h3', fontSize: 22, color: C.wine, align: 'left' }),
+          E.heading('Healing after hurt', { headerSize: 'h3', fontSize: 22, color: C.deepGreen, align: 'left' }),
           E.textEditor('Rhodonite and Rose Quartz for compassion, forgiveness, and emotional care.', { fontSize: 16, color: C.body, align: 'left' }),
-          E.buttonWidget('Read Healing Guide', '/crystals-for-emotional-healing/')
+          brandButton('Read Healing Guide', '/crystals-for-emotional-healing/', true)
         ],
         [
-          E.heading('More warmth in love', { headerSize: 'h3', fontSize: 22, color: C.wine, align: 'left' }),
+          E.heading('More warmth in love', { headerSize: 'h3', fontSize: 22, color: C.deepGreen, align: 'left' }),
           E.textEditor('Ruby and Rose Quartz for passion, devotion, and opening to meaningful connection.', { fontSize: 16, color: C.body, align: 'left' }),
-          E.buttonWidget('Read Love Guide', '/crystals-for-love/')
+          brandButton('Read Love Guide', '/crystals-for-love/', true)
         ],
         [
-          E.heading('Steadier connection', { headerSize: 'h3', fontSize: 22, color: C.wine, align: 'left' }),
+          E.heading('Steadier connection', { headerSize: 'h3', fontSize: 22, color: C.deepGreen, align: 'left' }),
           E.textEditor('Prehnite and Rhodonite for calmer communication, patience, and grounded care.', { fontSize: 16, color: C.body, align: 'left' }),
-          E.buttonWidget('Shop This Intention', '#shop-love-crystals')
+          brandButton('Shop This Intention', '#shop-love-crystals', true)
         ]
       ], { desktop: 4, tablet: 2, mobile: 1 }, { gap: 22, alignItems: 'stretch', cellStyle: cardStyle(23, 45) })
     ])),
@@ -260,7 +292,7 @@ function generateLoveRelationshipsV2() {
           width_tablet: { unit: '%', size: 100, sizes: [] },
           width_mobile: { unit: '%', size: 100, sizes: [] }
         }, [
-          E.imageWidget(IMG.roseQuartz.url, { alt: IMG.roseQuartz.alt, radius: 12, width: 100 })
+          E.imageWidget(IMG.roseQuartz.url, { id: IMG.roseQuartz.id, alt: IMG.roseQuartz.alt, radius: 12, width: 100 })
         ])
       ])
     ]),
@@ -315,7 +347,7 @@ function generateLoveRelationshipsV2() {
         mobile: { t: '45', r: '10', b: '45', l: '10' }
       }),
       background_background: 'classic',
-      background_color: C.cream
+      background_color: C.paleGreen
     }, sectionTitle(
       'Deepen Your Path',
       'If you want a more specific guide, these pages go deeper without asking this page to become a long article.',
@@ -323,9 +355,9 @@ function generateLoveRelationshipsV2() {
     ).concat([
       E.flexColumns(CONDITION_LINKS.map(function (item) {
         return [
-          E.heading(item.title, { headerSize: 'h3', fontSize: 24, color: C.wine, align: 'left' }),
+          E.heading(item.title, { headerSize: 'h3', fontSize: 24, color: C.deepGreen, align: 'left' }),
           E.textEditor(item.text, { fontSize: 16, lineHeight: 26, color: C.body, align: 'left' }),
-          E.buttonWidget('Read Guide', item.link)
+          brandButton('Read Guide', item.link, true)
         ];
       }), { desktop: 3, tablet: 2, mobile: 1 }, { gap: 22, alignItems: 'stretch', cellStyle: cardStyle(30, 45) })
     ])),
@@ -372,15 +404,15 @@ function generateLoveRelationshipsV2() {
           color: '#eaded9',
           align: 'center'
         }),
-        E.buttonWidget('Shop Love & Relationships', '#shop-love-crystals')
+        brandButton('Shop Love & Relationships', '#shop-love-crystals')
       ])
     ])
   ];
 }
 
 async function main() {
-  const data = generateLoveRelationshipsV2();
-  await E.createPage('Love & Relationships V2 Draft', 'love-relationships-v2', data, 'draft');
+  const data = generateLoveRelationships();
+  await E.createPage('Love & Relationships V3 Draft', 'love-relationships-v3', data, 'draft');
 }
 
 if (require.main === module) {
@@ -390,5 +422,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = generateLoveRelationshipsV2;
-
+module.exports = generateLoveRelationships;
