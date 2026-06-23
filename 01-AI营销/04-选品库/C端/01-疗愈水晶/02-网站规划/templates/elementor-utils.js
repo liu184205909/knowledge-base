@@ -425,6 +425,30 @@ function wdProductsWidget(count) {
   };
 }
 
+/** WoodMart: product categories module. Use this instead of shortcode for editable category sections. */
+function wdProductCategoriesWidget(options) {
+  const opts = options || {};
+  const ids = Array.isArray(opts.ids) ? opts.ids.join(',') : (opts.ids || '');
+  return {
+    id: uid(),
+    elType: 'widget',
+    settings: {
+      data_source: opts.data_source || 'custom_query',
+      ids: ids,
+      include: ids,
+      categories: ids,
+      number: { unit: 'px', size: String(opts.number || 6), sizes: [] },
+      columns: { unit: 'px', size: String(opts.columns || 3), sizes: [] },
+      orderby: opts.orderby || 'include',
+      order: opts.order || 'ASC',
+      hide_empty: opts.hide_empty == null ? 'yes' : opts.hide_empty,
+      scroll_y: -80
+    },
+    elements: [],
+    widgetType: 'wd_product_categories'
+  };
+}
+
 /** WoodMart: wd_products_tabs */
 function wdProductsTabs() {
   return {
@@ -448,6 +472,65 @@ function wdProductsTabs() {
   };
 }
 
+// ============================================================
+// 布局原语(layout helpers,基于 container 封装高频模式)
+// ============================================================
+
+/**
+ * 通用响应式网格(layout 原语:等分 N列M行)
+ * @param {Element[]|Element[][]} cells  单元素 或 元素数组(复合卡片,直接摊进 width-wrap)
+ * @param {number|object} cols  数字=desktop,或 {desktop,tablet,mobile}
+ * @param {object} opts  {gap=15, alignItems, cellStyle}
+ *   cellStyle: 合并进每个 cell 的 width-wrap(卡片背景/border等),不加层
+ * 列宽查表 4→23/3→30/2→45/1→100;其他列数 fallback 100/n
+ */
+// Legacy name: grid. This is NOT CSS Grid; it outputs Elementor Flexbox containers:
+// parent flex_direction=row + flex_wrap=wrap, children width/width_tablet/width_mobile.
+// New page scripts should prefer the alias flexColumns().
+function grid(cells, cols, opts) {
+  const o = opts || {};
+  const c = typeof cols === 'number' ? { desktop: cols } : cols;
+  const desk = c.desktop;
+  const tab = c.tablet || Math.min(2, desk);
+  const mob = c.mobile || 1;
+  const gap = o.gap != null ? o.gap : 15;
+  const widthByCols = function (n) {
+    return ({ 4: 23, 3: 30, 2: 45, 1: 100 }[n]) || Math.floor(100 / n);
+  };
+  const settings = {
+    content_width: 'full',
+    flex_direction: 'row',
+    flex_wrap: 'wrap',
+    flex_gap: { size: gap, column: String(gap), row: String(gap), unit: 'px' }
+  };
+  if (o.alignItems) settings.flex_align_items = o.alignItems;
+  const cellSettings = Object.assign({
+    content_width: 'full',
+    width: { unit: '%', size: widthByCols(desk), sizes: [] },
+    width_tablet: { unit: '%', size: widthByCols(tab), sizes: [] },
+    width_mobile: { unit: '%', size: widthByCols(mob), sizes: [] }
+  }, o.cellStyle || {});
+  return wrap(settings, cells.map(function (cell) {
+    const inner = Array.isArray(cell) ? cell : [cell];
+    return wrap(cellSettings, inner);
+  }));
+}
+
+/**
+ * 按钮行(layout 原语) — 居中横排按钮
+ */
+function buttonRow(buttons, opts) {
+  const o = opts || {};
+  const gap = o.gap != null ? o.gap : 15;
+  return wrap({
+    flex_direction: 'row',
+    flex_justify_content: 'center',
+    flex_gap: { size: gap, column: String(gap), row: String(gap), unit: 'px' }
+  }, buttons);
+}
+
+// Preferred Flexbox alias for new code. The legacy grid() name is not CSS Grid.
+const flexColumns = grid;
 // ============================================================
 // API 工具
 // ============================================================
@@ -497,6 +580,37 @@ async function createPage(title, slug, elementorData, status) {
 
   const result = await apiRequest('/wp-json/wp/v2/pages/' + pageId + '?context=edit', 'POST', {
     title: title, status: status || 'draft', content: '',
+    meta: {
+      _elementor_data: jsonStr,
+      _elementor_edit_mode: 'builder',
+      _elementor_template_type: 'wp-page'
+    }
+  });
+
+  if (result.id) {
+    console.log('  SUCCESS: https://' + SITE + '/?page_id=' + pageId + '&preview=true');
+    return result;
+  } else {
+    console.error('  FAILED: ' + JSON.stringify(result).slice(0, 500));
+    return null;
+  }
+}
+
+/**
+ * 更新已有页面的 Elementor 数据(不改 slug)
+ * @param {number|string} pageId
+ * @param {Array} elementorData
+ * @param {string} status - draft / publish
+ */
+async function updatePage(pageId, elementorData, status) {
+  console.log('Updating page ID: ' + pageId);
+
+  const jsonStr = JSON.stringify(elementorData);
+  console.log('  JSON: ' + jsonStr.length + ' chars, ' + elementorData.length + ' sections');
+
+  const result = await apiRequest('/wp-json/wp/v2/pages/' + pageId + '?context=edit', 'POST', {
+    status: status || 'draft',
+    content: '',
     meta: {
       _elementor_data: jsonStr,
       _elementor_edit_mode: 'builder',
@@ -633,7 +747,8 @@ module.exports = {
   uid, section, wrap, rPadding, rWidth, gap,
   heading, textEditor, imageWidget, imageBox, iconBox,
   buttonWidget, spacer, divider, accordion, socialIcons,
-  htmlWidget, shortcodeWidget, wdProductsWidget, wdProductsTabs,
-  apiRequest, createPage, uploadMedia, uploadMediaBatch, checkConnection,
+  htmlWidget, shortcodeWidget, wdProductsWidget, wdProductCategoriesWidget, wdProductsTabs,
+  grid, flexColumns, buttonRow,
+  apiRequest, createPage, updatePage, uploadMedia, uploadMediaBatch, checkConnection,
   SITE, AUTH
 };

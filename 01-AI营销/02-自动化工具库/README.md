@@ -1,457 +1,458 @@
-# 02-自动化工具库
+﻿# 02-鑷姩鍖栧伐鍏峰簱
 
-> 服务于 RLM 营销流程的自动化脚本与工具集合 | 最后更新: 2026-05-14
+> 鏈嶅姟浜?RLM 钀ラ攢娴佺▼鐨勮嚜鍔ㄥ寲鑴氭湰涓庡伐鍏烽泦鍚?| 鏈€鍚庢洿鏂? 2026-05-14
 
 ---
 
-## 工具总览
+## 宸ュ叿鎬昏
 
-| 序号 | 工具 | 核心功能 | 脚本文件 |
+| 搴忓彿 | 宸ュ叿 | 鏍稿績鍔熻兘 | 鑴氭湰鏂囦欢 |
 |------|------|---------|---------|
-| **01** | 域名查询 | 批量检测域名可用性，WHOIS 查询 | `domain_checker.py` |
-| **02** | 竞品研究工具 | 人工 Google 搜索竞品 + SEMrush 数据采集 + Sitemap 解析（sitemap-mcp-server） | `semrush_to_sheets.py`（`serp_competitor_finder.py` `sitemap_parser.py` 已退役） |
-| **03** | WordPress 建站 | AI 操作 WordPress，Elementor 建站规则 | 文档为主 |
-| **04** | 图片生成工具 | AI 图片生成提示词（产品页 Hero/促销/信任/细节/对比/生活方式 6 场景） | 提示词文档 |
-| **05** | 竞品内容分析工具 | 内容模式分析 + 站内重复检测 + 站外原创性检测 | `content_analyzer.py` `content_duplicate_checker.py` `content_originality_checker.py` |
-| **06** | 内容质检工具 | E-E-A-T 内容质量评估，发布前同质化风险检测 | 提示词文档 |
-| **07** | 数据分析工具 | Google Data Studio 数据可视化，SEO/流量仪表盘 | 文档为主 |
-| **08** | 短视频工具 | 素材采集/拆解/创作/分发全链路（配合步骤4C音视频再加工） | 文档为主 |
-| **09** | 外链工具 | 外链建设辅助工具（占坑，待建设） | 文档为主 |
-| **10** | SEO 审计工具 | 技术SEO审计 + On-Page SEO评分 + 关键词蚕食检测 | `seo_technical_auditor.py` `onpage_seo_checker.py` `keyword_cannibalization_checker.py` |
-| **11** | 用户洞察工具 | 采集 Reddit/竞品评论 → 分类分析 → 选题/痛点/购买意向挖掘 | `reddit_comment_collector.py` `comment_insight_analyzer.py` |
-| **12** | GEO 可见性检查 | 7维度检查品牌在 AI 生态中的可见性信号（Reddit/Quora/评价站/Wikipedia/媒体/竞品对比） | `geo_visibility_checker.py` |
-| **13** | Open Design（设计工具） | AI 驱动的开源设计工具，生成落地页/PPT/移动端原型/营销海报（本地部署，支持 Codex/BYOK 智谱） | [GitHub](https://github.com/nexu-io/open-design) |
-| **14** | Web-to-App（网站打包App） | 手机端一键把独立站/HTML项目打包成安卓 APK，无需电脑和 IDE（Kotlin + GeckoView 双内核，内置 AI 能力） | [GitHub](https://github.com/shiahonb777/web-to-app) |
-| **15** | 达人BD工具 | AI 驱动的达人（KOL/红人）商务拓展自动化 — 账号分析、个性化邮件、AB测试、合作追踪 | 方法论文档（工具待建） |
+| **01** | 鍩熷悕鏌ヨ | 鎵归噺妫€娴嬪煙鍚嶅彲鐢ㄦ€э紝WHOIS 鏌ヨ | `domain_checker.py` |
+| **02** | 绔炲搧鐮旂┒宸ュ叿 | 浜哄伐 Google 鎼滅储绔炲搧 + SEMrush 鏁版嵁閲囬泦 + Sitemap 瑙ｆ瀽锛坰itemap-mcp-server锛?| `semrush_to_sheets.py`锛坄serp_competitor_finder.py` `sitemap_parser.py` 宸查€€褰癸級 |
+| **03** | WordPress 寤虹珯 | AI 鎿嶄綔 WordPress锛孍lementor 寤虹珯瑙勫垯 | 鏂囨。涓轰富 |
+| **04** | 鍥剧墖鐢熸垚宸ュ叿 | AI 鍥剧墖鐢熸垚鎻愮ず璇嶏紙浜у搧椤?Hero/淇冮攢/淇′换/缁嗚妭/瀵规瘮/鐢熸椿鏂瑰紡 6 鍦烘櫙锛?| 鎻愮ず璇嶆枃妗?|
+| **05** | 绔炲搧鍐呭鍒嗘瀽宸ュ叿 | 鍐呭妯″紡鍒嗘瀽 + 绔欏唴閲嶅妫€娴?+ 绔欏鍘熷垱鎬ф娴?| `content_analyzer.py` `content_duplicate_checker.py` `content_originality_checker.py` |
+| **06** | 鍐呭璐ㄦ宸ュ叿 | E-E-A-T 鍐呭璐ㄩ噺璇勪及锛屽彂甯冨墠鍚岃川鍖栭闄╂娴?| 鎻愮ず璇嶆枃妗?|
+| **07** | 鏁版嵁鍒嗘瀽宸ュ叿 | Google Data Studio 鏁版嵁鍙鍖栵紝SEO/娴侀噺浠〃鐩?| 鏂囨。涓轰富 |
+| **08** | 鐭棰戝伐鍏?| 绱犳潗閲囬泦/鎷嗚В/鍒涗綔/鍒嗗彂鍏ㄩ摼璺紙閰嶅悎姝ラ4C闊宠棰戝啀鍔犲伐锛?| 鏂囨。涓轰富 |
+| **09** | 澶栭摼宸ュ叿 | 澶栭摼寤鸿杈呭姪宸ュ叿锛堝崰鍧戯紝寰呭缓璁撅級 | 鏂囨。涓轰富 |
+| **10** | SEO 瀹¤宸ュ叿 | 鎶€鏈疭EO瀹¤ + On-Page SEO璇勫垎 + 鍏抽敭璇嶈殨椋熸娴?| `seo_technical_auditor.py` `onpage_seo_checker.py` `keyword_cannibalization_checker.py` |
+| **11** | 鐢ㄦ埛娲炲療宸ュ叿 | 閲囬泦 Reddit/绔炲搧璇勮 鈫?鍒嗙被鍒嗘瀽 鈫?閫夐/鐥涚偣/璐拱鎰忓悜鎸栨帢 | `reddit_comment_collector.py` `comment_insight_analyzer.py` |
+| **12** | GEO 鍙鎬ф鏌?| 7缁村害妫€鏌ュ搧鐗屽湪 AI 鐢熸€佷腑鐨勫彲瑙佹€т俊鍙凤紙Reddit/Quora/璇勪环绔?Wikipedia/濯掍綋/绔炲搧瀵规瘮锛?| `geo_visibility_checker.py` |
+| **13** | Open Design锛堣璁″伐鍏凤級 | AI 椹卞姩鐨勫紑婧愯璁″伐鍏凤紝鐢熸垚钀藉湴椤?PPT/绉诲姩绔師鍨?钀ラ攢娴锋姤锛堟湰鍦伴儴缃诧紝鏀寔 Codex/BYOK 鏅鸿氨锛?| [GitHub](https://github.com/nexu-io/open-design) |
+| **14** | Web-to-App锛堢綉绔欐墦鍖匒pp锛?| 鎵嬫満绔竴閿妸鐙珛绔?HTML椤圭洰鎵撳寘鎴愬畨鍗?APK锛屾棤闇€鐢佃剳鍜?IDE锛圞otlin + GeckoView 鍙屽唴鏍革紝鍐呯疆 AI 鑳藉姏锛?| [GitHub](https://github.com/shiahonb777/web-to-app) |
+| **15** | 杈句汉BD宸ュ叿 | AI 椹卞姩鐨勮揪浜猴紙KOL/绾汉锛夊晢鍔℃嫇灞曡嚜鍔ㄥ寲 鈥?璐﹀彿鍒嗘瀽銆佷釜鎬у寲閭欢銆丄B娴嬭瘯銆佸悎浣滆拷韪?| 鏂规硶璁烘枃妗ｏ紙宸ュ叿寰呭缓锛?|
 
-### 补充：非编号工具 / 备选方案
+### 琛ュ厖锛氶潪缂栧彿宸ュ叿 / 澶囬€夋柟妗?
 
-| 工具 | 定位 | 适用场景 | 费用 |
+| 宸ュ叿 | 瀹氫綅 | 閫傜敤鍦烘櫙 | 璐圭敤 |
 |------|------|---------|------|
-| **Google AI Studio** | 零代码 AI 应用构建，与 Google Workspace 深度打通 | 读取 Google Sheets 数据生成 Dashboard → 自动发 Gmail；零 API 调试，零 Token 费用，全在谷歌生态内完成 | 免费（有额度限制） |
-| **NotebookLM** | 谷歌免费 AI 研究助手，上传文档后可对话提问 | 快速消化长文档/发布会内容/行业报告；Google I/O 2026 官方也用它做互动文档 | 免费 |
+| **Google AI Studio** | 闆朵唬鐮?AI 搴旂敤鏋勫缓锛屼笌 Google Workspace 娣卞害鎵撻€?| 璇诲彇 Google Sheets 鏁版嵁鐢熸垚 Dashboard 鈫?鑷姩鍙?Gmail锛涢浂 API 璋冭瘯锛岄浂 Token 璐圭敤锛屽叏鍦ㄨ胺姝岀敓鎬佸唴瀹屾垚 | 鍏嶈垂锛堟湁棰濆害闄愬埗锛?|
+| **NotebookLM** | 璋锋瓕鍏嶈垂 AI 鐮旂┒鍔╂墜锛屼笂浼犳枃妗ｅ悗鍙璇濇彁闂?| 蹇€熸秷鍖栭暱鏂囨。/鍙戝竷浼氬唴瀹?琛屼笟鎶ュ憡锛汫oogle I/O 2026 瀹樻柟涔熺敤瀹冨仛浜掑姩鏂囨。 | 鍏嶈垂 |
 
-> **AI Studio 适用场景**：需要连接 Google Sheets/Gmail/Docs 的轻量自动化（如数据 Dashboard、邮件通知），且不想折腾跨平台 API 的场景。Claude Code/Codex 适合复杂开发，AI Studio 适合谷歌生态内的快速原型。
-
----
-
-## 标准工作流
-
-### 1. 竞品研究阶段（建站前）
-
-```text
-人工 Google 搜索（排除语法过滤大平台）     ← 筛选 ~40 个竞品域名
-    ↓
-02-竞品研究工具/semrush_to_sheets.py       ← SEMrush 数据采集（AS/流量/截图 → Google Sheets）
-sitemap-mcp-server（MCP）                  ← Sitemap 解析内容架构（详见 1B数据处理工具手册）
-    ↓
-05-竞品内容分析工具/content_analyzer.py    ← 批量抓取 title/H1/H2，输出内容模式报告
-```
-
-### 2. 建站阶段
-
-```text
-01-域名查询/domain_checker.py              ← 域名可用性检测
-    ↓
-03-WordPress建站/                          ← 建站指南 + Elementor 操作手册
-    ↓
-14-Web-to-App（可选）                      ← 独立站打包成安卓 App，增加用户留存和 Push 触达渠道
-```
-
-### 3. 运营优化阶段（建站后）
-
-```text
-05-竞品内容分析工具/content_duplicate_checker.py      ← 站内重复内容检测
-05-竞品内容分析工具/content_originality_checker.py    ← 站外原创性检测
-10-SEO审计工具/seo_technical_auditor.py               ← 技术SEO审计
-10-SEO审计工具/onpage_seo_checker.py                  ← On-Page SEO评分
-10-SEO审计工具/keyword_cannibalization_checker.py     ← 关键词蚕食检测
-12-GEO可见性检查/geo_visibility_checker.py            ← GEO可见性检查（选品评估 + 定期监测）
-```
-
-### 4. 数据驱动阶段（有流量后）
-
-```text
-07-数据分析工具/                            ← Data Studio 仪表盘
-11-用户洞察工具/comment_insight_analyzer.py  ← 评论/反馈分析 → 驱动下一轮内容
-12-GEO可见性检查/geo_visibility_checker.py  ← 定期跑 GEO 可见性，跟踪变化趋势
-```
+> **AI Studio 閫傜敤鍦烘櫙**锛氶渶瑕佽繛鎺?Google Sheets/Gmail/Docs 鐨勮交閲忚嚜鍔ㄥ寲锛堝鏁版嵁 Dashboard銆侀偖浠堕€氱煡锛夛紝涓斾笉鎯虫姌鑵捐法骞冲彴 API 鐨勫満鏅€侰laude Code/Codex 閫傚悎澶嶆潅寮€鍙戯紝AI Studio 閫傚悎璋锋瓕鐢熸€佸唴鐨勫揩閫熷師鍨嬨€?
 
 ---
 
-## 环境依赖
+## 鏍囧噯宸ヤ綔娴?
+
+### 1. 绔炲搧鐮旂┒闃舵锛堝缓绔欏墠锛?
+
+```text
+浜哄伐 Google 鎼滅储锛堟帓闄よ娉曡繃婊ゅぇ骞冲彴锛?    鈫?绛涢€?~40 涓珵鍝佸煙鍚?
+    鈫?
+02-绔炲搧鐮旂┒宸ュ叿/semrush_to_sheets.py       鈫?SEMrush 鏁版嵁閲囬泦锛圓S/娴侀噺/鎴浘 鈫?Google Sheets锛?
+sitemap-mcp-server锛圡CP锛?                 鈫?Sitemap 瑙ｆ瀽鍐呭鏋舵瀯锛堣瑙?1B鏁版嵁澶勭悊宸ュ叿鎵嬪唽锛?
+    鈫?
+05-绔炲搧鍐呭鍒嗘瀽宸ュ叿/content_analyzer.py    鈫?鎵归噺鎶撳彇 title/H1/H2锛岃緭鍑哄唴瀹规ā寮忔姤鍛?
+```
+
+### 2. 寤虹珯闃舵
+
+```text
+01-鍩熷悕鏌ヨ/domain_checker.py              鈫?鍩熷悕鍙敤鎬ф娴?
+    鈫?
+03-WordPress寤虹珯/                          鈫?寤虹珯鎸囧崡 + Elementor 鎿嶄綔鎵嬪唽
+    鈫?
+14-Web-to-App锛堝彲閫夛級                      鈫?鐙珛绔欐墦鍖呮垚瀹夊崜 App锛屽鍔犵敤鎴风暀瀛樺拰 Push 瑙﹁揪娓犻亾
+```
+
+### 3. 杩愯惀浼樺寲闃舵锛堝缓绔欏悗锛?
+
+```text
+05-绔炲搧鍐呭鍒嗘瀽宸ュ叿/content_duplicate_checker.py      鈫?绔欏唴閲嶅鍐呭妫€娴?
+05-绔炲搧鍐呭鍒嗘瀽宸ュ叿/content_originality_checker.py    鈫?绔欏鍘熷垱鎬ф娴?
+10-SEO瀹¤宸ュ叿/seo_technical_auditor.py               鈫?鎶€鏈疭EO瀹¤
+10-SEO瀹¤宸ュ叿/onpage_seo_checker.py                  鈫?On-Page SEO璇勫垎
+10-SEO瀹¤宸ュ叿/keyword_cannibalization_checker.py     鈫?鍏抽敭璇嶈殨椋熸娴?
+12-GEO鍙鎬ф鏌?geo_visibility_checker.py            鈫?GEO鍙鎬ф鏌ワ紙閫夊搧璇勪及 + 瀹氭湡鐩戞祴锛?
+```
+
+### 4. 鏁版嵁椹卞姩闃舵锛堟湁娴侀噺鍚庯級
+
+```text
+07-鏁版嵁鍒嗘瀽宸ュ叿/                            鈫?Data Studio 浠〃鐩?
+11-鐢ㄦ埛娲炲療宸ュ叿/comment_insight_analyzer.py  鈫?璇勮/鍙嶉鍒嗘瀽 鈫?椹卞姩涓嬩竴杞唴瀹?
+12-GEO鍙鎬ф鏌?geo_visibility_checker.py  鈫?瀹氭湡璺?GEO 鍙鎬э紝璺熻釜鍙樺寲瓒嬪娍
+```
+
+---
+
+## 鐜渚濊禆
 
 ```bash
-# 竞品研究 + 内容分析 + SEO审计（核心）
+# 绔炲搧鐮旂┒ + 鍐呭鍒嗘瀽 + SEO瀹¤锛堟牳蹇冿級
 pip install requests beautifulsoup4 lxml pandas tqdm
 
-# 域名查询
+# 鍩熷悕鏌ヨ
 pip install python-whois
 
-# GEO 可见性检查（需要 DataForSEO API 凭证）
-# 复用 DataForSEO MCP 配置的账号
+# GEO 鍙鎬ф鏌ワ紙闇€瑕?DataForSEO API 鍑瘉锛?
+# 澶嶇敤 DataForSEO MCP 閰嶇疆鐨勮处鍙?
 # export DFS_API_LOGIN=your_login
 # export DFS_API_PASSWORD=your_password
 ```
 
 ---
 
-## 01 域名查询
+## 01 鍩熷悕鏌ヨ
 
-**文件**：`01-域名查询/domain_checker.py`
+**鏂囦欢**锛歚01-鍩熷悕鏌ヨ/domain_checker.py`
 
 ```bash
 pip install python-whois
-python 01-域名查询/domain_checker.py
+python 01-鍩熷悕鏌ヨ/domain_checker.py
 ```
 
-输出：`domain_availability_with_whois.csv`（域名可用性 + 注册信息）
+杈撳嚭锛歚domain_availability_with_whois.csv`锛堝煙鍚嶅彲鐢ㄦ€?+ 娉ㄥ唽淇℃伅锛?
 
 ---
 
-## 02 竞品研究工具
+## 02 绔炲搧鐮旂┒宸ュ叿
 
-### 2A 竞品挖掘：人工 Google 搜索（已替代 serp_competitor_finder.py）
+### 2A 绔炲搧鎸栨帢锛氫汉宸?Google 鎼滅储锛堝凡鏇夸唬 serp_competitor_finder.py锛?
 
-**原理**：人工使用 Google 搜索 + 排除语法过滤大平台，直接筛选竞品。
+**鍘熺悊**锛氫汉宸ヤ娇鐢?Google 鎼滅储 + 鎺掗櫎璇硶杩囨护澶у钩鍙帮紝鐩存帴绛涢€夌珵鍝併€?
 
-**搜索排除语法**（直接复制使用）：
+**鎼滅储鎺掗櫎璇硶**锛堢洿鎺ュ鍒朵娇鐢級锛?
 ```
-关键词 -amazon.com -ebay.com -etsy.com -walmart.com -pinterest.com -reddit.com -youtube.com -facebook.com -tiktok.com -wikipedia.org -quora.com -target.com -aliexpress.com -alibaba.com
+鍏抽敭璇?-amazon.com -ebay.com -etsy.com -walmart.com -pinterest.com -reddit.com -youtube.com -facebook.com -tiktok.com -wikipedia.org -quora.com -target.com -aliexpress.com -alibaba.com
 ```
 
-> `serp_competitor_finder.py` 和 `sitemap_parser.py` 已退役，不再使用。详见 [1B数据处理工具手册.md](02-竞品研究工具/1B数据处理工具手册.md)
+> `serp_competitor_finder.py` 鍜?`sitemap_parser.py` 宸查€€褰癸紝涓嶅啀浣跨敤銆傝瑙?[1B鏁版嵁澶勭悊宸ュ叿鎵嬪唽.md](02-绔炲搧鐮旂┒宸ュ叿/1B鏁版嵁澶勭悊宸ュ叿鎵嬪唽.md)
 
-### 2B Sitemap 解析：sitemap-mcp-server（MCP）
+### 2B Sitemap 瑙ｆ瀽锛歴itemap-mcp-server锛圡CP锛?
 
-**原理**：通过 sitemap-mcp-server（MCP 服务）自动发现并解析竞品 sitemap.xml，支持子sitemap过滤、路径过滤、分页。
+**鍘熺悊**锛氶€氳繃 sitemap-mcp-server锛圡CP 鏈嶅姟锛夎嚜鍔ㄥ彂鐜板苟瑙ｆ瀽绔炲搧 sitemap.xml锛屾敮鎸佸瓙sitemap杩囨护銆佽矾寰勮繃婊ゃ€佸垎椤点€?
 
-详见 [1B数据处理工具手册.md](02-竞品研究工具/1B数据处理工具手册.md) 的“5.4 轨道D：Sitemap解析”章节。
+璇﹁ [1B鏁版嵁澶勭悊宸ュ叿鎵嬪唽.md](02-绔炲搧鐮旂┒宸ュ叿/1B鏁版嵁澶勭悊宸ュ叿鎵嬪唽.md) 鐨勨€?.4 杞ㄩ亾D锛歋itemap瑙ｆ瀽鈥濈珷鑺傘€?
 
 ---
 
-## 03 WordPress 建站
+## 03 WordPress 寤虹珯
 
-**文件**：`03-WordPress建站/` 下以文档为主，含 1 个 Node.js 脚本。
+**鏂囦欢**锛歚03-WordPress寤虹珯/` 涓嬩互鏂囨。涓轰富锛屽惈 1 涓?Node.js 鑴氭湰銆?
 
-| 文档 | 内容 | 适用阶段 |
+| 鏂囨。 | 鍐呭 | 閫傜敤闃舵 |
 |------|------|---------|
-| `Elementor REST API 操作手册.md` | Elementor 模板创建 + Flexbox 布局 + Widget 列表 + 踩坑清单 | RLM 步骤 2B/2C（核心页面） |
-| `Gutenberg博客文章REST-API上传指南.md` | 博客文章通过 `wp-json/wp/v2/posts` 发布，Gutenberg Block HTML 格式 | RLM 步骤 3（博客文章） |
-| `elementor-upload.js` | Homepage V3 页面生成与上传脚本 | RLM 步骤 2B/2C |
-| `页面内容指南/` | 各类页面的内容框架（RLM 步骤 2A/2B 引用） | RLM 步骤 2A/2B |
+| `Elementor REST API 鎿嶄綔鎵嬪唽.md` | Elementor 妯℃澘鍒涘缓 + Flexbox 甯冨眬 + Widget 鍒楄〃 + 韪╁潙娓呭崟 | RLM 姝ラ 2B/2C锛堟牳蹇冮〉闈級 |
+| `Gutenberg鍗氬鏂囩珷REST-API涓婁紶鎸囧崡.md` | 鍗氬鏂囩珷閫氳繃 `wp-json/wp/v2/posts` 鍙戝竷锛孏utenberg Block HTML 鏍煎紡 | RLM 姝ラ 3锛堝崥瀹㈡枃绔狅級 |
+| `Elementor REST API 操作手册.md + templates/elementor-utils.js` | Homepage V3 椤甸潰鐢熸垚涓庝笂浼犺剼鏈?| RLM 姝ラ 2B/2C |
+| `椤甸潰鍐呭鎸囧崡/` | 鍚勭被椤甸潰鐨勫唴瀹规鏋讹紙RLM 姝ラ 2A/2B 寮曠敤锛?| RLM 姝ラ 2A/2B |
 
-> **分工原则**：核心页面（首页/产品页/Landing Page）用 Elementor；博客文章（教程/指南/科普）用 Gutenberg。
+> **鍒嗗伐鍘熷垯**锛氭牳蹇冮〉闈紙棣栭〉/浜у搧椤?Landing Page锛夌敤 Elementor锛涘崥瀹㈡枃绔狅紙鏁欑▼/鎸囧崡/绉戞櫘锛夌敤 Gutenberg銆?
 
 ---
 
-## 05 竞品内容分析工具
+## 05 绔炲搧鍐呭鍒嗘瀽宸ュ叿
 
-### 5A 内容模式分析：`content_analyzer.py`
+### 5A 鍐呭妯″紡鍒嗘瀽锛歚content_analyzer.py`
 
-批量抓取竞品文章的 title/meta/H1/H2，自动分类为「选购指南/教程/科普/产品页」等类型，生成跨竞品内容模式报告。
+鎵归噺鎶撳彇绔炲搧鏂囩珷鐨?title/meta/H1/H2锛岃嚜鍔ㄥ垎绫讳负銆岄€夎喘鎸囧崡/鏁欑▼/绉戞櫘/浜у搧椤点€嶇瓑绫诲瀷锛岀敓鎴愯法绔炲搧鍐呭妯″紡鎶ュ憡銆?
 
 ```bash
-python 05-竞品内容分析工具/content_analyzer.py \
-  --input 02-竞品研究工具/sitemap_results/<domain>_blog_urls.csv
+python 05-绔炲搧鍐呭鍒嗘瀽宸ュ叿/content_analyzer.py \
+  --input 02-绔炲搧鐮旂┒宸ュ叿/sitemap_results/<domain>_blog_urls.csv
 
-# 限速（避免被封）
-python 05-竞品内容分析工具/content_analyzer.py --input urls.csv --concurrency 3 --delay 2
+# 闄愰€燂紙閬垮厤琚皝锛?
+python 05-绔炲搧鍐呭鍒嗘瀽宸ュ叿/content_analyzer.py --input urls.csv --concurrency 3 --delay 2
 
-# 调试（只跑前20条）
-python 05-竞品内容分析工具/content_analyzer.py --input urls.csv --limit 20
+# 璋冭瘯锛堝彧璺戝墠20鏉★級
+python 05-绔炲搧鍐呭鍒嗘瀽宸ュ叿/content_analyzer.py --input urls.csv --limit 20
 ```
 
-### 5B 站内重复检测：`content_duplicate_checker.py`
+### 5B 绔欏唴閲嶅妫€娴嬶細`content_duplicate_checker.py`
 
-基于 SimHash 算法比对所有页面，找出站内重复/近似的页面对。
+鍩轰簬 SimHash 绠楁硶姣斿鎵€鏈夐〉闈紝鎵惧嚭绔欏唴閲嶅/杩戜技鐨勯〉闈㈠銆?
 
 ```bash
-# 从 sitemap 检测
-python 05-竞品内容分析工具/content_duplicate_checker.py \
+# 浠?sitemap 妫€娴?
+python 05-绔炲搧鍐呭鍒嗘瀽宸ュ叿/content_duplicate_checker.py \
   --input https://yoursite.com/sitemap.xml
 
-# 从本地文件检测
-python 05-竞品内容分析工具/content_duplicate_checker.py --input urls.csv
+# 浠庢湰鍦版枃浠舵娴?
+python 05-绔炲搧鍐呭鍒嗘瀽宸ュ叿/content_duplicate_checker.py --input urls.csv
 
-# 调整重复阈值（汉明距离，默认10，越小越严格）
-python 05-竞品内容分析工具/content_duplicate_checker.py --input sitemap.xml --threshold 8
+# 璋冩暣閲嶅闃堝€硷紙姹夋槑璺濈锛岄粯璁?0锛岃秺灏忚秺涓ユ牸锛?
+python 05-绔炲搧鍐呭鍒嗘瀽宸ュ叿/content_duplicate_checker.py --input sitemap.xml --threshold 8
 ```
 
-输出：
-- `results/duplicate_report_<domain>_<time>.md`：重复内容报告（按严重程度分级）
-- `results/duplicate_pairs_<domain>_<time>.csv`：重复对详情
+杈撳嚭锛?
+- `results/duplicate_report_<domain>_<time>.md`锛氶噸澶嶅唴瀹规姤鍛婏紙鎸変弗閲嶇▼搴﹀垎绾э級
+- `results/duplicate_pairs_<domain>_<time>.csv`锛氶噸澶嶅璇︽儏
 
-### 5C 站外原创性检测：`content_originality_checker.py`
+### 5C 绔欏鍘熷垱鎬ф娴嬶細`content_originality_checker.py`
 
-基于 N-gram（trigram）比对目标页面与竞品内容的重合度，输出段落级原创性评分。
+鍩轰簬 N-gram锛坱rigram锛夋瘮瀵圭洰鏍囬〉闈笌绔炲搧鍐呭鐨勯噸鍚堝害锛岃緭鍑烘钀界骇鍘熷垱鎬ц瘎鍒嗐€?
 
 ```bash
-python 05-竞品内容分析工具/content_originality_checker.py \
+python 05-绔炲搧鍐呭鍒嗘瀽宸ュ叿/content_originality_checker.py \
   --target https://yoursite.com/blog/article \
   --competitors competitor_urls.txt
 
-# 调整 N-gram 大小（增大则比对更严格）
-python 05-竞品内容分析工具/content_originality_checker.py \
+# 璋冩暣 N-gram 澶у皬锛堝澶у垯姣斿鏇翠弗鏍硷級
+python 05-绔炲搧鍐呭鍒嗘瀽宸ュ叿/content_originality_checker.py \
   --target URL --competitors urls.txt --ngram 4
 ```
 
-输出：
-- `results/originality_<domain>_<time>.md`：原创性报告（含段落级分析）
-- `results/originality_paragraphs_<domain>_<time>.csv`：段落级对比 CSV
+杈撳嚭锛?
+- `results/originality_<domain>_<time>.md`锛氬師鍒涙€ф姤鍛婏紙鍚钀界骇鍒嗘瀽锛?
+- `results/originality_paragraphs_<domain>_<time>.csv`锛氭钀界骇瀵规瘮 CSV
 
 ---
 
-## 04 图片生成工具
+## 04 鍥剧墖鐢熸垚宸ュ叿
 
-**文件**：`04-图片生成工具/产品页图片提示词.md`
+**鏂囦欢**锛歚04-鍥剧墖鐢熸垚宸ュ叿/浜у搧椤靛浘鐗囨彁绀鸿瘝.md`
 
-产品页标准 6 张轮播图（Hero/促销/信任/细节/对比/生活方式）的 AI 生成提示词，适用于 Shopify 和 WordPress + WooCommerce 产品页。
+浜у搧椤垫爣鍑?6 寮犺疆鎾浘锛圚ero/淇冮攢/淇′换/缁嗚妭/瀵规瘮/鐢熸椿鏂瑰紡锛夌殑 AI 鐢熸垚鎻愮ず璇嶏紝閫傜敤浜?Shopify 鍜?WordPress + WooCommerce 浜у搧椤点€?
 
-详见 [产品页图片提示词.md](04-图片生成工具/产品页图片提示词.md)。
+璇﹁ [浜у搧椤靛浘鐗囨彁绀鸿瘝.md](04-鍥剧墖鐢熸垚宸ュ叿/浜у搧椤靛浘鐗囨彁绀鸿瘝.md)銆?
 
 ---
 
-## 07 数据分析工具
+## 07 鏁版嵁鍒嗘瀽宸ュ叿
 
-**文件**：`07-数据分析工具/01-Google-Data-Studio使用指南.md`
+**鏂囦欢**锛歚07-鏁版嵁鍒嗘瀽宸ュ叿/01-Google-Data-Studio浣跨敤鎸囧崡.md`
 
-网站上线后的数据可视化中心，连接 GSC + GA4 + Sheets 搭建 SEO/流量仪表盘。
+缃戠珯涓婄嚎鍚庣殑鏁版嵁鍙鍖栦腑蹇冿紝杩炴帴 GSC + GA4 + Sheets 鎼缓 SEO/娴侀噺浠〃鐩樸€?
 
-**核心数据流**：
+**鏍稿績鏁版嵁娴?*锛?
 
 ```
-竞品分析数据（CSV）→ Google Sheets → Data Studio 仪表盘
-                                        ↑
-GSC 搜索排名 ─────────────────────── 原生连接
-GA4 流量行为 ─────────────────────── 原生连接
+绔炲搧鍒嗘瀽鏁版嵁锛圕SV锛夆啋 Google Sheets 鈫?Data Studio 浠〃鐩?
+                                        鈫?
+GSC 鎼滅储鎺掑悕 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ 鍘熺敓杩炴帴
+GA4 娴侀噺琛屼负 鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€鈹€ 鍘熺敓杩炴帴
 ```
 
 ---
 
-## 08 短视频工具
+## 08 鐭棰戝伐鍏?
 
-**文件**：`08-短视频工具/短视频工具与自动化流程.md`
+**鏂囦欢**锛歚08-鐭棰戝伐鍏?鐭棰戝伐鍏蜂笌鑷姩鍖栨祦绋?md`
 
-素材采集/拆解/创作/分发全链路，配合 RLM 步骤 4D 音视频再加工。
-
----
-
-## 09 外链工具
-
-> **状态**：占坑，待外链建设指南验证后启动开发。详见 [README.md](09-外链工具/README.md)。
-
-SEMrush 数据采集功能已整合到 `02-竞品研究工具/`，详见 [1B数据处理工具手册.md](02-竞品研究工具/1B数据处理工具手册.md)。
+绱犳潗閲囬泦/鎷嗚В/鍒涗綔/鍒嗗彂鍏ㄩ摼璺紝閰嶅悎 RLM 姝ラ 4D 闊宠棰戝啀鍔犲伐銆?
 
 ---
 
-## 10 SEO审计工具
+## 09 澶栭摼宸ュ叿
 
-### 10A 技术 SEO 审计：`seo_technical_auditor.py`
+> **鐘舵€?*锛氬崰鍧戯紝寰呭閾惧缓璁炬寚鍗楅獙璇佸悗鍚姩寮€鍙戙€傝瑙?[README.md](09-澶栭摼宸ュ叿/README.md)銆?
 
-检查 HTTPS、404、重定向链、Canonical、robots.txt、结构化数据、Hreflang、孤岛页面等。
+SEMrush 鏁版嵁閲囬泦鍔熻兘宸叉暣鍚堝埌 `02-绔炲搧鐮旂┒宸ュ叿/`锛岃瑙?[1B鏁版嵁澶勭悊宸ュ叿鎵嬪唽.md](02-绔炲搧鐮旂┒宸ュ叿/1B鏁版嵁澶勭悊宸ュ叿鎵嬪唽.md)銆?
+
+---
+
+## 10 SEO瀹¤宸ュ叿
+
+### 10A 鎶€鏈?SEO 瀹¤锛歚seo_technical_auditor.py`
+
+妫€鏌?HTTPS銆?04銆侀噸瀹氬悜閾俱€丆anonical銆乺obots.txt銆佺粨鏋勫寲鏁版嵁銆丠reflang銆佸宀涢〉闈㈢瓑銆?
 
 ```bash
-# 从 sitemap 审计全站
-python 10-SEO审计工具/seo_technical_auditor.py \
+# 浠?sitemap 瀹¤鍏ㄧ珯
+python 10-SEO瀹¤宸ュ叿/seo_technical_auditor.py \
   --input https://yoursite.com/sitemap.xml
 
-# 从本地文件
-python 10-SEO审计工具/seo_technical_auditor.py --input urls.csv
+# 浠庢湰鍦版枃浠?
+python 10-SEO瀹¤宸ュ叿/seo_technical_auditor.py --input urls.csv
 
-# 限制数量（调试用）
-python 10-SEO审计工具/seo_technical_auditor.py --input sitemap.xml --limit 50
+# 闄愬埗鏁伴噺锛堣皟璇曠敤锛?
+python 10-SEO瀹¤宸ュ叿/seo_technical_auditor.py --input sitemap.xml --limit 50
 ```
 
-输出：
-- `results/technical_audit_<domain>_<time>.md`：技术 SEO 审计报告（含健康评分）
-- `results/technical_issues_<domain>_<time>.csv`：问题清单 CSV
+杈撳嚭锛?
+- `results/technical_audit_<domain>_<time>.md`锛氭妧鏈?SEO 瀹¤鎶ュ憡锛堝惈鍋ュ悍璇勫垎锛?
+- `results/technical_issues_<domain>_<time>.csv`锛氶棶棰樻竻鍗?CSV
 
-### 10B On-Page SEO 检查：`onpage_seo_checker.py`
+### 10B On-Page SEO 妫€鏌ワ細`onpage_seo_checker.py`
 
-评估页面的 Title/Meta/H标签/内容/图片/内链/E-E-A-T，满分 100 分。
+璇勪及椤甸潰鐨?Title/Meta/H鏍囩/鍐呭/鍥剧墖/鍐呴摼/E-E-A-T锛屾弧鍒?100 鍒嗐€?
 
 ```bash
-# 检查单个页面
-python 10-SEO审计工具/onpage_seo_checker.py --input https://yoursite.com/blog/article
+# 妫€鏌ュ崟涓〉闈?
+python 10-SEO瀹¤宸ュ叿/onpage_seo_checker.py --input https://yoursite.com/blog/article
 
-# 检查多个页面（带关键词）
-python 10-SEO审计工具/onpage_seo_checker.py --input sitemap.xml --keyword "crystal healing"
+# 妫€鏌ュ涓〉闈紙甯﹀叧閿瘝锛?
+python 10-SEO瀹¤宸ュ叿/onpage_seo_checker.py --input sitemap.xml --keyword "crystal healing"
 
-# 从本地 URL 文件
-python 10-SEO审计工具/onpage_seo_checker.py --input urls.txt --keyword "target keyword"
+# 浠庢湰鍦?URL 鏂囦欢
+python 10-SEO瀹¤宸ュ叿/onpage_seo_checker.py --input urls.txt --keyword "target keyword"
 ```
 
-输出：
-- `results/onpage_seo_report_<time>.md`：各页面评分详情
-- `results/onpage_seo_scores_<time>.csv`：评分汇总 CSV
+杈撳嚭锛?
+- `results/onpage_seo_report_<time>.md`锛氬悇椤甸潰璇勫垎璇︽儏
+- `results/onpage_seo_scores_<time>.csv`锛氳瘎鍒嗘眹鎬?CSV
 
-### 10C 关键词蚕食检测：`keyword_cannibalization_checker.py`
+### 10C 鍏抽敭璇嶈殨椋熸娴嬶細`keyword_cannibalization_checker.py`
 
-提取每个页面的目标关键词，找出多个页面竞争同一关键词的情况。
+鎻愬彇姣忎釜椤甸潰鐨勭洰鏍囧叧閿瘝锛屾壘鍑哄涓〉闈㈢珵浜夊悓涓€鍏抽敭璇嶇殑鎯呭喌銆?
 
 ```bash
-# 从 sitemap 检测
-python 10-SEO审计工具/keyword_cannibalization_checker.py \
+# 浠?sitemap 妫€娴?
+python 10-SEO瀹¤宸ュ叿/keyword_cannibalization_checker.py \
   --input https://yoursite.com/sitemap.xml
 
-# 从本地文件
-python 10-SEO审计工具/keyword_cannibalization_checker.py --input urls.csv
+# 浠庢湰鍦版枃浠?
+python 10-SEO瀹¤宸ュ叿/keyword_cannibalization_checker.py --input urls.csv
 ```
 
-输出：
-- `results/cannibalization_<domain>_<time>.md`：蚕食检测报告（按优先级分级）
-- `results/cannibalized_keywords_<domain>_<time>.csv`：重叠关键词详情
+杈撳嚭锛?
+- `results/cannibalization_<domain>_<time>.md`锛氳殨椋熸娴嬫姤鍛婏紙鎸変紭鍏堢骇鍒嗙骇锛?
+- `results/cannibalized_keywords_<domain>_<time>.csv`锛氶噸鍙犲叧閿瘝璇︽儏
 
 ---
 
-## 11 用户洞察工具
+## 11 鐢ㄦ埛娲炲療宸ュ叿
 
-> **核心理念**：不等自己的网站/频道积累评论，直接去 Reddit/Amazon/YouTube 采集竞品和行业的用户反馈，驱动内容选题和产品策略。
+> **鏍稿績鐞嗗康**锛氫笉绛夎嚜宸辩殑缃戠珯/棰戦亾绉疮璇勮锛岀洿鎺ュ幓 Reddit/Amazon/YouTube 閲囬泦绔炲搧鍜岃涓氱殑鐢ㄦ埛鍙嶉锛岄┍鍔ㄥ唴瀹归€夐鍜屼骇鍝佺瓥鐣ャ€?
 
-### 11A Reddit 评论采集：`reddit_comment_collector.py`
+### 11A Reddit 璇勮閲囬泦锛歚reddit_comment_collector.py`
 
-基于 Reddit `.json` 端点（详见 [Reddit的JSON功法](11-用户洞察工具/Reddit的JSON功法.md)），无需 API 密钥，采集帖子 + 评论，输出为分析工具可直接使用的 CSV。
+鍩轰簬 Reddit `.json` 绔偣锛堣瑙?[Reddit鐨凧SON鍔熸硶](11-鐢ㄦ埛娲炲療宸ュ叿/Reddit鐨凧SON鍔熸硶.md)锛夛紝鏃犻渶 API 瀵嗛挜锛岄噰闆嗗笘瀛?+ 璇勮锛岃緭鍑轰负鍒嗘瀽宸ュ叿鍙洿鎺ヤ娇鐢ㄧ殑 CSV銆?
 
 ```bash
-# 采集整个 subreddit
-python 11-用户洞察工具/reddit_comment_collector.py \
+# 閲囬泦鏁翠釜 subreddit
+python 11-鐢ㄦ埛娲炲療宸ュ叿/reddit_comment_collector.py \
   --subreddit crystalhealing --sort hot --limit 15
 
-# 搜索关键词（跨 subreddit）
-python 11-用户洞察工具/reddit_comment_collector.py \
+# 鎼滅储鍏抽敭璇嶏紙璺?subreddit锛?
+python 11-鐢ㄦ埛娲炲療宸ュ叿/reddit_comment_collector.py \
   --search "crystal bracelet healing"
 
-# 搜索限定 subreddit
-python 11-用户洞察工具/reddit_comment_collector.py \
+# 鎼滅储闄愬畾 subreddit
+python 11-鐢ㄦ埛娲炲療宸ュ叿/reddit_comment_collector.py \
   --search "crystal meaning" --subreddit crystals
 
-# 采集单个帖子
-python 11-用户洞察工具/reddit_comment_collector.py \
+# 閲囬泦鍗曚釜甯栧瓙
+python 11-鐢ㄦ埛娲炲療宸ュ叿/reddit_comment_collector.py \
   --post "https://www.reddit.com/r/.../comments/xxx/"
 ```
 
-输出：`results/reddit_<关键词>_<时间>.csv`（可直接传给 11B 分析）
+杈撳嚭锛歚results/reddit_<鍏抽敭璇?_<鏃堕棿>.csv`锛堝彲鐩存帴浼犵粰 11B 鍒嗘瀽锛?
 
-### 11B 评论洞察分析：`comment_insight_analyzer.py`
+### 11B 璇勮娲炲療鍒嗘瀽锛歚comment_insight_analyzer.py`
 
-对评论数据进行智能分析：自动分类（问题/购买意向/抱怨/功能建议/合作询盘/地域需求）、提取选题信号、挖掘痛点、筛选高价值线索。
+瀵硅瘎璁烘暟鎹繘琛屾櫤鑳藉垎鏋愶細鑷姩鍒嗙被锛堥棶棰?璐拱鎰忓悜/鎶辨€?鍔熻兘寤鸿/鍚堜綔璇㈢洏/鍦板煙闇€姹傦級銆佹彁鍙栭€夐淇″彿銆佹寲鎺樼棝鐐广€佺瓫閫夐珮浠峰€肩嚎绱€?
 
-**标准用法（接 11A 的输出）**：
+**鏍囧噯鐢ㄦ硶锛堟帴 11A 鐨勮緭鍑猴級**锛?
 
 ```bash
-# 分析 Reddit 采集结果
-python 11-用户洞察工具/comment_insight_analyzer.py \
+# 鍒嗘瀽 Reddit 閲囬泦缁撴灉
+python 11-鐢ㄦ埛娲炲療宸ュ叿/comment_insight_analyzer.py \
   --input results/reddit_crystalhealing_20260509.csv \
   --source "Reddit r/crystalhealing"
 
-# 分析其他来源的 CSV（列名: text/comment/content/body）
-python 11-用户洞察工具/comment_insight_analyzer.py \
-  --input amazon_reviews.csv --source "竞品Amazon评论"
+# 鍒嗘瀽鍏朵粬鏉ユ簮鐨?CSV锛堝垪鍚? text/comment/content/body锛?
+python 11-鐢ㄦ埛娲炲療宸ュ叿/comment_insight_analyzer.py \
+  --input amazon_reviews.csv --source "绔炲搧Amazon璇勮"
 
-# 分析纯文本（每行一条）
-python 11-用户洞察工具/comment_insight_analyzer.py \
-  --input youtube_comments.txt --source "竞品YouTube评论"
+# 鍒嗘瀽绾枃鏈紙姣忚涓€鏉★級
+python 11-鐢ㄦ埛娲炲療宸ュ叿/comment_insight_analyzer.py \
+  --input youtube_comments.txt --source "绔炲搧YouTube璇勮"
 ```
 
-输出：
-- `results/comment_insight_<time>.md`：洞察报告（分类分布 + 高价值评论 + 选题建议 + 痛点 + 地域需求）
-- `results/comments_classified_<time>.csv`：每条评论的分类结果
-- `results/content_topics_<time>.csv`：选题建议清单
+杈撳嚭锛?
+- `results/comment_insight_<time>.md`锛氭礊瀵熸姤鍛婏紙鍒嗙被鍒嗗竷 + 楂樹环鍊艰瘎璁?+ 閫夐寤鸿 + 鐥涚偣 + 鍦板煙闇€姹傦級
+- `results/comments_classified_<time>.csv`锛氭瘡鏉¤瘎璁虹殑鍒嗙被缁撴灉
+- `results/content_topics_<time>.csv`锛氶€夐寤鸿娓呭崟
 
-### 完整工作流
+### 瀹屾暣宸ヤ綔娴?
 
 ```text
-11A reddit_comment_collector.py   ← 采集竞品/行业评论
-    ↓ results/reddit_xxx.csv
-11B comment_insight_analyzer.py   ← 分类分析，输出洞察
-    ↓ 选题建议 + 痛点 + 购买意向
-→ 驱动 RLM 步骤 3 内容策略
-→ 驱动产品设计（用户痛点 → 产品改进）
-→ 驱动市场验证（地域需求 → 优先本地化）
+11A reddit_comment_collector.py   鈫?閲囬泦绔炲搧/琛屼笟璇勮
+    鈫?results/reddit_xxx.csv
+11B comment_insight_analyzer.py   鈫?鍒嗙被鍒嗘瀽锛岃緭鍑烘礊瀵?
+    鈫?閫夐寤鸿 + 鐥涚偣 + 璐拱鎰忓悜
+鈫?椹卞姩 RLM 姝ラ 3 鍐呭绛栫暐
+鈫?椹卞姩浜у搧璁捐锛堢敤鎴风棝鐐?鈫?浜у搧鏀硅繘锛?
+鈫?椹卞姩甯傚満楠岃瘉锛堝湴鍩熼渶姹?鈫?浼樺厛鏈湴鍖栵級
 ```
 
-**更多数据源**：YouTube 评论可通过 DataForSEO MCP 直接获取（`serp_youtube_video_comments_live_advanced`），Amazon 评论可用 Apify Actor 采集，分析环节统一用 11B。
+**鏇村鏁版嵁婧?*锛歒ouTube 璇勮鍙€氳繃 DataForSEO MCP 鐩存帴鑾峰彇锛坄serp_youtube_video_comments_live_advanced`锛夛紝Amazon 璇勮鍙敤 Apify Actor 閲囬泦锛屽垎鏋愮幆鑺傜粺涓€鐢?11B銆?
 
 ---
 
-## 踩坑记录：全自动 SEO 为什么行不通
+## 韪╁潙璁板綍锛氬叏鑷姩 SEO 涓轰粈涔堣涓嶉€?
 
-> 以下经验来自 2025-2026 年的实操验证，记录于此避免重蹈覆辙。
+> 浠ヤ笅缁忛獙鏉ヨ嚜 2025-2026 骞寸殑瀹炴搷楠岃瘉锛岃褰曚簬姝ら伩鍏嶉噸韫堣杈欍€?
 
-### 已验证失效的做法
+### 宸查獙璇佸け鏁堢殑鍋氭硶
 
-| 做法 | 实操结果 | 失效原因 |
+| 鍋氭硶 | 瀹炴搷缁撴灉 | 澶辨晥鍘熷洜 |
 |------|---------|---------|
-| **全自动程序化目录站** | 做了 4 个，3 个完全死掉，1 个仅剩 Bing 零星流量且无法变现 | 批量生成的低质量内容无法通过 Google 质量评估，无真实用户价值 |
-| **自动批量外链** | 上一个时代的产物，现在无任何效果 | Google 已能识别并忽略批量制造的低质量外链，甚至可能导致惩罚 |
-| **AI 一键生成完整长文** | 多种模型尝试，反复炒剩饭、句式逻辑混乱、前后衔接断裂 | 大篇幅一次性输出时 AI 难以保持质量一致性 |
+| **鍏ㄨ嚜鍔ㄧ▼搴忓寲鐩綍绔?* | 鍋氫簡 4 涓紝3 涓畬鍏ㄦ鎺夛紝1 涓粎鍓?Bing 闆舵槦娴侀噺涓旀棤娉曞彉鐜?| 鎵归噺鐢熸垚鐨勪綆璐ㄩ噺鍐呭鏃犳硶閫氳繃 Google 璐ㄩ噺璇勪及锛屾棤鐪熷疄鐢ㄦ埛浠峰€?|
+| **鑷姩鎵归噺澶栭摼** | 涓婁竴涓椂浠ｇ殑浜х墿锛岀幇鍦ㄦ棤浠讳綍鏁堟灉 | Google 宸茶兘璇嗗埆骞跺拷鐣ユ壒閲忓埗閫犵殑浣庤川閲忓閾撅紝鐢氳嚦鍙兘瀵艰嚧鎯╃綒 |
+| **AI 涓€閿敓鎴愬畬鏁撮暱鏂?* | 澶氱妯″瀷灏濊瘯锛屽弽澶嶇倰鍓╅キ銆佸彞寮忛€昏緫娣蜂贡銆佸墠鍚庤鎺ユ柇瑁?| 澶х瘒骞呬竴娆℃€ц緭鍑烘椂 AI 闅句互淇濇寔璐ㄩ噺涓€鑷存€?|
 
-### 正确的自动化边界
+### 姝ｇ‘鐨勮嚜鍔ㄥ寲杈圭晫
 
 ```text
-✅ 适合自动化的环节（工具库已覆盖）：
-   - 竞品数据采集与分析（02/05）
-   - SEO 技术审计与评分（10）
-   - 用户评论采集与分类（11）
-   - 关键词数据批量获取（02 semrush_to_sheets.py）
-   - GEO 可见性信号检查（12）
+鉁?閫傚悎鑷姩鍖栫殑鐜妭锛堝伐鍏峰簱宸茶鐩栵級锛?
+   - 绔炲搧鏁版嵁閲囬泦涓庡垎鏋愶紙02/05锛?
+   - SEO 鎶€鏈璁′笌璇勫垎锛?0锛?
+   - 鐢ㄦ埛璇勮閲囬泦涓庡垎绫伙紙11锛?
+   - 鍏抽敭璇嶆暟鎹壒閲忚幏鍙栵紙02 semrush_to_sheets.py锛?
+   - GEO 鍙鎬т俊鍙锋鏌ワ紙12锛?
 
-❌ 不适合自动化的环节：
-   - 内容写作（应逐段人工打磨，参见 RLM执行版步骤3 + 内容Brief模板）
-   - 外链建设（应走真实合作与内容价值驱动）
-   - 用户需求理解（必须人工判断）
+鉂?涓嶉€傚悎鑷姩鍖栫殑鐜妭锛?
+   - 鍐呭鍐欎綔锛堝簲閫愭浜哄伐鎵撶（锛屽弬瑙?RLM鎵ц鐗堟楠? + 鍐呭Brief妯℃澘锛?
+   - 澶栭摼寤鸿锛堝簲璧扮湡瀹炲悎浣滀笌鍐呭浠峰€奸┍鍔級
+   - 鐢ㄦ埛闇€姹傜悊瑙ｏ紙蹇呴』浜哄伐鍒ゆ柇锛?
 ```
 
-### 核心教训
+### 鏍稿績鏁欒
 
-**老老实实调研用户、分析需求、满足需求，才是正经的生意逻辑。** 自动化工具的价值是提效（帮人更快地完成数据采集和分析），而不是替代人对用户需求的理解和内容质量的把控。
+**鑰佽€佸疄瀹炶皟鐮旂敤鎴枫€佸垎鏋愰渶姹傘€佹弧瓒抽渶姹傦紝鎵嶆槸姝ｇ粡鐨勭敓鎰忛€昏緫銆?* 鑷姩鍖栧伐鍏风殑浠峰€兼槸鎻愭晥锛堝府浜烘洿蹇湴瀹屾垚鏁版嵁閲囬泦鍜屽垎鏋愶級锛岃€屼笉鏄浛浠ｄ汉瀵圭敤鎴烽渶姹傜殑鐞嗚В鍜屽唴瀹硅川閲忕殑鎶婃帶銆?
 
 ---
 
-## 12 GEO 可见性检查
+## 12 GEO 鍙鎬ф鏌?
 
-> 详细文档见 [12-GEO可见性检查/README.md](12-GEO可见性检查/README.md)
+> 璇︾粏鏂囨。瑙?[12-GEO鍙鎬ф鏌?README.md](12-GEO鍙鎬ф鏌?README.md)
 
-### 12A 可见性信号采集：`geo_visibility_checker.py`
+### 12A 鍙鎬т俊鍙烽噰闆嗭細`geo_visibility_checker.py`
 
-7 维度检查品牌在 AI 生态中的可见性信号：AI Overview、Reddit、Quora、评价网站、Wikipedia、媒体报道、竞品对比。
+7 缁村害妫€鏌ュ搧鐗屽湪 AI 鐢熸€佷腑鐨勫彲瑙佹€т俊鍙凤細AI Overview銆丷eddit銆丵uora銆佽瘎浠风綉绔欍€乄ikipedia銆佸獟浣撴姤閬撱€佺珵鍝佸姣斻€?
 
-**前置条件**：DataForSEO API 凭证（复用 MCP 配置账号）
+**鍓嶇疆鏉′欢**锛欴ataForSEO API 鍑瘉锛堝鐢?MCP 閰嶇疆璐﹀彿锛?
 
 ```bash
 export DFS_API_LOGIN=your_login
 export DFS_API_PASSWORD=your_password
 
-# 基本用法
-python 12-GEO可见性检查/geo_visibility_checker.py \
+# 鍩烘湰鐢ㄦ硶
+python 12-GEO鍙鎬ф鏌?geo_visibility_checker.py \
   --brand "Crystal Healing" \
   --domain "crystalhealing.com" \
   --keywords "healing crystal bracelet"
 
-# 带竞品
-python 12-GEO可见性检查/geo_visibility_checker.py \
+# 甯︾珵鍝?
+python 12-GEO鍙鎬ф鏌?geo_visibility_checker.py \
   --brand "Crystal Healing" \
   --domain "crystalhealing.com" \
   --keywords "healing crystal bracelet" "crystal bracelet meaning" \
   --competitors "Energy Muse" "Tiny Rituals"
 ```
 
-输出：
-- `results/geo_visibility_<brand>_<time>.md`：可读报告
-- `results/geo_visibility_<brand>_<time>.json`：结构化数据（供 Layer 2 分析）
+杈撳嚭锛?
+- `results/geo_visibility_<brand>_<time>.md`锛氬彲璇绘姤鍛?
+- `results/geo_visibility_<brand>_<time>.json`锛氱粨鏋勫寲鏁版嵁锛堜緵 Layer 2 鍒嗘瀽锛?
 
-### 12B Layer 2 分析（Claude Code）
+### 12B Layer 2 鍒嗘瀽锛圕laude Code锛?
 
-将 JSON 交给 Claude Code，自动生成可见性评分 + 差距分析 + 行动建议 → 写入 Google Sheets。
+灏?JSON 浜ょ粰 Claude Code锛岃嚜鍔ㄧ敓鎴愬彲瑙佹€ц瘎鍒?+ 宸窛鍒嗘瀽 + 琛屽姩寤鸿 鈫?鍐欏叆 Google Sheets銆?
 
 ---
 
-## 删除历史说明
+## 鍒犻櫎鍘嗗彶璇存槑
 
-> 本目录在 2026-04-12 `commit 64ee06e` 中被整体删除，原因是历次文档重构中将文件标注为"已迁移/已整合"但未真正搬移，导致内容逐步流失。2026-04-13 根据 git 日志完整恢复，并补建从未提交过的竞品挖掘和分析脚本。
-> 2026-05-09 合并原 02-竞品挖掘工具 和 03-竞品分析工具 为 02-竞品研究工具；新增 04-竞品内容分析工具 2 个检测脚本；新增 10-SEO审计工具（技术审计 + On-Page + 关键词蚕食）；新增 11-用户洞察工具。
-> 2026-05-14 新增 12-GEO可见性检查（7维度 AI 生态可见性信号采集 + Layer 2 LLM 分析）。
-> 2026-05-23 新增 13-Open Design 设计工具（占坑，后期安装部署）。
-> 2026-05-24 新增 14-Web-to-App（网站打包安卓 APK 开源工具）。
-> 2026-05-29 新增 15-达人BD工具（AI 驱动达人商务拓展自动化方法论）。新增 AI Studio / NotebookLM 备选方案。
+> 鏈洰褰曞湪 2026-04-12 `commit 64ee06e` 涓鏁翠綋鍒犻櫎锛屽師鍥犳槸鍘嗘鏂囨。閲嶆瀯涓皢鏂囦欢鏍囨敞涓?宸茶縼绉?宸叉暣鍚?浣嗘湭鐪熸鎼Щ锛屽鑷村唴瀹归€愭娴佸け銆?026-04-13 鏍规嵁 git 鏃ュ織瀹屾暣鎭㈠锛屽苟琛ュ缓浠庢湭鎻愪氦杩囩殑绔炲搧鎸栨帢鍜屽垎鏋愯剼鏈€?
+> 2026-05-09 鍚堝苟鍘?02-绔炲搧鎸栨帢宸ュ叿 鍜?03-绔炲搧鍒嗘瀽宸ュ叿 涓?02-绔炲搧鐮旂┒宸ュ叿锛涙柊澧?04-绔炲搧鍐呭鍒嗘瀽宸ュ叿 2 涓娴嬭剼鏈紱鏂板 10-SEO瀹¤宸ュ叿锛堟妧鏈璁?+ On-Page + 鍏抽敭璇嶈殨椋燂級锛涙柊澧?11-鐢ㄦ埛娲炲療宸ュ叿銆?
+> 2026-05-14 鏂板 12-GEO鍙鎬ф鏌ワ紙7缁村害 AI 鐢熸€佸彲瑙佹€т俊鍙烽噰闆?+ Layer 2 LLM 鍒嗘瀽锛夈€?
+> 2026-05-23 鏂板 13-Open Design 璁捐宸ュ叿锛堝崰鍧戯紝鍚庢湡瀹夎閮ㄧ讲锛夈€?
+> 2026-05-24 鏂板 14-Web-to-App锛堢綉绔欐墦鍖呭畨鍗?APK 寮€婧愬伐鍏凤級銆?
+> 2026-05-29 鏂板 15-杈句汉BD宸ュ叿锛圓I 椹卞姩杈句汉鍟嗗姟鎷撳睍鑷姩鍖栨柟娉曡锛夈€傛柊澧?AI Studio / NotebookLM 澶囬€夋柟妗堛€?
+

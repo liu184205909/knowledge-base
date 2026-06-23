@@ -1,7 +1,85 @@
 ﻿# Elementor REST API 操作手册
 
 > 基于 goearthward.com（Elementor 3.34.0 + WoodMart 8.2.0）实战验证。
-> 只记录试错出来的经验，不记录常识。
+> 本文件现在同时承担 **Elementor Builder SOP + REST API 施工规范**。
+> 先按 SOP 确定页面，再按 REST 规则施工；不要让 JS 代替页面策划。
+
+---
+
+## 0. Elementor Builder SOP（WordPress Page）
+
+核心目标：产出一个 **WordPress Page 类型、Elementor 可编辑、结构合理、内容准确、视觉上可继续微调** 的页面初稿。
+
+当前范围只覆盖使用 Elementor 承接的 `page` 页面，例如 Home、About、Contact、FAQ、Ethical Sourcing、Intention Page。Post、WooCommerce Product、WooCommerce Category 模板不在本 SOP 范围内。
+
+### 0.1 输入来源必须来自项目资产
+
+关键词、主题、URL、内容依据不能由 AI 自己猜，必须从现有资产中取。页面创建的主路由先看 `2A-网站结构.md`：
+
+| 输入 | 主要来源 |
+|------|----------|
+| 页面创建路由 / URL / 页面主题归属 | `04-选品库/C端/01-疗愈水晶/02-网站规划/2A-网站结构.md` |
+| 页面是否做 / 优先级 | `页面决策表.md`、项目简报 |
+| 页面关键词支撑 | GSC、SEMrush Top Pages / Top Keywords、Seed-Master、站内关键词库、产品类目 |
+| 内容策略 | `03-内容策略/内容策略.md`、内容 Brief 模板、已有 page config |
+| 品牌语调 / 合规 | `03-内容策略/品牌语调配置.md` |
+| 竞品依据 | `01-竞品分析/1H-策略清单.md`、核心参考 URL |
+| 产品 / 类目 / 内链 | WooCommerce 产品类目、产品数据、Crystal Meaning、Condition、Intention 页面 |
+
+页面方案开头必须写清楚：本页在 `2A-网站结构.md` 中属于哪类页面、URL 是什么、是否由页面决策表/项目简报确认、关键词和内容分别依据哪些文档/数据。
+
+### 0.2 页面生产顺序
+
+```
+2A 页面路由 / URL / 主题归属
+→ 页面决策 / 优先级确认
+→ 关键词支撑
+→ 内容方案
+→ 图片需求
+→ 图片生成/选择/上传
+→ UI 设计
+→ Elementor 可还原性评估
+→ Elementor 组件映射
+→ JS 施工
+→ 上传 draft
+→ 对照 UI / 预览 / 编辑器验收
+→ Elementor 内微调
+```
+
+注意：
+
+- UI 确定前，不进入 JS。
+- Elementor 组件映射在 JS 施工之前。
+- JS 只负责施工，不负责临场决定页面目标、section 顺序和文案策略。
+- 生成结果只作为可编辑初稿，最终视觉允许在 Elementor 编辑器中微调。
+
+### 0.3 Elementor-first 设计原则
+
+设计 UI 时必须先考虑 Elementor 是否能自然表达：
+
+- 使用 Container / Flexbox，而不是 CSS Grid 思维。
+- 常规内容优先用 Elementor 标准 widget：`heading`、`text-editor`、`image`、`button`、`image-box`、`icon-box`、`accordion`。
+- WooCommerce / WoodMart 动态内容优先用 WoodMart 可编辑组件，例如产品网格、产品标签页、产品类目组件。
+- 常规页面不要用 shortcode / HTML / CSS 兜底；否则失去 Elementor 可编辑优势。
+- 如果 UI 需要复杂叠层、绝对定位、特殊动画或像素级还原，必须先标记为“近似还原”或调整 UI。
+
+### 0.4 交付物
+
+每个页面至少应有：
+
+1. 页面内容与布局方案：目标、关键词来源、section、文案、CTA、图片需求、内链/产品类目。
+2. Elementor 组件映射：每个 section 对应哪些 Container / widget。
+3. 页面 JS：只按映射施工。
+4. draft 预览链接。
+5. 验收记录：H1、图片、CTA、产品类目、移动端、编辑器可改、合规文案。
+
+### 0.5 文件分工
+
+| 文件 | 定位 |
+|------|------|
+| `Elementor REST API 操作手册.md` | 唯一 SOP + REST 施工规范 |
+| `01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/templates/elementor-utils.js` | 唯一 Elementor 工具库真源 |
+| `elementor-upload.js` | 旧 home 独立脚本，已废弃，不再作为工具源 |
 
 ---
 
@@ -36,6 +114,8 @@ Body: {
 ## 3. 布局规则（最关键）
 
 **多列布局必须用纯 Flexbox 模式，不能用 `structure` 属性！**
+
+术语约定：本项目的 Elementor 多列卡片布局叫 **Flexbox 多列容器**，不是 CSS Grid，也不是 Elementor Grid Container。历史代码里的 `grid()` 只是旧命名，实际代表“row + wrap + width”的 Flexbox 封装。
 
 | 布局模式 | 属性 | 是否生效 | 原因 |
 |---------|------|---------|------|
@@ -87,8 +167,17 @@ Body: {
 | 1 | `icon-box` | Pro | 图标特性卡片 |
 | 2 | `wd_products_widget` | WoodMart | 产品网格（WooCommerce 必需） |
 | 2 | `wd_products_tabs` | WoodMart | 产品标签页（WooCommerce 必需） |
+| 2 | `wd_product_categories` | WoodMart | 产品类目网格 / 类目入口 |
+| 3 | `shortcode` | Elementor | 仅在没有可编辑组件时兜底 |
+| 3 | `html` | Elementor | 仅特殊交互/脚本场景兜底 |
 
 原则：`wd_title` 不要用，`heading` 完全够用。减少主题依赖。
+
+原则补充：
+
+- 能用 Elementor / WoodMart 可编辑组件，就不要用 shortcode / HTML。
+- 产品类目入口优先用 WoodMart `wd_product_categories`，不要默认写 `[product_categories]`。
+- shortcode / HTML 不是常规页面搭建方式，否则后续在 Elementor 编辑器里不好改。
 
 ## 5. Container 格式规则
 
@@ -193,6 +282,7 @@ Body: {
 |------------|------|
 | `wd_products_widget` | 产品网格（样式更丰富） |
 | `wd_products_tabs` | 产品标签页 |
+| `wd_product_categories` | 产品类目网格 |
 
 ## 8. 认证方式
 

@@ -325,6 +325,61 @@ function wdProductsTabs() {
   };
 }
 
+/**
+ * 通用响应式网格布局(layout 原语之一:等分 N列M行)
+ * 只管布局(列数/折行/gap/响应式 width),不碰 cell 内容。
+ *
+ * @param {Element[]|Element[][]} cells  内容单元;每项可是单元素,也可是元素数组(复合卡片)
+ * @param {number|object} cols  列数;数字=desktop,或 {desktop,tablet,mobile}
+ * @param {object} opts  {gap=15, alignItems, cellStyle}
+ *   - cellStyle: 合并进每个 cell 的 width-wrap(如卡片背景/border),不额外加层
+ *
+ * 列宽查表 4→23 / 3→30 / 2→45 / 1→100(匹配 home 现有经验值,改用 grid 后 width 逐字段不变);
+ * 其他列数 fallback 100/n。
+ */
+function grid(cells, cols, opts) {
+  const o = opts || {};
+  const c = typeof cols === 'number' ? { desktop: cols } : cols;
+  const desk = c.desktop;
+  const tab = c.tablet || Math.min(2, desk);
+  const mob = c.mobile || 1;
+  const gap = o.gap != null ? o.gap : 15;
+  const widthByCols = function (n) {
+    return ({ 4: 23, 3: 30, 2: 45, 1: 100 }[n]) || Math.floor(100 / n);
+  };
+  const settings = {
+    content_width: 'full',
+    flex_direction: 'row',
+    flex_wrap: 'wrap',
+    flex_gap: { size: gap, column: String(gap), row: String(gap), unit: 'px' }
+  };
+  if (o.alignItems) settings.flex_align_items = o.alignItems;
+  const cellSettings = Object.assign({
+    content_width: 'full',
+    width: { unit: '%', size: widthByCols(desk), sizes: [] },
+    width_tablet: { unit: '%', size: widthByCols(tab), sizes: [] },
+    width_mobile: { unit: '%', size: widthByCols(mob), sizes: [] }
+  }, o.cellStyle || {});
+  return wrap(settings, cells.map(function (cell) {
+    const inner = Array.isArray(cell) ? cell : [cell];
+    return wrap(cellSettings, inner);
+  }));
+}
+
+/**
+ * 按钮行(layout 小原语) —— 居中横排按钮
+ * home S1/S6 的按钮行模式: flex row + justify center + gap
+ */
+function buttonRow(buttons, opts) {
+  const o = opts || {};
+  const gap = o.gap != null ? o.gap : 15;
+  return wrap({
+    flex_direction: 'row',
+    flex_justify_content: 'center',
+    flex_gap: { size: gap, column: String(gap), row: String(gap), unit: 'px' }
+  }, buttons);
+}
+
 // ============================================================
 // 生成 Homepage
 // ============================================================
@@ -374,10 +429,7 @@ function generateHomepage() {
           }
         }),
         // 按钮行
-        wrap({ flex_direction: 'row', flex_justify_content: 'center', flex_gap: { size: 15, column: '15', row: '15', unit: 'px' } }, [
-          buttonWidget('SHOP JEWELRY', ''),
-          buttonWidget('SHOP CRYSTALS', '')
-        ])
+        buttonRow([buttonWidget('SHOP JEWELRY', ''), buttonWidget('SHOP CRYSTALS', '')])
       ])
     ]),
 
@@ -386,64 +438,27 @@ function generateHomepage() {
     section({
       padding: rPadding('60', '10', '60', '10', {
         mobile: { t: '20', r: '10', b: '20', l: '10' }
-      }),
-      flex_direction: 'row',
-      flex_align_items: 'stretch',
-      flex_wrap: 'wrap',
-      flex_gap: { size: 10, column: '10', row: '10', unit: 'px' }
+      })
     }, [
       // 4个卡片各占 ~25%，平板各 ~45%（2x2），手机各 ~100%（1列）
-      wrap({
-        content_width: 'full',
-        width: { unit: '%', size: 23, sizes: [] },
-        width_tablet: { unit: '%', size: 45, sizes: [] },
-        width_mobile: { unit: '%', size: 100, sizes: [] },
-        background_background: 'classic',
-        background_color: '#EAEAEA',
-        border_border: 'solid',
-        border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true },
-        border_radius: { unit: 'px', top: '10', right: '10', bottom: '10', left: '10', isLinked: true },
-        padding: { unit: 'px', top: '20', right: '10', bottom: '20', left: '10', isLinked: false }
-      }, [iconBox('Peaceful Mind', 'Let crystals bring inner peace and harmony')]),
-
-      wrap({
-        content_width: 'full',
-        width: { unit: '%', size: 23, sizes: [] },
-        width_tablet: { unit: '%', size: 45, sizes: [] },
-        width_mobile: { unit: '%', size: 100, sizes: [] },
-        background_background: 'classic',
-        background_color: '#EAEAEA',
-        border_border: 'solid',
-        border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true },
-        border_radius: { unit: 'px', top: '10', right: '10', bottom: '10', left: '10', isLinked: true },
-        padding: { unit: 'px', top: '20', right: '10', bottom: '20', left: '10', isLinked: false }
-      }, [iconBox('Love Attraction', 'Open your heart chakra, attract true love')]),
-
-      wrap({
-        content_width: 'full',
-        width: { unit: '%', size: 23, sizes: [] },
-        width_tablet: { unit: '%', size: 45, sizes: [] },
-        width_mobile: { unit: '%', size: 100, sizes: [] },
-        background_background: 'classic',
-        background_color: '#EAEAEA',
-        border_border: 'solid',
-        border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true },
-        border_radius: { unit: 'px', top: '10', right: '10', bottom: '10', left: '10', isLinked: true },
-        padding: { unit: 'px', top: '20', right: '10', bottom: '20', left: '10', isLinked: false }
-      }, [iconBox('Dream Manifestation', 'Energy catalyst turning thoughts into reality')]),
-
-      wrap({
-        content_width: 'full',
-        width: { unit: '%', size: 23, sizes: [] },
-        width_tablet: { unit: '%', size: 45, sizes: [] },
-        width_mobile: { unit: '%', size: 100, sizes: [] },
-        background_background: 'classic',
-        background_color: '#EAEAEA',
-        border_border: 'solid',
-        border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true },
-        border_radius: { unit: 'px', top: '10', right: '10', bottom: '10', left: '10', isLinked: true },
-        padding: { unit: 'px', top: '20', right: '10', bottom: '20', left: '10', isLinked: false }
-      }, [iconBox('Spiritual Revival', 'Reconnect with your higher self and soul')])
+      // 卡片样式(背景/border/radius/padding)经 cellStyle 合并进 grid 的 width-wrap,不加层
+      grid([
+        iconBox('Peaceful Mind', 'Let crystals bring inner peace and harmony'),
+        iconBox('Love Attraction', 'Open your heart chakra, attract true love'),
+        iconBox('Dream Manifestation', 'Energy catalyst turning thoughts into reality'),
+        iconBox('Spiritual Revival', 'Reconnect with your higher self and soul')
+      ], { desktop: 4, tablet: 2, mobile: 1 }, {
+        gap: 10,
+        alignItems: 'stretch',
+        cellStyle: {
+          background_background: 'classic',
+          background_color: '#EAEAEA',
+          border_border: 'solid',
+          border_width: { unit: 'px', top: '1', right: '1', bottom: '1', left: '1', isLinked: true },
+          border_radius: { unit: 'px', top: '10', right: '10', bottom: '10', left: '10', isLinked: true },
+          padding: { unit: 'px', top: '20', right: '10', bottom: '20', left: '10', isLinked: false }
+        }
+      })
     ]),
 
     // ===================== Section 3: Products Area (2列) =====================
@@ -503,30 +518,20 @@ function generateHomepage() {
       ]),
 
       // 第一行（4列→平板2列→手机1列）
-      wrap({
-        content_width: 'full',
-        flex_direction: 'row',
-        flex_wrap: 'wrap',
-        flex_gap: { size: 10, column: '10', row: '10', unit: 'px' }
-      }, [
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home.jpeg', 'Love & Relationships', 'Connect deeply and attract harmonious relationships', 'https://goearthward.com/love-relationships/')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-2.jpeg', 'Health & Vitality', 'Support your wellbeing and enhance natural energy', 'https://goearthward.com/health-vitality/')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-3.jpeg', 'Abundance & Success', 'Attract prosperity and unlock your potential', 'https://goearthward.com/abundance-success/')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-5.jpeg', 'Protection & Clearing', 'Shield your energy and cleanse negative influences', 'https://goearthward.com/protection-clearing/')])
-      ]),
+      grid([
+        imageBox('https://goearthward.com/wp-content/uploads/2025/05/home.jpeg', 'Love & Relationships', 'Connect deeply and attract harmonious relationships', 'https://goearthward.com/love-relationships/'),
+        imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-2.jpeg', 'Health & Vitality', 'Support your wellbeing and enhance natural energy', 'https://goearthward.com/health-vitality/'),
+        imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-3.jpeg', 'Abundance & Success', 'Attract prosperity and unlock your potential', 'https://goearthward.com/abundance-success/'),
+        imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-5.jpeg', 'Protection & Clearing', 'Shield your energy and cleanse negative influences', 'https://goearthward.com/protection-clearing/')
+      ], { desktop: 4, tablet: 2, mobile: 1 }, { gap: 10 }),
 
       // 第二行（同样的响应式逻辑）
-      wrap({
-        content_width: 'full',
-        flex_direction: 'row',
-        flex_wrap: 'wrap',
-        flex_gap: { size: 10, column: '10', row: '10', unit: 'px' }
-      }, [
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-4.jpeg', 'Calm & Mindfulness', 'Find inner peace and emotional balance', 'https://goearthward.com/calm-mindfulness/')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-6.jpeg', 'Spiritual Connection', 'Elevate consciousness and deepen your spiritual journey', 'https://goearthward.com/spiritual-connection/')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-7.jpeg', 'Transformation', 'Embrace change and welcome fresh opportunities', 'https://goearthward.com/transformation/')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-8.jpeg', 'Personal Empowerment', 'Strengthen your resolve and amplify your inner power', 'https://goearthward.com/personal-empowerment/')])
-      ])
+      grid([
+        imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-4.jpeg', 'Calm & Mindfulness', 'Find inner peace and emotional balance', 'https://goearthward.com/calm-mindfulness/'),
+        imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-6.jpeg', 'Spiritual Connection', 'Elevate consciousness and deepen your spiritual journey', 'https://goearthward.com/spiritual-connection/'),
+        imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-7.jpeg', 'Transformation', 'Embrace change and welcome fresh opportunities', 'https://goearthward.com/transformation/'),
+        imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-8.jpeg', 'Personal Empowerment', 'Strengthen your resolve and amplify your inner power', 'https://goearthward.com/personal-empowerment/')
+      ], { desktop: 4, tablet: 2, mobile: 1 }, { gap: 10 })
     ]),
 
     // ===================== Section 5: Testimonials (3列→平板2列→手机1列) =====================
@@ -541,33 +546,33 @@ function generateHomepage() {
       heading('Testimonials', { fontSize: 40, color: '#333333' }),
       textEditor('What Our Customers Say', { fontSize: 16, color: '#888888' }),
       spacer(20),
-      // 3列→平板2列→手机1列（flex_wrap: 'wrap' + width 响应式）
-      wrap({ flex_direction: 'row', flex_wrap: 'wrap', flex_gap: { size: 20, column: '20', row: '20', unit: 'px' } }, [
-        wrap({ content_width: 'full', width: { unit: '%', size: 30, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [
+      // 3列→平板2列→手机1列;每个 cell 是 [头像+名+评价] 复合,用数组直接摊进 width-wrap,不加层
+      grid([
+        [
           imageWidget('https://goearthward.com/wp-content/uploads/2025/05/cars-testimon-3.jpg', { radius: 50, width: 80 }),
           heading('Sarah M', { fontSize: 18, align: 'center', color: '#333333' }),
           textEditor('My Moonstone bracelet accompanied me through the most confusing period of my life. It always brings me clear guidance and inspiration.', {
             fontSize: 14, align: 'center',
             extra: { _padding: { unit: 'px', top: '0', right: '10', bottom: '0', left: '10', isLinked: '' } }
           })
-        ]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 30, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [
+        ],
+        [
           imageWidget('https://goearthward.com/wp-content/uploads/2025/05/fashion-testimon-1.jpg', { radius: 50, width: 80 }),
           heading('Michael T', { fontSize: 18, align: 'center', color: '#333333' }),
           textEditor('Since placing a Citrine cluster on my desk, my business has improved significantly. Lucky Crystals truly changed my career path.', {
             fontSize: 14, align: 'center',
             extra: { _padding: { unit: 'px', top: '0', right: '10', bottom: '0', left: '10', isLinked: '' } }
           })
-        ]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 30, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [
+        ],
+        [
           imageWidget('https://goearthward.com/wp-content/uploads/2025/05/cars-testimon-1.jpg', { radius: 50, width: 80 }),
           heading('Emma L', { fontSize: 18, align: 'center', color: '#333333' }),
           textEditor('My Black Obsidian bracelet is like my guardian angel. During an important meeting, touching the bracelet suddenly calmed me down.', {
             fontSize: 14, align: 'center',
             extra: { _padding: { unit: 'px', top: '0', right: '10', bottom: '0', left: '10', isLinked: '' } }
           })
-        ])
-      ])
+        ]
+      ], { desktop: 3, tablet: 2, mobile: 1 }, { gap: 20 })
     ]),
 
     // ===================== Section 6: CTA Banner =====================
@@ -594,10 +599,7 @@ function generateHomepage() {
           color: '#FFFFFF', fontSize: 18,
           extra: { _margin: { unit: 'px', top: '0', right: '0', bottom: '30', left: '0', isLinked: '' } }
         }),
-        wrap({ flex_direction: 'row', flex_justify_content: 'center', flex_gap: { size: 15, column: '15', row: '15', unit: 'px' } }, [
-          buttonWidget('SHOP JEWELRY', ''),
-          buttonWidget('SHOP CRYSTALS', '')
-        ])
+        buttonRow([buttonWidget('SHOP JEWELRY', ''), buttonWidget('SHOP CRYSTALS', '')])
       ])
     ]),
 
@@ -613,17 +615,12 @@ function generateHomepage() {
       textEditor('Explore Our Crystal Collections', { fontSize: 18 }),
       spacer(10),
       // 4列→平板2列→手机1列
-      wrap({
-        content_width: 'full',
-        flex_direction: 'row',
-        flex_wrap: 'wrap',
-        flex_gap: { size: 10, column: '10', row: '10', unit: 'px' }
-      }, [
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-9.jpeg', 'Starter Kits', 'Curated Sets for Your First Steps', '')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-10.jpeg', 'By Intention', 'Find the Perfect Crystal for Your Intention', '')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home.jpeg', 'Best Sellers', 'Our Most Loved Crystal Bracelets', '')]),
-        wrap({ content_width: 'full', width: { unit: '%', size: 23, sizes: [] }, width_tablet: { unit: '%', size: 45, sizes: [] }, width_mobile: { unit: '%', size: 100, sizes: [] } }, [imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-2.jpeg', 'New Arrivals', 'Fresh Crystal Treasures Just Added', '')])
-      ])
+      grid([
+        imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-9.jpeg', 'Starter Kits', 'Curated Sets for Your First Steps', ''),
+        imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-10.jpeg', 'By Intention', 'Find the Perfect Crystal for Your Intention', ''),
+        imageBox('https://goearthward.com/wp-content/uploads/2025/05/home.jpeg', 'Best Sellers', 'Our Most Loved Crystal Bracelets', ''),
+        imageBox('https://goearthward.com/wp-content/uploads/2025/05/home-2.jpeg', 'New Arrivals', 'Fresh Crystal Treasures Just Added', '')
+      ], { desktop: 4, tablet: 2, mobile: 1 }, { gap: 10 })
     ]),
 
     // ===================== Section 8: Newsletter (深色底部) =====================
@@ -725,4 +722,13 @@ async function main() {
   }
 }
 
-main().catch(err => { console.error('Error:', err.message || err); process.exit(1); });
+// 直接运行才上传;被 require 时不触发(供 verify/其他页面脚本复用积木与布局函数)
+if (require.main === module) {
+  main().catch(err => { console.error('Error:', err.message || err); process.exit(1); });
+}
+
+module.exports = {
+  section, wrap, rPadding, heading, textEditor, imageWidget, imageBox, iconBox,
+  buttonWidget, spacer, divider, wdProductsWidget, wdProductsTabs, grid, buttonRow,
+  generateHomepage, apiRequest, main
+};
