@@ -10,7 +10,7 @@
 
 核心目标：产出一个 **WordPress Page 类型、Elementor 可编辑、结构合理、内容准确、视觉上可继续微调** 的页面初稿。
 
-当前范围只覆盖使用 Elementor 承接的 `page` 页面，例如 Home、About、Contact、FAQ、Ethical Sourcing、Intention Page。Post、WooCommerce Product、WooCommerce Category 模板不在本 SOP 范围内。
+当前范围覆盖所有使用 Elementor 承接的 WordPress `page` 页面，例如 Home、About、Contact、FAQ、Ethical Sourcing、Crystal Guide Index、Shop by Stone、Intention Page。Intention 只是当前验证这套流程的试点, 不是 SOP 的唯一适用范围。Post、WooCommerce Product、WooCommerce Category 模板不在本 SOP 范围内。
 
 ### 0.1 输入来源必须来自项目资产
 
@@ -34,23 +34,23 @@
 2A 页面路由 / URL / 主题归属
 → 页面决策 / 优先级确认
 → 关键词支撑
-→ 内容方案
-→ 图片需求
-→ 图片生成/选择/上传
-→ UI 设计文档
-→ HTML UI 原型
+→ 内容方案（content-v1.md，含 section 蓝图与图片需求）
+→ UI 设计文档（ui-v1.md，定义视觉结构与图片位）
+→ 图片生成/选择/上传（补 WP URL / media id / alt）
+→ HTML UI 原型（使用已上传图片或明确占位）
 → 人工确认视觉方向
 → Elementor 可还原性评估
 → Elementor 组件映射
 → JS 施工
 → 上传 draft
-→ 对照 UI / 预览 / 编辑器验收
+→ 对照 content/UI/原型 / 预览 / 编辑器验收
 → Elementor 内微调
 ```
 
 注意：
 
-- UI 确定前，不进入 JS。
+- content-v1.md 和 ui-v1.md 未完成前，不进入 JS。
+- 图片可以在 UI 文档之后生成，但进入 HTML 原型 / JS 前必须有 WP URL 或明确占位策略。
 - 文字 UI 方案不等于可视化设计；至少应有一个 HTML/Figma/截图原型供人工判断视觉。
 - HTML UI 原型只用于确认视觉，不是最终交付，不上传 WordPress。
 - Elementor 组件映射在 JS 施工之前。
@@ -79,7 +79,19 @@
 6. draft 预览链接。
 7. 验收记录：H1、图片、CTA、产品类目、移动端、编辑器可改、合规文案。
 
-Love & Relationships v3 已验证这条路径：
+### 0.4.1 JS 施工门禁
+
+进入 JS 前必须同时满足：
+
+- 页面属于 Elementor Page 范围，不是 post / WooCommerce product / category archive。
+- 已有 `content-v1.md`。
+- 已有 `ui-v1.md`。
+- 已有 HTML/Figma/截图原型，或用户明确接受“按 UI 文档直接施工”的低保真路径。
+- 图片已上传到 WordPress Media Library，或所有图片位都标明临时占位。
+- 产品/类目区使用 WoodMart/Elementor 可编辑组件，不能默认用 shortcode。
+- 多列布局使用 Flexbox Container，不按 CSS Grid 思维施工。
+
+Love & Relationships v3 是这套通用 Elementor Page SOP 的一个试点, 已验证这条路径：
 
 ```
 pages/intentions/love-relationships/content-v1.md

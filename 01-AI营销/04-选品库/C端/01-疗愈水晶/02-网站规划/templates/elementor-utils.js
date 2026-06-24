@@ -529,7 +529,7 @@ function buttonRow(buttons, opts) {
   }, buttons);
 }
 
-// Preferred Flexbox alias for new code. The legacy grid() name is not CSS Grid.
+// Preferred Flexbox alias for new code. The existing grid() helper is Flexbox, not CSS Grid.
 const flexColumns = grid;
 // ============================================================
 // API 工具

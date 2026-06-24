@@ -1,12 +1,12 @@
 {
-  "uploaded_at": "2026-06-20T12:32:57.755Z",
-  "source_json": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\crystal-meaning\\franklinite-meaning.json",
-  "mode": "updated",
+  "uploaded_at": "2026-06-24T01:10:26.998Z",
+  "source_json": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\zodiac-crystals\\aries-crystals.json",
+  "mode": "created",
   "status": "draft",
   "gemstone": {
-    "id": 42020,
-    "slug": "franklinite-meaning",
-    "link": "https://goearthward.com/?post_type=gemstone&p=42020"
+    "id": 43158,
+    "slug": "aries-crystals",
+    "link": "https://goearthward.com/?p=43158"
   },
   "media": {
     "featured": {
