@@ -309,6 +309,26 @@ ctr_opportunities 输出必须**透明展示 benchmark**（非黑箱分数），
 - **阶段2 SERP 反向工程 + Claude 5步 playbook**（年轻站/弱结果策略判断 + LLM 动态生成，NEURONwriter 是固定 NLP 打分）
 - **history diff 复查闭环**（Suganthan 有 generate_report 存盘但**无 diff**，我们有 history_diff 能答"两周前 vs 现在 quick win 进步没"）
 
+### 8.7 工具覆盖度与扩展路线（google-seo-mcp 全族 vs gsc-radar）
+
+google-seo-mcp 是 100+ 工具的能力底座（14 大类），gsc-radar 目前只编排约 12 个（GSC + SERP + History 三族，约 1/8），跑通了最高 ROI 的 GSC 机会挖掘闭环。**未覆盖的大块 = 扩展空间**：
+
+| 类别 | 工具数 | gsc-radar | 扩展价值 |
+|---|---|---|---|
+| GSC | 12 | ✅ 阶段1主力 | — |
+| SERP | 4 | ✅ 阶段2 | — |
+| History | 3 | ✅ 复查闭环 | — |
+| **Cross（GSC×GA4）** | 6 | ❌ 未编排 | ⭐⭐⭐ 落地 §8.6 revenue 差异化：`cross_opportunity_matrix`（机会×转化四象限）+ `cross_seo_to_revenue_attribution`（query→收入）接入决策队列，从"涨流量"升级到"赚钱" |
+| **AEO** | 3 | ❌ 未编排 | ⭐⭐ `serp_aio_monitor` 已发现 AIO 蚕食，但"适配 AIO"（`aeo_ai_bots_robots_audit` 放行 AI 爬虫 / `aeo_llms_txt_check`）没接上 |
+| **CrUX** | 3 | ❌ 仅原则提 | ⭐⭐ 防幻觉原则要 ranking_loss 附证据，`crux_history` 同期 LCP 回归即现成证据，应常态化 |
+| GA4 | 14 | ❌ | 行为分析，部分靠 Cross 间接覆盖 |
+| Schema | 3 | ❌ | CREATE 时 `schema_validate_url` 前置检查 |
+| Logs/Migration/Suggest-Trends/IndexNow | 45+ | ❌ | 技术 SEO/迁移，不同赛道，按需另开 skill |
+
+**扩展优先级**：① Cross 族接决策队列（revenue）→ ② AEO 族接 AIO 适配 → ③ CrUX 接掉量诊断证据。三步把 gsc-radar 从"流量机会雷达"升级成"收入+AI搜索+性能全维度决策助手"。
+
+> 工具清单随版本变，用 `get_capabilities` 动态查；本表只记稳定的"类别→覆盖度"映射。
+
 ---
 
 ## 附录：关键来源索引（均可访问，2026-06 验证）

@@ -23,7 +23,14 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const os = require('os');
-const sharp = require('sharp');
+const sharp = (function loadSharp() {
+  try { return require('sharp'); }
+  catch (e) {
+    // 项目无 node_modules → 用全局 npm 安装的 sharp
+    const globalRoot = require('child_process').execSync('npm root -g').toString().trim();
+    return require(globalRoot + '/sharp');
+  }
+})();
 
 // ---- 读 ~/.env 的 OPENAI_* ----
 function loadEnv() {
@@ -108,7 +115,10 @@ async function main() {
 
   const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
   const images = data.images || {};
-  const outDir = path.join(GENERATED_DIR, 'crystal-meaning', data.slug.replace(/-meaning$/, ''));
+  // 图片一级目录 = JSON 所在产出目录名（04-内容生产/{type}/ → generated/{type}/），与线上 URL 前缀一一对应，零猜测
+  const prodDir = path.basename(path.dirname(jsonPath));
+  const outDir = path.join(GENERATED_DIR, prodDir, data.slug.replace(/-meaning$|-crystals$/, ''));
+  console.log('output prodDir:', prodDir, '| outDir:', outDir);
   fs.mkdirSync(outDir, { recursive: true });
 
   for (const [key, img] of Object.entries(images)) {

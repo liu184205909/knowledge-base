@@ -98,6 +98,23 @@ claude mcp add -s user google-seo-mcp \
 
 ⚠️ **中国大陆代理补丁（必做）**：Mario 版用 google-auth-httplib2，httplib2 不读 HTTPS_PROXY → API 调用 `WinError 10060` 直连超时。必须 patch `build_http()` 走代理，见 [02-Google-Cloud凭证创建指南.md](./02-Google-Cloud凭证创建指南.md) 第六步补遗。与 google-workspace MCP 不冲突（各管一摊：本 MCP 管 GSC/GA4，workspace-mcp 管 Drive/Sheets/Docs/Gmail）。
 
+**类目速查**（google-seo-mcp 14 大类；具体工具数随版本变，用 `get_capabilities` 动态查）：
+
+| 类别 | 用途 |
+|---|---|
+| GSC (12) | 第一方搜索数据：quick_wins / ctr / decay / drops / cannibalization / inspect / sitemap |
+| GA4 (14) | 流量行为：落地页健康 / 异常检测 / 渠道归因 / 新老访客 |
+| Cross (6) | ⭐ GSC×GA4 跨域：opportunity_matrix / seo_to_revenue_attribution |
+| SERP (4) | DataForSEO：check / aio_monitor / paa_extractor / competitor_intersect |
+| CrUX (3) | Core Web Vitals 真实用户数据 |
+| Lighthouse (5) | Lab 性能审计 |
+| Schema (3) | 结构化数据提取/校验/推荐 |
+| AEO (3) | AI 搜索优化：AI 爬虫 robots / llms.txt |
+| Migration (29) | 网站迁移全家桶（301/预渲染/hreflang/索引恢复） |
+| Logs (7) | 抓取预算 / 蜘蛛陷阱 / bot 占比 |
+| History (3) | 快照对比（save/list/diff） |
+| 其余 | Suggest/Trends/Indexing/IndexNow/系统 |
+
 ### SEOctopus MCP（关键词聚类/SEO 审计）
 
 [官方仓库](https://github.com/AgrimCltv/seoctopus) | 开源免费 | 23 个 SEO 工具

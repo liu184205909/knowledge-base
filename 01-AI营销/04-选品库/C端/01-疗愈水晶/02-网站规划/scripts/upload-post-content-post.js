@@ -318,7 +318,7 @@ async function main() {
     console.log('Wrote back to JSON (content + wp_id): ' + opts.jsonPath);
   }
 
-  console.log((existing ? 'Updated' : 'Created') + ' gemstone [' + opts.status + ']: ' + result.id);
+  console.log((existing ? 'Updated' : 'Created') + ' post [' + opts.status + ']: ' + result.id);
   console.log('Rank Math meta updated.');
   console.log('Link: ' + result.link);
   console.log('Wrote: ' + RESULTS_PATH);

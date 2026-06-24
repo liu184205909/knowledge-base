@@ -1,21 +1,21 @@
 {
-  "uploaded_at": "2026-06-24T01:10:26.998Z",
-  "source_json": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\zodiac-crystals\\aries-crystals.json",
+  "uploaded_at": "2026-06-24T15:11:05.655Z",
+  "source_json": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\zodiac-crystals\\gemini-crystals.json",
   "mode": "created",
   "status": "draft",
   "gemstone": {
-    "id": 43158,
-    "slug": "aries-crystals",
-    "link": "https://goearthward.com/?p=43158"
+    "id": 43203,
+    "slug": "gemini-crystals",
+    "link": "https://goearthward.com/?p=43203"
   },
   "media": {
     "featured": {
-      "id": 42081,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/franklinite-hero-1.webp"
+      "id": 43200,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/gemini-crystals-featured.webp"
     },
     "overview": {
-      "id": 42073,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/epistilbite-overview.webp"
+      "id": 43201,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/gemini-crystals-overview.webp"
     },
     "properties": {
       "id": 42074,
@@ -26,8 +26,8 @@
       "source_url": "https://goearthward.com/wp-content/uploads/2026/06/epistilbite-benefits.webp"
     },
     "how_to_use": {
-      "id": 42076,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/epistilbite-how-to-use.webp"
+      "id": 43202,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/gemini-crystals-how-to-use.webp"
     },
     "pairings": {
       "id": 38653,
