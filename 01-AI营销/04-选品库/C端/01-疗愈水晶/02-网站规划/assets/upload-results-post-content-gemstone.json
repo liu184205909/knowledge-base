@@ -1,21 +1,21 @@
 {
-  "uploaded_at": "2026-06-24T15:11:05.655Z",
-  "source_json": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\zodiac-crystals\\gemini-crystals.json",
+  "uploaded_at": "2026-06-25T05:09:57.543Z",
+  "source_json": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\4.zodiac-compatibility\\articles\\gemini-virgo.json",
   "mode": "created",
   "status": "draft",
   "gemstone": {
-    "id": 43203,
-    "slug": "gemini-crystals",
-    "link": "https://goearthward.com/?p=43203"
+    "id": 43245,
+    "slug": "gemini-virgo",
+    "link": "https://goearthward.com/?p=43245"
   },
   "media": {
     "featured": {
-      "id": 43200,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/gemini-crystals-featured.webp"
+      "id": 43238,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/pisces-crystals-featured.webp"
     },
     "overview": {
-      "id": 43201,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/gemini-crystals-overview.webp"
+      "id": 43239,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/pisces-crystals-overview.webp"
     },
     "properties": {
       "id": 42074,
@@ -26,8 +26,8 @@
       "source_url": "https://goearthward.com/wp-content/uploads/2026/06/epistilbite-benefits.webp"
     },
     "how_to_use": {
-      "id": 43202,
-      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/gemini-crystals-how-to-use.webp"
+      "id": 43240,
+      "source_url": "https://goearthward.com/wp-content/uploads/2026/06/pisces-crystals-how-to-use.webp"
     },
     "pairings": {
       "id": 38653,

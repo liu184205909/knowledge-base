@@ -1,0 +1,103 @@
+{
+  "review_date": "2026-06-25",
+  "reviewer": "AI agent (second pass)",
+  "articles_reviewed": 5,
+  "overall_verdict": "NEEDS_FIX",
+  "articles": {
+    "aries-cancer": {
+      "verdict": "NEEDS_FIX",
+      "unique_judgment": "PASS — 模块4-9给出这对特有的洞察：'one wants the argument solved before bed; the other needs a day to cool off'（before-bed对决cool-off）、'declarative sentences vs emotional code'（直白对情感暗码）、'fire heating water toward steam'（火加热水至蒸汽的压力隐喻）。删掉星座名仍能认出这是一对'直接冲突 vs 侧后撤'的配对，命门PASS。",
+      "three_perspectives": "PARTIAL — 科学视角有（fire+water、cardinal square、steam隐喻元素互动），灵性视角有（crystal traditions中Emerald和Rose Quartz的传统用法），心理视角弱：缺少依恋风格/沟通模式理论的引用，'emotional code'更接近描述而非心理学框架。",
+      "natural_language": "PASS — 语言节奏好，长短句交替（'One talks in plain declarative sentences, the other in emotional code.' 短句开场，后接长句展开）。AI痕迹主要在结构上：6个模块都遵循'P1:概述+P2:深化带crystal mention+P3:tension/growth'的固定三段式，段落长度也高度一致。读起来像'懂星座+水晶的朋友'但略书面。",
+      "content_depth": "PASS — 有具体场景（'three plans a week vs one at home'、'the meal already cooked, the couch always open'、'what is the feeling underneath that?'）。有可操作建议（'we take a pause if either asks for one, and we name when we will return'、'shared signal for I need a day to process'、'weekly check-in'）。非废话。",
+      "issues_found": [
+        "关键不一致：模块7 Best Crystal Pair 推荐 Aquamarine(for Aries)/Emerald(for Cancer)/Rose Quartz(harmonizer)，但模块4-9全篇从未提及 Aquamarine——Aries 配石在正文里零出场，只在crystal card里出现。Love段用Emerald（这是Cancer的石头），Sex/Communication/Challenges段全用Rose Quartz。读者从正文过渡到crystal pair会困惑：为什么推荐给Aries的石头正文从没讨论过？",
+        "三段式结构在6个模块中机械重复（P1 spark/tide隐喻 → P2 crystal插入 → P3 具体建议），跨模块阅读有节奏疲劳感。",
+        "心理视角单薄：'emotional code'是文学性描述，未触及依恋理论（如anxious-avoidant dynamics）或非暴力沟通框架，本可以更厚。"
+      ],
+      "fix_suggestions": [
+        "在Love或Challenges段至少插入一次Aquamarine（如'Aquamarine, the stone many Aries partners carry to soften the urgency without losing the spark'），让crystal pair的Aries石在正文有叙事根基。",
+        "至少打破一个模块的段落结构（如Challenges改为两段或四段），消除跨模块的结构雷同。",
+        "在Communication或Challenges段加一句心理学锚点（如'This is the classic anxious-avoidant trap—the more one pursues, the more the other withdraws'），补齐心理视角。"
+      ]
+    },
+    "leo-sagittarius": {
+      "verdict": "NEEDS_FIX",
+      "unique_judgment": "PASS — 独有洞察鲜明：'fall in love the way other people book flights—boldly, optimistically, with a half-formed plan'、'both love the quest but neither is drawn to staying home to mind the life'、'communicates best in motion: the hardest conversations happen on walks, in cars, on trips'。这些洞察删掉星座名仍可识别为'两个追逐者，没人守家'的配对。命门PASS。",
+      "three_perspectives": "FAIL — 严重缺失。科学视角勉强（fire+fire trine提及），灵性视角完全缺失（模块4-9全篇无任何crystal或能量场/脉轮提及——Amber/Herkimer Diamond/Quartz只出现在最后的crystal card里，正文从不讨论），心理视角单薄（'fire-sign pattern of processing through action rather than stillness'接近刻板印象而非心理学框架）。三视角里至少缺灵性这一大块。",
+      "natural_language": "PASS — 语言最自然的一篇。句子长短交替好（'Blunt, fast, and surprisingly unbothered by disagreement.'开场有力），有口语化金句（'the romance slowly starves not from conflict but from drift'、'adventure without anchor eventually drifts out of port'）。读起来真的像懂这对的朋友在聊。AI痕迹弱。",
+      "content_depth": "PASS — 场景非常具体（'bills, laundry, the doctor's appointment postponed for three weeks'、'best group chat, most chaotic travel stories'、'once a week the momentum pauses and each partner says one true thing'）。建议可操作（'shared calendar, chore rotation, weekly state-of-the-union kept sacred'）。内容厚实。",
+      "issues_found": [
+        "最严重问题：模块4-9完全没有任何crystal提及，灵性视角整块缺失。Best Crystal Pair推荐Amber/Herkimer Diamond/Quartz，但读者读到crystal pair时这三块石头从未在正文出现过——推荐缺乏叙事铺垫，像硬塞的广告。这与aries-cancer/gemini-virgo等其它篇的处理方式（crystal自然融入每段）严重不一致。",
+        "三段式结构在每个模块里重复P1-ease / P2-deepening / P3-fracture-line的相同节奏，但因为语言好这个问题被掩盖了。",
+        "'both fire signs recognize each other across a crowded room' 等表达略接近星座刻板印象，可以更深一层。"
+      ],
+      "fix_suggestions": [
+        "在每个模块4-9至少插入一次crystal提及。例如Love段：'Amber, traditionally worn by Leo to stay warm without burning out, is the stone many keep close when the quest gets too fast.' Marriage段：'Herkimer Diamond, used in crystal traditions to clarify intention, supports the shared calendar work.'这是最优先的修复项。",
+        "在Communication或Challenges段补一个心理学锚点（如'high sensation-seeking traits compound—two dopamine-driven partners feed each other's risk appetite'），把科学/心理视角补厚。",
+        "打破至少一个模块的段落节奏。"
+      ]
+    },
+    "taurus-scorpio": {
+      "verdict": "NEEDS_FIX",
+      "unique_judgment": "PASS — 独有洞察非常到位：'two dialects of possession'（占有的两种方言：物质对 intensity）、'one holds through stuff and steadiness, the other through intensity and depth'（贯穿全篇的core metaphor）、'unspoken first, intense when spoken; both can go silent as a power move'。删掉星座名能清楚认出这是'占有欲×2但语言不同'的对宫配对。命门PASS。",
+      "three_perspectives": "PARTIAL — 科学视角有（earth+water nourishment、opposition axis），灵性视角有（Rose Quartz、Black Tourmaline传统用法），心理视角弱：'possession'/'control'/'trust'是描述性而非框架性，未引用依恋理论中control-as-anxiety-defense的视角。",
+      "natural_language": "PARTIAL — 语言质量好但结构AI痕迹明显。'one...the other...'的对称句式在每个模块的开头几乎都出现（Love/Friendship/Sex/Marriage/Communication 全部如此），形成节奏疲劳。'Many couples...'/'The couples who...'句式高频重复。这是5篇里AI写作痕迹最明显的一篇——内容好，但模板感重。",
+      "content_depth": "PASS — 有具体场景（'the home that is always open' vs 'the read on the room'、'we do not weaponize the past, we do not go silent as punishment'、'I need reassurance, not interrogation'）。建议可操作。内容厚。",
+      "issues_found": [
+        "Crystal一致性：模块7推荐Carnelian(for Taurus)/Black Tourmaline(for Scorpio)/Rose Quartz(harmonizer)。正文Carnelian从未在模块4-9出现，与aries-cancer的Aquamarine问题同类。Black Tourmaline和Rose Quartz则反复出场。Taurus的配石在正文缺叙事铺垫。",
+        "AI写作痕迹最重：6个模块几乎都以'one...the other...'的对称结构开头（Love: 'One brings the structure; the other dives for the depth'、Sex: 'One brings the body...The other brings the gravity'、Marriage: 'One partner holds through stuff...the other holds through intensity'），重复过多。",
+        "'holds through stuff'这个phrasing在Love/Friendship/Marriage/Challenges重复了5次以上，作为core metaphor是好的但已过度使用，开始感觉机械。"
+      ],
+      "fix_suggestions": [
+        "在Love或Sex段至少插入一次Carnelian（如'Carnelian, the stone many Taurus partners carry to keep the warmth moving when the tendency is to settle'），让crystal pair的Taurus石在正文有根基。",
+        "改写Friendship、Sex、Communication三个模块的开头，避免都用'one...the other...'对称结构。可以换为场景开场（如Sex从'opposites recognizing the thing they lack'直接进入具体bedroom场景）。",
+        "'holds through stuff'保留在Marriage和Challenges作为主题词，其他模块用变体表达（如'roots into the material'、'builds brick by brick'）。"
+      ]
+    },
+    "gemini-virgo": {
+      "verdict": "PASS",
+      "unique_judgment": "PASS — 独有洞察是5篇里最锋利的：'ruled by the same planet, processing relentlessly in opposite directions—the twin scatters information to find patterns; the maiden sorts patterns to discard noise'（共享水星却处理方向相反）、'one nitpicks to refine, the other nitpicks to deflect—does not feel different on the receiving end'（同样挑剔但动机不同，接收端无差别）。删掉星座名能清楚认出这是'双水星，一散一收'的配对。命门PASS且是5篇最强。",
+      "three_perspectives": "PASS — 三视角覆盖最好的篇章之一。科学视角强（shared Mercury ruler、square aspect、'processing in opposite directions'是认知科学隐喻），灵性视角有（Apatite/Amazonite/Rose Quartz在每段自然融入），心理视角强（'I'm thinking out loud, not critiquing' / 'I'm refining, not rejecting' 这种naming-intent-before-content的沟通策略是真沟通心理学工具）。",
+      "natural_language": "PASS — 语言最锐利、最不像AI的一篇。短句有力（'A working friendship.'、'Critique-heavy.'、'Verbal foreplay is real foreplay.'）。具体场景多（'three corrections, one compliment, a question about the source'、'a rule against unsolicited feedback in the first ten minutes after either partner walks through the door'）。长短句交替最好。",
+      "content_depth": "PASS — 场景最具体（'twin books the trip; maiden makes the packing list'、'twin walks in with three new ideas; maiden asks which one is the priority; twin cannot say because the point was the having of the ideas'）。建议最可操作（'name the function before the critique'、'let the twin own ideation; let the maiden own execution'、'90-day role rotation'）。内容最深。",
+      "issues_found": [
+        "Crystal一致性是5篇里最好的（Apatite/Amazonite/Rose Quartz在每个模块都自然提及），但仍有一个轻微问题：模块7 crystal card给Gemini配的是Apatite，给Virgo配的是Amazonite，但正文里两者的角色有时模糊（如Sex段'amazonite calms the maiden's inner critic'对，但'apatite supports honest speech'并未指明是给twin的——读者可能困惑）。",
+        "Communication段例子很好但稍长（例句连续两个'fires off half-formed idea'/'presents finished plan'的对仗），可以略减。",
+        "Sex段略短于其他模块，可以再厚一点（其它篇Sex都是双段，本篇第二段较短）。"
+      ],
+      "fix_suggestions": [
+        "在crystal提及处更明确partner attribution（如'Apatite, the twin's stone, supports...'而非泛称），与crystal card的for-Gemini/for-Virgo对应。",
+        "Sex段第二段可以加1-2句关于'lunar cycle or shared playlist as ambient anchor'的灵性/感官锚点，加深atmosphere。",
+        "可保留小问题，本篇是5篇里质量最高的，可作为模板基准。"
+      ]
+    },
+    "pisces-pisces": {
+      "verdict": "NEEDS_FIX",
+      "unique_judgment": "PASS — 独有洞察鲜明：'no shore, two oceans—empathy doubles until boundaries dissolve'（无岸双海，共情翻倍直到边界消融）、'a small coven'（小巫团——精确捕捉双Pisces友谊的神秘氛围）、'both are feeling the feeling of the sex more than the sex itself—sometimes more moved by the soundtrack than the touch'（在感受性的感受而非性本身，被配乐触动胜过触碰）。命门PASS。",
+      "three_perspectives": "PARTIAL — 灵性视角强（'Neptune's waters doubled'、'single nervous system shared by two people'、Amethyst/Angelite/Black Tourmaline在每段融入），科学视角弱（'empathy doubles'是描述性，未引用mirror neuron或emotional co-regulation的科学框架），心理视角弱（'dissolution'是诗意而非心理学概念，缺少'codependency'/'enmeshment'等本应被提及的心理学锚点——这是双Pisces最大风险，本应深谈）。",
+      "natural_language": "PASS — 语言最诗意的一篇。金句多（'the conversation rarely stays on the ground'、'the admin is underwater'、'small coven'、'a tide pool somehow surviving inland'）。长短句交替好。AI痕迹主要在三段式结构重复。",
+      "content_depth": "PARTIAL — 场景生动（'send each other songs at midnight, poems that need no explanation, voice notes about a dream'、'the bill sits unpaid because both assumed the other had it'、'pick one practical domain—finances, calendar—and assign it to one partner for ninety days'）。建议可操作。但缺一层：双Pisces最大的真实风险是codependency和escapism（共同逃避现实/成瘾），文章从未点破这层——这是同星座water+water配对的核心阴暗面，缺失让深度打了折扣。",
+      "issues_found": [
+        "Crystal一致性：模块7推荐Amethyst/Angelite/Black Tourmaline，模块4-9都自然提及，一致性良好。但crystal card两个'For Pisces'标签同星座逻辑上ok但视觉冗余。",
+        "Famous Couples段有明确语法错误：'Celebrity Pisces-Pisces couples show the full range of this dynamic — from Pisces's mirrored energy meeting Pisces's its own reflection'——'Pisces's its own reflection'是语法错误（所有格+代词冲突），应改为'meeting its own reflection'或'meeting Pisces's own reflection'。",
+        "Compatibility With Other Signs表格两个表格都完全空白（'<tbody></tbody>'）——同星座配对的边界情况，但这会让SEO内链结构断裂，是技术性缺陷。",
+        "Related links里'/pisces-crystals/'和'/zodiac/pisces/'各重复出现两次，应去重。",
+        "深度缺失：未提及codependency/enmeshment/escapism等双Pisces配对的核心心理风险，'admin is underwater'触及了但未点破。这是同星座配对最关键的内容深度盲点。"
+      ],
+      "fix_suggestions": [
+        "修复Famous Couples段的语法错误（'Pisces's its own reflection' → 'its own reflection'）。",
+        "在Compatibility With Other Signs表格里至少填入pisces与其他11个星座的链接（即使是同星座页也应列出其它选项，用于SEO内链）。",
+        "去重Related links里的重复链接。",
+        "在Challenges或Marriage段增加1段关于codependency/enmeshment的内容（如'The deeper risk is enmeshment—two water signs whose moods become indistinguishable, where one partner's bad day becomes both partners' bad week. The work is building individual practices (solo time, separate friendships, distinct creative outlets) that keep each self distinct inside the merger.'），把心理视角补厚。",
+        "在Marriage段补一句科学锚点（如'mirror neuron sensitivity doubled means emotional co-regulation works—but so does co-dysregulation'）。"
+      ]
+    }
+  },
+  "cross_article_findings": {
+    "pattern_similarity": "句式同质化是5篇最大的共性问题。所有5篇的模块4-9都遵循高度相似的三段式结构：P1=概述配对动态(spark/tide, oxygen, vault/diviner, twin/maiden, two oceans)；P2=深化+插入crystal提及；P3=fracture line/growth edge+可操作建议。这种结构本身是好的，但5篇都用就形成了强模板感。特别是aries-cancer和taurus-scorpio，'one...the other...'对称句式几乎在每个模块的开头出现。leo-sagittarius和pisces-pisces的语言个性化程度更高，gemini-virgo则因内容锋利掩盖了结构同质。FAQ结构、How-to-Use-Crystal-Pair的精确三步法（wear/meditate/grid）在5篇里完全相同，是模板化最明显的部分。",
+    "consistency": "品牌调性基本统一：灵性但不玄乎（crystal traditions用'used in crystal traditions to...'的描述方式，避免医学断言），所有篇都以相同的disclaimer结尾，crystal card的HTML结构、for-X/for-Y/Harmonizer标签逻辑一致。但Crystal Pair推荐逻辑一致性有严重问题：5篇里有3篇（aries-cancer的Aquamarine、leo-sagittarius的全部三石、taurus-scorpio的Carnelian）存在'crystal pair推荐的某块石头在正文模块4-9中从未提及'的不一致——这意味着差异化写作agent未与crystal pair生成逻辑对齐。gemini-virgo和pisces-pisces做到了正文与crystal pair的一致，可作为基准。",
+    "biggest_risk": "三个风险点按优先级：(1) Crystal-segment-mismatch（crystal pair推荐石头与正文脱节）影响3/5篇，是对转化率（crystal购买）最直接的伤害，因为正文没有为推荐铺垫信任。(2) 三段式+对称句式的结构同质化让78篇批量发布时有'同一作者用同一模板'的强AI写作感，对SEO和读者信任是隐患——差异化agent的'差异化'主要体现在内容选择上，未体现在结构变异上。(3) leo-sagittarius完全缺失灵性视角（模块4-9零crystal提及），是5篇里视角覆盖最不达标的，发布前必须补。"
+  },
+  "recommendation": "FIX（需修正4篇后发布，1篇可直接发布）\n\n可直接发布：\n- gemini-virgo（PASS，仅小问题）\n\n发布前必修（按严重程度）：\n1. leo-sagittarius（NEEDS_FIX，紧急）：模块4-9补crystal提及，灵性视角整块缺失。\n2. pisces-pisces（NEEDS_FIX）：修复Famous Couples语法错误、空白compatibility table、重复Related links；补codependency深度内容。\n3. aries-cancer（NEEDS_FIX）：模块4-9至少提及一次Aquamarine（Aries配石），让crystal pair叙事连贯。\n4. taurus-scorpio（NEEDS_FIX）：模块4-9至少提及一次Carnelian（Taurus配石）；改写3个模块的'one...the other'对称开头。\n\n共性问题（影响78篇批量生产，建议在generator层修复）：\n- 在agent prompt中加入约束：模块4-9必须提及crystal pair的全部3块石头至少各一次。\n- 鼓励结构变异：让差异化agent在不同模块使用2段或4段结构，避免6个模块都三段式。\n- 在prompt中加入心理学锚点要求（依恋理论/非暴力沟通/codependency等）补厚第三视角。"
+}

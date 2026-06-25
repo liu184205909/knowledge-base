@@ -1,0 +1,645 @@
+{
+  "total_articles": 78,
+  "checked_at": "2026-06-25T04:29:07.053Z",
+  "summary": {
+    "kill_list_pass": 78,
+    "kill_list_fail": 0,
+    "placeholder_pass": 78,
+    "placeholder_fail": 0,
+    "boundary_pass": 78,
+    "boundary_fail": 0,
+    "flip_pass": 78,
+    "flip_fail": 0,
+    "similarity_pairs_checked": 3003,
+    "similarity_red": 0,
+    "similarity_yellow": 0
+  },
+  "issue_articles": [],
+  "similarity_issues": [],
+  "all_articles": [
+    {
+      "slug": "aquarius-aquarius",
+      "kill": 0,
+      "boundary": 20,
+      "flip": 0,
+      "words": 2169,
+      "placeholders": 0
+    },
+    {
+      "slug": "aquarius-pisces",
+      "kill": 0,
+      "boundary": 15,
+      "flip": 0,
+      "words": 2110,
+      "placeholders": 0
+    },
+    {
+      "slug": "aries-aquarius",
+      "kill": 0,
+      "boundary": 25,
+      "flip": 0,
+      "words": 2204,
+      "placeholders": 0
+    },
+    {
+      "slug": "aries-aries",
+      "kill": 0,
+      "boundary": 23,
+      "flip": 0,
+      "words": 2131,
+      "placeholders": 0
+    },
+    {
+      "slug": "aries-cancer",
+      "kill": 0,
+      "boundary": 27,
+      "flip": 0,
+      "words": 2287,
+      "placeholders": 0
+    },
+    {
+      "slug": "aries-capricorn",
+      "kill": 0,
+      "boundary": 25,
+      "flip": 0,
+      "words": 2174,
+      "placeholders": 0
+    },
+    {
+      "slug": "aries-gemini",
+      "kill": 0,
+      "boundary": 25,
+      "flip": 0,
+      "words": 2220,
+      "placeholders": 0
+    },
+    {
+      "slug": "aries-leo",
+      "kill": 0,
+      "boundary": 24,
+      "flip": 0,
+      "words": 2213,
+      "placeholders": 0
+    },
+    {
+      "slug": "aries-libra",
+      "kill": 0,
+      "boundary": 24,
+      "flip": 0,
+      "words": 2189,
+      "placeholders": 0
+    },
+    {
+      "slug": "aries-pisces",
+      "kill": 0,
+      "boundary": 27,
+      "flip": 0,
+      "words": 2169,
+      "placeholders": 0
+    },
+    {
+      "slug": "aries-sagittarius",
+      "kill": 0,
+      "boundary": 27,
+      "flip": 0,
+      "words": 2264,
+      "placeholders": 0
+    },
+    {
+      "slug": "aries-scorpio",
+      "kill": 0,
+      "boundary": 29,
+      "flip": 0,
+      "words": 2232,
+      "placeholders": 0
+    },
+    {
+      "slug": "aries-taurus",
+      "kill": 0,
+      "boundary": 23,
+      "flip": 0,
+      "words": 2132,
+      "placeholders": 0
+    },
+    {
+      "slug": "aries-virgo",
+      "kill": 0,
+      "boundary": 25,
+      "flip": 0,
+      "words": 2182,
+      "placeholders": 0
+    },
+    {
+      "slug": "cancer-aquarius",
+      "kill": 0,
+      "boundary": 13,
+      "flip": 0,
+      "words": 2012,
+      "placeholders": 0
+    },
+    {
+      "slug": "cancer-cancer",
+      "kill": 0,
+      "boundary": 13,
+      "flip": 1,
+      "words": 2113,
+      "placeholders": 0
+    },
+    {
+      "slug": "cancer-capricorn",
+      "kill": 0,
+      "boundary": 15,
+      "flip": 0,
+      "words": 2027,
+      "placeholders": 0
+    },
+    {
+      "slug": "cancer-leo",
+      "kill": 0,
+      "boundary": 13,
+      "flip": 0,
+      "words": 2063,
+      "placeholders": 0
+    },
+    {
+      "slug": "cancer-libra",
+      "kill": 0,
+      "boundary": 15,
+      "flip": 0,
+      "words": 2020,
+      "placeholders": 0
+    },
+    {
+      "slug": "cancer-pisces",
+      "kill": 1,
+      "boundary": 13,
+      "flip": 0,
+      "words": 1991,
+      "placeholders": 0
+    },
+    {
+      "slug": "cancer-sagittarius",
+      "kill": 0,
+      "boundary": 13,
+      "flip": 0,
+      "words": 2003,
+      "placeholders": 0
+    },
+    {
+      "slug": "cancer-scorpio",
+      "kill": 1,
+      "boundary": 14,
+      "flip": 0,
+      "words": 1990,
+      "placeholders": 0
+    },
+    {
+      "slug": "cancer-virgo",
+      "kill": 0,
+      "boundary": 15,
+      "flip": 0,
+      "words": 2015,
+      "placeholders": 0
+    },
+    {
+      "slug": "capricorn-aquarius",
+      "kill": 0,
+      "boundary": 15,
+      "flip": 0,
+      "words": 2135,
+      "placeholders": 0
+    },
+    {
+      "slug": "capricorn-capricorn",
+      "kill": 0,
+      "boundary": 22,
+      "flip": 0,
+      "words": 2181,
+      "placeholders": 0
+    },
+    {
+      "slug": "capricorn-pisces",
+      "kill": 0,
+      "boundary": 21,
+      "flip": 0,
+      "words": 2185,
+      "placeholders": 0
+    },
+    {
+      "slug": "gemini-aquarius",
+      "kill": 1,
+      "boundary": 15,
+      "flip": 0,
+      "words": 2072,
+      "placeholders": 0
+    },
+    {
+      "slug": "gemini-cancer",
+      "kill": 0,
+      "boundary": 11,
+      "flip": 0,
+      "words": 2170,
+      "placeholders": 0
+    },
+    {
+      "slug": "gemini-capricorn",
+      "kill": 0,
+      "boundary": 12,
+      "flip": 0,
+      "words": 2042,
+      "placeholders": 0
+    },
+    {
+      "slug": "gemini-gemini",
+      "kill": 0,
+      "boundary": 17,
+      "flip": 0,
+      "words": 2120,
+      "placeholders": 0
+    },
+    {
+      "slug": "gemini-leo",
+      "kill": 0,
+      "boundary": 12,
+      "flip": 0,
+      "words": 2193,
+      "placeholders": 0
+    },
+    {
+      "slug": "gemini-libra",
+      "kill": 0,
+      "boundary": 14,
+      "flip": 0,
+      "words": 2078,
+      "placeholders": 0
+    },
+    {
+      "slug": "gemini-pisces",
+      "kill": 0,
+      "boundary": 15,
+      "flip": 1,
+      "words": 2058,
+      "placeholders": 0
+    },
+    {
+      "slug": "gemini-sagittarius",
+      "kill": 0,
+      "boundary": 14,
+      "flip": 0,
+      "words": 2067,
+      "placeholders": 0
+    },
+    {
+      "slug": "gemini-scorpio",
+      "kill": 0,
+      "boundary": 13,
+      "flip": 0,
+      "words": 2029,
+      "placeholders": 0
+    },
+    {
+      "slug": "gemini-virgo",
+      "kill": 0,
+      "boundary": 12,
+      "flip": 0,
+      "words": 2101,
+      "placeholders": 0
+    },
+    {
+      "slug": "leo-aquarius",
+      "kill": 0,
+      "boundary": 19,
+      "flip": 0,
+      "words": 2107,
+      "placeholders": 0
+    },
+    {
+      "slug": "leo-capricorn",
+      "kill": 0,
+      "boundary": 18,
+      "flip": 0,
+      "words": 2084,
+      "placeholders": 0
+    },
+    {
+      "slug": "leo-leo",
+      "kill": 0,
+      "boundary": 14,
+      "flip": 0,
+      "words": 2071,
+      "placeholders": 0
+    },
+    {
+      "slug": "leo-libra",
+      "kill": 0,
+      "boundary": 19,
+      "flip": 0,
+      "words": 2116,
+      "placeholders": 0
+    },
+    {
+      "slug": "leo-pisces",
+      "kill": 0,
+      "boundary": 18,
+      "flip": 0,
+      "words": 2131,
+      "placeholders": 0
+    },
+    {
+      "slug": "leo-sagittarius",
+      "kill": 0,
+      "boundary": 20,
+      "flip": 0,
+      "words": 2147,
+      "placeholders": 0
+    },
+    {
+      "slug": "leo-scorpio",
+      "kill": 0,
+      "boundary": 17,
+      "flip": 0,
+      "words": 2106,
+      "placeholders": 0
+    },
+    {
+      "slug": "leo-virgo",
+      "kill": 0,
+      "boundary": 16,
+      "flip": 0,
+      "words": 2091,
+      "placeholders": 0
+    },
+    {
+      "slug": "libra-aquarius",
+      "kill": 0,
+      "boundary": 12,
+      "flip": 0,
+      "words": 2153,
+      "placeholders": 0
+    },
+    {
+      "slug": "libra-capricorn",
+      "kill": 0,
+      "boundary": 10,
+      "flip": 0,
+      "words": 2132,
+      "placeholders": 0
+    },
+    {
+      "slug": "libra-libra",
+      "kill": 0,
+      "boundary": 9,
+      "flip": 0,
+      "words": 2089,
+      "placeholders": 0
+    },
+    {
+      "slug": "libra-pisces",
+      "kill": 0,
+      "boundary": 11,
+      "flip": 0,
+      "words": 2091,
+      "placeholders": 0
+    },
+    {
+      "slug": "libra-sagittarius",
+      "kill": 0,
+      "boundary": 9,
+      "flip": 0,
+      "words": 2128,
+      "placeholders": 0
+    },
+    {
+      "slug": "libra-scorpio",
+      "kill": 0,
+      "boundary": 13,
+      "flip": 0,
+      "words": 2112,
+      "placeholders": 0
+    },
+    {
+      "slug": "pisces-pisces",
+      "kill": 0,
+      "boundary": 20,
+      "flip": 0,
+      "words": 2207,
+      "placeholders": 0
+    },
+    {
+      "slug": "sagittarius-aquarius",
+      "kill": 0,
+      "boundary": 21,
+      "flip": 0,
+      "words": 2166,
+      "placeholders": 0
+    },
+    {
+      "slug": "sagittarius-capricorn",
+      "kill": 0,
+      "boundary": 14,
+      "flip": 0,
+      "words": 2194,
+      "placeholders": 0
+    },
+    {
+      "slug": "sagittarius-pisces",
+      "kill": 0,
+      "boundary": 14,
+      "flip": 0,
+      "words": 2222,
+      "placeholders": 0
+    },
+    {
+      "slug": "sagittarius-sagittarius",
+      "kill": 0,
+      "boundary": 20,
+      "flip": 0,
+      "words": 2142,
+      "placeholders": 0
+    },
+    {
+      "slug": "scorpio-aquarius",
+      "kill": 0,
+      "boundary": 8,
+      "flip": 0,
+      "words": 2057,
+      "placeholders": 0
+    },
+    {
+      "slug": "scorpio-capricorn",
+      "kill": 0,
+      "boundary": 13,
+      "flip": 0,
+      "words": 2073,
+      "placeholders": 0
+    },
+    {
+      "slug": "scorpio-pisces",
+      "kill": 0,
+      "boundary": 9,
+      "flip": 0,
+      "words": 2084,
+      "placeholders": 0
+    },
+    {
+      "slug": "scorpio-sagittarius",
+      "kill": 0,
+      "boundary": 12,
+      "flip": 0,
+      "words": 2082,
+      "placeholders": 0
+    },
+    {
+      "slug": "scorpio-scorpio",
+      "kill": 0,
+      "boundary": 11,
+      "flip": 0,
+      "words": 2179,
+      "placeholders": 0
+    },
+    {
+      "slug": "taurus-aquarius",
+      "kill": 0,
+      "boundary": 29,
+      "flip": 0,
+      "words": 2146,
+      "placeholders": 0
+    },
+    {
+      "slug": "taurus-cancer",
+      "kill": 0,
+      "boundary": 26,
+      "flip": 0,
+      "words": 2195,
+      "placeholders": 0
+    },
+    {
+      "slug": "taurus-capricorn",
+      "kill": 0,
+      "boundary": 26,
+      "flip": 0,
+      "words": 2147,
+      "placeholders": 0
+    },
+    {
+      "slug": "taurus-gemini",
+      "kill": 0,
+      "boundary": 29,
+      "flip": 0,
+      "words": 2169,
+      "placeholders": 0
+    },
+    {
+      "slug": "taurus-leo",
+      "kill": 0,
+      "boundary": 27,
+      "flip": 0,
+      "words": 2197,
+      "placeholders": 0
+    },
+    {
+      "slug": "taurus-libra",
+      "kill": 0,
+      "boundary": 30,
+      "flip": 0,
+      "words": 2154,
+      "placeholders": 0
+    },
+    {
+      "slug": "taurus-pisces",
+      "kill": 0,
+      "boundary": 28,
+      "flip": 0,
+      "words": 2180,
+      "placeholders": 0
+    },
+    {
+      "slug": "taurus-sagittarius",
+      "kill": 0,
+      "boundary": 29,
+      "flip": 0,
+      "words": 2122,
+      "placeholders": 0
+    },
+    {
+      "slug": "taurus-scorpio",
+      "kill": 0,
+      "boundary": 28,
+      "flip": 0,
+      "words": 2149,
+      "placeholders": 0
+    },
+    {
+      "slug": "taurus-taurus",
+      "kill": 0,
+      "boundary": 24,
+      "flip": 0,
+      "words": 2244,
+      "placeholders": 0
+    },
+    {
+      "slug": "taurus-virgo",
+      "kill": 0,
+      "boundary": 24,
+      "flip": 0,
+      "words": 2174,
+      "placeholders": 0
+    },
+    {
+      "slug": "virgo-aquarius",
+      "kill": 0,
+      "boundary": 16,
+      "flip": 0,
+      "words": 2098,
+      "placeholders": 0
+    },
+    {
+      "slug": "virgo-capricorn",
+      "kill": 0,
+      "boundary": 18,
+      "flip": 0,
+      "words": 2103,
+      "placeholders": 0
+    },
+    {
+      "slug": "virgo-libra",
+      "kill": 0,
+      "boundary": 17,
+      "flip": 0,
+      "words": 2086,
+      "placeholders": 0
+    },
+    {
+      "slug": "virgo-pisces",
+      "kill": 0,
+      "boundary": 17,
+      "flip": 0,
+      "words": 2142,
+      "placeholders": 0
+    },
+    {
+      "slug": "virgo-sagittarius",
+      "kill": 0,
+      "boundary": 19,
+      "flip": 0,
+      "words": 2076,
+      "placeholders": 0
+    },
+    {
+      "slug": "virgo-scorpio",
+      "kill": 0,
+      "boundary": 18,
+      "flip": 0,
+      "words": 2087,
+      "placeholders": 0
+    },
+    {
+      "slug": "virgo-virgo",
+      "kill": 0,
+      "boundary": 15,
+      "flip": 0,
+      "words": 2111,
+      "placeholders": 0
+    }
+  ]
+}

@@ -1,0 +1,2515 @@
+{
+  "_meta": {
+    "total_selected": 169,
+    "from_total": 435,
+    "generated_at": "2026-06-25T06:22:00.411Z"
+  },
+  "tiers": {
+    "T1_pairing": 65,
+    "T2_highscore": 91,
+    "T3_conflict": 13
+  },
+  "articles": [
+    {
+      "slug": "amethyst-and-selenite",
+      "url": "/crystal-combinations/amethyst-and-selenite/",
+      "title": "Amethyst and Selenite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amethyst",
+        "Selenite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Protection & grounding",
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "amethyst-and-lapis",
+      "url": "/crystal-combinations/amethyst-and-lapis/",
+      "title": "Amethyst and Lapis Lazuli Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amethyst",
+        "Lapis Lazuli"
+      ],
+      "bestFor": [
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "amethyst-and-fluorite",
+      "url": "/crystal-combinations/amethyst-and-fluorite/",
+      "title": "Amethyst and Fluorite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amethyst",
+        "Fluorite"
+      ],
+      "bestFor": [
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "amethyst-and-lepidolite",
+      "url": "/crystal-combinations/amethyst-and-lepidolite/",
+      "title": "Amethyst and Lepidolite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amethyst",
+        "Lepidolite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "amethyst-and-kyanite",
+      "url": "/crystal-combinations/amethyst-and-kyanite/",
+      "title": "Amethyst and Kyanite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amethyst",
+        "Kyanite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "amethyst-and-apatite",
+      "url": "/crystal-combinations/amethyst-and-apatite/",
+      "title": "Amethyst and Apatite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amethyst",
+        "Apatite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "amethyst-and-angelite",
+      "url": "/crystal-combinations/amethyst-and-angelite/",
+      "title": "Amethyst and Angelite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amethyst",
+        "Angelite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "tiger-eye-and-citrine",
+      "url": "/crystal-combinations/tiger-eye-and-citrine/",
+      "title": "Tiger Eye and Citrine Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Tiger Eye",
+        "Citrine"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "jade-and-rose-quartz",
+      "url": "/crystal-combinations/jade-and-rose-quartz/",
+      "title": "Jade and Rose Quartz Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Jade",
+        "Rose Quartz"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-black-tourmaline",
+      "url": "/crystal-combinations/rose-quartz-and-black-tourmaline/",
+      "title": "Rose Quartz and Black Tourmaline Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Rose Quartz",
+        "Black Tourmaline"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-amazonite",
+      "url": "/crystal-combinations/rose-quartz-and-amazonite/",
+      "title": "Rose Quartz and Amazonite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Rose Quartz",
+        "Amazonite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-aventurine",
+      "url": "/crystal-combinations/rose-quartz-and-aventurine/",
+      "title": "Rose Quartz and Aventurine Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Rose Quartz",
+        "Aventurine"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-hematite",
+      "url": "/crystal-combinations/rose-quartz-and-hematite/",
+      "title": "Rose Quartz and Hematite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Rose Quartz",
+        "Hematite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-larimar",
+      "url": "/crystal-combinations/rose-quartz-and-larimar/",
+      "title": "Rose Quartz and Larimar Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Rose Quartz",
+        "Larimar"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-rhodonite",
+      "url": "/crystal-combinations/rose-quartz-and-rhodonite/",
+      "title": "Rose Quartz and Rhodonite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Rose Quartz",
+        "Rhodonite"
+      ],
+      "bestFor": [
+        "Love & relationships"
+      ]
+    },
+    {
+      "slug": "carnelian-and-ruby",
+      "url": "/crystal-combinations/carnelian-and-ruby/",
+      "title": "Carnelian and Ruby Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Carnelian",
+        "Ruby"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "carnelian-and-citrine",
+      "url": "/crystal-combinations/carnelian-and-citrine/",
+      "title": "Carnelian and Citrine Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Carnelian",
+        "Citrine"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "carnelian-and-pyrite",
+      "url": "/crystal-combinations/carnelian-and-pyrite/",
+      "title": "Carnelian and Pyrite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Carnelian",
+        "Pyrite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "labradorite-and-moonstone",
+      "url": "/crystal-combinations/labradorite-and-moonstone/",
+      "title": "Labradorite and Moonstone Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Labradorite",
+        "Moonstone"
+      ],
+      "bestFor": [
+        "Meditation & spiritual growth",
+        "New beginnings"
+      ]
+    },
+    {
+      "slug": "labradorite-and-black-tourmaline",
+      "url": "/crystal-combinations/labradorite-and-black-tourmaline/",
+      "title": "Labradorite and Black Tourmaline Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Labradorite",
+        "Black Tourmaline"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "moonstone-and-opal",
+      "url": "/crystal-combinations/moonstone-and-opal/",
+      "title": "Moonstone and Opal Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Moonstone",
+        "Opal"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "obsidian-and-black-tourmaline",
+      "url": "/crystal-combinations/obsidian-and-black-tourmaline/",
+      "title": "Obsidian and Black Tourmaline Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Obsidian",
+        "Black Tourmaline"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "black-tourmaline-and-red-jasper",
+      "url": "/crystal-combinations/black-tourmaline-and-red-jasper/",
+      "title": "Black Tourmaline and Red Jasper Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Black Tourmaline",
+        "Red Jasper"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "black-tourmaline-and-bloodstone",
+      "url": "/crystal-combinations/black-tourmaline-and-bloodstone/",
+      "title": "Black Tourmaline and Bloodstone Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Black Tourmaline",
+        "Bloodstone"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "black-tourmaline-and-hematite",
+      "url": "/crystal-combinations/black-tourmaline-and-hematite/",
+      "title": "Black Tourmaline and Hematite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Black Tourmaline",
+        "Hematite"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "selenite-and-fluorite",
+      "url": "/crystal-combinations/selenite-and-fluorite/",
+      "title": "Selenite and Fluorite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Selenite",
+        "Fluorite"
+      ],
+      "bestFor": [
+        "Meditation & spiritual growth",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "selenite-and-angelite",
+      "url": "/crystal-combinations/selenite-and-angelite/",
+      "title": "Selenite and Angelite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Selenite",
+        "Angelite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "lapis-and-pyrite",
+      "url": "/crystal-combinations/lapis-and-pyrite/",
+      "title": "Lapis Lazuli and Pyrite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Lapis Lazuli",
+        "Pyrite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "citrine-and-malachite",
+      "url": "/crystal-combinations/citrine-and-malachite/",
+      "title": "Citrine and Malachite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Citrine",
+        "Malachite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "citrine-and-apatite",
+      "url": "/crystal-combinations/citrine-and-apatite/",
+      "title": "Citrine and Apatite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Citrine",
+        "Apatite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "citrine-and-pyrite",
+      "url": "/crystal-combinations/citrine-and-pyrite/",
+      "title": "Citrine and Pyrite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Citrine",
+        "Pyrite"
+      ],
+      "bestFor": [
+        "Wealth & abundance",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "red-jasper-and-bloodstone",
+      "url": "/crystal-combinations/red-jasper-and-bloodstone/",
+      "title": "Red Jasper and Bloodstone Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Red Jasper",
+        "Bloodstone"
+      ],
+      "bestFor": [
+        "Protection & grounding",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "amethyst-and-citrine",
+      "url": "/crystal-combinations/amethyst-and-citrine/",
+      "title": "Amethyst and Citrine Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amethyst",
+        "Citrine"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-moonstone",
+      "url": "/crystal-combinations/rose-quartz-and-moonstone/",
+      "title": "Rose Quartz and Moonstone Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Rose Quartz",
+        "Moonstone"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-opal",
+      "url": "/crystal-combinations/rose-quartz-and-opal/",
+      "title": "Rose Quartz and Opal Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Rose Quartz",
+        "Opal"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "amethyst-and-quartz",
+      "url": "/crystal-combinations/amethyst-and-quartz/",
+      "title": "Amethyst and Quartz Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amethyst",
+        "Quartz"
+      ],
+      "bestFor": [
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "tiger-eye-and-hematite",
+      "url": "/crystal-combinations/tiger-eye-and-hematite/",
+      "title": "Tiger Eye and Hematite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Tiger Eye",
+        "Hematite"
+      ],
+      "bestFor": [
+        "Protection & grounding",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "carnelian-and-red-jasper",
+      "url": "/crystal-combinations/carnelian-and-red-jasper/",
+      "title": "Carnelian and Red Jasper Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Carnelian",
+        "Red Jasper"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "carnelian-and-bloodstone",
+      "url": "/crystal-combinations/carnelian-and-bloodstone/",
+      "title": "Carnelian and Bloodstone Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Carnelian",
+        "Bloodstone"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "labradorite-and-kyanite",
+      "url": "/crystal-combinations/labradorite-and-kyanite/",
+      "title": "Labradorite and Kyanite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Labradorite",
+        "Kyanite"
+      ],
+      "bestFor": [
+        "Meditation & spiritual growth",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "quartz-and-citrine",
+      "url": "/crystal-combinations/quartz-and-citrine/",
+      "title": "Quartz and Citrine Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Quartz",
+        "Citrine"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "amethyst-and-jade",
+      "url": "/crystal-combinations/amethyst-and-jade/",
+      "title": "Amethyst and Jade Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Amethyst",
+        "Jade"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "amethyst-and-rose-quartz",
+      "url": "/crystal-combinations/amethyst-and-rose-quartz/",
+      "title": "Amethyst and Rose Quartz Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Amethyst",
+        "Rose Quartz"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "amethyst-and-labradorite",
+      "url": "/crystal-combinations/amethyst-and-labradorite/",
+      "title": "Amethyst and Labradorite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Amethyst",
+        "Labradorite"
+      ],
+      "bestFor": [
+        "Protection & grounding",
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "amethyst-and-obsidian",
+      "url": "/crystal-combinations/amethyst-and-obsidian/",
+      "title": "Amethyst and Obsidian Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Amethyst",
+        "Obsidian"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "amethyst-and-black-tourmaline",
+      "url": "/crystal-combinations/amethyst-and-black-tourmaline/",
+      "title": "Amethyst and Black Tourmaline Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Amethyst",
+        "Black Tourmaline"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "amethyst-and-amazonite",
+      "url": "/crystal-combinations/amethyst-and-amazonite/",
+      "title": "Amethyst and Amazonite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Amethyst",
+        "Amazonite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "amethyst-and-aventurine",
+      "url": "/crystal-combinations/amethyst-and-aventurine/",
+      "title": "Amethyst and Aventurine Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Amethyst",
+        "Aventurine"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "amethyst-and-red-jasper",
+      "url": "/crystal-combinations/amethyst-and-red-jasper/",
+      "title": "Amethyst and Red Jasper Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Amethyst",
+        "Red Jasper"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "amethyst-and-larimar",
+      "url": "/crystal-combinations/amethyst-and-larimar/",
+      "title": "Amethyst and Larimar Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Amethyst",
+        "Larimar"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "tiger-eye-and-black-tourmaline",
+      "url": "/crystal-combinations/tiger-eye-and-black-tourmaline/",
+      "title": "Tiger Eye and Black Tourmaline Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Tiger Eye",
+        "Black Tourmaline"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "jade-and-citrine",
+      "url": "/crystal-combinations/jade-and-citrine/",
+      "title": "Jade and Citrine Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Jade",
+        "Citrine"
+      ],
+      "bestFor": [
+        "Wealth & abundance"
+      ]
+    },
+    {
+      "slug": "rose-quartz-and-quartz",
+      "url": "/crystal-combinations/rose-quartz-and-quartz/",
+      "title": "Rose Quartz and Quartz Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Rose Quartz",
+        "Quartz"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-selenite",
+      "url": "/crystal-combinations/rose-quartz-and-selenite/",
+      "title": "Rose Quartz and Selenite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Rose Quartz",
+        "Selenite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-ruby",
+      "url": "/crystal-combinations/rose-quartz-and-ruby/",
+      "title": "Rose Quartz and Ruby Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Rose Quartz",
+        "Ruby"
+      ],
+      "bestFor": [
+        "Love & relationships"
+      ]
+    },
+    {
+      "slug": "rose-quartz-and-lepidolite",
+      "url": "/crystal-combinations/rose-quartz-and-lepidolite/",
+      "title": "Rose Quartz and Lepidolite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Rose Quartz",
+        "Lepidolite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-malachite",
+      "url": "/crystal-combinations/rose-quartz-and-malachite/",
+      "title": "Rose Quartz and Malachite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Rose Quartz",
+        "Malachite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-angelite",
+      "url": "/crystal-combinations/rose-quartz-and-angelite/",
+      "title": "Rose Quartz and Angelite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Rose Quartz",
+        "Angelite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "black-tourmaline-and-quartz",
+      "url": "/crystal-combinations/black-tourmaline-and-quartz/",
+      "title": "Black Tourmaline and Quartz Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Black Tourmaline",
+        "Quartz"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "black-tourmaline-and-selenite",
+      "url": "/crystal-combinations/black-tourmaline-and-selenite/",
+      "title": "Black Tourmaline and Selenite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Black Tourmaline",
+        "Selenite"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "black-tourmaline-and-fluorite",
+      "url": "/crystal-combinations/black-tourmaline-and-fluorite/",
+      "title": "Black Tourmaline and Fluorite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Black Tourmaline",
+        "Fluorite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "amazonite-and-selenite",
+      "url": "/crystal-combinations/amazonite-and-selenite/",
+      "title": "Amazonite and Selenite Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Amazonite",
+        "Selenite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "aventurine-and-citrine",
+      "url": "/crystal-combinations/aventurine-and-citrine/",
+      "title": "Aventurine and Citrine Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Aventurine",
+        "Citrine"
+      ],
+      "bestFor": [
+        "Wealth & abundance",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "turquoise-and-lapis",
+      "url": "/crystal-combinations/turquoise-and-lapis/",
+      "title": "Turquoise and Lapis Lazuli Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Turquoise",
+        "Lapis Lazuli"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "turquoise-and-citrine",
+      "url": "/crystal-combinations/turquoise-and-citrine/",
+      "title": "Turquoise and Citrine Together: Benefits + How to Use",
+      "tier": "T1_pairing",
+      "score": 80,
+      "band": "Harmonious",
+      "stoneNames": [
+        "Turquoise",
+        "Citrine"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "tiger-eye-and-carnelian",
+      "url": "/crystal-combinations/tiger-eye-and-carnelian/",
+      "title": "Tiger Eye and Carnelian Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Tiger Eye",
+        "Carnelian"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "jade-and-aventurine",
+      "url": "/crystal-combinations/jade-and-aventurine/",
+      "title": "Jade and Aventurine Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Jade",
+        "Aventurine"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Wealth & abundance"
+      ]
+    },
+    {
+      "slug": "amazonite-and-larimar",
+      "url": "/crystal-combinations/amazonite-and-larimar/",
+      "title": "Amazonite and Larimar Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amazonite",
+        "Larimar"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "selenite-and-lapis",
+      "url": "/crystal-combinations/selenite-and-lapis/",
+      "title": "Selenite and Lapis Lazuli Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Selenite",
+        "Lapis Lazuli"
+      ],
+      "bestFor": [
+        "Meditation & spiritual growth",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "selenite-and-lepidolite",
+      "url": "/crystal-combinations/selenite-and-lepidolite/",
+      "title": "Selenite and Lepidolite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Selenite",
+        "Lepidolite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "selenite-and-kyanite",
+      "url": "/crystal-combinations/selenite-and-kyanite/",
+      "title": "Selenite and Kyanite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Selenite",
+        "Kyanite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Meditation & spiritual growth",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "lapis-and-fluorite",
+      "url": "/crystal-combinations/lapis-and-fluorite/",
+      "title": "Lapis Lazuli and Fluorite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Lapis Lazuli",
+        "Fluorite"
+      ],
+      "bestFor": [
+        "Meditation & spiritual growth",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "lapis-and-kyanite",
+      "url": "/crystal-combinations/lapis-and-kyanite/",
+      "title": "Lapis Lazuli and Kyanite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Lapis Lazuli",
+        "Kyanite"
+      ],
+      "bestFor": [
+        "Meditation & spiritual growth",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "lapis-and-angelite",
+      "url": "/crystal-combinations/lapis-and-angelite/",
+      "title": "Lapis Lazuli and Angelite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Lapis Lazuli",
+        "Angelite"
+      ],
+      "bestFor": [
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "fluorite-and-kyanite",
+      "url": "/crystal-combinations/fluorite-and-kyanite/",
+      "title": "Fluorite and Kyanite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Fluorite",
+        "Kyanite"
+      ],
+      "bestFor": [
+        "Meditation & spiritual growth",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "fluorite-and-angelite",
+      "url": "/crystal-combinations/fluorite-and-angelite/",
+      "title": "Fluorite and Angelite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Fluorite",
+        "Angelite"
+      ],
+      "bestFor": [
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "red-jasper-and-hematite",
+      "url": "/crystal-combinations/red-jasper-and-hematite/",
+      "title": "Red Jasper and Hematite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Red Jasper",
+        "Hematite"
+      ],
+      "bestFor": [
+        "Protection & grounding",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "bloodstone-and-hematite",
+      "url": "/crystal-combinations/bloodstone-and-hematite/",
+      "title": "Bloodstone and Hematite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Bloodstone",
+        "Hematite"
+      ],
+      "bestFor": [
+        "Protection & grounding",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "kyanite-and-angelite",
+      "url": "/crystal-combinations/kyanite-and-angelite/",
+      "title": "Kyanite and Angelite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 100,
+      "band": "Excellent",
+      "stoneNames": [
+        "Kyanite",
+        "Angelite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "tiger-eye-and-ruby",
+      "url": "/crystal-combinations/tiger-eye-and-ruby/",
+      "title": "Tiger Eye and Ruby Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Tiger Eye",
+        "Ruby"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "tiger-eye-and-malachite",
+      "url": "/crystal-combinations/tiger-eye-and-malachite/",
+      "title": "Tiger Eye and Malachite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Tiger Eye",
+        "Malachite"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "tiger-eye-and-pyrite",
+      "url": "/crystal-combinations/tiger-eye-and-pyrite/",
+      "title": "Tiger Eye and Pyrite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Tiger Eye",
+        "Pyrite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "labradorite-and-amazonite",
+      "url": "/crystal-combinations/labradorite-and-amazonite/",
+      "title": "Labradorite and Amazonite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Labradorite",
+        "Amazonite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "labradorite-and-turquoise",
+      "url": "/crystal-combinations/labradorite-and-turquoise/",
+      "title": "Labradorite and Turquoise Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Labradorite",
+        "Turquoise"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "obsidian-and-turquoise",
+      "url": "/crystal-combinations/obsidian-and-turquoise/",
+      "title": "Obsidian and Turquoise Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Obsidian",
+        "Turquoise"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "obsidian-and-red-jasper",
+      "url": "/crystal-combinations/obsidian-and-red-jasper/",
+      "title": "Obsidian and Red Jasper Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Obsidian",
+        "Red Jasper"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "obsidian-and-bloodstone",
+      "url": "/crystal-combinations/obsidian-and-bloodstone/",
+      "title": "Obsidian and Bloodstone Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Obsidian",
+        "Bloodstone"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "obsidian-and-hematite",
+      "url": "/crystal-combinations/obsidian-and-hematite/",
+      "title": "Obsidian and Hematite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Obsidian",
+        "Hematite"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "amazonite-and-aventurine",
+      "url": "/crystal-combinations/amazonite-and-aventurine/",
+      "title": "Amazonite and Aventurine Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amazonite",
+        "Aventurine"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "aventurine-and-red-jasper",
+      "url": "/crystal-combinations/aventurine-and-red-jasper/",
+      "title": "Aventurine and Red Jasper Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Aventurine",
+        "Red Jasper"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "aventurine-and-bloodstone",
+      "url": "/crystal-combinations/aventurine-and-bloodstone/",
+      "title": "Aventurine and Bloodstone Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Aventurine",
+        "Bloodstone"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "lapis-and-apatite",
+      "url": "/crystal-combinations/lapis-and-apatite/",
+      "title": "Lapis Lazuli and Apatite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Lapis Lazuli",
+        "Apatite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "fluorite-and-apatite",
+      "url": "/crystal-combinations/fluorite-and-apatite/",
+      "title": "Fluorite and Apatite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Fluorite",
+        "Apatite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "lepidolite-and-kyanite",
+      "url": "/crystal-combinations/lepidolite-and-kyanite/",
+      "title": "Lepidolite and Kyanite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Lepidolite",
+        "Kyanite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "lepidolite-and-angelite",
+      "url": "/crystal-combinations/lepidolite-and-angelite/",
+      "title": "Lepidolite and Angelite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Lepidolite",
+        "Angelite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "kyanite-and-apatite",
+      "url": "/crystal-combinations/kyanite-and-apatite/",
+      "title": "Kyanite and Apatite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Kyanite",
+        "Apatite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "tiger-eye-and-selenite",
+      "url": "/crystal-combinations/tiger-eye-and-selenite/",
+      "title": "Tiger Eye and Selenite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Tiger Eye",
+        "Selenite"
+      ],
+      "bestFor": [
+        "Protection & grounding",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "tiger-eye-and-apatite",
+      "url": "/crystal-combinations/tiger-eye-and-apatite/",
+      "title": "Tiger Eye and Apatite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Tiger Eye",
+        "Apatite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "jade-and-moonstone",
+      "url": "/crystal-combinations/jade-and-moonstone/",
+      "title": "Jade and Moonstone Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Jade",
+        "Moonstone"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "jade-and-amazonite",
+      "url": "/crystal-combinations/jade-and-amazonite/",
+      "title": "Jade and Amazonite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Jade",
+        "Amazonite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "jade-and-red-jasper",
+      "url": "/crystal-combinations/jade-and-red-jasper/",
+      "title": "Jade and Red Jasper Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Jade",
+        "Red Jasper"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "jade-and-larimar",
+      "url": "/crystal-combinations/jade-and-larimar/",
+      "title": "Jade and Larimar Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Jade",
+        "Larimar"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "carnelian-and-apatite",
+      "url": "/crystal-combinations/carnelian-and-apatite/",
+      "title": "Carnelian and Apatite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Carnelian",
+        "Apatite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "labradorite-and-obsidian",
+      "url": "/crystal-combinations/labradorite-and-obsidian/",
+      "title": "Labradorite and Obsidian Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Labradorite",
+        "Obsidian"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "labradorite-and-aventurine",
+      "url": "/crystal-combinations/labradorite-and-aventurine/",
+      "title": "Labradorite and Aventurine Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Labradorite",
+        "Aventurine"
+      ],
+      "bestFor": [
+        "Confidence & motivation",
+        "New beginnings"
+      ]
+    },
+    {
+      "slug": "labradorite-and-red-jasper",
+      "url": "/crystal-combinations/labradorite-and-red-jasper/",
+      "title": "Labradorite and Red Jasper Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Labradorite",
+        "Red Jasper"
+      ],
+      "bestFor": [
+        "Protection & grounding",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "labradorite-and-opal",
+      "url": "/crystal-combinations/labradorite-and-opal/",
+      "title": "Labradorite and Opal Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Labradorite",
+        "Opal"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "labradorite-and-bloodstone",
+      "url": "/crystal-combinations/labradorite-and-bloodstone/",
+      "title": "Labradorite and Bloodstone Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Labradorite",
+        "Bloodstone"
+      ],
+      "bestFor": [
+        "Protection & grounding",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "labradorite-and-hematite",
+      "url": "/crystal-combinations/labradorite-and-hematite/",
+      "title": "Labradorite and Hematite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Labradorite",
+        "Hematite"
+      ],
+      "bestFor": [
+        "Protection & grounding",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "moonstone-and-amazonite",
+      "url": "/crystal-combinations/moonstone-and-amazonite/",
+      "title": "Moonstone and Amazonite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Moonstone",
+        "Amazonite"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "moonstone-and-aventurine",
+      "url": "/crystal-combinations/moonstone-and-aventurine/",
+      "title": "Moonstone and Aventurine Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Moonstone",
+        "Aventurine"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "New beginnings"
+      ]
+    },
+    {
+      "slug": "moonstone-and-red-jasper",
+      "url": "/crystal-combinations/moonstone-and-red-jasper/",
+      "title": "Moonstone and Red Jasper Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Moonstone",
+        "Red Jasper"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "moonstone-and-larimar",
+      "url": "/crystal-combinations/moonstone-and-larimar/",
+      "title": "Moonstone and Larimar Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Moonstone",
+        "Larimar"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "black-tourmaline-and-turquoise",
+      "url": "/crystal-combinations/black-tourmaline-and-turquoise/",
+      "title": "Black Tourmaline and Turquoise Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Black Tourmaline",
+        "Turquoise"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "amazonite-and-red-jasper",
+      "url": "/crystal-combinations/amazonite-and-red-jasper/",
+      "title": "Amazonite and Red Jasper Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amazonite",
+        "Red Jasper"
+      ],
+      "bestFor": [
+        "Sleep & relaxation",
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "amazonite-and-opal",
+      "url": "/crystal-combinations/amazonite-and-opal/",
+      "title": "Amazonite and Opal Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amazonite",
+        "Opal"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "amazonite-and-bloodstone",
+      "url": "/crystal-combinations/amazonite-and-bloodstone/",
+      "title": "Amazonite and Bloodstone Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amazonite",
+        "Bloodstone"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "aventurine-and-hematite",
+      "url": "/crystal-combinations/aventurine-and-hematite/",
+      "title": "Aventurine and Hematite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Aventurine",
+        "Hematite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "aventurine-and-larimar",
+      "url": "/crystal-combinations/aventurine-and-larimar/",
+      "title": "Aventurine and Larimar Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Aventurine",
+        "Larimar"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "selenite-and-apatite",
+      "url": "/crystal-combinations/selenite-and-apatite/",
+      "title": "Selenite and Apatite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Selenite",
+        "Apatite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "turquoise-and-red-jasper",
+      "url": "/crystal-combinations/turquoise-and-red-jasper/",
+      "title": "Turquoise and Red Jasper Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Turquoise",
+        "Red Jasper"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "turquoise-and-bloodstone",
+      "url": "/crystal-combinations/turquoise-and-bloodstone/",
+      "title": "Turquoise and Bloodstone Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Turquoise",
+        "Bloodstone"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "turquoise-and-hematite",
+      "url": "/crystal-combinations/turquoise-and-hematite/",
+      "title": "Turquoise and Hematite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Turquoise",
+        "Hematite"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "fluorite-and-ruby",
+      "url": "/crystal-combinations/fluorite-and-ruby/",
+      "title": "Fluorite and Ruby Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Fluorite",
+        "Ruby"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "ruby-and-citrine",
+      "url": "/crystal-combinations/ruby-and-citrine/",
+      "title": "Ruby and Citrine Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Ruby",
+        "Citrine"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "ruby-and-apatite",
+      "url": "/crystal-combinations/ruby-and-apatite/",
+      "title": "Ruby and Apatite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Ruby",
+        "Apatite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "ruby-and-pyrite",
+      "url": "/crystal-combinations/ruby-and-pyrite/",
+      "title": "Ruby and Pyrite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Ruby",
+        "Pyrite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "lepidolite-and-malachite",
+      "url": "/crystal-combinations/lepidolite-and-malachite/",
+      "title": "Lepidolite and Malachite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Lepidolite",
+        "Malachite"
+      ],
+      "bestFor": [
+        "New beginnings"
+      ]
+    },
+    {
+      "slug": "apatite-and-pyrite",
+      "url": "/crystal-combinations/apatite-and-pyrite/",
+      "title": "Apatite and Pyrite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Apatite",
+        "Pyrite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "amethyst-and-tiger-eye",
+      "url": "/crystal-combinations/amethyst-and-tiger-eye/",
+      "title": "Amethyst and Tiger Eye Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amethyst",
+        "Tiger Eye"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "amethyst-and-malachite",
+      "url": "/crystal-combinations/amethyst-and-malachite/",
+      "title": "Amethyst and Malachite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amethyst",
+        "Malachite"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "tiger-eye-and-lapis",
+      "url": "/crystal-combinations/tiger-eye-and-lapis/",
+      "title": "Tiger Eye and Lapis Lazuli Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Tiger Eye",
+        "Lapis Lazuli"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "tiger-eye-and-fluorite",
+      "url": "/crystal-combinations/tiger-eye-and-fluorite/",
+      "title": "Tiger Eye and Fluorite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Tiger Eye",
+        "Fluorite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "tiger-eye-and-kyanite",
+      "url": "/crystal-combinations/tiger-eye-and-kyanite/",
+      "title": "Tiger Eye and Kyanite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Tiger Eye",
+        "Kyanite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "jade-and-labradorite",
+      "url": "/crystal-combinations/jade-and-labradorite/",
+      "title": "Jade and Labradorite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Jade",
+        "Labradorite"
+      ],
+      "bestFor": [
+        "Meditation & spiritual growth"
+      ]
+    },
+    {
+      "slug": "carnelian-and-selenite",
+      "url": "/crystal-combinations/carnelian-and-selenite/",
+      "title": "Carnelian and Selenite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Carnelian",
+        "Selenite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "carnelian-and-lapis",
+      "url": "/crystal-combinations/carnelian-and-lapis/",
+      "title": "Carnelian and Lapis Lazuli Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Carnelian",
+        "Lapis Lazuli"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "carnelian-and-fluorite",
+      "url": "/crystal-combinations/carnelian-and-fluorite/",
+      "title": "Carnelian and Fluorite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Carnelian",
+        "Fluorite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "carnelian-and-kyanite",
+      "url": "/crystal-combinations/carnelian-and-kyanite/",
+      "title": "Carnelian and Kyanite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Carnelian",
+        "Kyanite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "amazonite-and-hematite",
+      "url": "/crystal-combinations/amazonite-and-hematite/",
+      "title": "Amazonite and Hematite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amazonite",
+        "Hematite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "aventurine-and-opal",
+      "url": "/crystal-combinations/aventurine-and-opal/",
+      "title": "Aventurine and Opal Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Aventurine",
+        "Opal"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "selenite-and-ruby",
+      "url": "/crystal-combinations/selenite-and-ruby/",
+      "title": "Selenite and Ruby Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Selenite",
+        "Ruby"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "selenite-and-citrine",
+      "url": "/crystal-combinations/selenite-and-citrine/",
+      "title": "Selenite and Citrine Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Selenite",
+        "Citrine"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "selenite-and-malachite",
+      "url": "/crystal-combinations/selenite-and-malachite/",
+      "title": "Selenite and Malachite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Selenite",
+        "Malachite"
+      ],
+      "bestFor": [
+        "Protection & grounding"
+      ]
+    },
+    {
+      "slug": "selenite-and-pyrite",
+      "url": "/crystal-combinations/selenite-and-pyrite/",
+      "title": "Selenite and Pyrite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Selenite",
+        "Pyrite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "lapis-and-ruby",
+      "url": "/crystal-combinations/lapis-and-ruby/",
+      "title": "Lapis Lazuli and Ruby Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Lapis Lazuli",
+        "Ruby"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "lapis-and-citrine",
+      "url": "/crystal-combinations/lapis-and-citrine/",
+      "title": "Lapis Lazuli and Citrine Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Lapis Lazuli",
+        "Citrine"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "fluorite-and-citrine",
+      "url": "/crystal-combinations/fluorite-and-citrine/",
+      "title": "Fluorite and Citrine Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Fluorite",
+        "Citrine"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "fluorite-and-pyrite",
+      "url": "/crystal-combinations/fluorite-and-pyrite/",
+      "title": "Fluorite and Pyrite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Fluorite",
+        "Pyrite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "ruby-and-kyanite",
+      "url": "/crystal-combinations/ruby-and-kyanite/",
+      "title": "Ruby and Kyanite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Ruby",
+        "Kyanite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "citrine-and-kyanite",
+      "url": "/crystal-combinations/citrine-and-kyanite/",
+      "title": "Citrine and Kyanite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Citrine",
+        "Kyanite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "red-jasper-and-opal",
+      "url": "/crystal-combinations/red-jasper-and-opal/",
+      "title": "Red Jasper and Opal Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Red Jasper",
+        "Opal"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "red-jasper-and-larimar",
+      "url": "/crystal-combinations/red-jasper-and-larimar/",
+      "title": "Red Jasper and Larimar Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Red Jasper",
+        "Larimar"
+      ],
+      "bestFor": [
+        "Sleep & relaxation"
+      ]
+    },
+    {
+      "slug": "opal-and-bloodstone",
+      "url": "/crystal-combinations/opal-and-bloodstone/",
+      "title": "Opal and Bloodstone Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Opal",
+        "Bloodstone"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "opal-and-hematite",
+      "url": "/crystal-combinations/opal-and-hematite/",
+      "title": "Opal and Hematite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Opal",
+        "Hematite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "kyanite-and-pyrite",
+      "url": "/crystal-combinations/kyanite-and-pyrite/",
+      "title": "Kyanite and Pyrite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Kyanite",
+        "Pyrite"
+      ],
+      "bestFor": [
+        "Confidence & motivation"
+      ]
+    },
+    {
+      "slug": "tiger-eye-and-larimar",
+      "url": "/crystal-combinations/tiger-eye-and-larimar/",
+      "title": "Tiger Eye and Larimar Together: Benefits + How to Use",
+      "tier": "T3_conflict",
+      "score": 35,
+      "band": "Conflicting",
+      "stoneNames": [
+        "Tiger Eye",
+        "Larimar"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "carnelian-and-larimar",
+      "url": "/crystal-combinations/carnelian-and-larimar/",
+      "title": "Carnelian and Larimar Together: Benefits + How to Use",
+      "tier": "T3_conflict",
+      "score": 35,
+      "band": "Conflicting",
+      "stoneNames": [
+        "Carnelian",
+        "Larimar"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "moonstone-and-ruby",
+      "url": "/crystal-combinations/moonstone-and-ruby/",
+      "title": "Moonstone and Ruby Together: Benefits + How to Use",
+      "tier": "T3_conflict",
+      "score": 35,
+      "band": "Conflicting",
+      "stoneNames": [
+        "Moonstone",
+        "Ruby"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "moonstone-and-pyrite",
+      "url": "/crystal-combinations/moonstone-and-pyrite/",
+      "title": "Moonstone and Pyrite Together: Benefits + How to Use",
+      "tier": "T3_conflict",
+      "score": 35,
+      "band": "Conflicting",
+      "stoneNames": [
+        "Moonstone",
+        "Pyrite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "citrine-and-larimar",
+      "url": "/crystal-combinations/citrine-and-larimar/",
+      "title": "Citrine and Larimar Together: Benefits + How to Use",
+      "tier": "T3_conflict",
+      "score": 35,
+      "band": "Conflicting",
+      "stoneNames": [
+        "Citrine",
+        "Larimar"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "opal-and-malachite",
+      "url": "/crystal-combinations/opal-and-malachite/",
+      "title": "Opal and Malachite Together: Benefits + How to Use",
+      "tier": "T3_conflict",
+      "score": 35,
+      "band": "Conflicting",
+      "stoneNames": [
+        "Opal",
+        "Malachite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "larimar-and-pyrite",
+      "url": "/crystal-combinations/larimar-and-pyrite/",
+      "title": "Larimar and Pyrite Together: Benefits + How to Use",
+      "tier": "T3_conflict",
+      "score": 35,
+      "band": "Conflicting",
+      "stoneNames": [
+        "Larimar",
+        "Pyrite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "amethyst-and-carnelian",
+      "url": "/crystal-combinations/amethyst-and-carnelian/",
+      "title": "Amethyst and Carnelian Together: Benefits + How to Use",
+      "tier": "T3_conflict",
+      "score": 25,
+      "band": "Conflicting",
+      "stoneNames": [
+        "Amethyst",
+        "Carnelian"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "jade-and-black-tourmaline",
+      "url": "/crystal-combinations/jade-and-black-tourmaline/",
+      "title": "Jade and Black Tourmaline Together: Benefits + How to Use",
+      "tier": "T3_conflict",
+      "score": 25,
+      "band": "Conflicting",
+      "stoneNames": [
+        "Jade",
+        "Black Tourmaline"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-obsidian",
+      "url": "/crystal-combinations/rose-quartz-and-obsidian/",
+      "title": "Rose Quartz and Obsidian Together: Benefits + How to Use",
+      "tier": "T3_conflict",
+      "score": 25,
+      "band": "Conflicting",
+      "stoneNames": [
+        "Rose Quartz",
+        "Obsidian"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "moonstone-and-citrine",
+      "url": "/crystal-combinations/moonstone-and-citrine/",
+      "title": "Moonstone and Citrine Together: Benefits + How to Use",
+      "tier": "T3_conflict",
+      "score": 25,
+      "band": "Conflicting",
+      "stoneNames": [
+        "Moonstone",
+        "Citrine"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "selenite-and-red-jasper",
+      "url": "/crystal-combinations/selenite-and-red-jasper/",
+      "title": "Selenite and Red Jasper Together: Benefits + How to Use",
+      "tier": "T3_conflict",
+      "score": 25,
+      "band": "Conflicting",
+      "stoneNames": [
+        "Selenite",
+        "Red Jasper"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "turquoise-and-malachite",
+      "url": "/crystal-combinations/turquoise-and-malachite/",
+      "title": "Turquoise and Malachite Together: Benefits + How to Use",
+      "tier": "T3_conflict",
+      "score": 25,
+      "band": "Conflicting",
+      "stoneNames": [
+        "Turquoise",
+        "Malachite"
+      ],
+      "bestFor": []
+    }
+  ]
+}
