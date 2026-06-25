@@ -3,7 +3,7 @@
  *
  * 404 根因：
  *   - /gemstone/quartz-meaning/、/gemstone/bloodstone-meaning/ —— 站上无 Clear Quartz / Bloodstone 的 meaning 页
- *   - /horoscope/aries-2026-07/、/zodiac-compatibility/aries-gemini/、/zodiac-crystals/ —— P2月运 / P1配对 / hub 尚未生产
+ *   - /horoscope/aries-2026-07/、/aries-gemini/、/zodiac-crystals/ —— P2月运 / P1配对 / hub 尚未生产
  * 处理：摘掉这 5 条失效链接（保留有效内链 ≥8 条，仍满足框架"≥5 内链"）。集群页待 P1/P2/hub 上线后再加回。
  *
  * 用法：node fix-aries-links.js
@@ -21,7 +21,7 @@ const REMOVALS = [
   '\n<p>Learn more: <a href="/gemstone/quartz-meaning/">Clear Quartz Meaning: Complete Guide</a></p>',
   '\n<p>Learn more: <a href="/gemstone/bloodstone-meaning/">Bloodstone Meaning: Complete Guide</a></p>',
   '\n<li><a href="/horoscope/aries-2026-07/">Aries Monthly Horoscope + Crystal of the Month</a></li>',
-  '\n<li><a href="/zodiac-compatibility/aries-gemini/">Aries and Gemini Compatibility + Crystal Pair</a></li>',
+  '\n<li><a href="/aries-gemini/">Aries and Gemini Compatibility + Crystal Pair</a></li>',
   '\n<li><a href="/zodiac-crystals/">Crystals for All Zodiac Signs</a></li>',
 ];
 

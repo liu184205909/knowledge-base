@@ -25,7 +25,7 @@
   },
   "pairs": {
     "aries-aries": {
-      "url": "/zodiac-compatibility/aries-aries/",
+      "url": "/aries-aries/",
       "slug": "aries-aries",
       "signs": [
         "Aries",
@@ -62,7 +62,7 @@
       }
     },
     "aries-taurus": {
-      "url": "/zodiac-compatibility/aries-taurus/",
+      "url": "/aries-taurus/",
       "slug": "aries-taurus",
       "signs": [
         "Aries",
@@ -99,7 +99,7 @@
       }
     },
     "aries-gemini": {
-      "url": "/zodiac-compatibility/aries-gemini/",
+      "url": "/aries-gemini/",
       "slug": "aries-gemini",
       "signs": [
         "Aries",
@@ -136,7 +136,7 @@
       }
     },
     "aries-cancer": {
-      "url": "/zodiac-compatibility/aries-cancer/",
+      "url": "/aries-cancer/",
       "slug": "aries-cancer",
       "signs": [
         "Aries",
@@ -173,7 +173,7 @@
       }
     },
     "aries-leo": {
-      "url": "/zodiac-compatibility/aries-leo/",
+      "url": "/aries-leo/",
       "slug": "aries-leo",
       "signs": [
         "Aries",
@@ -210,7 +210,7 @@
       }
     },
     "aries-virgo": {
-      "url": "/zodiac-compatibility/aries-virgo/",
+      "url": "/aries-virgo/",
       "slug": "aries-virgo",
       "signs": [
         "Aries",
@@ -247,7 +247,7 @@
       }
     },
     "aries-libra": {
-      "url": "/zodiac-compatibility/aries-libra/",
+      "url": "/aries-libra/",
       "slug": "aries-libra",
       "signs": [
         "Aries",
@@ -284,7 +284,7 @@
       }
     },
     "aries-scorpio": {
-      "url": "/zodiac-compatibility/aries-scorpio/",
+      "url": "/aries-scorpio/",
       "slug": "aries-scorpio",
       "signs": [
         "Aries",
@@ -321,7 +321,7 @@
       }
     },
     "aries-sagittarius": {
-      "url": "/zodiac-compatibility/aries-sagittarius/",
+      "url": "/aries-sagittarius/",
       "slug": "aries-sagittarius",
       "signs": [
         "Aries",
@@ -358,7 +358,7 @@
       }
     },
     "aries-capricorn": {
-      "url": "/zodiac-compatibility/aries-capricorn/",
+      "url": "/aries-capricorn/",
       "slug": "aries-capricorn",
       "signs": [
         "Aries",
@@ -395,7 +395,7 @@
       }
     },
     "aries-aquarius": {
-      "url": "/zodiac-compatibility/aries-aquarius/",
+      "url": "/aries-aquarius/",
       "slug": "aries-aquarius",
       "signs": [
         "Aries",
@@ -432,7 +432,7 @@
       }
     },
     "aries-pisces": {
-      "url": "/zodiac-compatibility/aries-pisces/",
+      "url": "/aries-pisces/",
       "slug": "aries-pisces",
       "signs": [
         "Aries",
@@ -469,7 +469,7 @@
       }
     },
     "taurus-taurus": {
-      "url": "/zodiac-compatibility/taurus-taurus/",
+      "url": "/taurus-taurus/",
       "slug": "taurus-taurus",
       "signs": [
         "Taurus",
@@ -506,7 +506,7 @@
       }
     },
     "taurus-gemini": {
-      "url": "/zodiac-compatibility/taurus-gemini/",
+      "url": "/taurus-gemini/",
       "slug": "taurus-gemini",
       "signs": [
         "Taurus",
@@ -543,7 +543,7 @@
       }
     },
     "taurus-cancer": {
-      "url": "/zodiac-compatibility/taurus-cancer/",
+      "url": "/taurus-cancer/",
       "slug": "taurus-cancer",
       "signs": [
         "Taurus",
@@ -580,7 +580,7 @@
       }
     },
     "taurus-leo": {
-      "url": "/zodiac-compatibility/taurus-leo/",
+      "url": "/taurus-leo/",
       "slug": "taurus-leo",
       "signs": [
         "Taurus",
@@ -617,7 +617,7 @@
       }
     },
     "taurus-virgo": {
-      "url": "/zodiac-compatibility/taurus-virgo/",
+      "url": "/taurus-virgo/",
       "slug": "taurus-virgo",
       "signs": [
         "Taurus",
@@ -654,7 +654,7 @@
       }
     },
     "taurus-libra": {
-      "url": "/zodiac-compatibility/taurus-libra/",
+      "url": "/taurus-libra/",
       "slug": "taurus-libra",
       "signs": [
         "Taurus",
@@ -691,7 +691,7 @@
       }
     },
     "taurus-scorpio": {
-      "url": "/zodiac-compatibility/taurus-scorpio/",
+      "url": "/taurus-scorpio/",
       "slug": "taurus-scorpio",
       "signs": [
         "Taurus",
@@ -728,7 +728,7 @@
       }
     },
     "taurus-sagittarius": {
-      "url": "/zodiac-compatibility/taurus-sagittarius/",
+      "url": "/taurus-sagittarius/",
       "slug": "taurus-sagittarius",
       "signs": [
         "Taurus",
@@ -765,7 +765,7 @@
       }
     },
     "taurus-capricorn": {
-      "url": "/zodiac-compatibility/taurus-capricorn/",
+      "url": "/taurus-capricorn/",
       "slug": "taurus-capricorn",
       "signs": [
         "Taurus",
@@ -802,7 +802,7 @@
       }
     },
     "taurus-aquarius": {
-      "url": "/zodiac-compatibility/taurus-aquarius/",
+      "url": "/taurus-aquarius/",
       "slug": "taurus-aquarius",
       "signs": [
         "Taurus",
@@ -839,7 +839,7 @@
       }
     },
     "taurus-pisces": {
-      "url": "/zodiac-compatibility/taurus-pisces/",
+      "url": "/taurus-pisces/",
       "slug": "taurus-pisces",
       "signs": [
         "Taurus",
@@ -876,7 +876,7 @@
       }
     },
     "gemini-gemini": {
-      "url": "/zodiac-compatibility/gemini-gemini/",
+      "url": "/gemini-gemini/",
       "slug": "gemini-gemini",
       "signs": [
         "Gemini",
@@ -913,7 +913,7 @@
       }
     },
     "gemini-cancer": {
-      "url": "/zodiac-compatibility/gemini-cancer/",
+      "url": "/gemini-cancer/",
       "slug": "gemini-cancer",
       "signs": [
         "Gemini",
@@ -950,7 +950,7 @@
       }
     },
     "gemini-leo": {
-      "url": "/zodiac-compatibility/gemini-leo/",
+      "url": "/gemini-leo/",
       "slug": "gemini-leo",
       "signs": [
         "Gemini",
@@ -987,7 +987,7 @@
       }
     },
     "gemini-virgo": {
-      "url": "/zodiac-compatibility/gemini-virgo/",
+      "url": "/gemini-virgo/",
       "slug": "gemini-virgo",
       "signs": [
         "Gemini",
@@ -1024,7 +1024,7 @@
       }
     },
     "gemini-libra": {
-      "url": "/zodiac-compatibility/gemini-libra/",
+      "url": "/gemini-libra/",
       "slug": "gemini-libra",
       "signs": [
         "Gemini",
@@ -1061,7 +1061,7 @@
       }
     },
     "gemini-scorpio": {
-      "url": "/zodiac-compatibility/gemini-scorpio/",
+      "url": "/gemini-scorpio/",
       "slug": "gemini-scorpio",
       "signs": [
         "Gemini",
@@ -1098,7 +1098,7 @@
       }
     },
     "gemini-sagittarius": {
-      "url": "/zodiac-compatibility/gemini-sagittarius/",
+      "url": "/gemini-sagittarius/",
       "slug": "gemini-sagittarius",
       "signs": [
         "Gemini",
@@ -1135,7 +1135,7 @@
       }
     },
     "gemini-capricorn": {
-      "url": "/zodiac-compatibility/gemini-capricorn/",
+      "url": "/gemini-capricorn/",
       "slug": "gemini-capricorn",
       "signs": [
         "Gemini",
@@ -1172,7 +1172,7 @@
       }
     },
     "gemini-aquarius": {
-      "url": "/zodiac-compatibility/gemini-aquarius/",
+      "url": "/gemini-aquarius/",
       "slug": "gemini-aquarius",
       "signs": [
         "Gemini",
@@ -1209,7 +1209,7 @@
       }
     },
     "gemini-pisces": {
-      "url": "/zodiac-compatibility/gemini-pisces/",
+      "url": "/gemini-pisces/",
       "slug": "gemini-pisces",
       "signs": [
         "Gemini",
@@ -1246,7 +1246,7 @@
       }
     },
     "cancer-cancer": {
-      "url": "/zodiac-compatibility/cancer-cancer/",
+      "url": "/cancer-cancer/",
       "slug": "cancer-cancer",
       "signs": [
         "Cancer",
@@ -1283,7 +1283,7 @@
       }
     },
     "cancer-leo": {
-      "url": "/zodiac-compatibility/cancer-leo/",
+      "url": "/cancer-leo/",
       "slug": "cancer-leo",
       "signs": [
         "Cancer",
@@ -1320,7 +1320,7 @@
       }
     },
     "cancer-virgo": {
-      "url": "/zodiac-compatibility/cancer-virgo/",
+      "url": "/cancer-virgo/",
       "slug": "cancer-virgo",
       "signs": [
         "Cancer",
@@ -1357,7 +1357,7 @@
       }
     },
     "cancer-libra": {
-      "url": "/zodiac-compatibility/cancer-libra/",
+      "url": "/cancer-libra/",
       "slug": "cancer-libra",
       "signs": [
         "Cancer",
@@ -1394,7 +1394,7 @@
       }
     },
     "cancer-scorpio": {
-      "url": "/zodiac-compatibility/cancer-scorpio/",
+      "url": "/cancer-scorpio/",
       "slug": "cancer-scorpio",
       "signs": [
         "Cancer",
@@ -1431,7 +1431,7 @@
       }
     },
     "cancer-sagittarius": {
-      "url": "/zodiac-compatibility/cancer-sagittarius/",
+      "url": "/cancer-sagittarius/",
       "slug": "cancer-sagittarius",
       "signs": [
         "Cancer",
@@ -1468,7 +1468,7 @@
       }
     },
     "cancer-capricorn": {
-      "url": "/zodiac-compatibility/cancer-capricorn/",
+      "url": "/cancer-capricorn/",
       "slug": "cancer-capricorn",
       "signs": [
         "Cancer",
@@ -1505,7 +1505,7 @@
       }
     },
     "cancer-aquarius": {
-      "url": "/zodiac-compatibility/cancer-aquarius/",
+      "url": "/cancer-aquarius/",
       "slug": "cancer-aquarius",
       "signs": [
         "Cancer",
@@ -1542,7 +1542,7 @@
       }
     },
     "cancer-pisces": {
-      "url": "/zodiac-compatibility/cancer-pisces/",
+      "url": "/cancer-pisces/",
       "slug": "cancer-pisces",
       "signs": [
         "Cancer",
@@ -1579,7 +1579,7 @@
       }
     },
     "leo-leo": {
-      "url": "/zodiac-compatibility/leo-leo/",
+      "url": "/leo-leo/",
       "slug": "leo-leo",
       "signs": [
         "Leo",
@@ -1616,7 +1616,7 @@
       }
     },
     "leo-virgo": {
-      "url": "/zodiac-compatibility/leo-virgo/",
+      "url": "/leo-virgo/",
       "slug": "leo-virgo",
       "signs": [
         "Leo",
@@ -1653,7 +1653,7 @@
       }
     },
     "leo-libra": {
-      "url": "/zodiac-compatibility/leo-libra/",
+      "url": "/leo-libra/",
       "slug": "leo-libra",
       "signs": [
         "Leo",
@@ -1690,7 +1690,7 @@
       }
     },
     "leo-scorpio": {
-      "url": "/zodiac-compatibility/leo-scorpio/",
+      "url": "/leo-scorpio/",
       "slug": "leo-scorpio",
       "signs": [
         "Leo",
@@ -1727,7 +1727,7 @@
       }
     },
     "leo-sagittarius": {
-      "url": "/zodiac-compatibility/leo-sagittarius/",
+      "url": "/leo-sagittarius/",
       "slug": "leo-sagittarius",
       "signs": [
         "Leo",
@@ -1764,7 +1764,7 @@
       }
     },
     "leo-capricorn": {
-      "url": "/zodiac-compatibility/leo-capricorn/",
+      "url": "/leo-capricorn/",
       "slug": "leo-capricorn",
       "signs": [
         "Leo",
@@ -1801,7 +1801,7 @@
       }
     },
     "leo-aquarius": {
-      "url": "/zodiac-compatibility/leo-aquarius/",
+      "url": "/leo-aquarius/",
       "slug": "leo-aquarius",
       "signs": [
         "Leo",
@@ -1838,7 +1838,7 @@
       }
     },
     "leo-pisces": {
-      "url": "/zodiac-compatibility/leo-pisces/",
+      "url": "/leo-pisces/",
       "slug": "leo-pisces",
       "signs": [
         "Leo",
@@ -1875,7 +1875,7 @@
       }
     },
     "virgo-virgo": {
-      "url": "/zodiac-compatibility/virgo-virgo/",
+      "url": "/virgo-virgo/",
       "slug": "virgo-virgo",
       "signs": [
         "Virgo",
@@ -1912,7 +1912,7 @@
       }
     },
     "virgo-libra": {
-      "url": "/zodiac-compatibility/virgo-libra/",
+      "url": "/virgo-libra/",
       "slug": "virgo-libra",
       "signs": [
         "Virgo",
@@ -1949,7 +1949,7 @@
       }
     },
     "virgo-scorpio": {
-      "url": "/zodiac-compatibility/virgo-scorpio/",
+      "url": "/virgo-scorpio/",
       "slug": "virgo-scorpio",
       "signs": [
         "Virgo",
@@ -1986,7 +1986,7 @@
       }
     },
     "virgo-sagittarius": {
-      "url": "/zodiac-compatibility/virgo-sagittarius/",
+      "url": "/virgo-sagittarius/",
       "slug": "virgo-sagittarius",
       "signs": [
         "Virgo",
@@ -2023,7 +2023,7 @@
       }
     },
     "virgo-capricorn": {
-      "url": "/zodiac-compatibility/virgo-capricorn/",
+      "url": "/virgo-capricorn/",
       "slug": "virgo-capricorn",
       "signs": [
         "Virgo",
@@ -2060,7 +2060,7 @@
       }
     },
     "virgo-aquarius": {
-      "url": "/zodiac-compatibility/virgo-aquarius/",
+      "url": "/virgo-aquarius/",
       "slug": "virgo-aquarius",
       "signs": [
         "Virgo",
@@ -2097,7 +2097,7 @@
       }
     },
     "virgo-pisces": {
-      "url": "/zodiac-compatibility/virgo-pisces/",
+      "url": "/virgo-pisces/",
       "slug": "virgo-pisces",
       "signs": [
         "Virgo",
@@ -2134,7 +2134,7 @@
       }
     },
     "libra-libra": {
-      "url": "/zodiac-compatibility/libra-libra/",
+      "url": "/libra-libra/",
       "slug": "libra-libra",
       "signs": [
         "Libra",
@@ -2171,7 +2171,7 @@
       }
     },
     "libra-scorpio": {
-      "url": "/zodiac-compatibility/libra-scorpio/",
+      "url": "/libra-scorpio/",
       "slug": "libra-scorpio",
       "signs": [
         "Libra",
@@ -2208,7 +2208,7 @@
       }
     },
     "libra-sagittarius": {
-      "url": "/zodiac-compatibility/libra-sagittarius/",
+      "url": "/libra-sagittarius/",
       "slug": "libra-sagittarius",
       "signs": [
         "Libra",
@@ -2245,7 +2245,7 @@
       }
     },
     "libra-capricorn": {
-      "url": "/zodiac-compatibility/libra-capricorn/",
+      "url": "/libra-capricorn/",
       "slug": "libra-capricorn",
       "signs": [
         "Libra",
@@ -2282,7 +2282,7 @@
       }
     },
     "libra-aquarius": {
-      "url": "/zodiac-compatibility/libra-aquarius/",
+      "url": "/libra-aquarius/",
       "slug": "libra-aquarius",
       "signs": [
         "Libra",
@@ -2319,7 +2319,7 @@
       }
     },
     "libra-pisces": {
-      "url": "/zodiac-compatibility/libra-pisces/",
+      "url": "/libra-pisces/",
       "slug": "libra-pisces",
       "signs": [
         "Libra",
@@ -2356,7 +2356,7 @@
       }
     },
     "scorpio-scorpio": {
-      "url": "/zodiac-compatibility/scorpio-scorpio/",
+      "url": "/scorpio-scorpio/",
       "slug": "scorpio-scorpio",
       "signs": [
         "Scorpio",
@@ -2393,7 +2393,7 @@
       }
     },
     "scorpio-sagittarius": {
-      "url": "/zodiac-compatibility/scorpio-sagittarius/",
+      "url": "/scorpio-sagittarius/",
       "slug": "scorpio-sagittarius",
       "signs": [
         "Scorpio",
@@ -2430,7 +2430,7 @@
       }
     },
     "scorpio-capricorn": {
-      "url": "/zodiac-compatibility/scorpio-capricorn/",
+      "url": "/scorpio-capricorn/",
       "slug": "scorpio-capricorn",
       "signs": [
         "Scorpio",
@@ -2467,7 +2467,7 @@
       }
     },
     "scorpio-aquarius": {
-      "url": "/zodiac-compatibility/scorpio-aquarius/",
+      "url": "/scorpio-aquarius/",
       "slug": "scorpio-aquarius",
       "signs": [
         "Scorpio",
@@ -2504,7 +2504,7 @@
       }
     },
     "scorpio-pisces": {
-      "url": "/zodiac-compatibility/scorpio-pisces/",
+      "url": "/scorpio-pisces/",
       "slug": "scorpio-pisces",
       "signs": [
         "Scorpio",
@@ -2541,7 +2541,7 @@
       }
     },
     "sagittarius-sagittarius": {
-      "url": "/zodiac-compatibility/sagittarius-sagittarius/",
+      "url": "/sagittarius-sagittarius/",
       "slug": "sagittarius-sagittarius",
       "signs": [
         "Sagittarius",
@@ -2578,7 +2578,7 @@
       }
     },
     "sagittarius-capricorn": {
-      "url": "/zodiac-compatibility/sagittarius-capricorn/",
+      "url": "/sagittarius-capricorn/",
       "slug": "sagittarius-capricorn",
       "signs": [
         "Sagittarius",
@@ -2615,7 +2615,7 @@
       }
     },
     "sagittarius-aquarius": {
-      "url": "/zodiac-compatibility/sagittarius-aquarius/",
+      "url": "/sagittarius-aquarius/",
       "slug": "sagittarius-aquarius",
       "signs": [
         "Sagittarius",
@@ -2652,7 +2652,7 @@
       }
     },
     "sagittarius-pisces": {
-      "url": "/zodiac-compatibility/sagittarius-pisces/",
+      "url": "/sagittarius-pisces/",
       "slug": "sagittarius-pisces",
       "signs": [
         "Sagittarius",
@@ -2689,7 +2689,7 @@
       }
     },
     "capricorn-capricorn": {
-      "url": "/zodiac-compatibility/capricorn-capricorn/",
+      "url": "/capricorn-capricorn/",
       "slug": "capricorn-capricorn",
       "signs": [
         "Capricorn",
@@ -2726,7 +2726,7 @@
       }
     },
     "capricorn-aquarius": {
-      "url": "/zodiac-compatibility/capricorn-aquarius/",
+      "url": "/capricorn-aquarius/",
       "slug": "capricorn-aquarius",
       "signs": [
         "Capricorn",
@@ -2763,7 +2763,7 @@
       }
     },
     "capricorn-pisces": {
-      "url": "/zodiac-compatibility/capricorn-pisces/",
+      "url": "/capricorn-pisces/",
       "slug": "capricorn-pisces",
       "signs": [
         "Capricorn",
@@ -2800,7 +2800,7 @@
       }
     },
     "aquarius-aquarius": {
-      "url": "/zodiac-compatibility/aquarius-aquarius/",
+      "url": "/aquarius-aquarius/",
       "slug": "aquarius-aquarius",
       "signs": [
         "Aquarius",
@@ -2837,7 +2837,7 @@
       }
     },
     "aquarius-pisces": {
-      "url": "/zodiac-compatibility/aquarius-pisces/",
+      "url": "/aquarius-pisces/",
       "slug": "aquarius-pisces",
       "signs": [
         "Aquarius",
@@ -2874,7 +2874,7 @@
       }
     },
     "pisces-pisces": {
-      "url": "/zodiac-compatibility/pisces-pisces/",
+      "url": "/pisces-pisces/",
       "slug": "pisces-pisces",
       "signs": [
         "Pisces",

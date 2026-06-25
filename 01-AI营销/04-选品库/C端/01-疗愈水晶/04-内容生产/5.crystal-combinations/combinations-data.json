@@ -24,7 +24,7 @@
   },
   "combinations": {
     "amethyst-and-rose-quartz": {
-      "url": "/crystal-combinations/amethyst-and-rose-quartz/",
+      "url": "/amethyst-and-rose-quartz/",
       "slug": "amethyst-and-rose-quartz",
       "stones": [
         "amethyst",
@@ -51,7 +51,7 @@
       ]
     },
     "amethyst-and-quartz": {
-      "url": "/crystal-combinations/amethyst-and-quartz/",
+      "url": "/amethyst-and-quartz/",
       "slug": "amethyst-and-quartz",
       "stones": [
         "amethyst",
@@ -83,7 +83,7 @@
       ]
     },
     "amethyst-and-citrine": {
-      "url": "/crystal-combinations/amethyst-and-citrine/",
+      "url": "/amethyst-and-citrine/",
       "slug": "amethyst-and-citrine",
       "stones": [
         "amethyst",
@@ -112,7 +112,7 @@
       ]
     },
     "amethyst-and-black-tourmaline": {
-      "url": "/crystal-combinations/amethyst-and-black-tourmaline/",
+      "url": "/amethyst-and-black-tourmaline/",
       "slug": "amethyst-and-black-tourmaline",
       "stones": [
         "amethyst",
@@ -144,7 +144,7 @@
       ]
     },
     "amethyst-and-carnelian": {
-      "url": "/crystal-combinations/amethyst-and-carnelian/",
+      "url": "/amethyst-and-carnelian/",
       "slug": "amethyst-and-carnelian",
       "stones": [
         "amethyst",
@@ -170,7 +170,7 @@
       ]
     },
     "amethyst-and-selenite": {
-      "url": "/crystal-combinations/amethyst-and-selenite/",
+      "url": "/amethyst-and-selenite/",
       "slug": "amethyst-and-selenite",
       "stones": [
         "amethyst",
@@ -210,7 +210,7 @@
       ]
     },
     "amethyst-and-moonstone": {
-      "url": "/crystal-combinations/amethyst-and-moonstone/",
+      "url": "/amethyst-and-moonstone/",
       "slug": "amethyst-and-moonstone",
       "stones": [
         "amethyst",
@@ -247,7 +247,7 @@
       ]
     },
     "amethyst-and-tiger-eye": {
-      "url": "/crystal-combinations/amethyst-and-tiger-eye/",
+      "url": "/amethyst-and-tiger-eye/",
       "slug": "amethyst-and-tiger-eye",
       "stones": [
         "amethyst",
@@ -278,7 +278,7 @@
       ]
     },
     "amethyst-and-labradorite": {
-      "url": "/crystal-combinations/amethyst-and-labradorite/",
+      "url": "/amethyst-and-labradorite/",
       "slug": "amethyst-and-labradorite",
       "stones": [
         "amethyst",
@@ -315,7 +315,7 @@
       ]
     },
     "amethyst-and-pyrite": {
-      "url": "/crystal-combinations/amethyst-and-pyrite/",
+      "url": "/amethyst-and-pyrite/",
       "slug": "amethyst-and-pyrite",
       "stones": [
         "amethyst",
@@ -343,7 +343,7 @@
       ]
     },
     "amethyst-and-jade": {
-      "url": "/crystal-combinations/amethyst-and-jade/",
+      "url": "/amethyst-and-jade/",
       "slug": "amethyst-and-jade",
       "stones": [
         "amethyst",
@@ -653,7 +653,7 @@
       ]
     },
     "quartz-and-citrine": {
-      "url": "/crystal-combinations/quartz-and-citrine/",
+      "url": "/quartz-and-citrine/",
       "slug": "quartz-and-citrine",
       "stones": [
         "quartz",
@@ -685,7 +685,7 @@
       ]
     },
     "quartz-and-black-tourmaline": {
-      "url": "/crystal-combinations/quartz-and-black-tourmaline/",
+      "url": "/quartz-and-black-tourmaline/",
       "slug": "quartz-and-black-tourmaline",
       "stones": [
         "quartz",
@@ -712,7 +712,7 @@
       ]
     },
     "quartz-and-carnelian": {
-      "url": "/crystal-combinations/quartz-and-carnelian/",
+      "url": "/quartz-and-carnelian/",
       "slug": "quartz-and-carnelian",
       "stones": [
         "quartz",
@@ -743,7 +743,7 @@
       ]
     },
     "quartz-and-selenite": {
-      "url": "/crystal-combinations/quartz-and-selenite/",
+      "url": "/quartz-and-selenite/",
       "slug": "quartz-and-selenite",
       "stones": [
         "quartz",
@@ -776,7 +776,7 @@
       ]
     },
     "quartz-and-moonstone": {
-      "url": "/crystal-combinations/quartz-and-moonstone/",
+      "url": "/quartz-and-moonstone/",
       "slug": "quartz-and-moonstone",
       "stones": [
         "quartz",
@@ -807,7 +807,7 @@
       ]
     },
     "quartz-and-tiger-eye": {
-      "url": "/crystal-combinations/quartz-and-tiger-eye/",
+      "url": "/quartz-and-tiger-eye/",
       "slug": "quartz-and-tiger-eye",
       "stones": [
         "quartz",
@@ -838,7 +838,7 @@
       ]
     },
     "quartz-and-labradorite": {
-      "url": "/crystal-combinations/quartz-and-labradorite/",
+      "url": "/quartz-and-labradorite/",
       "slug": "quartz-and-labradorite",
       "stones": [
         "quartz",
@@ -872,7 +872,7 @@
       ]
     },
     "quartz-and-pyrite": {
-      "url": "/crystal-combinations/quartz-and-pyrite/",
+      "url": "/quartz-and-pyrite/",
       "slug": "quartz-and-pyrite",
       "stones": [
         "quartz",
@@ -904,7 +904,7 @@
       ]
     },
     "quartz-and-jade": {
-      "url": "/crystal-combinations/quartz-and-jade/",
+      "url": "/quartz-and-jade/",
       "slug": "quartz-and-jade",
       "stones": [
         "quartz",
@@ -936,7 +936,7 @@
       ]
     },
     "citrine-and-black-tourmaline": {
-      "url": "/crystal-combinations/citrine-and-black-tourmaline/",
+      "url": "/citrine-and-black-tourmaline/",
       "slug": "citrine-and-black-tourmaline",
       "stones": [
         "citrine",
@@ -962,7 +962,7 @@
       ]
     },
     "citrine-and-carnelian": {
-      "url": "/crystal-combinations/citrine-and-carnelian/",
+      "url": "/citrine-and-carnelian/",
       "slug": "citrine-and-carnelian",
       "stones": [
         "citrine",
@@ -998,7 +998,7 @@
       ]
     },
     "citrine-and-selenite": {
-      "url": "/crystal-combinations/citrine-and-selenite/",
+      "url": "/citrine-and-selenite/",
       "slug": "citrine-and-selenite",
       "stones": [
         "citrine",
@@ -1029,7 +1029,7 @@
       ]
     },
     "citrine-and-moonstone": {
-      "url": "/crystal-combinations/citrine-and-moonstone/",
+      "url": "/citrine-and-moonstone/",
       "slug": "citrine-and-moonstone",
       "stones": [
         "citrine",
@@ -1055,7 +1055,7 @@
       ]
     },
     "citrine-and-tiger-eye": {
-      "url": "/crystal-combinations/citrine-and-tiger-eye/",
+      "url": "/citrine-and-tiger-eye/",
       "slug": "citrine-and-tiger-eye",
       "stones": [
         "citrine",
@@ -1091,7 +1091,7 @@
       ]
     },
     "citrine-and-labradorite": {
-      "url": "/crystal-combinations/citrine-and-labradorite/",
+      "url": "/citrine-and-labradorite/",
       "slug": "citrine-and-labradorite",
       "stones": [
         "citrine",
@@ -1122,7 +1122,7 @@
       ]
     },
     "citrine-and-pyrite": {
-      "url": "/crystal-combinations/citrine-and-pyrite/",
+      "url": "/citrine-and-pyrite/",
       "slug": "citrine-and-pyrite",
       "stones": [
         "citrine",
@@ -1159,7 +1159,7 @@
       ]
     },
     "citrine-and-jade": {
-      "url": "/crystal-combinations/citrine-and-jade/",
+      "url": "/citrine-and-jade/",
       "slug": "citrine-and-jade",
       "stones": [
         "citrine",
@@ -1399,7 +1399,7 @@
       ]
     },
     "carnelian-and-selenite": {
-      "url": "/crystal-combinations/carnelian-and-selenite/",
+      "url": "/carnelian-and-selenite/",
       "slug": "carnelian-and-selenite",
       "stones": [
         "carnelian",
@@ -1430,7 +1430,7 @@
       ]
     },
     "carnelian-and-moonstone": {
-      "url": "/crystal-combinations/carnelian-and-moonstone/",
+      "url": "/carnelian-and-moonstone/",
       "slug": "carnelian-and-moonstone",
       "stones": [
         "carnelian",
@@ -1459,7 +1459,7 @@
       ]
     },
     "carnelian-and-tiger-eye": {
-      "url": "/crystal-combinations/carnelian-and-tiger-eye/",
+      "url": "/carnelian-and-tiger-eye/",
       "slug": "carnelian-and-tiger-eye",
       "stones": [
         "carnelian",
@@ -1495,7 +1495,7 @@
       ]
     },
     "carnelian-and-labradorite": {
-      "url": "/crystal-combinations/carnelian-and-labradorite/",
+      "url": "/carnelian-and-labradorite/",
       "slug": "carnelian-and-labradorite",
       "stones": [
         "carnelian",
@@ -1526,7 +1526,7 @@
       ]
     },
     "carnelian-and-pyrite": {
-      "url": "/crystal-combinations/carnelian-and-pyrite/",
+      "url": "/carnelian-and-pyrite/",
       "slug": "carnelian-and-pyrite",
       "stones": [
         "carnelian",
@@ -1561,7 +1561,7 @@
       ]
     },
     "carnelian-and-jade": {
-      "url": "/crystal-combinations/carnelian-and-jade/",
+      "url": "/carnelian-and-jade/",
       "slug": "carnelian-and-jade",
       "stones": [
         "carnelian",
@@ -1587,7 +1587,7 @@
       ]
     },
     "selenite-and-moonstone": {
-      "url": "/crystal-combinations/selenite-and-moonstone/",
+      "url": "/selenite-and-moonstone/",
       "slug": "selenite-and-moonstone",
       "stones": [
         "selenite",
@@ -1624,7 +1624,7 @@
       ]
     },
     "selenite-and-tiger-eye": {
-      "url": "/crystal-combinations/selenite-and-tiger-eye/",
+      "url": "/selenite-and-tiger-eye/",
       "slug": "selenite-and-tiger-eye",
       "stones": [
         "selenite",
@@ -1657,7 +1657,7 @@
       ]
     },
     "selenite-and-labradorite": {
-      "url": "/crystal-combinations/selenite-and-labradorite/",
+      "url": "/selenite-and-labradorite/",
       "slug": "selenite-and-labradorite",
       "stones": [
         "selenite",
@@ -1695,7 +1695,7 @@
       ]
     },
     "selenite-and-pyrite": {
-      "url": "/crystal-combinations/selenite-and-pyrite/",
+      "url": "/selenite-and-pyrite/",
       "slug": "selenite-and-pyrite",
       "stones": [
         "selenite",
@@ -1726,7 +1726,7 @@
       ]
     },
     "selenite-and-jade": {
-      "url": "/crystal-combinations/selenite-and-jade/",
+      "url": "/selenite-and-jade/",
       "slug": "selenite-and-jade",
       "stones": [
         "selenite",
@@ -1759,7 +1759,7 @@
       ]
     },
     "moonstone-and-tiger-eye": {
-      "url": "/crystal-combinations/moonstone-and-tiger-eye/",
+      "url": "/moonstone-and-tiger-eye/",
       "slug": "moonstone-and-tiger-eye",
       "stones": [
         "moonstone",
@@ -1788,7 +1788,7 @@
       ]
     },
     "moonstone-and-labradorite": {
-      "url": "/crystal-combinations/moonstone-and-labradorite/",
+      "url": "/moonstone-and-labradorite/",
       "slug": "moonstone-and-labradorite",
       "stones": [
         "moonstone",
@@ -1825,7 +1825,7 @@
       ]
     },
     "moonstone-and-pyrite": {
-      "url": "/crystal-combinations/moonstone-and-pyrite/",
+      "url": "/moonstone-and-pyrite/",
       "slug": "moonstone-and-pyrite",
       "stones": [
         "moonstone",
@@ -1851,7 +1851,7 @@
       ]
     },
     "moonstone-and-jade": {
-      "url": "/crystal-combinations/moonstone-and-jade/",
+      "url": "/moonstone-and-jade/",
       "slug": "moonstone-and-jade",
       "stones": [
         "moonstone",
@@ -1977,7 +1977,7 @@
       ]
     },
     "labradorite-and-pyrite": {
-      "url": "/crystal-combinations/labradorite-and-pyrite/",
+      "url": "/labradorite-and-pyrite/",
       "slug": "labradorite-and-pyrite",
       "stones": [
         "labradorite",
@@ -2008,7 +2008,7 @@
       ]
     },
     "labradorite-and-jade": {
-      "url": "/crystal-combinations/labradorite-and-jade/",
+      "url": "/labradorite-and-jade/",
       "slug": "labradorite-and-jade",
       "stones": [
         "labradorite",
@@ -2039,7 +2039,7 @@
       ]
     },
     "pyrite-and-jade": {
-      "url": "/crystal-combinations/pyrite-and-jade/",
+      "url": "/pyrite-and-jade/",
       "slug": "pyrite-and-jade",
       "stones": [
         "pyrite",
