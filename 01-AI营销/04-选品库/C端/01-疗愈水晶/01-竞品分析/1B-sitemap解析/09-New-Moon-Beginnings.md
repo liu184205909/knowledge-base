@@ -54,7 +54,7 @@ Sitemap Index，通过 `xmlsitemap.php` 索引，含12个子sitemap（去重后7
 | 分类层级 | 说明 | 估计数量 |
 |---------|------|---------|
 | `/healing-crystals/gemstones/{stone}/` | 宝石品种页 | ~200+ |
-| `/zodiac/{sign}/` | 十二星座页 | 12 |
+| `/{sign}/` | 十二星座页 | 12 |
 | `/chakra/` + `/chakra/{type}/` | 脉轮相关 | ~10 |
 | `/color/{color}-crystals-gemstones/` | 按颜色分类 | ~10 |
 | `/jewelry/{type}/` | 首饰类型 | ~20 |

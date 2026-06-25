@@ -1,13 +1,12 @@
 {
   "_meta": {
-    "total_selected": 169,
+    "total_selected": 207,
     "from_total": 435,
-    "generated_at": "2026-06-25T06:22:00.411Z",
-    "url_fixed": "2026-06-25: removed /crystal-combinations/ prefix"
+    "generated_at": "2026-06-25T13:28:18.172Z"
   },
   "tiers": {
     "T1_pairing": 65,
-    "T2_highscore": 91,
+    "T2_highscore": 129,
     "T3_conflict": 13
   },
   "articles": [
@@ -1376,6 +1375,19 @@
       ]
     },
     {
+      "slug": "fluorite-and-lepidolite",
+      "url": "/fluorite-and-lepidolite/",
+      "title": "Fluorite and Lepidolite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 95,
+      "band": "Excellent",
+      "stoneNames": [
+        "Fluorite",
+        "Lepidolite"
+      ],
+      "bestFor": []
+    },
+    {
       "slug": "fluorite-and-apatite",
       "url": "/fluorite-and-apatite/",
       "title": "Fluorite and Apatite Together: Benefits + How to Use",
@@ -1513,6 +1525,19 @@
       ]
     },
     {
+      "slug": "jade-and-bloodstone",
+      "url": "/jade-and-bloodstone/",
+      "title": "Jade and Bloodstone Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Jade",
+        "Bloodstone"
+      ],
+      "bestFor": []
+    },
+    {
       "slug": "jade-and-larimar",
       "url": "/jade-and-larimar/",
       "title": "Jade and Larimar Together: Benefits + How to Use",
@@ -1526,6 +1551,45 @@
       "bestFor": [
         "Sleep & relaxation"
       ]
+    },
+    {
+      "slug": "jade-and-rhodonite",
+      "url": "/jade-and-rhodonite/",
+      "title": "Jade and Rhodonite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Jade",
+        "Rhodonite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-bloodstone",
+      "url": "/rose-quartz-and-bloodstone/",
+      "title": "Rose Quartz and Bloodstone Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Rose Quartz",
+        "Bloodstone"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "carnelian-and-malachite",
+      "url": "/carnelian-and-malachite/",
+      "title": "Carnelian and Malachite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Carnelian",
+        "Malachite"
+      ],
+      "bestFor": []
     },
     {
       "slug": "carnelian-and-apatite",
@@ -1635,6 +1699,19 @@
         "Protection & grounding",
         "Confidence & motivation"
       ]
+    },
+    {
+      "slug": "labradorite-and-larimar",
+      "url": "/labradorite-and-larimar/",
+      "title": "Labradorite and Larimar Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Labradorite",
+        "Larimar"
+      ],
+      "bestFor": []
     },
     {
       "slug": "moonstone-and-amazonite",
@@ -1789,6 +1866,19 @@
       ]
     },
     {
+      "slug": "aventurine-and-rhodonite",
+      "url": "/aventurine-and-rhodonite/",
+      "title": "Aventurine and Rhodonite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Aventurine",
+        "Rhodonite"
+      ],
+      "bestFor": []
+    },
+    {
       "slug": "selenite-and-apatite",
       "url": "/selenite-and-apatite/",
       "title": "Selenite and Apatite Together: Benefits + How to Use",
@@ -1849,6 +1939,19 @@
       ]
     },
     {
+      "slug": "lapis-and-lepidolite",
+      "url": "/lapis-and-lepidolite/",
+      "title": "Lapis Lazuli and Lepidolite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Lapis Lazuli",
+        "Lepidolite"
+      ],
+      "bestFor": []
+    },
+    {
       "slug": "fluorite-and-ruby",
       "url": "/fluorite-and-ruby/",
       "title": "Fluorite and Ruby Together: Benefits + How to Use",
@@ -1877,6 +1980,19 @@
       "bestFor": [
         "Confidence & motivation"
       ]
+    },
+    {
+      "slug": "ruby-and-malachite",
+      "url": "/ruby-and-malachite/",
+      "title": "Ruby and Malachite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Ruby",
+        "Malachite"
+      ],
+      "bestFor": []
     },
     {
       "slug": "ruby-and-apatite",
@@ -1909,6 +2025,19 @@
       ]
     },
     {
+      "slug": "bloodstone-and-rhodonite",
+      "url": "/bloodstone-and-rhodonite/",
+      "title": "Bloodstone and Rhodonite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Bloodstone",
+        "Rhodonite"
+      ],
+      "bestFor": []
+    },
+    {
       "slug": "lepidolite-and-malachite",
       "url": "/lepidolite-and-malachite/",
       "title": "Lepidolite and Malachite Together: Benefits + How to Use",
@@ -1922,6 +2051,32 @@
       "bestFor": [
         "New beginnings"
       ]
+    },
+    {
+      "slug": "malachite-and-pyrite",
+      "url": "/malachite-and-pyrite/",
+      "title": "Malachite and Pyrite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Malachite",
+        "Pyrite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "apatite-and-angelite",
+      "url": "/apatite-and-angelite/",
+      "title": "Apatite and Angelite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 90,
+      "band": "Excellent",
+      "stoneNames": [
+        "Apatite",
+        "Angelite"
+      ],
+      "bestFor": []
     },
     {
       "slug": "apatite-and-pyrite",
@@ -2029,6 +2184,71 @@
       ]
     },
     {
+      "slug": "jade-and-obsidian",
+      "url": "/jade-and-obsidian/",
+      "title": "Jade and Obsidian Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Jade",
+        "Obsidian"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "jade-and-turquoise",
+      "url": "/jade-and-turquoise/",
+      "title": "Jade and Turquoise Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Jade",
+        "Turquoise"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "jade-and-hematite",
+      "url": "/jade-and-hematite/",
+      "title": "Jade and Hematite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Jade",
+        "Hematite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-turquoise",
+      "url": "/rose-quartz-and-turquoise/",
+      "title": "Rose Quartz and Turquoise Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Rose Quartz",
+        "Turquoise"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "rose-quartz-and-red-jasper",
+      "url": "/rose-quartz-and-red-jasper/",
+      "title": "Rose Quartz and Red Jasper Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Rose Quartz",
+        "Red Jasper"
+      ],
+      "bestFor": []
+    },
+    {
       "slug": "carnelian-and-selenite",
       "url": "/carnelian-and-selenite/",
       "title": "Carnelian and Selenite Together: Benefits + How to Use",
@@ -2089,6 +2309,110 @@
       ]
     },
     {
+      "slug": "moonstone-and-obsidian",
+      "url": "/moonstone-and-obsidian/",
+      "title": "Moonstone and Obsidian Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Moonstone",
+        "Obsidian"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "moonstone-and-turquoise",
+      "url": "/moonstone-and-turquoise/",
+      "title": "Moonstone and Turquoise Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Moonstone",
+        "Turquoise"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "moonstone-and-bloodstone",
+      "url": "/moonstone-and-bloodstone/",
+      "title": "Moonstone and Bloodstone Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Moonstone",
+        "Bloodstone"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "obsidian-and-aventurine",
+      "url": "/obsidian-and-aventurine/",
+      "title": "Obsidian and Aventurine Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Obsidian",
+        "Aventurine"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "obsidian-and-rhodonite",
+      "url": "/obsidian-and-rhodonite/",
+      "title": "Obsidian and Rhodonite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Obsidian",
+        "Rhodonite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "black-tourmaline-and-aventurine",
+      "url": "/black-tourmaline-and-aventurine/",
+      "title": "Black Tourmaline and Aventurine Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Black Tourmaline",
+        "Aventurine"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "black-tourmaline-and-rhodonite",
+      "url": "/black-tourmaline-and-rhodonite/",
+      "title": "Black Tourmaline and Rhodonite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Black Tourmaline",
+        "Rhodonite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "amazonite-and-turquoise",
+      "url": "/amazonite-and-turquoise/",
+      "title": "Amazonite and Turquoise Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amazonite",
+        "Turquoise"
+      ],
+      "bestFor": []
+    },
+    {
       "slug": "amazonite-and-hematite",
       "url": "/amazonite-and-hematite/",
       "title": "Amazonite and Hematite Together: Benefits + How to Use",
@@ -2102,6 +2426,32 @@
       "bestFor": [
         "Confidence & motivation"
       ]
+    },
+    {
+      "slug": "amazonite-and-rhodonite",
+      "url": "/amazonite-and-rhodonite/",
+      "title": "Amazonite and Rhodonite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Amazonite",
+        "Rhodonite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "aventurine-and-turquoise",
+      "url": "/aventurine-and-turquoise/",
+      "title": "Aventurine and Turquoise Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Aventurine",
+        "Turquoise"
+      ],
+      "bestFor": []
     },
     {
       "slug": "aventurine-and-opal",
@@ -2179,6 +2529,32 @@
       ]
     },
     {
+      "slug": "turquoise-and-larimar",
+      "url": "/turquoise-and-larimar/",
+      "title": "Turquoise and Larimar Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Turquoise",
+        "Larimar"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "turquoise-and-rhodonite",
+      "url": "/turquoise-and-rhodonite/",
+      "title": "Turquoise and Rhodonite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Turquoise",
+        "Rhodonite"
+      ],
+      "bestFor": []
+    },
+    {
       "slug": "lapis-and-ruby",
       "url": "/lapis-and-ruby/",
       "title": "Lapis Lazuli and Ruby Together: Benefits + How to Use",
@@ -2224,6 +2600,19 @@
       ]
     },
     {
+      "slug": "fluorite-and-malachite",
+      "url": "/fluorite-and-malachite/",
+      "title": "Fluorite and Malachite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Fluorite",
+        "Malachite"
+      ],
+      "bestFor": []
+    },
+    {
       "slug": "fluorite-and-pyrite",
       "url": "/fluorite-and-pyrite/",
       "title": "Fluorite and Pyrite Together: Benefits + How to Use",
@@ -2237,6 +2626,19 @@
       "bestFor": [
         "Confidence & motivation"
       ]
+    },
+    {
+      "slug": "ruby-and-lepidolite",
+      "url": "/ruby-and-lepidolite/",
+      "title": "Ruby and Lepidolite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Ruby",
+        "Lepidolite"
+      ],
+      "bestFor": []
     },
     {
       "slug": "ruby-and-kyanite",
@@ -2299,6 +2701,19 @@
       ]
     },
     {
+      "slug": "red-jasper-and-rhodonite",
+      "url": "/red-jasper-and-rhodonite/",
+      "title": "Red Jasper and Rhodonite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Red Jasper",
+        "Rhodonite"
+      ],
+      "bestFor": []
+    },
+    {
       "slug": "opal-and-bloodstone",
       "url": "/opal-and-bloodstone/",
       "title": "Opal and Bloodstone Together: Benefits + How to Use",
@@ -2329,6 +2744,71 @@
       ]
     },
     {
+      "slug": "opal-and-larimar",
+      "url": "/opal-and-larimar/",
+      "title": "Opal and Larimar Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Opal",
+        "Larimar"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "bloodstone-and-larimar",
+      "url": "/bloodstone-and-larimar/",
+      "title": "Bloodstone and Larimar Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Bloodstone",
+        "Larimar"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "hematite-and-rhodonite",
+      "url": "/hematite-and-rhodonite/",
+      "title": "Hematite and Rhodonite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Hematite",
+        "Rhodonite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "lepidolite-and-apatite",
+      "url": "/lepidolite-and-apatite/",
+      "title": "Lepidolite and Apatite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Lepidolite",
+        "Apatite"
+      ],
+      "bestFor": []
+    },
+    {
+      "slug": "malachite-and-apatite",
+      "url": "/malachite-and-apatite/",
+      "title": "Malachite and Apatite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Malachite",
+        "Apatite"
+      ],
+      "bestFor": []
+    },
+    {
       "slug": "kyanite-and-pyrite",
       "url": "/kyanite-and-pyrite/",
       "title": "Kyanite and Pyrite Together: Benefits + How to Use",
@@ -2342,6 +2822,19 @@
       "bestFor": [
         "Confidence & motivation"
       ]
+    },
+    {
+      "slug": "larimar-and-rhodonite",
+      "url": "/larimar-and-rhodonite/",
+      "title": "Larimar and Rhodonite Together: Benefits + How to Use",
+      "tier": "T2_highscore",
+      "score": 85,
+      "band": "Excellent",
+      "stoneNames": [
+        "Larimar",
+        "Rhodonite"
+      ],
+      "bestFor": []
     },
     {
       "slug": "tiger-eye-and-larimar",

@@ -63,11 +63,12 @@ const IMAGE_PLACEHOLDERS = {
 
 function parseArgs() {
   const args = process.argv.slice(2);
-  const jsonPath = args.find((a, i) => !a.startsWith('--') && args[i - 1] !== '--status' && args[i - 1] !== '--schedule');
+  const jsonPath = args.find((a, i) => !a.startsWith('--') && args[i - 1] !== '--status' && args[i - 1] !== '--schedule' && args[i - 1] !== '--category');
   const statusIdx = args.indexOf('--status');
   const statusVal = statusIdx >= 0 ? args[statusIdx + 1] : null;
   const scheduleIdx = args.indexOf('--schedule');
   const scheduleDate = scheduleIdx >= 0 ? args[scheduleIdx + 1] : null;
+  const categoryIdx = args.indexOf('--category');
   let status = null;
   if (scheduleDate) status = 'future';           // --schedule "datetime" => WP 定时发布，到点自动 publish
   else if (args.includes('--publish')) status = 'publish';
@@ -80,7 +81,8 @@ function parseArgs() {
     scheduleDate,
     dryRun: status === null,
     skipImages: args.includes('--skip-images'),
-    uploadImages: args.includes('--upload-images')
+    uploadImages: args.includes('--upload-images'),
+    categoryId: categoryIdx >= 0 ? parseInt(args[categoryIdx + 1]) : null
   };
 }
 
@@ -284,6 +286,7 @@ async function main() {
   };
   if (opts.status === 'future' && opts.scheduleDate) payload.date = opts.scheduleDate;
   if (mediaIds.featured) payload.featured_media = mediaIds.featured.id;
+  if (opts.categoryId) payload.categories = [opts.categoryId];
 
   const apiPath = existing ? '/wp-json/wp/v2/posts/' + existing.id : '/wp-json/wp/v2/posts';
   const result = await E.apiRequest(apiPath, 'POST', payload);

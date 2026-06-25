@@ -6,16 +6,39 @@
  */
 const fs = require('fs');
 const path = require('path');
+const os = require('os');
+const { execSync } = require('child_process');
+
+// 读 ~/.env 拿 WP 凭证（WP_USER/WP_APP_PASSWORD）
+(function loadHomeEnv() {
+  const envPath = path.join(os.homedir(), '.env');
+  if (!fs.existsSync(envPath)) return;
+  for (const line of fs.readFileSync(envPath, 'utf8').split(/\r?\n/)) {
+    const t = line.trim(); if (!t || t.startsWith('#')) continue;
+    const eq = t.indexOf('='); if (eq < 1) continue;
+    const k = t.slice(0, eq).trim();
+    if (['WP_USER', 'WP_APP_PASSWORD', 'WP_SITE'].includes(k)) process.env[k] = t.slice(eq + 1).trim();
+  }
+})();
 
 const DATA = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../crystal-stones-30.json'), 'utf8'));
 const STONES = DATA.stones;
 const ELEM = DATA.elem;
 const CONFLICTS = DATA.conflicts;
 
-// 读取精选配对清单（有文章的 169 组）
-const SELECTED_PATH = path.resolve(__dirname, '../../../04-内容生产/5.crystal-combinations/selected-articles.json');
-let HAS_ARTICLE_JSON = '[]';
-try { const _sel = JSON.parse(fs.readFileSync(SELECTED_PATH, 'utf8')); HAS_ARTICLE_JSON = JSON.stringify(_sel.articles.map(a => a.slug)); } catch(e) {}
+// HAS_ARTICLE = WP 已上线的水晶配对文章 slug（crystal-combinations category 1563，status=publish）
+// ⚠ 不是 selected-articles.json 计划清单——必须基于"已上线"，否则 CTA 跳未上线 URL 会 404
+// 文章上线后重跑本脚本即自动更新 CTA；查询失败 fallback 空（所有 CTA = Shop，安全）
+const COMBOS_CAT_ID = 1563;
+let HAS_ARTICLE = [];
+try {
+  const u = process.env.WP_USER, p = process.env.WP_APP_PASSWORD;
+  if (u && p) {
+    const out = execSync('curl -s --proxy socks5://127.0.0.1:10808 -u "' + u + ':' + p + '" "https://goearthward.com/wp-json/wp/v2/posts?categories=' + COMBOS_CAT_ID + '&status=publish&per_page=250&_fields=slug" --max-time 40', { encoding: 'utf8' });
+    HAS_ARTICLE = JSON.parse(out).map(x => x.slug);
+  }
+} catch (e) { console.log('⚠ WP 已上线文章查询失败，HAS_ARTICLE 用空（所有 CTA = Shop，安全）'); }
+const HAS_ARTICLE_JSON = JSON.stringify(HAS_ARTICLE);
 
 const STONES_JSON = JSON.stringify(STONES);
 const ELEM_JSON = JSON.stringify(ELEM);
@@ -70,6 +93,7 @@ var EWCrystal=(function(){
   var HAS_ARTICLE=${HAS_ARTICLE_JSON};
   var sel=[];
   var TAG_SCENE={calm:'Sleep & relaxation',protection:'Protection & grounding',love:'Love & relationships',abundance:'Wealth & abundance','personal-power':'Confidence & motivation',spiritual:'Meditation & spiritual growth','new-beginnings':'New beginnings'};
+  var CHAKRA_SCENE={root:'Grounding & stability',sacral:'Creativity & passion','solar-plexus':'Confidence & willpower',heart:'Love & emotional balance',throat:'Communication & truth','third-eye':'Intuition & insight',crown:'Spiritual connection'};
   function band(s){return s>=85?'Excellent':s>=70?'Harmonious':s>=55?'Moderate':s>=40?'Neutral':'Conflicting';}
   function color(s){return s>=70?'#2D6A4F':s>=40?'#A66A43':'#B5715A';}
   function isConflict(a,b){return D.CONFLICTS.some(function(c){return(c[0]===a&&c[1]===b)||(c[0]===b&&c[1]===a);});}
@@ -80,13 +104,13 @@ var EWCrystal=(function(){
   function updBtn(){var b=document.getElementById('ewc-analyze');if(!b)return;b.disabled=sel.length<2;b.textContent='Analyze Compatibility'+(sel.length>0?' ('+sel.length+' of 2 selected)':'');}
   function filterStones(q){q=(q||'').toLowerCase();renderStones(Object.keys(D.STONES).filter(function(s){return D.STONES[s].name.toLowerCase().indexOf(q)>=0;}));}
   function pairScore(aSlug,bSlug){
-    if(isConflict(aSlug,bSlug))return{score:25,band:'Conflicting',reasons:[{t:'neg',s:'Traditionally not worn together — energies pull in opposite directions'}],sharedTags:[],pairHit:false,conflict:true};
+    if(isConflict(aSlug,bSlug))return{score:25,band:'Conflicting',reasons:[{t:'neg',s:'Traditionally not worn together — energies pull in opposite directions'}],sharedTags:[],sharedChakras:[],pairHit:false,conflict:true};
     var a=D.STONES[aSlug],b=D.STONES[bSlug],base=D.ELEM[a.element][b.element],sc=base,rs=[{t:'pos',s:'Element '+a.element+' x '+b.element+' = '+base}];
     var sh=a.chakras.filter(function(c){return b.chakras.indexOf(c)>=0;});if(sh.length){sc+=5*sh.length;rs.push({t:'pos',s:'Shared chakras +'+(5*sh.length)+' ('+sh.join(', ')+')'});}
     var st=a.tags.filter(function(t){return b.tags.indexOf(t)>=0;});if(st.length){sc+=5*st.length;rs.push({t:'pos',s:'Intention synergy +'+(5*st.length)+' ('+st.join(', ')+')'});}
     var ph=a.pairings.indexOf(bSlug)>=0||b.pairings.indexOf(aSlug)>=0;if(ph){sc+=15;rs.push({t:'pos',s:'Recommended pairing +15'});}
     sc=Math.min(100,sc);if(ph)sc=Math.max(sc,80);
-    return{score:sc,band:band(sc),reasons:rs,sharedTags:st,pairHit:ph,conflict:false};
+    return{score:sc,band:band(sc),reasons:rs,sharedTags:st,sharedChakras:sh,pairHit:ph,conflict:false};
   }
   function analyze(){
     if(sel.length<2)return;
@@ -107,9 +131,13 @@ var EWCrystal=(function(){
     if(hai){html+='<a class="ewc-guide-link" href="/'+hai+'/">Read Full Combination Guide \\u2192</a>';}
     else{html+='<a class="ewc-guide-link" href="#ewc-shop-section">Shop This Pair \\u2192</a>';}
     html+='</div></div>';
-    /* Why This Pairing + Best For (side by side) */
-    if(r.reasons.length||r.sharedTags.length){
-      var best=r.sharedTags.length?r.sharedTags.map(function(t){return TAG_SCENE[t]||t;}):(r.conflict?['Separate wear','Clear Quartz bridge','Different rooms']:['Daily wear','Meditation','Shared spaces']);
+    /* Why This Pairing + Best For (side by side) — Best For 从 sharedTags 优先，空则 sharedChakras 推导，再空通用（避免 228 组无文章时空洞） */
+    {
+      var best;
+      if(r.sharedTags.length){best=r.sharedTags.map(function(t){return TAG_SCENE[t]||t;});}
+      else if(r.sharedChakras&&r.sharedChakras.length){best=r.sharedChakras.map(function(c){return CHAKRA_SCENE[c]||c;});}
+      else if(r.conflict){best=['Separate wear','Clear Quartz bridge','Different rooms'];}
+      else{best=['Daily wear','Meditation','Shared spaces'];}
       html+='<div class="ewc-result-detail">';
       if(r.reasons.length){html+='<div class="ewc-card"><h3 class="ewc-h">Why This Pairing</h3><ul class="ewc-reason">'+r.reasons.map(function(x){return'<li><span class="'+x.t+'">'+(x.t==='pos'?'\\u2713':'\\u2717')+'</span><span>'+x.s+'</span></li>';}).join('')+'</ul></div>';}
       html+='<div class="ewc-card"><h3 class="ewc-h">Best For</h3><div class="ewc-bestfor">'+best.map(function(t){return'<span class="tag">'+t+'</span>';}).join('')+'</div></div>';
@@ -164,3 +192,4 @@ fs.writeFileSync(OUT, html, 'utf8');
 console.log(`✅ Crystal Checker 生成完成 → ${OUT}`);
 console.log(`   ${(fs.statSync(OUT).size / 1024).toFixed(1)} KB`);
 console.log(`   ${Object.keys(STONES).length} 颗水晶，选 2 颗`);
+console.log(`   HAS_ARTICLE 已上线: ${HAS_ARTICLE.length} 篇（决定 CTA 显示 Guide 还是 Shop）`);

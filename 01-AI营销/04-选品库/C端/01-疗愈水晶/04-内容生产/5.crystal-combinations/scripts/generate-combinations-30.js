@@ -3,7 +3,7 @@
  *
  * 筛选规则：
  *   Tier 1（必做）：pairHit=true（站内认可的搭配）
- *   Tier 2（推荐）：score>=80 且 sharedTags.length>=1（高分+有场景）
+ *   Tier 2（推荐）：score>=85（Excellent，含同脉轮/同元素高分组合）或 (score>=80 且 sharedTags>=1)
  *   Tier 3（差异化）：conflict=true 或 score<40（冲突组合）
  *
  * 输出：
@@ -68,7 +68,7 @@ for (let i = 0; i < SLUGS.length; i++) {
     let tier = null;
     if (r.conflict || r.score < 40) tier = 'T3_conflict';
     else if (r.pairHit) tier = 'T1_pairing';
-    else if (r.score >= 80 && r.sharedTags.length >= 1) tier = 'T2_highscore';
+    else if (r.score >= 85 || (r.score >= 80 && r.sharedTags.length >= 1)) tier = 'T2_highscore';
 
     if (tier) {
       selected[key] = { ...all[key], tier };
@@ -96,7 +96,7 @@ fs.writeFileSync(path.join(OUT_DIR, 'selected-articles.json'), JSON.stringify({
     return order[a[1].tier] - order[b[1].tier] || b[1].score - a[1].score;
   }).map(([key, data]) => ({
     slug: key,
-    url: `/crystal-combinations/${key}/`,
+    url: `/${key}/`,
     title: `${data.stoneNames[0]} and ${data.stoneNames[1]} Together: Benefits + How to Use`,
     tier: data.tier,
     score: data.score,
