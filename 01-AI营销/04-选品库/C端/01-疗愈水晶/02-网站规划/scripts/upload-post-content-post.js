@@ -138,8 +138,8 @@ async function uploadMedia(filePath, fileName, altText) {
 }
 
 async function findExistingGemstone(slug) {
-  // 必须带 status=draft,publish：默认只查 publish，draft 的 post 查不到 → 每次 Created 新的
-  const items = await E.apiRequest('/wp-json/wp/v2/posts?slug=' + encodeURIComponent(slug) + '&status=draft,publish&context=edit', 'GET');
+  // 必须带 status=draft,publish,future：默认只查 publish，draft/future 的 post 查不到 → 每次 Created 新的
+  const items = await E.apiRequest('/wp-json/wp/v2/posts?slug=' + encodeURIComponent(slug) + '&status=draft,publish,future&context=edit', 'GET');
   return Array.isArray(items) && items.length ? items[0] : null;
 }
 

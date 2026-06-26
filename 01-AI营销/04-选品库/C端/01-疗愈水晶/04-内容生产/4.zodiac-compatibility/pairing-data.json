@@ -15,13 +15,14 @@
       "coreChallenge / synergy / communicationPattern 为空，待 agent 逐对生成",
       "famousCouples 待建名人×星座映射表后参数化"
     ],
-    "last_updated": "2026-06-25T03:22:14.442Z",
+    "last_updated": "2026-06-25T15:10:21.896Z",
     "content_fields_status": {
       "coreChallenge": "78/78 已填",
       "synergy": "78/78 已填",
       "communicationPattern": "78/78 已填",
       "famousCouples": "0/78（待建名人×星座映射表）"
-    }
+    },
+    "deep_fields_added": "78/78"
   },
   "pairs": {
     "aries-aries": {
@@ -56,10 +57,12 @@
       "coreChallenge": "Two starters who both want the wheel—someone has to navigate. Arguments flare fast andforgive fast, but the real work is deciding who leads when both are wired to go first. Competitiveness leaks into small things: who picks the restaurant, who drives, who apologizes.",
       "synergy": "No one has to explain the urge to move now. Many couples in this mirror find their shared courage compounds—one jumps, the other is already midair. Traditionally tied to Mars-ruled fire, the pairing turns individual boldness into a joint engine for new projects, adventures, and honest fights that clear the air.",
       "communicationPattern": "Direct, loud, brief. Both say the sharp thing in the moment, then forget it by morning. The risk isn't dishonesty—it's that neither slows down to name the softer feeling underneath the heat, so tenderness gets buried under banter and bravado.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Twin Sparks — two flames lit from the same match, each convinced they struck first.",
+      "conflictLoop": "Flash-bang: both detonate on contact, burn hot for ten minutes, then forget the argument ever happened while the bruise underneath stays unexamined.",
+      "repairMove": "After the blowout, schedule a same-day cooldown where one person names the softer feeling beneath the heat before either moves on.",
+      "crystalStrategy": "Aquamarine cools the double-fire reflex so words land clean, while Black Tourmaline grounds the competitive charge that turns small choices into contests.",
+      "avoidCrystal": "Carnelian — piles fuel on an already over-stoked Mars engine and makes the race for who leads feel even more urgent.",
+      "ritualAngle": "Before any joint decision, both hold Aventurine in the left palm for thirty seconds — the stone asks each to listen before launching."
     },
     "aries-taurus": {
       "url": "/aries-taurus/",
@@ -93,10 +96,12 @@
       "coreChallenge": "Speed. One wants the decision made before bed; the other needs a week to feel it through. The faster partner reads delay as resistance, the slower one reads urgency as pressure—and the gap widens each time money, plans, or commitment land on the table.",
       "synergy": "Starter and finisher in one bond. Many couples find the impulsive one brings motion while the steady one brings follow-through, together closing the loop neither completes alone. Traditionally tied to fire meeting earth, the match turns raw drive into built results when both respect the other's tempo.",
       "communicationPattern": "One speaks in declarations, the other in measured pauses. Friction shows up when the first wants a yes-now and the second goes quiet to think—the silence reads as a no. Learning that pause doesn't mean refusal is half the work.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Spark and the Hearth — one strikes the flint, the other tends the coals long after midnight.",
+      "conflictLoop": "Gas-and-brake: the faster partner accelerates toward the decision, the slower one brakes harder, until both feel the other is sabotaging the ride.",
+      "repairMove": "Split timelines explicitly — name which decisions are same-day and which get a one-week window, so urgency and deliberation each get their lane.",
+      "crystalStrategy": "Aquamarine softens the fire-side's impatience, Carnelian keeps the earth-side from stalling in over-caution, and Quartz aligns the two tempos into shared rhythm.",
+      "avoidCrystal": "Hematite — its heavy anchoring energy drags the fire partner further into slow-stuck and makes the speed gap feel like a wall.",
+      "ritualAngle": "Hold Carnelian in the receiving hand and Aquamarine in the giving hand during money talks — the combination asks for warmth without pressure."
     },
     "aries-gemini": {
       "url": "/aries-gemini/",
@@ -130,10 +135,12 @@
       "coreChallenge": "Starting everything, finishing nothing. Both light up at the new idea and lose interest by week three—projects, plans, even arguments get abandoned mid-sentence. The challenge isn't chemistry, it's follow-through when the novelty fades.",
       "synergy": "Mental spark meets action. One dreams up the scheme, the other is already booking the tickets. Many couples in this air-fire mix find their shared curiosity turns ordinary weeks into adventures, and neither dulls the other's edge with too much structure.",
       "communicationPattern": "Fast, scattered, endlessly entertaining. Conversations pivot mid-thought and both keep up without offense. The risk is depth—skimming across surfaces feels close, until someone realizes the hard questions never got asked.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Match and the Wind — one strikes, the other scatters the flame into a thousand directions at once.",
+      "conflictLoop": "Spark-and-scatter: both light up at the new idea, both abandon it by week three, and neither notices the unfinished projects piling up until trust erodes.",
+      "repairMove": "Pick one shared project per quarter and commit to shipping it before starting the next — let completion, not novelty, become the bonding drug.",
+      "crystalStrategy": "Aquamarine steadies the fire-side's jumping impulse, Apatite focuses the air-side's scattered attention, and Quartz binds both minds to a single through-line.",
+      "avoidCrystal": "Citrine — amplifies the already-overcharged optimism and makes it even easier to skip the boring middle work between idea and result.",
+      "ritualAngle": "Place Quartz at the center of the desk with Apatite nearby during work sessions — the anchor asks both to return when the conversation pivots too far."
     },
     "aries-cancer": {
       "url": "/aries-cancer/",
@@ -167,10 +174,12 @@
       "coreChallenge": "One wants the argument solved before bed; the other needs a day to cool off first. Direct confrontation meets sideways withdrawal—the more one pushes for clarity, the more the other retreats into shell. Fire heats water to steam, and many couples find the pressure builds quietly until it explodes.",
       "synergy": "Protector and initiator in one bond. The courage of one gives the other safety to feel, the care of one gives the other a place to rest after the charge. Traditionally a tension aspect, but many couples report the friction forges real loyalty once both stop trying to make the other react their way.",
       "communicationPattern": "One talks in plain declarative sentences, the other in emotional code. The first reads silence as honesty, the second reads bluntness as attack. Bridging the gap means the fast one learning to wait, the careful one learning to name what hurts out loud.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Warrior and the Healer — one charges the gate, the other mends what the charge leaves behind.",
+      "conflictLoop": "Push-pull into steam: the more one demands immediate clarity, the deeper the other retreats into the shell — until pressure forces an explosion neither wanted.",
+      "repairMove": "Name the feeling before solving the problem — pause for one full breath, let the softer word land, then proceed toward the fix.",
+      "crystalStrategy": "Aquamarine cools the fire-side's edge so it stops scorching, Emerald steadies the water-side's emotional tides, and Rose Quartz bridges the warmth between them.",
+      "avoidCrystal": "Red Jasper — stokes the fire that already burns too hot against Cancer's water, turning gentle pressure into outright aggression.",
+      "ritualAngle": "Morning bond: hold Rose Quartz over the heart with Emerald in the lap — five slow breaths together before the day's first conversation begins."
     },
     "aries-leo": {
       "url": "/aries-leo/",
@@ -204,10 +213,12 @@
       "coreChallenge": "Two fires, one spotlight. Both want to be seen, both want to lead the story—and when egos collide neither wants to be the supporting cast. The match is electric but can burn to a standstill over whose moment it is.",
       "synergy": "Confidence compounds. One shines, the other cheers, then they swap. Many couples in this fire-fire trine find their shared warmth draws people in, and together they host, create, and build with an energy neither carries alone. Traditionally tied to the easiest aspect in the wheel.",
       "communicationPattern": "Loud, generous, dramatic—and quick to forgive. Fights are operatic but short. The work is making sure the small daily tenderness gets as much airtime as the grand gestures, because both can perform love louder than they actually feel it in quiet moments.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Twin Suns — two fires orbiting one spotlight, each convinced the encore belongs to them.",
+      "conflictLoop": "Spotlight tug-of-war: both reach for the lead role, and when neither yields to supporting cast the bond freezes in mutual grandstanding until one forgets the original line.",
+      "repairMove": "Alternate the headline — explicitly take turns being the one who gets seen, so applause stops being a zero-sum game.",
+      "crystalStrategy": "Aquamarine dials down the competitive heat, Amber warms the generous affection both crave, and Quartz channels the double-fire into shared creative output.",
+      "avoidCrystal": "Sunstone — magnifies the ego flare that already runs hot and makes the who-gets-the-stage fight burn longer than it should.",
+      "ritualAngle": "Before a public moment, both hold Amber over the solar plexus and breathe — the stone reminds each to cheer for the other first."
     },
     "aries-virgo": {
       "url": "/aries-virgo/",
@@ -241,10 +252,12 @@
       "coreChallenge": "Act first versus plan first. One trusts the impulse, the other needs the spreadsheet—so the same Saturday looks like an adventure to one and a logistical failure to the other. Criticism lands hard: the sharp eye of one meets the pride of the other and both walk away wounded.",
       "synergy": "Vision and refinement. Many couples find one brings the raw idea, the other brings the edits that make it work—the friction between impulse and craft produces results neither would ship alone. Traditionally a quincunx of adjustment, but the payoff is a partnership that learns to value both spark and detail.",
       "communicationPattern": "One speaks in bursts, the other in well-structured corrections. The first experiences help as nitpicking, the second experiences speed as carelessness. A shared language emerges only when both name what the other actually contributes instead of what they missed.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Spark and the Scalpel — one ignites the vision, the other trims it into something that actually ships.",
+      "conflictLoop": "Act-and-audit: the first moves on impulse, the second flags every flaw in real time — each correction reads as criticism, each leap reads as carelessness, both walk away wounded.",
+      "repairMove": "Separate the doing from the reviewing — act first, audit later, and never deliver edits while the spark is still mid-launch.",
+      "crystalStrategy": "Aquamarine softens the fire-side's defensiveness, Amazonite eases the earth-side's compulsion to correct, and Rose Quartz warms the gap between craft and courage.",
+      "avoidCrystal": "Pyrite — sharpens the perfectionist edge on the Virgo side and makes every well-meaning edit feel like an attack worth fighting.",
+      "ritualAngle": "During feedback talks, the Virgo-side holds Amazonite in the left hand and the Aries-side holds Aquamarine in the right — the stones ask both to receive before responding."
     },
     "aries-libra": {
       "url": "/aries-libra/",
@@ -278,10 +291,12 @@
       "coreChallenge": "Decision speed. One picks in seconds and moves; the other weighs every option and seeks harmony. The first reads hesitation as weakness, the second reads forcefulness as disregard—and magnetism curdles into resentment when one always gets their way.",
       "synergy": "Opposites who genuinely complete each other. One brings courage, the other brings grace; one starts the conflict, the other repairs it. Traditionally tied to the opposition aspect, many couples find the pull is instant and the growth is real—if both can hold the tension instead of collapsing into one pole.",
       "communicationPattern": "One argues to win, the other argues to restore balance. The first is direct to the point of blunt, the second is diplomatic to the point of evasive. Bridging the gap means the fast one learning tact, the careful one learning that disagreement isn't abandonment.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Blade and the Ballet — one cuts straight, the other choreographs every step around the cut.",
+      "conflictLoop": "Decide-and-defer: the first picks in seconds, the second weighs every option — the fast one reads hesitation as weakness, the careful one reads force as disregard, magnetism curdles into resentment.",
+      "repairMove": "Practice deliberate delay on one side and forced momentum on the other — name which decisions need speed and which need weight before the tension peaks.",
+      "crystalStrategy": "Aquamarine cools the blunt charge, Apatite sharpens the air-side's stalled decisiveness, and Rose Quartz keeps the tenderness alive under the friction.",
+      "avoidCrystal": "Garnet — intensifies the push-pull dynamic by making one side push harder while the other retreats further into diplomatic avoidance.",
+      "ritualAngle": "Before any joint decision, both hold Rose Quartz between the palms for one full minute — the stone asks each to feel the other before either speaks."
     },
     "aries-scorpio": {
       "url": "/aries-scorpio/",
@@ -315,10 +330,12 @@
       "coreChallenge": "Surface and depth. One fights in the open and moves on; the other fights in layers and remembers every word. The first's quick forgiveness reads as shallow to the second, the second's grudge reads as manipulation to the first. Trust is the constant negotiation.",
       "synergy": "Two Mars-ruled wills aimed at the same goal. Many couples find once they align on what they want, the combined drive is hard to stop—passion, loyalty, and intensity all compound. Traditionally tied to rulership by the same planet, the match runs hot but runs together.",
       "communicationPattern": "One says the sharp thing and forgets it; the other files it away for later. The first needs conflict to clear the air, the second needs conflict to mean something. Many couples find the work is the fast one learning weight, the deep one learning release.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Duel — one fights in daylight, the other fights in shadow, both wield the same Mars blade.",
+      "conflictLoop": "Surface-versus-depth: the first snaps, forgives, forgets; the second files every word and replays it three months later — quick release reads as shallow, slow grudge reads as manipulation.",
+      "repairMove": "After any flare, both stay one extra minute to name what the fight meant — depth won't surface if the fast one leaves and the deep one stays silent.",
+      "crystalStrategy": "Aquamarine cools the open flare-ups, Black Tourmaline absorbs the underground resentment the water-side stores, and Rose Quartz softens the trust wound both keep reopening.",
+      "avoidCrystal": "Malachite — draws buried intensity to the surface too fast for either to process, turning layered wounds into fresh explosions neither can metabolize.",
+      "ritualAngle": "After reconciliation, hold Black Tourmaline in both hands together for one minute of silence — the stone asks both to release what was said before it calcifies."
     },
     "aries-sagittarius": {
       "url": "/aries-sagittarius/",
@@ -352,10 +369,12 @@
       "coreChallenge": "Restlessness squared. Both want the next thing—next trip, next idea, next adventure—and neither wants to handle the return home. Bills, chores, and follow-through land on whoever caves first, and many couples find the bond frays not from conflict but from never stopping long enough to build structure.",
       "synergy": "Pure forward motion. One sparks, the other fans the flame into a vision. Traditionally tied to the fire trine, many couples report a near-telepathic sense of direction—their optimism compounds, their courage doubles, and the ordinary feels possible when both are in motion.",
       "communicationPattern": "Blunt, fast, optimistic. Both say the uncomfortable thing and laugh it off. The risk isn't honesty—it's that the hard conversations get skipped in favor of the next high, so the small cracks never get repaired until they're canyon-sized.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Twin Wildfires — one strikes, the other fans the flame into a horizon-line neither can resist chasing.",
+      "conflictLoop": "Perpetual-motion trap: both chase the next high, neither stops to repair the small cracks, and the bond frays not from conflict but from never building structure underneath the momentum.",
+      "repairMove": "Schedule a monthly stillness check-in — one hour with no plans, no trip, no new idea, where the only task is naming what needs repair.",
+      "crystalStrategy": "Aquamarine tempers the fire-side's impulsiveness, Herkimer Diamond clarifies the shared vision so both aim at the same horizon, and Quartz grounds the restless charge into a single intention.",
+      "avoidCrystal": "Citrine — amplifies the already-boundless optimism and makes it even easier to skip the return home where the boring structural work lives.",
+      "ritualAngle": "Before any new venture, both hold Herkimer Diamond together and name one thing they will finish before chasing the next — the stone asks for clarity before launch."
     },
     "aries-capricorn": {
       "url": "/aries-capricorn/",
@@ -389,10 +408,12 @@
       "coreChallenge": "Impulse versus strategy. One trusts the bold move now; the other calculates the five-year cost. The first reads caution as cowardice, the second reads spontaneity as recklessness—and both are partially right, which makes the friction harder to dismiss.",
       "synergy": "Initiator and architect. Many couples find one opens the door, the other builds the room behind it—the raw drive of fire plus the cold structure of earth, when aligned, produces outcomes neither could deliver alone. Traditionally a cardinal square, the tension is real but so is the capacity to build something that lasts.",
       "communicationPattern": "One speaks in action and urgency, the other in measured precedent. The first wants the decision, the second wants the plan. Many couples report the breakthrough comes when the fast one learns to wait for the strategy and the careful one learns to act before the blueprint is perfect.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Pioneer and the Architect — one kicks the door open, the other drafts the blueprint for the room behind it.",
+      "conflictLoop": "Impulse-versus-strategy: one trusts the bold move now, the other calculates the five-year cost — each reads the other's tempo as the wrong kind of risk, and both are partially right.",
+      "repairMove": "Run two clocks — a same-day lane for urgent moves, a one-month lane for strategic calls — so boldness and caution each get their domain.",
+      "crystalStrategy": "Aquamarine softens the fire-side's impatience with delay, Black Tourmaline grounds the earth-side's rigidity into adaptable structure, and Rose Quartz warms the cold gap between speed and strategy.",
+      "avoidCrystal": "Red Jasper — fuels the fire-side's impulsive charge while doing nothing for the earth-side's need for planning, widening the recklessness-versus-caution gap.",
+      "ritualAngle": "During long-horizon planning, both hold Black Tourmaline in the left hand and Aquamarine in the right — the pairing asks for patience and precision in equal measure."
     },
     "aries-aquarius": {
       "url": "/aries-aquarius/",
@@ -426,10 +447,12 @@
       "coreChallenge": "Independence on both sides. Neither wants to ask permission, neither wants to report in—and what starts as freedom can drift into parallel lives under the same roof. The challenge is building a shared structure without either feeling caged.",
       "synergy": "Two innovators in sync. One breaks the rule, the other reimagines what replaces it. Many couples in this air-fire sextile find their shared appetite for the unconventional turns ordinary life into a series of experiments, and neither asks the other to be smaller to fit the mold.",
       "communicationPattern": "Ideas-first, feelings-later. Both lead with the concept, the vision, the argument—and assume the emotional layer will sort itself. Many couples find the work is remembering to check in on the actual human underneath all the brilliant plans.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Maverick and the Visionary — one breaks the rule, the other rewrites the system that replaces it.",
+      "conflictLoop": "Parallel-independence drift: neither asks permission, neither reports in — freedom curdles into distance until both realize they are living parallel lives under the same roof.",
+      "repairMove": "Build one shared non-negotiable rhythm — a weekly dinner, a Sunday walk, a nightly check-in — that neither partner is allowed to skip without renegotiating.",
+      "crystalStrategy": "Aquamarine cools the fire-side's solo-launch impulse, Amazonite aligns the air-side's principles with shared values, and Quartz anchors both independent trajectories to a single relational center.",
+      "avoidCrystal": "Selenite — amplifies the floaty, untethered quality both already bring, making the drift toward parallel lives feel even more ungrounded.",
+      "ritualAngle": "Once a week, both hold Quartz between the palms and name one shared intention for the week — the stone asks both to weave two threads into one fabric."
     },
     "aries-pisces": {
       "url": "/aries-pisces/",
@@ -463,10 +486,12 @@
       "coreChallenge": "Clarity and dissolution. One draws hard lines, the other dissolves them—the first wants the answer, the second wants to sit with the question. Fire meets water and either finds warmth or gets drowned, and many couples swing between the two without warning.",
       "synergy": "Action meets compassion. One carries the will, the other carries the why. Many couples find the courage of one gives the other a safe harbor to dream, while the tenderness of one gives the other a reason to come home. Traditionally a semi-sextile of subtle difference, the bond rewards patience.",
       "communicationPattern": "One speaks in straight lines, the other in impressions. The first wants the concrete answer, the second offers the feeling—the first reads vagueness as evasion, the second reads precision as coldness. Meeting in the middle means the fast one learning pause, the deep one learning specificity.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Edge and the Ocean — one draws the shoreline, the other dissolves it with every tide.",
+      "conflictLoop": "Clarity-versus-dissolution: one wants the answer in plain words, the other sits inside the question — fire meets water and the bond swings between warmth and drowning.",
+      "repairMove": "Use a bridge sentence — the water-side names one specific feeling in plain words, the fire-side waits one full breath before responding with a solution.",
+      "crystalStrategy": "Aquamarine softens the fire-side's hard lines into patience, Amethyst gives the water-side a steadier anchor for emotional overflow, and Quartz aligns straight logic with curved intuition.",
+      "avoidCrystal": "Labradorite — amplifies the Piscean tendency to dissolve boundaries further, making it harder for the fire-side to ever land a clear answer.",
+      "ritualAngle": "At dusk, hold Amethyst in the receiving hand and Aquamarine in the giving hand — the pairing asks both to translate feeling into word before the tide rises."
     },
     "taurus-taurus": {
       "url": "/taurus-taurus/",
@@ -500,10 +525,12 @@
       "coreChallenge": "Two fixed earths, neither budging. Comfort becomes inertia—same restaurant, same routine, same disagreement replayed for years because neither will be the first to move. Many couples find the relationship works until it stalls, and then nothing restarts it.",
       "synergy": "Deep stability. Both want the same things: a home, a rhythm, a future built brick by brick. Traditionally tied to Venus-ruled earth, many couples find the shared devotion to beauty, comfort, and patience creates a sanctuary few other pairings can match.",
       "communicationPattern": "Slow, deliberate, often nonverbal. Both read actions over words—and both can go quiet when upset, waiting for the other to notice. The risk is silence hardening into standoff, because neither wants to be the one who breaks it first.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Twin Roots — two oaks planted in the same earth, each too stubborn to bend in the same storm.",
+      "conflictLoop": "Comfort-standoff: same routine, same disagreement replayed for years because neither will be the first to move — the relationship works until it stalls, and then nothing restarts it.",
+      "repairMove": "Designate one small weekly disruption — a new route, a new dish, a new conversation topic — and alternate who proposes it so inertia never fully sets in.",
+      "crystalStrategy": "Carnelian warms the stalled fire of motivation on both sides, Chrysocolla loosens the throats so neither stays mute, and Black Tourmaline grounds the shared stubbornness into adaptable stability.",
+      "avoidCrystal": "Selenite — amplifies the mental-fog quality that already comes from too much sameness, making both partners even less likely to notice the relationship has stalled.",
+      "ritualAngle": "Once a month, both hold Carnelian over the lower belly and name one routine they will deliberately break — the stone asks for warmth before momentum can return."
     },
     "taurus-gemini": {
       "url": "/taurus-gemini/",
@@ -537,10 +564,12 @@
       "coreChallenge": "Stillness and motion. One roots in, the other branches out—the first wants the evening at home, the second wants three invitations and a plan that changes. Many couples find the gap shows up in social energy, in money, and in how much new is tolerable in a month.",
       "synergy": "Anchor and explorer. Many couples find one gives the other a home to return to, the other brings the world back to the doorstep. Traditionally a semi-sextile of subtle difference, the match rewards curiosity—each carries what the other tends to skip.",
       "communicationPattern": "One speaks in concrete facts, the other in tangents. The first wants the bottom line, the second wants to circle the idea six ways. Many couples report the breakthrough is the steady one learning to follow the detour, the quick one learning to land the point.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Anchor and the Kite — one roots into the same chair, the other tugs at three different skies at once.",
+      "conflictLoop": "Stillness-versus-motion: one wants the evening at home, the other wants three invitations and a plan that changes — the gap widens monthly over social energy and money.",
+      "repairMove": "Negotiate a monthly adventure budget — a fixed number of new experiences the roamer gets and a fixed number of home nights the anchor gets, so neither side feels erased.",
+      "crystalStrategy": "Carnelian keeps the earth-side warm enough to tolerate detours, Apatite focuses the air-side's scattered attention into something landable, and Quartz aligns root and branch into one tree.",
+      "avoidCrystal": "Moonstone — amplifies the air-side's changeable restlessness while doing nothing for the earth-side's need for grounding, widening the motion gap.",
+      "ritualAngle": "Before any social decision, hold Carnelian in the left hand and Apatite in the right — the stones ask both to find the middle ground between home and horizon."
     },
     "taurus-cancer": {
       "url": "/taurus-cancer/",
@@ -574,10 +603,12 @@
       "coreChallenge": "Holding on too tight. Both want security, both build walls—but one through stuff and routine, the other through emotional closeness and family. Many couples find the bond curdles when comfort hardens into control, and neither wants to be the first to loosen the grip.",
       "synergy": "Home builders. Traditionally tied to the earth-water sextile of nourishment, many couples find the shared devotion to safety, beauty, and feeling creates a harbor few pairings match—one carries the structure, the other carries the warmth.",
       "communicationPattern": "Quiet, affectionate, often unspoken. Both read mood through small acts—the meal cooked, the blanket brought. The risk is that resentments go unnamed because both would rather absorb than confront, until the small things pile into a wall neither can name.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Two Builders of the Same Hearth — one lays the bricks, the other tends the flame that makes it home.",
+      "conflictLoop": "Grip-tightening spiral: both want security, both build walls — one through stuff and routine, the other through emotional closeness — until comfort hardens into control and neither loosens first.",
+      "repairMove": "Practice one weekly act of loosening — a small risk, an open conversation, a deliberately unscheduled hour — and name it aloud so the grip becomes visible to both.",
+      "crystalStrategy": "Carnelian warms the earth-side into flexible security, Emerald steadies the water-side's emotional tide without walls, and Quartz aligns structure and warmth into one home frequency.",
+      "avoidCrystal": "Black Onyx — amplifies the protective wall-building impulse on both sides and makes the grip-tightening spiral harder to interrupt.",
+      "ritualAngle": "On Sunday evenings, hold Quartz between both chests and name one thing each will release this week — the stone asks both to loosen before the walls go higher."
     },
     "taurus-leo": {
       "url": "/taurus-leo/",
@@ -611,10 +642,12 @@
       "coreChallenge": "Two fixed wills, two thrones. Neither bends by nature—one rules through steadiness, the other through presence—and when egos lock the standoff can last weeks. Many couples find the fight isn't about the thing, it's about who gets to be right.",
       "synergy": "Loyalty squared. Both value permanence: the home, the commitment, the long horizon. Traditionally tied to a fixed square, many couples report that once alignment is found, the combined staying power is rare—neither flinches when the hard years arrive.",
       "communicationPattern": "Slow to start, hard to stop. Both hold back until the line is crossed, then both dig in. Many couples find the work is building a pause button—because once the positions are set, neither wants to be the first to soften, even when both know they should.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Two Thrones — one rules through steadiness, the other through presence, and the room has only one crown.",
+      "conflictLoop": "Fixed-standoff freeze: both hold back until the line is crossed, then both dig in — the fight is about who gets to be right, and neither softens first.",
+      "repairMove": "Build a literal pause button — a code word or gesture that forces a thirty-minute break before either commits to a position, so the standoff never hardens past rescue.",
+      "crystalStrategy": "Carnelian warms the earth-side's stubborn stillness, Amber softens the fire-side's pride without dimming it, and Rose Quartz reminds both that tenderness is not surrender.",
+      "avoidCrystal": "Pyrite — sharpens the rigid, defensive edge on both sides and makes the who-gets-to-be-right standoff burn even longer.",
+      "ritualAngle": "When the standoff begins, both hold Rose Quartz over the heart and breathe together for sixty seconds — the stone asks each to soften before either has to concede."
     },
     "taurus-virgo": {
       "url": "/taurus-virgo/",
@@ -648,10 +681,12 @@
       "coreChallenge": "Standards on both sides. One refines through craft, the other through correction—and both notice everything. Many couples find the bond drifts into mutual critique, where love starts to sound like a performance review and neither feels quite good enough.",
       "synergy": "Two earths, one rhythm. Traditionally tied to the earth trine, many couples find a shared fluency in the practical—home, money, health, the daily craft of living. Neither drama, the bond builds slowly and lasts long because both speak the language of done well.",
       "communicationPattern": "Specific, practical, often about the task at hand. Both show care through acts more than words. The risk is that affection stays trapped inside competence—nice dinner, fixed sink, no actual I-love-you spoken—and both forget to name what they actually feel.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Two Craftsmen — one refines through feel, the other through correction, and the workshop has two foremen.",
+      "conflictLoop": "Mutual-audit drift: both notice everything, both refine — love starts to sound like a performance review, neither feels quite good enough, and affection gets trapped inside competence.",
+      "repairMove": "Separate the task-talk from the feeling-talk — one daily check-in where no problem-solving is allowed, only naming what each actually feels about the other.",
+      "crystalStrategy": "Carnelian warms the earth-side's rigid standards into generosity, Amazonite softens the Virgo-side's corrective edge into acceptance, and Quartz aligns two practical rhythms into one current.",
+      "avoidCrystal": "Hematite — amplifies the heavy, exacting perfectionism on both sides and makes every loving edit feel even more like a verdict.",
+      "ritualAngle": "During the no-fixing check-in, both hold Carnelian in the receiving hand and Amazonite in the giving hand — the stones ask both to receive warmth before offering improvement."
     },
     "taurus-libra": {
       "url": "/taurus-libra/",
@@ -685,10 +720,12 @@
       "coreChallenge": "Venus in two voices. Both want beauty and peace, but one wants it built and owned, the other wants it curated and shared. Many couples find the friction hides in money, taste, and how much compromise counts as love versus self-erasure.",
       "synergy": "Aesthetic partnership. Traditionally tied to shared Venus rulership, many couples find a rare fluency in design, atmosphere, and shared pleasure—the home, the table, the small daily beauties. Neither wants ugly, and together they build spaces that feel like a mood.",
       "communicationPattern": "Gentle, indirect, allergic to conflict. Both would rather absorb than argue, so resentments go underground. Many couples find the work is learning that politeness isn't honesty—and that a kind no saves more harmony than a resentful yes.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Connoisseur and the Curator — one wants beauty built and owned, the other wants beauty arranged and shared.",
+      "conflictLoop": "Polite-resentment underground: both would rather absorb than argue — a kind yes covers a hard no, and resentments accumulate between harmony and honesty until neither remembers what they want.",
+      "repairMove": "Practice one daily honest micro-no — name one small thing each genuinely doesn't want, before politeness swallows it and the wall builds higher.",
+      "crystalStrategy": "Carnelian warms the earth-side's quiet stubbornness into honest voice, Apatite sharpens the air-side's diplomatic blur into clear preference, and Rose Quartz keeps the tenderness intact through the friction.",
+      "avoidCrystal": "Lepidolite — amplifies the conflict-avoidance on both sides and makes the polite-underground accumulation of resentment even harder to surface.",
+      "ritualAngle": "Before any taste-or-money decision, hold Rose Quartz in both hands and ask each to name one honest preference — the stone asks for love and honesty in one breath."
     },
     "taurus-scorpio": {
       "url": "/taurus-scorpio/",
@@ -722,10 +759,12 @@
       "coreChallenge": "Possession in two directions. One holds through stuff and steadiness, the other holds through intensity and depth—both want total commitment but read loyalty differently. Many couples find the bond runs dark when trust cracks, because neither forgets and neither forgives easily.",
       "synergy": "Depth rare elsewhere. Traditionally tied to the opposition axis, many couples find the pull is instant and the loyalty total—once the bond forms, both will move earth for each other. The match asks everything and offers everything in return.",
       "communicationPattern": "Unspoken first, intense when spoken. Both read subtext faster than words, and both can go silent as power move. Many couples find the work is saying the thing instead of waiting for the other to sense it—because the guessing turns into suspicion fast.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Vault and the Volcano — one holds through steadiness and stuff, the other holds through depth and intensity, and neither forgets a wound.",
+      "conflictLoop": "Silent-power standoff: both read subtext faster than words, both go quiet as a move — the guessing turns into suspicion, and when trust cracks neither forgives easily because neither forgets.",
+      "repairMove": "Say the thing instead of waiting for the other to sense it — build a nightly two-minute raw-honesty window where subtext becomes spoken word, no interpretation allowed.",
+      "crystalStrategy": "Carnelian warms the earth-side's silent grip into honest voice, Black Tourmaline absorbs the water-side's stored intensity before it curdles, and Rose Quartz softens the trust-wound both keep reopening.",
+      "avoidCrystal": "Malachite — draws the Scorpio-side's buried intensity to the surface too fast for either to metabolize, turning layered wounds into volcanic episodes neither can repair.",
+      "ritualAngle": "Each night, hold Black Tourmaline in both hands for ninety seconds and speak one unsaid truth — the stone asks both to release what would otherwise calcify into suspicion."
     },
     "taurus-sagittarius": {
       "url": "/taurus-sagittarius/",
@@ -759,10 +798,12 @@
       "coreChallenge": "Roots and horizons. One wants the house paid off, the routine, the same chair at the same cafe; the other wants the next border crossed. Many couples find the gap shows up in five-year plans, in whose version of enough is allowed to win.",
       "synergy": "Stability and expansion in one bond. Many couples find one gives the other a base to launch from, the other brings back the world that keeps the base from becoming a cage. Traditionally a quincunx of adjustment, the match rewards curiosity about the other's definition of a good life.",
       "communicationPattern": "One speaks in bottom lines, the other in stories. The first wants the conclusion, the second wants the journey of getting there. Many couples report the breakthrough is the steady one learning to enjoy the tale, the roamer learning to actually land the point.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Root and the Horizon — one wants the house paid off and the same chair, the other wants the next border crossed before the ink dries.",
+      "conflictLoop": "Roots-versus-horizons: one wants the same cafe at the same hour, the other wants three countries in a month — the gap shows up in every five-year plan.",
+      "repairMove": "Build a horizon-and-home calendar — fixed home weeks for the root-side, fixed travel weeks for the horizon-side, so both definitions of enough coexist instead of competing.",
+      "crystalStrategy": "Carnelian keeps the earth-side warm enough to tolerate adventure, Herkimer Diamond clarifies the fire-side vision into trust, and Rose Quartz holds the bond through both geographies.",
+      "avoidCrystal": "Citrine — amplifies the Sagittarius-side's restless wanderlust while doing nothing for the Taurus-side's need for stable ground, widening the roots-versus-horizons gap.",
+      "ritualAngle": "Before any travel decision, hold Carnelian in the left hand and Herkimer Diamond in the right — the stones ask both to find the middle distance between chair and border."
     },
     "taurus-capricorn": {
       "url": "/taurus-capricorn/",
@@ -796,10 +837,12 @@
       "coreChallenge": "Work without end. Both value building, both respect results—so the relationship can quietly turn into a joint venture with no weekends. Many couples find the bond succeeds on paper while starving underneath, because neither thinks to ask what the success is for.",
       "synergy": "Two earths, one horizon. Traditionally tied to the earth trine, many couples find rare alignment on money, goals, and the long arc of a life. Neither flakes, both deliver, and the combined staying power builds things other pairings only talk about.",
       "communicationPattern": "Spare, practical, task-focused. Both assume actions speak louder—and both can go months without naming what they actually feel. Many couples find the work is carving out space for tenderness that isn't measured by outcomes, because the unspoken starts to feel like indifference.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Two Builders — one stacks the bricks, the other drafts the blueprint, and the job site never closes.",
+      "conflictLoop": "All-work starvation: both value building, both respect results — the relationship quietly turns into a joint venture with no weekends, succeeds on paper while starving underneath.",
+      "repairMove": "Schedule one weekly non-productive hour — no goals, no metrics, no outcomes — where the only task is being together with nothing to show for it.",
+      "crystalStrategy": "Carnelian warms the earth-side's work-only mode into tenderness, Black Tourmaline grounds the Capricorn-side's relentless ambition into sustainable rhythm, and Quartz aligns both builders toward a shared definition of enough.",
+      "avoidCrystal": "Pyrite — amplifies the ambition-and-output fixation on both sides and makes the success-on-paper-while-starving-underneath pattern even harder to break.",
+      "ritualAngle": "On Friday evenings, both hold Carnelian over the lower belly and Quartz over the heart — the stones ask both to convert output into warmth before the weekend begins."
     },
     "taurus-aquarius": {
       "url": "/taurus-aquarius/",
@@ -833,10 +876,12 @@
       "coreChallenge": "Tradition and disruption. One values what lasts, the other values what changes—the first wants the institution, the second questions why it exists. Many couples find the gap shows up in everything from money to marriage to what counts as a normal week.",
       "synergy": "Anchor and innovator. Many couples find one gives the other a base to push against, the other brings ideas that keep the base from going stale. Traditionally a fixed square, the match is hard but generative—both hold strong positions, and the friction can produce real evolution when both stop trying to convert the other.",
       "communicationPattern": "One speaks in precedent, the other in principles. The first defends the way it's been, the second argues the way it should be. Many couples report the breakthrough is both recognizing the other isn't wrong, just operating on a different timeline of value.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Foundation and the Future — one defends the institution, the other questions why it exists at all.",
+      "conflictLoop": "Tradition-versus-disruption lock: one values what lasts, the other values what changes — the gap shows up in everything from money to marriage, and each tries to convert the other.",
+      "repairMove": "Separate the domains — name which parts of life run on tradition and which run on experimentation, so neither side has to win every decision to feel alive.",
+      "crystalStrategy": "Carnelian warms the earth-side fixed position into flexible ground, Amazonite aligns the air-side principles with shared values, and Rose Quartz reminds both the other is not wrong, just different.",
+      "avoidCrystal": "Labradorite — amplifies the Aquarius-side's destabilizing experimentation while doing nothing for the Taurus-side's need for continuity, widening the tradition-versus-disruption gap.",
+      "ritualAngle": "During any values conversation, hold Carnelian in the left hand and Amazonite in the right — the stones ask both to find the value beneath the position before either argues."
     },
     "taurus-pisces": {
       "url": "/taurus-pisces/",
@@ -870,10 +915,12 @@
       "coreChallenge": "Boundaries and dissolution. One holds firm lines, the other dissolves them—the first wants the structure, the second wants the merge. Many couples find the bond drifts toward one carrying all the practical weight while the other carries all the feeling, and resentment builds quietly on both sides.",
       "synergy": "Earth and water, the classical nourishment pair. Traditionally tied to the sextile, many couples find one gives the other form—the dream gets a body, the body gets a soul. The devotion runs deep, and the shared appetite for beauty, comfort, and tenderness is rare.",
       "communicationPattern": "Slow, sensory, often wordless. Both read the room before either speaks. Many couples find the risk is that the hard conversation never happens because both would rather absorb the discomfort than break the atmosphere—and the unsaid piles up.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Banks and the River — one holds the shape, the other fills it, and neither remembers where one ends and the other begins.",
+      "conflictLoop": "Boundaries-dissolve drift: one holds firm lines, the other dissolves them — the bond drifts toward one carrying all practical weight while the other carries all feeling, and resentment builds quietly.",
+      "repairMove": "Run a weekly roles audit — name out loud who is carrying which weight, so the practical-emotional split stops being assumed and becomes chosen.",
+      "crystalStrategy": "Carnelian warms the earth-side's rigid container into flexible strength, Amethyst anchors the water-side's dissolving tendency into steady presence, and Quartz aligns form and feeling into one current.",
+      "avoidCrystal": "Moonstone — amplifies the Pisces-side's boundary-dissolving drift while doing nothing for the Taurus-side's need for defined structure, widening the formlessness gap.",
+      "ritualAngle": "On Sunday evenings, hold Amethyst in the left hand and Carnelian in the right — the stones ask both to honor river and banks before the new week begins."
     },
     "gemini-gemini": {
       "url": "/gemini-gemini/",
@@ -907,10 +954,12 @@
       "coreChallenge": "Two minds that never stop talking, and nobody remembering what was said Tuesday. Traditionally tied to mutable air, this match skims ten topics before breakfast yet struggles to land on one decision. Bills, plans, and promises stack up half-finished because the next shiny thread already pulled them away.",
       "synergy": "No one else follows the leaps. A half-sentence lands; the other half was already thought. Ideas multiply faster than either could generate alone, and the shared hunger for novelty keeps the bond from going stale.",
       "communicationPattern": "Rapid-fire, tangential, often brilliant. They finish each other's analogies, not sentences. Arguments dissolve into laughter mid-clash because both already spotted the absurdity. Listening, however, is entirely optional, and so is finishing a thought before the next one arrives.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Hall-of-Mirrors Twins — two restless minds that finish each other's tangents and abandon the same ten projects by Tuesday.",
+      "conflictLoop": "Both skim, both deflect, neither takes notes. A decision dissolves mid-conversation because a flashier topic hijacked the room, and neither remembers who was supposed to follow up.",
+      "repairMove": "Designate one partner as the 'closer' for each decision and write the agreed action on a sticky note before the next topic is allowed to open.",
+      "crystalStrategy": "Apatite sharpens scattered focus for the twin mind; chrysocolla slows the throat chakra so words land instead of multiplying; black tourmaline anchors the pair's racing nervous systems into one shared physical moment.",
+      "avoidCrystal": "Selenite — its upward, mentalizing energy amplifies the already-airborne overthinking and makes grounding harder for two partners who already live above the neck.",
+      "ritualAngle": "Hold black tourmaline in paired hands during the weekly 'decisions we actually made' review; let chrysocolla sit between two laptops to mute side-conversations and keep one thread alive to the end."
     },
     "gemini-cancer": {
       "url": "/gemini-cancer/",
@@ -944,10 +993,12 @@
       "coreChallenge": "One skims the surface of ten topics; the other needs to plumb the depths of one. The twin mind wants to discuss, the crab heart wants to feel. Traditionally an awkward neighbor pairing, a casual joke can land like a wound while a heartfelt confession gets met with cool analysis.",
       "synergy": "Air cools water's storm surges; water warms air's chill abstractions. The talker learns to name feelings, the feeler learns to voice them. Together they cover emotional and intellectual ground no same-sign pair could.",
       "communicationPattern": "Mismatched rhythms. One processes out loud and fast; the other processes in private and slow. They meet in the middle of a misunderstanding, then spend hours untangling it, and the undoing is often where the intimacy actually lives between them.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Talker and the Tender — one names the weather in ten words, the other feels it in one long silence.",
+      "conflictLoop": "A casual joke lands like a blade; the wounded partner retreats into the shell; the talker reads the withdrawal as coldness and analyzes it aloud, which deepens the wound instead of healing it.",
+      "repairMove": "When the joke misfires, stop analyzing. Name the hurt feeling in one short sentence, offer a quiet gesture — hand on shoulder, slow hug — before any further discussion.",
+      "crystalStrategy": "Apatite gives the air partner vocabulary for feelings, not just observations; emerald softens the water partner's shell so the heart can be voiced; quartz bridges the two mismatched rhythms into one coherent signal.",
+      "avoidCrystal": "Hematite — its heavy grounding deepens the crab's already-dense emotional sediment and overwhelms a mind that needs lightness to stay open.",
+      "ritualAngle": "Pass a single quartz point back and forth at the kitchen table: whoever holds it must speak one feeling-sentence, no analysis allowed. Pair with emerald over the heart during long untangling conversations."
     },
     "gemini-leo": {
       "url": "/gemini-leo/",
@@ -981,10 +1032,12 @@
       "coreChallenge": "One needs an audience of many; the other needs to be the audience. Leo's spotlight is fixed, Gemini's attention roams. Friction peaks when the lion demands undivided focus and the twin is already texting someone else, quietly bored by being lectured.",
       "synergy": "Fire feeds on air. Gemini's wit gives Leo fresh material to perform; Leo's warmth gives Gemini a stage worth playing on. Socially, this pair can host a room like few others.",
       "communicationPattern": "Theatrical and verbal. They like to talk, but one performs while the other narrates. When the joke lands together, it lands huge. When it misses, each blames the other's timing before the night is even over.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Narrator and the Stage — one performs the story, the other live-tweets it from the front row.",
+      "conflictLoop": "The spotlight-seeker demands undivided attention; the roving mind is already texting someone else, quietly bored by the lecture. The performer escalates louder; the narrator checks out further.",
+      "repairMove": "Trade roles once a week: the performer becomes the audience, the narrator gets the floor uninterrupted for ten full minutes. Honor the trade or the loop never breaks.",
+      "crystalStrategy": "Apatite gives the narrator genuine focus to stay in the room when not center-stage; amber warms the performer's need for validation into generous attention rather than demand; quartz harmonizes two bright, expressive frequencies.",
+      "avoidCrystal": "Black tourmaline — its absorptive heaviness dims the playful fire that this partnership runs on, leaving both partners flat where they should sparkle.",
+      "ritualAngle": "Place amber at the center of the dinner table during the weekly 'spotlight swap' ritual; hold quartz together for ten seconds before the audience partner begins to listen, sealing the attention contract."
     },
     "gemini-virgo": {
       "url": "/gemini-virgo/",
@@ -1018,10 +1071,12 @@
       "coreChallenge": "Ruled by the same planet, processing relentlessly in opposite directions. The twin scatters information to find patterns; the maiden sorts patterns to discard noise. Traditionally a tense square, what one calls exploration the other calls chaos.",
       "synergy": "Twin breadth meets Virgo depth. Together they can research, map, and execute what neither would attempt alone. Gemini sells the vision, Virgo builds the spreadsheet, and the project actually ships on time.",
       "communicationPattern": "Critique-heavy. They notice everything, and say it. The difference: one nitpicks to refine, the other nitpicks to deflect. Decoding intent is half the work of every single conversation they have.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Scatter and the Sorter — same ruling planet, opposite processing directions, infinite mutual critique.",
+      "conflictLoop": "One nitpicks to refine; the other nitpicks to deflect. A brainstorm gets shredded as chaos; the scatter retreats into more chaos to dodge the verdict, and the sorter issues another critique.",
+      "repairMove": "Separate ideation from evaluation explicitly: brainstorm for twenty minutes with zero critique allowed, then switch to sorter mode with the scatter agreeing in advance to stay for the full review.",
+      "crystalStrategy": "Apatite broadens the sorter's tolerance for mess; amazonite cools the harsh critic so critique becomes care, not attack; rose quartz reminds both why they fell in love between the spreadsheets.",
+      "avoidCrystal": "Pyrite — its rigid, ambitious focus rewards the sorter and punishes the scatter, widening the very productivity gap that fuels the loop.",
+      "ritualAngle": "Set amazonite on the desk during the no-critique ideation window; switch to rose quartz on the table once evaluation mode begins, marking the gear-shift so neither partner slips back into the wrong mode."
     },
     "gemini-libra": {
       "url": "/gemini-libra/",
@@ -1055,10 +1110,12 @@
       "coreChallenge": "Air plus air. Beautiful ideas, endless conversation, very little traction. They would rather discuss the plan than execute it. Months pass in brilliant talk while the lease, the wedding date, the savings account stay exactly where they were before the last brainstorm.",
       "synergy": "Shared wavelength. They get each other's references, finish each other's tangents, and rarely fight dirty. The mental rapport is the relationship, and it runs deep even when nothing else does.",
       "communicationPattern": "Diplomatic, indirect, fond of nuance. Neither wants to be the heavy. So decisions get postponed until one of them finally snaps, which always shocks the other into a wounded silence.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Salon of Two — brilliant talk, beautiful manners, no decision ever actually closes between them.",
+      "conflictLoop": "Neither wants to be the heavy. Decisions get postponed until one partner snaps at the unspoken buildup, shocking the other into wounded silence, then both apologize and postpone again.",
+      "repairMove": "Institute a forced-close: every discussion has a hard thirty-minute deadline, after which either partner may invoke a deciding vote that the other must accept without sulking.",
+      "crystalStrategy": "Apatite concentrates diffuse mental energy into one through-line; iolite cuts indecision by clarifying what is wanted underneath the diplomacy; quartz amplifies the rare honest sentence.",
+      "avoidCrystal": "Lepidolite — its sedating, smoothing frequency makes confrontation feel even less safe, extending the politeness stand-off by another month.",
+      "ritualAngle": "Hold iolite at the throat when forced to deliver the uncomfortable 'I actually want X' sentence; place quartz between the chairs during the deciding-vote window so the snap never gets personal."
     },
     "gemini-scorpio": {
       "url": "/gemini-scorpio/",
@@ -1092,10 +1149,12 @@
       "coreChallenge": "The twin wants to know a little about everything; the scorpion wants to know everything about one thing, especially you. Gemini's social ease reads as flirtation; Scorpio's stillness reads as accusation. Trust erodes fast when lightness meets gravity.",
       "synergy": "When aligned, Scorpio gives Gemini a mystery worth committing to, and Gemini gives Scorpio a reason to surface. The depth-chaser finds a doorway out of the abyss; the skater finds a depth actually worth diving.",
       "communicationPattern": "Asymmetric. One talks to connect; the other watches to decode. Silences carry more weight than words here, which terrifies one partner and quietly, deeply reassures the other through every long, loaded pause.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Skater and the Depth-Charge — one stays light to survive, the other dives dark to know.",
+      "conflictLoop": "Social ease reads as flirtation; stillness reads as accusation. Lightness meets gravity; the skater deflects with humor, the depth-charger interprets the deflection as proof of betrayal.",
+      "repairMove": "When the silence gets loaded, the light partner must stay in the room without a joke and say 'I am here, I am not leaving' before any explanation is offered or demanded.",
+      "crystalStrategy": "Apatite gives the light partner words for the fear beneath humor; black tourmaline shields the depth-charger from reading every social interaction as threat; rose quartz keeps the heart soft.",
+      "avoidCrystal": "Malachite — its deep transformational intensity feeds the scorpion's worst investigative spiral and drowns the already-thin air the twin needs to breathe.",
+      "ritualAngle": "Place black tourmaline at the door when either partner returns from a social outing, absorbing the flirtation-paranoia at the threshold; hold rose quartz over the heart during the 'I am not leaving' sentence."
     },
     "gemini-sagittarius": {
       "url": "/gemini-sagittarius/",
@@ -1129,10 +1188,12 @@
       "coreChallenge": "Opposite signs, same restlessness. Each loves the next thing more than the current thing. The archer chases the horizon; the twin chases the next conversation. Traditionally a magnetic polarity, they keep moving together but rarely arrive anywhere together.",
       "synergy": "Hunger for expansion on both sides. They travel, learn, and reinvent as a unit. Boredom is simply not in the vocabulary. The chemistry is instant because each partner speaks fluently in possibilities.",
       "communicationPattern": "Big-picture, philosophical, frequently exaggerated. They tell stories more than ask questions, trade monologues and call it dialogue, and most of the time that is genuinely, almost miraculously, perfectly fine with both.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "Two Nomads, One Horizon — magnetically opposite, identically restless, always departing together, rarely arriving anywhere.",
+      "conflictLoop": "Both love the next thing more than the current thing. They trade monologues, call it dialogue, and quietly drift past the plan they never finished agreeing on.",
+      "repairMove": "Pick one destination — literal or metaphorical — and commit to arriving before the next departure is allowed. Both partners must say 'we landed' out loud before opening the next map.",
+      "crystalStrategy": "Apatite focuses the twin's scattered curiosity into follow-through; herkimer diamond clarifies the archer's grandest vision into a single actionable next step; rose quartz anchors the wander into something worth coming back to.",
+      "avoidCrystal": "Citrine — its relentless forward, optimistic push accelerates the departure impulse and makes pausing to integrate feel like failure.",
+      "ritualAngle": "Hold herkimer diamond between paired palms during the 'we landed' declaration, locking the arrival; place rose quartz in the suitcase so the return feels like a choice, not a chore."
     },
     "gemini-capricorn": {
       "url": "/gemini-capricorn/",
@@ -1166,10 +1227,12 @@
       "coreChallenge": "The twin wants freedom today; the goat wants structure for the next decade. Gemini's pivots read as flakiness; Capricorn's plans read as cages. Couples often fight over the calendar more than the relationship itself.",
       "synergy": "Goat gives twin a deadline, twin gives goat a network. When they stop arguing about method, they produce results neither could manage alone. Capricorn builds the house; Gemini fills it with interesting people.",
       "communicationPattern": "Different speeds, different formats. One texts in fragments; the other replies in bullet points. Each quietly assumes the other is being difficult on purpose, and neither cares to confirm it.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Butterfly and the Blueprint — one texts fragments, the other replies in bullet points.",
+      "conflictLoop": "Pivots read as flakiness; plans read as cages. They fight over the calendar more than the relationship, each quietly assuming the other is being difficult on purpose.",
+      "repairMove": "Run the week from one shared calendar where the twin protects two 'free roam' nights and the goat protects three 'executed as planned' nights — neither partner may overwrite the other's protected slots.",
+      "crystalStrategy": "Apatite helps the butterfly hold a single thread long enough to finish; black tourmaline keeps the goat's structure from calcifying into control; rose quartz reminds both that the calendar serves the bond.",
+      "avoidCrystal": "Garnet — its rigid, dutiful commitment frequency amplifies the goat's worst instinct to timetable the partnership into a stale cage.",
+      "ritualAngle": "Place black tourmaline on the shared calendar during the Sunday week-planning ritual; hold rose quartz during the negotiation of protected slots so neither partner frames the other as the enemy."
     },
     "gemini-aquarius": {
       "url": "/gemini-aquarius/",
@@ -1203,10 +1266,12 @@
       "coreChallenge": "Air plus air, brilliant and detached. Each lives inside a busy head; neither volunteers for the dishes. Emotional labor gets skipped because neither signed up for it. Traditionally an easy trine, they slide into roommate mode when the talk finally runs dry.",
       "synergy": "Pure intellectual chemistry. They invent shared worlds, swap strange theories at 2 a.m., and never judge each other's obsessions. Friendship is the floor; everything else stacks on top of it.",
       "communicationPattern": "Conceptual, sideways, full of inside jokes. Feelings get theorized before they get felt. When one partner actually needs comfort, the other reaches for an analogy, and that small reach can quietly wound.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Think-Tank of Two — pure intellectual chemistry, dishes permanently unwashed, roommate mode by month six.",
+      "conflictLoop": "Feelings get theorized before they get felt. When one partner actually needs comfort, the other reaches for an analogy, and the small wounding goes unregistered as both slide back into idea-mode.",
+      "repairMove": "Agree a code phrase — 'this is a feeling, not a theory' — that forces the theorist to drop the analogy, make eye contact, and say one human sentence before resuming analysis.",
+      "crystalStrategy": "Apatite focuses the twin's restless mind into one heart-thread; amazonite cools the water bearer's detachment into calmer presence; quartz bridges head to heart so ideas become offerings, not escapes.",
+      "avoidCrystal": "Fluorite — its hyper-mental, organizing frequency deepens the very dissociation this pair already runs on, keeping both partners safely above the neck.",
+      "ritualAngle": "Hold amazonite over the heart when speaking the 'feeling, not a theory' code phrase; place quartz between two chairs facing each other, no screens allowed, for the ten-minute feeling window."
     },
     "gemini-pisces": {
       "url": "/gemini-pisces/",
@@ -1240,10 +1305,12 @@
       "coreChallenge": "Shapeshifters in different media. The twin shifts through ideas; the fish shifts through feelings. Gemini's irony wounds Pisces' sincerity; Pisces' vagueness frustrates Gemini's need for a clean thread. Traditionally a tense square, both partners evaporate under sustained pressure.",
       "synergy": "Mutable adaptability on both sides. They can become what the other needs, at least for a while. Pisces gives Gemini a soul to anchor the chatter; Gemini gives Pisces language for the fog.",
       "communicationPattern": "Indirect, elliptical, easily misread. One says it sideways; the other hears it slanted. Clarification takes longer than the original point, and sometimes that is precisely where the real intimacy lives between them.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "Two Shapeshifters, Different Media — one shifts through ideas, the other through feelings, both evaporate under pressure.",
+      "conflictLoop": "Irony wounds sincerity; vagueness frustrates the need for a clean thread. One says it sideways, the other hears it slanted, and clarification takes longer than the original point.",
+      "repairMove": "When the misread happens, both write down what they meant in one sentence on paper, exchange, read silently before speaking — this stops the verbal untangling from creating more knots.",
+      "crystalStrategy": "Apatite sharpens the twin's language into precision rather than irony; amethyst gives the fish a spine of clarity inside the fog; rose quartz keeps the heart soft through the long clarification.",
+      "avoidCrystal": "Moonstone — its already-dreamy, lunar pull thickens the fish's fog and the twin's scatter simultaneously, making the partnership even harder to pin down.",
+      "ritualAngle": "Hold amethyst at the third eye during the silent written clarification exchange; place rose quartz between the two notes so the reading stays tender, not clinical."
     },
     "cancer-cancer": {
       "url": "/cancer-cancer/",
@@ -1277,10 +1344,12 @@
       "coreChallenge": "Water plus water. Two shells, two soft interiors, two memories that never forget a slight. Each retreats when hurt, so a small wound can spiral into days of silent mutual withdrawal. The mood of one quietly becomes the weather of both.",
       "synergy": "Emotional attunement that borders on telepathy. No explanations needed, no translations required. They build a home that genuinely feels like refuge, and the loyalty runs bone-deep for decades on end.",
       "communicationPattern": "Low-volume, high-context. Real talk happens in glances, sighs, and what is deliberately left unsaid at dinner. When voices rise, both flood. Repair requires someone to surface first, and neither ever wants to.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "Two Shells, One Tide — bone-deep loyalty, two soft interiors, two memories that never forget a slight.",
+      "conflictLoop": "Each retreats when hurt. A small wound spirals into days of silent mutual withdrawal; the mood of one becomes the weather of both, and nobody surfaces first.",
+      "repairMove": "Agree a 'shell timer' — when one partner withdraws, they must surface within 24 hours with one sentence about what hurt, even if no resolution is offered yet.",
+      "crystalStrategy": "Emerald keeps the heart open through the long sulk instead of calcifying; moonstone honors the lunar tide without letting it swamp the bond; black tourmaline absorbs the cumulative static flooding the shared atmosphere.",
+      "avoidCrystal": "Selenite — its upward, ethereal lift pulls both partners further from the body and the home, dissolving the very shell-and-hearth anchor this pair needs to stay grounded.",
+      "ritualAngle": "Hold moonstone together at the new moon, naming the month's emotional weather in one word each; place black tourmaline at the bedroom threshold so the shared atmosphere gets cleared nightly."
     },
     "cancer-leo": {
       "url": "/cancer-leo/",
@@ -1314,10 +1383,12 @@
       "coreChallenge": "One tends the home; the other commands the stage. Cancer builds the nest; Leo needs the crowd. Resentment grows when the crab feels abandoned for the spotlight and the lion feels dimmed by the curtains.",
       "synergy": "Warmth on both sides. Leo's fire gives Cancer permission to shine; Cancer's care gives Leo a place to come down from the performance. Together they host, feed, and gather better than either could alone.",
       "communicationPattern": "Cancer hints; Leo announces. The crab waits to be noticed; the lion assumes the spotlight. Many a fight starts because the hint went unheard and the announcement went unfelt, and neither notices for days.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Nest-Keeper and the Spotlight — one builds the hearth, the other commands the stage.",
+      "conflictLoop": "The crab hints and waits to be noticed; the lion announces and assumes the room. The hint goes unheard; the announcement goes unfelt; resentment curdles on both sides for days.",
+      "repairMove": "The crab says the need aloud in one direct sentence without coding it; the lion stops performing for ten seconds, makes eye contact, and reflects the sentence back before responding.",
+      "crystalStrategy": "Emerald softens the crab's coding into clearer, braver speech; amber warms the lion's performance into actual reception instead of transmission; quartz harmonizes two warm but mismatched frequencies.",
+      "avoidCrystal": "Obsidian — its raw, volcanic pull deepens the crab's sulking side and dims the very fire the lion needs reflected back to stay generous.",
+      "ritualAngle": "Place amber on the kitchen table when the lion returns from the stage so the homecoming stays warm; hold quartz together during the hint-to-direct-sentence practice, sealing the new contract."
     },
     "cancer-virgo": {
       "url": "/cancer-virgo/",
@@ -1351,10 +1422,12 @@
       "coreChallenge": "Givers in different currencies. Cancer gives devotion; Virgo gives service. The crab needs reassurance spoken aloud; the maiden shows love by quietly fixing the sink. Traditionally an easy sextile, the languages still get lost in transit.",
       "synergy": "Earth holds water. Virgo's steadiness calms Cancer's tides; Cancer's tenderness softens Virgo's relentless self-critique. Together they make a home that actually runs, and rarely stop to thank each other for it.",
       "communicationPattern": "Careful, often coded. Virgo notices details; Cancer notices feelings. When they share notes openly, they understand everything. When they do not, they both stew in private and the silence widens.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "Two Givers, Different Currencies — one gives devotion spoken aloud, the other shows love by quietly fixing the sink.",
+      "conflictLoop": "The crab needs reassurance voiced; the maiden shows love through service. Languages get lost in transit; both partners stew privately because the giving on the other side doesn't register as love.",
+      "repairMove": "Once a week, each partner voices aloud one specific act of care the other performed, in the other's currency — 'you fixed the sink' meets 'you held me' — both named, both received.",
+      "crystalStrategy": "Emerald opens the crab's heart to receive service as love; amazonite loosens the maiden's critic so service flows without resentment; quartz translates between devotion and service so neither currency misreads.",
+      "avoidCrystal": "Hematite — its heavy, dutiful weight feeds the maiden's already-rigid work ethic and makes her interpret the crab's softness as indulgence rather than love.",
+      "ritualAngle": "Hold amazonite while speaking the named act of service; place quartz between two chairs at the weekly 'currencies exchanged' review so neither partner minimizes what the other offered."
     },
     "cancer-libra": {
       "url": "/cancer-libra/",
@@ -1388,10 +1461,12 @@
       "coreChallenge": "Each wants harmony, so neither names the problem out loud. The crab sulks; the scales smile through it. Traditionally a tense square, small resentments accumulate for months because both would rather keep the peace than start a war.",
       "synergy": "Aesthetic and emotional refinement in equal measure. They curate a beautiful home, beautiful dinners, beautiful manners, and a shared social life. When aligned, the vibe is unmistakably warm and genuinely inviting.",
       "communicationPattern": "Roundabout, polite, loaded. Cancer uses silence; Libra uses charm. Each is saying something, neither is saying it directly, and the subtext gets denser by the hour until somebody finally cracks.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "Two Peacemakers, One Unspoken War — the crab sulks, the scales smile through it, the subtext gets denser by the hour.",
+      "conflictLoop": "Both want harmony, so neither names the problem. Small resentments accumulate for months because both would rather keep peace than start the war that would actually clear the air.",
+      "repairMove": "Schedule a monthly 'clearing' where each partner names one resentment that has been swallowed, with the rule that no reaction is allowed for ten full minutes after each item — just listening.",
+      "crystalStrategy": "Emerald gives the crab courage to voice the swallowed hurt; apatite sharpens the scales' indirect charm into direct honesty; rose quartz keeps the named wound from hardening into grudge.",
+      "avoidCrystal": "Lepidolite — its smoothing, sedating vibe makes swallowing the resentment feel even safer, extending the silent accumulation by another month.",
+      "ritualAngle": "Hold rose quartz over the heart during the ten-minute silent-listening window; place apatite at the throat of whoever is speaking the named resentment so the truth stays clean rather than coded."
     },
     "cancer-scorpio": {
       "url": "/cancer-scorpio/",
@@ -1425,10 +1500,12 @@
       "coreChallenge": "Water plus water, depth plus depth. Each feels everything; each guards everything. Trust is slow to build because both test before letting anyone in. Once the walls finally come down, the intimacy is total and the fights are devastating.",
       "synergy": "Emotional resonance without words. Scorpio's intensity meets Cancer's tenderness, and both finally feel met. Loyalty here is absolute, unspoken, and genuinely lifelong. Together they become a true unit against the outside world.",
       "communicationPattern": "Sparse, weighted, often nonverbal. A single look carries a paragraph. When they do speak, it is private, raw, and unmistakably honest, and betrayal of that honesty is simply, permanently unforgivable.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "Two Depths, One Trench — slow-built trust, total intimacy, devastating fights, and a permanent unforgiveness.",
+      "conflictLoop": "Both feel everything; both guard everything. Walls come down slowly; once down, any perceived dishonesty is interpreted as betrayal and is quietly, permanently unforgiven — no second chance is offered.",
+      "repairMove": "When perceived betrayal lands, the hurt partner must ask one clarifying question before sealing the verdict — the assumption of intent is what makes the wound permanent.",
+      "crystalStrategy": "Emerald keeps the crab's heart open through the test; black tourmaline shields the scorpion from reading every nuance as threat; quartz clarifies the one honest sentence that disarms assumed betrayal.",
+      "avoidCrystal": "Malachite — its deep, surging transformational intensity feeds the scorpion's investigative spiral and turns a small wound into a permanent grudge.",
+      "ritualAngle": "Hold black tourmaline between two open palms during the clarifying-question ritual, absorbing the worst-case projection; place quartz over the heart during the answer so reception stays open, not sealed."
     },
     "cancer-sagittarius": {
       "url": "/cancer-sagittarius/",
@@ -1462,10 +1539,12 @@
       "coreChallenge": "One wants roots; the other wants horizons. The crab builds the home, the archer quietly packs the bag. Couples fight over geography more than feelings: where to live, where to go, where to stay. Cancer reads restlessness as rejection; Sagittarius reads clinging as entrapment.",
       "synergy": "Cancer gives the traveler a reason to come back; Sagittarius gives the homebody a window to the wider world. When they honor both needs, the rhythm of leaving and returning becomes the love language.",
       "communicationPattern": "Sagittarius speaks in big truths; Cancer speaks in feelings. The archer's bluntness lands hard on the crab's soft shell. Repair requires the archer to soften, not the crab to harden.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Anchor and the Archer — one builds the home, the other quietly packs the bag, geography is the eternal fight.",
+      "conflictLoop": "The crab builds roots; the archer chases horizons. Restlessness reads as rejection; clinging reads as entrapment. The more one reaches, the further the other roams, and the loop accelerates.",
+      "repairMove": "Establish a 'leaving and returning' rhythm — fixed return dates, fixed return rituals — so the archer's departures feel like choice and the crab's stays feel like choice, not abandonment or cage.",
+      "crystalStrategy": "Emerald anchors the crab's heart so home feels like refuge, not rope; herkimer diamond clarifies the archer's vision into a dated return; rose quartz makes the homecoming warmer than the road.",
+      "avoidCrystal": "Citrine — its relentless forward, optimistic push feeds the archer's departure impulse and makes the home feel like a stall rather than a choice.",
+      "ritualAngle": "Hold herkimer diamond while naming the return date out loud before departure; place rose quartz on the pillow the archer returns to so the bed reads as welcome, not leash."
     },
     "cancer-capricorn": {
       "url": "/cancer-capricorn/",
@@ -1499,10 +1578,12 @@
       "coreChallenge": "Opposite signs with mirror needs. One builds the home; the other builds the career. Both are doing it for the family, neither feels seen by the other. Traditionally a magnetic polarity, the crab waits at night while the goat works late, and both feel abandoned.",
       "synergy": "Old-fashioned complementarity. Cancer tends the fire; Capricorn tends the structure. Together they build something that genuinely lasts, with a foundation neither could pour alone, plus a shared legacy worth keeping.",
       "communicationPattern": "Different dialects. Capricorn speaks in plans and timelines; Cancer speaks in moods and subtext. Each is trying to say I love you in their native tongue, and translation between them is slow, slow work.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "Two Builders, One Legacy — one tends the hearth at midnight, the other tends the structure late at the office.",
+      "conflictLoop": "Both are doing it for the family; neither feels seen by the other. The crab waits in the lit window; the goat works late; both quietly conclude the other chose something else.",
+      "repairMove": "Once a week, the goat comes home before a fixed hour with no work allowed, and the crab speaks one sentence of gratitude for the structure built — both naming the unseen sacrifice.",
+      "crystalStrategy": "Emerald opens the crab's heart to receive structure as love; black tourmaline keeps the goat from mistaking presence for weakness; rose quartz melts the conclusion that the other chose something else.",
+      "avoidCrystal": "Pyrite — its rigid, ambitious focus rewards the goat's worst workaholic instinct and makes the late office feel even more justified.",
+      "ritualAngle": "Place black tourmaline on the work-desk at the agreed departure hour as a hard stop signal; hold rose quartz together during the gratitude sentence so the structure finally reads as love."
     },
     "cancer-aquarius": {
       "url": "/cancer-aquarius/",
@@ -1536,10 +1617,12 @@
       "coreChallenge": "The crab wants to merge; the water bearer wants to remain. Cancer pulls close; Aquarius pulls apart. Intimacy versus autonomy, the eternal quincunx. The more one reaches, the more the other detaches, and the cycle quietly accelerates.",
       "synergy": "Cancer offers Aquarius a heart to come home to; Aquarius offers Cancer a perspective bigger than the personal. When they stop trying to convert each other, the differences become the actual spark.",
       "communicationPattern": "Aquarius talks in principles and systems; Cancer talks in people and feelings. One wants to debate the structure; the other wants to feel seen inside it. They end up talking past the point, often.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Merger and the Sovereign — one pulls close, the other pulls apart, the eternal intimacy-versus-autonomy quincunx.",
+      "conflictLoop": "The crab reaches; the water bearer detaches. Each partner's defense triggers the other's defense; the more one merges, the further the other floats, and the cycle quietly accelerates.",
+      "repairMove": "Agree a 'tether window' — one daily 20-minute block where the water bearer commits to full presence, and the crab commits to not interpret the other 23 hours as withdrawal.",
+      "crystalStrategy": "Emerald lets the crab hold love without clinging; amazonite gives the water bearer a calmer, less defensive autonomy instead of pure detachment; rose quartz keeps the tether warm without turning into rope.",
+      "avoidCrystal": "Fluorite — its hyper-mental, organizing pull feeds the water bearer's intellectual escape hatch and makes the crab's reach feel like intrusion rather than invitation.",
+      "ritualAngle": "Hold amazonite together during the daily tether window so presence feels chosen, not forced; place rose quartz at the door the water bearer returns through, marking re-entry as a willing act."
     },
     "cancer-pisces": {
       "url": "/cancer-pisces/",
@@ -1573,10 +1656,12 @@
       "coreChallenge": "Water plus water, no anchor. Each feels everything; neither sets the boundary. Moods merge until nobody remembers whose sadness this actually was. Small disagreements flood because both partners absorb the other's distress in real time.",
       "synergy": "Psychic-level empathy without effort. Words are genuinely optional here. They sense the shift before it is spoken, and the kindness flows in both directions without negotiation, scorekeeping, or hidden agenda.",
       "communicationPattern": "Symbolic, poetic, often silent. They communicate through gesture, music, food. When they fight, it is through withdrawal, not volume. When they reconcile, it is through presence, not speeches or grand apologies.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "Two Tides, No Anchor — psychic empathy without boundary, moods merge until nobody remembers whose sadness this was.",
+      "conflictLoop": "Each feels everything; neither sets the line. Small disagreements flood because both partners absorb the other's distress in real time, and the original disagreement drowns under shared emotion.",
+      "repairMove": "When the flood rises, both partners physically separate for ten minutes in different rooms to identify whose feeling this originally was — then return and speak only that one feeling.",
+      "crystalStrategy": "Emerald gives the crab a spine of self inside the merge; amethyst offers the fish a calm crown of clarity above the tide; quartz anchors the shared atmosphere into one coherent signal.",
+      "avoidCrystal": "Moonstone — its already-lunar, dreamy pull thickens the shared emotional tide and makes it even harder to tell whose feeling is whose.",
+      "ritualAngle": "Hold amethyst at the crown during the ten-minute separation, sorting whose feeling is whose; return to a shared quartz between two chairs and speak only the original feeling."
     },
     "leo-leo": {
       "url": "/leo-leo/",
@@ -1610,10 +1695,12 @@
       "coreChallenge": "Two suns in one room, and only one spotlight. Both want to be adored; neither naturally volunteers to sit in the audience. Add shared fixed-sign stubbornness and a small disagreement can become a week-long standoff where each waits for the other to applaud first.",
       "synergy": "When they row in the same direction, the warmth is unmatched. Both speak the language of loyalty, generosity, and big-stage living. They genuinely understand each other's need to shine, and many couples find this mirror builds rare confidence—a partnership that feels like producing a hit together.",
       "communicationPattern": "Loud, dramatic, affectionate. Fights happen at full volume and often dissolve into laughter once the other's pride has been publicly validated. The trick many couples find: never criticize in front of an audience, and lead with admiration before asking for change.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Co-Stars. Two leads fighting for the same marquee, each secretly convinced the spotlight is theirs by birthright and the other is the love interest.",
+      "conflictLoop": "One performs for attention, the other withholds applause to protect pride; silence grows until both wait the other out, and the standoff outlasts whatever started it.",
+      "repairMove": "Lead with public admiration before any private ask. Praise the performance first, then request the change; never critique in front of an audience, ever.",
+      "crystalStrategy": "Amber melts the cold pride between sets, aventurine softens the competitive edge into play, and black-tourmaline grounds the dramatic spike so the standoff breaks before it becomes a week.",
+      "avoidCrystal": "Skip pyrite here. Its ambition frequency amplifies the 'main character' contest and turns healthy pride into a winner-take-all game nobody wins.",
+      "ritualAngle": "Pass a single piece of amber back and forth before any hard conversation; whoever holds the stone gets the spotlight and the applause, then hands it over."
     },
     "leo-virgo": {
       "url": "/leo-virgo/",
@@ -1647,10 +1734,12 @@
       "coreChallenge": "One needs the room to applaud; the other needs the room to be quiet and correct. Pride meets the editing instinct. The generous gesture gets proofread, the grand gesture gets a cost-benefit note. Many couples find Virgo's corrections land as criticism to Leo, and Leo's appetite for spectacle reads as wasteful to Virgo.",
       "synergy": "Service meets generosity, and both are givers by nature. Leo provides the warmth and visibility Virgo rarely grants itself; Virgo provides the practical scaffolding that turns Leo's big ideas into something finished. Many couples find this is a classic 'visionary + operator' partnership once egos are managed.",
       "communicationPattern": "Indirect, and that is the problem. Virgo refines through critique; Leo reads critique as withdrawal of love. Leo performs feelings; Virgo wants them stated plainly. Many couples find progress only when Virgo learns to praise out loud and Leo learns to ask 'what do you mean?' instead of 'why are you attacking me?'",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Star and the Stage Manager. One performs the gesture, the other proofreads the program it was printed in.",
+      "conflictLoop": "Virgo refines the gesture with a helpful note; Leo reads the note as withdrawal of applause; Leo performs louder to compensate; Virgo corrects the volume.",
+      "repairMove": "Virgo delivers praise out loud before any edit, and Leo asks 'what do you mean?' instead of 'why are you attacking me?' before retreating into the dressing room.",
+      "crystalStrategy": "Amber keeps Leo's warmth visible through Virgo's quiet refinement, amazonite cools Virgo's editing instinct into genuine curiosity, and quartz clarifies the intent behind each correction so critique stops feeling like critique.",
+      "avoidCrystal": "Avoid hematite. Its heavy grounding pulls Virgo deeper into 'let me fix this' mode and makes Leo feel managed rather than adored.",
+      "ritualAngle": "Hold amazonite while Virgo names one thing Leo did beautifully this week, then hold amber while Leo names one thing Virgo's editing actually improved."
     },
     "leo-libra": {
       "url": "/leo-libra/",
@@ -1684,10 +1773,12 @@
       "coreChallenge": "Both want the romance, neither always wants to make the call. Leo wants to lead; Libra wants to weigh every option until harmony is guaranteed. Many couples find Leo experiences Libra's indecision as avoidance, and Libra experiences Leo's decisiveness as steamrolling.",
       "synergy": "Charm on charm. Both speak beauty, courtship, and the language of 'we'. Leo gives Libra someone radiant to orbit; Libra gives Leo the admiration and social polish they crave. Many couples find this is one of the easiest public pairings—gracious hosts, generous partners, a couple other couples watch.",
       "communicationPattern": "Gentle, diplomatic, often skipping the ugly parts. Libra will soften the truth to protect Leo's pride; Leo will perform agreement to keep the peace. The growth edge many couples find: someone has to name the elephant, and Libra is usually the one who finally does—just three weeks late.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The It Couple. Charm squared, both fluent in romance and beauty, both quietly hoping the other will make the actual call.",
+      "conflictLoop": "Leo decides to lead; Libra weighs every option to preserve harmony; Leo experiences the weighing as avoidance and decides harder; Libra experiences the decisiveness as steamroll and goes nicer.",
+      "repairMove": "Name the elephant on purpose, on a schedule. Someone has to say the uncomfortable thing first, and agree that being the one who names it is an act of love, not aggression.",
+      "crystalStrategy": "Amber fuels Leo's warm decisiveness without steamroll, apatite helps Libra voice the real preference instead of the polite one, and quartz amplifies the truth between them so the soft argument becomes an honest one.",
+      "avoidCrystal": "Skip rose quartz here. It deepens the 'we are so agreeable' comfort and lets both keep skipping the ugly conversation for three more weeks.",
+      "ritualAngle": "Place apatite between you during any decision talk; whoever reaches for it first has to state the real preference out loud, no softening allowed."
     },
     "leo-scorpio": {
       "url": "/leo-scorpio/",
@@ -1721,10 +1812,12 @@
       "coreChallenge": "Both fixed, both proud, both unwilling to lose—so who holds the real power? Leo wants to be adored publicly; Scorpio wants to be possessed privately. Many couples find this becomes a slow war of wills, where withholding praise (Scorpio) and withholding vulnerability (Leo) become the main weapons.",
       "synergy": "When the alliance locks, it is unbreakable and almost theatrical in its intensity. Leo offers warmth that thaws Scorpio's suspicion; Scorpio offers loyalty deep enough to make Leo feel safe. Many couples find this pairing produces fierce protectiveness and a sexual magnetism that genuinely surprises both of them.",
       "communicationPattern": "Layered. What is said is rarely what is meant, and both are reading subtext constantly. Leo tests love through visible devotion; Scorpio tests love through jealousy and disclosure. Many couples find real talk only happens after a fight—and the fight is rarely about the thing being fought over.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Sovereign and the Sorcerer. One rules in public, the other rules in private, and neither wants to lose the throne.",
+      "conflictLoop": "Scorpio withholds praise to test devotion; Leo withholds vulnerability to protect pride; the weapons are silence and spotlight, and the fight is rarely about the thing being fought over.",
+      "repairMove": "Skip the test. Scorpio names the real need instead of engineering jealousy, and Leo drops the performance and shows the actual wound without the staging.",
+      "crystalStrategy": "Amber thaws Leo's staged armor into real warmth, black-tourmaline shields Scorpio's suspicion from spiraling into control, and rose-quartz opens the channel between them so withholding stops being the default weapon.",
+      "avoidCrystal": "Avoid obsidian. Its truth-telling edge sharpens Scorpio's probing into interrogation and makes Leo's pride double down instead of opening.",
+      "ritualAngle": "Both hold rose-quartz over the heart during a weekly 'real talk' window; the rule is no performance, no withholding, only the actual wound gets spoken."
     },
     "leo-sagittarius": {
       "url": "/leo-sagittarius/",
@@ -1758,10 +1851,12 @@
       "coreChallenge": "Both love the spotlight, both love a quest—so who stays home to mind the life they are building? Neither is naturally drawn to the unglamorous maintenance work. Many couples find the problem is not conflict but drift: too much adventure, not enough tending, and the relationship slowly runs out of fuel between trips.",
       "synergy": "Pure oxygen. Both fire signs run on optimism, generosity, and 'why not?'. They fuel each other's risk-taking, forgive quickly, and rarely hold grudges. Many couples find this is one of the few pairings where both partners genuinely feel bigger together—more brave, more alive, more willing to bet on themselves.",
       "communicationPattern": "Blunt, fast, and surprisingly unbothered by disagreement. Both fire signs tend to say the thing, react to the thing, and move on within the hour. Many couples find the actual risk is not conflict—it is that neither wants to be the one to bring up the heavy stuff that would slow the momentum.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Two Explorers. Both chasing the next horizon, both sure the quest is the point, neither naturally drawn to tending the home base.",
+      "conflictLoop": "No real conflict loop here, the real risk is drift; both go big, both forgive fast, and the relationship slowly runs out of fuel between adventures because nobody stayed home to tend it.",
+      "repairMove": "Schedule the unglamorous maintenance work like you schedule the trips. Someone has to choose to stay home and tend the fire, and that counts as a quest too.",
+      "crystalStrategy": "Amber keeps the warm hearth burning between quests, herkimer-diamond sharpens the clarity of what 'home' actually means, and quartz amplifies the small daily check-ins that prevent the drift from becoming distance.",
+      "avoidCrystal": "Skip citrine here. Its go-big energy fuels another adventure when what this pairing actually needs is someone willing to stay and tend.",
+      "ritualAngle": "Before any trip, both touch the same piece of quartz and name one thing they will tend at home while the other is away; the stone sits on the hearth until they return."
     },
     "leo-capricorn": {
       "url": "/leo-capricorn/",
@@ -1795,10 +1890,12 @@
       "coreChallenge": "Leo wants to be celebrated for who they are; Capricorn wants respect earned through what they have built. Status symbols collide—one chasing the spotlight, one chasing the corner office. Many couples find Leo reads Capricorn's reserve as coldness, and Capricorn reads Leo's need for praise as insecurity.",
       "synergy": "Long-game builders. Both are loyal, both take commitment seriously, and both want a life that looks like something. Leo provides warmth and visibility in a sometimes-cold climb; Capricorn provides the structure that turns Leo's charisma into something durable. Many couples find this is a power couple in slow motion.",
       "communicationPattern": "Formal and measured, which can feel like distance. Capricorn communicates through actions and logistics; Leo communicates through warmth and recognition. Many couples find they speak fluently only after building a shared project—give them something to build together and the talk finally has a purpose.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Star and the Architect. One chasing the spotlight, one chasing the corner office, both building something that looks like status from opposite ends.",
+      "conflictLoop": "Leo performs warmth to feel seen; Capricorn communicates through logistics and reads the performance as insecurity; Capricorn goes more reserved; Leo reads the reserve as coldness and performs harder.",
+      "repairMove": "Build something together. Give the talk a shared project to orbit, and the warmth and the structure finally have a common object to express themselves through.",
+      "crystalStrategy": "Amber gives Leo visible warmth without needing applause, black-tourmaline grounds Capricorn's reserve into steady presence instead of coldness, and rose-quartz opens the affection channel that both are too proud to reach for first.",
+      "avoidCrystal": "Avoid garnet. Its career-amplification frequency turns the status contest colder and lets both mistake productivity for intimacy.",
+      "ritualAngle": "Place rose-quartz on the shared project desk; whoever finishes a work session there touches the stone and says one non-work thing they appreciate about the other."
     },
     "leo-aquarius": {
       "url": "/leo-aquarius/",
@@ -1832,10 +1929,12 @@
       "coreChallenge": "Leo loves the personal 'me-and-you' against the world. Aquarius loves the collective 'all of us, including the strangers'. One wants to be the exception; the other wants no exceptions. Many couples find Leo experiences Aquarius's causes as disinterest, and Aquarius experiences Leo's need for attention as a tyranny of the personal.",
       "synergy": "Opposites who, at their best, expand each other's stage. Leo teaches Aquarius that warmth is also a kind of progress; Aquarius teaches Leo that being one face in a crowd can be its own kind of freedom. Many couples find this pairing produces genuine transformation once both stop trying to convert the other.",
       "communicationPattern": "Ideological, sometimes more debate than dialogue. Leo argues from the heart and personal stakes; Aquarius argues from principle and systems. Many couples find the trick is to not make every disagreement a referendum on whose worldview is correct—because both will dig in, and the standoff outlasts the topic.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Sovereign and the Revolutionary. One wants to be the exception, the other wants no exceptions; one loves me-and-you against the world, the other loves all of us including the strangers.",
+      "conflictLoop": "Leo argues from the heart, Aquarius from principle and systems; each treats the disagreement as a referendum on whose worldview is correct, so the standoff outlasts the topic.",
+      "repairMove": "Stop trying to convert the other. Leo accepts that Aquarius's causes are not disinterest, and Aquarius accepts that Leo's need for attention is not tyranny of the personal.",
+      "crystalStrategy": "Amber anchors Leo's personal warmth as its own kind of progress, amazonite cools Aquarius's principle into lived compassion, and rose-quartz bridges the personal and the collective so both worldviews stop competing.",
+      "avoidCrystal": "Skip labradorite here. Its frequency-amplifying edge deepens Aquarius's abstraction and makes Leo feel even less personally chosen.",
+      "ritualAngle": "Both hold rose-quartz while taking turns finishing the sentence 'the way I love you is also the way I love the world'; the rule is no debate, only translation."
     },
     "leo-pisces": {
       "url": "/leo-pisces/",
@@ -1869,10 +1968,12 @@
       "coreChallenge": "Leo wants clarity, performance, and visible love; Pisces communicates through feeling, metaphor, and retreat. One is sunlight, the other is ocean. Many couples find Leo reads Pisces's withdrawal as rejection, and Pisces reads Leo's directness as a spotlight too bright to sit under.",
       "synergy": "Big-hearted meets big-hearted. Both are givers, both are romantics, and both want a love that feels larger than ordinary life. Leo offers Pisces courage and a steady warm center; Pisces offers Leo a softness that no other sign can fake. Many couples find this is a fairy-tale arc when it works.",
       "communicationPattern": "Mismatched mediums. Leo says it; Pisces feels it. Leo's words land harder than intended; Pisces's silences land more heavily than intended. Many couples find translation only happens when Leo slows down and Pisces is willing to name what they are feeling instead of dissolving into it.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Sun and the Sea. One is performance and clarity, the other is feeling and metaphor, and the medium mismatch is the whole relationship.",
+      "conflictLoop": "Leo's words land harder than intended; Pisces retreats into feeling; Leo reads the retreat as rejection and performs louder; Pisces reads the volume as a spotlight too bright to sit under and dissolves further.",
+      "repairMove": "Leo slows the delivery and dims the spotlight; Pisces agrees to name the feeling in at least one sentence that is not a metaphor instead of disappearing into it.",
+      "crystalStrategy": "Amber gives Leo a steady warm center without performance, amethyst helps Pisces translate the feeling into language before retreat, and rose-quartz holds the tenderness so neither armors up.",
+      "avoidCrystal": "Avoid sodalite here. Its mental-order frequency pushes Pisces further from the felt sense and makes the translation harder, not easier.",
+      "ritualAngle": "Hold amethyst while Pisces speaks the feeling as one plain sentence, then hold amber while Leo mirrors it back without adding staging, volume, or fix."
     },
     "virgo-virgo": {
       "url": "/virgo-virgo/",
@@ -1906,10 +2007,12 @@
       "coreChallenge": "Two editors, one manuscript. Both see the flaw first and the whole second. Many couples find the love language of 'let me improve this for you' starts to read as constant low-grade criticism—and when both partners are doing it, the apartment becomes a feedback loop of small corrections that nobody asked for.",
       "synergy": "Quietly extraordinary competence. Both value service, both notice the small things, both show love through doing. Many couples find this pairing builds a home that actually runs—the bills paid, the trips planned, the plants alive—offering a calm reliability that more dramatic pairings spend years trying to manufacture.",
       "communicationPattern": "Precise, detailed, and at its worst—cold. Both default to problem-solving mode when feelings are mentioned. Many couples find the real intimacy unlock is learning to say 'I just need you to listen' out loud, because neither will infer it; both will assume you brought the problem to be fixed.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Two Editors. Both see the flaw first and the whole second, both showing love through 'let me improve this for you' until the apartment becomes a feedback loop of small corrections.",
+      "conflictLoop": "One offers a helpful refinement, the other reads it as criticism and offers a refinement back; the correction ping-pong escalates until nobody remembers the original manuscript was fine.",
+      "repairMove": "Say 'I just need you to listen' out loud before bringing the problem. Neither will infer it; both will assume you brought it to be fixed unless told otherwise.",
+      "crystalStrategy": "Amazonite softens the editing instinct into actual curiosity, carnelian warms the cold problem-solving default into presence, and black-tourmaline grounds the nervous scanning so the flaw stops being the only visible thing.",
+      "avoidCrystal": "Skip clear quartz here. Its amplifying clarity sharpens the flaw-spotting reflex and turns the love language of improvement into a constant low-grade critique.",
+      "ritualAngle": "Hold carnelian while taking turns saying one thing the other does that needs no improvement at all; the rule is no refining, no editing, only the whole."
     },
     "virgo-libra": {
       "url": "/virgo-libra/",
@@ -1943,10 +2046,12 @@
       "coreChallenge": "Virgo refines; Libra harmonizes—and both avoid the ugly conversation. Virgo's helpful critique lands as nitpicking to Libra, who would rather soften the edges than sharpen them. Many couples find resentment builds quietly because neither wants to be the one to make things uncomfortable, even when things already are.",
       "synergy": "Understated elegance. Both value taste, civility, and a well-kept life. Virgo handles the structure and the details; Libra handles the aesthetic and the social grace. Many couples find this is a pairing that produces a genuinely beautiful home, a thoughtful partnership, and the kind of manners other people envy.",
       "communicationPattern": "Polite, indirect, and full of small omissions. Virgo edits their own honesty to stay constructive; Libra edits theirs to keep peace. Many couples find decisions get delayed for weeks while each waits for the other to name the preference—someone has to be willing to be the first to not be nice.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Refiner and the Diplomat. One sharpens the edges to improve, the other softens the edges to harmonize, and neither wants to be the one to make things uncomfortable.",
+      "conflictLoop": "Virgo offers helpful critique; Libra experiences it as nitpicking and softens their own honesty to keep peace; resentment builds quietly because the actual preference never gets named by either side.",
+      "repairMove": "Be the first to not be nice. Someone has to name the real preference instead of editing it for constructive tone or for peace, and agree that honesty is more respectful than harmony here.",
+      "crystalStrategy": "Amazonite cools Virgo's critique into curiosity about Libra's actual preference, apatite gives Libra the voice to state the real choice instead of the polite one, and quartz amplifies the truth that both keep editing out.",
+      "avoidCrystal": "Avoid moonstone here. Its soft reflective frequency deepens Libra's already-strong avoidance of the uncomfortable and pushes decisions out another three weeks.",
+      "ritualAngle": "Place apatite between you during any delayed decision; whoever reaches for it first has to state the real preference, and the other has to answer with theirs, not with 'whatever you want.'"
     },
     "virgo-scorpio": {
       "url": "/virgo-scorpio/",
@@ -1980,10 +2085,12 @@
       "coreChallenge": "Virgo analyzes to understand; Scorpio analyzes to control. Both are private, both probe, both notice everything—and neither enjoys being on the receiving end of the other's scrutiny. Many couples find the dynamic becomes a quiet intelligence war, where being known too well starts to feel like being exposed.",
       "synergy": "Rare depth and rare loyalty. Both take commitment seriously, both are suspicious of surface-level anything, and both value devotion proven over time. Many couples find this is a private alliance of unusual intensity—once trust is earned, the bond is fierce and almost nobody outside the relationship gets to see it whole.",
       "communicationPattern": "Careful, layered, and full of things held back. Both test before they reveal, and both can withhold as a way of measuring the other. Many couples find real openness only happens after a long stretch of consistency—betray the trust once and the conversation goes back to surface for a long time.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Two Investigators. Both private, both probing, both noticing everything; one analyzes to understand, the other analyzes to control, and being known too well starts to feel like being exposed.",
+      "conflictLoop": "Both test before they reveal; both withhold as a way of measuring the other; the quiet intelligence war escalates until one betrayal, even small, sends the conversation back to surface for a long time.",
+      "repairMove": "Reward consistency, not disclosure. Real openness only happens after a long stretch of showing up without probing, so drop the interrogation and let trust accrete through ordinary reliability.",
+      "crystalStrategy": "Amazonite opens Virgo's analysis into genuine curiosity rather than scrutiny, black-tourmaline shields Scorpio's suspicion from spiraling into control, and quartz clarifies the intent behind each question so probing stops feeling like exposure.",
+      "avoidCrystal": "Skip malachite here. Its deep transformation edge sharpens Scorpio's probing into excavation and makes Virgo feel dissected rather than understood.",
+      "ritualAngle": "Hold black-tourmaline during a weekly 'no questions asked' window; the rule is presence without probing, and trust accretes through the absence of investigation."
     },
     "virgo-sagittarius": {
       "url": "/virgo-sagittarius/",
@@ -2017,10 +2124,12 @@
       "coreChallenge": "One zooms in; the other zooms out. Virgo tracks the itinerary, the receipts, the small print; Sagittarius is already three horizons ahead. Many couples find Virgo reads Sagittarius's optimism as recklessness, and Sagittarius reads Virgo's planning as a cage that keeps shrinking the more they try to fix it.",
       "synergy": "Different lenses on the same world—and together, a wider view. Virgo gives Sagittarius's big quests a structure that actually gets them finished; Sagittarius gives Virgo a horizon big enough to stop obsessing over the small print. Many couples find this is a growth pairing when both stop trying to convert the other's operating mode.",
       "communicationPattern": "Mismatched units. Virgo communicates in specifics; Sagittarius communicates in arcs. Virgo's 'we need to talk about Tuesday' meets Sagittarius's 'Tuesday is a construct anyway.' Many couples find productive talk only happens when Virgo agrees to start with the big picture and Sagittarius agrees to actually show up on Tuesday.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Magnifying Glass and the Telescope. One zooms in on the itinerary and the small print, the other is already three horizons ahead, and they live in different scales of the same world.",
+      "conflictLoop": "Virgo communicates in specifics; Sagittarius communicates in arcs; Virgo's 'we need to talk about Tuesday' meets Sagittarius's 'Tuesday is a construct anyway,' and neither feels met.",
+      "repairMove": "Virgo agrees to start with the big picture, Sagittarius agrees to actually show up on Tuesday. Both meet in the middle scale neither naturally inhabits.",
+      "crystalStrategy": "Amazonite cools Virgo's small-print anxiety into curiosity about the horizon, herkimer-diamond sharpens Sagittarius's big arc into something that can actually be planned, and rose-quartz keeps the warmth between them when the scales collide.",
+      "avoidCrystal": "Avoid tiger's eye here. Its focus-narrowing frequency pulls Virgo deeper into the receipt pile and Sagittarius feels the cage shrinking harder.",
+      "ritualAngle": "Pass herkimer-diamond back and forth; Virgo uses it to look up at the horizon once, then Sagittarius uses it to look down at Tuesday once, then both plan from the middle."
     },
     "virgo-capricorn": {
       "url": "/virgo-capricorn/",
@@ -2054,10 +2163,12 @@
       "coreChallenge": "Both competent, both critical, both reserved—and neither naturally reaches for the warm word first. Many couples find the relationship runs beautifully on paper but slowly starves on affection, because each is waiting for the other to drop the productivity mask and admit they are also a person who needs to be held.",
       "synergy": "Quiet power. Both earth signs treat love as something you build, not something you fall into. They share values—work ethic, loyalty, the long arc—and they back each other's climb without drama. Many couples find this pairing produces a stability and mutual respect that more passionate pairings spend decades chasing.",
       "communicationPattern": "Functional, sparse, and surprisingly effective—until it isn't. Both communicate through actions and logistics, and both assume the other infers love from competence. Many couples find the relationship-changing conversation is just one of them saying out loud, 'I know you love me, but I would still like to hear it.'",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Two Builders. Both earth signs, both competent, both reserved; the relationship runs beautifully on paper and slowly starves on affection because neither reaches for the warm word first.",
+      "conflictLoop": "Both communicate through actions and logistics; both assume the other infers love from competence; the productive mask stays on until both forget there is also a person underneath who needs to be held.",
+      "repairMove": "Just say it out loud. The relationship-changing conversation is simply one of you saying 'I know you love me, but I would still like to hear it,' and the other actually hearing it.",
+      "crystalStrategy": "Amazonite opens Virgo's reserved channel into spoken warmth, black-tourmaline grounds Capricorn's productivity mask into actual presence, and quartz amplifies the affection that both keep inferring instead of saying.",
+      "avoidCrystal": "Skip pyrite here. Its builders' ambition deepens the competence contest and lets both mistake another finished project for intimacy.",
+      "ritualAngle": "Place quartz on the nightstand; whoever wakes first touches it and says one warm thing out loud before any logistics, schedule, or task enters the day."
     },
     "virgo-aquarius": {
       "url": "/virgo-aquarius/",
@@ -2091,10 +2202,12 @@
       "coreChallenge": "Both live in their heads, both can be emotionally adjacent—and neither naturally pulls the other into the room. Virgo refines the details; Aquarius refines the systems, and the relationship can become a thought partnership that forgot it was also supposed to be a body, a bed, and a shared meal. Many couples find warmth has to be scheduled or it doesn't happen.",
       "synergy": "Intellectual respect. Both value intelligence, both value improvement, and neither is threatened by the other's competence. Virgo offers Aquarius a precision most people lack; Aquarius offers Virgo a vision big enough to be worth refining. Many couples find this is a partnership of unusual mental companionship once the emotional channel is also opened.",
       "communicationPattern": "Concept-heavy, feeling-light. Both will happily debate the system, the data, the principle—and forget to mention the actual day they just had. Many couples find the intimacy unlock is a small ritual that forces the personal onto the table: a real 'how are you, actually,' with no solving allowed.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Two System-Thinkers. Both live in their heads, both emotionally adjacent; Virgo refines the details, Aquarius refines the systems, and the partnership forgot it was also a body and a bed.",
+      "conflictLoop": "Both happily debate the system, the data, the principle, and forget to mention the actual day they just had; warmth gets postponed because neither naturally pulls the other into the room.",
+      "repairMove": "Schedule the personal onto the table. A small ritual that forces a real 'how are you, actually' with no solving allowed, repeated until it stops feeling forced.",
+      "crystalStrategy": "Amazonite brings Virgo's analytical head down into the lived body, amber warms Aquarius's abstraction into personal presence, and rose-quartz opens the emotional channel that both keep treating as optional.",
+      "avoidCrystal": "Avoid fluorite here. Its mental-order frequency deepens both partners' retreat into systems-thinking and pushes the personal further off the table.",
+      "ritualAngle": "Hold rose-quartz during a daily 'no solving' check-in; each names one actual feeling from the day, no systems analysis, no improvement note, only the felt thing."
     },
     "virgo-pisces": {
       "url": "/virgo-pisces/",
@@ -2128,10 +2241,12 @@
       "coreChallenge": "One dissects feelings to manage them; the other dissolves into feelings to survive them. Virgo wants the problem named and fixed; Pisces wants the problem held and felt. Many couples find Virgo reads Pisces's permeability as chaos, and Pisces reads Virgo's analysis as a refusal to actually be present with the pain.",
       "synergy": "The healer meets the helper. Both are givers, both are oriented toward service, and both carry a quiet devotion that more self-centered pairings never touch. Virgo offers Pisces an anchor and a structure; Pisces offers Virgo a softness that no amount of self-improvement will ever manufacture. Many couples find this is a genuine mutual rescue.",
       "communicationPattern": "Different languages. Virgo asks 'what happened, exactly?'; Pisces answers in feeling and image. Both mean well; neither feels met. Many couples find translation only happens when Virgo stops reaching for the fix and just sits with the feeling—and Pisces agrees to put the feeling into at least one sentence that is not a metaphor.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Healer and the Helper. One dissects feelings to manage them, the other dissolves into feelings to survive them; one wants the problem named and fixed, the other wants the problem held and felt.",
+      "conflictLoop": "Virgo reaches for the fix; Pisces experiences the fix as a refusal to be present with the pain; Pisces dissolves further; Virgo reads the dissolution as chaos and analyzes harder.",
+      "repairMove": "Virgo stops reaching for the fix and just sits with the feeling; Pisces agrees to put the feeling into at least one sentence that is not a metaphor, so translation can actually happen.",
+      "crystalStrategy": "Amazonite cools Virgo's analysis into presence without a fix, amethyst helps Pisces shape the feeling into language before it becomes pure dissolution, and rose-quartz holds the tender space between dissect and dissolve.",
+      "avoidCrystal": "Skip black obsidian here. Its blunt truth-telling edge sharpens Virgo's dissection and pushes Pisces further into retreat, away from translation.",
+      "ritualAngle": "Hold amethyst while Pisces speaks the feeling as one plain sentence, then hold amazonite while Virgo mirrors it back without proposing any fix, only presence."
     },
     "libra-libra": {
       "url": "/libra-libra/",
@@ -2165,10 +2280,12 @@
       "coreChallenge": "Two people who can spend forty minutes choosing a restaurant because each is waiting for the other to state a real preference. Neither wants to break the peace, so small decisions stall and real disagreements get gift-wrapped as 'whatever you want.'",
       "synergy": "Aesthetic instinct doubled. Many couples in this pairing describe a home, a wardrobe, a social life that simply looks and feels right to both of them, with almost no negotiation. Their shared radar for beauty, manners, and proportion turns ordinary evenings into something close to curated.",
       "communicationPattern": "Conversations stay polished and indirect, circling the actual point until someone finally cracks the surface. They will disagree three times before either admits they disagreed the first time, and both would rather reframe a hard truth than deliver it raw.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Mutual Mirror. Two aesthetic diplomats who curate harmony and quietly avoid any truth that would disturb the polished surface they co-create.",
+      "conflictLoop": "Both defer to preserve peace, so the real disagreement gets gift-wrapped as whatever you want, until a trivial choice erupts into the actual fight.",
+      "repairMove": "Name a real preference first, even a small one. Trade explicit turns stating what you want so the polite spiral breaks and authentic desire re-enters.",
+      "crystalStrategy": "Apatite clears the over-deliberation fog so a genuine preference surfaces; iolite sharpens inner vision beneath the shared aesthetic; black tourmaline grounds the air-only drift into a body-felt yes.",
+      "avoidCrystal": "Selenite. Its diffusing quality amplifies the pair's tendency to float above friction, making it harder to anchor a decision when one is overdue.",
+      "ritualAngle": "Place apatite and iolite at opposite ends of a bedside table, black tourmaline centered. Each partner holds their stone, states one genuine weekly want, then joins hands over the central tourmaline."
     },
     "libra-scorpio": {
       "url": "/libra-scorpio/",
@@ -2202,10 +2319,12 @@
       "coreChallenge": "One wants the conversation pleasant; the other wants it true, and only one of them is willing to start the fight. The air side reads the water side as too heavy, too suspicious, too slow to let things go. The water side reads the air side as evasive, performative, willing to look alive without being alive.",
       "synergy": "Together they cover what most couples are missing, one brings the charm and the social map, the other brings the loyalty and the staying power. Traditionally tied to a bond where the polished surface protects a deep core, and the deep core gives the surface something real to reflect.",
       "communicationPattern": "The air side talks in elegant circles; the water side asks one quiet question that lands like a dart. Many couples find the real exchange happens in the silences after, not during, and that one raised eyebrow can settle an argument the words refused to finish.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Velvet and the Vault. One curates the elegant surface; the other guards the depth behind it. Polish protects secrets; secrets give the polish something real to reflect.",
+      "conflictLoop": "Libra reads Scorpio's probing as heavy and deflects with charm; Scorpio reads Libra's deflection as evasion and probes harder. The more Libra smooths, the more Scorpio suspects.",
+      "repairMove": "Libra delivers one raw, unedited truth per week without softening. Scorpio names what was already sensed instead of cross-examining it aloud, trading interrogation for stated trust.",
+      "crystalStrategy": "Apatite loosens Libra's over-edited reflex so honesty surfaces intact; black tourmaline shields Scorpio from absorbing every undercurrent as threat; quartz clarifies the translation between air and water.",
+      "avoidCrystal": "Rose quartz in excess. Its all-is-love vibe encourages Libra to smooth over Scorpio's real concerns and lets Scorpio mistake the balm for avoidance.",
+      "ritualAngle": "Hold apatite at the throat and black tourmaline at the chest, quartz between you. Libra speaks one unedited sentence; Scorpio answers with one of acknowledged trust, then both touch the quartz."
     },
     "libra-sagittarius": {
       "url": "/libra-sagittarius/",
@@ -2239,10 +2358,12 @@
       "coreChallenge": "One polishes every sentence before it leaves their mouth; the other says the blunt thing first and apologizes later, if at all. The arrow flies straight while the scales keep recalibrating. Social tact clashes with foot-in-mouth honesty, and neither fully trusts the other's timing.",
       "synergy": "Both are travelers at heart, one through people and ideas, the other through places and meanings. They rarely bore each other, and many couples in this pairing describe a partnership that keeps expanding, more restaurants, more countries, more philosophies on the table.",
       "communicationPattern": "Conversations are fast, wide-ranging, and full of laughter, but they tend to skim the surface of anything heavy. The air side softens the fire side's bluntness; the fire side pulls the air side out of indecision. Real feelings sometimes get buried under jokes and new topics.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Diplomat and the Archer. One weighs every word for tact; the other fires the blunt arrow and apologizes later. Together they cover ground fast.",
+      "conflictLoop": "Sagittarius blurts, Libra flinches and smooths, then nurses the sting for days. Sagittarius reads the composure as agreement; Libra reads the speed as carelessness. The wound never gets named.",
+      "repairMove": "Build a ten-second buffer: Sagittarius asks 'was that too much?' after any pointed line, and Libra answers honestly within a day rather than letting the sting ferment into withdrawal.",
+      "crystalStrategy": "Apatite lets Libra name the sting in real time instead of days later; herkimer-diamond speeds Sagittarius's insight so the misstep registers before the next sentence; quartz harmonizes the fire-air frequency gap.",
+      "avoidCrystal": "Carnelian. Its high-vitality push amplifies Sagittarius's already-abundant momentum and drowns out Libra's quieter signal, making the pace even harder to slow.",
+      "ritualAngle": "Before a hard conversation, Libra holds apatite at the throat, Sagittarius herkimer-diamond at the brow, quartz between. Sagittarius speaks first and fast; Libra follows with the polished truth."
     },
     "libra-capricorn": {
       "url": "/libra-capricorn/",
@@ -2276,10 +2397,12 @@
       "coreChallenge": "One wants the evening to look beautiful and feel easy; the other wants it to be productive, on time, and worth the babysitter. The cardinal air reads the cardinal earth as cold, dry, all work. The earth reads the air as decorative, slow to commit, better at charm than follow-through.",
       "synergy": "Both are builders, one builds social capital and aesthetic worlds, the other builds institutions, careers, and long-term structures. Many couples find that what one designs, the other can actually finish, and together they tend to accumulate a life that is both lovely and solid.",
       "communicationPattern": "The air side explains feelings through context and tone; the earth side wants the bottom line in three bullet points. Conversations about money, time, and commitment run hottest, because both are cardinal and neither likes losing the steering wheel.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Architect and the Stylist. One builds structures that last; the other designs worlds that feel beautiful. Chemistry lives in the friction between productivity and aesthetics.",
+      "conflictLoop": "Money, time, and commitment talks run hottest because both are cardinal and neither cedes control. Capricorn reads Libra as decorative; Libra reads Capricorn as cold, and each digs in.",
+      "repairMove": "Pre-assign domains where each partner holds final say, design to one, schedule to the other. Cardinal energy respects territory more than negotiation and clear jurisdiction ends the struggle.",
+      "crystalStrategy": "Apatite lets Libra articulate beauty's value in language Capricorn respects; black tourmaline anchors Capricorn's rigidity so structure flexes without feeling like collapse; rose quartz softens the cardinal clash.",
+      "avoidCrystal": "Pyrite. Its success-at-all-costs frequency doubles down on Capricorn's work-first reflex and starves the Libran need for ease, beauty, and unmeasured evenings.",
+      "ritualAngle": "Set rose quartz at a shared desk's center. Capricorn places black tourmaline at the base to ground the work; Libra places apatite beside it to keep the work beautiful. Hold hands when money talks begin."
     },
     "libra-aquarius": {
       "url": "/libra-aquarius/",
@@ -2313,10 +2436,12 @@
       "coreChallenge": "Both live in their heads, so the relationship can drift into a beautiful theory that nobody actually inhabits. One wants the partnership to look a certain way; the other wants it to be free of convention altogether. The air-water disconnect shows up as lots of talk, very little landing.",
       "synergy": "Ideals on ideals. Two air signs who can spend six hours debating justice, art, design, or the future and never tire. Traditionally tied to a friendship-first bond where the romantic layer simply rides on top of genuine intellectual respect, and many couples describe feeling more allied than merged.",
       "communicationPattern": "They communicate in concepts, references, and shared abstractions, which works brilliantly until someone actually needs comfort. The Aquarian withdraws to process; the Libra swirls to restore balance, and neither is naturally built to sit with the other's raw emotion.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Idea Couple. Two air signs fluent in concepts, justice, and future visions who can debate for six hours yet struggle to inhabit the partnership they theorize.",
+      "conflictLoop": "Both retreat into abstraction when emotion arrives. Aquarius withdraws to process; Libra swirls to rebalance, and neither sits with the other's raw feeling. The body of the partnership drifts untended.",
+      "repairMove": "Schedule one embodied weekly check-in with no analysis allowed, just sensation and need. Air signs heal the drift by forcing the intellect offline long enough for the bond to register.",
+      "crystalStrategy": "Apatite gives Libra a single clear want instead of a balanced argument; amazonite anchors Aquarius's airy principles into spoken truth and presence; quartz amplifies the heart coherence both bypass.",
+      "avoidCrystal": "Clear quartz alone. With two over-mental air signs, another amplifying mental stone widens the gap between theory and inhabitation. Pair it always with a grounding stone.",
+      "ritualAngle": "Sit back-to-back, Libra holding apatite at the heart, Aquarius amazonite at the throat, quartz between. Each speaks one 'I feel' rather than 'I think' sentence, then turns over the quartz."
     },
     "libra-pisces": {
       "url": "/libra-pisces/",
@@ -2350,10 +2475,12 @@
       "coreChallenge": "One refines reality into something elegant; the other dissolves reality into something dreamlike, and between them the practical world keeps slipping through the cracks. Bills, deadlines, the phone call that needed to happen Tuesday, all of it floats. Neither wants to be the heavy.",
       "synergy": "A gentleness runs through this pairing that many couples describe as rare. Both read the room before they read themselves, both would rather bend than break, and together they create an atmosphere that feels almost devotional, more chapel than cocktail party.",
       "communicationPattern": "Conversations lean on tone, implication, and music rather than direct statement. The air side infers; the water side senses. Many couples find they can communicate a full evening's mood without ever naming it, and equally, that real grievances surface only sideways.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Chapel Couple. One refines reality into elegance; the other dissolves it into devotion. Together they create an atmosphere more sanctuary than cocktail party.",
+      "conflictLoop": "Both bend rather than break, so neither names the grievance. Bills, deadlines, and hard conversations float. Resentment surfaces only sideways through tone, sigh, or artistic choice, never direct.",
+      "repairMove": "Pick one concrete ground-task per week and assign ownership. The air-water pair heals through shared contact with the mundane, the call, the form, the deadline that makes the devotional sustainable.",
+      "crystalStrategy": "Apatite sharpens Libra's foggy preferences into a stated choice; amethyst gives Pisces a stable anchor for dissolving tenderness so devotion does not become avoidance; rose quartz keeps the tone devotional.",
+      "avoidCrystal": "Moonstone. Its dreamy, dissolving quality amplifies Pisces' pull away from the concrete and gives Libra another excuse to defer the practical task.",
+      "ritualAngle": "Place amethyst and rose quartz on the kitchen counter, the most mundane altar. Libra holds apatite naming one practical task; Pisces holds amethyst agreeing to one grounded action. Both touch rose quartz."
     },
     "scorpio-scorpio": {
       "url": "/scorpio-scorpio/",
@@ -2387,10 +2514,12 @@
       "coreChallenge": "Two people who both need total access and total control, while also refusing to hand over the same access in return. Each tests the other, watches the other test them, and neither will say out loud that the testing is the problem. Suspicion feeds suspicion until the original wound is forgotten.",
       "synergy": "When the trust finally locks in, it locks in for life. Same water, same depth, same radar for dishonesty, meaning almost nothing has to be explained. Many couples in this pairing describe a loyalty so total it surprises even them, a bond that doesn't need witnesses to feel unbreakable.",
       "communicationPattern": "Real exchange happens underneath the words. One long silence answers a question another couple would have fought about for an hour. When they do speak directly it tends to land heavy and final, because both are scanning for the lie, not the content.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Twin Vaults. Two people who demand total access while refusing to grant it, locked in a bond where the trust, when it lands, is unbreakable, the testing exhausting.",
+      "conflictLoop": "Each tests the other, watches the test being watched, and neither admits the testing is the wound. Suspicion feeds suspicion until the original trigger is forgotten and the loop becomes the betrayal.",
+      "repairMove": "Name the test aloud when you catch yourself running it. The pair heals the moment one breaks the silent interrogation by saying 'I am checking if you will leave' rather than performing the check.",
+      "crystalStrategy": "Black tourmaline shields each from absorbing the other's charge as threat, creating the interior space trust requires; malachite surfaces the old wound beneath the test so it can be witnessed.",
+      "avoidCrystal": "Obsidian in ungrounded doses. Its ruthless truth-telling amplifies the scorpic X-ray, turning mutual insight into mutual surgery and reopening the wound being healed.",
+      "ritualAngle": "Sit facing each other, each holding black tourmaline at the root, malachite between. One names the test about to be run; the other answers 'I am still here,' then both hands meet over the malachite."
     },
     "scorpio-sagittarius": {
       "url": "/scorpio-sagittarius/",
@@ -2424,10 +2553,12 @@
       "coreChallenge": "One wants to go deep and stay there; the other wants to keep moving and keep it light. The water side reads the fire side as superficial, over-sharer, always leaving just when it matters. The fire side reads the water side as heavy, withholding, turning every road trip into a therapy session.",
       "synergy": "Each gives the other exactly what it lacks, depth gets a way out, breadth gets somewhere real to come home to. Traditionally tied to a pairing that grows people up fast, because the tension forces both to widen.",
       "communicationPattern": "The fire side talks first and edits later; the water side edits first and may never speak. Many couples find the most honest moments arrive unexpectedly, on a drive, after a party, never in the official conversation both of them knew was coming.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Deep and the Wide. One wants to go down and stay there; the other wants to keep moving and keep it light. Friction forces both to widen.",
+      "conflictLoop": "Scorpio reads Sagittarius's lightness as flight and tightens its grip; Sagittarius reads the grip as heaviness and leaves. The tighter Scorpio holds, the faster Sagittarius moves.",
+      "repairMove": "Trade rhythm explicitly: one conversation goes deep and stays, the next adventure goes wide and light. Scorpio agrees not to interrogate on the road; Sagittarius not to bolt when depth arrives.",
+      "crystalStrategy": "Black tourmaline shields Scorpio from reading every Sagittarian exit as abandonment; herkimer-diamond clarifies Sagittarius's intent so lightness registers as joy not evasion; quartz turns fire-water into steam.",
+      "avoidCrystal": "Garnet. Its intensifying hold-close vibration amplifies Scorpio's grip and confirms Sagittarius's fear of being tethered, accelerating the leave-tighten loop.",
+      "ritualAngle": "Holding black tourmaline, Scorpio names what it fears; holding herkimer-diamond, Sagittarius names where it will return. Place quartz between you, then walk opposite directions and meet over the stone."
     },
     "scorpio-capricorn": {
       "url": "/scorpio-capricorn/",
@@ -2461,10 +2592,12 @@
       "coreChallenge": "Both want control, but in different currencies. One wants emotional and psychological pull; the other wants structural, financial, and scheduling pull. Neither flinches, and many couples find that the power negotiation between them never fully ends, it just goes quieter.",
       "synergy": "A strategic alliance with real teeth. The water side brings intuition and ruthlessness about people; the earth side brings patience, structure, and a tolerance for the long game. Together they tend to build something that lasts, an estate, a business, a family, a position neither could have built alone.",
       "communicationPattern": "Conversations are economical. Neither wastes words, and both respect a partner who doesn't either. The earth side states; the water side reads what wasn't stated. Disagreements tend to be settled by who actually holds the upper hand in that specific room.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Strategic Alliance. One wants emotional pull; the other wants structural pull. Together they build estates, businesses, and positions neither could build alone.",
+      "conflictLoop": "Both refuse to flinch, so the power negotiation never ends, it just goes quieter. Scorpio reads Capricorn's reserve as cold strategy; Capricorn reads Scorpio's reading as intrusion. The standoff hardens.",
+      "repairMove": "Name the room and who holds final say inside it. Two control-oriented signs heal by accepting that no one partner holds the upper hand everywhere; explicit domain-mapping ends the quiet war.",
+      "crystalStrategy": "Black tourmaline lets Scorpio read the room without weaponizing intuition; fluorite orders Capricorn's structural mind so it can flex without losing integrity; quartz translates between water depth and earth structure.",
+      "avoidCrystal": "Hematite in excess. Its heavy absorbing pull deepens Capricorn's reserve past the point Scorpio reads as cold war and concentrates Scorpio's suspicion into the standoff.",
+      "ritualAngle": "Place fluorite on the desk where practical business is handled, black tourmaline at the bedroom threshold where strategy yields to intimacy. Quartz travels between in a pocket, translating both currencies."
     },
     "scorpio-aquarius": {
       "url": "/scorpio-aquarius/",
@@ -2498,10 +2631,12 @@
       "coreChallenge": "Two fixed signs who both refuse to lose and both refuse to bend. One wants fusion and total access; the other wants autonomy and the right to remain opaque. The water side experiences the air side as detached to the point of cruel; the air side experiences the water side as possessive to the point of suffocating.",
       "synergy": "Both are built to see through fakes, and together they develop a near-X-ray view of the people and systems around them. Many couples find the bond thrives when each keeps a real, respected private life, separate projects, separate friends, parallel mysteries.",
       "communicationPattern": "The air side explains; the water side interrogates. Conversations can feel like two intelligence operatives trading limited information, and trust gets built in small, verified installments rather than sweeping confessions.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Operatives. Two fixed signs trading limited information across verified channels, building trust in small installments while respecting parallel mysteries.",
+      "conflictLoop": "Scorpio pushes for total access, Aquarius retreats into opacity, and each reads the other's survival strategy as betrayal. The more Scorpio interrogates, the more airtight Aquarius becomes.",
+      "repairMove": "Trade one verified disclosure per week, voluntarily, before being asked. The fixed standoff breaks when disclosure becomes proactive rather than extracted, proving the bond is safe without demanding fusion.",
+      "crystalStrategy": "Black tourmaline lets Scorpio trust what is offered without scanning for the hidden layer; amazonite gives Aquarius a safe frequency to voice what it would withhold; rose quartz softens the fixed standoff.",
+      "avoidCrystal": "Lapis lazuli. Its all-knowing mental frequency amplifies Scorpio's X-ray beyond what Aquarius will tolerate and pushes Aquarius further into the opacity that triggers the standoff.",
+      "ritualAngle": "Sit in separate rooms with shared quartz between. Scorpio holds black tourmaline and sends one true sentence; Aquarius holds amazonite and sends one back. Meet over quartz only when both arrive."
     },
     "scorpio-pisces": {
       "url": "/scorpio-pisces/",
@@ -2535,10 +2670,12 @@
       "coreChallenge": "The feeling gets so big that nobody names it. One reads the other's silence perfectly; the other reads the first's silence perfectly, and between two accurate readings nothing gets said out loud. Resentment can build in the gap between what was sensed and what was spoken.",
       "synergy": "An emotional current that moves between them without translation. Same element, same deep water, and many couples describe the relief of finally not having to explain themselves. Intuitive, devotional, often artistic, the bond tends to feel fated in a way neither can fully articulate.",
       "communicationPattern": "Words are almost decorative, the real exchange is energetic. A look across a room carries more information than a paragraph. When words do enter, they tend to be poetic, oblique, and more honest for it, because directness can feel too crude for what is actually moving between them.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Deep Water. Two water signs in fluent unspoken exchange, where a look carries more than a paragraph and the relief of not explaining is the bond's foundation.",
+      "conflictLoop": "Both read the other's silence perfectly and respond to what was sensed, never spoken. Resentment builds in the gap between accurate intuition and absent language until the unsaid becomes heavier than the feeling.",
+      "repairMove": "Speak one gratitude and one grievance per week, aloud, even when the partner already knows. The pair heals not through deeper sensing but through the discipline of naming what was felt.",
+      "crystalStrategy": "Black tourmaline shields each from absorbing the other's tide as their own, preventing flooding that makes speech feel unnecessary; amethyst lifts the exchange into calm clear insight; quartz amplifies the spoken word.",
+      "avoidCrystal": "Labradorite. Its reflective boundary-blurring shimmer deepens the porous water-water merge and makes it harder to tell whose feeling is whose, worsening the flooding.",
+      "ritualAngle": "Each holds black tourmaline at the root, amethyst at the brow, quartz centered. One speaks a gratitude aloud, the other a grievance aloud, then both touch quartz to confirm the word was received."
     },
     "sagittarius-sagittarius": {
       "url": "/sagittarius-sagittarius/",
@@ -2572,10 +2709,12 @@
       "coreChallenge": "Two archers firing arrows in opposite directions. Neither wants to book the return ticket, so bills, leases, and follow-through slip through the cracks. Many couples find the spark burns hot, then drifts because no one stocks the firewood.",
       "synergy": "Shared thirst for meaning. One plans the bucket list, the other has already packed the bags, and both light up at the same far-flung horizon. Traditionally tied to Jupiter's doubled fire, the optimism here is genuinely contagious.",
       "communicationPattern": "Stories over schedules. Conversations leap from philosophy to passport stamps to a half-true anecdote, with neither partner checking the time. Conflict gets talked around, not through, because blunt honesty feels too heavy for the road.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "Twin Flames On An Open Road. Two archers bonded by contagious doubled-fire optimism, who fell for the same horizon and quietly neglect the firewood.",
+      "conflictLoop": "Blunt honesty feels too heavy for the road, so disagreements drift into philosophical detours, anecdotes, and passport stamps until the original wound is forgotten entirely.",
+      "repairMove": "Book one non-negotiable weekly anchor, a fixed dinner, a rent split, an honest hour. One of you must stock the firewood while the other plans the next trip.",
+      "crystalStrategy": "herkimer-diamond sharpens the blunt honesty fire-pair energy avoids, iolite keeps each archer's compass on individual truth, black-tourmaline grounds the doubled-fire overload.",
+      "avoidCrystal": "Carnelian. It pours gas on already-doubled fire, amplifying restlessness and the urge to flee when real talk finally starts. The spark needs a hearth, not more fuel.",
+      "ritualAngle": "Sit back-to-back, each holding herkimer-diamond over the chest, then swap stones without turning. Place iolite at the shared doorstep where two paths re-enter one home."
     },
     "sagittarius-capricorn": {
       "url": "/sagittarius-capricorn/",
@@ -2609,10 +2748,12 @@
       "coreChallenge": "One is already on the next flight; the other is checking the return ticket policy and the long-term tax implications. Freedom meets structure, and both secretly think the other is doing it wrong.",
       "synergy": "Vision plus execution. The archer dreams the five-year plan; the goat actually builds it. When they stop trying to convert each other, many couples find they cover ground no pair of clones ever could.",
       "communicationPattern": "Directness in two accents. One speaks in bold strokes and exaggerations, the other in measured bullet points. Each hears the same sentence differently, so disagreements usually spiral from translation errors, not intent.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Archer And The Architect. One is through security while the other audits the return-ticket policy, fire-earth friction where neither secretly thinks the other is doing it right.",
+      "conflictLoop": "Disagreements spiral from translation errors, not intent. Bold strokes land as cold bullet points, so each walks away certain the other is careless or cold when both meant well.",
+      "repairMove": "Before any hard conversation, restate the other's position in their format. Most fights collapse the moment both realize they were arguing about framing, not facts.",
+      "crystalStrategy": "herkimer-diamond keeps the archer's vision articulate, black-tourmaline anchors the goat's structure without rigidity, quartz translates between two accents of directness.",
+      "avoidCrystal": "Selenite. Its dissolving float weakens the structure this bond depends on, and gives the archer another excuse to drift while the goat holds every receipt alone.",
+      "ritualAngle": "Place quartz at the center of the shared calendar, herkimer-diamond on the archer's side, black-tourmaline on the goat's. Hold the weekly sit with palms flat on the table."
     },
     "sagittarius-aquarius": {
       "url": "/sagittarius-aquarius/",
@@ -2646,10 +2787,12 @@
       "coreChallenge": "So much shared love for the future that nobody remembers Wednesday. One floats toward the next big idea, the other toward the next cause, and the flat, the fridge, and the feelings between them run on empty.",
       "synergy": "Big-picture radicals. Both want to reform something, explore somewhere, question something. Traditionally tied to fire fanned by air, the intellectual chemistry here rarely stalls, they spark each other forward at lightning speed.",
       "communicationPattern": "Concepts first, feelings maybe later. Debates feel like sparring partners warming up, playful and sharp. The risk is that vulnerability gets buried under theory, and 'we never talk about us' becomes the actual issue.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "Big-Picture Radicals. A fire-air sextile so busy reforming the future that nobody remembers Wednesday, sparring partners who spark each other forward at lightning speed.",
+      "conflictLoop": "Vulnerability gets buried under theory. Debates feel like playful sparring, so the actual issue, we never talk about us, hides inside AI ethics arguments for months.",
+      "repairMove": "Once a week, close the laptops and answer one human question in plain language. If a tired child could not understand it, it has not been said yet.",
+      "crystalStrategy": "herkimer-diamond crisps the archer's abstractions, amazonite gives the water-bearer courage to speak feeling not theory, quartz amplifies the signal between heart and head.",
+      "avoidCrystal": "Labradorite. It feeds the very escape this pair excels at, more planes of thought, more mystical detours, more reasons to stay airborne instead of landing tonight's conversation.",
+      "ritualAngle": "Shared altar with quartz at center, amazonite on the speaker's side, herkimer-diamond on the listener's. Swap positions every ten minutes so neither stays the theorist forever."
     },
     "sagittarius-pisces": {
       "url": "/sagittarius-pisces/",
@@ -2683,10 +2826,12 @@
       "coreChallenge": "Both chameleons, different media. One escapes outward through motion and grand stories, the other escapes inward through daydreams and feeling. Neither wants to handle the paperwork of being a person.",
       "synergy": "Belief magnified. The archer's fire warms the fish's watery dreams into something actionable, while the fish gives the archer a place to land. Many couples find a strange spiritual shorthand here that defies the textbook fire-water clash.",
       "communicationPattern": "Truth dressed in metaphor. One exaggerates, the other mystifies, and they meet somewhere poetic. Conflict often hides as a vibe, each sensing the shift before anyone says a word, which is magic until it isn't.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "Two Escapists, Different Media. The archer escapes outward through motion and grand stories, the fish inward through daydreams, and neither handles the paperwork of being a person.",
+      "conflictLoop": "Conflict hides as a vibe. One exaggerates, the other mystifies, each senses the shift before anyone speaks, which is magic until it becomes months of unspoken resentment.",
+      "repairMove": "Name one concrete feeling out loud each day, no metaphor, no anecdote. The archer says the sentence, the fish says it without softening, and the square tension breaks.",
+      "crystalStrategy": "herkimer-diamond gives the archer clear honest voice, amethyst helps the fish translate inner knowing into words instead of sighs, rose-quartz softens the fire-water clash so truth lands.",
+      "avoidCrystal": "Blue Lace Agate. It cools the fire the archer needs to break the square tension, and lets the fish stay in vague waters where nothing ever gets named.",
+      "ritualAngle": "Bath ritual with rose-quartz at the water's edge, amethyst in the archer's tea, herkimer-diamond on the shelf in view. Speak one unsugarcoated sentence before stepping out."
     },
     "capricorn-capricorn": {
       "url": "/capricorn-capricorn/",
@@ -2720,10 +2865,12 @@
       "coreChallenge": "Two mountain goats climbing the same peak from different sides. Respect runs deep, but warmth gets scheduled, and ambition quietly outpaces intimacy. Many couples find the relationship runs like a well-oiled company, and about as romantic.",
       "synergy": "Built to last. Both value legacy, discipline, and a plan that actually holds. Traditionally tied to doubled Saturn structure, this pair can construct a life, a home, or a business that outlasts most of their peers' third acts.",
       "communicationPattern": "Few words, heavy weight. Each sentence lands like a memo, and silence often signals agreement, not distance. The struggle is that neither volunteers feelings, so small doubts can calcify before anyone names them.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "Two Goats On The Same Peak. Doubled-Saturn discipline that builds a life outlasting peers' third acts, and quietly runs about as romantic as a well-oiled company.",
+      "conflictLoop": "Neither volunteers feelings, so small doubts calcify. Silence signals agreement not distance, sentences land like memos, and by the time anyone names the problem it has hardened into policy.",
+      "repairMove": "Schedule one weekly non-negotiable no-agenda hour. Whoever speaks first must start with I feel rather than I think, and the other is not allowed to solve it, only listen.",
+      "crystalStrategy": "black-tourmaline on both sides dissolves the shared Saturnian armor, fluorite draws stuck unspoken thoughts into organized clarity so memos finally become feelings.",
+      "avoidCrystal": "Pyrite. It feeds the very ambition that already outpaces intimacy, urging both to climb harder while the warmth between them fossilizes into another quarterly review.",
+      "ritualAngle": "fluorite between two black-tourmaline stones on the bedroom dresser, not the office desk. Hold one stone each for sixty seconds of silence, then say one feeling out loud."
     },
     "capricorn-aquarius": {
       "url": "/capricorn-aquarius/",
@@ -2757,10 +2904,12 @@
       "coreChallenge": "One respects the chain of command, the other wants to rewrite it. Tradition collides with reinvention in every room, from the wedding guest list to who pays for dinner. Stubbornness, the shared vice, locks every disagreement in place.",
       "synergy": "Structure meets systems change. The goat builds the institution, the water-bearer spots which wall to remove. Many couples find that long-term goals actually align, even when the methods look completely opposed from the outside.",
       "communicationPattern": "Logic in two dialects. One argues from precedent and proof, the other from principle and possibility. Both are convinced they're the rational one, so the friction is rarely about facts and almost always about framing.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Institution And The Insurrection. The goat builds structure, the water-bearer spots which wall to remove, and shared stubbornness locks every tradition-versus-reinvention fight in place.",
+      "conflictLoop": "Both are convinced they are the rational one, so friction is rarely about facts, almost always framing. One argues precedent, the other principle, and neither yields the floor.",
+      "repairMove": "At the start of any standoff, ask which method each is using, then trade roles for ten minutes. The goat argues possibility, the water-bearer argues precedent, until both feel heard.",
+      "crystalStrategy": "black-tourmaline grounds the goat's structure without rigidity, amazonite loosens the water-bearer's fixed principle into lived empathy, quartz bridges earth and air.",
+      "avoidCrystal": "Garnet. It doubles the stubbornness already endemic here, hardens the goat into reaction, turns reinvention into pure contrarianism. The deadlock gets worse, not better.",
+      "ritualAngle": "Shared desk ritual with quartz at center, black-tourmaline on the left for structure, amazonite on the right for change. Both touch the quartz until one full breath completes."
     },
     "capricorn-pisces": {
       "url": "/capricorn-pisces/",
@@ -2794,10 +2943,12 @@
       "coreChallenge": "One builds the seawall, the other is the tide. Earth wants receipts and a ten-year plan; water wants to feel its way and dissolve the boundary entirely. Many couples find the goat slowly softens while the fish slowly stands up straighter.",
       "synergy": "Ambition with a soul. The goat gives the fish a container, a calendar, a bank account that works. The fish gives the goat a reason to come home that isn't another quarterly review. Traditionally tied to earth holding water, this is quietly nourishing.",
       "communicationPattern": "Two speeds, one conversation. One speaks in commitments and numbers, the other in impressions and pauses. Each has to learn the other's fluency, or the goat will read silence as approval and the fish will read precision as coldness.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Seawall And The Tide. Earth steadies water in a quietly nourishing sextile, the goat softens, the fish stands straighter, ambition finally finding a soul to come home to.",
+      "conflictLoop": "Two speeds, one conversation. The goat reads silence as approval, the fish reads precision as coldness, and neither has learned the other's fluency, so small gaps widen into felt distance.",
+      "repairMove": "Once a week the goat speaks for sixty seconds using only feeling words, no numbers. The fish then answers with concrete nouns and a calendar date. Both survive discomfort.",
+      "crystalStrategy": "black-tourmaline gives the goat a safe container for softness, amethyst helps the fish turn impressions into spoken clarity, quartz harmonizes the two speeds into one rhythm.",
+      "avoidCrystal": "Hematite. Its heavy grounding pulls the fish further under, mirroring the goat's worst over-serious self, and starves the very softness this sextile depends on.",
+      "ritualAngle": "Waterside ritual with quartz held between both palms, black-tourmaline in the goat's pocket, amethyst in the fish's. Speak one shared intention, then walk in silence with palms touching."
     },
     "aquarius-aquarius": {
       "url": "/aquarius-aquarius/",
@@ -2831,10 +2982,12 @@
       "coreChallenge": "Two revolutionaries, no one minding the store. Both prize independence and ideas over intimacy, so the relationship itself can start to feel like a joint venture that neither remembers to staff.",
       "synergy": "Mind-meld on the future. Shared causes, shared rebellion, shared love of the strange. Traditionally tied to fixed air doubled, the friendship floor here is rock solid, even when the romance flickers above it.",
       "communicationPattern": "Theories before people. Conversations ping from AI ethics to urban planning to last night's dream, all at the same altitude. Real feelings get routed through ideas, which is efficient until someone actually needs to be held.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "Two Revolutionaries, No One Minding The Store. A fixed-air mind-meld on the future with rock-solid friendship underneath and a romance flickering above it like an unsupervised joint venture.",
+      "conflictLoop": "Real feelings get routed through ideas. Conversations ping from ethics to urban planning at the same altitude, so efficiency masks the fact that nobody is actually holding anyone.",
+      "repairMove": "Institute a no-abstractions rule for fifteen minutes daily. No theories, no causes. Only sentences that begin with I and end with a body sensation, hungry, tired, lonely.",
+      "crystalStrategy": "amazonite coaxes both out of theory into honest self-expression, amber warms cold fixed-air intellect with solar resin, black-tourmaline grounds the drift into a shared home.",
+      "avoidCrystal": "Clear Quartz in heavy doses. It amplifies the very mental resonance this pair runs on, pushing both further into altitude where nobody lands. The goal is embodiment, not more clarity.",
+      "ritualAngle": "Candle ritual with amber at the flame's base, amazonite on each palm, black-tourmaline under the feet. Stare at the flame for five minutes, then speak one non-intellectual sentence."
     },
     "aquarius-pisces": {
       "url": "/aquarius-pisces/",
@@ -2868,10 +3021,12 @@
       "coreChallenge": "One floats above the crowd, the other dissolves into it. Air wants the principle, water wants the feeling, and both quietly avoid the unglamorous logistics of staying together past the honeymoon.",
       "synergy": "Visionary softness. The water-bearer dreams a better world, the fish feels everyone who would live in it. Many couples find a gentle, almost psychic creative partnership here, one that art, music, or healing work tends to surface.",
       "communicationPattern": "Said between the lines. The water-bearer abstracts, the fish hints, and neither lands the direct sentence. Conflict resolves through vibes and time rather than clarity, which works until resentment quietly fills the silences.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "The Visionary And The Empath. The water-bearer dreams a better world, the fish feels everyone who would live in it, bonded by a shared avoidance of unglamorous logistics.",
+      "conflictLoop": "Everything important stays subtext. The water-bearer abstracts, the fish hints, and neither lands the direct sentence, so conflict resolves through vibes until resentment fills the silences.",
+      "repairMove": "Adopt a one-sentence rule for difficult topics. No abstractions, metaphors, or hints. The water-bearer states what they want in a child-plain sentence, the fish confirms or denies in kind.",
+      "crystalStrategy": "amazonite gives the water-bearer courage to speak feeling not principle, amethyst turns hinted impressions into clear words, quartz amplifies the faint air-water signal until it lands.",
+      "avoidCrystal": "Moonstone. It deepens the very dreaminess that keeps this pair in soft-focus avoidance, lifting both into psychic weather where nothing gets named. Grounding, not more mist, is the medicine.",
+      "ritualAngle": "Threshold ritual with quartz on the front door's threshold weekly, amazonite in the water-bearer's hand, amethyst in the fish's. Speak one shared commitment before stepping over together."
     },
     "pisces-pisces": {
       "url": "/pisces-pisces/",
@@ -2905,10 +3060,12 @@
       "coreChallenge": "No shore, two oceans. Empathy doubles until boundaries dissolve, and practical life, bills, appointments, the word no, starts leaking through the floorboards. Many couples find the romance is oceanic, the admin is underwater.",
       "synergy": "Emotional telepathy. Few words are needed; moods, dreams, and hurts pass between them almost unspoken. Traditionally tied to Neptune's waters doubled, this is the pairing that most resembles a single nervous system shared by two people.",
       "communicationPattern": "Felt, not stated. A glance carries a paragraph, and a sigh can end an argument. The danger is that everything important stays subtext, so small misunderstandings drift for months before anyone realizes they were ever there.",
-      "famousCouples": {
-        "together": [],
-        "brokenUp": []
-      }
+      "relationshipArchetype": "No Shore, Two Oceans. A single nervous system shared by two people with doubled-Neptune telepathy, where romance runs oceanic and the admin of being a person leaks through the floorboards.",
+      "conflictLoop": "Felt, not stated. A glance carries a paragraph and a sigh ends an argument, so everything important stays subtext and small misunderstandings drift for months unnoticed.",
+      "repairMove": "Institute one spoken truth per day, said out loud, not felt, not implied. Doubling water means doubling intuition, and the only cure for telepathy's blind spots is actual words.",
+      "crystalStrategy": "amethyst lifts the fog so the fish can name what they already sense, angelite softens direct speech so it does not feel like violence, black-tourmaline provides the missing shore.",
+      "avoidCrystal": "Selenite. It deepens the very boundary dissolution that is already this pair's weakness, merging two nervous systems until neither knows whose feeling is whose. Edges, not more mist.",
+      "ritualAngle": "Boundary ritual with black-tourmaline at the four corners of the bed, amethyst on one chest, angelite on the other. Speak one sentence beginning with mine, not ours, before sleep."
     }
   }
 }

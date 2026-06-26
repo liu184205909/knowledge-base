@@ -1,6 +1,6 @@
 {
   "total": 78,
-  "checked_at": "2026-06-25T04:36:56.405Z",
+  "checked_at": "2026-06-25T15:12:27.815Z",
   "summary": {
     "clean": 78,
     "has_issues": 0,
@@ -13,7 +13,7 @@
     ],
     [
       "Challenges:the",
-      55
+      50
     ],
     [
       "Friendship:a",
@@ -21,19 +21,15 @@
     ],
     [
       "Communication:the",
-      33
+      31
     ],
     [
       "Love:the",
-      32
+      31
     ],
     [
       "Marriage:a",
       26
-    ],
-    [
-      "Friendship:as",
-      23
     ],
     [
       "Marriage:marriage",
@@ -47,546 +43,546 @@
       "issues": 0,
       "kill": 0,
       "boundary": 14,
-      "wc": 2163
+      "wc": 2267
     },
     {
       "slug": "aquarius-pisces",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2143
+      "wc": 2251
     },
     {
       "slug": "aries-aquarius",
       "issues": 0,
       "kill": 0,
       "boundary": 13,
-      "wc": 2253
+      "wc": 2337
     },
     {
       "slug": "aries-aries",
       "issues": 0,
       "kill": 0,
       "boundary": 15,
-      "wc": 2125
+      "wc": 2187
     },
     {
       "slug": "aries-cancer",
       "issues": 0,
       "kill": 0,
       "boundary": 14,
-      "wc": 2337
+      "wc": 2416
     },
     {
       "slug": "aries-capricorn",
       "issues": 0,
       "kill": 0,
       "boundary": 13,
-      "wc": 2225
+      "wc": 2322
     },
     {
       "slug": "aries-gemini",
       "issues": 0,
       "kill": 0,
       "boundary": 12,
-      "wc": 2220
+      "wc": 2298
     },
     {
       "slug": "aries-leo",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2262
+      "wc": 2330
     },
     {
       "slug": "aries-libra",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2239
+      "wc": 2323
     },
     {
       "slug": "aries-pisces",
       "issues": 0,
       "kill": 0,
       "boundary": 14,
-      "wc": 2251
+      "wc": 2338
     },
     {
       "slug": "aries-sagittarius",
       "issues": 0,
       "kill": 0,
       "boundary": 14,
-      "wc": 2314
+      "wc": 2404
     },
     {
       "slug": "aries-scorpio",
       "issues": 0,
       "kill": 0,
       "boundary": 15,
-      "wc": 2283
+      "wc": 2379
     },
     {
       "slug": "aries-taurus",
       "issues": 0,
       "kill": 0,
       "boundary": 13,
-      "wc": 2132
+      "wc": 2205
     },
     {
       "slug": "aries-virgo",
       "issues": 0,
       "kill": 0,
       "boundary": 13,
-      "wc": 2232
+      "wc": 2318
     },
     {
       "slug": "cancer-aquarius",
       "issues": 0,
       "kill": 0,
       "boundary": 9,
-      "wc": 2012
+      "wc": 2117
     },
     {
       "slug": "cancer-cancer",
       "issues": 0,
       "kill": 0,
       "boundary": 9,
-      "wc": 2107
+      "wc": 2207
     },
     {
       "slug": "cancer-capricorn",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2027
+      "wc": 2142
     },
     {
       "slug": "cancer-leo",
       "issues": 0,
       "kill": 0,
       "boundary": 9,
-      "wc": 2063
+      "wc": 2160
     },
     {
       "slug": "cancer-libra",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2020
+      "wc": 2125
     },
     {
       "slug": "cancer-pisces",
       "issues": 0,
       "kill": 0,
       "boundary": 9,
-      "wc": 2024
+      "wc": 2124
     },
     {
       "slug": "cancer-sagittarius",
       "issues": 0,
       "kill": 0,
       "boundary": 9,
-      "wc": 2003
+      "wc": 2115
     },
     {
       "slug": "cancer-scorpio",
       "issues": 0,
       "kill": 0,
       "boundary": 10,
-      "wc": 1990
+      "wc": 2085
     },
     {
       "slug": "cancer-virgo",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2015
+      "wc": 2122
     },
     {
       "slug": "capricorn-aquarius",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2135
+      "wc": 2234
     },
     {
       "slug": "capricorn-capricorn",
       "issues": 0,
       "kill": 0,
       "boundary": 16,
-      "wc": 2175
+      "wc": 2273
     },
     {
       "slug": "capricorn-pisces",
       "issues": 0,
       "kill": 0,
       "boundary": 15,
-      "wc": 2218
+      "wc": 2328
     },
     {
       "slug": "gemini-aquarius",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2072
+      "wc": 2174
     },
     {
       "slug": "gemini-cancer",
       "issues": 0,
       "kill": 0,
       "boundary": 9,
-      "wc": 2170
+      "wc": 2282
     },
     {
       "slug": "gemini-capricorn",
       "issues": 0,
       "kill": 0,
       "boundary": 8,
-      "wc": 2042
+      "wc": 2144
     },
     {
       "slug": "gemini-gemini",
       "issues": 0,
       "kill": 0,
       "boundary": 12,
-      "wc": 2114
+      "wc": 2211
     },
     {
       "slug": "gemini-leo",
       "issues": 0,
       "kill": 0,
       "boundary": 9,
-      "wc": 2193
+      "wc": 2295
     },
     {
       "slug": "gemini-libra",
       "issues": 0,
       "kill": 0,
       "boundary": 10,
-      "wc": 2078
+      "wc": 2168
     },
     {
       "slug": "gemini-pisces",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2091
+      "wc": 2190
     },
     {
       "slug": "gemini-sagittarius",
       "issues": 0,
       "kill": 0,
       "boundary": 10,
-      "wc": 2067
+      "wc": 2164
     },
     {
       "slug": "gemini-scorpio",
       "issues": 0,
       "kill": 0,
       "boundary": 9,
-      "wc": 2029
+      "wc": 2133
     },
     {
       "slug": "gemini-virgo",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2101
+      "wc": 2205
     },
     {
       "slug": "leo-aquarius",
       "issues": 0,
       "kill": 0,
       "boundary": 18,
-      "wc": 2157
+      "wc": 2264
     },
     {
       "slug": "leo-capricorn",
       "issues": 0,
       "kill": 0,
       "boundary": 18,
-      "wc": 2135
+      "wc": 2234
     },
     {
       "slug": "leo-leo",
       "issues": 0,
       "kill": 0,
       "boundary": 14,
-      "wc": 2115
+      "wc": 2204
     },
     {
       "slug": "leo-libra",
       "issues": 0,
       "kill": 0,
       "boundary": 18,
-      "wc": 2165
+      "wc": 2270
     },
     {
       "slug": "leo-pisces",
       "issues": 0,
       "kill": 0,
       "boundary": 18,
-      "wc": 2214
+      "wc": 2317
     },
     {
       "slug": "leo-sagittarius",
       "issues": 0,
       "kill": 0,
       "boundary": 19,
-      "wc": 2197
+      "wc": 2308
     },
     {
       "slug": "leo-scorpio",
       "issues": 0,
       "kill": 0,
       "boundary": 17,
-      "wc": 2157
+      "wc": 2251
     },
     {
       "slug": "leo-virgo",
       "issues": 0,
       "kill": 0,
       "boundary": 16,
-      "wc": 2140
+      "wc": 2232
     },
     {
       "slug": "libra-aquarius",
       "issues": 0,
       "kill": 0,
       "boundary": 12,
-      "wc": 2202
+      "wc": 2315
     },
     {
       "slug": "libra-capricorn",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2183
+      "wc": 2294
     },
     {
       "slug": "libra-libra",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2133
+      "wc": 2222
     },
     {
       "slug": "libra-pisces",
       "issues": 0,
       "kill": 0,
       "boundary": 13,
-      "wc": 2174
+      "wc": 2284
     },
     {
       "slug": "libra-sagittarius",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2178
+      "wc": 2283
     },
     {
       "slug": "libra-scorpio",
       "issues": 0,
       "kill": 0,
       "boundary": 13,
-      "wc": 2162
+      "wc": 2267
     },
     {
       "slug": "pisces-pisces",
       "issues": 0,
       "kill": 0,
       "boundary": 14,
-      "wc": 2267
+      "wc": 2375
     },
     {
       "slug": "sagittarius-aquarius",
       "issues": 0,
       "kill": 0,
       "boundary": 14,
-      "wc": 2166
+      "wc": 2266
     },
     {
       "slug": "sagittarius-capricorn",
       "issues": 0,
       "kill": 0,
       "boundary": 10,
-      "wc": 2194
+      "wc": 2294
     },
     {
       "slug": "sagittarius-pisces",
       "issues": 0,
       "kill": 0,
       "boundary": 10,
-      "wc": 2255
+      "wc": 2363
     },
     {
       "slug": "sagittarius-sagittarius",
       "issues": 0,
       "kill": 0,
       "boundary": 14,
-      "wc": 2136
+      "wc": 2224
     },
     {
       "slug": "scorpio-aquarius",
       "issues": 0,
       "kill": 0,
       "boundary": 10,
-      "wc": 2108
+      "wc": 2216
     },
     {
       "slug": "scorpio-capricorn",
       "issues": 0,
       "kill": 0,
       "boundary": 15,
-      "wc": 2123
+      "wc": 2235
     },
     {
       "slug": "scorpio-pisces",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2167
+      "wc": 2288
     },
     {
       "slug": "scorpio-sagittarius",
       "issues": 0,
       "kill": 0,
       "boundary": 12,
-      "wc": 2133
+      "wc": 2237
     },
     {
       "slug": "scorpio-scorpio",
       "issues": 0,
       "kill": 0,
       "boundary": 13,
-      "wc": 2224
+      "wc": 2344
     },
     {
       "slug": "taurus-aquarius",
       "issues": 0,
       "kill": 0,
       "boundary": 16,
-      "wc": 2196
+      "wc": 2295
     },
     {
       "slug": "taurus-cancer",
       "issues": 0,
       "kill": 0,
       "boundary": 11,
-      "wc": 2195
+      "wc": 2290
     },
     {
       "slug": "taurus-capricorn",
       "issues": 0,
       "kill": 0,
       "boundary": 12,
-      "wc": 2147
+      "wc": 2239
     },
     {
       "slug": "taurus-gemini",
       "issues": 0,
       "kill": 0,
       "boundary": 14,
-      "wc": 2169
+      "wc": 2265
     },
     {
       "slug": "taurus-leo",
       "issues": 0,
       "kill": 0,
       "boundary": 12,
-      "wc": 2197
+      "wc": 2287
     },
     {
       "slug": "taurus-libra",
       "issues": 0,
       "kill": 0,
       "boundary": 16,
-      "wc": 2204
+      "wc": 2294
     },
     {
       "slug": "taurus-pisces",
       "issues": 0,
       "kill": 0,
       "boundary": 15,
-      "wc": 2262
+      "wc": 2361
     },
     {
       "slug": "taurus-sagittarius",
       "issues": 0,
       "kill": 0,
       "boundary": 14,
-      "wc": 2122
+      "wc": 2223
     },
     {
       "slug": "taurus-scorpio",
       "issues": 0,
       "kill": 0,
       "boundary": 15,
-      "wc": 2200
+      "wc": 2309
     },
     {
       "slug": "taurus-taurus",
       "issues": 0,
       "kill": 0,
       "boundary": 10,
-      "wc": 2238
+      "wc": 2332
     },
     {
       "slug": "taurus-virgo",
       "issues": 0,
       "kill": 0,
       "boundary": 12,
-      "wc": 2223
+      "wc": 2308
     },
     {
       "slug": "virgo-aquarius",
       "issues": 0,
       "kill": 0,
       "boundary": 16,
-      "wc": 2148
+      "wc": 2255
     },
     {
       "slug": "virgo-capricorn",
       "issues": 0,
       "kill": 0,
       "boundary": 18,
-      "wc": 2153
+      "wc": 2262
     },
     {
       "slug": "virgo-libra",
       "issues": 0,
       "kill": 0,
       "boundary": 17,
-      "wc": 2135
+      "wc": 2258
     },
     {
       "slug": "virgo-pisces",
       "issues": 0,
       "kill": 0,
       "boundary": 17,
-      "wc": 2225
+      "wc": 2342
     },
     {
       "slug": "virgo-sagittarius",
       "issues": 0,
       "kill": 0,
       "boundary": 19,
-      "wc": 2127
+      "wc": 2240
     },
     {
       "slug": "virgo-scorpio",
       "issues": 0,
       "kill": 0,
       "boundary": 18,
-      "wc": 2137
+      "wc": 2247
     },
     {
       "slug": "virgo-virgo",
       "issues": 0,
       "kill": 0,
       "boundary": 15,
-      "wc": 2155
+      "wc": 2262
     }
   ]
 }

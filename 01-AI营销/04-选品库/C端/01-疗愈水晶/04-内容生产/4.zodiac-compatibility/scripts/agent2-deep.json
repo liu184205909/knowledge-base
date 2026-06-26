@@ -1,0 +1,169 @@
+{
+  "_meta": {
+    "agent": "agent2",
+    "scope": "gemini-* and cancer-* pairings (19 pairs)",
+    "fields": [
+      "relationshipArchetype",
+      "conflictLoop",
+      "repairMove",
+      "crystalStrategy",
+      "avoidCrystal",
+      "ritualAngle"
+    ],
+    "generatedAt": "2026-06-25"
+  },
+  "pairs": {
+    "gemini-gemini": {
+      "relationshipArchetype": "The Hall-of-Mirrors Twins — two restless minds that finish each other's tangents and abandon the same ten projects by Tuesday.",
+      "conflictLoop": "Both skim, both deflect, neither takes notes. A decision dissolves mid-conversation because a flashier topic hijacked the room, and neither remembers who was supposed to follow up.",
+      "repairMove": "Designate one partner as the 'closer' for each decision and write the agreed action on a sticky note before the next topic is allowed to open.",
+      "crystalStrategy": "Apatite sharpens scattered focus for the twin mind; chrysocolla slows the throat chakra so words land instead of multiplying; black tourmaline anchors the pair's racing nervous systems into one shared physical moment.",
+      "avoidCrystal": "Selenite — its upward, mentalizing energy amplifies the already-airborne overthinking and makes grounding harder for two partners who already live above the neck.",
+      "ritualAngle": "Hold black tourmaline in paired hands during the weekly 'decisions we actually made' review; let chrysocolla sit between two laptops to mute side-conversations and keep one thread alive to the end."
+    },
+    "gemini-cancer": {
+      "relationshipArchetype": "The Talker and the Tender — one names the weather in ten words, the other feels it in one long silence.",
+      "conflictLoop": "A casual joke lands like a blade; the wounded partner retreats into the shell; the talker reads the withdrawal as coldness and analyzes it aloud, which deepens the wound instead of healing it.",
+      "repairMove": "When the joke misfires, stop analyzing. Name the hurt feeling in one short sentence, offer a quiet gesture — hand on shoulder, slow hug — before any further discussion.",
+      "crystalStrategy": "Apatite gives the air partner vocabulary for feelings, not just observations; emerald softens the water partner's shell so the heart can be voiced; quartz bridges the two mismatched rhythms into one coherent signal.",
+      "avoidCrystal": "Hematite — its heavy grounding deepens the crab's already-dense emotional sediment and overwhelms a mind that needs lightness to stay open.",
+      "ritualAngle": "Pass a single quartz point back and forth at the kitchen table: whoever holds it must speak one feeling-sentence, no analysis allowed. Pair with emerald over the heart during long untangling conversations."
+    },
+    "gemini-leo": {
+      "relationshipArchetype": "The Narrator and the Stage — one performs the story, the other live-tweets it from the front row.",
+      "conflictLoop": "The spotlight-seeker demands undivided attention; the roving mind is already texting someone else, quietly bored by the lecture. The performer escalates louder; the narrator checks out further.",
+      "repairMove": "Trade roles once a week: the performer becomes the audience, the narrator gets the floor uninterrupted for ten full minutes. Honor the trade or the loop never breaks.",
+      "crystalStrategy": "Apatite gives the narrator genuine focus to stay in the room when not center-stage; amber warms the performer's need for validation into generous attention rather than demand; quartz harmonizes two bright, expressive frequencies.",
+      "avoidCrystal": "Black tourmaline — its absorptive heaviness dims the playful fire that this partnership runs on, leaving both partners flat where they should sparkle.",
+      "ritualAngle": "Place amber at the center of the dinner table during the weekly 'spotlight swap' ritual; hold quartz together for ten seconds before the audience partner begins to listen, sealing the attention contract."
+    },
+    "gemini-virgo": {
+      "relationshipArchetype": "The Scatter and the Sorter — same ruling planet, opposite processing directions, infinite mutual critique.",
+      "conflictLoop": "One nitpicks to refine; the other nitpicks to deflect. A brainstorm gets shredded as chaos; the scatter retreats into more chaos to dodge the verdict, and the sorter issues another critique.",
+      "repairMove": "Separate ideation from evaluation explicitly: brainstorm for twenty minutes with zero critique allowed, then switch to sorter mode with the scatter agreeing in advance to stay for the full review.",
+      "crystalStrategy": "Apatite broadens the sorter's tolerance for mess; amazonite cools the harsh critic so critique becomes care, not attack; rose quartz reminds both why they fell in love between the spreadsheets.",
+      "avoidCrystal": "Pyrite — its rigid, ambitious focus rewards the sorter and punishes the scatter, widening the very productivity gap that fuels the loop.",
+      "ritualAngle": "Set amazonite on the desk during the no-critique ideation window; switch to rose quartz on the table once evaluation mode begins, marking the gear-shift so neither partner slips back into the wrong mode."
+    },
+    "gemini-libra": {
+      "relationshipArchetype": "The Salon of Two — brilliant talk, beautiful manners, no decision ever actually closes between them.",
+      "conflictLoop": "Neither wants to be the heavy. Decisions get postponed until one partner snaps at the unspoken buildup, shocking the other into wounded silence, then both apologize and postpone again.",
+      "repairMove": "Institute a forced-close: every discussion has a hard thirty-minute deadline, after which either partner may invoke a deciding vote that the other must accept without sulking.",
+      "crystalStrategy": "Apatite concentrates diffuse mental energy into one through-line; iolite cuts indecision by clarifying what is wanted underneath the diplomacy; quartz amplifies the rare honest sentence.",
+      "avoidCrystal": "Lepidolite — its sedating, smoothing frequency makes confrontation feel even less safe, extending the politeness stand-off by another month.",
+      "ritualAngle": "Hold iolite at the throat when forced to deliver the uncomfortable 'I actually want X' sentence; place quartz between the chairs during the deciding-vote window so the snap never gets personal."
+    },
+    "gemini-scorpio": {
+      "relationshipArchetype": "The Skater and the Depth-Charge — one stays light to survive, the other dives dark to know.",
+      "conflictLoop": "Social ease reads as flirtation; stillness reads as accusation. Lightness meets gravity; the skater deflects with humor, the depth-charger interprets the deflection as proof of betrayal.",
+      "repairMove": "When the silence gets loaded, the light partner must stay in the room without a joke and say 'I am here, I am not leaving' before any explanation is offered or demanded.",
+      "crystalStrategy": "Apatite gives the light partner words for the fear beneath humor; black tourmaline shields the depth-charger from reading every social interaction as threat; rose quartz keeps the heart soft.",
+      "avoidCrystal": "Malachite — its deep transformational intensity feeds the scorpion's worst investigative spiral and drowns the already-thin air the twin needs to breathe.",
+      "ritualAngle": "Place black tourmaline at the door when either partner returns from a social outing, absorbing the flirtation-paranoia at the threshold; hold rose quartz over the heart during the 'I am not leaving' sentence."
+    },
+    "gemini-sagittarius": {
+      "relationshipArchetype": "Two Nomads, One Horizon — magnetically opposite, identically restless, always departing together, rarely arriving anywhere.",
+      "conflictLoop": "Both love the next thing more than the current thing. They trade monologues, call it dialogue, and quietly drift past the plan they never finished agreeing on.",
+      "repairMove": "Pick one destination — literal or metaphorical — and commit to arriving before the next departure is allowed. Both partners must say 'we landed' out loud before opening the next map.",
+      "crystalStrategy": "Apatite focuses the twin's scattered curiosity into follow-through; herkimer diamond clarifies the archer's grandest vision into a single actionable next step; rose quartz anchors the wander into something worth coming back to.",
+      "avoidCrystal": "Citrine — its relentless forward, optimistic push accelerates the departure impulse and makes pausing to integrate feel like failure.",
+      "ritualAngle": "Hold herkimer diamond between paired palms during the 'we landed' declaration, locking the arrival; place rose quartz in the suitcase so the return feels like a choice, not a chore."
+    },
+    "gemini-capricorn": {
+      "relationshipArchetype": "The Butterfly and the Blueprint — one texts fragments, the other replies in bullet points.",
+      "conflictLoop": "Pivots read as flakiness; plans read as cages. They fight over the calendar more than the relationship, each quietly assuming the other is being difficult on purpose.",
+      "repairMove": "Run the week from one shared calendar where the twin protects two 'free roam' nights and the goat protects three 'executed as planned' nights — neither partner may overwrite the other's protected slots.",
+      "crystalStrategy": "Apatite helps the butterfly hold a single thread long enough to finish; black tourmaline keeps the goat's structure from calcifying into control; rose quartz reminds both that the calendar serves the bond.",
+      "avoidCrystal": "Garnet — its rigid, dutiful commitment frequency amplifies the goat's worst instinct to timetable the partnership into a stale cage.",
+      "ritualAngle": "Place black tourmaline on the shared calendar during the Sunday week-planning ritual; hold rose quartz during the negotiation of protected slots so neither partner frames the other as the enemy."
+    },
+    "gemini-aquarius": {
+      "relationshipArchetype": "The Think-Tank of Two — pure intellectual chemistry, dishes permanently unwashed, roommate mode by month six.",
+      "conflictLoop": "Feelings get theorized before they get felt. When one partner actually needs comfort, the other reaches for an analogy, and the small wounding goes unregistered as both slide back into idea-mode.",
+      "repairMove": "Agree a code phrase — 'this is a feeling, not a theory' — that forces the theorist to drop the analogy, make eye contact, and say one human sentence before resuming analysis.",
+      "crystalStrategy": "Apatite focuses the twin's restless mind into one heart-thread; amazonite cools the water bearer's detachment into calmer presence; quartz bridges head to heart so ideas become offerings, not escapes.",
+      "avoidCrystal": "Fluorite — its hyper-mental, organizing frequency deepens the very dissociation this pair already runs on, keeping both partners safely above the neck.",
+      "ritualAngle": "Hold amazonite over the heart when speaking the 'feeling, not a theory' code phrase; place quartz between two chairs facing each other, no screens allowed, for the ten-minute feeling window."
+    },
+    "gemini-pisces": {
+      "relationshipArchetype": "Two Shapeshifters, Different Media — one shifts through ideas, the other through feelings, both evaporate under pressure.",
+      "conflictLoop": "Irony wounds sincerity; vagueness frustrates the need for a clean thread. One says it sideways, the other hears it slanted, and clarification takes longer than the original point.",
+      "repairMove": "When the misread happens, both write down what they meant in one sentence on paper, exchange, read silently before speaking — this stops the verbal untangling from creating more knots.",
+      "crystalStrategy": "Apatite sharpens the twin's language into precision rather than irony; amethyst gives the fish a spine of clarity inside the fog; rose quartz keeps the heart soft through the long clarification.",
+      "avoidCrystal": "Moonstone — its already-dreamy, lunar pull thickens the fish's fog and the twin's scatter simultaneously, making the partnership even harder to pin down.",
+      "ritualAngle": "Hold amethyst at the third eye during the silent written clarification exchange; place rose quartz between the two notes so the reading stays tender, not clinical."
+    },
+    "cancer-cancer": {
+      "relationshipArchetype": "Two Shells, One Tide — bone-deep loyalty, two soft interiors, two memories that never forget a slight.",
+      "conflictLoop": "Each retreats when hurt. A small wound spirals into days of silent mutual withdrawal; the mood of one becomes the weather of both, and nobody surfaces first.",
+      "repairMove": "Agree a 'shell timer' — when one partner withdraws, they must surface within 24 hours with one sentence about what hurt, even if no resolution is offered yet.",
+      "crystalStrategy": "Emerald keeps the heart open through the long sulk instead of calcifying; moonstone honors the lunar tide without letting it swamp the bond; black tourmaline absorbs the cumulative static flooding the shared atmosphere.",
+      "avoidCrystal": "Selenite — its upward, ethereal lift pulls both partners further from the body and the home, dissolving the very shell-and-hearth anchor this pair needs to stay grounded.",
+      "ritualAngle": "Hold moonstone together at the new moon, naming the month's emotional weather in one word each; place black tourmaline at the bedroom threshold so the shared atmosphere gets cleared nightly."
+    },
+    "cancer-leo": {
+      "relationshipArchetype": "The Nest-Keeper and the Spotlight — one builds the hearth, the other commands the stage.",
+      "conflictLoop": "The crab hints and waits to be noticed; the lion announces and assumes the room. The hint goes unheard; the announcement goes unfelt; resentment curdles on both sides for days.",
+      "repairMove": "The crab says the need aloud in one direct sentence without coding it; the lion stops performing for ten seconds, makes eye contact, and reflects the sentence back before responding.",
+      "crystalStrategy": "Emerald softens the crab's coding into clearer, braver speech; amber warms the lion's performance into actual reception instead of transmission; quartz harmonizes two warm but mismatched frequencies.",
+      "avoidCrystal": "Obsidian — its raw, volcanic pull deepens the crab's sulking side and dims the very fire the lion needs reflected back to stay generous.",
+      "ritualAngle": "Place amber on the kitchen table when the lion returns from the stage so the homecoming stays warm; hold quartz together during the hint-to-direct-sentence practice, sealing the new contract."
+    },
+    "cancer-virgo": {
+      "relationshipArchetype": "Two Givers, Different Currencies — one gives devotion spoken aloud, the other shows love by quietly fixing the sink.",
+      "conflictLoop": "The crab needs reassurance voiced; the maiden shows love through service. Languages get lost in transit; both partners stew privately because the giving on the other side doesn't register as love.",
+      "repairMove": "Once a week, each partner voices aloud one specific act of care the other performed, in the other's currency — 'you fixed the sink' meets 'you held me' — both named, both received.",
+      "crystalStrategy": "Emerald opens the crab's heart to receive service as love; amazonite loosens the maiden's critic so service flows without resentment; quartz translates between devotion and service so neither currency misreads.",
+      "avoidCrystal": "Hematite — its heavy, dutiful weight feeds the maiden's already-rigid work ethic and makes her interpret the crab's softness as indulgence rather than love.",
+      "ritualAngle": "Hold amazonite while speaking the named act of service; place quartz between two chairs at the weekly 'currencies exchanged' review so neither partner minimizes what the other offered."
+    },
+    "cancer-libra": {
+      "relationshipArchetype": "Two Peacemakers, One Unspoken War — the crab sulks, the scales smile through it, the subtext gets denser by the hour.",
+      "conflictLoop": "Both want harmony, so neither names the problem. Small resentments accumulate for months because both would rather keep peace than start the war that would actually clear the air.",
+      "repairMove": "Schedule a monthly 'clearing' where each partner names one resentment that has been swallowed, with the rule that no reaction is allowed for ten full minutes after each item — just listening.",
+      "crystalStrategy": "Emerald gives the crab courage to voice the swallowed hurt; apatite sharpens the scales' indirect charm into direct honesty; rose quartz keeps the named wound from hardening into grudge.",
+      "avoidCrystal": "Lepidolite — its smoothing, sedating vibe makes swallowing the resentment feel even safer, extending the silent accumulation by another month.",
+      "ritualAngle": "Hold rose quartz over the heart during the ten-minute silent-listening window; place apatite at the throat of whoever is speaking the named resentment so the truth stays clean rather than coded."
+    },
+    "cancer-scorpio": {
+      "relationshipArchetype": "Two Depths, One Trench — slow-built trust, total intimacy, devastating fights, and a permanent unforgiveness.",
+      "conflictLoop": "Both feel everything; both guard everything. Walls come down slowly; once down, any perceived dishonesty is interpreted as betrayal and is quietly, permanently unforgiven — no second chance is offered.",
+      "repairMove": "When perceived betrayal lands, the hurt partner must ask one clarifying question before sealing the verdict — the assumption of intent is what makes the wound permanent.",
+      "crystalStrategy": "Emerald keeps the crab's heart open through the test; black tourmaline shields the scorpion from reading every nuance as threat; quartz clarifies the one honest sentence that disarms assumed betrayal.",
+      "avoidCrystal": "Malachite — its deep, surging transformational intensity feeds the scorpion's investigative spiral and turns a small wound into a permanent grudge.",
+      "ritualAngle": "Hold black tourmaline between two open palms during the clarifying-question ritual, absorbing the worst-case projection; place quartz over the heart during the answer so reception stays open, not sealed."
+    },
+    "cancer-sagittarius": {
+      "relationshipArchetype": "The Anchor and the Archer — one builds the home, the other quietly packs the bag, geography is the eternal fight.",
+      "conflictLoop": "The crab builds roots; the archer chases horizons. Restlessness reads as rejection; clinging reads as entrapment. The more one reaches, the further the other roams, and the loop accelerates.",
+      "repairMove": "Establish a 'leaving and returning' rhythm — fixed return dates, fixed return rituals — so the archer's departures feel like choice and the crab's stays feel like choice, not abandonment or cage.",
+      "crystalStrategy": "Emerald anchors the crab's heart so home feels like refuge, not rope; herkimer diamond clarifies the archer's vision into a dated return; rose quartz makes the homecoming warmer than the road.",
+      "avoidCrystal": "Citrine — its relentless forward, optimistic push feeds the archer's departure impulse and makes the home feel like a stall rather than a choice.",
+      "ritualAngle": "Hold herkimer diamond while naming the return date out loud before departure; place rose quartz on the pillow the archer returns to so the bed reads as welcome, not leash."
+    },
+    "cancer-capricorn": {
+      "relationshipArchetype": "Two Builders, One Legacy — one tends the hearth at midnight, the other tends the structure late at the office.",
+      "conflictLoop": "Both are doing it for the family; neither feels seen by the other. The crab waits in the lit window; the goat works late; both quietly conclude the other chose something else.",
+      "repairMove": "Once a week, the goat comes home before a fixed hour with no work allowed, and the crab speaks one sentence of gratitude for the structure built — both naming the unseen sacrifice.",
+      "crystalStrategy": "Emerald opens the crab's heart to receive structure as love; black tourmaline keeps the goat from mistaking presence for weakness; rose quartz melts the conclusion that the other chose something else.",
+      "avoidCrystal": "Pyrite — its rigid, ambitious focus rewards the goat's worst workaholic instinct and makes the late office feel even more justified.",
+      "ritualAngle": "Place black tourmaline on the work-desk at the agreed departure hour as a hard stop signal; hold rose quartz together during the gratitude sentence so the structure finally reads as love."
+    },
+    "cancer-aquarius": {
+      "relationshipArchetype": "The Merger and the Sovereign — one pulls close, the other pulls apart, the eternal intimacy-versus-autonomy quincunx.",
+      "conflictLoop": "The crab reaches; the water bearer detaches. Each partner's defense triggers the other's defense; the more one merges, the further the other floats, and the cycle quietly accelerates.",
+      "repairMove": "Agree a 'tether window' — one daily 20-minute block where the water bearer commits to full presence, and the crab commits to not interpret the other 23 hours as withdrawal.",
+      "crystalStrategy": "Emerald lets the crab hold love without clinging; amazonite gives the water bearer a calmer, less defensive autonomy instead of pure detachment; rose quartz keeps the tether warm without turning into rope.",
+      "avoidCrystal": "Fluorite — its hyper-mental, organizing pull feeds the water bearer's intellectual escape hatch and makes the crab's reach feel like intrusion rather than invitation.",
+      "ritualAngle": "Hold amazonite together during the daily tether window so presence feels chosen, not forced; place rose quartz at the door the water bearer returns through, marking re-entry as a willing act."
+    },
+    "cancer-pisces": {
+      "relationshipArchetype": "Two Tides, No Anchor — psychic empathy without boundary, moods merge until nobody remembers whose sadness this was.",
+      "conflictLoop": "Each feels everything; neither sets the line. Small disagreements flood because both partners absorb the other's distress in real time, and the original disagreement drowns under shared emotion.",
+      "repairMove": "When the flood rises, both partners physically separate for ten minutes in different rooms to identify whose feeling this originally was — then return and speak only that one feeling.",
+      "crystalStrategy": "Emerald gives the crab a spine of self inside the merge; amethyst offers the fish a calm crown of clarity above the tide; quartz anchors the shared atmosphere into one coherent signal.",
+      "avoidCrystal": "Moonstone — its already-lunar, dreamy pull thickens the shared emotional tide and makes it even harder to tell whose feeling is whose.",
+      "ritualAngle": "Hold amethyst at the crown during the ten-minute separation, sorting whose feeling is whose; return to a shared quartz between two chairs and speak only the original feeling."
+    }
+  }
+}

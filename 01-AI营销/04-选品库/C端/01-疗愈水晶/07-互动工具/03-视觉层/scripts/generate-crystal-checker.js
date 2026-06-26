@@ -6,38 +6,18 @@
  */
 const fs = require('fs');
 const path = require('path');
-const os = require('os');
-const { execSync } = require('child_process');
-
-// 读 ~/.env 拿 WP 凭证（WP_USER/WP_APP_PASSWORD）
-(function loadHomeEnv() {
-  const envPath = path.join(os.homedir(), '.env');
-  if (!fs.existsSync(envPath)) return;
-  for (const line of fs.readFileSync(envPath, 'utf8').split(/\r?\n/)) {
-    const t = line.trim(); if (!t || t.startsWith('#')) continue;
-    const eq = t.indexOf('='); if (eq < 1) continue;
-    const k = t.slice(0, eq).trim();
-    if (['WP_USER', 'WP_APP_PASSWORD', 'WP_SITE'].includes(k)) process.env[k] = t.slice(eq + 1).trim();
-  }
-})();
 
 const DATA = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../crystal-stones-30.json'), 'utf8'));
 const STONES = DATA.stones;
 const ELEM = DATA.elem;
 const CONFLICTS = DATA.conflicts;
 
-// HAS_ARTICLE = WP 已上线的水晶配对文章 slug（crystal-combinations category 1563，status=publish）
-// ⚠ 不是 selected-articles.json 计划清单——必须基于"已上线"，否则 CTA 跳未上线 URL 会 404
-// 文章上线后重跑本脚本即自动更新 CTA；查询失败 fallback 空（所有 CTA = Shop，安全）
-const COMBOS_CAT_ID = 1563;
+// HAS_ARTICLE = selected-articles.json 计划清单（207 组将产出文章）
+// 207 篇即将批量上线 → 这 207 组 CTA 现在就显示 "Read Full Combination Guide"（接受上线前临时 404，符合 internal-link-planned-pages-ok-404）
+// 其余 228 组（无文章）显示 "Shop This Pair"。文章上线后清单不变，无需改这里。
+const SELECTED_PATH = path.resolve(__dirname, '../../../04-内容生产/5.crystal-combinations/selected-articles.json');
 let HAS_ARTICLE = [];
-try {
-  const u = process.env.WP_USER, p = process.env.WP_APP_PASSWORD;
-  if (u && p) {
-    const out = execSync('curl -s --proxy socks5://127.0.0.1:10808 -u "' + u + ':' + p + '" "https://goearthward.com/wp-json/wp/v2/posts?categories=' + COMBOS_CAT_ID + '&status=publish&per_page=250&_fields=slug" --max-time 40', { encoding: 'utf8' });
-    HAS_ARTICLE = JSON.parse(out).map(x => x.slug);
-  }
-} catch (e) { console.log('⚠ WP 已上线文章查询失败，HAS_ARTICLE 用空（所有 CTA = Shop，安全）'); }
+try { HAS_ARTICLE = JSON.parse(fs.readFileSync(SELECTED_PATH, 'utf8')).articles.map(a => a.slug); } catch (e) { console.log('⚠ selected-articles.json 读取失败，HAS_ARTICLE 用空'); }
 const HAS_ARTICLE_JSON = JSON.stringify(HAS_ARTICLE);
 
 const STONES_JSON = JSON.stringify(STONES);
@@ -76,14 +56,14 @@ let html = `<!-- ===== Earthward Crystal Compatibility Checker ===== -->
 .ewc-score-card{display:flex;align-items:center;justify-content:center}
 .ewc-cta-card{display:flex;flex-direction:column;justify-content:center;gap:14px}
 .ewc-guide-link{display:block;text-align:center;background:#2D6A4F;color:#fff !important;padding:12px;border-radius:10px;text-decoration:none;font-size:14px;font-weight:600}.ewc-guide-link:hover{background:#1B4332;color:#fff !important}
-.ewc-score-wrap{display:flex;flex-direction:column;align-items:center;gap:10px}.ewc-ring{position:relative;width:130px;height:130px}.ewc-ring svg{transform:rotate(-90deg)}.ewc-ring .num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}.ewc-ring .num b{font-size:34px;color:#1A1A2E;line-height:1}.ewc-ring .num span{font-size:13px;color:#666;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+.ewc-score-wrap{display:flex;flex-direction:column;align-items:center;gap:10px}.ewc-ring{position:relative;width:130px;height:130px}.ewc-ring svg{transform:rotate(-90deg)}.ewc-ring .num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}.ewc-ring .num b{font-size:34px;color:#1A1A2E;line-height:1}.ewc-ring .num span{font-size:13px;color:#666;text-transform:uppercase;letter-spacing:.05em;margin-top:10px}
 .ewc-pair{display:flex;gap:8px;justify-content:center;margin-top:8px;flex-wrap:wrap}.ewc-pair .p{background:#F0F7F4;color:#1B4332;padding:6px 14px;border-radius:20px;font-size:14px;font-weight:600;text-decoration:none}
 .ewc-narr{font-size:15px;color:#444;line-height:1.7;margin:14px 0 0}
-.ewc-h{font-size:18px;color:#1A1A2E;margin:0 0 12px}
-.ewc-reason{list-style:none;padding:0;margin:0}.ewc-reason li{padding:6px 0;font-size:14px;color:#444;display:flex;gap:8px}.ewc-reason .pos{color:#2D6A4F;font-weight:700}.ewc-reason .neg{color:#B5715A;font-weight:700}
-.ewc-bestfor{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.ewc-bestfor .tag{background:#F0F7F4;color:#1B4332;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600}
+.ewc-h{font-size:18px;color:#1A1A2E;margin:0 0 8px}
+.ewc-reason{list-style:none;padding:0;margin:0}.ewc-reason li{padding:3px 0;font-size:14px;line-height:1.45;color:#444;display:flex;gap:8px}.ewc-reason .pos{color:#2D6A4F;font-weight:700}.ewc-reason .neg{color:#B5715A;font-weight:700}
+.ewc-bestfor{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}.ewc-bestfor .tag{background:#F0F7F4;color:#1B4332;padding:6px 14px;border-radius:20px;font-size:13px;font-weight:600}
 .ewc-rec{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.ewc-rec a{display:block;background:#F8F8F8;border:1px solid #EEE;border-radius:10px;padding:14px;text-align:center;text-decoration:none;color:#1A1A2E}.ewc-rec a:hover{border-color:#2D6A4F}.ewc-rec .pn{font-weight:600;font-size:14px;margin-bottom:6px}.ewc-rec .go{color:#2D6A4F;font-size:13px}
-.ewc-use-list{list-style:none;padding:0;margin:0;font-size:14px;color:#444;line-height:1.9}.ewc-shop{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.ewc-shop a{display:block;background:#2D6A4F;color:#fff !important;border-radius:10px;padding:14px;text-align:center;text-decoration:none;font-size:14px;font-weight:600}.ewc-shop a:hover{background:#1B4332;color:#fff !important}
+.ewc-use-list{list-style:none;padding:0;margin:0;font-size:14px;color:#444;line-height:1.55}.ewc-use-list li{margin:0 0 7px}.ewc-use-list li:last-child{margin-bottom:0}.ewc-shop{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.ewc-shop a{display:block;background:#2D6A4F;color:#fff !important;border-radius:10px;padding:14px;text-align:center;text-decoration:none;font-size:14px;font-weight:600}.ewc-shop a:hover{background:#1B4332;color:#fff !important}
 .ewc-actions{display:flex;gap:10px;justify-content:center;margin-top:12px}.ewc-actions button{padding:8px 16px;background:#fff;border:1px solid #DDD;border-radius:8px;color:#444;cursor:pointer;font-size:13px}
 @media(max-width:640px){.ewc-h1{font-size:28px}.ewc-intro{font-size:15px;margin-bottom:18px}.ewc-panel{padding:14px}.ewc-grid{height:260px;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.ewc-chip{padding:8px 4px 7px}.ewc-chip .ic{width:48px;height:48px}.ewc-result-top,.ewc-result-detail{grid-template-columns:1fr}.ewc-card{padding:16px}.ewc-ring{width:118px;height:118px}.ewc-ring svg{width:118px;height:118px}.ewc-ring .num b{font-size:30px}}
 </style>
@@ -192,4 +172,4 @@ fs.writeFileSync(OUT, html, 'utf8');
 console.log(`✅ Crystal Checker 生成完成 → ${OUT}`);
 console.log(`   ${(fs.statSync(OUT).size / 1024).toFixed(1)} KB`);
 console.log(`   ${Object.keys(STONES).length} 颗水晶，选 2 颗`);
-console.log(`   HAS_ARTICLE 已上线: ${HAS_ARTICLE.length} 篇（决定 CTA 显示 Guide 还是 Shop）`);
+console.log(`   HAS_ARTICLE 计划清单: ${HAS_ARTICLE.length} 组（CTA 显示 Guide；其余 228 组显示 Shop）`);

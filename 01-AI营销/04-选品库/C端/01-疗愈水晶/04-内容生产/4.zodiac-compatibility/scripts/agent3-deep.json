@@ -1,0 +1,137 @@
+{
+  "_meta": {
+    "agent": "agent3",
+    "scope": "leo-* and virgo-* pairings (15 pairs)",
+    "fields": [
+      "relationshipArchetype",
+      "conflictLoop",
+      "repairMove",
+      "crystalStrategy",
+      "avoidCrystal",
+      "ritualAngle"
+    ],
+    "generated_at": "2026-06-25"
+  },
+  "pairs": {
+    "leo-leo": {
+      "relationshipArchetype": "The Co-Stars. Two leads fighting for the same marquee, each secretly convinced the spotlight is theirs by birthright and the other is the love interest.",
+      "conflictLoop": "One performs for attention, the other withholds applause to protect pride; silence grows until both wait the other out, and the standoff outlasts whatever started it.",
+      "repairMove": "Lead with public admiration before any private ask. Praise the performance first, then request the change; never critique in front of an audience, ever.",
+      "crystalStrategy": "Amber melts the cold pride between sets, aventurine softens the competitive edge into play, and black-tourmaline grounds the dramatic spike so the standoff breaks before it becomes a week.",
+      "avoidCrystal": "Skip pyrite here. Its ambition frequency amplifies the 'main character' contest and turns healthy pride into a winner-take-all game nobody wins.",
+      "ritualAngle": "Pass a single piece of amber back and forth before any hard conversation; whoever holds the stone gets the spotlight and the applause, then hands it over."
+    },
+    "leo-virgo": {
+      "relationshipArchetype": "The Star and the Stage Manager. One performs the gesture, the other proofreads the program it was printed in.",
+      "conflictLoop": "Virgo refines the gesture with a helpful note; Leo reads the note as withdrawal of applause; Leo performs louder to compensate; Virgo corrects the volume.",
+      "repairMove": "Virgo delivers praise out loud before any edit, and Leo asks 'what do you mean?' instead of 'why are you attacking me?' before retreating into the dressing room.",
+      "crystalStrategy": "Amber keeps Leo's warmth visible through Virgo's quiet refinement, amazonite cools Virgo's editing instinct into genuine curiosity, and quartz clarifies the intent behind each correction so critique stops feeling like critique.",
+      "avoidCrystal": "Avoid hematite. Its heavy grounding pulls Virgo deeper into 'let me fix this' mode and makes Leo feel managed rather than adored.",
+      "ritualAngle": "Hold amazonite while Virgo names one thing Leo did beautifully this week, then hold amber while Leo names one thing Virgo's editing actually improved."
+    },
+    "leo-libra": {
+      "relationshipArchetype": "The It Couple. Charm squared, both fluent in romance and beauty, both quietly hoping the other will make the actual call.",
+      "conflictLoop": "Leo decides to lead; Libra weighs every option to preserve harmony; Leo experiences the weighing as avoidance and decides harder; Libra experiences the decisiveness as steamroll and goes nicer.",
+      "repairMove": "Name the elephant on purpose, on a schedule. Someone has to say the uncomfortable thing first, and agree that being the one who names it is an act of love, not aggression.",
+      "crystalStrategy": "Amber fuels Leo's warm decisiveness without steamroll, apatite helps Libra voice the real preference instead of the polite one, and quartz amplifies the truth between them so the soft argument becomes an honest one.",
+      "avoidCrystal": "Skip rose quartz here. It deepens the 'we are so agreeable' comfort and lets both keep skipping the ugly conversation for three more weeks.",
+      "ritualAngle": "Place apatite between you during any decision talk; whoever reaches for it first has to state the real preference out loud, no softening allowed."
+    },
+    "leo-scorpio": {
+      "relationshipArchetype": "The Sovereign and the Sorcerer. One rules in public, the other rules in private, and neither wants to lose the throne.",
+      "conflictLoop": "Scorpio withholds praise to test devotion; Leo withholds vulnerability to protect pride; the weapons are silence and spotlight, and the fight is rarely about the thing being fought over.",
+      "repairMove": "Skip the test. Scorpio names the real need instead of engineering jealousy, and Leo drops the performance and shows the actual wound without the staging.",
+      "crystalStrategy": "Amber thaws Leo's staged armor into real warmth, black-tourmaline shields Scorpio's suspicion from spiraling into control, and rose-quartz opens the channel between them so withholding stops being the default weapon.",
+      "avoidCrystal": "Avoid obsidian. Its truth-telling edge sharpens Scorpio's probing into interrogation and makes Leo's pride double down instead of opening.",
+      "ritualAngle": "Both hold rose-quartz over the heart during a weekly 'real talk' window; the rule is no performance, no withholding, only the actual wound gets spoken."
+    },
+    "leo-sagittarius": {
+      "relationshipArchetype": "The Two Explorers. Both chasing the next horizon, both sure the quest is the point, neither naturally drawn to tending the home base.",
+      "conflictLoop": "No real conflict loop here, the real risk is drift; both go big, both forgive fast, and the relationship slowly runs out of fuel between adventures because nobody stayed home to tend it.",
+      "repairMove": "Schedule the unglamorous maintenance work like you schedule the trips. Someone has to choose to stay home and tend the fire, and that counts as a quest too.",
+      "crystalStrategy": "Amber keeps the warm hearth burning between quests, herkimer-diamond sharpens the clarity of what 'home' actually means, and quartz amplifies the small daily check-ins that prevent the drift from becoming distance.",
+      "avoidCrystal": "Skip citrine here. Its go-big energy fuels another adventure when what this pairing actually needs is someone willing to stay and tend.",
+      "ritualAngle": "Before any trip, both touch the same piece of quartz and name one thing they will tend at home while the other is away; the stone sits on the hearth until they return."
+    },
+    "leo-capricorn": {
+      "relationshipArchetype": "The Star and the Architect. One chasing the spotlight, one chasing the corner office, both building something that looks like status from opposite ends.",
+      "conflictLoop": "Leo performs warmth to feel seen; Capricorn communicates through logistics and reads the performance as insecurity; Capricorn goes more reserved; Leo reads the reserve as coldness and performs harder.",
+      "repairMove": "Build something together. Give the talk a shared project to orbit, and the warmth and the structure finally have a common object to express themselves through.",
+      "crystalStrategy": "Amber gives Leo visible warmth without needing applause, black-tourmaline grounds Capricorn's reserve into steady presence instead of coldness, and rose-quartz opens the affection channel that both are too proud to reach for first.",
+      "avoidCrystal": "Avoid garnet. Its career-amplification frequency turns the status contest colder and lets both mistake productivity for intimacy.",
+      "ritualAngle": "Place rose-quartz on the shared project desk; whoever finishes a work session there touches the stone and says one non-work thing they appreciate about the other."
+    },
+    "leo-aquarius": {
+      "relationshipArchetype": "The Sovereign and the Revolutionary. One wants to be the exception, the other wants no exceptions; one loves me-and-you against the world, the other loves all of us including the strangers.",
+      "conflictLoop": "Leo argues from the heart, Aquarius from principle and systems; each treats the disagreement as a referendum on whose worldview is correct, so the standoff outlasts the topic.",
+      "repairMove": "Stop trying to convert the other. Leo accepts that Aquarius's causes are not disinterest, and Aquarius accepts that Leo's need for attention is not tyranny of the personal.",
+      "crystalStrategy": "Amber anchors Leo's personal warmth as its own kind of progress, amazonite cools Aquarius's principle into lived compassion, and rose-quartz bridges the personal and the collective so both worldviews stop competing.",
+      "avoidCrystal": "Skip labradorite here. Its frequency-amplifying edge deepens Aquarius's abstraction and makes Leo feel even less personally chosen.",
+      "ritualAngle": "Both hold rose-quartz while taking turns finishing the sentence 'the way I love you is also the way I love the world'; the rule is no debate, only translation."
+    },
+    "leo-pisces": {
+      "relationshipArchetype": "The Sun and the Sea. One is performance and clarity, the other is feeling and metaphor, and the medium mismatch is the whole relationship.",
+      "conflictLoop": "Leo's words land harder than intended; Pisces retreats into feeling; Leo reads the retreat as rejection and performs louder; Pisces reads the volume as a spotlight too bright to sit under and dissolves further.",
+      "repairMove": "Leo slows the delivery and dims the spotlight; Pisces agrees to name the feeling in at least one sentence that is not a metaphor instead of disappearing into it.",
+      "crystalStrategy": "Amber gives Leo a steady warm center without performance, amethyst helps Pisces translate the feeling into language before retreat, and rose-quartz holds the tenderness so neither armors up.",
+      "avoidCrystal": "Avoid sodalite here. Its mental-order frequency pushes Pisces further from the felt sense and makes the translation harder, not easier.",
+      "ritualAngle": "Hold amethyst while Pisces speaks the feeling as one plain sentence, then hold amber while Leo mirrors it back without adding staging, volume, or fix."
+    },
+    "virgo-virgo": {
+      "relationshipArchetype": "The Two Editors. Both see the flaw first and the whole second, both showing love through 'let me improve this for you' until the apartment becomes a feedback loop of small corrections.",
+      "conflictLoop": "One offers a helpful refinement, the other reads it as criticism and offers a refinement back; the correction ping-pong escalates until nobody remembers the original manuscript was fine.",
+      "repairMove": "Say 'I just need you to listen' out loud before bringing the problem. Neither will infer it; both will assume you brought it to be fixed unless told otherwise.",
+      "crystalStrategy": "Amazonite softens the editing instinct into actual curiosity, carnelian warms the cold problem-solving default into presence, and black-tourmaline grounds the nervous scanning so the flaw stops being the only visible thing.",
+      "avoidCrystal": "Skip clear quartz here. Its amplifying clarity sharpens the flaw-spotting reflex and turns the love language of improvement into a constant low-grade critique.",
+      "ritualAngle": "Hold carnelian while taking turns saying one thing the other does that needs no improvement at all; the rule is no refining, no editing, only the whole."
+    },
+    "virgo-libra": {
+      "relationshipArchetype": "The Refiner and the Diplomat. One sharpens the edges to improve, the other softens the edges to harmonize, and neither wants to be the one to make things uncomfortable.",
+      "conflictLoop": "Virgo offers helpful critique; Libra experiences it as nitpicking and softens their own honesty to keep peace; resentment builds quietly because the actual preference never gets named by either side.",
+      "repairMove": "Be the first to not be nice. Someone has to name the real preference instead of editing it for constructive tone or for peace, and agree that honesty is more respectful than harmony here.",
+      "crystalStrategy": "Amazonite cools Virgo's critique into curiosity about Libra's actual preference, apatite gives Libra the voice to state the real choice instead of the polite one, and quartz amplifies the truth that both keep editing out.",
+      "avoidCrystal": "Avoid moonstone here. Its soft reflective frequency deepens Libra's already-strong avoidance of the uncomfortable and pushes decisions out another three weeks.",
+      "ritualAngle": "Place apatite between you during any delayed decision; whoever reaches for it first has to state the real preference, and the other has to answer with theirs, not with 'whatever you want.'"
+    },
+    "virgo-scorpio": {
+      "relationshipArchetype": "The Two Investigators. Both private, both probing, both noticing everything; one analyzes to understand, the other analyzes to control, and being known too well starts to feel like being exposed.",
+      "conflictLoop": "Both test before they reveal; both withhold as a way of measuring the other; the quiet intelligence war escalates until one betrayal, even small, sends the conversation back to surface for a long time.",
+      "repairMove": "Reward consistency, not disclosure. Real openness only happens after a long stretch of showing up without probing, so drop the interrogation and let trust accrete through ordinary reliability.",
+      "crystalStrategy": "Amazonite opens Virgo's analysis into genuine curiosity rather than scrutiny, black-tourmaline shields Scorpio's suspicion from spiraling into control, and quartz clarifies the intent behind each question so probing stops feeling like exposure.",
+      "avoidCrystal": "Skip malachite here. Its deep transformation edge sharpens Scorpio's probing into excavation and makes Virgo feel dissected rather than understood.",
+      "ritualAngle": "Hold black-tourmaline during a weekly 'no questions asked' window; the rule is presence without probing, and trust accretes through the absence of investigation."
+    },
+    "virgo-sagittarius": {
+      "relationshipArchetype": "The Magnifying Glass and the Telescope. One zooms in on the itinerary and the small print, the other is already three horizons ahead, and they live in different scales of the same world.",
+      "conflictLoop": "Virgo communicates in specifics; Sagittarius communicates in arcs; Virgo's 'we need to talk about Tuesday' meets Sagittarius's 'Tuesday is a construct anyway,' and neither feels met.",
+      "repairMove": "Virgo agrees to start with the big picture, Sagittarius agrees to actually show up on Tuesday. Both meet in the middle scale neither naturally inhabits.",
+      "crystalStrategy": "Amazonite cools Virgo's small-print anxiety into curiosity about the horizon, herkimer-diamond sharpens Sagittarius's big arc into something that can actually be planned, and rose-quartz keeps the warmth between them when the scales collide.",
+      "avoidCrystal": "Avoid tiger's eye here. Its focus-narrowing frequency pulls Virgo deeper into the receipt pile and Sagittarius feels the cage shrinking harder.",
+      "ritualAngle": "Pass herkimer-diamond back and forth; Virgo uses it to look up at the horizon once, then Sagittarius uses it to look down at Tuesday once, then both plan from the middle."
+    },
+    "virgo-capricorn": {
+      "relationshipArchetype": "The Two Builders. Both earth signs, both competent, both reserved; the relationship runs beautifully on paper and slowly starves on affection because neither reaches for the warm word first.",
+      "conflictLoop": "Both communicate through actions and logistics; both assume the other infers love from competence; the productive mask stays on until both forget there is also a person underneath who needs to be held.",
+      "repairMove": "Just say it out loud. The relationship-changing conversation is simply one of you saying 'I know you love me, but I would still like to hear it,' and the other actually hearing it.",
+      "crystalStrategy": "Amazonite opens Virgo's reserved channel into spoken warmth, black-tourmaline grounds Capricorn's productivity mask into actual presence, and quartz amplifies the affection that both keep inferring instead of saying.",
+      "avoidCrystal": "Skip pyrite here. Its builders' ambition deepens the competence contest and lets both mistake another finished project for intimacy.",
+      "ritualAngle": "Place quartz on the nightstand; whoever wakes first touches it and says one warm thing out loud before any logistics, schedule, or task enters the day."
+    },
+    "virgo-aquarius": {
+      "relationshipArchetype": "The Two System-Thinkers. Both live in their heads, both emotionally adjacent; Virgo refines the details, Aquarius refines the systems, and the partnership forgot it was also a body and a bed.",
+      "conflictLoop": "Both happily debate the system, the data, the principle, and forget to mention the actual day they just had; warmth gets postponed because neither naturally pulls the other into the room.",
+      "repairMove": "Schedule the personal onto the table. A small ritual that forces a real 'how are you, actually' with no solving allowed, repeated until it stops feeling forced.",
+      "crystalStrategy": "Amazonite brings Virgo's analytical head down into the lived body, amber warms Aquarius's abstraction into personal presence, and rose-quartz opens the emotional channel that both keep treating as optional.",
+      "avoidCrystal": "Avoid fluorite here. Its mental-order frequency deepens both partners' retreat into systems-thinking and pushes the personal further off the table.",
+      "ritualAngle": "Hold rose-quartz during a daily 'no solving' check-in; each names one actual feeling from the day, no systems analysis, no improvement note, only the felt thing."
+    },
+    "virgo-pisces": {
+      "relationshipArchetype": "The Healer and the Helper. One dissects feelings to manage them, the other dissolves into feelings to survive them; one wants the problem named and fixed, the other wants the problem held and felt.",
+      "conflictLoop": "Virgo reaches for the fix; Pisces experiences the fix as a refusal to be present with the pain; Pisces dissolves further; Virgo reads the dissolution as chaos and analyzes harder.",
+      "repairMove": "Virgo stops reaching for the fix and just sits with the feeling; Pisces agrees to put the feeling into at least one sentence that is not a metaphor, so translation can actually happen.",
+      "crystalStrategy": "Amazonite cools Virgo's analysis into presence without a fix, amethyst helps Pisces shape the feeling into language before it becomes pure dissolution, and rose-quartz holds the tender space between dissect and dissolve.",
+      "avoidCrystal": "Skip black obsidian here. Its blunt truth-telling edge sharpens Virgo's dissection and pushes Pisces further into retreat, away from translation.",
+      "ritualAngle": "Hold amethyst while Pisces speaks the feeling as one plain sentence, then hold amazonite while Virgo mirrors it back without proposing any fix, only presence."
+    }
+  }
+}

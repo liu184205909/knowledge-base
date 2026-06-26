@@ -1,0 +1,66 @@
+{
+  "review_date": "2026-06-25",
+  "verdict": "PASS_WITH_MINOR_FIX",
+  "articles": {
+    "aries-cancer": {
+      "quick_answer_aio": "PASS — 'Quick Answer: Aries and Cancer have a compatibility score of 43/100 (Neutral). The best crystal pair... is Aquamarine (for Aries), Emerald (for Cancer), and Rose Quartz (harmonizer). Growth Through Tension.' 分数+3颗水晶+标签齐全，AIO 可直接抓取。",
+      "famous_deleted": "PASS — 无 Famous/Celebrity/Hollywood 残留，无占位文本。",
+      "deep_fields_quality": "PASS — 6 字段全部到位且融入自然。relationshipArchetype 'The Warrior and the Healer' 与 Overview 衔接好；conflictLoop 'Push-pull into steam' 与原文 fire heats water 主线一致；crystalStrategy 解释了 3 颗水晶各自的功能（cool/steady/bridge）；avoidCrystal Red Jasper 理由具体；ritualAngle 'Morning bond: hold Rose Quartz over the heart with Emerald in the lap — five slow breaths' 可操作。",
+      "overall": "PASS",
+      "issues": [
+        "Challenges 段尾部插入顺序略乱：先有 'For this square pairing, many couples find that <a>Aquamarine</a>...' 水晶购买引导段，再接 conflictLoop/repairMove，最后才到 Best Crystal Pair 模块。读起来水晶购买引导插在中间打断 conflict-repair 的逻辑链。"
+      ],
+      "fix_suggestions": [
+        "把 Challenges 段尾的水晶购买引导段（'For this square pairing, many couples find that <a>Aquamarine</a>...'）移到 conflictLoop/repairMove 之后，或者直接删除（因为下一节就是 Best Crystal Pair 模块，引导内容会重复）。"
+      ]
+    },
+    "leo-sagittarius": {
+      "quick_answer_aio": "PASS — '91/100 (Excellent). Amber (for Leo), Herkimer Diamond (for Sagittarius), and Quartz (harmonizer). Powerful Synergy.' 分数+水晶+标签齐全。",
+      "famous_deleted": "PASS — 无残留。",
+      "deep_fields_quality": "PASS — 6 字段融入最佳之一。relationshipArchetype 'The Two Explorers' 直接呼应全文 drift 主线；conflictLoop 'No real conflict loop here, the real risk is drift' 诚实标注（而非硬塞冲突），与 fire-fire trine 的设定一致；crystalStrategy 'Amber keeps the warm hearth burning between quests, herkimer-diamond sharpens the clarity of what home actually means, and quartz amplifies the small daily check-ins that prevent the drift' 解释精准；ritualAngle 'Before any trip, both touch the same piece of quartz and name one thing they will tend at home' 非常具体且呼应 drift 主题。",
+      "overall": "PASS",
+      "issues": [
+        "crystalStrategy 中 'herkimer-diamond' 用了连字符小写形式，与其他篇 'Herkimer Diamond' 双词大写不一致（跨篇格式小瑕疵）。"
+      ],
+      "fix_suggestions": [
+        "把 'herkimer-diamond' 改为 'Herkimer Diamond'，保持跨篇格式统一。"
+      ]
+    },
+    "taurus-scorpio": {
+      "quick_answer_aio": "PASS — '67/100 (Moderate). Carnelian (for Taurus), Black Tourmaline (for Scorpio), and Rose Quartz (harmonizer). Magnetic Opposites.' 齐全。",
+      "famous_deleted": "PASS — 无残留。",
+      "deep_fields_quality": "PASS — 6 字段融入质量高。relationshipArchetype 'The Vault and the Volcano' 生动且呼应全文；conflictLoop 'Silent-power standoff' 与原文 'silent as power move' 完美呼应；repairMove 'nightly two-minute raw-honesty window' 具体可操作；crystalStrategy 'Carnelian warms the earth-side's silent grip into honest voice, Black Tourmaline absorbs the water-side's stored intensity before it curdles, and Rose Quartz softens the trust-wound' 解释了 3 颗水晶各自解决什么；avoidCrystal Malachite 理由精准（'draws buried intensity to surface too fast'）。",
+      "overall": "PASS",
+      "issues": [
+        "与 aries-cancer 同样的结构问题：Challenges 段尾插入了水晶购买引导段（'For this opposition pairing, many couples find that <a>Carnelian</a>...'），打断了 conflict-repair 的逻辑流。"
+      ],
+      "fix_suggestions": [
+        "把 Challenges 段尾的水晶购买引导段移到 conflictLoop/repairMove 之后，或直接删除（下一节就是 Best Crystal Pair 模块）。"
+      ]
+    },
+    "gemini-virgo": {
+      "quick_answer_aio": "PASS — '43/100 (Neutral). Apatite (for Gemini), Amazonite (for Virgo), and Rose Quartz (harmonizer). Growth Through Tension.' 齐全。",
+      "famous_deleted": "PASS — 无残留。",
+      "deep_fields_quality": "PASS — 6 字段融入最佳之一。relationshipArchetype 'The Scatter and the Sorter — same ruling planet, opposite processing directions, infinite mutual critique' 是全文核心洞察的浓缩；conflictLoop 'One nitpicks to refine; the other nitpicks to deflect' 精准对应 Communication 段的核心论述；repairMove 'brainstorm for twenty minutes with zero critique allowed, then switch to sorter mode' 极具体；crystalStrategy 'Apatite broadens the sorter's tolerance for mess; amazonite cools the harsh critic so critique becomes care, not attack; rose quartz reminds both why they fell in love between the spreadsheets' 解释精准且带情感；ritualAngle 'Set amazonite on the desk during the no-critique ideation window; switch to rose quartz on the table once evaluation mode begins' 极具体且呼应 repairMove。",
+      "overall": "PASS",
+      "issues": [],
+      "fix_suggestions": []
+    },
+    "pisces-pisces": {
+      "quick_answer_aio": "PASS — '76/100 (Harmonious). Amethyst (for Pisces), Angelite (for Pisces), and Black Tourmaline (harmonizer). Mirror Souls.' 齐全。",
+      "famous_deleted": "PASS — 无残留。",
+      "deep_fields_quality": "PASS — 6 字段融入最佳。relationshipArchetype 'No Shore, Two Oceans' 既是隐喻也是全文主线，反复以 shore/ocean/floorboards/merge 意象贯穿；conflictLoop 'Felt, not stated' 与原文 Communication 段一致；repairMove 'Institute one spoken truth per day, said out loud, not felt, not implied' 具体；crystalStrategy 'amethyst lifts the fog so the fish can name what they already sense, angelite softens direct speech so it does not feel like violence, black-tourmaline provides the missing shore' 解释精准；avoidCrystal Selenite 'deepens the very boundary dissolution that is already this pair's weakness' 理由完美呼应主线。",
+      "overall": "PASS",
+      "issues": [
+        "crystalStrategy 中 'black-tourmaline' 用了连字符小写，与其他篇 'Black Tourmaline' 格式不一致。",
+        "conflictLoop 文案 'Felt, not stated. A glance carries a paragraph and a sigh ends an argument' 与 Communication 段开头 'The back-and-forth between two Pisces runs on what is felt, not stated. A glance carries a paragraph. A sigh can end an argument' 几乎完全重复——属于跨模块内容重复（AIO 角度可接受，但严格说是冗余）。"
+      ],
+      "fix_suggestions": [
+        "把 'black-tourmaline' 改为 'Black Tourmaline' 保持格式统一。",
+        "可考虑把 conflictLoop 改写为对 Communication 段的浓缩/换表达（如改写为 'Subtext-only communication: moods get felt and matched, never spoken, so small drifts compound for months unnoticed'），避免与 Communication 段直接重复。"
+      ]
+    }
+  },
+  "cross_article": "整体一致性高。位置一致（relationshipArchetype 在 Overview 评分块顶部、conflictLoop+repairMove 在 Challenges 段尾、crystalStrategy+ritualAngle 在 How to Use 段 ul 之后、avoidCrystal 在 FAQ 第一题）；格式一致（统一用 <p><strong>Conflict pattern:</strong>/<strong>The repair:</strong>/<strong>Crystal strategy:</strong>/<strong>Pair ritual:</strong>）；风格一致（每篇都把 conflictLoop 写成 1-2 句浓缩，repairMove 写成 1 句可操作指令）。3 处跨篇小瑕疵：(1) aries-cancer 和 taurus-scorpio 在 Challenges 段尾额外插入了水晶购买引导段，leo-sagittarius/gemini-virgo/pisces-pisces 没有——结构不齐；(2) leo-sagittarius 和 pisces-pisces 的 crystalStrategy 中水晶名用了连字符小写（herkimer-diamond / black-tourmaline），其他篇都是双词大写；(3) pisces-pisces 的 conflictLoop 与 Communication 段开头直接重复。这些都是表面一致性瑕疵，不影响内容质量。",
+  "recommendation": "PASS（可发布）— 微调质量整体很高，6 个新字段融入自然、读起来不像硬塞。建议发布前修 3 处小瑕疵以提升跨篇一致性：(1) 删除/移位 aries-cancer 和 taurus-scorpio 的 Challenges 段尾水晶购买引导段；(2) 统一 crystalStrategy 中水晶名格式（去掉连字符，双词大写）；(3) pisces-pisces 的 conflictLoop 可选改写以避免与 Communication 段重复。这 3 项都是 5 分钟级修正，不需要重做融入。"
+}
