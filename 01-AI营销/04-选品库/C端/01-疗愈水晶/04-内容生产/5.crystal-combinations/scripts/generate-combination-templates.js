@@ -12,7 +12,7 @@ const SELECTED = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../selected
 const ALL = DATA.combinations;
 
 // 30 颗水晶属性（从 crystal-stones-30.json）
-const STONES30 = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../../07-互动工具/03-视觉层/crystal-stones-30.json'), 'utf8'));
+const STONES30 = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../../07-互动工具/crystal-compatibility-checker/data/crystal-stones-30.json'), 'utf8'));
 const STONES = STONES30.stones;
 
 const cap = s => s.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');

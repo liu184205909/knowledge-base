@@ -115,8 +115,9 @@ async function main() {
 
   const data = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
   const images = data.images || {};
-  // 图片一级目录 = JSON 所在产出目录名（04-内容生产/{type}/ → generated/{type}/），与线上 URL 前缀一一对应，零猜测
-  const prodDir = path.basename(path.dirname(jsonPath));
+  // 图片一级目录：配对类（articles/ 子目录）取再上一级（5.crystal-combinations/4.zodiac-compatibility），meaning 取自身目录
+  const parent = path.dirname(jsonPath);
+  const prodDir = path.basename(parent) === 'articles' ? path.basename(path.dirname(parent)) : path.basename(parent);
   const outDir = path.join(GENERATED_DIR, prodDir, data.slug.replace(/-meaning$|-crystals$/, ''));
   console.log('output prodDir:', prodDir, '| outDir:', outDir);
   fs.mkdirSync(outDir, { recursive: true });

@@ -1,0 +1,126 @@
+{
+  "_meta": {
+    "type": "2026 Monthly Astrology Data (月运生产用)",
+    "source": "星象数据参考-2026-2027.md（已交叉核对）",
+    "usage": "月运框架§五生产流程第1-3步：月度星象总表 + 宫位推算 + 水晶选择",
+    "house_system": "whole-sign（太阳星座=1宫）"
+  },
+  "months": {
+    "january": {
+      "new_moon": { "date": "Jan 19", "sign": "Capricorn", "type": "regular" },
+      "full_moon": { "date": "Jan 3", "sign": "Cancer", "type": "regular", "name": "Wolf Moon" },
+      "retrogrades": [],
+      "major_events": ["Neptune enters Aries (Jan 26) — permanent move, new 14-year cycle"],
+      "energy_theme": "Foundations and ambition",
+      "crystal_direction": "grounding",
+      "crystal_suggestions": ["Black Tourmaline", "Hematite", "Garnet"]
+    },
+    "february": {
+      "new_moon": { "date": "Feb 17", "sign": "Aquarius", "type": "annular_solar_eclipse", "degree": "28°04'" },
+      "full_moon": { "date": "Feb 1", "sign": "Leo", "type": "regular", "name": "Snow Moon" },
+      "retrogrades": ["Mercury retrograde begins Feb 26 (Pisces 22°34')"],
+      "major_events": [
+        "Saturn enters Aries (Feb 13-14)",
+        "Saturn-Neptune conjunction in Aries 0° (Feb 17-20) — BIGGEST event of the year",
+        "Six-planet alignment (Feb 28)"
+      ],
+      "energy_theme": "New beginnings, identity restructuring",
+      "crystal_direction": "grounding + clarity",
+      "crystal_suggestions": ["Smoky Quartz", "Clear Quartz", "Black Tourmaline"]
+    },
+    "march": {
+      "new_moon": { "date": "Mar 19", "sign": "Pisces", "type": "regular" },
+      "full_moon": { "date": "Mar 3", "sign": "Virgo", "type": "total_lunar_eclipse", "degree": "12°" },
+      "retrogrades": ["Mercury retrograde ends Mar 20 (Pisces 8°30')"],
+      "major_events": [],
+      "energy_theme": "Release and recalibration",
+      "crystal_direction": "emotional release",
+      "crystal_suggestions": ["Moonstone", "Amethyst", "Selenite"]
+    },
+    "april": {
+      "new_moon": { "date": "Apr 17", "sign": "Aries", "type": "regular" },
+      "full_moon": { "date": "Apr 2", "sign": "Libra", "type": "regular", "name": "Pink Moon" },
+      "retrogrades": [],
+      "major_events": ["Uranus enters Gemini (Apr 25) — 7-year cycle begins"],
+      "energy_theme": "Innovation and fresh starts",
+      "crystal_direction": "communication",
+      "crystal_suggestions": ["Aquamarine", "Blue Lace Agate", "Fluorite"]
+    },
+    "may": {
+      "new_moon": { "date": "May 16", "sign": "Taurus", "type": "super" },
+      "full_moon": { "date": "May 3", "sign": "Scorpio", "type": "regular", "name": "Flower Moon" },
+      "blue_moon": { "date": "May 31", "sign": "Sagittarius", "type": "micro" },
+      "retrogrades": [],
+      "major_events": ["Blue Moon (second full moon in May)"],
+      "energy_theme": "Abundance and expansion",
+      "crystal_direction": "abundance",
+      "crystal_suggestions": ["Citrine", "Green Aventurine", "Pyrite"]
+    },
+    "june": {
+      "new_moon": { "date": "Jun 14", "sign": "Gemini", "type": "super" },
+      "full_moon": { "date": "Jun 29", "sign": "Capricorn", "type": "regular", "name": "Strawberry Moon" },
+      "retrogrades": ["Mercury retrograde begins Jun 29 (Cancer)"],
+      "major_events": [
+        "Chiron enters Taurus (Jun 19)",
+        "Jupiter enters Leo (Jun 29) — YEAR WATERSHED"
+      ],
+      "energy_theme": "Shift and transition",
+      "crystal_direction": "transformation",
+      "crystal_suggestions": ["Citrine", "Sunstone", "Moonstone"]
+    },
+    "july": {
+      "new_moon": { "date": "Jul 13", "sign": "Cancer", "type": "regular" },
+      "full_moon": { "date": "Jul 29", "sign": "Aquarius", "type": "regular", "name": "Buck Moon" },
+      "retrogrades": ["Mercury retrograde ends Jul 23"],
+      "major_events": [],
+      "energy_theme": "Home and community",
+      "crystal_direction": "emotional balance",
+      "crystal_suggestions": ["Moonstone", "Rose Quartz", "Selenite"]
+    },
+    "august": {
+      "new_moon": { "date": "Aug 12", "sign": "Leo", "type": "total_solar_eclipse", "degree": "20°01'" },
+      "full_moon": { "date": "Aug 28", "sign": "Pisces", "type": "partial_lunar_eclipse", "degree": "5°" },
+      "retrogrades": [],
+      "major_events": ["Total Solar Eclipse visible in Europe (first since 1999)"],
+      "energy_theme": "Drama and visibility",
+      "crystal_direction": "confidence + release",
+      "crystal_suggestions": ["Sunstone", "Carnelian", "Amethyst"]
+    },
+    "september": {
+      "new_moon": { "date": "Sep 11", "sign": "Virgo", "type": "regular" },
+      "full_moon": { "date": "Sep 26", "sign": "Aries", "type": "regular", "name": "Harvest Moon" },
+      "retrogrades": [],
+      "major_events": [],
+      "energy_theme": "Organization and action",
+      "crystal_direction": "focus",
+      "crystal_suggestions": ["Clear Quartz", "Tiger's Eye", "Red Jasper"]
+    },
+    "october": {
+      "new_moon": { "date": "Oct 10", "sign": "Libra", "type": "regular" },
+      "full_moon": { "date": "Oct 26", "sign": "Taurus", "type": "regular", "name": "Hunter's Moon" },
+      "retrogrades": ["Venus retrograde begins Oct 3 (Scorpio 8°29')", "Mercury retrograde begins Oct 24 (Scorpio)"],
+      "major_events": [],
+      "energy_theme": "Relationships and review",
+      "crystal_direction": "love + communication",
+      "crystal_suggestions": ["Rose Quartz", "Blue Lace Agate", "Rhodonite"]
+    },
+    "november": {
+      "new_moon": { "date": "Nov 8", "sign": "Scorpio", "type": "regular" },
+      "full_moon": { "date": "Nov 24", "sign": "Gemini", "type": "regular", "name": "Beaver Moon" },
+      "retrogrades": ["Venus retrograde ends Nov 13", "Mercury retrograde ends Nov 13"],
+      "major_events": ["Mars conjunct Jupiter (Nov 16) at 25°53' Leo"],
+      "energy_theme": "Intensity and clarity",
+      "crystal_direction": "passion + truth",
+      "crystal_suggestions": ["Carnelian", "Lapis Lazuli", "Obsidian"]
+    },
+    "december": {
+      "new_moon": { "date": "Dec 7", "sign": "Sagittarius", "type": "regular" },
+      "full_moon": { "date": "Dec 24", "sign": "Cancer", "type": "regular", "name": "Cold Moon" },
+      "retrogrades": ["Jupiter retrograde begins Dec 12 (Leo 27°01')", "Venus post-shadow ends Dec 15"],
+      "major_events": [],
+      "energy_theme": "Reflection and celebration",
+      "crystal_direction": "reflection + joy",
+      "crystal_suggestions": ["Citrine", "Selenite", "Moonstone"]
+    }
+  }
+}

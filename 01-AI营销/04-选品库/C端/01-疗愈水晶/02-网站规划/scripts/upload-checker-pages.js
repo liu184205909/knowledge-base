@@ -57,7 +57,7 @@ async function main() {
   // 2. 上传 Crystal Checker 到 page 43180
   console.log('\n=== 上传 Crystal Checker → page 43180 ===');
   const crystalHtml = fs.readFileSync(
-    path.resolve(__dirname, '../../07-互动工具/03-视觉层/crystal-checker.html'), 'utf8'
+    path.resolve(__dirname, '../../07-互动工具/crystal-compatibility-checker/build/crystal-checker.html'), 'utf8'
   );
   const crystalResult = await wpRequest('/wp-json/wp/v2/pages/43180', 'POST', {
     content: crystalHtml,
@@ -75,7 +75,7 @@ async function main() {
   if (zodiacPage) {
     console.log(`\n=== 上传 Zodiac Checker → page ${zodiacPage.id} ===`);
     const zodiacHtml = fs.readFileSync(
-      path.resolve(__dirname, '../../07-互动工具/03-视觉层/zodiac-checker.html'), 'utf8'
+      path.resolve(__dirname, '../../07-互动工具/zodiac-compatibility-checker/build/zodiac-checker.html'), 'utf8'
     );
     const zodiacResult = await wpRequest('/wp-json/wp/v2/pages/' + zodiacPage.id, 'POST', {
       content: zodiacHtml,

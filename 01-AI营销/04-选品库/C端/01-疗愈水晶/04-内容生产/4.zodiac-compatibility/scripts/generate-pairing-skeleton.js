@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SRC = 'D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/07-互动工具/02-数据层/zodiac-matrix.json';
+const SRC = 'D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/07-互动工具/zodiac-compatibility-checker/data/zodiac-matrix.json';
 const DST = path.resolve(__dirname, '../pairing-data.json');
 
 const matrix = JSON.parse(fs.readFileSync(SRC, 'utf8'));
@@ -93,7 +93,7 @@ const output = {
     total_pairs: count,
     generated_at: new Date().toISOString(),
     source: {
-      base_fields: '07-互动工具/02-数据层/zodiac-matrix.json (派生)',
+      base_fields: '07-互动工具/zodiac-compatibility-checker/data/zodiac-matrix.json (派生)',
       content_fields: 'AI agent 生成（5 维评分 + 核心挑战 + 协同优势 + 沟通模式 + 名人配对）',
     },
     schema_doc: '03-内容策略/内容Brief/模板-星座配对×水晶框架.md §10.3',

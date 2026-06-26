@@ -13,7 +13,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const DATA = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../../07-互动工具/03-视觉层/crystal-stones-30.json'), 'utf8'));
+const DATA = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../../07-互动工具/crystal-compatibility-checker/data/crystal-stones-30.json'), 'utf8'));
 const STONES = DATA.stones;
 const ELEM = DATA.elem;
 const CONFLICTS = DATA.conflicts;

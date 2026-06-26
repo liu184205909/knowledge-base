@@ -47,7 +47,7 @@ fs.writeFileSync(PAIRING_FILE, JSON.stringify(pairing, null, 2), 'utf8');
 console.log(`1. pairing-data.json: 修复 ${fixedPairing} 组 dynamics`);
 
 // ─── 2. 修复 zodiac-matrix.json ───
-const MATRIX_FILE = 'D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/07-互动工具/02-数据层/zodiac-matrix.json';
+const MATRIX_FILE = 'D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/07-互动工具/zodiac-compatibility-checker/data/zodiac-matrix.json';
 const matrix = JSON.parse(fs.readFileSync(MATRIX_FILE, 'utf8'));
 let fixedMatrix = 0;
 for (const [slug, m] of Object.entries(matrix.matrix)) {
@@ -62,7 +62,7 @@ fs.writeFileSync(MATRIX_FILE, JSON.stringify(matrix, null, 2), 'utf8');
 console.log(`2. zodiac-matrix.json: 修复 ${fixedMatrix} 组 dynamics`);
 
 // ─── 3. 修复 compatibility-tool.html（内嵌数据正则替换）───
-const HTML_FILE = path.resolve(__dirname, '../../../07-互动工具/03-视觉层/compatibility-tool.html');
+const HTML_FILE = path.resolve(__dirname, '../../../07-互动工具/_archive/compatibility-tool.html');
 let html = fs.readFileSync(HTML_FILE, 'utf8');
 let fixedHtml = 0;
 for (const [cnKey, enVal] of Object.entries({

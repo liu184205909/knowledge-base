@@ -31,10 +31,8 @@ function wpUpdate(pageId, content) {
 }
 
 async function main() {
-  const VISUAL_DIR = path.resolve(__dirname, '../../07-互动工具/03-视觉层');
-
   // 1. Crystal Checker → page 43180
-  const crystalHtml = fs.readFileSync(path.join(VISUAL_DIR, 'crystal-checker.html'), 'utf8');
+  const crystalHtml = fs.readFileSync(path.resolve(__dirname, '../../07-互动工具/crystal-compatibility-checker/build/crystal-checker.html'), 'utf8');
   // 用 <!-- wp:html --> 块标记包裹，防止 wpautop
   const crystalWrapped = `<!-- wp:html -->\n${crystalHtml}\n<!-- /wp:html -->`;
   console.log('=== 上传 Crystal Checker (wp:html 包裹) → page 43180 ===');
@@ -42,7 +40,7 @@ async function main() {
   console.log(r1.id ? `✅ 成功 → ${r1.link}` : `❌ 失败: ${JSON.stringify(r1).slice(0, 200)}`);
 
   // 2. Zodiac Checker → page 43246
-  const zodiacHtml = fs.readFileSync(path.join(VISUAL_DIR, 'zodiac-checker.html'), 'utf8');
+  const zodiacHtml = fs.readFileSync(path.resolve(__dirname, '../../07-互动工具/zodiac-compatibility-checker/build/zodiac-checker.html'), 'utf8');
   const zodiacWrapped = `<!-- wp:html -->\n${zodiacHtml}\n<!-- /wp:html -->`;
   console.log('\n=== 上传 Zodiac Checker (wp:html 包裹) → page 43246 ===');
   const r2 = await wpUpdate(43246, zodiacWrapped);

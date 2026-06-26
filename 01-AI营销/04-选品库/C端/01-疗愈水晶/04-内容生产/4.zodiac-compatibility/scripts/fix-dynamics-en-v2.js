@@ -35,7 +35,7 @@ fs.writeFileSync(PF, JSON.stringify(pd, null, 2), 'utf8');
 console.log(`1. pairing-data.json: ${n1} 组更新`);
 
 // 2. zodiac-matrix.json
-const MF = 'D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/07-互动工具/02-数据层/zodiac-matrix.json';
+const MF = 'D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/07-互动工具/zodiac-compatibility-checker/data/zodiac-matrix.json';
 const mx = JSON.parse(fs.readFileSync(MF, 'utf8'));
 let n2 = 0;
 for (const m of Object.values(mx.matrix)) {
@@ -46,7 +46,7 @@ fs.writeFileSync(MF, JSON.stringify(mx, null, 2), 'utf8');
 console.log(`2. zodiac-matrix.json: ${n2} 组更新`);
 
 // 3. HTML — 重新嵌入整个 ZM（确保完全同步）
-const HF = path.resolve(__dirname, '../../../07-互动工具/03-视觉层/compatibility-tool.html');
+const HF = path.resolve(__dirname, '../../../07-互动工具/_archive/compatibility-tool.html');
 let html = fs.readFileSync(HF, 'utf8');
 
 // 构建 ZM JSON（从 matrix）

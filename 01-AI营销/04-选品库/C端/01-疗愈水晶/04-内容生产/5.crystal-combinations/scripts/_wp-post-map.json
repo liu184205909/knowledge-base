@@ -1,0 +1,1012 @@
+{
+  "turquoise-and-malachite": {
+    "id": 44460,
+    "status": "draft",
+    "fm": 44457
+  },
+  "selenite-and-red-jasper": {
+    "id": 44456,
+    "status": "draft",
+    "fm": 44453
+  },
+  "moonstone-and-citrine": {
+    "id": 44452,
+    "status": "draft",
+    "fm": 44449
+  },
+  "rose-quartz-and-obsidian": {
+    "id": 44448,
+    "status": "draft",
+    "fm": 44445
+  },
+  "jade-and-black-tourmaline": {
+    "id": 44444,
+    "status": "draft",
+    "fm": 44441
+  },
+  "amethyst-and-carnelian": {
+    "id": 44440,
+    "status": "draft",
+    "fm": 44437
+  },
+  "larimar-and-pyrite": {
+    "id": 44436,
+    "status": "draft",
+    "fm": 44433
+  },
+  "opal-and-malachite": {
+    "id": 44432,
+    "status": "draft",
+    "fm": 44429
+  },
+  "citrine-and-larimar": {
+    "id": 44428,
+    "status": "draft",
+    "fm": 44425
+  },
+  "moonstone-and-pyrite": {
+    "id": 44424,
+    "status": "draft",
+    "fm": 44421
+  },
+  "moonstone-and-ruby": {
+    "id": 44420,
+    "status": "draft",
+    "fm": 44417
+  },
+  "carnelian-and-larimar": {
+    "id": 44416,
+    "status": "draft",
+    "fm": 44413
+  },
+  "tiger-eye-and-larimar": {
+    "id": 44412,
+    "status": "draft",
+    "fm": 44409
+  },
+  "larimar-and-rhodonite": {
+    "id": 44408,
+    "status": "draft",
+    "fm": 44405
+  },
+  "kyanite-and-pyrite": {
+    "id": 44404,
+    "status": "draft",
+    "fm": 44401
+  },
+  "malachite-and-apatite": {
+    "id": 44400,
+    "status": "draft",
+    "fm": 44397
+  },
+  "lepidolite-and-apatite": {
+    "id": 44396,
+    "status": "draft",
+    "fm": 44393
+  },
+  "hematite-and-rhodonite": {
+    "id": 44392,
+    "status": "draft",
+    "fm": 44389
+  },
+  "bloodstone-and-larimar": {
+    "id": 44388,
+    "status": "draft",
+    "fm": 44385
+  },
+  "opal-and-larimar": {
+    "id": 44384,
+    "status": "draft",
+    "fm": 44381
+  },
+  "opal-and-hematite": {
+    "id": 44380,
+    "status": "draft",
+    "fm": 44377
+  },
+  "opal-and-bloodstone": {
+    "id": 44376,
+    "status": "draft",
+    "fm": 44373
+  },
+  "red-jasper-and-rhodonite": {
+    "id": 44372,
+    "status": "draft",
+    "fm": 44369
+  },
+  "red-jasper-and-larimar": {
+    "id": 44368,
+    "status": "draft",
+    "fm": 44365
+  },
+  "red-jasper-and-opal": {
+    "id": 44364,
+    "status": "draft",
+    "fm": 44361
+  },
+  "citrine-and-kyanite": {
+    "id": 44360,
+    "status": "draft",
+    "fm": 44357
+  },
+  "ruby-and-kyanite": {
+    "id": 44356,
+    "status": "draft",
+    "fm": 44353
+  },
+  "ruby-and-lepidolite": {
+    "id": 44352,
+    "status": "draft",
+    "fm": 44349
+  },
+  "fluorite-and-pyrite": {
+    "id": 44348,
+    "status": "draft",
+    "fm": 44345
+  },
+  "fluorite-and-malachite": {
+    "id": 44344,
+    "status": "draft",
+    "fm": 44341
+  },
+  "fluorite-and-citrine": {
+    "id": 44340,
+    "status": "draft",
+    "fm": 44337
+  },
+  "lapis-and-citrine": {
+    "id": 44336,
+    "status": "draft",
+    "fm": 44333
+  },
+  "lapis-and-ruby": {
+    "id": 44332,
+    "status": "draft",
+    "fm": 44329
+  },
+  "turquoise-and-rhodonite": {
+    "id": 44328,
+    "status": "draft",
+    "fm": 44325
+  },
+  "turquoise-and-larimar": {
+    "id": 44324,
+    "status": "draft",
+    "fm": 44321
+  },
+  "selenite-and-pyrite": {
+    "id": 44320,
+    "status": "draft",
+    "fm": 44317
+  },
+  "selenite-and-malachite": {
+    "id": 44316,
+    "status": "draft",
+    "fm": 44313
+  },
+  "selenite-and-citrine": {
+    "id": 44312,
+    "status": "draft",
+    "fm": 44309
+  },
+  "selenite-and-ruby": {
+    "id": 44308,
+    "status": "draft",
+    "fm": 44305
+  },
+  "aventurine-and-opal": {
+    "id": 44304,
+    "status": "draft",
+    "fm": 44301
+  },
+  "aventurine-and-turquoise": {
+    "id": 44300,
+    "status": "draft",
+    "fm": 44297
+  },
+  "amazonite-and-rhodonite": {
+    "id": 44296,
+    "status": "draft",
+    "fm": 44293
+  },
+  "amazonite-and-hematite": {
+    "id": 44292,
+    "status": "draft",
+    "fm": 44289
+  },
+  "amazonite-and-turquoise": {
+    "id": 44288,
+    "status": "draft",
+    "fm": 44285
+  },
+  "black-tourmaline-and-rhodonite": {
+    "id": 44284,
+    "status": "draft",
+    "fm": 44281
+  },
+  "black-tourmaline-and-aventurine": {
+    "id": 44280,
+    "status": "draft",
+    "fm": 44277
+  },
+  "obsidian-and-rhodonite": {
+    "id": 44276,
+    "status": "draft",
+    "fm": 44273
+  },
+  "obsidian-and-aventurine": {
+    "id": 44272,
+    "status": "draft",
+    "fm": 44269
+  },
+  "moonstone-and-bloodstone": {
+    "id": 44268,
+    "status": "draft",
+    "fm": 44265
+  },
+  "moonstone-and-turquoise": {
+    "id": 44264,
+    "status": "draft",
+    "fm": 44261
+  },
+  "moonstone-and-obsidian": {
+    "id": 44260,
+    "status": "draft",
+    "fm": 44257
+  },
+  "carnelian-and-kyanite": {
+    "id": 44256,
+    "status": "draft",
+    "fm": 44253
+  },
+  "carnelian-and-fluorite": {
+    "id": 44252,
+    "status": "draft",
+    "fm": 44249
+  },
+  "carnelian-and-lapis": {
+    "id": 44248,
+    "status": "draft",
+    "fm": 44245
+  },
+  "carnelian-and-selenite": {
+    "id": 44244,
+    "status": "draft",
+    "fm": 44241
+  },
+  "rose-quartz-and-red-jasper": {
+    "id": 44240,
+    "status": "draft",
+    "fm": 44237
+  },
+  "rose-quartz-and-turquoise": {
+    "id": 44236,
+    "status": "draft",
+    "fm": 44233
+  },
+  "jade-and-hematite": {
+    "id": 44232,
+    "status": "draft",
+    "fm": 44229
+  },
+  "jade-and-turquoise": {
+    "id": 44228,
+    "status": "draft",
+    "fm": 44225
+  },
+  "jade-and-obsidian": {
+    "id": 44224,
+    "status": "draft",
+    "fm": 44221
+  },
+  "jade-and-labradorite": {
+    "id": 44220,
+    "status": "draft",
+    "fm": 44217
+  },
+  "tiger-eye-and-kyanite": {
+    "id": 44216,
+    "status": "draft",
+    "fm": 44213
+  },
+  "tiger-eye-and-fluorite": {
+    "id": 44212,
+    "status": "draft",
+    "fm": 44209
+  },
+  "tiger-eye-and-lapis": {
+    "id": 44208,
+    "status": "draft",
+    "fm": 44205
+  },
+  "amethyst-and-malachite": {
+    "id": 44204,
+    "status": "draft",
+    "fm": 44201
+  },
+  "apatite-and-pyrite": {
+    "id": 44197,
+    "status": "draft",
+    "fm": 44194
+  },
+  "apatite-and-angelite": {
+    "id": 44193,
+    "status": "draft",
+    "fm": 44190
+  },
+  "malachite-and-pyrite": {
+    "id": 44189,
+    "status": "draft",
+    "fm": 44186
+  },
+  "lepidolite-and-malachite": {
+    "id": 44185,
+    "status": "draft",
+    "fm": 44182
+  },
+  "bloodstone-and-rhodonite": {
+    "id": 44181,
+    "status": "draft",
+    "fm": 44178
+  },
+  "ruby-and-pyrite": {
+    "id": 44177,
+    "status": "draft",
+    "fm": 44174
+  },
+  "ruby-and-malachite": {
+    "id": 44171,
+    "status": "draft",
+    "fm": 44168
+  },
+  "ruby-and-citrine": {
+    "id": 44167,
+    "status": "draft",
+    "fm": 44164
+  },
+  "fluorite-and-ruby": {
+    "id": 44163,
+    "status": "draft",
+    "fm": 44160
+  },
+  "lapis-and-lepidolite": {
+    "id": 44159,
+    "status": "draft",
+    "fm": 44156
+  },
+  "turquoise-and-hematite": {
+    "id": 44155,
+    "status": "draft",
+    "fm": 44152
+  },
+  "turquoise-and-bloodstone": {
+    "id": 44151,
+    "status": "draft",
+    "fm": 44148
+  },
+  "turquoise-and-red-jasper": {
+    "id": 44147,
+    "status": "draft",
+    "fm": 44144
+  },
+  "selenite-and-apatite": {
+    "id": 44143,
+    "status": "draft",
+    "fm": 44140
+  },
+  "aventurine-and-rhodonite": {
+    "id": 44139,
+    "status": "draft",
+    "fm": 44136
+  },
+  "aventurine-and-larimar": {
+    "id": 44135,
+    "status": "draft",
+    "fm": 44132
+  },
+  "aventurine-and-hematite": {
+    "id": 44131,
+    "status": "draft",
+    "fm": 44128
+  },
+  "amazonite-and-bloodstone": {
+    "id": 44127,
+    "status": "draft",
+    "fm": 44124
+  },
+  "amazonite-and-opal": {
+    "id": 44123,
+    "status": "draft",
+    "fm": 44120
+  },
+  "amazonite-and-red-jasper": {
+    "id": 44119,
+    "status": "draft",
+    "fm": 44116
+  },
+  "black-tourmaline-and-turquoise": {
+    "id": 44115,
+    "status": "draft",
+    "fm": 44112
+  },
+  "moonstone-and-larimar": {
+    "id": 44111,
+    "status": "draft",
+    "fm": 44108
+  },
+  "moonstone-and-red-jasper": {
+    "id": 44107,
+    "status": "draft",
+    "fm": 44104
+  },
+  "moonstone-and-aventurine": {
+    "id": 44103,
+    "status": "draft",
+    "fm": 44100
+  },
+  "moonstone-and-amazonite": {
+    "id": 44099,
+    "status": "draft",
+    "fm": 44096
+  },
+  "labradorite-and-larimar": {
+    "id": 44095,
+    "status": "draft",
+    "fm": 44092
+  },
+  "labradorite-and-hematite": {
+    "id": 44091,
+    "status": "draft",
+    "fm": 44088
+  },
+  "labradorite-and-bloodstone": {
+    "id": 44087,
+    "status": "draft",
+    "fm": 44084
+  },
+  "labradorite-and-opal": {
+    "id": 44083,
+    "status": "draft",
+    "fm": 44080
+  },
+  "labradorite-and-red-jasper": {
+    "id": 44079,
+    "status": "draft",
+    "fm": 44076
+  },
+  "labradorite-and-aventurine": {
+    "id": 44075,
+    "status": "draft",
+    "fm": 44072
+  },
+  "labradorite-and-obsidian": {
+    "id": 44071,
+    "status": "draft",
+    "fm": 44068
+  },
+  "carnelian-and-apatite": {
+    "id": 44067,
+    "status": "draft",
+    "fm": 44064
+  },
+  "carnelian-and-malachite": {
+    "id": 44063,
+    "status": "draft",
+    "fm": 44060
+  },
+  "rose-quartz-and-bloodstone": {
+    "id": 44059,
+    "status": "draft",
+    "fm": 44056
+  },
+  "jade-and-rhodonite": {
+    "id": 44055,
+    "status": "draft",
+    "fm": 44052
+  },
+  "jade-and-larimar": {
+    "id": 44051,
+    "status": "draft",
+    "fm": 44048
+  },
+  "jade-and-bloodstone": {
+    "id": 44047,
+    "status": "draft",
+    "fm": 44044
+  },
+  "jade-and-red-jasper": {
+    "id": 44043,
+    "status": "draft",
+    "fm": 44040
+  },
+  "jade-and-amazonite": {
+    "id": 44039,
+    "status": "draft",
+    "fm": 44036
+  },
+  "jade-and-moonstone": {
+    "id": 44035,
+    "status": "draft",
+    "fm": 44032
+  },
+  "tiger-eye-and-apatite": {
+    "id": 44031,
+    "status": "draft",
+    "fm": 44028
+  },
+  "tiger-eye-and-selenite": {
+    "id": 44027,
+    "status": "draft",
+    "fm": 44024
+  },
+  "kyanite-and-apatite": {
+    "id": 44023,
+    "status": "draft",
+    "fm": 44020
+  },
+  "lepidolite-and-kyanite": {
+    "id": 44017,
+    "status": "draft",
+    "fm": 44014
+  },
+  "fluorite-and-apatite": {
+    "id": 44013,
+    "status": "draft",
+    "fm": 44010
+  },
+  "fluorite-and-lepidolite": {
+    "id": 44009,
+    "status": "draft",
+    "fm": 44006
+  },
+  "lapis-and-apatite": {
+    "id": 44005,
+    "status": "draft",
+    "fm": 44002
+  },
+  "aventurine-and-bloodstone": {
+    "id": 44001,
+    "status": "draft",
+    "fm": 43998
+  },
+  "aventurine-and-red-jasper": {
+    "id": 43997,
+    "status": "draft",
+    "fm": 43994
+  },
+  "amazonite-and-aventurine": {
+    "id": 43993,
+    "status": "draft",
+    "fm": 43990
+  },
+  "obsidian-and-hematite": {
+    "id": 43989,
+    "status": "draft",
+    "fm": 43986
+  },
+  "obsidian-and-bloodstone": {
+    "id": 43985,
+    "status": "draft",
+    "fm": 43982
+  },
+  "obsidian-and-red-jasper": {
+    "id": 43981,
+    "status": "draft",
+    "fm": 43978
+  },
+  "obsidian-and-turquoise": {
+    "id": 43977,
+    "status": "draft",
+    "fm": 43974
+  },
+  "labradorite-and-turquoise": {
+    "id": 43973,
+    "status": "draft",
+    "fm": 43970
+  },
+  "labradorite-and-amazonite": {
+    "id": 43969,
+    "status": "draft",
+    "fm": 43966
+  },
+  "tiger-eye-and-pyrite": {
+    "id": 43965,
+    "status": "draft",
+    "fm": 43962
+  },
+  "tiger-eye-and-malachite": {
+    "id": 43961,
+    "status": "draft",
+    "fm": 43958
+  },
+  "tiger-eye-and-ruby": {
+    "id": 43957,
+    "status": "draft",
+    "fm": 43954
+  },
+  "kyanite-and-angelite": {
+    "id": 43953,
+    "status": "draft",
+    "fm": 43950
+  },
+  "bloodstone-and-hematite": {
+    "id": 43949,
+    "status": "draft",
+    "fm": 43946
+  },
+  "red-jasper-and-hematite": {
+    "id": 43945,
+    "status": "draft",
+    "fm": 43942
+  },
+  "fluorite-and-angelite": {
+    "id": 43941,
+    "status": "draft",
+    "fm": 43938
+  },
+  "fluorite-and-kyanite": {
+    "id": 43937,
+    "status": "draft",
+    "fm": 43934
+  },
+  "lapis-and-angelite": {
+    "id": 43933,
+    "status": "draft",
+    "fm": 43930
+  },
+  "lapis-and-kyanite": {
+    "id": 43929,
+    "status": "draft",
+    "fm": 43926
+  },
+  "lapis-and-fluorite": {
+    "id": 43925,
+    "status": "draft",
+    "fm": 43922
+  },
+  "selenite-and-kyanite": {
+    "id": 43921,
+    "status": "draft",
+    "fm": 43918
+  },
+  "selenite-and-lepidolite": {
+    "id": 43917,
+    "status": "draft",
+    "fm": 43914
+  },
+  "selenite-and-lapis": {
+    "id": 43913,
+    "status": "draft",
+    "fm": 43910
+  },
+  "amazonite-and-larimar": {
+    "id": 43909,
+    "status": "draft",
+    "fm": 43906
+  },
+  "jade-and-aventurine": {
+    "id": 43905,
+    "status": "draft",
+    "fm": 43902
+  },
+  "tiger-eye-and-carnelian": {
+    "id": 43901,
+    "status": "draft",
+    "fm": 43898
+  },
+  "turquoise-and-citrine": {
+    "id": 43897,
+    "status": "draft",
+    "fm": 43894
+  },
+  "turquoise-and-lapis": {
+    "id": 43893,
+    "status": "draft",
+    "fm": 43890
+  },
+  "aventurine-and-citrine": {
+    "id": 43889,
+    "status": "draft",
+    "fm": 43886
+  },
+  "amazonite-and-selenite": {
+    "id": 43885,
+    "status": "draft",
+    "fm": 43882
+  },
+  "black-tourmaline-and-fluorite": {
+    "id": 43881,
+    "status": "draft",
+    "fm": 43878
+  },
+  "black-tourmaline-and-selenite": {
+    "id": 43877,
+    "status": "draft",
+    "fm": 43874
+  },
+  "black-tourmaline-and-quartz": {
+    "id": 43873,
+    "status": "draft",
+    "fm": 43870
+  },
+  "rose-quartz-and-angelite": {
+    "id": 43869,
+    "status": "draft",
+    "fm": 43866
+  },
+  "rose-quartz-and-malachite": {
+    "id": 43865,
+    "status": "draft",
+    "fm": 43862
+  },
+  "rose-quartz-and-lepidolite": {
+    "id": 43861,
+    "status": "draft",
+    "fm": 43858
+  },
+  "rose-quartz-and-ruby": {
+    "id": 43857,
+    "status": "draft",
+    "fm": 43854
+  },
+  "rose-quartz-and-selenite": {
+    "id": 43853,
+    "status": "draft",
+    "fm": 43850
+  },
+  "rose-quartz-and-quartz": {
+    "id": 43849,
+    "status": "draft",
+    "fm": 43846
+  },
+  "jade-and-citrine": {
+    "id": 43845,
+    "status": "draft",
+    "fm": 43842
+  },
+  "tiger-eye-and-black-tourmaline": {
+    "id": 43841,
+    "status": "draft",
+    "fm": 43838
+  },
+  "amethyst-and-larimar": {
+    "id": 43837,
+    "status": "draft",
+    "fm": 43834
+  },
+  "amethyst-and-red-jasper": {
+    "id": 43833,
+    "status": "draft",
+    "fm": 43830
+  },
+  "amethyst-and-aventurine": {
+    "id": 43829,
+    "status": "draft",
+    "fm": 43826
+  },
+  "amethyst-and-amazonite": {
+    "id": 43825,
+    "status": "draft",
+    "fm": 43822
+  },
+  "amethyst-and-black-tourmaline": {
+    "id": 43821,
+    "status": "draft",
+    "fm": 43818
+  },
+  "amethyst-and-obsidian": {
+    "id": 43817,
+    "status": "draft",
+    "fm": 43814
+  },
+  "amethyst-and-labradorite": {
+    "id": 43813,
+    "status": "draft",
+    "fm": 43810
+  },
+  "amethyst-and-rose-quartz": {
+    "id": 43809,
+    "status": "draft",
+    "fm": 43806
+  },
+  "amethyst-and-jade": {
+    "id": 43805,
+    "status": "draft",
+    "fm": 43802
+  },
+  "labradorite-and-kyanite": {
+    "id": 43801,
+    "status": "draft",
+    "fm": 43798
+  },
+  "carnelian-and-bloodstone": {
+    "id": 43797,
+    "status": "draft",
+    "fm": 43794
+  },
+  "carnelian-and-red-jasper": {
+    "id": 43793,
+    "status": "draft",
+    "fm": 43790
+  },
+  "tiger-eye-and-hematite": {
+    "id": 43789,
+    "status": "draft",
+    "fm": 43786
+  },
+  "amethyst-and-quartz": {
+    "id": 43785,
+    "status": "draft",
+    "fm": 43782
+  },
+  "rose-quartz-and-opal": {
+    "id": 43781,
+    "status": "draft",
+    "fm": 43778
+  },
+  "rose-quartz-and-moonstone": {
+    "id": 43777,
+    "status": "draft",
+    "fm": 43774
+  },
+  "amethyst-and-citrine": {
+    "id": 43773,
+    "status": "draft",
+    "fm": 43770
+  },
+  "red-jasper-and-bloodstone": {
+    "id": 43769,
+    "status": "draft",
+    "fm": 43766
+  },
+  "citrine-and-pyrite": {
+    "id": 43765,
+    "status": "draft",
+    "fm": 43762
+  },
+  "citrine-and-apatite": {
+    "id": 43761,
+    "status": "draft",
+    "fm": 43758
+  },
+  "citrine-and-malachite": {
+    "id": 43757,
+    "status": "draft",
+    "fm": 43754
+  },
+  "lapis-and-pyrite": {
+    "id": 43753,
+    "status": "draft",
+    "fm": 43750
+  },
+  "selenite-and-angelite": {
+    "id": 43749,
+    "status": "draft",
+    "fm": 43746
+  },
+  "selenite-and-fluorite": {
+    "id": 43745,
+    "status": "draft",
+    "fm": 43742
+  },
+  "black-tourmaline-and-hematite": {
+    "id": 43741,
+    "status": "draft",
+    "fm": 43738
+  },
+  "black-tourmaline-and-bloodstone": {
+    "id": 43737,
+    "status": "draft",
+    "fm": 43734
+  },
+  "black-tourmaline-and-red-jasper": {
+    "id": 43733,
+    "status": "draft",
+    "fm": 43730
+  },
+  "obsidian-and-black-tourmaline": {
+    "id": 43729,
+    "status": "draft",
+    "fm": 43726
+  },
+  "moonstone-and-opal": {
+    "id": 43725,
+    "status": "draft",
+    "fm": 43722
+  },
+  "labradorite-and-black-tourmaline": {
+    "id": 43721,
+    "status": "draft",
+    "fm": 43718
+  },
+  "labradorite-and-moonstone": {
+    "id": 43717,
+    "status": "draft",
+    "fm": 43714
+  },
+  "carnelian-and-pyrite": {
+    "id": 43713,
+    "status": "draft",
+    "fm": 43710
+  },
+  "carnelian-and-citrine": {
+    "id": 43709,
+    "status": "draft",
+    "fm": 43706
+  },
+  "carnelian-and-ruby": {
+    "id": 43705,
+    "status": "draft",
+    "fm": 43702
+  },
+  "rose-quartz-and-rhodonite": {
+    "id": 43701,
+    "status": "draft",
+    "fm": 43698
+  },
+  "rose-quartz-and-larimar": {
+    "id": 43697,
+    "status": "draft",
+    "fm": 43694
+  },
+  "rose-quartz-and-hematite": {
+    "id": 43693,
+    "status": "draft",
+    "fm": 43690
+  },
+  "rose-quartz-and-aventurine": {
+    "id": 43689,
+    "status": "draft",
+    "fm": 43686
+  },
+  "rose-quartz-and-amazonite": {
+    "id": 43685,
+    "status": "draft",
+    "fm": 43682
+  },
+  "rose-quartz-and-black-tourmaline": {
+    "id": 43681,
+    "status": "draft",
+    "fm": 43678
+  },
+  "jade-and-rose-quartz": {
+    "id": 43677,
+    "status": "draft",
+    "fm": 43674
+  },
+  "tiger-eye-and-citrine": {
+    "id": 43673,
+    "status": "draft",
+    "fm": 43670
+  },
+  "amethyst-and-angelite": {
+    "id": 43669,
+    "status": "draft",
+    "fm": 43666
+  },
+  "amethyst-and-kyanite": {
+    "id": 43664,
+    "status": "draft",
+    "fm": 43661
+  },
+  "amethyst-and-lepidolite": {
+    "id": 43660,
+    "status": "draft",
+    "fm": 43657
+  },
+  "amethyst-and-fluorite": {
+    "id": 43656,
+    "status": "draft",
+    "fm": 43653
+  },
+  "amethyst-and-lapis": {
+    "id": 43652,
+    "status": "draft",
+    "fm": 43649
+  },
+  "amethyst-and-selenite": {
+    "id": 43648,
+    "status": "draft",
+    "fm": 43645
+  }
+}

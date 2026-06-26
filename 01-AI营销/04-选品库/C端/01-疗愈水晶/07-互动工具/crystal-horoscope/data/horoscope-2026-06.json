@@ -1,0 +1,1279 @@
+{
+  "_meta": {
+    "month": "2026-06",
+    "monthName": "June",
+    "year": 2026,
+    "astrology": {
+      "month": "2026-06",
+      "monthName": "June",
+      "year": 2026,
+      "newMoon": {
+        "date": "Jun 14",
+        "sign": "Gemini",
+        "theme": "fresh ideas, communication, learning"
+      },
+      "fullMoon": {
+        "date": "Jun 29",
+        "sign": "Capricorn",
+        "theme": "career culmination, structure, release"
+      },
+      "highlights": [
+        "Jupiter enters Leo on Jun 29 — expansion shifts to creativity, courage, self-expression",
+        "Mercury turns retrograde in Cancer on Jun 29 (to Jul 23) — review home, family, old conversations",
+        "Chiron enters Taurus on Jun 19 — healing themes move to money, values, the body"
+      ]
+    },
+    "disclaimer": "Astrology and crystal meanings are offered for entertainment, reflection, and spiritual inspiration. Crystals carry traditional symbolic qualities but are not a substitute for medical, financial, or professional advice.",
+    "source": "星象数据参考-2026-2027.md (交叉核对 Cafe Astrology/Astro-Seek/CHANI/NASA) + 模板-星座运势×水晶框架"
+  },
+  "signs": [
+    {
+      "sign": "aries",
+      "name": "Aries",
+      "symbol": "♈",
+      "element": "fire",
+      "theme": "The Gemini New Moon (Jun 14) activates your third house of communication, learning, short trips. Momentum builds, but Mercury turns retrograde on the 29th — review and refine rather than push.",
+      "crystal_of_month": {
+        "slug": "carnelian",
+        "name": "Carnelian",
+        "img": "https://goearthward.com/wp-content/uploads/2026/06/carnelian-form-bracelet-1.webp",
+        "link": "/gemstone/carnelian-meaning/",
+        "shop": "/product-category/carnelian-crystals/",
+        "reason": "Carnelian fuels the confident self-expression the Gemini New Moon asks of your third house — and keeps momentum when Mercury slows."
+      },
+      "quadrants": {
+        "love": {
+          "text": "Your third house keeps relationships in motion. Pause before committing during the retrograde; reconnect after the Full Moon.",
+          "crystal": {
+            "slug": "rose-quartz",
+            "name": "Rose Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+            "link": "/gemstone/rose-quartz-meaning/",
+            "shop": "/product-category/rose-quartz-crystals/"
+          }
+        },
+        "career": {
+          "text": "The Capricorn Full Moon (Jun 29) brings a career or structure moment. Solidify what the New Moon started, release what is not working.",
+          "crystal": {
+            "slug": "citrine",
+            "name": "Citrine",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp",
+            "link": "/gemstone/citrine-meaning/",
+            "shop": "/product-category/citrine-crystals/"
+          }
+        },
+        "wellness": {
+          "text": "Chiron entering Taurus on the 19th invites a gentler pace. Rest is productive this month — protect your sleep and body rituals.",
+          "crystal": {
+            "slug": "bloodstone",
+            "name": "Bloodstone",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/bloodstone-form-bracelet.webp",
+            "link": "/gemstone/bloodstone-meaning/",
+            "shop": "/product-category/bloodstone-crystals/"
+          }
+        },
+        "spirituality": {
+          "text": "The retrograde favors inner work. Journaling, dream notes, and time alone sharpen the intuition the New Moon is opening.",
+          "crystal": {
+            "slug": "sunstone",
+            "name": "Sunstone",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/sunstone-form-bracelet.webp",
+            "link": "/gemstone/sunstone-meaning/",
+            "shop": "/product-category/healing-crystals-jewelry/"
+          }
+        }
+      },
+      "power_stones": [
+        {
+          "slug": "carnelian",
+          "name": "Carnelian",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/carnelian-form-bracelet-1.webp",
+          "link": "/gemstone/carnelian-meaning/",
+          "shop": "/product-category/carnelian-crystals/"
+        },
+        {
+          "slug": "citrine",
+          "name": "Citrine",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp",
+          "link": "/gemstone/citrine-meaning/",
+          "shop": "/product-category/citrine-crystals/"
+        },
+        {
+          "slug": "bloodstone",
+          "name": "Bloodstone",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/bloodstone-form-bracelet.webp",
+          "link": "/gemstone/bloodstone-meaning/",
+          "shop": "/product-category/bloodstone-crystals/"
+        }
+      ],
+      "affirmation": "I act on what matters and release what does not.",
+      "key_dates": [
+        {
+          "date": "Jun 14",
+          "event": "New Moon in Gemini",
+          "focus": "Set intentions around communication, learning, short trips",
+          "do": "Write down one goal",
+          "avoid": "Rushing decisions"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Full Moon in Capricorn",
+          "focus": "Release and culminate",
+          "do": "Acknowledge what you have completed",
+          "avoid": "Forcing closure before it is ready"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Mercury turns retrograde",
+          "focus": "Review, do not launch",
+          "do": "Revisit old conversations and plans",
+          "avoid": "Signing new contracts blind"
+        }
+      ]
+    },
+    {
+      "sign": "taurus",
+      "name": "Taurus",
+      "symbol": "♉",
+      "element": "earth",
+      "theme": "The Gemini New Moon (Jun 14) activates your second house of money, values, self-worth. Slow, tangible progress unfolds, but Mercury turns retrograde on the 29th — review and refine rather than push.",
+      "crystal_of_month": {
+        "slug": "green-aventurine",
+        "name": "green-aventurine",
+        "img": "",
+        "link": "/gemstone/green-aventurine-meaning/",
+        "shop": "/product-category/healing-crystals-jewelry/",
+        "reason": "With Chiron entering your sign this month, Green Aventurine grounds the second-house money theme in calm abundance rather than anxiety."
+      },
+      "quadrants": {
+        "love": {
+          "text": "Your second house keeps relationships in motion. Pause before committing during the retrograde; reconnect after the Full Moon.",
+          "crystal": {
+            "slug": "rose-quartz",
+            "name": "Rose Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+            "link": "/gemstone/rose-quartz-meaning/",
+            "shop": "/product-category/rose-quartz-crystals/"
+          }
+        },
+        "career": {
+          "text": "The Capricorn Full Moon (Jun 29) brings a career or structure moment. Solidify what the New Moon started, release what is not working.",
+          "crystal": {
+            "slug": "green-aventurine",
+            "name": "green-aventurine",
+            "img": "",
+            "link": "/gemstone/green-aventurine-meaning/",
+            "shop": "/product-category/healing-crystals-jewelry/"
+          }
+        },
+        "wellness": {
+          "text": "Chiron entering Taurus on the 19th invites a gentler pace. Rest is productive this month — protect your sleep and body rituals.",
+          "crystal": {
+            "slug": "smoky-quartz",
+            "name": "Smoky Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/smoky-quartz-form-bracelet.webp",
+            "link": "/gemstone/smoky-quartz-meaning/",
+            "shop": "/product-category/healing-crystals-jewelry/"
+          }
+        },
+        "spirituality": {
+          "text": "The retrograde favors inner work. Journaling, dream notes, and time alone sharpen the intuition the New Moon is opening.",
+          "crystal": {
+            "slug": "tourmalinated-quartz",
+            "name": "Tourmalinated Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/tourmalinated-quartz-form-bracelet.webp",
+            "link": "/gemstone/tourmalinated-quartz-meaning/",
+            "shop": "/product-category/healing-crystals-jewelry/"
+          }
+        }
+      },
+      "power_stones": [
+        {
+          "slug": "green-aventurine",
+          "name": "green-aventurine",
+          "img": "",
+          "link": "/gemstone/green-aventurine-meaning/",
+          "shop": "/product-category/healing-crystals-jewelry/"
+        },
+        {
+          "slug": "green-aventurine",
+          "name": "green-aventurine",
+          "img": "",
+          "link": "/gemstone/green-aventurine-meaning/",
+          "shop": "/product-category/healing-crystals-jewelry/"
+        },
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/smoky-quartz-form-bracelet.webp",
+          "link": "/gemstone/smoky-quartz-meaning/",
+          "shop": "/product-category/healing-crystals-jewelry/"
+        }
+      ],
+      "affirmation": "I build steadily and trust the value I carry.",
+      "key_dates": [
+        {
+          "date": "Jun 14",
+          "event": "New Moon in Gemini",
+          "focus": "Set intentions around money, values, self-worth",
+          "do": "Write down one goal",
+          "avoid": "Rushing decisions"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Full Moon in Capricorn",
+          "focus": "Release and culminate",
+          "do": "Acknowledge what you have completed",
+          "avoid": "Forcing closure before it is ready"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Mercury turns retrograde",
+          "focus": "Review, do not launch",
+          "do": "Revisit old conversations and plans",
+          "avoid": "Signing new contracts blind"
+        }
+      ]
+    },
+    {
+      "sign": "gemini",
+      "name": "Gemini",
+      "symbol": "♊",
+      "element": "air",
+      "theme": "The Gemini New Moon (Jun 14) activates your first house of self, identity, new beginnings. Ideas and conversations spark, but Mercury turns retrograde on the 29th — review and refine rather than push.",
+      "crystal_of_month": {
+        "slug": "clear-quartz",
+        "name": "clear-quartz",
+        "img": "",
+        "link": "/gemstone/clear-quartz-meaning/",
+        "shop": "/product-category/healing-crystals-jewelry/",
+        "reason": "The Gemini New Moon is your annual reset — Clear Quartz clarifies first-house intentions and amplifies the fresh start."
+      },
+      "quadrants": {
+        "love": {
+          "text": "Your first house keeps relationships in motion. Pause before committing during the retrograde; reconnect after the Full Moon.",
+          "crystal": {
+            "slug": "rose-quartz",
+            "name": "Rose Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+            "link": "/gemstone/rose-quartz-meaning/",
+            "shop": "/product-category/rose-quartz-crystals/"
+          }
+        },
+        "career": {
+          "text": "The Capricorn Full Moon (Jun 29) brings a career or structure moment. Solidify what the New Moon started, release what is not working.",
+          "crystal": {
+            "slug": "citrine",
+            "name": "Citrine",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp",
+            "link": "/gemstone/citrine-meaning/",
+            "shop": "/product-category/citrine-crystals/"
+          }
+        },
+        "wellness": {
+          "text": "Chiron entering Taurus on the 19th invites a gentler pace. Rest is productive this month — protect your sleep and body rituals.",
+          "crystal": {
+            "slug": "fluorite",
+            "name": "Fluorite",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/fluorite-overview.webp",
+            "link": "/gemstone/fluorite-meaning/",
+            "shop": "/product-category/fluorite-crystals/"
+          }
+        },
+        "spirituality": {
+          "text": "The retrograde favors inner work. Journaling, dream notes, and time alone sharpen the intuition the New Moon is opening.",
+          "crystal": {
+            "slug": "amethyst",
+            "name": "Amethyst",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp",
+            "link": "/gemstone/amethyst-meaning/",
+            "shop": "/product-category/amethyst-crystals/"
+          }
+        }
+      },
+      "power_stones": [
+        {
+          "slug": "clear-quartz",
+          "name": "clear-quartz",
+          "img": "",
+          "link": "/gemstone/clear-quartz-meaning/",
+          "shop": "/product-category/healing-crystals-jewelry/"
+        },
+        {
+          "slug": "citrine",
+          "name": "Citrine",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp",
+          "link": "/gemstone/citrine-meaning/",
+          "shop": "/product-category/citrine-crystals/"
+        },
+        {
+          "slug": "fluorite",
+          "name": "Fluorite",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/fluorite-overview.webp",
+          "link": "/gemstone/fluorite-meaning/",
+          "shop": "/product-category/fluorite-crystals/"
+        }
+      ],
+      "affirmation": "I speak my truth clearly and stay open to new perspectives.",
+      "key_dates": [
+        {
+          "date": "Jun 14",
+          "event": "New Moon in Gemini",
+          "focus": "Set intentions around self, identity, new beginnings",
+          "do": "Write down one goal",
+          "avoid": "Rushing decisions"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Full Moon in Capricorn",
+          "focus": "Release and culminate",
+          "do": "Acknowledge what you have completed",
+          "avoid": "Forcing closure before it is ready"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Mercury turns retrograde",
+          "focus": "Review, do not launch",
+          "do": "Revisit old conversations and plans",
+          "avoid": "Signing new contracts blind"
+        }
+      ]
+    },
+    {
+      "sign": "cancer",
+      "name": "Cancer",
+      "symbol": "♋",
+      "element": "water",
+      "theme": "The Gemini New Moon (Jun 14) activates your twelfth house of rest, intuition, closure. Feelings deepen, but Mercury turns retrograde on the 29th — review and refine rather than push.",
+      "crystal_of_month": {
+        "slug": "moonstone",
+        "name": "Moonstone",
+        "img": "https://goearthward.com/wp-content/uploads/2026/06/moonstone-form-bracelet.webp",
+        "link": "/gemstone/moonstone-meaning/",
+        "shop": "/product-category/moonstone-crystals/",
+        "reason": "Mercury retrogrades in your sign from the 29th — Moonstone softens the twelfth-house inward turn and supports intuitive review."
+      },
+      "quadrants": {
+        "love": {
+          "text": "Your twelfth house keeps relationships in motion. Pause before committing during the retrograde; reconnect after the Full Moon.",
+          "crystal": {
+            "slug": "rose-quartz",
+            "name": "Rose Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+            "link": "/gemstone/rose-quartz-meaning/",
+            "shop": "/product-category/rose-quartz-crystals/"
+          }
+        },
+        "career": {
+          "text": "The Capricorn Full Moon (Jun 29) brings a career or structure moment. Solidify what the New Moon started, release what is not working.",
+          "crystal": {
+            "slug": "pyrite",
+            "name": "Pyrite",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/pyrite-overview.webp",
+            "link": "/gemstone/pyrite-meaning/",
+            "shop": "/product-category/pyrite-crystals/"
+          }
+        },
+        "wellness": {
+          "text": "Chiron entering Taurus on the 19th invites a gentler pace. Rest is productive this month — protect your sleep and body rituals.",
+          "crystal": {
+            "slug": "moonstone",
+            "name": "Moonstone",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/moonstone-form-bracelet.webp",
+            "link": "/gemstone/moonstone-meaning/",
+            "shop": "/product-category/moonstone-crystals/"
+          }
+        },
+        "spirituality": {
+          "text": "The retrograde favors inner work. Journaling, dream notes, and time alone sharpen the intuition the New Moon is opening.",
+          "crystal": {
+            "slug": "amethyst",
+            "name": "Amethyst",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp",
+            "link": "/gemstone/amethyst-meaning/",
+            "shop": "/product-category/amethyst-crystals/"
+          }
+        }
+      },
+      "power_stones": [
+        {
+          "slug": "moonstone",
+          "name": "Moonstone",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/moonstone-form-bracelet.webp",
+          "link": "/gemstone/moonstone-meaning/",
+          "shop": "/product-category/moonstone-crystals/"
+        },
+        {
+          "slug": "pyrite",
+          "name": "Pyrite",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/pyrite-overview.webp",
+          "link": "/gemstone/pyrite-meaning/",
+          "shop": "/product-category/pyrite-crystals/"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/moonstone-form-bracelet.webp",
+          "link": "/gemstone/moonstone-meaning/",
+          "shop": "/product-category/moonstone-crystals/"
+        }
+      ],
+      "affirmation": "I honor my feelings and let intuition guide my next step.",
+      "key_dates": [
+        {
+          "date": "Jun 14",
+          "event": "New Moon in Gemini",
+          "focus": "Set intentions around rest, intuition, closure",
+          "do": "Write down one goal",
+          "avoid": "Rushing decisions"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Full Moon in Capricorn",
+          "focus": "Release and culminate",
+          "do": "Acknowledge what you have completed",
+          "avoid": "Forcing closure before it is ready"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Mercury turns retrograde",
+          "focus": "Review, do not launch",
+          "do": "Revisit old conversations and plans",
+          "avoid": "Signing new contracts blind"
+        }
+      ]
+    },
+    {
+      "sign": "leo",
+      "name": "Leo",
+      "symbol": "♌",
+      "element": "fire",
+      "theme": "The Gemini New Moon (Jun 14) activates your eleventh house of community, dreams, future vision. Momentum builds, but Mercury turns retrograde on the 29th — review and refine rather than push.",
+      "crystal_of_month": {
+        "slug": "sunstone",
+        "name": "Sunstone",
+        "img": "https://goearthward.com/wp-content/uploads/2026/06/sunstone-form-bracelet.webp",
+        "link": "/gemstone/sunstone-meaning/",
+        "shop": "/product-category/healing-crystals-jewelry/",
+        "reason": "Jupiter enters your sign on the 29th — Sunstone matches that incoming fire and magnetizes eleventh-house networks."
+      },
+      "quadrants": {
+        "love": {
+          "text": "Your eleventh house keeps relationships in motion. Pause before committing during the retrograde; reconnect after the Full Moon.",
+          "crystal": {
+            "slug": "rose-quartz",
+            "name": "Rose Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+            "link": "/gemstone/rose-quartz-meaning/",
+            "shop": "/product-category/rose-quartz-crystals/"
+          }
+        },
+        "career": {
+          "text": "The Capricorn Full Moon (Jun 29) brings a career or structure moment. Solidify what the New Moon started, release what is not working.",
+          "crystal": {
+            "slug": "citrine",
+            "name": "Citrine",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp",
+            "link": "/gemstone/citrine-meaning/",
+            "shop": "/product-category/citrine-crystals/"
+          }
+        },
+        "wellness": {
+          "text": "Chiron entering Taurus on the 19th invites a gentler pace. Rest is productive this month — protect your sleep and body rituals.",
+          "crystal": {
+            "slug": "bloodstone",
+            "name": "Bloodstone",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/bloodstone-form-bracelet.webp",
+            "link": "/gemstone/bloodstone-meaning/",
+            "shop": "/product-category/bloodstone-crystals/"
+          }
+        },
+        "spirituality": {
+          "text": "The retrograde favors inner work. Journaling, dream notes, and time alone sharpen the intuition the New Moon is opening.",
+          "crystal": {
+            "slug": "sunstone",
+            "name": "Sunstone",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/sunstone-form-bracelet.webp",
+            "link": "/gemstone/sunstone-meaning/",
+            "shop": "/product-category/healing-crystals-jewelry/"
+          }
+        }
+      },
+      "power_stones": [
+        {
+          "slug": "sunstone",
+          "name": "Sunstone",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/sunstone-form-bracelet.webp",
+          "link": "/gemstone/sunstone-meaning/",
+          "shop": "/product-category/healing-crystals-jewelry/"
+        },
+        {
+          "slug": "citrine",
+          "name": "Citrine",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp",
+          "link": "/gemstone/citrine-meaning/",
+          "shop": "/product-category/citrine-crystals/"
+        },
+        {
+          "slug": "bloodstone",
+          "name": "Bloodstone",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/bloodstone-form-bracelet.webp",
+          "link": "/gemstone/bloodstone-meaning/",
+          "shop": "/product-category/bloodstone-crystals/"
+        }
+      ],
+      "affirmation": "I act on what matters and release what does not.",
+      "key_dates": [
+        {
+          "date": "Jun 14",
+          "event": "New Moon in Gemini",
+          "focus": "Set intentions around community, dreams, future vision",
+          "do": "Write down one goal",
+          "avoid": "Rushing decisions"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Full Moon in Capricorn",
+          "focus": "Release and culminate",
+          "do": "Acknowledge what you have completed",
+          "avoid": "Forcing closure before it is ready"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Mercury turns retrograde",
+          "focus": "Review, do not launch",
+          "do": "Revisit old conversations and plans",
+          "avoid": "Signing new contracts blind"
+        }
+      ]
+    },
+    {
+      "sign": "virgo",
+      "name": "Virgo",
+      "symbol": "♍",
+      "element": "earth",
+      "theme": "The Gemini New Moon (Jun 14) activates your tenth house of career, reputation, public role. Slow, tangible progress unfolds, but Mercury turns retrograde on the 29th — review and refine rather than push.",
+      "crystal_of_month": {
+        "slug": "garnet",
+        "name": "Garnet",
+        "img": "https://goearthward.com/wp-content/uploads/2026/06/garnet-form-bracelet.webp",
+        "link": "/gemstone/garnet-meaning/",
+        "shop": "/product-category/healing-crystals-jewelry/",
+        "reason": "The Capricorn Full Moon lights your tenth house — Garnet grounds ambition and steadies professional footing under the spotlight."
+      },
+      "quadrants": {
+        "love": {
+          "text": "Your tenth house keeps relationships in motion. Pause before committing during the retrograde; reconnect after the Full Moon.",
+          "crystal": {
+            "slug": "rose-quartz",
+            "name": "Rose Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+            "link": "/gemstone/rose-quartz-meaning/",
+            "shop": "/product-category/rose-quartz-crystals/"
+          }
+        },
+        "career": {
+          "text": "The Capricorn Full Moon (Jun 29) brings a career or structure moment. Solidify what the New Moon started, release what is not working.",
+          "crystal": {
+            "slug": "green-aventurine",
+            "name": "green-aventurine",
+            "img": "",
+            "link": "/gemstone/green-aventurine-meaning/",
+            "shop": "/product-category/healing-crystals-jewelry/"
+          }
+        },
+        "wellness": {
+          "text": "Chiron entering Taurus on the 19th invites a gentler pace. Rest is productive this month — protect your sleep and body rituals.",
+          "crystal": {
+            "slug": "smoky-quartz",
+            "name": "Smoky Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/smoky-quartz-form-bracelet.webp",
+            "link": "/gemstone/smoky-quartz-meaning/",
+            "shop": "/product-category/healing-crystals-jewelry/"
+          }
+        },
+        "spirituality": {
+          "text": "The retrograde favors inner work. Journaling, dream notes, and time alone sharpen the intuition the New Moon is opening.",
+          "crystal": {
+            "slug": "tourmalinated-quartz",
+            "name": "Tourmalinated Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/tourmalinated-quartz-form-bracelet.webp",
+            "link": "/gemstone/tourmalinated-quartz-meaning/",
+            "shop": "/product-category/healing-crystals-jewelry/"
+          }
+        }
+      },
+      "power_stones": [
+        {
+          "slug": "garnet",
+          "name": "Garnet",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/garnet-form-bracelet.webp",
+          "link": "/gemstone/garnet-meaning/",
+          "shop": "/product-category/healing-crystals-jewelry/"
+        },
+        {
+          "slug": "green-aventurine",
+          "name": "green-aventurine",
+          "img": "",
+          "link": "/gemstone/green-aventurine-meaning/",
+          "shop": "/product-category/healing-crystals-jewelry/"
+        },
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/smoky-quartz-form-bracelet.webp",
+          "link": "/gemstone/smoky-quartz-meaning/",
+          "shop": "/product-category/healing-crystals-jewelry/"
+        }
+      ],
+      "affirmation": "I build steadily and trust the value I carry.",
+      "key_dates": [
+        {
+          "date": "Jun 14",
+          "event": "New Moon in Gemini",
+          "focus": "Set intentions around career, reputation, public role",
+          "do": "Write down one goal",
+          "avoid": "Rushing decisions"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Full Moon in Capricorn",
+          "focus": "Release and culminate",
+          "do": "Acknowledge what you have completed",
+          "avoid": "Forcing closure before it is ready"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Mercury turns retrograde",
+          "focus": "Review, do not launch",
+          "do": "Revisit old conversations and plans",
+          "avoid": "Signing new contracts blind"
+        }
+      ]
+    },
+    {
+      "sign": "libra",
+      "name": "Libra",
+      "symbol": "♎",
+      "element": "air",
+      "theme": "The Gemini New Moon (Jun 14) activates your ninth house of beliefs, learning, big-picture. Ideas and conversations spark, but Mercury turns retrograde on the 29th — review and refine rather than push.",
+      "crystal_of_month": {
+        "slug": "lapis",
+        "name": "Lapis Lazuli",
+        "img": "https://goearthward.com/wp-content/uploads/2026/06/lapis-form-bracelet.webp",
+        "link": "/gemstone/lapis-meaning/",
+        "shop": "/product-category/lapis-lazuli-crystals/",
+        "reason": "A ninth-house New Moon expands your mind — Lapis Lazuli supports clear, wise communication as you revise old stories."
+      },
+      "quadrants": {
+        "love": {
+          "text": "Your ninth house keeps relationships in motion. Pause before committing during the retrograde; reconnect after the Full Moon.",
+          "crystal": {
+            "slug": "rose-quartz",
+            "name": "Rose Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+            "link": "/gemstone/rose-quartz-meaning/",
+            "shop": "/product-category/rose-quartz-crystals/"
+          }
+        },
+        "career": {
+          "text": "The Capricorn Full Moon (Jun 29) brings a career or structure moment. Solidify what the New Moon started, release what is not working.",
+          "crystal": {
+            "slug": "citrine",
+            "name": "Citrine",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp",
+            "link": "/gemstone/citrine-meaning/",
+            "shop": "/product-category/citrine-crystals/"
+          }
+        },
+        "wellness": {
+          "text": "Chiron entering Taurus on the 19th invites a gentler pace. Rest is productive this month — protect your sleep and body rituals.",
+          "crystal": {
+            "slug": "fluorite",
+            "name": "Fluorite",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/fluorite-overview.webp",
+            "link": "/gemstone/fluorite-meaning/",
+            "shop": "/product-category/fluorite-crystals/"
+          }
+        },
+        "spirituality": {
+          "text": "The retrograde favors inner work. Journaling, dream notes, and time alone sharpen the intuition the New Moon is opening.",
+          "crystal": {
+            "slug": "amethyst",
+            "name": "Amethyst",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp",
+            "link": "/gemstone/amethyst-meaning/",
+            "shop": "/product-category/amethyst-crystals/"
+          }
+        }
+      },
+      "power_stones": [
+        {
+          "slug": "lapis",
+          "name": "Lapis Lazuli",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/lapis-form-bracelet.webp",
+          "link": "/gemstone/lapis-meaning/",
+          "shop": "/product-category/lapis-lazuli-crystals/"
+        },
+        {
+          "slug": "citrine",
+          "name": "Citrine",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp",
+          "link": "/gemstone/citrine-meaning/",
+          "shop": "/product-category/citrine-crystals/"
+        },
+        {
+          "slug": "fluorite",
+          "name": "Fluorite",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/fluorite-overview.webp",
+          "link": "/gemstone/fluorite-meaning/",
+          "shop": "/product-category/fluorite-crystals/"
+        }
+      ],
+      "affirmation": "I speak my truth clearly and stay open to new perspectives.",
+      "key_dates": [
+        {
+          "date": "Jun 14",
+          "event": "New Moon in Gemini",
+          "focus": "Set intentions around beliefs, learning, big-picture",
+          "do": "Write down one goal",
+          "avoid": "Rushing decisions"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Full Moon in Capricorn",
+          "focus": "Release and culminate",
+          "do": "Acknowledge what you have completed",
+          "avoid": "Forcing closure before it is ready"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Mercury turns retrograde",
+          "focus": "Review, do not launch",
+          "do": "Revisit old conversations and plans",
+          "avoid": "Signing new contracts blind"
+        }
+      ]
+    },
+    {
+      "sign": "scorpio",
+      "name": "Scorpio",
+      "symbol": "♏",
+      "element": "water",
+      "theme": "The Gemini New Moon (Jun 14) activates your eighth house of transformation, shared resources, depth. Feelings deepen, but Mercury turns retrograde on the 29th — review and refine rather than push.",
+      "crystal_of_month": {
+        "slug": "obsidian",
+        "name": "Obsidian",
+        "img": "https://goearthward.com/wp-content/uploads/2026/06/obsidian-overview.webp",
+        "link": "/gemstone/obsidian-meaning/",
+        "shop": "/product-category/obsidian-crystals/",
+        "reason": "Eighth-house depth work this month — Obsidian offers truth-facing protection as you release what is no longer yours to carry."
+      },
+      "quadrants": {
+        "love": {
+          "text": "Your eighth house keeps relationships in motion. Pause before committing during the retrograde; reconnect after the Full Moon.",
+          "crystal": {
+            "slug": "rose-quartz",
+            "name": "Rose Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+            "link": "/gemstone/rose-quartz-meaning/",
+            "shop": "/product-category/rose-quartz-crystals/"
+          }
+        },
+        "career": {
+          "text": "The Capricorn Full Moon (Jun 29) brings a career or structure moment. Solidify what the New Moon started, release what is not working.",
+          "crystal": {
+            "slug": "pyrite",
+            "name": "Pyrite",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/pyrite-overview.webp",
+            "link": "/gemstone/pyrite-meaning/",
+            "shop": "/product-category/pyrite-crystals/"
+          }
+        },
+        "wellness": {
+          "text": "Chiron entering Taurus on the 19th invites a gentler pace. Rest is productive this month — protect your sleep and body rituals.",
+          "crystal": {
+            "slug": "moonstone",
+            "name": "Moonstone",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/moonstone-form-bracelet.webp",
+            "link": "/gemstone/moonstone-meaning/",
+            "shop": "/product-category/moonstone-crystals/"
+          }
+        },
+        "spirituality": {
+          "text": "The retrograde favors inner work. Journaling, dream notes, and time alone sharpen the intuition the New Moon is opening.",
+          "crystal": {
+            "slug": "amethyst",
+            "name": "Amethyst",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp",
+            "link": "/gemstone/amethyst-meaning/",
+            "shop": "/product-category/amethyst-crystals/"
+          }
+        }
+      },
+      "power_stones": [
+        {
+          "slug": "obsidian",
+          "name": "Obsidian",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/obsidian-overview.webp",
+          "link": "/gemstone/obsidian-meaning/",
+          "shop": "/product-category/obsidian-crystals/"
+        },
+        {
+          "slug": "pyrite",
+          "name": "Pyrite",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/pyrite-overview.webp",
+          "link": "/gemstone/pyrite-meaning/",
+          "shop": "/product-category/pyrite-crystals/"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/moonstone-form-bracelet.webp",
+          "link": "/gemstone/moonstone-meaning/",
+          "shop": "/product-category/moonstone-crystals/"
+        }
+      ],
+      "affirmation": "I honor my feelings and let intuition guide my next step.",
+      "key_dates": [
+        {
+          "date": "Jun 14",
+          "event": "New Moon in Gemini",
+          "focus": "Set intentions around transformation, shared resources, depth",
+          "do": "Write down one goal",
+          "avoid": "Rushing decisions"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Full Moon in Capricorn",
+          "focus": "Release and culminate",
+          "do": "Acknowledge what you have completed",
+          "avoid": "Forcing closure before it is ready"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Mercury turns retrograde",
+          "focus": "Review, do not launch",
+          "do": "Revisit old conversations and plans",
+          "avoid": "Signing new contracts blind"
+        }
+      ]
+    },
+    {
+      "sign": "sagittarius",
+      "name": "Sagittarius",
+      "symbol": "♐",
+      "element": "fire",
+      "theme": "The Gemini New Moon (Jun 14) activates your seventh house of partnerships, contracts, significant others. Momentum builds, but Mercury turns retrograde on the 29th — review and refine rather than push.",
+      "crystal_of_month": {
+        "slug": "turquoise",
+        "name": "Turquoise",
+        "img": "https://goearthward.com/wp-content/uploads/2026/06/turquoise-form-bracelet.webp",
+        "link": "/gemstone/turquoise-meaning/",
+        "shop": "/product-category/turquoise-crystals/",
+        "reason": "A seventh-house New Moon reframes relationships — Turquoise supports honest, adventurous communication with partners."
+      },
+      "quadrants": {
+        "love": {
+          "text": "Your seventh house keeps relationships in motion. Pause before committing during the retrograde; reconnect after the Full Moon.",
+          "crystal": {
+            "slug": "rose-quartz",
+            "name": "Rose Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+            "link": "/gemstone/rose-quartz-meaning/",
+            "shop": "/product-category/rose-quartz-crystals/"
+          }
+        },
+        "career": {
+          "text": "The Capricorn Full Moon (Jun 29) brings a career or structure moment. Solidify what the New Moon started, release what is not working.",
+          "crystal": {
+            "slug": "citrine",
+            "name": "Citrine",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp",
+            "link": "/gemstone/citrine-meaning/",
+            "shop": "/product-category/citrine-crystals/"
+          }
+        },
+        "wellness": {
+          "text": "Chiron entering Taurus on the 19th invites a gentler pace. Rest is productive this month — protect your sleep and body rituals.",
+          "crystal": {
+            "slug": "bloodstone",
+            "name": "Bloodstone",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/bloodstone-form-bracelet.webp",
+            "link": "/gemstone/bloodstone-meaning/",
+            "shop": "/product-category/bloodstone-crystals/"
+          }
+        },
+        "spirituality": {
+          "text": "The retrograde favors inner work. Journaling, dream notes, and time alone sharpen the intuition the New Moon is opening.",
+          "crystal": {
+            "slug": "sunstone",
+            "name": "Sunstone",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/sunstone-form-bracelet.webp",
+            "link": "/gemstone/sunstone-meaning/",
+            "shop": "/product-category/healing-crystals-jewelry/"
+          }
+        }
+      },
+      "power_stones": [
+        {
+          "slug": "turquoise",
+          "name": "Turquoise",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/turquoise-form-bracelet.webp",
+          "link": "/gemstone/turquoise-meaning/",
+          "shop": "/product-category/turquoise-crystals/"
+        },
+        {
+          "slug": "citrine",
+          "name": "Citrine",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp",
+          "link": "/gemstone/citrine-meaning/",
+          "shop": "/product-category/citrine-crystals/"
+        },
+        {
+          "slug": "bloodstone",
+          "name": "Bloodstone",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/bloodstone-form-bracelet.webp",
+          "link": "/gemstone/bloodstone-meaning/",
+          "shop": "/product-category/bloodstone-crystals/"
+        }
+      ],
+      "affirmation": "I act on what matters and release what does not.",
+      "key_dates": [
+        {
+          "date": "Jun 14",
+          "event": "New Moon in Gemini",
+          "focus": "Set intentions around partnerships, contracts, significant others",
+          "do": "Write down one goal",
+          "avoid": "Rushing decisions"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Full Moon in Capricorn",
+          "focus": "Release and culminate",
+          "do": "Acknowledge what you have completed",
+          "avoid": "Forcing closure before it is ready"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Mercury turns retrograde",
+          "focus": "Review, do not launch",
+          "do": "Revisit old conversations and plans",
+          "avoid": "Signing new contracts blind"
+        }
+      ]
+    },
+    {
+      "sign": "capricorn",
+      "name": "Capricorn",
+      "symbol": "♑",
+      "element": "earth",
+      "theme": "The Gemini New Moon (Jun 14) activates your sixth house of routine, health, daily work. Slow, tangible progress unfolds, but Mercury turns retrograde on the 29th — review and refine rather than push.",
+      "crystal_of_month": {
+        "slug": "smoky-quartz",
+        "name": "Smoky Quartz",
+        "img": "https://goearthward.com/wp-content/uploads/2026/06/smoky-quartz-form-bracelet.webp",
+        "link": "/gemstone/smoky-quartz-meaning/",
+        "shop": "/product-category/healing-crystals-jewelry/",
+        "reason": "The Full Moon in your sign on the 29th is a release point — Smoky Quartz clears sixth-house overload and grounds the letting-go."
+      },
+      "quadrants": {
+        "love": {
+          "text": "Your sixth house keeps relationships in motion. Pause before committing during the retrograde; reconnect after the Full Moon.",
+          "crystal": {
+            "slug": "rose-quartz",
+            "name": "Rose Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+            "link": "/gemstone/rose-quartz-meaning/",
+            "shop": "/product-category/rose-quartz-crystals/"
+          }
+        },
+        "career": {
+          "text": "The Capricorn Full Moon (Jun 29) brings a career or structure moment. Solidify what the New Moon started, release what is not working.",
+          "crystal": {
+            "slug": "green-aventurine",
+            "name": "green-aventurine",
+            "img": "",
+            "link": "/gemstone/green-aventurine-meaning/",
+            "shop": "/product-category/healing-crystals-jewelry/"
+          }
+        },
+        "wellness": {
+          "text": "Chiron entering Taurus on the 19th invites a gentler pace. Rest is productive this month — protect your sleep and body rituals.",
+          "crystal": {
+            "slug": "smoky-quartz",
+            "name": "Smoky Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/smoky-quartz-form-bracelet.webp",
+            "link": "/gemstone/smoky-quartz-meaning/",
+            "shop": "/product-category/healing-crystals-jewelry/"
+          }
+        },
+        "spirituality": {
+          "text": "The retrograde favors inner work. Journaling, dream notes, and time alone sharpen the intuition the New Moon is opening.",
+          "crystal": {
+            "slug": "tourmalinated-quartz",
+            "name": "Tourmalinated Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/tourmalinated-quartz-form-bracelet.webp",
+            "link": "/gemstone/tourmalinated-quartz-meaning/",
+            "shop": "/product-category/healing-crystals-jewelry/"
+          }
+        }
+      },
+      "power_stones": [
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/smoky-quartz-form-bracelet.webp",
+          "link": "/gemstone/smoky-quartz-meaning/",
+          "shop": "/product-category/healing-crystals-jewelry/"
+        },
+        {
+          "slug": "green-aventurine",
+          "name": "green-aventurine",
+          "img": "",
+          "link": "/gemstone/green-aventurine-meaning/",
+          "shop": "/product-category/healing-crystals-jewelry/"
+        },
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/smoky-quartz-form-bracelet.webp",
+          "link": "/gemstone/smoky-quartz-meaning/",
+          "shop": "/product-category/healing-crystals-jewelry/"
+        }
+      ],
+      "affirmation": "I build steadily and trust the value I carry.",
+      "key_dates": [
+        {
+          "date": "Jun 14",
+          "event": "New Moon in Gemini",
+          "focus": "Set intentions around routine, health, daily work",
+          "do": "Write down one goal",
+          "avoid": "Rushing decisions"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Full Moon in Capricorn",
+          "focus": "Release and culminate",
+          "do": "Acknowledge what you have completed",
+          "avoid": "Forcing closure before it is ready"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Mercury turns retrograde",
+          "focus": "Review, do not launch",
+          "do": "Revisit old conversations and plans",
+          "avoid": "Signing new contracts blind"
+        }
+      ]
+    },
+    {
+      "sign": "aquarius",
+      "name": "Aquarius",
+      "symbol": "♒",
+      "element": "air",
+      "theme": "The Gemini New Moon (Jun 14) activates your fifth house of creativity, romance, play. Ideas and conversations spark, but Mercury turns retrograde on the 29th — review and refine rather than push.",
+      "crystal_of_month": {
+        "slug": "amethyst",
+        "name": "Amethyst",
+        "img": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp",
+        "link": "/gemstone/amethyst-meaning/",
+        "shop": "/product-category/amethyst-crystals/",
+        "reason": "A fifth-house New Moon sparks creativity — Amethyst channels that inspiration into focused, inspired work rather than scattered ideas."
+      },
+      "quadrants": {
+        "love": {
+          "text": "Your fifth house keeps relationships in motion. Pause before committing during the retrograde; reconnect after the Full Moon.",
+          "crystal": {
+            "slug": "rose-quartz",
+            "name": "Rose Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+            "link": "/gemstone/rose-quartz-meaning/",
+            "shop": "/product-category/rose-quartz-crystals/"
+          }
+        },
+        "career": {
+          "text": "The Capricorn Full Moon (Jun 29) brings a career or structure moment. Solidify what the New Moon started, release what is not working.",
+          "crystal": {
+            "slug": "citrine",
+            "name": "Citrine",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp",
+            "link": "/gemstone/citrine-meaning/",
+            "shop": "/product-category/citrine-crystals/"
+          }
+        },
+        "wellness": {
+          "text": "Chiron entering Taurus on the 19th invites a gentler pace. Rest is productive this month — protect your sleep and body rituals.",
+          "crystal": {
+            "slug": "fluorite",
+            "name": "Fluorite",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/fluorite-overview.webp",
+            "link": "/gemstone/fluorite-meaning/",
+            "shop": "/product-category/fluorite-crystals/"
+          }
+        },
+        "spirituality": {
+          "text": "The retrograde favors inner work. Journaling, dream notes, and time alone sharpen the intuition the New Moon is opening.",
+          "crystal": {
+            "slug": "amethyst",
+            "name": "Amethyst",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp",
+            "link": "/gemstone/amethyst-meaning/",
+            "shop": "/product-category/amethyst-crystals/"
+          }
+        }
+      },
+      "power_stones": [
+        {
+          "slug": "amethyst",
+          "name": "Amethyst",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp",
+          "link": "/gemstone/amethyst-meaning/",
+          "shop": "/product-category/amethyst-crystals/"
+        },
+        {
+          "slug": "citrine",
+          "name": "Citrine",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp",
+          "link": "/gemstone/citrine-meaning/",
+          "shop": "/product-category/citrine-crystals/"
+        },
+        {
+          "slug": "fluorite",
+          "name": "Fluorite",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/fluorite-overview.webp",
+          "link": "/gemstone/fluorite-meaning/",
+          "shop": "/product-category/fluorite-crystals/"
+        }
+      ],
+      "affirmation": "I speak my truth clearly and stay open to new perspectives.",
+      "key_dates": [
+        {
+          "date": "Jun 14",
+          "event": "New Moon in Gemini",
+          "focus": "Set intentions around creativity, romance, play",
+          "do": "Write down one goal",
+          "avoid": "Rushing decisions"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Full Moon in Capricorn",
+          "focus": "Release and culminate",
+          "do": "Acknowledge what you have completed",
+          "avoid": "Forcing closure before it is ready"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Mercury turns retrograde",
+          "focus": "Review, do not launch",
+          "do": "Revisit old conversations and plans",
+          "avoid": "Signing new contracts blind"
+        }
+      ]
+    },
+    {
+      "sign": "pisces",
+      "name": "Pisces",
+      "symbol": "♓",
+      "element": "water",
+      "theme": "The Gemini New Moon (Jun 14) activates your fourth house of home, family, emotional roots. Feelings deepen, but Mercury turns retrograde on the 29th — review and refine rather than push.",
+      "crystal_of_month": {
+        "slug": "rose-quartz",
+        "name": "Rose Quartz",
+        "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+        "link": "/gemstone/rose-quartz-meaning/",
+        "shop": "/product-category/rose-quartz-crystals/",
+        "reason": "A fourth-house New Moon softens home and family — Rose Quartz warms domestic bonds during the retrograde review."
+      },
+      "quadrants": {
+        "love": {
+          "text": "Your fourth house keeps relationships in motion. Pause before committing during the retrograde; reconnect after the Full Moon.",
+          "crystal": {
+            "slug": "rose-quartz",
+            "name": "Rose Quartz",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+            "link": "/gemstone/rose-quartz-meaning/",
+            "shop": "/product-category/rose-quartz-crystals/"
+          }
+        },
+        "career": {
+          "text": "The Capricorn Full Moon (Jun 29) brings a career or structure moment. Solidify what the New Moon started, release what is not working.",
+          "crystal": {
+            "slug": "pyrite",
+            "name": "Pyrite",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/pyrite-overview.webp",
+            "link": "/gemstone/pyrite-meaning/",
+            "shop": "/product-category/pyrite-crystals/"
+          }
+        },
+        "wellness": {
+          "text": "Chiron entering Taurus on the 19th invites a gentler pace. Rest is productive this month — protect your sleep and body rituals.",
+          "crystal": {
+            "slug": "moonstone",
+            "name": "Moonstone",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/moonstone-form-bracelet.webp",
+            "link": "/gemstone/moonstone-meaning/",
+            "shop": "/product-category/moonstone-crystals/"
+          }
+        },
+        "spirituality": {
+          "text": "The retrograde favors inner work. Journaling, dream notes, and time alone sharpen the intuition the New Moon is opening.",
+          "crystal": {
+            "slug": "amethyst",
+            "name": "Amethyst",
+            "img": "https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp",
+            "link": "/gemstone/amethyst-meaning/",
+            "shop": "/product-category/amethyst-crystals/"
+          }
+        }
+      },
+      "power_stones": [
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp",
+          "link": "/gemstone/rose-quartz-meaning/",
+          "shop": "/product-category/rose-quartz-crystals/"
+        },
+        {
+          "slug": "pyrite",
+          "name": "Pyrite",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/pyrite-overview.webp",
+          "link": "/gemstone/pyrite-meaning/",
+          "shop": "/product-category/pyrite-crystals/"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone",
+          "img": "https://goearthward.com/wp-content/uploads/2026/06/moonstone-form-bracelet.webp",
+          "link": "/gemstone/moonstone-meaning/",
+          "shop": "/product-category/moonstone-crystals/"
+        }
+      ],
+      "affirmation": "I honor my feelings and let intuition guide my next step.",
+      "key_dates": [
+        {
+          "date": "Jun 14",
+          "event": "New Moon in Gemini",
+          "focus": "Set intentions around home, family, emotional roots",
+          "do": "Write down one goal",
+          "avoid": "Rushing decisions"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Full Moon in Capricorn",
+          "focus": "Release and culminate",
+          "do": "Acknowledge what you have completed",
+          "avoid": "Forcing closure before it is ready"
+        },
+        {
+          "date": "Jun 29",
+          "event": "Mercury turns retrograde",
+          "focus": "Review, do not launch",
+          "do": "Revisit old conversations and plans",
+          "avoid": "Signing new contracts blind"
+        }
+      ]
+    }
+  ]
+}

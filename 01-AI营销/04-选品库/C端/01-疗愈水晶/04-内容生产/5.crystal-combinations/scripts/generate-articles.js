@@ -20,8 +20,8 @@ const path = require('path');
 const DIR = path.resolve(__dirname, '..');
 const sel = JSON.parse(fs.readFileSync(path.join(DIR, 'selected-articles.json'), 'utf8'));
 const combos = JSON.parse(fs.readFileSync(path.join(DIR, 'combinations-data-30.json'), 'utf8')).combinations;
-const stones30 = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../../07-互动工具/03-视觉层/crystal-stones-30.json'), 'utf8')).stones;
-const ATTR = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../../07-互动工具/02-数据层/crystal-attributes.json'), 'utf8')).crystals;
+const stones30 = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../../07-互动工具/crystal-compatibility-checker/data/crystal-stones-30.json'), 'utf8')).stones;
+const ATTR = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../../07-互动工具/_shared/crystal-attributes.json'), 'utf8')).crystals;
 
 // ---- args ----
 const args = process.argv.slice(2);

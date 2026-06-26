@@ -1,5 +1,5 @@
 /**
- * 从 pairing-data.json 导出工具子集到 07-互动工具/02-数据层/zodiac-matrix.json
+ * 从 pairing-data.json 导出工具子集到 07-互动工具/zodiac-compatibility-checker/data/zodiac-matrix.json
  *
  * 数据流（单向）：pairing-data.json（权威）→ zodiac-matrix.json（工具静态子集）
  * 工具前端只读 zodiac-matrix.json，不读 pairing-data.json（不动态耦合）
@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 
 const SRC = path.resolve(__dirname, '../pairing-data.json');
-const DST = 'D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/07-互动工具/02-数据层/zodiac-matrix.json';
+const DST = 'D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/07-互动工具/zodiac-compatibility-checker/data/zodiac-matrix.json';
 
 const pairing = JSON.parse(fs.readFileSync(SRC, 'utf8'));
 
