@@ -11,7 +11,8 @@
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/gemini-october-2026/gemini-october-2026-featured.webp",
       "source_type": "scene",
       "alt": "Gemini October 2026 monthly horoscope with Blue Lace Agate as crystal of the month, zodiac symbol ♊",
-      "prompt": "An editorial flat-lay for Gemini October horoscope: a Blue Lace Agate crystal resting on natural linen beside a subtle zodiac symbol ♊, with elements evoking mid autumn with rich colors and misty mornings, soft blue, silver and pale lavender tones, soft natural light, representing Relationships and review, no text, no watermark, no human face"
+      "prompt": "An editorial flat-lay for Gemini October horoscope: a Blue Lace Agate crystal resting on natural linen beside a subtle zodiac symbol ♊, with elements evoking mid autumn with rich colors and misty mornings, soft blue, silver and pale lavender tones, soft natural light, representing Relationships and review, no text, no watermark, no human face",
+      "wp_id": 45438
     },
     "crystal_month": {
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/gemini-october-2026/gemini-october-2026-crystal-month.webp",
@@ -25,5 +26,6 @@
       "alt": "Monthly crystal ritual for Gemini October 2026 using Blue Lace Agate",
       "prompt": "A serene lifestyle scene: a Blue Lace Agate crystal placed on a wooden surface with a journal, a candle, and seasonal elements evoking mid autumn with rich colors and misty mornings, representing a new moon or full moon crystal ritual, warm natural daylight, soft blue, silver and pale lavender accents, minimalist wellness aesthetic, no text, no watermark, no human face"
     }
-  }
+  },
+  "category": "horoscope"
 }

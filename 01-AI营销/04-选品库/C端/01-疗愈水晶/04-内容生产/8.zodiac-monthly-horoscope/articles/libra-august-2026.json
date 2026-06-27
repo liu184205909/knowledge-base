@@ -11,7 +11,8 @@
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/libra-august-2026/libra-august-2026-featured.webp",
       "source_type": "scene",
       "alt": "Libra August 2026 monthly horoscope with Amethyst as crystal of the month, zodiac symbol ♎",
-      "prompt": "An editorial flat-lay for Libra August horoscope: a Amethyst crystal resting on natural linen beside a subtle zodiac symbol ♎, with elements evoking late summer with harvest gold and deep warm tones, soft pink, ivory and pale blue tones, soft natural light, representing Drama and visibility, no text, no watermark, no human face"
+      "prompt": "An editorial flat-lay for Libra August horoscope: a Amethyst crystal resting on natural linen beside a subtle zodiac symbol ♎, with elements evoking late summer with harvest gold and deep warm tones, soft pink, ivory and pale blue tones, soft natural light, representing Drama and visibility, no text, no watermark, no human face",
+      "wp_id": 45468
     },
     "crystal_month": {
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/libra-august-2026/libra-august-2026-crystal-month.webp",
@@ -25,5 +26,6 @@
       "alt": "Monthly crystal ritual for Libra August 2026 using Amethyst",
       "prompt": "A serene lifestyle scene: a Amethyst crystal placed on a wooden surface with a journal, a candle, and seasonal elements evoking late summer with harvest gold and deep warm tones, representing a new moon or full moon crystal ritual, warm natural daylight, soft pink, ivory and pale blue accents, minimalist wellness aesthetic, no text, no watermark, no human face"
     }
-  }
+  },
+  "category": "horoscope"
 }

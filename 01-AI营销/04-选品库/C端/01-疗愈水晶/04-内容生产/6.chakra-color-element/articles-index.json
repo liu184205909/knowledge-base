@@ -1,0 +1,189 @@
+{
+  "total": 23,
+  "articles": [
+    {
+      "slug": "root",
+      "url": "/root-chakra-crystals/",
+      "type": "chakra",
+      "title": "Best Crystals for the Root Chakra: A Complete Guide",
+      "kw": "root chakra crystals",
+      "stoneCount": 8
+    },
+    {
+      "slug": "sacral",
+      "url": "/sacral-chakra-crystals/",
+      "type": "chakra",
+      "title": "Best Crystals for the Sacral Chakra: A Complete Guide",
+      "kw": "sacral chakra crystals",
+      "stoneCount": 6
+    },
+    {
+      "slug": "solar-plexus",
+      "url": "/solar-plexus-chakra-crystals/",
+      "type": "chakra",
+      "title": "Best Crystals for the Solar Plexus Chakra: A Complete Guide",
+      "kw": "solar plexus chakra crystals",
+      "stoneCount": 5
+    },
+    {
+      "slug": "heart",
+      "url": "/heart-chakra-crystals/",
+      "type": "chakra",
+      "title": "Best Crystals for the Heart Chakra: A Complete Guide",
+      "kw": "heart chakra crystals",
+      "stoneCount": 10
+    },
+    {
+      "slug": "throat",
+      "url": "/throat-chakra-crystals/",
+      "type": "chakra",
+      "title": "Best Crystals for the Throat Chakra: A Complete Guide",
+      "kw": "throat chakra crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "third-eye",
+      "url": "/third-eye-chakra-crystals/",
+      "type": "chakra",
+      "title": "Best Crystals for the Third Eye Chakra: A Complete Guide",
+      "kw": "third eye chakra crystals",
+      "stoneCount": 12
+    },
+    {
+      "slug": "crown",
+      "url": "/crown-chakra-crystals/",
+      "type": "chakra",
+      "title": "Best Crystals for the Crown Chakra: A Complete Guide",
+      "kw": "crown chakra crystals",
+      "stoneCount": 4
+    },
+    {
+      "slug": "white",
+      "url": "/white-crystals/",
+      "type": "color",
+      "title": "Best White Crystals: Meanings, Benefits & How to Use",
+      "kw": "white crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "yellow",
+      "url": "/yellow-crystals/",
+      "type": "color",
+      "title": "Best Yellow Crystals: Meanings, Benefits & How to Use",
+      "kw": "yellow crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "green",
+      "url": "/green-crystals/",
+      "type": "color",
+      "title": "Best Green Crystals: Meanings, Benefits & How to Use",
+      "kw": "green crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "brown",
+      "url": "/brown-crystals/",
+      "type": "color",
+      "title": "Best Brown Crystals: Meanings, Benefits & How to Use",
+      "kw": "brown crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "black",
+      "url": "/black-crystals/",
+      "type": "color",
+      "title": "Best Black Crystals: Meanings, Benefits & How to Use",
+      "kw": "black crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "pink",
+      "url": "/pink-crystals/",
+      "type": "color",
+      "title": "Best Pink Crystals: Meanings, Benefits & How to Use",
+      "kw": "pink crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "blue",
+      "url": "/blue-crystals/",
+      "type": "color",
+      "title": "Best Blue Crystals: Meanings, Benefits & How to Use",
+      "kw": "blue crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "red",
+      "url": "/red-crystals/",
+      "type": "color",
+      "title": "Best Red Crystals: Meanings, Benefits & How to Use",
+      "kw": "red crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "orange",
+      "url": "/orange-crystals/",
+      "type": "color",
+      "title": "Best Orange Crystals: Meanings, Benefits & How to Use",
+      "kw": "orange crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "grey",
+      "url": "/grey-crystals/",
+      "type": "color",
+      "title": "Best Grey Crystals: Meanings, Benefits & How to Use",
+      "kw": "grey crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "blue-green",
+      "url": "/blue-green-crystals/",
+      "type": "color",
+      "title": "Best Blue-Green Crystals: Meanings, Benefits & How to Use",
+      "kw": "blue green crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "purple",
+      "url": "/purple-crystals/",
+      "type": "color",
+      "title": "Best Purple Crystals: Meanings, Benefits & How to Use",
+      "kw": "purple crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "earth",
+      "url": "/earth-crystals/",
+      "type": "element",
+      "title": "Best Earth Element Crystals: Grounding, Energy & Meaning",
+      "kw": "earth element crystals",
+      "stoneCount": 11
+    },
+    {
+      "slug": "fire",
+      "url": "/fire-crystals/",
+      "type": "element",
+      "title": "Best Fire Element Crystals: Grounding, Energy & Meaning",
+      "kw": "fire element crystals",
+      "stoneCount": 9
+    },
+    {
+      "slug": "air",
+      "url": "/air-crystals/",
+      "type": "element",
+      "title": "Best Air Element Crystals: Grounding, Energy & Meaning",
+      "kw": "air element crystals",
+      "stoneCount": 7
+    },
+    {
+      "slug": "water",
+      "url": "/water-crystals/",
+      "type": "element",
+      "title": "Best Water Element Crystals: Grounding, Energy & Meaning",
+      "kw": "water element crystals",
+      "stoneCount": 5
+    }
+  ]
+}

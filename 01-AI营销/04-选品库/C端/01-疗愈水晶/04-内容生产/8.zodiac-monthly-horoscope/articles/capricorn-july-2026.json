@@ -11,7 +11,8 @@
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/capricorn-july-2026/capricorn-july-2026-featured.webp",
       "source_type": "scene",
       "alt": "Capricorn July 2026 monthly horoscope with Selenite as crystal of the month, zodiac symbol ♑",
-      "prompt": "An editorial flat-lay for Capricorn July horoscope: a Selenite crystal resting on natural linen beside a subtle zodiac symbol ♑, with elements evoking high summer with warm breezes and vibrant greenery, warm brown, charcoal and deep green tones, soft natural light, representing Home and community, no text, no watermark, no human face"
+      "prompt": "An editorial flat-lay for Capricorn July horoscope: a Selenite crystal resting on natural linen beside a subtle zodiac symbol ♑, with elements evoking high summer with warm breezes and vibrant greenery, warm brown, charcoal and deep green tones, soft natural light, representing Home and community, no text, no watermark, no human face",
+      "wp_id": 45404
     },
     "crystal_month": {
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/capricorn-july-2026/capricorn-july-2026-crystal-month.webp",
@@ -25,5 +26,6 @@
       "alt": "Monthly crystal ritual for Capricorn July 2026 using Selenite",
       "prompt": "A serene lifestyle scene: a Selenite crystal placed on a wooden surface with a journal, a candle, and seasonal elements evoking high summer with warm breezes and vibrant greenery, representing a new moon or full moon crystal ritual, warm natural daylight, warm brown, charcoal and deep green accents, minimalist wellness aesthetic, no text, no watermark, no human face"
     }
-  }
+  },
+  "category": "horoscope"
 }

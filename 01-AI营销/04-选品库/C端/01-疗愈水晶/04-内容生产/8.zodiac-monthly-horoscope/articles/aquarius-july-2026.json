@@ -11,7 +11,8 @@
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/aquarius-july-2026/aquarius-july-2026-featured.webp",
       "source_type": "scene",
       "alt": "Aquarius July 2026 monthly horoscope with Moonstone as crystal of the month, zodiac symbol ♒",
-      "prompt": "An editorial flat-lay for Aquarius July horoscope: a Moonstone crystal resting on natural linen beside a subtle zodiac symbol ♒, with elements evoking high summer with warm breezes and vibrant greenery, soft blue, silver and electric teal tones, soft natural light, representing Home and community, no text, no watermark, no human face"
+      "prompt": "An editorial flat-lay for Aquarius July horoscope: a Moonstone crystal resting on natural linen beside a subtle zodiac symbol ♒, with elements evoking high summer with warm breezes and vibrant greenery, soft blue, silver and electric teal tones, soft natural light, representing Home and community, no text, no watermark, no human face",
+      "wp_id": 45332
     },
     "crystal_month": {
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/aquarius-july-2026/aquarius-july-2026-crystal-month.webp",
@@ -25,5 +26,6 @@
       "alt": "Monthly crystal ritual for Aquarius July 2026 using Moonstone",
       "prompt": "A serene lifestyle scene: a Moonstone crystal placed on a wooden surface with a journal, a candle, and seasonal elements evoking high summer with warm breezes and vibrant greenery, representing a new moon or full moon crystal ritual, warm natural daylight, soft blue, silver and electric teal accents, minimalist wellness aesthetic, no text, no watermark, no human face"
     }
-  }
+  },
+  "category": "horoscope"
 }

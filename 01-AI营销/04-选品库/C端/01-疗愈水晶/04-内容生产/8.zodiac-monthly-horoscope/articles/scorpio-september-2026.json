@@ -11,7 +11,8 @@
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/scorpio-september-2026/scorpio-september-2026-featured.webp",
       "source_type": "scene",
       "alt": "Scorpio September 2026 monthly horoscope with Clear Quartz as crystal of the month, zodiac symbol ♏",
-      "prompt": "An editorial flat-lay for Scorpio September horoscope: a Clear Quartz crystal resting on natural linen beside a subtle zodiac symbol ♏, with elements evoking early autumn with amber leaves and cozy atmosphere, deep red, black and dark teal tones, soft natural light, representing Organization and action, no text, no watermark, no human face"
+      "prompt": "An editorial flat-lay for Scorpio September horoscope: a Clear Quartz crystal resting on natural linen beside a subtle zodiac symbol ♏, with elements evoking early autumn with amber leaves and cozy atmosphere, deep red, black and dark teal tones, soft natural light, representing Organization and action, no text, no watermark, no human face",
+      "wp_id": 45560
     },
     "crystal_month": {
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/scorpio-september-2026/scorpio-september-2026-crystal-month.webp",
@@ -25,5 +26,6 @@
       "alt": "Monthly crystal ritual for Scorpio September 2026 using Clear Quartz",
       "prompt": "A serene lifestyle scene: a Clear Quartz crystal placed on a wooden surface with a journal, a candle, and seasonal elements evoking early autumn with amber leaves and cozy atmosphere, representing a new moon or full moon crystal ritual, warm natural daylight, deep red, black and dark teal accents, minimalist wellness aesthetic, no text, no watermark, no human face"
     }
-  }
+  },
+  "category": "horoscope"
 }

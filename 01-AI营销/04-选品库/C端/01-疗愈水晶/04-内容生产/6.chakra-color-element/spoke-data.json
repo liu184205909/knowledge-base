@@ -1,0 +1,480 @@
+{
+  "_meta": {
+    "total": 23,
+    "chakra": 7,
+    "color": 12,
+    "element": 4
+  },
+  "spokes": [
+    {
+      "type": "chakra",
+      "slug": "root",
+      "url": "/root-chakra-crystals/",
+      "name": "Root Chakra",
+      "kw": "root chakra crystals",
+      "title": "Best Crystals for the Root Chakra: A Complete Guide",
+      "crystals": [
+        "tiger-eye",
+        "carnelian",
+        "obsidian",
+        "black-tourmaline",
+        "ruby",
+        "red-jasper",
+        "bloodstone",
+        "hematite",
+        "aegirine",
+        "agate",
+        "agatized-coral",
+        "alabandite"
+      ]
+    },
+    {
+      "type": "chakra",
+      "slug": "sacral",
+      "url": "/sacral-chakra-crystals/",
+      "name": "Sacral Chakra",
+      "kw": "sacral chakra crystals",
+      "title": "Best Crystals for the Sacral Chakra: A Complete Guide",
+      "crystals": [
+        "tiger-eye",
+        "carnelian",
+        "moonstone",
+        "citrine",
+        "red-jasper",
+        "bloodstone",
+        "aegirine",
+        "agate",
+        "agatized-coral",
+        "amber",
+        "anglesite",
+        "augite"
+      ]
+    },
+    {
+      "type": "chakra",
+      "slug": "solar-plexus",
+      "url": "/solar-plexus-chakra-crystals/",
+      "name": "Solar Plexus Chakra",
+      "kw": "solar plexus chakra crystals",
+      "title": "Best Crystals for the Solar Plexus Chakra: A Complete Guide",
+      "crystals": [
+        "tiger-eye",
+        "carnelian",
+        "citrine",
+        "malachite",
+        "pyrite",
+        "adamite",
+        "aegirine",
+        "amber",
+        "ametrine",
+        "andalusite",
+        "arsenopyrite",
+        "baltic-amber"
+      ]
+    },
+    {
+      "type": "chakra",
+      "slug": "heart",
+      "url": "/heart-chakra-crystals/",
+      "name": "Heart Chakra",
+      "kw": "heart chakra crystals",
+      "title": "Best Crystals for the Heart Chakra: A Complete Guide",
+      "crystals": [
+        "jade",
+        "rose-quartz",
+        "amazonite",
+        "aventurine",
+        "ruby",
+        "bloodstone",
+        "lepidolite",
+        "malachite",
+        "larimar",
+        "rhodonite",
+        "abalone-shell",
+        "adamite"
+      ]
+    },
+    {
+      "type": "chakra",
+      "slug": "throat",
+      "url": "/throat-chakra-crystals/",
+      "name": "Throat Chakra",
+      "kw": "throat chakra crystals",
+      "title": "Best Crystals for the Throat Chakra: A Complete Guide",
+      "crystals": [
+        "labradorite",
+        "amazonite",
+        "turquoise",
+        "lapis",
+        "fluorite",
+        "kyanite",
+        "larimar",
+        "apatite",
+        "angelite",
+        "abalone-shell",
+        "afghanite",
+        "ajoite"
+      ]
+    },
+    {
+      "type": "chakra",
+      "slug": "third-eye",
+      "url": "/third-eye-chakra-crystals/",
+      "name": "Third Eye Chakra",
+      "kw": "third eye chakra crystals",
+      "title": "Best Crystals for the Third Eye Chakra: A Complete Guide",
+      "crystals": [
+        "amethyst",
+        "labradorite",
+        "moonstone",
+        "obsidian",
+        "selenite",
+        "turquoise",
+        "lapis",
+        "fluorite",
+        "lepidolite",
+        "kyanite",
+        "apatite",
+        "angelite"
+      ]
+    },
+    {
+      "type": "chakra",
+      "slug": "crown",
+      "url": "/crown-chakra-crystals/",
+      "name": "Crown Chakra",
+      "kw": "crown chakra crystals",
+      "title": "Best Crystals for the Crown Chakra: A Complete Guide",
+      "crystals": [
+        "amethyst",
+        "moonstone",
+        "selenite",
+        "lepidolite",
+        "acanthite",
+        "alexandrite",
+        "ametrine",
+        "amphibole",
+        "analcime",
+        "anatase",
+        "angel-aura-quartz",
+        "anhydrite"
+      ]
+    },
+    {
+      "type": "color",
+      "slug": "white",
+      "url": "/white-crystals/",
+      "name": "White",
+      "kw": "white crystals",
+      "title": "Best White Crystals: Meanings, Benefits & How to Use",
+      "crystals": [
+        "jade",
+        "moonstone",
+        "selenite",
+        "lapis",
+        "opal",
+        "larimar",
+        "adamite",
+        "agate",
+        "alamosite"
+      ]
+    },
+    {
+      "type": "color",
+      "slug": "yellow",
+      "url": "/yellow-crystals/",
+      "name": "Yellow",
+      "kw": "yellow crystals",
+      "title": "Best Yellow Crystals: Meanings, Benefits & How to Use",
+      "crystals": [
+        "jade",
+        "fluorite",
+        "citrine",
+        "apatite",
+        "pyrite",
+        "adamite",
+        "agatized-coral",
+        "alamosite",
+        "amber"
+      ]
+    },
+    {
+      "type": "color",
+      "slug": "green",
+      "url": "/green-crystals/",
+      "name": "Green",
+      "kw": "green crystals",
+      "title": "Best Green Crystals: Meanings, Benefits & How to Use",
+      "crystals": [
+        "jade",
+        "labradorite",
+        "amazonite",
+        "aventurine",
+        "turquoise",
+        "fluorite",
+        "bloodstone",
+        "malachite",
+        "kyanite"
+      ]
+    },
+    {
+      "type": "color",
+      "slug": "brown",
+      "url": "/brown-crystals/",
+      "name": "Brown",
+      "kw": "brown crystals",
+      "title": "Best Brown Crystals: Meanings, Benefits & How to Use",
+      "crystals": [
+        "tiger-eye",
+        "carnelian",
+        "aventurine",
+        "citrine",
+        "red-jasper",
+        "agate",
+        "agatized-coral",
+        "alabandite",
+        "amber"
+      ]
+    },
+    {
+      "type": "color",
+      "slug": "black",
+      "url": "/black-crystals/",
+      "name": "Black",
+      "kw": "black crystals",
+      "title": "Best Black Crystals: Meanings, Benefits & How to Use",
+      "crystals": [
+        "jade",
+        "labradorite",
+        "obsidian",
+        "black-tourmaline",
+        "opal",
+        "hematite",
+        "kyanite",
+        "rhodonite",
+        "acanthite"
+      ]
+    },
+    {
+      "type": "color",
+      "slug": "pink",
+      "url": "/pink-crystals/",
+      "name": "Pink",
+      "kw": "pink crystals",
+      "title": "Best Pink Crystals: Meanings, Benefits & How to Use",
+      "crystals": [
+        "rose-quartz",
+        "rhodonite",
+        "adamite",
+        "agatized-coral",
+        "analcime",
+        "atlantisite",
+        "augelite",
+        "botswana-agate",
+        "bustamite"
+      ]
+    },
+    {
+      "type": "color",
+      "slug": "blue",
+      "url": "/blue-crystals/",
+      "name": "Blue",
+      "kw": "blue crystals",
+      "title": "Best Blue Crystals: Meanings, Benefits & How to Use",
+      "crystals": [
+        "tiger-eye",
+        "labradorite",
+        "moonstone",
+        "amazonite",
+        "aventurine",
+        "turquoise",
+        "lapis",
+        "fluorite",
+        "kyanite"
+      ]
+    },
+    {
+      "type": "color",
+      "slug": "red",
+      "url": "/red-crystals/",
+      "name": "Red",
+      "kw": "red crystals",
+      "title": "Best Red Crystals: Meanings, Benefits & How to Use",
+      "crystals": [
+        "tiger-eye",
+        "carnelian",
+        "aventurine",
+        "ruby",
+        "red-jasper",
+        "bloodstone",
+        "rhodonite",
+        "agatized-coral",
+        "alexandrite"
+      ]
+    },
+    {
+      "type": "color",
+      "slug": "orange",
+      "url": "/orange-crystals/",
+      "name": "Orange",
+      "kw": "orange crystals",
+      "title": "Best Orange Crystals: Meanings, Benefits & How to Use",
+      "crystals": [
+        "carnelian",
+        "citrine",
+        "kyanite",
+        "agate",
+        "amber",
+        "bumblebee-jasper",
+        "carnelian-agate",
+        "chondrodite",
+        "clinohumite"
+      ]
+    },
+    {
+      "type": "color",
+      "slug": "grey",
+      "url": "/grey-crystals/",
+      "name": "Grey",
+      "kw": "grey crystals",
+      "title": "Best Grey Crystals: Meanings, Benefits & How to Use",
+      "crystals": [
+        "labradorite",
+        "acanthite",
+        "agate",
+        "agatized-coral",
+        "alabandite",
+        "alamosite",
+        "ammonite",
+        "analcime",
+        "anhydrite"
+      ]
+    },
+    {
+      "type": "color",
+      "slug": "blue-green",
+      "url": "/blue-green-crystals/",
+      "name": "Blue-Green",
+      "kw": "blue green crystals",
+      "title": "Best Blue-Green Crystals: Meanings, Benefits & How to Use",
+      "crystals": [
+        "amazonite",
+        "apatite",
+        "ajoite",
+        "aquamarine",
+        "augelite",
+        "aurichalcite",
+        "blue-jade",
+        "brochantite",
+        "caledonite"
+      ]
+    },
+    {
+      "type": "color",
+      "slug": "purple",
+      "url": "/purple-crystals/",
+      "name": "Purple",
+      "kw": "purple crystals",
+      "title": "Best Purple Crystals: Meanings, Benefits & How to Use",
+      "crystals": [
+        "amethyst",
+        "fluorite",
+        "lepidolite",
+        "ametrine",
+        "black-pearl",
+        "bornite",
+        "charoite",
+        "chevron-amethyst",
+        "creedite"
+      ]
+    },
+    {
+      "type": "element",
+      "slug": "earth",
+      "url": "/earth-crystals/",
+      "name": "Earth",
+      "kw": "earth element crystals",
+      "title": "Best Earth Element Crystals: Grounding, Energy & Meaning",
+      "crystals": [
+        "jade",
+        "rose-quartz",
+        "obsidian",
+        "black-tourmaline",
+        "quartz",
+        "aventurine",
+        "turquoise",
+        "red-jasper",
+        "bloodstone",
+        "hematite",
+        "rhodonite",
+        "aegirine"
+      ]
+    },
+    {
+      "type": "element",
+      "slug": "fire",
+      "url": "/fire-crystals/",
+      "name": "Fire",
+      "kw": "fire element crystals",
+      "title": "Best Fire Element Crystals: Grounding, Energy & Meaning",
+      "crystals": [
+        "tiger-eye",
+        "carnelian",
+        "obsidian",
+        "ruby",
+        "citrine",
+        "bloodstone",
+        "malachite",
+        "apatite",
+        "pyrite",
+        "adamite",
+        "aegirine",
+        "amber"
+      ]
+    },
+    {
+      "type": "element",
+      "slug": "air",
+      "url": "/air-crystals/",
+      "name": "Air",
+      "kw": "air element crystals",
+      "title": "Best Air Element Crystals: Grounding, Energy & Meaning",
+      "crystals": [
+        "amethyst",
+        "selenite",
+        "lapis",
+        "fluorite",
+        "lepidolite",
+        "kyanite",
+        "angelite",
+        "alamosite",
+        "albite",
+        "ametrine",
+        "amphibole",
+        "analcime"
+      ]
+    },
+    {
+      "type": "element",
+      "slug": "water",
+      "url": "/water-crystals/",
+      "name": "Water",
+      "kw": "water element crystals",
+      "title": "Best Water Element Crystals: Grounding, Energy & Meaning",
+      "crystals": [
+        "labradorite",
+        "moonstone",
+        "amazonite",
+        "opal",
+        "larimar",
+        "abalone-shell",
+        "afghanite",
+        "agatized-coral",
+        "ajoite",
+        "ammonite",
+        "anhydrite",
+        "aquamarine"
+      ]
+    }
+  ]
+}

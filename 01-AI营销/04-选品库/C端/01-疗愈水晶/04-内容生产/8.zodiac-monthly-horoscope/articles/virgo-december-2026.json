@@ -11,7 +11,8 @@
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/virgo-december-2026/virgo-december-2026-featured.webp",
       "source_type": "scene",
       "alt": "Virgo December 2026 monthly horoscope with Moonstone as crystal of the month, zodiac symbol ♍",
-      "prompt": "An editorial flat-lay for Virgo December horoscope: a Moonstone crystal resting on natural linen beside a subtle zodiac symbol ♍, with elements evoking deep winter with pine, cinnamon and festive stillness, warm brown, olive and forest green tones, soft natural light, representing Reflection and celebration, no text, no watermark, no human face"
+      "prompt": "An editorial flat-lay for Virgo December horoscope: a Moonstone crystal resting on natural linen beside a subtle zodiac symbol ♍, with elements evoking deep winter with pine, cinnamon and festive stillness, warm brown, olive and forest green tones, soft natural light, representing Reflection and celebration, no text, no watermark, no human face",
+      "wp_id": 45590
     },
     "crystal_month": {
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/virgo-december-2026/virgo-december-2026-crystal-month.webp",
@@ -25,5 +26,6 @@
       "alt": "Monthly crystal ritual for Virgo December 2026 using Moonstone",
       "prompt": "A serene lifestyle scene: a Moonstone crystal placed on a wooden surface with a journal, a candle, and seasonal elements evoking deep winter with pine, cinnamon and festive stillness, representing a new moon or full moon crystal ritual, warm natural daylight, warm brown, olive and forest green accents, minimalist wellness aesthetic, no text, no watermark, no human face"
     }
-  }
+  },
+  "category": "horoscope"
 }

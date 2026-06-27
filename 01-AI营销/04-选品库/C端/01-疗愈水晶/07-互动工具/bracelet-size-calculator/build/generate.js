@@ -142,7 +142,6 @@ let html = `<!-- ===== Earthward Crystal Bracelet Sizing & Buying Guide ===== --
   </section>
 </div>
 <style>
-#ew-bracelet{max-width:920px;margin-left:auto;margin-right:auto}
 .ewb-h1{font-size:34px;color:#1A1A2E;margin:0 0 12px;font-weight:700;line-height:1.2}
 .ewb-intro{color:#444;font-size:17px;line-height:1.65;margin:0 0 28px}
 .ewb-h2{font-size:24px;color:#1A1A2E;margin:0 0 14px;font-weight:700}

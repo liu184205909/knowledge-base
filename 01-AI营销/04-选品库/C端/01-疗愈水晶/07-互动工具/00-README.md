@@ -15,7 +15,9 @@
 | **Crystal Meaning Search** | `/crystal-meaning-search/` | 44461 | ✅ 已上线 | [crystal-meaning-search/](crystal-meaning-search/) |
 | **Bracelet Size Calculator** | `/bracelet-size-calculator/` | 44469 | ✅ 已上线 | [bracelet-size-calculator/](bracelet-size-calculator/) |
 | **Ring Size Calculator** | `/ring-size-calculator/` | 44471 | ✅ 已上线 | [ring-size-calculator/](ring-size-calculator/) |
-| Crystal Horoscope | `/tools/crystal-horoscope/` | 待建 | 🔄 规划中（第二阶段） | [crystal-horoscope/](crystal-horoscope/) |
+| **Chakra Test** | `/chakra-test/` | 45647 | ✅ 已上线 | [chakra-test/](chakra-test/) |
+
+> **Crystal Horoscope 不在此模块**——它是**内容类目**（`/category/zodiac/horoscope/`，156 篇年运 12 + 月运 144 文章），非互动工具。文章在 `04-内容生产/7.zodiac-yearly-horoscope` + `8.zodiac-monthly-horoscope`，category 全 horoscope。
 
 > **P0 候选（2E 规划）**：~~T2 Crystal Meaning Search~~ ✅（44461）｜~~T1 Bracelet Size Calculator~~ ✅（44469，2026-06-26）。**P0 工具全部上线。**
 

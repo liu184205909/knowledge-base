@@ -11,7 +11,8 @@
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/leo-august-2026/leo-august-2026-featured.webp",
       "source_type": "scene",
       "alt": "Leo August 2026 monthly horoscope with Sunstone as crystal of the month, zodiac symbol ♌",
-      "prompt": "An editorial flat-lay for Leo August horoscope: a Sunstone crystal resting on natural linen beside a subtle zodiac symbol ♌, with elements evoking late summer with harvest gold and deep warm tones, warm gold, orange and amber tones, soft natural light, representing Drama and visibility, no text, no watermark, no human face"
+      "prompt": "An editorial flat-lay for Leo August horoscope: a Sunstone crystal resting on natural linen beside a subtle zodiac symbol ♌, with elements evoking late summer with harvest gold and deep warm tones, warm gold, orange and amber tones, soft natural light, representing Drama and visibility, no text, no watermark, no human face",
+      "wp_id": 45444
     },
     "crystal_month": {
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/leo-august-2026/leo-august-2026-crystal-month.webp",
@@ -25,5 +26,6 @@
       "alt": "Monthly crystal ritual for Leo August 2026 using Sunstone",
       "prompt": "A serene lifestyle scene: a Sunstone crystal placed on a wooden surface with a journal, a candle, and seasonal elements evoking late summer with harvest gold and deep warm tones, representing a new moon or full moon crystal ritual, warm natural daylight, warm gold, orange and amber accents, minimalist wellness aesthetic, no text, no watermark, no human face"
     }
-  }
+  },
+  "category": "horoscope"
 }

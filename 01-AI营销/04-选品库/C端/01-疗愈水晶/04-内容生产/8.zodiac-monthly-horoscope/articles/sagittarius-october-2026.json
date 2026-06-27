@@ -11,7 +11,8 @@
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/sagittarius-october-2026/sagittarius-october-2026-featured.webp",
       "source_type": "scene",
       "alt": "Sagittarius October 2026 monthly horoscope with Rose Quartz as crystal of the month, zodiac symbol ♐",
-      "prompt": "An editorial flat-lay for Sagittarius October horoscope: a Rose Quartz crystal resting on natural linen beside a subtle zodiac symbol ♐, with elements evoking mid autumn with rich colors and misty mornings, warm purple, indigo and teal tones, soft natural light, representing Relationships and review, no text, no watermark, no human face"
+      "prompt": "An editorial flat-lay for Sagittarius October horoscope: a Rose Quartz crystal resting on natural linen beside a subtle zodiac symbol ♐, with elements evoking mid autumn with rich colors and misty mornings, warm purple, indigo and teal tones, soft natural light, representing Relationships and review, no text, no watermark, no human face",
+      "wp_id": 45534
     },
     "crystal_month": {
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/sagittarius-october-2026/sagittarius-october-2026-crystal-month.webp",
@@ -25,5 +26,6 @@
       "alt": "Monthly crystal ritual for Sagittarius October 2026 using Rose Quartz",
       "prompt": "A serene lifestyle scene: a Rose Quartz crystal placed on a wooden surface with a journal, a candle, and seasonal elements evoking mid autumn with rich colors and misty mornings, representing a new moon or full moon crystal ritual, warm natural daylight, warm purple, indigo and teal accents, minimalist wellness aesthetic, no text, no watermark, no human face"
     }
-  }
+  },
+  "category": "horoscope"
 }

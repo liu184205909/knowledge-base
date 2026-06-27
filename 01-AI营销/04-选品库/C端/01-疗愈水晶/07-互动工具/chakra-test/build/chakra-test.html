@@ -1,0 +1,233 @@
+<!-- ===== Earthward Chakra Test ===== -->
+<div id="ew-chakra">
+  <h1 class="ewc5-h1">Chakra Test: Which Chakra Is Blocked?</h1>
+  <p class="ewc5-intro">Answer 14 honest questions about how you've been feeling. We'll identify which of your seven chakras needs the most attention — and the crystals traditionally used to bring it back into balance.</p>
+
+  <div class="ewc5-quiz" id="ewc5-quiz"></div>
+  <div class="ewc5-actions">
+    <button class="ewc5-btn" id="ewc5-submit" disabled onclick="EWChakra.calc()">See My Results</button>
+    <span class="ewc5-progress" id="ewc5-progress">0 of 14 answered</span>
+  </div>
+
+  <div class="ewc5-result" id="ewc5-result"></div>
+</div>
+<style>
+.ewc5-h1{font-size:34px;color:#1A1A2E;margin:0 0 12px;font-weight:700;line-height:1.2}
+.ewc5-intro{color:#444;font-size:17px;line-height:1.65;margin:0 0 28px}
+.ewc5-q{background:#fff;border:1px solid #EEE;border-radius:12px;padding:18px 20px;margin-bottom:10px}
+.ewc5-q-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.ewc5-q-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.ewc5-q-text{font-size:17px;color:#1A1A2E;font-weight:600;line-height:1.4}
+.ewc5-opts{display:flex;gap:8px;flex-wrap:wrap}
+.ewc5-opt{flex:1;min-width:90px;padding:10px;border:1px solid #DDD;border-radius:8px;background:#fff;cursor:pointer;font-size:14px;color:#444;text-align:center;transition:.15s}
+.ewc5-opt:hover{border-color:#95D5B2}
+.ewc5-opt.sel{background:#2D6A4F;color:#fff !important;border-color:#2D6A4F}
+.ewc5-actions{display:flex;align-items:center;gap:16px;margin:18px 0 0}
+.ewc5-btn{background:#2D6A4F;color:#fff !important;border:none;border-radius:10px;padding:13px 28px;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 2px 6px rgba(45,106,79,.25)}
+.ewc5-btn:hover:not(:disabled){background:#1B4332}
+.ewc5-btn:disabled{background:#CCC;color:#888 !important;cursor:not-allowed;box-shadow:none}
+.ewc5-progress{color:#666;font-size:14px}
+.ewc5-result{margin-top:30px;display:none}
+.ewc5-result.show{display:block}
+.ewc5-result-card{background:#F7F3EA;border:1px solid #EEE;border-radius:14px;padding:26px;margin-bottom:18px}
+.ewc5-result-card h2{font-size:22px;color:#1A1A2E;margin:0 0 6px}
+.ewc5-blocked-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#666}
+.ewc5-blocked-name{font-size:26px;font-weight:700}
+.ewc5-blocked-area{color:#666;font-size:15px;margin:6px 0 14px}
+.ewc5-chakra-crystals{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-top:14px}
+.ewc5-cc{background:#fff;border:1px solid #EEE;border-radius:10px;overflow:hidden;text-decoration:none;color:#1A1A2E;transition:.15s}
+.ewc5-cc:hover{border-color:#2D6A4F;transform:translateY(-2px)}
+.ewc5-cc img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#F0F7F4}
+.ewc5-cc-name{padding:8px 10px;font-size:13px;font-weight:600;text-align:center}
+.ewc5-chart{background:#fff;border:1px solid #EEE;border-radius:12px;padding:20px;margin-bottom:18px}
+.ewc5-chart h3{font-size:17px;color:#1A1A2E;margin:0 0 14px}
+.ewc5-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.ewc5-bar-label{width:90px;font-size:13px;color:#444;font-weight:600}
+.ewc5-bar-track{flex:1;height:14px;background:#F0F0F0;border-radius:7px;overflow:hidden}
+.ewc5-bar-fill{height:100%;border-radius:7px}
+.ewc5-bar-val{width:30px;font-size:12px;color:#888;text-align:right}
+.ewc5-lead{background:#fff;border:1px solid #2D6A4F33;border-radius:12px;padding:22px;text-align:center}
+.ewc5-lead h3{font-size:18px;color:#1A1A2E;margin:0 0 8px}
+.ewc5-lead p{color:#666;font-size:14px;margin:0 0 14px}
+.ewc5-email-row{display:flex;gap:8px;max-width:380px;margin:0 auto}
+.ewc5-email{flex:1;padding:11px 14px;border:1px solid #DDD;border-radius:8px;font-size:14px}
+.ewc5-email:focus{outline:none;border-color:#2D6A4F}
+.ewc5-disclaim{color:#999;font-size:12px;margin-top:18px;line-height:1.5}
+@media(max-width:640px){.ewc5-h1{font-size:26px}.ewc5-opt{min-width:70px;font-size:13px}.ewc5-bar-label{width:70px}}
+</style>
+<script>
+var EWChakra=(function(){
+  var Q=[{"chakra":"root","q":"I feel secure, grounded, and safe in my daily life."},{"chakra":"root","q":"I trust that my basic needs — money, shelter, stability — will be met."},{"chakra":"sacral","q":"I feel creative and can express my emotions freely."},{"chakra":"sacral","q":"I allow myself to experience pleasure and joy without guilt."},{"chakra":"solar-plexus","q":"I feel confident and in control of my choices."},{"chakra":"solar-plexus","q":"I can make decisions and stand by them."},{"chakra":"heart","q":"I give and receive love openly."},{"chakra":"heart","q":"I forgive easily and don't hold onto grudges."},{"chakra":"throat","q":"I express my thoughts and feelings honestly."},{"chakra":"throat","q":"I feel heard and understood by others."},{"chakra":"third-eye","q":"I trust my intuition and inner knowing."},{"chakra":"third-eye","q":"I can focus and see situations clearly."},{"chakra":"crown","q":"I feel connected to something greater than myself."},{"chakra":"crown","q":"I have a sense of purpose and meaning in life."}];
+  var CH={"root":{"name":"Root","color":"#C0533B","area":"security · stability · grounding","focus":"feeling safe, grounded, and financially secure"},"sacral":{"name":"Sacral","color":"#E0833C","area":"creativity · emotion · pleasure","focus":"creativity, emotional flow, and capacity for joy"},"solar-plexus":{"name":"Solar Plexus","color":"#CFAA3E","area":"confidence · willpower · self-worth","focus":"confidence, motivation, and personal power"},"heart":{"name":"Heart","color":"#6FAE7A","area":"love · compassion · connection","focus":"giving and receiving love, emotional healing"},"throat":{"name":"Throat","color":"#5A9BBF","area":"communication · truth · expression","focus":"speaking your truth and being heard"},"third-eye":{"name":"Third Eye","color":"#6A6AAE","area":"intuition · insight · clarity","focus":"intuition, focus, and inner vision"},"crown":{"name":"Crown","color":"#8E6AAE","area":"spirituality · purpose · connection","focus":"spiritual connection and sense of purpose"}};
+  var CO=["root","sacral","solar-plexus","heart","throat","third-eye","crown"];
+  var CC={"root":[{"slug":"black-tourmaline","name":"Black Tourmaline","img":"https://goearthward.com/wp-content/uploads/2026/06/black-tourmaline-form-bracelet.webp","excerpt":"Black tourmaline (also called schorl) is the dark, iron-rich form of tourmaline — and the stone most people reach for when they want protection and gr","colors":["black"],"chakras":["root"],"element":"earth","intentions":["protection"],"link":"/gemstone/black-tourmaline-meaning/","shop":"/product-category/black-tourmaline-crystals/"},{"slug":"bloodstone","name":"Bloodstone","img":"https://goearthward.com/wp-content/uploads/2026/06/bloodstone-form-bracelet.webp","excerpt":"Bloodstone (also called heliotrope) is a dark green chalcedony speckled with red spots that look like drops of blood. Long tied to courage, vitality, ","colors":["red","green"],"chakras":["root","sacral","heart"],"element":"earth","intentions":["health","personal-power"],"link":"/gemstone/bloodstone-meaning/","shop":"/product-category/bloodstone-crystals/"},{"slug":"carnelian","name":"Carnelian","img":"https://goearthward.com/wp-content/uploads/2026/06/carnelian-form-bracelet-1.webp","excerpt":"Carnelian is the orange to red-orange variety of quartz, colored by microscopic iron oxide inclusions. For thousands of years it has been carved into ","colors":["red","orange","brown"],"chakras":["sacral","solar-plexus","root"],"element":"fire","intentions":["personal-power","new-beginnings"],"link":"/gemstone/carnelian-meaning/","shop":"/product-category/carnelian-crystals/"},{"slug":"hematite","name":"Hematite","img":"https://goearthward.com/wp-content/uploads/2026/06/hematite-form-bracelet.webp","excerpt":"Hematite is a dense iron oxide with a cool, metallic silver-black look — and a surprising red streak when scratched. Long tied to grounding, protectio","colors":["black","grey"],"chakras":["root"],"element":"earth","intentions":["protection","health"],"link":"/gemstone/hematite-meaning/","shop":"/product-category/hematite-crystals/"},{"slug":"obsidian","name":"Obsidian","img":"https://goearthward.com/wp-content/uploads/2026/06/obsidian-overview.webp","excerpt":"Obsidian is volcanic glass — a natural, non-crystalline silica glass formed when lava cools so fast no crystals grow. Long tied to protection, truth-t","colors":["black"],"chakras":["root","third-eye"],"element":"earth","intentions":["protection","personal-power"],"link":"/gemstone/obsidian-meaning/","shop":"/product-category/obsidian-crystals/"}],"sacral":[{"slug":"bloodstone","name":"Bloodstone","img":"https://goearthward.com/wp-content/uploads/2026/06/bloodstone-form-bracelet.webp","excerpt":"Bloodstone (also called heliotrope) is a dark green chalcedony speckled with red spots that look like drops of blood. Long tied to courage, vitality, ","colors":["red","green"],"chakras":["root","sacral","heart"],"element":"earth","intentions":["health","personal-power"],"link":"/gemstone/bloodstone-meaning/","shop":"/product-category/bloodstone-crystals/"},{"slug":"carnelian","name":"Carnelian","img":"https://goearthward.com/wp-content/uploads/2026/06/carnelian-form-bracelet-1.webp","excerpt":"Carnelian is the orange to red-orange variety of quartz, colored by microscopic iron oxide inclusions. For thousands of years it has been carved into ","colors":["red","orange","brown"],"chakras":["sacral","solar-plexus","root"],"element":"fire","intentions":["personal-power","new-beginnings"],"link":"/gemstone/carnelian-meaning/","shop":"/product-category/carnelian-crystals/"},{"slug":"citrine","name":"Citrine","img":"https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp","excerpt":"Citrine is the yellow to golden-brown variety of quartz, colored by trace iron and heat. For centuries it has been called the Merchant’s Stone and car","colors":["orange","yellow","brown"],"chakras":["solar-plexus","sacral"],"element":"fire","intentions":["abundance","personal-power"],"link":"/gemstone/citrine-meaning/","shop":"/product-category/citrine-crystals/"},{"slug":"moonstone","name":"Moonstone","img":"https://goearthward.com/wp-content/uploads/2026/06/moonstone-form-bracelet.webp","excerpt":"Moonstone is a feldspar gem famous for its soft, floating blue-white glow that moves across the surface as you turn it. Long tied to the moon, intuiti","colors":["blue","white"],"chakras":["third-eye","crown","sacral"],"element":"water","intentions":["calm","spiritual","new-beginnings"],"link":"/gemstone/moonstone-meaning/","shop":"/product-category/moonstone-crystals/"},{"slug":"red-jasper","name":"Red Jasper","img":"https://goearthward.com/wp-content/uploads/2026/06/red-jasper-form-bracelet-1.webp","excerpt":"Red Jasper is an opaque, earth-red variety of chalcedony — microcrystalline quartz — long tied to grounding, stamina, and quiet strength. If you’re dr","colors":["red","orange","brown"],"chakras":["root","sacral"],"element":"earth","intentions":["protection","health","personal-power"],"link":"/gemstone/red-jasper-meaning/","shop":"/product-category/red-jasper-crystals/"}],"solar-plexus":[{"slug":"carnelian","name":"Carnelian","img":"https://goearthward.com/wp-content/uploads/2026/06/carnelian-form-bracelet-1.webp","excerpt":"Carnelian is the orange to red-orange variety of quartz, colored by microscopic iron oxide inclusions. For thousands of years it has been carved into ","colors":["red","orange","brown"],"chakras":["sacral","solar-plexus","root"],"element":"fire","intentions":["personal-power","new-beginnings"],"link":"/gemstone/carnelian-meaning/","shop":"/product-category/carnelian-crystals/"},{"slug":"citrine","name":"Citrine","img":"https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp","excerpt":"Citrine is the yellow to golden-brown variety of quartz, colored by trace iron and heat. For centuries it has been called the Merchant’s Stone and car","colors":["orange","yellow","brown"],"chakras":["solar-plexus","sacral"],"element":"fire","intentions":["abundance","personal-power"],"link":"/gemstone/citrine-meaning/","shop":"/product-category/citrine-crystals/"},{"slug":"malachite","name":"Malachite","img":"https://goearthward.com/wp-content/uploads/2026/06/malachite-form-bracelet.webp","excerpt":"Malachite is a green copper carbonate mineral famous for its swirling, concentric bands — long tied to transformation, protection, and personal growth","colors":["green"],"chakras":["heart","solar-plexus"],"element":"fire","intentions":["protection","new-beginnings"],"link":"/gemstone/malachite-meaning/","shop":"/product-category/malachite-crystals/"},{"slug":"pyrite","name":"Pyrite","img":"https://goearthward.com/wp-content/uploads/2026/06/pyrite-overview.webp","excerpt":"Pyrite is iron sulfide — a metallic, brass-yellow mineral famously known as fool’s gold. Long tied to abundance, confidence, and grounded willpower, i","colors":["yellow"],"chakras":["solar-plexus"],"element":"fire","intentions":["abundance","personal-power"],"link":"/gemstone/pyrite-meaning/","shop":"/product-category/pyrite-crystals/"},{"slug":"tiger-eye","name":"Tiger Eye","img":"https://goearthward.com/wp-content/uploads/2026/06/tiger-eye-form-bracelet.webp","excerpt":"Tiger’s eye is a golden-brown quartz famous for a silky band of light that glides across its surface as you turn it — an effect called chatoyancy. Lon","colors":["red","yellow","blue","brown"],"chakras":["solar-plexus","root","sacral"],"element":"fire","intentions":["protection","personal-power"],"link":"/gemstone/tiger-eye-meaning/","shop":"/product-category/tiger-eye-crystals/"}],"heart":[{"slug":"amazonite","name":"Amazonite","img":"https://goearthward.com/wp-content/uploads/2026/06/amazonite-overview.webp","excerpt":"Amazonite is a blue-green variety of microcline feldspar — a cool, turquoise-green stone long tied to courage, honest communication, and calm. If you’","colors":["green","blue"],"chakras":["heart","throat"],"element":"water","intentions":["personal-power"],"link":"/gemstone/amazonite-meaning/","shop":"/product-category/amazonite-crystals/"},{"slug":"aventurine","name":"Aventurine","img":"https://goearthward.com/wp-content/uploads/2026/06/aventurine-overview.webp","excerpt":"Aventurine is a sparkly variety of quartz — its shimmer (called aventurescence) comes from tiny reflective mineral flakes inside the stone. Long tied ","colors":["red","green","blue","brown"],"chakras":["heart"],"element":"earth","intentions":["personal-power","new-beginnings"],"link":"/gemstone/aventurine-meaning/","shop":"/product-category/aventurine-crystals/"},{"slug":"bloodstone","name":"Bloodstone","img":"https://goearthward.com/wp-content/uploads/2026/06/bloodstone-form-bracelet.webp","excerpt":"Bloodstone (also called heliotrope) is a dark green chalcedony speckled with red spots that look like drops of blood. Long tied to courage, vitality, ","colors":["red","green"],"chakras":["root","sacral","heart"],"element":"earth","intentions":["health","personal-power"],"link":"/gemstone/bloodstone-meaning/","shop":"/product-category/bloodstone-crystals/"},{"slug":"fluorite","name":"Fluorite","img":"https://goearthward.com/wp-content/uploads/2026/06/fluorite-overview.webp","excerpt":"Fluorite is one of the most colorful minerals in the crystal world — a calcium fluoride crystal that forms in striking bands of purple, green, blue, a","colors":["yellow","green","blue","purple"],"chakras":["third-eye","throat","heart"],"element":"air","intentions":["personal-power"],"link":"/gemstone/fluorite-meaning/","shop":"/product-category/fluorite-crystals/"},{"slug":"jade","name":"Jade","img":"https://goearthward.com/wp-content/uploads/2026/06/jade-overview.webp","excerpt":"Jade is one of the most revered stones in human history — but “jade” is actually two different minerals, jadeite and nephrite, both prized across cult","colors":["yellow","green","purple","black","white"],"chakras":["heart"],"element":"earth","intentions":["spiritual"],"link":"/gemstone/jade-meaning/","shop":"/product-category/jade-crystals/"}],"throat":[{"slug":"amazonite","name":"Amazonite","img":"https://goearthward.com/wp-content/uploads/2026/06/amazonite-overview.webp","excerpt":"Amazonite is a blue-green variety of microcline feldspar — a cool, turquoise-green stone long tied to courage, honest communication, and calm. If you’","colors":["green","blue"],"chakras":["heart","throat"],"element":"water","intentions":["personal-power"],"link":"/gemstone/amazonite-meaning/","shop":"/product-category/amazonite-crystals/"},{"slug":"angelite","name":"Angelite","img":"https://goearthward.com/wp-content/uploads/2026/06/angelite-form-bracelet.webp","excerpt":"Angelite is the blue gem form of anhydrite — a soft, soothing stone tied to gentle calm, quiet communication, and a sense of uplift. Hold it, set it w","colors":["blue"],"chakras":["throat","third-eye"],"element":"air","intentions":["calm","personal-power"],"link":"/gemstone/angelite-meaning/","shop":"/product-category/angelite-crystals/"},{"slug":"apatite","name":"Apatite","img":"https://goearthward.com/wp-content/uploads/2026/06/apatite-overview.webp","excerpt":"Apatite is a phosphate mineral that comes in vivid blue-green, blue, and green — a calcium phosphate named after the Greek for “deceive” because it so","colors":["yellow","green","blue","purple"],"chakras":["throat","third-eye"],"element":"fire","intentions":["personal-power","new-beginnings"],"link":"/gemstone/apatite-meaning/","shop":"/product-category/apatite-crystals/"},{"slug":"fluorite","name":"Fluorite","img":"https://goearthward.com/wp-content/uploads/2026/06/fluorite-overview.webp","excerpt":"Fluorite is one of the most colorful minerals in the crystal world — a calcium fluoride crystal that forms in striking bands of purple, green, blue, a","colors":["yellow","green","blue","purple"],"chakras":["third-eye","throat","heart"],"element":"air","intentions":["personal-power"],"link":"/gemstone/fluorite-meaning/","shop":"/product-category/fluorite-crystals/"},{"slug":"kyanite","name":"Kyanite","img":"https://goearthward.com/wp-content/uploads/2026/06/kyanite-form-bracelet.webp","excerpt":"Kyanite is a striated blue crystal prized for its glassy blades and its long-standing tie to clear communication, calm, and honest self-expression. It","colors":["orange","green","blue","black"],"chakras":["throat","third-eye"],"element":"air","intentions":["calm","personal-power"],"link":"/gemstone/kyanite-meaning/","shop":"/product-category/kyanite-crystals/"}],"third-eye":[{"slug":"amethyst","name":"Amethyst","img":"https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp","excerpt":"Amethyst is the purple variety of quartz — a stone long tied to calm, clarity, and spiritual focus. If you’re drawn to it for meditation, sleep, or si","colors":["purple"],"chakras":["crown","third-eye"],"element":"air","intentions":["calm","protection","spiritual"],"link":"/gemstone/amethyst-meaning/","shop":"/product-category/amethyst-crystals/"},{"slug":"angelite","name":"Angelite","img":"https://goearthward.com/wp-content/uploads/2026/06/angelite-form-bracelet.webp","excerpt":"Angelite is the blue gem form of anhydrite — a soft, soothing stone tied to gentle calm, quiet communication, and a sense of uplift. Hold it, set it w","colors":["blue"],"chakras":["throat","third-eye"],"element":"air","intentions":["calm","personal-power"],"link":"/gemstone/angelite-meaning/","shop":"/product-category/angelite-crystals/"},{"slug":"apatite","name":"Apatite","img":"https://goearthward.com/wp-content/uploads/2026/06/apatite-overview.webp","excerpt":"Apatite is a phosphate mineral that comes in vivid blue-green, blue, and green — a calcium phosphate named after the Greek for “deceive” because it so","colors":["yellow","green","blue","purple"],"chakras":["throat","third-eye"],"element":"fire","intentions":["personal-power","new-beginnings"],"link":"/gemstone/apatite-meaning/","shop":"/product-category/apatite-crystals/"},{"slug":"fluorite","name":"Fluorite","img":"https://goearthward.com/wp-content/uploads/2026/06/fluorite-overview.webp","excerpt":"Fluorite is one of the most colorful minerals in the crystal world — a calcium fluoride crystal that forms in striking bands of purple, green, blue, a","colors":["yellow","green","blue","purple"],"chakras":["third-eye","throat","heart"],"element":"air","intentions":["personal-power"],"link":"/gemstone/fluorite-meaning/","shop":"/product-category/fluorite-crystals/"},{"slug":"kyanite","name":"Kyanite","img":"https://goearthward.com/wp-content/uploads/2026/06/kyanite-form-bracelet.webp","excerpt":"Kyanite is a striated blue crystal prized for its glassy blades and its long-standing tie to clear communication, calm, and honest self-expression. It","colors":["orange","green","blue","black"],"chakras":["throat","third-eye"],"element":"air","intentions":["calm","personal-power"],"link":"/gemstone/kyanite-meaning/","shop":"/product-category/kyanite-crystals/"}],"crown":[{"slug":"acanthite","name":"Acanthite","img":"https://goearthward.com/wp-content/uploads/2026/06/acanthite-form-bracelet-1.webp","excerpt":"Acanthite is the primary ore of silver, Ag₂S, a soft (Mohs 2–2½) and very heavy silver sulfide recognized by its black, metallic, often prismatic crys","colors":["black","grey"],"chakras":["third-eye","crown"],"element":"ether","intentions":["calm","health"],"link":"/gemstone/acanthite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"alexandrite","name":"Alexandrite","img":"https://goearthward.com/wp-content/uploads/2026/06/alexandrite-form-bracelet.webp","excerpt":"Alexandrite is a rare color-change variety of the mineral chrysoberyl — green to blue-green in daylight, and red to raspberry under warm lamp light. T","colors":["red","green"],"chakras":["heart","crown"],"element":"earth","intentions":[],"link":"/gemstone/alexandrite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"amethyst","name":"Amethyst","img":"https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp","excerpt":"Amethyst is the purple variety of quartz — a stone long tied to calm, clarity, and spiritual focus. If you’re drawn to it for meditation, sleep, or si","colors":["purple"],"chakras":["crown","third-eye"],"element":"air","intentions":["calm","protection","spiritual"],"link":"/gemstone/amethyst-meaning/","shop":"/product-category/amethyst-crystals/"},{"slug":"ametrine","name":"Ametrine","img":"https://goearthward.com/wp-content/uploads/2026/06/ametrine-form-bracelet.webp","excerpt":"Ametrine is a naturally bicolor quartz crystal that combines purple amethyst and golden citrine in a single stone. Its two colors come from different ","colors":["yellow","purple"],"chakras":["solar-plexus","crown","third-eye"],"element":"air","intentions":["new-beginnings"],"link":"/gemstone/ametrine-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"amphibole","name":"Amphibole Quartz","img":"https://goearthward.com/wp-content/uploads/2026/06/amphibole-form-bracelet.webp","excerpt":"Amphibole quartz — also sold as Angel Phantom Quartz — is milky white quartz shot through with fibrous inclusions of amphibole minerals like actinolit","colors":["orange","green","brown","white"],"chakras":["third-eye","crown"],"element":"air","intentions":["calm","spiritual","personal-power"],"link":"/gemstone/amphibole-meaning/","shop":"/product-category/healing-crystals-jewelry/"}]};
+  var answers={}; // qIndex -> 1/2/3
+
+  function init(){renderQuiz();}
+  function renderQuiz(){
+    var el=document.getElementById('ewc5-quiz');if(!el)return;
+    el.innerHTML=Q.map(function(q,i){
+      var c=CH[q.chakra];
+      return '<div class="ewc5-q">'
+        +'<div class="ewc5-q-head"><span class="ewc5-q-dot" style="background:'+c.color+'"></span><span class="ewc5-q-text">'+(i+1)+'. '+q.q+'</span></div>'
+        +'<div class="ewc5-opts" data-qi="'+i+'">'
+        +'<button class="ewc5-opt" onclick="EWChakra.answer('+i+',1)">Rarely</button>'
+        +'<button class="ewc5-opt" onclick="EWChakra.answer('+i+',2)">Sometimes</button>'
+        +'<button class="ewc5-opt" onclick="EWChakra.answer('+i+',3)">Often</button>'
+        +'</div></div>';
+    }).join('');
+  }
+  function answer(qi,val){
+    answers[qi]=val;
+    document.querySelectorAll('.ewc5-opts[data-qi="'+qi+'"] .ewc5-opt').forEach(function(b,idx){
+      b.classList.toggle('sel',idx===(val-1));
+    });
+    var n=Object.keys(answers).length;
+    document.getElementById('ewc5-progress').textContent=n+' of '+Q.length+' answered';
+    document.getElementById('ewc5-submit').disabled=(n<Q.length);
+  }
+  function calc(){
+    // 每脉轮 2 题和 (2-6), blocked=最低
+    var scores={};CO.forEach(function(ck){scores[ck]=0;});
+    Q.forEach(function(q,i){if(answers[i])scores[q.chakra]+=answers[i];});
+    var sorted=CO.map(function(ck){return{ck:ck,s:scores[ck]};}).sort(function(a,b){return a.s-b.s;});
+    var blocked=[sorted[0].ck];
+    if(sorted[1].s<=sorted[0].s+1)blocked.push(sorted[1].ck); // 接近最低也算
+    renderResult(scores,blocked,sorted);
+  }
+  function renderResult(scores,blocked,sorted){
+    var r=document.getElementById('ewc5-result');
+    var html='<div class="ewc5-result-card">';
+    html+='<div class="ewc5-blocked-label">Your most blocked chakra'+(blocked.length>1?'s':'')+'</div>';
+    html+=blocked.map(function(ck){
+      var c=CH[ck];
+      return '<div style="margin-top:10px"><span class="ewc5-blocked-name" style="color:'+c.color+'">'+c.name+'</span><div class="ewc5-blocked-area">'+c.area+'</div></div>';
+    }).join('');
+    html+='<p style="color:#444;font-size:15px;margin:14px 0 0;line-height:1.6">This energy center governs '+blocked.map(function(ck){return CH[ck].focus;}).join(' and ')+'. When blocked, it often shows up as imbalance in these areas. The crystals below are traditionally used to support it.</p>';
+    html+='</div>';
+    // 推荐水晶
+    html+='<div class="ewc5-result-card"><h2>Crystals to Balance Your '+blocked.map(function(ck){return CH[ck].name;}).join(' & ')+'</h2>';
+    blocked.forEach(function(ck){
+      html+='<div class="ewc5-chakra-crystals" style="margin-bottom:14px">';
+      (CC[ck]||[]).forEach(function(c){
+        html+='<a class="ewc5-cc" href="'+c.link+'"><img src="'+(c.img||'')+'" alt="'+c.name+'" loading="lazy"><div class="ewc5-cc-name">'+c.name+'</div></a>';
+      });
+      html+='</div>';
+    });
+    html+='<a class="ewc5-btn" href="/product-category/healing-crystals-jewelry/" style="display:inline-block;margin-top:6px;text-decoration:none">Shop Healing Crystal Jewelry →</a>';
+    html+='</div>';
+    // 全脉轮图表
+    html+='<div class="ewc5-chart"><h3>Your Full Chakra Balance</h3>';
+    sorted.slice().sort(function(a,b){return CO.indexOf(a.ck)-CO.indexOf(b.ck);}).forEach(function(item){
+      var pct=Math.round((item.s/6)*100);
+      var c=CH[item.ck];
+      var lab=blocked.indexOf(item.ck)>=0?' ← needs care':'';
+      html+='<div class="ewc5-bar-row"><span class="ewc5-bar-label">'+c.name+lab+'</span><div class="ewc5-bar-track"><div class="ewc5-bar-fill" style="width:'+pct+'%;background:'+c.color+'"></div></div><span class="ewc5-bar-val">'+item.s+'/6</span></div>';
+    });
+    html+='</div>';
+    // 留资
+    html+='<div class="ewc5-lead"><h3>Get Your Full 7-Chakra Report</h3><p>Free personalized report with the status of each chakra, deeper crystal guidance, and a daily balancing ritual. Drop your email.</p>';
+    html+='<div class="ewc5-email-row"><input class="ewc5-email" type="email" placeholder="your@email.com"><button class="ewc5-btn" onclick="alert(\'Report feature coming soon\')">Get Full Report</button></div></div>';
+    html+='<p class="ewc5-disclaim">Astrology, chakras, and crystal meanings are offered for reflection and spiritual inspiration. Crystals carry traditional symbolic qualities but are not a substitute for medical, financial, or professional advice.</p>';
+    r.innerHTML=html;
+    r.classList.add('show');
+    r.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  return{init:init,answer:answer,calc:calc};
+})();
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',EWChakra.init);}else{EWChakra.init();}
+</script>
+<!-- ===== Chakra Test Schema (HowTo + FAQPage) ===== -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"HowTo","name":"How to Test Which Chakra Is Blocked","description":"A 14-question self-assessment to identify your most blocked chakra and the crystals that traditionally restore balance.","step":[{"@type":"HowToStep","name":"Answer 14 questions","text":"Rate how true each statement feels about your current state, from Rarely to Often."},{"@type":"HowToStep","name":"See your blocked chakra","text":"Scores are tallied per chakra; the lowest indicate where energy is most blocked."},{"@type":"HowToStep","name":"Use the recommended crystals","text":"Each chakra maps to specific crystals traditionally used to restore balance."}]},
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a chakra test?","acceptedAnswer":{"@type":"Answer","text":"A chakra test is a self-assessment quiz that helps identify which of your seven chakras may be blocked or out of balance, based on how you currently feel."}},{"@type":"Question","name":"How accurate is a chakra test?","acceptedAnswer":{"@type":"Answer","text":"A chakra test is a reflective tool, not a diagnostic. It points to where you might focus based on your current state. Energy shifts, so results can change over time."}},{"@type":"Question","name":"What crystal helps a blocked chakra?","acceptedAnswer":{"@type":"Answer","text":"Each chakra maps to specific crystals — root chakra stones like smoky quartz for grounding, heart chakra stones like rose quartz for love, third eye stones like amethyst for intuition."}},{"@type":"Question","name":"Can chakra test results change?","acceptedAnswer":{"@type":"Answer","text":"Yes. Your energy shifts with life circumstances, stress, and intentional practice. Retake the test periodically to track how your balance evolves."}}]}
+]}
+</script>
+<!-- ===== End Chakra Test ===== -->
+<!-- ===== Chakra Test SEO Accordion ===== -->
+<section style="margin:32px auto 0">
+  <details style="border:1px solid #D8D8D8;border-radius:12px;background:#FAFAFA;overflow:hidden">
+    <summary style="list-style:none;cursor:pointer;background:#E8E8E8;color:#1A1A2E;font-size:18px;font-weight:700;padding:18px 22px">Learn More About Chakras & Crystals</summary>
+    <div style="padding:24px 28px;color:#444;font-size:15px;line-height:1.75">
+<h2>What Is a Chakra Test?</h2>
+<p>A chakra test is a self-reflection quiz that helps identify which of your seven energy centers may be blocked or out of balance. By answering honest questions about how you currently feel across different areas of life, the test points to where your energy may be stuck — and the crystals traditionally used to support that chakra. It is a reflective tool for awareness, not a medical or psychological diagnosis.</p>
+
+<h2>Symptoms of a Blocked Chakra</h2>
+<p>Each chakra shows different signs when blocked. If you've been feeling stuck in a specific area of life, these symptoms can help you identify which energy center needs attention — even before taking the test.</p>
+
+<h3>Root Chakra Blocked — Signs</h3>
+<p>Feeling ungrounded, anxious about money or safety, disconnected from your body, restless, or unable to settle. You may worry constantly about basic needs or feel like you don't belong anywhere. Physical signs sometimes include lower back pain, leg issues, or fatigue.</p>
+
+<h3>Sacral Chakra Blocked — Signs</h3>
+<p>Creative numbness, emotional suppression, low motivation for pleasure, or guilt around enjoyment. You may feel disconnected from your feelings or struggle to experience joy. Physical signs can include reproductive or lower abdominal discomfort.</p>
+
+<h3>Solar Plexus Chakra Blocked — Signs</h3>
+<p>Self-doubt, indecision, lack of motivation, or feeling powerless and stuck. On the opposite end, a blocked solar plexus can manifest as excessive control, anger, or aggression — energy that has nowhere constructive to go.</p>
+
+<h3>Heart Chakra Blocked — Signs</h3>
+<p>Difficulty giving or receiving love, holding grudges, emotional withdrawal, or feeling cold and distant. You may fear vulnerability or shut down when someone gets close. Physical signs sometimes include chest tightness or shallow breathing.</p>
+
+<h3>Throat Chakra Blocked — Signs</h3>
+<p>Fear of speaking up, feeling unheard or misunderstood, compulsive lying or over-talking to compensate. You may swallow your truth or struggle to express what you really feel. Physical signs can include sore throat, neck stiffness, or thyroid issues.</p>
+
+<h3>Third Eye Chakra Blocked — Signs</h3>
+<p>Confusion, poor focus, ignoring your intuition, inability to see a clear path forward, or feeling disconnected from your inner guidance. You may overthink everything yet feel no clarity. Physical signs sometimes include headaches or sleep issues.</p>
+
+<h3>Crown Chakra Blocked — Signs</h3>
+<p>Feeling spiritually disconnected, lacking purpose or meaning, emptiness, or a sense that life is mechanical. You may feel isolated from something greater than yourself. Physical signs can include brain fog or a sense of heaviness in the head.</p>
+
+<h2>The 7 Chakras and What They Govern</h2>
+<p>Each chakra maps to a specific life area. When balanced, energy flows freely; when blocked, you may feel stuck in that domain.</p>
+<ul>
+<li><strong>Root (Muladhara)</strong> — security, stability, grounding, survival instincts.</li>
+<li><strong>Sacral (Svadhisthana)</strong> — creativity, emotion, pleasure, sensuality.</li>
+<li><strong>Solar Plexus (Manipura)</strong> — confidence, willpower, self-esteem, personal power.</li>
+<li><strong>Heart (Anahata)</strong> — love, compassion, forgiveness, connection.</li>
+<li><strong>Throat (Vishuddha)</strong> — communication, truth, self-expression.</li>
+<li><strong>Third Eye (Ajna)</strong> — intuition, insight, imagination, clarity.</li>
+<li><strong>Crown (Sahasrara)</strong> — spirituality, wisdom, purpose, universal connection.</li>
+</ul>
+
+<h2>How to Balance a Blocked Chakra</h2>
+<p>Once the test reveals your most blocked chakra, the path forward blends intention with simple daily practice. Here are the most effective traditional methods:</p>
+
+<h3>Work with Chakra Crystals</h3>
+<p>Crystals are the most accessible tool for chakra work. Here's how to use them:</p>
+<ul>
+<li><strong>Choose the right stone</strong> for your blocked chakra (see the guide below).</li>
+<li><strong>Wear it</strong> as jewelry — a bracelet or pendant keeps the stone's energy close to your body throughout the day.</li>
+<li><strong>Meditate with it</strong> — place the crystal on or near the chakra's body location during quiet reflection.</li>
+<li><strong>Carry it</strong> in your pocket or bag as a tactile reminder of your intention.</li>
+<li><strong>Place it</strong> on your nightstand or desk to keep the energy in your space.</li>
+</ul>
+
+<h3>Chakra Meditation</h3>
+<p>A simple daily practice: sit quietly, close your eyes, and focus on the blocked chakra's location and color. Visualize it becoming clear, open, and vibrant. Spend 3–5 minutes per chakra, working from root to crown. Pair this with the crystal placed on the relevant body area for a deeper session.</p>
+
+<h2>Crystals for Each Chakra</h2>
+<p>Different stones resonate with different energy centers, based on traditional associations passed down through crystal and yoga traditions. These pairings are symbolic and reflective, not clinical claims.</p>
+<ul>
+<li><strong>Root:</strong> Smoky Quartz, Red Jasper, Black Tourmaline — grounding, safety, stability.</li>
+<li><strong>Sacral:</strong> Carnelian, Orange Calcite — creativity and emotional flow.</li>
+<li><strong>Solar Plexus:</strong> Citrine, Pyrite, Tiger's Eye — confidence, motivation, personal power.</li>
+<li><strong>Heart:</strong> Rose Quartz, Green Aventurine — love, compassion, emotional healing.</li>
+<li><strong>Throat:</strong> Blue Lace Agate, Aquamarine — clear communication and honest expression.</li>
+<li><strong>Third Eye:</strong> Amethyst, Lapis Lazuli — intuition, insight, mental clarity.</li>
+<li><strong>Crown:</strong> Clear Quartz, Selenite — spiritual connection and higher perspective.</li>
+</ul>
+<p>Explore each stone's full meaning in our <a href="/gemstones/">crystal encyclopedia</a>, or browse <a href="/product-category/healing-crystals-jewelry/">healing crystal jewelry</a> for pieces matched to your chakra.</p>
+
+<h2>How Accurate Is a Chakra Test?</h2>
+<p>A chakra test reflects how you feel right now, not a fixed state. Your energy shifts with stress, seasons, relationships, and intentional practice — so results can change from week to week. The most honest answers give the most useful insight. Think of the test as a mirror for where to focus your attention, paired with the crystals traditionally used to support that focus. Retake it every few weeks to track how your balance evolves.</p>
+
+<h2>Chakra Test FAQ</h2>
+<details style="border:1px solid #EEE;border-radius:10px;background:#fff;margin-bottom:8px;padding:14px 18px"><summary style="cursor:pointer;font-weight:600;color:#1A1A2E;font-size:16px;list-style:none">Which chakra is blocked? <span style="float:right;color:#2D6A4F">+</span></summary><p style="margin:12px 0 0;color:#444;font-size:15px;line-height:1.65">The test above tells you — it flags the energy center scoring lowest based on your honest answers. Everyone's pattern differs: one person may have a blocked root (security), another a blocked throat (expression). Take the test to find yours.</p></details>
+<details style="border:1px solid #EEE;border-radius:10px;background:#fff;margin-bottom:8px;padding:14px 18px"><summary style="cursor:pointer;font-weight:600;color:#1A1A2E;font-size:16px;list-style:none">How do I know which chakra is blocked? <span style="float:right;color:#2D6A4F">+</span></summary><p style="margin:12px 0 0;color:#444;font-size:15px;line-height:1.65">Two ways: take the 14-question test above, or read the symptoms in the section above and notice which resonates — anxiety about money points to root, creative numbness to sacral, fear of speaking up to throat, and so on.</p></details>
+<details style="border:1px solid #EEE;border-radius:10px;background:#fff;margin-bottom:8px;padding:14px 18px"><summary style="cursor:pointer;font-weight:600;color:#1A1A2E;font-size:16px;list-style:none">What happens when a chakra is blocked? <span style="float:right;color:#2D6A4F">+</span></summary><p style="margin:12px 0 0;color:#444;font-size:15px;line-height:1.65">A blocked chakra shows up as imbalance in its life area — a blocked heart may feel like difficulty giving or receiving love; a blocked solar plexus like low confidence; a blocked third eye like poor focus and ignoring intuition. See the Symptoms section above for each chakra's specific signs.</p></details>
+<details style="border:1px solid #EEE;border-radius:10px;background:#fff;margin-bottom:8px;padding:14px 18px"><summary style="cursor:pointer;font-weight:600;color:#1A1A2E;font-size:16px;list-style:none">How long does it take to unblock a chakra? <span style="float:right;color:#2D6A4F">+</span></summary><p style="margin:12px 0 0;color:#444;font-size:15px;line-height:1.65">It varies. Some feel a shift within days of wearing the right crystal and setting an intention; deeper patterns take weeks or months. Consistency matters more than intensity — retake the test periodically to track progress.</p></details>
+
+    </div>
+  </details>
+</section>
+<!-- ===== End Chakra Test SEO Accordion ===== -->

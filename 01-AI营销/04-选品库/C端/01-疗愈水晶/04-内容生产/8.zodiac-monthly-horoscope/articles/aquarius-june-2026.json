@@ -11,7 +11,8 @@
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/aquarius-june-2026/aquarius-june-2026-featured.webp",
       "source_type": "scene",
       "alt": "Aquarius June 2026 monthly horoscope with Citrine as crystal of the month, zodiac symbol ♒",
-      "prompt": "An editorial flat-lay for Aquarius June horoscope: a Citrine crystal resting on natural linen beside a subtle zodiac symbol ♒, with elements evoking early summer with long days and golden evening light, soft blue, silver and electric teal tones, soft natural light, representing Shift and transition, no text, no watermark, no human face"
+      "prompt": "An editorial flat-lay for Aquarius June horoscope: a Citrine crystal resting on natural linen beside a subtle zodiac symbol ♒, with elements evoking early summer with long days and golden evening light, soft blue, silver and electric teal tones, soft natural light, representing Shift and transition, no text, no watermark, no human face",
+      "wp_id": 45334
     },
     "crystal_month": {
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/aquarius-june-2026/aquarius-june-2026-crystal-month.webp",
@@ -25,5 +26,6 @@
       "alt": "Monthly crystal ritual for Aquarius June 2026 using Citrine",
       "prompt": "A serene lifestyle scene: a Citrine crystal placed on a wooden surface with a journal, a candle, and seasonal elements evoking early summer with long days and golden evening light, representing a new moon or full moon crystal ritual, warm natural daylight, soft blue, silver and electric teal accents, minimalist wellness aesthetic, no text, no watermark, no human face"
     }
-  }
+  },
+  "category": "horoscope"
 }

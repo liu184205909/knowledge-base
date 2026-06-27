@@ -35,7 +35,8 @@
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/leo-april-2026/leo-april-2026-featured.webp",
       "source_type": "scene",
       "alt": "Leo April 2026 monthly horoscope with Aquamarine as crystal of the month, zodiac symbol ♌",
-      "prompt": "An editorial flat-lay for Leo April horoscope: a Aquamarine crystal resting on natural linen beside a subtle zodiac symbol ♌, with elements evoking fresh spring with new blooms and bright green leaves, warm gold, orange and amber tones, soft natural light, representing Innovation and fresh starts, no text, no watermark, no human face"
+      "prompt": "An editorial flat-lay for Leo April horoscope: a Aquamarine crystal resting on natural linen beside a subtle zodiac symbol ♌, with elements evoking fresh spring with new blooms and bright green leaves, warm gold, orange and amber tones, soft natural light, representing Innovation and fresh starts, no text, no watermark, no human face",
+      "wp_id": 45442
     },
     "crystal_month": {
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/leo-april-2026/leo-april-2026-crystal-month.webp",
@@ -49,5 +50,11 @@
       "alt": "Monthly crystal ritual for Leo April 2026 using Aquamarine",
       "prompt": "A serene lifestyle scene: a Aquamarine crystal placed on a wooden surface with a journal, a candle, and seasonal elements evoking fresh spring with new blooms and bright green leaves, representing a new moon or full moon crystal ritual, warm natural daylight, warm gold, orange and amber accents, minimalist wellness aesthetic, no text, no watermark, no human face"
     }
-  }
+  },
+  "category": "horoscope",
+  "title": "Leo April 2026 Horoscope: Key Dates, Love, Career & Crystal of the Month",
+  "excerpt": "Leo April 2026 horoscope: Speak the idea, then book the trip. Crystal of the Month: Aquamarine. Key dates, love, career, and ritual guidance inside.",
+  "rank_math_title": "Leo April 2026 Horoscope: Key Dates, Love, Career & Crystal of the Month",
+  "rank_math_description": "Leo April 2026 horoscope: Speak the idea, then book the trip. Crystal of the Month: Aquamarine. Key dates, love, career, and ritual guidance inside.",
+  "rank_math_focus_keyword": "leo april 2026 horoscope"
 }

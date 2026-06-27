@@ -35,7 +35,8 @@
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/aries-april-2026/aries-april-2026-featured.webp",
       "source_type": "scene",
       "alt": "Aries April 2026 monthly horoscope with Aquamarine as crystal of the month, zodiac symbol ♈",
-      "prompt": "An editorial flat-lay for Aries April horoscope: a Aquamarine crystal resting on natural linen beside a subtle zodiac symbol ♈, with elements evoking fresh spring with new blooms and bright green leaves, warm red, orange and golden tones, soft natural light, representing Innovation and fresh starts, no text, no watermark, no human face"
+      "prompt": "An editorial flat-lay for Aries April horoscope: a Aquamarine crystal resting on natural linen beside a subtle zodiac symbol ♈, with elements evoking fresh spring with new blooms and bright green leaves, warm red, orange and golden tones, soft natural light, representing Innovation and fresh starts, no text, no watermark, no human face",
+      "wp_id": 45346
     },
     "crystal_month": {
       "file": "assets/images/generated/8.zodiac-monthly-horoscope/aries-april-2026/aries-april-2026-crystal-month.webp",
@@ -49,5 +50,11 @@
       "alt": "Monthly crystal ritual for Aries April 2026 using Aquamarine",
       "prompt": "A serene lifestyle scene: a Aquamarine crystal placed on a wooden surface with a journal, a candle, and seasonal elements evoking fresh spring with new blooms and bright green leaves, representing a new moon or full moon crystal ritual, warm natural daylight, warm red, orange and golden accents, minimalist wellness aesthetic, no text, no watermark, no human face"
     }
-  }
+  },
+  "category": "horoscope",
+  "title": "Aries April 2026 Horoscope: Key Dates, Love, Career & Crystal of the Month",
+  "excerpt": "Aries April 2026 horoscope: Innovation meets relationship reset. Crystal of the Month: Aquamarine. Key dates, love, career, and ritual guidance inside.",
+  "rank_math_title": "Aries April 2026 Horoscope: Key Dates, Love, Career & Crystal of the Month",
+  "rank_math_description": "Aries April 2026 horoscope: Innovation meets relationship reset. Crystal of the Month: Aquamarine. Key dates, love, career, and ritual guidance inside.",
+  "rank_math_focus_keyword": "aries april 2026 horoscope"
 }
