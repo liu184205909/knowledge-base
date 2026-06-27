@@ -83,12 +83,12 @@ let html = `<!-- ===== Earthward Chakra Test ===== -->
 .ewc5-progress{color:#666;font-size:14px}
 .ewc5-result{margin-top:30px;display:none}
 .ewc5-result.show{display:block}
-.ewc5-result-card{background:#F7F3EA;border:1px solid #EEE;border-radius:14px;padding:26px;margin-bottom:18px}
+.ewc5-result-card{background:#F7F3EA;border:1px solid #EEE;border-radius:14px;padding:22px;margin-bottom:14px}
 .ewc5-result-card h2{font-size:22px;color:#1A1A2E;margin:0 0 6px}
 .ewc5-blocked-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#666}
 .ewc5-blocked-name{font-size:26px;font-weight:700}
-.ewc5-blocked-area{color:#666;font-size:15px;margin:6px 0 14px}
-.ewc5-chakra-crystals{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-top:14px}
+.ewc5-blocked-area{color:#666;font-size:15px;margin:4px 0 10px;line-height:1.45}
+.ewc5-chakra-crystals{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-top:12px}
 .ewc5-cc{background:#fff;border:1px solid #EEE;border-radius:10px;overflow:hidden;text-decoration:none;color:#1A1A2E;transition:.15s}
 .ewc5-cc:hover{border-color:#2D6A4F;transform:translateY(-2px)}
 .ewc5-cc img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#F0F7F4}
@@ -149,6 +149,11 @@ var EWChakra=(function(){
     if(sorted[1].s<=sorted[0].s+1)blocked.push(sorted[1].ck); // 接近最低也算
     renderResult(scores,blocked,sorted);
   }
+  function scrollToResult(r){
+    var offset=window.innerWidth<768?110:170;
+    var y=r.getBoundingClientRect().top+window.pageYOffset-offset;
+    window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
+  }
   function renderResult(scores,blocked,sorted){
     var r=document.getElementById('ewc5-result');
     var html='<div class="ewc5-result-card">';
@@ -157,7 +162,7 @@ var EWChakra=(function(){
       var c=CH[ck];
       return '<div style="margin-top:10px"><span class="ewc5-blocked-name" style="color:'+c.color+'">'+c.name+'</span><div class="ewc5-blocked-area">'+c.area+'</div></div>';
     }).join('');
-    html+='<p style="color:#444;font-size:15px;margin:14px 0 0;line-height:1.6">This energy center governs '+blocked.map(function(ck){return CH[ck].focus;}).join(' and ')+'. When blocked, it often shows up as imbalance in these areas. The crystals below are traditionally used to support it.</p>';
+    html+='<p style="color:#444;font-size:16px;margin:10px 0 0;line-height:1.5">This energy center governs '+blocked.map(function(ck){return CH[ck].focus;}).join(' and ')+'. When blocked, it often shows up as imbalance in these areas. The crystals below are traditionally used to support it.</p>';
     html+='</div>';
     // 推荐水晶
     html+='<div class="ewc5-result-card"><h2>Crystals to Balance Your '+blocked.map(function(ck){return CH[ck].name;}).join(' & ')+'</h2>';
@@ -166,6 +171,7 @@ var EWChakra=(function(){
       (CC[ck]||[]).forEach(function(c){
         html+='<a class="ewc5-cc" href="'+c.link+'"><img src="'+(c.img||'')+'" alt="'+c.name+'" loading="lazy"><div class="ewc5-cc-name">'+c.name+'</div></a>';
       });
+      html+='<a href="/'+ck+'-chakra-crystals/" style="display:block;margin-top:12px;color:#2D6A4F;font-weight:600;text-decoration:none;font-size:15px">Read the '+CH[ck].name+' Chakra Crystals Guide →</a>';
       html+='</div>';
     });
     html+='<a class="ewc5-btn" href="/product-category/healing-crystals-jewelry/" style="display:inline-block;margin-top:6px;text-decoration:none">Shop Healing Crystal Jewelry →</a>';
@@ -185,7 +191,7 @@ var EWChakra=(function(){
     html+='<p class="ewc5-disclaim">Astrology, chakras, and crystal meanings are offered for reflection and spiritual inspiration. Crystals carry traditional symbolic qualities but are not a substitute for medical, financial, or professional advice.</p>';
     r.innerHTML=html;
     r.classList.add('show');
-    r.scrollIntoView({behavior:'smooth',block:'start'});
+    scrollToResult(r);
   }
   return{init:init,answer:answer,calc:calc};
 })();
@@ -209,7 +215,7 @@ if (SEO_CONTENT.trim()) {
 <section style="margin:32px auto 0">
   <details style="border:1px solid #D8D8D8;border-radius:12px;background:#FAFAFA;overflow:hidden">
     <summary style="list-style:none;cursor:pointer;background:#E8E8E8;color:#1A1A2E;font-size:18px;font-weight:700;padding:18px 22px">Learn More About Chakras & Crystals</summary>
-    <div style="padding:24px 28px;color:#444;font-size:15px;line-height:1.75">
+    <div style="padding:24px 28px;color:#444;font-size:17px;line-height:1.75">
 ${SEO_CONTENT}
     </div>
   </details>

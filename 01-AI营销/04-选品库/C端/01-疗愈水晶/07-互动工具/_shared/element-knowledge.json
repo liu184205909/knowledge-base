@@ -1,0 +1,104 @@
+{
+  "_meta": {
+    "source": "4-element system + moonrisecrystals/crystalvaults",
+    "for": "Element文章M2/M6/M7 + Element Test工具"
+  },
+  "elements": {
+    "earth": {
+      "traits": "Grounding, stability, patience, abundance",
+      "balanced": "Steady, reliable, nurturing, practical",
+      "imbalanced": "Stagnation, stubbornness, feeling stuck",
+      "zodiac": "Taurus, Virgo, Capricorn",
+      "fengshui": "Northeast/Southwest, knowledge/relationships areas",
+      "chakra": "Root",
+      "name": "Earth",
+      "crystals": [
+        "jade",
+        "rose-quartz",
+        "obsidian",
+        "black-tourmaline",
+        "quartz",
+        "aventurine",
+        "turquoise",
+        "red-jasper",
+        "bloodstone",
+        "hematite",
+        "rhodonite",
+        "aegirine"
+      ],
+      "article": "/earth-crystals/"
+    },
+    "fire": {
+      "traits": "Passion, courage, creativity, transformation",
+      "balanced": "Motivated, confident, inspiring",
+      "imbalanced": "Burnout, anger, impulsiveness",
+      "zodiac": "Aries, Leo, Sagittarius",
+      "fengshui": "South, fame/recognition area",
+      "chakra": "Solar Plexus",
+      "name": "Fire",
+      "crystals": [
+        "tiger-eye",
+        "carnelian",
+        "obsidian",
+        "ruby",
+        "citrine",
+        "bloodstone",
+        "malachite",
+        "apatite",
+        "pyrite",
+        "adamite",
+        "aegirine",
+        "amber"
+      ],
+      "article": "/fire-crystals/"
+    },
+    "air": {
+      "traits": "Intellect, communication, freedom, clarity",
+      "balanced": "Clear-thinking, articulate, open-minded",
+      "imbalanced": "Scattered, detached, overthinking",
+      "zodiac": "Gemini, Libra, Aquarius",
+      "fengshui": "Southeast/East, wisdom area",
+      "chakra": "Heart/Throat",
+      "name": "Air",
+      "crystals": [
+        "amethyst",
+        "selenite",
+        "lapis",
+        "fluorite",
+        "lepidolite",
+        "kyanite",
+        "angelite",
+        "alamosite",
+        "albite",
+        "ametrine",
+        "amphibole",
+        "analcime"
+      ],
+      "article": "/air-crystals/"
+    },
+    "water": {
+      "traits": "Emotion, intuition, healing, flow",
+      "balanced": "Empathetic, intuitive, adaptable",
+      "imbalanced": "Overwhelm, mood swings, clinging",
+      "zodiac": "Cancer, Scorpio, Pisces",
+      "fengshui": "North, career/life path area",
+      "chakra": "Sacral",
+      "name": "Water",
+      "crystals": [
+        "labradorite",
+        "moonstone",
+        "amazonite",
+        "opal",
+        "larimar",
+        "abalone-shell",
+        "afghanite",
+        "agatized-coral",
+        "ajoite",
+        "ammonite",
+        "anhydrite",
+        "aquamarine"
+      ],
+      "article": "/water-crystals/"
+    }
+  }
+}

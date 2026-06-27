@@ -207,6 +207,109 @@ npx clawhub@latest install image-generation
 
 ---
 
+## Claude Design 平替（UI 设计）
+
+> [Claude Design](https://claude.ai/design) 是 Anthropic Labs 的**闭源网页产品**（需原生 Claude 账号），产出设计稿 + handoff bundle。本节用开源组件在智谱壳子 CLI 侧复现其核心能力——**审美决策 + 品牌视觉系统 → 生产级代码**，无需注册任何服务。
+
+### 两件套角色分工
+
+| 组件 | 角色 | 产出 | 状态 |
+|------|------|------|------|
+| **frontend-design** skill | 审美决策（怎么设计才好看） | bold aesthetic 方向 + 生产级代码 | ✅ 已就位 |
+| **DESIGN.md** | 品牌视觉系统（这个项目长什么样） | 颜色/字体/组件 token | ✅ 索引已 clone |
+
+两者职责互补：skill 管「设计哲学」，DESIGN.md 管「项目具象」。端到端覆盖「**审美 → 系统 → 代码**」全链路，无需第三个 MCP。
+
+> 原 Magic MCP（21st.dev）因注册不可用已放弃。组件生成这一环 Claude Code 自身就能胜任——配合 frontend-design 的审美指令直接产出 HTML/CSS/JS/React 代码。未来做 React 项目时可补装 shadcn/ui MCP（见下方可选扩展）。
+
+---
+
+### 组件 1：frontend-design skill（审美决策）
+
+[源头 anthropics/claude-code/plugins/frontend-design](https://github.com/anthropics/claude-code/blob/main/plugins/frontend-design/skills/frontend-design/SKILL.md) | ISC | 已就位 `~/.claude/skills/frontend-design/SKILL.md`
+
+**核心指令**：拒绝「AI slop」审美（Inter 字体 / 紫色渐变 / 卡片布局套路），每次设计前先选定一个 **bold aesthetic direction**（极简 / 极繁 / 复古未来 / 有机自然 / 奢华精致 / 玩具感 / 编辑杂志风 / 粗野主义 等），再用生产级代码执行。支持 HTML/CSS/JS、React、Vue 全栈。
+
+**为什么需要**：Claude Code 默认产出套路化 UI（Inter 字体 + 紫渐变 + 居中卡片），被社区戏称「AI slop」。本 skill 强制每次设计选不同方向，产出有记忆点的界面。
+
+**与 Claude Design 网页产品的区别**：Claude Design 是闭源网页产品，产出设计稿；本 skill 是 CLI 内的审美指令包，产出直接是生产级代码。两者底层是同一套设计哲学。
+
+**触发**：用户要求建网页/组件/页面/应用时自动触发；或显式说「用 frontend-design 风格做」「做个有设计感的 UI」。
+
+---
+
+### 组件 2：DESIGN.md 工作流（品牌视觉系统）
+
+[索引库 VoltAgent/awesome-claude-design](https://github.com/VoltAgent/awesome-claude-design) | 已 clone 到 `~/tools/awesome-claude-design/` | 模板托管在 [getdesign.md](https://getdesign.md/)
+
+**定位**：`DESIGN.md` 是单个纯文本 markdown 文件，描述品牌的视觉语言（颜色 token / 字体 scale / 组件样式 / 布局原则 / 阴影层级 / Do's & Don'ts / 响应式 / agent prompt），AI agent 能直接执行。概念由 Google Stitch 提出，VoltAgent 整理成 68 个知名品牌的设计系统索引（Stripe / Linear / Vercel / Notion / Figma / Apple / Nike / Spotify 等）。
+
+**DESIGN.md 的 9 个标准段落**（Claude 读取时各取所需）：
+
+| # | 段落 | Claude 用途 |
+|---|------|------------|
+| 1 | Visual Theme & Atmosphere | 设定整体调性、密度、氛围 |
+| 2 | Color Palette & Roles | 生成带语义名的 CSS 变量 + hex |
+| 3 | Typography Rules | 构建 type scale + 选 Google Fonts 替代 |
+| 4 | Component Stylings | 生成 button/input/card/nav 含各状态 |
+| 5 | Layout Principles | 间距 scale、栅格、留白节奏 |
+| 6 | Depth & Elevation | 阴影 token + 层级 |
+| 7 | Do's and Don'ts | 生成新页面时的护栏 |
+| 8 | Responsive Behavior | 断点、触控目标、折叠行为 |
+| 9 | Agent Prompt Guide | 嵌入生成 SKILL.md 的可复用 prompt |
+
+**使用流程**：
+
+```bash
+# 1. 浏览索引 ~/tools/awesome-claude-design/，挑匹配调性的品牌
+#    疗愈水晶 → Notion（温暖极简）/ Clay（有机形状）/ Airbnb（温暖珊瑚）
+
+# 2. 从 getdesign.md 下载对应 DESIGN.md
+#    例如 https://getdesign.md/notion/design-md → 下载 DESIGN.md
+
+# 3. 丢进项目根目录
+cp ~/Downloads/DESIGN.md /path/to/project/DESIGN.md
+
+# 4. 让 Claude Code 生成 UI（frontend-design skill 自动遵循 DESIGN.md tokens）
+```
+
+---
+
+### 两件套配合实战
+
+以「为疗愈水晶站做一个高转化落地页」为例：
+
+```bash
+# 步骤 1：选设计系统（DESIGN.md）
+# 浏览 ~/tools/awesome-claude-design/，挑 Notion（温暖极简）或 Clay（有机形状）
+# 从 getdesign.md 下载，丢进项目根目录
+
+# 步骤 2：触发生成
+# "用 frontend-design 风格，基于项目根的 DESIGN.md，做一个疗愈水晶落地页"
+# → skill 选定 bold aesthetic（如「有机自然 + 温暖编辑风」）
+# → 严格遵循 DESIGN.md 的颜色/字体/组件 token
+# → 产出生产级 HTML/CSS/JS（或 React/Vue，按需指定）
+```
+
+**关键**：frontend-design skill 会自动读取项目根的 DESIGN.md 作为视觉系统 source of truth；DESIGN.md 未覆盖的决策回退到 skill 的 bold aesthetic 原则。两者协同，无需手动协调。
+
+---
+
+### 可选扩展：shadcn/ui MCP（React 项目时启用）
+
+[官方文档](https://ui.shadcn.com/docs/registry/mcp) | [开源 server Jpisnice/shadcn-ui-mcp-server](https://github.com/Jpisnice/shadcn-ui-mcp-server) | 完全免费、免注册、免 API key
+
+**定位**：让 Claude Code 访问 shadcn/ui v4 组件库（blocks/demos/metadata），生成标准化 React + Tailwind 组件。shadcn 是 Anthropic 官方推荐的 React 组件库，Claude Code 有原生 skills 支持（[ui.shadcn.com/docs/skills](https://ui.shadcn.com/docs/skills)）。
+
+**何时启用**：当前 WordPress 项目用不上（纯 HTML/CSS 场景由 frontend-design 覆盖）。**未来做 React 项目时**补装——不替代两件套，而是**补充**标准化 React 组件实现层。
+
+```bash
+# 参考 https://ui.shadcn.com/docs/registry/mcp 最新配置
+# 或社区开源版：npx -y @jpisnice/shadcn-ui-mcp-server
+```
+
+---
+
 ## Skill 速查
 
 | 场景 | Skill | 触发词 |
@@ -223,6 +326,7 @@ npx clawhub@latest install image-generation
 | 跨会话记忆 | **claude-mem** | "上次怎么解决的" |
 | 多步任务防假完成 / 严格执行 | **fable-discipline** | "fable风格" / "严格执行" / "先验证再完成" / "防假完成" / "建目标账本" |
 | GSC 数据驱动 SEO（扫机会+深挖竞品） | **gsc-radar** | "扫一下X的机会" / "X站SEO体检" / "深挖这个关键词" |
+| UI 设计（Claude Design 平替，详见专节） | **frontend-design** + DESIGN.md | "做个UI" / "建网页" / "有设计感的界面" / "用frontend-design风格" |
 
 ### 按需安装（未本地部署，需时再装）
 

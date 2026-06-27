@@ -168,15 +168,15 @@
       "kw": "white crystals",
       "title": "Best White Crystals: Meanings, Benefits & How to Use",
       "crystals": [
-        "jade",
-        "moonstone",
         "selenite",
-        "lapis",
         "opal",
-        "larimar",
-        "adamite",
-        "agate",
-        "alamosite"
+        "moonstone",
+        "lapis",
+        "alamosite",
+        "analcime",
+        "anhydrite",
+        "ankerite",
+        "aragonite"
       ]
     },
     {
@@ -187,15 +187,15 @@
       "kw": "yellow crystals",
       "title": "Best Yellow Crystals: Meanings, Benefits & How to Use",
       "crystals": [
-        "jade",
-        "fluorite",
         "citrine",
-        "apatite",
         "pyrite",
-        "adamite",
-        "agatized-coral",
-        "alamosite",
-        "amber"
+        "amber",
+        "bumblebee-jasper",
+        "chondrodite",
+        "chrysoberyl",
+        "copal",
+        "fire-opal",
+        "mimetite"
       ]
     },
     {
@@ -207,14 +207,14 @@
       "title": "Best Green Crystals: Meanings, Benefits & How to Use",
       "crystals": [
         "jade",
-        "labradorite",
-        "amazonite",
         "aventurine",
-        "turquoise",
-        "fluorite",
-        "bloodstone",
         "malachite",
-        "kyanite"
+        "amazonite",
+        "turquoise",
+        "apatite",
+        "labradorite",
+        "bloodstone",
+        "african-jade"
       ]
     },
     {
@@ -226,14 +226,14 @@
       "title": "Best Brown Crystals: Meanings, Benefits & How to Use",
       "crystals": [
         "tiger-eye",
-        "carnelian",
-        "aventurine",
-        "citrine",
-        "red-jasper",
-        "agate",
-        "agatized-coral",
-        "alabandite",
-        "amber"
+        "anatase",
+        "axinite",
+        "brookite",
+        "brown-jasper",
+        "cassiterite",
+        "goethite",
+        "petrified-wood",
+        "picture-jasper"
       ]
     },
     {
@@ -244,15 +244,15 @@
       "kw": "black crystals",
       "title": "Best Black Crystals: Meanings, Benefits & How to Use",
       "crystals": [
-        "jade",
-        "labradorite",
         "obsidian",
         "black-tourmaline",
-        "opal",
         "hematite",
-        "kyanite",
+        "labradorite",
         "rhodonite",
-        "acanthite"
+        "acanthite",
+        "alabandite",
+        "apache-tears",
+        "babingtonite"
       ]
     },
     {
@@ -265,13 +265,13 @@
       "crystals": [
         "rose-quartz",
         "rhodonite",
-        "adamite",
-        "agatized-coral",
-        "analcime",
-        "atlantisite",
-        "augelite",
-        "botswana-agate",
-        "bustamite"
+        "bustamite",
+        "inesite",
+        "kutnohorite",
+        "morganite",
+        "pink-quartz",
+        "rhodochrosite",
+        "thulite"
       ]
     },
     {
@@ -282,15 +282,15 @@
       "kw": "blue crystals",
       "title": "Best Blue Crystals: Meanings, Benefits & How to Use",
       "crystals": [
-        "tiger-eye",
+        "kyanite",
+        "larimar",
+        "amazonite",
+        "turquoise",
+        "apatite",
+        "angelite",
         "labradorite",
         "moonstone",
-        "amazonite",
-        "aventurine",
-        "turquoise",
-        "lapis",
-        "fluorite",
-        "kyanite"
+        "lapis"
       ]
     },
     {
@@ -301,15 +301,15 @@
       "kw": "red crystals",
       "title": "Best Red Crystals: Meanings, Benefits & How to Use",
       "crystals": [
-        "tiger-eye",
-        "carnelian",
-        "aventurine",
         "ruby",
         "red-jasper",
         "bloodstone",
         "rhodonite",
-        "agatized-coral",
-        "alexandrite"
+        "brecciated-jasper",
+        "coral",
+        "corundum",
+        "eisenkiesel",
+        "eudialyte"
       ]
     },
     {
@@ -321,14 +321,13 @@
       "title": "Best Orange Crystals: Meanings, Benefits & How to Use",
       "crystals": [
         "carnelian",
-        "citrine",
-        "kyanite",
-        "agate",
-        "amber",
-        "bumblebee-jasper",
+        "sunstone",
         "carnelian-agate",
-        "chondrodite",
-        "clinohumite"
+        "padparadscha-sapphire",
+        "sherry-topaz",
+        "wulfenite",
+        "crocoite",
+        "jacinth"
       ]
     },
     {
@@ -340,14 +339,14 @@
       "title": "Best Grey Crystals: Meanings, Benefits & How to Use",
       "crystals": [
         "labradorite",
-        "acanthite",
-        "agate",
         "agatized-coral",
-        "alabandite",
-        "alamosite",
-        "ammonite",
-        "analcime",
-        "anhydrite"
+        "black-pearl",
+        "granite",
+        "rhyolite",
+        "k2-stone",
+        "kimberlite",
+        "meteorite",
+        "petoskey-stone"
       ]
     },
     {
@@ -361,12 +360,12 @@
         "amazonite",
         "apatite",
         "ajoite",
-        "aquamarine",
-        "augelite",
         "aurichalcite",
+        "caledonite",
+        "aquamarine",
         "blue-jade",
-        "brochantite",
-        "caledonite"
+        "cornetite",
+        "grandidierite"
       ]
     },
     {
@@ -379,13 +378,13 @@
       "crystals": [
         "amethyst",
         "fluorite",
-        "lepidolite",
+        "sugilite",
+        "tiffany-stone",
         "ametrine",
-        "black-pearl",
-        "bornite",
-        "charoite",
         "chevron-amethyst",
-        "creedite"
+        "grape-agate",
+        "lavender-jade",
+        "rhodolite"
       ]
     },
     {

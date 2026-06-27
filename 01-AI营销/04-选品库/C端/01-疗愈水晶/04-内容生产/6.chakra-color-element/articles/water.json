@@ -14,9 +14,16 @@
     "moonstone",
     "amazonite",
     "opal",
-    "larimar"
+    "larimar",
+    "abalone-shell",
+    "afghanite",
+    "agatized-coral",
+    "ajoite",
+    "ammonite",
+    "anhydrite",
+    "aquamarine"
   ],
-  "stoneCount": 5,
+  "stoneCount": 12,
   "crystals": [
     {
       "slug": "labradorite",
@@ -47,7 +54,59 @@
       "name": "Larimar",
       "meaning": "/gemstone/larimar-meaning/",
       "shop": "/product-category/larimar-crystals/"
+    },
+    {
+      "slug": "abalone-shell",
+      "name": "abalone-shell",
+      "meaning": "/gemstone/abalone-shell-meaning/",
+      "shop": "/product-category/abalone-shell-crystals/"
+    },
+    {
+      "slug": "afghanite",
+      "name": "afghanite",
+      "meaning": "/gemstone/afghanite-meaning/",
+      "shop": "/product-category/afghanite-crystals/"
+    },
+    {
+      "slug": "agatized-coral",
+      "name": "agatized-coral",
+      "meaning": "/gemstone/agatized-coral-meaning/",
+      "shop": "/product-category/agatized-coral-crystals/"
+    },
+    {
+      "slug": "ajoite",
+      "name": "ajoite",
+      "meaning": "/gemstone/ajoite-meaning/",
+      "shop": "/product-category/ajoite-crystals/"
+    },
+    {
+      "slug": "ammonite",
+      "name": "ammonite",
+      "meaning": "/gemstone/ammonite-meaning/",
+      "shop": "/product-category/ammonite-crystals/"
+    },
+    {
+      "slug": "anhydrite",
+      "name": "anhydrite",
+      "meaning": "/gemstone/anhydrite-meaning/",
+      "shop": "/product-category/anhydrite-crystals/"
+    },
+    {
+      "slug": "aquamarine",
+      "name": "aquamarine",
+      "meaning": "/gemstone/aquamarine-meaning/",
+      "shop": "/product-category/aquamarine-crystals/"
     }
   ],
-  "content": "<h2>Quick Answer: Best Crystals for the Water Element</h2>\n<p>Looking for the best crystals for the Water Element? Labradorite, Moonstone, Amazonite and more are among the most popular choices, each traditionally associated with the grounding, energetic nature of this element. Below we explain what each one does and how to use it. <em>Crystal properties are complementary wellness tools, not medical treatments.</em></p>\n\n{{AI_M2_UNDERSTANDING}}\n\n<h2>How We Chose These Crystals</h2>\n<p>We selected these 5 crystals based on their traditional association with the Water Element, mineral properties, and practical popularity. Each is commonly available as jewelry or tumbled stones, making them easy to incorporate into daily life.</p>\n\n<h2>5 Best Crystals for the Water Element</h2>\n<h3>Labradorite</h3>\n<p><strong>Best for:</strong> Change, Intuition, Creativity</p>\n<p><strong>How to use it:</strong> Wear as cabochon pendant; <a href=\"/gemstone/labradorite-meaning/\">read full Labradorite meaning</a>.</p>\n<p>{{AI_DESC_labradorite}}</p>\n<h3>Moonstone</h3>\n<p><strong>Best for:</strong> Intuition, Emotional balance, June birthstone</p>\n<p><strong>How to use it:</strong> Wear as cabochon; <a href=\"/gemstone/moonstone-meaning/\">read full Moonstone meaning</a>.</p>\n<p>{{AI_DESC_moonstone}}</p>\n<h3>Amazonite</h3>\n<p><strong>Best for:</strong> Communication, Calm, Honesty</p>\n<p><strong>How to use it:</strong> Wear as pendant; <a href=\"/gemstone/amazonite-meaning/\">read full Amazonite meaning</a>.</p>\n<p>{{AI_DESC_amazonite}}</p>\n<h3>Opal</h3>\n<p><strong>Best for:</strong> Creativity, Inspiration, October birthstone</p>\n<p><strong>How to use it:</strong> Wear as solid cabochon; <a href=\"/gemstone/opal-meaning/\">read full Opal meaning</a>.</p>\n<p>{{AI_DESC_opal}}</p>\n<h3>Larimar</h3>\n<p><strong>Best for:</strong> Calm, Emotional balance, Communication</p>\n<p><strong>How to use it:</strong> Wear as cabochon pendant; <a href=\"/gemstone/larimar-meaning/\">read full Larimar meaning</a>.</p>\n<p>{{AI_DESC_larimar}}</p>\n\n{{AI_M4_CHOOSE_TABLE}}\n\n{{AI_M5_HOW_TO_USE}}\n\n{{AI_M6_COMBINATIONS}}\n\n{{AI_M7_SITUATIONS}}\n\n<h2>Shop Water  Crystals</h2>\n<p>Explore jewelry and stones from this guide:</p>\n<ul>\n<li><a href=\"/product-category/labradorite-crystals/\">Shop Labradorite</a></li>\n<li><a href=\"/product-category/moonstone-crystals/\">Shop Moonstone</a></li>\n<li><a href=\"/product-category/amazonite-crystals/\">Shop Amazonite</a></li>\n<li><a href=\"/product-category/opal-crystals/\">Shop Opal</a></li>\n<li><a href=\"/product-category/larimar-crystals/\">Shop Larimar</a></li></ul>\n\n{{AI_M9_FAQ}}\n\n<h2>Explore More Crystal Guides</h2>\n<ul>\n<li><a href=\"/gemstones/\">Crystal Guide Index</a></li>\n<li><a href=\"/root-chakra-crystals/\">Root Chakra Crystals</a></li><li><a href=\"/sacral-chakra-crystals/\">Sacral Chakra Crystals</a></li><li><a href=\"/solar-plexus-chakra-crystals/\">Solar Plexus Chakra Crystals</a></li><li><a href=\"/heart-chakra-crystals/\">Heart Chakra Crystals</a></li><li><a href=\"/throat-chakra-crystals/\">Throat Chakra Crystals</a></li><li><a href=\"/third-eye-chakra-crystals/\">Third Eye Chakra Crystals</a></li>\n</ul>\n<p><em>Explore our full <a href=\"/gemstones/\">crystal encyclopedia</a> for deeper dives into each stone.</em></p>"
+  "toolCta": {
+    "url": "/tools/element-test/",
+    "text": "Take the Element Test",
+    "lead": "Discover your dominant element —"
+  },
+  "diffHints": {
+    "useFocus": "emotional reflection, moon/water symbolism, bedside ritual, self-compassion meditation",
+    "zodiac": "Cancer→Moonstone,Rose Quartz; Scorpio→Malachite,Obsidian; Pisces→Aquamarine,Amethyst",
+    "regulate": "Emotional depth:Moonstone,Aquamarine; Intuition:Labradorite,Amethyst; Calm:Blue Lace Agate,Angelite; Flow:Aquamarine,Clear Quartz"
+  },
+  "content": "<h2>Quick Answer: Best Crystals for the Water Element</h2>\n<p>The best crystals for the Water Element include Labradorite, Moonstone, Amazonite, traditionally used in mindfulness and spiritual practices. <em>Crystal properties are complementary wellness tools, not medical treatments.</em></p>\n\n{{AI_M2_UNDERSTANDING}}\n<p><strong>Quick facts:</strong> Traits: Emotion, intuition, healing, flow. <strong>Balanced:</strong> Empathetic, intuitive, adaptable. <strong>Out of balance:</strong> Overwhelm, mood swings, clinging. Western zodiac: Cancer, Scorpio, Pisces. Feng Shui: North, career/life path area.</p>\n<p class=\"tool-cta\"><em>Not sure if your Water is balanced?  <a href=\"/tools/element-test/\">Take the Element Test ↗</a></em></p>\n\n<h2>12 Best Crystals for the Water Element</h2>\n<h3>Labradorite</h3>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Elemental link:</strong> {{AI_LINK_labradorite}}</p>\n<p><strong>Element action:</strong> {{AI_ACTION_labradorite}}</p>\n<p><strong>Color:</strong> Grey-black body with blue/gold/green flash</p>\n<p><strong>Chakra:</strong> Throat, Third Eye</p>\n<p><strong>Zodiac:</strong> Leo, Sagittarius</p>\n<p><strong>Best for:</strong> Change, Intuition, Creativity</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_labradorite}}</p>\n<p>{{AI_DESC_labradorite}}</p>\n<p><a href=\"/gemstone/labradorite-meaning/\">Read full Labradorite meaning →</a></p>\n<h3>Moonstone</h3>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Elemental link:</strong> {{AI_LINK_moonstone}}</p>\n<p><strong>Element action:</strong> {{AI_ACTION_moonstone}}</p>\n<p><strong>Color:</strong> White/cream with blue-white sheen</p>\n<p><strong>Chakra:</strong> Third Eye, Crown, Sacral</p>\n<p><strong>Zodiac:</strong> Cancer</p>\n<p><strong>Best for:</strong> Intuition, Emotional balance, June birthstone</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_moonstone}}</p>\n<p>{{AI_DESC_moonstone}}</p>\n<p><a href=\"/gemstone/moonstone-meaning/\">Read full Moonstone meaning →</a></p>\n<h3>Amazonite</h3>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Elemental link:</strong> {{AI_LINK_amazonite}}</p>\n<p><strong>Element action:</strong> {{AI_ACTION_amazonite}}</p>\n<p><strong>Color:</strong> Blue-green, turquoise-green</p>\n<p><strong>Chakra:</strong> Heart, Throat</p>\n<p><strong>Zodiac:</strong> Virgo, Aquarius</p>\n<p><strong>Best for:</strong> Communication, Calm, Honesty</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_amazonite}}</p>\n<p>{{AI_DESC_amazonite}}</p>\n<p><a href=\"/gemstone/amazonite-meaning/\">Read full Amazonite meaning →</a></p>\n<h3>Opal</h3>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Elemental link:</strong> {{AI_LINK_opal}}</p>\n<p><strong>Element action:</strong> {{AI_ACTION_opal}}</p>\n<p><strong>Color:</strong> White, black, fire — rainbow play-of-color</p>\n<p><strong>Chakra:</strong> All</p>\n<p><strong>Zodiac:</strong> Libra</p>\n<p><strong>Best for:</strong> Creativity, Inspiration, October birthstone</p>\n<p><strong>Best way to use:</strong> Wear, carry, or place in your space</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_opal}}</p>\n<p>{{AI_DESC_opal}}</p>\n<p><a href=\"/gemstone/opal-meaning/\">Read full Opal meaning →</a></p>\n<h3>Larimar</h3>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Elemental link:</strong> {{AI_LINK_larimar}}</p>\n<p><strong>Element action:</strong> {{AI_ACTION_larimar}}</p>\n<p><strong>Color:</strong> Blue, White</p>\n<p><strong>Chakra:</strong> Throat, Heart</p>\n<p><strong>Zodiac:</strong> Leo, Pisces</p>\n<p><strong>Best for:</strong> Calm, Emotional balance, Communication</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_larimar}}</p>\n<p>{{AI_DESC_larimar}}</p>\n<p><a href=\"/gemstone/larimar-meaning/\">Read full Larimar meaning →</a></p>\n<h3>abalone-shell</h3>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Elemental link:</strong> {{AI_LINK_abalone-shell}}</p>\n<p><strong>Element action:</strong> {{AI_ACTION_abalone-shell}}</p>\n<p><strong>Color:</strong> Iridescent blue, green, violet</p>\n<p><strong>Chakra:</strong> Throat, Heart, Third Eye</p>\n<p><strong>Zodiac:</strong> Aquarius, Pisces, Cancer</p>\n<p><strong>Best for:</strong> Calming, Emotional balance, Ocean connection</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_abalone-shell}}</p>\n<p>{{AI_DESC_abalone-shell}}</p>\n<p><a href=\"/gemstone/abalone-shell-meaning/\">Read full abalone-shell meaning →</a></p>\n<h3>afghanite</h3>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Elemental link:</strong> {{AI_LINK_afghanite}}</p>\n<p><strong>Element action:</strong> {{AI_ACTION_afghanite}}</p>\n<p><strong>Color:</strong> Deep vivid blue</p>\n<p><strong>Chakra:</strong> Throat, Third Eye</p>\n<p><strong>Zodiac:</strong> Sagittarius, Aquarius</p>\n<p><strong>Best for:</strong> Honesty, Inner knowing, Speaking truth</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_afghanite}}</p>\n<p>{{AI_DESC_afghanite}}</p>\n<p><a href=\"/gemstone/afghanite-meaning/\">Read full afghanite meaning →</a></p>\n<h3>agatized-coral</h3>\n<p><strong>Element:</strong> Earth, Water</p>\n<p><strong>Elemental link:</strong> {{AI_LINK_agatized-coral}}</p>\n<p><strong>Element action:</strong> {{AI_ACTION_agatized-coral}}</p>\n<p><strong>Color:</strong> Grey, brown, pink, red, yellow (natural/dyed)</p>\n<p><strong>Chakra:</strong> Root, Sacral, Heart</p>\n<p><strong>Zodiac:</strong> Taurus, Cancer</p>\n<p><strong>Best for:</strong> Patience, Longevity, Grounding</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_agatized-coral}}</p>\n<p>{{AI_DESC_agatized-coral}}</p>\n<p><a href=\"/gemstone/agatized-coral-meaning/\">Read full agatized-coral meaning →</a></p>\n<h3>ajoite</h3>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Elemental link:</strong> {{AI_LINK_ajoite}}</p>\n<p><strong>Element action:</strong> {{AI_ACTION_ajoite}}</p>\n<p><strong>Color:</strong> Blue-green, pale blue-green</p>\n<p><strong>Chakra:</strong> Heart, Throat</p>\n<p><strong>Zodiac:</strong> Cancer, Pisces</p>\n<p><strong>Best for:</strong> Peace, Gentle Expression, Heart</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_ajoite}}</p>\n<p>{{AI_DESC_ajoite}}</p>\n<p><a href=\"/gemstone/ajoite-meaning/\">Read full ajoite meaning →</a></p>\n<h3>ammonite</h3>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Elemental link:</strong> {{AI_LINK_ammonite}}</p>\n<p><strong>Element action:</strong> {{AI_ACTION_ammonite}}</p>\n<p><strong>Color:</strong> Brown-grey shell; iridescent (ammolite)</p>\n<p><strong>Chakra:</strong> Root, Third Eye</p>\n<p><strong>Zodiac:</strong> Cancer</p>\n<p><strong>Best for:</strong> Perspective, Grounding, Transitions</p>\n<p><strong>Best way to use:</strong> Wear, carry, or place in your space</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_ammonite}}</p>\n<p>{{AI_DESC_ammonite}}</p>\n<p><a href=\"/gemstone/ammonite-meaning/\">Read full ammonite meaning →</a></p>\n<h3>anhydrite</h3>\n<p><strong>Element:</strong> Air, Water</p>\n<p><strong>Elemental link:</strong> {{AI_LINK_anhydrite}}</p>\n<p><strong>Element action:</strong> {{AI_ACTION_anhydrite}}</p>\n<p><strong>Color:</strong> White, blue-white, grey, pale lilac</p>\n<p><strong>Chakra:</strong> Throat, Third Eye, Crown</p>\n<p><strong>Zodiac:</strong> Aquarius, Pisces</p>\n<p><strong>Best for:</strong> Peace, Calm, Serenity</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_anhydrite}}</p>\n<p>{{AI_DESC_anhydrite}}</p>\n<p><a href=\"/gemstone/anhydrite-meaning/\">Read full anhydrite meaning →</a></p>\n<h3>aquamarine</h3>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Elemental link:</strong> {{AI_LINK_aquamarine}}</p>\n<p><strong>Element action:</strong> {{AI_ACTION_aquamarine}}</p>\n<p><strong>Color:</strong> Pale blue to blue-green</p>\n<p><strong>Chakra:</strong> Throat</p>\n<p><strong>Zodiac:</strong> Pisces, Aries</p>\n<p><strong>Best for:</strong> Communication, Courage, Soothing tension</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_aquamarine}}</p>\n<p>{{AI_DESC_aquamarine}}</p>\n<p><a href=\"/gemstone/aquamarine-meaning/\">Read full aquamarine meaning →</a></p>\n\n{{AI_M4_REGULATE}}\n\n{{AI_M5_SAFE}}\n\n{{AI_M6_ZODIAC}}\n\n{{AI_M7_FENGSHUI}}\n\n{{AI_M8_FAQ}}\n\n<h2>Shop Water  Crystals: What to Look For</h2>\n<ul>\n<li><a href=\"/product-category/labradorite-crystals/\">Shop Labradorite</a></li>\n<li><a href=\"/product-category/moonstone-crystals/\">Shop Moonstone</a></li>\n<li><a href=\"/product-category/amazonite-crystals/\">Shop Amazonite</a></li>\n<li><a href=\"/product-category/opal-crystals/\">Shop Opal</a></li>\n<li><a href=\"/product-category/larimar-crystals/\">Shop Larimar</a></li>\n<li><a href=\"/product-category/abalone-shell-crystals/\">Shop abalone-shell</a></li></ul>\n\n<h2>Explore More Crystal Guides</h2>\n<ul>\n<li><a href=\"/gemstones/\">Crystal Guide Index</a></li>\n<li><a href=\"/earth-crystals/\">Earth Crystals</a></li>\n<li><a href=\"/fire-crystals/\">Fire Crystals</a></li>\n<li><a href=\"/air-crystals/\">Air Crystals</a></li>\n</ul>"
 }

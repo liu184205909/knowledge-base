@@ -11,14 +11,14 @@
   "excerpt": "{{AI_EXCERPT}}",
   "stoneSlugs": [
     "labradorite",
-    "acanthite",
-    "agate",
     "agatized-coral",
-    "alabandite",
-    "alamosite",
-    "ammonite",
-    "analcime",
-    "anhydrite"
+    "black-pearl",
+    "granite",
+    "rhyolite",
+    "k2-stone",
+    "kimberlite",
+    "meteorite",
+    "petoskey-stone"
   ],
   "stoneCount": 9,
   "crystals": [
@@ -29,53 +29,62 @@
       "shop": "/product-category/labradorite-crystals/"
     },
     {
-      "slug": "acanthite",
-      "name": "acanthite",
-      "meaning": "/gemstone/acanthite-meaning/",
-      "shop": "/product-category/acanthite-crystals/"
-    },
-    {
-      "slug": "agate",
-      "name": "agate",
-      "meaning": "/gemstone/agate-meaning/",
-      "shop": "/product-category/agate-crystals/"
-    },
-    {
       "slug": "agatized-coral",
       "name": "agatized-coral",
       "meaning": "/gemstone/agatized-coral-meaning/",
       "shop": "/product-category/agatized-coral-crystals/"
     },
     {
-      "slug": "alabandite",
-      "name": "alabandite",
-      "meaning": "/gemstone/alabandite-meaning/",
-      "shop": "/product-category/alabandite-crystals/"
+      "slug": "black-pearl",
+      "name": "black-pearl",
+      "meaning": "/gemstone/black-pearl-meaning/",
+      "shop": "/product-category/black-pearl-crystals/"
     },
     {
-      "slug": "alamosite",
-      "name": "alamosite",
-      "meaning": "/gemstone/alamosite-meaning/",
-      "shop": "/product-category/alamosite-crystals/"
+      "slug": "granite",
+      "name": "granite",
+      "meaning": "/gemstone/granite-meaning/",
+      "shop": "/product-category/granite-crystals/"
     },
     {
-      "slug": "ammonite",
-      "name": "ammonite",
-      "meaning": "/gemstone/ammonite-meaning/",
-      "shop": "/product-category/ammonite-crystals/"
+      "slug": "rhyolite",
+      "name": "rhyolite",
+      "meaning": "/gemstone/rhyolite-meaning/",
+      "shop": "/product-category/rhyolite-crystals/"
     },
     {
-      "slug": "analcime",
-      "name": "analcime",
-      "meaning": "/gemstone/analcime-meaning/",
-      "shop": "/product-category/analcime-crystals/"
+      "slug": "k2-stone",
+      "name": "k2-stone",
+      "meaning": "/gemstone/k2-stone-meaning/",
+      "shop": "/product-category/k2-stone-crystals/"
     },
     {
-      "slug": "anhydrite",
-      "name": "anhydrite",
-      "meaning": "/gemstone/anhydrite-meaning/",
-      "shop": "/product-category/anhydrite-crystals/"
+      "slug": "kimberlite",
+      "name": "kimberlite",
+      "meaning": "/gemstone/kimberlite-meaning/",
+      "shop": "/product-category/kimberlite-crystals/"
+    },
+    {
+      "slug": "meteorite",
+      "name": "meteorite",
+      "meaning": "/gemstone/meteorite-meaning/",
+      "shop": "/product-category/meteorite-crystals/"
+    },
+    {
+      "slug": "petoskey-stone",
+      "name": "petoskey-stone",
+      "meaning": "/gemstone/petoskey-stone-meaning/",
+      "shop": "/product-category/petoskey-stone-crystals/"
     }
   ],
-  "content": "<h2>Quick Answer: Best Crystals for Grey</h2>\n<p>Looking for the best crystals for Grey? Labradorite, acanthite, agate and more are among the most popular choices, each traditionally associated with the qualities this color represents. Below we explain what each one does and how to use it. <em>Crystal properties are complementary wellness tools, not medical treatments.</em></p>\n\n{{AI_M2_UNDERSTANDING}}\n\n<h2>How We Chose These Crystals</h2>\n<p>We selected these 9 crystals based on their traditional association with Grey, mineral properties, and practical popularity. Each is commonly available as jewelry or tumbled stones, making them easy to incorporate into daily life.</p>\n\n<h2>9 Best Crystals for Grey</h2>\n<h3>Labradorite</h3>\n<p><strong>Best for:</strong> Change, Intuition, Creativity</p>\n<p><strong>How to use it:</strong> Wear as cabochon pendant; <a href=\"/gemstone/labradorite-meaning/\">read full Labradorite meaning</a>.</p>\n<p>{{AI_DESC_labradorite}}</p>\n<h3>acanthite</h3>\n<p><strong>Best for:</strong> Clarity, Reflective Energy, Calm</p>\n<p><strong>How to use it:</strong> Wear as metallic crystals on matrix; <a href=\"/gemstone/acanthite-meaning/\">read full acanthite meaning</a>.</p>\n<p>{{AI_DESC_acanthite}}</p>\n<h3>agate</h3>\n<p><strong>Best for:</strong> Grounding, Balance, Daily wear</p>\n<p><strong>How to use it:</strong> Wear as bracelet; <a href=\"/gemstone/agate-meaning/\">read full agate meaning</a>.</p>\n<p>{{AI_DESC_agate}}</p>\n<h3>agatized-coral</h3>\n<p><strong>Best for:</strong> Patience, Longevity, Grounding</p>\n<p><strong>How to use it:</strong> Wear as tumbled; <a href=\"/gemstone/agatized-coral-meaning/\">read full agatized-coral meaning</a>.</p>\n<p>{{AI_DESC_agatized-coral}}</p>\n<h3>alabandite</h3>\n<p><strong>Best for:</strong> Grounding, Steady Strength, Vitality</p>\n<p><strong>How to use it:</strong> Wear as massive granular specimen; <a href=\"/gemstone/alabandite-meaning/\">read full alabandite meaning</a>.</p>\n<p>{{AI_DESC_alabandite}}</p>\n<h3>alamosite</h3>\n<p><strong>Best for:</strong> Clarity, Structure, Focus</p>\n<p><strong>How to use it:</strong> Wear as silky fibrous mass on matrix; <a href=\"/gemstone/alamosite-meaning/\">read full alamosite meaning</a>.</p>\n<p>{{AI_DESC_alamosite}}</p>\n<h3>ammonite</h3>\n<p><strong>Best for:</strong> Perspective, Grounding, Transitions</p>\n<p><strong>How to use it:</strong> Wear as whole fossil; <a href=\"/gemstone/ammonite-meaning/\">read full ammonite meaning</a>.</p>\n<p>{{AI_DESC_ammonite}}</p>\n<h3>analcime</h3>\n<p><strong>Best for:</strong> Clarity, Mental Focus, Perception</p>\n<p><strong>How to use it:</strong> Wear as crystal specimen; <a href=\"/gemstone/analcime-meaning/\">read full analcime meaning</a>.</p>\n<p>{{AI_DESC_analcime}}</p>\n<h3>anhydrite</h3>\n<p><strong>Best for:</strong> Peace, Calm, Serenity</p>\n<p><strong>How to use it:</strong> Wear as tumbled; <a href=\"/gemstone/anhydrite-meaning/\">read full anhydrite meaning</a>.</p>\n<p>{{AI_DESC_anhydrite}}</p>\n\n{{AI_M4_CHOOSE_TABLE}}\n\n{{AI_M5_HOW_TO_USE}}\n\n{{AI_M6_COMBINATIONS}}\n\n{{AI_M7_SITUATIONS}}\n\n<h2>Shop Grey  Crystals</h2>\n<p>Explore jewelry and stones from this guide:</p>\n<ul>\n<li><a href=\"/product-category/labradorite-crystals/\">Shop Labradorite</a></li>\n<li><a href=\"/product-category/acanthite-crystals/\">Shop acanthite</a></li>\n<li><a href=\"/product-category/agate-crystals/\">Shop agate</a></li>\n<li><a href=\"/product-category/agatized-coral-crystals/\">Shop agatized-coral</a></li>\n<li><a href=\"/product-category/alabandite-crystals/\">Shop alabandite</a></li>\n<li><a href=\"/product-category/alamosite-crystals/\">Shop alamosite</a></li></ul>\n\n{{AI_M9_FAQ}}\n\n<h2>Explore More Crystal Guides</h2>\n<ul>\n<li><a href=\"/gemstones/\">Crystal Guide Index</a></li>\n<li><a href=\"/root-chakra-crystals/\">Root Chakra Crystals</a></li><li><a href=\"/sacral-chakra-crystals/\">Sacral Chakra Crystals</a></li><li><a href=\"/solar-plexus-chakra-crystals/\">Solar Plexus Chakra Crystals</a></li><li><a href=\"/heart-chakra-crystals/\">Heart Chakra Crystals</a></li><li><a href=\"/throat-chakra-crystals/\">Throat Chakra Crystals</a></li><li><a href=\"/third-eye-chakra-crystals/\">Third Eye Chakra Crystals</a></li>\n</ul>\n<p><em>Explore our full <a href=\"/gemstones/\">crystal encyclopedia</a> for deeper dives into each stone.</em></p>"
+  "toolCta": {
+    "url": "/tools/crystal-quiz/",
+    "text": "Try the Crystal Quiz",
+    "lead": "Not sure which color is right for you?"
+  },
+  "diffHints": {
+    "useFocus": "transition rituals, desk, meditation, calm-focus practice",
+    "scene": "Transition, Neutrality, Calm Focus"
+  },
+  "content": "<h2>Quick Answer: Best Crystals for Grey</h2>\n<p>The best crystals for Grey include Labradorite, agatized-coral, black-pearl, traditionally used in mindfulness and spiritual practices. <em>Crystal properties are complementary wellness tools, not medical treatments.</em></p>\n\n{{AI_M2_UNDERSTANDING}}\n<p><strong>Quick facts:</strong> Symbolism: Neutrality, calm, introspection. Psychology: Detachment, balance, quiet reflection. Associated chakra: Neutral, element: Air/Metal.</p>\n<p class=\"tool-cta\"><em>Not sure which color is right for you? <a href=\"/tools/crystal-quiz/\">Try the Crystal Quiz ↗</a></em></p>\n\n{{AI_M2_5_IDENTIFY}}\n\n<h2>9 Best Crystals for Grey</h2>\n<h3>Labradorite</h3>\n<p><strong>Color:</strong> Grey-black body with blue/gold/green flash</p>\n<p><strong>Meaning:</strong> Neutrality, calm, introspection</p>\n<p><strong>Best for:</strong> Change, Intuition, Creativity</p>\n<p><strong>Chakra:</strong> Throat, Third Eye</p>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_labradorite}}</p>\n<p>{{AI_DESC_labradorite}}</p>\n<p><a href=\"/gemstone/labradorite-meaning/\">Read full Labradorite meaning →</a></p>\n<h3>agatized-coral</h3>\n<p><strong>Color:</strong> Grey, brown, pink, red, yellow (natural/dyed)</p>\n<p><strong>Meaning:</strong> Neutrality, calm, introspection</p>\n<p><strong>Best for:</strong> Patience, Longevity, Grounding</p>\n<p><strong>Chakra:</strong> Root, Sacral, Heart</p>\n<p><strong>Element:</strong> Earth, Water</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_agatized-coral}}</p>\n<p>{{AI_DESC_agatized-coral}}</p>\n<p><a href=\"/gemstone/agatized-coral-meaning/\">Read full agatized-coral meaning →</a></p>\n<h3>black-pearl</h3>\n<p><strong>Color:</strong> Grey, silver, black, green, blue, purple</p>\n<p><strong>Meaning:</strong> Neutrality, calm, introspection</p>\n<p><strong>Best for:</strong> Calm, Composure, Wisdom</p>\n<p><strong>Chakra:</strong> Throat, Third Eye, Crown</p>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_black-pearl}}</p>\n<p>{{AI_DESC_black-pearl}}</p>\n<p><a href=\"/gemstone/black-pearl-meaning/\">Read full black-pearl meaning →</a></p>\n<h3>granite</h3>\n<p><strong>Color:</strong> Grey, pink, white, black (speckled)</p>\n<p><strong>Meaning:</strong> Neutrality, calm, introspection</p>\n<p><strong>Best for:</strong> Grounding, Stability, Stress relief</p>\n<p><strong>Chakra:</strong> Root</p>\n<p><strong>Element:</strong> Earth</p>\n<p><strong>Best way to use:</strong> Carry or hold in meditation</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_granite}}</p>\n<p>{{AI_DESC_granite}}</p>\n<p><a href=\"/gemstone/granite-meaning/\">Read full granite meaning →</a></p>\n<h3>rhyolite</h3>\n<p><strong>Color:</strong> Grey, brown, red, pink, often banded</p>\n<p><strong>Meaning:</strong> Neutrality, calm, introspection</p>\n<p><strong>Best for:</strong> Forward movement, Creative thinking, Rooted energy</p>\n<p><strong>Chakra:</strong> Root, Sacral, Solar Plexus</p>\n<p><strong>Element:</strong> Fire / Earth</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_rhyolite}}</p>\n<p>{{AI_DESC_rhyolite}}</p>\n<p><a href=\"/gemstone/rhyolite-meaning/\">Read full rhyolite meaning →</a></p>\n<h3>k2-stone</h3>\n<p><strong>Color:</strong> Grey-white granite with blue spots</p>\n<p><strong>Meaning:</strong> Neutrality, calm, introspection</p>\n<p><strong>Best for:</strong> Rooted intuition, Earth-sky balance, Honest expression</p>\n<p><strong>Chakra:</strong> Root, Third Eye, Throat</p>\n<p><strong>Element:</strong> Earth</p>\n<p><strong>Best way to use:</strong> Carry or hold in meditation</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_k2-stone}}</p>\n<p>{{AI_DESC_k2-stone}}</p>\n<p><a href=\"/gemstone/k2-stone-meaning/\">Read full k2-stone meaning →</a></p>\n<h3>kimberlite</h3>\n<p><strong>Color:</strong> Grey-blue, grey-green, speckled</p>\n<p><strong>Meaning:</strong> Neutrality, calm, introspection</p>\n<p><strong>Best for:</strong> Hidden Potential, Transformation, Grounding</p>\n<p><strong>Chakra:</strong> Root</p>\n<p><strong>Element:</strong> Earth (deep mantle)</p>\n<p><strong>Best way to use:</strong> Wear, carry, or place in your space</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_kimberlite}}</p>\n<p>{{AI_DESC_kimberlite}}</p>\n<p><a href=\"/gemstone/kimberlite-meaning/\">Read full kimberlite meaning →</a></p>\n<h3>meteorite</h3>\n<p><strong>Color:</strong> Dark grey, metallic black</p>\n<p><strong>Meaning:</strong> Neutrality, calm, introspection</p>\n<p><strong>Best for:</strong> Perspective, Change, Grounding</p>\n<p><strong>Chakra:</strong> Third Eye, Crown, Root</p>\n<p><strong>Element:</strong> Éther (cosmos)</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_meteorite}}</p>\n<p>{{AI_DESC_meteorite}}</p>\n<p><a href=\"/gemstone/meteorite-meaning/\">Read full meteorite meaning →</a></p>\n<h3>petoskey-stone</h3>\n<p><strong>Color:</strong> Grey-brown (hexagonal pattern when polished)</p>\n<p><strong>Meaning:</strong> Neutrality, calm, introspection</p>\n<p><strong>Best for:</strong> Perspective, Grounding, Patience</p>\n<p><strong>Chakra:</strong> Third Eye, Root</p>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Best way to use:</strong> Carry or hold in meditation</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_petoskey-stone}}</p>\n<p>{{AI_DESC_petoskey-stone}}</p>\n<p><a href=\"/gemstone/petoskey-stone-meaning/\">Read full petoskey-stone meaning →</a></p>\n\n{{AI_M4_MATRIX}}\n\n{{AI_M5_USE}}\n\n{{AI_M6_SCENE}}\n\n{{AI_M7_GLANCE}}\n\n{{AI_M8_FAQ}}\n\n<h2>Shop Grey  Crystals: What to Look For</h2>\n<ul>\n<li><a href=\"/product-category/labradorite-crystals/\">Shop Labradorite</a></li>\n<li><a href=\"/product-category/agatized-coral-crystals/\">Shop agatized-coral</a></li>\n<li><a href=\"/product-category/black-pearl-crystals/\">Shop black-pearl</a></li>\n<li><a href=\"/product-category/granite-crystals/\">Shop granite</a></li>\n<li><a href=\"/product-category/rhyolite-crystals/\">Shop rhyolite</a></li>\n<li><a href=\"/product-category/k2-stone-crystals/\">Shop k2-stone</a></li></ul>\n\n<h2>Explore More Crystal Guides</h2>\n<ul>\n<li><a href=\"/gemstones/\">Crystal Guide Index</a></li>\n<li><a href=\"/white-crystals/\">White Crystals</a></li>\n<li><a href=\"/yellow-crystals/\">Yellow Crystals</a></li>\n<li><a href=\"/green-crystals/\">Green Crystals</a></li>\n<li><a href=\"/brown-crystals/\">Brown Crystals</a></li>\n<li><a href=\"/black-crystals/\">Black Crystals</a></li>\n<li><a href=\"/pink-crystals/\">Pink Crystals</a></li>\n</ul>"
 }

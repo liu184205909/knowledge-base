@@ -12,13 +12,13 @@
   "stoneSlugs": [
     "amethyst",
     "fluorite",
-    "lepidolite",
+    "sugilite",
+    "tiffany-stone",
     "ametrine",
-    "black-pearl",
-    "bornite",
-    "charoite",
     "chevron-amethyst",
-    "creedite"
+    "grape-agate",
+    "lavender-jade",
+    "rhodolite"
   ],
   "stoneCount": 9,
   "crystals": [
@@ -35,10 +35,16 @@
       "shop": "/product-category/fluorite-crystals/"
     },
     {
-      "slug": "lepidolite",
-      "name": "Lepidolite",
-      "meaning": "/gemstone/lepidolite-meaning/",
-      "shop": "/product-category/lepidolite-crystals/"
+      "slug": "sugilite",
+      "name": "sugilite",
+      "meaning": "/gemstone/sugilite-meaning/",
+      "shop": "/product-category/sugilite-crystals/"
+    },
+    {
+      "slug": "tiffany-stone",
+      "name": "tiffany-stone",
+      "meaning": "/gemstone/tiffany-stone-meaning/",
+      "shop": "/product-category/tiffany-stone-crystals/"
     },
     {
       "slug": "ametrine",
@@ -47,35 +53,38 @@
       "shop": "/product-category/ametrine-crystals/"
     },
     {
-      "slug": "black-pearl",
-      "name": "black-pearl",
-      "meaning": "/gemstone/black-pearl-meaning/",
-      "shop": "/product-category/black-pearl-crystals/"
-    },
-    {
-      "slug": "bornite",
-      "name": "bornite",
-      "meaning": "/gemstone/bornite-meaning/",
-      "shop": "/product-category/bornite-crystals/"
-    },
-    {
-      "slug": "charoite",
-      "name": "charoite",
-      "meaning": "/gemstone/charoite-meaning/",
-      "shop": "/product-category/charoite-crystals/"
-    },
-    {
       "slug": "chevron-amethyst",
       "name": "chevron-amethyst",
       "meaning": "/gemstone/chevron-amethyst-meaning/",
       "shop": "/product-category/chevron-amethyst-crystals/"
     },
     {
-      "slug": "creedite",
-      "name": "creedite",
-      "meaning": "/gemstone/creedite-meaning/",
-      "shop": "/product-category/creedite-crystals/"
+      "slug": "grape-agate",
+      "name": "grape-agate",
+      "meaning": "/gemstone/grape-agate-meaning/",
+      "shop": "/product-category/grape-agate-crystals/"
+    },
+    {
+      "slug": "lavender-jade",
+      "name": "lavender-jade",
+      "meaning": "/gemstone/lavender-jade-meaning/",
+      "shop": "/product-category/lavender-jade-crystals/"
+    },
+    {
+      "slug": "rhodolite",
+      "name": "rhodolite",
+      "meaning": "/gemstone/rhodolite-meaning/",
+      "shop": "/product-category/rhodolite-crystals/"
     }
   ],
-  "content": "<h2>Quick Answer: Best Crystals for Purple</h2>\n<p>Looking for the best crystals for Purple? Amethyst, Fluorite, Lepidolite and more are among the most popular choices, each traditionally associated with the qualities this color represents. Below we explain what each one does and how to use it. <em>Crystal properties are complementary wellness tools, not medical treatments.</em></p>\n\n{{AI_M2_UNDERSTANDING}}\n\n<h2>How We Chose These Crystals</h2>\n<p>We selected these 9 crystals based on their traditional association with Purple, mineral properties, and practical popularity. Each is commonly available as jewelry or tumbled stones, making them easy to incorporate into daily life.</p>\n\n<h2>9 Best Crystals for Purple</h2>\n<h3>Amethyst</h3>\n<p><strong>Best for:</strong> Meditation, Sleep, Stress relief</p>\n<p><strong>How to use it:</strong> Wear as bracelet; <a href=\"/gemstone/amethyst-meaning/\">read full Amethyst meaning</a>.</p>\n<p>{{AI_DESC_amethyst}}</p>\n<h3>Fluorite</h3>\n<p><strong>Best for:</strong> Study, Concentration, Work</p>\n<p><strong>How to use it:</strong> Wear as tumbled; <a href=\"/gemstone/fluorite-meaning/\">read full Fluorite meaning</a>.</p>\n<p>{{AI_DESC_fluorite}}</p>\n<h3>Lepidolite</h3>\n<p><strong>Best for:</strong> Calm, Stress relief, Transitions</p>\n<p><strong>How to use it:</strong> Wear as chip-bead bracelet; <a href=\"/gemstone/lepidolite-meaning/\">read full Lepidolite meaning</a>.</p>\n<p>{{AI_DESC_lepidolite}}</p>\n<h3>ametrine</h3>\n<p><strong>Best for:</strong> Focus, Creativity, Confidence</p>\n<p><strong>How to use it:</strong> Wear as faceted ring; <a href=\"/gemstone/ametrine-meaning/\">read full ametrine meaning</a>.</p>\n<p>{{AI_DESC_ametrine}}</p>\n<h3>black-pearl</h3>\n<p><strong>Best for:</strong> Calm, Composure, Wisdom</p>\n<p><strong>How to use it:</strong> Wear as pendant; <a href=\"/gemstone/black-pearl-meaning/\">read full black-pearl meaning</a>.</p>\n<p>{{AI_DESC_black-pearl}}</p>\n<h3>bornite</h3>\n<p><strong>Best for:</strong> Joy, Happiness, Optimism</p>\n<p><strong>How to use it:</strong> Wear as crystal specimen; <a href=\"/gemstone/bornite-meaning/\">read full bornite meaning</a>.</p>\n<p>{{AI_DESC_bornite}}</p>\n<h3>charoite</h3>\n<p><strong>Best for:</strong> Change, Facing fear, Inner growth</p>\n<p><strong>How to use it:</strong> Wear as cabochon pendant; <a href=\"/gemstone/charoite-meaning/\">read full charoite meaning</a>.</p>\n<p>{{AI_DESC_charoite}}</p>\n<h3>chevron-amethyst</h3>\n<p><strong>Best for:</strong> Meditation, Insight, Calm</p>\n<p><strong>How to use it:</strong> Wear as sphere; <a href=\"/gemstone/chevron-amethyst-meaning/\">read full chevron-amethyst meaning</a>.</p>\n<p>{{AI_DESC_chevron-amethyst}}</p>\n<h3>creedite</h3>\n<p><strong>Best for:</strong> Clarity, Alignment, Goal-Setting</p>\n<p><strong>How to use it:</strong> Wear as crystal specimen; <a href=\"/gemstone/creedite-meaning/\">read full creedite meaning</a>.</p>\n<p>{{AI_DESC_creedite}}</p>\n\n{{AI_M4_CHOOSE_TABLE}}\n\n{{AI_M5_HOW_TO_USE}}\n\n{{AI_M6_COMBINATIONS}}\n\n{{AI_M7_SITUATIONS}}\n\n<h2>Shop Purple  Crystals</h2>\n<p>Explore jewelry and stones from this guide:</p>\n<ul>\n<li><a href=\"/product-category/amethyst-crystals/\">Shop Amethyst</a></li>\n<li><a href=\"/product-category/fluorite-crystals/\">Shop Fluorite</a></li>\n<li><a href=\"/product-category/lepidolite-crystals/\">Shop Lepidolite</a></li>\n<li><a href=\"/product-category/ametrine-crystals/\">Shop ametrine</a></li>\n<li><a href=\"/product-category/black-pearl-crystals/\">Shop black-pearl</a></li>\n<li><a href=\"/product-category/bornite-crystals/\">Shop bornite</a></li></ul>\n\n{{AI_M9_FAQ}}\n\n<h2>Explore More Crystal Guides</h2>\n<ul>\n<li><a href=\"/gemstones/\">Crystal Guide Index</a></li>\n<li><a href=\"/root-chakra-crystals/\">Root Chakra Crystals</a></li><li><a href=\"/sacral-chakra-crystals/\">Sacral Chakra Crystals</a></li><li><a href=\"/solar-plexus-chakra-crystals/\">Solar Plexus Chakra Crystals</a></li><li><a href=\"/heart-chakra-crystals/\">Heart Chakra Crystals</a></li><li><a href=\"/throat-chakra-crystals/\">Throat Chakra Crystals</a></li><li><a href=\"/third-eye-chakra-crystals/\">Third Eye Chakra Crystals</a></li>\n</ul>\n<p><em>Explore our full <a href=\"/gemstones/\">crystal encyclopedia</a> for deeper dives into each stone.</em></p>"
+  "toolCta": {
+    "url": "/tools/crystal-quiz/",
+    "text": "Try the Crystal Quiz",
+    "lead": "Not sure which color is right for you?"
+  },
+  "diffHints": {
+    "useFocus": "meditation, bedside, dream journaling, spiritual altar",
+    "scene": "Intuition and Spiritual Reflection"
+  },
+  "content": "<h2>Quick Answer: Best Crystals for Purple</h2>\n<p>The best crystals for Purple include Amethyst, Fluorite, sugilite, traditionally used in mindfulness and spiritual practices. <em>Crystal properties are complementary wellness tools, not medical treatments.</em></p>\n\n{{AI_M2_UNDERSTANDING}}\n<p><strong>Quick facts:</strong> Symbolism: Spirituality, wisdom, intuition. Psychology: Deep contemplation, spiritual awareness. Associated chakra: Third Eye/Crown, element: Air/Thought.</p>\n<p class=\"tool-cta\"><em>Not sure which color is right for you? <a href=\"/tools/crystal-quiz/\">Try the Crystal Quiz ↗</a></em></p>\n\n{{AI_M2_5_IDENTIFY}}\n\n<h2>9 Best Crystals for Purple</h2>\n<h3>Amethyst</h3>\n<p><strong>Color:</strong> Purple</p>\n<p><strong>Meaning:</strong> Spirituality, wisdom, intuition</p>\n<p><strong>Best for:</strong> Meditation, Sleep, Stress relief</p>\n<p><strong>Chakra:</strong> Crown, Third Eye</p>\n<p><strong>Element:</strong> Air</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_amethyst}}</p>\n<p>{{AI_DESC_amethyst}}</p>\n<p><a href=\"/gemstone/amethyst-meaning/\">Read full Amethyst meaning →</a></p>\n<h3>Fluorite</h3>\n<p><strong>Color:</strong> Purple, green, blue, yellow, rainbow</p>\n<p><strong>Meaning:</strong> Spirituality, wisdom, intuition</p>\n<p><strong>Best for:</strong> Study, Concentration, Work</p>\n<p><strong>Chakra:</strong> Third Eye, Throat, Heart (color-linked)</p>\n<p><strong>Element:</strong> Air</p>\n<p><strong>Best way to use:</strong> Carry or hold in meditation</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_fluorite}}</p>\n<p>{{AI_DESC_fluorite}}</p>\n<p><a href=\"/gemstone/fluorite-meaning/\">Read full Fluorite meaning →</a></p>\n<h3>sugilite</h3>\n<p><strong>Color:</strong> Purple, violet, reddish-purple</p>\n<p><strong>Meaning:</strong> Spirituality, wisdom, intuition</p>\n<p><strong>Best for:</strong> Meditation, Sensitivity, Self-Awareness</p>\n<p><strong>Chakra:</strong> Crown, Third Eye</p>\n<p><strong>Element:</strong> Spirit (Ether)</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_sugilite}}</p>\n<p>{{AI_DESC_sugilite}}</p>\n<p><a href=\"/gemstone/sugilite-meaning/\">Read full sugilite meaning →</a></p>\n<h3>tiffany-stone</h3>\n<p><strong>Color:</strong> Purple, blue, pink, white, black veining</p>\n<p><strong>Meaning:</strong> Spirituality, wisdom, intuition</p>\n<p><strong>Best for:</strong> Intuition, Creativity, Softness</p>\n<p><strong>Chakra:</strong> Third Eye, Crown, Heart</p>\n<p><strong>Element:</strong> Air, Spirit</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_tiffany-stone}}</p>\n<p>{{AI_DESC_tiffany-stone}}</p>\n<p><a href=\"/gemstone/tiffany-stone-meaning/\">Read full tiffany-stone meaning →</a></p>\n<h3>ametrine</h3>\n<p><strong>Color:</strong> Purple and gold (bicolor)</p>\n<p><strong>Meaning:</strong> Spirituality, wisdom, intuition</p>\n<p><strong>Best for:</strong> Focus, Creativity, Confidence</p>\n<p><strong>Chakra:</strong> Solar Plexus, Crown, Third Eye</p>\n<p><strong>Element:</strong> Air, Fire</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_ametrine}}</p>\n<p>{{AI_DESC_ametrine}}</p>\n<p><a href=\"/gemstone/ametrine-meaning/\">Read full ametrine meaning →</a></p>\n<h3>chevron-amethyst</h3>\n<p><strong>Color:</strong> Purple and white (chevron bands)</p>\n<p><strong>Meaning:</strong> Spirituality, wisdom, intuition</p>\n<p><strong>Best for:</strong> Meditation, Insight, Calm</p>\n<p><strong>Chakra:</strong> Third Eye, Crown</p>\n<p><strong>Element:</strong> Air</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_chevron-amethyst}}</p>\n<p>{{AI_DESC_chevron-amethyst}}</p>\n<p><a href=\"/gemstone/chevron-amethyst-meaning/\">Read full chevron-amethyst meaning →</a></p>\n<h3>grape-agate</h3>\n<p><strong>Color:</strong> Lilac to purple</p>\n<p><strong>Meaning:</strong> Spirituality, wisdom, intuition</p>\n<p><strong>Best for:</strong> Calm, Connection, Balance</p>\n<p><strong>Chakra:</strong> Third Eye, Crown</p>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Best way to use:</strong> Carry or hold in meditation</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_grape-agate}}</p>\n<p>{{AI_DESC_grape-agate}}</p>\n<p><a href=\"/gemstone/grape-agate-meaning/\">Read full grape-agate meaning →</a></p>\n<h3>lavender-jade</h3>\n<p><strong>Color:</strong> Soft lavender purple</p>\n<p><strong>Meaning:</strong> Spirituality, wisdom, intuition</p>\n<p><strong>Best for:</strong> Calm mind, Balance, Gentle reflection</p>\n<p><strong>Chakra:</strong> Crown, Third Eye, Heart</p>\n<p><strong>Element:</strong> Air / Spirit</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_lavender-jade}}</p>\n<p>{{AI_DESC_lavender-jade}}</p>\n<p><a href=\"/gemstone/lavender-jade-meaning/\">Read full lavender-jade meaning →</a></p>\n<h3>rhodolite</h3>\n<p><strong>Color:</strong> Rose-purple</p>\n<p><strong>Meaning:</strong> Spirituality, wisdom, intuition</p>\n<p><strong>Best for:</strong> Warm heart, Kindness, Fresh vision</p>\n<p><strong>Chakra:</strong> Heart, Crown</p>\n<p><strong>Element:</strong> Fire / Air</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_rhodolite}}</p>\n<p>{{AI_DESC_rhodolite}}</p>\n<p><a href=\"/gemstone/rhodolite-meaning/\">Read full rhodolite meaning →</a></p>\n\n{{AI_M4_MATRIX}}\n\n{{AI_M5_USE}}\n\n{{AI_M6_SCENE}}\n\n{{AI_M7_GLANCE}}\n\n{{AI_M8_FAQ}}\n\n<h2>Shop Purple  Crystals: What to Look For</h2>\n<ul>\n<li><a href=\"/product-category/amethyst-crystals/\">Shop Amethyst</a></li>\n<li><a href=\"/product-category/fluorite-crystals/\">Shop Fluorite</a></li>\n<li><a href=\"/product-category/sugilite-crystals/\">Shop sugilite</a></li>\n<li><a href=\"/product-category/tiffany-stone-crystals/\">Shop tiffany-stone</a></li>\n<li><a href=\"/product-category/ametrine-crystals/\">Shop ametrine</a></li>\n<li><a href=\"/product-category/chevron-amethyst-crystals/\">Shop chevron-amethyst</a></li></ul>\n\n<h2>Explore More Crystal Guides</h2>\n<ul>\n<li><a href=\"/gemstones/\">Crystal Guide Index</a></li>\n<li><a href=\"/white-crystals/\">White Crystals</a></li>\n<li><a href=\"/yellow-crystals/\">Yellow Crystals</a></li>\n<li><a href=\"/green-crystals/\">Green Crystals</a></li>\n<li><a href=\"/brown-crystals/\">Brown Crystals</a></li>\n<li><a href=\"/black-crystals/\">Black Crystals</a></li>\n<li><a href=\"/pink-crystals/\">Pink Crystals</a></li>\n</ul>"
 }

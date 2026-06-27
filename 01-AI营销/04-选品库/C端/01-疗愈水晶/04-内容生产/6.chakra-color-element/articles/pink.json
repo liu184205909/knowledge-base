@@ -12,13 +12,13 @@
   "stoneSlugs": [
     "rose-quartz",
     "rhodonite",
-    "adamite",
-    "agatized-coral",
-    "analcime",
-    "atlantisite",
-    "augelite",
-    "botswana-agate",
-    "bustamite"
+    "bustamite",
+    "inesite",
+    "kutnohorite",
+    "morganite",
+    "pink-quartz",
+    "rhodochrosite",
+    "thulite"
   ],
   "stoneCount": 9,
   "crystals": [
@@ -35,47 +35,56 @@
       "shop": "/product-category/rhodonite-crystals/"
     },
     {
-      "slug": "adamite",
-      "name": "adamite",
-      "meaning": "/gemstone/adamite-meaning/",
-      "shop": "/product-category/adamite-crystals/"
-    },
-    {
-      "slug": "agatized-coral",
-      "name": "agatized-coral",
-      "meaning": "/gemstone/agatized-coral-meaning/",
-      "shop": "/product-category/agatized-coral-crystals/"
-    },
-    {
-      "slug": "analcime",
-      "name": "analcime",
-      "meaning": "/gemstone/analcime-meaning/",
-      "shop": "/product-category/analcime-crystals/"
-    },
-    {
-      "slug": "atlantisite",
-      "name": "atlantisite",
-      "meaning": "/gemstone/atlantisite-meaning/",
-      "shop": "/product-category/atlantisite-crystals/"
-    },
-    {
-      "slug": "augelite",
-      "name": "augelite",
-      "meaning": "/gemstone/augelite-meaning/",
-      "shop": "/product-category/augelite-crystals/"
-    },
-    {
-      "slug": "botswana-agate",
-      "name": "botswana-agate",
-      "meaning": "/gemstone/botswana-agate-meaning/",
-      "shop": "/product-category/botswana-agate-crystals/"
-    },
-    {
       "slug": "bustamite",
       "name": "bustamite",
       "meaning": "/gemstone/bustamite-meaning/",
       "shop": "/product-category/bustamite-crystals/"
+    },
+    {
+      "slug": "inesite",
+      "name": "inesite",
+      "meaning": "/gemstone/inesite-meaning/",
+      "shop": "/product-category/inesite-crystals/"
+    },
+    {
+      "slug": "kutnohorite",
+      "name": "kutnohorite",
+      "meaning": "/gemstone/kutnohorite-meaning/",
+      "shop": "/product-category/kutnohorite-crystals/"
+    },
+    {
+      "slug": "morganite",
+      "name": "morganite",
+      "meaning": "/gemstone/morganite-meaning/",
+      "shop": "/product-category/morganite-crystals/"
+    },
+    {
+      "slug": "pink-quartz",
+      "name": "pink-quartz",
+      "meaning": "/gemstone/pink-quartz-meaning/",
+      "shop": "/product-category/pink-quartz-crystals/"
+    },
+    {
+      "slug": "rhodochrosite",
+      "name": "rhodochrosite",
+      "meaning": "/gemstone/rhodochrosite-meaning/",
+      "shop": "/product-category/rhodochrosite-crystals/"
+    },
+    {
+      "slug": "thulite",
+      "name": "thulite",
+      "meaning": "/gemstone/thulite-meaning/",
+      "shop": "/product-category/thulite-crystals/"
     }
   ],
-  "content": "<h2>Quick Answer: Best Crystals for Pink</h2>\n<p>Looking for the best crystals for Pink? Rose Quartz, Rhodonite, adamite and more are among the most popular choices, each traditionally associated with the qualities this color represents. Below we explain what each one does and how to use it. <em>Crystal properties are complementary wellness tools, not medical treatments.</em></p>\n\n{{AI_M2_UNDERSTANDING}}\n\n<h2>How We Chose These Crystals</h2>\n<p>We selected these 9 crystals based on their traditional association with Pink, mineral properties, and practical popularity. Each is commonly available as jewelry or tumbled stones, making them easy to incorporate into daily life.</p>\n\n<h2>9 Best Crystals for Pink</h2>\n<h3>Rose Quartz</h3>\n<p><strong>Best for:</strong> Self-love, Relationships, Grief</p>\n<p><strong>How to use it:</strong> Wear as bracelet; <a href=\"/gemstone/rose-quartz-meaning/\">read full Rose Quartz meaning</a>.</p>\n<p>{{AI_DESC_rose-quartz}}</p>\n<h3>Rhodonite</h3>\n<p><strong>Best for:</strong> Forgiveness, Heart work, Self-worth</p>\n<p><strong>How to use it:</strong> Wear as tumbled; <a href=\"/gemstone/rhodonite-meaning/\">read full Rhodonite meaning</a>.</p>\n<p>{{AI_DESC_rhodonite}}</p>\n<h3>adamite</h3>\n<p><strong>Best for:</strong> Mood lift, Creative work, Display</p>\n<p><strong>How to use it:</strong> Wear as radiating cluster; <a href=\"/gemstone/adamite-meaning/\">read full adamite meaning</a>.</p>\n<p>{{AI_DESC_adamite}}</p>\n<h3>agatized-coral</h3>\n<p><strong>Best for:</strong> Patience, Longevity, Grounding</p>\n<p><strong>How to use it:</strong> Wear as tumbled; <a href=\"/gemstone/agatized-coral-meaning/\">read full agatized-coral meaning</a>.</p>\n<p>{{AI_DESC_agatized-coral}}</p>\n<h3>analcime</h3>\n<p><strong>Best for:</strong> Clarity, Mental Focus, Perception</p>\n<p><strong>How to use it:</strong> Wear as crystal specimen; <a href=\"/gemstone/analcime-meaning/\">read full analcime meaning</a>.</p>\n<p>{{AI_DESC_analcime}}</p>\n<h3>atlantisite</h3>\n<p><strong>Best for:</strong> Emotional mending, Grounding, Nature connection</p>\n<p><strong>How to use it:</strong> Wear as cabochon; <a href=\"/gemstone/atlantisite-meaning/\">read full atlantisite meaning</a>.</p>\n<p>{{AI_DESC_atlantisite}}</p>\n<h3>augelite</h3>\n<p><strong>Best for:</strong> Clarity, Illumination, Bright Mood</p>\n<p><strong>How to use it:</strong> Wear as bright wedge crystals on matrix; <a href=\"/gemstone/augelite-meaning/\">read full augelite meaning</a>.</p>\n<p>{{AI_DESC_augelite}}</p>\n<h3>botswana-agate</h3>\n<p><strong>Best for:</strong> Grief, Worry, Grounding</p>\n<p><strong>How to use it:</strong> Wear as tumbled; <a href=\"/gemstone/botswana-agate-meaning/\">read full botswana-agate meaning</a>.</p>\n<p>{{AI_DESC_botswana-agate}}</p>\n<h3>bustamite</h3>\n<p><strong>Best for:</strong> Self-Worth, Warmth, Gentle Healing</p>\n<p><strong>How to use it:</strong> Wear as tumbled stone; <a href=\"/gemstone/bustamite-meaning/\">read full bustamite meaning</a>.</p>\n<p>{{AI_DESC_bustamite}}</p>\n\n{{AI_M4_CHOOSE_TABLE}}\n\n{{AI_M5_HOW_TO_USE}}\n\n{{AI_M6_COMBINATIONS}}\n\n{{AI_M7_SITUATIONS}}\n\n<h2>Shop Pink  Crystals</h2>\n<p>Explore jewelry and stones from this guide:</p>\n<ul>\n<li><a href=\"/product-category/rose-quartz-crystals/\">Shop Rose Quartz</a></li>\n<li><a href=\"/product-category/rhodonite-crystals/\">Shop Rhodonite</a></li>\n<li><a href=\"/product-category/adamite-crystals/\">Shop adamite</a></li>\n<li><a href=\"/product-category/agatized-coral-crystals/\">Shop agatized-coral</a></li>\n<li><a href=\"/product-category/analcime-crystals/\">Shop analcime</a></li>\n<li><a href=\"/product-category/atlantisite-crystals/\">Shop atlantisite</a></li></ul>\n\n{{AI_M9_FAQ}}\n\n<h2>Explore More Crystal Guides</h2>\n<ul>\n<li><a href=\"/gemstones/\">Crystal Guide Index</a></li>\n<li><a href=\"/root-chakra-crystals/\">Root Chakra Crystals</a></li><li><a href=\"/sacral-chakra-crystals/\">Sacral Chakra Crystals</a></li><li><a href=\"/solar-plexus-chakra-crystals/\">Solar Plexus Chakra Crystals</a></li><li><a href=\"/heart-chakra-crystals/\">Heart Chakra Crystals</a></li><li><a href=\"/throat-chakra-crystals/\">Throat Chakra Crystals</a></li><li><a href=\"/third-eye-chakra-crystals/\">Third Eye Chakra Crystals</a></li>\n</ul>\n<p><em>Explore our full <a href=\"/gemstones/\">crystal encyclopedia</a> for deeper dives into each stone.</em></p>"
+  "toolCta": {
+    "url": "/tools/crystal-quiz/",
+    "text": "Try the Crystal Quiz",
+    "lead": "Not sure which color is right for you?"
+  },
+  "diffHints": {
+    "useFocus": "jewelry, self-care ritual, bedside placement, heart meditation",
+    "scene": "Self-Love and Relationships"
+  },
+  "content": "<h2>Quick Answer: Best Crystals for Pink</h2>\n<p>The best crystals for Pink include Rose Quartz, Rhodonite, bustamite, traditionally used in mindfulness and spiritual practices. <em>Crystal properties are complementary wellness tools, not medical treatments.</em></p>\n\n{{AI_M2_UNDERSTANDING}}\n<p><strong>Quick facts:</strong> Symbolism: Love, compassion, tenderness. Psychology: Emotional warmth, self-care, nurturing. Associated chakra: Heart, element: Water.</p>\n<p class=\"tool-cta\"><em>Not sure which color is right for you? <a href=\"/tools/crystal-quiz/\">Try the Crystal Quiz ↗</a></em></p>\n\n{{AI_M2_5_IDENTIFY}}\n\n<h2>9 Best Crystals for Pink</h2>\n<h3>Rose Quartz</h3>\n<p><strong>Color:</strong> Soft pink, rosy pink</p>\n<p><strong>Meaning:</strong> Love, compassion, tenderness</p>\n<p><strong>Best for:</strong> Self-love, Relationships, Grief</p>\n<p><strong>Chakra:</strong> Heart</p>\n<p><strong>Element:</strong> Earth</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_rose-quartz}}</p>\n<p>{{AI_DESC_rose-quartz}}</p>\n<p><a href=\"/gemstone/rose-quartz-meaning/\">Read full Rose Quartz meaning →</a></p>\n<h3>Rhodonite</h3>\n<p><strong>Color:</strong> Pink-red with black veining</p>\n<p><strong>Meaning:</strong> Love, compassion, tenderness</p>\n<p><strong>Best for:</strong> Forgiveness, Heart work, Self-worth</p>\n<p><strong>Chakra:</strong> Heart</p>\n<p><strong>Element:</strong> Earth</p>\n<p><strong>Best way to use:</strong> Carry or hold in meditation</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_rhodonite}}</p>\n<p>{{AI_DESC_rhodonite}}</p>\n<p><a href=\"/gemstone/rhodonite-meaning/\">Read full Rhodonite meaning →</a></p>\n<h3>bustamite</h3>\n<p><strong>Color:</strong> Pink, reddish-pink, brownish</p>\n<p><strong>Meaning:</strong> Love, compassion, tenderness</p>\n<p><strong>Best for:</strong> Self-Worth, Warmth, Gentle Healing</p>\n<p><strong>Chakra:</strong> Heart</p>\n<p><strong>Element:</strong> Earth, Water</p>\n<p><strong>Best way to use:</strong> Carry or hold in meditation</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_bustamite}}</p>\n<p>{{AI_DESC_bustamite}}</p>\n<p><a href=\"/gemstone/bustamite-meaning/\">Read full bustamite meaning →</a></p>\n<h3>inesite</h3>\n<p><strong>Color:</strong> Pink, rose-pink, peach-pink, orange-pink</p>\n<p><strong>Meaning:</strong> Love, compassion, tenderness</p>\n<p><strong>Best for:</strong> Heart, Compassion, Self-kindness</p>\n<p><strong>Chakra:</strong> Heart</p>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Best way to use:</strong> Place in your space</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_inesite}}</p>\n<p>{{AI_DESC_inesite}}</p>\n<p><a href=\"/gemstone/inesite-meaning/\">Read full inesite meaning →</a></p>\n<h3>kutnohorite</h3>\n<p><strong>Color:</strong> Pink, pale-pink, white, yellow-white</p>\n<p><strong>Meaning:</strong> Love, compassion, tenderness</p>\n<p><strong>Best for:</strong> Heart, Emotional Balance, Calm</p>\n<p><strong>Chakra:</strong> Heart</p>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Best way to use:</strong> Wear, carry, or place in your space</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_kutnohorite}}</p>\n<p>{{AI_DESC_kutnohorite}}</p>\n<p><a href=\"/gemstone/kutnohorite-meaning/\">Read full kutnohorite meaning →</a></p>\n<h3>morganite</h3>\n<p><strong>Color:</strong> Pink, peach, salmon</p>\n<p><strong>Meaning:</strong> Love, compassion, tenderness</p>\n<p><strong>Best for:</strong> Love, Self-Compassion, Relationships</p>\n<p><strong>Chakra:</strong> Heart</p>\n<p><strong>Element:</strong> Water, Air</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_morganite}}</p>\n<p>{{AI_DESC_morganite}}</p>\n<p><a href=\"/gemstone/morganite-meaning/\">Read full morganite meaning →</a></p>\n<h3>pink-quartz</h3>\n<p><strong>Color:</strong> Pink (light-sensitive)</p>\n<p><strong>Meaning:</strong> Love, compassion, tenderness</p>\n<p><strong>Best for:</strong> Love, Self-Compassion, Tenderness</p>\n<p><strong>Chakra:</strong> Heart, Crown</p>\n<p><strong>Element:</strong> Water, Air</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_pink-quartz}}</p>\n<p>{{AI_DESC_pink-quartz}}</p>\n<p><a href=\"/gemstone/pink-quartz-meaning/\">Read full pink-quartz meaning →</a></p>\n<h3>rhodochrosite</h3>\n<p><strong>Color:</strong> Pink, rose-red, banded pink-white</p>\n<p><strong>Meaning:</strong> Love, compassion, tenderness</p>\n<p><strong>Best for:</strong> Self-Love, Compassion, Mending</p>\n<p><strong>Chakra:</strong> Heart, Solar Plexus</p>\n<p><strong>Element:</strong> Fire, Water</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_rhodochrosite}}</p>\n<p>{{AI_DESC_rhodochrosite}}</p>\n<p><a href=\"/gemstone/rhodochrosite-meaning/\">Read full rhodochrosite meaning →</a></p>\n<h3>thulite</h3>\n<p><strong>Color:</strong> Pink, rose-red, magenta</p>\n<p><strong>Meaning:</strong> Love, compassion, tenderness</p>\n<p><strong>Best for:</strong> Heart, Passion, Vitality</p>\n<p><strong>Chakra:</strong> Heart</p>\n<p><strong>Element:</strong> Water</p>\n<p><strong>Best way to use:</strong> Wear as jewelry</p>\n<p><strong>Affirmation:</strong> {{AI_AFFIRM_thulite}}</p>\n<p>{{AI_DESC_thulite}}</p>\n<p><a href=\"/gemstone/thulite-meaning/\">Read full thulite meaning →</a></p>\n\n{{AI_M4_MATRIX}}\n\n{{AI_M5_USE}}\n\n{{AI_M6_SCENE}}\n\n{{AI_M7_GLANCE}}\n\n{{AI_M8_FAQ}}\n\n<h2>Shop Pink  Crystals: What to Look For</h2>\n<ul>\n<li><a href=\"/product-category/rose-quartz-crystals/\">Shop Rose Quartz</a></li>\n<li><a href=\"/product-category/rhodonite-crystals/\">Shop Rhodonite</a></li>\n<li><a href=\"/product-category/bustamite-crystals/\">Shop bustamite</a></li>\n<li><a href=\"/product-category/inesite-crystals/\">Shop inesite</a></li>\n<li><a href=\"/product-category/kutnohorite-crystals/\">Shop kutnohorite</a></li>\n<li><a href=\"/product-category/morganite-crystals/\">Shop morganite</a></li></ul>\n\n<h2>Explore More Crystal Guides</h2>\n<ul>\n<li><a href=\"/gemstones/\">Crystal Guide Index</a></li>\n<li><a href=\"/white-crystals/\">White Crystals</a></li>\n<li><a href=\"/yellow-crystals/\">Yellow Crystals</a></li>\n<li><a href=\"/green-crystals/\">Green Crystals</a></li>\n<li><a href=\"/brown-crystals/\">Brown Crystals</a></li>\n<li><a href=\"/black-crystals/\">Black Crystals</a></li>\n<li><a href=\"/blue-crystals/\">Blue Crystals</a></li>\n</ul>"
 }

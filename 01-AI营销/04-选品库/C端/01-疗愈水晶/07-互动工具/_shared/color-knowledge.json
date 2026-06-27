@@ -1,0 +1,235 @@
+{
+  "_meta": {
+    "source": "color symbolism standard + rockparadise/capecodcrystals",
+    "for": "Color文章M2 + Crystal Quiz工具"
+  },
+  "colors": {
+    "white": {
+      "symbolism": "Purity, clarity, new beginnings",
+      "psychology": "Cleansing, mental clarity, fresh start",
+      "chakra": "Crown",
+      "element": "All",
+      "name": "White",
+      "crystals": [
+        "selenite",
+        "opal",
+        "moonstone",
+        "lapis",
+        "alamosite",
+        "analcime",
+        "anhydrite",
+        "ankerite",
+        "aragonite"
+      ],
+      "article": "/white-crystals/"
+    },
+    "yellow": {
+      "symbolism": "Joy, optimism, confidence",
+      "psychology": "Mental stimulation, energy, cheer",
+      "chakra": "Solar Plexus",
+      "element": "Air/Fire",
+      "name": "Yellow",
+      "crystals": [
+        "citrine",
+        "pyrite",
+        "amber",
+        "bumblebee-jasper",
+        "chondrodite",
+        "chrysoberyl",
+        "copal",
+        "fire-opal",
+        "mimetite"
+      ],
+      "article": "/yellow-crystals/"
+    },
+    "green": {
+      "symbolism": "Growth, harmony, renewal",
+      "psychology": "Balance, calm, healing",
+      "chakra": "Heart",
+      "element": "Earth",
+      "name": "Green",
+      "crystals": [
+        "jade",
+        "aventurine",
+        "malachite",
+        "amazonite",
+        "turquoise",
+        "apatite",
+        "labradorite",
+        "bloodstone",
+        "african-jade"
+      ],
+      "article": "/green-crystals/"
+    },
+    "brown": {
+      "symbolism": "Grounding, stability, earth",
+      "psychology": "Rootedness, reliability, comfort",
+      "chakra": "Root/Earth Star",
+      "element": "Earth",
+      "name": "Brown",
+      "crystals": [
+        "tiger-eye",
+        "anatase",
+        "axinite",
+        "brookite",
+        "brown-jasper",
+        "cassiterite",
+        "goethite",
+        "petrified-wood",
+        "picture-jasper"
+      ],
+      "article": "/brown-crystals/"
+    },
+    "black": {
+      "symbolism": "Protection, grounding, mystery",
+      "psychology": "Absorbing negativity, boundary-setting",
+      "chakra": "Root/Earth Star",
+      "element": "Earth",
+      "name": "Black",
+      "crystals": [
+        "obsidian",
+        "black-tourmaline",
+        "hematite",
+        "labradorite",
+        "rhodonite",
+        "acanthite",
+        "alabandite",
+        "apache-tears",
+        "babingtonite"
+      ],
+      "article": "/black-crystals/"
+    },
+    "pink": {
+      "symbolism": "Love, compassion, tenderness",
+      "psychology": "Emotional warmth, self-care, nurturing",
+      "chakra": "Heart",
+      "element": "Water",
+      "name": "Pink",
+      "crystals": [
+        "rose-quartz",
+        "rhodonite",
+        "bustamite",
+        "inesite",
+        "kutnohorite",
+        "morganite",
+        "pink-quartz",
+        "rhodochrosite",
+        "thulite"
+      ],
+      "article": "/pink-crystals/"
+    },
+    "blue": {
+      "symbolism": "Calm, truth, communication",
+      "psychology": "Soothing, focus, honest expression",
+      "chakra": "Throat/Third Eye",
+      "element": "Water/Air",
+      "name": "Blue",
+      "crystals": [
+        "kyanite",
+        "larimar",
+        "amazonite",
+        "turquoise",
+        "apatite",
+        "angelite",
+        "labradorite",
+        "moonstone",
+        "lapis"
+      ],
+      "article": "/blue-crystals/"
+    },
+    "red": {
+      "symbolism": "Passion, vitality, courage",
+      "psychology": "Energy, strength, action",
+      "chakra": "Root",
+      "element": "Fire",
+      "name": "Red",
+      "crystals": [
+        "ruby",
+        "red-jasper",
+        "bloodstone",
+        "rhodonite",
+        "brecciated-jasper",
+        "coral",
+        "corundum",
+        "eisenkiesel",
+        "eudialyte"
+      ],
+      "article": "/red-crystals/"
+    },
+    "orange": {
+      "symbolism": "Creativity, joy, warmth",
+      "psychology": "Enthusiasm, social warmth, creative spark",
+      "chakra": "Sacral",
+      "element": "Fire/Water",
+      "name": "Orange",
+      "crystals": [
+        "carnelian",
+        "sunstone",
+        "carnelian-agate",
+        "padparadscha-sapphire",
+        "sherry-topaz",
+        "wulfenite",
+        "crocoite",
+        "jacinth"
+      ],
+      "article": "/orange-crystals/"
+    },
+    "grey": {
+      "symbolism": "Neutrality, calm, introspection",
+      "psychology": "Detachment, balance, quiet reflection",
+      "chakra": "Neutral",
+      "element": "Air/Metal",
+      "name": "Grey",
+      "crystals": [
+        "labradorite",
+        "agatized-coral",
+        "black-pearl",
+        "granite",
+        "rhyolite",
+        "k2-stone",
+        "kimberlite",
+        "meteorite",
+        "petoskey-stone"
+      ],
+      "article": "/grey-crystals/"
+    },
+    "blue-green": {
+      "symbolism": "Transformation, flow, truth",
+      "psychology": "Calm communication, emotional release",
+      "chakra": "Throat/Heart",
+      "element": "Water/Air",
+      "name": "Blue-Green",
+      "crystals": [
+        "amazonite",
+        "apatite",
+        "ajoite",
+        "aurichalcite",
+        "caledonite",
+        "aquamarine",
+        "blue-jade",
+        "cornetite",
+        "grandidierite"
+      ],
+      "article": "/blue-green-crystals/"
+    },
+    "purple": {
+      "symbolism": "Spirituality, wisdom, intuition",
+      "psychology": "Deep contemplation, spiritual awareness",
+      "chakra": "Third Eye/Crown",
+      "element": "Air/Thought",
+      "name": "Purple",
+      "crystals": [
+        "amethyst",
+        "fluorite",
+        "sugilite",
+        "tiffany-stone",
+        "ametrine",
+        "chevron-amethyst",
+        "grape-agate",
+        "lavender-jade",
+        "rhodolite"
+      ],
+      "article": "/purple-crystals/"
+    }
+  }
+}

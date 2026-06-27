@@ -1,0 +1,183 @@
+{
+  "_meta": {
+    "source": "standard chakra system + tinyrituals/7chakracolors",
+    "for": "Chakra文章M2 + Chakra Test工具"
+  },
+  "chakras": {
+    "root": {
+      "sanskrit": "Muladhara",
+      "position": "Base of the spine",
+      "color": "Red",
+      "element": "Earth",
+      "function": "Grounding, survival, safety, stability",
+      "imbalanced": "Anxiety, fear, feeling ungrounded, financial worry, disconnection",
+      "balanced": "Security, stability, presence, confidence",
+      "name": "Root Chakra",
+      "crystals": [
+        "tiger-eye",
+        "carnelian",
+        "obsidian",
+        "black-tourmaline",
+        "ruby",
+        "red-jasper",
+        "bloodstone",
+        "hematite",
+        "aegirine",
+        "agate",
+        "agatized-coral",
+        "alabandite"
+      ],
+      "article": "/root-chakra-crystals/"
+    },
+    "sacral": {
+      "sanskrit": "Svadhisthana",
+      "position": "Lower abdomen",
+      "color": "Orange",
+      "element": "Water",
+      "function": "Creativity, emotions, pleasure, sexuality",
+      "imbalanced": "Guilt, emotional numbness, creative blocks",
+      "balanced": "Creative flow, emotional openness, healthy boundaries",
+      "name": "Sacral Chakra",
+      "crystals": [
+        "tiger-eye",
+        "carnelian",
+        "moonstone",
+        "citrine",
+        "red-jasper",
+        "bloodstone",
+        "aegirine",
+        "agate",
+        "agatized-coral",
+        "amber",
+        "anglesite",
+        "augite"
+      ],
+      "article": "/sacral-chakra-crystals/"
+    },
+    "solar-plexus": {
+      "sanskrit": "Manipura",
+      "position": "Upper abdomen",
+      "color": "Yellow",
+      "element": "Fire",
+      "function": "Willpower, confidence, personal power",
+      "imbalanced": "Low self-worth, need for control, digestive tension",
+      "balanced": "Self-confidence, motivation, agency",
+      "name": "Solar Plexus Chakra",
+      "crystals": [
+        "tiger-eye",
+        "carnelian",
+        "citrine",
+        "malachite",
+        "pyrite",
+        "adamite",
+        "aegirine",
+        "amber",
+        "ametrine",
+        "andalusite",
+        "arsenopyrite",
+        "baltic-amber"
+      ],
+      "article": "/solar-plexus-chakra-crystals/"
+    },
+    "heart": {
+      "sanskrit": "Anahata",
+      "position": "Center of chest",
+      "color": "Green/Pink",
+      "element": "Air",
+      "function": "Love, compassion, connection, forgiveness",
+      "imbalanced": "Loneliness, jealousy, holding grudges",
+      "balanced": "Compassion, healthy relationships, self-love",
+      "name": "Heart Chakra",
+      "crystals": [
+        "jade",
+        "rose-quartz",
+        "amazonite",
+        "aventurine",
+        "ruby",
+        "bloodstone",
+        "lepidolite",
+        "malachite",
+        "larimar",
+        "rhodonite",
+        "abalone-shell",
+        "adamite"
+      ],
+      "article": "/heart-chakra-crystals/"
+    },
+    "throat": {
+      "sanskrit": "Vishuddha",
+      "position": "Throat",
+      "color": "Blue",
+      "element": "Ether/Air",
+      "function": "Communication, truth, self-expression",
+      "imbalanced": "Fear of speaking, dishonesty, being unheard",
+      "balanced": "Clear expression, authentic voice",
+      "name": "Throat Chakra",
+      "crystals": [
+        "labradorite",
+        "amazonite",
+        "turquoise",
+        "lapis",
+        "fluorite",
+        "kyanite",
+        "larimar",
+        "apatite",
+        "angelite",
+        "abalone-shell",
+        "afghanite",
+        "ajoite"
+      ],
+      "article": "/throat-chakra-crystals/"
+    },
+    "third-eye": {
+      "sanskrit": "Ajna",
+      "position": "Between the eyebrows",
+      "color": "Indigo",
+      "element": "Light",
+      "function": "Intuition, insight, imagination",
+      "imbalanced": "Confusion, lack of direction, dismissing gut feelings",
+      "balanced": "Clarity, discernment, trust in intuition",
+      "name": "Third Eye Chakra",
+      "crystals": [
+        "amethyst",
+        "labradorite",
+        "moonstone",
+        "obsidian",
+        "selenite",
+        "turquoise",
+        "lapis",
+        "fluorite",
+        "lepidolite",
+        "kyanite",
+        "apatite",
+        "angelite"
+      ],
+      "article": "/third-eye-chakra-crystals/"
+    },
+    "crown": {
+      "sanskrit": "Sahasrara",
+      "position": "Top of head",
+      "color": "Violet/White",
+      "element": "Thought/Consciousness",
+      "function": "Spiritual connection, wisdom, higher purpose",
+      "imbalanced": "Feeling isolated, lack of meaning, cynicism",
+      "balanced": "Inner peace, sense of connection, open-mindedness",
+      "name": "Crown Chakra",
+      "crystals": [
+        "amethyst",
+        "moonstone",
+        "selenite",
+        "lepidolite",
+        "acanthite",
+        "alexandrite",
+        "ametrine",
+        "amphibole",
+        "analcime",
+        "anatase",
+        "angel-aura-quartz",
+        "anhydrite"
+      ],
+      "article": "/crown-chakra-crystals/"
+    }
+  }
+}

@@ -61,25 +61,30 @@ function byChakra(chakraSlug) {
   }
   return [...core, ...extra].slice(0, 12); // 核心 + 补到12
 }
-// 按 Color 筛选(30核心 + 390补到8-10)
+// 按 Color 筛选(匹配精度排序: 精确>首尾>包含; 剔除主色蓝/粉等; 9颗)
 function byColor(colorSlug) {
-  const core = [], extra = [];
+  const target = colorSlug.replace(/[-\s]/g, '').toLowerCase();
+  const score = (colorStr) => {
+    const primary = (colorStr || '').replace(/\([^)]*\)/g, '').toLowerCase().split(/[,;]/)[0].replace(/[-\s]/g, '').trim();
+    if (!primary) return 0;
+    if (primary === target) return 3;           // 精确(Black)
+    if (primary.startsWith(target) || primary.endsWith(target)) return 2; // 首尾(grey-black/deep black)
+    if (primary.includes(target)) return 1;     // 包含
+    return 0;
+  };
+  const all = [];
   for (const s of coreSlugs) {
-    const a = attr[s + '-meaning'] || {};
-    const cs = (a.overview || {}).Color || '';
-    if (cs.toLowerCase().includes(colorSlug.replace('-', ' ')) || cs.toLowerCase().includes(colorSlug)) core.push(s);
+    const sc = score(((attr[s + '-meaning'] || {}).overview || {}).Color);
+    if (sc > 0) all.push({ slug: s, core: 1, sc });
   }
-  // 390 补充(非核心)
   for (const k of Object.keys(attr)) {
-    if (coreSlugs.includes(k.replace(/-meaning$/, ''))) continue;
-    const cs = (attr[k].overview || {}).Color || '';
-    if (cs.toLowerCase().includes(colorSlug.replace('-', ' ')) || cs.toLowerCase().includes(colorSlug)) {
-      extra.push(k.replace(/-meaning$/, ''));
-    }
+    const s = k.replace(/-meaning$/, '');
+    if (coreSlugs.includes(s)) continue;
+    const sc = score(((attr[k] || {}).overview || {}).Color);
+    if (sc > 0) all.push({ slug: s, core: 0, sc });
   }
-  // 核心优先 + 补到 9 颗
-  const all = [...core, ...extra].slice(0, 9);
-  return all;
+  all.sort((a, b) => b.core - a.core || b.sc - a.sc);  // 30核心优先(有产品主推), 同核心按精度
+  return all.slice(0, 9).map(x => x.slug);
 }
 // 按 Element 筛选(30核心优先 + 390补到12)
 function byElement(elSlug) {
