@@ -208,7 +208,7 @@ var EWCleanse=(function(){
     html+='<ol class="ecl-steps">'+m.steps.map(function(s){return '<li>'+s+'</li>';}).join('')+'</ol>';
     // next date
     var next=new Date(Date.now()+30*24*3600*1000);
-    html+='<div class="ecl-next"><strong>Next cleanse reminder:</strong> '+next.toLocaleDateString(undefined,{month:'long',day:'numeric',year:'numeric'})+' (monthly is a common rhythm — or whenever it feels right).</div>';
+    html+='<div class="ecl-next"><strong>Next cleanse reminder:</strong> '+next.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'})+' (monthly is a common rhythm — or whenever it feels right).</div>';
     // 导购：水晶首饰(站点主营)+ 该水晶 meaning(净化工具 sage/bowl 站点不卖,不推避免死链)
     html+='<div class="ecl-acc-title">Continue with '+selected.name+'</div><div class="ecl-acc"><a href="'+selected.link+'">Read '+selected.name+' meaning →</a><a href="/product-category/healing-crystals-jewelry/">Shop healing crystal jewelry →</a></div>';
     html+='<p class="ecl-disclaim">Cleansing guidance blends cultural tradition with practical mineral care. There is no scientific evidence that crystals store or release energy, but the safety information (which stones tolerate water, sun, or salt) is real mineralogy and the reason this tool exists.</p>';

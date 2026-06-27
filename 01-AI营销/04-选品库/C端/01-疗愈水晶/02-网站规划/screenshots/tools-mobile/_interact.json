@@ -1,0 +1,2021 @@
+{
+  "chakra-test": {
+    "mobile": {
+      "locate": {
+        "found": true,
+        "totalBtn": 46,
+        "toolBtnCount": 43,
+        "containerTag": "DIV",
+        "containerId": "ewc5-quiz",
+        "containerCls": "ewc5-quiz",
+        "containerRect": {
+          "x": 15,
+          "y": 370,
+          "w": 345,
+          "h": 2023
+        },
+        "containerTxt": "1. I feel secure, grounded, and safe in my daily life.\nRARELY\nSOMETIMES\nOFTEN\n2. I trust that my basic needs - money, shelter, stability - will be met.\nRARELY\nSOMETIMES\nOFTEN\n3. I feel creative and can express my emotions freely.\nRARELY\nSOMETIMES\nOFTEN\n4. I allow myself to experience pleasure and joy without guilt.\nRARELY\nSOMETIMES\nOFTEN\n5. I feel confident and in control of my choices.\nRARELY\nSOMETIMES\nOFTEN\n6. I can make decisions and stand by them.\nRARELY\nSOMETIMES\nOFTEN\n7. I give and receive"
+      },
+      "measure": {
+        "count": 60,
+        "minH": 13,
+        "undersized": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "RARELY",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          }
+        ],
+        "all": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "RARELY",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          }
+        ]
+      },
+      "interact": [
+        {
+          "step": 0,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 1,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 2,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 3,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 4,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 5,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 6,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 7,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "final": {
+            "hasResult": true,
+            "tail": "feel connected to something greater than myself.\nRARELY\nSOMETIMES\nOFTEN\n14. I have a sense of purpose and meaning in life.\nRARELY\nSOMETIMES\nOFTEN\nSEE MY RESULTS\n1 of 14 answered\nLearn More About Chakras & Crystals\nCreated By LuckyCrystal . Your Lucky Heart.\nSHOP\nBLOG\nCONTACT US\nWISHLIST\nLOGIN / REGISTER\nShopping cart\nClose\n\nNo products in the cart.\n\nRETURN TO SHOP\nShop\n0\nWishlist\n0\nCart\nMy account"
+          }
+        }
+      ],
+      "errors": [],
+      "shot": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/screenshots/tools-mobile\\chakra-test-mobile-interact.png"
+    },
+    "tablet": {
+      "locate": {
+        "found": true,
+        "totalBtn": 46,
+        "toolBtnCount": 43,
+        "containerTag": "DIV",
+        "containerId": "ewc5-quiz",
+        "containerCls": "ewc5-quiz",
+        "containerRect": {
+          "x": 15,
+          "y": 305,
+          "w": 723,
+          "h": 1751
+        },
+        "containerTxt": "1. I feel secure, grounded, and safe in my daily life.\nRARELY\nSOMETIMES\nOFTEN\n2. I trust that my basic needs - money, shelter, stability - will be met.\nRARELY\nSOMETIMES\nOFTEN\n3. I feel creative and can express my emotions freely.\nRARELY\nSOMETIMES\nOFTEN\n4. I allow myself to experience pleasure and joy without guilt.\nRARELY\nSOMETIMES\nOFTEN\n5. I feel confident and in control of my choices.\nRARELY\nSOMETIMES\nOFTEN\n6. I can make decisions and stand by them.\nRARELY\nSOMETIMES\nOFTEN\n7. I give and receive"
+      },
+      "measure": {
+        "count": 60,
+        "minH": 13,
+        "undersized": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "RARELY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          }
+        ],
+        "all": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "RARELY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          }
+        ]
+      },
+      "interact": [
+        {
+          "step": 0,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 1,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 2,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 3,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 4,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 5,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 6,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 7,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "final": {
+            "hasResult": true,
+            "tail": "feel connected to something greater than myself.\nRARELY\nSOMETIMES\nOFTEN\n14. I have a sense of purpose and meaning in life.\nRARELY\nSOMETIMES\nOFTEN\nSEE MY RESULTS\n1 of 14 answered\nLearn More About Chakras & Crystals\nCreated By LuckyCrystal . Your Lucky Heart.\nSHOP\nBLOG\nCONTACT US\nWISHLIST\nLOGIN / REGISTER\nShopping cart\nClose\n\nNo products in the cart.\n\nRETURN TO SHOP\nShop\n0\nWishlist\n0\nCart\nMy account"
+          }
+        }
+      ],
+      "errors": [],
+      "shot": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/screenshots/tools-mobile\\chakra-test-tablet-interact.png"
+    }
+  },
+  "element-test": {
+    "mobile": {
+      "locate": {
+        "found": true,
+        "totalBtn": 28,
+        "toolBtnCount": 25,
+        "containerTag": "DIV",
+        "containerId": "ewe-quiz",
+        "containerCls": "ewe-quiz",
+        "containerRect": {
+          "x": 15,
+          "y": 370,
+          "w": 345,
+          "h": 1187
+        },
+        "containerTxt": "1. Friends would describe me as the dependable one who keeps plans.\nRARELY\nSOMETIMES\nOFTEN\n2. When my daily routine gets disrupted, I find it unsettling.\nRARELY\nSOMETIMES\nOFTEN\n3. In a tough situation, I lead with how I feel rather than what's logical.\nRARELY\nSOMETIMES\nOFTEN\n4. I sometimes take on other people's moods as my own.\nRARELY\nSOMETIMES\nOFTEN\n5. In group settings, I'm usually the one who kicks things off.\nRARELY\nSOMETIMES\nOFTEN\n6. When something excites me, I tend to jump in before thin"
+      },
+      "measure": {
+        "count": 42,
+        "minH": 13,
+        "undersized": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "RARELY",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          }
+        ],
+        "all": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "RARELY",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 96,
+            "h": 42,
+            "fs": 13,
+            "tag": "BUTTON"
+          }
+        ]
+      },
+      "interact": [
+        {
+          "step": 0,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 1,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 2,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 3,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 4,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 5,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 6,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 7,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "final": {
+            "hasResult": true,
+            "tail": "on't personally hold.\nRARELY\nSOMETIMES\nOFTEN\n8. I'd rather explore a new idea than stick with what's already familiar.\nRARELY\nSOMETIMES\nOFTEN\nSEE MY ELEMENT\n1 of 8 answered\nLearn More About the Elements & Crystals\nCreated By LuckyCrystal . Your Lucky Heart.\nSHOP\nBLOG\nCONTACT US\nWISHLIST\nLOGIN / REGISTER\nShopping cart\nClose\n\nNo products in the cart.\n\nRETURN TO SHOP\nShop\n0\nWishlist\n0\nCart\nMy account"
+          }
+        }
+      ],
+      "errors": [],
+      "shot": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/screenshots/tools-mobile\\element-test-mobile-interact.png"
+    },
+    "tablet": {
+      "locate": {
+        "found": true,
+        "totalBtn": 28,
+        "toolBtnCount": 25,
+        "containerTag": "DIV",
+        "containerId": "ewe-quiz",
+        "containerCls": "ewe-quiz",
+        "containerRect": {
+          "x": 15,
+          "y": 305,
+          "w": 723,
+          "h": 996
+        },
+        "containerTxt": "1. Friends would describe me as the dependable one who keeps plans.\nRARELY\nSOMETIMES\nOFTEN\n2. When my daily routine gets disrupted, I find it unsettling.\nRARELY\nSOMETIMES\nOFTEN\n3. In a tough situation, I lead with how I feel rather than what's logical.\nRARELY\nSOMETIMES\nOFTEN\n4. I sometimes take on other people's moods as my own.\nRARELY\nSOMETIMES\nOFTEN\n5. In group settings, I'm usually the one who kicks things off.\nRARELY\nSOMETIMES\nOFTEN\n6. When something excites me, I tend to jump in before thin"
+      },
+      "measure": {
+        "count": 42,
+        "minH": 13,
+        "undersized": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "RARELY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          }
+        ],
+        "all": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "RARELY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMETIMES",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "OFTEN",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "RARELY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          }
+        ]
+      },
+      "interact": [
+        {
+          "step": 0,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 1,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 2,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 3,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 4,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 5,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 6,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "step": 7,
+          "clicked": "OFTEN",
+          "delta": 0
+        },
+        {
+          "final": {
+            "hasResult": true,
+            "tail": "on't personally hold.\nRARELY\nSOMETIMES\nOFTEN\n8. I'd rather explore a new idea than stick with what's already familiar.\nRARELY\nSOMETIMES\nOFTEN\nSEE MY ELEMENT\n1 of 8 answered\nLearn More About the Elements & Crystals\nCreated By LuckyCrystal . Your Lucky Heart.\nSHOP\nBLOG\nCONTACT US\nWISHLIST\nLOGIN / REGISTER\nShopping cart\nClose\n\nNo products in the cart.\n\nRETURN TO SHOP\nShop\n0\nWishlist\n0\nCart\nMy account"
+          }
+        }
+      ],
+      "errors": [],
+      "shot": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/screenshots/tools-mobile\\element-test-tablet-interact.png"
+    }
+  },
+  "crystal-quiz": {
+    "mobile": {
+      "locate": {
+        "found": true,
+        "totalBtn": 28,
+        "toolBtnCount": 25,
+        "containerTag": "DIV",
+        "containerId": "ewq-quiz",
+        "containerCls": "ewq-quiz",
+        "containerRect": {
+          "x": 15,
+          "y": 343,
+          "w": 345,
+          "h": 1240
+        },
+        "containerTxt": "1. I'm seeking mental clarity, cleansing, or a fresh start.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\n2. I need to feel protected or set stronger boundaries.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\n3. I'm looking for love, compassion, or gentle self-care.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\n4. I want growth, abundance, or a sense of renewal.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\n5. I crave calm, peace, or clearer self-expression.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\n6. I'm drawn to intuition, insight, or spiritual depth.\nN"
+      },
+      "measure": {
+        "count": 42,
+        "minH": 13,
+        "undersized": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "LuckyCrystal",
+            "w": 80,
+            "h": 13,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Scroll to top button",
+            "w": 40,
+            "h": 40,
+            "fs": 14,
+            "tag": "A"
+          },
+          {
+            "txt": "Close",
+            "w": 62,
+            "h": 25,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "RETURN TO SHOP",
+            "w": 137,
+            "h": 36,
+            "fs": 12,
+            "tag": "A"
+          }
+        ],
+        "all": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "NOT REALLY",
+            "w": 96,
+            "h": 53,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMEWHAT",
+            "w": 96,
+            "h": 53,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "YES, EXACTLY",
+            "w": 96,
+            "h": 53,
+            "fs": 13,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "NOT REALLY",
+            "w": 96,
+            "h": 53,
+            "fs": 13,
+            "tag": "BUTTON"
+          }
+        ]
+      },
+      "interact": [
+        {
+          "step": 0,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 1,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 2,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 3,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 4,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 5,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 6,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 7,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 8,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 9,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "final": {
+            "hasResult": true,
+            "tail": "tivation to take action.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\n8. I want confidence, optimism, or sharper mental focus.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\nSEE MY CRYSTAL\n1 of 8 answered\nLearn More About Choosing Crystals\nCreated By LuckyCrystal . Your Lucky Heart.\nSHOP\nBLOG\nCONTACT US\nWISHLIST\nLOGIN / REGISTER\nShopping cart\nClose\n\nNo products in the cart.\n\nRETURN TO SHOP\nShop\n0\nWishlist\n0\nCart\nMy account"
+          }
+        }
+      ],
+      "errors": [],
+      "shot": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/screenshots/tools-mobile\\crystal-quiz-mobile-interact.png"
+    },
+    "tablet": {
+      "locate": {
+        "found": true,
+        "totalBtn": 28,
+        "toolBtnCount": 25,
+        "containerTag": "DIV",
+        "containerId": "ewq-quiz",
+        "containerCls": "ewq-quiz",
+        "containerRect": {
+          "x": 15,
+          "y": 277,
+          "w": 723,
+          "h": 982
+        },
+        "containerTxt": "1. I'm seeking mental clarity, cleansing, or a fresh start.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\n2. I need to feel protected or set stronger boundaries.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\n3. I'm looking for love, compassion, or gentle self-care.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\n4. I want growth, abundance, or a sense of renewal.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\n5. I crave calm, peace, or clearer self-expression.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\n6. I'm drawn to intuition, insight, or spiritual depth.\nN"
+      },
+      "measure": {
+        "count": 42,
+        "minH": 13,
+        "undersized": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "NOT REALLY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMEWHAT",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "YES, EXACTLY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "NOT REALLY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMEWHAT",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "YES, EXACTLY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "NOT REALLY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMEWHAT",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "YES, EXACTLY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "NOT REALLY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMEWHAT",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          }
+        ],
+        "all": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "NOT REALLY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "SOMEWHAT",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "YES, EXACTLY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          },
+          {
+            "txt": "NOT REALLY",
+            "w": 222,
+            "h": 42,
+            "fs": 14,
+            "tag": "BUTTON"
+          }
+        ]
+      },
+      "interact": [
+        {
+          "step": 0,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 1,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 2,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 3,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 4,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 5,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 6,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 7,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 8,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "step": 9,
+          "clicked": "YES",
+          "delta": 0
+        },
+        {
+          "final": {
+            "hasResult": true,
+            "tail": "tivation to take action.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\n8. I want confidence, optimism, or sharper mental focus.\nNOT REALLY\nSOMEWHAT\nYES, EXACTLY\nSEE MY CRYSTAL\n1 of 8 answered\nLearn More About Choosing Crystals\nCreated By LuckyCrystal . Your Lucky Heart.\nSHOP\nBLOG\nCONTACT US\nWISHLIST\nLOGIN / REGISTER\nShopping cart\nClose\n\nNo products in the cart.\n\nRETURN TO SHOP\nShop\n0\nWishlist\n0\nCart\nMy account"
+          }
+        }
+      ],
+      "errors": [],
+      "shot": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/screenshots/tools-mobile\\crystal-quiz-tablet-interact.png"
+    }
+  },
+  "cleansing-timer": {
+    "mobile": {
+      "locate": {
+        "found": true,
+        "totalBtn": 3,
+        "toolBtnCount": 1,
+        "containerTag": "BODY",
+        "containerId": "",
+        "containerCls": "wp-singular page-template-default page page-id-45681 page-child parent-pageid-43101 wp-theme-woodmar",
+        "containerRect": {
+          "x": 0,
+          "y": 0,
+          "w": 375,
+          "h": 1667
+        },
+        "containerTxt": "SKIP TO NAVIGATION\nSKIP TO MAIN CONTENT\nCrystal Cleansing Timer & Safety Checker\n\nPick your crystal, and we’ll show which cleansing methods are safe for it — then start a timer, see the steps, and get a reminder for next time. Because the one non-negotiable in crystal cleansing is not damaging the stone (selenite dissolves in water, amethyst fades in sun).\n\nChoose a Cleansing Method\nTap a method to start a timer and see the steps. Moonlight, selenite, sound, and smoke are safe for every crystal "
+      },
+      "measure": {
+        "count": 17,
+        "minH": 13,
+        "undersized": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "LuckyCrystal",
+            "w": 80,
+            "h": 13,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Scroll to top button",
+            "w": 40,
+            "h": 40,
+            "fs": 14,
+            "tag": "A"
+          },
+          {
+            "txt": "Close",
+            "w": 62,
+            "h": 25,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "RETURN TO SHOP",
+            "w": 137,
+            "h": 36,
+            "fs": 12,
+            "tag": "A"
+          }
+        ],
+        "all": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "LuckyCrystal",
+            "w": 80,
+            "h": 13,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Scroll to top button",
+            "w": 40,
+            "h": 40,
+            "fs": 14,
+            "tag": "A"
+          },
+          {
+            "txt": "SHOP",
+            "w": 300,
+            "h": 50,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "BLOG",
+            "w": 300,
+            "h": 50,
+            "fs": 13,
+            "tag": "A"
+          }
+        ]
+      },
+      "interact": [
+        {
+          "action": "search",
+          "log": [
+            "typed selenite"
+          ],
+          "hasInput": true,
+          "sampleCards": [
+            "",
+            "Log in",
+            "Choose a Cleansing M",
+            "🌙\nMoonlight\nSAFE",
+            "✨\nSelenite Plate / B"
+          ]
+        }
+      ],
+      "errors": [],
+      "shot": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/screenshots/tools-mobile\\cleansing-timer-mobile-interact.png"
+    },
+    "tablet": {
+      "locate": {
+        "found": true,
+        "totalBtn": 3,
+        "toolBtnCount": 1,
+        "containerTag": "BODY",
+        "containerId": "",
+        "containerCls": "wp-singular page-template-default page page-id-45681 page-child parent-pageid-43101 wp-theme-woodmar",
+        "containerRect": {
+          "x": 0,
+          "y": 0,
+          "w": 753,
+          "h": 1111
+        },
+        "containerTxt": "SKIP TO NAVIGATION\nSKIP TO MAIN CONTENT\nCrystal Cleansing Timer & Safety Checker\n\nPick your crystal, and we’ll show which cleansing methods are safe for it — then start a timer, see the steps, and get a reminder for next time. Because the one non-negotiable in crystal cleansing is not damaging the stone (selenite dissolves in water, amethyst fades in sun).\n\nChoose a Cleansing Method\nTap a method to start a timer and see the steps. Moonlight, selenite, sound, and smoke are safe for every crystal "
+      },
+      "measure": {
+        "count": 17,
+        "minH": 13,
+        "undersized": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "LuckyCrystal",
+            "w": 80,
+            "h": 13,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Scroll to top button",
+            "w": 40,
+            "h": 40,
+            "fs": 14,
+            "tag": "A"
+          },
+          {
+            "txt": "Close",
+            "w": 62,
+            "h": 25,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "RETURN TO SHOP",
+            "w": 137,
+            "h": 36,
+            "fs": 12,
+            "tag": "A"
+          }
+        ],
+        "all": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "LuckyCrystal",
+            "w": 80,
+            "h": 13,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Scroll to top button",
+            "w": 40,
+            "h": 40,
+            "fs": 14,
+            "tag": "A"
+          },
+          {
+            "txt": "SHOP",
+            "w": 300,
+            "h": 50,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "BLOG",
+            "w": 300,
+            "h": 50,
+            "fs": 13,
+            "tag": "A"
+          }
+        ]
+      },
+      "interact": [
+        {
+          "action": "search",
+          "log": [
+            "typed selenite"
+          ],
+          "hasInput": true,
+          "sampleCards": [
+            "",
+            "Log in",
+            "Choose a Cleansing M",
+            "🌙\nMoonlight\nSAFE",
+            "✨\nSelenite Plate / B"
+          ]
+        }
+      ],
+      "errors": [],
+      "shot": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/screenshots/tools-mobile\\cleansing-timer-tablet-interact.png"
+    }
+  },
+  "birthstone-finder": {
+    "mobile": {
+      "locate": {
+        "found": true,
+        "totalBtn": 3,
+        "toolBtnCount": 1,
+        "containerTag": "BODY",
+        "containerId": "",
+        "containerCls": "wp-singular page-template-default page page-id-45772 page-child parent-pageid-43101 wp-theme-woodmar",
+        "containerRect": {
+          "x": 0,
+          "y": 0,
+          "w": 375,
+          "h": 1557
+        },
+        "containerTxt": "SKIP TO NAVIGATION\nSKIP TO MAIN CONTENT\nBirthstone Finder: What Is My Birthstone?\n\nSelect your birth month below to discover your birthstone — its meaning, color, chakra, and the energy traditionally associated with it. Every month is linked to a unique gemstone carried for protection, luck, and personal power for thousands of years.\n\nJanuary\nGarnet\nFebruary\nAmethyst\nMarch\nAquamarine\nApril\nDiamond\nMay\nEmerald\nJune\nPearl\nJuly\nRuby\nAugust\nPeridot\nSeptember\nSapphire\nOctober\nOpal\nNovember\nCitrine\nDe"
+      },
+      "measure": {
+        "count": 17,
+        "minH": 13,
+        "undersized": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "LuckyCrystal",
+            "w": 80,
+            "h": 13,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Scroll to top button",
+            "w": 40,
+            "h": 40,
+            "fs": 14,
+            "tag": "A"
+          },
+          {
+            "txt": "Close",
+            "w": 62,
+            "h": 25,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "RETURN TO SHOP",
+            "w": 137,
+            "h": 36,
+            "fs": 12,
+            "tag": "A"
+          }
+        ],
+        "all": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "LuckyCrystal",
+            "w": 80,
+            "h": 13,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Scroll to top button",
+            "w": 40,
+            "h": 40,
+            "fs": 14,
+            "tag": "A"
+          },
+          {
+            "txt": "SHOP",
+            "w": 300,
+            "h": 50,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "BLOG",
+            "w": 300,
+            "h": 50,
+            "fs": 13,
+            "tag": "A"
+          }
+        ]
+      },
+      "interact": [
+        {
+          "action": "inspect",
+          "selectCount": 0,
+          "cardOrButtonCount": 16,
+          "sample": [
+            "",
+            "Log in",
+            "January\nGarnet\nFebru",
+            "January\nGarnet",
+            "February\nAmethyst",
+            "March\nAquamarine",
+            "April\nDiamond",
+            "May\nEmerald"
+          ]
+        }
+      ],
+      "errors": [],
+      "shot": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/screenshots/tools-mobile\\birthstone-finder-mobile-interact.png"
+    },
+    "tablet": {
+      "locate": {
+        "found": true,
+        "totalBtn": 3,
+        "toolBtnCount": 1,
+        "containerTag": "BODY",
+        "containerId": "",
+        "containerCls": "wp-singular page-template-default page page-id-45772 page-child parent-pageid-43101 wp-theme-woodmar",
+        "containerRect": {
+          "x": 0,
+          "y": 0,
+          "w": 753,
+          "h": 1027
+        },
+        "containerTxt": "SKIP TO NAVIGATION\nSKIP TO MAIN CONTENT\nBirthstone Finder: What Is My Birthstone?\n\nSelect your birth month below to discover your birthstone — its meaning, color, chakra, and the energy traditionally associated with it. Every month is linked to a unique gemstone carried for protection, luck, and personal power for thousands of years.\n\nJanuary\nGarnet\nFebruary\nAmethyst\nMarch\nAquamarine\nApril\nDiamond\nMay\nEmerald\nJune\nPearl\nJuly\nRuby\nAugust\nPeridot\nSeptember\nSapphire\nOctober\nOpal\nNovember\nCitrine\nDe"
+      },
+      "measure": {
+        "count": 17,
+        "minH": 13,
+        "undersized": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "LuckyCrystal",
+            "w": 80,
+            "h": 13,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Scroll to top button",
+            "w": 40,
+            "h": 40,
+            "fs": 14,
+            "tag": "A"
+          },
+          {
+            "txt": "Close",
+            "w": 62,
+            "h": 25,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "RETURN TO SHOP",
+            "w": 137,
+            "h": 36,
+            "fs": 12,
+            "tag": "A"
+          }
+        ],
+        "all": [
+          {
+            "txt": "SKIP TO NAVIGATION",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "SKIP TO MAIN CONTENT",
+            "w": 202,
+            "h": 42,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Site logo",
+            "w": 179,
+            "h": 16,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "Open mobile menu",
+            "w": 40,
+            "h": 40,
+            "fs": 16,
+            "tag": "A"
+          },
+          {
+            "txt": "LuckyCrystal",
+            "w": 80,
+            "h": 13,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "Scroll to top button",
+            "w": 40,
+            "h": 40,
+            "fs": 14,
+            "tag": "A"
+          },
+          {
+            "txt": "SHOP",
+            "w": 300,
+            "h": 50,
+            "fs": 13,
+            "tag": "A"
+          },
+          {
+            "txt": "BLOG",
+            "w": 300,
+            "h": 50,
+            "fs": 13,
+            "tag": "A"
+          }
+        ]
+      },
+      "interact": [
+        {
+          "action": "inspect",
+          "selectCount": 0,
+          "cardOrButtonCount": 16,
+          "sample": [
+            "",
+            "Log in",
+            "January\nGarnet\nFebru",
+            "January\nGarnet",
+            "February\nAmethyst",
+            "March\nAquamarine",
+            "April\nDiamond",
+            "May\nEmerald"
+          ]
+        }
+      ],
+      "errors": [],
+      "shot": "D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/screenshots/tools-mobile\\birthstone-finder-tablet-interact.png"
+    }
+  }
+}

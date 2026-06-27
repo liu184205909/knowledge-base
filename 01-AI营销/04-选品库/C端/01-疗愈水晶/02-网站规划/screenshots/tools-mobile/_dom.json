@@ -1,0 +1,452 @@
+{
+  "chakra-test": {
+    "find": {
+      "top": [],
+      "idd": [
+        {
+          "tag": "LINK",
+          "id": "elementor-icons-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-frontend-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-post-14-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-elementor-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-elementor-pro-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-mod-tools-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-header-elements-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-bottom-toolbar-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-gf-local-roboto-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-gf-local-robotoslab-css",
+          "cls": ""
+        },
+        {
+          "tag": "DIV",
+          "id": "ew-chakra",
+          "cls": ""
+        },
+        {
+          "tag": "DIV",
+          "id": "ewc5-quiz",
+          "cls": "ewc5-quiz"
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-pro-webpack-runtime-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-webpack-runtime-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-frontend-modules-js",
+          "cls": ""
+        }
+      ],
+      "ecFound": true
+    },
+    "deep": {
+      "rootSel": "#elementor-icons-css",
+      "btnCount": 0,
+      "sample": [],
+      "txt": ""
+    },
+    "errors": []
+  },
+  "element-test": {
+    "find": {
+      "top": [],
+      "idd": [
+        {
+          "tag": "LINK",
+          "id": "elementor-icons-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-frontend-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-post-14-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-elementor-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-elementor-pro-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-mod-tools-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-header-elements-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-bottom-toolbar-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-gf-local-roboto-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-gf-local-robotoslab-css",
+          "cls": ""
+        },
+        {
+          "tag": "DIV",
+          "id": "ewe-quiz",
+          "cls": "ewe-quiz"
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-pro-webpack-runtime-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-webpack-runtime-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-frontend-modules-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-pro-frontend-js-before",
+          "cls": ""
+        }
+      ],
+      "ecFound": true
+    },
+    "deep": {
+      "rootSel": "#elementor-icons-css",
+      "btnCount": 0,
+      "sample": [],
+      "txt": ""
+    },
+    "errors": []
+  },
+  "crystal-quiz": {
+    "find": {
+      "top": [],
+      "idd": [
+        {
+          "tag": "LINK",
+          "id": "elementor-icons-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-frontend-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-post-14-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-elementor-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-elementor-pro-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-mod-tools-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-header-elements-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-bottom-toolbar-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-gf-local-roboto-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-gf-local-robotoslab-css",
+          "cls": ""
+        },
+        {
+          "tag": "DIV",
+          "id": "ewq-quiz",
+          "cls": "ewq-quiz"
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-pro-webpack-runtime-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-webpack-runtime-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-frontend-modules-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-pro-frontend-js-before",
+          "cls": ""
+        }
+      ],
+      "ecFound": true
+    },
+    "deep": {
+      "rootSel": "#elementor-icons-css",
+      "btnCount": 0,
+      "sample": [],
+      "txt": ""
+    },
+    "errors": []
+  },
+  "cleansing-timer": {
+    "find": {
+      "top": [],
+      "idd": [
+        {
+          "tag": "LINK",
+          "id": "elementor-icons-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-frontend-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-post-14-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-elementor-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-elementor-pro-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-mod-tools-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-header-elements-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-bottom-toolbar-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-gf-local-roboto-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-gf-local-robotoslab-css",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-pro-webpack-runtime-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-webpack-runtime-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-frontend-modules-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-pro-frontend-js-before",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-pro-frontend-js",
+          "cls": ""
+        }
+      ],
+      "ecFound": true
+    },
+    "deep": {
+      "rootSel": "#elementor-icons-css",
+      "btnCount": 0,
+      "sample": [],
+      "txt": ""
+    },
+    "errors": []
+  },
+  "birthstone-finder": {
+    "find": {
+      "top": [],
+      "idd": [
+        {
+          "tag": "LINK",
+          "id": "elementor-icons-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-frontend-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-post-14-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-elementor-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-elementor-pro-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-mod-tools-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-header-elements-base-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "wd-bottom-toolbar-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-gf-local-roboto-css",
+          "cls": ""
+        },
+        {
+          "tag": "LINK",
+          "id": "elementor-gf-local-robotoslab-css",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-pro-webpack-runtime-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-webpack-runtime-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-frontend-modules-js",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-pro-frontend-js-before",
+          "cls": ""
+        },
+        {
+          "tag": "SCRIPT",
+          "id": "elementor-pro-frontend-js",
+          "cls": ""
+        }
+      ],
+      "ecFound": true
+    },
+    "deep": {
+      "rootSel": "#elementor-icons-css",
+      "btnCount": 0,
+      "sample": [],
+      "txt": ""
+    },
+    "errors": []
+  }
+}
