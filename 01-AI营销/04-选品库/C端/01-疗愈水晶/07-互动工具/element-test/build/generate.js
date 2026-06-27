@@ -1,15 +1,14 @@
-/**
- * Element Test — 8题测你的主导元素(earth/water/fire/air) → 推荐该元素水晶
- * 4元素×2题(1行为正面+1场景/阴影,正交对立去赞许性偏差),3级量表,高分=主导(真正同分才共主导)
- * 复用 crystal-meaning-search/data/search-data.json 的 element 字段(已归一化五元,390颗)
- * 2026-06-27 审核修订:题目场景化(去自夸通胀)+ 算分收紧 + 删留资死链 + 合规软化
+﻿/**
+ * Element Test 鈥?8棰樻祴浣犵殑涓诲鍏冪礌(earth/water/fire/air) 鈫?鎺ㄨ崘璇ュ厓绱犳按鏅? * 4鍏冪礌脳2棰?1琛屼负姝ｉ潰+1鍦烘櫙/闃村奖,姝ｄ氦瀵圭珛鍘昏禐璁告€у亸宸?,3绾ч噺琛?楂樺垎=涓诲(鐪熸鍚屽垎鎵嶅叡涓诲)
+ * 澶嶇敤 crystal-meaning-search/data/search-data.json 鐨?element 瀛楁(宸插綊涓€鍖栦簲鍏?390棰?
+ * 2026-06-27 瀹℃牳淇:棰樼洰鍦烘櫙鍖?鍘昏嚜澶搁€氳儉)+ 绠楀垎鏀剁揣 + 鍒犵暀璧勬閾?+ 鍚堣杞寲
  *
- * 输出：./element-test.html
+ * 杈撳嚭锛?/element-test.html
  */
 const fs = require('fs');
 const path = require('path');
 
-// ===== 8 题（4 元素 × 2：1 行为正面 + 1 场景/阴影，正交对立）=====
+// ===== 8 棰橈紙4 鍏冪礌 脳 2锛? 琛屼负姝ｉ潰 + 1 鍦烘櫙/闃村奖锛屾浜ゅ绔嬶級=====
 const QUESTIONS = [
   { el: 'earth', q: "Friends would describe me as the dependable one who keeps plans." },
   { el: 'earth', q: "When my daily routine gets disrupted, I find it unsettling." },
@@ -21,9 +20,9 @@ const QUESTIONS = [
   { el: 'air', q: "I'd rather explore a new idea than stick with what's already familiar." },
 ];
 
-// 4 元素顺序
+// 4 鍏冪礌椤哄簭
 const ELEMENT_ORDER = ['earth', 'water', 'fire', 'air'];
-// 元素知识单源：_shared/element-knowledge.json（文章 M2 画像 + 工具 ELEMENTS 共用，避免不一致）
+// 鍏冪礌鐭ヨ瘑鍗曟簮锛歘shared/element-knowledge.json锛堟枃绔?M2 鐢诲儚 + 宸ュ叿 ELEMENTS 鍏辩敤锛岄伩鍏嶄笉涓€鑷达級
 const EK = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../_shared/element-knowledge.json'), 'utf8')).elements;
 const ELEMENT_COLOR = { earth:'#6FAE7A', water:'#5A9BBF', fire:'#E0833C', air:'#95B8D1' };
 const ELEMENTS = {};
@@ -33,21 +32,27 @@ for (const el of ELEMENT_ORDER) {
   ELEMENTS[el] = { name:k.name, color:ELEMENT_COLOR[el], area:q, focus:q, traits:k.balanced.toLowerCase() };
 }
 
-// 读 search-data，每元素水晶（element 字段已归一化字符串，取 6）
+// Read normalized crystal data and keep 6 stones per element.
 const SD = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../crystal-meaning-search/data/search-data.json'), 'utf8'));
 const ELEMENT_CRYSTALS = {};
-for (const el of ELEMENT_ORDER) {
-  ELEMENT_CRYSTALS[el] = SD.crystals.filter(c => c.element === el).slice(0, 6);
+function compactCrystal(c) {
+  return { slug: c.slug, name: c.name, img: c.img || '', link: c.link || '', shop: c.shop || '' };
 }
-const CRYSTALS_JSON = JSON.stringify(ELEMENT_CRYSTALS);
-const ELEMENTS_JSON = JSON.stringify(ELEMENTS);
-const QUESTIONS_JSON = JSON.stringify(QUESTIONS);
-const ELEMENT_ORDER_JSON = JSON.stringify(ELEMENT_ORDER);
+function safeJSON(value) {
+  return JSON.stringify(value).replace(/<\//g, '<\\/');
+}
+for (const el of ELEMENT_ORDER) {
+  ELEMENT_CRYSTALS[el] = SD.crystals.filter(c => c.element === el).slice(0, 6).map(compactCrystal);
+}
+const CRYSTALS_JSON = safeJSON(ELEMENT_CRYSTALS);
+const ELEMENTS_JSON = safeJSON(ELEMENTS);
+const QUESTIONS_JSON = safeJSON(QUESTIONS);
+const ELEMENT_ORDER_JSON = safeJSON(ELEMENT_ORDER);
 
 let html = `<!-- ===== Earthward Element Test ===== -->
 <div id="ewe-el">
   <h1 class="ewe-h1">Element Test: Which Element Are You?</h1>
-  <p class="ewe-intro">Answer ${QUESTIONS.length} honest questions about how you think, feel, and act. We'll reveal your dominant element — Earth, Water, Fire, or Air — and the crystals traditionally associated with each element.</p>
+  <p class="ewe-intro">Answer ${QUESTIONS.length} honest questions about how you think, feel, and act. We'll reveal your dominant element - Earth, Water, Fire, or Air - and the crystals traditionally associated with each element.</p>
 
   <div class="ewe-quiz" id="ewe-quiz"></div>
   <div class="ewe-actions">
@@ -94,7 +99,7 @@ let html = `<!-- ===== Earthward Element Test ===== -->
 .ewe-bar-fill{height:100%;border-radius:7px}
 .ewe-bar-val{width:30px;font-size:12px;color:#888;text-align:right}
 .ewe-disclaim{color:#999;font-size:12px;margin-top:18px;line-height:1.5}
-@media(max-width:640px){.ewe-h1{font-size:26px}.ewe-opt{min-width:70px;font-size:13px}.ewe-bar-label{width:70px}}
+@media(max-width:640px){.ewe-h1{font-size:24px}.ewe-result-card h2{font-size:20px}.ewe-el-name{font-size:23px}.ewe-intro,.ewe-q-text,#ewe-el p,#ewe-el li,#ewe-el td,#ewe-el th{font-size:16px!important}.ewe-opt{min-width:70px;font-size:13px}.ewe-bar-label{width:70px}}
 </style>
 <script>
 var EWElement=(function(){
@@ -128,16 +133,16 @@ var EWElement=(function(){
     document.getElementById('ewe-submit').disabled=(n<Q.length);
   }
   function calc(){
-    // 每元素 2 题和 (2-6), dominant=最高(真正同分才共主导)
+    // Sum two questions per element. True ties share dominance.
     var scores={};EO.forEach(function(el){scores[el]=0;});
     Q.forEach(function(q,i){if(answers[i])scores[q.el]+=answers[i];});
-    var sorted=EO.map(function(el){return{el:el,s:scores[el]};}).sort(function(a,b){return b.s-a.s;}); // 降序, 高=主导
+    var sorted=EO.map(function(el){return{el:el,s:scores[el]};}).sort(function(a,b){return b.s-a.s;});
     var dominant=[sorted[0].el];
-    for(var i=1;i<sorted.length;i++){ if(sorted[i].s===sorted[0].s) dominant.push(sorted[i].el); else break; } // 严格同分才共主导(避免通胀下四元素共主导)
+    for(var i=1;i<sorted.length;i++){ if(sorted[i].s===sorted[0].s) dominant.push(sorted[i].el); else break; }
     renderResult(scores,dominant,sorted);
   }
   function scrollToResult(r){
-    var offset=window.innerWidth<768?110:170;
+    var offset=window.innerWidth<768?80:120;
     var y=r.getBoundingClientRect().top+window.pageYOffset-offset;
     window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
   }
@@ -151,24 +156,23 @@ var EWElement=(function(){
     }).join('');
     html+='<p style="color:#444;font-size:16px;margin:10px 0 0;line-height:1.5">'+dominant.map(function(el){return EL[el].name+' energy is traditionally associated with '+EL[el].focus;}).join(' and ')+'. People with this element tend to be '+dominant.map(function(el){return EL[el].traits;}).join(' and ')+'. The crystals below are traditionally associated with this element and often used as a focus for intention or mindfulness.</p>';
     html+='</div>';
-    // 推荐水晶
+    // 鎺ㄨ崘姘存櫠
     html+='<div class="ewe-result-card"><h2>Crystals Traditionally Associated with Your '+dominant.map(function(el){return EL[el].name;}).join(' & ')+' Element</h2>';
     dominant.forEach(function(el){
       html+='<div class="ewe-el-crystals" style="margin-bottom:14px">';
       (EC[el]||[]).forEach(function(c){
         html+='<a class="ewe-cc" href="'+c.link+'"><img src="'+(c.img||'')+'" alt="'+c.name+'" loading="lazy"><div class="ewe-cc-name">'+c.name+'</div></a>';
       });
-      html+='<a href="/'+el+'-crystals/" style="display:block;margin-top:12px;color:#2D6A4F;font-weight:600;text-decoration:none;font-size:15px">Read the '+EL[el].name+' Element Crystals Guide →</a>';
+      html+='<a href="/'+el+'-crystals/" style="display:block;margin-top:12px;color:#2D6A4F;font-weight:600;text-decoration:none;font-size:15px">Read the '+EL[el].name+' Element Crystals Guide -&gt;</a>';
       html+='</div>';
     });
-    html+='<a class="ewe-btn" href="/product-category/healing-crystals-jewelry/" style="display:inline-block;margin-top:6px;text-decoration:none">Shop Healing Crystal Jewelry →</a>';
+    html+='<a class="ewe-btn" href="/product-category/healing-crystals-jewelry/" style="display:inline-block;margin-top:6px;text-decoration:none">Shop Healing Crystal Jewelry -&gt;</a>';
     html+='</div>';
-    // 全元素图表
-    html+='<div class="ewe-chart"><h3>Your Full Element Balance</h3>';
+    // 鍏ㄥ厓绱犲浘琛?    html+='<div class="ewe-chart"><h3>Your Full Element Balance</h3>';
     sorted.slice().sort(function(a,b){return EO.indexOf(a.el)-EO.indexOf(b.el);}).forEach(function(item){
       var pct=Math.round((item.s/6)*100);
       var e=EL[item.el];
-      var lab=dominant.indexOf(item.el)>=0?' ← dominant':'';
+      var lab=dominant.indexOf(item.el)>=0?' - dominant':'';
       html+='<div class="ewe-bar-row"><span class="ewe-bar-label">'+e.name+lab+'</span><div class="ewe-bar-track"><div class="ewe-bar-fill" style="width:'+pct+'%;background:'+e.color+'"></div></div><span class="ewe-bar-val">'+item.s+'/6</span></div>';
     });
     html+='</div>';
@@ -184,14 +188,13 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
 <!-- ===== Element Test Schema (HowTo + FAQPage) ===== -->
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"HowTo","name":"How to Find Out Which Element You Are","description":"A short self-assessment to identify the element that most strongly reflects your temperament (Earth, Water, Fire, or Air) and the crystals traditionally associated with it.","step":[{"@type":"HowToStep","name":"Answer 8 questions","text":"Rate how true each statement feels about your temperament, from Rarely to Often."},{"@type":"HowToStep","name":"See your dominant element","text":"Scores are tallied per element; the highest reveal the element that most strongly reflects your temperament."},{"@type":"HowToStep","name":"Use the recommended crystals","text":"Explore the crystals traditionally associated with your element — carry one, place it on your desk, or hold it during a few minutes of mindful breathing as a focus for intention."}]},
-{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the four elements?","acceptedAnswer":{"@type":"Answer","text":"In the Western tradition the four elements are Earth, Water, Fire, and Air. Together they describe the core energies that shape personality, emotion, action, and thought."}},{"@type":"Question","name":"How do I know which element I am?","acceptedAnswer":{"@type":"Answer","text":"Take the 8-question element test above. The element scoring highest reflects your dominant temperament — grounded Earth, emotional Water, passionate Fire, or intellectual Air."}},{"@type":"Question","name":"Which crystals match my element?","acceptedAnswer":{"@type":"Answer","text":"Each element is traditionally associated with specific crystals — for example, Earth stones like smoky quartz often used as a symbol of grounding, Water stones like aquamarine linked to emotional reflection, Fire stones like carnelian associated with passion, and Air stones like blue lace agate used as a focus for clear communication."}},{"@type":"Question","name":"Can my dominant element change?","acceptedAnswer":{"@type":"Answer","text":"Your core element is relatively stable, but stress, life seasons, and intentional practice can shift the balance. Retake the test periodically to see how your elemental makeup evolves."}}]}
+{"@type":"HowTo","name":"How to Find Out Which Element You Are","description":"A short self-assessment to identify the element that most strongly reflects your temperament (Earth, Water, Fire, or Air) and the crystals traditionally associated with it.","step":[{"@type":"HowToStep","name":"Answer 8 questions","text":"Rate how true each statement feels about your temperament, from Rarely to Often."},{"@type":"HowToStep","name":"See your dominant element","text":"Scores are tallied per element; the highest reveal the element that most strongly reflects your temperament."},{"@type":"HowToStep","name":"Use the recommended crystals","text":"Explore the crystals traditionally associated with your element - carry one, place it on your desk, or hold it during a few minutes of mindful breathing as a focus for intention."}]},
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What are the four elements?","acceptedAnswer":{"@type":"Answer","text":"In the Western tradition the four elements are Earth, Water, Fire, and Air. Together they describe the core energies that shape personality, emotion, action, and thought."}},{"@type":"Question","name":"How do I know which element I am?","acceptedAnswer":{"@type":"Answer","text":"Take the 8-question element test above. The element scoring highest reflects your dominant temperament - grounded Earth, emotional Water, passionate Fire, or intellectual Air."}},{"@type":"Question","name":"Which crystals match my element?","acceptedAnswer":{"@type":"Answer","text":"Each element is traditionally associated with specific crystals - for example, Earth stones like smoky quartz often used as a symbol of grounding, Water stones like aquamarine linked to emotional reflection, Fire stones like carnelian associated with passion, and Air stones like blue lace agate used as a focus for clear communication."}},{"@type":"Question","name":"Can my dominant element change?","acceptedAnswer":{"@type":"Answer","text":"Your core element is relatively stable, but stress, life seasons, and intentional practice can shift the balance. Retake the test periodically to see how your elemental makeup evolves."}}]}
 ]}
 </script>
 <!-- ===== End Element Test ===== -->`;
 
-// SEO 折叠长文（element test 关键词覆盖，注入页面底部）
-let SEO_CONTENT = '';
+// SEO 鎶樺彔闀挎枃锛坋lement test 鍏抽敭璇嶈鐩栵紝娉ㄥ叆椤甸潰搴曢儴锛?let SEO_CONTENT = '';
 try { SEO_CONTENT = fs.readFileSync(path.resolve(__dirname, 'seo-content.html'), 'utf8'); } catch (e) {}
 if (SEO_CONTENT.trim()) {
   html += `
@@ -209,6 +212,7 @@ ${SEO_CONTENT}
 
 const OUT = path.resolve(__dirname, 'element-test.html');
 fs.writeFileSync(OUT, html, 'utf8');
-console.log(`✅ Element Test 生成完成 → ${OUT}`);
-console.log(`   ${(fs.statSync(OUT).size / 1024).toFixed(1)} KB | ${QUESTIONS.length} 题(4元素×2,场景化) | 每元素 ${Object.values(ELEMENT_CRYSTALS)[0].length} 颗推荐水晶`);
-console.log(`   每元素水晶数:`, Object.fromEntries(ELEMENT_ORDER.map(el => [ELEMENTS[el].name, ELEMENT_CRYSTALS[el].length])));
+console.log(`Element Test generated -> ${OUT}`);
+console.log(`   ${(fs.statSync(OUT).size / 1024).toFixed(1)} KB | ${QUESTIONS.length} questions | ${Object.values(ELEMENT_CRYSTALS)[0].length} crystals per element`);
+console.log('   crystal counts:', Object.fromEntries(ELEMENT_ORDER.map(el => [ELEMENTS[el].name, ELEMENT_CRYSTALS[el].length])));
+

@@ -1,0 +1,100 @@
+{
+  "_meta": {
+    "source": "crystals.com safety guide + gemporia/consciousitems/cosmopolitan cleansing methods (SERP 2026-06-27)",
+    "for": "Cleansing Timer工具(T4) + 净化文章",
+    "note": "7 methods 时长+safety 规则;universal_safe 4 法全石安全;合规:tradition/practical 双视角,no scientific evidence"
+  },
+  "methods": {
+    "moonlight": {
+      "name": "Moonlight",
+      "icon": "🌙",
+      "duration_label": "Overnight (8+ hours)",
+      "minutes": 480,
+      "safe": "all",
+      "tradition": "Place under the full moon to reset a stone's symbolic energy; the full moon is considered the most potent time.",
+      "practical": "Moonlight is reflected sunlight at roughly 1/400,000 the intensity — no UV risk, no damage to any mineral.",
+      "steps": ["Place crystals on a windowsill or covered porch at sunset", "Leave overnight (8+ hours)", "Bring in before sunrise to avoid dew or direct sun"],
+      "accessory": null
+    },
+    "selenite": {
+      "name": "Selenite Plate / Bowl",
+      "icon": "✨",
+      "duration_label": "6+ hours (or overnight)",
+      "minutes": 360,
+      "safe": "all",
+      "tradition": "Selenite is widely considered self-cleansing and is said to cleanse stones placed on it.",
+      "practical": "No chemical interaction — completely harmless. Handle gently, as selenite itself is soft (Mohs 2).",
+      "steps": ["Place crystals on a selenite plate, bowl, or bar", "Leave 6+ hours or overnight", "Avoid dragging hard stones across the selenite surface"],
+      "accessory": "Selenite charging plate"
+    },
+    "sound": {
+      "name": "Sound (Singing Bowl / Bell)",
+      "icon": "🔔",
+      "duration_label": "5–10 minutes",
+      "minutes": 7,
+      "safe": "all",
+      "tradition": "Sustained sound vibrations are believed to clear stagnant energy around crystals.",
+      "practical": "Sound waves are far too low-energy to affect any mineral's structure — harmless to every stone.",
+      "steps": ["Play a singing bowl, bell, or tuning fork near the crystals", "Continue for 5–10 minutes", "Works for your whole collection at once"],
+      "accessory": "Tibetan singing bowl"
+    },
+    "smoke": {
+      "name": "Smoke (Sage / Palo Santo)",
+      "icon": "🌿",
+      "duration_label": "30–60 seconds per stone",
+      "minutes": 1,
+      "safe": "all",
+      "tradition": "Passing crystals through smoke is believed to clear stored energy; rooted in many indigenous practices.",
+      "practical": "Smoke will not damage stones. Prolonged exposure may leave faint residue — wipe with a dry cloth.",
+      "steps": ["Light sage, palo santo, or cedar", "Pass each crystal through the smoke for 30–60 seconds", "Ensure ventilation and use fire safely"],
+      "accessory": "White sage / Palo santo"
+    },
+    "water": {
+      "name": "Running Water",
+      "icon": "💧",
+      "duration_label": "1 minute rinse",
+      "minutes": 1,
+      "safe": "mohs6+",
+      "check": "water",
+      "tradition": "Holding a crystal under running water is believed to wash away stored negativity.",
+      "practical": "Effective physical cleaning for hard, non-porous stones; dissolves or damages soft or water-reactive minerals.",
+      "steps": ["Rinse under cool (not hot) running water", "About 1 minute, gently moving fingers over the stone", "Dry immediately with a soft cloth"],
+      "accessory": null
+    },
+    "earth": {
+      "name": "Earth Burial",
+      "icon": "🌍",
+      "duration_label": "24 hours (up to 3 days)",
+      "minutes": 1440,
+      "safe": "mohs7+",
+      "check": "water",
+      "tradition": "Burying crystals returns them to the earth to absorb and neutralize stored energy.",
+      "practical": "Soil moisture and organic acids can stain or etch soft, porous stones — always wrap in cloth first.",
+      "steps": ["Wrap the stone in a natural cloth", "Bury in soil (garden or houseplant pot)", "Leave about 24 hours", "Brush off soil gently when done"],
+      "accessory": null
+    },
+    "salt": {
+      "name": "Salt (Dry)",
+      "icon": "🧂",
+      "duration_label": "A few hours (dry only)",
+      "minutes": 180,
+      "safe": "mohs7+",
+      "check": "salt",
+      "tradition": "Salt is one of the oldest purification symbols, believed to draw out and neutralize negative energy.",
+      "practical": "The most damaging method — abrasive, corrodes metals, etches soft stones. Saltwater is not recommended for any specimen-quality crystal.",
+      "steps": ["Bury in dry sea salt or Himalayan salt", "Only Mohs 7+ stones, a few hours maximum", "Discard the salt afterward (do not reuse)"],
+      "accessory": "Sea salt / Himalayan salt"
+    }
+  },
+  "universal_safe": ["moonlight", "selenite", "sound", "smoke"],
+  "frequency": {
+    "physical": "Monthly wipe-down with a dry or slightly damp microfiber cloth (like mineral-museum care).",
+    "ritual": "Whenever it feels right — a new crystal, after heavy use, on the full moon, or at the start of a new season."
+  },
+  "accessories": [
+    {"name": "Selenite Charging Plate", "desc": "Universally safe cleansing + a beautiful display base.", "shop": "/product-category/healing-crystals-jewelry/"},
+    {"name": "White Sage Smudge Stick", "desc": "Smoke cleansing that works for every stone.", "shop": "/product-category/healing-crystals-jewelry/"},
+    {"name": "Palo Santo", "desc": "A sweet-smoke alternative to sage.", "shop": "/product-category/healing-crystals-jewelry/"},
+    {"name": "Tibetan Singing Bowl", "desc": "Sound cleansing for your whole collection at once.", "shop": "/product-category/healing-crystals-jewelry/"}
+  ]
+}

@@ -1,0 +1,187 @@
+<!-- ===== Earthward Crystal Quiz ===== -->
+<div id="ewq-cq">
+  <h1 class="ewq-h1">Crystal Quiz: Which Crystal Is Right for You?</h1>
+  <p class="ewq-intro">Answer 8 quick questions about what you're seeking right now. We'll match you with the color that fits your energy - and the crystals traditionally associated with it.</p>
+
+  <div class="ewq-quiz" id="ewq-quiz"></div>
+  <div class="ewq-actions">
+    <button class="ewq-btn" id="ewq-submit" disabled onclick="EWQuiz.calc()">See My Crystal</button>
+    <span class="ewq-progress" id="ewq-progress">0 of 8 answered</span>
+  </div>
+
+  <div class="ewq-result" id="ewq-result"></div>
+</div>
+<style>
+.ewq-h1{font-size:34px;color:#1A1A2E;margin:0 0 12px;font-weight:700;line-height:1.2}
+.ewq-intro{color:#444;font-size:17px;line-height:1.65;margin:0 0 28px}
+.ewq-q{background:#fff;border:1px solid #EEE;border-radius:12px;padding:18px 20px;margin-bottom:8px}
+.ewq-q-head{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.ewq-q-dot{width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.ewq-q-text{font-size:17px;color:#1A1A2E;font-weight:600;line-height:1.4}
+.ewq-opts{display:flex;gap:8px;flex-wrap:wrap}
+.ewq-opt{flex:1;min-width:90px;padding:10px;border:1px solid #DDD;border-radius:8px;background:#fff;cursor:pointer;font-size:14px;color:#444;text-align:center;transition:.15s}
+.ewq-opt:hover{border-color:#95D5B2}
+.ewq-opt.sel{background:#2D6A4F;color:#fff !important;border-color:#2D6A4F}
+.ewq-actions{display:flex;align-items:center;gap:16px;margin:18px 0 0}
+.ewq-btn{background:#2D6A4F;color:#fff !important;border:none;border-radius:10px;padding:13px 28px;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 2px 6px rgba(45,106,79,.25)}
+.ewq-btn:hover:not(:disabled){background:#1B4332}
+.ewq-btn:disabled{background:#CCC;color:#888 !important;cursor:not-allowed;box-shadow:none}
+.ewq-progress{color:#666;font-size:15px}
+.ewq-result{margin-top:30px;display:none}
+.ewq-result.show{display:block}
+.ewq-result-card{background:#F7F3EA;border:1px solid #EEE;border-radius:14px;padding:22px;margin-bottom:14px}
+.ewq-result-card h2{font-size:22px;color:#1A1A2E;margin:0 0 6px}
+.ewq-color-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#666}
+.ewq-color-name{font-size:26px;font-weight:700}
+.ewq-color-area{color:#666;font-size:15px;margin:4px 0 4px;line-height:1.45}
+.ewq-color-crystals{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px;margin-top:12px}
+.ewq-cc{background:#fff;border:1px solid #EEE;border-radius:10px;overflow:hidden;text-decoration:none;color:#1A1A2E;transition:.15s}
+.ewq-cc:hover{border-color:#2D6A4F;transform:translateY(-2px)}
+.ewq-cc img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#F0F7F4}
+.ewq-cc-name{padding:8px 10px;font-size:14px;font-weight:600;text-align:center}
+.ewq-chart{background:#fff;border:1px solid #EEE;border-radius:12px;padding:20px;margin-bottom:18px}
+.ewq-chart h3{font-size:17px;color:#1A1A2E;margin:0 0 14px}
+.ewq-bar-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.ewq-bar-label{width:90px;font-size:13px;color:#444;font-weight:600}
+.ewq-bar-track{flex:1;height:14px;background:#F0F0F0;border-radius:7px;overflow:hidden}
+.ewq-bar-fill{height:100%;border-radius:7px}
+.ewq-bar-val{width:30px;font-size:12px;color:#888;text-align:right}
+.ewq-disclaim{color:#999;font-size:12px;margin-top:18px;line-height:1.5}
+@media(max-width:640px){.ewq-h1{font-size:24px}.ewq-result-card h2{font-size:20px}.ewq-color-name{font-size:23px}.ewq-intro,.ewq-q-text,#ewq-cq p,#ewq-cq li,#ewq-cq td,#ewq-cq th{font-size:16px!important}.ewq-opt{min-width:70px;font-size:13px}.ewq-bar-label{width:70px}}
+</style>
+<script>
+var EWQuiz=(function(){
+  var Q=[{"color":"white","q":"I'm seeking mental clarity, cleansing, or a fresh start."},{"color":"black","q":"I need to feel protected or set stronger boundaries."},{"color":"pink","q":"I'm looking for love, compassion, or gentle self-care."},{"color":"green","q":"I want growth, abundance, or a sense of renewal."},{"color":"blue","q":"I crave calm, peace, or clearer self-expression."},{"color":"purple","q":"I'm drawn to intuition, insight, or spiritual depth."},{"color":"red","q":"I need energy, courage, or motivation to take action."},{"color":"yellow","q":"I want confidence, optimism, or sharper mental focus."}];
+  var CL={"white":{"name":"White","color":"#BFBFBF","area":"purity, clarity, new beginnings","focus":"cleansing, mental clarity, fresh start"},"black":{"name":"Black","color":"#3A3A3A","area":"protection, grounding, mystery","focus":"absorbing negativity, boundary-setting"},"pink":{"name":"Pink","color":"#E0839E","area":"love, compassion, tenderness","focus":"emotional warmth, self-care, nurturing"},"green":{"name":"Green","color":"#6FAE7A","area":"growth, harmony, renewal","focus":"balance, calm, healing"},"blue":{"name":"Blue","color":"#5A9BBF","area":"calm, truth, communication","focus":"soothing, focus, honest expression"},"purple":{"name":"Purple","color":"#8E6AAE","area":"spirituality, wisdom, intuition","focus":"deep contemplation, spiritual awareness"},"red":{"name":"Red","color":"#C0533B","area":"passion, vitality, courage","focus":"energy, strength, action"},"yellow":{"name":"Yellow","color":"#CFAA3E","area":"joy, optimism, confidence","focus":"mental stimulation, energy, cheer"}};
+  var CO=["white","black","pink","green","blue","purple","red","yellow"];
+  var CC={"white":[{"slug":"adamite","name":"Adamite","img":"https://goearthward.com/wp-content/uploads/2026/06/adamite-overview.webp","link":"/gemstone/adamite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"agate","name":"Agate","img":"https://goearthward.com/wp-content/uploads/2026/06/agate-form-bracelet.webp","link":"/gemstone/agate-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"alamosite","name":"Alamosite","img":"https://goearthward.com/wp-content/uploads/2026/06/alamosite-form-bracelet.webp","link":"/gemstone/alamosite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"albite","name":"Albite","img":"https://goearthward.com/wp-content/uploads/2026/06/albite-form-bracelet-1.webp","link":"/gemstone/albite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"amphibole","name":"Amphibole Quartz","img":"https://goearthward.com/wp-content/uploads/2026/06/amphibole-form-bracelet.webp","link":"/gemstone/amphibole-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"analcime","name":"Analcime","img":"https://goearthward.com/wp-content/uploads/2026/06/analcime-form-bracelet.webp","link":"/gemstone/analcime-meaning/","shop":"/product-category/healing-crystals-jewelry/"}],"black":[{"slug":"acanthite","name":"Acanthite","img":"https://goearthward.com/wp-content/uploads/2026/06/acanthite-form-bracelet-1.webp","link":"/gemstone/acanthite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"aegirine","name":"Aegirine","img":"https://goearthward.com/wp-content/uploads/2026/06/aegirine-form-bracelet.webp","link":"/gemstone/aegirine-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"alabandite","name":"Alabandite","img":"https://goearthward.com/wp-content/uploads/2026/06/alabandite-form-bracelet.webp","link":"/gemstone/alabandite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"anatase","name":"Anatase","img":"https://goearthward.com/wp-content/uploads/2026/06/anatase-form-bracelet.webp","link":"/gemstone/anatase-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"anyolite","name":"Anyolite","img":"https://goearthward.com/wp-content/uploads/2026/06/anyolite-form-bracelet.webp","link":"/gemstone/anyolite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"apache-tears","name":"Apache Tears","img":"https://goearthward.com/wp-content/uploads/2026/06/apache-tears-form-bracelet.webp","link":"/gemstone/apache-tears-meaning/","shop":"/product-category/healing-crystals-jewelry/"}],"pink":[{"slug":"adamite","name":"Adamite","img":"https://goearthward.com/wp-content/uploads/2026/06/adamite-overview.webp","link":"/gemstone/adamite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"agatized-coral","name":"Agatized Coral","img":"https://goearthward.com/wp-content/uploads/2026/06/agatized-coral-form-bracelet.webp","link":"/gemstone/agatized-coral-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"analcime","name":"Analcime","img":"https://goearthward.com/wp-content/uploads/2026/06/analcime-form-bracelet.webp","link":"/gemstone/analcime-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"atlantisite","name":"Atlantisite","img":"https://goearthward.com/wp-content/uploads/2026/06/atlantisite-form-bracelet.webp","link":"/gemstone/atlantisite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"augelite","name":"Augelite","img":"https://goearthward.com/wp-content/uploads/2026/06/augelite-form-bracelet.webp","link":"/gemstone/augelite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"botswana-agate","name":"Botswana Agate","img":"https://goearthward.com/wp-content/uploads/2026/06/botswana-agate-form-bracelet.webp","link":"/gemstone/botswana-agate-meaning/","shop":"/product-category/healing-crystals-jewelry/"}],"green":[{"slug":"abalone-shell","name":"Abalone Shell","img":"https://goearthward.com/wp-content/uploads/2026/06/abalone-shell-form-bracelet.webp","link":"/gemstone/abalone-shell-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"adamite","name":"Adamite","img":"https://goearthward.com/wp-content/uploads/2026/06/adamite-overview.webp","link":"/gemstone/adamite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"aegirine","name":"Aegirine","img":"https://goearthward.com/wp-content/uploads/2026/06/aegirine-form-bracelet.webp","link":"/gemstone/aegirine-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"african-jade","name":"African Jade","img":"https://goearthward.com/wp-content/uploads/2026/06/african-jade-form-bracelet.webp","link":"/gemstone/african-jade-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"ajoite","name":"Ajoite","img":"https://goearthward.com/wp-content/uploads/2026/06/ajoite-form-bracelet.webp","link":"/gemstone/ajoite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"alabandite","name":"Alabandite","img":"https://goearthward.com/wp-content/uploads/2026/06/alabandite-form-bracelet.webp","link":"/gemstone/alabandite-meaning/","shop":"/product-category/healing-crystals-jewelry/"}],"blue":[{"slug":"abalone-shell","name":"Abalone Shell","img":"https://goearthward.com/wp-content/uploads/2026/06/abalone-shell-form-bracelet.webp","link":"/gemstone/abalone-shell-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"afghanite","name":"Afghanite","img":"https://goearthward.com/wp-content/uploads/2026/06/afghanite-form-bracelet.webp","link":"/gemstone/afghanite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"agate","name":"Agate","img":"https://goearthward.com/wp-content/uploads/2026/06/agate-form-bracelet.webp","link":"/gemstone/agate-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"ajoite","name":"Ajoite","img":"https://goearthward.com/wp-content/uploads/2026/06/ajoite-form-bracelet.webp","link":"/gemstone/ajoite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"alamosite","name":"Alamosite","img":"https://goearthward.com/wp-content/uploads/2026/06/alamosite-form-bracelet.webp","link":"/gemstone/alamosite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"amazonite","name":"Amazonite","img":"https://goearthward.com/wp-content/uploads/2026/06/amazonite-overview.webp","link":"/gemstone/amazonite-meaning/","shop":"/product-category/amazonite-crystals/"}],"purple":[{"slug":"abalone-shell","name":"Abalone Shell","img":"https://goearthward.com/wp-content/uploads/2026/06/abalone-shell-form-bracelet.webp","link":"/gemstone/abalone-shell-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"amethyst","name":"Amethyst","img":"https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp","link":"/gemstone/amethyst-meaning/","shop":"/product-category/amethyst-crystals/"},{"slug":"ametrine","name":"Ametrine","img":"https://goearthward.com/wp-content/uploads/2026/06/ametrine-form-bracelet.webp","link":"/gemstone/ametrine-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"apatite","name":"Apatite","img":"https://goearthward.com/wp-content/uploads/2026/06/apatite-overview.webp","link":"/gemstone/apatite-meaning/","shop":"/product-category/apatite-crystals/"},{"slug":"axinite","name":"Axinite","img":"https://goearthward.com/wp-content/uploads/2026/06/axinite-form-bracelet.webp","link":"/gemstone/axinite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"black-pearl","name":"Black Pearl","img":"https://goearthward.com/wp-content/uploads/2026/06/black-pearl-form-bracelet.webp","link":"/gemstone/black-pearl-meaning/","shop":"/product-category/healing-crystals-jewelry/"}],"red":[{"slug":"agatized-coral","name":"Agatized Coral","img":"https://goearthward.com/wp-content/uploads/2026/06/agatized-coral-form-bracelet.webp","link":"/gemstone/agatized-coral-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"alexandrite","name":"Alexandrite","img":"https://goearthward.com/wp-content/uploads/2026/06/alexandrite-form-bracelet.webp","link":"/gemstone/alexandrite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"andalusite","name":"Andalusite","img":"https://goearthward.com/wp-content/uploads/2026/06/andalusite-form-bracelet.webp","link":"/gemstone/andalusite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"anyolite","name":"Anyolite","img":"https://goearthward.com/wp-content/uploads/2026/06/anyolite-form-bracelet.webp","link":"/gemstone/anyolite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"aventurine","name":"Aventurine","img":"https://goearthward.com/wp-content/uploads/2026/06/aventurine-overview.webp","link":"/gemstone/aventurine-meaning/","shop":"/product-category/aventurine-crystals/"},{"slug":"bauxite","name":"Bauxite","img":"https://goearthward.com/wp-content/uploads/2026/06/bauxite-form-bracelet.webp","link":"/gemstone/bauxite-meaning/","shop":"/product-category/healing-crystals-jewelry/"}],"yellow":[{"slug":"adamite","name":"Adamite","img":"https://goearthward.com/wp-content/uploads/2026/06/adamite-overview.webp","link":"/gemstone/adamite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"agatized-coral","name":"Agatized Coral","img":"https://goearthward.com/wp-content/uploads/2026/06/agatized-coral-form-bracelet.webp","link":"/gemstone/agatized-coral-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"alamosite","name":"Alamosite","img":"https://goearthward.com/wp-content/uploads/2026/06/alamosite-form-bracelet.webp","link":"/gemstone/alamosite-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"amber","name":"Amber","img":"https://goearthward.com/wp-content/uploads/2026/06/amber-form-bracelet.webp","link":"/gemstone/amber-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"ametrine","name":"Ametrine","img":"https://goearthward.com/wp-content/uploads/2026/06/ametrine-form-bracelet.webp","link":"/gemstone/ametrine-meaning/","shop":"/product-category/healing-crystals-jewelry/"},{"slug":"analcime","name":"Analcime","img":"https://goearthward.com/wp-content/uploads/2026/06/analcime-form-bracelet.webp","link":"/gemstone/analcime-meaning/","shop":"/product-category/healing-crystals-jewelry/"}]};
+  var answers={}; // qIndex -> 0/1/2
+
+  function init(){renderQuiz();}
+  function renderQuiz(){
+    var el=document.getElementById('ewq-quiz');if(!el)return;
+    el.innerHTML=Q.map(function(q,i){
+      var c=CL[q.color];
+      return '<div class="ewq-q">'
+        +'<div class="ewq-q-head"><span class="ewq-q-dot" style="background:'+c.color+'"></span><span class="ewq-q-text">'+(i+1)+'. '+q.q+'</span></div>'
+        +'<div class="ewq-opts" data-qi="'+i+'">'
+        +'<button class="ewq-opt" onclick="EWQuiz.answer('+i+',0)">Not really</button>'
+        +'<button class="ewq-opt" onclick="EWQuiz.answer('+i+',1)">Somewhat</button>'
+        +'<button class="ewq-opt" onclick="EWQuiz.answer('+i+',2)">Yes, exactly</button>'
+        +'</div></div>';
+    }).join('');
+  }
+  function answer(qi,val){
+    answers[qi]=val;
+    document.querySelectorAll('.ewq-opts[data-qi="'+qi+'"] .ewq-opt').forEach(function(b,idx){
+      b.classList.toggle('sel',idx===val);
+    });
+    var n=Object.keys(answers).length;
+    document.getElementById('ewq-progress').textContent=n+' of '+Q.length+' answered';
+    document.getElementById('ewq-submit').disabled=(n<Q.length);
+  }
+  function calc(){
+    // 濮ｅ繗澹?1 妫?(0-2), dominant=閺堚偓妤?閸楁洑瀵岀€?閸氬苯鍨庨崣鏈嘜LOR_ORDER閸?P0-2)
+    var scores={};CO.forEach(function(cl){scores[cl]=0;});
+    Q.forEach(function(q,i){if(answers[i])scores[q.color]+=answers[i];});
+    var maxS=-1;CO.forEach(function(cl){if(scores[cl]>maxS)maxS=scores[cl];});
+    var dominant=[CO.find(function(cl){return scores[cl]===maxS;})]; // 閸楁洑瀵岀€?COLOR_ORDER 娑擃厾顑囨稉鈧稉顏囨彧 maxS
+    var sorted=CO.map(function(cl){return{cl:cl,s:scores[cl]};}).sort(function(a,b){return b.s-a.s;});
+    renderResult(scores,dominant,sorted);
+  }
+  function renderResult(scores,dominant,sorted){
+    var r=document.getElementById('ewq-result');
+    var html='<div class="ewq-result-card">';
+    html+='<div class="ewq-color-label">Your color match</div>';
+    dominant.forEach(function(cl){
+      var c=CL[cl], q=Q.find(function(x){return x.color===cl;});
+      var resp=q.q.replace(/^I'm /,"You're ").replace(/^I /,"You ");
+      html+='<div style="margin-top:10px"><span class="ewq-color-name" style="color:'+c.color+'">'+c.name+'</span><div class="ewq-color-area">'+c.area+'</div></div>';
+      html+='<p style="color:#444;font-size:17px;margin:12px 0 0;line-height:1.6"><strong>'+c.name+'</strong> matched your response: "'+resp+'." '+c.name+' crystals are traditionally associated with '+c.focus+', and are often used as a focus for that intention.</p>';
+    });
+    html+='</div>';
+    // 閹恒劏宕樺瀛樻珷
+    html+='<div class="ewq-result-card"><h2>Crystals Traditionally Associated with '+dominant.map(function(cl){return CL[cl].name;}).join(' & ')+'</h2>';
+    dominant.forEach(function(cl){
+      html+='<div class="ewq-color-crystals" style="margin-bottom:14px">';
+      (CC[cl]||[]).forEach(function(c){
+        html+='<a class="ewq-cc" href="'+c.link+'"><img src="'+(c.img||'')+'" alt="'+c.name+'" loading="lazy"><div class="ewq-cc-name">'+c.name+'</div></a>';
+      });
+      html+='<a href="/'+cl+'-crystals/" style="display:block;margin-top:12px;color:#2D6A4F;font-weight:600;text-decoration:none;font-size:15px">Read the '+CL[cl].name+' Crystals Guide -&gt;</a>';
+      html+='</div>';
+    });
+    html+='<a class="ewq-btn" href="/product-category/healing-crystals-jewelry/" style="display:inline-block;margin-top:6px;text-decoration:none">Shop Healing Crystal Jewelry -&gt;</a>';
+    html+='</div>';
+    // 閸忋劏澹婇崶鎹愩€?濞喡ゅ閼奉亞鍔ч弰鍓с仛,閺冪娀娓堕崗鍙樺瘜鐎靛吋鐖ｅ▔?
+    html+='<div class="ewq-chart"><h3>Your Full Color Match</h3>';
+    sorted.slice().sort(function(a,b){return CO.indexOf(a.cl)-CO.indexOf(b.cl);}).forEach(function(item){
+      var pct=Math.round((item.s/2)*100);
+      var c=CL[item.cl];
+      var lab=dominant.indexOf(item.cl)>=0?' - match':'';
+      html+='<div class="ewq-bar-row"><span class="ewq-bar-label">'+c.name+lab+'</span><div class="ewq-bar-track"><div class="ewq-bar-fill" style="width:'+pct+'%;background:'+c.color+'"></div></div><span class="ewq-bar-val">'+item.s+'/2</span></div>';
+    });
+    html+='</div>';
+    html+='<p class="ewq-disclaim">Crystal meanings are offered for reflection and spiritual inspiration. There is no scientific evidence that crystals directly treat disease, but many people use them as meditation, intention-setting, and self-awareness tools. They are not a substitute for medical, financial, or professional advice.</p>';
+    r.innerHTML=html;
+    r.classList.add('show');
+    var offset=window.innerWidth<768?80:120;
+    var top=r.getBoundingClientRect().top+window.pageYOffset-offset;
+    window.scrollTo({top:top,behavior:'smooth'});
+  }
+  return{init:init,answer:answer,calc:calc};
+})();
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',EWQuiz.init);}else{EWQuiz.init();}
+</script>
+<!-- ===== Crystal Quiz Schema (HowTo + FAQPage) ===== -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"HowTo","name":"How to Find the Right Crystal for You","description":"A short quiz to match you with the crystal color that fits what you are seeking right now, and the stones traditionally associated with it.","step":[{"@type":"HowToStep","name":"Answer 8 questions","text":"Rate how much each statement matches what you are seeking, from Not really to Yes, exactly."},{"@type":"HowToStep","name":"See your color match","text":"Scores are tallied per color; the highest reveals the color that fits your current intention."},{"@type":"HowToStep","name":"Use the recommended crystals","text":"Explore the crystals traditionally associated with your color 閳?carry one, wear it as jewelry, or hold it during a few minutes of mindful breathing."}]},
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I know which crystal is right for me?","acceptedAnswer":{"@type":"Answer","text":"Take the 8-question crystal quiz above. The color scoring highest reflects what you are seeking right now 閳?and each color maps to specific crystals traditionally used for that intention, such as rose quartz for love or amethyst for intuition. Many people retake it weekly or as their focus shifts."}},{"@type":"Question","name":"What crystal should I buy?","acceptedAnswer":{"@type":"Answer","text":"It depends on what you need. For calm, blue stones like aquamarine are often used. For love, pink stones like rose quartz. For protection, black stones like black tourmaline. The quiz above matches you to a color based on your current intention."}},{"@type":"Question","name":"Can I choose a crystal by color?","acceptedAnswer":{"@type":"Answer","text":"Yes. Color is one of the simplest ways to choose a crystal, because each color is traditionally associated with certain intentions 閳?white for clarity, green for growth, purple for intuition, yellow for confidence, and so on."}},{"@type":"Question","name":"Do I have to stick with my result?","acceptedAnswer":{"@type":"Answer","text":"No. Your result reflects what you are seeking right now, which can change. You can use crystals from any color at any time 閳?trust your own sense of what draws you."}}]}
+]}
+</script>
+<!-- ===== End Crystal Quiz ===== -->
+<!-- ===== Crystal Quiz SEO Accordion ===== -->
+<section style="margin:32px auto 0">
+  <details style="border:1px solid #D8D8D8;border-radius:12px;background:#FAFAFA;overflow:hidden">
+    <summary style="list-style:none;cursor:pointer;background:#E8E8E8;color:#1A1A2E;font-size:18px;font-weight:700;padding:18px 22px">Learn More About Choosing Crystals</summary>
+    <div style="padding:24px 28px;color:#444;font-size:17px;line-height:1.75">
+<h2>How to Choose the Right Crystal</h2>
+<p>With hundreds of stones to choose from, picking a crystal can feel overwhelming. The good news is there's no single "right" answer — most people choose by one of four approaches: by the intention you're seeking, by the color you're drawn to, by a specific need (like calm or protection), or simply by intuition. The quiz above uses your current intention to match you with a color and its crystals, but any of these methods works.</p>
+
+<h2>Choosing Crystals by Color</h2>
+<p>Color is one of the simplest ways to choose a crystal, because each color carries traditional associations. White for clarity and fresh starts, black for protection, pink for love and self-care, green for growth and abundance, blue for calm and communication, purple for intuition, red for energy and courage, yellow for confidence. If a certain color keeps catching your eye, that's often a good place to start. Explore each in our <a href="/gemstones/">crystal encyclopedia</a>.</p>
+
+<h2>Choosing Crystals by Intention</h2>
+<p>If you have a specific goal in mind, let it guide you:</p>
+<ul>
+<li><strong>For calm or anxiety</strong> — blue and purple stones like aquamarine, blue lace agate, and amethyst are often used as a focus for peace.</li>
+<li><strong>For love and self-care</strong> — pink stones like rose quartz and rhodochrosite, traditionally associated with compassion.</li>
+<li><strong>For protection</strong> — black stones like black tourmaline and obsidian, often used as symbolic protection stones.</li>
+<li><strong>For confidence and motivation</strong> — yellow and orange stones like citrine and carnelian.</li>
+<li><strong>For intuition</strong> — purple stones like amethyst and fluorite, linked to insight and reflection.</li>
+</ul>
+
+<h2>Popular Crystals for Beginners</h2>
+<p>Not sure where to start? A few stones are considered foundational by longtime collectors:</p>
+<ul>
+<li><strong>Clear Quartz</strong> — often described as a "master" stone, traditionally associated with clarity and amplifying intention.</li>
+<li><strong>Amethyst</strong> — purple, calming, linked to intuition and restful reflection.</li>
+<li><strong>Rose Quartz</strong> — pink, the stone most associated with love and self-compassion.</li>
+<li><strong>Citrine</strong> — yellow, traditionally associated with optimism and confidence.</li>
+<li><strong>Black Tourmaline</strong> — black, often used as a symbolic protective stone.</li>
+</ul>
+
+<h2>How Do You Know a Crystal Is Right for You?</h2>
+<p>There's no scientific test for crystal "fit," but many people report being drawn to a particular stone — through its color, weight, or the feeling of holding it. The quiz above offers one starting point based on what you're seeking; from there, trust your own response. If a crystal feels right, it usually is — for you. You can also learn what each stone is traditionally associated with in our <a href="/gemstones/">crystal meaning encyclopedia</a>, or browse <a href="/product-category/healing-crystals-jewelry/">healing crystal jewelry</a>.</p>
+
+<h2>Crystal Quiz FAQ</h2>
+<details style="border:1px solid #EEE;border-radius:10px;background:#fff;margin-bottom:8px;padding:14px 18px"><summary style="cursor:pointer;font-weight:600;color:#1A1A2E;font-size:17px;list-style:none">How do I know which crystal is right for me? <span style="float:right;color:#2D6A4F">+</span></summary><p style="margin:12px 0 0;color:#444;font-size:17px;line-height:1.65">Take the 8-question quiz above — it matches you to a color based on what you're seeking right now, then shows the crystals traditionally associated with it. You can also choose by intention (calm, love, protection), by the color you're drawn to, or simply by holding a stone and noticing your response.</p></details>
+<details style="border:1px solid #EEE;border-radius:10px;background:#fff;margin-bottom:8px;padding:14px 18px"><summary style="cursor:pointer;font-weight:600;color:#1A1A2E;font-size:17px;list-style:none">What crystal should I buy first? <span style="float:right;color:#2D6A4F">+</span></summary><p style="margin:12px 0 0;color:#444;font-size:17px;line-height:1.65">For a first crystal, many people start with clear quartz (clarity), amethyst (calm and intuition), rose quartz (love), citrine (confidence), or black tourmaline (protection). These are widely available, affordable, and cover the most common intentions — so any of them makes a strong starting point.</p></details>
+<details style="border:1px solid #EEE;border-radius:10px;background:#fff;margin-bottom:8px;padding:14px 18px"><summary style="cursor:pointer;font-weight:600;color:#1A1A2E;font-size:17px;list-style:none">Can I choose a crystal by color? <span style="float:right;color:#2D6A4F">+</span></summary><p style="margin:12px 0 0;color:#444;font-size:17px;line-height:1.65">Yes — color is one of the easiest guides. Each color is traditionally associated with certain intentions: white for clarity, black for protection, pink for love, green for growth, blue for calm, purple for intuition, red for energy, yellow for confidence. The quiz above uses exactly this color-to-intention mapping.</p></details>
+<details style="border:1px solid #EEE;border-radius:10px;background:#fff;margin-bottom:8px;padding:14px 18px"><summary style="cursor:pointer;font-weight:600;color:#1A1A2E;font-size:17px;list-style:none">Do I have to stick with my result? <span style="float:right;color:#2D6A4F">+</span></summary><p style="margin:12px 0 0;color:#444;font-size:17px;line-height:1.65">No. Your result reflects what you're seeking right now, which can shift day to day. Many people retake the quiz weekly or as their focus changes, and you're always free to use crystals from any color — trust your own sense of what draws you.</p></details>
+<p style="color:#999;font-size:12px;margin-top:18px;line-height:1.5">Crystal meanings are offered for reflection and spiritual inspiration. There is no scientific evidence that crystals directly treat disease, but many people use them as meditation, intention-setting, and self-awareness tools. They are not a substitute for medical, financial, or professional advice.</p>
+
+    </div>
+  </details>
+</section>
+<!-- ===== End Crystal Quiz SEO Accordion ===== -->

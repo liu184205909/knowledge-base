@@ -1,17 +1,17 @@
-/**
- * Chakra Test（T5）— 14题问卷测失衡脉轮 → 推荐水晶
- * 7脉轮×2题,3级量表(Rarely/Sometimes/Often),低分=blocked,推荐对应chakra水晶(390颗search-data)
- * 复用 crystal-meaning-search/data/search-data.json 的 chakras 字段
+﻿/**
+ * Chakra Test锛圱5锛夆€?14棰橀棶鍗锋祴澶辫　鑴夎疆 鈫?鎺ㄨ崘姘存櫠
+ * 7鑴夎疆脳2棰?3绾ч噺琛?Rarely/Sometimes/Often),浣庡垎=blocked,鎺ㄨ崘瀵瑰簲chakra姘存櫠(390棰梥earch-data)
+ * 澶嶇敤 crystal-meaning-search/data/search-data.json 鐨?chakras 瀛楁
  *
- * 输出：./chakra-test.html
+ * 杈撳嚭锛?/chakra-test.html
  */
 const fs = require('fs');
 const path = require('path');
 
-// ===== 14 题（7 脉轮 × 2）=====
+// ===== 14 棰橈紙7 鑴夎疆 脳 2锛?====
 const QUESTIONS = [
   { chakra: 'root', q: "I feel secure, grounded, and safe in my daily life." },
-  { chakra: 'root', q: "I trust that my basic needs — money, shelter, stability — will be met." },
+  { chakra: 'root', q: "I trust that my basic needs - money, shelter, stability - will be met." },
   { chakra: 'sacral', q: "I feel creative and can express my emotions freely." },
   { chakra: 'sacral', q: "I allow myself to experience pleasure and joy without guilt." },
   { chakra: 'solar-plexus', q: "I feel confident and in control of my choices." },
@@ -26,36 +26,42 @@ const QUESTIONS = [
   { chakra: 'crown', q: "I have a sense of purpose and meaning in life." },
 ];
 
-// 7 脉轮（传统色 + 生活领域）
+// Chakra metadata
 const CHAKRAS = {
-  root: { name: 'Root', color: '#C0533B', area: 'security · stability · grounding', focus: 'feeling safe, grounded, and financially secure' },
-  sacral: { name: 'Sacral', color: '#E0833C', area: 'creativity · emotion · pleasure', focus: 'creativity, emotional flow, and capacity for joy' },
-  'solar-plexus': { name: 'Solar Plexus', color: '#CFAA3E', area: 'confidence · willpower · self-worth', focus: 'confidence, motivation, and personal power' },
-  heart: { name: 'Heart', color: '#6FAE7A', area: 'love · compassion · connection', focus: 'giving and receiving love, emotional healing' },
-  throat: { name: 'Throat', color: '#5A9BBF', area: 'communication · truth · expression', focus: 'speaking your truth and being heard' },
-  'third-eye': { name: 'Third Eye', color: '#6A6AAE', area: 'intuition · insight · clarity', focus: 'intuition, focus, and inner vision' },
-  crown: { name: 'Crown', color: '#8E6AAE', area: 'spirituality · purpose · connection', focus: 'spiritual connection and sense of purpose' },
+  root: { name: 'Root', color: '#C0533B', area: 'security, stability, grounding', focus: 'feeling safe, grounded, and financially secure' },
+  sacral: { name: 'Sacral', color: '#E0833C', area: 'creativity, emotion, pleasure', focus: 'creativity, emotional flow, and capacity for joy' },
+  'solar-plexus': { name: 'Solar Plexus', color: '#CFAA3E', area: 'confidence, willpower, self-worth', focus: 'confidence, motivation, and personal power' },
+  heart: { name: 'Heart', color: '#6FAE7A', area: 'love, compassion, connection', focus: 'giving and receiving love, emotional healing' },
+  throat: { name: 'Throat', color: '#5A9BBF', area: 'communication, truth, expression', focus: 'speaking your truth and being heard' },
+  'third-eye': { name: 'Third Eye', color: '#6A6AAE', area: 'intuition, insight, clarity', focus: 'intuition, focus, and inner vision' },
+  crown: { name: 'Crown', color: '#8E6AAE', area: 'spirituality, purpose, connection', focus: 'spiritual connection and sense of purpose' },
 };
 
-// 读 search-data，每脉轮水晶（chakras 字段含，取 5，优先有 by-stone shop 的）
+// 璇?search-data锛屾瘡鑴夎疆姘存櫠锛坈hakras 瀛楁鍚紝鍙?5锛屼紭鍏堟湁 by-stone shop 鐨勶級
 const SD = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../crystal-meaning-search/data/search-data.json'), 'utf8'));
 const CHAKRA_ORDER = ['root', 'sacral', 'solar-plexus', 'heart', 'throat', 'third-eye', 'crown'];
 const CHAKRA_CRYSTALS = {};
+function compactCrystal(c) {
+  return { slug: c.slug, name: c.name, img: c.img || '', link: c.link || '', shop: c.shop || '' };
+}
+function safeJSON(value) {
+  return JSON.stringify(value).replace(/<\//g, '<\\/');
+}
 for (const ck of CHAKRA_ORDER) {
   const all = SD.crystals.filter(c => (c.chakras || []).includes(ck));
-  // 优先有 by-stone shop（/product-category/xxx-crystals/）的，取前 5
+  // 浼樺厛鏈?by-stone shop锛?product-category/xxx-crystals/锛夌殑锛屽彇鍓?5
   const withShop = all.filter(c => /-crystals\/$/.test(c.shop));
-  CHAKRA_CRYSTALS[ck] = (withShop.length >= 5 ? withShop : all).slice(0, 5);
+  CHAKRA_CRYSTALS[ck] = (withShop.length >= 5 ? withShop : all).slice(0, 5).map(compactCrystal);
 }
-const CRYSTALS_JSON = JSON.stringify(CHAKRA_CRYSTALS);
-const CHAKRAS_JSON = JSON.stringify(CHAKRAS);
-const QUESTIONS_JSON = JSON.stringify(QUESTIONS);
-const CHAKRA_ORDER_JSON = JSON.stringify(CHAKRA_ORDER);
+const CRYSTALS_JSON = safeJSON(CHAKRA_CRYSTALS);
+const CHAKRAS_JSON = safeJSON(CHAKRAS);
+const QUESTIONS_JSON = safeJSON(QUESTIONS);
+const CHAKRA_ORDER_JSON = safeJSON(CHAKRA_ORDER);
 
 let html = `<!-- ===== Earthward Chakra Test ===== -->
 <div id="ew-chakra">
   <h1 class="ewc5-h1">Chakra Test: Which Chakra Is Blocked?</h1>
-  <p class="ewc5-intro">Answer ${QUESTIONS.length} honest questions about how you've been feeling. We'll identify which of your seven chakras needs the most attention — and the crystals traditionally used to bring it back into balance.</p>
+  <p class="ewc5-intro">Answer ${QUESTIONS.length} honest questions about how you've been feeling. We'll identify which of your seven chakras needs the most attention - and the crystals traditionally used to bring it back into balance.</p>
 
   <div class="ewc5-quiz" id="ewc5-quiz"></div>
   <div class="ewc5-actions">
@@ -107,7 +113,7 @@ let html = `<!-- ===== Earthward Chakra Test ===== -->
 .ewc5-email{flex:1;padding:11px 14px;border:1px solid #DDD;border-radius:8px;font-size:14px}
 .ewc5-email:focus{outline:none;border-color:#2D6A4F}
 .ewc5-disclaim{color:#999;font-size:12px;margin-top:18px;line-height:1.5}
-@media(max-width:640px){.ewc5-h1{font-size:26px}.ewc5-opt{min-width:70px;font-size:13px}.ewc5-bar-label{width:70px}}
+@media(max-width:640px){.ewc5-h1{font-size:24px}.ewc5-result-card h2{font-size:20px}.ewc5-blocked-name{font-size:23px}.ewc5-intro,.ewc5-q-text,#ewc5 p,#ewc5 li,#ewc5 td,#ewc5 th{font-size:16px!important}.ewc5-opt{min-width:70px;font-size:13px}.ewc5-bar-label{width:70px}}
 </style>
 <script>
 var EWChakra=(function(){
@@ -141,16 +147,16 @@ var EWChakra=(function(){
     document.getElementById('ewc5-submit').disabled=(n<Q.length);
   }
   function calc(){
-    // 每脉轮 2 题和 (2-6), blocked=最低
-    var scores={};CO.forEach(function(ck){scores[ck]=0;});
+    var scores={};
+    CO.forEach(function(ck){scores[ck]=0;});
     Q.forEach(function(q,i){if(answers[i])scores[q.chakra]+=answers[i];});
     var sorted=CO.map(function(ck){return{ck:ck,s:scores[ck]};}).sort(function(a,b){return a.s-b.s;});
     var blocked=[sorted[0].ck];
-    if(sorted[1].s<=sorted[0].s+1)blocked.push(sorted[1].ck); // 接近最低也算
+    if(sorted[1].s<=sorted[0].s+1)blocked.push(sorted[1].ck);
     renderResult(scores,blocked,sorted);
   }
   function scrollToResult(r){
-    var offset=window.innerWidth<768?110:170;
+    var offset=window.innerWidth<768?80:120;
     var y=r.getBoundingClientRect().top+window.pageYOffset-offset;
     window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
   }
@@ -164,28 +170,27 @@ var EWChakra=(function(){
     }).join('');
     html+='<p style="color:#444;font-size:16px;margin:10px 0 0;line-height:1.5">This energy center governs '+blocked.map(function(ck){return CH[ck].focus;}).join(' and ')+'. When blocked, it often shows up as imbalance in these areas. The crystals below are traditionally used to support it.</p>';
     html+='</div>';
-    // 推荐水晶
+    // 鎺ㄨ崘姘存櫠
     html+='<div class="ewc5-result-card"><h2>Crystals to Balance Your '+blocked.map(function(ck){return CH[ck].name;}).join(' & ')+'</h2>';
     blocked.forEach(function(ck){
       html+='<div class="ewc5-chakra-crystals" style="margin-bottom:14px">';
       (CC[ck]||[]).forEach(function(c){
         html+='<a class="ewc5-cc" href="'+c.link+'"><img src="'+(c.img||'')+'" alt="'+c.name+'" loading="lazy"><div class="ewc5-cc-name">'+c.name+'</div></a>';
       });
-      html+='<a href="/'+ck+'-chakra-crystals/" style="display:block;margin-top:12px;color:#2D6A4F;font-weight:600;text-decoration:none;font-size:15px">Read the '+CH[ck].name+' Chakra Crystals Guide →</a>';
+      html+='<a href="/'+ck+'-chakra-crystals/" style="display:block;margin-top:12px;color:#2D6A4F;font-weight:600;text-decoration:none;font-size:15px">Read the '+CH[ck].name+' Chakra Crystals Guide -&gt;</a>';
       html+='</div>';
     });
-    html+='<a class="ewc5-btn" href="/product-category/healing-crystals-jewelry/" style="display:inline-block;margin-top:6px;text-decoration:none">Shop Healing Crystal Jewelry →</a>';
+    html+='<a class="ewc5-btn" href="/product-category/healing-crystals-jewelry/" style="display:inline-block;margin-top:6px;text-decoration:none">Shop Healing Crystal Jewelry -&gt;</a>';
     html+='</div>';
-    // 全脉轮图表
     html+='<div class="ewc5-chart"><h3>Your Full Chakra Balance</h3>';
     sorted.slice().sort(function(a,b){return CO.indexOf(a.ck)-CO.indexOf(b.ck);}).forEach(function(item){
       var pct=Math.round((item.s/6)*100);
       var c=CH[item.ck];
-      var lab=blocked.indexOf(item.ck)>=0?' ← needs care':'';
+      var lab=blocked.indexOf(item.ck)>=0?' - needs care':'';
       html+='<div class="ewc5-bar-row"><span class="ewc5-bar-label">'+c.name+lab+'</span><div class="ewc5-bar-track"><div class="ewc5-bar-fill" style="width:'+pct+'%;background:'+c.color+'"></div></div><span class="ewc5-bar-val">'+item.s+'/6</span></div>';
     });
     html+='</div>';
-    // 留资
+    // 鐣欒祫
     html+='<div class="ewc5-lead"><h3>Get Your Full 7-Chakra Report</h3><p>Free personalized report with the status of each chakra, deeper crystal guidance, and a daily balancing ritual. Drop your email.</p>';
     html+='<div class="ewc5-email-row"><input class="ewc5-email" type="email" placeholder="your@email.com"><button class="ewc5-btn" onclick="alert(\\'Report feature coming soon\\')">Get Full Report</button></div></div>';
     html+='<p class="ewc5-disclaim">Astrology, chakras, and crystal meanings are offered for reflection and spiritual inspiration. Crystals carry traditional symbolic qualities but are not a substitute for medical, financial, or professional advice.</p>';
@@ -201,13 +206,12 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"HowTo","name":"How to Test Which Chakra Is Blocked","description":"A 14-question self-assessment to identify your most blocked chakra and the crystals that traditionally restore balance.","step":[{"@type":"HowToStep","name":"Answer 14 questions","text":"Rate how true each statement feels about your current state, from Rarely to Often."},{"@type":"HowToStep","name":"See your blocked chakra","text":"Scores are tallied per chakra; the lowest indicate where energy is most blocked."},{"@type":"HowToStep","name":"Use the recommended crystals","text":"Each chakra maps to specific crystals traditionally used to restore balance."}]},
-{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a chakra test?","acceptedAnswer":{"@type":"Answer","text":"A chakra test is a self-assessment quiz that helps identify which of your seven chakras may be blocked or out of balance, based on how you currently feel."}},{"@type":"Question","name":"How accurate is a chakra test?","acceptedAnswer":{"@type":"Answer","text":"A chakra test is a reflective tool, not a diagnostic. It points to where you might focus based on your current state. Energy shifts, so results can change over time."}},{"@type":"Question","name":"What crystal helps a blocked chakra?","acceptedAnswer":{"@type":"Answer","text":"Each chakra maps to specific crystals — root chakra stones like smoky quartz for grounding, heart chakra stones like rose quartz for love, third eye stones like amethyst for intuition."}},{"@type":"Question","name":"Can chakra test results change?","acceptedAnswer":{"@type":"Answer","text":"Yes. Your energy shifts with life circumstances, stress, and intentional practice. Retake the test periodically to track how your balance evolves."}}]}
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a chakra test?","acceptedAnswer":{"@type":"Answer","text":"A chakra test is a self-assessment quiz that helps identify which of your seven chakras may be blocked or out of balance, based on how you currently feel."}},{"@type":"Question","name":"How accurate is a chakra test?","acceptedAnswer":{"@type":"Answer","text":"A chakra test is a reflective tool, not a diagnostic. It points to where you might focus based on your current state. Energy shifts, so results can change over time."}},{"@type":"Question","name":"What crystal helps a blocked chakra?","acceptedAnswer":{"@type":"Answer","text":"Each chakra maps to specific crystals - root chakra stones like smoky quartz for grounding, heart chakra stones like rose quartz for love, third eye stones like amethyst for intuition."}},{"@type":"Question","name":"Can chakra test results change?","acceptedAnswer":{"@type":"Answer","text":"Yes. Your energy shifts with life circumstances, stress, and intentional practice. Retake the test periodically to track how your balance evolves."}}]}
 ]}
 </script>
 <!-- ===== End Chakra Test ===== -->`;
 
-// SEO 折叠长文（chakra test 关键词覆盖，注入页面底部）
-let SEO_CONTENT = '';
+// SEO 鎶樺彔闀挎枃锛坈hakra test 鍏抽敭璇嶈鐩栵紝娉ㄥ叆椤甸潰搴曢儴锛?let SEO_CONTENT = '';
 try { SEO_CONTENT = fs.readFileSync(path.resolve(__dirname, 'seo-content.html'), 'utf8'); } catch (e) {}
 if (SEO_CONTENT.trim()) {
   html += `
@@ -225,6 +229,12 @@ ${SEO_CONTENT}
 
 const OUT = path.resolve(__dirname, 'chakra-test.html');
 fs.writeFileSync(OUT, html, 'utf8');
-console.log(`✅ Chakra Test 生成完成 → ${OUT}`);
-console.log(`   ${(fs.statSync(OUT).size / 1024).toFixed(1)} KB | ${QUESTIONS.length} 题(7脉轮×2) | 每脉轮 ${Object.values(CHAKRA_CRYSTALS)[0].length} 颗推荐水晶`);
-console.log(`   每脉轮水晶数:`, Object.fromEntries(CHAKRA_ORDER.map(ck => [CHAKRAS[ck].name, CHAKRA_CRYSTALS[ck].length])));
+console.log(`Chakra Test generated -> ${OUT}`);
+console.log(`   ${(fs.statSync(OUT).size / 1024).toFixed(1)} KB | ${QUESTIONS.length} questions | ${Object.values(CHAKRA_CRYSTALS)[0].length} crystals per chakra`);
+console.log('   crystal counts:', Object.fromEntries(CHAKRA_ORDER.map(ck => [CHAKRAS[ck].name, CHAKRA_CRYSTALS[ck].length])));
+
+
+
+
+
+

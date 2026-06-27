@@ -1,0 +1,25 @@
+⏭ root (已存在,跳过)
+✅ sacral → post:45687
+✅ solar-plexus → post:45689
+✅ heart → post:45691
+✅ throat → post:45693
+✅ third-eye → post:45695
+✅ crown → post:45697
+✅ white → post:45700
+✅ yellow → post:45703
+✅ green → post:45706
+✅ brown → post:45709
+✅ black → post:45712
+✅ pink → post:45715
+✅ blue → post:45718
+✅ red → post:45721
+✅ orange → post:45724
+✅ grey → post:45727
+✅ blue-green → post:45730
+✅ purple → post:45733
+✅ earth → post:45736
+✅ fire → post:45739
+✅ air → post:45742
+✅ water → post:45745
+
+=== 上传完成: 22 OK, 0 ERR, 1 跳过 ===
