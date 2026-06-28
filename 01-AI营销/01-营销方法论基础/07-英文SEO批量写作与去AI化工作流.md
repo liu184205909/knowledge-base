@@ -77,6 +77,8 @@
 
 **做什么：** 从 RLM 内容清单中选出本批可生产内容，确认每篇内容都有关键词、意图、承接页面和信息增量依据。
 
+> **三源验证原则（2026-06-28 新增）**：定选题/篇数必须三源交叉——①竞品 sitemap（1B 解析，查竞品实际写了多少+什么选题）②Seed-Master volume（精确聚合，定篇数依据）③SERP（看实际生态/AIO/PAA，验证搜索意图）。**不能只查 Seed-Master + 现有竞品清单**（曾误判 MBTI"0 需求"——Seed 无词+35 竞品 0 做，但 SERP 一堆站在做）。篇数不能从策略粗估抄（如"how-to 8 篇"是拍脑袋，实际 Seed-Master 筛后 5-7 篇）。详见 memory `seo-demand-validation-three-sources`。
+
 **操作方法：**
 
 1. 从内容清单中筛选本批候选内容，不直接从零散关键词开始写
@@ -144,6 +146,8 @@
 3. **批量审阅**：一次审 10-20 篇 Brief，确认方向正确后批量进入起草
 
 **产出物：** 已确认的 Brief 文件（Markdown）
+
+> **⚠️ 框架审核门禁（2026-06-28 新增）**：模板化批量内容（如天使号码 100 篇 / chakra-color-element 23 篇 / 配对 207 篇）在 Brief 确认后，须建专属框架文档（`模板-XXX文章框架.md`），并**经用户审核通过后才进入起草**。框架审核要点：模块结构对齐竞品 H2 + 数据支撑（非编造）+ 差异化角度 + 合规规则 + 每篇 unique_angle（防同质化）。**不能跳过审核直接批量生产**（曾因臆想框架+合并 3 框架被用户纠正两次）。
 
 > 详见 [06-内容Brief模板.md](03-模板库/06-内容Brief模板.md)
 
@@ -411,17 +415,72 @@ WRITING RULES — MANDATORY:
 
 **做什么：** 批量发布内容 + 构建站内链接网络。
 
+### 7.1 技术执行前置（发布前必做）
+
+> 以下步骤在内容通过 QA 后、正式上传 WP/CMS 前执行。每批开工前过一遍，避免重复踩坑。
+
+| # | 步骤 | 操作 | 踩过的坑（标注⚠️/🔴） |
+|---|------|------|---------------------|
+| 1 | **WP Category 创建** | 先查现有 category（避免重复 slug），按 URL 结构规定创建。不存在的 category 先建，已有则确认 slug 正确 | ⚠️ chakras-crystals(复数) vs chakra-crystals(单数) 混淆 |
+| 2 | **图片生成** | hero + 专项图（shade guide/diagram/概念图等），gpt-image-2 或同类。**生成后验证尺寸**（如 1536×864 = AI 生，1280×720 = sharp 拼接，需区分） | ⚠️ 配对 121 篇分屏图需补生 AI 版；images.file 路径相对 02-网站规划（非 01-疗愈水晶） |
+| 3 | **图片 Alt 优化** | 每张图规范 alt（`{Name} crystal for {用途}`），上传 WP media 时正确写入 alt 字段 | |
+| 4 | **rank_math 三件套** | rank_math_title（≤60 字符）/ rank_math_description（150-160 字符）/ rank_math_focus_keyword。上传脚本须调 `rankmath/v1/updateMeta`（objectType=post+objectID） | ⚠️ upload 脚本漏设 rank_math；title 过长（angel numbers 模板超 60 字符） |
+| 5 | **Title 长度校验** | rank_math_title ≤ 60 字符。准备短版/长版两套 title 模板 | ⚠️ 天使号码 Title 被 SERP 截断 |
+| 6 | **删冗余导航** | **不手动加** prev/next/related 导航段（CMS 主题通常原生提供）。检查 content 末尾无手动导航残留 | 🔴 horoscope 144 篇手动注入 prev/next（中文→英文→发现根本不该有，主题原生已提供） |
+| 7 | **Gentle Note/Disclaimer** | 全站统一合规组件（非每篇手写）。放 FAQ 前或 How to Use 后 | ⚠️ 散在各框架规则里，无 WP 侧统一实现 |
+
+### 7.2 批量上传
+
 **操作方法：**
 
-1. **批量发布**：通过 CMS API（Shopify/WordPress）或发布插件自动化
-2. **内链建设**：
-   - 簇内文章互相链接（同主题关键词的文章交叉引用）
-   - 所有簇文章指向对应的 Content Pillar 页面
-   - Pillar 页面链接到产品页（转化入口）
-3. **发布记录**：记录 URL、发布时间、目标关键词、所属 Pillar、内链目标、QA 结果
-4. **发布后监控**：索引速度 → 排名 → 流量 → 点击 → 转化或辅助转化
+1. **上传脚本**：通过 CMS API（WordPress REST / Shopify）批量上传
+   - content 嵌入图片（hero/专项图/m Crystal Meaning 图复用）
+   - featured_media 设为 hero 图
+   - categories 设为对应 WP category ID
+   - status = **draft**（不直接发布，先存草稿）
+   - excerpt + rank_math 三件套同步设置
+2. **上传后立即验证**：
+   - 抽检 1 篇：featured_media 是否挂载 + content 图片数 + category 是否正确 + rank_math 是否写入
+   - 验证方式：WP REST `context=edit`（非 `curl -L`，避免假阳性）
 
-**产出物：** 已发布内容 + 内链地图
+### 7.3 内链建设
+
+1. **簇内文章互链**（同主题关键词的文章交叉引用）
+2. **所有簇文章指向 Content Pillar 页面**
+3. **Pillar 页面链接到产品页**（转化入口）
+4. **字段二次利用**（如 Color/Chakra/Element/Zodiac 字段 → 横向聚合页内链）
+5. **工具联动**：
+   - 文章→工具 CTA（如 chakra 文章 → chakra-test 工具）
+   - 工具→文章 结果页链接（如 chakra-test 结果 → /root-chakra-crystals/）
+   - 数据单源：`_shared/xxx-knowledge.json` 文章与工具共用，避免不一致
+6. **内链目标验证**：用 `status=any` REST 查目标页是否存在（不用 `curl -L`，未来/schedule 文章会临时 404 但可接受）
+
+### 7.4 排期发布（Schedule）
+
+> 新站不可一次性推送大量内容（Google 会判 AI 批量生成）。
+
+1. **status = future** + date 递增（每天 N 篇，跨类目混发）
+2. **排期顺序**：差异化高的优先 + 跨类目交替（不连续同类型）
+3. **WP cron** 到 date 时间自动 publish（验证 cron 是否正常工作）
+4. **总量控制**：每天 ≤ 2-3 篇，配合社媒信号
+
+### 7.5 发布后线上验证
+
+| 检查项 | 方法 | 频率 |
+|--------|------|------|
+| **head 标签** | curl 抓 `<title>` / `<meta description>` / `og:image` | 抽检 1-2 篇/批 |
+| **中文残留** | grep CJK 字符（`[一-鿿]`） | 全量扫（曾 144 篇中文残留）|
+| **图片显示** | 访问 og:image URL，确认 200 + 尺寸正确 | 抽检 |
+| **Schema** | Google Rich Results Test / 手动查 JSON-LD（FAQ 与可见内容一致） | 抽检 |
+| **分类计数** | WP category count 刷新（可能缓存为 0） | 不需处理（缓存会自动刷新）|
+| **featured_media** | WP REST 确认 featured_media 字段非 0 | 抽检 |
+| **工具 CTA 链接** | 文章→工具 + 工具→文章 双向链接活 | 全量 |
+
+### 7.6 发布记录
+
+记录 URL、发布时间、目标关键词、所属 Pillar、内链目标、QA 结果、上传状态（draft/future/publish）。
+
+**产出物：** 已发布内容 + 内链地图 + 上传日志
 
 ---
 

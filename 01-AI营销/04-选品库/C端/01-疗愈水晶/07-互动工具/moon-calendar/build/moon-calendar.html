@@ -1,0 +1,157 @@
+<!-- ===== Earthward Moon Calendar ===== -->
+<div id="emc-mc">
+  <h1 class="emc-h1">Moon Phase Crystal Calendar</h1>
+  <p class="emc-intro">See today's moon phase and the crystals traditionally aligned with it - plus the ritual and intention for this point in the lunar cycle. The moon has guided crystal cleansing and charging practices for centuries; this calendar pairs each phase with the right stones.</p>
+
+  <div class="emc-current" id="emc-current"></div>
+  <div class="emc-next" id="emc-next"></div>
+
+  <div class="emc-link-row">
+    <a class="emc-link" href="/tools/crystal-cleansing-timer/">Cleansing & charging safety -&gt;</a>
+    <a class="emc-link sec" href="/category/zodiac/horoscope/">Your zodiac this month -&gt;</a>
+  </div>
+
+  <h2 class="emc-section-title">The Four Moon Phases & Their Crystals</h2>
+  <div class="emc-phases" id="emc-phases"></div>
+</div>
+<style>
+.emc-h1{font-size:34px;color:#1A1A2E;margin:0 0 12px;font-weight:700;line-height:1.2}
+.emc-intro{color:#444;font-size:17px;line-height:1.65;margin:0 0 28px}
+.emc-current{background:#1A1A2E;border-radius:16px;padding:28px;margin-bottom:18px;color:#fff}
+.emc-cur-top{display:flex;align-items:center;gap:16px;margin-bottom:14px}
+.emc-moon{display:inline-block;width:56px;height:56px;border-radius:50%;background:#f6f0d8;border:1px solid rgba(255,255,255,.45);box-shadow:inset -10px 0 0 rgba(26,26,46,.48),0 0 16px rgba(246,240,216,.22);flex:0 0 auto}
+.emc-moon-new{background:#22243a;box-shadow:inset 0 0 0 2px rgba(255,255,255,.15)}
+.emc-moon-waxing{background:linear-gradient(90deg,#554577 0 42%,#ffd979 43% 100%);box-shadow:inset -8px 0 0 rgba(255,255,255,.18),0 0 16px rgba(255,217,121,.18)}
+.emc-moon-full{background:#f8edc9;box-shadow:0 0 18px rgba(248,237,201,.32)}
+.emc-moon-waning{background:linear-gradient(90deg,#ffd979 0 42%,#554577 43% 100%);box-shadow:inset 8px 0 0 rgba(255,255,255,.18),0 0 16px rgba(255,217,121,.18)}
+.emc-ph-icon.emc-moon{width:28px;height:28px;box-shadow:inset -5px 0 0 rgba(26,26,46,.38)}
+.emc-current .emc-cur-name,.emc-current .emc-cur-name *{font-size:26px;font-weight:700;margin:0;color:#fff !important}
+.emc-cur-intent{font-size:15px;color:#fff;margin:4px 0 0}
+.emc-cur-energy{font-size:17px;line-height:1.65;color:#fff;margin-bottom:16px}
+.emc-cur-label{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;margin-bottom:8px;opacity:.8}
+.emc-cur-crystals{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.emc-crystal{padding:6px 14px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:20px;font-size:14px;color:#fff}
+.emc-cur-ritual{background:rgba(255,255,255,.06);border-left:3px solid #95B8D1;padding:14px 16px;border-radius:0 8px 8px 0;font-size:16px;line-height:1.6;color:#fff}
+.emc-next{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.emc-next-card{flex:1;min-width:200px;background:#F7F3EA;border:1px solid #EEE;border-radius:12px;padding:18px}
+.emc-next-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#888;margin-bottom:4px}
+.emc-next-date{font-size:18px;font-weight:700;color:#1A1A2E;margin-bottom:4px}
+.emc-next-note{font-size:14px;color:#666;line-height:1.5}
+.emc-link-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.emc-link{display:inline-block;padding:11px 20px;background:#2D6A4F;color:#fff !important;text-decoration:none;border-radius:8px;font-size:14px;font-weight:600}
+.emc-link:hover{background:#1B4332}
+.emc-link.sec{background:#fff;color:#2D6A4F !important;border:1px solid #2D6A4F}
+.emc-section-title{font-size:22px;color:#1A1A2E;margin:0 0 16px;font-weight:700}
+.emc-phases{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.emc-phase{background:#fff;border:1px solid #EEE;border-radius:14px;padding:20px}
+.emc-ph-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.emc-ph-icon{flex:0 0 auto}
+.emc-ph-name{font-size:17px;font-weight:700;color:#1A1A2E}
+.emc-ph-intent{font-size:13px;color:#2D6A4F;font-style:italic;margin-bottom:8px}
+.emc-ph-crystals{font-size:14px;color:#666;margin-bottom:8px}
+.emc-ph-energy{font-size:14px;color:#444;line-height:1.55}
+.emc-disclaim{color:#999;font-size:12px;margin-top:18px;line-height:1.5}
+@media(max-width:768px){.emc-phases{grid-template-columns:1fr}}
+@media(max-width:640px){.emc-h1{font-size:24px}.emc-cur-top{flex-direction:column;text-align:center}.emc-moon{width:48px;height:48px}.emc-ph-icon.emc-moon{width:28px;height:28px}.emc-next{flex-direction:column}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/suncalc@1.9.0/suncalc.min.js"></script>
+<script>
+var EWMoon=(function(){
+  var P={"new":{"name":"New Moon","intention":"Setting intentions and new beginnings","energy":"A blank slate. The new moon is traditionally a time to plant seeds - set clear intentions, start new projects, and clarify what you want to call in over the coming cycle.","crystals":["Moonstone","Clear Quartz","Selenite","Labradorite"],"ritual":"Write your intentions on paper. Hold your crystal, state your goal aloud, and place the stone on a windowsill overnight to 'charge' your intention. Keep the note where you'll see it daily.","cleanse_note":"A quiet time to cleanse crystals (low lunar energy) - pair with smoke or sound if the sky is dark."},"waxing":{"name":"Waxing Moon (Crescent -> Gibbous)","intention":"Building momentum, growth, and action","energy":"The moon is growing, and so is your momentum. Traditionally a time to take action on new-moon intentions, build habits, and gather resources toward your goals.","crystals":["Citrine","Carnelian","Green Aventurine","Tiger's Eye"],"ritual":"Carry a growth stone (citrine or aventurine) daily as a reminder to act. Each evening, hold it and name one step you took toward your intention.","cleanse_note":"Building moonlight is gentle and safe - a good window to charge water-safe crystals on a sill."},"full":{"name":"Full Moon","intention":"Cleansing, charging, and manifestation peak","energy":"Peak lunar energy. The full moon is the most popular time to cleanse and charge crystals, celebrate progress, and release what's complete. Traditionally seen as the most potent night for ritual.","crystals":["Selenite","Clear Quartz","Amethyst","Moonstone"],"ritual":"Place your crystals on a windowsill or covered porch from sunset to sunrise to bathe in full-moon light. Set an intention to release anything that no longer serves you. Bring them in before morning dew.","cleanse_note":"The single best night to cleanse and charge every crystal - moonlight is safe for all stones. See the Cleansing Timer for per-stone safety."},"waning":{"name":"Waning Moon (Gibbous -> Crescent)","intention":"Release, gratitude, and reflection","energy":"The moon is shrinking, and the energy turns inward. Traditionally a time to release what no longer serves you, reflect on the cycle, practice gratitude, and rest.","crystals":["Smoky Quartz","Black Tourmaline","Obsidian","Rose Quartz"],"ritual":"Hold a grounding or release stone (smoky quartz, tourmaline). Name something you're ready to let go of, then place the crystal aside as a symbol of release. End with a gratitude list.","cleanse_note":"A reflective time to cleanse crystals of accumulated energy - smoke or sound work well indoors."}};
+  function phaseKey(frac){
+    // Phase fraction: 0=new, 0.5=full.
+    if(frac<0.0625||frac>0.9375) return 'new';
+    if(frac<0.4375) return 'waxing';
+    if(frac<0.5625) return 'full';
+    return 'waning';
+  }
+  function findNext(targetFrac){
+    // 闁归潧褰炵粭鍛枎閳╁啫澶嶉弶?targetFrac(0=new,0.5=full)闁汇劌瀚Λ鈺呭嫉閻曞倻绀夐梺顐ｅ姈濡晠骞嶉锝呬紟
+    var d=new Date();
+    for(var i=0;i<35;i++){
+      var dd=new Date(d.getTime()+i*86400000);
+      var f=SunCalc.getMoonIllumination(dd).phase;
+      var dist=Math.min(Math.abs(f-targetFrac), Math.abs(f-targetFrac+1), Math.abs(f-targetFrac-1));
+      if(dist<0.03) return dd;
+    }
+    return null;
+  }
+  function fmtDate(d){
+    if(!d) return '-';
+    return d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+  }
+  function init(){
+    var now=new Date();
+    var illum=SunCalc.getMoonIllumination(now);
+    var key=phaseKey(illum.phase);
+    var ph=P[key];
+    // Render current phase.
+    var cur=document.getElementById('emc-current');
+    cur.innerHTML='<div class="emc-cur-top"><span class="emc-cur-icon emc-moon emc-moon-'+key+'" aria-hidden="true"></span><div><h2 class="emc-cur-name">'+ph.name+' (Now)</h2><div class="emc-cur-intent">'+ph.intention+'</div></div></div>'
+      +'<p class="emc-cur-energy">'+ph.energy+'</p>'
+      +'<div class="emc-cur-label">Crystals for this phase</div><div class="emc-cur-crystals">'+ph.crystals.map(function(c){return '<span class="emc-crystal">'+c+'</span>';}).join('')+'</div>'
+      +'<div class="emc-cur-label">Ritual</div><div class="emc-cur-ritual">'+ph.ritual+'</div>';
+    // Render upcoming full and new moon dates.
+    var nextFull=findNext(0.5);
+    var nextNew=findNext(0);
+    document.getElementById('emc-next').innerHTML=
+      '<div class="emc-next-card"><div class="emc-next-label">Next Full Moon</div><div class="emc-next-date">'+fmtDate(nextFull)+'</div><div class="emc-next-note">Best night to cleanse & charge crystals in moonlight.</div></div>'
+      +'<div class="emc-next-card"><div class="emc-next-label">Next New Moon</div><div class="emc-next-date">'+fmtDate(nextNew)+'</div><div class="emc-next-note">Time to set fresh crystal-charged intentions.</div></div>';
+    // Render the four phase cards.
+    var div=document.getElementById('emc-phases');
+    div.innerHTML=['new','waxing','full','waning'].map(function(k){
+      var p=P[k];
+      return '<div class="emc-phase'+(k===key?' emc-phase-now':'')+'"><div class="emc-ph-head"><span class="emc-ph-icon emc-moon emc-moon-'+k+'" aria-hidden="true"></span><span class="emc-ph-name">'+p.name+'</span></div>'
+        +'<div class="emc-ph-intent">'+p.intention+'</div>'
+        +'<div class="emc-ph-crystals"><strong>Crystals:</strong> '+p.crystals.join(', ')+'</div>'
+        +'<div class="emc-ph-energy">'+p.energy+'</div></div>';
+    }).join('');
+  }
+  return{init:init};
+})();
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',EWMoon.init);}else{EWMoon.init();}
+</script>
+<!-- ===== Moon Calendar Schema (FAQPage) ===== -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When should I cleanse my crystals with moonlight?","acceptedAnswer":{"@type":"Answer","text":"The full moon is the most popular time to cleanse and charge crystals in moonlight 闁?place them on a windowsill or covered porch from sunset to sunrise. Moonlight is safe for every crystal and carries no UV risk. The new moon is a quieter alternative for setting fresh intentions."}},{"@type":"Question","name":"Which crystals are best for the full moon?","acceptedAnswer":{"@type":"Answer","text":"Selenite, clear quartz, amethyst, and moonstone are traditionally associated with full-moon energy. Selenite and clear quartz are also self-cleansing stones often used to charge other crystals placed near them."}},{"@type":"Question","name":"What do I do during a new moon with crystals?","acceptedAnswer":{"@type":"Answer","text":"The new moon is traditionally a time to set intentions and new beginnings. Hold a moonstone or clear quartz, state your goal aloud, and place the crystal overnight to 'charge' your intention. It's a quieter, lower-energy phase good for clarifying what you want to call in."}},{"@type":"Question","name":"Does the moon phase really affect crystals?","acceptedAnswer":{"@type":"Answer","text":"There is no scientific evidence that moon phase changes a crystal's physical properties. The practice comes from centuries of cultural and spiritual tradition. Many people find it a meaningful rhythm for cleansing, charging, and intention-setting rituals."}}]}
+]}
+</script>
+<!-- ===== End Moon Calendar ===== -->
+<!-- ===== Moon Calendar SEO Accordion ===== -->
+<section style="margin:32px auto 0">
+  <details style="border:1px solid #D8D8D8;border-radius:12px;background:#FAFAFA;overflow:hidden">
+    <summary style="list-style:none;cursor:pointer;background:#E8E8E8;color:#1A1A2E;font-size:18px;font-weight:700;padding:18px 22px">Learn More About Moon Phases & Crystals</summary>
+    <div style="padding:24px 28px;color:#444;font-size:17px;line-height:1.75">
+<h2>Why Moon Phases Matter for Crystals</h2>
+<p>The moon has guided crystal practices for centuries. Across many traditions, each phase of the lunar cycle is associated with a different kind of energy — a time to set intentions, build momentum, release, or rest. Pairing the right crystal with the right moon phase is a way to bring rhythm and intention to your practice, whether you're cleansing stones, charging them, or working toward a goal.</p>
+
+<h2>The Four Moon Phases Explained</h2>
+
+<h3>New Moon — Setting Intentions</h3>
+<p>The new moon is the dark moon, traditionally a blank slate. It's the time to clarify what you want to call in over the coming cycle and set fresh intentions. <strong>Crystals for the new moon:</strong> moonstone, clear quartz, selenite, labradorite — stones traditionally associated with new beginnings, clarity, and intuition.</p>
+
+<h3>Waxing Moon — Building & Growth</h3>
+<p>As the moon grows from crescent to gibbous, the focus shifts to action and momentum. This is the window to take steps toward your new-moon intentions, build habits, and gather resources. <strong>Crystals for the waxing moon:</strong> citrine, carnelian, green aventurine, tiger's eye — stones linked to growth, confidence, and abundance.</p>
+
+<h3>Full Moon — Cleansing & Charging</h3>
+<p>The full moon is the peak of the cycle and the most popular night to cleanse and charge crystals. Moonlight is reflected sunlight at roughly 1/400,000 the intensity, so it carries no UV risk and is safe for every stone. <strong>Crystals for the full moon:</strong> selenite, clear quartz, amethyst, moonstone — stones used to purify, amplify, and connect.</p>
+
+<h3>Waning Moon — Release & Reflection</h3>
+<p>As the moon shrinks back toward dark, the energy turns inward. This is the time to release what no longer serves you, reflect on the cycle, practice gratitude, and rest. <strong>Crystals for the waning moon:</strong> smoky quartz, black tourmaline, obsidian, rose quartz — stones associated with grounding, protection, and letting go.</p>
+
+<h2>How to Cleanse & Charge Crystals by Moonlight</h2>
+<p>The full moon is the simplest, safest way to cleanse and charge your crystals. Place them on a windowsill or covered porch from sunset to sunrise so they bathe in moonlight overnight. Moonlight is safe for every crystal, including delicate stones like selenite and fluorite that can't go in water or direct sun. Bring them in before morning to avoid dew or direct sunlight.</p>
+<p>Not every stone needs moonlight — selenite and clear quartz are traditionally considered self-cleansing and can also be used to charge other stones placed near them. For water- and sun-safe methods tailored to each specific crystal, see our <a href="/tools/crystal-cleansing-timer/">Cleansing & Safety Checker</a>.</p>
+
+<h2>Moon Phase Crystals FAQ</h2>
+<details style="border:1px solid #EEE;border-radius:10px;background:#fff;margin-bottom:8px;padding:14px 18px"><summary style="cursor:pointer;font-weight:600;color:#1A1A2E;font-size:17px;list-style:none">When should I charge my crystals? <span style="float:right;color:#2D6A4F">+</span></summary><p style="margin:12px 0 0;color:#444;font-size:17px;line-height:1.65">The full moon is the most popular time to charge crystals, because moonlight is safe for every stone and the lunar energy is at its peak. Place your crystals out overnight. If you miss the full moon, any night during the waxing or waning phases works too — only the new moon (dark sky) offers little light to charge by.</p></details>
+<details style="border:1px solid #EEE;border-radius:10px;background:#fff;margin-bottom:8px;padding:14px 18px"><summary style="cursor:pointer;font-weight:600;color:#1A1A2E;font-size:17px;list-style:none">Which crystals should I use during a new moon? <span style="float:right;color:#2D6A4F">+</span></summary><p style="margin:12px 0 0;color:#444;font-size:17px;line-height:1.65">Moonstone, clear quartz, selenite, and labradorite are traditionally associated with new-moon energy — a time for setting intentions and new beginnings. Hold one while you state your intention for the cycle, then place it overnight to 'charge' your goal.</p></details>
+<details style="border:1px solid #EEE;border-radius:10px;background:#fff;margin-bottom:8px;padding:14px 18px"><summary style="cursor:pointer;font-weight:600;color:#1A1A2E;font-size:17px;list-style:none">Can I leave my crystals out every night? <span style="float:right;color:#2D6A4F">+</span></summary><p style="margin:12px 0 0;color:#444;font-size:17px;line-height:1.65">You can, but the full moon is considered the most potent night, so most people charge crystals monthly rather than nightly. Be mindful of weather — rain can damage water-sensitive stones like selenite, calcite, or malachite, and direct morning sun can fade amethyst or rose quartz.</p></details>
+<details style="border:1px solid #EEE;border-radius:10px;background:#fff;margin-bottom:8px;padding:14px 18px"><summary style="cursor:pointer;font-weight:600;color:#1A1A2E;font-size:17px;list-style:none">Does the moon phase really affect crystals? <span style="float:right;color:#2D6A4F">+</span></summary><p style="margin:12px 0 0;color:#444;font-size:17px;line-height:1.65">There is no scientific evidence that moon phase changes a crystal's physical properties. The practice comes from centuries of cultural and spiritual tradition. Many people find it a meaningful rhythm for cleansing, charging, and intention-setting — a way to mark time and bring intention to their collection.</p></details>
+<p style="color:#999;font-size:12px;margin-top:18px;line-height:1.5">Moon phase and crystal meanings are offered for reflection and spiritual inspiration. There is no scientific evidence that the moon phase affects a crystal's properties, but the practice carries deep cultural tradition. Crystals are not a substitute for medical or professional advice.</p>
+
+    </div>
+  </details>
+</section>
+<!-- ===== End Moon Calendar SEO Accordion ===== -->

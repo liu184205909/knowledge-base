@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "source": "soulku/slownorth/withenergy/rockswithsass moon-phase-crystals guides + veraluna lunar-calendar (SERP 2026-06-28)",
+    "for": "Moon Calendar工具(T10) + 月相文章",
+    "note": "4月相(新月/上弦/满月/下弦)×水晶+仪式+intention;合规traditionally associated;联动cleansing(月光净化)+月运(星座本月)"
+  },
+  "phases": {
+    "new": {
+      "name": "New Moon",
+      "icon": "🌑",
+      "intention": "Setting intentions and new beginnings",
+      "energy": "A blank slate. The new moon is traditionally a time to plant seeds — set clear intentions, start new projects, and clarify what you want to call in over the coming cycle.",
+      "crystals": ["Moonstone", "Clear Quartz", "Selenite", "Labradorite"],
+      "ritual": "Write your intentions on paper. Hold your crystal, state your goal aloud, and place the stone on a windowsill overnight to 'charge' your intention. Keep the note where you'll see it daily.",
+      "cleanse_note": "A quiet time to cleanse crystals (low lunar energy) — pair with smoke or sound if the sky is dark."
+    },
+    "waxing": {
+      "name": "Waxing Moon (Crescent → Gibbous)",
+      "icon": "🌓",
+      "intention": "Building momentum, growth, and action",
+      "energy": "The moon is growing, and so is your momentum. Traditionally a time to take action on new-moon intentions, build habits, and gather resources toward your goals.",
+      "crystals": ["Citrine", "Carnelian", "Green Aventurine", "Tiger's Eye"],
+      "ritual": "Carry a growth stone (citrine or aventurine) daily as a reminder to act. Each evening, hold it and name one step you took toward your intention.",
+      "cleanse_note": "Building moonlight is gentle and safe — a good window to charge water-safe crystals on a sill."
+    },
+    "full": {
+      "name": "Full Moon",
+      "icon": "🌕",
+      "intention": "Cleansing, charging, and manifestation peak",
+      "energy": "Peak lunar energy. The full moon is the most popular time to cleanse and charge crystals, celebrate progress, and release what's complete. Traditionally seen as the most potent night for ritual.",
+      "crystals": ["Selenite", "Clear Quartz", "Amethyst", "Moonstone"],
+      "ritual": "Place your crystals on a windowsill or covered porch from sunset to sunrise to bathe in full-moon light. Set an intention to release anything that no longer serves you. Bring them in before morning dew.",
+      "cleanse_note": "The single best night to cleanse and charge every crystal — moonlight is safe for all stones. See the Cleansing Timer for per-stone safety."
+    },
+    "waning": {
+      "name": "Waning Moon (Gibbous → Crescent)",
+      "icon": "🌗",
+      "intention": "Release, gratitude, and reflection",
+      "energy": "The moon is shrinking, and the energy turns inward. Traditionally a time to release what no longer serves you, reflect on the cycle, practice gratitude, and rest.",
+      "crystals": ["Smoky Quartz", "Black Tourmaline", "Obsidian", "Rose Quartz"],
+      "ritual": "Hold a grounding or release stone (smoky quartz, tourmaline). Name something you're ready to let go of, then place the crystal aside as a symbol of release. End with a gratitude list.",
+      "cleanse_note": "A reflective time to cleanse crystals of accumulated energy — smoke or sound work well indoors."
+    }
+  },
+  "zodiac_themes": {
+    "Aries": "action and courage", "Taurus": "abundance and grounding", "Gemini": "communication and clarity",
+    "Cancer": "home and emotion", "Leo": "confidence and expression", "Virgo": "order and healing",
+    "Libra": "balance and relationship", "Scorpio": "release and transformation", "Sagittarius": "expansion and adventure",
+    "Capricorn": "ambition and structure", "Aquarius": "vision and community", "Pisces": "intuition and dreams"
+  }
+}

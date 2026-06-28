@@ -82,7 +82,7 @@ for (const file of files) {
   // 12. 上下月连续性内链
   const month = slug.match(/-(\w+)-2026$/);
   if (month) {
-    const hasPrevNext = content.includes('horoscope') && (content.includes('recap') || content.includes('preview') || content.includes('previous') || content.includes('next') || content.includes('\u56DE\u987E') || content.includes('\u5C55\u671B'));
+    const hasPrevNext = content.includes('horoscope') && (content.includes('recap') || content.includes('preview') || content.includes('Previous:') || content.includes('Next:') || content.includes('previous') || content.includes('next') || content.includes('Overview:'));
     // 放宽：只要 Related 里有其他月份链接就算
     const monthLinks = (content.match(/-2026\//g) || []).length;
     if (monthLinks < 2) fileIssues.push(`MONTH_LINKS<2(${monthLinks})`);

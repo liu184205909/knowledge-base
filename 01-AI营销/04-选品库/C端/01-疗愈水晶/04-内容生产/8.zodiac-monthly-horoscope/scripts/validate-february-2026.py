@@ -68,7 +68,7 @@ for sign in SIGNS:
         "key_dates_5_to_8": 5 <= len(data["key_dates_overview"]) <= 8,
         "faq_count_4_to_6": len(re.findall(r'\*\*', content)) > 0 and content.count('## FAQ') == 1,
         "has_disclaimer": "Astrology and crystal meanings are offered" in content,
-        "has_prev_next_links": "回顾" in content and "展望" in content,
+        "has_prev_next_links": "Previous:" in content and "Next:" in content,
         "has_yearly_link": f"/{sign}-2026/" in content,
         "has_crystal_meaning_link": "/gemstone/" in content,
         "has_sign_crystals_link": f"/{sign}-crystals/" in content,

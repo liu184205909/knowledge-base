@@ -40,7 +40,7 @@ const SHOP_CAT = {
   'Citrine':'/product-category/citrine-crystals/',
   'Turquoise':'/product-category/turquoise-crystals/'
 };
-BIRTHSTONES.forEach(b => { var c = findStone(b.stone); b.img = c ? (c.img||'') : ''; b.link = c ? (c.link||'') : ''; b.shop = SHOP_CAT[b.stone] || '/product-category/healing-crystals-jewelry/'; });
+BIRTHSTONES.forEach(b => { var c = findStone(b.stone); b.img = c ? (c.img||'') : ''; b.link = c ? (c.link||'') : ''; b.shop = SHOP_CAT[b.stone] || ('/shop/?s=' + b.stone.toLowerCase()); });
 
 function safeJSON(v){ return JSON.stringify(v).replace(/<\//g, '<\\/'); }
 const BS_JSON = safeJSON(BIRTHSTONES);
