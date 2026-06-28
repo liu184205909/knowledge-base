@@ -1,0 +1,796 @@
+{
+  "_meta": {
+    "source": "chinahighlights.com (culture/lucky-unlucky/personality/Tai Sui) + desiderate.com.au 2026 Fire Horse配石 + naturaltreasureca/lifestyleasia/alberthern多源交叉 + 五行理论",
+    "for": "Chinese Zodiac文章(12生肖×水晶) + 未来Chinese Zodiac Checker工具",
+    "version": "v1.1 (2026-06-28)",
+    "notes": [
+      "2026 = Year of the Fire Horse (火马年, Feb 17 2026 - Feb 5 2027)",
+      "每生肖5个配石字段: lucky_stone(传统共识) / balance_stone(补生肖短板) / year_boost(本年度加持,可年度切换) / fire_horse_2026(2026专属历史留档) / avoid_stone(元素冲突或本命年禁忌)",
+      "所有crystal slug已对齐1.crystal-meaning/390库(quartz=clear quartz, lapis=lapis lazuli)",
+      "西方zodiac-crystals(12星座)是月分割, Chinese zodiac是年分割+五行, 两者东西方双线独立",
+      "本命年(Tai Sui犯太岁): 该生肖年反而不顺, 需避讳石化解 - 这是首饰站独占差异化(vs风水站只讲运气)",
+      "★★★ 年度刷新机制(2027及以后): 每年农历新年前, (1)切换topic_context.current_year为新年份 (2)为每个animal的year_boost字段批量重写为新年度对应石 (3)生新年份hub(/chinese-zodiac/{element}-{animal}-{year}/) (4)旧年份hub标记归档但不删(保留历史内链价值), fire_horse_2026字段永久保留作为历史留档, 不再切换",
+      "本命佛/五行相生相克/本命年(Tai Sui)/兼容性为文化硬数据, 已在本文件预填锁死, 文章/工具只读不重写"
+    ]
+  },
+  "current_year": {
+    "year": 2026,
+    "animal": "Horse",
+    "element": "Fire",
+    "stem_branch": "Bing Wu (丙午)",
+    "dates": "Feb 17, 2026 – Feb 5, 2027",
+    "theme": "Boldness, speed, big shifts, amplified ambition. Fire on Fire = double Yang, needs grounding & cooling stones to balance.",
+    "signature_stones": [
+      "citrine",
+      "jade",
+      "black-tourmaline",
+      "smoky-quartz",
+      "clear-quartz"
+    ],
+    "ben_ming_nian_sign": "Horse (本命年 — Horses offend Tai Sui in their own year, need protective stones)",
+    "next_year_preview": {
+      "year": 2027,
+      "animal": "Goat",
+      "element": "Fire",
+      "stem_branch": "Ding Wei (丁未)",
+      "dates": "Feb 6, 2027 – Jan 25, 2028",
+      "refresh_action": "2027农历新年前切换current_year + 重写每animal.year_boost + 生/chinese-zodiac/fire-goat-2027/ + fire-horse-2026归档"
+    }
+  },
+  "topic_context": {
+    "_note": "year_2026 已上移为顶层 current_year (年度切换字段); fire_horse_2026 字段在每个animal内永久留档。",
+    "vs_western_zodiac": {
+      "chinese": "Year-based (12-year animal cycle) + 5 elements (Wood/Fire/Earth/Metal/Water) + lunar calendar",
+      "western": "Month-based (12 constellations) + 4 elements + ruling planets",
+      "our_positioning": "Eastern-inspired brand narrative (藏传/东方玉石/生肖文化); 两条线并存形成东西方双线 (Western zodiac = /{sign}-crystals/, Chinese zodiac = /chinese-zodiac/{animal}-crystals/)"
+    },
+    "five_elements_animals": {
+      "Wood": [
+        "Tiger",
+        "Rabbit"
+      ],
+      "Fire": [
+        "Snake",
+        "Horse"
+      ],
+      "Earth": [
+        "Ox",
+        "Dragon",
+        "Goat",
+        "Dog"
+      ],
+      "Metal": [
+        "Monkey",
+        "Rooster"
+      ],
+      "Water": [
+        "Rat",
+        "Pig"
+      ]
+    }
+  },
+  "animals": {
+    "rat": {
+      "name": "Rat",
+      "chinese": "鼠 (Shǔ)",
+      "order": 1,
+      "years_sample": "2020, 2008, 1996, 1984, 1972",
+      "element": "Water",
+      "personality": "Quick-witted, resourceful, versatile, kind. Three steps ahead, clever with systems and money.",
+      "lucky_numbers": [
+        2,
+        3
+      ],
+      "lucky_colors": [
+        "blue",
+        "gold",
+        "green"
+      ],
+      "unlucky_colors": [
+        "yellow",
+        "brown"
+      ],
+      "lucky_stone": {
+        "name": "Garnet",
+        "slug": "garnet",
+        "why": "Traditional Rat stone across multiple SERP sources. Courage to act on the quiet ideas Rats keep shelving — confidence to stop putting yourself last."
+      },
+      "balance_stone": {
+        "name": "Aquamarine",
+        "slug": "aquamarine",
+        "why": "Water-element Rat can overthink and drain emotionally. Aquamarine (water stone) soothes the nervous system and clears mental noise."
+      },
+      "fire_horse_2026": {
+        "name": "Clear Quartz",
+        "slug": "quartz",
+        "why": "Fire Horse year amplifies Rat's scattered 'too many ideas' tendency. Clear Quartz focuses one intention so momentum isn't diluted."
+      },
+      "avoid_stone": {
+        "name": "Excessively fiery stones (large Ruby/Carnelian stacks)",
+        "slug": "ruby",
+        "why": "Rat is Water element; too much Fire-element stone energy is traditionally said to create elemental friction. Use as accent, not dominant. Trust how a stone feels to you over any hard rule."
+      },
+      "ben_ming_nian": false,
+      "affiliate_buddha": "Avalokiteshvara (千手观音)",
+      "compatibility_best": [
+        "Ox",
+        "Dragon",
+        "Monkey"
+      ],
+      "article": "/chinese-zodiac/rat-crystals/",
+      "year_boost": {
+        "name": "Clear Quartz",
+        "slug": "quartz",
+        "why": "Fire Horse year amplifies Rat's scattered 'too many ideas' tendency. Clear Quartz focuses one intention so momentum isn't diluted.",
+        "year_context": "2026 Fire Horse",
+        "_switchable": "此字段为年度切换字段; 2027农历新年前重写为Fire Goat年对应石, fire_horse_2026字段保留不动"
+      }
+    },
+    "ox": {
+      "name": "Ox",
+      "chinese": "牛 (Niú)",
+      "order": 2,
+      "years_sample": "2021, 2009, 1997, 1985, 1973",
+      "element": "Earth",
+      "personality": "Diligent, dependable, strong, determined. The steady rock everyone leans on; patient methodical builder.",
+      "lucky_numbers": [
+        1,
+        4
+      ],
+      "lucky_colors": [
+        "white",
+        "yellow",
+        "green"
+      ],
+      "unlucky_colors": [
+        "blue"
+      ],
+      "lucky_stone": {
+        "name": "Jade",
+        "slug": "jadeite",
+        "why": "Jade is the signature Eastern stone of wisdom, emotional balance and longevity — perfectly mirrors Ox's steady virtue. 'Gold is valuable, jade is priceless.' (China Highlights)"
+      },
+      "balance_stone": {
+        "name": "Aquamarine",
+        "slug": "aquamarine",
+        "why": "Ox's relentless pace in fast Fire Horse year needs calm. Aquamarine cools the nervous system when everyone demands faster, louder."
+      },
+      "fire_horse_2026": {
+        "name": "Aventurine",
+        "slug": "aventurine",
+        "why": "2026 lifts Ox above prior challenges (fengshuimall). Green Aventurine supports the breakthrough opportunities and steady growth."
+      },
+      "avoid_stone": {
+        "name": "Overly stimulating stones in large amounts",
+        "slug": "sunstone",
+        "why": "Ox's strength is steadiness; too much Yang-stimulating energy (large Sunstone stacks) can work against the patient rhythm. Balance is key — trust intuition."
+      },
+      "ben_ming_nian": false,
+      "affiliate_buddha": "Akasagarbha (虚空藏菩萨)",
+      "compatibility_best": [
+        "Rat",
+        "Snake",
+        "Rooster"
+      ],
+      "article": "/chinese-zodiac/ox-crystals/",
+      "year_boost": {
+        "name": "Aventurine",
+        "slug": "aventurine",
+        "why": "2026 lifts Ox above prior challenges (fengshuimall). Green Aventurine supports the breakthrough opportunities and steady growth.",
+        "year_context": "2026 Fire Horse",
+        "_switchable": "此字段为年度切换字段; 2027农历新年前重写为Fire Goat年对应石, fire_horse_2026字段保留不动"
+      }
+    },
+    "tiger": {
+      "name": "Tiger",
+      "chinese": "虎 (Hǔ)",
+      "order": 3,
+      "years_sample": "2022, 2010, 1998, 1986, 1974",
+      "element": "Wood",
+      "personality": "Brave, confident, competitive, unpredictable. Bold midlife moves; natural leadership and dramatic courage.",
+      "lucky_numbers": [
+        1,
+        3,
+        4
+      ],
+      "lucky_colors": [
+        "blue",
+        "gray",
+        "orange"
+      ],
+      "unlucky_colors": [
+        "brown"
+      ],
+      "lucky_stone": {
+        "name": "Citrine",
+        "slug": "citrine",
+        "why": "Tiger's confidence and 'I deserve this' energy in 2026 (desiderate). Supports money, career, self-worth for bold moves."
+      },
+      "balance_stone": {
+        "name": "Blue Sapphire",
+        "slug": "blue-sapphire",
+        "why": "Tiger's spontaneity needs strategic focus. Blue Sapphire adds wisdom so Tiger acts strategically, not just on impulse."
+      },
+      "fire_horse_2026": {
+        "name": "Tiger's Eye",
+        "slug": "tiger-eye",
+        "why": "2026 = power moves, career breakthroughs for Tiger (fengshui forecast). Tiger's Eye grounds the bold energy into decisive, followed-through action."
+      },
+      "avoid_stone": {
+        "name": "Overly sedating stones (large Amethyst/Moonstone stacks daytime)",
+        "slug": "amethyst",
+        "why": "Tiger's gift is momentum; heavy sedating stones worn in large amounts can blunt the drive. Reserve calming stones for evenings — trust your rhythm."
+      },
+      "ben_ming_nian": false,
+      "affiliate_buddha": "Akasagarbha (虚空藏菩萨)",
+      "compatibility_best": [
+        "Horse",
+        "Dog",
+        "Pig"
+      ],
+      "article": "/chinese-zodiac/tiger-crystals/",
+      "year_boost": {
+        "name": "Tiger's Eye",
+        "slug": "tiger-eye",
+        "why": "2026 = power moves, career breakthroughs for Tiger (fengshui forecast). Tiger's Eye grounds the bold energy into decisive, followed-through action.",
+        "year_context": "2026 Fire Horse",
+        "_switchable": "此字段为年度切换字段; 2027农历新年前重写为Fire Goat年对应石, fire_horse_2026字段保留不动"
+      }
+    },
+    "rabbit": {
+      "name": "Rabbit",
+      "chinese": "兔 (Tù)",
+      "order": 4,
+      "years_sample": "2023, 2011, 1999, 1987, 1975",
+      "element": "Wood",
+      "personality": "Quiet, elegant, kind, responsible. Sensitive, harmony-loving; feels everything deeply.",
+      "lucky_numbers": [
+        3,
+        4,
+        6
+      ],
+      "lucky_colors": [
+        "red",
+        "pink",
+        "purple",
+        "blue"
+      ],
+      "unlucky_colors": [
+        "dark brown",
+        "dark yellow",
+        "white"
+      ],
+      "lucky_stone": {
+        "name": "Moonstone",
+        "slug": "moonstone",
+        "why": "Rabbit's signature stone for emotional protection and intuition — 'emotional SPF' in fiery Horse year (desiderate). Soft buffer between sensitive Rabbit and the world."
+      },
+      "balance_stone": {
+        "name": "Pearl",
+        "slug": "pearl",
+        "why": "Soothing and classic; calms the nervous system when it whispers 'too much'. Traditional Rabbit stone for kindness and gentleness (alberthern)."
+      },
+      "fire_horse_2026": {
+        "name": "Amethyst",
+        "slug": "amethyst",
+        "why": "2026 Rabbit benefits from calm against the year's rapid pace (qilingaura). Amethyst offers spiritual protection and fewer overthinking loops."
+      },
+      "avoid_stone": {
+        "name": "Harsh grounding stones in large amounts (large Hematite/Magnetite stacks)",
+        "slug": "hematite",
+        "why": "Rabbit's sensitivity thrives on gentle energy; overly dense/heavy grounding stones can feel oppressive. Favor soft stones — trust how they feel."
+      },
+      "ben_ming_nian": false,
+      "affiliate_buddha": "Manjushri (文殊菩萨)",
+      "compatibility_best": [
+        "Goat",
+        "Pig",
+        "Dog"
+      ],
+      "article": "/chinese-zodiac/rabbit-crystals/",
+      "year_boost": {
+        "name": "Amethyst",
+        "slug": "amethyst",
+        "why": "2026 Rabbit benefits from calm against the year's rapid pace (qilingaura). Amethyst offers spiritual protection and fewer overthinking loops.",
+        "year_context": "2026 Fire Horse",
+        "_switchable": "此字段为年度切换字段; 2027农历新年前重写为Fire Goat年对应石, fire_horse_2026字段保留不动"
+      }
+    },
+    "dragon": {
+      "name": "Dragon",
+      "chinese": "龙 (Lóng)",
+      "order": 5,
+      "years_sample": "2024, 2012, 2000, 1988, 1976",
+      "element": "Earth",
+      "personality": "Confident, intelligent, enthusiastic. Strong presence; natural power and influence. The most coveted sign.",
+      "lucky_numbers": [
+        1,
+        6,
+        7
+      ],
+      "lucky_colors": [
+        "gold",
+        "silver",
+        "grayish white"
+      ],
+      "unlucky_colors": [
+        "blue",
+        "green"
+      ],
+      "lucky_stone": {
+        "name": "Amethyst",
+        "slug": "amethyst",
+        "why": "Dragon's traditional stone (aureusboutique/desiderate) for spiritual protection, clearer thinking — steers Dragon's power with fewer late-night overthinking loops."
+      },
+      "balance_stone": {
+        "name": "Labradorite",
+        "slug": "labradorite",
+        "why": "Shields Dragon's energy when visible and 'on duty' all day (desiderate/gojiakhong). Grounds amplified presence in 2026."
+      },
+      "fire_horse_2026": {
+        "name": "Green Aventurine",
+        "slug": "aventurine",
+        "why": "Enhances helpful-people connections and smooth collaboration in 2026 (buddha3bodhi). Dragon's influence grows; this supports relationships, not just solo power."
+      },
+      "avoid_stone": {
+        "name": "Excessive Wood-element green stones in huge amounts",
+        "slug": "emerald",
+        "why": "Dragon is Earth element; massive Wood-element stacks (large Emerald) are traditionally said to drain Earth. Use green stones as accents. Personal resonance overrules any rule."
+      },
+      "ben_ming_nian": false,
+      "affiliate_buddha": "Samantabhadra (普贤菩萨)",
+      "compatibility_best": [
+        "Rat",
+        "Monkey",
+        "Rooster"
+      ],
+      "article": "/chinese-zodiac/dragon-crystals/",
+      "year_boost": {
+        "name": "Green Aventurine",
+        "slug": "aventurine",
+        "why": "Enhances helpful-people connections and smooth collaboration in 2026 (buddha3bodhi). Dragon's influence grows; this supports relationships, not just solo power.",
+        "year_context": "2026 Fire Horse",
+        "_switchable": "此字段为年度切换字段; 2027农历新年前重写为Fire Goat年对应石, fire_horse_2026字段保留不动"
+      }
+    },
+    "snake": {
+      "name": "Snake",
+      "chinese": "蛇 (Shé)",
+      "order": 6,
+      "years_sample": "2025, 2013, 2001, 1989, 1977",
+      "element": "Fire",
+      "personality": "Enigmatic, intelligent, wise, perceptive. Senses undercurrents; quietly powerful; intuitive.",
+      "lucky_numbers": [
+        2,
+        8,
+        9
+      ],
+      "lucky_colors": [
+        "black",
+        "red",
+        "yellow"
+      ],
+      "unlucky_colors": [
+        "brown",
+        "gold",
+        "white"
+      ],
+      "lucky_stone": {
+        "name": "Opal",
+        "slug": "opal",
+        "why": "Snake's traditional stone for intuitive upgrades — enhances creativity, intuition, emotional insight (desiderate). Gorgeous for gentle reinvention."
+      },
+      "balance_stone": {
+        "name": "Malachite",
+        "slug": "malachite",
+        "why": "Supports deep shifts, pattern-breaking, honest self-reflection (desiderate). For Snakes who know something must change."
+      },
+      "fire_horse_2026": {
+        "name": "Black Tourmaline",
+        "slug": "black-tourmaline",
+        "why": "Snake is Fire element entering another Fire-heavy year — needs grounding protection. Black Tourmaline shields from energetic overload."
+      },
+      "avoid_stone": {
+        "name": "Excessively Water stones in huge amounts",
+        "slug": "aquamarine",
+        "why": "Snake is Fire; massive Water-element stacks are traditionally said to extinguish Snake's inner fire. Use blue/water stones sparingly. Trust your own sense of the stone."
+      },
+      "ben_ming_nian": true,
+      "ben_ming_nian_note": "2025 was Snake's ben ming nian (just exited). If reading in 2026, the 'just past' Tai Sui echo may linger — protective stones (Black Tourmaline/Obsidian) still helpful early year.",
+      "affiliate_buddha": "Samantabhadra (普贤菩萨)",
+      "compatibility_best": [
+        "Ox",
+        "Rooster",
+        "Monkey"
+      ],
+      "article": "/chinese-zodiac/snake-crystals/",
+      "year_boost": {
+        "name": "Black Tourmaline",
+        "slug": "black-tourmaline",
+        "why": "Snake is Fire element entering another Fire-heavy year — needs grounding protection. Black Tourmaline shields from energetic overload.",
+        "year_context": "2026 Fire Horse",
+        "_switchable": "此字段为年度切换字段; 2027农历新年前重写为Fire Goat年对应石, fire_horse_2026字段保留不动"
+      }
+    },
+    "horse": {
+      "name": "Horse",
+      "chinese": "马 (Mǎ)",
+      "order": 7,
+      "years_sample": "2026, 2014, 2002, 1990, 1978",
+      "element": "Fire",
+      "personality": "Animated, active, energetic, independent, charming. Appetite for adventure; says 'go' when the universe opens doors.",
+      "lucky_numbers": [
+        2,
+        3,
+        7
+      ],
+      "lucky_colors": [
+        "yellow",
+        "green"
+      ],
+      "unlucky_colors": [
+        "blue",
+        "white"
+      ],
+      "lucky_stone": {
+        "name": "Topaz",
+        "slug": "topaz",
+        "why": "Horse's traditional lucky stone (lifestyleasia/catcherry). Confidence, courage, calling in right opportunities — especially potent in your own year."
+      },
+      "balance_stone": {
+        "name": "Smoky Quartz",
+        "slug": "smoky-quartz",
+        "why": "Grounding and protection — clear 'no thank you' when plate overflows (desiderate). Keeps Horse centred while life speeds up."
+      },
+      "fire_horse_2026": {
+        "name": "Black Tourmaline",
+        "slug": "black-tourmaline",
+        "why": "Ben ming nian (本命年) — Horse offends Tai Sui in own year. Black Tourmaline is the protective anchor against the year's instability."
+      },
+      "avoid_stone": {
+        "name": "Excessive Fire stones in large stacks (large Ruby/Carnelian/Sunstone)",
+        "slug": "carnelian",
+        "why": "Horse is Fire + 2026 is Fire Horse = double Fire. Adding more Fire-element stones in huge amounts is traditionally said to over-amp. Favor grounding/cooling stones. Personal resonance first."
+      },
+      "ben_ming_nian": true,
+      "ben_ming_nian_note": "2026 IS Horse's ben ming nian (本命年, 犯太岁). Traditionally a year of instability, not pure luck — protective stones (Black Tourmaline, Smoky Quartz, Jade) are the priority, not amplifying stones.",
+      "affiliate_buddha": "Mahasthamaprapta (大势至菩萨)",
+      "compatibility_best": [
+        "Tiger",
+        "Goat",
+        "Dog"
+      ],
+      "article": "/chinese-zodiac/horse-crystals/",
+      "year_boost": {
+        "name": "Black Tourmaline",
+        "slug": "black-tourmaline",
+        "why": "Ben ming nian (本命年) — Horse offends Tai Sui in own year. Black Tourmaline is the protective anchor against the year's instability.",
+        "year_context": "2026 Fire Horse",
+        "_switchable": "此字段为年度切换字段; 2027农历新年前重写为Fire Goat年对应石, fire_horse_2026字段保留不动"
+      }
+    },
+    "goat": {
+      "name": "Goat (Sheep)",
+      "chinese": "羊 (Yáng)",
+      "order": 8,
+      "years_sample": "2027, 2015, 2003, 1991, 1979",
+      "element": "Earth",
+      "personality": "Calm, gentle, sympathetic, creative. Brilliant at caring for others; creative and emotional.",
+      "lucky_numbers": [
+        2,
+        7
+      ],
+      "lucky_colors": [
+        "brown",
+        "red",
+        "purple"
+      ],
+      "unlucky_colors": [
+        "blue",
+        "black"
+      ],
+      "lucky_stone": {
+        "name": "Emerald",
+        "slug": "emerald",
+        "why": "Self-worth, creative expression, emotional balance (desiderate). For Goats done apologising for taking up space."
+      },
+      "balance_stone": {
+        "name": "Rose Quartz",
+        "slug": "rose-quartz",
+        "why": "Soft unconditional self-love on frayed days (desiderate). Goats give endlessly; this is the receiving stone."
+      },
+      "fire_horse_2026": {
+        "name": "Citrine",
+        "slug": "citrine",
+        "why": "2026 = wealth luck + helpful allies for Goat (facebook fengshui). Citrine supports the abundance and confidence to receive."
+      },
+      "avoid_stone": {
+        "name": "Cold blue/black stones in large amounts",
+        "slug": "sodalite",
+        "why": "Goat is Earth + warm tones suit; excessive cold Water-element stones (large Sodalite/Lapis stacks) traditionally clash with Goat's warm nature. Use as accents — trust intuition."
+      },
+      "ben_ming_nian": false,
+      "affiliate_buddha": "Mahasthamaprapta (大势至菩萨)",
+      "compatibility_best": [
+        "Rabbit",
+        "Horse",
+        "Pig"
+      ],
+      "article": "/chinese-zodiac/goat-crystals/",
+      "year_boost": {
+        "name": "Citrine",
+        "slug": "citrine",
+        "why": "2026 = wealth luck + helpful allies for Goat (facebook fengshui). Citrine supports the abundance and confidence to receive.",
+        "year_context": "2026 Fire Horse",
+        "_switchable": "此字段为年度切换字段; 2027农历新年前重写为Fire Goat年对应石, fire_horse_2026字段保留不动"
+      }
+    },
+    "monkey": {
+      "name": "Monkey",
+      "chinese": "猴 (Hóu)",
+      "order": 9,
+      "years_sample": "2028, 2016, 2004, 1992, 1980",
+      "element": "Metal",
+      "personality": "Sharp, smart, curious, playful. Easily bored; thrives on novelty and clever problem-solving.",
+      "lucky_numbers": [
+        4,
+        9
+      ],
+      "lucky_colors": [
+        "white",
+        "blue",
+        "gold"
+      ],
+      "unlucky_colors": [
+        "red",
+        "pink"
+      ],
+      "lucky_stone": {
+        "name": "Peridot",
+        "slug": "peridot",
+        "why": "Fresh-start energy, lightness, clearing old emotional clutter (desiderate). Monkey's permission slip to shake off groundhog-day routine."
+      },
+      "balance_stone": {
+        "name": "Citrine",
+        "slug": "citrine",
+        "why": "Confidence and 'money magic' when trying something new (desiderate). Pairs with Peridot for new ventures."
+      },
+      "fire_horse_2026": {
+        "name": "Clear Quartz",
+        "slug": "quartz",
+        "why": "Monkey's restless mind needs single-pointed focus in fast 2026. Clear Quartz clarifies one intention among many shiny options."
+      },
+      "avoid_stone": {
+        "name": "Excessive Fire stones (large Ruby/Red Jasper stacks)",
+        "slug": "red-jasper",
+        "why": "Monkey is Metal; Fire melts Metal in elemental theory. Large red/Fire stones traditionally clash — use as small accents. Trust your own feel."
+      },
+      "ben_ming_nian": false,
+      "affiliate_buddha": "Vairocana (大日如来)",
+      "compatibility_best": [
+        "Rat",
+        "Dragon",
+        "Snake"
+      ],
+      "article": "/chinese-zodiac/monkey-crystals/",
+      "year_boost": {
+        "name": "Clear Quartz",
+        "slug": "quartz",
+        "why": "Monkey's restless mind needs single-pointed focus in fast 2026. Clear Quartz clarifies one intention among many shiny options.",
+        "year_context": "2026 Fire Horse",
+        "_switchable": "此字段为年度切换字段; 2027农历新年前重写为Fire Goat年对应石, fire_horse_2026字段保留不动"
+      }
+    },
+    "rooster": {
+      "name": "Rooster",
+      "chinese": "鸡 (Jī)",
+      "order": 10,
+      "years_sample": "2029, 2017, 2005, 1993, 1981",
+      "element": "Metal",
+      "personality": "Observant, hardworking, courageous, organised. The quiet powerhouse; capable and detail-driven.",
+      "lucky_numbers": [
+        5,
+        7,
+        8
+      ],
+      "lucky_colors": [
+        "gold",
+        "brown",
+        "yellow"
+      ],
+      "unlucky_colors": [
+        "red"
+      ],
+      "lucky_stone": {
+        "name": "Citrine",
+        "slug": "citrine",
+        "why": "Visibility, recognition, 'pay me what I'm worth' energy (desiderate). 2026 wants Roosters seen and appreciated properly."
+      },
+      "balance_stone": {
+        "name": "Garnet",
+        "slug": "garnet",
+        "why": "Stamina and strength for busy seasons and big responsibilities (desiderate). Sustains Rooster through demanding periods."
+      },
+      "fire_horse_2026": {
+        "name": "Tiger's Eye",
+        "slug": "tiger-eye",
+        "why": "Combines courage with discernment for Rooster's 2026 push. Turns hard work into recognised achievement."
+      },
+      "avoid_stone": {
+        "name": "Excessive Fire stones (large Ruby/Carnelian)",
+        "slug": "carnelian",
+        "why": "Rooster is Metal + unlucky color is red; Fire-element stones in large amounts traditionally clash. Yellow/gold tones suit better. Trust resonance."
+      },
+      "ben_ming_nian": false,
+      "affiliate_buddha": "Acala / 不动尊菩萨 (Fudo Myoo)",
+      "compatibility_best": [
+        "Ox",
+        "Snake",
+        "Dragon"
+      ],
+      "article": "/chinese-zodiac/rooster-crystals/",
+      "year_boost": {
+        "name": "Tiger's Eye",
+        "slug": "tiger-eye",
+        "why": "Combines courage with discernment for Rooster's 2026 push. Turns hard work into recognised achievement.",
+        "year_context": "2026 Fire Horse",
+        "_switchable": "此字段为年度切换字段; 2027农历新年前重写为Fire Goat年对应石, fire_horse_2026字段保留不动"
+      }
+    },
+    "dog": {
+      "name": "Dog",
+      "chinese": "狗 (Gǒu)",
+      "order": 11,
+      "years_sample": "2030, 2018, 2006, 1994, 1982",
+      "element": "Earth",
+      "personality": "Loyal, protective, honest, prudent, values-driven. Cares deeply — sometimes to own detriment.",
+      "lucky_numbers": [
+        3,
+        4,
+        9
+      ],
+      "lucky_colors": [
+        "red",
+        "green",
+        "purple"
+      ],
+      "unlucky_colors": [
+        "blue",
+        "white",
+        "gold"
+      ],
+      "lucky_stone": {
+        "name": "Clear Quartz / White Topaz",
+        "slug": "quartz",
+        "why": "Clarity about what Dog wants next — not just what everyone else needs (desiderate). Clears people-pleasing fog."
+      },
+      "balance_stone": {
+        "name": "Black Tourmaline",
+        "slug": "black-tourmaline",
+        "why": "Strong energetic boundaries and protection from emotional overload (desiderate). For Dogs learning 'no' is a complete sentence."
+      },
+      "fire_horse_2026": {
+        "name": "Amethyst",
+        "slug": "amethyst",
+        "why": "2026 Dog benefits from Amitabha Buddha amulet energy (qilingaura) — light, forgiveness, compassion. Amethyst mirrors that protective, clear-hearted quality."
+      },
+      "avoid_stone": {
+        "name": "Overly stimulating stones in huge amounts",
+        "slug": "sunstone",
+        "why": "Dog's gift is steady discernment; excessive Yang-stimulating energy can blur boundaries Dog is building. Balance grounding + clarity stones. Trust intuition."
+      },
+      "ben_ming_nian": false,
+      "affiliate_buddha": "Amitabha (阿弥陀佛)",
+      "compatibility_best": [
+        "Rabbit",
+        "Tiger",
+        "Horse"
+      ],
+      "article": "/chinese-zodiac/dog-crystals/",
+      "year_boost": {
+        "name": "Amethyst",
+        "slug": "amethyst",
+        "why": "2026 Dog benefits from Amitabha Buddha amulet energy (qilingaura) — light, forgiveness, compassion. Amethyst mirrors that protective, clear-hearted quality.",
+        "year_context": "2026 Fire Horse",
+        "_switchable": "此字段为年度切换字段; 2027农历新年前重写为Fire Goat年对应石, fire_horse_2026字段保留不动"
+      }
+    },
+    "pig": {
+      "name": "Pig",
+      "chinese": "猪 (Zhū)",
+      "order": 12,
+      "years_sample": "2031, 2019, 2007, 1995, 1983",
+      "element": "Water",
+      "personality": "Compassionate, generous, diligent, pleasure-loving. Here for good food, good company, a rich life.",
+      "lucky_numbers": [
+        2,
+        5,
+        8
+      ],
+      "lucky_colors": [
+        "yellow",
+        "gray",
+        "brown",
+        "gold"
+      ],
+      "unlucky_colors": [
+        "red",
+        "blue",
+        "green"
+      ],
+      "lucky_stone": {
+        "name": "Ruby",
+        "slug": "ruby",
+        "why": "Joy, passion, life force, abundance that feels good (desiderate). Reminder Pig is allowed to want more — and receive without guilt."
+      },
+      "balance_stone": {
+        "name": "Carnelian",
+        "slug": "carnelian",
+        "why": "Confidence to start or finish what matters (desiderate). Warms Pig's natural generosity into self-honoring action."
+      },
+      "fire_horse_2026": {
+        "name": "Citrine",
+        "slug": "citrine",
+        "why": "2026 supports Pig's abundance theme; Citrine is the classic abundance stone for wealth, optimism, momentum."
+      },
+      "avoid_stone": {
+        "name": "Excessive Fire stones in huge stacks",
+        "slug": "ruby",
+        "why": "Pig is Water element; too much Fire is traditionally said to create elemental friction. Ruby as signature is fine (resonance); avoid over-stacking Fire stones. Trust your feel."
+      },
+      "ben_ming_nian": false,
+      "affiliate_buddha": "Amitabha (阿弥陀佛)",
+      "compatibility_best": [
+        "Goat",
+        "Rabbit",
+        "Tiger"
+      ],
+      "article": "/chinese-zodiac/pig-crystals/",
+      "year_boost": {
+        "name": "Citrine",
+        "slug": "citrine",
+        "why": "2026 supports Pig's abundance theme; Citrine is the classic abundance stone for wealth, optimism, momentum.",
+        "year_context": "2026 Fire Horse",
+        "_switchable": "此字段为年度切换字段; 2027农历新年前重写为Fire Goat年对应石, fire_horse_2026字段保留不动"
+      }
+    }
+  },
+  "hub_pages": {
+    "chinese_zodiac_overview": {
+      "title": "Chinese Zodiac Crystals: Complete Guide to Lucky Stones for All 12 Signs",
+      "slug": "chinese-zodiac-crystals",
+      "url": "/chinese-zodiac/crystals/",
+      "purpose": "Hub page — 12生肖总览+2026 Fire Horse+东西方对比+找你的生肖入口",
+      "internal_links_to": [
+        "all 12 animal articles"
+      ]
+    },
+    "fire_horse_2026": {
+      "title": "2026 Year of the Fire Horse: Lucky Crystals & What to Avoid",
+      "slug": "fire-horse-2026-crystals",
+      "url": "/chinese-zodiac/fire-horse-2026/",
+      "purpose": "时效hub — 2026火马年加持石总览+本命年(Horse)避讳+生肖年运势水晶",
+      "internal_links_to": [
+        "all 12 animal articles (2026 column)",
+        "horse-crystals (ben ming nian)"
+      ]
+    }
+  },
+  "compliance_note": {
+    "stance": "Eastern-inspired crystal jewellery brand; cultural traditions shared respectfully as symbolic reminders, not deterministic fortune.",
+    "allowed_phrases": [
+      "traditionally associated with",
+      "in Chinese zodiac tradition, ... is linked to",
+      "many people wear ... as a symbolic reminder of",
+      "often used in mindfulness / intention-setting practices",
+      "may support a sense of"
+    ],
+    "forbidden_phrases": [
+      "this stone will bring you luck/wealth",
+      "cures / treats / heals",
+      "guaranteed fortune",
+      "deterministic fortune-telling claims"
+    ],
+    "avoid_stone_framing": "Frame 'avoid' as elemental-tradition guidance + personal resonance, NOT hard prohibition. Always close with 'trust how a stone feels to you over any hard rule' (mirrors western zodiac-crystals 'use separately' framing)."
+  }
+}

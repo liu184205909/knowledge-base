@@ -1,0 +1,25 @@
+{
+  "total": 4,
+  "articles": [
+    {
+      "slug": "how-to-tell-if-crystal-is-real",
+      "title": "How to Tell If a Crystal Is Real: 10 Tests (With Photos)",
+      "quality_tier": "flagship"
+    },
+    {
+      "slug": "real-vs-fake-amethyst",
+      "title": "Real vs Fake Amethyst: 7 Ways to Tell the Difference",
+      "quality_tier": "high"
+    },
+    {
+      "slug": "how-to-tell-if-clear-quartz-is-real",
+      "title": "How to Tell If Clear Quartz Is Real: 6 Tests That Work",
+      "quality_tier": "high"
+    },
+    {
+      "slug": "most-faked-crystals",
+      "title": "Most Faked Crystals: 10 Stones Often Sold Fake (2026 Guide)",
+      "quality_tier": "hub"
+    }
+  ]
+}

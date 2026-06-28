@@ -1,0 +1,467 @@
+{
+  "aquarius-aquarius": {
+    "exists": true,
+    "id": 43322,
+    "status": "publish",
+    "featured_media": 43401
+  },
+  "aquarius-pisces": {
+    "exists": true,
+    "id": 43323,
+    "status": "publish",
+    "featured_media": 43403
+  },
+  "aries-aquarius": {
+    "exists": true,
+    "id": 43324,
+    "status": "publish",
+    "featured_media": 43405
+  },
+  "aries-aries": {
+    "exists": true,
+    "id": 43325,
+    "status": "publish",
+    "featured_media": 43407
+  },
+  "aries-cancer": {
+    "error": "Unexpected end of JSON input"
+  },
+  "aries-capricorn": {
+    "exists": true,
+    "id": 43327,
+    "status": "publish",
+    "featured_media": 43411
+  },
+  "aries-gemini": {
+    "exists": true,
+    "id": 43328,
+    "status": "future",
+    "featured_media": 43413
+  },
+  "aries-leo": {
+    "exists": true,
+    "id": 43329,
+    "status": "future",
+    "featured_media": 43415
+  },
+  "aries-libra": {
+    "exists": true,
+    "id": 43330,
+    "status": "future",
+    "featured_media": 43417
+  },
+  "aries-pisces": {
+    "exists": true,
+    "id": 43331,
+    "status": "future",
+    "featured_media": 43419
+  },
+  "aries-sagittarius": {
+    "exists": true,
+    "id": 43332,
+    "status": "future",
+    "featured_media": 43421
+  },
+  "aries-scorpio": {
+    "exists": true,
+    "id": 43333,
+    "status": "future",
+    "featured_media": 43423
+  },
+  "aries-taurus": {
+    "exists": true,
+    "id": 43334,
+    "status": "future",
+    "featured_media": 43425
+  },
+  "aries-virgo": {
+    "exists": true,
+    "id": 43335,
+    "status": "future",
+    "featured_media": 43427
+  },
+  "cancer-aquarius": {
+    "exists": true,
+    "id": 43336,
+    "status": "future",
+    "featured_media": 43429
+  },
+  "cancer-cancer": {
+    "exists": true,
+    "id": 43337,
+    "status": "future",
+    "featured_media": 43431
+  },
+  "cancer-capricorn": {
+    "exists": true,
+    "id": 43338,
+    "status": "future",
+    "featured_media": 43433
+  },
+  "cancer-leo": {
+    "exists": true,
+    "id": 43339,
+    "status": "future",
+    "featured_media": 43435
+  },
+  "cancer-libra": {
+    "exists": true,
+    "id": 43340,
+    "status": "future",
+    "featured_media": 43437
+  },
+  "cancer-pisces": {
+    "exists": true,
+    "id": 43341,
+    "status": "future",
+    "featured_media": 43439
+  },
+  "cancer-sagittarius": {
+    "exists": true,
+    "id": 43342,
+    "status": "future",
+    "featured_media": 43441
+  },
+  "cancer-scorpio": {
+    "exists": true,
+    "id": 43343,
+    "status": "future",
+    "featured_media": 43443
+  },
+  "cancer-virgo": {
+    "exists": true,
+    "id": 43344,
+    "status": "future",
+    "featured_media": 43445
+  },
+  "capricorn-aquarius": {
+    "exists": true,
+    "id": 43345,
+    "status": "future",
+    "featured_media": 43447
+  },
+  "capricorn-capricorn": {
+    "exists": true,
+    "id": 43346,
+    "status": "future",
+    "featured_media": 43455
+  },
+  "capricorn-pisces": {
+    "exists": true,
+    "id": 43347,
+    "status": "future",
+    "featured_media": 43462
+  },
+  "gemini-aquarius": {
+    "exists": true,
+    "id": 43348,
+    "status": "future",
+    "featured_media": 43470
+  },
+  "gemini-cancer": {
+    "exists": true,
+    "id": 43349,
+    "status": "future",
+    "featured_media": 43478
+  },
+  "gemini-capricorn": {
+    "exists": true,
+    "id": 43350,
+    "status": "future",
+    "featured_media": 43486
+  },
+  "gemini-gemini": {
+    "exists": true,
+    "id": 43351,
+    "status": "future",
+    "featured_media": 43492
+  },
+  "gemini-leo": {
+    "exists": true,
+    "id": 43352,
+    "status": "future",
+    "featured_media": 43499
+  },
+  "gemini-libra": {
+    "exists": true,
+    "id": 43353,
+    "status": "future",
+    "featured_media": 43505
+  },
+  "gemini-pisces": {
+    "exists": true,
+    "id": 43354,
+    "status": "future",
+    "featured_media": 43513
+  },
+  "gemini-sagittarius": {
+    "exists": true,
+    "id": 43355,
+    "status": "future",
+    "featured_media": 43519
+  },
+  "gemini-scorpio": {
+    "exists": true,
+    "id": 43356,
+    "status": "future",
+    "featured_media": 43522
+  },
+  "gemini-virgo": {
+    "exists": true,
+    "id": 43245,
+    "status": "future",
+    "featured_media": 43524
+  },
+  "leo-aquarius": {
+    "exists": true,
+    "id": 43358,
+    "status": "future",
+    "featured_media": 43526
+  },
+  "leo-capricorn": {
+    "exists": true,
+    "id": 43359,
+    "status": "future",
+    "featured_media": 43528
+  },
+  "leo-leo": {
+    "exists": true,
+    "id": 43360,
+    "status": "future",
+    "featured_media": 43530
+  },
+  "leo-libra": {
+    "exists": true,
+    "id": 43361,
+    "status": "future",
+    "featured_media": 43532
+  },
+  "leo-pisces": {
+    "exists": true,
+    "id": 43362,
+    "status": "future",
+    "featured_media": 43534
+  },
+  "leo-sagittarius": {
+    "exists": true,
+    "id": 43363,
+    "status": "future",
+    "featured_media": 43536
+  },
+  "leo-scorpio": {
+    "exists": true,
+    "id": 43364,
+    "status": "future",
+    "featured_media": 43538
+  },
+  "leo-virgo": {
+    "exists": true,
+    "id": 43365,
+    "status": "future",
+    "featured_media": 43540
+  },
+  "libra-aquarius": {
+    "exists": true,
+    "id": 43366,
+    "status": "future",
+    "featured_media": 43542
+  },
+  "libra-capricorn": {
+    "exists": true,
+    "id": 43367,
+    "status": "future",
+    "featured_media": 43544
+  },
+  "libra-libra": {
+    "exists": true,
+    "id": 43368,
+    "status": "future",
+    "featured_media": 43546
+  },
+  "libra-pisces": {
+    "exists": true,
+    "id": 43369,
+    "status": "future",
+    "featured_media": 43548
+  },
+  "libra-sagittarius": {
+    "exists": true,
+    "id": 43370,
+    "status": "future",
+    "featured_media": 43550
+  },
+  "libra-scorpio": {
+    "exists": true,
+    "id": 43371,
+    "status": "future",
+    "featured_media": 43552
+  },
+  "pisces-pisces": {
+    "exists": true,
+    "id": 43372,
+    "status": "future",
+    "featured_media": 43554
+  },
+  "sagittarius-aquarius": {
+    "exists": true,
+    "id": 43373,
+    "status": "future",
+    "featured_media": 43556
+  },
+  "sagittarius-capricorn": {
+    "exists": true,
+    "id": 43374,
+    "status": "future",
+    "featured_media": 43558
+  },
+  "sagittarius-pisces": {
+    "exists": true,
+    "id": 43375,
+    "status": "future",
+    "featured_media": 43560
+  },
+  "sagittarius-sagittarius": {
+    "exists": true,
+    "id": 43376,
+    "status": "future",
+    "featured_media": 43562
+  },
+  "scorpio-aquarius": {
+    "exists": true,
+    "id": 43377,
+    "status": "future",
+    "featured_media": 43564
+  },
+  "scorpio-capricorn": {
+    "exists": true,
+    "id": 43378,
+    "status": "future",
+    "featured_media": 43566
+  },
+  "scorpio-pisces": {
+    "exists": true,
+    "id": 43379,
+    "status": "future",
+    "featured_media": 43568
+  },
+  "scorpio-sagittarius": {
+    "exists": true,
+    "id": 43380,
+    "status": "future",
+    "featured_media": 43570
+  },
+  "scorpio-scorpio": {
+    "exists": true,
+    "id": 43381,
+    "status": "future",
+    "featured_media": 43572
+  },
+  "taurus-aquarius": {
+    "exists": true,
+    "id": 43382,
+    "status": "future",
+    "featured_media": 43574
+  },
+  "taurus-cancer": {
+    "exists": true,
+    "id": 43383,
+    "status": "future",
+    "featured_media": 43576
+  },
+  "taurus-capricorn": {
+    "exists": true,
+    "id": 43384,
+    "status": "future",
+    "featured_media": 43578
+  },
+  "taurus-gemini": {
+    "exists": true,
+    "id": 43385,
+    "status": "future",
+    "featured_media": 43580
+  },
+  "taurus-leo": {
+    "exists": true,
+    "id": 43386,
+    "status": "future",
+    "featured_media": 43582
+  },
+  "taurus-libra": {
+    "exists": true,
+    "id": 43387,
+    "status": "future",
+    "featured_media": 43584
+  },
+  "taurus-pisces": {
+    "exists": true,
+    "id": 43388,
+    "status": "future",
+    "featured_media": 43586
+  },
+  "taurus-sagittarius": {
+    "exists": true,
+    "id": 43389,
+    "status": "future",
+    "featured_media": 43588
+  },
+  "taurus-scorpio": {
+    "exists": true,
+    "id": 43390,
+    "status": "future",
+    "featured_media": 43590
+  },
+  "taurus-taurus": {
+    "exists": true,
+    "id": 43391,
+    "status": "future",
+    "featured_media": 43592
+  },
+  "taurus-virgo": {
+    "exists": true,
+    "id": 43392,
+    "status": "future",
+    "featured_media": 43594
+  },
+  "virgo-aquarius": {
+    "exists": true,
+    "id": 43393,
+    "status": "future",
+    "featured_media": 43596
+  },
+  "virgo-capricorn": {
+    "exists": true,
+    "id": 43394,
+    "status": "future",
+    "featured_media": 43598
+  },
+  "virgo-libra": {
+    "exists": true,
+    "id": 43395,
+    "status": "future",
+    "featured_media": 43600
+  },
+  "virgo-pisces": {
+    "exists": true,
+    "id": 43396,
+    "status": "future",
+    "featured_media": 43602
+  },
+  "virgo-sagittarius": {
+    "exists": true,
+    "id": 43397,
+    "status": "future",
+    "featured_media": 0
+  },
+  "virgo-scorpio": {
+    "exists": true,
+    "id": 43398,
+    "status": "future",
+    "featured_media": 43605
+  },
+  "virgo-virgo": {
+    "exists": true,
+    "id": 43399,
+    "status": "future",
+    "featured_media": 43607
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "total": 7,
+  "articles": [
+    {
+      "slug": "how-to-cleanse-crystals",
+      "title": "How to Cleanse Crystals: 7 Safe Methods (With Steps & Timer)",
+      "action": "cleanse"
+    },
+    {
+      "slug": "how-to-charge-crystals",
+      "title": "How to Charge Crystals: Meaning, Methods & When to Do It",
+      "action": "charge"
+    },
+    {
+      "slug": "how-to-activate-crystals",
+      "title": "How to Activate Crystals: Meaning, Steps & Intentions",
+      "action": "activate"
+    },
+    {
+      "slug": "how-to-program-crystals",
+      "title": "How to Program Crystals: Meaning, Steps & Intentions",
+      "action": "program"
+    },
+    {
+      "slug": "how-to-meditate-with-crystals",
+      "title": "How to Meditate with Crystals: Steps, Stones & Practices",
+      "action": "meditate"
+    },
+    {
+      "slug": "how-to-use-crystals",
+      "title": "How to Use Crystals: Beginner's Guide (10 Ways to Start)",
+      "action": "use"
+    },
+    {
+      "slug": "how-to-cleanse-a-crystal-bracelet",
+      "title": "How to Cleanse a Crystal Bracelet: Safe Methods (No Damage)",
+      "action": "cleanse"
+    }
+  ]
+}

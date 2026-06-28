@@ -1,0 +1,89 @@
+{
+  "total": 12,
+  "articles": [
+    {
+      "slug": "1",
+      "number": 1,
+      "is_master": false,
+      "title": "Life Path 1: Meaning, Personality & Best Crystals",
+      "theme": "Independence / Leadership"
+    },
+    {
+      "slug": "2",
+      "number": 2,
+      "is_master": false,
+      "title": "Life Path 2: Meaning, Personality & Best Crystals",
+      "theme": "Partnership / Harmony"
+    },
+    {
+      "slug": "3",
+      "number": 3,
+      "is_master": false,
+      "title": "Life Path 3: Meaning, Personality & Best Crystals",
+      "theme": "Self-Expression / Joy"
+    },
+    {
+      "slug": "4",
+      "number": 4,
+      "is_master": false,
+      "title": "Life Path 4: Meaning, Personality & Best Crystals",
+      "theme": "Structure / Foundation / Hard Work"
+    },
+    {
+      "slug": "5",
+      "number": 5,
+      "is_master": false,
+      "title": "Life Path 5: Meaning, Personality & Best Crystals",
+      "theme": "Freedom / Change / Experience"
+    },
+    {
+      "slug": "6",
+      "number": 6,
+      "is_master": false,
+      "title": "Life Path 6: Meaning, Personality & Best Crystals",
+      "theme": "Care / Responsibility / Harmony"
+    },
+    {
+      "slug": "7",
+      "number": 7,
+      "is_master": false,
+      "title": "Life Path 7: Meaning, Personality & Best Crystals",
+      "theme": "Wisdom / Introspection / Truth"
+    },
+    {
+      "slug": "8",
+      "number": 8,
+      "is_master": false,
+      "title": "Life Path 8: Meaning, Personality & Best Crystals",
+      "theme": "Ambition / Abundance / Mastery"
+    },
+    {
+      "slug": "9",
+      "number": 9,
+      "is_master": false,
+      "title": "Life Path 9: Meaning, Personality & Best Crystals",
+      "theme": "Compassion / Wisdom / Completion"
+    },
+    {
+      "slug": "11",
+      "number": 11,
+      "is_master": true,
+      "title": "Life Path 11: Meaning, Personality & Best Crystals",
+      "theme": "Intuition / Inspiration / Spiritual Vision"
+    },
+    {
+      "slug": "22",
+      "number": 22,
+      "is_master": true,
+      "title": "Life Path 22: Meaning, Personality & Best Crystals",
+      "theme": "Vision Made Manifest / Large-Scale Impact"
+    },
+    {
+      "slug": "33",
+      "number": 33,
+      "is_master": true,
+      "title": "Life Path 33: Meaning, Personality & Best Crystals",
+      "theme": "Selfless Service / Healing / Uplifting Others"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "_meta": {
+    "article": "A2",
+    "purpose": "紫水晶专篇(1600词主词) — 假货最泛滥石种，首饰视角(手链珠子)，色带/气泡/UV实操",
+    "framework_ref": "模板-水晶真伪鉴别文章框架.md §0 A2 + §5",
+    "created": "2026-06-28"
+  },
+  "slug": "real-vs-fake-amethyst",
+  "url": "/blog/real-vs-fake-amethyst/",
+  "subject_label": "Amethyst",
+  "subject_scope": "single-stone-amethyst",
+  "title": "Real vs Fake Amethyst: 7 Ways to Tell the Difference",
+  "h1": "Real vs Fake Amethyst",
+  "primary_kw": "real vs fake amethyst",
+  "secondary_kw": ["how to tell if amethyst is real", "is my amethyst real", "fake amethyst", "genuine amethyst", "amethyst bracelet real or fake"],
+  "word_target": 2400,
+  "word_range": "2200-2700",
+  "quality_tier": "high",
+  "date_published": "2026-06-28",
+  "date_modified": "2026-06-28",
+  "crystal_vs_glass_section": false,
+  "methods_used": ["color_banding", "bubbles", "uv_light", "temperature", "hardness", "price", "naming"],
+  "stone_cases": ["amethyst"],
+  "mineral_table_position": "m4",
+  "m3_heading": "How to Tell If Amethyst Is Real: 7 Tests",
+  "m4_heading": "Amethyst: Deep Dive (Bracelets, Beads, and Geodes)",
+  "m4_mode": "single_deep_dive",
+  "series_links": {
+    "to_flagship": { "anchor": "How to Tell If a Crystal Is Real (full 10-test guide)", "url": "/blog/how-to-tell-if-crystal-is-real/" },
+    "to_hub": { "anchor": "Most Faked Crystals: the full list", "url": "/blog/most-faked-crystals/" }
+  },
+  "author": {
+    "name": "Earthward Editorial Team",
+    "byline": "Earthward's crystal care and sourcing team",
+    "reviewed_by": "Earthward's mineral-sourcing reviewers"
+  },
+  "buying_guide": {
+    "shop_cta_target": "/product-category/amethyst-crystals/",
+    "shop_cta_anchor": "Shop genuine amethyst jewelry"
+  },
+  "faq_picks": {
+    "intent": [
+      "How can you tell if amethyst is real or fake?",
+      "What is the most reliable test for real amethyst?",
+      "How can I tell if my amethyst bracelet is real?",
+      "Does real amethyst have bubbles?"
+    ],
+    "conversion": [
+      "Where can I buy genuine amethyst?",
+      "How much should real amethyst cost?",
+      "Are lab-created amethyst stones real?"
+    ],
+    "trust": [
+      "Can home tests guarantee amethyst is real?",
+      "Why is my amethyst losing color?"
+    ],
+    "selective": [
+      "Is dark amethyst better than light amethyst?"
+    ]
+  },
+  "internal_links": {
+    "meaning_min": 3,
+    "flagship": { "anchor": "How to Tell If a Crystal Is Real", "url": "/blog/how-to-tell-if-crystal-is-real/" },
+    "clear_quartz": { "anchor": "How to Tell If Clear Quartz Is Real", "url": "/blog/how-to-tell-if-clear-quartz-is-real/" },
+    "hub": { "anchor": "Most Faked Crystals", "url": "/blog/most-faked-crystals/" }
+  },
+  "schema": {
+    "types": ["Article", "FAQPage", "BreadcrumbList"],
+    "howto_name": "How to Tell If Amethyst Is Real",
+    "howto_total_time": "PT15M",
+    "howto_steps": [
+      { "step": 1, "name": "Look for color zoning", "text": "Genuine amethyst shows natural lighter/darker purple gradients, concentrated at tips. Synthetic is uniform." },
+      { "step": 2, "name": "Check inclusions under a 10x loupe", "text": "Natural amethyst has needle rutile and two-phase inclusions; synthetic has 'breadcrumb' bubbles." },
+      { "step": 3, "name": "UV fluorescence check", "text": "Synthetic amethyst often fluoresces blue under shortwave UV; natural is usually inert." },
+      { "step": 4, "name": "Temperature and hardness for bracelets", "text": "Genuine amethyst feels cool and (on rough stones only) scratches glass." },
+      { "step": 5, "name": "Cross-check price and naming", "text": "Large 'natural amethyst' geodes at tumbled-stone prices are a red flag." }
+    ]
+  },
+  "compliance": {
+    "avoid": ["100% genuine", "100% authentic", "guaranteed real", "verified authentic", "always works", "never fails", "the only way to know"],
+    "gentle_note": "Amethyst identification tests combine practical mineralogy (color zoning, inclusions, fluorescence) with marketplace awareness. Home tests help you spot common fakes, but for valuable amethyst geodes, a gemological lab report is the gold standard. Crystal meanings and energetic properties are separate from authenticity.",
+    "brand_tagline": "We name our stones and sources — return to what's real.",
+    "ai_banned_words": ["delve", "tapestry", "realm", "unlock your potential", "manifest abundance", "elevate your vibration"]
+  },
+  "three_perspectives": { "science": "55%", "spirituality": "25%", "psychology": "20%" },
+  "image_plan": {
+    "hero": { "size": "1536x864", "scene": "genuine amethyst cluster with natural color zoning", "filename": "real-vs-fake-amethyst-hero.jpg" },
+    "comparison": { "size": "1200x800", "scene": "natural amethyst color zoning vs synthetic uniform color side by side", "filename": "real-vs-fake-amethyst-color.jpg" },
+    "test_diagram": { "size": "1200x800", "scene": "amethyst bead bracelet inspection with 10x loupe", "filename": "real-vs-fake-amethyst-bracelet.jpg" }
+  }
+}

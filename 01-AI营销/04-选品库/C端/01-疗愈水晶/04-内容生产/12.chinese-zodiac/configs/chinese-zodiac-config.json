@@ -1,0 +1,69 @@
+{
+  "_meta": {
+    "purpose": "Chinese Zodiac 14 篇文章生产 config（12 生肖 + fire-horse-2026 hub + 总览 hub）",
+    "framework": "模板-Chinese-Zodiac文章框架.md v2（17 节，14 点加固）",
+    "data_source": "07-互动工具/_shared/chinese-zodiac-knowledge.json v1.1（12 生肖×4维水晶 + year_boost 可切换 + 本命佛锁死 + 兼容性）",
+    "cta_validation": "_qc/_cta-validation.json（meaning 15 颗含 Read CTA，其余仅 Shop；category 200 用 product-category，404 降级 shop search）",
+    "compliance": "M6 避讳石硬化（必填缓和语 + 二审硬扫描 harmful/bad for/should never wear/will bring bad luck/clashes with）+ M5 左进右出 traditionally/symbolically + 本命佛谨慎措辞",
+    "tool_cta": "Chinese Zodiac Checker 未上线，降级 /chinese-zodiac/find-your-sign/ 静态年表页（P3 同步建）"
+  },
+  "current_year": {
+    "year": 2026,
+    "animal": "Horse",
+    "element": "Fire",
+    "stem_branch": "Bing Wu (丙午)",
+    "dates": "Feb 17, 2026 – Feb 5, 2027",
+    "theme": "Boldness, speed, big shifts, amplified ambition. Fire on Fire = double Yang, needs grounding & cooling stones to balance.",
+    "signature_stones": ["citrine", "jade", "black-tourmaline", "smoky-quartz", "clear-quartz"]
+  },
+  "eastern_anchors_note": "每篇 ≥2 处 Eastern 锚点（框架 §13.1）。本命佛/五行/Tai Sui/兼容性为文化硬数据锁死（chinese-zodiac-knowledge.json 只读不重写）。下列为按生肖适配的写作库 + 通用锚点。",
+  "eastern_anchors": {
+    "five_elements": {
+      "Wood": "Wood 元素主生长、扩展、仁（Tiger/Rabbit）；过旺易怒，需 grounding",
+      "Fire": "Fire 元素主礼、热情、光明（Snake/Horse）；过旺燥急，需 cooling/grounding",
+      "Earth": "Earth 元素主信、稳定、包容（Ox/Dragon/Goat/Dog）；过旺固执，需流动",
+      "Metal": "Metal 元素主义、决断、肃杀（Monkey/Rooster）；过旺锋利，需柔化",
+      "Water": "Water 元素主智、流动、变通（Rat/Pig）；过旺涣散，需聚焦"
+    },
+    "benmingnian": "本命年（Ben Ming Nian, 犯太岁）：每 12 年一轮自己生肖年，传统认为是变动/不稳之年（非纯好运），许多人选择全年佩戴保护石作为 symbolic anchor。2026=Horse 本命年；2025=Snake 刚出本命年（余温回响）。",
+    "left_in_right_out": "「左进右出」：In some Chinese wearing traditions, the left wrist is associated with receiving energy, so absorbing stones (lucky/wealth) are often worn there; the right with releasing, so protective stones may go there. 必须用 traditionally/symbolically 框架，禁确定性 claim。",
+    "buddha_framing": "本命佛措辞：用「in some East Asian Buddhist-inspired traditions, {Animal} is associated with {Buddha/Bodhisattva}」或「in certain folk traditions」—— 非所有体系统一认可，不陈述为 universally accepted 事实。",
+    "jade_cultural": "Jade 在中国文化 =「Stone of Heaven」/「君子比德于玉」/纯净/守护/福禄；'Gold is valuable, jade is priceless.'（China Highlights）。Ox 篇重点展开。"
+  },
+  "m6_compliance": {
+    "must_fill_1": "These are traditional elemental guidelines, not hard rules.",
+    "must_fill_2": "Trust how a stone feels to you over any textbook.",
+    "hard_scan_forbidden": ["harmful", "bad for", "should never wear", "will bring bad luck", "clashes with", "must avoid", "forbidden"],
+    "rewrite_map": {
+      "harmful": "traditionally suggested to use mindfully",
+      "bad for {animal}": "traditionally suggested to use mindfully",
+      "should never wear": "traditionally suggested to wear as an accent rather than a dominant stone",
+      "will bring bad luck": "(删除; 改为 elemental-tradition guidance)",
+      "clashes with": "is traditionally said to create elemental friction when stacked in large amounts",
+      "must avoid": "traditionally used mindfully",
+      "forbidden": "traditionally used mindfully"
+    },
+    "closing_template": "These are traditional elemental guidelines, not hard rules. A {Animal} who adores {avoid_stone} should wear it — personal resonance overrules tradition. Trust how a stone feels to you."
+  },
+  "m7_dual_lens": {
+    "principle": "不做 Dragon=Leo 硬等号。生肖(按年)↔西方星座(按月) 非一一对应。用「If you're X and Y」条件式 CTA，让读者自查。",
+    "explanation": "Your Chinese zodiac sign is based on your birth year and carries cultural symbolism. Your Western zodiac sign is based on your birth month and carries astrological symbolism. They're two different self-reflection lenses — not the same system.",
+    "condition_cta_template": "If you're a {Animal} in the Chinese zodiac and a {WesternSign} in Western astrology, both pages offer something — read both: [{WesternSign} Crystals →](/{western-slug}-crystals/) and [{Animal} Crystals →](/chinese-zodiac/{animal}-crystals/). Two lenses on one you."
+  },
+  "faq_7_fixed": [
+    "What is the best crystal for {Animal}?",
+    "What is the lucky crystal for {Animal} in {current_year} ({element} {animal} year)?",
+    "What is the protection crystal for {Animal}?",
+    "Is crystal healing scientifically proven?",
+    "Can I wear a crystal that's traditionally not recommended for my sign?",
+    "What if I was born in January or February?",
+    "How is this different from Western zodiac crystals?"
+  ],
+  "publish_priority": {
+    "P0": ["fire-horse-2026"],
+    "P1": ["horse", "dragon", "rabbit", "snake"],
+    "P2": ["tiger", "dog", "ox", "goat", "monkey", "rooster", "rat", "pig"],
+    "P3": ["year-crystals", "find-your-sign"]
+  },
+  "disclaimer": "Crystal and zodiac traditions are shared for cultural appreciation and spiritual practice. They're not a substitute for professional medical, mental-health, or financial advice, and they don't guarantee specific outcomes."
+}

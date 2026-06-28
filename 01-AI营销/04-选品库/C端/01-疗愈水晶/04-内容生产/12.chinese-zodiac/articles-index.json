@@ -1,0 +1,113 @@
+{
+  "total": 15,
+  "articles": [
+    {
+      "slug": "fire-horse-2026",
+      "animal": "year-hub",
+      "title": "2026 Year of the Fire Horse: Lucky Crystals & What to Avoid",
+      "element": "",
+      "ben_ming_nian": false,
+      "is_hub": true
+    },
+    {
+      "slug": "rat-crystals",
+      "animal": "Rat",
+      "title": "Rat Lucky Crystals: Chinese Zodiac Stones for Luck, Balance & Protection",
+      "element": "Water",
+      "ben_ming_nian": false
+    },
+    {
+      "slug": "ox-crystals",
+      "animal": "Ox",
+      "title": "Ox Lucky Crystals: Chinese Zodiac Stones for Luck, Balance & Protection",
+      "element": "Earth",
+      "ben_ming_nian": false
+    },
+    {
+      "slug": "tiger-crystals",
+      "animal": "Tiger",
+      "title": "Tiger Lucky Crystals: Chinese Zodiac Stones for Luck, Balance & Protection",
+      "element": "Wood",
+      "ben_ming_nian": false
+    },
+    {
+      "slug": "rabbit-crystals",
+      "animal": "Rabbit",
+      "title": "Rabbit Lucky Crystals: Chinese Zodiac Stones for Luck, Balance & Protection",
+      "element": "Wood",
+      "ben_ming_nian": false
+    },
+    {
+      "slug": "dragon-crystals",
+      "animal": "Dragon",
+      "title": "Dragon Lucky Crystals: Chinese Zodiac Stones for Luck, Balance & Protection",
+      "element": "Earth",
+      "ben_ming_nian": false
+    },
+    {
+      "slug": "snake-crystals",
+      "animal": "Snake",
+      "title": "Snake Lucky Crystals: Chinese Zodiac Stones for Luck, Balance & Protection",
+      "element": "Fire",
+      "ben_ming_nian": true
+    },
+    {
+      "slug": "horse-crystals",
+      "animal": "Horse",
+      "title": "Horse Lucky Crystals: Chinese Zodiac Stones for Luck, Balance & Protection",
+      "element": "Fire",
+      "ben_ming_nian": true
+    },
+    {
+      "slug": "goat-crystals",
+      "animal": "Goat (Sheep)",
+      "title": "Goat (Sheep) Lucky Crystals: Chinese Zodiac Stones for Luck, Balance & Protection",
+      "element": "Earth",
+      "ben_ming_nian": false
+    },
+    {
+      "slug": "monkey-crystals",
+      "animal": "Monkey",
+      "title": "Monkey Lucky Crystals: Chinese Zodiac Stones for Luck, Balance & Protection",
+      "element": "Metal",
+      "ben_ming_nian": false
+    },
+    {
+      "slug": "rooster-crystals",
+      "animal": "Rooster",
+      "title": "Rooster Lucky Crystals: Chinese Zodiac Stones for Luck, Balance & Protection",
+      "element": "Metal",
+      "ben_ming_nian": false
+    },
+    {
+      "slug": "dog-crystals",
+      "animal": "Dog",
+      "title": "Dog Lucky Crystals: Chinese Zodiac Stones for Luck, Balance & Protection",
+      "element": "Earth",
+      "ben_ming_nian": false
+    },
+    {
+      "slug": "pig-crystals",
+      "animal": "Pig",
+      "title": "Pig Lucky Crystals: Chinese Zodiac Stones for Luck, Balance & Protection",
+      "element": "Water",
+      "ben_ming_nian": false
+    },
+    {
+      "slug": "find-your-sign",
+      "animal": "tool-fallback",
+      "title": "Find Your Chinese Zodiac Sign (Birth Year Table)",
+      "element": "",
+      "ben_ming_nian": false,
+      "is_hub": true
+    },
+    {
+      "slug": "year-crystals",
+      "animal": "evergreen-hub",
+      "title": "Chinese Zodiac Crystals: Complete Guide to Lucky Stones for All 12 Signs",
+      "element": "",
+      "ben_ming_nian": false,
+      "is_hub": true
+    }
+  ]
+}

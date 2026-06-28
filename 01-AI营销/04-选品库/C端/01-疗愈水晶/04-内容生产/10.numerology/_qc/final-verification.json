@@ -1,0 +1,348 @@
+[
+  {
+    "slug": "1",
+    "id": 47693,
+    "featured": 47691,
+    "img": 2,
+    "schema": {
+      "Article": true,
+      "FAQPage": true,
+      "BreadcrumbList": true,
+      "ItemList": true,
+      "Product": false
+    },
+    "rank_math": {
+      "title": true,
+      "desc": true,
+      "kw": "life path 1"
+    },
+    "link": "https://goearthward.com/?p=47693",
+    "status": "draft",
+    "meaningLinks": [
+      "citrine",
+      "carnelian",
+      "tiger-eye",
+      "citrine",
+      "carnelian",
+      "tiger-eye"
+    ]
+  },
+  {
+    "slug": "2",
+    "id": 47696,
+    "featured": 47694,
+    "img": 2,
+    "schema": {
+      "Article": true,
+      "FAQPage": true,
+      "BreadcrumbList": true,
+      "ItemList": true,
+      "Product": false
+    },
+    "rank_math": {
+      "title": true,
+      "desc": true,
+      "kw": "life path 2"
+    },
+    "link": "https://goearthward.com/?p=47696",
+    "status": "draft",
+    "meaningLinks": [
+      "rose-quartz",
+      "jade",
+      "aquamarine",
+      "rose-quartz",
+      "jade",
+      "aquamarine"
+    ]
+  },
+  {
+    "slug": "3",
+    "id": 47699,
+    "featured": 47697,
+    "img": 2,
+    "schema": {
+      "Article": true,
+      "FAQPage": true,
+      "BreadcrumbList": true,
+      "ItemList": true,
+      "Product": false
+    },
+    "rank_math": {
+      "title": true,
+      "desc": true,
+      "kw": "life path 3"
+    },
+    "link": "https://goearthward.com/?p=47699",
+    "status": "draft",
+    "meaningLinks": [
+      "citrine",
+      "rose-quartz",
+      "amazonite",
+      "carnelian",
+      "citrine",
+      "rose-quartz",
+      "amazonite",
+      "carnelian"
+    ]
+  },
+  {
+    "slug": "4",
+    "id": 47702,
+    "featured": 47700,
+    "img": 2,
+    "schema": {
+      "Article": true,
+      "FAQPage": true,
+      "BreadcrumbList": true,
+      "ItemList": true,
+      "Product": false
+    },
+    "rank_math": {
+      "title": true,
+      "desc": true,
+      "kw": "life path 4"
+    },
+    "link": "https://goearthward.com/?p=47702",
+    "status": "draft",
+    "meaningLinks": [
+      "jade",
+      "pyrite",
+      "aventurine",
+      "jade",
+      "pyrite",
+      "aventurine"
+    ]
+  },
+  {
+    "slug": "5",
+    "id": 47705,
+    "featured": 47703,
+    "img": 2,
+    "schema": {
+      "Article": true,
+      "FAQPage": true,
+      "BreadcrumbList": true,
+      "ItemList": true,
+      "Product": false
+    },
+    "rank_math": {
+      "title": true,
+      "desc": true,
+      "kw": "life path 5"
+    },
+    "link": "https://goearthward.com/?p=47705",
+    "status": "draft",
+    "meaningLinks": [
+      "aquamarine",
+      "rose-quartz",
+      "smoky-quartz",
+      "citrine",
+      "aquamarine",
+      "rose-quartz",
+      "smoky-quartz",
+      "citrine"
+    ]
+  },
+  {
+    "slug": "6",
+    "id": 47708,
+    "featured": 47706,
+    "img": 2,
+    "schema": {
+      "Article": true,
+      "FAQPage": true,
+      "BreadcrumbList": true,
+      "ItemList": true,
+      "Product": false
+    },
+    "rank_math": {
+      "title": true,
+      "desc": true,
+      "kw": "life path 6"
+    },
+    "link": "https://goearthward.com/?p=47708",
+    "status": "draft",
+    "meaningLinks": [
+      "rose-quartz",
+      "black-tourmaline",
+      "jade",
+      "rose-quartz",
+      "black-tourmaline",
+      "jade"
+    ]
+  },
+  {
+    "slug": "7",
+    "id": 47711,
+    "featured": 47709,
+    "img": 2,
+    "schema": {
+      "Article": true,
+      "FAQPage": true,
+      "BreadcrumbList": true,
+      "ItemList": true,
+      "Product": false
+    },
+    "rank_math": {
+      "title": true,
+      "desc": true,
+      "kw": "life path 7"
+    },
+    "link": "https://goearthward.com/?p=47711",
+    "status": "draft",
+    "meaningLinks": [
+      "amethyst",
+      "black-tourmaline",
+      "amethyst",
+      "black-tourmaline"
+    ]
+  },
+  {
+    "slug": "8",
+    "id": 47714,
+    "featured": 47712,
+    "img": 2,
+    "schema": {
+      "Article": true,
+      "FAQPage": true,
+      "BreadcrumbList": true,
+      "ItemList": true,
+      "Product": false
+    },
+    "rank_math": {
+      "title": true,
+      "desc": true,
+      "kw": "life path 8"
+    },
+    "link": "https://goearthward.com/?p=47714",
+    "status": "draft",
+    "meaningLinks": [
+      "pyrite",
+      "rose-quartz",
+      "black-tourmaline",
+      "citrine",
+      "tiger-eye",
+      "pyrite",
+      "rose-quartz",
+      "black-tourmaline",
+      "citrine",
+      "tiger-eye"
+    ]
+  },
+  {
+    "slug": "9",
+    "id": 47717,
+    "featured": 47715,
+    "img": 2,
+    "schema": {
+      "Article": true,
+      "FAQPage": true,
+      "BreadcrumbList": true,
+      "ItemList": true,
+      "Product": false
+    },
+    "rank_math": {
+      "title": true,
+      "desc": true,
+      "kw": "life path 9"
+    },
+    "link": "https://goearthward.com/?p=47717",
+    "status": "draft",
+    "meaningLinks": [
+      "malachite",
+      "rose-quartz",
+      "black-tourmaline",
+      "citrine",
+      "malachite",
+      "rose-quartz",
+      "black-tourmaline",
+      "citrine"
+    ]
+  },
+  {
+    "slug": "11",
+    "id": 47720,
+    "featured": 47718,
+    "img": 2,
+    "schema": {
+      "Article": true,
+      "FAQPage": true,
+      "BreadcrumbList": true,
+      "ItemList": true,
+      "Product": false
+    },
+    "rank_math": {
+      "title": true,
+      "desc": true,
+      "kw": "life path 11"
+    },
+    "link": "https://goearthward.com/?p=47720",
+    "status": "draft",
+    "meaningLinks": [
+      "amethyst",
+      "black-tourmaline",
+      "selenite",
+      "amethyst",
+      "black-tourmaline",
+      "selenite"
+    ]
+  },
+  {
+    "slug": "22",
+    "id": 47723,
+    "featured": 47721,
+    "img": 2,
+    "schema": {
+      "Article": true,
+      "FAQPage": true,
+      "BreadcrumbList": true,
+      "ItemList": true,
+      "Product": false
+    },
+    "rank_math": {
+      "title": true,
+      "desc": true,
+      "kw": "life path 22"
+    },
+    "link": "https://goearthward.com/?p=47723",
+    "status": "draft",
+    "meaningLinks": [
+      "rose-quartz",
+      "black-tourmaline",
+      "pyrite",
+      "tiger-eye",
+      "rose-quartz",
+      "black-tourmaline",
+      "pyrite",
+      "tiger-eye"
+    ]
+  },
+  {
+    "slug": "33",
+    "id": 47726,
+    "featured": 47724,
+    "img": 2,
+    "schema": {
+      "Article": true,
+      "FAQPage": true,
+      "BreadcrumbList": true,
+      "ItemList": true,
+      "Product": false
+    },
+    "rank_math": {
+      "title": true,
+      "desc": true,
+      "kw": "life path 33"
+    },
+    "link": "https://goearthward.com/?p=47726",
+    "status": "draft",
+    "meaningLinks": [
+      "rose-quartz",
+      "black-tourmaline",
+      "jade",
+      "rose-quartz",
+      "black-tourmaline",
+      "jade"
+    ]
+  }
+]

@@ -1,0 +1,936 @@
+{
+  "_meta": {
+    "purpose": "Life Path Numerology × Crystals 内容 + 计算器工具单源数据层",
+    "consumers": [
+      "04-内容生产/10.numerology/ (Life Path 1-9 + 11/22/33 分篇文章)",
+      "07-互动工具/numerology-calculator/ (Life Path 计算器工具)"
+    ],
+    "source_basis": [
+      "Numerology 标准定义: Life Path 1-9 + Master Numbers 11/22/33",
+      "竞品 SERP 验证: solacely.co (Life Path 1-9 全做,每篇 Clear Quartz/Citrine/Garnet 等 5 颗) + moonrisecrystals.com (Numerology X Healing Crystals 系列) + californiaispsychics.com (Best Crystals for Your Life Path) + navratan.com (Lucky Stone For X Number, 印度体系宝石映射)",
+      "天使号码框架 v2 数据层结构 (angel-numbers-config.json) 平移",
+      "crystal-attributes.json (390 颗水晶 overview.Intentions 字段) 反向主题匹配"
+    ],
+    "compliance": "Numerology = 自我认知/正念工具,非科学定论。水晶 = 提醒/陪伴/意图聚焦,非疗效 claim。所有 avoid_claims 必须在生成时校验。",
+    "version": "v1",
+    "created": "2026-06-28",
+    "counts": {
+      "core_numbers": "1-9 (9 个核心 Life Path)",
+      "master_numbers": "11/22/33 (3 个 Master Number)",
+      "total": 12
+    }
+  },
+  "calculation": {
+    "title": "How to Calculate Your Life Path Number",
+    "method": "Pythagorean reduction (birth date: MM/DD/YYYY)",
+    "steps": [
+      {
+        "step": 1,
+        "action": "Write down your full birthdate in MM/DD/YYYY format",
+        "example": "July 15, 1990 → 07/15/1990"
+      },
+      {
+        "step": 2,
+        "action": "Reduce each part (month, day, year) to a single digit. Month/Day: if double-digit, add its digits. Year: add all four digits, then reduce further if needed.",
+        "example": "Month 07 → 7 | Day 15 → 1+5=6 | Year 1990 → 1+9+9+0=19 → 1+9=10 → 1+0=1"
+      },
+      {
+        "step": 3,
+        "action": "Add the three reduced numbers together",
+        "example": "7 + 6 + 1 = 14"
+      },
+      {
+        "step": 4,
+        "action": "Reduce the total to a single digit. EXCEPTION: if the total (or any part during reduction) is 11, 22, or 33, do NOT reduce — these are Master Numbers.",
+        "example": "14 → 1+4 = 5 → Life Path 5"
+      }
+    ],
+    "master_number_rule": "11, 22, and 33 are Master Numbers. They carry intensified energy and are kept in double-digit form. All other double digits (44, 55, 66...) are reduced.",
+    "quick_example": "November 26, 1985: Month 11 (Master Number, keep) | Day 26 → 2+6=8 | Year 1985 → 1+9+8+5=23 → 2+3=5 | 11+8+5=24 → 2+4=6 → Life Path 6",
+    "tool_cta_url": "/tools/numerology-calculator/",
+    "tool_cta_text": "Use our free Life Path Number Calculator to find yours in seconds"
+  },
+  "numbers": [
+    {
+      "number": 1,
+      "slug": "1",
+      "is_master": false,
+      "archetype": "The Leader / The Pioneer",
+      "theme": "Independence / Leadership",
+      "unique_angle": "the drive to lead, initiate, and forge your own path — the single seed of self-directed will",
+      "primary_intent": "independence",
+      "secondary_intent": "self-leadership",
+      "core_traits": [
+        "independent",
+        "ambitious",
+        "original",
+        "determined",
+        "self-reliant",
+        "pioneering"
+      ],
+      "strengths": [
+        "natural leadership",
+        "initiative and drive",
+        "original thinking",
+        "courage to begin",
+        "self-reliance",
+        "ability to inspire others"
+      ],
+      "challenges": [
+        "can become overly self-focused",
+        "impatient with slower pace",
+        "stubbornness",
+        "reluctance to ask for help",
+        "burnout from over-driving"
+      ],
+      "emotional_state": "self-directed, pioneering, courageous",
+      "recommended_action": "lead yourself first — make one decision you have been postponing and take the first step today",
+      "purpose_keyword": "initiation",
+      "ruling_planet_note": "Sun (Western tradition) — associated with vitality, self-expression, and individual identity",
+      "element": "Fire / Solar",
+      "color": "Red, Gold, Orange",
+      "avoid_claims": [
+        "guarantees wealth or success",
+        "means you are superior to others",
+        "cures or treats any medical condition",
+        "predicts your exact career or partner",
+        "is scientifically proven"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "citrine",
+          "reason": "best for confidence, self-directed will, and the solar energy Life Path 1 embodies"
+        },
+        "best_love": {
+          "slug": "carnelian",
+          "reason": "best for the courage to show up authentically in relationships"
+        },
+        "best_protection": {
+          "slug": "tiger-eye",
+          "reason": "best for grounded, brave self-leadership and holding your ground"
+        },
+        "best_manifestation": {
+          "slug": "sunstone",
+          "reason": "best for personal power and joyful initiative"
+        },
+        "best_daily_wear": {
+          "slug": "garnet",
+          "reason": "best for steady, energized independence — durable for everyday wear"
+        }
+      },
+      "related_numbers": [
+        "11",
+        "5",
+        "3"
+      ],
+      "related_reason": "11 amplifies 1's leadership into intuition; 5 shares 1's drive for freedom; 3 channels 1's initiative into creative expression"
+    },
+    {
+      "number": 2,
+      "slug": "2",
+      "is_master": false,
+      "archetype": "The Peacemaker / The Diplomat",
+      "theme": "Partnership / Harmony",
+      "unique_angle": "sensitivity, cooperation, and the quiet power of receptivity — strength through relationship, not dominance",
+      "primary_intent": "harmony",
+      "secondary_intent": "partnership",
+      "core_traits": [
+        "cooperative",
+        "sensitive",
+        "diplomatic",
+        "patient",
+        "receptive",
+        "supportive"
+      ],
+      "strengths": [
+        "empathy and emotional intelligence",
+        "mediation and peacemaking",
+        "patience",
+        "ability to listen deeply",
+        "building partnership and trust"
+      ],
+      "challenges": [
+        "over-sensitivity to criticism",
+        "conflict avoidance",
+        "indecisiveness",
+        "losing self in others' needs",
+        "passivity"
+      ],
+      "emotional_state": "attuned, gentle, cooperative",
+      "recommended_action": "honor your sensitivity as a strength — set one boundary that protects your peace this week",
+      "purpose_keyword": "cooperation",
+      "ruling_planet_note": "Moon (Western tradition) — associated with emotion, intuition, and reflection",
+      "element": "Water / Lunar",
+      "color": "Silver, White, Light Blue",
+      "avoid_claims": [
+        "means you are weak or submissive",
+        "guarantees a perfect relationship",
+        "cures anxiety or emotional conditions",
+        "predicts your soulmate",
+        "is scientifically proven"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "moonstone",
+          "reason": "best for emotional balance and intuitive sensitivity that defines Life Path 2"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "reason": "best for cultivating loving, harmonious partnerships"
+        },
+        "best_protection": {
+          "slug": "howlite",
+          "reason": "best for calming over-stimulation and grounding anxious energy"
+        },
+        "best_manifestation": {
+          "slug": "jade",
+          "reason": "best for harmony, patience, and steady growth"
+        },
+        "best_daily_wear": {
+          "slug": "aquamarine",
+          "reason": "best for calm communication and gentle courage in daily interactions"
+        }
+      },
+      "related_numbers": [
+        "11",
+        "6",
+        "8"
+      ],
+      "related_reason": "11 amplifies 2's sensitivity into spiritual intuition; 6 shares 2's care for others; 8 complements 2's receptivity with decisive action"
+    },
+    {
+      "number": 3,
+      "slug": "3",
+      "is_master": false,
+      "archetype": "The Communicator / The Creative",
+      "theme": "Self-Expression / Joy",
+      "unique_angle": "creativity, communication, and the gift of bringing ideas to life with optimism and playfulness",
+      "primary_intent": "creativity",
+      "secondary_intent": "communication",
+      "core_traits": [
+        "creative",
+        "expressive",
+        "optimistic",
+        "social",
+        "imaginative",
+        "charismatic"
+      ],
+      "strengths": [
+        "creative self-expression",
+        "communication and storytelling",
+        "optimism and enthusiasm",
+        "social warmth",
+        "ability to uplift others"
+      ],
+      "challenges": [
+        "scattered focus",
+        "avoidance of deeper emotions",
+        "over-talkativeness",
+        "difficulty finishing projects",
+        "mood swings"
+      ],
+      "emotional_state": "expressive, playful, inspired",
+      "recommended_action": "channel your creative energy — finish one project you started but left unfinished",
+      "purpose_keyword": "expression",
+      "ruling_planet_note": "Jupiter (Western tradition) — associated with expansion, joy, and wisdom",
+      "element": "Fire / Air",
+      "color": "Yellow, Orange, Bright Pink",
+      "avoid_claims": [
+        "guarantees artistic talent or fame",
+        "means you are always happy",
+        "cures mood disorders",
+        "predicts creative success",
+        "is scientifically proven"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "citrine",
+          "reason": "best for creative confidence, joy, and the sunny optimism of Life Path 3"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "reason": "best for open-hearted, expressive connection with others"
+        },
+        "best_protection": {
+          "slug": "amazonite",
+          "reason": "best for soothing overwhelm and supporting authentic self-expression"
+        },
+        "best_manifestation": {
+          "slug": "carnelian",
+          "reason": "best for turning creative ideas into finished work"
+        },
+        "best_daily_wear": {
+          "slug": "apatite",
+          "reason": "best for sustained creative focus and cheerful energy through the day"
+        }
+      },
+      "related_numbers": [
+        "33",
+        "1",
+        "6"
+      ],
+      "related_reason": "33 amplifies 3's creativity into compassionate mastery; 1 shares 3's initiative; 6 channels 3's expressiveness into nurturing care"
+    },
+    {
+      "number": 4,
+      "slug": "4",
+      "is_master": false,
+      "archetype": "The Builder / The Organizer",
+      "theme": "Structure / Foundation / Hard Work",
+      "unique_angle": "discipline, reliability, and the steady work of building lasting foundations — strength through consistency and order",
+      "primary_intent": "stability",
+      "secondary_intent": "diligence",
+      "core_traits": [
+        "practical",
+        "disciplined",
+        "reliable",
+        "organized",
+        "hardworking",
+        "loyal"
+      ],
+      "strengths": [
+        "dependability and follow-through",
+        "organizational skill",
+        "patience for long-term building",
+        "loyalty",
+        "creating stable systems and foundations"
+      ],
+      "challenges": [
+        "rigidity and resistance to change",
+        "workaholic tendencies",
+        "difficulty expressing emotion",
+        "stubbornness",
+        "missing the big picture for details"
+      ],
+      "emotional_state": "grounded, steady, dependable",
+      "recommended_action": "build one lasting foundation this month — a habit, structure, or commitment that supports your long-term goals",
+      "purpose_keyword": "foundation",
+      "ruling_planet_note": "Saturn / Uranus (Western traditions vary) — associated with structure, discipline, and order",
+      "element": "Earth",
+      "color": "Green, Brown, Deep Earth Tones",
+      "avoid_claims": [
+        "means you are boring or rigid",
+        "guarantees financial stability",
+        "cures physical health conditions",
+        "predicts career in a specific field",
+        "is scientifically proven"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "jade",
+          "reason": "best for steady growth, long-term building, and the grounded patience Life Path 4 needs"
+        },
+        "best_love": {
+          "slug": "moonstone",
+          "reason": "best for softening rigidity and opening emotional flow in relationships"
+        },
+        "best_protection": {
+          "slug": "hematite",
+          "reason": "best for grounding, focus, and protection against burnout"
+        },
+        "best_manifestation": {
+          "slug": "pyrite",
+          "reason": "best for sustained motivation and material follow-through"
+        },
+        "best_daily_wear": {
+          "slug": "aventurine",
+          "reason": "best for balancing work ethic with opportunity and a lighter spirit"
+        }
+      },
+      "related_numbers": [
+        "22",
+        "8",
+        "7"
+      ],
+      "related_reason": "22 amplifies 4's building into master-level impact; 8 shares 4's material focus; 7 complements 4's structure with depth and reflection"
+    },
+    {
+      "number": 5,
+      "slug": "5",
+      "is_master": false,
+      "archetype": "The Freedom Seeker / The Adventurer",
+      "theme": "Freedom / Change / Experience",
+      "unique_angle": "curiosity, adaptability, and the drive to experience life fully — growth through change, travel, and sensory richness",
+      "primary_intent": "freedom",
+      "secondary_intent": "adventure",
+      "core_traits": [
+        "adaptable",
+        "curious",
+        "adventurous",
+        "versatile",
+        "energetic",
+        "magnetic"
+      ],
+      "strengths": [
+        "adaptability to change",
+        "curiosity and learning",
+        "magnetic social presence",
+        "courage to explore",
+        "ability to inspire others to live fully"
+      ],
+      "challenges": [
+        "restlessness and inconsistency",
+        "commitment avoidance",
+        "impulsivity",
+        "scattered energy",
+        "difficulty settling down"
+      ],
+      "emotional_state": "curious, restless, alive",
+      "recommended_action": "channel your restlessness productively — commit to one experience that expands your perspective this month",
+      "purpose_keyword": "experience",
+      "ruling_planet_note": "Mercury (Western tradition) — associated with communication, travel, and movement",
+      "element": "Air",
+      "color": "Turquoise, Light Blue, Multi-color",
+      "avoid_claims": [
+        "means you cannot commit to anything",
+        "guarantees travel or constant excitement",
+        "cures ADHD or attention conditions",
+        "predicts a nomadic lifestyle",
+        "is scientifically proven"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "aquamarine",
+          "reason": "best for calm courage to explore and the fluid adaptability Life Path 5 needs"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "reason": "best for grounding restless energy into meaningful connection"
+        },
+        "best_protection": {
+          "slug": "smoky-quartz",
+          "reason": "best for grounding scattered energy and protection during change"
+        },
+        "best_manifestation": {
+          "slug": "citrine",
+          "reason": "best for focused motivation when channeling freedom into a project"
+        },
+        "best_daily_wear": {
+          "slug": "turquoise",
+          "reason": "best for protection during travel and honest self-expression"
+        }
+      },
+      "related_numbers": [
+        "1",
+        "7",
+        "9"
+      ],
+      "related_reason": "1 shares 5's independence and drive; 7 complements 5's outer exploration with inner depth; 9 mirrors 5's broad perspective with wisdom"
+    },
+    {
+      "number": 6,
+      "slug": "6",
+      "is_master": false,
+      "archetype": "The Nurturer / The Healer",
+      "theme": "Care / Responsibility / Harmony",
+      "unique_angle": "compassion, responsibility, and the gift of creating loving spaces — strength through service, family, and nurturing connection",
+      "primary_intent": "nurturing",
+      "secondary_intent": "responsibility",
+      "core_traits": [
+        "caring",
+        "responsible",
+        "compassionate",
+        "harmony-seeking",
+        "protective",
+        "domestic"
+      ],
+      "strengths": [
+        "deep compassion",
+        "reliability in relationships",
+        "creating harmonious spaces",
+        "healing presence",
+        "sense of duty and protection"
+      ],
+      "challenges": [
+        "over-giving and self-neglect",
+        "control in the name of care",
+        "difficulty receiving",
+        "idealism about relationships",
+        "taking on others' burdens"
+      ],
+      "emotional_state": "caring, devoted, harmonizing",
+      "recommended_action": "care for yourself as you care for others — schedule one act of self-nurturing this week",
+      "purpose_keyword": "service",
+      "ruling_planet_note": "Venus (Western tradition) — associated with love, beauty, and harmony",
+      "element": "Earth",
+      "color": "Pink, Green, Rose",
+      "avoid_claims": [
+        "means you must sacrifice yourself for others",
+        "guarantees a perfect family or home",
+        "cures illness in loved ones",
+        "predicts your role as a parent",
+        "is scientifically proven"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "rose-quartz",
+          "reason": "best for unconditional love and the nurturing heart that defines Life Path 6"
+        },
+        "best_love": {
+          "slug": "moonstone",
+          "reason": "best for emotional balance in caring relationships"
+        },
+        "best_protection": {
+          "slug": "black-tourmaline",
+          "reason": "best for setting energetic boundaries against over-giving"
+        },
+        "best_manifestation": {
+          "slug": "jade",
+          "reason": "best for harmony in home and stable, loving abundance"
+        },
+        "best_daily_wear": {
+          "slug": "rhodonite",
+          "reason": "best for balancing self-care with care for others"
+        }
+      },
+      "related_numbers": [
+        "33",
+        "2",
+        "9"
+      ],
+      "related_reason": "33 amplifies 6's nurturing into master-level compassion; 2 shares 6's care for relationship; 9 complements 6's personal care with universal love"
+    },
+    {
+      "number": 7,
+      "slug": "7",
+      "is_master": false,
+      "archetype": "The Seeker / The Thinker",
+      "theme": "Wisdom / Introspection / Truth",
+      "unique_angle": "depth, introspection, and the search for truth — growth through study, solitude, and spiritual or intellectual inquiry",
+      "primary_intent": "wisdom",
+      "secondary_intent": "introspection",
+      "core_traits": [
+        "analytical",
+        "introspective",
+        "spiritual",
+        "curious",
+        "independent-minded",
+        "reserved"
+      ],
+      "strengths": [
+        "deep analytical thinking",
+        "spiritual and philosophical insight",
+        "ability to see beneath the surface",
+        "self-sufficiency",
+        "intuitive wisdom"
+      ],
+      "challenges": [
+        "isolation and withdrawal",
+        "over-thinking and analysis paralysis",
+        "emotional guardedness",
+        "cynicism or skepticism",
+        "difficulty with small talk"
+      ],
+      "emotional_state": "contemplative, seeking, inward",
+      "recommended_action": "honor your need for depth — set aside quiet time this week for the question you have been avoiding",
+      "purpose_keyword": "truth-seeking",
+      "ruling_planet_note": "Neptune / Ketu (Vedic tradition) — associated with mysticism, introspection, and inner wisdom",
+      "element": "Water",
+      "color": "Violet, Deep Blue, Indigo",
+      "avoid_claims": [
+        "means you are antisocial or lonely",
+        "guarantees spiritual awakening or psychic ability",
+        "cures mental health conditions",
+        "predicts a solitary life",
+        "is scientifically proven"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "amethyst",
+          "reason": "best for spiritual insight, intuition, and the contemplative depth of Life Path 7"
+        },
+        "best_love": {
+          "slug": "moonstone",
+          "reason": "best for emotional openness in a naturally reserved nature"
+        },
+        "best_protection": {
+          "slug": "black-tourmaline",
+          "reason": "best for grounding over-thinking and protection during deep inner work"
+        },
+        "best_manifestation": {
+          "slug": "quartz",
+          "reason": "best for mental clarity and amplifying focused study or meditation"
+        },
+        "best_daily_wear": {
+          "slug": "lapis",
+          "reason": "best for truth-seeking, wisdom, and authentic self-expression"
+        }
+      },
+      "related_numbers": [
+        "3",
+        "5",
+        "9"
+      ],
+      "related_reason": "3 channels 7's depth into expression; 5 mirrors 7's independence with outward exploration; 9 shares 7's wisdom-seeking with universal scope"
+    },
+    {
+      "number": 8,
+      "slug": "8",
+      "is_master": false,
+      "archetype": "The Powerhouse / The Executive",
+      "theme": "Ambition / Abundance / Mastery",
+      "unique_angle": "ambition, vision, and the capacity to build and lead at scale — strength through discipline, strategy, and material mastery",
+      "primary_intent": "abundance",
+      "secondary_intent": "leadership",
+      "core_traits": [
+        "ambitious",
+        "strategic",
+        "authoritative",
+        "disciplined",
+        "visionary",
+        "resilient"
+      ],
+      "strengths": [
+        "leadership at scale",
+        "strategic thinking",
+        "financial and material acumen",
+        "resilience under pressure",
+        "ability to manifest vision into reality"
+      ],
+      "challenges": [
+        "workaholism and burnout",
+        "control and dominance",
+        "materialism over meaning",
+        "difficulty delegating",
+        "emotional guardedness"
+      ],
+      "emotional_state": "focused, ambitious, commanding",
+      "recommended_action": "align your ambition with purpose — name one goal where success also serves something beyond yourself",
+      "purpose_keyword": "mastery",
+      "ruling_planet_note": "Saturn (Western tradition) — associated with karma, discipline, and material manifestation",
+      "element": "Earth",
+      "color": "Black, Deep Green, Gold",
+      "avoid_claims": [
+        "guarantees wealth or financial success",
+        "means you are destined to be powerful",
+        "cures financial or legal problems",
+        "predicts business success",
+        "is scientifically proven"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "pyrite",
+          "reason": "best for abundance mindset, focus, and the disciplined ambition Life Path 8 embodies"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "reason": "best for opening the heart behind the armor of ambition"
+        },
+        "best_protection": {
+          "slug": "black-tourmaline",
+          "reason": "best for protection against burnout and energetic drain"
+        },
+        "best_manifestation": {
+          "slug": "citrine",
+          "reason": "best for wealth energy, confidence, and sustained success"
+        },
+        "best_daily_wear": {
+          "slug": "tiger-eye",
+          "reason": "best for willpower, grounded decision-making, and steady authority"
+        }
+      },
+      "related_numbers": [
+        "22",
+        "4",
+        "1"
+      ],
+      "related_reason": "22 amplifies 8's material mastery into master-builder impact; 4 shares 8's discipline and foundation-building; 1 mirrors 8's leadership with personal initiative"
+    },
+    {
+      "number": 9,
+      "slug": "9",
+      "is_master": false,
+      "archetype": "The Humanitarian / The Old Soul",
+      "theme": "Compassion / Wisdom / Completion",
+      "unique_angle": "universal compassion, wisdom, and the drive to serve the greater good — strength through letting go, completion, and broad perspective",
+      "primary_intent": "compassion",
+      "secondary_intent": "wisdom",
+      "core_traits": [
+        "compassionate",
+        "idealistic",
+        "wise",
+        "generous",
+        "humanitarian",
+        "creative"
+      ],
+      "strengths": [
+        "universal compassion",
+        "wisdom from experience",
+        "ability to see the big picture",
+        "generosity",
+        "artistic or creative gifts",
+        "capacity to let go and complete cycles"
+      ],
+      "challenges": [
+        "idealism vs. practical reality",
+        "difficulty with closure",
+        "martyrdom or over-sacrifice",
+        "emotional intensity",
+        "disengagement when discouraged"
+      ],
+      "emotional_state": "compassionate, wise, idealistic",
+      "recommended_action": "release what is completing — let go of one thing you are holding that no longer serves, to make room for the new",
+      "purpose_keyword": "universal love",
+      "ruling_planet_note": "Mars (Western tradition) — associated with action channeled toward higher purpose",
+      "element": "Fire / Water",
+      "color": "Deep Red, Gold, Violet",
+      "avoid_claims": [
+        "means you are destined to sacrifice yourself",
+        "guarantees spiritual enlightenment",
+        "cures world suffering or global problems",
+        "predicts a role in charity or activism",
+        "is scientifically proven"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "malachite",
+          "reason": "best for transformation, compassion, and the heart-led wisdom of Life Path 9"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "reason": "best for universal and personal love in equal measure"
+        },
+        "best_protection": {
+          "slug": "black-tourmaline",
+          "reason": "best for grounding idealism and protecting sensitive humanitarian energy"
+        },
+        "best_manifestation": {
+          "slug": "citrine",
+          "reason": "best for generosity and the abundance to give freely"
+        },
+        "best_daily_wear": {
+          "slug": "bloodstone",
+          "reason": "best for courage in service and grounding intense compassion"
+        }
+      },
+      "related_numbers": [
+        "33",
+        "6",
+        "7"
+      ],
+      "related_reason": "33 amplifies 9's compassion into master-teacher energy; 6 shares 9's nurturing care; 7 complements 9's outer service with inner wisdom"
+    },
+    {
+      "number": 11,
+      "slug": "11",
+      "is_master": true,
+      "archetype": "The Spiritual Messenger / The Illuminator",
+      "theme": "Intuition / Inspiration / Spiritual Vision",
+      "unique_angle": "heightened intuition, visionary insight, and the capacity to inspire others — a Master Number that intensifies the sensitivity of 2 (1+1) into spiritual illumination",
+      "primary_intent": "intuition",
+      "secondary_intent": "inspiration",
+      "core_traits": [
+        "intuitive",
+        "visionary",
+        "inspiring",
+        "sensitive",
+        "spiritually aware",
+        "idealistic"
+      ],
+      "strengths": [
+        "deep intuition and insight",
+        "ability to inspire and uplift others",
+        "spiritual awareness",
+        "visionary thinking",
+        "heightened empathy"
+      ],
+      "challenges": [
+        "extreme sensitivity to environments and others' energy",
+        "nervous tension and anxiety",
+        "feeling different or misunderstood",
+        "difficulty grounding visionary ideas",
+        "self-doubt despite insight"
+      ],
+      "emotional_state": "illumined, sensitive, inspired",
+      "recommended_action": "trust your insight — act on one intuitive knowing you have been dismissing",
+      "purpose_keyword": "illumination",
+      "ruling_planet_note": "Moon (intensified) — Master Number amplifying lunar intuition and reflection",
+      "element": "Ether / Water",
+      "color": "Silver, Pearl White, Iridescent",
+      "avoid_claims": [
+        "is spiritually superior to other numbers",
+        "guarantees psychic ability or spiritual gifts",
+        "cures anxiety or nervous conditions",
+        "means you are chosen or special",
+        "is scientifically proven"
+      ],
+      "master_note": "11 is a Master Number. It is the doubled, intensified energy of 1 (initiative) flowing through the sensitivity of 2 (1+1=2). Master Numbers are kept unreduced because they carry higher potential — and higher demand. Operating at master level is a choice, not a guarantee; many 11s also experience the 2 energy (1+1=2) as their grounded baseline.",
+      "crystals": {
+        "best_overall": {
+          "slug": "amethyst",
+          "reason": "best for spiritual insight, intuition, and calming the heightened sensitivity of Master Number 11"
+        },
+        "best_love": {
+          "slug": "moonstone",
+          "reason": "best for emotional balance and intuitive connection in relationships"
+        },
+        "best_protection": {
+          "slug": "black-tourmaline",
+          "reason": "best for grounding intense energy and protection against energetic overwhelm"
+        },
+        "best_manifestation": {
+          "slug": "quartz",
+          "reason": "best for amplifying visionary ideas and clarifying spiritual insight"
+        },
+        "best_daily_wear": {
+          "slug": "selenite",
+          "reason": "best for maintaining a clear, calm energetic field through the day"
+        }
+      },
+      "related_numbers": [
+        "2",
+        "22",
+        "7"
+      ],
+      "related_reason": "2 is 11's grounded root (1+1=2); 22 is the master-builder complement to 11's visionary; 7 shares 11's depth and spiritual seeking"
+    },
+    {
+      "number": 22,
+      "slug": "22",
+      "is_master": true,
+      "archetype": "The Master Builder",
+      "theme": "Vision Made Manifest / Large-Scale Impact",
+      "unique_angle": "the rare capacity to turn visionary ideas into tangible, lasting reality at scale — a Master Number that intensifies the building discipline of 4 (2+2) into master-level manifestation",
+      "primary_intent": "masterful manifestation",
+      "secondary_intent": "legacy",
+      "core_traits": [
+        "visionary-builder",
+        "disciplined",
+        "practical-idealist",
+        "capable",
+        "resilient",
+        "impact-driven"
+      ],
+      "strengths": [
+        "ability to manifest large-scale vision",
+        "rare blend of idealism and practicality",
+        "disciplined execution",
+        "legacy thinking",
+        "capacity to lead projects of lasting impact"
+      ],
+      "challenges": [
+        "immense internal pressure to deliver",
+        "potential for self-doubt given the scale of vision",
+        "burnout from carrying big projects",
+        "frustration when reality lags vision",
+        "all-or-nothing thinking"
+      ],
+      "emotional_state": "purposeful, driven, capable",
+      "recommended_action": "break your big vision into one tangible next step — the master builder builds one stone at a time",
+      "purpose_keyword": "legacy",
+      "ruling_planet_note": "Saturn (intensified) — Master Number amplifying structural mastery and material manifestation",
+      "element": "Earth",
+      "color": "Deep Brown, Gold, Forest Green",
+      "avoid_claims": [
+        "guarantees massive success or fame",
+        "means you are destined for greatness",
+        "cures business or financial failure",
+        "predicts a legacy or historical impact",
+        "is scientifically proven"
+      ],
+      "master_note": "22 is a Master Number. It is the doubled, intensified energy of 2 (cooperation) flowing through the structural discipline of 4 (2+2=4). Called the Master Builder, 22 carries the rare potential to manifest large-scale visionary work. Operating at master level is demanding; many 22s also move through life at the grounded 4 baseline (2+2=4) of steady building.",
+      "crystals": {
+        "best_overall": {
+          "slug": "quartz",
+          "reason": "best for amplifying master-level vision and bringing clarity to large-scale plans"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "reason": "best for staying heart-connected while carrying big projects"
+        },
+        "best_protection": {
+          "slug": "black-tourmaline",
+          "reason": "best for grounding immense pressure and protection during demanding work"
+        },
+        "best_manifestation": {
+          "slug": "pyrite",
+          "reason": "best for sustained focus, abundance, and material follow-through"
+        },
+        "best_daily_wear": {
+          "slug": "tiger-eye",
+          "reason": "best for grounded willpower and steady, capable energy through long builds"
+        }
+      },
+      "related_numbers": [
+        "4",
+        "11",
+        "8"
+      ],
+      "related_reason": "4 is 22's grounded root (2+2=4); 11 is the visionary-messenger complement to 22's builder; 8 shares 22's material mastery and ambition"
+    },
+    {
+      "number": 33,
+      "slug": "33",
+      "is_master": true,
+      "archetype": "The Master Teacher / The Compassionate Healer",
+      "theme": "Selfless Service / Healing / Uplifting Others",
+      "unique_angle": "the rare capacity to uplift humanity through compassion and teaching — a Master Number that intensifies the nurturing care of 6 (3+3) into master-level healing and service",
+      "primary_intent": "compassionate uplift",
+      "secondary_intent": "healing teaching",
+      "core_traits": [
+        "compassionate",
+        "selfless",
+        "healing",
+        "teaching",
+        "nurturing",
+        "idealistic"
+      ],
+      "strengths": [
+        "rare capacity for compassionate service",
+        "ability to heal and uplift others",
+        "teaching and guiding gifts",
+        "embodying universal love",
+        "bringing people together around higher purpose"
+      ],
+      "challenges": [
+        "extreme self-sacrifice and martyrdom",
+        "carrying others' pain as one's own",
+        "burnout from over-service",
+        "idealism vs. practical limits",
+        "difficulty receiving care"
+      ],
+      "emotional_state": "devoted, compassionate, healing",
+      "recommended_action": "serve from a full cup — tend to your own well-being first, so your gift to others is sustainable",
+      "purpose_keyword": "compassionate mastery",
+      "ruling_planet_note": "Venus (intensified) — Master Number amplifying love, harmony, and nurturing",
+      "element": "Earth / Water",
+      "color": "Rose Pink, Green, Soft Gold",
+      "avoid_claims": [
+        "is spiritually superior to other numbers",
+        "means you must sacrifice yourself for others",
+        "guarantees healing ability or teaching success",
+        "cures illness or suffering in others",
+        "is scientifically proven"
+      ],
+      "master_note": "33 is a Master Number. It is the doubled, intensified energy of 3 (expression) flowing through the nurturing care of 6 (3+3=6). Called the Master Teacher or Master Healer, 33 carries the potential for profound compassionate uplift. Operating at master level is rare and demanding; many 33s also live at the grounded 6 baseline (3+3=6) of caring service.",
+      "crystals": {
+        "best_overall": {
+          "slug": "rose-quartz",
+          "reason": "best for universal love and the compassionate heart that defines Master Number 33"
+        },
+        "best_love": {
+          "slug": "rhodonite",
+          "reason": "best for balancing compassion for others with care for self"
+        },
+        "best_protection": {
+          "slug": "black-tourmaline",
+          "reason": "best for grounding and protecting sensitive, service-oriented energy"
+        },
+        "best_manifestation": {
+          "slug": "jade",
+          "reason": "best for heart-centered abundance and harmonious service"
+        },
+        "best_daily_wear": {
+          "slug": "moonstone",
+          "reason": "best for emotional balance and sustaining a nurturing presence"
+        }
+      },
+      "related_numbers": [
+        "6",
+        "9",
+        "11"
+      ],
+      "related_reason": "6 is 33's grounded root (3+3=6); 9 shares 33's universal compassion with broader scope; 11 is the visionary counterpart to 33's healing service"
+    }
+  ]
+}

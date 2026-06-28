@@ -1,0 +1,32 @@
+{
+  "all_count": 15,
+  "mapping": {
+    "amethyst": "amethyst-meaning",
+    "aquamarine": "aquamarine-meaning",
+    "aventurine": "aventurine-meaning",
+    "black-tourmaline": "black-tourmaline-meaning",
+    "blue-sapphire": null,
+    "carnelian": "carnelian-meaning",
+    "citrine": "citrine-meaning",
+    "emerald": null,
+    "garnet": null,
+    "hematite": null,
+    "jade": "jade-meaning",
+    "jadeite": "jadeite-meaning",
+    "labradorite": "labradorite-meaning",
+    "malachite": "malachite-meaning",
+    "moonstone": null,
+    "opal": "opal-meaning",
+    "pearl": null,
+    "peridot": null,
+    "quartz": null,
+    "red-jasper": "red-jasper-meaning",
+    "rose-quartz": "rose-quartz-meaning",
+    "ruby": null,
+    "smoky-quartz": "smoky-quartz-meaning",
+    "sodalite": null,
+    "sunstone": null,
+    "tiger-eye": "tiger-eye-meaning",
+    "topaz": null
+  }
+}

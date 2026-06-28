@@ -1,0 +1,40 @@
+{
+  "_meta": {
+    "purpose": "Tarot Major Arcana 23 篇文章生产 config（22 Major 0-21 + 1 Hub）",
+    "framework": "模板-Tarot文章框架.md v2",
+    "data_source": "07-互动工具/_shared/tarot-knowledge.json（22 牌单源：archetype/upright/reversed/psych/eastern/crystals/chakra/related）",
+    "cta_validation": "_qc/_cta-validation.json（meaning 16 颗含 Read CTA，其余 OMIT；Shop CATEGORY→SEARCH→HEALING_JEWELRY）",
+    "module_weights_source": "框架 §2 module_weights 表（22 牌 M2/M3/M7 差异化重心）",
+    "url_rule": "/tarot-{card-slug}-crystals/（避产品词污染）；Hub /crystals-for-tarot-cards/",
+    "compliance": "archetype for self-reflection；逆位 shadow aspect 非 bad omen；Gentle Note 全站统一"
+  },
+  "module_weights": {
+    "0":  { "M2_upright": "leaps of faith / fresh starts / beginner's mind (悬崖/白玫瑰/小狗画面)", "M3_reversed_tension": "recklessness / avoidance of commitment", "M7_psych": "openness to experience", "M5_focus": "leap with discernment", "eastern": "初发心(beginner's heart) / 菩萨石" },
+    "1":  { "M2_upright": "willpower / resourcefulness / as above so below (四要素桌上/手指天地画面)", "M3_reversed_tension": "manipulation / misuse of power / illusion", "M7_psych": "self-efficacy & agency", "M5_focus": "direct the will with integrity", "eastern": "创造之神原理 / 水晶念珠专注意图" },
+    "2":  { "M2_upright": "inner knowing / the veil / stillness (双柱/帷幕/石榴/月亮画面)", "M3_reversed_tension": "secrets / disconnection from intuition / surface", "M7_psych": "interoceptive awareness", "M5_focus": "sit and listen before analyzing", "eastern": "内观 stillness / 印度 Moonstone lunar" },
+    "3":  { "M2_upright": "abundance / creativity / fertility (麦田/星冠/ lush 画面)", "M3_reversed_tension": "smothering / dependence / creative block", "M7_psych": "nurturance vs overgiving", "M5_focus": "allow receiving as well as giving", "eastern": "Devi 大地母亲 / Venus 心轮" },
+    "4":  { "M2_upright": "structure / authority / foundations (石 throne/羊头/权杖画面)", "M3_reversed_tension": "tyranny / rigidity / abuse of control", "M7_psych": "healthy structure vs control", "M5_focus": "lay one foundation with integrity", "eastern": "'正' uprightness / 战士 Red Jasper" },
+    "5":  { "M2_upright": "tradition / wisdom / lineage (vestments/双柱/两徒画面)", "M3_reversed_tension": "dogma / rebellion / outdated belief", "M7_psych": "conformity vs autonomy", "M5_focus": "examine one inherited belief", "eastern": "藏传 lineage 传承 / Lapis 跨文化智慧石" },
+    "6":  { "M2_upright": "union / values-aligned choice / partnership (天使/双树/双人物画面)", "M3_reversed_tension": "disharmony / values misalignment / avoidance", "M7_psych": "attachment & values", "M5_focus": "weigh a choice against your values", "eastern": "'right association' 择友择道 / Rose Quartz 心轮" },
+    "7":  { "M2_upright": "will / direction / triumph through focus (双 sphinx/战车/权杖画面)", "M3_reversed_tension": "scattered force / aggression / no direction", "M7_psych": "conscientiousness & drive", "M5_focus": "harness opposing pulls toward one aim", "eastern": "'中道' 整合对立 / Hematite 扎根意志" },
+    "8":  { "M2_upright": "courage through softness / patience / inner fortitude (驯狮/无限符号/花环画面)", "M3_reversed_tension": "self-doubt / raw instinct over mastery / burnout", "M7_psych": "emotional regulation", "M5_focus": "meet raw impulse with patient attention", "eastern": "'调伏' taming mind 非暴力 / Tiger Eye 平衡勇气" },
+    "9":  { "M2_upright": "solitude / inner guidance / the lantern (雪峰/提灯/六芒星/杖画面)", "M3_reversed_tension": "isolation / withdrawal / refusal to share wisdom", "M7_psych": "solitude vs isolation", "M5_focus": "schedule solitude that restores", "eastern": "藏传 '闭关' retreat / Labradorite 内在光" },
+    "10": { "M2_upright": "cycles / fate / momentum (大轮/翼兽/四 fixed signs 画面)", "M3_reversed_tension": "resistance to change / bad luck streak / stagnation", "M7_psych": "locus of control", "M5_focus": "sort influence vs not-in-control", "eastern": "无常/轮回非宿命 / Turquoise 丝路护身" },
+    "11": { "M2_upright": "fairness / accountability / balance (剑/秤/双柱/帷幕画面)", "M3_reversed_tension": "injustice / dishonesty / avoidance of responsibility", "M7_psych": "justice sensitivity", "M5_focus": "weigh facts apart from fear", "eastern": "因果 cause-effect 非宿命 / Lapis 真理石" },
+    "12": { "M2_upright": "perspective shift / surrender / pause (倒挂/T树/光环画面)", "M3_reversed_tension": "stalling / martyrdom / refusal to let go", "M7_psych": "cognitive reappraisal", "M5_focus": "argue the opposite side honestly", "eastern": "反转惯常视角 / Selenite 高维清明" },
+    "13": { "M2_upright": "endings / transformation / rebirth (骷髅骑马/落日/双 tower 画面)", "M3_reversed_tension": "resistance to change / stagnation / decay", "M7_psych": "meaning-making after loss", "M5_focus": "acknowledge one thing already ended", "eastern": "'无常' 非 morbidity / Obsidian 诚实之镜" },
+    "14": { "M2_upright": "balance / blending / patience (翼人/双杯倾倒/水陆/路径画面)", "M3_reversed_tension": "excess / imbalance / impatience", "M7_psych": "self-regulation", "M5_focus": "honor two opposing needs", "eastern": "'中道' 动态平衡 / Amethyst '不醉'" },
+    "15": { "M2_upright": "bondage / attachment / shadow awareness (horned figure/松链/双徒画面)", "M3_reversed_tension": "liberation / breaking chains / release", "M7_psych": "shadow integration", "M5_focus": "notice where the chain is already loose", "eastern": "对治内魔(非实体) / Black Tourmaline 守护" },
+    "16": { "M2_upright": "sudden revelation / structural collapse / truth (闪电/坠塔/落冠画面)", "M3_reversed_tension": "avoiding the lesson / resisting necessary change", "M7_psych": "post-traumatic growth", "M5_focus": "name one cracking structure", "eastern": "无常/崩塌即清明 / Smoky Quartz 动荡扎根" },
+    "17": { "M2_upright": "hope / renewal / guidance after storm (跪姿/双器倾倒/八芒星/水池画面)", "M3_reversed_tension": "despair / disconnection from hope / faith lost", "M7_psych": "hope theory & optimism", "M5_focus": "name one small renewing hope", "eastern": "'菩提心' 觉醒心 / Aquamarine 清明水" },
+    "18": { "M2_upright": "intuition / illusion / the subconscious (月亮/双 tower/狼狗/螯虾画面)", "M3_reversed_tension": "confusion released / deception surfacing / clarity returning", "M7_psych": "unconscious processing", "M5_focus": "sit with unclear feeling via images", "eastern": "无意识深处/梦观 / Moonstone 月光内映" },
+    "19": { "M2_upright": "joy / vitality / clarity / success (骄阳/孩童/白马/向日葵画面)", "M3_reversed_tension": "temporary setback / muted joy / ego inflation", "M7_psych": "positive affect", "M5_focus": "tend one source of joy", "eastern": "'明性' luminosity / Sunstone 阳光石" },
+    "20": { "M2_upright": "reckoning / rebirth / calling (天使吹号/复活人物/旗画面)", "M3_reversed_tension": "self-criticism / refusing the call / avoidance", "M7_psych": "self-compassion vs self-criticism", "M5_focus": "tell guidance from self-judgment", "eastern": "如实自省非自责 / Angelite 温柔更高沟通" },
+    "21": { "M2_upright": "completion / integration / wholeness (花环/舞者/四 fixed signs 画面)", "M3_reversed_tension": "incompletion / loose ends / delay of closure", "M7_psych": "self-actualization", "M5_focus": "close one loose end", "eastern": "曼荼罗 圆满即下一环 / Clear Quartz 大师和合" }
+  },
+  "gentle_note": "Tarot and crystal meanings are based on spiritual traditions, symbolism, and personal mindfulness practices. They are a tool for self-reflection and contemplation, not a substitute for medical, financial, or professional advice — and not a prediction of fixed outcomes.",
+  "faq_shared_halves": {
+    "is_bad_card_first_half": "In tarot, no card is inherently 'good' or 'bad' — every card, including reversed positions, is read as information for reflection rather than a fixed outcome.",
+    "can_predict_future_first_half": "No — tarot is a symbolic system used for self-reflection and contemplation, not a tool that predicts fixed outcomes. The cards surface patterns and questions; your choices shape what happens next."
+  }
+}

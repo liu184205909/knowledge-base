@@ -1,0 +1,102 @@
+{
+  "amazonite": {
+    "meaning": "200",
+    "category": "404"
+  },
+  "amethyst": {
+    "meaning": "200",
+    "category": "200"
+  },
+  "apatite": {
+    "meaning": "404",
+    "category": "200"
+  },
+  "aquamarine": {
+    "meaning": "200",
+    "category": "404"
+  },
+  "aventurine": {
+    "meaning": "200",
+    "category": "200"
+  },
+  "black-tourmaline": {
+    "meaning": "200",
+    "category": "200"
+  },
+  "bloodstone": {
+    "meaning": "404",
+    "category": "200"
+  },
+  "carnelian": {
+    "meaning": "200",
+    "category": "200"
+  },
+  "citrine": {
+    "meaning": "500",
+    "category": "200"
+  },
+  "garnet": {
+    "meaning": "404",
+    "category": "404"
+  },
+  "hematite": {
+    "meaning": "404",
+    "category": "200"
+  },
+  "howlite": {
+    "meaning": "404",
+    "category": "404"
+  },
+  "jade": {
+    "meaning": "200",
+    "category": "200"
+  },
+  "lapis": {
+    "meaning": "404",
+    "category": "404"
+  },
+  "malachite": {
+    "meaning": "200",
+    "category": "200"
+  },
+  "moonstone": {
+    "meaning": "404",
+    "category": "404"
+  },
+  "pyrite": {
+    "meaning": "200",
+    "category": "200"
+  },
+  "quartz": {
+    "meaning": "404",
+    "category": "404"
+  },
+  "rhodonite": {
+    "meaning": "404",
+    "category": "200"
+  },
+  "rose-quartz": {
+    "meaning": "200",
+    "category": "200"
+  },
+  "selenite": {
+    "meaning": "200",
+    "category": "200"
+  },
+  "smoky-quartz": {
+    "meaning": "200",
+    "category": "404"
+  },
+  "sunstone": {
+    "meaning": "404",
+    "category": "404"
+  },
+  "tiger-eye": {
+    "meaning": "200",
+    "category": "200"
+  },
+  "turquoise": {
+    "meaning": "404",
+    "category": "200"
+  }
+}

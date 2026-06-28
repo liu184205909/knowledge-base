@@ -1,0 +1,245 @@
+{
+  "amethyst": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/amethyst-meaning/",
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/amethyst-crystals/",
+    "status_meaning": "200",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "aquamarine": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/aquamarine-meaning/",
+    "shop_cta": "SEARCH",
+    "shop_url": "/shop/?s=aquamarine",
+    "status_meaning": "200",
+    "status_category": "404",
+    "status": "OK"
+  },
+  "aventurine": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/aventurine-meaning/",
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/aventurine-crystals/",
+    "status_meaning": "200",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "black-tourmaline": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/black-tourmaline-meaning/",
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/black-tourmaline-crystals/",
+    "status_meaning": "200",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "blue-sapphire": {
+    "meaning_cta": "OMIT",
+    "meaning_url": null,
+    "shop_cta": "SEARCH",
+    "shop_url": "/shop/?s=blue-sapphire",
+    "status_meaning": "404",
+    "status_category": "404",
+    "status": "OK"
+  },
+  "carnelian": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/carnelian-meaning/",
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/carnelian-crystals/",
+    "status_meaning": "200",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "citrine": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/citrine-meaning/",
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/citrine-crystals/",
+    "status_meaning": "200",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "emerald": {
+    "meaning_cta": "OMIT",
+    "meaning_url": null,
+    "shop_cta": "SEARCH",
+    "shop_url": "/shop/?s=emerald",
+    "status_meaning": "404",
+    "status_category": "404",
+    "status": "OK"
+  },
+  "garnet": {
+    "meaning_cta": "OMIT",
+    "meaning_url": null,
+    "shop_cta": "SEARCH",
+    "shop_url": "/shop/?s=garnet",
+    "status_meaning": "404",
+    "status_category": "404",
+    "status": "OK"
+  },
+  "hematite": {
+    "meaning_cta": "OMIT",
+    "meaning_url": null,
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/hematite-crystals/",
+    "status_meaning": "404",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "jade": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/jade-meaning/",
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/jade-crystals/",
+    "status_meaning": "200",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "jadeite": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/jadeite-meaning/",
+    "shop_cta": "SEARCH",
+    "shop_url": "/shop/?s=jadeite",
+    "status_meaning": "200",
+    "status_category": "404",
+    "status": "OK"
+  },
+  "labradorite": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/labradorite-meaning/",
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/labradorite-crystals/",
+    "status_meaning": "200",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "malachite": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/malachite-meaning/",
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/malachite-crystals/",
+    "status_meaning": "200",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "moonstone": {
+    "meaning_cta": "OMIT",
+    "meaning_url": null,
+    "shop_cta": "SEARCH",
+    "shop_url": "/shop/?s=moonstone",
+    "status_meaning": "404",
+    "status_category": "404",
+    "status": "OK"
+  },
+  "opal": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/opal-meaning/",
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/opal-crystals/",
+    "status_meaning": "200",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "pearl": {
+    "meaning_cta": "OMIT",
+    "meaning_url": null,
+    "shop_cta": "SEARCH",
+    "shop_url": "/shop/?s=pearl",
+    "status_meaning": "404",
+    "status_category": "404",
+    "status": "OK"
+  },
+  "peridot": {
+    "meaning_cta": "OMIT",
+    "meaning_url": null,
+    "shop_cta": "SEARCH",
+    "shop_url": "/shop/?s=peridot",
+    "status_meaning": "404",
+    "status_category": "404",
+    "status": "OK"
+  },
+  "quartz": {
+    "meaning_cta": "OMIT",
+    "meaning_url": null,
+    "shop_cta": "SEARCH",
+    "shop_url": "/shop/?s=quartz",
+    "status_meaning": "404",
+    "status_category": "404",
+    "status": "OK"
+  },
+  "red-jasper": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/red-jasper-meaning/",
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/red-jasper-crystals/",
+    "status_meaning": "200",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "rose-quartz": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/rose-quartz-meaning/",
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/rose-quartz-crystals/",
+    "status_meaning": "200",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "ruby": {
+    "meaning_cta": "OMIT",
+    "meaning_url": null,
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/ruby-crystals/",
+    "status_meaning": "404",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "smoky-quartz": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/smoky-quartz-meaning/",
+    "shop_cta": "SEARCH",
+    "shop_url": "/shop/?s=smoky-quartz",
+    "status_meaning": "200",
+    "status_category": "404",
+    "status": "OK"
+  },
+  "sodalite": {
+    "meaning_cta": "OMIT",
+    "meaning_url": null,
+    "shop_cta": "SEARCH",
+    "shop_url": "/shop/?s=sodalite",
+    "status_meaning": "404",
+    "status_category": "404",
+    "status": "OK"
+  },
+  "sunstone": {
+    "meaning_cta": "OMIT",
+    "meaning_url": null,
+    "shop_cta": "SEARCH",
+    "shop_url": "/shop/?s=sunstone",
+    "status_meaning": "404",
+    "status_category": "404",
+    "status": "OK"
+  },
+  "tiger-eye": {
+    "meaning_cta": "INCLUDE",
+    "meaning_url": "/gemstone/tiger-eye-meaning/",
+    "shop_cta": "CATEGORY",
+    "shop_url": "/product-category/tiger-eye-crystals/",
+    "status_meaning": "200",
+    "status_category": "200",
+    "status": "OK"
+  },
+  "topaz": {
+    "meaning_cta": "OMIT",
+    "meaning_url": null,
+    "shop_cta": "SEARCH",
+    "shop_url": "/shop/?s=topaz",
+    "status_meaning": "404",
+    "status_category": "404",
+    "status": "OK"
+  }
+}

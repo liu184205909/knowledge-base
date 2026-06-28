@@ -1,0 +1,187 @@
+{
+  "total": 23,
+  "articles": [
+    {
+      "slug": "the-fool",
+      "number": 0,
+      "name": "The Fool",
+      "title": "The Fool Tarot Card Meaning & Best Crystals",
+      "theme": "New beginnings, leaps of faith, beginner's mind",
+      "is_hub": false
+    },
+    {
+      "slug": "the-magician",
+      "number": 1,
+      "name": "The Magician",
+      "title": "The Magician Tarot Card Meaning & Best Crystals",
+      "theme": "Willpower, resourcefulness, 'as above so below'",
+      "is_hub": false
+    },
+    {
+      "slug": "the-high-priestess",
+      "number": 2,
+      "name": "The High Priestess",
+      "title": "The High Priestess Tarot Card Meaning & Best Crystals",
+      "theme": "Inner knowing, the veil between conscious and unconscious, stillness",
+      "is_hub": false
+    },
+    {
+      "slug": "the-empress",
+      "number": 3,
+      "name": "The Empress",
+      "title": "The Empress Tarot Card Meaning & Best Crystals",
+      "theme": "Abundance, creativity, fertility, embodied care",
+      "is_hub": false
+    },
+    {
+      "slug": "the-emperor",
+      "number": 4,
+      "name": "The Emperor",
+      "title": "The Emperor Tarot Card Meaning & Best Crystals",
+      "theme": "Structure, authority, foundations, healthy boundaries",
+      "is_hub": false
+    },
+    {
+      "slug": "the-hierophant",
+      "number": 5,
+      "name": "The Hierophant",
+      "title": "The Hierophant Tarot Card Meaning & Best Crystals",
+      "theme": "Tradition, lineage, wisdom, learned structure",
+      "is_hub": false
+    },
+    {
+      "slug": "the-lovers",
+      "number": 6,
+      "name": "The Lovers",
+      "title": "The Lovers Tarot Card Meaning & Best Crystals",
+      "theme": "Union, values-aligned choice, partnership",
+      "is_hub": false
+    },
+    {
+      "slug": "the-chariot",
+      "number": 7,
+      "name": "The Chariot",
+      "title": "The Chariot Tarot Card Meaning & Best Crystals",
+      "theme": "Will, direction, triumph through focused effort",
+      "is_hub": false
+    },
+    {
+      "slug": "strength",
+      "number": 8,
+      "name": "Strength",
+      "title": "Strength Tarot Card Meaning & Best Crystals",
+      "theme": "Courage through softness, patience, inner fortitude",
+      "is_hub": false
+    },
+    {
+      "slug": "the-hermit",
+      "number": 9,
+      "name": "The Hermit",
+      "title": "The Hermit Tarot Card Meaning & Best Crystals",
+      "theme": "Solitude, inner guidance, the lantern of self-knowledge",
+      "is_hub": false
+    },
+    {
+      "slug": "wheel-of-fortune",
+      "number": 10,
+      "name": "Wheel of Fortune",
+      "title": "Wheel of Fortune Tarot Card Meaning & Best Crystals",
+      "theme": "Cycles, change, the turning of fortune, momentum",
+      "is_hub": false
+    },
+    {
+      "slug": "justice",
+      "number": 11,
+      "name": "Justice",
+      "title": "Justice Tarot Card Meaning & Best Crystals",
+      "theme": "Fairness, accountability, truth, balance",
+      "is_hub": false
+    },
+    {
+      "slug": "the-hanged-man",
+      "number": 12,
+      "name": "The Hanged Man",
+      "title": "The Hanged Man Tarot Card Meaning & Best Crystals",
+      "theme": "Perspective shift, surrender, willing pause",
+      "is_hub": false
+    },
+    {
+      "slug": "death",
+      "number": 13,
+      "name": "Death",
+      "title": "Death Tarot Card Meaning & Best Crystals",
+      "theme": "Endings, transformation, the clearing that makes space for rebirth",
+      "is_hub": false
+    },
+    {
+      "slug": "temperance",
+      "number": 14,
+      "name": "Temperance",
+      "title": "Temperance Tarot Card Meaning & Best Crystals",
+      "theme": "Balance, blending, patience, the middle way",
+      "is_hub": false
+    },
+    {
+      "slug": "the-devil",
+      "number": 15,
+      "name": "The Devil",
+      "title": "The Devil Tarot Card Meaning & Best Crystals",
+      "theme": "Bondage, attachment, shadow awareness — and the liberation that comes from seeing it",
+      "is_hub": false
+    },
+    {
+      "slug": "the-tower",
+      "number": 16,
+      "name": "The Tower",
+      "title": "The Tower Tarot Card Meaning & Best Crystals",
+      "theme": "Sudden revelation, structural collapse, the truth that breaks what was unstable",
+      "is_hub": false
+    },
+    {
+      "slug": "the-star",
+      "number": 17,
+      "name": "The Star",
+      "title": "The Star Tarot Card Meaning & Best Crystals",
+      "theme": "Hope, renewal, guidance after the storm",
+      "is_hub": false
+    },
+    {
+      "slug": "the-moon",
+      "number": 18,
+      "name": "The Moon",
+      "title": "The Moon Tarot Card Meaning & Best Crystals",
+      "theme": "Intuition, the subconscious, illusion, what is hidden coming to light",
+      "is_hub": false
+    },
+    {
+      "slug": "the-sun",
+      "number": 19,
+      "name": "The Sun",
+      "title": "The Sun Tarot Card Meaning & Best Crystals",
+      "theme": "Joy, vitality, clarity, success",
+      "is_hub": false
+    },
+    {
+      "slug": "judgment",
+      "number": 20,
+      "name": "Judgment",
+      "title": "Judgment Tarot Card Meaning & Best Crystals",
+      "theme": "Reckoning, rebirth, hearing the call to a larger life",
+      "is_hub": false
+    },
+    {
+      "slug": "the-world",
+      "number": 21,
+      "name": "The World",
+      "title": "The World Tarot Card Meaning & Best Crystals",
+      "theme": "Completion, integration, wholeness — the end of a cycle",
+      "is_hub": false
+    },
+    {
+      "slug": "crystals-for-tarot-cards",
+      "name": "Crystals for Tarot Cards",
+      "title": "Crystals for Tarot Cards: Major Arcana Meanings & Stone Pairings",
+      "is_hub": true
+    }
+  ]
+}

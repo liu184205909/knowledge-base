@@ -1,0 +1,114 @@
+{
+  "combos": {
+    "amethyst-and-carnelian": {
+      "exists": true,
+      "id": 44440,
+      "status": "future",
+      "featured_media": 44549
+    },
+    "carnelian-and-larimar": {
+      "exists": true,
+      "id": 44416,
+      "status": "future",
+      "featured_media": 44625
+    },
+    "citrine-and-larimar": {
+      "exists": true,
+      "id": 44428,
+      "status": "future",
+      "featured_media": 44637
+    },
+    "jade-and-black-tourmaline": {
+      "exists": true,
+      "id": 44444,
+      "status": "future",
+      "featured_media": 44680
+    },
+    "larimar-and-pyrite": {
+      "exists": true,
+      "id": 44436,
+      "status": "future",
+      "featured_media": 44767
+    },
+    "moonstone-and-citrine": {
+      "exists": true,
+      "id": 44452,
+      "status": "future",
+      "featured_media": 44799
+    },
+    "moonstone-and-pyrite": {
+      "exists": true,
+      "id": 44424,
+      "status": "future",
+      "featured_media": 44803
+    },
+    "moonstone-and-ruby": {
+      "exists": true,
+      "id": 44420,
+      "status": "future",
+      "featured_media": 44811
+    },
+    "opal-and-malachite": {
+      "exists": true,
+      "id": 44432,
+      "status": "future",
+      "featured_media": 44851
+    },
+    "rose-quartz-and-obsidian": {
+      "exists": true,
+      "id": 44448,
+      "status": "future",
+      "featured_media": 44879
+    },
+    "selenite-and-red-jasper": {
+      "exists": true,
+      "id": 44456,
+      "status": "future",
+      "featured_media": 44927
+    },
+    "tiger-eye-and-larimar": {
+      "exists": true,
+      "id": 44412,
+      "status": "future",
+      "featured_media": 44947
+    },
+    "turquoise-and-malachite": {
+      "exists": true,
+      "id": 44460,
+      "status": "future",
+      "featured_media": 44979
+    }
+  },
+  "intentions": {
+    "calm-mindfulness": {
+      "exists": true,
+      "id": 16883,
+      "status": "publish",
+      "featured_media": 0
+    },
+    "love-relationships": {
+      "exists": true,
+      "id": 16879,
+      "status": "publish",
+      "featured_media": 0
+    },
+    "protection-clearing": {
+      "exists": true,
+      "id": 16882,
+      "status": "publish",
+      "featured_media": 0
+    },
+    "abundance-success": {
+      "exists": true,
+      "id": 16881,
+      "status": "publish",
+      "featured_media": 0
+    },
+    "spiritual-connection": {
+      "exists": true,
+      "id": 16884,
+      "status": "publish",
+      "featured_media": 0
+    }
+  }
+}

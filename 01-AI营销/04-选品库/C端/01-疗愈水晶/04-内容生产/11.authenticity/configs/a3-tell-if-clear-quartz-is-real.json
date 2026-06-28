@@ -1,0 +1,91 @@
+{
+  "_meta": {
+    "article": "A3",
+    "purpose": "白水晶专篇 — 玻璃冒充重灾区，clarified/reconstituted/synthetic三档区分，比重2.65+气泡",
+    "framework_ref": "模板-水晶真伪鉴别文章框架.md §0 A3 + §5",
+    "created": "2026-06-28"
+  },
+  "slug": "how-to-tell-if-clear-quartz-is-real",
+  "url": "/blog/how-to-tell-if-clear-quartz-is-real/",
+  "subject_label": "Clear Quartz",
+  "subject_scope": "single-stone-clear-quartz",
+  "title": "How to Tell If Clear Quartz Is Real: 6 Tests That Work",
+  "h1": "How to Tell If Clear Quartz Is Real",
+  "primary_kw": "how to tell if clear quartz is real",
+  "secondary_kw": ["real vs fake clear quartz", "is my clear quartz real", "fake clear quartz", "genuine clear quartz", "quartz vs glass"],
+  "word_target": 2400,
+  "word_range": "2200-2700",
+  "quality_tier": "high",
+  "date_published": "2026-06-28",
+  "date_modified": "2026-06-28",
+  "crystal_vs_glass_section": false,
+  "methods_used": ["bubbles", "hardness", "temperature", "specific_gravity", "refractive_index", "naming"],
+  "stone_cases": ["clear_quartz"],
+  "mineral_table_position": "m4",
+  "m3_heading": "How to Tell If Clear Quartz Is Real: 6 Tests",
+  "m4_heading": "Clear Quartz: Deep Dive (Natural vs Glass vs Reconstituted vs Synthetic)",
+  "m4_mode": "single_deep_dive",
+  "series_links": {
+    "to_flagship": { "anchor": "How to Tell If a Crystal Is Real (full 10-test guide)", "url": "/blog/how-to-tell-if-crystal-is-real/" },
+    "to_hub": { "anchor": "Most Faked Crystals: the full list", "url": "/blog/most-faked-crystals/" }
+  },
+  "author": {
+    "name": "Earthward Editorial Team",
+    "byline": "Earthward's crystal care and sourcing team",
+    "reviewed_by": "Earthward's mineral-sourcing reviewers"
+  },
+  "buying_guide": {
+    "shop_cta_target": "/product-category/clear-quartz-crystals/",
+    "shop_cta_anchor": "Shop genuine clear quartz"
+  },
+  "faq_picks": {
+    "intent": [
+      "How can you tell if clear quartz is real or glass?",
+      "Does real clear quartz have bubbles inside?",
+      "What is the most reliable test for clear quartz?",
+      "Can clear quartz scratch glass?"
+    ],
+    "conversion": [
+      "Where can I buy genuine clear quartz?",
+      "Is clear quartz valuable?",
+      "What does 'reconstituted quartz' mean?"
+    ],
+    "trust": [
+      "Can home tests guarantee clear quartz is real?",
+      "Is reconstituted quartz the same as natural quartz?"
+    ],
+    "selective": [
+      "Why does my clear quartz have a rainbow inside?"
+    ]
+  },
+  "internal_links": {
+    "meaning_min": 3,
+    "flagship": { "anchor": "How to Tell If a Crystal Is Real", "url": "/blog/how-to-tell-if-crystal-is-real/" },
+    "amethyst": { "anchor": "Real vs Fake Amethyst (another heavily faked quartz)", "url": "/blog/real-vs-fake-amethyst/" },
+    "hub": { "anchor": "Most Faked Crystals", "url": "/blog/most-faked-crystals/" }
+  },
+  "schema": {
+    "types": ["Article", "FAQPage", "BreadcrumbList"],
+    "howto_name": "How to Tell If Clear Quartz Is Real",
+    "howto_total_time": "PT15M",
+    "howto_steps": [
+      { "step": 1, "name": "Check for bubbles with a 10x loupe", "text": "Round bubbles mean glass; natural clear quartz has irregular inclusions (needles, veils) or none." },
+      { "step": 2, "name": "Hardness test on rough stones only", "text": "Genuine quartz (Mohs 7) scratches glass; glass imitations cannot. Never use on polished jewelry." },
+      { "step": 3, "name": "Temperature and heft", "text": "Genuine quartz feels cool and has the right density (SG 2.65); plastic and some glass feel lighter." },
+      { "step": 4, "name": "Spot the naming trap", "text": "'Crystal quartz' sold cheaply is often glass — natural quartz is properly called 'quartz.'" },
+      { "step": 5, "name": "Distinguish the three tiers", "text": "Natural (minor inclusions) vs clarified/reconstituted (too perfect) vs pure glass (bubbles, flow lines)." }
+    ]
+  },
+  "compliance": {
+    "avoid": ["100% genuine", "100% authentic", "guaranteed real", "verified authentic", "always works", "never fails", "the only way to know"],
+    "gentle_note": "Clear quartz identification tests combine practical mineralogy (bubbles, hardness, density) with marketplace awareness. Because clear quartz is affordable, the fakes tend to be cheap glass beads sold in bulk — but a gemological lab can confirm any high-value specimen. Crystal meanings are separate from authenticity.",
+    "brand_tagline": "We name our stones and sources — return to what's real.",
+    "ai_banned_words": ["delve", "tapestry", "realm", "unlock your potential", "manifest abundance", "elevate your vibration"]
+  },
+  "three_perspectives": { "science": "60%", "spirituality": "20%", "psychology": "20%" },
+  "image_plan": {
+    "hero": { "size": "1536x864", "scene": "genuine clear quartz cluster with natural inclusions", "filename": "how-to-tell-if-clear-quartz-is-real-hero.jpg" },
+    "comparison": { "size": "1200x800", "scene": "clear quartz natural inclusions vs glass bubbles side by side (10x loupe)", "filename": "how-to-tell-if-clear-quartz-is-real-bubbles.jpg" },
+    "test_diagram": { "size": "1200x800", "scene": "hardness scratch test clear quartz on glass", "filename": "how-to-tell-if-clear-quartz-is-real-scratch.jpg" }
+  }
+}

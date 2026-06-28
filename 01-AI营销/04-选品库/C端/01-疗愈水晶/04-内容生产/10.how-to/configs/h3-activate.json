@@ -1,0 +1,283 @@
+{
+  "_meta": {
+    "framework": "How-to 框架 v2",
+    "purpose": "H3 轻量 — How to Activate Crystals (activate 720蓝海，集群完整性补丁)",
+    "created": "2026-06-28",
+    "quality_tier": "lightweight",
+    "diff_angle": "activate vs program(开机vs装软件)；new crystal first-use ritual前置(安全准备→激活)；新手starter套装CTA"
+  },
+  "article": "H3",
+  "slug": "how-to-activate-crystals",
+  "url": "/blog/how-to-activate-crystals/",
+  "action": "activate",
+  "action_gerund": "activating",
+  "title": "How to Activate Crystals: Meaning, Steps & Intentions",
+  "h1": "How to Activate Crystals",
+  "primary_kw": "how to activate crystals",
+  "secondary_kw": ["how to activate a crystal", "activating crystals", "crystal activation", "how to activate a crystal for the first time"],
+  "word_target": 2200,
+  "word_range": "2000-2400",
+  "concept_focus": "activate_vs_program_only（局部对比，比喻：新手机首次开机→后续才装app；不重复H1完整四概念表）",
+  "concept_table_mode": "local_only",
+  "local_concept_pair": {
+    "focus": "Activate vs Program",
+    "metaphor": "activate = turning on a new phone for the first time; program = installing an app later (不用H1的唤醒沉睡叙事)",
+    "order_rule": "you can activate without programming — 激活是开机，编程是设指令，可激活不编程",
+    "link_to_h1": "For the full four-concept comparison (Cleanse, Charge, Activate, Program), see How to Cleanse Crystals"
+  },
+  "methods_used": ["moonlight", "selenite", "sound", "meditation-focus"],
+  "methods_subset": "activate subset (4 methods)",
+  "methods_risk_tiers": {
+    "tier1_safe": {
+      "label": "🟢 Tier 1 — Safest & Recommended for All Stones",
+      "subtitle": "最安全通用，新石首次激活首选",
+      "methods": ["moonlight", "selenite", "sound"],
+      "narrative_variant": ["新石首次激活叙事", "静默放置叙事", "音钵唤醒叙事"]
+    },
+    "tier2_conditional": {
+      "label": "🟡 Tier 2 — Personal Practice",
+      "subtitle": "个人实践，需专注",
+      "methods": ["meditation-focus"]
+    },
+    "tier3_caution": {
+      "label": "",
+      "subtitle": "",
+      "methods": []
+    }
+  },
+  "methods_data": {
+    "moonlight": {
+      "name": "Moonlight (First Full Moon)",
+      "icon": "🌙",
+      "duration_label": "Overnight (8+ hours)",
+      "safe": "all",
+      "tradition": "Placing a new stone under its first full moon is considered a meaningful way to 'switch it on' — a monthly activation tied to the lunar cycle.",
+      "practical": "Moonlight is reflected sunlight at roughly 1/400,000 the intensity — gentle enough for every mineral, including color-sensitive stones.",
+      "steps": ["Place the new crystal on a windowsill at sunset", "Leave overnight (8+ hours); the full moon is ideal for a first activation", "Bring in before sunrise to avoid dew or direct sun"],
+      "best_for_default": "every new stone — especially color-sensitive quartz (amethyst, rose quartz) and a first activation where you want zero risk. The full moon is the classic activation moment."
+    },
+    "selenite": {
+      "name": "Selenite Plate (24-Hour Rest)",
+      "icon": "✨",
+      "duration_label": "24 hours",
+      "safe": "all",
+      "tradition": "Resting a new stone on a selenite plate for a full day is said to clear and ready it — a passive activation while you go about your day.",
+      "practical": "No chemical interaction — completely harmless. Handle gently, as selenite itself is soft (Mohs 2).",
+      "steps": ["Place the new crystal on a selenite plate, bowl, or bar", "Leave for a full 24 hours", "Avoid dragging hard stones across the selenite surface"],
+      "best_for_default": "jewelry and soft stones above all — a no-contact activation that also works while you sleep or work. Ideal for a new bracelet you don't want to handle roughly."
+    },
+    "sound": {
+      "name": "Sound (Singing Bowl Wake)",
+      "icon": "🔔",
+      "duration_label": "5–10 minutes",
+      "safe": "all",
+      "tradition": "Sustained sound vibrations are believed to 'wake' a dormant stone — a fast activation for a new piece.",
+      "practical": "Sound waves are far too low-energy to affect any mineral's structure — harmless to every stone.",
+      "steps": ["Play a singing bowl, bell, or tuning fork near the new crystal", "Continue for 5–10 minutes", "Works for several new stones at once"],
+      "best_for_default": "when you have several new stones to activate at once, or want a fast ritual. A Tibetan singing bowl gives a grounding, ceremonial feel."
+    },
+    "meditation-focus": {
+      "name": "Hold & Focus (Meditation)",
+      "icon": "🤲",
+      "duration_label": "10–15 minutes",
+      "safe": "all",
+      "tradition": "Holding a new stone in stillness while breathing deeply is considered a personal way to 'start working' with it — the stone becomes a focus for your attention.",
+      "practical": "No physical effect on the stone — this is a mindfulness practice that turns the object into a personal cue.",
+      "steps": ["Find a quiet space and sit comfortably", "Hold the new crystal in your receiving (non-dominant) hand", "Breathe slowly for 10–15 minutes, simply noticing the stone", "End when it feels ready — there is no fixed duration"],
+      "best_for_default": "those who want a personal, hands-on activation ritual — holding a new stone in meditation marks it as yours and begins the relationship. Pairs naturally with setting an intention later (programming)."
+    }
+  },
+  "new_crystal_first_use_ritual": {
+    "enabled": true,
+    "position": "M2前置（安全准备→才激活，不过早概念辨析）",
+    "steps": [
+      "Identify the stone (affects tolerance — soft/porous/copper-bearing stones need no-contact activation)",
+      "Check water/sun tolerance before any handling (use the Cleansing Timer if unsure)",
+      "Cleanse first (a new stone has passed through many hands) — see How to Cleanse Crystals",
+      "Then activate with one of the safe methods below"
+    ],
+    "compliance": "Marking a new piece as your own — a small ceremony that turns an object into a personal keepsake."
+  },
+  "crystals": {
+    "main_commercial": {
+      "slug": "clear-quartz",
+      "role": "starter",
+      "role_label": "The Beginner's First Stone",
+      "reason": "Durable (Mohs 7), forgiving, and a neutral staple — the classic first crystal to activate and learn the ritual on",
+      "compliance_phrase": "A versatile piece collectors often describe as a neutral staple that pairs with any setting"
+    },
+    "semantic_match": {
+      "slug": "selenite",
+      "role": "passive-activator",
+      "role_label": "The Passive Activator Stone",
+      "reason": "Traditionally self-cleansing and used as a plate to ready other stones — a stone that activates others by proximity",
+      "compliance_phrase": "A self-cleansing stone many use as a display plate to rest other pieces on — a practical care choice"
+    },
+    "entry_price": {
+      "slug": "amethyst",
+      "role": "nightstand",
+      "role_label": "The Nightstand Favorite",
+      "reason": "A common first stone kept by the bed — activate with moonlight (not sun, color fades) as part of a wind-down ritual",
+      "compliance_phrase": "A stone many keep on their nightstand as part of a wind-down ritual before bed"
+    },
+    "niche": {
+      "slug": "moonstone",
+      "role": "lunar-activate",
+      "role_label": "The Lunar Activation Favorite",
+      "reason": "Soft iridescent sheen with a natural link to moon-phase activation traditions — a meaningful first-full-moon stone",
+      "compliance_phrase": "A stone many choose for its soft iridescent sheen and connection to lunar ritual traditions"
+    },
+    "safety_warning": {
+      "slug": "calcite",
+      "role": "soft-stone-caution",
+      "role_label": "The Soft-Stone Caution",
+      "reason": "Mohs 3 and reacts with acids — handle gently during hold-and-focus activation; no water/sun, use no-contact methods",
+      "compliance_phrase": "A soft stone collectors keep for its range of gentle colors — a specimen best cared for with no-contact methods"
+    },
+    "jewelry_scene": {
+      "slug": "rose-quartz",
+      "role": "bracelet",
+      "role_label": "The Bracelet First-Activation",
+      "reason": "A common first bracelet — activate with moonlight/selenite (no sun, color fades) before first wear",
+      "compliance_phrase": "A rose quartz bracelet many people wear as a daily reminder to be gentle with themselves"
+    }
+  },
+  "data_snapshot": {
+    "cleansing_knowledge_version": "v1.0 (activate subset: moonlight/selenite/sound/meditation-focus — 前3法复用时长，meditation-focus为activate专属)",
+    "mineral_safety_reference_version": "v1.0 (14 stones, 校准selenite=soft/keep dry, amethyst/rose-quartz=sun avoid)",
+    "crystal_attributes_version": "390 stones",
+    "verified_date": "2026-06-28",
+    "verified_by": "数据一致性 diff + 人工抽检"
+  },
+  "tool_cta": {
+    "enabled": true,
+    "tool": "cleansing-timer",
+    "tool_url": "/tools/crystal-cleansing-timer/",
+    "cta_type": "decision_card",
+    "positions": [
+      "M3-end-decision-card (主决策卡)",
+      "M7-pre-bottom (底部曝光卡)"
+    ],
+    "card_template": "> 💡 **Activating a new stone? Check its safety first.**\n> Enter your stone name in the **[Crystal Cleansing Timer](/tools/crystal-cleansing-timer/)** →\n> confirm its water/sun tolerance, then pick a safe activation method."
+  },
+  "jewelry_angle": {
+    "enabled": true,
+    "mode": "interspersed",
+    "insertion_points": {
+      "M2-first-use": "新手链到家：先cleanse(去除经手残留)→再activate(moonlight/selenite过夜)→首次佩戴",
+      "M3-selenite": "首饰专长：新手链放selenite plate上24h激活，零接触零风险",
+      "M3-meditation-focus": "握石激活时traditionally用非主导手(接收手)；标'traditionally'非规则",
+      "M7-faq": "Do I need to activate a new crystal bracelet? → 建议首次佩戴前activate(moonlight/selenite)，标记为你的"
+    },
+    "m6_role": "brief starter-kit CTA (新手starter套装：clear quartz+selenite plate+rose quartz bracelet)"
+  },
+  "eastern_touch": {
+    "moonlight": "满月冥想 / 月相周期 ritual (新石首次满月激活)",
+    "sound": "Tibetan singing bowl / 颂钵 (唤醒新石，站点实卖铜器)",
+    "meditation-focus": "禅修 / 呼吸正念 (东方冥想传统，握石静坐)"
+  },
+  "safety_first_narrative": {
+    "M1_quick_answer": [
+      "新石激活最安全法 = moonlight / selenite plate / sound / hold-and-focus meditation",
+      "激活前先cleanse(新石经手多人)再activate；soft/porous石用no-contact法",
+      "进入方法前一句话'new crystal first-use ritual: 识别→查耐受→cleanse→activate'"
+    ],
+    "M2_order_hardware": [
+      "第一段(first-use ritual前置): 新石到家先做什么(识别→查耐受→cleanse)——不过早概念辨析",
+      "第二段(为什么activate): 传统/象征(开机, 标记为己, 开始工作)",
+      "第三段(概念区分): Activate vs Program局部对比(开机vs装软件) + 内链H1完整四概念表"
+    ],
+    "compliance_phrasing": "symbolic energy state / traditionally believed to / many people experience"
+  },
+  "faq_picks": {
+    "intent": [
+      "How do I activate my crystals for the first time?",
+      "What is the best way to activate crystals?",
+      "How long does it take to activate a crystal?",
+      "Do I need to activate a new crystal?"
+    ],
+    "conversion": [
+      "Which crystals are easiest to activate for beginners?",
+      "Do I need to activate a crystal bracelet before wearing it?",
+      "Do I need any tools to activate crystals?"
+    ],
+    "trust": [
+      "Is there scientific evidence that activating crystals does anything?",
+      "What happens if I don't activate my crystal?"
+    ],
+    "selective": [
+      "What is the difference between activating and programming a crystal?",
+      "Can I activate a crystal without cleansing it first?"
+    ]
+  },
+  "internal_links": {
+    "meaning_min": 3,
+    "condition": {
+      "anchor": "Crystals for Anxiety",
+      "url": "/crystals-for-anxiety/"
+    },
+    "intention": {
+      "anchor": "Shop Calm & Mindfulness",
+      "url": "/calm-mindfulness/"
+    },
+    "hub_flagship": {
+      "anchor": "How to Cleanse Crystals (full four-concept comparison)",
+      "url": "/blog/how-to-cleanse-crystals/"
+    },
+    "h1_cleanse_link": {
+      "anchor": "How to Cleanse Crystals (cleanse before activate)",
+      "url": "/blog/how-to-cleanse-crystals/"
+    },
+    "h4_program_link": {
+      "anchor": "How to Program Crystals (set an intention after activating)",
+      "url": "/blog/how-to-program-crystals/"
+    },
+    "h6_use_link": {
+      "anchor": "How to Use Crystals (beginner's overview)",
+      "url": "/blog/how-to-use-crystals/"
+    },
+    "shop_fallback": "/product-category/healing-crystals-jewelry/"
+  },
+  "schema": {
+    "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+    "howto_structure": "6-step universal activate flow",
+    "howto_focus": "knowledge safety steps",
+    "howto_6_steps": [
+      {"step": 1, "name": "Identify your new crystal", "text": "确认石种(影响耐受性)——soft/porous/copper-bearing石需no-contact激活法"},
+      {"step": 2, "name": "Check water/sun tolerance", "text": "查mineral-safety-reference或cleansing-timer工具，确认激活方式安全"},
+      {"step": 3, "name": "Cleanse first", "text": "新石经手多人，先cleanse(moonlight/selenite/sound/smoke)再activate"},
+      {"step": 4, "name": "Choose a safe activation method", "text": "从4法中选(moonlight/selenite/sound/hold-and-focus)；soft石优先no-contact"},
+      {"step": 5, "name": "Activate for recommended time", "text": "按该方法时长(moonlight 8+hrs/selenite 24h/sound 5-10min/meditation 10-15min)"},
+      {"step": 6, "name": "Wear or place mindfully", "text": "激活后佩戴或放置——可作为日常正念提醒；后续可选program设定意图"}
+    ],
+    "howto_name": "How to Activate Crystals Safely",
+    "howto_total_time": "PT8H",
+    "faq_page_schema_consistency": "FAQ答案与Schema FAQPage严格一致"
+  },
+  "compliance": {
+    "avoid": [
+      "awakens the crystal's magical properties",
+      "unlocks the crystal's power",
+      "switches on the crystal's energy",
+      "removes negative energy",
+      "supercharges"
+    ],
+    "phrase_library_version": "v1.0（框架v2 §11.2）",
+    "gentle_note": "Crystal activation practices are based on spiritual traditions, symbolism, and personal mindfulness. There is no scientific evidence that crystals store or release energy, but the safety guidance (which stones tolerate water, sun, or handling) is real mineralogy — and the reason a mindful ritual can coexist with caring for your stones.",
+    "ai_banned_words": ["delve", "tapestry", "realm", "journey（叙事）", "unlock your potential", "manifest abundance", "elevate your vibration"],
+    "chemistry_case_sensitive": "SiO₂（非sio₂）/ CaCO₃ — 校验用includes('sio₂')"
+  },
+  "three_perspectives": {
+    "science": "40%",
+    "spirituality": "40%",
+    "psychology": "20%",
+    "style": "融在段落里"
+  },
+  "image_plan": {
+    "hero": {"size": "1536x864", "scene": "新水晶+selenite plate+月光(首次激活主题视觉)", "filename": "how-to-activate-crystals-hero.jpg"},
+    "step_diagrams": [
+      {"size": "1200x800", "scene": "手持新水晶冥想激活(hold-and-focus)", "filename": "how-to-activate-crystals-meditation.jpg"}
+    ],
+    "jewelry_scene": {"size": "1200x800", "scene": "新手链selenite plate激活场景", "filename": "how-to-activate-crystals-jewelry.jpg"}
+  }
+}

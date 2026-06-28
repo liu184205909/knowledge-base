@@ -1,0 +1,31 @@
+{
+  "total": 110,
+  "passed": 108,
+  "failed": [
+    {
+      "card": "the-hierophant",
+      "role": "best_overall",
+      "slug": "amethyst",
+      "name": "Amethyst",
+      "elem1_cardSpecific": true,
+      "elem2_symbolic": false,
+      "elem2_hasSource": true,
+      "elem3_scene": true,
+      "generic_pattern": false,
+      "pass": false
+    },
+    {
+      "card": "the-hierophant",
+      "role": "best_upright",
+      "slug": "sodalite",
+      "name": "Sodalite",
+      "elem1_cardSpecific": true,
+      "elem2_symbolic": false,
+      "elem2_hasSource": true,
+      "elem3_scene": true,
+      "generic_pattern": false,
+      "pass": false
+    }
+  ],
+  "verdict": "REVIEW"
+}

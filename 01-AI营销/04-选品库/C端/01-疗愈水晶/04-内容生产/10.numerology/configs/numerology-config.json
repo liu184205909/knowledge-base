@@ -1,0 +1,51 @@
+{
+  "_meta": {
+    "purpose": "Numerology (Life Path) 12 篇文章生产 config（1-9 + Master 11/22/33）",
+    "framework": "模板-Numerology文章框架.md v2",
+    "data_source": "07-互动工具/_shared/numerology-knowledge.json（calculation + numbers 单源）",
+    "cta_validation": "_qc/_cta-validation.json（meaning 14 颗含 Read CTA，其余仅 Shop 搜索）",
+    "module_weights_source": "框架 §2 module_weights 表（1-9 差异化重心）"
+  },
+  "module_weights": {
+    "1": { "M3": "leadership / independence / self-trust / initiative", "M5": "先锋型/独立创业者/开创方向", "M8_tension": "独断 ↔ 孤立；self-trust 滑向 dismissive", "purpose_keyword": "initiation" },
+    "2": { "M3": "relationship / emotional sensitivity / cooperation / boundaries", "M5": "调解/支持/协作型方向", "M8_tension": "取悦 ↔ 失自我；sensitivity 滑向 oversensitive", "purpose_keyword": "cooperation" },
+    "3": { "M3": "creativity / expression / visibility / joy", "M5": "创意/表达/内容创作方向", "M8_tension": "散漫 ↔ 浅尝辄止；visibility 焦虑", "purpose_keyword": "expression" },
+    "4": { "M3": "structure / discipline / stability / long-term building", "M5": "工程/系统/长期建设方向", "M8_tension": "刻板 ↔ 控制欲；stability 滑向 rigidity", "purpose_keyword": "foundation" },
+    "5": { "M3": "freedom / adaptability / restlessness / grounding", "M5": "体验/变化/多元方向", "M8_tension": "散乱 ↔ 逃避承诺；restlessness 滑向不稳定", "purpose_keyword": "experience" },
+    "6": { "M3": "care / family / service / overgiving", "M5": "照护/服务/家庭方向", "M8_tension": "过度付出 ↔ 怨气；overgiving 滑向 martyrdom", "purpose_keyword": "service" },
+    "7": { "M3": "introspection / spirituality / knowledge / isolation", "M5": "研究/专精/内省方向", "M8_tension": "孤立 ↔ 疏离；isolation 滑向 avoidant", "purpose_keyword": "truth-seeking" },
+    "8": { "M3": "ambition / money / power / responsibility", "M5": "商业/财务/领导方向", "M8_tension": "控制欲 ↔ 工具化他人；power 滑向 dominating", "purpose_keyword": "mastery" },
+    "9": { "M3": "compassion / completion / humanitarian / emotional release", "M5": "公益/艺术/收尾方向", "M8_tension": "牺牲 ↔ 自我耗竭；completion 滑向 burnt-out", "purpose_keyword": "universal love" },
+    "11": { "M3": "heightened intuition / visionary insight / sensitivity tension（加重）", "M4": "灵性伴侣长尾（加重）", "M5": "灵性/启发/治愈方向", "M8_tension": "直觉过载 ↔ 神经耗竭；illumination 滑向 overwhelm", "purpose_keyword": "illumination" },
+    "22": { "M3": "masterful vision / large-scale building / pressure（加重）", "M5": "大尺度建设/legacy 事业（加重）", "M8_tension": "压力 ↔ 工具化；mastery 滑向 burnout/dominating", "purpose_keyword": "legacy" },
+    "33": { "M3": "compassionate uplift / teaching / self-sacrifice tension（加重）", "M5": "healing/teaching 方向（加重）", "M8_tension": "自我牺牲 ↔ 耗竭；compassionate mastery 滑向 martyrdom", "purpose_keyword": "compassionate mastery" }
+  },
+  "eastern_anchors": {
+    "note": "每篇 ≥2 处 Eastern 锚点（框架 §12A）。下列为按号码适配的写作库，生产时取用。",
+    "tibetan": {
+      "1": "Tibetan Buddhist numerology: 1 = 统一/佛性/独一无二",
+      "2": "Tibetan: 2 = relative truth / complementarity（二谛）",
+      "3": "Tibetan: 3 = Three Jewels (Buddha, Dharma, Sangha) 三宝",
+      "4": "Tibetan: 4 = Four Noble Truths 四圣谛",
+      "5": "Tibetan: 5 = Five Wisdoms / Five Buddha Families 五智/五部",
+      "6": "Tibetan: 6 = Six Perfections (paramitas) 六度",
+      "7": "Tibetan: 7 not canonical-stressed; use 'seven factors of awakening' 七觉支",
+      "8": "Tibetan: 8 = Eightfold Path / Eight Auspicious Symbols 八正道/八吉祥",
+      "9": "Tibetan: 9 = perfection/completion (极数圆满), 99/999 mandala layers",
+      "11": "Tibetan: paired-deity traditions (11-faced Avalokiteshvara 千手千眼十一面观音)",
+      "22": "Tibetan: stupa architecture numerology (foundational structure)",
+      "33": "Tibetan: 33 = Trayastrimsa heaven (三十三天) in Buddhist cosmology"
+    },
+    "indian_navratna": {
+      "1": "Ruby", "2": "Pearl", "3": "Yellow Sapphire", "4": "Emerald",
+      "5": "Emerald", "6": "Diamond", "7": "Cats Eye", "8": "Blue Sapphire", "9": "Red Coral",
+      "note": "Master Numbers 无独立 navratana 对应，落回根号(2/4/6)传统石"
+    },
+    "chinese_jade": {
+      "jade": "Jade 在中国文化 = 纯净/守护/福禄；'君子比德于玉'",
+      "agate": "Agate = 平衡/长寿/辟邪",
+      "crystal_quartz": "水晶古称'菩萨石'，佛家念珠常用",
+      "amber": "Amber = 虎魄/安神，佛教七宝之一"
+    }
+  }
+}

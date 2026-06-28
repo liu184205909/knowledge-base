@@ -152,7 +152,17 @@
     "hero": {
       "file": "assets/images/generated/9.angel-numbers/angel-numbers-list/angel-numbers-list-hero.webp",
       "source_type": "number-hero",
-      "alt": "A spiritual artwork for the Angel Numbers guide: the words \"Angel Numbers\" rendered as a luminous central focal point in elegant glowing golden typography radiating warm light, surrounded by delicate arrangements of Clear Quartz, Rose Quartz, Citrine crystals and subtle sacred geometry, ethereal cosmic background in deep indigo and gold tones, floating light particles, premium editorial spiritual design"
+      "alt": "A spiritual artwork for the Angel Numbers guide: the words \"Angel Numbers\" rendered as a luminous central focal point in elegant glowing golden typography radiating warm light, surrounded by delicate arrangements of Clear Quartz and subtle sacred geometry, ethereal cosmic background in deep indigo and gold tones, floating light particles, premium editorial spiritual design"
+    },
+    "crystal-grid": {
+      "file": "assets/images/generated/9.angel-numbers/angel-numbers-list/angel-numbers-list-crystal-grid.webp",
+      "source_type": "scene",
+      "alt": "Five healing crystals for angel number angel-numbers-list — Clear Quartz, Rose Quartz, Black Tourmaline, Citrine, Aventurine — arranged in a balanced sacred geometry composition on a soft cloth, warm natural light, calm muted background with subtle floral accents, editorial crystal photography, no text"
+    },
+    "numerology": {
+      "file": "assets/images/generated/9.angel-numbers/angel-numbers-list/angel-numbers-list-numerology.webp",
+      "source_type": "number-diagram",
+      "alt": "A clean numerology breakdown infographic for angel number angel-numbers-list: showing n/a (hub) reducing to the single digit 0, the number angel-numbers-list displayed prominently at top in elegant golden typography with reduction steps below, minimalist sacred geometry frame, deep indigo background with gold accents, spiritual educational diagram style"
     }
   }
 }

@@ -1,0 +1,270 @@
+{
+  "_meta": {
+    "purpose": "mineral safety 统一校准表（How-to 框架 v2 §4.3）— 文章 + cleansing-timer 工具单源调用，不临场编",
+    "version": "v1.0",
+    "created": "2026-06-28",
+    "calibration_principle": "措辞经矿物学校准，避免'瞬间溶解/强毒性'等夸张表述伤可信度（v2 §4.3）",
+    "columns": ["water_safe", "salt_safe", "sun_safe", "smoke_safe", "jewelry_safe", "notes", "source"],
+    "value_legend": {
+      "yes": "安全可用",
+      "brief": "短暂接触安全（快冲/快擦，不可浸泡）",
+      "indirect": "仅间接（不可直射/长时间）",
+      "avoid": "避免使用该法",
+      "no_contact_preferred": "推荐无接触法（plate/bowl/sound/moonlight）"
+    },
+    "tier_legend": {
+      "tier1_safe": "moonlight / selenite / sound — 全石安全通用",
+      "tier2_conditional": "smoke(通风) / water(查耐受) — 有条件",
+      "tier3_caution": "earth / salt — 高风险谨慎"
+    }
+  },
+  "stones": {
+    "selenite": {
+      "name": "Selenite",
+      "mineral": "CaSO₄·2H₂O (calcium sulfate dihydrate, gypsum variety)",
+      "mohs": "2",
+      "water_safe": "avoid",
+      "salt_safe": "avoid",
+      "sun_safe": "indirect",
+      "smoke_safe": "yes",
+      "jewelry_safe": "no_contact_preferred",
+      "notes": "A soft form of gypsum (Mohs 2); can be damaged, scratched, or degraded by prolonged water exposure — keep dry. Self-cleansing in tradition; commonly used as a plate to rest other stones on.",
+      "source": "GIA / mindat — gypsum mineralogy reference"
+    },
+    "malachite": {
+      "name": "Malachite",
+      "mineral": "Cu₂CO₃(OH)₂ (copper carbonate hydroxide)",
+      "mohs": "3.5–4",
+      "water_safe": "avoid",
+      "salt_safe": "avoid",
+      "sun_safe": "indirect",
+      "smoke_safe": "yes",
+      "jewelry_safe": "no_contact_preferred",
+      "notes": "Porous and copper-bearing; commonly kept away from water, salt, and acids in stone-care practice to avoid surface dulling and potential copper compound release.",
+      "source": "GIA / USGS — copper-bearing stone-care reference"
+    },
+    "amethyst": {
+      "name": "Amethyst",
+      "mineral": "SiO₂ (silicon dioxide, quartz variety)",
+      "mohs": "7",
+      "water_safe": "brief",
+      "salt_safe": "avoid",
+      "sun_safe": "avoid",
+      "smoke_safe": "yes",
+      "jewelry_safe": "yes",
+      "notes": "Color may fade with prolonged direct sunlight; indirect light or moonlight is the safer choice for color-sensitive stones. Durable (Mohs 7) but a color-sensitive quartz.",
+      "source": "GIA / mindat — quartz color stability reference"
+    },
+    "rose-quartz": {
+      "name": "Rose Quartz",
+      "mineral": "SiO₂ (silicon dioxide, quartz variety)",
+      "mohs": "7",
+      "water_safe": "brief",
+      "salt_safe": "avoid",
+      "sun_safe": "avoid",
+      "smoke_safe": "yes",
+      "jewelry_safe": "yes",
+      "notes": "Color may fade with prolonged direct sunlight (titanium/manganese + irradiation color cause); indirect light or moonlight is the safer choice for color-sensitive stones.",
+      "source": "GIA / mindat — quartz color stability reference"
+    },
+    "citrine": {
+      "name": "Citrine",
+      "mineral": "SiO₂ (silicon dioxide, quartz variety)",
+      "mohs": "7",
+      "water_safe": "brief",
+      "salt_safe": "brief",
+      "sun_safe": "indirect",
+      "smoke_safe": "yes",
+      "jewelry_safe": "yes",
+      "notes": "Durable stone (Mohs 7) tolerates short indirect sunlight; avoid prolonged direct sun even for durable stones to prevent heat stress. Color (iron + heat) is more stable than amethyst but prolonged sun still not advised.",
+      "source": "GIA / mindat — quartz durability reference"
+    },
+    "clear-quartz": {
+      "name": "Clear Quartz",
+      "mineral": "SiO₂ (silicon dioxide)",
+      "mohs": "7",
+      "water_safe": "brief",
+      "salt_safe": "brief",
+      "sun_safe": "indirect",
+      "smoke_safe": "yes",
+      "jewelry_safe": "yes",
+      "notes": "Durable stone (Mohs 7) tolerates short indirect sunlight; avoid prolonged direct sun even for durable stones to prevent heat stress. Brief water rinse safe; avoid prolonged soaking.",
+      "source": "GIA / mindat — quartz durability reference"
+    },
+    "tiger-eye": {
+      "name": "Tiger's Eye",
+      "mineral": "SiO₂ (silicon dioxide, crocidolite pseudomorph)",
+      "mohs": "7",
+      "water_safe": "brief",
+      "salt_safe": "brief",
+      "sun_safe": "indirect",
+      "smoke_safe": "yes",
+      "jewelry_safe": "yes",
+      "notes": "Durable stone (Mohs 7); tolerates short indirect sunlight. Brief water rinse safe. Avoid prolonged soaking and direct sun to preserve the chatoyant sheen.",
+      "source": "GIA / mindat — quartz durability reference"
+    },
+    "black-tourmaline": {
+      "name": "Black Tourmaline (Schorl)",
+      "mineral": "NaFe²⁺₃Al₆(BO₃)₃Si₆O₁₈(OH)₄",
+      "mohs": "7–7.5",
+      "water_safe": "brief",
+      "salt_safe": "avoid",
+      "sun_safe": "yes",
+      "smoke_safe": "yes",
+      "jewelry_safe": "yes",
+      "notes": "Durable stone (Mohs 7–7.5), sun-stable. Brief water rinse safe. Popular daily-wear stone (bracelets) — frequent contact with skin oils/sweat makes regular cleansing practical care, not just ritual.",
+      "source": "GIA / mindat — tourmaline durability reference"
+    },
+    "carnelian": {
+      "name": "Carnelian",
+      "mineral": "SiO₂ (silicon dioxide, chalcedony variety)",
+      "mohs": "7",
+      "water_safe": "brief",
+      "salt_safe": "avoid",
+      "sun_safe": "yes",
+      "smoke_safe": "yes",
+      "jewelry_safe": "yes",
+      "notes": "Durable stone (Mohs 7), color-stable (iron oxide). Brief water rinse safe; avoid long salt soaks.",
+      "source": "GIA / mindat — chalcedony durability reference"
+    },
+    "calcite": {
+      "name": "Calcite",
+      "mineral": "CaCO₃ (calcium carbonate)",
+      "mohs": "3",
+      "water_safe": "avoid",
+      "salt_safe": "avoid",
+      "sun_safe": "indirect",
+      "smoke_safe": "yes",
+      "jewelry_safe": "no_contact_preferred",
+      "notes": "Soft (Mohs 3) and reacts with acids (including mild ones). Keep dry; avoid water, salt, and acidic cleaners. Use no-contact methods (moonlight / selenite / sound).",
+      "source": "GIA / mindat — carbonate mineralogy reference"
+    },
+    "moonstone": {
+      "name": "Moonstone (Feldspar)",
+      "mineral": "KAlSi₃O₈ (orthoclase, feldspar group)",
+      "mohs": "6–6.5",
+      "water_safe": "brief",
+      "salt_safe": "avoid",
+      "sun_safe": "indirect",
+      "smoke_safe": "yes",
+      "jewelry_safe": "yes",
+      "notes": "Mohs 6–6.5, two perfect cleavages — avoid rough handling and prolonged water/soaking. Indirect light preferred to protect the adularescent sheen.",
+      "source": "GIA / mindat — feldspar mineralogy reference"
+    },
+    "fluorite": {
+      "name": "Fluorite",
+      "mineral": "CaF₂ (calcium fluoride)",
+      "mohs": "4",
+      "water_safe": "brief",
+      "salt_safe": "avoid",
+      "sun_safe": "avoid",
+      "smoke_safe": "yes",
+      "jewelry_safe": "no_contact_preferred",
+      "notes": "Soft (Mohs 4) and color may fade with prolonged direct sunlight. Brief water rinse safe; avoid prolonged soaking. No-contact methods preferred for specimen-quality pieces.",
+      "source": "GIA / mindat — fluorite mineralogy reference"
+    },
+    "pyrite": {
+      "name": "Pyrite",
+      "mineral": "FeS₂ (iron disulfide)",
+      "mohs": "6–6.5",
+      "water_safe": "avoid",
+      "salt_safe": "avoid",
+      "sun_safe": "yes",
+      "smoke_safe": "yes",
+      "jewelry_safe": "no_contact_preferred",
+      "notes": "Can oxidize (tarnish to rusty/brown) with prolonged moisture exposure; keep dry. Avoid water and salt. No-contact methods preferred.",
+      "source": "GIA / mindat — sulfide mineralogy reference"
+    },
+    "hematite": {
+      "name": "Hematite",
+      "mineral": "Fe₂O₃ (iron oxide)",
+      "mohs": "5.5–6.5",
+      "water_safe": "brief",
+      "salt_safe": "avoid",
+      "sun_safe": "yes",
+      "smoke_safe": "yes",
+      "jewelry_safe": "yes",
+      "notes": "Durable (Mohs 5.5–6.5) but can rust in prolonged water/salt. Brief rinse safe; avoid soaking. Often set in metal jewelry — dry methods preferred to protect settings.",
+      "source": "GIA / mindat — iron oxide mineralogy reference"
+    }
+  },
+  "method_safety_notes": {
+    "moonlight": {
+      "specific_risk": "Extremely low UV intensity vs direct sun (roughly 1/400,000); generally one of the safest light methods for all minerals.",
+      "practical_caveat": "Check weather before placing on a windowsill — unexpected rain can wet selenite, calcite, pyrite and other water-sensitive stones.",
+      "source": "mineralogy reference — moonlight intensity comparison"
+    },
+    "selenite_plate": {
+      "specific_risk": "No chemical interaction — completely harmless to other stones. The selenite itself is soft (Mohs 2); avoid dragging hard stones across its surface to prevent scratching.",
+      "practical_caveat": "Best no-contact method for jewelry — bracelet/necklace rests on the plate, no water/salt/handling involved.",
+      "source": "mineralogy reference — gypsum softness"
+    },
+    "sound": {
+      "specific_risk": "Sound waves are far too low-energy to affect any mineral's structure — harmless to every stone.",
+      "practical_caveat": "Fastest no-contact method (5–10 min); works for an entire collection at once.",
+      "source": "mineralogy / acoustics reference"
+    },
+    "smoke": {
+      "specific_risk": "Smoke will not damage stones; prolonged exposure may leave faint residue — wipe with a dry cloth. Ventilate well; keep smoke, embers, and hot ash away from children, pets, and respiratory-sensitive people. Confirm local rules (some apartments/rentals ban indoor burning); use a fire-safe vessel (abalone shell / ceramic bowl) and fully extinguish after use.",
+      "practical_caveat": "Eastern alternative: a Tibetan singing bowl gives a similar ritual feel without smoke (the shop carries copper singing bowls).",
+      "source": "stone-care + fire-safety reference"
+    },
+    "water": {
+      "specific_risk": "Only water-tolerant stones (Mohs 6+, non-porous, non-copper-bearing). Dissolves or damages soft/water-reactive minerals (selenite, calcite, malachite, pyrite). Avoid soaking elastic-cord bracelets (cord degrades) and prolonged wetting of metal chains (oxidation).",
+      "practical_caveat": "Cool running water, brief rinse (~1 min), dry immediately with a soft cloth.",
+      "source": "mineralogy reference — Mohs + porosity"
+    },
+    "earth": {
+      "specific_risk": "Only high-hardness stones (Mohs 7+); soil moisture and organic acids can stain or etch soft, porous stones — always wrap in natural cloth first. No metal settings (soil moisture tarnishes/loosens them).",
+      "practical_caveat": "A deep grounding ritual — bury in a garden or houseplant pot for ~24 hours; brush off soil gently after.",
+      "source": "mineralogy reference — soil chemistry interaction"
+    },
+    "salt": {
+      "specific_risk": "The most damaging method — abrasive, corrodes metals (silver/copper chains oxidize faster), etches soft stones. Not ideal for metal-chain jewelry or porous stones. Dry salt only, never saltwater (saltwater is not recommended for any specimen-quality crystal).",
+      "practical_caveat": "Only Mohs 7+ raw stones, a few hours maximum; discard salt afterward (do not reuse).",
+      "source": "mineralogy reference — salt abrasiveness + metal corrosion"
+    }
+  },
+  "universal_safe_methods": ["moonlight", "selenite", "sound", "smoke"],
+  "safety_quick_reference_table": [
+    {
+      "group": "Soft / porous / copper-bearing / water-reactive",
+      "examples": ["Selenite", "Malachite", "Calcite", "Pyrite"],
+      "water": "❌ avoid",
+      "salt": "❌ avoid",
+      "sun": "⚠️ indirect",
+      "smoke": "✅ safe",
+      "jewelry_safe": "✅ (no-contact)",
+      "note": "Dry / no-contact methods only — moonlight, selenite plate, sound, smoke"
+    },
+    {
+      "group": "Color-sensitive quartz",
+      "examples": ["Amethyst", "Rose Quartz", "Fluorite"],
+      "water": "⚠️ brief rinse",
+      "salt": "⚠️ avoid",
+      "sun": "❌ fades",
+      "smoke": "✅ safe",
+      "jewelry_safe": "✅",
+      "note": "No direct sun (color may fade) — moonlight is the safer light method"
+    },
+    {
+      "group": "Durable stones (Mohs 7+)",
+      "examples": ["Clear Quartz", "Tiger's Eye", "Carnelian", "Black Tourmaline"],
+      "water": "✅ brief rinse",
+      "salt": "⚠️ avoid metal",
+      "sun": "⚠️ short indirect",
+      "smoke": "✅ safe",
+      "jewelry_safe": "✅",
+      "note": "Durable but avoid prolonged soaking; for jewelry, selenite/moonlight still the gentlest default"
+    },
+    {
+      "group": "All stones (universal safe)",
+      "examples": ["Any mineral"],
+      "moonlight": "✅ safe",
+      "selenite_plate": "✅ safe",
+      "sound": "✅ safe",
+      "smoke": "✅ safe (ventilate)",
+      "note": "The four universal-safe methods — use these when unsure of a stone's tolerance"
+    }
+  ]
+}

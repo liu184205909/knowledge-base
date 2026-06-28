@@ -1,0 +1,59 @@
+{
+  "total": 9,
+  "articles": [
+    {
+      "slug": "best-crystals-for-meditation",
+      "title": "Best Crystals for Meditation: 13 Stones by Goal (Focus, Sleep, Calm)",
+      "id": "M0",
+      "tier": "hub"
+    },
+    {
+      "slug": "crystals-for-focus-meditation",
+      "title": "Crystals for Focus & Concentration Meditation: Stones, Steps & Script",
+      "id": "M1",
+      "tier": "deep"
+    },
+    {
+      "slug": "crystals-for-sleep-meditation",
+      "title": "Crystals for Sleep Meditation: Bedtime Ritual Stones & Script",
+      "id": "M2",
+      "tier": "deep"
+    },
+    {
+      "slug": "crystals-for-emotional-release-meditation",
+      "title": "Crystals for Emotional Release Meditation: Stones & Healing Practice",
+      "id": "M3",
+      "tier": "deep"
+    },
+    {
+      "slug": "grounding-meditation-with-crystals",
+      "title": "Grounding Meditation with Crystals: Stones, Steps & Script",
+      "id": "M4",
+      "tier": "deep"
+    },
+    {
+      "slug": "meditation-crystals-for-beginners",
+      "title": "Meditation Crystals for Beginners: 5-Step Start + 6 Stones",
+      "id": "M5",
+      "tier": "light"
+    },
+    {
+      "slug": "manifestation-meditation-with-crystals",
+      "title": "Manifestation Meditation with Crystals: Stones, Steps & Script",
+      "id": "M6",
+      "tier": "deep"
+    },
+    {
+      "slug": "crystal-meditation-script",
+      "title": "Crystal Meditation Script: 5 Ready-to-Use Guided Sessions",
+      "id": "M7",
+      "tier": "light"
+    },
+    {
+      "slug": "meditation-room-crystals",
+      "title": "Meditation Room Crystals: How to Set Up Your Space",
+      "id": "M8",
+      "tier": "light"
+    }
+  ]
+}

@@ -1,0 +1,1562 @@
+[
+  {
+    "slug": "virgo-september-2026",
+    "scope": "monthly",
+    "id": 45321,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45608,
+    "pass": true
+  },
+  {
+    "slug": "virgo-october-2026",
+    "scope": "monthly",
+    "id": 45319,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45606,
+    "pass": true
+  },
+  {
+    "slug": "virgo-november-2026",
+    "scope": "monthly",
+    "id": 45317,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45604,
+    "pass": true
+  },
+  {
+    "slug": "virgo-may-2026",
+    "scope": "monthly",
+    "id": 45315,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45602,
+    "pass": true
+  },
+  {
+    "slug": "virgo-march-2026",
+    "scope": "monthly",
+    "id": 45313,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45600,
+    "pass": true
+  },
+  {
+    "slug": "virgo-june-2026",
+    "scope": "monthly",
+    "id": 45311,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45598,
+    "pass": true
+  },
+  {
+    "slug": "virgo-july-2026",
+    "scope": "monthly",
+    "id": 45309,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45596,
+    "pass": true
+  },
+  {
+    "slug": "virgo-january-2026",
+    "scope": "monthly",
+    "id": 45307,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45594,
+    "pass": true
+  },
+  {
+    "slug": "virgo-february-2026",
+    "scope": "monthly",
+    "id": 45305,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45592,
+    "pass": true
+  },
+  {
+    "slug": "virgo-december-2026",
+    "scope": "monthly",
+    "id": 45303,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45590,
+    "pass": true
+  },
+  {
+    "slug": "virgo-august-2026",
+    "scope": "monthly",
+    "id": 45301,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45588,
+    "pass": true
+  },
+  {
+    "slug": "virgo-april-2026",
+    "scope": "monthly",
+    "id": 45299,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45586,
+    "pass": true
+  },
+  {
+    "slug": "taurus-september-2026",
+    "scope": "monthly",
+    "id": 45297,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45584,
+    "pass": true
+  },
+  {
+    "slug": "taurus-october-2026",
+    "scope": "monthly",
+    "id": 45295,
+    "error": null,
+    "pass": true,
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 1
+  },
+  {
+    "slug": "taurus-november-2026",
+    "scope": "monthly",
+    "id": 45293,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45580,
+    "pass": true
+  },
+  {
+    "slug": "taurus-may-2026",
+    "scope": "monthly",
+    "id": 45291,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45578,
+    "pass": true
+  },
+  {
+    "slug": "taurus-march-2026",
+    "scope": "monthly",
+    "id": 45289,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45576,
+    "pass": true
+  },
+  {
+    "slug": "taurus-june-2026",
+    "scope": "monthly",
+    "id": 45287,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45574,
+    "pass": true
+  },
+  {
+    "slug": "taurus-july-2026",
+    "scope": "monthly",
+    "id": 45285,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45572,
+    "pass": true
+  },
+  {
+    "slug": "taurus-january-2026",
+    "scope": "monthly",
+    "id": 45283,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45570,
+    "pass": true
+  },
+  {
+    "slug": "taurus-february-2026",
+    "scope": "monthly",
+    "id": 45281,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45568,
+    "pass": true
+  },
+  {
+    "slug": "taurus-december-2026",
+    "scope": "monthly",
+    "id": 45279,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45566,
+    "pass": true
+  },
+  {
+    "slug": "taurus-august-2026",
+    "scope": "monthly",
+    "id": 45277,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45564,
+    "pass": true
+  },
+  {
+    "slug": "taurus-april-2026",
+    "scope": "monthly",
+    "id": 45275,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45562,
+    "pass": true
+  },
+  {
+    "slug": "scorpio-september-2026",
+    "scope": "monthly",
+    "id": 45273,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45560,
+    "pass": true
+  },
+  {
+    "slug": "scorpio-october-2026",
+    "scope": "monthly",
+    "id": 45271,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45558,
+    "pass": true
+  },
+  {
+    "slug": "scorpio-november-2026",
+    "scope": "monthly",
+    "id": 45269,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45556,
+    "pass": true
+  },
+  {
+    "slug": "scorpio-may-2026",
+    "scope": "monthly",
+    "id": 45267,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45554,
+    "pass": true
+  },
+  {
+    "slug": "scorpio-march-2026",
+    "scope": "monthly",
+    "id": 45265,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45552,
+    "pass": true
+  },
+  {
+    "slug": "scorpio-june-2026",
+    "scope": "monthly",
+    "id": 45263,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45550,
+    "pass": true
+  },
+  {
+    "slug": "scorpio-july-2026",
+    "scope": "monthly",
+    "id": 45261,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45548,
+    "pass": true
+  },
+  {
+    "slug": "scorpio-january-2026",
+    "scope": "monthly",
+    "id": 45259,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45546,
+    "pass": true
+  },
+  {
+    "slug": "scorpio-february-2026",
+    "scope": "monthly",
+    "id": 45257,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45544,
+    "pass": true
+  },
+  {
+    "slug": "scorpio-december-2026",
+    "scope": "monthly",
+    "id": 45255,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45542,
+    "pass": true
+  },
+  {
+    "slug": "scorpio-august-2026",
+    "scope": "monthly",
+    "id": 45253,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45540,
+    "pass": true
+  },
+  {
+    "slug": "scorpio-april-2026",
+    "scope": "monthly",
+    "id": 45539,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45538,
+    "pass": true
+  },
+  {
+    "slug": "sagittarius-september-2026",
+    "scope": "monthly",
+    "id": 45251,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45536,
+    "pass": true
+  },
+  {
+    "slug": "sagittarius-october-2026",
+    "scope": "monthly",
+    "id": 45249,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45534,
+    "pass": true
+  },
+  {
+    "slug": "sagittarius-november-2026",
+    "scope": "monthly",
+    "id": 45247,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45532,
+    "pass": true
+  },
+  {
+    "slug": "sagittarius-may-2026",
+    "scope": "monthly",
+    "id": 45531,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45530,
+    "pass": true
+  },
+  {
+    "slug": "sagittarius-march-2026",
+    "scope": "monthly",
+    "id": 45529,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45528,
+    "pass": true
+  },
+  {
+    "slug": "sagittarius-june-2026",
+    "scope": "monthly",
+    "id": 45245,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45526,
+    "pass": true
+  },
+  {
+    "slug": "sagittarius-july-2026",
+    "scope": "monthly",
+    "id": 45243,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45524,
+    "pass": true
+  },
+  {
+    "slug": "sagittarius-january-2026",
+    "scope": "monthly",
+    "id": 45241,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45522,
+    "pass": true
+  },
+  {
+    "slug": "sagittarius-february-2026",
+    "scope": "monthly",
+    "id": 45521,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45520,
+    "pass": true
+  },
+  {
+    "slug": "sagittarius-december-2026",
+    "scope": "monthly",
+    "id": 45239,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45518,
+    "pass": true
+  },
+  {
+    "slug": "sagittarius-august-2026",
+    "scope": "monthly",
+    "id": 45237,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45516,
+    "pass": true
+  },
+  {
+    "slug": "sagittarius-april-2026",
+    "scope": "monthly",
+    "id": 45515,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45514,
+    "pass": true
+  },
+  {
+    "slug": "pisces-september-2026",
+    "scope": "monthly",
+    "id": 45235,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45512,
+    "pass": true
+  },
+  {
+    "slug": "pisces-october-2026",
+    "scope": "monthly",
+    "id": 45233,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45510,
+    "pass": true
+  },
+  {
+    "slug": "pisces-november-2026",
+    "scope": "monthly",
+    "id": 45231,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45508,
+    "pass": true
+  },
+  {
+    "slug": "pisces-may-2026",
+    "scope": "monthly",
+    "id": 45507,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45506,
+    "pass": true
+  },
+  {
+    "slug": "pisces-march-2026",
+    "scope": "monthly",
+    "id": 45505,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45504,
+    "pass": true
+  },
+  {
+    "slug": "pisces-june-2026",
+    "scope": "monthly",
+    "id": 45229,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45502,
+    "pass": true
+  },
+  {
+    "slug": "pisces-july-2026",
+    "scope": "monthly",
+    "id": 45227,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45500,
+    "pass": true
+  },
+  {
+    "slug": "pisces-january-2026",
+    "scope": "monthly",
+    "id": 45225,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45498,
+    "pass": true
+  },
+  {
+    "slug": "pisces-february-2026",
+    "scope": "monthly",
+    "id": 45497,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45496,
+    "pass": true
+  },
+  {
+    "slug": "pisces-december-2026",
+    "scope": "monthly",
+    "id": 45223,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45494,
+    "pass": true
+  },
+  {
+    "slug": "pisces-august-2026",
+    "scope": "monthly",
+    "id": 45221,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45492,
+    "pass": true
+  },
+  {
+    "slug": "pisces-april-2026",
+    "scope": "monthly",
+    "id": 45491,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45490,
+    "pass": true
+  },
+  {
+    "slug": "libra-september-2026",
+    "scope": "monthly",
+    "id": 45219,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45488,
+    "pass": true
+  },
+  {
+    "slug": "libra-october-2026",
+    "scope": "monthly",
+    "id": 45217,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45486,
+    "pass": true
+  },
+  {
+    "slug": "libra-november-2026",
+    "scope": "monthly",
+    "id": 45215,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45484,
+    "pass": true
+  },
+  {
+    "slug": "libra-may-2026",
+    "scope": "monthly",
+    "id": 45483,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45482,
+    "pass": true
+  },
+  {
+    "slug": "libra-march-2026",
+    "scope": "monthly",
+    "id": 45481,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45480,
+    "pass": true
+  },
+  {
+    "slug": "libra-june-2026",
+    "scope": "monthly",
+    "id": 45213,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45478,
+    "pass": true
+  },
+  {
+    "slug": "libra-july-2026",
+    "scope": "monthly",
+    "id": 45211,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45476,
+    "pass": true
+  },
+  {
+    "slug": "libra-january-2026",
+    "scope": "monthly",
+    "id": 45209,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45474,
+    "pass": true
+  },
+  {
+    "slug": "libra-february-2026",
+    "scope": "monthly",
+    "id": 45473,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45472,
+    "pass": true
+  },
+  {
+    "slug": "libra-december-2026",
+    "scope": "monthly",
+    "id": 45207,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45470,
+    "pass": true
+  },
+  {
+    "slug": "libra-august-2026",
+    "scope": "monthly",
+    "id": 45205,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45468,
+    "pass": true
+  },
+  {
+    "slug": "libra-april-2026",
+    "scope": "monthly",
+    "id": 45467,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45466,
+    "pass": true
+  },
+  {
+    "slug": "leo-september-2026",
+    "scope": "monthly",
+    "id": 45203,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45464,
+    "pass": true
+  },
+  {
+    "slug": "leo-october-2026",
+    "scope": "monthly",
+    "id": 45201,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45462,
+    "pass": true
+  },
+  {
+    "slug": "leo-november-2026",
+    "scope": "monthly",
+    "id": 45199,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45460,
+    "pass": true
+  },
+  {
+    "slug": "leo-may-2026",
+    "scope": "monthly",
+    "id": 45459,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45458,
+    "pass": true
+  },
+  {
+    "slug": "leo-march-2026",
+    "scope": "monthly",
+    "id": 45457,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45456,
+    "pass": true
+  },
+  {
+    "slug": "leo-june-2026",
+    "scope": "monthly",
+    "id": 45197,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45454,
+    "pass": true
+  },
+  {
+    "slug": "leo-july-2026",
+    "scope": "monthly",
+    "id": 45195,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45452,
+    "pass": true
+  },
+  {
+    "slug": "leo-january-2026",
+    "scope": "monthly",
+    "id": 45193,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45450,
+    "pass": true
+  },
+  {
+    "slug": "leo-february-2026",
+    "scope": "monthly",
+    "id": 45449,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45448,
+    "pass": true
+  },
+  {
+    "slug": "leo-december-2026",
+    "scope": "monthly",
+    "id": 45191,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45446,
+    "pass": true
+  },
+  {
+    "slug": "leo-august-2026",
+    "scope": "monthly",
+    "id": 45189,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45444,
+    "pass": true
+  },
+  {
+    "slug": "leo-april-2026",
+    "scope": "monthly",
+    "id": 45443,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45442,
+    "pass": true
+  },
+  {
+    "slug": "gemini-september-2026",
+    "scope": "monthly",
+    "id": 45187,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45440,
+    "pass": true
+  },
+  {
+    "slug": "gemini-october-2026",
+    "scope": "monthly",
+    "id": 45185,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45438,
+    "pass": true
+  },
+  {
+    "slug": "gemini-november-2026",
+    "scope": "monthly",
+    "id": 45183,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45436,
+    "pass": true
+  },
+  {
+    "slug": "gemini-may-2026",
+    "scope": "monthly",
+    "id": 45435,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45434,
+    "pass": true
+  },
+  {
+    "slug": "gemini-march-2026",
+    "scope": "monthly",
+    "id": 45433,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45432,
+    "pass": true
+  },
+  {
+    "slug": "gemini-june-2026",
+    "scope": "monthly",
+    "id": 45181,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45430,
+    "pass": true
+  },
+  {
+    "slug": "gemini-july-2026",
+    "scope": "monthly",
+    "id": 45179,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45428,
+    "pass": true
+  },
+  {
+    "slug": "gemini-january-2026",
+    "scope": "monthly",
+    "id": 45177,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45426,
+    "pass": true
+  },
+  {
+    "slug": "gemini-february-2026",
+    "scope": "monthly",
+    "id": 45425,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45424,
+    "pass": true
+  },
+  {
+    "slug": "gemini-december-2026",
+    "scope": "monthly",
+    "id": 45175,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45422,
+    "pass": true
+  },
+  {
+    "slug": "gemini-august-2026",
+    "scope": "monthly",
+    "id": 45173,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45420,
+    "pass": true
+  },
+  {
+    "slug": "gemini-april-2026",
+    "scope": "monthly",
+    "id": 45419,
+    "error": null,
+    "pass": true,
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 1
+  },
+  {
+    "slug": "capricorn-september-2026",
+    "scope": "monthly",
+    "id": 45171,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45416,
+    "pass": true
+  },
+  {
+    "slug": "capricorn-october-2026",
+    "scope": "monthly",
+    "id": 45169,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45414,
+    "pass": true
+  },
+  {
+    "slug": "capricorn-november-2026",
+    "scope": "monthly",
+    "id": 45167,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45412,
+    "pass": true
+  },
+  {
+    "slug": "capricorn-may-2026",
+    "scope": "monthly",
+    "id": 45411,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45410,
+    "pass": true
+  },
+  {
+    "slug": "capricorn-march-2026",
+    "scope": "monthly",
+    "id": 45409,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45408,
+    "pass": true
+  },
+  {
+    "slug": "capricorn-june-2026",
+    "scope": "monthly",
+    "id": 45165,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45406,
+    "pass": true
+  },
+  {
+    "slug": "capricorn-july-2026",
+    "scope": "monthly",
+    "id": 45163,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45404,
+    "pass": true
+  },
+  {
+    "slug": "capricorn-january-2026",
+    "scope": "monthly",
+    "id": 45161,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45402,
+    "pass": true
+  },
+  {
+    "slug": "capricorn-february-2026",
+    "scope": "monthly",
+    "id": 45401,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45400,
+    "pass": true
+  },
+  {
+    "slug": "capricorn-december-2026",
+    "scope": "monthly",
+    "id": 45159,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45398,
+    "pass": true
+  },
+  {
+    "slug": "capricorn-august-2026",
+    "scope": "monthly",
+    "id": 45157,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45396,
+    "pass": true
+  },
+  {
+    "slug": "capricorn-april-2026",
+    "scope": "monthly",
+    "id": 45395,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45394,
+    "pass": true
+  },
+  {
+    "slug": "cancer-september-2026",
+    "scope": "monthly",
+    "id": 45155,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45392,
+    "pass": true
+  },
+  {
+    "slug": "cancer-october-2026",
+    "scope": "monthly",
+    "id": 45153,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45390,
+    "pass": true
+  },
+  {
+    "slug": "cancer-november-2026",
+    "scope": "monthly",
+    "id": 45151,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45388,
+    "pass": true
+  },
+  {
+    "slug": "cancer-may-2026",
+    "scope": "monthly",
+    "id": 45387,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45386,
+    "pass": true
+  },
+  {
+    "slug": "cancer-march-2026",
+    "scope": "monthly",
+    "id": 45385,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45384,
+    "pass": true
+  },
+  {
+    "slug": "cancer-june-2026",
+    "scope": "monthly",
+    "id": 45149,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45382,
+    "pass": true
+  },
+  {
+    "slug": "cancer-july-2026",
+    "scope": "monthly",
+    "id": 45147,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45380,
+    "pass": true
+  },
+  {
+    "slug": "cancer-january-2026",
+    "scope": "monthly",
+    "id": 45145,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45378,
+    "pass": true
+  },
+  {
+    "slug": "cancer-february-2026",
+    "scope": "monthly",
+    "id": 45377,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45376,
+    "pass": true
+  },
+  {
+    "slug": "cancer-december-2026",
+    "scope": "monthly",
+    "id": 45143,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45374,
+    "pass": true
+  },
+  {
+    "slug": "cancer-august-2026",
+    "scope": "monthly",
+    "id": 45141,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45372,
+    "pass": true
+  },
+  {
+    "slug": "cancer-april-2026",
+    "scope": "monthly",
+    "id": 45371,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45370,
+    "pass": true
+  },
+  {
+    "slug": "aries-september-2026",
+    "scope": "monthly",
+    "id": 45139,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45368,
+    "pass": true
+  },
+  {
+    "slug": "aries-october-2026",
+    "scope": "monthly",
+    "id": 45137,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45366,
+    "pass": true
+  },
+  {
+    "slug": "aries-november-2026",
+    "scope": "monthly",
+    "id": 45135,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45364,
+    "pass": true
+  },
+  {
+    "slug": "aries-may-2026",
+    "scope": "monthly",
+    "id": 45363,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45362,
+    "pass": true
+  },
+  {
+    "slug": "aries-march-2026",
+    "scope": "monthly",
+    "id": 45361,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45360,
+    "pass": true
+  },
+  {
+    "slug": "aries-june-2026",
+    "scope": "monthly",
+    "id": 45133,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45358,
+    "pass": true
+  },
+  {
+    "slug": "aries-july-2026",
+    "scope": "monthly",
+    "id": 45131,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45356,
+    "pass": true
+  },
+  {
+    "slug": "aries-january-2026",
+    "scope": "monthly",
+    "id": 45129,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45354,
+    "pass": true
+  },
+  {
+    "slug": "aries-february-2026",
+    "scope": "monthly",
+    "id": 45353,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45352,
+    "pass": true
+  },
+  {
+    "slug": "aries-december-2026",
+    "scope": "monthly",
+    "id": 45127,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45350,
+    "pass": true
+  },
+  {
+    "slug": "aries-august-2026",
+    "scope": "monthly",
+    "id": 45125,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45348,
+    "pass": true
+  },
+  {
+    "slug": "aries-april-2026",
+    "scope": "monthly",
+    "id": 45347,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45346,
+    "pass": true
+  },
+  {
+    "slug": "aquarius-september-2026",
+    "scope": "monthly",
+    "id": 45123,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45344,
+    "pass": true
+  },
+  {
+    "slug": "aquarius-october-2026",
+    "scope": "monthly",
+    "id": 45121,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45342,
+    "pass": true
+  },
+  {
+    "slug": "aquarius-november-2026",
+    "scope": "monthly",
+    "id": 45119,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45340,
+    "pass": true
+  },
+  {
+    "slug": "aquarius-may-2026",
+    "scope": "monthly",
+    "id": 45339,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45338,
+    "pass": true
+  },
+  {
+    "slug": "aquarius-march-2026",
+    "scope": "monthly",
+    "id": 45337,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45336,
+    "pass": true
+  },
+  {
+    "slug": "aquarius-june-2026",
+    "scope": "monthly",
+    "id": 45117,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45334,
+    "pass": true
+  },
+  {
+    "slug": "aquarius-july-2026",
+    "scope": "monthly",
+    "id": 45115,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45332,
+    "pass": true
+  },
+  {
+    "slug": "aquarius-january-2026",
+    "scope": "monthly",
+    "id": 45113,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45330,
+    "pass": true
+  },
+  {
+    "slug": "aquarius-february-2026",
+    "scope": "monthly",
+    "id": 45329,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45328,
+    "pass": true
+  },
+  {
+    "slug": "aquarius-december-2026",
+    "scope": "monthly",
+    "id": 45111,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45326,
+    "pass": true
+  },
+  {
+    "slug": "aquarius-august-2026",
+    "scope": "monthly",
+    "id": 45109,
+    "status": "publish",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45324,
+    "pass": true
+  },
+  {
+    "slug": "aquarius-april-2026",
+    "scope": "monthly",
+    "id": 45323,
+    "status": "publish",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 45322,
+    "pass": true
+  },
+  {
+    "slug": "virgo-2026",
+    "scope": "yearly",
+    "id": 44504,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 44503,
+    "pass": true
+  },
+  {
+    "slug": "taurus-2026",
+    "scope": "yearly",
+    "id": 44502,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 44501,
+    "pass": true
+  },
+  {
+    "slug": "scorpio-2026",
+    "scope": "yearly",
+    "id": 44500,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 44499,
+    "pass": true
+  },
+  {
+    "slug": "sagittarius-2026",
+    "scope": "yearly",
+    "id": 44498,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 44497,
+    "pass": true
+  },
+  {
+    "slug": "pisces-2026",
+    "scope": "yearly",
+    "id": 44496,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 44495,
+    "pass": true
+  },
+  {
+    "slug": "libra-2026",
+    "scope": "yearly",
+    "id": 44494,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 44493,
+    "pass": true
+  },
+  {
+    "slug": "leo-2026",
+    "scope": "yearly",
+    "id": 44492,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 44491,
+    "pass": true
+  },
+  {
+    "slug": "gemini-2026",
+    "scope": "yearly",
+    "id": 44490,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 44489,
+    "pass": true
+  },
+  {
+    "slug": "capricorn-2026",
+    "scope": "yearly",
+    "id": 44488,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 44487,
+    "pass": true
+  },
+  {
+    "slug": "cancer-2026",
+    "scope": "yearly",
+    "id": 44486,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 44485,
+    "pass": true
+  },
+  {
+    "slug": "aries-2026",
+    "scope": "yearly",
+    "id": 44484,
+    "status": "future",
+    "contentImg": 2,
+    "totalImg": 2,
+    "featured_media": 44483,
+    "pass": true
+  },
+  {
+    "slug": "aquarius-2026",
+    "scope": "yearly",
+    "id": 44482,
+    "status": "publish",
+    "contentImg": 2,
+    "totalImg": 14,
+    "featured_media": 44481,
+    "pass": true
+  }
+]

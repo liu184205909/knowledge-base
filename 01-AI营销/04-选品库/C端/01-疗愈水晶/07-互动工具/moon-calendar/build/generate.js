@@ -35,6 +35,10 @@ function safeJSON(v){
   return JSON.stringify(v).replace(/<\//g, '<\\/');
 }
 const PHASES_JSON = safeJSON(PHASES);
+// 每日水晶轮换 (390, dayOfYear%390)
+const SD = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../crystal-meaning-search/data/search-data.json'), 'utf8'));
+const DAILY_CRYSTALS = (SD.crystals||[]).map(c => ({ name:c.name, img:c.img||'', excerpt:(c.excerpt||'').slice(0,150), intentions:(c.intentions||[]).slice(0,3), link:c.link||'', shop:c.shop||('/shop/?s='+c.slug) }));
+const DAILY_JSON = safeJSON(DAILY_CRYSTALS);
 
 let html = `<!-- ===== Earthward Moon Calendar ===== -->
 <div id="emc-mc">
@@ -42,6 +46,7 @@ let html = `<!-- ===== Earthward Moon Calendar ===== -->
   <p class="emc-intro">See today's moon phase and the crystals traditionally aligned with it - plus the ritual and intention for this point in the lunar cycle. The moon has guided crystal cleansing and charging practices for centuries; this calendar pairs each phase with the right stones.</p>
 
   <div class="emc-current" id="emc-current"></div>
+  <div class="emc-today" id="emc-today"></div>
   <div class="emc-next" id="emc-next"></div>
 
   <div class="emc-link-row">
@@ -88,7 +93,17 @@ let html = `<!-- ===== Earthward Moon Calendar ===== -->
 .emc-ph-intent{font-size:13px;color:#2D6A4F;font-style:italic;margin-bottom:8px}
 .emc-ph-crystals{font-size:14px;color:#666;margin-bottom:8px}
 .emc-ph-energy{font-size:14px;color:#444;line-height:1.55}
+.emc-today{display:flex;gap:18px;align-items:center;background:#fff;border:1px solid #EEE;border-radius:14px;padding:20px;margin-bottom:18px}
+.emc-today-img{width:96px;height:96px;border-radius:12px;object-fit:cover;flex:0 0 auto;background:#F0F7F4}
+.emc-today-info{flex:1;min-width:0}
+.emc-today-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#2D6A4F;margin-bottom:4px}
+.emc-today-name{font-size:22px;font-weight:700;color:#1A1A2E;margin:0 0 4px}
+.emc-today-theme{font-size:14px;color:#666;font-style:italic;margin-bottom:8px}
+.emc-today-reading{font-size:15px;color:#444;line-height:1.6;margin-bottom:10px}
+.emc-today-cta{font-size:14px;font-weight:600;color:#2D6A4F;text-decoration:none}
+.emc-today-cta:hover{text-decoration:underline}
 .emc-disclaim{color:#999;font-size:12px;margin-top:18px;line-height:1.5}
+@media(max-width:640px){.emc-today{flex-direction:column;text-align:center}.emc-today-img{width:120px;height:120px}}
 @media(max-width:768px){.emc-phases{grid-template-columns:1fr}}
 @media(max-width:640px){.emc-h1{font-size:24px}.emc-cur-top{flex-direction:column;text-align:center}.emc-moon{width:48px;height:48px}.emc-ph-icon.emc-moon{width:28px;height:28px}.emc-next{flex-direction:column}}
 </style>
@@ -96,6 +111,7 @@ let html = `<!-- ===== Earthward Moon Calendar ===== -->
 <script>
 var EWMoon=(function(){
   var P=${PHASES_JSON};
+  var DC=${DAILY_JSON};
   function phaseKey(frac){
     // Phase fraction: 0=new, 0.5=full.
     if(frac<0.0625||frac>0.9375) return 'new';
@@ -129,6 +145,19 @@ var EWMoon=(function(){
       +'<p class="emc-cur-energy">'+ph.energy+'</p>'
       +'<div class="emc-cur-label">Crystals for this phase</div><div class="emc-cur-crystals">'+ph.crystals.map(function(c){return '<span class="emc-crystal">'+c+'</span>';}).join('')+'</div>'
       +'<div class="emc-cur-label">Ritual</div><div class="emc-cur-ritual">'+ph.ritual+'</div>';
+    // Today's Crystal (daily rotation + phase-themed reading)
+    var doy = Math.floor((now - new Date(now.getFullYear(),0,0))/86400000);
+    var tc = DC[doy % DC.length];
+    var theme = (tc.intentions && tc.intentions.length) ? tc.intentions.slice(0,2).join(' & ') : 'balance';
+    var shortPhase = ph.name.replace(/ \(.*\)/,'').replace(' Moon','');
+    var reading = "Today's " + shortPhase + " Moon pairs well with " + tc.name + ", a stone traditionally associated with " + theme.toLowerCase() + ". A good day to carry it, wear it, or set it nearby as a mindful focus for " + theme.toLowerCase() + ".";
+    document.getElementById('emc-today').innerHTML =
+      '<img class="emc-today-img" src="' + (tc.img||'') + '" alt="' + tc.name + '">'
+      + '<div class="emc-today-info"><div class="emc-today-label">Today\\'s Crystal</div>'
+      + '<h2 class="emc-today-name">' + tc.name + '</h2>'
+      + '<div class="emc-today-theme">Today\\'s theme: ' + theme + '</div>'
+      + '<p class="emc-today-reading">' + reading + '</p>'
+      + '<a class="emc-today-cta" href="' + tc.shop + '">Shop ' + tc.name + ' -&gt;</a></div>';
     // Render upcoming full and new moon dates.
     var nextFull=findNext(0.5);
     var nextNew=findNext(0);

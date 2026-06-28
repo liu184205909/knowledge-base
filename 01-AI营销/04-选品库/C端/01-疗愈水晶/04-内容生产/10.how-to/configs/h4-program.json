@@ -1,0 +1,295 @@
+{
+  "_meta": {
+    "framework": "How-to 框架 v2",
+    "purpose": "H4 轻量 — How to Program Crystals (program 590，与H3配套)",
+    "created": "2026-06-28",
+    "quality_tier": "lightweight",
+    "diff_angle": "program前置链路(意图设定)；按intention页互链；比喻先洗手→拿干净碗→盛饭→端上桌"
+  },
+  "article": "H4",
+  "slug": "how-to-program-crystals",
+  "url": "/blog/how-to-program-crystals/",
+  "action": "program",
+  "action_gerund": "programming",
+  "title": "How to Program Crystals: Meaning, Steps & Intentions",
+  "h1": "How to Program Crystals",
+  "primary_kw": "how to program crystals",
+  "secondary_kw": ["how to program a crystal", "programming crystals", "crystal programming", "how to set an intention in a crystal"],
+  "word_target": 2200,
+  "word_range": "2000-2400",
+  "concept_focus": "program_prerequisite_chain（前置链路：Cleanse→Charge→Activate→Program；比喻先洗手→拿干净碗→盛饭→端上桌）",
+  "concept_table_mode": "local_only",
+  "local_concept_pair": {
+    "focus": "Program prerequisite chain",
+    "metaphor": "wash hands → take a clean bowl → fill it with food → serve it on the table (不用H1/H3的比喻)",
+    "order_rule": "program is the last step — cleanse, charge, activate come first; programming sets a specific intention the stone becomes a tactile cue for",
+    "link_to_h1": "For the full four-concept comparison (Cleanse, Charge, Activate, Program), see How to Cleanse Crystals"
+  },
+  "methods_used": ["quiet-space", "hold-focus", "repeat-affirmation", "visualize", "rest"],
+  "methods_subset": "program subset (5 steps, intention-setting ritual)",
+  "methods_risk_tiers": {
+    "tier1_safe": {
+      "label": "🟢 The 5-Step Programming Ritual",
+      "subtitle": "设定意图的5步仪式",
+      "methods": ["quiet-space", "hold-focus", "repeat-affirmation", "visualize", "rest"],
+      "narrative_variant": ["意图设定叙事", "肯定语重复叙事", "可视化叙事"]
+    },
+    "tier2_conditional": {"label": "", "subtitle": "", "methods": []},
+    "tier3_caution": {"label": "", "subtitle": "", "methods": []}
+  },
+  "methods_data": {
+    "quiet-space": {
+      "name": "1. Find a Quiet Space",
+      "icon": "🤫",
+      "duration_label": "1–2 minutes (settle in)",
+      "safe": "all",
+      "tradition": "A calm, undistracted setting is considered the right container for setting an intention — the ritual begins with stillness.",
+      "practical": "No physical effect — this is about creating focus so the intention feels deliberate rather than rushed.",
+      "steps": ["Choose a spot where you won't be interrupted for 10–15 minutes", "Sit comfortably and take a few slow breaths to settle", "Have your cleansed, charged, activated crystal within reach"],
+      "best_for_default": "everyone — programming is a focus practice, so a quiet space sets the tone. Even a corner of your desk or a bedside spot works."
+    },
+    "hold-focus": {
+      "name": "2. Hold the Crystal & Focus",
+      "icon": "🤲",
+      "duration_label": "2–3 minutes",
+      "safe": "all",
+      "tradition": "Holding the stone in your receiving (non-dominant) hand while focusing on your intention is the central act of programming — the stone becomes the object your attention rests on.",
+      "practical": "No physical effect on the stone — the practice turns the object into a personal cue for a specific thought or goal.",
+      "steps": ["Hold the crystal in your receiving (non-dominant) hand", "Close your eyes or soften your gaze", "Bring to mind the single intention you want to carry"],
+      "best_for_default": "anyone setting an intention — the tactile anchor of holding the stone helps keep the mind on the thought rather than letting it wander."
+    },
+    "repeat-affirmation": {
+      "name": "3. Repeat Your Affirmation",
+      "icon": "💬",
+      "duration_label": "2–3 minutes",
+      "safe": "all",
+      "tradition": "Repeating a short affirmation silently or aloud is said to 'write' the intention into the stone — the words become linked to the object.",
+      "practical": "This is a mindfulness technique (similar to mantra practice) — the repetition helps fix the intention in your own mind, with the stone as a physical reminder.",
+      "steps": ["Phrase your intention as a short, present-tense affirmation (e.g. 'I stay calm under pressure')", "Repeat it slowly, 10–20 times, while holding the stone", "Let each repetition feel deliberate, not mechanical"],
+      "best_for_default": "those who respond to verbal or written cues — putting the intention into words makes it concrete and gives the stone a clear 'job'."
+    },
+    "visualize": {
+      "name": "4. Visualize the Outcome",
+      "icon": "🌅",
+      "duration_label": "2–3 minutes",
+      "safe": "all",
+      "tradition": "Picturing the outcome you want — calmly, briefly — is considered a way to attach the vision to the stone, so holding it later recalls the goal.",
+      "practical": "Visualization is a well-known mindfulness and performance practice (athletes, speakers use it); the stone simply becomes the tactile trigger for the image.",
+      "steps": ["With the stone still in hand, picture a specific moment of your intention fulfilled", "Keep it brief and calm — 1–2 minutes is enough", "Notice how the stone feels in your hand as you hold the image"],
+      "best_for_default": "those who think in images — pairing a mental picture with the physical stone makes the intention easier to recall later."
+    },
+    "rest": {
+      "name": "5. Rest & Close the Ritual",
+      "icon": "🌙",
+      "duration_label": "Close and place",
+      "safe": "all",
+      "tradition": "Placing the stone down deliberately to 'rest' with the intention is considered the closing of the ritual — the programming is set.",
+      "practical": "No physical effect — this simply marks the end of the focus practice and the stone's new role as a personal cue.",
+      "steps": ["Thank yourself (or the ritual) briefly — a small closing gesture", "Place the stone where you'll see or wear it daily", "The programming is complete — let the stone serve as a reminder"],
+      "best_for_default": "everyone — closing the ritual makes the practice feel complete, and placing the stone somewhere visible turns it into an ongoing reminder of the intention."
+    }
+  },
+  "prerequisite_chain": {
+    "enabled": true,
+    "position": "M2前置（program是最后一步，前三步先做）",
+    "chain": ["Cleanse (reset)", "Charge (refill)", "Activate (switch on)", "Program (set the task)"],
+    "metaphor": "wash hands → take a clean bowl → fill it with food → serve it on the table",
+    "compliance": "Setting an intention or affirmation you'd like to carry with you — the stone becomes a tactile cue for that thought."
+  },
+  "crystals": {
+    "main_commercial": {
+      "slug": "clear-quartz",
+      "role": "intention-stone",
+      "role_label": "The Classic Intention Stone",
+      "reason": "Durable (Mohs 7), versatile, and traditionally associated with clarity — a forgiving stone to program a first intention into",
+      "compliance_phrase": "A versatile piece collectors often describe as a neutral staple that pairs with any setting"
+    },
+    "semantic_match": {
+      "slug": "amethyst",
+      "role": "calm-intention",
+      "role_label": "The Calm-Intention Favorite",
+      "reason": "A common stone for calm/sleep intentions — program a wind-down affirmation and keep it on the nightstand",
+      "compliance_phrase": "A stone many keep on their nightstand as part of a wind-down ritual before bed"
+    },
+    "entry_price": {
+      "slug": "rose-quartz",
+      "role": "gentle-intention",
+      "role_label": "The Gentle-Reminder Bracelet",
+      "reason": "A common bracelet stone — program a self-compassion intention and wear it as a daily reminder",
+      "compliance_phrase": "A rose quartz bracelet many people wear as a daily reminder to be gentle with themselves"
+    },
+    "niche": {
+      "slug": "citrine",
+      "role": "warmth-intention",
+      "role_label": "The Warmth-Intention Stone",
+      "reason": "Often associated with warmth and sunlight — program a positivity or motivation intention",
+      "compliance_phrase": "Often associated with warmth and sunlight — a piece many enjoy as a bright accent in a collection"
+    },
+    "safety_warning": {
+      "slug": "black-tourmaline",
+      "role": "grounding-intention",
+      "role_label": "The Grounding-Intention Stone",
+      "reason": "A popular daily-wear stone — program a grounding/steadiness intention for a busy workday",
+      "compliance_phrase": "A popular choice for those who like a grounding touchstone during a busy workday"
+    },
+    "jewelry_scene": {
+      "slug": "moonstone",
+      "role": "bracelet",
+      "role_label": "The Lunar-Intention Bracelet",
+      "reason": "Soft sheen linked to lunar traditions — program an intuition or new-beginning intention",
+      "compliance_phrase": "A stone many choose for its soft iridescent sheen and connection to lunar ritual traditions"
+    }
+  },
+  "intention_page_links": {
+    "enabled": true,
+    "note": "M4按intention页互链（program设定意图→对应intention页CTA）",
+    "mappings": [
+      {"intention": "calm", "anchor": "Shop Calm & Mindfulness", "url": "/calm-mindfulness/"},
+      {"intention": "love", "anchor": "Shop Love & Compassion", "url": "/love-compassion/"},
+      {"intention": "protection", "anchor": "Shop Protection & Grounding", "url": "/protection-grounding/"},
+      {"intention": "focus", "anchor": "Shop Focus & Clarity", "url": "/focus-clarity/"}
+    ]
+  },
+  "data_snapshot": {
+    "cleansing_knowledge_version": "v1.0 (program subset: 5-step ritual — quiet-space/hold-focus/repeat-affirmation/visualize/rest，intention-setting非物理法)",
+    "mineral_safety_reference_version": "v1.0 (program无物理接触风险，但前置cleanse/charge/activate需查耐受)",
+    "crystal_attributes_version": "390 stones",
+    "verified_date": "2026-06-28",
+    "verified_by": "数据一致性 diff + 人工抽检"
+  },
+  "tool_cta": {
+    "enabled": true,
+    "tool": "cleansing-timer",
+    "tool_url": "/tools/crystal-cleansing-timer/",
+    "cta_type": "decision_card",
+    "positions": [
+      "M2-end-decision-card (前置链路后：先cleanse再program，查耐受)",
+      "M7-pre-bottom (底部曝光卡)"
+    ],
+    "card_template": "> 💡 **Programming a stone? Cleanse it first.**\n> Before setting an intention, run your stone through the **[Crystal Cleansing Timer](/tools/crystal-cleansing-timer/)** →\n> confirm its tolerance, cleanse it safely, then program with confidence."
+  },
+  "jewelry_angle": {
+    "enabled": true,
+    "mode": "interspersed",
+    "insertion_points": {
+      "M3-hold-focus": "握石program时traditionally用非主导手(接收手)；一条手链一个意图(one bracelet, one intention)",
+      "M3-rest": "program后佩戴手链——每次看到/触摸都是意图的触觉提醒(tactile cue)",
+      "M6-one-intention": "一条手链一个意图：避免一条手链设多个矛盾意图，保持清晰",
+      "M7-faq": "Can I program a crystal bracelet? → 可以；program后佩戴作为daily reminder，one bracelet one intention"
+    },
+    "m6_role": "brief (one bracelet one intention + 佩戴作为触觉提醒)"
+  },
+  "eastern_touch": {
+    "repeat-affirmation": "Mantra / 咒语 重复 (东方冥想传统的肯定语重复)",
+    "visualize": "观想 / 可视化 (藏传佛教观想修法)",
+    "hold-focus": "禅修握石 / 瑜伽手印 (东方冥想传统)"
+  },
+  "safety_first_narrative": {
+    "M1_quick_answer": [
+      "program是四步最后一步：cleanse→charge→activate→program",
+      "program本身无物理风险(意图设定)，但前置cleanse/charge需查石耐受",
+      "进入方法前一句话'program前先完成cleanse/charge/activate'"
+    ],
+    "M2_order_hardware": [
+      "第一段(前置链路): program是最后一步——先洗手→拿干净碗→盛饭→端上桌(cleanse→charge→activate→program)",
+      "第二段(为什么program): 传统/象征(给石一个明确任务，作为日常触觉提醒)",
+      "第三段(概念区分): Program vs Activate局部对比(装软件vs开机) + 内链H1完整四概念表"
+    ],
+    "compliance_phrasing": "setting an intention / a tactile cue for that thought / many people experience"
+  },
+  "faq_picks": {
+    "intent": [
+      "How do I program a crystal with an intention?",
+      "What is the best way to program crystals?",
+      "How long does it take to program a crystal?",
+      "What kind of intentions can I program into a crystal?"
+    ],
+    "conversion": [
+      "Can I program a crystal bracelet?",
+      "How many intentions can one crystal hold?",
+      "Can I program a crystal for someone else?"
+    ],
+    "trust": [
+      "Is there scientific evidence that programming crystals does anything?",
+      "Do I need to cleanse and charge before programming?"
+    ],
+    "selective": [
+      "What is the difference between programming and activating a crystal?",
+      "How do I know if my crystal is programmed?"
+    ]
+  },
+  "internal_links": {
+    "meaning_min": 3,
+    "condition": {
+      "anchor": "Crystals for Anxiety",
+      "url": "/crystals-for-anxiety/"
+    },
+    "intention": {
+      "anchor": "Shop Calm & Mindfulness",
+      "url": "/calm-mindfulness/"
+    },
+    "hub_flagship": {
+      "anchor": "How to Cleanse Crystals (full four-concept comparison)",
+      "url": "/blog/how-to-cleanse-crystals/"
+    },
+    "h1_cleanse_link": {
+      "anchor": "How to Cleanse Crystals (cleanse before program)",
+      "url": "/blog/how-to-cleanse-crystals/"
+    },
+    "h2_charge_link": {
+      "anchor": "How to Charge Crystals (charge before program)",
+      "url": "/blog/how-to-charge-crystals/"
+    },
+    "h3_activate_link": {
+      "anchor": "How to Activate Crystals (activate before program)",
+      "url": "/blog/how-to-activate-crystals/"
+    },
+    "h6_use_link": {
+      "anchor": "How to Use Crystals (beginner's overview)",
+      "url": "/blog/how-to-use-crystals/"
+    },
+    "shop_fallback": "/product-category/healing-crystals-jewelry/"
+  },
+  "schema": {
+    "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+    "howto_structure": "6-step universal program flow",
+    "howto_focus": "knowledge intention-setting steps",
+    "howto_6_steps": [
+      {"step": 1, "name": "Complete cleanse → charge → activate first", "text": "program是最后一步——先cleanse(reset)→charge(refill)→activate(switch on)，再program"},
+      {"step": 2, "name": "Decide on one clear intention", "text": "选一个明确的意图(present-tense affirmation)，一条石一个意图"},
+      {"step": 3, "name": "Find a quiet space & hold the stone", "text": "安静空间坐定，握石于接收手(非主导手)，专注意图"},
+      {"step": 4, "name": "Repeat your affirmation & visualize", "text": "重复肯定语10-20次+可视化目标完成场景2-3min"},
+      {"step": 5, "name": "Close the ritual & place the stone", "text": "小closing gesture→放置/佩戴于日常可见处"},
+      {"step": 6, "name": "Use it as a daily tactile reminder", "text": "佩戴/触摸时回忆意图——石成为该想法的触觉cue"}
+    ],
+    "howto_name": "How to Program a Crystal with an Intention",
+    "howto_total_time": "PT15M",
+    "faq_page_schema_consistency": "FAQ答案与Schema FAQPage严格一致"
+  },
+  "compliance": {
+    "avoid": [
+      "makes the crystal work for you",
+      "programs the crystal to manifest your goals",
+      "infuses the crystal with power",
+      "guarantees your intention will come true",
+      "removes negative energy"
+    ],
+    "phrase_library_version": "v1.0（框架v2 §11.2）",
+    "gentle_note": "Crystal programming is based on spiritual traditions, symbolism, and personal mindfulness. There is no scientific evidence that crystals store intentions or influence outcomes, but the practice of setting a clear intention — and using the stone as a tactile reminder of it — is a genuine mindfulness technique that many people find helpful.",
+    "ai_banned_words": ["delve", "tapestry", "realm", "journey（叙事）", "unlock your potential", "manifest abundance", "elevate your vibration"],
+    "chemistry_case_sensitive": "SiO₂（非sio₂）/ CaCO₃ — 校验用includes('sio₂')"
+  },
+  "three_perspectives": {
+    "science": "40%",
+    "spirituality": "40%",
+    "psychology": "20%",
+    "style": "融在段落里（program心理学权重略高：意图设定+触觉cue是真实mindfulness技术）"
+  },
+  "image_plan": {
+    "hero": {"size": "1536x864", "scene": "手持水晶设定意图+安静空间(program主题视觉)", "filename": "how-to-program-crystals-hero.jpg"},
+    "step_diagrams": [
+      {"size": "1200x800", "scene": "握石冥想+设定意图(hold-focus step)", "filename": "how-to-program-crystals-intention.jpg"}
+    ],
+    "jewelry_scene": {"size": "1200x800", "scene": "program后佩戴手链作为daily reminder", "filename": "how-to-program-crystals-jewelry.jpg"}
+  }
+}

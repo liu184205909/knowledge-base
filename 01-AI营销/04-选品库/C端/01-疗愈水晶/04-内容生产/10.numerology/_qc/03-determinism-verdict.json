@@ -1,0 +1,50 @@
+{
+  "total_hits": 7,
+  "manual_review_result": "ALL_LEGITIMATE",
+  "hits": [
+    {
+      "num": "1",
+      "word": "destined",
+      "verdict": "LEGITIMATE",
+      "reason": "引号内反述，明确否定(leadership is \"destined,\" but...)，符合巴纳姆防护口径"
+    },
+    {
+      "num": "2",
+      "word": "fix",
+      "verdict": "LEGITIMATE",
+      "reason": "描述行为倾向(rushing to fix)，非承诺或断言"
+    },
+    {
+      "num": "6",
+      "word": "never",
+      "verdict": "LEGITIMATE",
+      "reason": "反述(responsibilities that were never truly yours)，合规"
+    },
+    {
+      "num": "6",
+      "word": "never",
+      "verdict": "FALSE_POSITIVE",
+      "reason": "脚本按句拆分误报，实际段落(ritual intro/strengths intro)不含确定论never"
+    },
+    {
+      "num": "6",
+      "word": "never",
+      "verdict": "FALSE_POSITIVE",
+      "reason": "同上，句子边界误归并"
+    },
+    {
+      "num": "6",
+      "word": "fix",
+      "verdict": "LEGITIMATE",
+      "reason": "M8表格edge列描述越界行为(Fixing what others should fix)，正是要警告的过度形态"
+    },
+    {
+      "num": "11",
+      "word": "guaranteed",
+      "verdict": "LEGITIMATE",
+      "reason": "反述(rather than as a guaranteed spiritual rank)，明确否定Master优越论"
+    }
+  ],
+  "final_verdict": "PASS (7处全部人工判定为合规用法或脚本误报，无需改写)",
+  "note": "框架§13A关卡3要求人工逐条改写非脚本替换。已逐条判定，所有命中在反述/引号/行为描述/合规口径中合法。"
+}

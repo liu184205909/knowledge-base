@@ -1,0 +1,239 @@
+{
+  "_meta": {
+    "framework": "How-to 框架 v2 (17点已落实)",
+    "purpose": "H1 旗舰 MVP config — How to Cleanse Crystals (cleanse 旗舰 6600词主词)",
+    "created": "2026-06-28",
+    "quality_tier": "flagship",
+    "mvp_note": "先 H1 单篇验证（v2 第一轮第10点），验收8项通过后再固化模板放大 H2-H7"
+  },
+  "article": "H1",
+  "slug": "how-to-cleanse-crystals",
+  "url": "/blog/how-to-cleanse-crystals/",
+  "action": "cleanse",
+  "action_gerund": "cleansing",
+  "title": "How to Cleanse Crystals: 7 Safe Methods (With Steps & Timer)",
+  "h1": "How to Cleanse Crystals",
+  "primary_kw": "how to cleanse crystals",
+  "secondary_kw": ["how to cleanse a crystal", "cleansing crystals", "crystal cleansing methods", "how to clean crystals"],
+  "word_target": 3400,
+  "word_range": "3000-3800",
+  "concept_focus": "full_comparison + cleanse vs charge（H1 唯一完整四概念表）",
+  "methods_used": ["moonlight", "selenite", "sound", "smoke", "water", "earth", "salt"],
+  "methods_subset": null,
+  "methods_risk_tiers": {
+    "tier1_safe": {
+      "label": "🟢 Tier 1 — Safest & Recommended for All Stones",
+      "subtitle": "最安全通用，新手首选 / 首饰无接触",
+      "methods": ["moonlight", "selenite", "sound"],
+      "narrative_variant": ["新手通用首选叙事", "首饰专长叙事", "快速场景叙事"]
+    },
+    "tier2_conditional": {
+      "label": "🟡 Tier 2 — Conditional, Check Your Stone First",
+      "subtitle": "有条件，先查耐受性",
+      "methods": ["smoke", "water"]
+    },
+    "tier3_caution": {
+      "label": "🔴 Tier 3 — Higher Risk, Use with Caution",
+      "subtitle": "高风险，谨慎使用",
+      "methods": ["earth", "salt"]
+    }
+  },
+  "crystals": {
+    "main_commercial": {
+      "slug": "black-tourmaline",
+      "role": "frequent-wear",
+      "role_label": "Most in Need of Regular Cleansing",
+      "reason": "Popular daily-wear bracelet stone — frequent contact with skin oils and sweat makes regular cleansing practical care, not just ritual",
+      "compliance_phrase": "A popular choice for those who like a grounding touchstone during a busy workday"
+    },
+    "semantic_match": {
+      "slug": "selenite",
+      "role": "self-cleansing",
+      "role_label": "Self-Cleansing & The Cleanser's Stone",
+      "reason": "Traditionally self-cleansing and used as a plate to rest other stones on — the natural mascot of the cleansing topic",
+      "compliance_phrase": "A self-cleansing stone many use as a display plate to rest other pieces on — a practical care choice"
+    },
+    "entry_price": {
+      "slug": "clear-quartz",
+      "role": "amplifier",
+      "role_label": "The Versatile Everyday Piece",
+      "reason": "Durable (Mohs 7) and a neutral staple — pairs with any setting, beginner-friendly",
+      "compliance_phrase": "A versatile piece collectors often describe as a neutral staple that pairs with any setting"
+    },
+    "niche": {
+      "slug": "moonstone",
+      "role": "long-tail",
+      "role_label": "Long-Tail Favorite for Lunar Ritual",
+      "reason": "Soft iridescent sheen with a natural link to moon-phase ritual traditions — differentiates from generic lists",
+      "compliance_phrase": "A stone many choose for its soft iridescent sheen and connection to lunar ritual traditions"
+    },
+    "safety_warning": {
+      "slug": "malachite",
+      "role": "porous-copper-bearing",
+      "role_label": "The Cautionary Example (Why Safety Matters)",
+      "reason": "Porous and copper-bearing — the textbook case for why 'check tolerance before water/salt' is the headline message",
+      "compliance_phrase": "A striking green stone — its care requirements (dry methods only) are exactly why the safety-first message matters"
+    },
+    "jewelry_scene": {
+      "slug": "rose-quartz",
+      "role": "bracelet",
+      "role_label": "The Bracelet Favorite",
+      "reason": "A common bracelet stone — wear as a daily reminder; needs no-contact cleansing to protect color from sun fade",
+      "compliance_phrase": "A rose quartz bracelet many people wear as a daily reminder to be gentle with themselves"
+    }
+  },
+  "data_snapshot": {
+    "cleansing_knowledge_version": "v1.0 (7 methods, universal_safe=moonlight/selenite/sound/smoke)",
+    "mineral_safety_reference_version": "v1.0 (14 stones, 7-col calibration table)",
+    "crystal_attributes_version": "390 stones, mineral+safety fields",
+    "verified_date": "2026-06-28",
+    "verified_by": "数据一致性 diff 脚本 + 人工抽检（待生成 verify-data-consistency.js）"
+  },
+  "tool_cta": {
+    "enabled": true,
+    "tool": "cleansing-timer",
+    "tool_url": "/tools/crystal-cleansing-timer/",
+    "cta_type": "decision_card",
+    "positions": [
+      "M3-end-decision-card (主决策卡，必加)",
+      "M5-end-reminder (二次提醒卡)",
+      "M7-pre-bottom (底部曝光卡)"
+    ],
+    "card_template": "> 💡 **Not sure if your stone can go in water, salt, or sunlight?**\n> Enter your stone name in the **[Crystal Cleansing Timer](/tools/crystal-cleansing-timer/)** →\n> instantly check its water/salt/sun safety, get the recommended method, and start a guided countdown timer."
+  },
+  "jewelry_angle": {
+    "enabled": true,
+    "mode": "interspersed（穿插全文，非 M6 集中）",
+    "insertion_points": {
+      "M3-moonlight": "moonlight 是手链/项链最佳无接触净化法——整条放着不动，绳子/金属/石头都不受损（best no-contact for bracelets/necklaces）",
+      "M3-water": "避免浸泡弹力绳手链（avoid soaking elastic bracelets）——绳子会老化松弛；金属链手链也忌 prolonged water（防氧化）",
+      "M3-salt": "不适合金属链首饰（not ideal for metal chains）——盐会加速银/铜氧化；弹力绳手链可用 selenite plate 替代",
+      "M3-selenite": "首饰专长：把手链/项链放 selenite plate 上过夜即可，零接触零风险",
+      "M5-mistakes": "典型错误：'戴着弹力绳手链洗澡净化' → 绳子老化 + 肥皂残留；正确做法 selenite plate",
+      "M7-faq": "Can I cleanse my bracelet without removing it? → moonlight/selenite/sound 可戴净化，water/smoke/salt 需摘下"
+    },
+    "m6_role": "summary + H7 deep-dive link（不深入 bracelet 材质细节，留 H7 专篇）"
+  },
+  "eastern_touch": {
+    "smoke": "Tibetan incense / juniper / cedar as sage alternatives (avoid sage-only framing,泛文化)",
+    "sound": "Tibetan singing bowl / 颂钵 / 铜磬 (站点实卖铜器，天然契合)",
+    "earth": "玉石文化'返璞归真' / 大地冥想 (瑜伽 grounding 语境)",
+    "moonlight": "满月冥想 / 月相周期 ritual"
+  },
+  "concept_comparison_table": {
+    "appears_only_in": "H1 (唯一完整四概念表，H2-H4 不得完整重复)",
+    "narrative_voice": "用'重置能量状态'叙事",
+    "concepts": ["Cleanse", "Charge", "Activate", "Program"],
+    "H1_depth": "完整四概念对照表 + 深讲 Cleanse + 简短区别 Charge（一句）"
+  },
+  "safety_first_narrative": {
+    "M1_quick_answer": [
+      "最安全通用法 = moonlight / selenite plate / sound / smoke",
+      "不是所有水晶能用水/盐/阳光，不确定先别用水盐",
+      "进入方法前一句话'先确认你的石头耐受性' + Featured Snippet bait（3点 bullet）"
+    ],
+    "M2_order_hardware": [
+      "第一段（安全风险前置）: Before any method, know this...",
+      "第二段（为什么需要净化）: 传统/象征意义",
+      "第三段（才引概念区分）: Cleanse vs Charge + 完整四概念表"
+    ],
+    "compliance_phrasing": "symbolic energy state / traditionally believed to / many people experience"
+  },
+  "faq_picks": {
+    "intent": [
+      "How often should I cleanse my crystals?",
+      "What is the best way to cleanse crystals?",
+      "How long does it take to cleanse a crystal?",
+      "Can I cleanse all crystals the same way?"
+    ],
+    "conversion": [
+      "Which crystals need cleansing most?",
+      "Can I cleanse my crystal bracelet without removing it?",
+      "Do I need any tools to cleanse crystals?"
+    ],
+    "trust": [
+      "Is there scientific evidence that cleansing crystals does anything?",
+      "Will cleansing damage my crystal?"
+    ],
+    "selective": [
+      "Can I cleanse crystals with tap water?",
+      "Which crystals cannot go in water?"
+    ]
+  },
+  "internal_links": {
+    "meaning_min": 3,
+    "condition": {
+      "anchor": "Crystals for Anxiety",
+      "url": "/crystals-for-anxiety/"
+    },
+    "intention": {
+      "anchor": "Shop Calm & Mindfulness",
+      "url": "/calm-mindfulness/"
+    },
+    "hub_flagship": null,
+    "h2_charge_link": {
+      "anchor": "How to Charge Crystals (cleanse first, charge second)",
+      "url": "/blog/how-to-charge-crystals/"
+    },
+    "h7_bracelet_link": {
+      "anchor": "How to Cleanse a Crystal Bracelet (deep dive on bracelet materials)",
+      "url": "/blog/how-to-cleanse-a-crystal-bracelet/"
+    },
+    "shop_fallback": "/product-category/healing-crystals-jewelry/"
+  },
+  "schema": {
+    "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+    "howto_structure": "6-step universal flow（非 7 法 = 7 步）",
+    "howto_focus": "knowledge safety steps（vs 工具页 interactive flow，防 Schema 双占位）",
+    "howto_6_steps": [
+      {"step": 1, "name": "Identify your crystal & jewelry setting", "text": "确认石种（影响耐受性）+ 首饰材质（弹力绳/金属链/编织绳，影响方法选择）"},
+      {"step": 2, "name": "Check water / salt / sun tolerance", "text": "查 mineral-safety-reference 或 cleansing-timer 工具，确认该石能否接触水/盐/阳光"},
+      {"step": 3, "name": "Choose a safe cleansing method", "text": "从 7 法中选（🟢 moonlight/selenite/sound 最安全 → 🟡 smoke/water 有条件 → 🔴 earth/salt 谨慎）；不确定优先无接触法"},
+      {"step": 4, "name": "Prepare space & materials", "text": "准备空间（通风 if smoke）+ 材料（selenite plate / singing bowl / 耐火容器）"},
+      {"step": 5, "name": "Cleanse for recommended time", "text": "按该方法推荐时长（moonlight 8+ hrs / sound 5-10 min / smoke 30-60 sec）"},
+      {"step": 6, "name": "Dry / store / charge / wear mindfully", "text": "干燥收纳（water 法后）→ 可选充能 → 佩戴时作为正念提醒"}
+    ],
+    "howto_name": "How to Cleanse Crystals Safely",
+    "howto_total_time": "PT8H",
+    "faq_page_schema_consistency": "FAQ 答案与 Schema FAQPage 严格一致（同数据块生成页面+schema）"
+  },
+  "compliance": {
+    "avoid": [
+      "removes negative energy",
+      "purifies bad vibes",
+      "amplifies healing power",
+      "awakens the crystal's magical properties",
+      "will protect you from negativity"
+    ],
+    "phrase_library_version": "v1.0（框架 v2 §11.2 合规转化句式库，12 句范式）",
+    "gentle_note": "Crystal cleansing, charging, and activation practices are based on spiritual traditions, symbolism, and personal mindfulness. There is no scientific evidence that crystals store or release energy, but the safety guidance (which stones tolerate water, sun, or salt) is real mineralogy — and the reason a mindful ritual can coexist with caring for your stones.",
+    "ai_banned_words": ["delve", "tapestry", "realm", "journey（叙事）", "unlock your potential", "manifest abundance", "elevate your vibration"],
+    "chemistry_case_sensitive": "SiO₂（非 sio₂）/ CaCO₃ / Ag₂S — 校验用 includes('sio₂') 小写查真违规"
+  },
+  "three_perspectives": {
+    "science": "40%",
+    "spirituality": "40%",
+    "psychology": "20%",
+    "style": "不单独标注 (science)(spirituality)，融在段落里（对齐 Chakra v2 §11）"
+  },
+  "image_plan": {
+    "hero": {"size": "1536x864", "scene": "月光下的水晶阵列 + 音钵（主题视觉）", "filename": "how-to-cleanse-crystals-hero.jpg"},
+    "step_diagrams": [
+      {"size": "1200x800", "scene": "moonlight 放置窗台步骤", "filename": "how-to-cleanse-crystals-moonlight.jpg"},
+      {"size": "1200x800", "scene": "selenite plate 摆放手链", "filename": "how-to-cleanse-crystals-selenite.jpg"},
+      {"size": "1200x800", "scene": "smoke 净化 + 耐火容器", "filename": "how-to-cleanse-crystals-smoke.jpg"}
+    ],
+    "jewelry_scene": {"size": "1200x800", "scene": "手链/项链 selenite plate 净化场景", "filename": "how-to-cleanse-crystals-jewelry.jpg"},
+    "crystal_images": "复用 390 图库 M4 推荐水晶（search-data.json 已有 img）"
+  },
+  "mvp_validation_8checks": [
+    "结构顺: M1安全优先首屏 → M2安全风险前置 → M3风险分层",
+    "M2概念重不重: 完整四概念表只出现一次（H1）",
+    "M3模板感: 7法卡片句式 3-4 套变体非雷同",
+    "CTA位置: 决策卡片在 M3 末自然出现",
+    "首饰自然: 穿插提示不生硬",
+    "Shop验证: M4每颗 Shop 链接全 200（生产时 REST 验证）",
+    "Schema稳定: HowTo 6 步通用流程不与工具页 step 雷同",
+    "图片投入值: 旗舰级全套（hero+分步+首饰场景）"
+  ]
+}

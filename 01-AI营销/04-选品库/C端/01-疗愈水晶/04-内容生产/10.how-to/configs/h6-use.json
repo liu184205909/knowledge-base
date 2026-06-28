@@ -1,0 +1,233 @@
+{
+  "_meta": {
+    "framework": "How-to 框架 v2",
+    "purpose": "H6 枢纽 — How to Use Crystals (use 2400总览枢纽，承上启下)",
+    "created": "2026-06-28",
+    "quality_tier": "hub",
+    "diff_angle": "首饰佩戴视角(手链/项链daily wear)；完整四概念表放H6(H1外第二处权威)+内链H1；hub角色汇总H1-H5各链专题"
+  },
+  "article": "H6",
+  "slug": "how-to-use-crystals",
+  "url": "/blog/how-to-use-crystals/",
+  "action": "use",
+  "action_gerund": "using",
+  "title": "How to Use Crystals: Beginner's Guide (10 Ways to Start)",
+  "h1": "How to Use Crystals",
+  "primary_kw": "how to use crystals",
+  "secondary_kw": ["how to use a crystal", "using crystals", "crystal uses for beginners", "what to do with crystals"],
+  "word_target": 3100,
+  "word_range": "2800-3400",
+  "concept_focus": "full_comparison_jewelry_view（完整四概念表第二处权威+首饰佩戴视角汇总10种用法；hub角色内链H1-H5专题）",
+  "concept_table_mode": "full_jewelry_view",
+  "full_concept_table_note": "H6是完整四概念表的第二处权威呈现（H1外唯一），作为crystal care sequence图形化总览，内链H1文字版",
+  "ten_ways": [
+    {"way": 1, "title": "Wear it as jewelry", "desc": " bracelets / necklaces / earrings — daily reminder"},
+    {"way": 2, "title": "Carry it in your pocket", "desc": "worry stone / tumbled stone — tactile anchor"},
+    {"way": 3, "title": "Place it on your desk", "desc": "decorative + focus object"},
+    {"way": 4, "title": "Meditate with it", "desc": "hold / body layout / grid — link to H5"},
+    {"way": 5, "title": "Keep it by your bed", "desc": "nightstand wind-down ritual"},
+    {"way": 6, "title": "Use it in a grid", "desc": "arranged pattern for a focused intention"},
+    {"way": 7, "title": "Place it in a room", "desc": "entryway / living room accent"},
+    {"way": 8, "title": "Gift it", "desc": "marking a milestone for someone"},
+    {"way": 9, "title": "Add it to an altar", "desc": "personal sacred space"},
+    {"way": 10, "title": "Cleanse & care for it", "desc": "monthly ritual — link to H1"}
+  ],
+  "methods_subset": null,
+  "methods_risk_tiers": null,
+  "crystals": {
+    "main_commercial": {
+      "slug": "black-tourmaline",
+      "role": "daily-wear",
+      "role_label": "The Daily-Wear Bracelet Stone",
+      "reason": "The most-worn stone in any collection — a grounding touchstone bracelet for daily wear, needs regular cleansing",
+      "compliance_phrase": "A popular choice for those who like a grounding touchstone during a busy workday"
+    },
+    "semantic_match": {
+      "slug": "clear-quartz",
+      "role": "starter",
+      "role_label": "The Beginner's First Stone",
+      "reason": "Durable (Mohs 7), versatile, forgiving — the classic first crystal to learn care and uses on",
+      "compliance_phrase": "A versatile piece collectors often describe as a neutral staple that pairs with any setting"
+    },
+    "entry_price": {
+      "slug": "rose-quartz",
+      "role": "jewelry-favorite",
+      "role_label": "The Jewelry Favorite",
+      "reason": "The most common bracelet/necklace stone — worn as a daily reminder; needs no-contact cleansing (color fades in sun)",
+      "compliance_phrase": "A rose quartz bracelet many people wear as a daily reminder to be gentle with themselves"
+    },
+    "niche": {
+      "slug": "amethyst",
+      "role": "nightstand",
+      "role_label": "The Nightstand Favorite",
+      "reason": "Kept by the bed as part of a wind-down ritual — a common first stone beyond jewelry",
+      "compliance_phrase": "A stone many keep on their nightstand as part of a wind-down ritual before bed"
+    },
+    "safety_warning": {
+      "slug": "selenite",
+      "role": "care-mascot",
+      "role_label": "The Care Mascot",
+      "reason": "Self-cleansing and used as a plate — the stone that helps you care for all the others",
+      "compliance_phrase": "A self-cleansing stone many use as a display plate to rest other pieces on — a practical care choice"
+    },
+    "jewelry_scene": {
+      "slug": "moonstone",
+      "role": "necklace",
+      "role_label": "The Necklace Favorite",
+      "reason": "Soft sheen suits pendants — worn at the heart center as a personal keepsake",
+      "compliance_phrase": "A stone many choose for its soft iridescent sheen and connection to lunar ritual traditions"
+    }
+  },
+  "data_snapshot": {
+    "cleansing_knowledge_version": "v1.0 (H6汇总用，不深入方法细节——各方法细节在H1-H5专题)",
+    "mineral_safety_reference_version": "v1.0 (M4每颗石safety校准)",
+    "crystal_attributes_version": "390 stones",
+    "verified_date": "2026-06-28",
+    "verified_by": "数据一致性 diff + 人工抽检"
+  },
+  "tool_cta": {
+    "enabled": true,
+    "tool": "cleansing-timer",
+    "tool_url": "/tools/crystal-cleansing-timer/",
+    "cta_type": "decision_card",
+    "positions": [
+      "M4-end-decision-card (主决策卡：用石前查耐受)",
+      "M7-pre-bottom (底部曝光卡)"
+    ],
+    "card_template": "> 💡 **Using a new stone? Check its tolerance first.**\n> Before wearing, carrying, or placing a crystal, enter its name in the **[Crystal Cleansing Timer](/tools/crystal-cleansing-timer/)** →\n> confirm its water/sun/salt safety so you care for it correctly from day one."
+  },
+  "jewelry_angle": {
+    "enabled": true,
+    "mode": "central（H6首饰佩戴是核心视角，非穿插）",
+    "insertion_points": {
+      "M3-way1-wear": "首饰佩戴核心：手链戴哪只手(traditionally非主导接收手)、项链吊坠位置、日常佩戴tips",
+      "M3-way5-nightstand": "首饰夜间放selenite plate——睡觉时被动cleanse/charge",
+      "M4-each-stone": "每颗石标首饰形态(bracelet/necklace/pendant) + 佩戴场景",
+      "M6-jewelry-summary": "首饰佩戴汇总：日常佩戴=mini reminder，月度selenite plate care"
+    },
+    "m6_role": "central jewelry section（首饰佩戴视角是H6的核心差异化）"
+  },
+  "eastern_touch": {
+    "wear": "Eastern-inspired jewelry (藏式/编织绳手链，站点实卖)",
+    "meditate": "瑜伽/藏传冥想传统 (link to H5)",
+    "altar": "东方神龛/供桌传统 (personal sacred space)",
+    "grid": "Mandala 曼陀罗 (东方圆形神圣空间)"
+  },
+  "safety_first_narrative": {
+    "M1_quick_answer": [
+      "新手用石最简10法(首饰/口袋/桌面/冥想/床头/grid/房间/礼物/altar/care)",
+      "用石前查耐受：不是所有石能碰水/晒阳光/用盐——不确定先no-contact",
+      "进入10法前一句话'crystal care sequence: cleanse→charge→activate→program'"
+    ],
+    "M2_order_hardware": [
+      "第一段(为什么用水晶): 体验/仪式/美感/日常提醒/收藏(非功效)",
+      "第二段(crystal care sequence): 完整四概念表(图形化呈现，H1外第二处权威)+内链H1文字版",
+      "第三段(首饰佩戴视角引入): 站点主营水晶首饰——10法以佩戴为起点"
+    ],
+    "compliance_phrasing": "a daily reminder / a personal keepsake / a thoughtful collection (非功效)"
+  },
+  "faq_picks": {
+    "intent": [
+      "How do I start using crystals as a beginner?",
+      "What is the best way to use crystals?",
+      "How many crystals should I start with?",
+      "What do I do with a new crystal?"
+    ],
+    "conversion": [
+      "Which crystals are best for jewelry?",
+      "How do I wear a crystal bracelet?",
+      "Do I need to cleanse a crystal before using it?"
+    ],
+    "trust": [
+      "Is there scientific evidence that using crystals does anything?",
+      "Are crystals safe to wear every day?"
+    ],
+    "selective": [
+      "What is the crystal care sequence?",
+      "Can I wear multiple crystal bracelets at once?"
+    ]
+  },
+  "internal_links": {
+    "meaning_min": 3,
+    "condition": {
+      "anchor": "Crystals for Anxiety",
+      "url": "/crystals-for-anxiety/"
+    },
+    "intention": {
+      "anchor": "Shop Calm & Mindfulness",
+      "url": "/calm-mindfulness/"
+    },
+    "hub_flagship": {
+      "anchor": "How to Cleanse Crystals (full four-concept text version)",
+      "url": "/blog/how-to-cleanse-crystals/"
+    },
+    "h1_cleanse_link": {
+      "anchor": "How to Cleanse Crystals",
+      "url": "/blog/how-to-cleanse-crystals/"
+    },
+    "h2_charge_link": {
+      "anchor": "How to Charge Crystals",
+      "url": "/blog/how-to-charge-crystals/"
+    },
+    "h3_activate_link": {
+      "anchor": "How to Activate Crystals",
+      "url": "/blog/how-to-activate-crystals/"
+    },
+    "h4_program_link": {
+      "anchor": "How to Program Crystals",
+      "url": "/blog/how-to-program-crystals/"
+    },
+    "h5_meditate_link": {
+      "anchor": "How to Meditate with Crystals",
+      "url": "/blog/how-to-meditate-with-crystals/"
+    },
+    "h7_bracelet_link": {
+      "anchor": "How to Cleanse a Crystal Bracelet (deep dive)",
+      "url": "/blog/how-to-cleanse-a-crystal-bracelet/"
+    },
+    "shop_fallback": "/product-category/healing-crystals-jewelry/"
+  },
+  "schema": {
+    "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+    "howto_structure": "6-step beginner flow",
+    "howto_focus": "knowledge beginner use steps",
+    "howto_6_steps": [
+      {"step": 1, "name": "Choose your first stone", "text": "选一颗入门石(clear quartz/rose quartz/amethyst)——durability+forgiving"},
+      {"step": 2, "name": "Check its tolerance", "text": "查water/sun/salt耐受(用cleansing-timer工具)——决定能否碰水/晒阳光"},
+      {"step": 3, "name": "Cleanse it first", "text": "新石先cleanse(moonlight/selenite/sound/smoke)——去除经手残留"},
+      {"step": 4, "name": "Pick a way to use it", "text": "从10法选(wear/carry/place/meditate/nightstand等)——建议新手从佩戴或床头开始"},
+      {"step": 5, "name": "Care for it monthly", "text": "月度care：selenite plate过夜cleanse/charge——full moon周期"},
+      {"step": 6, "name": "Build your practice over time", "text": "逐步扩展——加activate(H3)/program(H4)/meditate(H5)专题深化"}
+    ],
+    "howto_name": "How to Use Crystals: A Beginner's Guide",
+    "howto_total_time": "PT30M",
+    "faq_page_schema_consistency": "FAQ答案与Schema FAQPage严格一致"
+  },
+  "compliance": {
+    "avoid": [
+      "crystals bring you luck",
+      "attracts wealth and abundance",
+      "protects you from negative energy",
+      "manifests your desires",
+      "removes negative energy"
+    ],
+    "phrase_library_version": "v1.0（框架v2 §11.2）",
+    "gentle_note": "Using crystals is a personal practice rooted in spiritual traditions, symbolism, and mindfulness. There is no scientific evidence that crystals influence luck, health, or outcomes, but the practices — wearing a stone as a daily reminder, meditating with it, caring for it monthly — are genuine mindfulness rituals that many people find meaningful.",
+    "ai_banned_words": ["delve", "tapestry", "realm", "journey（叙事）", "unlock your potential", "manifest abundance", "elevate your vibration"],
+    "chemistry_case_sensitive": "SiO₂（非sio₂）/ CaCO₃ — 校验用includes('sio₂')"
+  },
+  "three_perspectives": {
+    "science": "40%",
+    "spirituality": "40%",
+    "psychology": "20%",
+    "style": "融在段落里（H6心理学权重略高：daily reminder/正念锚是真实mindfulness技术）"
+  },
+  "image_plan": {
+    "hero": {"size": "1536x864", "scene": "水晶首饰+日常使用场景合集(手链/项链/床头石/桌面石)", "filename": "how-to-use-crystals-hero.jpg"},
+    "step_diagrams": [
+      {"size": "1200x800", "scene": "crystal care sequence流程图(cleanse→charge→activate→program)", "filename": "how-to-use-crystals-care-sequence.jpg"},
+      {"size": "1200x800", "scene": "10种用法grid视觉汇总", "filename": "how-to-use-crystals-10-ways.jpg"}
+    ],
+    "jewelry_scene": {"size": "1200x800", "scene": "手链/项链日常佩戴场景(Eastern-inspired)", "filename": "how-to-use-crystals-jewelry.jpg"}
+  }
+}

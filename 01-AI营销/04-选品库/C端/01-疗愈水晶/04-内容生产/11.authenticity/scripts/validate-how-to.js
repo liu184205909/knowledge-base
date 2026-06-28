@@ -1,0 +1,121 @@
+/**
+ * How-to 机械校验（填充后跑）
+ * 硬规则(必须0): 占位符残留 / 合规红线绝对禁词 / 字数不足
+ * 软提示(统计不自动改): 去AI化禁词 / 功效句检测
+ * 化学式大小写: includes('sio₂') 小写查真违规（按 validate-riskwords-case-sensitive memory）
+ * 用法：node validate-how-to.js [--slug=how-to-cleanse-crystals]
+ * 参考：9.angel-numbers/scripts/validate-angel-numbers.js
+ */
+const fs = require('fs'), path = require('path');
+const DIR = path.resolve(__dirname, '..');
+const args = process.argv.slice(2);
+const slugArg = args.find(a => a.startsWith('--slug='))?.split('=')[1];
+
+const idx = JSON.parse(fs.readFileSync(path.join(DIR, 'articles-index.json'), 'utf8'));
+const list = slugArg ? idx.articles.filter(a => a.slug === slugArg) : idx.articles;
+
+// 合规红线（绝对禁止，功效 claim，精确 includes 小写）
+const HARD_BANNED = [
+  'removes negative energy', 'remove negative energy',
+  'purifies bad vibes', 'purify bad vibes',
+  'amplifies healing power', 'amplify healing power',
+  "awakens the crystal's magical", 'awaken magical',
+  'will protect you from negativity',
+  'attracts love', 'attracts wealth', 'attracts abundance',
+  'blocks negative energy', 'block negative energy',
+  'manifest abundance', 'attracts romance',
+  'heals anxiety', 'cures anxiety', 'treats anxiety',
+  'emf protection', 'blocks emf',
+  // 真伪鉴别场景：绝对化真伪声明（FTC 风险，框架 §9）
+  '100% genuine', '100% authentic', '100% real',
+  'guaranteed authentic', 'guaranteed real', 'guaranteed genuine',
+  'verified authentic', 'absolutely genuine', 'absolutely real',
+  'always works', 'never fails', 'never fails',
+  'the only way to know', 'only way to tell',
+  'fake crystals are dangerous', 'fakes are toxic',
+];
+
+// 去AI化禁词（软提示，toLowerCase 匹配）
+const SOFT_BANNED = [
+  'delve', 'harness', 'realm', 'tapestry', 'unlock your potential',
+  'elevate your vibration', 'manifest abundance',
+  'intricate', 'seamless', 'leverage', 'foster',
+  'paramount', 'plethora', 'myriad', 'beacon', 'conduit',
+  "in today's fast-paced", "it's important to note",
+  'pave the way', 'when it comes to', 'moreover', 'furthermore',
+  'journey',  // 叙事性 journey，软提示（可能合理用法如 user journey）
+];
+
+// 化学式小写误用（真违规检测，区分大小写按 memory）
+const CHEMISTRY_LOWER = ['sio₂', 'caco₃', 'ag₂s', 'caso₄', 'cu₂co₃', 'fe₂o₃', 'fes₂'];
+
+let totalWords = 0, hardIssues = [], softStats = {};
+let placeholderIssues = [], wordCountIssues = [], chemIssues = [];
+let checked = 0, details = [];
+
+for (const art of list) {
+  const f = path.join(DIR, 'articles', art.slug + '.json');
+  if (!fs.existsSync(f)) continue;
+  const a = JSON.parse(fs.readFileSync(f, 'utf8'));
+  const content = a.content || '';
+  const lower = content.toLowerCase();
+  checked++;
+
+  // 1. 占位符残留
+  const phCount = (content.match(/\{\{AI_/g) || []).length
+    + ((a.rank_math_description || '').match(/\{\{AI_/g) || []).length
+    + ((a.excerpt || '').match(/\{\{AI_/g) || []).length;
+  if (phCount > 0) placeholderIssues.push(`${art.slug}(${phCount})`);
+
+  // 2. 字数（HTML 标签剥离后）
+  const words = content.replace(/<[^>]+>/g, ' ').replace(/&[a-z]+;/g, ' ').split(/\s+/).filter(Boolean).length;
+  totalWords += words;
+  const minWords = a.word_target ? Math.round(a.word_target * 0.85) : 2500;
+  if (words < minWords) wordCountIssues.push(`${art.slug}(${words}, 需≥${minWords})`);
+
+  // 3. 合规红线（硬）
+  for (const b of HARD_BANNED) {
+    if (lower.includes(b)) hardIssues.push(`${art.slug}: "${b}"`);
+  }
+
+  // 4. 化学式小写误用（真违规检测：查原文 content，非 lower —— 按 validate-riskwords-case-sensitive memory）
+  // 正确写法是 "SiO₂"（首字母大写），误用是 "sio₂"（全小写）。原文含小写形式才是真违规。
+  for (const c of CHEMISTRY_LOWER) {
+    if (content.includes(c)) chemIssues.push(`${art.slug}: "${c}"`);
+  }
+
+  // 5. 去AI化禁词（软统计）
+  for (const b of SOFT_BANNED) {
+    const cnt = lower.split(b).length - 1;
+    if (cnt > 0) {
+      softStats[b] = (softStats[b] || 0) + cnt;
+    }
+  }
+
+  details.push({ slug: art.slug, words, ph: phCount });
+}
+
+console.log(`\n===== How-to 校验（${checked}篇）=====`);
+details.forEach(d => console.log(`  ${d.slug}: ${d.words} 词, 占位符残留 ${d.ph}`));
+console.log(`平均词数: ${checked ? Math.round(totalWords / checked) : 0}`);
+
+console.log(`\n[硬] 占位符残留: ${placeholderIssues.length} 篇`);
+if (placeholderIssues.length) console.log('  ' + placeholderIssues.join(', '));
+
+console.log(`\n[硬] 字数不足: ${wordCountIssues.length} 篇`);
+if (wordCountIssues.length) console.log('  ' + wordCountIssues.join(', '));
+
+console.log(`\n[硬] 化学式小写误用: ${chemIssues.length} 处`);
+if (chemIssues.length) console.log('  ' + chemIssues.join(', '));
+
+console.log(`\n[硬] 合规红线命中: ${hardIssues.length} 处`);
+if (hardIssues.length) hardIssues.slice(0, 30).forEach(h => console.log('  ' + h));
+
+console.log(`\n[软] 去AI化禁词统计:`);
+const sorted = Object.entries(softStats).sort((a, b) => b[1] - a[1]);
+if (sorted.length) sorted.forEach(([w, c]) => console.log(`  ${w}: ${c}`));
+else console.log('  (无)');
+
+const allHard = placeholderIssues.length + wordCountIssues.length + chemIssues.length + hardIssues.length;
+console.log(`\n===== 硬规则总计: ${allHard}（必须为 0）=====`);
+process.exit(allHard > 0 ? 1 : 0);

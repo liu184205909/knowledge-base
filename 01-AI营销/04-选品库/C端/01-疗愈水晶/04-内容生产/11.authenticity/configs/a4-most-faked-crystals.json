@@ -1,0 +1,91 @@
+{
+  "_meta": {
+    "article": "A4",
+    "purpose": "Most Faked Crystals集合篇(hub) — 10石各一卡(矿物数据+独有鉴别点+实拍对比)，差异化选题竞品弱",
+    "framework_ref": "模板-水晶真伪鉴别文章框架.md §0 A4 + §5",
+    "created": "2026-06-28"
+  },
+  "slug": "most-faked-crystals",
+  "url": "/blog/most-faked-crystals/",
+  "subject_label": "Crystals",
+  "subject_scope": "collection-10-stones",
+  "title": "Most Faked Crystals: 10 Stones Often Sold Fake (2026 Guide)",
+  "h1": "Most Faked Crystals: 10 Stones Often Sold Fake",
+  "primary_kw": "most faked crystals",
+  "secondary_kw": ["fake crystals list", "crystals that are commonly faked", "how to spot fake turquoise", "fake moldavite", "fake citrine"],
+  "word_target": 2700,
+  "word_range": "2400-3000",
+  "quality_tier": "hub",
+  "date_published": "2026-06-28",
+  "date_modified": "2026-06-28",
+  "crystal_vs_glass_section": false,
+  "methods_used": ["naming", "price", "bubbles", "color_banding", "specific_gravity", "hardness", "uv_light"],
+  "stone_cases": ["amethyst", "citrine", "turquoise", "lapis_lazuli", "moldavite", "malachite", "jadeite", "obsidian", "clear_quartz", "rose_quartz"],
+  "mineral_table_position": "m3",
+  "m3_heading": "How Fakes Are Made (and the Tests That Catch Them)",
+  "m4_heading": "The 10 Most Faked Crystals",
+  "m4_mode": "multi_overview",
+  "series_links": {
+    "to_flagship": { "anchor": "How to Tell If a Crystal Is Real (full 10-test guide)", "url": "/blog/how-to-tell-if-crystal-is-real/" }
+  },
+  "author": {
+    "name": "Earthward Editorial Team",
+    "byline": "Earthward's crystal care and sourcing team",
+    "reviewed_by": "Earthward's mineral-sourcing reviewers"
+  },
+  "buying_guide": {
+    "shop_cta_target": "/product-category/healing-crystals-jewelry/",
+    "shop_cta_anchor": "Browse genuine crystal jewelry"
+  },
+  "faq_picks": {
+    "intent": [
+      "Which crystals are most commonly faked?",
+      "How can you tell if a crystal is fake?",
+      "What is the most faked crystal?",
+      "Is fake turquoise common?"
+    ],
+    "conversion": [
+      "Where can I buy genuine crystals that are not fake?",
+      "How much do real crystals cost vs fakes?",
+      "Are lab-created crystals considered fake?"
+    ],
+    "trust": [
+      "Are fake crystals dangerous?",
+      "Can home tests spot all fakes?"
+    ],
+    "selective": [
+      "Why is moldavite so often faked?",
+      "Is dyed howlite always sold as turquoise?"
+    ]
+  },
+  "internal_links": {
+    "meaning_min": 3,
+    "flagship": { "anchor": "How to Tell If a Crystal Is Real", "url": "/blog/how-to-tell-if-crystal-is-real/" },
+    "amethyst_deep": { "anchor": "Real vs Fake Amethyst (deep dive)", "url": "/blog/real-vs-fake-amethyst/" },
+    "clear_quartz_deep": { "anchor": "How to Tell If Clear Quartz Is Real (deep dive)", "url": "/blog/how-to-tell-if-clear-quartz-is-real/" }
+  },
+  "schema": {
+    "types": ["Article", "FAQPage", "BreadcrumbList"],
+    "howto_name": "How to Spot the Most Faked Crystals",
+    "howto_total_time": "PT20M",
+    "howto_steps": [
+      { "step": 1, "name": "Learn the most-faked list", "text": "Amethyst, citrine, turquoise, lapis, moldavite, malachite, jadeite, obsidian, clear quartz, rose quartz lead the fake market." },
+      { "step": 2, "name": "Apply the species-specific test", "text": "Each stone has one headline signal (turquoise: matrix, lapis: pyrite flecks, jadeite: heft, moldavite: origin)." },
+      { "step": 3, "name": "Cross-check price and naming", "text": "Bargain pricing on high-value species (jadeite, moldavite, large turquoise) is the strongest pre-purchase warning." },
+      { "step": 4, "name": "Use a 10x loupe for any transparent stone", "text": "Bubbles separate glass from natural quartz-family stones." },
+      { "step": 5, "name": "For valuable pieces, get a lab certificate", "text": "Jadeite, moldavite, and large turquoise warrant professional certification." }
+    ]
+  },
+  "compliance": {
+    "avoid": ["100% genuine", "100% authentic", "guaranteed real", "verified authentic", "always works", "never fails", "the only way to know", "fake crystals are dangerous"],
+    "gentle_note": "This guide covers the stones most often sold as imitations. Home tests help you spot common fakes, but for valuable specimens (jadeite, moldavite, untreated turquoise), a gemological lab report is the gold standard. Crystal meanings and energetic properties are separate from authenticity.",
+    "brand_tagline": "We name our stones and sources — return to what's real.",
+    "ai_banned_words": ["delve", "tapestry", "realm", "unlock your potential", "manifest abundance", "elevate your vibration"]
+  },
+  "three_perspectives": { "science": "55%", "spirituality": "25%", "psychology": "20%" },
+  "image_plan": {
+    "hero": { "size": "1536x864", "scene": "collection of 10 most-faked crystals arranged with labels", "filename": "most-faked-crystals-hero.jpg" },
+    "comparison": { "size": "1200x800", "scene": "genuine turquoise with matrix vs dyed howlite side by side", "filename": "most-faked-crystals-turquoise.jpg" },
+    "test_diagram": { "size": "1200x800", "scene": "genuine lapis with pyrite flecks vs fake uniform blue side by side", "filename": "most-faked-crystals-lapis.jpg" }
+  }
+}

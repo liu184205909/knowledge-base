@@ -1,0 +1,186 @@
+[
+  {
+    "slug": "the-magician",
+    "postSlug": "tarot-the-magician",
+    "id": 47830,
+    "hero": 47828,
+    "spread": 47829,
+    "status": "ok"
+  },
+  {
+    "slug": "the-high-priestess",
+    "postSlug": "tarot-the-high-priestess",
+    "id": 47833,
+    "hero": 47831,
+    "spread": 47832,
+    "status": "ok"
+  },
+  {
+    "slug": "the-empress",
+    "postSlug": "tarot-the-empress",
+    "id": 47836,
+    "hero": 47834,
+    "spread": 47835,
+    "status": "ok"
+  },
+  {
+    "slug": "the-emperor",
+    "postSlug": "tarot-the-emperor",
+    "id": 47839,
+    "hero": 47837,
+    "spread": 47838,
+    "status": "ok"
+  },
+  {
+    "slug": "the-hierophant",
+    "postSlug": "tarot-the-hierophant",
+    "id": 47842,
+    "hero": 47840,
+    "spread": 47841,
+    "status": "ok"
+  },
+  {
+    "slug": "the-lovers",
+    "postSlug": "tarot-the-lovers",
+    "id": 47845,
+    "hero": 47843,
+    "spread": 47844,
+    "status": "ok"
+  },
+  {
+    "slug": "the-chariot",
+    "postSlug": "tarot-the-chariot",
+    "id": 47848,
+    "hero": 47846,
+    "spread": 47847,
+    "status": "ok"
+  },
+  {
+    "slug": "strength",
+    "postSlug": "tarot-strength",
+    "id": 47851,
+    "hero": 47849,
+    "spread": 47850,
+    "status": "ok"
+  },
+  {
+    "slug": "the-hermit",
+    "postSlug": "tarot-the-hermit",
+    "id": 47854,
+    "hero": 47852,
+    "spread": 47853,
+    "status": "ok"
+  },
+  {
+    "slug": "wheel-of-fortune",
+    "postSlug": "tarot-wheel-of-fortune",
+    "id": 47857,
+    "hero": 47855,
+    "spread": 47856,
+    "status": "ok"
+  },
+  {
+    "slug": "justice",
+    "postSlug": "tarot-justice",
+    "id": 47860,
+    "hero": 47858,
+    "spread": 47859,
+    "status": "ok"
+  },
+  {
+    "slug": "the-hanged-man",
+    "postSlug": "tarot-the-hanged-man",
+    "id": 47863,
+    "hero": 47861,
+    "spread": 47862,
+    "status": "ok"
+  },
+  {
+    "slug": "death",
+    "postSlug": "tarot-death",
+    "id": 47866,
+    "hero": 47864,
+    "spread": 47865,
+    "status": "ok"
+  },
+  {
+    "slug": "temperance",
+    "postSlug": "tarot-temperance",
+    "id": 47869,
+    "hero": 47867,
+    "spread": 47868,
+    "status": "ok"
+  },
+  {
+    "slug": "the-devil",
+    "postSlug": "tarot-the-devil",
+    "id": 47872,
+    "hero": 47870,
+    "spread": 47871,
+    "status": "ok"
+  },
+  {
+    "slug": "the-tower",
+    "postSlug": "tarot-the-tower",
+    "id": 47875,
+    "hero": 47873,
+    "spread": 47874,
+    "status": "ok"
+  },
+  {
+    "slug": "the-star",
+    "postSlug": "tarot-the-star",
+    "id": 47878,
+    "hero": 47876,
+    "spread": 47877,
+    "status": "ok"
+  },
+  {
+    "slug": "the-moon",
+    "postSlug": "tarot-the-moon",
+    "id": 47881,
+    "hero": 47879,
+    "spread": 47880,
+    "status": "ok"
+  },
+  {
+    "slug": "the-sun",
+    "postSlug": "tarot-the-sun",
+    "id": 47884,
+    "hero": 47882,
+    "spread": 47883,
+    "status": "ok"
+  },
+  {
+    "slug": "judgment",
+    "postSlug": "tarot-judgment",
+    "id": 47887,
+    "hero": 47885,
+    "spread": 47886,
+    "status": "ok"
+  },
+  {
+    "slug": "the-world",
+    "postSlug": "tarot-the-world",
+    "id": 47890,
+    "hero": 47888,
+    "spread": 47889,
+    "status": "ok"
+  },
+  {
+    "slug": "crystals-for-tarot-cards",
+    "postSlug": "crystals-for-tarot-cards",
+    "id": 47892,
+    "hero": 47891,
+    "spread": null,
+    "status": "ok"
+  },
+  {
+    "slug": "the-fool",
+    "postSlug": "tarot-the-fool",
+    "id": 47895,
+    "hero": 47893,
+    "spread": 47894,
+    "status": "ok"
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "_meta": {
+    "article": "A1",
+    "purpose": "旗舰总览枢纽 — How to Tell If a Crystal Is Real (1300词主词) + crystal vs glass 长尾段(1600) + 10法全展开",
+    "framework_ref": "模板-水晶真伪鉴别文章框架.md §0 A1",
+    "created": "2026-06-28"
+  },
+  "slug": "how-to-tell-if-crystal-is-real",
+  "url": "/blog/how-to-tell-if-crystal-is-real/",
+  "subject_label": "Crystal",
+  "subject_scope": "all-crystals",
+  "title": "How to Tell If a Crystal Is Real: 10 Tests (With Photos)",
+  "h1": "How to Tell If a Crystal Is Real",
+  "primary_kw": "how to tell if a crystal is real",
+  "secondary_kw": ["real vs fake crystals", "crystal vs glass", "is my crystal real", "genuine crystals", "how to tell real crystal"],
+  "word_target": 3000,
+  "word_range": "2700-3300",
+  "quality_tier": "flagship",
+  "date_published": "2026-06-28",
+  "date_modified": "2026-06-28",
+  "crystal_vs_glass_section": true,
+  "methods_used": ["temperature", "hardness", "specific_gravity", "bubbles", "color_banding", "uv_light", "refractive_index", "sound", "price", "naming"],
+  "stone_cases": ["amethyst", "clear_quartz", "turquoise", "lapis_lazuli"],
+  "mineral_table_position": "m3",
+  "m3_heading": "How to Tell If a Crystal Is Real: 10 Tests",
+  "m4_heading": "Stone-Specific Tests: The Most Faked Crystals",
+  "m4_mode": "multi_overview",
+  "series_links": {
+    "to_hub": { "anchor": "Most Faked Crystals: the full list", "url": "/blog/most-faked-crystals/" }
+  },
+  "author": {
+    "name": "Earthward Editorial Team",
+    "byline": "Earthward's crystal care and sourcing team",
+    "reviewed_by": "Earthward's mineral-sourcing reviewers"
+  },
+  "buying_guide": {
+    "shop_cta_target": "/product-category/healing-crystals-jewelry/",
+    "shop_cta_anchor": "Browse genuine crystal jewelry"
+  },
+  "faq_picks": {
+    "intent": [
+      "How can you tell if a crystal is real or fake?",
+      "What is the most reliable test for real crystals?",
+      "Can you tell if a crystal is real at home?",
+      "Is there a difference between crystal and glass?"
+    ],
+    "conversion": [
+      "Where can I buy genuine crystals?",
+      "How much should a real crystal cost?",
+      "Are lab-created crystals real?"
+    ],
+    "trust": [
+      "Can home tests guarantee a crystal is real?",
+      "Are fake crystals dangerous?"
+    ],
+    "selective": [
+      "What does 'crystal' mean in glassware?",
+      "Why does my crystal feel warm?"
+    ]
+  },
+  "internal_links": {
+    "meaning_min": 3,
+    "series_amethyst": { "anchor": "Real vs Fake Amethyst: deep dive", "url": "/blog/real-vs-fake-amethyst/" },
+    "series_clear_quartz": { "anchor": "How to Tell if Clear Quartz Is Real", "url": "/blog/how-to-tell-if-clear-quartz-is-real/" },
+    "hub": { "anchor": "Most Faked Crystals", "url": "/blog/most-faked-crystals/" }
+  },
+  "schema": {
+    "types": ["Article", "FAQPage", "BreadcrumbList"],
+    "howto_name": "How to Tell If a Crystal Is Real",
+    "howto_total_time": "PT20M",
+    "howto_steps": [
+      { "step": 1, "name": "Start with non-destructive tests", "text": "Temperature, a 10x loupe bubble check, and color zoning — all harmless to the stone." },
+      { "step": 2, "name": "Cross-check with mineral data", "text": "Compare Mohs hardness, specific gravity, and refractive index against known values for the claimed species." },
+      { "step": 3, "name": "Use price and naming as auxiliary signals", "text": "Far-below-market pricing or vague naming raises the stakes for further testing." },
+      { "step": 4, "name": "Confirm with a destructive test only if needed", "text": "The scratch test (Mohs) damages the stone — use only on rough or tumbled quartz-family stones, never on jewelry." },
+      { "step": 5, "name": "For valuable specimens, get a lab report", "text": "A gemological laboratory certificate is the only definitive answer for high-value stones." }
+    ]
+  },
+  "compliance": {
+    "avoid": ["100% genuine", "100% authentic", "guaranteed real", "verified authentic", "absolutely real", "always works", "never fails", "the only way to know", "fake crystals are dangerous"],
+    "gentle_note": "Crystal identification tests combine practical mineralogy with marketplace awareness. Home tests help you spot common fakes, but for valuable specimens, a gemological lab report is the gold standard. Crystal meanings and energetic properties are separate from authenticity — a stone can be genuinely natural without being a 'healing' tool.",
+    "brand_tagline": "We name our stones and sources — return to what's real.",
+    "ai_banned_words": ["delve", "tapestry", "realm", "unlock your potential", "manifest abundance", "elevate your vibration"]
+  },
+  "three_perspectives": { "science": "55%", "spirituality": "25%", "psychology": "20%" },
+  "image_plan": {
+    "hero": { "size": "1536x864", "scene": "real crystal vs glass side-by-side comparison", "filename": "how-to-tell-if-crystal-is-real-hero.jpg" },
+    "comparison": { "size": "1200x800", "scene": "genuine quartz with inclusions vs glass with bubbles (10x loupe view)", "filename": "how-to-tell-if-crystal-is-real-comparison.jpg" },
+    "test_diagram": { "size": "1200x800", "scene": "temperature and hardness test illustration", "filename": "how-to-tell-if-crystal-is-real-tests.jpg" },
+    "mineral_chart": { "size": "1200x800", "scene": "Mohs hardness scale infographic for common crystals", "filename": "how-to-tell-if-crystal-is-real-mohs.jpg" }
+  }
+}

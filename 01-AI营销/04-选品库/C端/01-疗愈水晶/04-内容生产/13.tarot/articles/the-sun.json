@@ -1,0 +1,149 @@
+{
+  "title": "The Sun Tarot Card Meaning & Best Crystals",
+  "slug": "the-sun",
+  "url": "/tarot-the-sun-crystals/",
+  "number": 19,
+  "name": "The Sun",
+  "archetype": "The Radiant",
+  "element": "Fire",
+  "astrology": "Sun",
+  "theme": "Joy, vitality, clarity, success",
+  "upright_keywords": [
+    "joy",
+    "success",
+    "vitality",
+    "positivity",
+    "clarity"
+  ],
+  "reversed_keywords": [
+    "temporary setback",
+    "muted joy",
+    "ego inflation",
+    "excessive optimism"
+  ],
+  "upright_meaning": "A bright sun with a content child riding a white horse beneath it, sunflowers turning toward the light, a wall behind. The Sun is the archetype of joyful clarity — vitality, optimism, the simple good of being alive. Upright, it speaks to a season of warmth and success, and also to the cultivation of joy — the reminder that even good things are noticed and tended, not assumed.",
+  "reversed_meaning": "Reversed, The Sun often points to a temporary dimming — muted joy, a setback after a high, or the shadow of too much sun, ego inflation and excessive optimism. It is not a forecast of failure; it is an invitation to ask where you have stopped tending the joy that was once vivid, or where confidence has crossed into overreach.",
+  "psychological_lens": "positive affect (the role of cultivated joy and vitality in resilience and well-being — not as denial, but as a genuine resource)",
+  "eastern_anchors": {
+    "tibetan": "The Sun resonates with the Eastern recognition of luminosity — the warm, radiant quality of an unobscured mind, neither grasping nor dimmed by avoidance.",
+    "crystal_culture": "Sunstone, named for the sun across traditions, embodies The Sun's warmth, confidence, and the leadership that comes from genuine vitality."
+  },
+  "recommended_practice": "name one genuine source of joy in your life right now, and tend it today with five minutes of real attention",
+  "crystals": {
+    "best_overall": {
+      "slug": "sunstone",
+      "name": "Sunstone",
+      "reason": "Sunstone is the radiant stone of joy, confidence, and warmth — The Sun in mineral form. Hold it when you want to reconnect with simple vitality; it supports the cultivated joy this card depicts, the kind that is noticed and tended rather than assumed.",
+      "source": "四源共识",
+      "meaning_cta": "OMIT",
+      "meaning_url": null,
+      "shop_cta": "HEALING_JEWELRY",
+      "shop_url": "/product-category/healing-jewelry/",
+      "read_text": "Read Sunstone Meaning",
+      "shop_text": "Shop Sunstone"
+    },
+    "best_upright": {
+      "slug": "citrine",
+      "name": "Citrine",
+      "reason": "Citrine carries the abundant, sunny energy of success and optimism. For an upright Sun draw, it supports the warmth of a season going well — and the generosity that genuine vitality makes possible.",
+      "source": "矿物学",
+      "meaning_cta": "INCLUDE",
+      "meaning_url": "/gemstone/citrine-meaning/",
+      "shop_cta": "CATEGORY",
+      "shop_url": "/product-category/citrine-crystals/",
+      "read_text": "Explore Citrine in depth",
+      "shop_text": "Browse Citrine jewelry"
+    },
+    "best_reversed": {
+      "slug": "smoky-quartz",
+      "name": "Smoky Quartz",
+      "reason": "When The Sun reverses into muted joy or ego inflation, Smoky Quartz grounds the over-bright energy back to earth. It is the stone for when confidence has crossed into overreach, or when joy needs steadying.",
+      "source": "goearthward逆位裁决",
+      "meaning_cta": "INCLUDE",
+      "meaning_url": "/gemstone/smoky-quartz-meaning/",
+      "shop_cta": "SEARCH",
+      "shop_url": "/shop/?s=smoky+quartz",
+      "read_text": "Smoky Quartz properties & symbolism",
+      "shop_text": "Find your Smoky Quartz piece"
+    },
+    "best_love": {
+      "slug": "rose-quartz",
+      "name": "Rose Quartz",
+      "reason": "Rose Quartz deepens The Sun's love readings, where joy can be shared. It supports the simple warmth of two people enjoying each other, tending the good rather than taking it for granted.",
+      "source": "goearthward爱情跨牌统一",
+      "meaning_cta": "INCLUDE",
+      "meaning_url": "/gemstone/rose-quartz-meaning/",
+      "shop_cta": "CATEGORY",
+      "shop_url": "/product-category/rose-quartz-crystals/",
+      "read_text": "Read Rose Quartz Meaning",
+      "shop_text": "Shop Rose Quartz"
+    },
+    "best_daily_wear": {
+      "slug": "carnelian",
+      "name": "Carnelian",
+      "reason": "Carnelian is a daily stone of vitality, courage, and warm presence. Worn as jewelry, it keeps The Sun's radiance within reach through ordinary days — a reminder to bring genuine energy to what is in front of you.",
+      "source": "矿物学+首饰适配",
+      "meaning_cta": "INCLUDE",
+      "meaning_url": "/gemstone/carnelian-meaning/",
+      "shop_cta": "CATEGORY",
+      "shop_url": "/product-category/carnelian-crystals/",
+      "read_text": "Explore Carnelian in depth",
+      "shop_text": "Browse Carnelian jewelry"
+    }
+  },
+  "chakra": [
+    "Solar Plexus",
+    "Sacral"
+  ],
+  "related_cards": [
+    17,
+    18
+  ],
+  "source_notes": "四源共识=Sunstone(贴 Sun archetype)；best_reversed=Smoky Quartz(逆位 muted joy/ego 时 grounding)；合规：明示'joy is tended not assumed'+ 逆位非 failure 是临时 dimming",
+  "module_weights": {
+    "M2_upright": "joy / vitality / clarity / success (骄阳/孩童/白马/向日葵画面)",
+    "M3_reversed_tension": "temporary setback / muted joy / ego inflation",
+    "M7_psych": "positive affect",
+    "M5_focus": "tend one source of joy",
+    "eastern": "'明性' luminosity / Sunstone 阳光石"
+  },
+  "rank_math_title": "The Sun Tarot Card Meaning & Best Crystals",
+  "rank_math_description": "The Sun tarot card meaning, upright and reversed, with the best crystals for joy and vitality — Sunstone, Citrine, Carnelian — and a self-reflection practice for tending the good that is present.",
+  "rank_math_focus_keyword": "the sun tarot",
+  "excerpt": "The Sun is the card of joyful clarity and vitality. Explore its upright and reversed meanings, the best crystals for warm confidence, and a short practice for tending the joy that is present rather than taking it for granted.",
+  "diffHints": {
+    "archetype": "The Radiant",
+    "upright_meaning": "A bright sun with a content child riding a white horse beneath it, sunflowers turning toward the light, a wall behind. The Sun is the archetype of joyful clarity — vitality, optimism, the simple good of being alive. Upright, it speaks to a season of warmth and success, and also to the cultivation of joy — the reminder that even good things are noticed and tended, not assumed.",
+    "reversed_meaning": "Reversed, The Sun often points to a temporary dimming — muted joy, a setback after a high, or the shadow of too much sun, ego inflation and excessive optimism. It is not a forecast of failure; it is an invitation to ask where you have stopped tending the joy that was once vivid, or where confidence has crossed into overreach.",
+    "psychological_lens": "positive affect (the role of cultivated joy and vitality in resilience and well-being — not as denial, but as a genuine resource)",
+    "eastern_anchors": {
+      "tibetan": "The Sun resonates with the Eastern recognition of luminosity — the warm, radiant quality of an unobscured mind, neither grasping nor dimmed by avoidance.",
+      "crystal_culture": "Sunstone, named for the sun across traditions, embodies The Sun's warmth, confidence, and the leadership that comes from genuine vitality."
+    },
+    "recommended_practice": "name one genuine source of joy in your life right now, and tend it today with five minutes of real attention",
+    "module_weights": {
+      "M2_upright": "joy / vitality / clarity / success (骄阳/孩童/白马/向日葵画面)",
+      "M3_reversed_tension": "temporary setback / muted joy / ego inflation",
+      "M7_psych": "positive affect",
+      "M5_focus": "tend one source of joy",
+      "eastern": "'明性' luminosity / Sunstone 阳光石"
+    },
+    "faq_shared_halves": {
+      "is_bad_card_first_half": "In tarot, no card is inherently 'good' or 'bad' — every card, including reversed positions, is read as information for reflection rather than a fixed outcome.",
+      "can_predict_future_first_half": "No — tarot is a symbolic system used for self-reflection and contemplation, not a tool that predicts fixed outcomes. The cards surface patterns and questions; your choices shape what happens next."
+    }
+  },
+  "images": {
+    "hero": {
+      "file": "images/tarot/hero-tarot-the-sun.webp",
+      "alt": "The Sun tarot card meaning with crystals — The Radiant",
+      "source_type": "tarot-hero"
+    },
+    "spread": {
+      "file": "images/tarot/spread-the-sun.webp",
+      "alt": "Mini crystal tarot spread for The Sun — 3 cards with companion crystals",
+      "source_type": "tarot-spread"
+    }
+  },
+  "content": "When The Sun appears in a reading, it usually brings a warm, uncomplicated good — joy, vitality, clarity, the simple pleasure of being alive. Card 19 of the Major Arcana, it is the archetype of the radiant. Paired with the right crystals, this card becomes an invitation to tend the joy that is present rather than take it for granted, and to let the confidence it brings stay grounded rather than inflate.\n\n<h2>The Sun at a Glance</h2>\n<p>The Sun is the card of joy, vitality, success, and clarity. Upright, it points to a season of warmth and optimism; reversed, it often asks where joy has been muted or confidence has crossed into overreach. The crystal most often paired with The Sun is Sunstone, the radiant stone of warmth and self-worth.</p>\n<ul>\n<li><strong>Archetype:</strong> The Radiant</li>\n<li><strong>Core theme:</strong> Joy, vitality, clarity, success</li>\n<li><strong>Recommended crystal:</strong> Sunstone</li>\n<li><strong>Upright:</strong> joy, success, vitality</li>\n<li><strong>Reversed:</strong> temporary setback, muted joy, ego inflation</li>\n</ul>\n\n<h2>The Sun Upright: Meaning &amp; Message</h2>\n<p>In the Rider-Waite image, a bright sun shines over a walled garden, a content child rides a white horse beneath it, arms open, a banner streaming. Sunflowers line the wall behind. The scene is wholly joyful, almost disarmingly simple after the half-lit uncertainty of The Moon. There is no hidden meaning to decode; the good is on the surface, and the surface is enough.\n\nUpright, The Sun is the archetype of <em>joyful clarity and vitality</em>. It is the card of a season going well — of energy, optimism, success, and the simple good of being alive in a body. In everyday terms, The Sun often appears when something genuinely good is present or arriving, and the card's quiet teaching is that even joy asks to be noticed and tended, not assumed.\n\nThis is also a card of clear seeing. Where The Moon was half-lit, The Sun is full daylight — the situation is what it appears to be, and the truth is available without decoding. The confidence The Sun brings is earned by clarity, not manufactured by wishful thinking.</p>\n\n<h2>The Sun Reversed: The Shadow Aspect</h2>\n<p>When The Sun appears reversed, the same joy has been dimmed somewhere. The familiar form is <em>muted joy</em> — the good that is present but not being felt, the success that lands flat, the moment that should be bright and somehow is not. A second form is the shadow of too much sun: <em>ego inflation</em>, excessive optimism, confidence that has crossed from grounded into grandiose.\n\nThis is not a forecast of failure. A reversed card is information for reflection. The Sun reversed often asks one honest question: where has the joy that is actually present stopped reaching you — or where has confidence stopped being earned and started being assumed?</p>\n<p><strong>A reflection prompt:</strong> Name one genuine source of joy in your life right now. Tend it today with five full minutes of real attention — not scrolling past it, not qualifying it, just letting it be good. The Sun asks you to receive what is already shining.</p>\n\n<h2>Best Crystals for The Sun</h2>\n<p>Crystals paired with The Sun tend to share qualities of warmth, vitality, confidence, or grounding, matching the card's theme of joyful clarity. The five below are drawn from the major crystal-and-tarot references and mineral tradition, chosen for distinct aspects of this card — from the radiant stone itself, to a stone of abundant optimism, to a grounding stone for when confidence has crossed into overreach.</p>\n<h3>Best Overall Crystal for The Sun</h3>\n<p>Sunstone is the radiant stone of joy, confidence, and warmth — The Sun in mineral form. Hold it when you want to reconnect with simple vitality; it supports the cultivated joy this card depicts, the kind that is noticed and tended rather than assumed. The stone carries the warm, solar energy the image radiates.</p>\n<p><em>Sunstone</em> — Sunstone is the radiant stone of joy, confidence, and warmth — The Sun in mineral form. Hold it when you want to reconnect with simple vitality; it supports the cultivated joy this card depicts, the kind that is noticed and tended rather than assumed. <a href=\"/product-category/healing-jewelry/\">Shop Sunstone →</a></p>\n<h3>Best Crystal for Upright The Sun Energy</h3>\n<p>Citrine carries the abundant, sunny energy of success and optimism. For an upright Sun draw, when a season is genuinely going well, it supports the warmth of the moment — and the generosity that genuine vitality makes possible, the willingness to share the light rather than hoard it.</p>\n<p><em>Citrine</em> — Citrine carries the abundant, sunny energy of success and optimism. For an upright Sun draw, it supports the warmth of a season going well — and the generosity that genuine vitality makes possible. <a href=\"/gemstone/citrine-meaning/\">Explore Citrine in depth →</a> · <a href=\"/product-category/citrine-crystals/\">Browse Citrine jewelry →</a></p>\n<h3>Best Crystal for Reversed The Sun (Shadow Work)</h3>\n<p>When The Sun reverses into muted joy or ego inflation, Smoky Quartz grounds the over-bright energy back to earth. It is the stone for when confidence has crossed into overreach, or when joy needs steadying — the grounding that lets the good land fully rather than skim past.</p>\n<p><em>Smoky Quartz</em> — When The Sun reverses into muted joy or ego inflation, Smoky Quartz grounds the over-bright energy back to earth. It is the stone for when confidence has crossed into overreach, or when joy needs steadying. <a href=\"/gemstone/smoky-quartz-meaning/\">Smoky Quartz properties & symbolism →</a> · <a href=\"/shop/?s=smoky+quartz\">Find your Smoky Quartz piece →</a></p>\n<h3>Best Crystal for Love &amp; Relationship Readings</h3>\n<p>Rose Quartz deepens The Sun's love readings, where joy can be shared between two people. It supports the simple warmth of enjoying each other, tending the good in the relationship rather than taking it for granted or looking past it toward the next problem.</p>\n<p><em>Rose Quartz</em> — Rose Quartz deepens The Sun's love readings, where joy can be shared. It supports the simple warmth of two people enjoying each other, tending the good rather than taking it for granted. <a href=\"/gemstone/rose-quartz-meaning/\">Read Rose Quartz Meaning →</a> · <a href=\"/product-category/rose-quartz-crystals/\">Shop Rose Quartz →</a></p>\n<h3>Best Crystal to Wear Daily</h3>\n<p>Carnelian is a daily stone of vitality, courage, and warm presence. Worn as a bracelet, it keeps The Sun's radiance within reach through ordinary days — a reminder to bring genuine energy and attention to what is in front of you, rather than reserving your full self for some future moment worthier of it.</p>\n<p><em>Carnelian</em> — Carnelian is a daily stone of vitality, courage, and warm presence. Worn as jewelry, it keeps The Sun's radiance within reach through ordinary days — a reminder to bring genuine energy to what is in front of you. <a href=\"/gemstone/carnelian-meaning/\">Explore Carnelian in depth →</a> · <a href=\"/product-category/carnelian-crystals/\">Browse Carnelian jewelry →</a></p>\n\n<h2>A Crystal Practice for The Sun</h2>\n<p>A short practice to bring The Sun's energy into your reading or your day. Keep it practical — crystals are a focus for intention, not magic.</p>\n<p><strong>You'll need:</strong> Sunstone or Citrine.</p>\n<p><strong>Step 1 — Set the focus (1 min):</strong> Name one genuine source of joy in your life right now — something that is actually present, however small. The Sun asks you to begin here, with the real good, rather than with the gap between what is and what you wish were.</p>\n<p><strong>Step 2 — Hold the stone + draw a card (2 min):</strong> Hold your Sunstone over your solar plexus and draw a card with the question \"what does this joy want me to notice or tend?\" Let the stone's warmth support the receptive state in which the good can be fully received, as you sit with whatever the card surfaces.</p>\n<p><strong>Step 3 — Close with one commitment:</strong> Close by naming one small act that honors the joy — five minutes of real attention, a thank-you said, a moment savored rather than rushed — and commit to it today. Place the stone somewhere visible until you do. The Sun's joy is tended, not assumed.</p>\n<p>Prefer something quicker? <strong>Touch your Carnelian jewelry each morning and ask: \"What is genuinely good in my day today, and how can I bring real presence to it?\" The card's gift is vital joy; this small ritual trains the habit of receiving the good rather than scrolling past it.</strong></p>\n\n<h2>Crystals to Support The Sun Reversed</h2>\n<p>When The Sun appears reversed, it often points to temporary setback, muted joy, ego inflation — the card's energy in shadow rather than a bad omen. It's an invitation to notice where joy and success has gone into overdrive or gone quiet. The crystal below is traditionally used to support this specific reflection.</p>\n<p><strong>Supporting stone — Smoky Quartz:</strong> Smoky Quartz is the steady stone for the shadow work this reversal invites. When joy has been muted or confidence has inflated, hold a piece and let its grounding energy recall you to the body and the present — where the actual good lives, waiting to be felt. Pair it with the Sunstone above once the grounding settles; together they restore the radiant joy without letting it tip into overreach.</p>\n\n<h2>The Sun Through Three Lenses</h2>\n<p><strong>1. Tarot tradition:</strong> In the Rider-Waite tradition, The Sun is numbered 19 and corresponds to the Sun itself. It is read as the archetype of joy, vitality, and success — the full daylight that follows the half-lit uncertainty of The Moon, and one of the most unambiguously positive cards in the deck. The child on the white horse is sometimes read as the inner child, the part of us capable of simple, unguarded joy; the sunflowers turn toward the light, as the card asks us to.</p>\n<p><strong>2. Psychological archetype:</strong> In psychological terms, The Sun maps onto the well-documented role of <em>positive affect</em> in well-being and resilience. Far from being a trivial \"good mood,\" research consistently finds that the capacity to notice, savor, and be sustained by genuine positive emotion is a core component of flourishing — and that this capacity is a skill that can be cultivated, not merely a temperament some people are born with. Read through this lens, The Sun is not promising that everything will be easy. It is reminding you that joy is something you do — a practice of attention and savoring — and that the good present in your life asks to be actively received rather than passively expected.</p>\n<p><em>This lens treats The Sun as a mirror for self-inquiry — the psychological dimension here is <strong>positive affect</strong> — rather than a prediction.</em></p>\n<p><strong>3. Crystal companion:</strong> As a crystal companion, Sunstone becomes the tangible anchor for the cultivated joy this card asks. The Sun reminds you to tend the good; the stone gives you a warm focus to hold while you do. Worn as jewelry, it is a small daily cue to bring presence to what is genuinely positive — the kind of steady, embodied vitality that does not depend on circumstances being perfect, but on the willingness to receive the light that is actually shining.</p>\n\n<h2>The Sun in the Eastern Tradition</h2>\n<p>The Sun resonates with the Eastern contemplative recognition of <em>luminosity</em> — the warm, radiant quality of an unobscured mind, described across both Buddhist and Daoist traditions. Importantly, this luminosity is not grasping or inflated; it is the clear, warm quality of awareness that has been freed of the obscurations (compulsive desire, aversion, dullness) that dim it. For The Sun, this echo reframes the card's joy as something more durable than circumstance-dependent mood — a radiance that is always available to a mind that has learned to stop obscuring it.</p>\n<p>Sunstone, named for the sun across many traditions and carrying a warm, reflective sparkle from its feldspar inclusions, embodies The Sun's warmth in a form whose symbolism crosses cultures. The stone has been associated with solar energy, leadership, and the confident vitality that comes from genuine well-being. For The Sun, the cross-cultural reverence for sunstone as the radiant stone pairs naturally with the Western crystal-and-tarot reading of it as the anchor of cultivated joy.</p>\n\n<h2>Shop The Sun Crystals</h2>\n<p>Sunstone and its companions are available as wearable jewelry in our shop — each piece can serve as a daily reminder of The Sun's invitation to tend one source of joy.</p>\n<ul>\n<li><a href=\"/product-category/healing-jewelry/\">Shop Sunstone →</a></li>\n<li><a href=\"/product-category/carnelian-crystals/\">Browse Carnelian →</a></li>\n<li><a href=\"/product-category/healing-jewelry/\">Explore all healing jewelry →</a></li>\n</ul>\n\n<h2>A Mini Crystal Tarot Spread for The Sun</h2>\n<p>A three-card spread to explore The Sun's message in your life, with a crystal paired to each position.</p>\n<table>\n<thead>\n<tr><th>Position</th><th>Question</th><th>Companion Crystal</th></tr>\n</thead>\n<tbody>\n<tr><td>1. Where The Sun is showing up</td><td>Where is The Radiant energy active in my life right now?</td><td>Sunstone</td></tr>\n<tr><td>2. What it invites</td><td>What is this card asking me to notice or do?</td><td>Citrine</td></tr>\n<tr><td>3. The next step</td><td>What small action aligns me with this card's healthy expression?</td><td>Carnelian</td></tr>\n</tbody>\n</table>\n<p>Shuffle your deck, place a stone on each position as you draw, and sit with the three cards together for a few minutes before journaling.</p>\n\n<p class=\"gentle-note\"><em>Tarot and crystal meanings are based on spiritual traditions, symbolism, and personal mindfulness practices. They are a tool for self-reflection and contemplation, not a substitute for medical, financial, or professional advice — and not a prediction of fixed outcomes.</em></p>\n\n<h2>Frequently Asked Questions</h2>\n<details><summary>What does The Sun mean in tarot?</summary>The Sun (card 19 of the Major Arcana) is the card of joy, vitality, success, and clarity. It corresponds to the Sun and is traditionally read as the archetype of radiant well-being — one of the most unambiguously positive cards in the deck. In a reading, it often points to a season of warmth, optimism, and the simple good of being alive, and quietly, to the practice of tending the joy that is present.</details>\n<details><summary>What is the upright meaning of The Sun?</summary>Upright, The Sun points to joy, vitality, and a season going well. It suggests that clarity has returned, that energy and optimism are available, and that the good present in the situation is real and worth receiving. It is often read as an invitation to tend the joy rather than take it for granted, and to share the light rather than hoard it.</details>\n<details><summary>What are the best crystals for The Sun?</summary>The crystals most often paired with The Sun are Sunstone (the radiant stone of joy and warmth), Citrine (for abundant optimism), Smoky Quartz (to ground muted joy or ego inflation), Rose Quartz (to share warmth in love), and Carnelian (for daily vitality). The principle across references is warm, vital, confident energy.</details>\n<details><summary>What does The Sun mean in love?</summary>In love readings, The Sun often points to a season of warmth, joy, and clarity in a relationship — the simple good of two people enjoying each other. It can also signal a positive, openly affectionate new connection. The invitation is to receive the good rather than looking past it toward the next problem, and to share the warmth generously.</details>\n<details><summary>What does The Sun reversed mean?</summary>Reversed, The Sun often points to one of two shadow patterns: muted joy (the good that is present but not being felt) or ego inflation (confidence that has crossed from grounded into grandiose). It is not a forecast of failure — it is an invitation to ask where the joy has stopped reaching you, or where confidence has stopped being earned, and to restore the balance.</details>\n<details><summary>What chakra is The Sun associated with?</summary>The crystals paired with The Sun work primarily with the Solar Plexus and Sacral chakras — Sunstone, Citrine, and Carnelian for the vitality, confidence, and creative life-force this card radiates. The card's energy is centered where willpower, warmth, and aliveness meet.</details>\n<details><summary>Is The Sun a bad card?</summary>In tarot, no card is inherently 'good' or 'bad' — every card, including reversed positions, is read as information for reflection rather than a fixed outcome. For The Sun, the card's joy can read as muted or over-inflated when reversed — but the invitation is simply to receive the good that is present and keep confidence grounded, not to treat the reversed card as a sign that the joy was false or the success hollow.</details>\n<details><summary>Can tarot predict the future?</summary>No — tarot is a symbolic system used for self-reflection and contemplation, not a tool that predicts fixed outcomes. The cards surface patterns and questions; your choices shape what happens next. For The Sun, the card may point to the good that is genuinely present — but whether you tend that joy, and how you carry the confidence it brings, remains entirely in your hands.</details>\n\n<h2>Related Tarot Cards</h2>\n<ul>\n<li><a href=\"/tarot-the-star-crystals/\">The Star: The Hopeful</a> — Hope, renewal, guidance after the storm</li>\n<li><a href=\"/tarot-the-moon-crystals/\">The Moon: The Dreamer</a> — Intuition, the subconscious, illusion, what is hidden coming to light</li>\n<li><a href=\"/crystals-for-tarot-cards/\">All Tarot Card Crystals →</a> (Hub)</li>\n</ul>\n<p>The Sun is the card of the good that is genuinely present, asking only to be noticed and tended. Pair it with a crystal that supports radiant vitality, and let it be a reminder that joy is not a circumstance that simply arrives but a practice of receiving — and that the willingness to let the light in, fully and gratefully, is one of the most renewable sources of warmth a life can have.</p>"
+}

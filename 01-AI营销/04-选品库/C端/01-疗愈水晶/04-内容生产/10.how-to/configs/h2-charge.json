@@ -1,0 +1,302 @@
+{
+  "_meta": {
+    "framework": "How-to 框架 v2 (17点已落实)",
+    "purpose": "H2 旗舰 — How to Charge Crystals (charge 4400主词，与H1配套)",
+    "created": "2026-06-28",
+    "quality_tier": "flagship",
+    "diff_angle": "只深讲charge + 'cleanse first charge second'顺序链路；四概念局部(charge vs cleanse，比喻清空杯子再倒水)；满月日历联动"
+  },
+  "article": "H2",
+  "slug": "how-to-charge-crystals",
+  "url": "/blog/how-to-charge-crystals/",
+  "action": "charge",
+  "action_gerund": "charging",
+  "title": "How to Charge Crystals: Meaning, Methods & When to Do It",
+  "h1": "How to Charge Crystals",
+  "primary_kw": "how to charge crystals",
+  "secondary_kw": ["how to charge a crystal", "charging crystals", "crystal charging methods", "how to recharge crystals"],
+  "word_target": 3100,
+  "word_range": "2800-3400",
+  "concept_focus": "charge_vs_cleanse_only（局部对比，比喻：清空杯子→再倒水；不重复H1完整四概念表）+ cleanse first charge second 顺序链路",
+  "concept_table_mode": "local_only",
+  "local_concept_pair": {
+    "focus": "Charge vs Cleanse",
+    "metaphor": "cleanse = emptying a used cup; charge = refilling it with fresh water (不用H1的电池比喻)",
+    "order_rule": "cleanse first, charge second — 顺序不可逆（先清后充）",
+    "link_to_h1": "For the full four-concept comparison (Cleanse, Charge, Activate, Program), see How to Cleanse Crystals"
+  },
+  "methods_used": ["moonlight", "selenite", "sound", "sunlight", "earth", "cluster"],
+  "methods_subset": "charge subset (6 methods, no water/salt/smoke — charge 不用水盐烟)",
+  "methods_risk_tiers": {
+    "tier1_safe": {
+      "label": "🟢 Tier 1 — Safest & Recommended for All Stones",
+      "subtitle": "最安全通用，新手首选 / 首饰无接触",
+      "methods": ["moonlight", "selenite", "sound"],
+      "narrative_variant": ["满月充能叙事(最强charge时刻)", "首饰专长叙事", "快速场景叙事"]
+    },
+    "tier2_conditional": {
+      "label": "🟡 Tier 2 — Conditional, Check Your Stone First",
+      "subtitle": "有条件，先查阳光耐受性",
+      "methods": ["sunlight"]
+    },
+    "tier3_caution": {
+      "label": "🔴 Tier 3 — Higher Risk / Niche, Use with Care",
+      "subtitle": "高风险/小众，谨慎使用",
+      "methods": ["earth", "cluster"]
+    }
+  },
+  "methods_data": {
+    "moonlight": {
+      "name": "Moonlight",
+      "icon": "🌙",
+      "duration_label": "Overnight (6–12 hours)",
+      "safe": "all",
+      "tradition": "The full moon is considered the most potent time to recharge a stone's symbolic energy — a monthly refill tied to the lunar cycle.",
+      "practical": "Moonlight is reflected sunlight at roughly 1/400,000 the intensity — gentle enough for every mineral, including color-sensitive stones that must avoid direct sun.",
+      "steps": ["Place crystals on a windowsill or covered porch at sunset", "Leave overnight (6–12 hours); the full moon is ideal", "Bring in before sunrise to avoid dew or direct sun"],
+      "best_for_default": "every stone — especially color-sensitive quartz (amethyst, rose quartz) that must avoid direct sun, and a first charge for a new piece. The full moon is the classic charging moment in many traditions."
+    },
+    "selenite": {
+      "name": "Selenite Plate / Bowl",
+      "icon": "✨",
+      "duration_label": "6+ hours (or overnight)",
+      "safe": "all",
+      "tradition": "Selenite is widely considered self-cleansing and is said to keep stones placed on it 'full' — a passive overnight recharge.",
+      "practical": "No chemical interaction — completely harmless. Handle gently, as selenite itself is soft (Mohs 2).",
+      "steps": ["Place crystals on a selenite plate, bowl, or bar", "Leave 6+ hours or overnight", "Avoid dragging hard stones across the selenite surface"],
+      "best_for_default": "jewelry above all — bracelets, necklaces, and rings rest on the plate with zero water, salt, or handling. Also ideal for soft and porous stones that need a no-contact method."
+    },
+    "sound": {
+      "name": "Sound (Singing Bowl / Bell)",
+      "icon": "🔔",
+      "duration_label": "5–10 minutes",
+      "safe": "all",
+      "tradition": "Sustained sound vibrations are believed to restore a stone's energy — a fast recharge for a whole collection.",
+      "practical": "Sound waves are far too low-energy to affect any mineral's structure — harmless to every stone.",
+      "steps": ["Play a singing bowl, bell, or tuning fork near the crystals", "Continue for 5–10 minutes", "Works for your whole collection at once"],
+      "best_for_default": "when you need speed and have many pieces — a singing bowl or bell recharges an entire collection at once in minutes. A practical choice for soft stones where you'd rather avoid any handling."
+    },
+    "sunlight": {
+      "name": "Sunlight (Indirect / Brief)",
+      "icon": "☀️",
+      "duration_label": "Short indirect exposure",
+      "safe": "mohs7_sun_stable",
+      "check": "sun",
+      "tradition": "The sun's energy is associated with vitality and warmth — a midday recharge for sun-tolerant stones.",
+      "practical": "Direct sun can fade color-sensitive quartz (amethyst, rose quartz, citrine) and cause heat stress even in hard stones. Use indirect light or brief morning sun only.",
+      "steps": ["Confirm your stone tolerates sun (citrine, clear quartz, tiger's eye, black tourmaline — NOT amethyst/rose quartz/fluorite)", "Place in indirect sunlight or brief morning sun (1–2 hours max)", "Never leave color-sensitive stones in direct sun"],
+      "best_for_default": "only sun-stable stones (citrine, clear quartz, tiger's eye, black tourmaline) — and even then, indirect or brief morning sun only. Never use direct sun on amethyst, rose quartz, or fluorite (color fades)."
+    },
+    "earth": {
+      "name": "Earth Burial",
+      "icon": "🌍",
+      "duration_label": "24 hours (up to 3 days)",
+      "safe": "mohs7+",
+      "check": "water",
+      "tradition": "Burying crystals returns them to the earth to absorb and restore energy — a deep grounding recharge.",
+      "practical": "Soil moisture and organic acids can stain or etch soft, porous stones — always wrap in cloth first.",
+      "steps": ["Wrap the stone in a natural cloth", "Bury in soil (garden or houseplant pot)", "Leave about 24 hours", "Brush off soil gently when done"],
+      "best_for_default": "high-hardness raw stones (Mohs 7+) with no metal settings — a deep grounding ritual for those drawn to burying a stone in soil overnight. Wrap the stone in natural cloth first, and keep jewelry pieces away from this method."
+    },
+    "cluster": {
+      "name": "Crystal Cluster",
+      "icon": "💎",
+      "duration_label": "24+ hours",
+      "safe": "all",
+      "tradition": "Resting a stone on a large crystal cluster (clear quartz or amethyst) is said to recharge it through the cluster's collective energy.",
+      "practical": "No chemical interaction — harmless to every stone. The cluster is a durable, passive charging base.",
+      "steps": ["Place a large clear quartz or amethyst cluster on a stable surface", "Rest smaller stones on or around the cluster", "Leave 24+ hours for a full recharge"],
+      "best_for_default": "collectors who already own a large cluster — a passive, decorative charging base that also doubles as a display. Works for every stone with no risk."
+    }
+  },
+  "crystals": {
+    "main_commercial": {
+      "slug": "citrine",
+      "role": "sun-charged",
+      "role_label": "The Sunlight-Charged Favorite",
+      "reason": "Color-stable (iron + heat) and sun-tolerant — the natural fit for sunlight charging, plus a warm bright accent in any collection",
+      "compliance_phrase": "Often associated with warmth and sunlight — a piece many enjoy as a bright accent in a collection"
+    },
+    "semantic_match": {
+      "slug": "selenite",
+      "role": "charging-plate",
+      "role_label": "The Charging Plate Stone",
+      "reason": "Traditionally self-cleansing and used as a plate to recharge other stones — the natural mascot of the charging topic",
+      "compliance_phrase": "A self-cleansing stone many use as a display plate to rest other pieces on — a practical care choice"
+    },
+    "entry_price": {
+      "slug": "clear-quartz",
+      "role": "amplifier",
+      "role_label": "The Versatile Charger",
+      "reason": "Durable (Mohs 7), sun-tolerant, and a neutral staple — pairs with any charging method, beginner-friendly",
+      "compliance_phrase": "A versatile piece collectors often describe as a neutral staple that pairs with any setting"
+    },
+    "niche": {
+      "slug": "moonstone",
+      "role": "lunar-charged",
+      "role_label": "The Lunar Charging Favorite",
+      "reason": "Soft iridescent sheen with a natural link to moon-phase charging traditions — differentiates from generic lists",
+      "compliance_phrase": "A stone many choose for its soft iridescent sheen and connection to lunar ritual traditions"
+    },
+    "safety_warning": {
+      "slug": "amethyst",
+      "role": "sun-fade-caution",
+      "role_label": "The Cautionary Example (Why Sun Safety Matters)",
+      "reason": "Color fades with prolonged direct sunlight — the textbook case for why 'check sun tolerance before sunlight charging' is the headline message",
+      "compliance_phrase": "A stone many keep on their nightstand as part of a wind-down ritual before bed"
+    },
+    "jewelry_scene": {
+      "slug": "rose-quartz",
+      "role": "bracelet",
+      "role_label": "The Bracelet Favorite",
+      "reason": "A common bracelet stone — wear as a daily reminder; needs no-contact charging (moonlight/selenite) to protect color from sun fade",
+      "compliance_phrase": "A rose quartz bracelet many people wear as a daily reminder to be gentle with themselves"
+    }
+  },
+  "data_snapshot": {
+    "cleansing_knowledge_version": "v1.0 (charge subset: moonlight/selenite/sound/sunlight/earth/cluster — 复用moonlight/selenite/sound时长，sunlight/earth/cluster为charge专属)",
+    "mineral_safety_reference_version": "v1.0 (14 stones, sun_safe列校准 — amethyst/rose-quartz=avoid, citrine/clear-quartz=indirect)",
+    "crystal_attributes_version": "390 stones, mineral+safety fields",
+    "verified_date": "2026-06-28",
+    "verified_by": "数据一致性 diff + 人工抽检"
+  },
+  "tool_cta": {
+    "enabled": true,
+    "tool": "cleansing-timer",
+    "tool_url": "/tools/crystal-cleansing-timer/",
+    "cta_type": "decision_card",
+    "positions": [
+      "M3-end-decision-card (主决策卡，必加)",
+      "M5-end-reminder (二次提醒卡)",
+      "M7-pre-bottom (底部曝光卡)"
+    ],
+    "card_template": "> 💡 **Not sure if your stone can go in sunlight?**\n> Enter your stone name in the **[Crystal Cleansing Timer](/tools/crystal-cleansing-timer/)** →\n> check its sun/water/salt safety, get the recommended charging method, and start a guided countdown."
+  },
+  "jewelry_angle": {
+    "enabled": true,
+    "mode": "interspersed（穿插全文，非M6集中）",
+    "insertion_points": {
+      "M3-moonlight": "满月夜把手链/项链放窗台——整条charge不动，绳子/金属/石头都不受损（best no-contact charge for bracelets/necklaces）",
+      "M3-sunlight": "避免把amethyst/rose quartz手链放阳光下charge——颜色会褪；改用moonlight或selenite plate",
+      "M3-selenite": "首饰专长：把手链/项链放selenite plate上过夜charge即可，零接触零风险",
+      "M5-mistakes": "典型错误：'把手链放直射阳光下charge一整天' → amethyst/rose quartz褪色；正确做法moonlight/selenite",
+      "M6-which-hand": "charge后佩戴：非主导手(接收手)traditionally suggested；标'traditionally'非规则",
+      "M7-faq": "Can I charge my bracelet in sunlight? → 仅sun-stable石(citrine/clear quartz)且brief indirect；amethyst/rose quartz用moonlight"
+    },
+    "m6_role": "summary + H7 deep-dive link（不深入bracelet材质细节，留H7专篇）"
+  },
+  "eastern_touch": {
+    "moonlight": "满月冥想 / 月相周期 ritual (与moon-calendar工具联动，满月是最强charge时刻)",
+    "sound": "Tibetan singing bowl / 颂钵 / 铜磬 (站点实卖铜器，天然契合charge音钵)",
+    "earth": "玉石文化'返璞归真' / 大地冥想 (瑜伽grounding语境)",
+    "sunlight": "Surya Namaskar (拜日式) / 日光仪式语境"
+  },
+  "safety_first_narrative": {
+    "M1_quick_answer": [
+      "最安全通用charge法 = moonlight / selenite plate / sound / crystal cluster",
+      "不是所有水晶能晒阳光，amethyst/rose quartz会褪色；不确定先别用阳光",
+      "charge前先cleanse（cleanse first charge second），进入方法前一句话'先确认阳光耐受性'"
+    ],
+    "M2_order_hardware": [
+      "第一段(cleanse first charge second顺序): charge前必须先cleanse——清空杯子再倒水",
+      "第二段(为什么需要charge): 传统/象征意义(能量低时refill, 满月周期, dull感)",
+      "第三段(概念区分): Charge vs Cleanse局部对比(比喻清空杯子再倒水) + 内链H1完整四概念表"
+    ],
+    "compliance_phrasing": "symbolic energy state / traditionally believed to / many people experience"
+  },
+  "faq_picks": {
+    "intent": [
+      "How often should I charge my crystals?",
+      "What is the best way to charge crystals?",
+      "How long does it take to charge a crystal?",
+      "How do I know when my crystals need charging?"
+    ],
+    "conversion": [
+      "Which crystals can be charged in sunlight?",
+      "Can I charge my crystal bracelet in sunlight?",
+      "Do I need to cleanse before charging?"
+    ],
+    "trust": [
+      "Is there scientific evidence that charging crystals does anything?",
+      "Will charging damage my crystal?"
+    ],
+    "selective": [
+      "What is the difference between cleansing and charging?",
+      "Can I charge crystals on a new moon?"
+    ]
+  },
+  "internal_links": {
+    "meaning_min": 3,
+    "condition": {
+      "anchor": "Crystals for Anxiety",
+      "url": "/crystals-for-anxiety/"
+    },
+    "intention": {
+      "anchor": "Shop Calm & Mindfulness",
+      "url": "/calm-mindfulness/"
+    },
+    "hub_flagship": {
+      "anchor": "How to Cleanse Crystals (full four-concept comparison)",
+      "url": "/blog/how-to-cleanse-crystals/"
+    },
+    "h1_cleanse_link": {
+      "anchor": "How to Cleanse Crystals (cleanse first, charge second)",
+      "url": "/blog/how-to-cleanse-crystals/"
+    },
+    "h6_use_link": {
+      "anchor": "How to Use Crystals (beginner's overview)",
+      "url": "/blog/how-to-use-crystals/"
+    },
+    "shop_fallback": "/product-category/healing-crystals-jewelry/"
+  },
+  "schema": {
+    "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+    "howto_structure": "6-step universal charge flow",
+    "howto_focus": "knowledge safety steps（vs工具页interactive flow，防Schema双占位）",
+    "howto_6_steps": [
+      {"step": 1, "name": "Cleanse first (then charge)", "text": "charge前必须先cleanse——清空杯子再倒水；用moonlight/selenite/sound/smoke任一安全法先清"},
+      {"step": 2, "name": "Check sun tolerance", "text": "查mineral-safety-reference或cleansing-timer工具，确认该石能否晒阳光(amethyst/rose quartz=avoid)"}
+    ],
+    "howto_name": "How to Charge Crystals Safely",
+    "howto_total_time": "PT8H",
+    "faq_page_schema_consistency": "FAQ答案与Schema FAQPage严格一致（同数据块生成页面+schema）"
+  },
+  "compliance": {
+    "avoid": [
+      "amplifies healing power",
+      "supercharges the crystal",
+      "fills the crystal with positive energy",
+      "maximizes the crystal's power",
+      "removes negative energy"
+    ],
+    "phrase_library_version": "v1.0（框架v2 §11.2合规转化句式库）",
+    "gentle_note": "Crystal charging practices are based on spiritual traditions, symbolism, and personal mindfulness. There is no scientific evidence that crystals store, deplete, or release energy, but the safety guidance (which stones tolerate sunlight) is real mineralogy — and the reason a mindful ritual can coexist with caring for your stones.",
+    "ai_banned_words": ["delve", "tapestry", "realm", "journey（叙事）", "unlock your potential", "manifest abundance", "elevate your vibration"],
+    "chemistry_case_sensitive": "SiO₂（非sio₂）/ CaCO₃ / Fe₂O₃ — 校验用includes('sio₂')小写查真违规"
+  },
+  "three_perspectives": {
+    "science": "40%",
+    "spirituality": "40%",
+    "psychology": "20%",
+    "style": "不单独标注(science)(spirituality)，融在段落里（对齐Chakra v2 §11）"
+  },
+  "image_plan": {
+    "hero": {"size": "1536x864", "scene": "满月下的水晶阵列+selenite plate(充能主题视觉)", "filename": "how-to-charge-crystals-hero.jpg"},
+    "step_diagrams": [
+      {"size": "1200x800", "scene": "满月夜窗台放置水晶charge", "filename": "how-to-charge-crystals-moonlight.jpg"},
+      {"size": "1200x800", "scene": "selenite plate摆放手链charge", "filename": "how-to-charge-crystals-selenite.jpg"},
+      {"size": "1200x800", "scene": "sunlight间接光charge(citrine/clear quartz)", "filename": "how-to-charge-crystals-sunlight.jpg"}
+    ],
+    "jewelry_scene": {"size": "1200x800", "scene": "手链/项链selenite plate charge场景", "filename": "how-to-charge-crystals-jewelry.jpg"}
+  },
+  "mvp_validation_8checks": [
+    "结构顺: M1安全优先→M2 cleanse first charge second顺序→M3风险分层",
+    "M2概念重不重: 只讲charge vs cleanse局部对比(比喻清空杯子再倒水)+内链H1完整表",
+    "M3模板感: 6法卡片句式3套变体(满月/首饰/快速)",
+    "CTA位置: 决策卡片M3末自然出现(查阳光耐受性)",
+    "首饰自然: 穿插提示不生硬",
+    "Shop验证: M4每颗Shop链接全200",
+    "Schema稳定: HowTo 6步charge流程",
+    "图片投入值: 旗舰级全套(hero+分步+首饰场景)"
+  ]
+}

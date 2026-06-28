@@ -21,6 +21,7 @@
 | Cleansing Timer (T4) | `/tools/crystal-cleansing-timer/` | 45681 | ✅ | 工具（safety+计时） | [cleansing-timer/](cleansing-timer/) |
 | Birthstone Finder (T8) | `/tools/birthstone-finder/` | 45772 | ✅ | 选月→生辰石 | [birthstone-finder/](birthstone-finder/) |
 | Moon Phase Calendar (T10) | `/tools/moon-calendar/` | 45777 | ✅ | 月相→水晶 | [moon-calendar/](moon-calendar/) |
+| Life Path Calculator | `/tools/numerology-calculator/` | 47687 | ✅ | 生日→Life Path+水晶 | [numerology-calculator/](numerology-calculator/) |
 
 > **P0 + P1 + T8 全部上线（10 工具）**。剩 P2：T7 Crystal Identifier / T9 Bead Converter / T10 Moon Calendar（未做）。
 

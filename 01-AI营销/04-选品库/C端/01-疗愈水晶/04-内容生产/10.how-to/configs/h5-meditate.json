@@ -1,0 +1,274 @@
+{
+  "_meta": {
+    "framework": "How-to 框架 v2",
+    "purpose": "H5 轻量 — How to Meditate with Crystals (meditate 590，实践入口导流chakra-test)",
+    "created": "2026-06-28",
+    "quality_tier": "lightweight",
+    "diff_angle": "Eastern冥想传统(藏传/瑜伽)+chakra body layout图解；chakra7篇互链；导流chakra-test工具"
+  },
+  "article": "H5",
+  "slug": "how-to-meditate-with-crystals",
+  "url": "/blog/how-to-meditate-with-crystals/",
+  "action": "meditate",
+  "action_gerund": "meditating",
+  "title": "How to Meditate with Crystals: Steps, Stones & Practices",
+  "h1": "How to Meditate with Crystals",
+  "primary_kw": "how to meditate with crystals",
+  "secondary_kw": ["meditating with crystals", "crystal meditation", "how to use crystals in meditation", "crystal meditation for beginners"],
+  "word_target": 2200,
+  "word_range": "2000-2400",
+  "concept_focus": "meditation_practice（非care concept；聚焦冥想实践+body layout+Eastern传统，不涉及cleanse/charge/activate/program概念表）",
+  "concept_table_mode": "none",
+  "local_concept_pair": null,
+  "methods_used": ["hold-in-hand", "place-on-body", "surround-grid", "gaze-focus"],
+  "methods_subset": "meditation subset (4 practices)",
+  "methods_risk_tiers": {
+    "tier1_safe": {
+      "label": "🟢 4 Crystal Meditation Practices",
+      "subtitle": "4种水晶冥想练习",
+      "methods": ["hold-in-hand", "place-on-body", "surround-grid", "gaze-focus"],
+      "narrative_variant": ["手持冥想叙事", "body layout脉轮叙事", "环绕网格叙事", "凝视冥想叙事"]
+    },
+    "tier2_conditional": {"label": "", "subtitle": "", "methods": []},
+    "tier3_caution": {"label": "", "subtitle": "", "methods": []}
+  },
+  "methods_data": {
+    "hold-in-hand": {
+      "name": "1. Hold a Stone in Your Hand",
+      "icon": "🤲",
+      "duration_label": "5–15 minutes",
+      "safe": "all",
+      "tradition": "Holding a single stone in your receiving hand while meditating is the simplest crystal practice — the stone becomes a tactile anchor for your attention.",
+      "practical": "No physical effect — this is a mindfulness technique (similar to holding a worry stone or mala bead) that gives the mind something to return to.",
+      "steps": ["Sit comfortably and hold one stone in your receiving (non-dominant) hand", "Close your eyes and breathe slowly", "When your mind wanders, return your attention to the feel of the stone", "Continue for 5–15 minutes"],
+      "best_for_default": "beginners and anyone who wants the simplest entry — a single tumbled stone or worry stone is all you need."
+    },
+    "place-on-body": {
+      "name": "2. Place Stones on the Body (Chakra Layout)",
+      "icon": "🌀",
+      "duration_label": "10–20 minutes",
+      "safe": "all",
+      "tradition": "Laying stones on the body's seven energy centers (chakras) is a practice rooted in Indian yoga and Tibetan traditions — each center is associated with a region and a stone.",
+      "practical": "No physical effect — this is a structured meditation that uses body placement as a focus, similar to yoga nidra or body-scan practices.",
+      "steps": ["Lie flat on your back in a comfortable space", "Place one stone at each of the seven centers (crown, brow, throat, heart, solar plexus, sacral, root) — see the body layout guide below", "Breathe slowly and rest for 10–20 minutes", "Remove the stones gently when done"],
+      "best_for_default": "those who want a deeper, full-body practice — the seven-stone layout turns meditation into a structured ritual. Take our free Chakra Test first to see which centers to focus on."
+    },
+    "surround-grid": {
+      "name": "3. Surround Yourself (Simple Grid)",
+      "icon": "✨",
+      "duration_label": "10–20 minutes",
+      "safe": "all",
+      "tradition": "Placing several stones in a circle or pattern around you as you sit or lie within it is a simple crystal-grid meditation — the arrangement becomes the container for your practice.",
+      "practical": "No physical effect — the grid is a spatial focus that helps define a dedicated meditation space.",
+      "steps": ["Choose 4–8 stones and arrange them in a circle or simple pattern around your cushion or mat", "Sit or lie in the center", "Meditate with eyes closed for 10–20 minutes", "The arrangement marks the space as your practice area"],
+      "best_for_default": "those with a small collection who want a spatial, immersive practice — the grid defines a dedicated space without needing body placement."
+    },
+    "gaze-focus": {
+      "name": "4. Gaze at a Stone (Trataka-Inspired)",
+      "icon": "👁️",
+      "duration_label": "5–10 minutes",
+      "safe": "all",
+      "tradition": "Softly gazing at a single stone is inspired by trataka (a yogic candle-gazing practice) — the object becomes the steady focus for the mind.",
+      "practical": "No physical effect — this is an open-eyed concentration practice; the stone's surface gives the eyes a resting point.",
+      "steps": ["Place one stone at eye level, about an arm's length away", "Sit comfortably and soften your gaze onto the stone", "Keep your eyes gently open, returning to the stone whenever they wander", "Continue for 5–10 minutes"],
+      "best_for_default": "those who find eyes-closed meditation difficult — an open-eyed gaze gives the mind a steady external anchor."
+    }
+  },
+  "chakra_body_layout": {
+    "enabled": true,
+    "position": "M3 place-on-body法内（图解7个能量中心+对应石）",
+    "centers": [
+      {"center": "Crown", "position": "Top of head", "stone_example": "Clear Quartz / Selenite", "chakra_link": "/chakra/crown-chakra/"},
+      {"center": "Brow (Third Eye)", "position": "Between eyebrows", "stone_example": "Amethyst / Lapis Lazuli", "chakra_link": "/chakra/third-eye-chakra/"},
+      {"center": "Throat", "position": "Base of throat", "stone_example": "Sodalite / Aquamarine", "chakra_link": "/chakra/throat-chakra/"},
+      {"center": "Heart", "position": "Center of chest", "stone_example": "Rose Quartz / Green Aventurine", "chakra_link": "/chakra/heart-chakra/"},
+      {"center": "Solar Plexus", "position": "Upper abdomen", "stone_example": "Citrine / Tiger's Eye", "chakra_link": "/chakra/solar-plexus-chakra/"},
+      {"center": "Sacral", "position": "Lower abdomen", "stone_example": "Carnelian / Moonstone", "chakra_link": "/chakra/sacral-chakra/"},
+      {"center": "Root", "position": "Base of spine", "stone_example": "Black Tourmaline / Hematite", "chakra_link": "/chakra/root-chakra/"}
+    ],
+    "chakra_test_cta": {
+      "anchor": "Take the free Chakra Test",
+      "url": "/tools/chakra-test/",
+      "note": "Not sure which centers to focus on? Take our free Chakra Test first."
+    }
+  },
+  "crystals": {
+    "main_commercial": {
+      "slug": "amethyst",
+      "role": "meditation-classic",
+      "role_label": "The Meditation Classic",
+      "reason": "The most common meditation stone — held in the hand or placed at the brow (third eye) as part of a wind-down practice",
+      "compliance_phrase": "A stone many keep on their nightstand as part of a wind-down ritual before bed"
+    },
+    "semantic_match": {
+      "slug": "clear-quartz",
+      "role": "clarity-focus",
+      "role_label": "The Clarity-Focus Stone",
+      "reason": "Versatile and durable — held in the receiving hand as a neutral focus anchor for any meditation",
+      "compliance_phrase": "A versatile piece collectors often describe as a neutral staple that pairs with any setting"
+    },
+    "entry_price": {
+      "slug": "rose-quartz",
+      "role": "heart-stone",
+      "role_label": "The Heart-Center Stone",
+      "reason": "Placed at the heart center in body-layout meditation — a gentle, forgiving stone for beginners",
+      "compliance_phrase": "A rose quartz bracelet many people wear as a daily reminder to be gentle with themselves"
+    },
+    "niche": {
+      "slug": "selenite",
+      "role": "crown-stone",
+      "role_label": "The Crown-Center Stone",
+      "reason": "Placed at the crown (top of head) in body-layout meditation — handle gently (Mohs 2)",
+      "compliance_phrase": "A self-cleansing stone many use as a display plate to rest other pieces on — a practical care choice"
+    },
+    "safety_warning": {
+      "slug": "black-tourmaline",
+      "role": "root-stone",
+      "role_label": "The Root-Center Grounding Stone",
+      "reason": "Placed at the root (base of spine) for grounding meditation — durable and sun-stable",
+      "compliance_phrase": "A popular choice for those who like a grounding touchstone during a busy workday"
+    },
+    "jewelry_scene": {
+      "slug": "moonstone",
+      "role": "bracelet-worry-stone",
+      "role_label": "The Bracelet-as-Worry-Stone",
+      "reason": "A meditation bracelet can double as a worry stone — thumb the beads during seated practice",
+      "compliance_phrase": "A stone many choose for its soft iridescent sheen and connection to lunar ritual traditions"
+    }
+  },
+  "data_snapshot": {
+    "cleansing_knowledge_version": "v1.0 (meditation非care concept，复用cleanse前置提醒：冥想前cleanse石)",
+    "mineral_safety_reference_version": "v1.0 (body layout石需查耐受：selenite=soft/keep dry, amethyst=sun avoid)",
+    "crystal_attributes_version": "390 stones",
+    "verified_date": "2026-06-28",
+    "verified_by": "数据一致性 diff + 人工抽检"
+  },
+  "tool_cta": {
+    "enabled": true,
+    "tool": "chakra-test",
+    "tool_url": "/tools/chakra-test/",
+    "cta_type": "decision_card",
+    "positions": [
+      "M3-end-decision-card (主决策卡：测脉轮定focus)",
+      "M7-pre-bottom (底部曝光卡)"
+    ],
+    "card_template": "> 💡 **Not sure which energy centers to focus on?**\n> Take the free **[Chakra Test](/tools/chakra-test/)** →\n> see which of your seven centers need attention, then choose stones and a body layout that match."
+  },
+  "jewelry_angle": {
+    "enabled": true,
+    "mode": "interspersed",
+    "insertion_points": {
+      "M3-hold-in-hand": "手链转手掌石：worry stone替代——拇指拨珠替代手持单石",
+      "M3-place-on-body": "项链吊坠放心轮位置：佩戴的项链在heart center自然就位",
+      "M6-worry-stone": "手链/项链作为冥想触觉锚——日常佩戴即mini冥想reminder",
+      "M7-faq": "Can I meditate with a crystal bracelet? → 可以；拨珠或手掌石，项链吊坠放心轮"
+    },
+    "m6_role": "brief (手链worry stone + 项链heart center吊坠)"
+  },
+  "eastern_touch": {
+    "place-on-body": "藏传佛教 + 印度瑜伽 chakra system (七脉轮body layout，东方冥想传统)",
+    "gaze-focus": "Trataka 烛光冥想 (瑜伽凝视修法，水晶版)",
+    "hold-in-hand": "Mala 念珠 / 禅修握石 (东方冥想手持传统)",
+    "surround-grid": "Mandala 曼陀罗 (东方圆形神圣空间)"
+  },
+  "safety_first_narrative": {
+    "M1_quick_answer": [
+      "水晶冥想最简入门 = 手持一颗石5-15min",
+      "冥想前cleanse石(去除经手残留)；body layout石查耐受(selenite=soft)",
+      "进入方法前一句话'meditation是正念practice，石是触觉anchor'"
+    ],
+    "M2_order_hardware": [
+      "第一段(为什么水晶冥想): 石作为触觉/视觉anchor帮专注(类似mala念珠/worry stone)",
+      "第二段( Eastern传统): 藏传/瑜伽chakra body layout + trataka凝视(东方冥想传统context)",
+      "第三段(cleanse前置): 冥想前cleanse石——见H1"
+    ],
+    "compliance_phrasing": "a mindfulness practice / a tactile anchor / many people find helpful"
+  },
+  "faq_picks": {
+    "intent": [
+      "How do I meditate with crystals for beginners?",
+      "What is the best way to meditate with crystals?",
+      "How long should a crystal meditation be?",
+      "Which crystals are best for meditation?"
+    ],
+    "conversion": [
+      "Can I meditate with a crystal bracelet?",
+      "Do I need to cleanse crystals before meditating?",
+      "How do I place crystals on my body for meditation?"
+    ],
+    "trust": [
+      "Is there scientific evidence that meditating with crystals does anything?",
+      "Can crystal meditation help with anxiety?"
+    ],
+    "selective": [
+      "What is a chakra body layout?",
+      "Can I meditate with multiple crystals at once?"
+    ]
+  },
+  "internal_links": {
+    "meaning_min": 3,
+    "condition": {
+      "anchor": "Crystals for Anxiety",
+      "url": "/crystals-for-anxiety/"
+    },
+    "intention": {
+      "anchor": "Shop Calm & Mindfulness",
+      "url": "/calm-mindfulness/"
+    },
+    "h1_cleanse_link": {
+      "anchor": "How to Cleanse Crystals (cleanse before meditating)",
+      "url": "/blog/how-to-cleanse-crystals/"
+    },
+    "h6_use_link": {
+      "anchor": "How to Use Crystals (beginner's overview)",
+      "url": "/blog/how-to-use-crystals/"
+    },
+    "chakra_links": {
+      "note": "M3 body layout 7个center各链对应chakra文章（chakra7篇互链）",
+      "links": ["/chakra/crown-chakra/", "/chakra/third-eye-chakra/", "/chakra/throat-chakra/", "/chakra/heart-chakra/", "/chakra/solar-plexus-chakra/", "/chakra/sacral-chakra/", "/chakra/root-chakra/"]
+    },
+    "shop_fallback": "/product-category/healing-crystals-jewelry/"
+  },
+  "schema": {
+    "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+    "howto_structure": "6-step meditation flow",
+    "howto_focus": "knowledge meditation practice steps",
+    "howto_6_steps": [
+      {"step": 1, "name": "Cleanse your stones first", "text": "冥想前cleanse石(去除经手残留)——见How to Cleanse Crystals"},
+      {"step": 2, "name": "Choose a practice & stones", "text": "从4法选(hold/place-on-body/grid/gaze)；body layout可选7 center对应石"},
+      {"step": 3, "name": "Find a quiet space", "text": "安静空间坐/卧定，关掉干扰"},
+      {"step": 4, "name": "Set up stones (hold/place/surround/gaze)", "text": "按选定practice布置石——手持/身体layout/环绕grid/凝视"},
+      {"step": 5, "name": "Meditate for 5–20 minutes", "text": "闭眼或软凝视，呼吸缓，注意力游走时回到石的触觉/视觉"},
+      {"step": 6, "name": "Close gently & journal (optional)", "text": "轻收石，可选journal记录感受——结束practice"}
+    ],
+    "howto_name": "How to Meditate with Crystals",
+    "howto_total_time": "PT15M",
+    "faq_page_schema_consistency": "FAQ答案与Schema FAQPage严格一致"
+  },
+  "compliance": {
+    "avoid": [
+      "crystals amplify meditation power",
+      "deepens your spiritual awakening",
+      "opens your chakras magically",
+      "connects you to higher realms",
+      "removes negative energy"
+    ],
+    "phrase_library_version": "v1.0（框架v2 §11.2）",
+    "gentle_note": "Crystal meditation is a personal mindfulness practice rooted in spiritual traditions like yoga and Tibetan Buddhism. There is no scientific evidence that crystals emit energy or open chakras, but meditation itself is well-studied for its benefits, and using a stone as a tactile anchor is a genuine focus technique that many people find helpful.",
+    "ai_banned_words": ["delve", "tapestry", "realm", "journey（叙事）", "unlock your potential", "manifest abundance", "elevate your vibration"],
+    "chemistry_case_sensitive": "SiO₂（非sio₂）/ CaCO₃ — 校验用includes('sio₂')"
+  },
+  "three_perspectives": {
+    "science": "40%",
+    "spirituality": "40%",
+    "psychology": "20%",
+    "style": "融在段落里（meditation心理学权重高：冥想本身有科学依据，石是触觉anchor）"
+  },
+  "image_plan": {
+    "hero": {"size": "1536x864", "scene": "冥想者+周围水晶阵列+柔和光(冥想主题视觉)", "filename": "how-to-meditate-with-crystals-hero.jpg"},
+    "step_diagrams": [
+      {"size": "1200x800", "scene": "chakra body layout图解(人体平躺+7 center石位置)", "filename": "how-to-meditate-with-crystals-chakra-layout.jpg"}
+    ],
+    "jewelry_scene": {"size": "1200x800", "scene": "手链作为worry stone冥想场景", "filename": "how-to-meditate-with-crystals-jewelry.jpg"}
+  }
+}

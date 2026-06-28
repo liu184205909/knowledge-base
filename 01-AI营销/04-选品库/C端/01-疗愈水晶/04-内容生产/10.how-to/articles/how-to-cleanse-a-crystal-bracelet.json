@@ -1,0 +1,402 @@
+{
+  "title": "How to Cleanse a Crystal Bracelet: Safe Methods (No Damage)",
+  "slug": "how-to-cleanse-a-crystal-bracelet",
+  "url": "/blog/how-to-cleanse-a-crystal-bracelet/",
+  "action": "cleanse",
+  "h1": "How to Cleanse a Crystal Bracelet",
+  "primary_kw": "how to cleanse a crystal bracelet",
+  "secondary_kw": [
+    "how to clean a crystal bracelet",
+    "cleansing crystal bracelet",
+    "crystal bracelet care",
+    "how to care for a gemstone bracelet"
+  ],
+  "word_target": 2200,
+  "concept_focus": "bracelet_material_specific（首饰材质专属：弹力绳/金属链/编织绳各不同；不重复H1完整四概念表，内链H1）",
+  "crystals": {
+    "main_commercial": {
+      "slug": "black-tourmaline",
+      "name": "Black Tourmaline",
+      "role_label": "The Everyday Elastic Bracelet",
+      "reason": "The most common elastic-cord bracelet stone — daily wear means regular cleansing is practical care",
+      "compliance_phrase": "A popular choice for those who like a grounding touchstone during a busy workday",
+      "safety_note": "Durable stone (Mohs 7–7.5), sun-stable. Brief water rinse safe. Popular daily-wear stone (bracelets) — frequent contact with skin oils/sweat makes regular cleansing practical care, not just ritual.",
+      "meaning_url": "/gemstone/black-tourmaline-meaning/",
+      "shop_url": "/product-category/black-tourmaline-crystals/"
+    },
+    "semantic_match": {
+      "slug": "rose-quartz",
+      "name": "Rose Quartz",
+      "role_label": "The Bracelet Favorite",
+      "reason": "The classic bracelet stone — needs no-contact cleansing to protect color from sun fade",
+      "compliance_phrase": "A rose quartz bracelet many people wear as a daily reminder to be gentle with themselves",
+      "safety_note": "Color may fade with prolonged direct sunlight (titanium/manganese + irradiation color cause); indirect light or moonlight is the safer choice for color-sensitive stones.",
+      "meaning_url": "/gemstone/rose-quartz-meaning/",
+      "shop_url": "/product-category/rose-quartz-crystals/"
+    },
+    "entry_price": {
+      "slug": "amethyst",
+      "name": "Amethyst",
+      "role_label": "The Bracelet + Nightstand Combo",
+      "reason": "Worn by day, rested on a selenite plate by night — a common two-role stone",
+      "compliance_phrase": "A stone many keep on their nightstand as part of a wind-down ritual before bed",
+      "safety_note": "Color may fade with prolonged direct sunlight; indirect light or moonlight is the safer choice for color-sensitive stones. Durable (Mohs 7) but a color-sensitive quartz.",
+      "meaning_url": "/gemstone/amethyst-meaning/",
+      "shop_url": "/product-category/amethyst-crystals/"
+    },
+    "niche": {
+      "slug": "moonstone",
+      "name": "Moonstone",
+      "role_label": "The Woven-Thread Bracelet",
+      "reason": "Soft sheen suits Tibetan-style woven bracelets — a site specialty that needs dry-care methods",
+      "compliance_phrase": "A stone many choose for its soft iridescent sheen and connection to lunar ritual traditions",
+      "safety_note": "Mohs 6–6.5, two perfect cleavages — avoid rough handling and prolonged water/soaking. Indirect light preferred to protect the adularescent sheen.",
+      "meaning_url": "/gemstone/moonstone-meaning/",
+      "shop_url": "/product-category/rainbow-moonstone-crystals/"
+    },
+    "safety_warning": {
+      "slug": "selenite",
+      "name": "Selenite",
+      "role_label": "The Care Plate Stone",
+      "reason": "The plate you rest bracelets on — self-cleansing and the mascot of jewelry care",
+      "compliance_phrase": "A self-cleansing stone many use as a display plate to rest other pieces on — a practical care choice",
+      "safety_note": "A soft form of gypsum (Mohs 2); can be damaged, scratched, or degraded by prolonged water exposure — keep dry. Self-cleansing in tradition; commonly used as a plate to rest other stones on.",
+      "meaning_url": "/gemstone/selenite-meaning/",
+      "shop_url": "/product-category/selenite-crystals/"
+    },
+    "jewelry_scene": {
+      "slug": "citrine",
+      "name": "Citrine",
+      "role_label": "The Metal-Chain Bracelet Stone",
+      "reason": "Sun-stable and warm — suits metal-chain bracelets that need dry, no-contact cleansing",
+      "compliance_phrase": "Often associated with warmth and sunlight — a piece many enjoy as a bright accent in a collection",
+      "safety_note": "Durable stone (Mohs 7) tolerates short indirect sunlight; avoid prolonged direct sun even for durable stones to prevent heat stress. Color (iron + heat) is more stable than amethyst but prolonged sun still not advised.",
+      "meaning_url": "/gemstone/citrine-meaning/",
+      "shop_url": "/product-category/citrine-crystals/"
+    }
+  },
+  "data_snapshot": {
+    "cleansing_knowledge_version": "v1.0 (bracelet subset: 3 universal-safe no-contact法 — moonlight/selenite/sound)",
+    "mineral_safety_reference_version": "v1.0 (手链上石头耐受校准 + 材质care)",
+    "crystal_attributes_version": "390 stones",
+    "verified_date": "2026-06-28",
+    "verified_by": "数据一致性 diff + 人工抽检"
+  },
+  "tool_cta": {
+    "enabled": true,
+    "tool": "cleansing-timer",
+    "tool_url": "/tools/crystal-cleansing-timer/",
+    "cta_type": "decision_card",
+    "positions": [
+      "M3-end-decision-card (主决策卡：查手链石头耐受)",
+      "M5-end-reminder (二次提醒卡)",
+      "M7-pre-bottom (底部曝光卡)"
+    ],
+    "card_template": "> 💡 **Not sure if your bracelet's stones tolerate sun or water?**\n> Enter the stone name in the **[Crystal Cleansing Timer](/tools/crystal-cleansing-timer/)** →\n> check its tolerance, then pick a safe no-contact method that protects both the stones and the cord."
+  },
+  "jewelry_angle": {
+    "enabled": true,
+    "mode": "entire_article（整篇都是首饰场景）",
+    "insertion_points": {
+      "M3-each-method": "每法都标三种材质适用性(弹力绳/金属链/编织绳)",
+      "M5-mistakes": "首饰材质典型错误(戴洗澡/盐泡金属/prolonged水泡编织绳)",
+      "M6-care-guide": "完整手链care guide(日常佩戴/月度care/季节care)"
+    },
+    "m6_role": "complete bracelet care guide（H7的核心：完整care guide）"
+  },
+  "eastern_touch": {
+    "woven_thread": "藏式编织手链 / macramé (站点Eastern-inspired特色，干法cleanse)",
+    "sound": "Tibetan singing bowl / 颂钵 (站点实卖铜器，手链cleanse天然契合)",
+    "moonlight": "满月冥想 / 月相周期 ritual (手链月度reset)"
+  },
+  "faq_picks": {
+    "intent": [
+      "How do I cleanse a crystal bracelet?",
+      "What is the safest way to cleanse a crystal bracelet?",
+      "Can I cleanse my bracelet without removing the stones?",
+      "How often should I cleanse my crystal bracelet?"
+    ],
+    "conversion": [
+      "Can I wear my crystal bracelet in the shower?",
+      "Can I cleanse a stretch bracelet in water?",
+      "How do I care for a woven thread bracelet?"
+    ],
+    "trust": [
+      "Will cleansing damage my bracelet?",
+      "Is salt safe for crystal bracelets?"
+    ],
+    "selective": [
+      "How do I cleanse a metal chain bracelet?",
+      "Can I put my crystal bracelet in sunlight?"
+    ]
+  },
+  "internal_links": {
+    "meaning_min": 3,
+    "condition": {
+      "anchor": "Crystals for Anxiety",
+      "url": "/crystals-for-anxiety/"
+    },
+    "intention": {
+      "anchor": "Shop Calm & Mindfulness",
+      "url": "/calm-mindfulness/"
+    },
+    "hub_flagship": {
+      "anchor": "How to Cleanse Crystals (full guide, all 7 methods)",
+      "url": "/blog/how-to-cleanse-crystals/"
+    },
+    "h1_cleanse_link": {
+      "anchor": "How to Cleanse Crystals (the full cleansing guide)",
+      "url": "/blog/how-to-cleanse-crystals/"
+    },
+    "h6_use_link": {
+      "anchor": "How to Use Crystals (beginner's overview)",
+      "url": "/blog/how-to-use-crystals/"
+    },
+    "shop_fallback": "/product-category/healing-crystals-jewelry/"
+  },
+  "schema": {
+    "types": [
+      "Article",
+      "FAQPage",
+      "HowTo",
+      "BreadcrumbList"
+    ],
+    "howto_structure": "6-step bracelet cleanse flow",
+    "howto_focus": "knowledge bracelet-specific safety steps",
+    "howto_6_steps": [
+      {
+        "step": 1,
+        "name": "Identify your bracelet material",
+        "text": "确认手链材质(弹力绳/金属链/编织绳)——决定可用方法"
+      },
+      {
+        "step": 2,
+        "name": "Check the stones' tolerance",
+        "text": "查手链上石头的sun/water耐受(用cleansing-timer)——影响能否用sun/water"
+      },
+      {
+        "step": 3,
+        "name": "Remove the bracelet",
+        "text": "cleanse前摘下手链——除moonlight/selenite/sound可戴净化外，其他法需摘"
+      },
+      {
+        "step": 4,
+        "name": "Choose a no-contact method",
+        "text": "从3安全法选(moonlight/selenite/sound)——三种材质全适用"
+      },
+      {
+        "step": 5,
+        "name": "Cleanse for recommended time",
+        "text": "按该方法时长(moonlight 8+hrs/selenite 6+hrs/sound 5-10min)"
+      },
+      {
+        "step": 6,
+        "name": "Store & wear mindfully",
+        "text": "收纳干燥处；洗澡/游泳/洗碗必摘；月度selenite plate care"
+      }
+    ],
+    "howto_name": "How to Cleanse a Crystal Bracelet Safely",
+    "howto_total_time": "PT8H",
+    "faq_page_schema_consistency": "FAQ答案与Schema FAQPage严格一致"
+  },
+  "compliance": {
+    "avoid": [
+      "removes negative energy",
+      "purifies bad vibes",
+      "protects you from negativity",
+      "cleanses the bracelet's energy field",
+      "supercharges"
+    ],
+    "phrase_library_version": "v1.0（框架v2 §11.2）",
+    "gentle_note": "Cleansing a crystal bracelet is practical jewelry care combined with personal ritual. There is no scientific evidence that bracelets store or release energy, but the care guidance — which materials tolerate water, salt, or sun — is real, and a regular no-contact cleanse keeps both the stones and the cord in good condition.",
+    "ai_banned_words": [
+      "delve",
+      "tapestry",
+      "realm",
+      "journey（叙事）",
+      "unlock your potential",
+      "manifest abundance",
+      "elevate your vibration"
+    ],
+    "chemistry_case_sensitive": "SiO₂（非sio₂）/ Ag₂S (银氧化) / Cu₂CO₃ — 校验用includes('sio₂')/'ag₂s'"
+  },
+  "three_perspectives": {
+    "science": "40%",
+    "spirituality": "40%",
+    "psychology": "20%",
+    "style": "融在段落里（H7科学权重高：材质care是真实物理/化学事实）"
+  },
+  "image_plan": {
+    "hero": {
+      "size": "1536x864",
+      "scene": "水晶手链+selenite plate(手链净化主题视觉)",
+      "filename": "how-to-cleanse-a-crystal-bracelet-hero.jpg"
+    },
+    "step_diagrams": [
+      {
+        "size": "1200x800",
+        "scene": "三种材质手链对比(弹力绳/金属链/编织绳)",
+        "filename": "how-to-cleanse-a-crystal-bracelet-materials.jpg"
+      }
+    ],
+    "jewelry_scene": {
+      "size": "1200x800",
+      "scene": "手链selenite plate过夜cleanse场景",
+      "filename": "how-to-cleanse-a-crystal-bracelet-jewelry.jpg"
+    }
+  },
+  "rank_math_title": "How to Cleanse a Crystal Bracelet: Safe Methods (No Damage)",
+  "rank_math_description": "Learn how to cleanse a crystal bracelet safely with 3 no-contact methods (moonlight, selenite, sound). Covers elastic cord, metal chain, and woven thread materials, what to avoid, and a complete care guide.",
+  "rank_math_focus_keyword": "how to cleanse a crystal bracelet",
+  "excerpt": "A jewelry-specific guide to cleansing crystal bracelets: three no-contact methods safe for every material (elastic cord, metal chain, woven thread), the methods to avoid and why, a material-by-material care table, a complete monthly care guide, and answers to buyer questions.",
+  "faq_schema": [
+    {
+      "question": "How do I cleanse a crystal bracelet?",
+      "answer_placeholder": "{{AI_FAQ_0}}",
+      "category": "intent"
+    },
+    {
+      "question": "What is the safest way to cleanse a crystal bracelet?",
+      "answer_placeholder": "{{AI_FAQ_1}}",
+      "category": "intent"
+    },
+    {
+      "question": "Can I cleanse my bracelet without removing the stones?",
+      "answer_placeholder": "{{AI_FAQ_2}}",
+      "category": "intent"
+    },
+    {
+      "question": "How often should I cleanse my crystal bracelet?",
+      "answer_placeholder": "{{AI_FAQ_3}}",
+      "category": "intent"
+    },
+    {
+      "question": "Can I wear my crystal bracelet in the shower?",
+      "answer_placeholder": "{{AI_FAQ_4}}",
+      "category": "conversion"
+    },
+    {
+      "question": "Can I cleanse a stretch bracelet in water?",
+      "answer_placeholder": "{{AI_FAQ_5}}",
+      "category": "conversion"
+    },
+    {
+      "question": "How do I care for a woven thread bracelet?",
+      "answer_placeholder": "{{AI_FAQ_6}}",
+      "category": "conversion"
+    },
+    {
+      "question": "Will cleansing damage my bracelet?",
+      "answer_placeholder": "{{AI_FAQ_7}}",
+      "category": "trust"
+    },
+    {
+      "question": "Is salt safe for crystal bracelets?",
+      "answer_placeholder": "{{AI_FAQ_8}}",
+      "category": "trust"
+    },
+    {
+      "question": "How do I cleanse a metal chain bracelet?",
+      "answer_placeholder": "{{AI_FAQ_9}}",
+      "category": "selective"
+    },
+    {
+      "question": "Can I put my crystal bracelet in sunlight?",
+      "answer_placeholder": "{{AI_FAQ_10}}",
+      "category": "selective"
+    }
+  ],
+  "howto_schema": {
+    "name": "How to Cleanse a Crystal Bracelet Safely",
+    "totalTime": "PT8H",
+    "steps": [
+      {
+        "step": 1,
+        "name": "Identify your bracelet material",
+        "text": "确认手链材质(弹力绳/金属链/编织绳)——决定可用方法"
+      },
+      {
+        "step": 2,
+        "name": "Check the stones' tolerance",
+        "text": "查手链上石头的sun/water耐受(用cleansing-timer)——影响能否用sun/water"
+      },
+      {
+        "step": 3,
+        "name": "Remove the bracelet",
+        "text": "cleanse前摘下手链——除moonlight/selenite/sound可戴净化外，其他法需摘"
+      },
+      {
+        "step": 4,
+        "name": "Choose a no-contact method",
+        "text": "从3安全法选(moonlight/selenite/sound)——三种材质全适用"
+      },
+      {
+        "step": 5,
+        "name": "Cleanse for recommended time",
+        "text": "按该方法时长(moonlight 8+hrs/selenite 6+hrs/sound 5-10min)"
+      },
+      {
+        "step": 6,
+        "name": "Store & wear mindfully",
+        "text": "收纳干燥处；洗澡/游泳/洗碗必摘；月度selenite plate care"
+      }
+    ],
+    "supplies": [
+      "Selenite charging plate",
+      "Tibetan singing bowl",
+      "Full-moon windowsill"
+    ],
+    "tools": [
+      "cleansing-timer (optional safety check)"
+    ]
+  },
+  "diffHints": {
+    "concept_focus": "bracelet_material_specific（首饰材质专属：弹力绳/金属链/编织绳各不同；不重复H1完整四概念表，内链H1）",
+    "concept_table_mode": "none",
+    "local_concept_pair": null,
+    "safety_first_narrative": {
+      "M1_quick_answer": [
+        "手链cleanse最安全法 = moonlight / selenite plate / sound（三种材质全适用）",
+        "手链忌用：water浸泡(绳老化)/salt(金属氧化)/smoke(残留)/earth/prolonged sun",
+        "进入方法前一句话'先认手链材质(弹力绳/金属链/编织绳)再选法'"
+      ],
+      "M2_order_hardware": [
+        "第一段(材质分类前置): 手链材质决定方法——弹力绳/金属链/编织绳各不同",
+        "第二段(为什么手链需特殊care): 材质+石头双重耐受考量(绳子怕水盐，金属怕盐氧化)",
+        "第三段(内链H1): 手链是cleanse的子集——完整7法见H1"
+      ],
+      "compliance_phrasing": "practical care / a daily reminder / protect both the stones and the cord"
+    },
+    "jewelry_mode": "entire_article（整篇都是首饰场景）",
+    "eastern_touch": {
+      "woven_thread": "藏式编织手链 / macramé (站点Eastern-inspired特色，干法cleanse)",
+      "sound": "Tibetan singing bowl / 颂钵 (站点实卖铜器，手链cleanse天然契合)",
+      "moonlight": "满月冥想 / 月相周期 ritual (手链月度reset)"
+    },
+    "three_perspectives": {
+      "science": "40%",
+      "spirituality": "40%",
+      "psychology": "20%",
+      "style": "融在段落里（H7科学权重高：材质care是真实物理/化学事实）"
+    },
+    "compliance_phrase_library": "v1.0（框架v2 §11.2）"
+  },
+  "content": "<p><p>A crystal bracelet is the most-worn piece in any collection — it lives on your wrist, picks up skin oils and sweat every day, and deserves regular care. But cleansing a bracelet is not the same as cleansing a loose stone. The cord, the metal, and the stones each have their own tolerances, and a method that's fine for a raw crystal (a salt bed, a water rinse) can ruin a bracelet in a single session. That's why this guide focuses on the one thing that matters most for jewelry: <strong>no-contact methods</strong> that protect every part of the piece.</p>\n<p>The good news is that the three safest cleansing methods — <strong>moonlight</strong>, a <strong>selenite plate</strong>, and <strong>sound</strong> — work for every bracelet material, whether yours is strung on elastic cord, a metal chain, or woven thread. They involve no water, no salt, and no handling stress, so they cleanse the whole piece — stones, cord, and metal — without risking any of it. Methods to avoid for bracelets are equally clear: water soaking, salt, smoke, earth burial, and prolonged sun all damage one or more bracelet materials.</p>\n<p>What you'll find below: a material-by-material guide (elastic cord, metal chain, woven thread), the three safe methods, the methods to avoid and why, a complete bracelet care guide, stones commonly used in bracelets, and answers to the questions buyers ask most. The goal is simple, low-risk care that keeps your bracelets looking good and lasting longer — practical jewelry care, not just ritual.</p></p>\n\n<h2>Quick Answer: How to Cleanse Crystals</h2>\n<p><p>The safest way to cleanse a crystal bracelet is with one of three <strong>no-contact methods</strong> that work for every bracelet material: <strong>moonlight</strong> (overnight on a windowsill), a <strong>selenite plate</strong> (passive overnight rest), or <strong>sound</strong> (a singing bowl or bell for 5–10 minutes). These cleanse the whole piece — stones, cord, and metal — without any water, salt, or handling that could damage it.</p></p>\n<ul>\n<li><li><strong>Safest methods for ALL bracelet materials:</strong> moonlight, a selenite plate, or sound — these work for elastic cord, metal chain, and woven thread alike.</li></li>\n<li><li><strong>Avoid for bracelets:</strong> water soaking (degrades elastic cord, oxidizes metal, distorts woven thread), salt (corrodes metal chains), smoke (leaves residue), earth burial (tarnishes metal), and prolonged direct sun (fades some stones).</li></li>\n<li><li><strong>How long:</strong> moonlight and selenite need 6–8+ hours (usually overnight); sound takes 5–10 minutes. All three are passive — set the bracelet down and let the method do the work.</li></li>\n</ul>\n<p><p>One more thing before you start: <strong>know your bracelet's material</strong>. The three safe methods below work for every material, but the stones themselves also matter — a bracelet with amethyst or rose quartz stones should avoid direct sun even for drying, and soft stones like selenite need gentle handling. If you're unsure what your bracelet's stones tolerate, <a href=\"/tools/crystal-cleansing-timer/\">check their safety in the Cleansing Timer</a> before you begin.</p></p>\n\n<h2>Why Bracelets Need Special Care</h2>\n<p><p>The first step in cleansing a bracelet isn't choosing a method — it's knowing what the bracelet is made of. <strong>Elastic cord</strong> (the stretchy thread on most beaded bracelets) degrades in water, soap, and heat, eventually loosening and snapping. <strong>Metal chain</strong> (silver, copper, or brass links) oxidizes faster in salt and prolonged water, turning black or greenish. <strong>Woven thread</strong> (Tibetan-style or macramé cotton and waxed cord) absorbs water, which can distort the weave, fade the color, and cause odor. Each material has its own \"do not\" list, and a method that's safe for one can damage another.</p></p>\n<p><p>So why do bracelets need special care at all? Because a bracelet is a composite object — stones plus cord or metal — and the cord and metal are far more vulnerable than the stones themselves. A piece of clear quartz can tolerate a brief water rinse, but the elastic cord holding it cannot. A metal clasp might survive a salt bed, but the salt will accelerate its oxidation. The stones are often the most durable part of a bracelet, which means cleansing methods chosen for the <em>stones</em> alone can quietly destroy the <em>cord and metal</em> that hold them together. The safest approach is always the one that protects every part of the piece.</p></p>\n<p><p>For the full guide to all seven cleansing methods (including the water, earth, and salt methods that work for loose stones but not bracelets), see <a href=\"/blog/how-to-cleanse-crystals/\">How to Cleanse Crystals</a>. This article is the deep dive on bracelets specifically — where the three no-contact methods are the entire toolkit you need.</p></p>\n<h3>Know Your Bracelet Material First</h3>\n<p><p>Use the table below to identify your bracelet's material and see at a glance which methods are safe and which to avoid. If you're not sure whether your bracelet is elastic, metal, or woven, look at the stringing: stretchy cord that gives when you pull is elastic; visible metal links or wire is a metal chain; braided or knotted thread (often with a sliding knot closure) is woven. All three materials share the same three safe methods — moonlight, selenite, and sound — but their \"avoid\" lists differ slightly.</p></p>\n<table>\n<thead><tr><th>Material</th><th>Characteristics</th><th>Safe methods</th><th>Avoid</th></tr></thead>\n<tbody>\n<tr><td><strong>🧵 Elastic Cord (Stretch Bracelet)</strong></td><td>弹力绳(橡胶/弹性线)——遇水/肥皂/热会老化松弛最终断裂</td><td>moonlight, selenite, sound</td><td>water (soaking), salt, smoke (residue), earth, sun (prolonged, fades some stones)</td></tr>\n<tr><td><strong>⛓️ Metal Chain (Silver / Copper / Brass)</strong></td><td>金属链(银/铜/黄铜)——盐会加速氧化变黑， prolonged water也致氧化</td><td>moonlight, selenite, sound</td><td>salt (corrodes metal), water (prolonged, oxidation), earth (tarnishes metal), smoke (residue)</td></tr>\n<tr><td><strong>🪢 Woven Thread (Tibetan / Macramé)</strong></td><td>编织绳(藏式/ macramé棉线蜡线)——吸水， prolonged water致变形/褪色/异味</td><td>moonlight, selenite, sound</td><td>water (soaking), salt, earth, smoke (residue on thread)</td></tr>\n</tbody>\n</table>\n\n\n<h2>How to Cleanse a Crystal Bracelet: 3 Safe Methods</h2>\n<p><p>Below are the three methods that work for every bracelet material. They're all no-contact, meaning the bracelet rests in place while the method does the work — no water, no salt, no handling stress on the cord or metal. Pick the one that fits your routine; all three cleanse the whole piece equally well.</p></p>\n<h3 style=\"color:#2e7d32;\">🟢 Tier 1 — Safe for ALL Bracelet Materials</h3>\n<p><em>三种材质全适用(弹力绳/金属链/编织绳)</em></p><h3>🌙 Moonlight (Overnight on Windowsill)</h3>\n<p><strong>What it does (tradition):</strong> The full moon is the classic monthly reset — lay bracelets on a windowsill overnight, no contact, no chemistry.</p>\n<p><strong>How it works (practical):</strong> Moonlight is reflected sunlight at roughly 1/400,000 the intensity — no risk to cord, metal, thread, or any stone.</p>\n<p><strong>Best for:</strong> every bracelet material — elastic cord, metal chain, and woven thread all tolerate moonlight perfectly. The lowest-effort, lowest-risk monthly reset.</p>\n<p><strong>Method-specific safety notes:</strong> Extremely low UV intensity vs direct sun (roughly 1/400,000); generally one of the safest light methods for all minerals.</p>\n<p><em>Jewelry tip:</em> Works for elastic cord, metal chain, and woven thread — all three materials tolerate this perfectly.</p>\n<p><strong>Steps:</strong></p>\n<ol>\n<li>Lay bracelets flat on a windowsill at sunset</li>\n<li>Leave overnight (8+ hours); full moon is ideal</li>\n<li>Bring in before sunrise to avoid dew</li>\n</ol>\n<p><strong>How long:</strong> Overnight (8+ hours)</p><h3>✨ Selenite Plate (Passive Overnight)</h3>\n<p><strong>What it does (tradition):</strong> Resting bracelets on a selenite plate overnight is a passive cleanse that works while you sleep — the plate does the work.</p>\n<p><strong>How it works (practical):</strong> No chemical interaction — harmless to cord, metal, thread, and every stone. Handle gently, as selenite itself is soft (Mohs 2).</p>\n<p><strong>Best for:</strong> every bracelet material — the no-contact plate is the single best daily-care habit for a jewelry collection. Keep one plate by the bed and rest the day's bracelets on it each night.</p>\n<p><strong>Method-specific safety notes:</strong> No chemical interaction — completely harmless to other stones. The selenite itself is soft (Mohs 2); avoid dragging hard stones across its surface to prevent scratching.</p>\n<p><em>Jewelry tip:</em> Works for elastic cord, metal chain, and woven thread — all three materials tolerate this perfectly.</p>\n<p><strong>Steps:</strong></p>\n<ol>\n<li>Place bracelets on a selenite plate, bowl, or bar</li>\n<li>Leave 6+ hours or overnight</li>\n<li>Avoid dragging metal clasps across the selenite surface</li>\n</ol>\n<p><strong>How long:</strong> 6+ hours (or overnight)</p><h3>🔔 Sound (Singing Bowl / Bell)</h3>\n<p><strong>What it does (tradition):</strong> Sustained sound vibrations are believed to clear stagnant energy — fast, no-contact, works for several bracelets at once.</p>\n<p><strong>How it works (practical):</strong> Sound waves are far too low-energy to affect cord, metal, thread, or any stone's structure — harmless.</p>\n<p><strong>Best for:</strong> every bracelet material — the fastest method, and a Tibetan singing bowl (which the shop carries) gives a grounding, ceremonial feel.</p>\n<p><strong>Method-specific safety notes:</strong> Sound waves are far too low-energy to affect any mineral's structure — harmless to every stone.</p>\n<p><em>Jewelry tip:</em> Works for elastic cord, metal chain, and woven thread — all three materials tolerate this perfectly.</p>\n<p><strong>Steps:</strong></p>\n<ol>\n<li>Play a singing bowl, bell, or tuning fork near the bracelets</li>\n<li>Continue for 5–10 minutes</li>\n<li>Works for several bracelets at once</li>\n</ol>\n<p><strong>How long:</strong> 5–10 minutes</p><h3 style=\"color:#c62828;\">🔴 Avoid for Bracelets</h3>\n<p><em>手链忌用(损伤材质)</em></p>\n<p></p>\n<ul>\n<li><li><strong>Water soaking.</strong> Soaking degrades elastic cord (it loosens and eventually snaps), oxidizes metal chains (turning them black or greenish), and distorts woven thread (causing it to lose shape, fade, or develop odor). Even a brief rinse risks the cord and metal, and the soap in a shower makes all of it worse. <em>Use instead:</em> moonlight, a selenite plate, or sound — all no-contact.</li></li>\n<li><li><strong>Salt (dry or saltwater).</strong> Salt is abrasive and accelerates oxidation in silver, copper, and brass — a salt bed can tarnish a metal chain far faster than normal wear. It also leaves gritty residue in the cord and bead holes. <em>Use instead:</em> for jewelry, skip salt entirely and rest the piece on a selenite plate overnight — same symbolic reset, zero metal damage.</li></li>\n<li><li><strong>Smoke.</strong> Smoke cleansing leaves a faint residue on the cord, thread, and bead surfaces — and on woven thread, that residue can be hard to remove and may hold odor. While smoke won't damage the stones, it's not ideal for the porous and fabric parts of a bracelet. <em>Use instead:</em> a Tibetan singing bowl gives a similar ritual feel without any smoke or residue.</li></li>\n<li><li><strong>Earth burial.</strong> Soil moisture and organic acids tarnish and loosen metal settings, and burying a bracelet risks losing it, scratching the stones, and degrading the cord. Earth burial is a method for loose, high-hardness raw stones — never for jewelry. <em>Use instead:</em> a selenite plate or moonlit windowsill.</li></li>\n<li><li><strong>Prolonged direct sun.</strong> Direct sunlight can fade color-sensitive stones (amethyst, rose quartz, fluorite) and cause heat stress even in hard stones — and prolonged sun can also dry out and weaken elastic cord over time. <em>Use instead:</em> moonlight (reflected sun, roughly 1/400,000 the intensity) or a selenite plate, both of which work with zero fading risk.</li></li>\n</ul>\n<div class=\"cleansing-timer-card\" style=\"background:#f0f7ff;border-left:4px solid #2e7d32;padding:16px 20px;margin:24px 0;border-radius:6px;\">\n<p>💡 <strong>Not sure if your bracelet's stones tolerate sun or water?</strong></p>\n<p><a href=\"/tools/crystal-cleansing-timer/\"><strong>Crystal Cleansing Timer</strong></a> → check its tolerance, then pick a safe no-contact method that protects both the stones and the cord.</p>\n</div>\n\n<h2>Stones Commonly Used in Bracelets</h2>\n<p><p>Different stones appear in bracelets for different reasons — daily wear, gentle reminders, warm accents, or woven-thread Tibetan styles. Below are six stones commonly found in bracelets, with a note on the bracelet style they suit and their care requirements. Every entry follows the same principle: use no-contact methods, and check the stone's sun tolerance before any light-based care.</p></p><h3>Black Tourmaline — The Everyday Elastic Bracelet</h3>\n<p><p>Black tourmaline is the everyday elastic-bracelet stone — the most common beaded stretch bracelet, popular as a grounding touchstone for daily wear. Because it lives on the wrist, it picks up skin oils and sweat every day, which makes regular cleansing practical care. The good news: it's durable (Mohs 7–7.5) and sun-stable, so it tolerates any of the three safe methods with ease. Rest it on a selenite plate overnight, or lay it on a moonlit windowsill once a month.</p></p>\n<p><em>Black Tourmaline</em> — A popular choice for those who like a grounding touchstone during a busy workday. The most common elastic-cord bracelet stone — daily wear means regular cleansing is practical care. <strong>Safety note:</strong> Durable stone (Mohs 7–7.5), sun-stable. Brief water rinse safe. Popular daily-wear stone (bracelets) — frequent contact with skin oils/sweat makes regular cleansing practical care, not just ritual.</p>\n<p><a href=\"/gemstone/black-tourmaline-meaning/\">Read full Black Tourmaline meaning</a> · <a href=\"/product-category/black-tourmaline-crystals/\">Shop Black Tourmaline</a></p><h3>Rose Quartz — The Bracelet Favorite</h3>\n<p><p>Rose quartz is the bracelet favorite — the classic beaded bracelet stone, worn as a daily reminder to be gentle with oneself. As a color-sensitive quartz, its main care rule is light: prolonged direct sun can fade its pink, so use moonlight or a selenite plate rather than sun. For a daily-wear piece, a no-contact monthly reset protects both the color and the elastic cord.</p></p>\n<p><em>Rose Quartz</em> — A rose quartz bracelet many people wear as a daily reminder to be gentle with themselves. The classic bracelet stone — needs no-contact cleansing to protect color from sun fade. <strong>Safety note:</strong> Color may fade with prolonged direct sunlight (titanium/manganese + irradiation color cause); indirect light or moonlight is the safer choice for color-sensitive stones.</p>\n<p><a href=\"/gemstone/rose-quartz-meaning/\">Read full Rose Quartz meaning</a> · <a href=\"/product-category/rose-quartz-crystals/\">Shop Rose Quartz</a></p><h3>Amethyst — The Bracelet + Nightstand Combo</h3>\n<p><p>Amethyst is the bracelet-plus-nightstand combo — worn by day and rested on a selenite plate by night. Like rose quartz, it's a color-sensitive quartz that must avoid direct sun, so use moonlight or a selenite plate for cleansing. A daily-wear amethyst bracelet that's rested on a plate each night gets a passive cleanse and charge while you sleep — the lowest-effort care routine there is.</p></p>\n<p><em>Amethyst</em> — A stone many keep on their nightstand as part of a wind-down ritual before bed. Worn by day, rested on a selenite plate by night — a common two-role stone. <strong>Safety note:</strong> Color may fade with prolonged direct sunlight; indirect light or moonlight is the safer choice for color-sensitive stones. Durable (Mohs 7) but a color-sensitive quartz.</p>\n<p><a href=\"/gemstone/amethyst-meaning/\">Read full Amethyst meaning</a> · <a href=\"/product-category/amethyst-crystals/\">Shop Amethyst</a></p><h3>Moonstone — The Woven-Thread Bracelet</h3>\n<p><p>Moonstone is the woven-thread bracelet stone — its soft iridescent sheen suits Tibetan-style woven and macramé bracelets, which are a specialty of this site. Woven thread absorbs water and must stay dry, so no-contact methods (moonlight, selenite, sound) are essential. Handle moonstone gently (Mohs 6–6.5, two cleavages) and keep it out of prolonged water and direct sun. If the thread gets damp from hand-washing, blot it dry immediately and let it air-dry away from heat.</p></p>\n<p><em>Moonstone</em> — A stone many choose for its soft iridescent sheen and connection to lunar ritual traditions. Soft sheen suits Tibetan-style woven bracelets — a site specialty that needs dry-care methods. <strong>Safety note:</strong> Mohs 6–6.5, two perfect cleavages — avoid rough handling and prolonged water/soaking. Indirect light preferred to protect the adularescent sheen.</p>\n<p><a href=\"/gemstone/moonstone-meaning/\">Read full Moonstone meaning</a> · <a href=\"/product-category/rainbow-moonstone-crystals/\">Shop Moonstone</a></p><h3>Selenite — The Care Plate Stone</h3>\n<p><p>Selenite is the care plate stone — not usually worn as a bracelet (it's too soft, Mohs 2), but the plate you rest your bracelets on. In tradition it's considered self-cleansing, and resting bracelets on a selenite plate overnight is the single best daily-care habit for a jewelry collection. Keep one plate by the bed and rest the day's bracelets on it each night for a passive cleanse and charge.</p></p>\n<p><em>Selenite</em> — A self-cleansing stone many use as a display plate to rest other pieces on — a practical care choice. The plate you rest bracelets on — self-cleansing and the mascot of jewelry care. <strong>Safety note:</strong> A soft form of gypsum (Mohs 2); can be damaged, scratched, or degraded by prolonged water exposure — keep dry. Self-cleansing in tradition; commonly used as a plate to rest other stones on.</p>\n<p><a href=\"/gemstone/selenite-meaning/\">Read full Selenite meaning</a> · <a href=\"/product-category/selenite-crystals/\">Shop Selenite</a></p><h3>Citrine — The Metal-Chain Bracelet Stone</h3>\n<p><p>Citrine is the metal-chain bracelet stone — sun-stable and warm in color, it suits metal-link bracelets that need dry, no-contact cleansing. As a color-stable quartz (its color comes from iron and heat, not irradiation), citrine tolerates brief indirect sun, though moonlight or a selenite plate remain the gentlest defaults. For a metal-chain bracelet, avoid salt entirely (it corrodes the metal) and stick to the three no-contact methods.</p></p>\n<p><em>Citrine</em> — Often associated with warmth and sunlight — a piece many enjoy as a bright accent in a collection. Sun-stable and warm — suits metal-chain bracelets that need dry, no-contact cleansing. <strong>Safety note:</strong> Durable stone (Mohs 7) tolerates short indirect sunlight; avoid prolonged direct sun even for durable stones to prevent heat stress. Color (iron + heat) is more stable than amethyst but prolonged sun still not advised.</p>\n<p><a href=\"/gemstone/citrine-meaning/\">Read full Citrine meaning</a> · <a href=\"/product-category/citrine-crystals/\">Shop Citrine</a></p><p>Explore more: <a href=\"/crystals-for-anxiety/\">Crystals for Anxiety</a> · <a href=\"/calm-mindfulness/\">Shop Calm & Mindfulness</a></p>\n\n<h2>Common Mistakes to Avoid</h2>\n<p><p>Bracelet damage almost always comes down to one of five common mistakes — and all five are easy to avoid once you know them. The underlying principle is simple: <strong>treat a bracelet as a composite object</strong> (stones plus cord or metal), and choose methods that protect every part of it.</p></p>\n<ul>\n<li><li><strong>Wearing an elastic-cord bracelet in the shower.</strong> Hot water and soap degrade elastic cord — it loosens and eventually snaps — and leave a soapy film on the stones. <em>Fix:</em> take the bracelet off before showering, swimming, or doing dishes, and rest it on a selenite plate while you do.</li></li>\n<li><li><strong>Using a salt bed on a metal-chain bracelet.</strong> Salt accelerates oxidation in silver, copper, and brass, so a salt cleanse can tarnish a chain far faster than normal wear. <em>Fix:</em> for any jewelry, skip salt entirely and use a selenite plate or moonlit windowsill instead.</li></li>\n<li><li><strong>Soaking a woven-thread bracelet in water.</strong> Woven thread absorbs water, which can distort the weave, fade the color, and cause odor. <em>Fix:</em> keep woven-thread bracelets dry — cleanse with moonlight, a selenite plate, or sound only. If the thread gets damp, blot it dry immediately and air-dry away from heat.</li></li>\n<li><li><strong>Leaving an amethyst or rose quartz bracelet in direct sun.</strong> Color-sensitive stones fade with prolonged direct sun, and heat can also weaken elastic cord over time. <em>Fix:</em> use moonlight or a selenite plate — both work with zero fading risk and no stress on the cord.</li></li>\n<li><li><strong>Reusing a salt bed or skipping the cleanse entirely.</strong> Some people either reuse salt (which accumulates moisture and grit) or never cleanse their bracelets at all (which lets skin oils and daily residue build up). <em>Fix:</em> establish a simple monthly routine — rest bracelets on a selenite plate overnight, or on a moonlit windowsill under the full moon. Consistency matters more than intensity.</li></li>\n</ul><div class=\"cleansing-timer-card\" style=\"background:#fff4e5;border-left:4px solid #f9a825;padding:16px 20px;margin:24px 0;border-radius:6px;\">\n<p>💡 <strong>Not sure if your bracelet's stones tolerate sun or water?</strong></p>\n<p><a href=\"/tools/crystal-cleansing-timer/\"><strong>Crystal Cleansing Timer</strong></a> → check its tolerance, then pick a safe no-contact method that protects both the stones and the cord.</p>\n</div>\n\n<h2>Complete Bracelet Care Guide</h2>\n<p><p>Beyond cleansing, a few simple habits keep your crystal bracelets in good condition for years. The complete care guide below covers daily wear, monthly care, seasonal care, and when to remove your bracelet — the small routine that protects both the stones and the cord or metal that hold them.</p></p>\n<ul>\n<li><li><strong>Daily wear.</strong> Put your bracelet on after applying lotion, perfume, or sunscreen (these can dull the stones and degrade the cord over time). Wear it on whichever wrist feels comfortable — in many traditions the non-dominant (receiving) hand is suggested, but treat this as a personal choice. Notice the bracelet through the day as a small reminder of whatever intention you've attached to it.</li></li>\n<li><li><strong>Monthly care.</strong> Once a month — ideally on the full moon — lay your bracelets on a selenite plate overnight (6–8+ hours), or on a moonlit windowsill. This is the single most important habit: it passively cleanses and charges the whole piece with no contact, no chemistry, and no risk. Set a monthly reminder if it helps.</li></li>\n<li><li><strong>Seasonal care.</strong> A few times a year, give your bracelets a closer look: check elastic cord for stretching or fraying (have it re-strung if it's loose), wipe metal chains with a soft jewelry cloth to remove tarnish, and inspect woven thread for wear. Catching these early prevents breakage and loss.</li></li>\n<li><li><strong>When to remove.</strong> Always take your bracelet off before showering, swimming, sleeping (elastic cord wears faster when caught on bedding), heavy cleaning, or any activity where it might be knocked, soaked, or exposed to chemicals. Rest it on a selenite plate or in a soft pouch while you do — this is the single biggest factor in how long a bracelet lasts.</li></li>\n</ul>\n\n\n<h2>FAQ About Cleansing a Crystal Bracelet</h2>\n<h3>How do I cleanse a crystal bracelet?</h3>\n<p><p>The safest way to cleanse a crystal bracelet is to rest it on a <strong>selenite plate overnight</strong> (6–8+ hours), or lay it on a <strong>moonlit windowsill</strong> under the full moon. Both are no-contact methods that cleanse the whole piece — stones, cord, and metal — without any water, salt, or handling. For a faster option, a <strong>singing bowl</strong> for 5–10 minutes works too. Avoid water soaking, salt, smoke, earth, and prolonged sun, all of which damage one or more bracelet materials.</p></p>\n<h3>What is the safest way to cleanse a crystal bracelet?</h3>\n<p><p>The safest method — by a wide margin — is a <strong>selenite plate</strong>: rest the bracelet on the plate overnight, and the whole piece is cleansed passively while you sleep. It works for every bracelet material (elastic cord, metal chain, woven thread) and every stone, with zero risk of damage. Moonlight (overnight on a windowsill) and sound (a singing bowl for 5–10 minutes) are equally safe alternatives. Keep one selenite plate by the bed and rest the day's bracelets on it each night for the lowest-effort care routine there is.</p></p>\n<h3>Can I cleanse my bracelet without removing the stones?</h3>\n<p><p>Yes — that's the main advantage of the three safe methods. Moonlight, a selenite plate, and sound all cleanse the bracelet <em>without removing the stones</em>, because they don't involve any handling, water, or chemistry. You simply rest the whole bracelet in place and let the method do the work. Methods that <em>would</em> require removing the stones (water soaking, salt) are exactly the ones to avoid for bracelets — they damage the cord and metal.</p></p>\n<h3>How often should I cleanse my crystal bracelet?</h3>\n<p><p>Most daily-wear bracelets benefit from a cleanse about <strong>once a month</strong>, often timed to the full moon. You might also cleanse a new bracelet before its first wear (to clear the handling of many hands), or after a period of heavy wear. Bracelets worn daily pick up skin oils and sweat faster than loose stones, so a monthly selenite-plate reset is practical care, not just ritual. Set a monthly reminder if it helps.</p></p>\n<h3>Can I wear my crystal bracelet in the shower?</h3>\n<p><p>No — showering with a crystal bracelet on is one of the most common causes of damage. Hot water and soap degrade elastic cord (it loosens and eventually snaps), oxidize metal chains, and distort woven thread, and they also leave a soapy film on the stones. Always take your bracelet off before showering, swimming, or doing dishes, and rest it on a selenite plate or in a soft pouch while you do.</p></p>\n<h3>Can I cleanse a stretch bracelet in water?</h3>\n<p><p>No — water is one of the methods to avoid for stretch (elastic-cord) bracelets. Soaking degrades the elastic cord, which loosens and eventually snaps, and even a brief rinse risks the cord. Cleanse stretch bracelets with no-contact methods only: moonlight, a selenite plate, or sound. These cleanse the whole piece — stones and cord — without any water exposure.</p></p>\n<h3>How do I care for a woven thread bracelet?</h3>\n<p><p>Keep woven-thread bracelets dry. Cleanse them with no-contact methods only — moonlight, a selenite plate, or sound. Woven thread (cotton, waxed cord, macramé) absorbs water, which can distort the weave, fade the color, and cause odor. If the thread gets damp from hand-washing or rain, blot it dry immediately with a soft cloth and let it air-dry away from heat or direct sun. Never soak or machine-wash a woven bracelet.</p></p>\n<h3>Will cleansing damage my bracelet?</h3>\n<p><p>It can, if you choose the wrong method — which is why this guide is so focused on the three no-contact methods. Water soaking degrades elastic cord and oxidizes metal; salt corrodes metal chains; smoke leaves residue on cord and thread; earth burial tarnishes metal; prolonged sun fades some stones and weakens elastic. The three safe methods (moonlight, selenite, sound) will not damage any bracelet. When in doubt, use those — and <a href=\"/tools/crystal-cleansing-timer/\">check your bracelet's stone tolerance</a> before any light-based care.</p></p>\n<h3>Is salt safe for crystal bracelets?</h3>\n<p><p>No — salt is one of the methods to avoid for crystal bracelets. Salt is abrasive and accelerates oxidation in silver, copper, and brass, so a salt bed can tarnish a metal chain far faster than normal wear. It also leaves gritty residue in the cord and bead holes. For any jewelry, skip salt entirely and use a selenite plate or moonlit windowsill instead — same symbolic reset, zero metal damage.</p></p>\n<h3>How do I cleanse a metal chain bracelet?</h3>\n<p><p>Cleanse a metal-chain bracelet with no-contact methods only — moonlight, a selenite plate, or sound. Avoid salt (it corrodes metal), prolonged water (it oxidizes metal), and earth burial (it tarnishes metal). For the metal itself, wipe the chain regularly with a soft jewelry cloth to remove early tarnish — this is independent of cleansing and keeps the metal bright. The stones on a metal-chain bracelet follow their own tolerance rules, so check them too.</p></p>\n<h3>Can I put my crystal bracelet in sunlight?</h3>\n<p><p>Only if the bracelet is made of sun-stable stones (citrine, clear quartz, tiger's eye, black tourmaline) — and even then, indirect or brief sun only. If the bracelet contains amethyst, rose quartz, or fluorite, direct sunlight will fade the stones over time, and prolonged sun can also weaken elastic cord. For most bracelets, the safer choice is moonlight or a selenite plate — they cleanse with zero fading risk and no stress on the cord.</p></p>\n<p class=\"gentle-note\"><em>Cleansing a crystal bracelet is practical jewelry care combined with personal ritual. There is no scientific evidence that bracelets store or release energy, but the care guidance — which materials tolerate water, salt, or sun — is real, and a regular no-contact cleanse keeps both the stones and the cord in good condition.</em></p>\n<div class=\"cleansing-timer-card\" style=\"background:#f0f7ff;border-left:4px solid #2e7d32;padding:16px 20px;margin:24px 0;border-radius:6px;\">\n<p>💡 <strong>Not sure if your bracelet's stones tolerate sun or water?</strong></p>\n<p><a href=\"/tools/crystal-cleansing-timer/\"><strong>Crystal Cleansing Timer</strong></a> → check its tolerance, then pick a safe no-contact method that protects both the stones and the cord.</p>\n</div>",
+  "images": {
+    "hero": {
+      "file": "assets/images/generated/10.how-to/how-to-cleanse-a-crystal-bracelet/how-to-cleanse-a-crystal-bracelet-hero.webp",
+      "source_type": "scene",
+      "alt": "How to cleanse a crystal bracelet — a serene still life of assorted gemstone bracelets resting on a glowing white selenite charging plate in soft moonlight, calm muted background, balanced composition, realistic jewelry and mineral photography showing cord and metal settings, editorial quality, no text, no watermark"
+    },
+    "materials": {
+      "file": "assets/images/generated/10.how-to/how-to-cleanse-a-crystal-bracelet/how-to-cleanse-a-crystal-bracelet-materials.webp",
+      "source_type": "scene",
+      "alt": "Three bracelet material types compared — an elastic-cord beaded bracelet, a metal-chain gemstone bracelet, and a woven-thread Tibetan-style bracelet arranged side by side on a neutral surface, soft natural light, realistic photography showing the distinct cord and chain materials, no text"
+    },
+    "jewelry": {
+      "file": "assets/images/generated/10.how-to/how-to-cleanse-a-crystal-bracelet/how-to-cleanse-a-crystal-bracelet-jewelry.webp",
+      "source_type": "scene",
+      "alt": "Crystal jewelry cleansing — a gemstone bracelet and a crystal necklace resting on a white selenite plate overnight in soft moonlight, clean minimal surface, realistic jewelry and mineral photography showing the cord, metal, and stones at rest, no text"
+    }
+  }
+}

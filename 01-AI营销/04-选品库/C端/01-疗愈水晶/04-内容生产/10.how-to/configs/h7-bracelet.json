@@ -1,0 +1,285 @@
+{
+  "_meta": {
+    "framework": "How-to 框架 v2",
+    "purpose": "H7 长尾 — How to Cleanse a Crystal Bracelet (首饰专属，按材质分方法)",
+    "created": "2026-06-28",
+    "quality_tier": "lightweight",
+    "diff_angle": "首饰专属(整篇聚焦手链)；按材质分类(弹力绳/金属链/编织绳)；care guide；H1 M6引导来的deep-dive"
+  },
+  "article": "H7",
+  "slug": "how-to-cleanse-a-crystal-bracelet",
+  "url": "/blog/how-to-cleanse-a-crystal-bracelet/",
+  "action": "cleanse",
+  "action_gerund": "cleansing",
+  "title": "How to Cleanse a Crystal Bracelet: Safe Methods (No Damage)",
+  "h1": "How to Cleanse a Crystal Bracelet",
+  "primary_kw": "how to cleanse a crystal bracelet",
+  "secondary_kw": ["how to clean a crystal bracelet", "cleansing crystal bracelet", "crystal bracelet care", "how to care for a gemstone bracelet"],
+  "word_target": 2200,
+  "word_range": "2000-2400",
+  "concept_focus": "bracelet_material_specific（首饰材质专属：弹力绳/金属链/编织绳各不同；不重复H1完整四概念表，内链H1）",
+  "concept_table_mode": "none",
+  "local_concept_pair": null,
+  "bracelet_materials": {
+    "elastic_cord": {
+      "name": "Elastic Cord (Stretch Bracelet)",
+      "icon": "🧵",
+      "characteristics": "弹力绳(橡胶/弹性线)——遇水/肥皂/热会老化松弛最终断裂",
+      "safe_methods": ["moonlight", "selenite", "sound"],
+      "avoid_methods": ["water (soaking)", "salt", "smoke (residue)", "earth", "sun (prolonged, fades some stones)"],
+      "care_note": "弹力绳手链是日常佩戴主力——月度selenite plate过夜是最佳care，洗澡/游泳/洗碗必摘",
+      "steps": ["摘下手链", "放selenite plate上过夜(6+hrs)，或满月夜窗台", "可选：singing bowl 5-10min快速cleanse", "绝对避免浸泡/盐/烟"]
+    },
+    "metal_chain": {
+      "name": "Metal Chain (Silver / Copper / Brass)",
+      "icon": "⛓️",
+      "characteristics": "金属链(银/铜/黄铜)——盐会加速氧化变黑， prolonged water也致氧化",
+      "safe_methods": ["moonlight", "selenite", "sound"],
+      "avoid_methods": ["salt (corrodes metal)", "water (prolonged, oxidation)", "earth (tarnishes metal)", "smoke (residue)"],
+      "care_note": "金属链手链忌盐——盐会加速银/铜氧化变黑；用专用银布定期擦亮，cleanse用no-contact法",
+      "steps": ["摘下手链", "放selenite plate上过夜，或moonlight窗台", "可选：singing bowl", "金属部分用专用银布擦亮(独立于cleanse)", "绝对避免盐/prolonged water"]
+    },
+    "woven_thread": {
+      "name": "Woven Thread (Tibetan / Macramé)",
+      "icon": "🪢",
+      "characteristics": "编织绳(藏式/ macramé棉线蜡线)——吸水， prolonged water致变形/褪色/异味",
+      "safe_methods": ["moonlight", "selenite", "sound"],
+      "avoid_methods": ["water (soaking)", "salt", "earth", "smoke (residue on thread)"],
+      "care_note": "编织绳手链(站点Eastern-inspired特色)吸水忌泡——干法cleanse，wet时阴干勿暴晒",
+      "steps": ["摘下手链", "放selenite plate上过夜，或moonlight窗台", "可选：singing bowl", "如绳wet(洗手溅到)立刻软布吸干，阴干勿暴晒/热风", "绝对避免浸泡/盐"]
+    }
+  },
+  "stone_safety_for_bracelets": {
+    "note": "除材质外，手链上的石头本身也要查耐受(影响能否用sun/water)",
+    "examples": [
+      {"stone": "Amethyst / Rose Quartz", "sun": "avoid (fades)", "water": "brief ok但忌浸泡(绳子)"},
+      {"stone": "Citrine / Clear Quartz / Black Tourmaline", "sun": "brief indirect ok", "water": "brief ok但忌浸泡(绳子)"},
+      {"stone": "Selenite / Malachite", "sun": "indirect", "water": "avoid"}
+    ]
+  },
+  "methods_subset": "bracelet-specific (3 universal-safe no-contact: moonlight/selenite/sound)",
+  "methods_risk_tiers": {
+    "tier1_safe": {
+      "label": "🟢 Tier 1 — Safe for ALL Bracelet Materials",
+      "subtitle": "三种材质全适用(弹力绳/金属链/编织绳)",
+      "methods": ["moonlight", "selenite", "sound"],
+      "narrative_variant": ["弹力绳叙事", "金属链叙事", "编织绳叙事"]
+    },
+    "tier2_conditional": {"label": "", "subtitle": "", "methods": []},
+    "tier3_caution": {
+      "label": "🔴 Avoid for Bracelets",
+      "subtitle": "手链忌用(损伤材质)",
+      "methods": ["water", "salt", "smoke", "earth", "sun-prolonged"]
+    }
+  },
+  "methods_data": {
+    "moonlight": {
+      "name": "Moonlight (Overnight on Windowsill)",
+      "icon": "🌙",
+      "duration_label": "Overnight (8+ hours)",
+      "safe": "all_materials",
+      "tradition": "The full moon is the classic monthly reset — lay bracelets on a windowsill overnight, no contact, no chemistry.",
+      "practical": "Moonlight is reflected sunlight at roughly 1/400,000 the intensity — no risk to cord, metal, thread, or any stone.",
+      "steps": ["Lay bracelets flat on a windowsill at sunset", "Leave overnight (8+ hours); full moon is ideal", "Bring in before sunrise to avoid dew"],
+      "best_for_default": "every bracelet material — elastic cord, metal chain, and woven thread all tolerate moonlight perfectly. The lowest-effort, lowest-risk monthly reset."
+    },
+    "selenite": {
+      "name": "Selenite Plate (Passive Overnight)",
+      "icon": "✨",
+      "duration_label": "6+ hours (or overnight)",
+      "safe": "all_materials",
+      "tradition": "Resting bracelets on a selenite plate overnight is a passive cleanse that works while you sleep — the plate does the work.",
+      "practical": "No chemical interaction — harmless to cord, metal, thread, and every stone. Handle gently, as selenite itself is soft (Mohs 2).",
+      "steps": ["Place bracelets on a selenite plate, bowl, or bar", "Leave 6+ hours or overnight", "Avoid dragging metal clasps across the selenite surface"],
+      "best_for_default": "every bracelet material — the no-contact plate is the single best daily-care habit for a jewelry collection. Keep one plate by the bed and rest the day's bracelets on it each night."
+    },
+    "sound": {
+      "name": "Sound (Singing Bowl / Bell)",
+      "icon": "🔔",
+      "duration_label": "5–10 minutes",
+      "safe": "all_materials",
+      "tradition": "Sustained sound vibrations are believed to clear stagnant energy — fast, no-contact, works for several bracelets at once.",
+      "practical": "Sound waves are far too low-energy to affect cord, metal, thread, or any stone's structure — harmless.",
+      "steps": ["Play a singing bowl, bell, or tuning fork near the bracelets", "Continue for 5–10 minutes", "Works for several bracelets at once"],
+      "best_for_default": "every bracelet material — the fastest method, and a Tibetan singing bowl (which the shop carries) gives a grounding, ceremonial feel."
+    }
+  },
+  "crystals": {
+    "main_commercial": {
+      "slug": "black-tourmaline",
+      "role": "elastic-bracelet",
+      "role_label": "The Everyday Elastic Bracelet",
+      "reason": "The most common elastic-cord bracelet stone — daily wear means regular cleansing is practical care",
+      "compliance_phrase": "A popular choice for those who like a grounding touchstone during a busy workday"
+    },
+    "semantic_match": {
+      "slug": "rose-quartz",
+      "role": "jewelry-favorite",
+      "role_label": "The Bracelet Favorite",
+      "reason": "The classic bracelet stone — needs no-contact cleansing to protect color from sun fade",
+      "compliance_phrase": "A rose quartz bracelet many people wear as a daily reminder to be gentle with themselves"
+    },
+    "entry_price": {
+      "slug": "amethyst",
+      "role": "bracelet-nightstand",
+      "role_label": "The Bracelet + Nightstand Combo",
+      "reason": "Worn by day, rested on a selenite plate by night — a common two-role stone",
+      "compliance_phrase": "A stone many keep on their nightstand as part of a wind-down ritual before bed"
+    },
+    "niche": {
+      "slug": "moonstone",
+      "role": "woven-bracelet",
+      "role_label": "The Woven-Thread Bracelet",
+      "reason": "Soft sheen suits Tibetan-style woven bracelets — a site specialty that needs dry-care methods",
+      "compliance_phrase": "A stone many choose for its soft iridescent sheen and connection to lunar ritual traditions"
+    },
+    "safety_warning": {
+      "slug": "selenite",
+      "role": "care-mascot",
+      "role_label": "The Care Plate Stone",
+      "reason": "The plate you rest bracelets on — self-cleansing and the mascot of jewelry care",
+      "compliance_phrase": "A self-cleansing stone many use as a display plate to rest other pieces on — a practical care choice"
+    },
+    "jewelry_scene": {
+      "slug": "citrine",
+      "role": "metal-chain",
+      "role_label": "The Metal-Chain Bracelet Stone",
+      "reason": "Sun-stable and warm — suits metal-chain bracelets that need dry, no-contact cleansing",
+      "compliance_phrase": "Often associated with warmth and sunlight — a piece many enjoy as a bright accent in a collection"
+    }
+  },
+  "data_snapshot": {
+    "cleansing_knowledge_version": "v1.0 (bracelet subset: 3 universal-safe no-contact法 — moonlight/selenite/sound)",
+    "mineral_safety_reference_version": "v1.0 (手链上石头耐受校准 + 材质care)",
+    "crystal_attributes_version": "390 stones",
+    "verified_date": "2026-06-28",
+    "verified_by": "数据一致性 diff + 人工抽检"
+  },
+  "tool_cta": {
+    "enabled": true,
+    "tool": "cleansing-timer",
+    "tool_url": "/tools/crystal-cleansing-timer/",
+    "cta_type": "decision_card",
+    "positions": [
+      "M3-end-decision-card (主决策卡：查手链石头耐受)",
+      "M5-end-reminder (二次提醒卡)",
+      "M7-pre-bottom (底部曝光卡)"
+    ],
+    "card_template": "> 💡 **Not sure if your bracelet's stones tolerate sun or water?**\n> Enter the stone name in the **[Crystal Cleansing Timer](/tools/crystal-cleansing-timer/)** →\n> check its tolerance, then pick a safe no-contact method that protects both the stones and the cord."
+  },
+  "jewelry_angle": {
+    "enabled": true,
+    "mode": "entire_article（整篇都是首饰场景）",
+    "insertion_points": {
+      "M3-each-method": "每法都标三种材质适用性(弹力绳/金属链/编织绳)",
+      "M5-mistakes": "首饰材质典型错误(戴洗澡/盐泡金属/prolonged水泡编织绳)",
+      "M6-care-guide": "完整手链care guide(日常佩戴/月度care/季节care)"
+    },
+    "m6_role": "complete bracelet care guide（H7的核心：完整care guide）"
+  },
+  "eastern_touch": {
+    "woven_thread": "藏式编织手链 / macramé (站点Eastern-inspired特色，干法cleanse)",
+    "sound": "Tibetan singing bowl / 颂钵 (站点实卖铜器，手链cleanse天然契合)",
+    "moonlight": "满月冥想 / 月相周期 ritual (手链月度reset)"
+  },
+  "safety_first_narrative": {
+    "M1_quick_answer": [
+      "手链cleanse最安全法 = moonlight / selenite plate / sound（三种材质全适用）",
+      "手链忌用：water浸泡(绳老化)/salt(金属氧化)/smoke(残留)/earth/prolonged sun",
+      "进入方法前一句话'先认手链材质(弹力绳/金属链/编织绳)再选法'"
+    ],
+    "M2_order_hardware": [
+      "第一段(材质分类前置): 手链材质决定方法——弹力绳/金属链/编织绳各不同",
+      "第二段(为什么手链需特殊care): 材质+石头双重耐受考量(绳子怕水盐，金属怕盐氧化)",
+      "第三段(内链H1): 手链是cleanse的子集——完整7法见H1"
+    ],
+    "compliance_phrasing": "practical care / a daily reminder / protect both the stones and the cord"
+  },
+  "faq_picks": {
+    "intent": [
+      "How do I cleanse a crystal bracelet?",
+      "What is the safest way to cleanse a crystal bracelet?",
+      "Can I cleanse my bracelet without removing the stones?",
+      "How often should I cleanse my crystal bracelet?"
+    ],
+    "conversion": [
+      "Can I wear my crystal bracelet in the shower?",
+      "Can I cleanse a stretch bracelet in water?",
+      "How do I care for a woven thread bracelet?"
+    ],
+    "trust": [
+      "Will cleansing damage my bracelet?",
+      "Is salt safe for crystal bracelets?"
+    ],
+    "selective": [
+      "How do I cleanse a metal chain bracelet?",
+      "Can I put my crystal bracelet in sunlight?"
+    ]
+  },
+  "internal_links": {
+    "meaning_min": 3,
+    "condition": {
+      "anchor": "Crystals for Anxiety",
+      "url": "/crystals-for-anxiety/"
+    },
+    "intention": {
+      "anchor": "Shop Calm & Mindfulness",
+      "url": "/calm-mindfulness/"
+    },
+    "hub_flagship": {
+      "anchor": "How to Cleanse Crystals (full guide, all 7 methods)",
+      "url": "/blog/how-to-cleanse-crystals/"
+    },
+    "h1_cleanse_link": {
+      "anchor": "How to Cleanse Crystals (the full cleansing guide)",
+      "url": "/blog/how-to-cleanse-crystals/"
+    },
+    "h6_use_link": {
+      "anchor": "How to Use Crystals (beginner's overview)",
+      "url": "/blog/how-to-use-crystals/"
+    },
+    "shop_fallback": "/product-category/healing-crystals-jewelry/"
+  },
+  "schema": {
+    "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+    "howto_structure": "6-step bracelet cleanse flow",
+    "howto_focus": "knowledge bracelet-specific safety steps",
+    "howto_6_steps": [
+      {"step": 1, "name": "Identify your bracelet material", "text": "确认手链材质(弹力绳/金属链/编织绳)——决定可用方法"},
+      {"step": 2, "name": "Check the stones' tolerance", "text": "查手链上石头的sun/water耐受(用cleansing-timer)——影响能否用sun/water"},
+      {"step": 3, "name": "Remove the bracelet", "text": "cleanse前摘下手链——除moonlight/selenite/sound可戴净化外，其他法需摘"},
+      {"step": 4, "name": "Choose a no-contact method", "text": "从3安全法选(moonlight/selenite/sound)——三种材质全适用"},
+      {"step": 5, "name": "Cleanse for recommended time", "text": "按该方法时长(moonlight 8+hrs/selenite 6+hrs/sound 5-10min)"},
+      {"step": 6, "name": "Store & wear mindfully", "text": "收纳干燥处；洗澡/游泳/洗碗必摘；月度selenite plate care"}
+    ],
+    "howto_name": "How to Cleanse a Crystal Bracelet Safely",
+    "howto_total_time": "PT8H",
+    "faq_page_schema_consistency": "FAQ答案与Schema FAQPage严格一致"
+  },
+  "compliance": {
+    "avoid": [
+      "removes negative energy",
+      "purifies bad vibes",
+      "protects you from negativity",
+      "cleanses the bracelet's energy field",
+      "supercharges"
+    ],
+    "phrase_library_version": "v1.0（框架v2 §11.2）",
+    "gentle_note": "Cleansing a crystal bracelet is practical jewelry care combined with personal ritual. There is no scientific evidence that bracelets store or release energy, but the care guidance — which materials tolerate water, salt, or sun — is real, and a regular no-contact cleanse keeps both the stones and the cord in good condition.",
+    "ai_banned_words": ["delve", "tapestry", "realm", "journey（叙事）", "unlock your potential", "manifest abundance", "elevate your vibration"],
+    "chemistry_case_sensitive": "SiO₂（非sio₂）/ Ag₂S (银氧化) / Cu₂CO₃ — 校验用includes('sio₂')/'ag₂s'"
+  },
+  "three_perspectives": {
+    "science": "40%",
+    "spirituality": "40%",
+    "psychology": "20%",
+    "style": "融在段落里（H7科学权重高：材质care是真实物理/化学事实）"
+  },
+  "image_plan": {
+    "hero": {"size": "1536x864", "scene": "水晶手链+selenite plate(手链净化主题视觉)", "filename": "how-to-cleanse-a-crystal-bracelet-hero.jpg"},
+    "step_diagrams": [
+      {"size": "1200x800", "scene": "三种材质手链对比(弹力绳/金属链/编织绳)", "filename": "how-to-cleanse-a-crystal-bracelet-materials.jpg"}
+    ],
+    "jewelry_scene": {"size": "1200x800", "scene": "手链selenite plate过夜cleanse场景", "filename": "how-to-cleanse-a-crystal-bracelet-jewelry.jpg"}
+  }
+}

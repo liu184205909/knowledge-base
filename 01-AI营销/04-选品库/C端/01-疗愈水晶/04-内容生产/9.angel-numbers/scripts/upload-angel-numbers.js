@@ -71,11 +71,22 @@ for (const art of list) {
   try {
     const a = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'articles', art.slug + '.json'), 'utf8'));
     if (!a.images || !a.images.hero) throw new Error('无 hero 图');
-    // 1. 上传 hero 图
+    // 1. 上传3图（如存在）
     const hero = uploadMedia(path.join(ROOT, a.images.hero.file), a.images.hero.alt);
-    // 2. content 顶部嵌 hero
+    let crystal = null, numerology = null;
+    if (a.images['crystal-grid']) crystal = uploadMedia(path.join(ROOT, a.images['crystal-grid'].file), a.images['crystal-grid'].alt);
+    if (a.images.numerology) numerology = uploadMedia(path.join(ROOT, a.images.numerology.file), a.images.numerology.alt);
+    // 2. content 嵌图：hero(顶部) + crystal-grid(M6后) + numerology(M3后)
     const heroImg = '<img src="' + hero.url + '" alt="' + a.images.hero.alt + '" style="' + IMG_STYLE + '" loading="lazy">';
     let content = heroImg + '\n' + a.content;
+    if (crystal) {
+      const cImg = '<img src="' + crystal.url + '" alt="' + a.images['crystal-grid'].alt + '" style="' + IMG_STYLE + '" loading="lazy">';
+      content = content.replace(/(<h2>Best Crystals for Angel Number[^<]*<\/h2>)/, '$1\n' + cImg);
+    }
+    if (numerology) {
+      const nImg = '<img src="' + numerology.url + '" alt="' + a.images.numerology.alt + '" style="' + IMG_STYLE + '" loading="lazy">';
+      content = content.replace(/(<h2>The Numerology Behind[^<]*<\/h2>)/, '$1\n' + nImg);
+    }
     // 3. createPost
     const post = createPost({
       title: a.title, slug: art.slug,

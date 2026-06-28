@@ -1,0 +1,659 @@
+{
+  "_meta": {
+    "purpose": "Meditation 系列 9 篇单源数据层（文章 + 未来 meditation 工具共用）",
+    "version": "v1.0",
+    "created": "2026-06-28",
+    "framework": "03-内容策略/内容Brief/模板-Meditation文章框架.md v2",
+    "data_snapshot": {
+      "crystal_attributes_version": "v1.1",
+      "mineral_safety_reference_version": "v1.0",
+      "chakra_knowledge_version": "v1.0",
+      "verified_date": "2026-06-28"
+    },
+    "compliance_baseline": "support/invite/gentle companion/mindful anchor; 禁 cures/heals/treats anxiety/insomnia/depression",
+    "meaning_url_pattern": "/gemstone/{meaning_slug}-meaning/ (只链已验证200的，未上线不强链)",
+    "meaning_slug_overrides": {
+      "clear-quartz": "quartz"
+    }
+  },
+  "scenes": {
+    "focus": {
+      "name": "Focus & Concentration",
+      "pain_point": "fragmented attention, constant context-switching, mental fog",
+      "breath": "box breathing (inhale 4, hold 4, exhale 4, hold 4)",
+      "hold_hand": "right (traditionally the releasing side, letting distraction flow out)",
+      "scan_focus": "third eye (between the brows)",
+      "visualization": "a single stable point of soft light, growing slightly brighter with each breath",
+      "chakra": "third-eye",
+      "eastern": [
+        "Tibetan shamatha (single-pointed concentration meditation, calming the mind onto one object)",
+        "yoga trataka (candle or point gazing, a concentration practice)"
+      ],
+      "duration": "10-15 min",
+      "affirmation": "My attention is steady and clear.",
+      "compliance_phrasing": "supporting attention / single-pointed practice (NOT cures ADHD / treats attention disorders)"
+    },
+    "sleep": {
+      "name": "Sleep & Bedtime Ritual",
+      "pain_point": "racing mind at night, difficulty winding down, restless transition to rest",
+      "breath": "4-7-8 breath (inhale 4, hold 7, exhale 8)",
+      "hold_hand": "left (traditionally the receiving side, inviting settling)",
+      "scan_focus": "crown of the head, then a slow release down the body",
+      "visualization": "a curtain of dark soft velvet lowering slowly over the mind, dimming thought",
+      "chakra": "crown",
+      "eastern": [
+        "Tibetan Dream Yoga / Milam (the tradition of using sleep and dream states as a field of practice)",
+        "Yoga Nidra (yogic sleep, the origin of the modern body-scan relaxation technique)"
+      ],
+      "duration": "10-20 min before bed",
+      "affirmation": "I allow the day to settle, and rest to come.",
+      "compliance_phrasing": "bedtime ritual / wind-down practice / settling into rest (NOT cures insomnia / treats sleep disorders)"
+    },
+    "emotional": {
+      "name": "Emotional Release",
+      "pain_point": "held feelings, emotional weight, tension in the chest",
+      "breath": "sighing breath (double inhale through nose, long slow exhale through mouth)",
+      "hold_hand": "left over the heart center",
+      "scan_focus": "heart center (center of chest, sternum)",
+      "visualization": "gentle water moving through and carrying accumulated feeling outward",
+      "chakra": "heart",
+      "eastern": [
+        "Metta Bhavana (the Buddhist loving-kindness practice of cultivating warmth toward oneself and others)",
+        "heart-opening yoga tradition (Anahata, gentle chest-opening postures paired with breath)"
+      ],
+      "duration": "12-18 min",
+      "affirmation": "I make space for what I feel.",
+      "compliance_phrasing": "emotional release practice / holding space for feelings (NOT treats depression / heals trauma)"
+    },
+    "grounding": {
+      "name": "Grounding & Stability",
+      "pain_point": "feeling scattered, unrooted, overwhelmed, disconnected from the body",
+      "breath": "earth breath (short inhale, long slow exhale as if pressing down into the ground)",
+      "hold_hand": "both hands cupping the stone in the lap, feet flat on the floor",
+      "scan_focus": "soles of the feet and base of the spine (root center)",
+      "visualization": "roots growing from the soles of the feet down into cool, stable earth",
+      "chakra": "root",
+      "eastern": [
+        "yoga grounding asana tradition (Tadasana / mountain pose, Vrksasana / tree pose — postures of stable contact)",
+        "Daoist and jade-culture 'returning to the earth' — stones as a link to ground and origin"
+      ],
+      "duration": "10-15 min",
+      "affirmation": "I am steady, supported, and here.",
+      "compliance_phrasing": "grounding touchstone / settling practice (NOT blocks negative energy / cures anxiety)"
+    },
+    "beginners": {
+      "name": "Beginners",
+      "pain_point": "not knowing where to start, overthinking the process",
+      "breath": "natural breath, silently counting ten cycles",
+      "hold_hand": "left, holding one stone in the palm",
+      "scan_focus": "simple path from palm to heart",
+      "visualization": "a small warm sphere of soft light",
+      "chakra": "general (heart-friendly)",
+      "eastern": [
+        "the opening limb of yoga tradition (the early limbs of ashtanga that prepare the mind for meditation)",
+        "Japanese Zen zazen (the simple seated tradition, minimal instruction, just sit)"
+      ],
+      "duration": "5-10 min",
+      "affirmation": "I begin, simply.",
+      "compliance_phrasing": "a simple starting practice / gentle introduction"
+    },
+    "manifestation": {
+      "name": "Manifestation & Intention",
+      "pain_point": "vague goals, scattered will, difficulty holding a clear aim",
+      "breath": "rising breath (inhale 4, hold gently at the top 2, exhale 6)",
+      "hold_hand": "right over the solar plexus",
+      "scan_focus": "solar plexus (just above the navel)",
+      "visualization": "a scene in which a chosen aim has already taken shape, felt in the body rather than watched",
+      "chakra": "solar-plexus",
+      "eastern": [
+        "the Tibetan kriya tradition (body, speech, and mind aligned in action toward an aim)",
+        "yoga sankalpa (the practice of setting a heartfelt intention or resolve at the start of practice)"
+      ],
+      "duration": "10-15 min",
+      "affirmation": "I align body, breath, and aim.",
+      "compliance_phrasing": "tactile cue for an intention / aligning practice (NOT attracts wealth / guarantees success)"
+    }
+  },
+  "crystal_pool": {
+    "amethyst": {
+      "name": "Amethyst", "mineral": "SiO₂ (quartz variety, color from natural irradiation of iron)",
+      "science_angle": "purple quartz, Mohs 7, color-sensitive to prolonged direct sun; cool smooth surface as a tactile anchor",
+      "tradition_angle": "long associated with clarity and stillness; crown and third-eye placement in many traditions",
+      "mindfulness_angle": "holding a cool stone during breathwork gives the mind a single point of contact",
+      "safety": "avoid prolonged direct sunlight (color fade); moonlight/selenite/sound safe",
+      "meaning_slug": "amethyst", "meaning_online": true,
+      "shop_category": "/product-category/amethyst-crystals/"
+    },
+    "clear-quartz": {
+      "name": "Clear Quartz", "mineral": "SiO₂ (silicon dioxide)",
+      "science_angle": "Mohs 7, piezoelectric (used in watches and electronics); transparent clarity as a neutral visual object",
+      "tradition_angle": "described across cultures as a 'master' or all-purpose stone; placed anywhere on the body",
+      "mindfulness_angle": "a neutral, colorless focal point that doesn't compete with visualization imagery",
+      "safety": "durable, tolerates brief indirect sun; moonlight/selenite/sound safe",
+      "meaning_slug": "quartz", "meaning_online": false,
+      "shop_category": "/product-category/clear-quartz-crystals/"
+    },
+    "fluorite": {
+      "name": "Fluorite", "mineral": "CaF₂ (calcium fluoride)",
+      "science_angle": "Mohs 4 (relatively soft), famous for octahedral cleavage and layered color bands; a visual organizer of stripes",
+      "tradition_angle": "associated in modern crystal traditions with order and mental structure",
+      "mindfulness_angle": "the structured color bands become a visual metaphor for sorting scattered thoughts",
+      "safety": "soft and slightly water-sensitive; keep dry, moonlight/selenite/sound safe",
+      "meaning_slug": "fluorite", "meaning_online": true,
+      "shop_category": "/shop/?s=fluorite"
+    },
+    "rose-quartz": {
+      "name": "Rose Quartz", "mineral": "SiO₂ (quartz variety, pink from titanium/manganese + irradiation)",
+      "science_angle": "Mohs 7, color fades with prolonged direct sun; soft pink as a calming visual tone",
+      "tradition_angle": "associated across cultures with gentleness and the heart center",
+      "mindfulness_angle": "a smooth palm stone that fits the curve of the hand, a natural 'worry stone' shape",
+      "safety": "avoid prolonged direct sun; moonlight/selenite/sound safe",
+      "meaning_slug": "rose-quartz", "meaning_online": true,
+      "shop_category": "/product-category/rose-quartz-crystals/"
+    },
+    "citrine": {
+      "name": "Citrine", "mineral": "SiO₂ (quartz variety, color from iron + heat)",
+      "science_angle": "Mohs 7, durable and relatively color-stable; warm yellow-orange tone",
+      "tradition_angle": "historically associated with warmth, sunlight, and abundance imagery",
+      "mindfulness_angle": "a warm-toned tactile cue for a positive intention or resolve",
+      "safety": "durable, tolerates short indirect sun; moonlight/selenite/sound safe",
+      "meaning_slug": "citrine", "meaning_online": true,
+      "shop_category": "/product-category/citrine-crystals/"
+    },
+    "selenite": {
+      "name": "Selenite", "mineral": "CaSO₄·2H₂O (gypsum variety)",
+      "science_angle": "Mohs 2 (very soft), fibrous and light-transmitting; can be scratched or degraded by prolonged water",
+      "tradition_angle": "described in many traditions as self-cleansing; used as a plate to rest other stones on",
+      "mindfulness_angle": "a long wand or flat plate that becomes a 'resting place' between sessions",
+      "safety": "keep dry (avoid water/salt); moonlight/sound safe — the safest universal option",
+      "meaning_slug": "selenite", "meaning_online": true,
+      "shop_category": "/product-category/selenite-crystals/"
+    },
+    "black-tourmaline": {
+      "name": "Black Tourmaline (Schorl)", "mineral": "NaFe³⁺₃Al₆(BO₃)₃Si₆O₁₈(OH)₄ (complex borosilicate)",
+      "science_angle": "Mohs 7-7.5, pyroelectric (generates charge with temperature change); dense and heavy for its size",
+      "tradition_angle": "a popular grounding and protective stone across Western and Eastern traditions",
+      "mindfulness_angle": "the noticeable weight in the hand is a strong tactile anchor for grounding practice",
+      "safety": "durable and sun-stable; brief water safe; moonlight/selenite/sound safe",
+      "meaning_slug": "black-tourmaline", "meaning_online": true,
+      "shop_category": "/product-category/black-tourmaline-crystals/"
+    },
+    "smoky-quartz": {
+      "name": "Smoky Quartz", "mineral": "SiO₂ (quartz variety, color from natural irradiation)",
+      "science_angle": "Mohs 7, color is natural irradiation (stable); translucent brown-grey tone",
+      "tradition_angle": "associated with grounding and release in many modern crystal traditions",
+      "mindfulness_angle": "a translucent stone that pairs visual softness with grounding weight",
+      "safety": "durable; moonlight/selenite/sound safe",
+      "meaning_slug": "smoky-quartz", "meaning_online": true,
+      "shop_category": "/shop/?s=smoky-quartz"
+    },
+    "hematite": {
+      "name": "Hematite", "mineral": "Fe₂O₃ (iron oxide)",
+      "science_angle": "Mohs 5.5-6.5, distinctly heavy (high specific gravity), metallic grey-black; noticeably dense in the hand",
+      "tradition_angle": "associated across cultures with grounding and stability, linked to iron and the earth",
+      "mindfulness_angle": "the unusual weight immediately draws attention downward — a natural grounding cue",
+      "safety": "keep dry (may rust in prolonged water); moonlight/selenite/sound safe",
+      "meaning_slug": "hematite", "meaning_online": false,
+      "shop_category": "/product-category/hematite-crystals/"
+    },
+    "howlite": {
+      "name": "Howlite", "mineral": "Ca₂B₅SiO₉(OH)₅ (borate mineral)",
+      "science_angle": "Mohs 3.5 (soft), naturally white with grey veining; porous so often dyed in jewelry",
+      "tradition_angle": "associated in modern traditions with calm and a quiet mind at bedtime",
+      "mindfulness_angle": "a soft pale stone often tucked under the pillow as part of a wind-down ritual",
+      "safety": "soft and porous; keep dry; moonlight/selenite/sound safe",
+      "meaning_slug": "howlite", "meaning_online": false,
+      "shop_category": "/shop/?s=howlite"
+    },
+    "moonstone": {
+      "name": "Moonstone", "mineral": "KAlSi₃O₈ (feldspar variety, adularescence)",
+      "science_angle": "Mohs 6-6.5, displays adularescence (a floating light sheen from layered feldspar structure)",
+      "tradition_angle": "associated across many cultures with lunar cycles, intuition, and new beginnings",
+      "mindfulness_angle": "the moving sheen gives the eye a soft, non-fixed point of rest",
+      "safety": "relatively soft; brief water safe; moonlight/selenite/sound safe",
+      "meaning_slug": "moonstone", "meaning_online": false,
+      "shop_category": "/shop/?s=moonstone"
+    },
+    "lepidolite": {
+      "name": "Lepidolite", "mineral": "K(Li,Al)₃(Al,Si,Rb)₄O₁₀(F,OH)₂ (lithium-bearing mica)",
+      "science_angle": "Mohs 2.5-3 (very soft), contains natural lithium; flaky scaly structure, lilac to grey-purple",
+      "tradition_angle": "associated in modern traditions with a calm, settled state",
+      "mindfulness_angle": "a soft cool stone often held during a wind-down or settling practice",
+      "safety": "soft and layered; keep dry; moonlight/selenite/sound safe",
+      "meaning_slug": "lepidolite", "meaning_online": false,
+      "shop_category": "/product-category/lepidolite-crystals/"
+    },
+    "labradorite": {
+      "name": "Labradorite", "mineral": "(Ca,Na)(Al,Si)₄O₈ (plagioclase feldspar, labradorescence)",
+      "science_angle": "Mohs 6-6.5, displays labradorescence (flashes of blue/gold from internal layering)",
+      "tradition_angle": "associated with intuition and inner sight in many traditions",
+      "mindfulness_angle": "the unexpected flashes give the mind a gentle point of surprise to settle onto",
+      "safety": "durable; brief water safe; moonlight/selenite/sound safe",
+      "meaning_slug": "labradorite", "meaning_online": true,
+      "shop_category": "/product-category/labradorite-crystals/"
+    },
+    "pyrite": {
+      "name": "Pyrite", "mineral": "FeS₂ (iron disulfide)",
+      "science_angle": "Mohs 6-6.5, metallic gold, forms cubic crystals; can produce sparks (the origin of its name, 'fire stone')",
+      "tradition_angle": "historically associated with the sun, vitality, and confident action",
+      "mindfulness_angle": "the bright reflective surface as a visual cue for a confident, sun-like intention",
+      "safety": "keep dry (can oxidize/tarnish); moonlight/selenite/sound safe",
+      "meaning_slug": "pyrite", "meaning_online": true,
+      "shop_category": "/product-category/pyrite-crystals/"
+    },
+    "rhodochrosite": {
+      "name": "Rhodochrosite", "mineral": "MnCO₃ (manganese carbonate)",
+      "science_angle": "Mohs 3.5-4 (soft), pink to rose-red with white banding; a manganese carbonate",
+      "tradition_angle": "associated in modern traditions with the heart and self-compassion",
+      "mindfulness_angle": "the soft pink banding as a gentle focal point for a heart-centered practice",
+      "safety": "soft and sensitive to acids/water; keep dry; moonlight/selenite/sound safe",
+      "meaning_slug": "rhodochrosite", "meaning_online": true,
+      "shop_category": "/product-category/healing-crystals-jewelry/"
+    },
+    "kyanite": {
+      "name": "Kyanite", "mineral": "Al₂SiO₅ (aluminum silicate)",
+      "science_angle": "Mohs 4.5-7 (variable by direction, anisotropic hardness), bladed crystal form, blue",
+      "tradition_angle": "described in some traditions as not needing cleansing; associated with alignment",
+      "mindfulness_angle": "the blade-like form and blue tone as an image of 'lining things up'",
+      "safety": "variable hardness, slightly brittle; keep dry; moonlight/selenite/sound safe",
+      "meaning_slug": "kyanite", "meaning_online": false,
+      "shop_category": "/product-category/kyanite-crystals/"
+    },
+    "jade": {
+      "name": "Jade", "mineral": "NaAlSi₂O₆ (nephrite/jadeite, silicate)",
+      "science_angle": "Mohs 6-7 (nephrite) / 7 (jadeite), exceptionally tough (interlocking microcrystals), smooth cool surface",
+      "tradition_angle": "central to Chinese culture for millennia — a stone of integrity, calm, and cultivated virtue",
+      "mindfulness_angle": "the exceptional smoothness and cool-then-warming feel is one of the most pleasant tactile anchors",
+      "safety": "durable; moonlight/selenite/sound safe",
+      "meaning_slug": "jade", "meaning_online": true,
+      "shop_category": "/product-category/jade-crystals/"
+    },
+    "tiger-eye": {
+      "name": "Tiger's Eye", "mineral": "SiO₂ (quartz pseudomorph after crocidolite)",
+      "science_angle": "Mohs 7, chatoyancy (a moving 'cat's eye' line from parallel fibrous inclusions)",
+      "tradition_angle": "associated with steady alertness and grounded confidence",
+      "mindfulness_angle": "the moving eye-line gives the gaze a stable, traveling point of focus",
+      "safety": "durable; brief water safe; moonlight/selenite/sound safe",
+      "meaning_slug": "tiger-eye", "meaning_online": true,
+      "shop_category": "/product-category/tiger-eye-crystals/"
+    },
+    "carnelian": {
+      "name": "Carnelian", "mineral": "SiO₂ (chalcedony variety, iron color)",
+      "science_angle": "Mohs 6.5-7, translucent orange-red from iron oxide; smooth waxy luster",
+      "tradition_angle": "associated across ancient cultures (Egypt, Rome) with vitality and courageous action",
+      "mindfulness_angle": "warm translucent tone as a cue for gentle activation rather than agitation",
+      "safety": "durable; brief water safe; moonlight/selenite/sound safe",
+      "meaning_slug": "carnelian", "meaning_online": true,
+      "shop_category": "/product-category/carnelian-crystals/"
+    }
+  },
+  "articles": [
+    {
+      "id": "M0", "slug": "best-crystals-for-meditation", "url": "/best-crystals-for-meditation/",
+      "title": "Best Crystals for Meditation: 13 Stones by Goal (Focus, Sleep, Calm)",
+      "h1": "Best Crystals for Meditation",
+      "primary_kw": "best crystals for meditation",
+      "secondary_kw": ["crystals for meditation", "meditation crystals", "best stones for meditation"],
+      "scene": "hub", "priority": "P1", "tier": "hub", "word_target": 2800,
+      "concept_focus": "13 crystals overview organized by meditation goal + scene routing matrix to M1-M8",
+      "scene_routing": {
+        "focus": "/crystals-for-focus-meditation/",
+        "sleep": "/crystals-for-sleep-meditation/",
+        "emotional": "/crystals-for-emotional-release-meditation/",
+        "grounding": "/grounding-meditation-with-crystals/",
+        "beginners": "/meditation-crystals-for-beginners/",
+        "manifestation": "/manifestation-meditation-with-crystals/"
+      },
+      "crystals_13": ["amethyst", "clear-quartz", "fluorite", "rose-quartz", "selenite", "black-tourmaline", "smoky-quartz", "howlite", "moonstone", "citrine", "hematite", "labradorite", "lepidolite"],
+      "eastern": ["yoga nyasa (placing stones along the body's centers)", "Tibetan singing bowl as opening/closing sound"],
+      "howto_6_steps": [
+        {"step": 1, "name": "Settle with a few grounding breaths", "text": "begin with slow natural breaths to arrive in the space"},
+        {"step": 2, "name": "Choose a stone that matches your goal today", "text": "let the intention (focus/sleep/calm/etc.) guide the choice, not rarity"},
+        {"step": 3, "name": "Hold or place the stone", "text": "in the palm, on the lap, or on the body center that matches the goal"},
+        {"step": 4, "name": "Rest your attention on the stone's texture", "text": "weight, temperature, surface — a single tactile point"},
+        {"step": 5, "name": "Set a one-line intention", "text": "a simple phrase for this session"},
+        {"step": 6, "name": "Close by thanking the practice", "text": "place the stone down gently and transition back"}
+      ],
+      "faq_picks": {
+        "intent": ["What are the best crystals for meditation?", "How do I choose a crystal for meditation?", "Can I use more than one crystal when meditating?", "Where do I place crystals during meditation?"],
+        "conversion": ["Which crystal should I wear during meditation?", "Do I need to cleanse my meditation crystals?"],
+        "trust": ["Is there scientific evidence that crystals help meditation?", "Will the wrong crystal interfere with my meditation?"]
+      },
+      "internal_links": {
+        "meaning_min": 3, "scene_pages": ["M1", "M2", "M3", "M4", "M5", "M6"],
+        "condition": null, "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/healing-crystals-jewelry/"
+      },
+      "schema": {
+        "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+        "howto_name": "How to Choose and Use Crystals for Meditation",
+        "howto_total_time": "PT10M"
+      },
+      "image_plan": {
+        "hero": {"filename": "best-crystals-for-meditation-hero.jpg", "alt": "An arranged collection of healing crystals for meditation on a folded linen cloth beside a singing bowl, soft natural light, calm neutral background"},
+        "step_diagrams": [{"filename": "best-crystals-for-meditation-layout.jpg", "alt": "Crystals arranged along a meditation mat showing placement options for different meditation goals"}]
+      }
+    },
+    {
+      "id": "M1", "slug": "crystals-for-focus-meditation", "url": "/crystals-for-focus-meditation/",
+      "title": "Crystals for Focus & Concentration Meditation: Stones, Steps & Script",
+      "h1": "How to Use Crystals for Focus Meditation",
+      "primary_kw": "crystals for focus meditation",
+      "secondary_kw": ["crystals for concentration", "best stones for focus meditation", "fluorite meditation"],
+      "scene": "focus", "priority": "P0", "tier": "deep", "word_target": 2600,
+      "concept_focus": "focus scene 6-step script (box breathing, third-eye, single-pointed) + fluorite/clear-quartz/hematite",
+      "crystals": ["fluorite", "clear-quartz", "hematite", "tiger-eye", "amethyst"],
+      "eastern": ["Tibetan shamatha (single-pointed concentration)", "yoga trataka (steady gazing)"],
+      "howto_6_steps": [
+        {"step": 1, "name": "Settle with box breathing", "text": "inhale 4, hold 4, exhale 4, hold 4 — repeat four rounds to steady the mind"},
+        {"step": 2, "name": "Hold the stone in the right hand", "text": "traditionally the releasing side; let scattered attention flow outward with each exhale"},
+        {"step": 3, "name": "Bring attention to the third-eye point", "text": "between the brows, resting the stone there if lying back or holding it near"},
+        {"step": 4, "name": "Visualize a single stable point of light", "text": "a small soft point that grows slightly brighter with each breath"},
+        {"step": 5, "name": "Set a one-line intention", "text": "\"My attention is steady and clear.\""},
+        {"step": 6, "name": "Close by opening the eyes onto one object", "text": "rest the gaze on a single physical object for 30 seconds before moving on"}
+      ],
+      "faq_picks": {
+        "intent": ["What are the best crystals for focus meditation?", "How do I use crystals for concentration?", "How long should a focus crystal meditation be?", "Can any crystal help with focus?"],
+        "conversion": ["Which crystal should I wear for focus?", "Do I need to cleanse my focus crystals?"],
+        "trust": ["Is there scientific evidence crystals help focus?", "Will the wrong crystal distract my meditation?"]
+      },
+      "internal_links": {
+        "meaning_min": 3, "hub": "M0", "sibling": ["M5", "M6"],
+        "condition": null, "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/healing-crystals-jewelry/"
+      },
+      "schema": {
+        "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+        "howto_name": "How to Meditate with Crystals for Focus",
+        "howto_total_time": "PT12M"
+      },
+      "image_plan": {
+        "hero": {"filename": "crystals-for-focus-meditation-hero.jpg", "alt": "A single fluorite crystal and a clear quartz point resting on a clean desk beside a lit candle, soft directional light, uncluttered calm workspace"},
+        "step_diagrams": [{"filename": "crystals-for-focus-meditation-breath.jpg", "alt": "Hands holding a fluorite stone at brow level during a seated focus meditation, soft window light"}]
+      }
+    },
+    {
+      "id": "M2", "slug": "crystals-for-sleep-meditation", "url": "/crystals-for-sleep-meditation/",
+      "title": "Crystals for Sleep Meditation: Bedtime Ritual Stones & Script",
+      "h1": "How to Use Crystals for Sleep Meditation",
+      "primary_kw": "crystals for sleep meditation",
+      "secondary_kw": ["crystals for bedtime meditation", "best stones for sleep meditation", "amethyst howlite sleep"],
+      "scene": "sleep", "priority": "P0", "tier": "deep", "word_target": 2600,
+      "concept_focus": "sleep bedtime ritual 6-step script (4-7-8 breath, crown, velvet curtain) + amethyst/howlite/selenite/moonstone/lepidolite",
+      "crystals": ["amethyst", "howlite", "selenite", "moonstone", "lepidolite"],
+      "eastern": ["Tibetan Dream Yoga / Milam (sleep as a field of practice)", "Yoga Nidra (yogic sleep, the origin of body-scan relaxation)"],
+      "howto_6_steps": [
+        {"step": 1, "name": "Settle with 4-7-8 breath", "text": "inhale through the nose for 4, hold gently for 7, exhale through the mouth for 8 — repeat four cycles"},
+        {"step": 2, "name": "Hold the stone in the left hand", "text": "traditionally the receiving side; or place it on the nightstand, or under the pillow"},
+        {"step": 3, "name": "Scan from the crown downward", "text": "begin at the top of the head and let each slow exhale release the body one layer at a time"},
+        {"step": 4, "name": "Visualize a curtain of dark velvet lowering", "text": "a soft dark curtain slowly dimming the mind, thought by thought"},
+        {"step": 5, "name": "Set a one-line intention", "text": "\"I allow the day to settle, and rest to come.\""},
+        {"step": 6, "name": "Close by setting the stone aside", "text": "place it on the nightstand or under the pillow, turn onto your side, and let the practice dissolve into sleep"}
+      ],
+      "faq_picks": {
+        "intent": ["What are the best crystals for sleep meditation?", "How do I use crystals in a bedtime meditation?", "How long before bed should I meditate with crystals?", "Where do I place crystals for sleep meditation?"],
+        "conversion": ["Which crystal should I wear or place for sleep?", "Do I need to cleanse my bedtime crystals?"],
+        "trust": ["Is there scientific evidence crystals help sleep?", "Will the wrong crystal keep me awake?"]
+      },
+      "internal_links": {
+        "meaning_min": 3, "hub": "M0", "sibling": ["M3", "M5"],
+        "condition": "/crystals-for-sleep/", "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/healing-crystals-jewelry/"
+      },
+      "schema": {
+        "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+        "howto_name": "How to Meditate with Crystals for Sleep",
+        "howto_total_time": "PT15M"
+      },
+      "image_plan": {
+        "hero": {"filename": "crystals-for-sleep-meditation-hero.jpg", "alt": "An amethyst and a piece of howlite resting on a folded linen cloth on a nightstand beside a dim bedside lamp, soft moonlit blue tones, calm bedroom"},
+        "step_diagrams": [{"filename": "crystals-for-sleep-meditation-breath.jpg", "alt": "A hand resting calmly holding a smooth amethyst stone on a pillow, soft low light, bedtime wind-down scene"}]
+      }
+    },
+    {
+      "id": "M3", "slug": "crystals-for-emotional-release-meditation", "url": "/crystals-for-emotional-release-meditation/",
+      "title": "Crystals for Emotional Release Meditation: Stones & Healing Practice",
+      "h1": "How to Use Crystals for Emotional Release Meditation",
+      "primary_kw": "crystals for emotional release meditation",
+      "secondary_kw": ["crystals for emotional healing", "rose quartz emotional meditation", "heart chakra meditation crystals"],
+      "scene": "emotional", "priority": "P0", "tier": "deep", "word_target": 2600,
+      "concept_focus": "emotional release 6-step script (sighing breath, heart center, flowing water) + rose-quartz/rhodochrosite/smoky-quartz/amethyst/citrine",
+      "crystals": ["rose-quartz", "rhodochrosite", "smoky-quartz", "amethyst", "citrine"],
+      "eastern": ["Metta Bhavana (Buddhist loving-kindness cultivation)", "heart-opening yoga tradition (Anahata)"],
+      "howto_6_steps": [
+        {"step": 1, "name": "Settle with a sighing breath", "text": "a double inhale through the nose, followed by a long slow exhale through the mouth — repeat three times"},
+        {"step": 2, "name": "Hold the stone in the left hand over the heart", "text": "rest the hand and stone on the center of the chest, over the sternum"},
+        {"step": 3, "name": "Bring attention to the heart center", "text": "feel the weight of the stone and the gentle movement of breath beneath it"},
+        {"step": 4, "name": "Visualize moving water", "text": "imagine a gentle current moving through the chest, carrying accumulated feeling outward with each exhale"},
+        {"step": 5, "name": "Set a one-line intention", "text": "\"I make space for what I feel.\""},
+        {"step": 6, "name": "Close with three things", "text": "before lifting the hand, silently name three small things you are grateful for in this moment"}
+      ],
+      "faq_picks": {
+        "intent": ["What are the best crystals for emotional release meditation?", "How do I use crystals for emotional release?", "How long should an emotional release meditation be?", "Can crying happen during crystal meditation?"],
+        "conversion": ["Which crystal should I wear over my heart?", "Do I need to cleanse crystals after emotional release?"],
+        "trust": ["Is there scientific evidence crystals help with emotions?", "Are crystals a substitute for therapy?"]
+      },
+      "internal_links": {
+        "meaning_min": 3, "hub": "M0", "sibling": ["M2", "M4"],
+        "condition": null, "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/healing-crystals-jewelry/"
+      },
+      "schema": {
+        "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+        "howto_name": "How to Meditate with Crystals for Emotional Release",
+        "howto_total_time": "PT15M"
+      },
+      "image_plan": {
+        "hero": {"filename": "crystals-for-emotional-release-meditation-hero.jpg", "alt": "A soft pink rose quartz heart-shaped stone resting on a folded cloth near gentle flowing water, soft diffused light, tender calm mood"},
+        "step_diagrams": [{"filename": "crystals-for-emotional-release-meditation-heart.jpg", "alt": "A hand resting a rose quartz stone gently on the center of the chest during a seated heart-centered meditation, soft natural light"}]
+      }
+    },
+    {
+      "id": "M4", "slug": "grounding-meditation-with-crystals", "url": "/grounding-meditation-with-crystals/",
+      "title": "Grounding Meditation with Crystals: Stones, Steps & Script",
+      "h1": "How to Do a Grounding Meditation with Crystals",
+      "primary_kw": "grounding meditation with crystals",
+      "secondary_kw": ["crystals for grounding meditation", "black tourmaline hematite grounding", "root chakra meditation crystals"],
+      "scene": "grounding", "priority": "P1", "tier": "deep", "word_target": 2400,
+      "concept_focus": "grounding 6-step script (earth breath, root center, roots into soil) + black-tourmaline/hematite/smoky-quartz/jade/red-jasper-substitute",
+      "crystals": ["black-tourmaline", "hematite", "smoky-quartz", "jade"],
+      "eastern": ["yoga grounding asana (Tadasana/Vrksasana tradition)", "Daoist and jade-culture 'returning to the earth'"],
+      "howto_6_steps": [
+        {"step": 1, "name": "Settle with the earth breath", "text": "a short gentle inhale, a long slow exhale as if pressing weight down into the floor — repeat six rounds"},
+        {"step": 2, "name": "Cup the stone in both hands in the lap", "text": "feet flat on the floor, hands cradling the stone, feel its weight"},
+        {"step": 3, "name": "Bring attention to the soles of the feet", "text": "the contact with the floor, the base of the spine, the root center"},
+        {"step": 4, "name": "Visualize roots growing down", "text": "from the soles of the feet, roots extending down into cool, stable, dark earth"},
+        {"step": 5, "name": "Set a one-line intention", "text": "\"I am steady, supported, and here.\""},
+        {"step": 6, "name": "Close by feeling the floor", "text": "before opening the eyes, press the feet gently into the floor and feel the support for a few breaths"}
+      ],
+      "faq_picks": {
+        "intent": ["What are the best crystals for grounding meditation?", "How do I do a grounding meditation with crystals?", "How long should a grounding meditation be?", "Can I ground with any crystal?"],
+        "conversion": ["Which grounding crystal should I wear?", "Do I need to cleanse grounding crystals?"],
+        "trust": ["Is there scientific evidence grounding helps?", "Will the wrong crystal make me feel scattered?"]
+      },
+      "internal_links": {
+        "meaning_min": 3, "hub": "M0", "sibling": ["M3", "M6"],
+        "condition": "/crystals-for-anxiety/", "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/healing-crystals-jewelry/"
+      },
+      "schema": {
+        "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+        "howto_name": "How to Do a Grounding Meditation with Crystals",
+        "howto_total_time": "PT12M"
+      },
+      "image_plan": {
+        "hero": {"filename": "grounding-meditation-with-crystals-hero.jpg", "alt": "A heavy black tourmaline and a hematite stone resting on smooth dark earth-toned stone, bare feet visible in soft focus behind, grounded calm mood"},
+        "step_diagrams": [{"filename": "grounding-meditation-with-crystals-roots.jpg", "alt": "Hands cupping a black tourmaline stone in the lap during seated grounding meditation, feet flat on a wooden floor, warm earthy light"}]
+      }
+    },
+    {
+      "id": "M5", "slug": "meditation-crystals-for-beginners", "url": "/meditation-crystals-for-beginners/",
+      "title": "Meditation Crystals for Beginners: 5-Step Start + 6 Stones",
+      "h1": "Meditation with Crystals for Beginners",
+      "primary_kw": "meditation crystals for beginners",
+      "secondary_kw": ["how to start crystal meditation", "beginner crystals for meditation", "easy crystal meditation"],
+      "scene": "beginners", "priority": "P1", "tier": "light", "word_target": 1900,
+      "concept_focus": "beginner-friendly 5-step simple start + 6 approachable stones + how-to H5 link",
+      "crystals": ["clear-quartz", "amethyst", "rose-quartz", "selenite", "smoky-quartz", "howlite"],
+      "eastern": ["the opening limbs of yoga tradition", "Japanese Zen zazen (just sit)"],
+      "howto_6_steps": [
+        {"step": 1, "name": "Find a quiet seat and breathe naturally", "text": "no special technique — just notice ten natural breaths, silently counting"},
+        {"step": 2, "name": "Hold one stone in the left palm", "text": "choose one stone only; feel its weight, temperature, and surface"},
+        {"step": 3, "name": "Rest your attention on the stone", "text": "when the mind wanders, gently return to the feeling of the stone — that is the whole practice"},
+        {"step": 4, "name": "Picture a small warm sphere of light", "text": "a simple image, nothing elaborate, resting in the palm with the stone"},
+        {"step": 5, "name": "Set a simple intention", "text": "\"I begin, simply.\" — one short line is enough"},
+        {"step": 6, "name": "Close with a small smile", "text": "lift the corners of the mouth gently, open the eyes slowly, set the stone down"}
+      ],
+      "faq_picks": {
+        "intent": ["Which crystals are best for beginners meditation?", "How do I start meditating with crystals?", "How long should a beginner crystal meditation be?", "Do I need more than one crystal?"],
+        "conversion": ["Which one crystal should I buy first?", "Do I need to cleanse a new crystal before meditating?"],
+        "trust": ["Is there scientific evidence crystals help beginners meditate?", "Am I doing it wrong if my mind wanders?"]
+      },
+      "internal_links": {
+        "meaning_min": 3, "hub": "M0", "sibling": ["M1", "M2"],
+        "condition": null, "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "how_to_h5": "/blog/how-to-meditate-with-crystals/",
+        "shop_fallback": "/product-category/healing-crystals-jewelry/"
+      },
+      "schema": {
+        "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+        "howto_name": "How to Start Meditating with Crystals (Beginners)",
+        "howto_total_time": "PT8M"
+      },
+      "image_plan": {
+        "hero": {"filename": "meditation-crystals-for-beginners-hero.jpg", "alt": "A small simple collection of six beginner crystals arranged on a plain folded cloth, soft daylight, clean minimal calm composition"},
+        "step_diagrams": [{"filename": "meditation-crystals-for-beginners-hold.jpg", "alt": "A hand gently holding a single clear quartz point in the palm during a simple seated beginner meditation, soft natural light"}]
+      }
+    },
+    {
+      "id": "M6", "slug": "manifestation-meditation-with-crystals", "url": "/manifestation-meditation-with-crystals/",
+      "title": "Manifestation Meditation with Crystals: Stones, Steps & Script",
+      "h1": "How to Do a Manifestation Meditation with Crystals",
+      "primary_kw": "manifestation meditation with crystals",
+      "secondary_kw": ["crystals for manifestation meditation", "citrine pyrite manifestation", "intention setting crystal meditation"],
+      "scene": "manifestation", "priority": "P1", "tier": "deep", "word_target": 2400,
+      "concept_focus": "manifestation 6-step script (rising breath, solar plexus, scene-already-realized) + citrine/pyrite/clear-quartz/carnelian",
+      "crystals": ["citrine", "pyrite", "clear-quartz", "carnelian"],
+      "eastern": ["Tibetan kriya tradition (body, speech, mind aligned in action)", "yoga sankalpa (heartfelt resolve)"],
+      "howto_6_steps": [
+        {"step": 1, "name": "Settle with the rising breath", "text": "inhale for 4, hold gently at the top for 2, exhale for 6 — repeat five rounds to gather focus"},
+        {"step": 2, "name": "Hold the stone in the right hand over the solar plexus", "text": "rest the hand just above the navel; feel the warmth of the hand and stone"},
+        {"step": 3, "name": "Bring attention to the solar plexus", "text": "the center associated across traditions with will and aligned action"},
+        {"step": 4, "name": "Visualize the aim already realized", "text": "not watching a future scene, but feeling it in the body now — a felt sense, not a fantasy"},
+        {"step": 5, "name": "Set the resolve", "text": "\"I align body, breath, and aim.\" — state the intention silently three times"},
+        {"step": 6, "name": "Close by touching the stone", "text": "press the stone gently three times as a tactile seal, then set it down and carry one small next action into the day"}
+      ],
+      "faq_picks": {
+        "intent": ["What are the best crystals for manifestation meditation?", "How do I do a manifestation meditation with crystals?", "How long should a manifestation meditation be?", "Can I manifest with any crystal?"],
+        "conversion": ["Which crystal should I wear for manifestation?", "Do I need to program or cleanse manifestation crystals?"],
+        "trust": ["Is there scientific evidence crystals help manifestation?", "Is manifestation the same as wishful thinking?"]
+      },
+      "internal_links": {
+        "meaning_min": 3, "hub": "M0", "sibling": ["M1", "M4"],
+        "condition": null, "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/healing-crystals-jewelry/"
+      },
+      "schema": {
+        "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+        "howto_name": "How to Do a Manifestation Meditation with Crystals",
+        "howto_total_time": "PT12M"
+      },
+      "image_plan": {
+        "hero": {"filename": "manifestation-meditation-with-crystals-hero.jpg", "alt": "A bright citrine point and a piece of pyrite resting on a warm-toned cloth in soft golden sunlight, warm aspirational calm mood"},
+        "step_diagrams": [{"filename": "manifestation-meditation-with-crystals-intention.jpg", "alt": "A hand holding a citrine stone over the solar plexus during a seated manifestation meditation, warm directional light"}]
+      }
+    },
+    {
+      "id": "M7", "slug": "crystal-meditation-script", "url": "/crystal-meditation-script/",
+      "title": "Crystal Meditation Script: 5 Ready-to-Use Guided Sessions",
+      "h1": "5 Crystal Meditation Scripts You Can Use Today",
+      "primary_kw": "crystal meditation script",
+      "secondary_kw": ["guided crystal meditation script", "crystal meditation for sleep script", "crystal meditation for focus script"],
+      "scene": "script-compilation", "priority": "P2", "tier": "light", "word_target": 1900,
+      "concept_focus": "5 ready-to-read scripts (focus/sleep/emotional/grounding/manifestation) — each a condensed 6-step from M1-M6, formatted to be read aloud or silently",
+      "crystals": ["clear-quartz", "amethyst", "rose-quartz", "black-tourmaline", "citrine"],
+      "eastern": ["integrates Tibetan shamatha, Dream Yoga, Metta, grounding asana, and yoga sankalpa across the five scripts"],
+      "scripts_5": [
+        {"name": "Focus Script", "stone": "fluorite or clear quartz", "source": "M1"},
+        {"name": "Sleep Script", "stone": "amethyst or howlite", "source": "M2"},
+        {"name": "Emotional Release Script", "stone": "rose quartz", "source": "M3"},
+        {"name": "Grounding Script", "stone": "black tourmaline or hematite", "source": "M4"},
+        {"name": "Manifestation Script", "stone": "citrine or pyrite", "source": "M6"}
+      ],
+      "howto_6_steps": [
+        {"step": 1, "name": "Pick one script and one stone", "text": "match the script to what you need today"},
+        {"step": 2, "name": "Find a quiet seat or lie down", "text": "5-15 minutes, undisturbed"},
+        {"step": 3, "name": "Read the script once silently", "text": "to feel the shape of it"},
+        {"step": 4, "name": "Hold the stone and follow the steps", "text": "at your own pace, breath by breath"},
+        {"step": 5, "name": "Close as the script describes", "text": "each script has its own closing"},
+        {"step": 6, "name": "Cleanse the stone before next use", "text": "see the cleansing timer for the safe method for your stone"}
+      ],
+      "faq_picks": {
+        "intent": ["Where can I find a crystal meditation script?", "How do I read a crystal meditation script?", "Which script should I use today?", "Can I record myself reading these scripts?"],
+        "conversion": ["Which crystals work with these scripts?", "Do I need to cleanse crystals between scripts?"],
+        "trust": ["Is there science behind guided meditation?", "Do these scripts work without believing in crystal energy?"]
+      },
+      "internal_links": {
+        "meaning_min": 3, "hub": "M0", "sibling": ["M1", "M2", "M3", "M4", "M6"],
+        "condition": null, "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/healing-crystals-jewelry/"
+      },
+      "schema": {
+        "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+        "howto_name": "How to Use a Crystal Meditation Script",
+        "howto_total_time": "PT12M"
+      },
+      "image_plan": {
+        "hero": {"filename": "crystal-meditation-script-hero.jpg", "alt": "An open journal beside a collection of five crystals each paired with a small label, soft reading light, calm study desk composition"},
+        "step_diagrams": [{"filename": "crystal-meditation-script-read.jpg", "alt": "Hands resting on an open book with a crystal placed beside it during a guided reading meditation, soft warm light"}]
+      }
+    },
+    {
+      "id": "M8", "slug": "meditation-room-crystals", "url": "/meditation-room-crystals/",
+      "title": "Meditation Room Crystals: How to Set Up Your Space",
+      "h1": "How to Set Up Crystals in Your Meditation Room",
+      "primary_kw": "meditation room crystals",
+      "secondary_kw": ["crystals for meditation space", "how to arrange crystals in meditation room", "selenite meditation room"],
+      "scene": "space-setup", "priority": "P2", "tier": "light", "word_target": 1700,
+      "concept_focus": "space setup (placement grid, the 4 corners + center layout, light/sound/scent layering) + selenite/clear-quartz/amethyst/black-tourmaline",
+      "crystals": ["selenite", "clear-quartz", "amethyst", "black-tourmaline"],
+      "eastern": ["Tibetan shrine / altar arrangement tradition (purifying and ordering a space)", "Japanese Zen 'chashitsu' aesthetic of simple uncluttered space"],
+      "howto_6_steps": [
+        {"step": 1, "name": "Choose a quiet, low-traffic corner", "text": "a place you return to, even a small one — consistency matters more than size"},
+        {"step": 2, "name": "Clean the space physically first", "text": "a clean surface and aired room — the material foundation"},
+        {"step": 3, "name": "Place four stones at the corners", "text": "traditionally dark or grounding stones at the corners for a sense of boundary"},
+        {"step": 4, "name": "Place one central stone", "text": "a clear quartz or selenite in the center as the focal point"},
+        {"step": 5, "name": "Add one sensory layer (light, sound, or scent)", "text": "a candle, a singing bowl, or incense — one only, to keep it simple"},
+        {"step": 6, "name": "Cleanse the stones before first use", "text": "moonlight or a selenite plate overnight — then the space is ready"}
+      ],
+      "faq_picks": {
+        "intent": ["Which crystals are best for a meditation room?", "How do I arrange crystals in my meditation space?", "Where should I place selenite in a meditation room?", "Do I need many crystals or just a few?"],
+        "conversion": ["Which crystals should I buy for my meditation room?", "Do I need to cleanse meditation room crystals?"],
+        "trust": ["Is there science behind sacred space setup?", "Will the arrangement matter if I don't believe in crystal energy?"]
+      },
+      "internal_links": {
+        "meaning_min": 3, "hub": "M0", "sibling": ["M0", "M5"],
+        "condition": null, "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/healing-crystals-jewelry/"
+      },
+      "schema": {
+        "types": ["Article", "FAQPage", "HowTo", "BreadcrumbList"],
+        "howto_name": "How to Set Up Crystals in a Meditation Room",
+        "howto_total_time": "PT20M"
+      },
+      "image_plan": {
+        "hero": {"filename": "meditation-room-crystals-hero.jpg", "alt": "A calm meditation corner with crystals placed at the corners of a low shelf and a central clear quartz, a folded cushion and a candle, soft natural light"},
+        "step_diagrams": [{"filename": "meditation-room-crystals-layout.jpg", "alt": "Top-down view of a meditation space showing four corner stones and one central stone arranged on a cloth, a candle and singing bowl nearby"}]
+      }
+    }
+  ]
+}
