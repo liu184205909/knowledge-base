@@ -1,0 +1,183 @@
+<!-- ===== Earthward Chinese Zodiac Checker ===== -->
+<div id="ecz-wrap">
+  <h1 class="ecz-h1">Chinese Zodiac Checker</h1>
+  <p class="ecz-intro">Enter your date of birth to find your Chinese zodiac animal — its personality traits, element, lucky stones for 2026, and your most compatible signs. The tool accounts for the lunar new year cutoff, so January and February birthdays are placed correctly.</p>
+
+  <div class="ecz-input-row">
+    <select id="ecz-month"><option value="">Month</option></select>
+    <select id="ecz-day"><option value="">Day</option></select>
+    <input id="ecz-year" type="number" placeholder="Year (e.g. 1990)" min="1900" max="2099">
+    <button class="ecz-btn" onclick="ECZodiac.calc()">Find My Zodiac</button>
+  </div>
+
+  <div class="ecz-result" id="ecz-result" style="display:none"></div>
+</div>
+<style>
+.ecz-h1{font-size:34px;color:#1A1A2E;margin:0 0 12px;font-weight:700;line-height:1.2}
+.ecz-intro{color:#444;font-size:17px;line-height:1.65;margin:0 0 24px;max-width:760px}
+.ecz-input-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.ecz-input-row select,.ecz-input-row input{padding:12px 14px;border:1px solid #DDD;border-radius:8px;font-size:16px;background:#fff}
+.ecz-input-row select{min-width:110px}
+.ecz-input-row input{width:160px}
+.ecz-btn{background:#2D6A4F;color:#fff !important;border:none;border-radius:8px;padding:12px 26px;font-size:15px;font-weight:600;cursor:pointer}
+.ecz-btn:hover{background:#1B4332}
+.ecz-result{margin-top:8px}
+.ecz-head{background:#1A1A2E;border-radius:14px;padding:28px;color:#fff;margin-bottom:16px}
+.ecz-animal-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.ecz-animal-name{font-size:38px;font-weight:700;line-height:1.1}
+.ecz-chinese{font-size:18px;color:#CFAA3E;font-weight:600}
+.ecz-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.ecz-badge{background:#2D6A4F;color:#fff;font-size:12px;font-weight:600;padding:4px 12px;border-radius:12px}
+.ecz-personality{font-size:15px;color:#C8D1E0;line-height:1.6;margin-top:12px}
+.ecz-bmn{background:#FBF3E5;border:1px solid #E8C887;border-radius:12px;padding:14px 18px;margin-bottom:16px;color:#7A5A12;font-size:14px;line-height:1.55}
+.ecz-bmn b{color:#5A4208}
+.ecz-card{background:#fff;border:1px solid #EEE;border-radius:14px;padding:20px;margin-bottom:14px}
+.ecz-card h3{font-size:17px;color:#1A1A2E;margin:0 0 12px}
+.ecz-stones{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ecz-stone{background:#FAFAFA;border:1px solid #EEE;border-radius:12px;padding:14px;text-align:center}
+.ecz-stone-img{width:90px;height:90px;object-fit:cover;border-radius:50%;margin-bottom:8px}
+.ecz-stone-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#2D6A4F}
+.ecz-stone-name{font-size:16px;font-weight:700;color:#1A1A2E;margin:3px 0 6px}
+.ecz-stone-why{font-size:13px;color:#666;line-height:1.5;text-align:left}
+.ecz-stone-shop{display:inline-block;margin-top:8px;font-size:13px;font-weight:600;color:#2D6A4F;text-decoration:none}
+.ecz-compat{display:flex;gap:8px;flex-wrap:wrap}
+.ecz-chip{background:#F0F7F4;border:1px solid #C8E6D5;color:#1B4332;padding:6px 14px;border-radius:18px;font-size:14px;font-weight:600}
+.ecz-cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.ecz-cta{display:inline-block;padding:12px 22px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600}
+.ecz-cta-primary{background:#2D6A4F;color:#fff !important}
+.ecz-cta-primary:hover{background:#1B4332}
+.ecz-cta-sec{background:#fff;color:#2D6A4F !important;border:1px solid #2D6A4F}
+.ecz-disclaim{color:#999;font-size:12px;margin-top:18px;line-height:1.5}
+.ecz-seo-accordion{max-width:1220px;margin:32px auto 0}
+.ecz-seo-details{border:1px solid #D8D8D8;border-radius:12px;background:#FAFAFA;overflow:hidden}
+.ecz-seo-details summary{list-style:none;cursor:pointer;background:#E8E8E8;color:#1A1A2E;font-size:18px;font-weight:700;padding:18px 22px}
+.ecz-seo-details summary::-webkit-details-marker{display:none}
+.ecz-seo-details summary:after{content:'+';float:right;font-size:24px;line-height:1;color:#2D6A4F}
+.ecz-seo-details[open] summary:after{content:'-'}
+.ecz-seo-content{padding:24px 28px;color:#444;font-size:16px;line-height:1.75}
+.ecz-seo-content h2{color:#1A1A2E;font-size:24px;margin:26px 0 10px}
+.ecz-seo-content h3{color:#1A1A2E;font-size:19px;margin:20px 0 8px}
+@media(max-width:640px){.ecz-h1{font-size:26px}.ecz-input-row select{min-width:90px}.ecz-input-row input{width:120px}.ecz-animal-name{font-size:30px}.ecz-stones{grid-template-columns:1fr}}
+</style>
+<script>
+var ECZodiac=(function(){
+  var A=[{"key":"rat","name":"Rat","chinese":"鼠 (Shǔ)","element":"Water","personality":"Quick-witted, resourceful, versatile, kind. Three steps ahead, clever with systems and money.","lucky":{"name":"Garnet","slug":"garnet","img":"https://goearthward.com/wp-content/uploads/2026/06/garnet-form-bracelet.webp","shop":"/product-category/healing-crystals-jewelry/","why":"Traditional Rat stone across multiple SERP sources. Courage to act on the quiet ideas Rats keep shelving — confidence to stop putting yourself last."},"balance":{"name":"Aquamarine","slug":"aquamarine","img":"https://goearthward.com/wp-content/uploads/2026/06/aquamarine-overview.webp","shop":"/product-category/healing-crystals-jewelry/","why":"Water-element Rat can overthink and drain emotionally. Aquamarine (water stone) soothes the nervous system and clears mental noise."},"year_boost":{"name":"Clear Quartz","slug":"quartz","img":"https://goearthward.com/wp-content/uploads/2026/06/quartz-overview.webp","shop":"/product-category/clear-quartz-crystals/","why":"Fire Horse year amplifies Rat's scattered 'too many ideas' tendency. Clear Quartz focuses one intention so momentum isn't diluted."},"compatibility_best":["Ox","Dragon","Monkey"]},{"key":"ox","name":"Ox","chinese":"牛 (Niú)","element":"Earth","personality":"Diligent, dependable, strong, determined. The steady rock everyone leans on; patient methodical builder.","lucky":{"name":"Jade","slug":"jadeite","img":"https://goearthward.com/wp-content/uploads/2026/06/jadeite-overview.webp","shop":"/product-category/healing-crystals-jewelry/","why":"Jade is the signature Eastern stone of wisdom, emotional balance and longevity — perfectly mirrors Ox's steady virtue. 'Gold is valuable, jade is priceless.' (China Highlights)"},"balance":{"name":"Aquamarine","slug":"aquamarine","img":"https://goearthward.com/wp-content/uploads/2026/06/aquamarine-overview.webp","shop":"/product-category/healing-crystals-jewelry/","why":"Ox's relentless pace in fast Fire Horse year needs calm. Aquamarine cools the nervous system when everyone demands faster, louder."},"year_boost":{"name":"Aventurine","slug":"aventurine","img":"https://goearthward.com/wp-content/uploads/2026/06/aventurine-overview.webp","shop":"/product-category/aventurine-crystals/","why":"2026 lifts Ox above prior challenges (fengshuimall). Green Aventurine supports the breakthrough opportunities and steady growth."},"compatibility_best":["Rat","Snake","Rooster"]},{"key":"tiger","name":"Tiger","chinese":"虎 (Hǔ)","element":"Wood","personality":"Brave, confident, competitive, unpredictable. Bold midlife moves; natural leadership and dramatic courage.","lucky":{"name":"Citrine","slug":"citrine","img":"https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp","shop":"/product-category/citrine-crystals/","why":"Tiger's confidence and 'I deserve this' energy in 2026 (desiderate). Supports money, career, self-worth for bold moves."},"balance":{"name":"Blue Sapphire","slug":"blue-sapphire","img":"https://goearthward.com/wp-content/uploads/2026/06/blue-sapphire-form-bracelet.webp","shop":"/product-category/healing-crystals-jewelry/","why":"Tiger's spontaneity needs strategic focus. Blue Sapphire adds wisdom so Tiger acts strategically, not just on impulse."},"year_boost":{"name":"Tiger's Eye","slug":"tiger-eye","img":"https://goearthward.com/wp-content/uploads/2026/06/tiger-eye-form-bracelet.webp","shop":"/product-category/tiger-eye-crystals/","why":"2026 = power moves, career breakthroughs for Tiger (fengshui forecast). Tiger's Eye grounds the bold energy into decisive, followed-through action."},"compatibility_best":["Horse","Dog","Pig"]},{"key":"rabbit","name":"Rabbit","chinese":"兔 (Tù)","element":"Wood","personality":"Quiet, elegant, kind, responsible. Sensitive, harmony-loving; feels everything deeply.","lucky":{"name":"Moonstone","slug":"moonstone","img":"https://goearthward.com/wp-content/uploads/2026/06/moonstone-form-bracelet.webp","shop":"/product-category/moonstone-crystals/","why":"Rabbit's signature stone for emotional protection and intuition — 'emotional SPF' in fiery Horse year (desiderate). Soft buffer between sensitive Rabbit and the world."},"balance":{"name":"Pearl","slug":"pearl","img":"https://goearthward.com/wp-content/uploads/2026/06/pearl-form-bracelet.webp","shop":"/product-category/healing-crystals-jewelry/","why":"Soothing and classic; calms the nervous system when it whispers 'too much'. Traditional Rabbit stone for kindness and gentleness (alberthern)."},"year_boost":{"name":"Amethyst","slug":"amethyst","img":"https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp","shop":"/product-category/amethyst-crystals/","why":"2026 Rabbit benefits from calm against the year's rapid pace (qilingaura). Amethyst offers spiritual protection and fewer overthinking loops."},"compatibility_best":["Goat","Pig","Dog"]},{"key":"dragon","name":"Dragon","chinese":"龙 (Lóng)","element":"Earth","personality":"Confident, intelligent, enthusiastic. Strong presence; natural power and influence. The most coveted sign.","lucky":{"name":"Amethyst","slug":"amethyst","img":"https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp","shop":"/product-category/amethyst-crystals/","why":"Dragon's traditional stone (aureusboutique/desiderate) for spiritual protection, clearer thinking — steers Dragon's power with fewer late-night overthinking loops."},"balance":{"name":"Labradorite","slug":"labradorite","img":"https://goearthward.com/wp-content/uploads/2026/06/labradorite-overview.webp","shop":"/product-category/labradorite-crystals/","why":"Shields Dragon's energy when visible and 'on duty' all day (desiderate/gojiakhong). Grounds amplified presence in 2026."},"year_boost":{"name":"Green Aventurine","slug":"aventurine","img":"https://goearthward.com/wp-content/uploads/2026/06/aventurine-overview.webp","shop":"/product-category/aventurine-crystals/","why":"Enhances helpful-people connections and smooth collaboration in 2026 (buddha3bodhi). Dragon's influence grows; this supports relationships, not just solo power."},"compatibility_best":["Rat","Monkey","Rooster"]},{"key":"snake","name":"Snake","chinese":"蛇 (Shé)","element":"Fire","personality":"Enigmatic, intelligent, wise, perceptive. Senses undercurrents; quietly powerful; intuitive.","lucky":{"name":"Opal","slug":"opal","img":"https://goearthward.com/wp-content/uploads/2026/06/opal-form-bracelet.webp","shop":"/product-category/opal-crystals/","why":"Snake's traditional stone for intuitive upgrades — enhances creativity, intuition, emotional insight (desiderate). Gorgeous for gentle reinvention."},"balance":{"name":"Malachite","slug":"malachite","img":"https://goearthward.com/wp-content/uploads/2026/06/malachite-form-bracelet.webp","shop":"/product-category/malachite-crystals/","why":"Supports deep shifts, pattern-breaking, honest self-reflection (desiderate). For Snakes who know something must change."},"year_boost":{"name":"Black Tourmaline","slug":"black-tourmaline","img":"https://goearthward.com/wp-content/uploads/2026/06/black-tourmaline-form-bracelet.webp","shop":"/product-category/black-tourmaline-crystals/","why":"Snake is Fire element entering another Fire-heavy year — needs grounding protection. Black Tourmaline shields from energetic overload."},"compatibility_best":["Ox","Rooster","Monkey"]},{"key":"horse","name":"Horse","chinese":"马 (Mǎ)","element":"Fire","personality":"Animated, active, energetic, independent, charming. Appetite for adventure; says 'go' when the universe opens doors.","lucky":{"name":"Topaz","slug":"topaz","img":"https://goearthward.com/wp-content/uploads/2026/06/topaz-form-bracelet.webp","shop":"/product-category/healing-crystals-jewelry/","why":"Horse's traditional lucky stone (lifestyleasia/catcherry). Confidence, courage, calling in right opportunities — especially potent in your own year."},"balance":{"name":"Smoky Quartz","slug":"smoky-quartz","img":"https://goearthward.com/wp-content/uploads/2026/06/smoky-quartz-form-bracelet.webp","shop":"/product-category/healing-crystals-jewelry/","why":"Grounding and protection — clear 'no thank you' when plate overflows (desiderate). Keeps Horse centred while life speeds up."},"year_boost":{"name":"Black Tourmaline","slug":"black-tourmaline","img":"https://goearthward.com/wp-content/uploads/2026/06/black-tourmaline-form-bracelet.webp","shop":"/product-category/black-tourmaline-crystals/","why":"Ben ming nian (本命年) — Horse offends Tai Sui in own year. Black Tourmaline is the protective anchor against the year's instability."},"compatibility_best":["Tiger","Goat","Dog"]},{"key":"goat","name":"Goat (Sheep)","chinese":"羊 (Yáng)","element":"Earth","personality":"Calm, gentle, sympathetic, creative. Brilliant at caring for others; creative and emotional.","lucky":{"name":"Emerald","slug":"emerald","img":"https://goearthward.com/wp-content/uploads/2026/06/emerald-form-bracelet.webp","shop":"/product-category/healing-crystals-jewelry/","why":"Self-worth, creative expression, emotional balance (desiderate). For Goats done apologising for taking up space."},"balance":{"name":"Rose Quartz","slug":"rose-quartz","img":"https://goearthward.com/wp-content/uploads/2026/06/rose-quartz-form-bracelet.webp","shop":"/product-category/rose-quartz-crystals/","why":"Soft unconditional self-love on frayed days (desiderate). Goats give endlessly; this is the receiving stone."},"year_boost":{"name":"Citrine","slug":"citrine","img":"https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp","shop":"/product-category/citrine-crystals/","why":"2026 = wealth luck + helpful allies for Goat (facebook fengshui). Citrine supports the abundance and confidence to receive."},"compatibility_best":["Rabbit","Horse","Pig"]},{"key":"monkey","name":"Monkey","chinese":"猴 (Hóu)","element":"Metal","personality":"Sharp, smart, curious, playful. Easily bored; thrives on novelty and clever problem-solving.","lucky":{"name":"Peridot","slug":"peridot","img":"https://goearthward.com/wp-content/uploads/2026/06/peridot-form-bracelet.webp","shop":"/product-category/healing-crystals-jewelry/","why":"Fresh-start energy, lightness, clearing old emotional clutter (desiderate). Monkey's permission slip to shake off groundhog-day routine."},"balance":{"name":"Citrine","slug":"citrine","img":"https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp","shop":"/product-category/citrine-crystals/","why":"Confidence and 'money magic' when trying something new (desiderate). Pairs with Peridot for new ventures."},"year_boost":{"name":"Clear Quartz","slug":"quartz","img":"https://goearthward.com/wp-content/uploads/2026/06/quartz-overview.webp","shop":"/product-category/clear-quartz-crystals/","why":"Monkey's restless mind needs single-pointed focus in fast 2026. Clear Quartz clarifies one intention among many shiny options."},"compatibility_best":["Rat","Dragon","Snake"]},{"key":"rooster","name":"Rooster","chinese":"鸡 (Jī)","element":"Metal","personality":"Observant, hardworking, courageous, organised. The quiet powerhouse; capable and detail-driven.","lucky":{"name":"Citrine","slug":"citrine","img":"https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp","shop":"/product-category/citrine-crystals/","why":"Visibility, recognition, 'pay me what I'm worth' energy (desiderate). 2026 wants Roosters seen and appreciated properly."},"balance":{"name":"Garnet","slug":"garnet","img":"https://goearthward.com/wp-content/uploads/2026/06/garnet-form-bracelet.webp","shop":"/product-category/healing-crystals-jewelry/","why":"Stamina and strength for busy seasons and big responsibilities (desiderate). Sustains Rooster through demanding periods."},"year_boost":{"name":"Tiger's Eye","slug":"tiger-eye","img":"https://goearthward.com/wp-content/uploads/2026/06/tiger-eye-form-bracelet.webp","shop":"/product-category/tiger-eye-crystals/","why":"Combines courage with discernment for Rooster's 2026 push. Turns hard work into recognised achievement."},"compatibility_best":["Ox","Snake","Dragon"]},{"key":"dog","name":"Dog","chinese":"狗 (Gǒu)","element":"Earth","personality":"Loyal, protective, honest, prudent, values-driven. Cares deeply — sometimes to own detriment.","lucky":{"name":"Clear Quartz / White Topaz","slug":"quartz","img":"https://goearthward.com/wp-content/uploads/2026/06/quartz-overview.webp","shop":"/product-category/clear-quartz-crystals/","why":"Clarity about what Dog wants next — not just what everyone else needs (desiderate). Clears people-pleasing fog."},"balance":{"name":"Black Tourmaline","slug":"black-tourmaline","img":"https://goearthward.com/wp-content/uploads/2026/06/black-tourmaline-form-bracelet.webp","shop":"/product-category/black-tourmaline-crystals/","why":"Strong energetic boundaries and protection from emotional overload (desiderate). For Dogs learning 'no' is a complete sentence."},"year_boost":{"name":"Amethyst","slug":"amethyst","img":"https://goearthward.com/wp-content/uploads/2026/06/amethyst-form-bracelet.webp","shop":"/product-category/amethyst-crystals/","why":"2026 Dog benefits from Amitabha Buddha amulet energy (qilingaura) — light, forgiveness, compassion. Amethyst mirrors that protective, clear-hearted quality."},"compatibility_best":["Rabbit","Tiger","Horse"]},{"key":"pig","name":"Pig","chinese":"猪 (Zhū)","element":"Water","personality":"Compassionate, generous, diligent, pleasure-loving. Here for good food, good company, a rich life.","lucky":{"name":"Ruby","slug":"ruby","img":"https://goearthward.com/wp-content/uploads/2026/06/ruby-form-bracelet.webp","shop":"/product-category/ruby-crystals/","why":"Joy, passion, life force, abundance that feels good (desiderate). Reminder Pig is allowed to want more — and receive without guilt."},"balance":{"name":"Carnelian","slug":"carnelian","img":"https://goearthward.com/wp-content/uploads/2026/06/carnelian-form-bracelet-1.webp","shop":"/product-category/carnelian-crystals/","why":"Confidence to start or finish what matters (desiderate). Warms Pig's natural generosity into self-honoring action."},"year_boost":{"name":"Citrine","slug":"citrine","img":"https://goearthward.com/wp-content/uploads/2026/06/citrine-form-bracelet.webp","shop":"/product-category/citrine-crystals/","why":"2026 supports Pig's abundance theme; Citrine is the classic abundance stone for wealth, optimism, momentum."},"compatibility_best":["Goat","Rabbit","Tiger"]}];
+  var CUR={"year":2026,"animal":"Horse","element":"Fire","theme":"Boldness, speed, big shifts, amplified ambition. Fire on Fire = double Yang, needs grounding & cooling stones to balance."};
+  var LUNAR={"1900":[1,31],"1901":[2,19],"1902":[2,8],"1903":[1,29],"1904":[2,16],"1905":[2,4],"1906":[1,25],"1907":[2,13],"1908":[2,2],"1909":[1,22],"1910":[2,10],"1911":[1,30],"1912":[2,18],"1913":[2,6],"1914":[1,26],"1915":[2,14],"1916":[2,3],"1917":[1,23],"1918":[2,11],"1919":[2,1],"1920":[2,20],"1921":[2,8],"1922":[1,28],"1923":[2,16],"1924":[2,5],"1925":[1,25],"1926":[2,13],"1927":[2,2],"1928":[1,23],"1929":[2,10],"1930":[1,30],"1931":[2,17],"1932":[2,6],"1933":[1,26],"1934":[2,14],"1935":[2,4],"1936":[1,24],"1937":[2,11],"1938":[1,31],"1939":[2,19],"1940":[2,8],"1941":[1,27],"1942":[2,15],"1943":[2,5],"1944":[1,25],"1945":[2,13],"1946":[2,2],"1947":[1,22],"1948":[2,10],"1949":[1,29],"1950":[2,17],"1951":[2,6],"1952":[1,27],"1953":[2,14],"1954":[2,3],"1955":[1,24],"1956":[2,12],"1957":[1,31],"1958":[2,18],"1959":[2,8],"1960":[1,28],"1961":[2,15],"1962":[2,5],"1963":[1,25],"1964":[2,13],"1965":[2,2],"1966":[1,21],"1967":[2,9],"1968":[1,30],"1969":[2,17],"1970":[2,6],"1971":[1,27],"1972":[2,15],"1973":[2,3],"1974":[1,23],"1975":[2,11],"1976":[1,31],"1977":[2,18],"1978":[2,7],"1979":[1,28],"1980":[2,16],"1981":[2,5],"1982":[1,25],"1983":[2,13],"1984":[2,2],"1985":[2,20],"1986":[2,9],"1987":[1,29],"1988":[2,17],"1989":[2,6],"1990":[1,27],"1991":[2,15],"1992":[2,4],"1993":[1,23],"1994":[2,10],"1995":[1,31],"1996":[2,19],"1997":[2,7],"1998":[1,28],"1999":[2,16],"2000":[2,5],"2001":[1,24],"2002":[2,12],"2003":[2,1],"2004":[1,22],"2005":[2,9],"2006":[1,29],"2007":[2,18],"2008":[2,7],"2009":[1,26],"2010":[2,14],"2011":[2,3],"2012":[1,23],"2013":[2,10],"2014":[1,31],"2015":[2,19],"2016":[2,8],"2017":[1,28],"2018":[2,16],"2019":[2,5],"2020":[1,25],"2021":[2,12],"2022":[2,1],"2023":[1,22],"2024":[2,10],"2025":[1,29],"2026":[2,17],"2027":[2,6],"2028":[1,26],"2029":[2,13],"2030":[2,3]};
+  var ORDER=["rat","ox","tiger","rabbit","dragon","snake","horse","goat","monkey","rooster","dog","pig"];
+  function init(){
+    var ms=['','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var mh=document.getElementById('ecz-month'), dh=document.getElementById('ecz-day');
+    for(var i=1;i<=12;i++) mh.innerHTML+='<option value="'+i+'">'+ms[i]+'</option>';
+    for(var d=1;d<=31;d++) dh.innerHTML+='<option value="'+d+'">'+d+'</option>';
+  }
+  function calcZodiac(y,m,d){
+    var yr=y;
+    var l=LUNAR[y];
+    if(l){
+      var lunarDate=new Date(y,l[0]-1,l[1]);
+      var bd=new Date(y,m-1,d);
+      if(bd<lunarDate) yr=y-1;
+    }
+    var idx=((yr-2020)%12+12)%12; // Rat=2020=idx0
+    return { key:ORDER[idx], year:yr };
+  }
+  function calc(){
+    var m=Number(document.getElementById('ecz-month').value);
+    var d=Number(document.getElementById('ecz-day').value);
+    var y=Number(document.getElementById('ecz-year').value);
+    if(!m||!d||!y||String(y).length<4){alert('Please enter your full birth date (month, day, and 4-digit year).');return;}
+    var z=calcZodiac(y,m,d);
+    var a=A.filter(function(x){return x.key===z.key;})[0];
+    var el=document.getElementById('ecz-result');
+    el.style.display='block';
+    var isBMN = z.key===CUR.animal.toLowerCase();
+    var stones=[['Lucky Stone',a.lucky],['Balance Stone',a.balance],[CUR.year+' Year Boost',a.year_boost]];
+    var stonesHtml=stones.map(function(s){
+      var lbl=s[0],c=s[1];
+      return '<div class="ecz-stone">'
+        +(c.img?'<img class="ecz-stone-img" src="'+c.img+'" alt="'+c.name+'" loading="lazy">':'')
+        +'<div class="ecz-stone-lbl">'+lbl+'</div>'
+        +'<div class="ecz-stone-name">'+c.name+'</div>'
+        +'<div class="ecz-stone-why">'+c.why+'</div>'
+        +'<a class="ecz-stone-shop" href="'+c.shop+'">Shop '+c.name+' -&gt;</a></div>';
+    }).join('');
+    var compatHtml=a.compatibility_best.map(function(n){return '<span class="ecz-chip">'+n+'</span>';}).join('');
+    el.innerHTML='<div class="ecz-head">'
+      +'<div class="ecz-animal-row"><div class="ecz-animal-name">'+a.name+'</div><div class="ecz-chinese">'+a.chinese+'</div></div>'
+      +'<div class="ecz-badges"><span class="ecz-badge">'+a.element+' Element</span><span class="ecz-badge">Birth year '+z.year+'</span></div>'
+      +'<div class="ecz-personality">'+a.personality+'</div></div>'
+      +(isBMN?'<div class="ecz-bmn"><b>'+CUR.year+' is your Ben Ming Nian (\u672c\u547d\u5e74) \u2014 your zodiac year.</b> In Chinese tradition, encountering your own animal year is seen as a time of change rather than pure luck, so grounding and protective stones are especially supportive this year.</div>':'')
+      +'<div class="ecz-card"><h3>Your Crystals for '+a.name+'</h3><div class="ecz-stones">'+stonesHtml+'</div></div>'
+      +'<div class="ecz-card"><h3>Most Compatible Signs</h3><div class="ecz-compat">'+compatHtml+'</div></div>'
+      +'<div class="ecz-cta-row">'
+      +'<a class="ecz-cta ecz-cta-primary" href="/'+z.key+'-crystals/">Read the '+a.name+' Crystals Guide -&gt;</a>'
+      +'<a class="ecz-cta ecz-cta-sec" href="/product-category/healing-crystals-jewelry/">Shop healing jewelry -&gt;</a></div>'
+      +'<p class="ecz-disclaim">Chinese zodiac traditions and crystal meanings are shared for cultural appreciation and self-reflection, not as deterministic fortune-telling or medical advice. Trust how a stone feels to you over any hard rule.</p>';
+    var offset=window.innerWidth<768?80:120;
+    var top=el.getBoundingClientRect().top+window.pageYOffset-offset;
+    window.scrollTo({top:Math.max(0,top),behavior:'smooth'});
+  }
+  return{init:init,calc:calc};
+})();
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',ECZodiac.init);}else{ECZodiac.init();}
+</script>
+<!-- ===== Chinese Zodiac Checker Schema (FAQPage) ===== -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How do I find my Chinese zodiac sign?","acceptedAnswer":{"@type":"Answer","text":"Your Chinese zodiac animal is determined by your birth year, based on a 12-year cycle. Enter your full date of birth into the checker above. Because the Chinese zodiac follows the lunar new year (which falls in late January or February), the exact cutoff date changes each year — the tool accounts for this automatically."}},
+{"@type":"Question","name":"What if I was born in January or February?","acceptedAnswer":{"@type":"Answer","text":"The lunar new year falls between January 21 and February 20, so if your birthday is before that date in your birth year, you belong to the previous year's zodiac animal. For example, someone born on January 10, 2020 is a Pig (the 2019 animal), not a Rat. This checker uses the exact lunar new year date for each year to place you correctly."}},
+{"@type":"Question","name":"What are the 12 Chinese zodiac animals in order?","acceptedAnswer":{"@type":"Answer","text":"Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat (Sheep), Monkey, Rooster, Dog, and Pig. The cycle repeats every 12 years. Each animal also pairs with one of five elements (Wood, Fire, Earth, Metal, Water), giving a 60-year full cycle."}},
+{"@type":"Question","name":"What is Ben Ming Nian (your zodiac year)?","acceptedAnswer":{"@type":"Answer","text":"Ben Ming Nian occurs every 12 years when your zodiac animal returns. In Chinese tradition it is viewed as a year of change rather than guaranteed luck, and many people wear protective stones such as jade or black tourmaline as a symbolic anchor through the year."}},
+{"@type":"Question","name":"How is the Chinese zodiac different from Western astrology?","acceptedAnswer":{"@type":"Answer","text":"The Chinese zodiac is year-based (one animal per birth year) and combines with five elements. Western astrology is month-based, with twelve constellations and four elements. They are two separate systems of self-reflection — your Chinese sign and Western sign describe different lenses, not the same thing."}}
+]}
+]}
+</script>
+<!-- ===== End Chinese Zodiac Checker ===== -->
+<!-- ===== Chinese Zodiac SEO Accordion ===== -->
+<section class="ecz-seo-accordion" aria-label="Chinese zodiac guide">
+  <details class="ecz-seo-details">
+    <summary>Learn More About the Chinese Zodiac</summary>
+    <div class="ecz-seo-content">
+<h2>What Is the Chinese Zodiac?</h2>
+<p>The Chinese zodiac (Sheng Xiao, 生肖) is a classification system that assigns one of twelve animals to each year in a repeating 12-year cycle. Rooted in ancient Chinese culture, it remains a living tradition used to mark years, celebrate the lunar new year, and reflect on personality traits, relationships, and symbolic themes. Each animal carries its own associations with element, lucky colors and numbers, and traditional stones — making it a rich framework for self-reflection rather than a fixed prediction of fate.</p>
+
+<h2>How the Chinese Zodiac Works</h2>
+<p>The system combines two layers: the <strong>12 animal signs</strong> and the <strong>five elements</strong> (Wood, Fire, Earth, Metal, Water). The animals cycle every 12 years, and each element rules a two-year span, producing a full 60-year cycle before the exact same animal-and-element combination repeats.</p>
+<p>The twelve animals in order are:</p>
+<ul>
+<li><strong>Rat</strong> (Water) — quick-witted, resourceful</li>
+<li><strong>Ox</strong> (Earth) — diligent, dependable</li>
+<li><strong>Tiger</strong> (Wood) — brave, competitive</li>
+<li><strong>Rabbit</strong> (Wood) — gentle, sensitive</li>
+<li><strong>Dragon</strong> (Earth) — confident, charismatic</li>
+<li><strong>Snake</strong> (Fire) — wise, intuitive</li>
+<li><strong>Horse</strong> (Fire) — energetic, independent</li>
+<li><strong>Goat / Sheep</strong> (Earth) — calm, creative</li>
+<li><strong>Monkey</strong> (Metal) — clever, playful</li>
+<li><strong>Rooster</strong> (Metal) — observant, hardworking</li>
+<li><strong>Dog</strong> (Earth) — loyal, honest</li>
+<li><strong>Pig</strong> (Water) — generous, warm-hearted</li>
+</ul>
+
+<h2>Find Your Animal by Birth Year</h2>
+<p>Because the cycle repeats every twelve years, anyone born in 2020, 2008, 1996, 1984, or 1972 is a Rat; Tiger years include 2022, 2010, 1998, and 1986; Dragon years include 2024, 2012, 2000, and 1988. The calculator above looks up your exact sign in one step — and correctly handles the one detail that trips up most year tables.</p>
+
+<h2>What If You Were Born in January or February?</h2>
+<p>This is the most common source of confusion. The Chinese zodiac year does <strong>not</strong> begin on January 1st — it begins on the lunar new year (Spring Festival), which falls between January 21 and February 20. The exact date changes every year.</p>
+<p>If you were born <strong>before</strong> the lunar new year in your birth year, you belong to the <strong>previous</strong> year's animal. For example, the 2020 lunar new year was January 25, so someone born on January 10, 2020 is a Pig (the 2019 animal), while someone born on February 5, 2020 is a Rat. The checker above uses the precise lunar new year date for every year from 1900 to 2030 to place you correctly — no guesswork needed.</p>
+
+<h2>2026: Year of the Fire Horse</h2>
+<p>2026 is the Year of the Fire Horse (Bing Wu, 丙午), running from February 17, 2026 to February 5, 2027. Fire on Fire creates a doubled Yang energy — boldness, speed, and amplified ambition. For Horses, this is their Ben Ming Nian (本命年), the return of their own animal year. In Chinese tradition, a Ben Ming Nian is viewed as a year of change and potential instability rather than pure good luck, so grounding and protective stones such as jade, black tourmaline, and smoky quartz are traditionally favored as symbolic anchors through the year.</p>
+
+<h2>Chinese vs Western Zodiac: What's the Difference?</h2>
+<p>The two systems are often confused but operate on completely different logic. The <strong>Chinese zodiac</strong> is year-based (one animal per birth year) and combines with five elements; the <strong>Western zodiac</strong> is month-based, with twelve constellations and four elements. They are two separate lenses for self-reflection — your Chinese sign and your Western sign describe different things, not the same trait in two languages. Many people enjoy reading both.</p>
+
+<h2>Crystals and the Chinese Zodiac</h2>
+<p>In Chinese tradition, certain stones have long been linked with each zodiac animal — jade in particular is celebrated as the "Stone of Heaven," a symbol of purity, protection, and virtue ("gold is valuable, jade is priceless"). Each animal's traditional stones are chosen either to amplify its natural strengths (the lucky stone) or to gently balance its tendencies (the balance stone). These are traditional guidelines for intention-setting and personal meaning, not hard rules — personal resonance with a stone always matters more than any textbook. Use the checker above to find your animal, then explore its full crystal guide.</p>
+
+    </div>
+  </details>
+</section>
+<!-- ===== End Chinese Zodiac SEO Accordion ===== -->

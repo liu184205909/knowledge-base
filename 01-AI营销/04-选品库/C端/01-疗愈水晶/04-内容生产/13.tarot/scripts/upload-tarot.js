@@ -127,7 +127,7 @@ console.log('分类 tarot → ' + CAT_ID + '\n');
 let ok = 0, fail = 0, skip = 0;
 const results = [];
 for (const art of list) {
-  const postSlug = art.is_hub ? 'crystals-for-tarot-cards' : 'tarot-' + art.slug;
+  const postSlug = art.is_hub ? 'crystals-for-tarot-cards' : 'tarot-' + art.slug + '-crystals';
   if (!slugArg && postSlugExists(postSlug)) { console.log('⏭ ' + postSlug + ' (已存在,跳过)'); skip++; continue; }
   try {
     const a = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'articles', art.slug + '.json'), 'utf8'));

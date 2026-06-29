@@ -123,13 +123,16 @@ for (const art of idx.articles.filter(a => !a.is_hub)) {
       'love': ['love','heart','compassion','tender','devot'],
       'courage': ['courage','brave','confiden','fearless','bold'],
       'joy': ['joy','happy','glad','delight','warm','radiant'],
-      'wisdom': ['wisdom','truth','insight','discern','know'],
+      'wisdom': ['wisdom','truth','insight','discern','know','learn','study','teach'],
+      'spiritual awareness': ['spiritual','spirit','devot','reveren','sacred','contemplat','meditat','pray','faith','soul'],
       'intuition': ['intuit','inner know','gut','instinct','perceiv'],
       'abundance': ['abundan','plenty','prosper','opportun','growth'],
       'focus': ['focus','concentrat','atten','clarit','disciplin'],
       'strength': ['strength','power','fortitude','endurance','vital'],
       'balance': ['balance','harmon','equilibr','middle','integrat'],
       'transformation': ['transform','chang','shift','renew','rebirth','release'],
+      'logic': ['logic','reason','mental discipline','structured','ration','analy','systemat','lineage','framework','order'],
+      'honesty': ['honest','honesty','sincer','authentic','truth','genuine','question','inquir'],
       'communication': ['communic','express','speak','truth','voice'],
       'self-worth': ['self-worth','self-esteem','worth','value','respect','confidence'],
       'confidence': ['confiden','assur','bold','self'],
@@ -180,13 +183,24 @@ const detHits = [];
 for (const art of idx.articles) {
   const a = JSON.parse(fs.readFileSync(path.join(DIR, 'articles', art.slug + '.json'), 'utf8'));
   const full = a.content + ' ' + (a.rank_math_description || '');
-  const sentences = full.split(/(?<=[.!?])\s+/);
+  // 按 HTML 块/句号切，避免 <li> 关键词列表与正文混在同一个"句子"
+  const sentences = full.split(/(?<=[.!?])\s+|<\/?(?:li|p|h[1-6]|ul|ol|details|summary)[^>]*>/i);
   for (const s of sentences) {
     const t = text(s);
     for (const p of determinismWords) {
       const m = t.match(p);
       if (m) {
-        if (/not a bad omen|isn'?t a bad omen|not a curse|isn'?t a curse|not cursed|no card is inherently|not a forecast|not a worsening|not a verdict|not a condemnation|not a sign|destiny number|despite its|reputation|not evil|not a bad card|not a bad luck|fearsome image|fearsome reputation|almost never|not the absence|not a sentencing|not condemned|not a worsen|one of the most feared|reputation makes it|misunderstood|not a sign of|despite the.*image|rather than a bad omen|rather than a curse|shadow rather than|can tarot predict the future\?/i.test(t)) continue;
+        // 排除合规语境：
+        //  - 明确否定句 (not a bad omen / not a forecast / not ... predicts fixed outcomes)
+        //  - Rider-Waite 关键词列表条目 (upright:/reversed: + destiny/bad luck streak)
+        //  - "meant to + 动词" 心理镜像描述 (meant to protect/carry/be/inform/prevent/guide/serve)
+        //  - 声誉/误解讨论 (reputation / misunderstood / despite its image)
+        const negatePatterns = /not a bad omen|isn'?t a bad omen|not a curse|isn'?t a curse|not cursed|no card is inherently|not a forecast|not a worsening|not a verdict|not a condemnation|not a sign|destiny number|despite its|reputation|not evil|not a bad card|not a bad luck|fearsome image|fearsome reputation|almost never|not the absence|not a sentencing|not condemned|not a worsen|one of the most feared|reputation makes it|misunderstood|not a sign of|despite the.*image|rather than a bad omen|rather than a curse|shadow rather than|can tarot predict the future\?|not a tool that predict|do not predict|don'?t predict|not .* predict|read as bad luck|can read as/i;
+        const keywordListPattern = /\b(upright|reversed)\b\s*:|streak|fixed sign|cycles?.*change/i;
+        const meantToMirror = /\bmeant to\s+(protect|carry|be|inform|prevent|guide|serve|restore|recall|become|support|help|shape|surface|ask|open|teach|lead|awaken|hold)\b/i;
+        // FAQ 标题本身就是问句(Is X a bad card? / Can tarot predict the future?) —— 合规 SEO 承接查询
+        const isFaqQuestion = /^is\s+(the\s+|wheel of fortune|death|temperance|strength|judgment|justice)?[\w\s]+a bad card\??$|^can tarot predict the future\??$/i.test(t.trim());
+        if (isFaqQuestion || negatePatterns.test(t) || keywordListPattern.test(t) || meantToMirror.test(t)) continue;
         detHits.push({ slug: art.slug, word: m[0], sentence: s.slice(0, 200) });
       }
     }

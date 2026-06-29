@@ -42,9 +42,18 @@ function ensureCategory(slug, name) {
   return j.id;
 }
 function uploadMedia(file, alt) {
-  const r = execSync('curl -s ' + PROXY + ' ' + AUTH + ' -F "file=@' + file + '" -F "alt=' + alt + '" "https://' + SITE + '/wp-json/wp/v2/media" --max-time 120', { encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 });
+  // alt 用 "name=value" 形式（curl -F 标准），值整体加引号并转义内部双引号，避免空格/逗号被截断导致 alt 丢失
+  const safeAlt = alt.replace(/"/g, '\\"');
+  const r = execSync('curl -s ' + PROXY + ' ' + AUTH + ' -F "file=@' + file + '" -F "alt=\\"' + safeAlt + '\\"" "https://' + SITE + '/wp-json/wp/v2/media" --max-time 120', { encoding: 'utf8', maxBuffer: 20 * 1024 * 1024 });
   const j = JSON.parse(r);
   if (!j.id) throw new Error('media: ' + (j.message || r.slice(0, 100)));
+  // 兜底：upload 后强制 POST alt_text（防止 -F alt 因 shell 转义再次丢失，与 how-to/angel-numbers 批次对齐）
+  try {
+    const tmp = path.join(__dirname, '_tmp-alt.json');
+    fs.writeFileSync(tmp, JSON.stringify({ alt_text: alt }), 'utf8');
+    execSync('curl -s ' + PROXY + ' ' + AUTH + ' -X POST -H "Content-Type: application/json" -d @"' + tmp + '" "https://' + SITE + '/wp-json/wp/v2/media/' + j.id + '" --max-time 30', { encoding: 'utf8' });
+    fs.unlinkSync(tmp);
+  } catch (e) { /* alt 兜底失败不阻断主流程 */ }
   return { id: j.id, url: j.source_url };
 }
 function createPost(data) {
