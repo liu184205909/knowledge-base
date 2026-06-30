@@ -1,0 +1,20 @@
+{
+  "key": "xzw",
+  "name": "m.xzw.com",
+  "usedProxy": true,
+  "main": {
+    "url": "https://m.xzw.com/tarot/divine/",
+    "tag": "landing",
+    "ok": false,
+    "error": "goto: Page.goto: Timeout 25000ms exceeded.\nCall log:\n  - navigating to \"https://m.xzw.com/tarot/divine/\", waiting until \"domcontentloaded\"\n"
+  },
+  "explore": [
+    {
+      "url": "https://m.xzw.com/tarot/",
+      "tag": "m-xzw-com-tarot",
+      "ok": false,
+      "error": "goto: Page.goto: net::ERR_TIMED_OUT at https://m.xzw.com/tarot/\nCall log:\n  - navigating to \"https://m.xzw.com/tarot/\", waiting until \"domcontentloaded\"\n"
+    }
+  ],
+  "errors": []
+}

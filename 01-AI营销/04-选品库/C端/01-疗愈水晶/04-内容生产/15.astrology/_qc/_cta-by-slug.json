@@ -1,0 +1,274 @@
+{
+ "quartz": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "SEARCH",
+  "shop_url": "/shop/?s=quartz",
+  "status": "OK",
+  "no_meaning": true
+ },
+ "aventurine": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/aventurine-meaning/",
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/aventurine-crystals/",
+  "status": "OK",
+  "no_meaning": false
+ },
+ "amethyst": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/amethyst-meaning/",
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/amethyst-crystals/",
+  "status": "OK",
+  "no_meaning": false
+ },
+ "citrine": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/citrine-meaning/",
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/citrine-crystals/",
+  "status": "OK",
+  "no_meaning": false
+ },
+ "rose-quartz": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/rose-quartz-meaning/",
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/rose-quartz-crystals/",
+  "status": "OK",
+  "no_meaning": false
+ },
+ "carnelian": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/carnelian-meaning/",
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/carnelian-crystals/",
+  "status": "OK",
+  "no_meaning": false
+ },
+ "moonstone": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "SEARCH",
+  "shop_url": "/shop/?s=moonstone",
+  "status": "OK",
+  "no_meaning": true
+ },
+ "smoky-quartz": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/smoky-quartz-meaning/",
+  "shop_cta": "SEARCH",
+  "shop_url": "/shop/?s=smoky+quartz",
+  "status": "OK",
+  "no_meaning": false
+ },
+ "selenite": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/selenite-meaning/",
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/selenite-crystals/",
+  "status": "OK",
+  "no_meaning": false
+ },
+ "labradorite": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/labradorite-meaning/",
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/labradorite-crystals/",
+  "status": "OK",
+  "no_meaning": false
+ },
+ "emerald": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "HEALING_JEWELRY",
+  "shop_url": "/product-category/healing-crystals-jewelry/",
+  "status": "DOWNGRADE",
+  "no_meaning": true
+ },
+ "peridot": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "HEALING_JEWELRY",
+  "shop_url": "/product-category/healing-crystals-jewelry/",
+  "status": "DOWNGRADE",
+  "no_meaning": true
+ },
+ "rhodonite": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/rhodonite-crystals/",
+  "status": "OK",
+  "no_meaning": true
+ },
+ "red-jasper": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/red-jasper-meaning/",
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/red-jasper-crystals/",
+  "status": "OK",
+  "no_meaning": false
+ },
+ "sodalite": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "HEALING_JEWELRY",
+  "shop_url": "/product-category/healing-crystals-jewelry/",
+  "status": "DOWNGRADE",
+  "no_meaning": true
+ },
+ "tiger-eye": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/tiger-eye-meaning/",
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/tiger-eye-crystals/",
+  "status": "OK",
+  "no_meaning": false
+ },
+ "lapis": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "HEALING_JEWELRY",
+  "shop_url": "/product-category/healing-crystals-jewelry/",
+  "status": "DOWNGRADE",
+  "no_meaning": true
+ },
+ "hematite": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/hematite-crystals/",
+  "status": "OK",
+  "no_meaning": true
+ },
+ "onyx": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "HEALING_JEWELRY",
+  "shop_url": "/product-category/healing-crystals-jewelry/",
+  "status": "DOWNGRADE",
+  "no_meaning": true
+ },
+ "sunstone": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "HEALING_JEWELRY",
+  "shop_url": "/product-category/healing-crystals-jewelry/",
+  "status": "DOWNGRADE",
+  "no_meaning": true
+ },
+ "obsidian": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/obsidian-meaning/",
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/obsidian-crystals/",
+  "status": "OK",
+  "no_meaning": false
+ },
+ "turquoise": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/turquoise-crystals/",
+  "status": "OK",
+  "no_meaning": true
+ },
+ "bloodstone": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/bloodstone-crystals/",
+  "status": "OK",
+  "no_meaning": true
+ },
+ "malachite": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/malachite-meaning/",
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/malachite-crystals/",
+  "status": "OK",
+  "no_meaning": false
+ },
+ "garnet": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "HEALING_JEWELRY",
+  "shop_url": "/product-category/healing-crystals-jewelry/",
+  "status": "DOWNGRADE",
+  "no_meaning": true
+ },
+ "fluorite": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/fluorite-meaning/",
+  "shop_cta": "HEALING_JEWELRY",
+  "shop_url": "/product-category/healing-crystals-jewelry/",
+  "status": "DOWNGRADE",
+  "no_meaning": false
+ },
+ "amazonite": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/amazonite-meaning/",
+  "shop_cta": "HEALING_JEWELRY",
+  "shop_url": "/product-category/healing-crystals-jewelry/",
+  "status": "DOWNGRADE",
+  "no_meaning": false
+ },
+ "black-tourmaline": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/black-tourmaline-meaning/",
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/black-tourmaline-crystals/",
+  "status": "OK",
+  "no_meaning": false
+ },
+ "aquamarine": {
+  "meaning_cta": "INCLUDE",
+  "meaning_url": "/gemstone/aquamarine-meaning/",
+  "shop_cta": "HEALING_JEWELRY",
+  "shop_url": "/product-category/healing-crystals-jewelry/",
+  "status": "DOWNGRADE",
+  "no_meaning": false
+ },
+ "lepidolite": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/lepidolite-crystals/",
+  "status": "OK",
+  "no_meaning": true
+ },
+ "angelite": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/angelite-crystals/",
+  "status": "OK",
+  "no_meaning": true
+ },
+ "rhodochrosite": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "HEALING_JEWELRY",
+  "shop_url": "/product-category/healing-crystals-jewelry/",
+  "status": "DOWNGRADE",
+  "no_meaning": true
+ },
+ "kyanite": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/kyanite-crystals/",
+  "status": "OK",
+  "no_meaning": true
+ },
+ "shungite": {
+  "meaning_cta": "OMIT",
+  "meaning_url": null,
+  "shop_cta": "CATEGORY",
+  "shop_url": "/product-category/shungite-crystals/",
+  "status": "OK",
+  "no_meaning": true
+ }
+}

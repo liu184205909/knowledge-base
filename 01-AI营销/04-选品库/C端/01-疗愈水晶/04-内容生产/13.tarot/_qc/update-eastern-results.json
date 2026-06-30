@@ -1,0 +1,56 @@
+[
+  [
+    "the-emperor",
+    47839,
+    "OK",
+    "applied=1 before=1 after=0"
+  ],
+  [
+    "the-chariot",
+    47848,
+    "OK",
+    "applied=1 before=2 after=0"
+  ],
+  [
+    "the-hermit",
+    47854,
+    "OK",
+    "applied=1 before=2 after=0"
+  ],
+  [
+    "death",
+    47866,
+    "OK",
+    "applied=1 before=2 after=0"
+  ],
+  [
+    "temperance",
+    47869,
+    "OK",
+    "applied=1 before=2 after=0"
+  ],
+  [
+    "the-star",
+    47878,
+    "OK",
+    "applied=2 before=7 after=0"
+  ],
+  [
+    "judgment",
+    47887,
+    "OK",
+    "applied=1 before=6 after=0"
+  ],
+  [
+    "the-world",
+    47890,
+    "OK",
+    "applied=1 before=3 after=0"
+  ],
+  [
+    "the-fool",
+    47895,
+    "OK",
+    "applied=2 before=6 after=0"
+  ]
+]

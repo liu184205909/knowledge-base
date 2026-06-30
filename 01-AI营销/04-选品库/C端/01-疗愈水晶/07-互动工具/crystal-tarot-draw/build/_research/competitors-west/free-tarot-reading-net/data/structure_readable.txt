@@ -1,0 +1,615 @@
+======================================================================
+[home] https://www.free-tarot-reading.net/
+TITLE: Free Tarot Card Readings
+HEADINGS:
+  H1: Free Tarot Readings
+  H2: 200 million free online readings served ... and counting!
+  H2: Online Tarot Readings
+  H2: Live Readings
+  H2: LEARN TAROT & CARD MEANINGS
+  H2: LOTUS TAROT DECK
+  H2: NUMEROLOGY
+NAV:
+  Sign In Here | /user/login
+   | #show-everything
+   | #show-everything
+   | /help
+   | /contact
+   | https://www.facebook.com/OfficialLotusTarot
+CTAS:
+  Sign In Here | /user/login
+  Get a Free Online
+Tarot Reading | /free
+  Live Chat and
+Phone Readings | /live-readings
+  AI Tarot Reading | /readings#ai-readings
+  Get Started Now! | /learn-tarot
+  See all the cardsOrder the deck | /lotus-tarot-deck
+  Get My Life Path Number | BTN
+
+======================================================================
+[free] https://www.free-tarot-reading.net/free
+TITLE: Free Online Tarot Reading
+HEADINGS:
+  H1: Your Free Online Tarot Card Reading... 
+no fee, no ads, no catch, no nonsense!
+  H2: Tips to improve your readings
+  H2: LT's World Famous Universal 6 Card Spread
+  H2: LT's World Famous Universal 6 Card Spread
+  H2: Tips to improve your readings
+  H2: LEARN TAROT & CARD MEANINGS
+  H2: LOTUS TAROT DECK
+  H2: NUMEROLOGY
+NAV:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  More... | #show-everything
+  Sign In | /user/login
+   | javascript:void(0);
+   | javascript:void(0);
+   | javascript:void(0);
+   | javascript:void(0);
+   | #show-everything
+   | #show-everything
+   | /help
+   | /contact
+   | https://www.facebook.com/OfficialLotusTarot
+CTAS:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  Sign In | /user/login
+  Card Design | BTN
+  Get My Reading! | BTN
+  Reading description | #reading-description
+  Tips to improve your readings | #reading-tips
+  Get Started Now! | /learn-tarot
+  See all the cardsOrder the deck | /lotus-tarot-deck
+  Get My Life Path Number | BTN
+BODY(excerpt):
+Got It
+
+Lotus Tarot uses cookies in order to provide our website services. More info
+
+Free Tarot
+Readings
+Online Readings
+Live Readings
+More...
+Sign In
+Your Free Online Tarot Card Reading... 
+no fee, no ads, no catch, no nonsense!
+Card Design 
+ZEN Mode /switch
+ONZENOFF
+We shuffled the cards 5 times. Now please tap on the deck and choose 6 cards, or tap here if you want to shuffle again.
+Tips to improve your readings
+#5: Read between the lines!
+
+The pre-written text will give you the feeling that each card conveys when it is selected in a certain position in the spread.
+
+If the literal text does not exactly fit your question or circumstance, it is usually fairly obvious how you can 'read between the lines a little' and translate the message to suit your personal situation.
+
+        
+Previous
+Next
+LT's World Famous Universal 6 Card Spread
+
+
+6 cards from the Major Arcana
+
+This is a good reading to simply 'get a snapshot' of how things are with you generally, at this moment in time.
+
+It can also be used to answer specific questions, and has been consulted over 200 million times since Lotus Tarot was launched in 2002.
+
+
+The card positions represent:
+
+How you feel about yourself now
+What you most want at this moment
+Your fears
+What is going for you
+What is going against you
+The outcome according to your current situation or the question you asked
+
+Don't be fooled by the brevity and simplicity of the responses or by the fact it is a Major Arcana only reading, this reading has stood the test of time and proven itself again and again to millions of users.
+
+
+
+Show It ALL
+
+Site Help 
+Contact Us 
+Follow Us
+© Information | Privacy | Disclaimer | Affiliates 
+
+======================================================================
+[readings] https://www.free-tarot-reading.net/readings
+TITLE: Online Tarot Readings @ Lotus Tarot
+HEADINGS:
+  H1: Select Your Reading:
+  H1: Select Your Reading:
+  H2: LEARN TAROT & CARD MEANINGS
+  H2: LOTUS TAROT DECK
+  H2: NUMEROLOGY
+NAV:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  More... | #show-everything
+  Sign In | /user/login
+  Favorites | #favorites
+  All Readings | #all
+  Topics
+Topics | javascript:void(0)
+  Sort | #
+  Title | javascript:void(0);
+  Highest Rated | javascript:void(0);
+  Mix 'em up! | javascript:void(0);
+  Ai Readings | #ai-readings
+  Membership Readings | #membership-readings
+  Free Readings | #free
+  Let Fate Decide! | javascript:void(0);
+  Universal Readings | #universal
+  Love & Relationship | #love-relationship
+  Money & Career | #money-career
+  Health & Well Being | #health-and-well-being
+  Personal Growth | #personal-growth
+  Predictions & Forecasts | #predictions-and-forecasts
+  Meditation & Insight | #meditation-and-insight
+  A Bit of Fun | #a-bit-of-fun
+   | #show-everything
+   | #show-everything
+   | /help
+   | /contact
+   | https://www.facebook.com/OfficialLotusTarot
+CTAS:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  Sign In | /user/login
+  All Readings | #all
+  Ai Readings | #ai-readings
+  Membership Readings | #membership-readings
+  Free Readings | #free
+  Universal Readings | #universal
+  Sign In / Sign Up | /user/login
+  Sign In / Sign Up | /user/login
+  Sign In / Sign Up | /user/login
+  Sign In / Sign Up | /user/login
+  Read More | /ai-tarot-reading-faq
+  Read More | /ai-tarot-reading-faq
+  New Moon Guidance Reading | /readings/new-moon-guidance-reading
+  New Moon Guidance Reading | /readings/new-moon-guidance-reading
+  Is somebody trying to send you a message? | /readings/the-spiritual-telephone
+  Is somebody trying to send you a message? | /readings/the-spiritual-telephone
+  Improving My Love Life | /readings/improving-my-love-life
+  Improving My Love Life | /readings/improving-my-love-life
+  There are many ways to improve your love life :) | /readings/improving-my-love-life
+  There are many ways to improve your love life :) | /readings/improving-my-love-life
+  Last Quarter Moon Guidance Reading | /readings/last-quarter-moon-guidance-reading
+  Last Quarter Moon Guidance Reading | /readings/last-quarter-moon-guidance-reading
+  First Quarter Moon Guidance Reading | /readings/first-quarter-moon-guidance-reading
+  First Quarter Moon Guidance Reading | /readings/first-quarter-moon-guidance-reading
+  Full Moon Guidance Reading | /readings/full-moon-guidance-reading
+  Full Moon Guidance Reading | /readings/full-moon-guidance-reading
+  The Simplicity Reading | /readings/the-simplicity-reading
+  The Simplicity Reading | /readings/the-simplicity-reading
+  The Clarification Reading | /readings/the-clarification-reading
+  The Clarification Reading | /readings/the-clarification-reading
+  Live the Life You Desire Now | /readings/live-the-life-you-desire-now
+  Live the Life You Desire Now | /readings/live-the-life-you-desire-now
+  Kick-start your day with great energy and clear focus | /readings/ai-good-morning-mindset
+  Kick-start your day with great energy and clear focus | /readings/ai-good-morning-mindset
+  Get a quick yes, no or maybe answer to a specific question | /readings/ai-yes-no-maybe
+  Get a quick yes, no or maybe answer to a specific question | /readings/ai-yes-no-maybe
+  Improve your own life, as you improve the lives of animals | /readings/loving-animals
+  Improve your own life, as you improve the lives of animals | /readings/loving-animals
+  The Sign Post Reading | /readings/the-sign-post-reading
+  The Sign Post Reading | /readings/the-sign-post-reading
+  The Chakra Reading | /readings/chakra-reading
+  The Chakra Reading | /readings/chakra-reading
+  Facing a difficult choice in love? This reading can help. | /readings/love-relationships-choices
+  Facing a difficult choice in love? This reading can help. | /readings/love-relationships-choices
+  The Truth Spread | /readings/the-truth-spread
+  The Truth Spread | /readings/the-truth-spread
+  Explores your current situation and how to improve it! | /readings/how-do-i-empower-myself
+BODY(excerpt):
+Got It
+
+Lotus Tarot uses cookies in order to provide our website services. More info
+
+Free Tarot
+Readings
+Online Readings
+Live Readings
+More...
+Sign In
+Select Your Reading:
+Favorites
+All Readings
+Topics
+Topics 
+GridList
+Sort 
+Showing: Free Readings
+
+Sign in to unlock all free readings
+
+Not registered?   Sign up is 100% free and takes less than a minute!
+
+Sign In / Sign Up
+Not Signed In
+Actualize your own dreams when you readjust your approach to life
+by Dr. Laurie
+Live the Life You Desire Now
+Where you're at today regarding your physical, mental and emotional well-being
+by LT
+Your Tarot-rhythm
+A snapshot into your relationship
+by The Love Messenger
+What Lies Between You (Overview)
+A daily one card reading for life, love & work
+by Chrisalis
+Card of the Day (Major Arcana)
+Get a snapshot of how things are with you generally, at this moment in time
+by LT
+Universal 6 Card Spread
+Wisdom is the knowledge you receive from making mistakes!
+by Safina
+Wisdom from Mistakes
+
+Show It ALL
+
+Site Help 
+Contact Us 
+Follow Us
+© Information | Privacy | Disclaimer | Affiliates 
+
+======================================================================
+[live-readings] https://www.free-tarot-reading.net/live-readings
+TITLE: Live Readings @ Lotus Tarot
+HEADINGS:
+  H1: Live Readings
+  H2: Tarot, Astrology & Psychic Readings
+  H2: More about Safina
+  H2: More about Rachael
+  H2: More about Medusa
+  H2: More about Chrisalis
+  H2: More about Divinity Dealer
+  H2: More about Auromai
+  H2: More about Libby
+  H2: More about Dr. Laurie
+  H2: More about Lynn
+  H2: LEARN TAROT & CARD MEANINGS
+  H2: LOTUS TAROT DECK
+  H2: NUMEROLOGY
+NAV:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  More... | #show-everything
+  Sign In | /user/login
+   | #show-everything
+   | #show-everything
+   | /help
+   | /contact
+   | https://www.facebook.com/OfficialLotusTarot
+CTAS:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  Sign In | /user/login
+  Browse Readers | https://bargestech.go2cloud.org/aff_c?offer_id=191&aff_id=313&url_id=95&aff_sub=banner
+  Divinity Dealer's Testimonials | #carousel4
+  Get Started Now! | /learn-tarot
+  See all the cardsOrder the deck | /lotus-tarot-deck
+  Get My Life Path Number | BTN
+
+======================================================================
+[card-meanings] https://www.free-tarot-reading.net/card-meanings
+TITLE: Tarot Card Meanings @ Lotus Tarot
+HEADINGS:
+  H1: Tarot Card Meanings Articles by our 'in-house' live readers
+  H2: LEARN TAROT & CARD MEANINGS
+  H2: LOTUS TAROT DECK
+  H2: NUMEROLOGY
+NAV:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  More... | #show-everything
+  Sign In | /user/login
+  (click here for old-style card menu navigation or begin at Step 1) | #menu
+  Major Arcana | /card-meanings/major_arcana
+  Wands | /card-meanings/wands
+  Cups | /card-meanings/cups
+  Swords | /card-meanings/swords
+  Pentacles | /card-meanings/pentacles
+   | #show-everything
+   | #show-everything
+   | /help
+   | /contact
+   | https://www.facebook.com/OfficialLotusTarot
+CTAS:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  Sign In | /user/login
+  Get Started Now! | /learn-tarot
+  See all the cardsOrder the deck | /lotus-tarot-deck
+  Get My Life Path Number | BTN
+BODY(excerpt):
+Got It
+
+Lotus Tarot uses cookies in order to provide our website services. More info
+
+Free Tarot
+Readings
+Online Readings
+Live Readings
+More...
+Sign In
+Tarot Card Meanings Articles by our 'in-house' live readers
+(click here for old-style card menu navigation or begin at Step 1)
+Step 1: The Suit
+Choose Suit...
+Major Arcana
+Wands
+Cups
+Swords
+Pentacles
+
+Show It ALL
+
+Site Help 
+Contact Us 
+Follow Us
+© Information | Privacy | Disclaimer | Affiliates 
+
+======================================================================
+[meaning-fool] https://www.free-tarot-reading.net/card-meanings?slug=the-fool
+TITLE: Tarot Card Meanings @ Lotus Tarot
+HEADINGS:
+  H1: Tarot Card Meanings Articles by our 'in-house' live readers
+  H2: LEARN TAROT & CARD MEANINGS
+  H2: LOTUS TAROT DECK
+  H2: NUMEROLOGY
+NAV:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  More... | #show-everything
+  Sign In | /user/login
+  (click here for old-style card menu navigation or begin at Step 1) | #menu
+  Major Arcana | /card-meanings/major_arcana
+  Wands | /card-meanings/wands
+  Cups | /card-meanings/cups
+  Swords | /card-meanings/swords
+  Pentacles | /card-meanings/pentacles
+   | #show-everything
+   | #show-everything
+   | /help
+   | /contact
+   | https://www.facebook.com/OfficialLotusTarot
+CTAS:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  Sign In | /user/login
+  Get Started Now! | /learn-tarot
+  See all the cardsOrder the deck | /lotus-tarot-deck
+  Get My Life Path Number | BTN
+BODY(excerpt):
+Got It
+
+Lotus Tarot uses cookies in order to provide our website services. More info
+
+Free Tarot
+Readings
+Online Readings
+Live Readings
+More...
+Sign In
+Tarot Card Meanings Articles by our 'in-house' live readers
+(click here for old-style card menu navigation or begin at Step 1)
+Step 1: The Suit
+Choose Suit...
+Major Arcana
+Wands
+Cups
+Swords
+Pentacles
+
+Show It ALL
+
+Site Help 
+Contact Us 
+Follow Us
+© Information | Privacy | Disclaimer | Affiliates 
+
+======================================================================
+[learn-tarot] https://www.free-tarot-reading.net/learn-tarot
+TITLE: Pleasure of Tarot: Introduction
+HEADINGS:
+  H1: The Pleasure of Tarot - A fun and easy 12 week course to learn the tarot cards
+  H2: What you will need:
+  H2: How does the course work
+  H2: LEARN TAROT & CARD MEANINGS
+  H2: LOTUS TAROT DECK
+  H2: NUMEROLOGY
+NAV:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  More... | #show-everything
+  Sign In | /user/login
+  Next | /learn-tarot/lesson?view=lesson-01-1
+  Lesson: | /learn-tarot
+  01 | /learn-tarot/lesson?view=lesson-01-1
+  02 | /learn-tarot/lesson?view=lesson-02-1
+  03 | /learn-tarot/lesson?view=lesson-03-1
+  04 | /learn-tarot/lesson?view=lesson-04-1
+  05 | /learn-tarot/lesson?view=lesson-05-1
+  06 | /learn-tarot/lesson?view=lesson-06-1
+  07 | /learn-tarot/lesson?view=lesson-07-1
+  08 | /learn-tarot/lesson?view=lesson-08-1
+  09 | /learn-tarot/lesson?view=lesson-09-1
+  10 | /learn-tarot/lesson?view=lesson-10-1
+  11 | /learn-tarot/lesson?view=lesson-11-1
+  12 | /learn-tarot/lesson?view=lesson-12-1
+   | #show-everything
+   | #show-everything
+   | /help
+   | /contact
+   | https://www.facebook.com/OfficialLotusTarot
+CTAS:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  Sign In | /user/login
+  Get Started Now! | /learn-tarot
+  See all the cardsOrder the deck | /lotus-tarot-deck
+  Get My Life Path Number | BTN
+
+======================================================================
+[numerology] https://www.free-tarot-reading.net/numerology
+TITLE: Numerology Reports @ Lotus Tarot
+HEADINGS:
+  H1: Numerology Reports by Master Numerologist Hans Decoz
+  H2: Help with PDF files
+  H2: LEARN TAROT & CARD MEANINGS
+  H2: LOTUS TAROT DECK
+  H2: NUMEROLOGY
+NAV:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  More... | #show-everything
+  Sign In | /user/login
+   | #show-everything
+   | #show-everything
+   | /help
+   | /contact
+   | https://www.facebook.com/OfficialLotusTarot
+CTAS:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  Sign In | /user/login
+  Click here if you have problem viewing or downloading them! | #
+  $42.95Buy It Now | /order?product=complete-personal-package
+  $9.95Buy It Now | /order?product=short-personality-profile
+  $14.95Buy It Now | /order?product=full-personality-profile
+  $14.95Buy It Now | /order?product=12-month-forecast
+  $14.95Buy It Now | /order?product=relationship-compatibility
+  $7.95Buy It Now | /order?product=lucky-numbers
+  $9.95Buy It Now | /order?product=the-diamond
+  $7.95Buy It Now | /order?product=name-advisor
+  Get Started Now! | /learn-tarot
+  See all the cardsOrder the deck | /lotus-tarot-deck
+  Get My Life Path Number | BTN
+
+======================================================================
+[membership] https://www.free-tarot-reading.net/membership
+TITLE: Memberships @ Lotus Tarot
+HEADINGS:
+  H1: Lotus Tarot Membership
+  H2: Membership and Purchase Information
+  H2: LEARN TAROT & CARD MEANINGS
+  H2: LOTUS TAROT DECK
+  H2: NUMEROLOGY
+NAV:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  More... | #show-everything
+  Sign In | /user/login
+   | #show-everything
+   | #show-everything
+   | /help
+   | /contact
+   | https://www.facebook.com/OfficialLotusTarot
+CTAS:
+  Free Tarot
+Readings | /
+  Online Readings | /readings
+  Live Readings | /live-readings
+  Sign In | /user/login
+  live readers | /live-readings
+  Get Started Now! | /learn-tarot
+  See all the cardsOrder the deck | /lotus-tarot-deck
+  Get My Life Path Number | BTN
+BODY(excerpt):
+Got It
+
+Lotus Tarot uses cookies in order to provide our website services. More info
+
+Free Tarot
+Readings
+Online Readings
+Live Readings
+More...
+Sign In
+Lotus Tarot Membership
+
+Thank you for considering the membership.
+
+Your readings are more of the real thing than I've seen on any other site. I had almost an exact reading to how I was feeling.
+
+Charla, Las Vegas, NV, USA
+
+Enjoy unlimited use of the complete range of online membership readings risk free for up to 30 days
+
+ Includes 200 LTT *
+
+$9.95 (USD)
+Buy Now
+
+Just a few pennies a day for access to our specialist readings whenever you need them - 24/7/365
+
+ Includes 800 LTT *
+
+$39.95 (USD)
+Buy Now
+
+A one-time payment and the entire range of members online readings are yours to access as often as you like, for life
+
+ Includes 1,600 LTT *
+
+$79.95 (USD)
+Buy Now
+
+
+* LTT (Lotus Tarot Tokens) are required to access the Ai readings ...more info »
+The Lotus Tarot Membership Guarantee
+
+As with all Lotus Tarot digital products our online reading memberships guarantee satisfaction, or your money back!
+
+"You have our personal guarantee, and our reputation as one of the most popular and established Tarot websites on the internet, that if for ANY reason whatsoever you feel you have not received value for money or have spent your money unwisely, you only need to ask for a refund and it will be given in full - without question or hesitation"
+
+Click here for more information about our memberships and the ordering process 
+
+Show It ALL
+
+Site Help 
+Contact Us 
+Follow Us
+© Information | Privacy | Disclaimer | Affiliates 
+

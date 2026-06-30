@@ -1,0 +1,75 @@
+[
+  {
+    "site": "7tarot",
+    "name": "home",
+    "url": "https://www.7tarot.com/",
+    "title": "Free Tarot Reading: Begin your Journey | 7Tarot",
+    "headings": [],
+    "nav": [
+      "7Tarot | https://www.7tarot.com/",
+      "DAILY TAROT | https://www.7tarot.com/daily-tarot/",
+      "YES / NO TAROT | https://www.7tarot.com/yes-no/",
+      "THE PATH OF THE PYRAMIDS | https://www.7tarot.com/egyptian-tarot/",
+      "CRYSTAL BALL READING | https://www.7tarot.com/psychic-reading/",
+      "THE ORACLE OF THE MOON | https://www.7tarot.com/moon-reading/",
+      "THE ANGEL ORACLE | https://www.7tarot.com/angel-oracle/",
+      "LOVE TAROT | https://www.7tarot.com/love-tarot/",
+      "CLASSIC 32 CARD READING | https://www.7tarot.com/cartomancy/",
+      "TAROT CARDS | https://www.7tarot.com/card/",
+      "ABOUT ME | https://www.7tarot.com/about-me/",
+      "LEGAL INFORMATION | https://www.7tarot.com/legal-information/",
+      "CONTACT | https://www.7tarot.com/contact/",
+      " | https://www.7tarot.fr",
+      " | https://www.7tarot.es",
+      " | https://www.7tarocchi.it"
+    ],
+    "ctas": [
+      "CRYSTAL BALL READING | https://www.7tarot.com/psychic-reading/",
+      "CLASSIC 32 CARD READING | https://www.7tarot.com/cartomancy/"
+    ],
+    "links": [
+      "https://www.7tarot.com/",
+      "https://www.7tarot.com/daily-tarot/",
+      "https://www.7tarot.com/yes-no/",
+      "https://www.7tarot.com/egyptian-tarot/",
+      "https://www.7tarot.com/psychic-reading/",
+      "https://www.7tarot.com/moon-reading/",
+      "https://www.7tarot.com/angel-oracle/",
+      "https://www.7tarot.com/love-tarot/",
+      "https://www.7tarot.com/cartomancy/",
+      "https://www.7tarot.com/card/",
+      "https://www.7tarot.com/about-me/",
+      "https://www.7tarot.com/legal-information/",
+      "https://www.7tarot.com/contact/",
+      "https://www.7tarot.fr/",
+      "https://www.7tarot.es/",
+      "https://www.7tarocchi.it/",
+      "https://www.7tarot.com/yes-no/",
+      "https://www.7tarot.com/psychic-reading/",
+      "https://www.7tarot.com/love-tarot/",
+      "https://www.7tarot.com/daily-tarot/",
+      "https://www.7tarot.com/moon-reading/",
+      "https://www.7tarot.com/cartomancy/",
+      "https://www.7tarot.com/angel-oracle/",
+      "https://www.7tarot.com/egyptian-tarot/",
+      "https://www.7tarot.com/card/major-arcana.htm",
+      "https://www.7tarot.com/card/minor-arcana.htm",
+      "https://www.7tarot.com/legal-information/",
+      "https://www.7tarot.com/contact/",
+      "https://www.facebook.com/7Tarotcom",
+      "https://www.instagram.com/7tarot_com/"
+    ]
+  },
+  {
+    "site": "7tarot",
+    "name": "en-home",
+    "url": "https://www.7tarot.com/en",
+    "title": "404 Not Found",
+    "headings": [
+      "H1: Not Found"
+    ],
+    "nav": [],
+    "ctas": [],
+    "links": []
+  }
+]

@@ -1,0 +1,492 @@
+======================================================================
+[home] https://www.llewellyn.com/
+TITLE: Since 1901 | Body, Mind & Spirit | Llewellyn Worldwide, Ltd.
+HEADINGS:
+  
+NAV:
+  Main Menu | #
+  PRODUCTS | #
+  Browse | /browse.php
+  Almanacs & Calendars | /browse_annuals.php
+  Astrology | /browse_astrology.php
+  Body & Soul | /browse_body_and_soul.php
+  Español | /browse_espanol.php
+  Gifts & Accessories | /browse_category.php?product_category_id=605
+  Magick | /browse_magick.php
+  Nature-Based & Pagan | /browse_nature_and_pagan.php
+  Supernatural & Parapsychology | /browse_paranormal.php
+  Tarot | /browse_tarot_and_divination.php
+  Young Adult | /browse_category.php?product_category_id=214
+  New Releases | /browse_new_releases.php
+  Coming Soon | /browse_coming_soon.php
+  Best Sellers | /browse_best_sellers.php
+  Special Offers | /browse_special_offers.php
+  New Worlds Catalog | /newworlds.php
+  Browse | /browse.php
+  By Category | /browse_by_category.php
+  By Series | /browse_by_series.php
+   | /newworlds.php
+  New Worlds Catalog | /newworlds.php
+  » read more | /newworlds.php
+   | /product.php?ean=9780738767123
+   | /product.php?ean=9780738767253
+   | /product.php?ean=9780738771595
+   | /product.php?ean=9780738775203
+   | /product.php?ean=9780738749242
+  About Our Annuals | /browse_annuals.php
+  Browse All | /browse_annuals_all.php
+  Annuals For 2026 | /browse_annuals_by_year.php?year=2026
+  Annuals For 2027 | /browse_annuals_by_year.php?year=2027
+  Almanacs | /browse_type.php?type=2&product_category_id=100
+  Calendars | /browse_type.php?type=3&product_category_id=100
+  Datebooks | /browse_type.php?type=62&product_category_id=100
+  Other Annuals | /browse_type.php?type=1&product_category_id=100
+   | /spell.php?spell_id=10068
+  Cooling Temper Spell | /spell.php?spell_id=10068
+  » read more | /spell.php?spell_id=10068
+  A full year of guidanceand stunning imagery! | /browse_new_releases.php
+   | /product.php?ean=9780738785691
+   | /product.php?ean=9780738778037
+   | /product.php?ean=9780738778068
+  SHOP NOW | /browse_new_releases.php
+  About Astrology | /browse_astrology.php
+  Browse All | /browse_category.php?product_category_id=101
+  Almanacs & Calendars | /browse_category.php?product_category_id=102
+  Getting Started | /browse_category.php?product_category_id=103
+  Houses & Aspects | /browse_category.php?product_category_id=104
+  Interpretive Techniques | /browse_category.php?product_category_id=105
+  Karmic Astrology | /browse_category.php?product_category_id=106
+  Planets & Signs | /browse_category.php?product_category_id=107
+  Predictive Astrology | /browse_category.php?product_category_id=108
+  Professional & Counseling | /browse_category.php?product_category_id=109
+  Relationships | /browse_category.php?product_category_id=110
+  Reports & Charts | /browse_category.php?product_category_id=111
+  Spirituality | /browse_category.php?product_category_id=112
+   | /blog/2026/6/llewellyncon-2026-day-six-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  LlewellynCon 2026 Day Six: Did You Miss Any of Today's Live Presentations? Watch Them On-Demand Now | /blog/2026/6/llewellyncon-2026-day-six-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+CTAS:
+  Orders: In Process | /account_orders.php
+  Orders: Shipped | /account_orders_complete.php
+  Backorders | /account_backorders.php
+  SIGN IN | /login.php
+  FREE SHIPPING ON US ORDERS OVER $35* | https://www.llewellyn.com/about/faq.php#shipping
+  PRODUCTS | #
+  » read more | /newworlds.php
+  » read more | /spell.php?spell_id=10068
+  SHOP NOW | /browse_new_releases.php
+  Getting Started | /browse_category.php?product_category_id=103
+  Planets & Signs | /browse_category.php?product_category_id=107
+  Professional & Counseling | /browse_category.php?product_category_id=109
+  » Read More | /blog/2026/6/llewellyncon-2026-day-six-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_new_releases.php
+  Psychic Development | /browse_category.php?product_category_id=133
+  » Read More | /blog/2026/6/llewellyncon-2026-day-nine-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_espanol.php
+  SHOP NOW | /browse_category.php?product_category_id=605
+  » Read More | /blog/2026/6/llewellyncon-2026-day-ten-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_magick.php
+  FREE Spell-A-Day | /spell.php
+  » Read More | /blog/2026/6/llewellyncon-2026-day-ten-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_nature_and_pagan.php
+  Astral Projection | /browse_category.php?product_category_id=182
+  Psychic Development | /browse_category.php?product_category_id=420
+  » Read More | /blog/2026/6/llewellyncon-2026-day-nine-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_paranormal.php
+  FREE Tarot Reading | /tarot_reading.php
+  Getting Started | /browse_category.php?product_category_id=191
+  Professional | /browse_category.php?product_category_id=194
+  Palmistry | /browse_category.php?product_category_id=211
+  SHOP NOW | /browse_tarot_and_divination.php
+  SHOP NOW | /browse_category.php?product_category_id=214
+  READ MORE | /author_interview.php?author_id=6991&interview_id=188
+  Book Signing with Llewellyn Author Jack Chanek | /author_events_detail.php?event_id=8002
+  READ MORE | /journal/article/3339
+  Browse Videos by Product | /videos/videos_by_product.php
+  WATCH NOW | /videos/video/375
+  READ MORE | /blog/2026/6/llewellyncon-2026-day-ten-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  Borderland Consciousness | /encyclopedia/term/Borderland+Consciousness
+  READ MORE | /encyclopedia/term/Faggot
+  READ MORE | /encyclopedia/term/Prithivi
+  SUBSCRIBE | #
+  Subscribe | /newsletters.php
+  Our Co-op Program | /booksellers/coop_program.php
+  Our EDI Program | /booksellers/edi.php
+  LLEWELLYN'S 2027 MOON SIGN BOOK | product.php?ean=9780738778136
+  THE ART OF TAROT SPREADS | product.php?ean=9780738780405
+  LLEWELLYN'S 2027 MOON SIGN BOOK | product.php?ean=9780738778136
+  THE ART OF TAROT SPREADS | product.php?ean=9780738780405
+
+======================================================================
+[tarot-reading] https://www.llewellyn.com/tarot_reading.php
+TITLE: Free Tarot Reading | Llewellyn Worldwide, Ltd.
+HEADINGS:
+  H2: Free Tarot Reading
+NAV:
+  Main Menu | #
+  PRODUCTS | #
+  Browse | /browse.php
+  Almanacs & Calendars | /browse_annuals.php
+  Astrology | /browse_astrology.php
+  Body & Soul | /browse_body_and_soul.php
+  Español | /browse_espanol.php
+  Gifts & Accessories | /browse_category.php?product_category_id=605
+  Magick | /browse_magick.php
+  Nature-Based & Pagan | /browse_nature_and_pagan.php
+  Supernatural & Parapsychology | /browse_paranormal.php
+  Tarot | /browse_tarot_and_divination.php
+  Young Adult | /browse_category.php?product_category_id=214
+  New Releases | /browse_new_releases.php
+  Coming Soon | /browse_coming_soon.php
+  Best Sellers | /browse_best_sellers.php
+  Special Offers | /browse_special_offers.php
+  New Worlds Catalog | /newworlds.php
+  Browse | /browse.php
+  By Category | /browse_by_category.php
+  By Series | /browse_by_series.php
+   | /newworlds.php
+  New Worlds Catalog | /newworlds.php
+  » read more | /newworlds.php
+   | /product.php?ean=9780738767123
+   | /product.php?ean=9780738767253
+   | /product.php?ean=9780738771595
+   | /product.php?ean=9780738775203
+   | /product.php?ean=9780738749242
+  About Our Annuals | /browse_annuals.php
+  Browse All | /browse_annuals_all.php
+  Annuals For 2026 | /browse_annuals_by_year.php?year=2026
+  Annuals For 2027 | /browse_annuals_by_year.php?year=2027
+  Almanacs | /browse_type.php?type=2&product_category_id=100
+  Calendars | /browse_type.php?type=3&product_category_id=100
+  Datebooks | /browse_type.php?type=62&product_category_id=100
+  Other Annuals | /browse_type.php?type=1&product_category_id=100
+   | /spell.php?spell_id=10068
+  Cooling Temper Spell | /spell.php?spell_id=10068
+  » read more | /spell.php?spell_id=10068
+  A full year of guidanceand stunning imagery! | /browse_new_releases.php
+   | /product.php?ean=9780738785691
+   | /product.php?ean=9780738778037
+   | /product.php?ean=9780738778068
+  SHOP NOW | /browse_new_releases.php
+  About Astrology | /browse_astrology.php
+  Browse All | /browse_category.php?product_category_id=101
+  Almanacs & Calendars | /browse_category.php?product_category_id=102
+  Getting Started | /browse_category.php?product_category_id=103
+  Houses & Aspects | /browse_category.php?product_category_id=104
+  Interpretive Techniques | /browse_category.php?product_category_id=105
+  Karmic Astrology | /browse_category.php?product_category_id=106
+  Planets & Signs | /browse_category.php?product_category_id=107
+  Predictive Astrology | /browse_category.php?product_category_id=108
+  Professional & Counseling | /browse_category.php?product_category_id=109
+  Relationships | /browse_category.php?product_category_id=110
+  Reports & Charts | /browse_category.php?product_category_id=111
+  Spirituality | /browse_category.php?product_category_id=112
+   | /blog/2026/6/llewellyncon-2026-day-six-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  LlewellynCon 2026 Day Six: Did You Miss Any of Today's Live Presentations? Watch Them On-Demand Now | /blog/2026/6/llewellyncon-2026-day-six-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+CTAS:
+  Orders: In Process | /account_orders.php
+  Orders: Shipped | /account_orders_complete.php
+  Backorders | /account_backorders.php
+  SIGN IN | /login.php
+  FREE SHIPPING ON US ORDERS OVER $35* | https://www.llewellyn.com/about/faq.php#shipping
+  PRODUCTS | #
+  » read more | /newworlds.php
+  » read more | /spell.php?spell_id=10068
+  SHOP NOW | /browse_new_releases.php
+  Getting Started | /browse_category.php?product_category_id=103
+  Planets & Signs | /browse_category.php?product_category_id=107
+  Professional & Counseling | /browse_category.php?product_category_id=109
+  » Read More | /blog/2026/6/llewellyncon-2026-day-six-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_new_releases.php
+  Psychic Development | /browse_category.php?product_category_id=133
+  » Read More | /blog/2026/6/llewellyncon-2026-day-nine-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_espanol.php
+  SHOP NOW | /browse_category.php?product_category_id=605
+  » Read More | /blog/2026/6/llewellyncon-2026-day-ten-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_magick.php
+  FREE Spell-A-Day | /spell.php
+  » Read More | /blog/2026/6/llewellyncon-2026-day-ten-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_nature_and_pagan.php
+  Astral Projection | /browse_category.php?product_category_id=182
+  Psychic Development | /browse_category.php?product_category_id=420
+  » Read More | /blog/2026/6/llewellyncon-2026-day-nine-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_paranormal.php
+  FREE Tarot Reading | /tarot_reading.php
+  Getting Started | /browse_category.php?product_category_id=191
+  Professional | /browse_category.php?product_category_id=194
+  Palmistry | /browse_category.php?product_category_id=211
+  SHOP NOW | /browse_tarot_and_divination.php
+  SHOP NOW | /browse_category.php?product_category_id=214
+  READ MORE | /author_interview.php?author_id=6991&interview_id=188
+  Book Signing with Llewellyn Author Jack Chanek | /author_events_detail.php?event_id=8002
+  READ MORE | /journal/article/3339
+  Browse Videos by Product | /videos/videos_by_product.php
+  WATCH NOW | /videos/video/375
+  READ MORE | /blog/2026/6/llewellyncon-2026-day-ten-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  Borderland Consciousness | /encyclopedia/term/Borderland+Consciousness
+  READ MORE | /encyclopedia/term/Faggot
+  READ MORE | /encyclopedia/term/Prithivi
+  SUBSCRIBE | #
+  Subscribe | /newsletters.php
+  Our Co-op Program | /booksellers/coop_program.php
+  Our EDI Program | /booksellers/edi.php
+  FREE TAROT READING | /tarot_reading.php
+  BUY NOW | /cart.php?action=add&ean=9780738702995
+  Show Tarot Reading | BTN
+  READ MORE | /blog/2026/6/llewellyncon-2026-day-ten-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+
+======================================================================
+[horoscope] https://www.llewellyn.com/horoscope.asp
+TITLE: Llewellyn Worldwide - Page Not Found
+HEADINGS:
+  H2: OOPS! Page Not Found
+NAV:
+  
+CTAS:
+  
+
+======================================================================
+[encyclopedia] https://www.llewellyn.com/encyclopedia/
+TITLE: The Llewellyn Encyclopedia | Llewellyn Worldwide, Ltd.
+HEADINGS:
+  H2: The Llewellyn Encyclopedia
+NAV:
+  Main Menu | #
+  PRODUCTS | #
+  Browse | /browse.php
+  Almanacs & Calendars | /browse_annuals.php
+  Astrology | /browse_astrology.php
+  Body & Soul | /browse_body_and_soul.php
+  Español | /browse_espanol.php
+  Gifts & Accessories | /browse_category.php?product_category_id=605
+  Magick | /browse_magick.php
+  Nature-Based & Pagan | /browse_nature_and_pagan.php
+  Supernatural & Parapsychology | /browse_paranormal.php
+  Tarot | /browse_tarot_and_divination.php
+  Young Adult | /browse_category.php?product_category_id=214
+  New Releases | /browse_new_releases.php
+  Coming Soon | /browse_coming_soon.php
+  Best Sellers | /browse_best_sellers.php
+  Special Offers | /browse_special_offers.php
+  New Worlds Catalog | /newworlds.php
+  Browse | /browse.php
+  By Category | /browse_by_category.php
+  By Series | /browse_by_series.php
+   | /newworlds.php
+  New Worlds Catalog | /newworlds.php
+  » read more | /newworlds.php
+   | /product.php?ean=9780738767123
+   | /product.php?ean=9780738767253
+   | /product.php?ean=9780738771595
+   | /product.php?ean=9780738775203
+   | /product.php?ean=9780738749242
+  About Our Annuals | /browse_annuals.php
+  Browse All | /browse_annuals_all.php
+  Annuals For 2026 | /browse_annuals_by_year.php?year=2026
+  Annuals For 2027 | /browse_annuals_by_year.php?year=2027
+  Almanacs | /browse_type.php?type=2&product_category_id=100
+  Calendars | /browse_type.php?type=3&product_category_id=100
+  Datebooks | /browse_type.php?type=62&product_category_id=100
+  Other Annuals | /browse_type.php?type=1&product_category_id=100
+   | /spell.php?spell_id=10068
+  Cooling Temper Spell | /spell.php?spell_id=10068
+  » read more | /spell.php?spell_id=10068
+  A full year of guidanceand stunning imagery! | /browse_new_releases.php
+   | /product.php?ean=9780738785691
+   | /product.php?ean=9780738778037
+   | /product.php?ean=9780738778068
+  SHOP NOW | /browse_new_releases.php
+  About Astrology | /browse_astrology.php
+  Browse All | /browse_category.php?product_category_id=101
+  Almanacs & Calendars | /browse_category.php?product_category_id=102
+  Getting Started | /browse_category.php?product_category_id=103
+  Houses & Aspects | /browse_category.php?product_category_id=104
+  Interpretive Techniques | /browse_category.php?product_category_id=105
+  Karmic Astrology | /browse_category.php?product_category_id=106
+  Planets & Signs | /browse_category.php?product_category_id=107
+  Predictive Astrology | /browse_category.php?product_category_id=108
+  Professional & Counseling | /browse_category.php?product_category_id=109
+  Relationships | /browse_category.php?product_category_id=110
+  Reports & Charts | /browse_category.php?product_category_id=111
+  Spirituality | /browse_category.php?product_category_id=112
+   | /blog/2026/6/llewellyncon-2026-day-six-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  LlewellynCon 2026 Day Six: Did You Miss Any of Today's Live Presentations? Watch Them On-Demand Now | /blog/2026/6/llewellyncon-2026-day-six-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+CTAS:
+  Orders: In Process | /account_orders.php
+  Orders: Shipped | /account_orders_complete.php
+  Backorders | /account_backorders.php
+  SIGN IN | /login.php
+  FREE SHIPPING ON US ORDERS OVER $35* | https://www.llewellyn.com/about/faq.php#shipping
+  PRODUCTS | #
+  » read more | /newworlds.php
+  » read more | /spell.php?spell_id=10068
+  SHOP NOW | /browse_new_releases.php
+  Getting Started | /browse_category.php?product_category_id=103
+  Planets & Signs | /browse_category.php?product_category_id=107
+  Professional & Counseling | /browse_category.php?product_category_id=109
+  » Read More | /blog/2026/6/llewellyncon-2026-day-six-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_new_releases.php
+  Psychic Development | /browse_category.php?product_category_id=133
+  » Read More | /blog/2026/6/llewellyncon-2026-day-nine-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_espanol.php
+  SHOP NOW | /browse_category.php?product_category_id=605
+  » Read More | /blog/2026/6/llewellyncon-2026-day-ten-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_magick.php
+  FREE Spell-A-Day | /spell.php
+  » Read More | /blog/2026/6/llewellyncon-2026-day-ten-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_nature_and_pagan.php
+  Astral Projection | /browse_category.php?product_category_id=182
+  Psychic Development | /browse_category.php?product_category_id=420
+  » Read More | /blog/2026/6/llewellyncon-2026-day-nine-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_paranormal.php
+  FREE Tarot Reading | /tarot_reading.php
+  Getting Started | /browse_category.php?product_category_id=191
+  Professional | /browse_category.php?product_category_id=194
+  Palmistry | /browse_category.php?product_category_id=211
+  SHOP NOW | /browse_tarot_and_divination.php
+  SHOP NOW | /browse_category.php?product_category_id=214
+  READ MORE | /author_interview.php?author_id=6991&interview_id=188
+  Book Signing with Llewellyn Author Jack Chanek | /author_events_detail.php?event_id=8002
+  READ MORE | /journal/article/3339
+  Browse Videos by Product | /videos/videos_by_product.php
+  WATCH NOW | /videos/video/375
+  READ MORE | /blog/2026/6/llewellyncon-2026-day-ten-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  Borderland Consciousness | /encyclopedia/term/Borderland+Consciousness
+  READ MORE | /encyclopedia/term/Faggot
+  READ MORE | /encyclopedia/term/Prithivi
+  SUBSCRIBE | #
+  Subscribe | /newsletters.php
+  Our Co-op Program | /booksellers/coop_program.php
+  Our EDI Program | /booksellers/edi.php
+  Products | /browse.php
+  Subscribe | /newsletters.php
+  Rising Sign | /encyclopedia/term/Rising+Sign
+  End of the World as we Know it | /encyclopedia/term/End+of+the+World+as+we+Know+it
+
+======================================================================
+[journal] https://www.llewellyn.com/journal/
+TITLE: The Llewellyn Journal | Llewellyn Worldwide, Ltd.
+HEADINGS:
+  H2: The Llewellyn Journal
+NAV:
+  Main Menu | #
+  PRODUCTS | #
+  Browse | /browse.php
+  Almanacs & Calendars | /browse_annuals.php
+  Astrology | /browse_astrology.php
+  Body & Soul | /browse_body_and_soul.php
+  Español | /browse_espanol.php
+  Gifts & Accessories | /browse_category.php?product_category_id=605
+  Magick | /browse_magick.php
+  Nature-Based & Pagan | /browse_nature_and_pagan.php
+  Supernatural & Parapsychology | /browse_paranormal.php
+  Tarot | /browse_tarot_and_divination.php
+  Young Adult | /browse_category.php?product_category_id=214
+  New Releases | /browse_new_releases.php
+  Coming Soon | /browse_coming_soon.php
+  Best Sellers | /browse_best_sellers.php
+  Special Offers | /browse_special_offers.php
+  New Worlds Catalog | /newworlds.php
+  Browse | /browse.php
+  By Category | /browse_by_category.php
+  By Series | /browse_by_series.php
+   | /newworlds.php
+  New Worlds Catalog | /newworlds.php
+  » read more | /newworlds.php
+   | /product.php?ean=9780738767123
+   | /product.php?ean=9780738767253
+   | /product.php?ean=9780738771595
+   | /product.php?ean=9780738775203
+   | /product.php?ean=9780738749242
+  About Our Annuals | /browse_annuals.php
+  Browse All | /browse_annuals_all.php
+  Annuals For 2026 | /browse_annuals_by_year.php?year=2026
+  Annuals For 2027 | /browse_annuals_by_year.php?year=2027
+  Almanacs | /browse_type.php?type=2&product_category_id=100
+  Calendars | /browse_type.php?type=3&product_category_id=100
+  Datebooks | /browse_type.php?type=62&product_category_id=100
+  Other Annuals | /browse_type.php?type=1&product_category_id=100
+   | /spell.php?spell_id=10068
+  Cooling Temper Spell | /spell.php?spell_id=10068
+  » read more | /spell.php?spell_id=10068
+  A full year of guidanceand stunning imagery! | /browse_new_releases.php
+   | /product.php?ean=9780738785691
+   | /product.php?ean=9780738778037
+   | /product.php?ean=9780738778068
+  SHOP NOW | /browse_new_releases.php
+  About Astrology | /browse_astrology.php
+  Browse All | /browse_category.php?product_category_id=101
+  Almanacs & Calendars | /browse_category.php?product_category_id=102
+  Getting Started | /browse_category.php?product_category_id=103
+  Houses & Aspects | /browse_category.php?product_category_id=104
+  Interpretive Techniques | /browse_category.php?product_category_id=105
+  Karmic Astrology | /browse_category.php?product_category_id=106
+  Planets & Signs | /browse_category.php?product_category_id=107
+  Predictive Astrology | /browse_category.php?product_category_id=108
+  Professional & Counseling | /browse_category.php?product_category_id=109
+  Relationships | /browse_category.php?product_category_id=110
+  Reports & Charts | /browse_category.php?product_category_id=111
+  Spirituality | /browse_category.php?product_category_id=112
+   | /blog/2026/6/llewellyncon-2026-day-six-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  LlewellynCon 2026 Day Six: Did You Miss Any of Today's Live Presentations? Watch Them On-Demand Now | /blog/2026/6/llewellyncon-2026-day-six-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+CTAS:
+  Orders: In Process | /account_orders.php
+  Orders: Shipped | /account_orders_complete.php
+  Backorders | /account_backorders.php
+  SIGN IN | /login.php
+  FREE SHIPPING ON US ORDERS OVER $35* | https://www.llewellyn.com/about/faq.php#shipping
+  PRODUCTS | #
+  » read more | /newworlds.php
+  » read more | /spell.php?spell_id=10068
+  SHOP NOW | /browse_new_releases.php
+  Getting Started | /browse_category.php?product_category_id=103
+  Planets & Signs | /browse_category.php?product_category_id=107
+  Professional & Counseling | /browse_category.php?product_category_id=109
+  » Read More | /blog/2026/6/llewellyncon-2026-day-six-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_new_releases.php
+  Psychic Development | /browse_category.php?product_category_id=133
+  » Read More | /blog/2026/6/llewellyncon-2026-day-nine-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_espanol.php
+  SHOP NOW | /browse_category.php?product_category_id=605
+  » Read More | /blog/2026/6/llewellyncon-2026-day-ten-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_magick.php
+  FREE Spell-A-Day | /spell.php
+  » Read More | /blog/2026/6/llewellyncon-2026-day-ten-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_nature_and_pagan.php
+  Astral Projection | /browse_category.php?product_category_id=182
+  Psychic Development | /browse_category.php?product_category_id=420
+  » Read More | /blog/2026/6/llewellyncon-2026-day-nine-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  SHOP NOW | /browse_paranormal.php
+  FREE Tarot Reading | /tarot_reading.php
+  Getting Started | /browse_category.php?product_category_id=191
+  Professional | /browse_category.php?product_category_id=194
+  Palmistry | /browse_category.php?product_category_id=211
+  SHOP NOW | /browse_tarot_and_divination.php
+  SHOP NOW | /browse_category.php?product_category_id=214
+  READ MORE | /author_interview.php?author_id=6991&interview_id=188
+  Book Signing with Llewellyn Author Jack Chanek | /author_events_detail.php?event_id=8002
+  READ MORE | /journal/article/3339
+  Browse Videos by Product | /videos/videos_by_product.php
+  WATCH NOW | /videos/video/375
+  READ MORE | /blog/2026/6/llewellyncon-2026-day-ten-did-you-miss-any-of-todays-live-presentations-watch-them-on-demand-now/
+  Borderland Consciousness | /encyclopedia/term/Borderland+Consciousness
+  READ MORE | /encyclopedia/term/Faggot
+  READ MORE | /encyclopedia/term/Prithivi
+  SUBSCRIBE | #
+  Subscribe | /newsletters.php
+  Our Co-op Program | /booksellers/coop_program.php
+  Our EDI Program | /booksellers/edi.php
+  READ MORE | /journal/article/3339
+  HOW TO READ PLANETARY ASPECTS, STEP-BY-STEP | /journal/article/3327
+  Astral Projection | article_topic.php?article_topic=Astral+Projection
+  Palmistry | article_topic.php?article_topic=Palmistry
+
+======================================================================
+[shop-tarot] https://www.llewellyn.com/shop/search.php?search=tarot
+TITLE: Llewellyn Worldwide - Page Not Found
+HEADINGS:
+  H2: OOPS! Page Not Found
+NAV:
+  
+CTAS:
+  
+

@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Tarot Major Arcana 22 牌单源数据层（文章生产 + 未来 Tarot 工具复用）",
-    "framework": "模板-Tarot文章框架.md v2（45KB，12模块+6差异化+合规+URL规则+数据层设计）",
+    "framework": "模板-Tarot-牌义页框架.md v2（45KB，12模块+6差异化+合规+URL规则+数据层设计）",
     "crystal_sources": "综合四源（soulfulnwild / astrosofa / labyrinthos / thecrystalcouncil）+ 矿物学 + 五行 + 首饰适配度，逐牌选最优建立 goearthward Crystal Tarot 体系",
     "cta_validation": "04-内容生产/13.tarot/_qc/_cta-by-slug.json（meaning 16 颗含 Read CTA，其余 OMIT；Shop 按 CATEGORY→SEARCH→HEALING_JEWELRY 三级降级）",
     "compliance": "archetype for self-reflection 框架；逆位用 shadow aspect / invitation to reflect，禁 bad omen / curse / evil；Gentle Note 全站统一",
@@ -25,7 +25,7 @@
       "reversed_meaning": "Reversed, The Fool often points to the shadow side of openness — recklessness that skips discernment, or the opposite, hesitation that talks itself out of every beginning. It is not a bad omen; it is an invitation to notice whether a leap before you is wise or impulsive, and to bring a little more care to the edge.",
       "psychological_lens": "openness to experience (one of the Big Five traits — the curiosity that seeks novelty and tolerates uncertainty)",
       "eastern_anchors": {
-        "tibetan": "In Tibetan Buddhist practice, the energy of The Fool also resonates with '初发心' (the beginner's heart, the first arising of aspiration on the path) — the willingness to begin before knowing the outcome.",
+        "tibetan": "In Tibetan Buddhist practice, the energy of The Fool also resonates with bodhicitta — the beginner's heart, the first arising of aspiration on the path — the willingness to begin before knowing the outcome.",
         "crystal_culture": "Clear quartz has a long history in East Asian tradition as a stone of clarity, called '菩萨石' (bodhisattva stone) in some old Chinese texts and used for Buddhist prayer beads."
       },
       "recommended_practice": "name one new beginning you are being invited to take, and one practical support you would need before the leap",
@@ -157,7 +157,7 @@
       "reversed_meaning": "Reversed, The Emperor often points to the shadow of structure — rigidity that cannot bend, domination that confuses control with leadership, or its collapse, a structure that has fallen apart. It is an invitation to examine whether your authority is in service of something larger or has hardened into control.",
       "psychological_lens": "healthy structure vs control (the difference between boundaries that protect and rules that dominate)",
       "eastern_anchors": {
-        "tibetan": "The Emperor's stable-throne energy resonates with the Eastern principle of '正' (uprightness) — the well-ordered foundation on which inner and outer life can stand without collapsing into either chaos or rigidity.",
+        "tibetan": "The Emperor's stable-throne energy resonates with the Eastern principle of uprightness — the well-ordered foundation on which inner and outer life can stand without collapsing into either chaos or rigidity.",
         "crystal_culture": "Red Jasper, used across warrior traditions as a stone of endurance, embodies The Emperor's grounded strength — the steady foundation, not the spike of force."
       },
       "recommended_practice": "identify one area of life that lacks structure, and lay a single foundational rule for it this week",
@@ -256,7 +256,7 @@
       "reversed_meaning": "Reversed, The Chariot often points to force without direction — aggression that scatters rather than advances, two impulses pulling you apart, or momentum stalled. It is an invitation to ask what you are actually driving toward before pressing harder on the gas.",
       "psychological_lens": "conscientiousness and drive (the capacity to organize competing impulses toward a goal)",
       "eastern_anchors": {
-        "tibetan": "The Chariot's theme of harnessing opposing forces resonates with the Eastern principle of '中道' (the middle way) — strength that comes from integration, not from suppressing one side.",
+        "tibetan": "The Chariot's theme of harnessing opposing forces resonates with the Eastern principle of the middle way — strength that comes from integration, not from suppressing one side.",
         "crystal_culture": "Hematite, used in many traditions as a grounding stone, embodies The Chariot's rooted, focused will — the kind of steadiness that holds opposing forces in line."
       },
       "recommended_practice": "name the two competing pulls on your time, and the single goal that could harness both",
@@ -322,7 +322,7 @@
       "reversed_meaning": "Reversed, The Hermit often points to the shadow of solitude — isolation that has become loneliness, withdrawal that cuts you off from the sharing your wisdom needs, or stuckness disguised as retreat. It is an invitation to ask whether your solitude is feeding you or hiding you.",
       "psychological_lens": "solitude vs isolation (the difference between chosen time alone that restores and enforced alone-time that depletes)",
       "eastern_anchors": {
-        "tibetan": "The Hermit resonates deeply with the Tibetan practice of '闭关' (retreat) — structured solitude undertaken for insight, not escape, with a defined end and a return to share what was learned.",
+        "tibetan": "The Hermit resonates deeply with the Tibetan practice of retreat — structured solitude undertaken for insight, not escape, with a defined end and a return to share what was learned.",
         "crystal_culture": "Labradorite, with its hidden flash revealed only at certain angles, embodies The Hermit's theme of inner light — the guidance that does not need to be displayed to be real."
       },
       "recommended_practice": "schedule 30 minutes of phone-free solitude this week, with one question to sit with — and notice if it restores or depletes you",
@@ -454,7 +454,7 @@
       "reversed_meaning": "Reversed, Death often points to resistance to that ending — clinging to a phase, relationship, or identity that has already completed, which leads to a kind of stagnation or slow decay. It is not a curse; it is an invitation to consider what you are refusing to let end, and what is being kept alive only by force.",
       "psychological_lens": "meaning-making after loss (the capacity to find coherent narrative in significant change or ending)",
       "eastern_anchors": {
-        "tibetan": "Death resonates with the Eastern contemplation of impermanence (无常) — not as morbidity, but as the clarity that frees you to live fully because nothing is held as permanent.",
+        "tibetan": "Death resonates with the Eastern contemplation of impermanence — not as morbidity, but as the clarity that frees you to live fully because nothing is held as permanent.",
         "crystal_culture": "Obsidian, used in Mesoamerican and Eastern traditions for truth-telling and release, embodies Death's unflinching honesty about what must end."
       },
       "recommended_practice": "name one thing in your life that has already ended but you have not yet let yourself acknowledge",
@@ -487,7 +487,7 @@
       "reversed_meaning": "Reversed, Temperance often points to imbalance — excess in one direction, impatience with the slow pace of true integration, or a swing between extremes. It is an invitation to ask where you have lost the middle, and what patient blending a situation is asking for.",
       "psychological_lens": "self-regulation (the capacity to hold opposing states or needs without collapsing into either extreme)",
       "eastern_anchors": {
-        "tibetan": "Temperance resonates directly with the Eastern principle of '中道' (the middle way) — not the mediocre average, but the dynamic balance that holds opposites in living tension.",
+        "tibetan": "Temperance resonates directly with the Eastern principle of the middle way — not the mediocre average, but the dynamic balance that holds opposites in living tension.",
         "crystal_culture": "Amethyst, historically associated with sobriety and balanced mind (the Greek root 'amethystos' means 'not intoxicated'), embodies Temperance's measured clarity."
       },
       "recommended_practice": "name two opposing needs pulling at you this week, and one small way to honor both rather than choose",
@@ -586,7 +586,7 @@
       "reversed_meaning": "Reversed, The Star often points to a temporary disconnection from hope — feeling adrift, faith worn thin by difficulty, the guidance obscured by discouragement. It is not a verdict of despair; it is an invitation to ask what has dimmed your sense of meaning, and to let even a small light back in.",
       "psychological_lens": "hope theory (the capacity to identify pathways toward what you want and the agency to begin moving — hope as a skill, not just a feeling)",
       "eastern_anchors": {
-        "tibetan": "The Star resonates with the Eastern ideal of '菩提心' (the awakened heart/mind) — the steady, luminous aspiration that re-arises even after difficulty, not as denial but as renewed direction.",
+        "tibetan": "The Star resonates with the Eastern ideal of bodhicitta, the awakened heart-mind — the steady, luminous aspiration that re-arises even after difficulty, not as denial but as renewed direction.",
         "crystal_culture": "Aquamarine, the stone of calm courage and clear water, embodies The Star's serene renewal — the still pool this card depicts."
       },
       "recommended_practice": "name one thing that has renewed even a little hope recently, however small, and one next step toward it",

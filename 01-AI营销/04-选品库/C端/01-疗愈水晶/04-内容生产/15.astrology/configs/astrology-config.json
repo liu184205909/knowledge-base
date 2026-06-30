@@ -1,0 +1,54 @@
+{
+  "_meta": {
+    "purpose": "Astrology × Crystals 6 篇交叉文章生产 config（P0 蓝海线）",
+    "framework": "模板-Astrology文章框架.md v2",
+    "data_source": "07-互动工具/_shared/astrology-knowledge.json（6 事件单源：astrology_meaning/what_to_expect/psych/eastern/crystals6角色/sign_specific/faq_seed）",
+    "cta_validation": "_qc/_cta-by-slug.json（合并 tarot 32 颗已验证 + kyanite/shungite 新验证，共 34 颗；CATEGORY/SEARCH/HEALING_JEWELRY 三级降级）",
+    "module_weights_source": "框架 §2 module_weights 表（6 事件 M2/M3/M7/M8 差异化重心）",
+    "url_rule": "/crystals-for-{event-slug}/（根级 post）；Hub /crystals-for-astrology-events/",
+    "compliance": "self-reflection framework; 逆行/食相/土星回归= invitation 非 doom; Gentle Note 全站统一; 去AI化硬门禁(qc关卡3 禁词=0)"
+  },
+  "module_weights": {
+    "mercury-retrograde": {
+      "M2_focus": "planetary apparent retrograde + Mercury rulership (communication/travel/tech/contracts/mental clarity) + re- prefix tradition (review/revise/reconnect/redo)",
+      "M3_scenes": "miscommunications / tech glitches & travel delays / resurfacing of past people & projects / call to finish unfinished work",
+      "M7_psych": "cognitive pacing & reflective review — pausing before reacting, double-checking details, integrating unfinished information",
+      "M8_eastern": "Vedic Budha governs buddhi (discriminative intellect), green color association; Tibetan astrology reads planetary reversals as review cycles not misfortune"
+    },
+    "saturn-return": {
+      "M2_focus": "~29.5-year cycle + ages 27-30 & 58-60 + Saturn as structural audit (responsibility/long-term foundation/maturation)",
+      "M3_scenes": "pressure to get serious on career & relationships / shedding outgrown roles / heavy responsibility mixed with clarifying purpose / long arc not instant change",
+      "M7_psych": "identity consolidation & long-term goal commitment (Erikson intimacy-vs-isolation / generativity); building a durable adult foundation",
+      "M8_eastern": "Vedic Shani (Saturn) = karma/time/justice, gem Blue Sapphire (Neelam) worn only after testing; Tibetan reads Saturn cycles as karmic ripening"
+    },
+    "full-moon": {
+      "M2_focus": "synodic ~29.5-day cycle + Sun-Moon opposition + climax & release point (what was seeded at New Moon comes to light)",
+      "M3_scenes": "heightened emotions & vivid dreams / illumination of what was hidden / natural closing point for cycles / peak energy for release & gratitude",
+      "M7_psych": "emotional processing & closure — ritualized release, naming completions, metabolizing peak emotional states",
+      "M8_eastern": "Tibetan sojong (full moon purification & vow renewal); Vedic Purnima auspicious high-energy day, Moon (Chandra) governs mind"
+    },
+    "new-moon": {
+      "M2_focus": "dark moon invisibility + seeding point + pairs with Full Moon as lunar rhythm (seed at new, release at full)",
+      "M3_scenes": "low energy & call to rest inward / fertile window to clarify what you want to grow / natural starting point for new habits / quiet intuition without Full Moon peak",
+      "M7_psych": "intention-setting & implementation intentions — naming specific when-where-how intentions + value of rest cycles before high-output",
+      "M8_eastern": "Vedic Amavasya (ancestor honoring & quiet reflection); Tibetan dark moon as reset point before cycle rebuilds"
+    },
+    "eclipse": {
+      "M2_focus": "lunar node alignment + seasonal pairs 2-4/year + accelerators of destiny (sudden turning points, course corrections)",
+      "M3_scenes": "sudden shifts in direction/circumstances / revelations reframing situations / sense of acceleration or fate-like timing / amplified emotional intensity",
+      "M7_psych": "tolerance for uncertainty & meaning-making after change — staying grounded during non-linear transitions",
+      "M8_eastern": "Vedic Rahu & Ketu (lunar nodes swallowing luminaries) as karmic windows for meditation not worldly action; Tibetan heightened stillness period"
+    },
+    "venus-retrograde": {
+      "M2_focus": "~18-month cycle + ~40 days + heart-review season (love/beauty/values/money/self-worth re-examined, next Oct 3 – Nov 13 2026 Scorpio→Libra)",
+      "M3_scenes": "return of past loves or relationship themes / questioning what & who you truly value / money & self-worth under review / call to revisit not initiate",
+      "M7_psych": "attachment review & self-worth consolidation — examining relational patterns with curiosity, grounding worth internally",
+      "M8_eastern": "Vedic Shukra (Venus) governs love/beauty/vitality, gem Diamond or White Sapphire; refined receptive energy"
+    }
+  },
+  "gentle_note": "Astrology and crystal meanings draw on spiritual traditions, symbolism, and personal mindfulness practices. They are offered as a framework for self-reflection and intention-setting, not as a prediction of fixed outcomes or a substitute for professional medical, financial, or psychological advice.",
+  "faq_shared_halves": {
+    "is_doom_first_half": "No astrological transit — including retrogrades, eclipses, and Saturn Returns — is inherently 'bad.' These cycles are traditionally read as invitations to slow down, review, and grow, not as predictions of misfortune.",
+    "can_predict_future_first_half": "Astrology is a symbolic language used for self-reflection, not a system that predicts fixed future events. The transits surface themes and questions; your choices and actions determine what happens."
+  }
+}

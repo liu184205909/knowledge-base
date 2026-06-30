@@ -202,9 +202,55 @@ python3 scripts/crawl_xhs_notes.py \
 
 **延伸参考（微信公众号采集）**：
 MediaCrawler 不覆盖公众号。如需公众号文章采集，GitHub 上可参考：
+- **`jooooock/wechat-article-exporter`**（推荐，详见下方专节）
 - `wonderfulsuccess/weixin_crawler`（稳定运行 4 年，全历史文章）
 - `wnma3mz/wechat_articles_spider`（支持阅读数/点赞/评论）
 - `striver-ing/wechat-spider`（免安装，双击即用）
+
+---
+
+### wechat-article-exporter（公众号全量采集 — 推荐）
+
+**GitHub**: https://github.com/wechat-article-exporter/wechat-article-exporter | **在线版**: https://down.mptext.top | Nuxt 3 + Cloudflare Workers
+
+**简介**: 抓取**任意**微信公众号的全量历史文章（非仅自有账号），含正文/图片/阅读量/点赞/收藏/评论数据。基于微信公众平台后台 `searchbiz` / `appmsgpublish` API，无需逆向加密，开箱即用。
+
+**核心能力**:
+- **任意账号全量**：通过公众平台搜索接口，无需登录目标账号即可拉取其历史所有文章
+- **元数据完整**：阅读量 / 点赞 / 收藏 / 评论数 / 发布时间全部抓取
+- **评论抓取**：需一次性配置 cookie（公众平台后台抓包），之后自动复用
+- **导出格式**：Markdown / HTML / JSON
+
+**两种用法**:
+
+| 方式 | 入口 | 适用场景 |
+|------|------|---------|
+| **在线版**（推荐先试） | https://down.mptext.top | 临时/少量账号（如 5-15 个对标号），开箱即用，无需部署 |
+| **本地部署** | Docker（端口 3000，需 Chromium）或 Node 22+ | 长期/大规模批量采集，避免在线版限流 |
+
+**本地部署命令**（参考，**当前未装**，因 GitHub 从 bash 不可达）:
+```bash
+git clone https://github.com/jooooock/wechat-article-exporter
+cd wechat-article-exporter
+# 方式1：Docker
+docker-compose up -d   # http://localhost:3000
+# 方式2：Node（需 22+）
+pnpm install && pnpm dev
+```
+
+**实战记录（2026-06-29）**:
+- 当前需求：抓 13 个玄学对标公众号（白桃星座/Alex大叔/同道大叔/艾菲爾老師/灏泽异谈等）做内容分析
+- 决策：**13 个账号用在线版 `down.mptext.top` 完全够用，不本地部署**
+- 本地部署 GitHub 网络阻塞（直连/proxy 10808/kkgithub mirror 全 timeout），折腾性价比低
+- 在线版用法：打开网站 → 输入公众号名 → 选目标账号 → 设抓取范围 → 导出 Markdown
+
+**与现有采集工具的关系**:
+- **MediaCrawler**：跨平台社媒（小红书/抖音/B站等），不覆盖公众号
+- **wechat-article-exporter**：公众号专精，能拉任意账号全量历史
+- **web-access skill**：登录态页面单篇/单列表抓取，无法批量
+- 三者互补：MediaCrawler 管社媒矩阵，本工具管公众号矩阵，web-access 管单点登录态
+
+**适用场景**: 玄学/占星/水晶对标公众号内容分析、爆款标题拆解、竞品选题挖掘、公众号矩阵监控
 
 ---
 

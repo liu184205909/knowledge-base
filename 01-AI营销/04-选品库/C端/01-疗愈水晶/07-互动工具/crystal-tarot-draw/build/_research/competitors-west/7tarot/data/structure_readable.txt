@@ -1,0 +1,36 @@
+======================================================================
+[home] https://www.7tarot.com/
+TITLE: Free Tarot Reading: Begin your Journey | 7Tarot
+HEADINGS:
+  
+NAV:
+  7Tarot | https://www.7tarot.com/
+  DAILY TAROT | https://www.7tarot.com/daily-tarot/
+  YES / NO TAROT | https://www.7tarot.com/yes-no/
+  THE PATH OF THE PYRAMIDS | https://www.7tarot.com/egyptian-tarot/
+  CRYSTAL BALL READING | https://www.7tarot.com/psychic-reading/
+  THE ORACLE OF THE MOON | https://www.7tarot.com/moon-reading/
+  THE ANGEL ORACLE | https://www.7tarot.com/angel-oracle/
+  LOVE TAROT | https://www.7tarot.com/love-tarot/
+  CLASSIC 32 CARD READING | https://www.7tarot.com/cartomancy/
+  TAROT CARDS | https://www.7tarot.com/card/
+  ABOUT ME | https://www.7tarot.com/about-me/
+  LEGAL INFORMATION | https://www.7tarot.com/legal-information/
+  CONTACT | https://www.7tarot.com/contact/
+   | https://www.7tarot.fr
+   | https://www.7tarot.es
+   | https://www.7tarocchi.it
+CTAS:
+  CRYSTAL BALL READING | https://www.7tarot.com/psychic-reading/
+  CLASSIC 32 CARD READING | https://www.7tarot.com/cartomancy/
+
+======================================================================
+[en-home] https://www.7tarot.com/en
+TITLE: 404 Not Found
+HEADINGS:
+  H1: Not Found
+NAV:
+  
+CTAS:
+  
+

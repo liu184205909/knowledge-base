@@ -1,0 +1,198 @@
+======================================================================
+[home] https://tarotgoddess.com/
+TITLE: Tarot Goddess: Free Online Tarot and Oracle Readings since 2006
+HEADINGS:
+  H1: free tarot readings since 2006
+  H2: GET YOUR CARD OF THE DAY
+  H2: BROWSE READINGS BY CATEGORY
+  H2: FEATURED TAROT AND ORACLE READINGS
+  H2: past-present-future
+  H2: yes-no oracle
+  H2: tarot + astrology
+  H2: more helpful readings
+  H2: INSPIRATION AND INSIGHT
+  H2: how to ask tarot cards a question
+  H2: top nine tarot decks for beginners
+  H2: can tarot predict the future?
+  H2: Do not sell or share my personal information.
+  H2: Your Use of Our Content
+NAV:
+  
+CTAS:
+  one card readings | https://tarotgoddess.com/oraclereadings.html
+  multi-card readings | https://tarotgoddess.com/multicard.html
+  beginner resources | #
+  Best Decks for Beginners | https://tarotgoddess.com/bestdecks.html
+  Our Beginner Tarot Guide | https://payhip.com/b/kreR6
+  View All Readings | https://tarotgoddess.com/readings.html
+  View all tarot and oracle readings. | https://tarotgoddess.com/tarot/
+  Get Reading. | https://tarotgoddess.com/tarot/ppf.html
+  Get Reading. | https://tarotgoddess.com/tarot/yesno.html
+  View Your Sign Now. | https://tarotgoddess.com/tarotscope/
+  Download now. | https://payhip.com/b/kreR6
+  Continue reading. | bestdecks.html
+  Read more about our tarot philosophy. | philosophy.html
+BODY(excerpt):
+card of the day
+one card readings
+multi-card readings
+tarotscopes
+beginner resources
+more
+free tarot readings since 2006
+
+Tarot Goddess offers free online tarot and oracle readings with the Rider Waite, Goddess Tarot, Runes, and other popular card decks and divination systems. We've been online since 2006—a lifetime in internet years! Consider us your go-to sanctuary for inspiration, empowerment, beauty, and most of all, tarot. View all tarot and oracle readings.
+
+
+GET YOUR CARD OF THE DAY
+
+
+Begin your Journey with our Card of the Day one card tarot reading. Use your Card of the Day to gain guidance for the day ahead, answer a question, or as a tool for personal insight.
+
+BROWSE READINGS BY CATEGORY
+
+Whether you need insight into a love relationship or to reflect on your future life path, we've got a free reading for you. Choose a category to begin exploring.
+
+FEATURED TAROT AND ORACLE READINGS
+past-present-future
+
+
+This incisive four card tarot reading offers helpful insight into a situation over time. Get Reading.
+
+ 
+
+yes-no oracle
+
+
+Our most popular one card tarot reading! For questions requiring an immediate answer. Get Reading.
+
+ 
+
+tarot + astrology
+
+
+Tarot Goddess's 2026 TarotScopes combine astrology with the wisdom of tarot to empower your year ahead. View Your Sign Now.
+
+more helpful readings
+
+
+Our free tarot and oracle readings include the One Card Oracle, Celtic Cross, Glow and Grow, Burning Question, Rune Oracle, True Love Tarot, and many others.
+
+INSPIRATION AND INSIGHT
+
+
+Our official beginner's guide is here! Learning the tarot doesn't have to feel overwhelming. Entering the World of the Cards offers a gentle introduction to the tarot. Download now.
+
+ 
+
+how to ask tarot cards a question
+
+New to the tarot? If you've ever wondered the right way to pose a question to the cards, here's down to earth advice from Tarot Goddess.
+
+ 
+
+top nine tarot decks for beginners
+ 
+
+Perfect for gift giving and your own enlightment, here's our favorite user-friendly tarot decks for those yearning to get to know the cards by hand. (Our #4 choice may surprise you!) Continue reading. 
+
+can tarot predict the future?
+
+When it comes to the tarot everyone wants to know "what's going to happen?" While a tarot or oracle readings can't guarantee the future, it can help you figure out your best way forward ... and if a prediction turns out to be on the mark, all the better. Bottom line: we consider a tarot reading a reflection of the moment, representing a possible outcome if things continue without change—the future is never written in stone. Read more about our tarot philosophy.
+
+
+ 
+
+Enjoying Tarot Goddess? You're welcome to leave a small thank you on Ko-fi for us.
+
+© 2026 TarotGoddess.com, a division of Muse Publications LLC. All rights reserved. Do not use or reproduce content without permission. Privacy policy.
+
+Individual tarot decks are copyright under their respective creators and may not be reproduced without written permission. All site content is written, programmed, and designed by us, not AI generated. We are a participant in the Amazon Services LLC Associates Program, an affiliate program designed to provide a means for us to support this site by linking to Amazon.com and affiliated sites. All tarot and oracle readings are for entertainment only. In the case of questions regarding physical illness, and financial or legal issues, please remember there’s no substitute for consulting an appropriate professional.
+
+×
+Information from your device can be used to personalize your ad experience.
+
+Do not sell or share my personal information.
+Terms of Content Use
+A RAPTIVE PARTNER SITE
+
+======================================================================
+[daily-card] https://tarotgoddess.com/dailytarot.html
+TITLE: 404 - PAGE NOT FOUND
+HEADINGS:
+  
+NAV:
+  
+CTAS:
+  
+BODY(excerpt):
+ERROR 404 - PAGE NOT FOUND
+Why am I seeing this page?
+How to find the correct spelling and folder
+404 Errors After Clicking WordPress Links
+How to modify your .htaccess file
+
+======================================================================
+[three-card] https://tarotgoddess.com/threecard.html
+TITLE: 404 - PAGE NOT FOUND
+HEADINGS:
+  
+NAV:
+  
+CTAS:
+  
+BODY(excerpt):
+ERROR 404 - PAGE NOT FOUND
+Why am I seeing this page?
+How to find the correct spelling and folder
+404 Errors After Clicking WordPress Links
+How to modify your .htaccess file
+
+======================================================================
+[celtic] https://tarotgoddess.com/celticcross.html
+TITLE: 404 - PAGE NOT FOUND
+HEADINGS:
+  
+NAV:
+  
+CTAS:
+  
+
+======================================================================
+[yesno] https://tarotgoddess.com/yesno.html
+TITLE: 
+ERROR: goto fail: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://tarotgoddess.com/yesno.html", waiting until "domcontentloaded"
+
+HEADINGS:
+  
+NAV:
+  
+CTAS:
+  
+
+======================================================================
+[single] https://tarotgoddess.com/singlecard.html
+TITLE: 
+ERROR: goto fail: Page.goto: Timeout 30000ms exceeded.
+Call log:
+  - navigating to "https://tarotgoddess.com/singlecard.html", waiting until "domcontentloaded"
+
+HEADINGS:
+  
+NAV:
+  
+CTAS:
+  
+
+======================================================================
+[lovescopes] https://tarotgoddess.com/lovescopes.html
+TITLE: 404 - PAGE NOT FOUND
+HEADINGS:
+  
+NAV:
+  
+CTAS:
+  
+

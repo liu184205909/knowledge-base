@@ -1,0 +1,254 @@
+{
+  "_meta": {
+    "purpose": "Astrology × Crystals 内容集群单源数据层（交叉蓝海线 + 纯占星铺量线 + 月相线共用）",
+    "framework": "03-内容策略/内容Brief/模板-Astrology文章框架.md v2",
+    "data_sources": [
+      "星象数据参考-2026-2027.md（已交叉核对 Cafe Astrology + Astro-Seek + CHANI + NASA + Farmer's Almanac）",
+      "竞品精读：Energy Muse (energymuse.com) + Crystals.com + The Crystal Council + Rocks With Sass + Happysoulcrystals（2026-06-29 抓取）",
+      "crystal-attributes.json（390 颗水晶 Intentions/Chakra 单源）",
+      "Vedic astrology 行星色彩传统（印度 Navagraha 9 行星 gem 系统）+ 西藏占星（Tibetan elemental astrology）"
+    ],
+    "competitor_consensus_pool": "Fluorite / Labradorite / Black Tourmaline / Hematite / Amazonite / Clear Quartz(quartz) / Shungite / Black Kyanite(kyanite) / Obsidian / Lapis(lapis) / Sodalite / Amethyst / Selenite / Smoky Quartz / Citrine / Moonstone / Carnelian / Tiger Eye / Aquamarine / Sunstone",
+    "differentiation": "1.独立深度页(竞品合集单页低质) 2.首饰Shop CTA(竞品只raw stone) 3.Eastern Vedic/西藏占星(竞品纯西方) 4.三视角(占星传统/心理学/水晶) 5.FAQ schema(竞品Energy Muse无FAQ) 6.星座细分(Mercury Rx in Scorpio不同水晶)",
+    "compliance": "self-reflection framework; 逆行/食相/土星回归= invitation to reflect 非 doom; Gentle Note 全站统一; 非疗效/非算命确定论",
+    "validated_at": "2026-06-29"
+  },
+
+  "events": [
+    {
+      "slug": "mercury-retrograde",
+      "name": "Mercury Retrograde",
+      "category": "retrograde",
+      "line": "cross",
+      "priority": "P0",
+      "url": "/crystals-for-mercury-retrograde/",
+      "title": "Crystals for Mercury Retrograde: Stay Grounded & Clear",
+      "h1": "Crystals for Mercury Retrograde: Protection, Clarity & Calm",
+      "primary_kw": ["crystals for mercury retrograde", "mercury retrograde crystals", "best crystals for mercury retrograde"],
+      "secondary_kw": ["stones for mercury retrograde", "mercury retrograde protection crystals", "crystals for mercury retrograde 2026"],
+      "astrology_meaning": "Mercury Retrograde is the three-week period (~3x/year) when Mercury appears to move backward from Earth's vantage point. Astrologically, Mercury rules communication, travel, technology, contracts, and mental clarity — so its apparent reversal is traditionally read as a time to slow down, re- prefixes (review, revise, reconnect, redo), and double-check details rather than launch new ventures.",
+      "what_to_expect": ["miscommunications and crossed signals", "tech glitches and travel delays", "resurfacing of past people, projects, or conversations", "a call to finish what's unfinished before starting fresh"],
+      "invitation_framing": "Rather than a season to fear, Mercury Retrograde is best treated as a built-in cosmic review season — the sky's way of asking you to slow down and tie up loose ends.",
+      "psych_lens": "cognitive pacing & reflective review — the value of pausing before reacting, double-checking details, and integrating unfinished information before committing to new decisions",
+      "eastern_lens": "In Vedic (Jyotish) tradition, Mercury (Budha) governs buddhi — discriminative intellect — and its green color association links it to growth, communication, and nervous-system regulation. Tibetan astrology similarly reads planetary reversals as energetic review cycles rather than misfortune.",
+      "ritual_focus": "re- prefix practices: review an unfinished project, reconnect with someone you've been meaning to reach, revise a draft before sending",
+      "crystals": {
+        "best_overall": { "slug": "fluorite", "name": "Fluorite", "reason": "Fluorite is the consensus anchor stone for Mercury Retrograde across Energy Muse, Crystals.com, and The Crystal Council — its association with mental clarity and organization directly answers Mercury's rulership over the intellect. When communications tangle and details slip, Fluorite is the stone most often reached for to cut through fog.", "source": "Energy Muse + Crystals.com + Rocks With Sass (3-source consensus)" },
+        "best_for_communication": { "slug": "amazonite", "name": "Amazonite", "reason": "Amazonite is consistently recommended for speaking with clarity and grace during retrograde misunderstandings — it answers Mercury's communication rulership when words get twisted. Energy Muse specifically names it for fostering clear, calm communication during anxiety.", "source": "Energy Muse" },
+        "best_for_protection": { "slug": "black-tourmaline", "name": "Black Tourmaline", "reason": "Black Tourmaline is the most-cited protection stone for Mercury Retrograde across nearly every competitor — it grounds chaotic energy through the root chakra and shields against the period's signature overwhelm. Its protective reputation during 'chaos and turmoil' is a near-universal recommendation.", "source": "Energy Muse + The Crystal Council + Happysoulcrystals (3-source consensus)" },
+        "best_for_intuition": { "slug": "labradorite", "name": "Labradorite", "reason": "Labradorite is the go-to stone for reading the hidden messages retrograde surfaces — Crystals.com and Energy Muse both describe it as revealing what's beneath the surface and helping you 'digest the message' the period carries. Its association with transformation makes it ideal for the re- prefix work.", "source": "Energy Muse + Crystals.com" },
+        "best_for_grounding": { "slug": "hematite", "name": "Hematite", "reason": "Hematite is Energy Muse's named favorite grounding crystal for retrograde — its downward-pulling, stabilizing energy counters the scattered, speed-up feeling that defines the period. Reddit's r/Crystals community also ranks it among the top grounding stones for Mercury Rx.", "source": "Energy Muse + Reddit r/Crystals" },
+        "best_to_wear_daily": { "slug": "kyanite", "name": "Black Kyanite", "reason": "Energy Muse's personal favorite for retrograde — Kyanite's blade-like energy is used to cut recurring negative thought patterns, which is exactly what the re- prefix review period asks of you. It also doesn't accumulate negative energy, making it low-maintenance for daily wear.", "source": "Energy Muse" }
+      },
+      "sign_specific": {
+        "scorpio": { "crystals": ["shungite", "obsidian", "labradorite"], "note": "Scorpio Mercury Rx turns the focus inward toward shadow work — Shungite for EMF grounding, Obsidian to release emotional blocks, Labradorite to surface hidden truths." },
+        "sagittarius": { "crystals": ["lapis", "sodalite", "fluorite"], "note": "Sagittarius Mercury Rx asks for big-picture truth — Lapis for clear speech, Sodalite for calm study, Fluorite to clear mental fog." },
+        "pisces": { "crystals": ["amethyst", "aquamarine", "fluorite"], "note": "Pisces Mercury Rx blurs boundaries — Amethyst for higher-mind clarity, Aquamarine for calm flow, Fluorite to organize fuzzy thinking." }
+      },
+      "faq_seed": [
+        "What crystals help with Mercury Retrograde?",
+        "What should you avoid during Mercury Retrograde?",
+        "How do I protect my energy during Mercury Retrograde?",
+        "Can I wear Mercury Retrograde crystals as jewelry?"
+      ]
+    },
+    {
+      "slug": "saturn-return",
+      "name": "Saturn Return",
+      "category": "life-cycle",
+      "line": "cross",
+      "priority": "P0",
+      "url": "/crystals-for-saturn-return/",
+      "title": "Crystals for Your Saturn Return: Structure, Patience & Growth",
+      "h1": "Crystals for Your Saturn Return: Grounding the Big Adulthood Milestone",
+      "primary_kw": ["crystals for saturn return", "saturn return crystals", "best crystals for saturn return"],
+      "secondary_kw": ["stones for saturn return", "crystals for saturn return anxiety", "which stone is good for saturn"],
+      "astrology_meaning": "A Saturn Return occurs when Saturn completes its ~29.5-year orbit and returns to the zodiac sign it occupied at your birth — happening roughly between ages 27-30 and again at 58-60. Astrologically it is read as a coming-of-age checkpoint: Saturn (structure, responsibility, long-term foundation) asks you to build your adult life on solid ground, which often means confronting what's outgrown and committing to what's real.",
+      "what_to_expect": ["pressure to get serious about career, relationships, and life direction", "shedding of roles and commitments that no longer fit", "a sense of heavy responsibility mixed with clarifying purpose", "the long arc of maturation rather than instant transformation"],
+      "invitation_framing": "A Saturn Return is less a crisis than a structural audit — Saturn doesn't punish, it asks you to build on what's true and release what isn't.",
+      "psych_lens": "identity consolidation & long-term goal commitment — Erikson's intimacy-vs-isolation and generativity stages, the developmental task of building a durable adult foundation",
+      "eastern_lens": "In Vedic astrology, Saturn (Shani) is the planet of karma, time, and justice — its gem is traditionally Blue Sapphire (Neelam), worn only after careful testing because Saturn's energy is potent. The Western crystal approach borrows Saturn's structural themes (discipline, patience, foundation) through grounding stones. Tibetan astrology reads Saturn cycles as karmic ripening periods.",
+      "ritual_focus": "foundation-building: write one long-term commitment you're ready to make, name one outgrown role you're releasing, lay one stone of structure this season",
+      "crystals": {
+        "best_overall": { "slug": "hematite", "name": "Hematite", "reason": "Hematite embodies Saturn's grounding, structural energy — its dense, downward-pulling weight answers Saturn's demand for solid foundations. For the heaviness and disorientation a Saturn Return can bring, Hematite is the anchor that keeps you rooted while you rebuild.", "source": "Saturn elemental correspondence (earth/structure) + grounding consensus" },
+        "best_for_patience": { "slug": "smoky-quartz", "name": "Smoky Quartz", "reason": "Saturn Returns test patience — Smoky Quartz is the stone for sitting with discomfort without rushing, transmuting the anxiety of 'am I behind?' into grounded endurance. Its slow, earthy frequency matches Saturn's long timeline.", "source": "Saturn patience correspondence + Smoky Quartz grounding tradition" },
+        "best_for_discipline": { "slug": "garnet", "name": "Garnet", "reason": "Garnet supports the discipline and commitment Saturn asks for — its deep red, regenerative energy fuels the perseverance to follow through on hard, long-term work. Vedic tradition links red stones to the fortitude Saturn cycles demand.", "source": "Saturn perseverance correspondence + Vedic red-stone fortitude" },
+        "best_for_release": { "slug": "obsidian", "name": "Obsidian", "reason": "A Saturn Return asks you to shed what's outgrown — Obsidian's truth-revealing, shadow-working energy helps you see clearly what (and who) no longer fits your foundation, supporting honest release without sentimentality.", "source": "Obsidian release/shadow tradition" },
+        "best_for_purpose": { "slug": "lapis", "name": "Lapis Lazuli", "reason": "Saturn Returns are about clarifying your life's direction — Lapis has a long historical association with wisdom, truth, and higher perspective, helping you see the long arc of your life from above the daily noise. Vedic tradition honors Lapis-adjacent stones for the insight Saturn asks you to earn.", "source": "Lapis wisdom/perspective tradition + Saturn insight correspondence" },
+        "best_to_wear_daily": { "slug": "tiger-eye", "name": "Tiger's Eye", "reason": "Tiger's Eye balances Saturn's heaviness with grounded willpower — its warm, durable energy supports daily follow-through on the commitments a Saturn Return asks you to make, and it wears well as everyday jewelry.", "source": "Tiger's Eye willpower/grounding tradition" }
+      },
+      "faq_seed": [
+        "What crystals help with a Saturn Return?",
+        "At what age does a Saturn Return happen?",
+        "How long does a Saturn Return last?",
+        "Is a Saturn Return always difficult?"
+      ]
+    },
+    {
+      "slug": "full-moon",
+      "name": "Full Moon",
+      "category": "moon-phase",
+      "line": "cross",
+      "priority": "P0",
+      "url": "/crystals-for-full-moon/",
+      "title": "Crystals for the Full Moon: Release, Clarity & Ritual",
+      "h1": "Crystals for the Full Moon: Release Rituals & Lunar Energy",
+      "primary_kw": ["crystals for full moon", "full moon crystals", "best crystals for full moon"],
+      "secondary_kw": ["crystals for full moon ritual", "crystals for full moon release", "full moon crystals for manifesting"],
+      "astrology_meaning": "A Full Moon occurs roughly every 29.5 days when the Sun and Moon stand opposite each other, illuminating the sky. Astrologically it is read as a climax and release point — what was seeded at the New Moon two weeks prior comes to light, emotions peak, and it's a traditional time for release rituals, gratitude, and letting go of what no longer serves.",
+      "what_to_expect": ["heightened emotions and vivid dreams", "illumination of what was hidden or building", "a natural closing point for projects or emotional cycles", "peak energy for release and gratitude rituals"],
+      "invitation_framing": "The Full Moon is a built-in monthly release valve — a time to acknowledge what has ripened and consciously let go of what has completed its cycle.",
+      "psych_lens": "emotional processing & closure — the psychological value of ritualized release, naming completions, and metabolizing peak emotional states rather than suppressing them",
+      "eastern_lens": "In Tibetan Buddhism, full moon days (sojong) are traditional purification and renewal observances — monks confess and renew vows. Vedic tradition treats the Full Moon (Purnima) as an auspicious, high-energy day for spiritual practice, associating the mind (chandra) with lunar rhythm.",
+      "ritual_focus": "release ritual: write what you're releasing and safely burn or bury it, place crystals in moonlight overnight, name one completion to honor",
+      "crystals": {
+        "best_overall": { "slug": "selenite", "name": "Selenite", "reason": "Selenite is named for Selene, the Greek moon goddess — its luminous, high-vibration energy is the most iconic Full Moon stone, used for cleansing and charging other crystals under moonlight. Its association with lunar purity makes it the natural centerpiece of any full moon ritual.", "source": "Selenite lunar naming tradition + universal full moon consensus" },
+        "best_for_release": { "slug": "black-tourmaline", "name": "Black Tourmaline", "reason": "The Full Moon is the traditional release point — Black Tourmaline is the stone most used to absorb and transmute what you're letting go of, grounding the heaviness that release surfaces. Its protective, grounding nature makes it the release ritual anchor.", "source": "Full moon release ritual tradition + Black Tourmaline transmutation" },
+        "best_for_emotion": { "slug": "moonstone", "name": "Moonstone", "reason": "Moonstone is the lunar stone by name and tradition — its association with emotional tides, intuition, and feminine cycles makes it the stone for riding the emotional peak of the Full Moon without being overwhelmed. Vedic tradition links it directly to the Moon (Chandra).", "source": "Moonstone lunar tradition (Vedic + Western)" },
+        "best_for_clarity": { "slug": "quartz", "name": "Clear Quartz", "reason": "The Full Moon illuminates — Clear Quartz, the master amplifier, is used to clarify what the moonlight is surfacing and to amplify the intention of your release ritual. It's also the stone most used to 'charge' under full moon light.", "source": "Clear Quartz amplification tradition + full moon charging practice" },
+        "best_for_intuition": { "slug": "amethyst", "name": "Amethyst", "reason": "Full Moons bring vivid dreams and heightened intuition — Amethyst, the stone of higher consciousness and dreamwork, supports the intuitive insight that peaks under full moon light. Its calming energy also steadies the emotional intensity.", "source": "Amethyst dreamwork/intuition tradition" },
+        "best_to_wear_daily": { "slug": "labradorite", "name": "Labradorite", "reason": "Labradorite's moonlit flash (labradorescence) mirrors full moon energy and supports the transformation that release rituals initiate — a wearable reminder of lunar work that's durable for daily jewelry.", "source": "Labradorite transformation/lunar-flash tradition" }
+      },
+      "sign_specific": {
+        "scorpio": { "crystals": ["obsidian", "malachite", "smoky-quartz"], "note": "Scorpio Full Moons intensify emotional release — Obsidian for shadow work, Malachite for heart-layer clearing, Smoky Quartz to ground the depth." },
+        "capricorn": { "crystals": ["garnet", "fluorite", "hematite"], "note": "Capricorn Full Moons highlight structure-vs-rest balance — Garnet for perseverance review, Fluorite for mental order, Hematite to ground ambition." }
+      },
+      "faq_seed": [
+        "Which crystals are best for a full moon?",
+        "How do I charge crystals under the full moon?",
+        "What is a full moon release ritual?",
+        "Can I leave all crystals in moonlight?"
+      ]
+    },
+    {
+      "slug": "new-moon",
+      "name": "New Moon",
+      "category": "moon-phase",
+      "line": "cross",
+      "priority": "P0",
+      "url": "/crystals-for-new-moon/",
+      "title": "Crystals for the New Moon: Intentions & New Beginnings",
+      "h1": "Crystals for the New Moon: Setting Intentions & Fresh Starts",
+      "primary_kw": ["crystals for new moon", "new moon crystals", "best crystals for new moon"],
+      "secondary_kw": ["crystals for new moon ritual", "new moon crystals for manifestation", "crystals for new moon intentions"],
+      "astrology_meaning": "A New Moon occurs every ~29.5 days when the Moon sits between Earth and Sun, invisible in the night sky. Astrologically it is read as a seeding point — a dark, quiet, fertile window for setting intentions, planting seeds for the coming lunar cycle, and beginning new projects. It pairs with the Full Moon as the other half of the lunar rhythm (seed at new, release at full).",
+      "what_to_expect": ["low energy and a call to rest and go inward", "a fertile window for clarifying what you want to grow", "a natural starting point for new habits or projects", "quiet intuitive insight without the Full Moon's emotional peak"],
+      "invitation_framing": "The New Moon is a monthly blank page — a quiet, dark window where intentions take root before they're visible, asking patience rather than action.",
+      "psych_lens": "intention-setting & implementation intentions — the research-backed practice of naming specific 'when-where-how' intentions, combined with the value of rest cycles before high-output phases",
+      "eastern_lens": "In Vedic tradition, the New Moon (Amavasya) is a day for honoring ancestors and quiet reflection — a potent, introspective time rather than an empty one. Tibetan astrology reads the dark moon as a reset point for accumulated energy before the cycle rebuilds.",
+      "ritual_focus": "intention-setting: write 1-3 specific intentions for the cycle, create a small crystal grid for your seed, rest more in the 48 hours around the dark moon",
+      "crystals": {
+        "best_overall": { "slug": "quartz", "name": "Clear Quartz", "reason": "Clear Quartz is the master amplifier and the most-used stone for programming New Moon intentions — its clarity and programmability make it the natural vessel for the seeds you're planting. New Moon ritual guides across competitors consistently name it for intention-setting.", "source": "Clear Quartz programming tradition + new moon intention consensus" },
+        "best_for_new_beginnings": { "slug": "moonstone", "name": "Moonstone", "reason": "Moonstone governs new cycles and beginnings by lunar tradition — its association with fresh starts and intuitive timing makes it the stone for the New Moon's seeding energy, the quiet counterpart to its Full Moon role.", "source": "Moonstone new-cycle tradition" },
+        "best_for_manifestation": { "slug": "citrine", "name": "Citrine", "reason": "Citrine is the manifestation stone — its warm, solar energy doesn't manifest overnight but supports the sustained, abundance-minded action that turns New Moon seeds into Full Moon results. It carries the 'will' that the dark moon lacks.", "source": "Citrine manifestation tradition" },
+        "best_for_clarity": { "slug": "selenite", "name": "Selenite", "reason": "Before you can seed an intention you need a clear field — Selenite cleanses the space and the mind, making room for the New Moon's quiet insight. Its high, clear frequency cuts the static that muddies intention.", "source": "Selenite cleansing/clarity tradition" },
+        "best_for_grounding": { "slug": "smoky-quartz", "name": "Smoky Quartz", "reason": "New Moon energy can feel ungrounded and floaty — Smoky Quartz anchors your intentions into the body and the earth, so seeds take root in reality rather than staying abstract. It grounds the dark moon's inward pull.", "source": "Smoky Quartz grounding tradition" },
+        "best_to_wear_daily": { "slug": "amethyst", "name": "Amethyst", "reason": "Amethyst supports the calm, inward, intuitive state the New Moon favors — wearable daily to stay tuned to the quiet insight of the dark moon without the Full Moon's emotional spike.", "source": "Amethyst intuition/calm tradition" }
+      },
+      "faq_seed": [
+        "Which crystals are best for a new moon?",
+        "How do I set intentions with crystals on a new moon?",
+        "What is a new moon ritual?",
+        "What's the difference between new moon and full moon crystals?"
+      ]
+    },
+    {
+      "slug": "eclipse",
+      "name": "Eclipse Season",
+      "category": "eclipse",
+      "line": "cross",
+      "priority": "P0",
+      "url": "/crystals-for-eclipse-season/",
+      "title": "Crystals for Eclipse Season: Grounding Sudden Change",
+      "h1": "Crystals for Eclipse Season: Stability During Cosmic Shifts",
+      "primary_kw": ["crystals for eclipse", "crystals for eclipse season", "eclipse crystals"],
+      "secondary_kw": ["best crystals for eclipse season", "crystals for lunar eclipse", "crystals for solar eclipse", "crystals for blood moon eclipse"],
+      "astrology_meaning": "Eclipses happen in seasonal pairs (2-4 per year) when the Sun, Moon, and Earth align on the lunar nodes, producing solar (new moon) and lunar (full moon) eclipses. Astrologically they are read as accelerators of change — sudden turning points, revelations, and course corrections that move you onto your path, often faster than feels comfortable. Eclipse season (the weeks around them) is treated as a high-change window.",
+      "what_to_expect": ["sudden shifts in direction, relationships, or circumstances", "revelations or information that reframes a situation", "a sense of acceleration or milestone-like timing", "emotional intensity amplified beyond a normal full/new moon"],
+      "invitation_framing": "Eclipses are not chaos — they're course corrections that often move you faster than you'd move yourself. The work is to stay grounded while the landscape reshapes, not to force clarity before it arrives.",
+      "psych_lens": "tolerance for uncertainty & meaning-making after change — the psychological capacity to stay grounded during non-linear life transitions and integrate sudden shifts into a coherent narrative",
+      "eastern_lens": "In Tibetan and Vedic tradition, eclipses (Rahu and Ketu, the lunar nodes, swallowing the luminaries) are read as potent karmic windows — times for meditation and spiritual practice rather than worldly action. Both traditions treat eclipse periods as energetically heightened, advising stillness over initiation.",
+      "ritual_focus": "grounding over action: avoid major initiations during eclipse week, meditate with a grounding stone daily, name one thing the eclipse is illuminating rather than acting on it immediately",
+      "crystals": {
+        "best_overall": { "slug": "smoky-quartz", "name": "Smoky Quartz", "reason": "Smoky Quartz is the premier grounding stone for sudden change — its earthy, stabilizing energy anchors you when eclipse acceleration feels disorienting. For the turbulence eclipse season brings, it's the most recommended anchor stone.", "source": "Smoky Quartz grounding/sudden-change tradition" },
+        "best_for_protection": { "slug": "black-tourmaline", "name": "Black Tourmaline", "reason": "Eclipse energy is intense and unfiltered — Black Tourmaline is the stone most used to create an energetic boundary during the overwhelm, grounding the chaotic surge through the root chakra. Its protective reputation makes it the eclipse-season shield.", "source": "Black Tourmaline protection tradition" },
+        "best_for_release": { "slug": "obsidian", "name": "Obsidian", "reason": "Lunar eclipses (especially) are accelerated Full Moons — Obsidian's truth-revealing, release-supporting energy helps you work with what the eclipse surfaces, cutting through illusion to what actually needs to go.", "source": "Obsidian release/truth tradition" },
+        "best_for_intuition": { "slug": "labradorite", "name": "Labradorite", "reason": "Eclipses reveal hidden information — Labradorite, the stone of transformation and hidden light, supports reading the signals an eclipse brings without forcing a premature interpretation. Its labradorescence mirrors eclipse light.", "source": "Labradorite transformation/revelation tradition" },
+        "best_for_calm": { "slug": "amethyst", "name": "Amethyst", "reason": "Eclipse anxiety runs high — Amethyst's calming, higher-mind energy steadies the nervous system during the intensity, supporting the meditation and stillness both Vedic and Tibetan traditions advise for eclipse periods.", "source": "Amethyst calm/higher-mind tradition" },
+        "best_to_wear_daily": { "slug": "hematite", "name": "Hematite", "reason": "Hematite's dense, downward-pulling weight is the wearable anchor for eclipse season — keeping you grounded in your body through disorienting shifts, durable enough for daily jewelry.", "source": "Hematite grounding tradition" }
+      },
+      "sign_specific": {
+        "pisces": { "crystals": ["aquamarine", "amethyst", "selenite"], "note": "Pisces lunar eclipses dissolve boundaries — Aquamarine for calm flow, Amethyst for clarity, Selenite to keep the field clear." }
+      },
+      "faq_seed": [
+        "What crystals are best for eclipse season?",
+        "Should I charge crystals during an eclipse?",
+        "What should I avoid during an eclipse?",
+        "Is a lunar eclipse different from a full moon for crystals?"
+      ]
+    },
+    {
+      "slug": "venus-retrograde",
+      "name": "Venus Retrograde",
+      "category": "retrograde",
+      "line": "cross",
+      "priority": "P1",
+      "url": "/crystals-for-venus-retrograde/",
+      "title": "Crystals for Venus Retrograde: Love, Worth & Reconnection",
+      "h1": "Crystals for Venus Retrograde: Relationships, Self-Worth & Heart Review",
+      "primary_kw": ["crystals for venus retrograde", "venus retrograde crystals"],
+      "secondary_kw": ["stones for venus retrograde", "crystals for love during venus retrograde"],
+      "astrology_meaning": "Venus Retrograde happens every ~18 months for about 40 days, when Venus (love, beauty, values, money, self-worth) appears to move backward. Astrologically it's read as a heart-review season — exes and old relationship patterns often resurface, values get re-examined, and it's a time to revisit (not launch) major commitments in love and finances. The next Venus Retrograde is Oct 3 – Nov 13, 2026 (Scorpio→Libra).",
+      "what_to_expect": ["return of past loves or relationship themes", "questioning what (and who) you truly value", "money and self-worth coming up for review", "a call to revisit, not initiate, in love and finances"],
+      "invitation_framing": "Venus Retrograde is a heart's review season — less about new beginnings in love, more about understanding what your relationships and values are teaching you.",
+      "psych_lens": "attachment review & self-worth consolidation — examining relational patterns with curiosity rather than reactivity, and grounding worth internally rather than in others' validation",
+      "eastern_lens": "In Vedic tradition, Venus (Shukra) governs love, beauty, and vitality — its gem is traditionally Diamond or White Sapphire, and Shukra's energy is refined and receptive. The Western crystal approach channels Venus's heart-and-worth themes through love and harmony stones.",
+      "ritual_focus": "heart review: journal on one old relationship pattern that's resurfacing, practice self-love practices, revisit (don't end) a valued connection before making big relationship calls",
+      "crystals": {
+        "best_overall": { "slug": "rose-quartz", "name": "Rose Quartz", "reason": "Rose Quartz is the universal love stone and the natural anchor for Venus Retrograde — its heart-chakra energy supports both the self-love the period asks for and the gentle re-evaluation of relationships. For a Venus heart-review, it's the foundational stone.", "source": "Rose Quartz love/self-worth tradition" },
+        "best_for_self_worth": { "slug": "rhodonite", "name": "Rhodonite", "reason": "Venus Retrograde surfaces old wounds around worth — Rhodonite, the stone of emotional healing and self-worth recovery, helps process the resurfacing heart material without self-blame. It's the compassionate witness for heart review.", "source": "Rhodonite self-worth/healing tradition" },
+        "best_for_release": { "slug": "obsidian", "name": "Obsidian", "reason": "When old patterns resurface, Obsidian's truth-revealing energy helps you see the pattern clearly and release what's complete — supporting honest heart-clearing during the review.", "source": "Obsidian release tradition" },
+        "best_for_harmony": { "slug": "lapis", "name": "Lapis Lazuli", "reason": "Venus also rules what you value — Lapis, the stone of truth and authentic self-expression, supports the honest communication and values-clarification Venus Rx asks for in relationships.", "source": "Lapis truth/expression tradition" },
+        "best_for_comfort": { "slug": "moonstone", "name": "Moonstone", "reason": "The emotional tides Venus Rx stirs benefit from Moonstone's soothing, cyclical energy — supporting the hormonal and emotional sensitivity that often peaks during a Venus review.", "source": "Moonstone emotional-cycle tradition" },
+        "best_to_wear_daily": { "slug": "rhodonite", "name": "Rhodonite", "reason": "A wearable heart-healer for Venus Retrograde — its pink energy keeps self-worth and compassion close through the daily emotional review of the season." }
+      },
+      "faq_seed": [
+        "What crystals help during Venus Retrograde?",
+        "Should I avoid relationships during Venus Retrograde?",
+        "How often does Venus go retrograde?",
+        "What does Venus Retrograde mean for love?"
+      ]
+    }
+  ],
+
+  "planets": {
+    "sun":      { "name": "Sun",      "color": "gold / yellow / orange", "gem_vedic": "Ruby (Manik)", "theme": "vitality, identity, self-expression", "crystals": ["citrine", "tiger-eye", "sunstone"], "note": "Solar stones for confidence and life-force; Sun rules Sunday." },
+    "moon":     { "name": "Moon",     "color": "white / silver / pearl", "gem_vedic": "Pearl (Moti)", "theme": "emotion, intuition, mind", "crystals": ["moonstone", "selenite", "quartz"], "note": "Lunar stones for emotional tides; Moon rules Monday." },
+    "mars":     { "name": "Mars",     "color": "red", "gem_vedic": "Red Coral (Moonga)", "theme": "drive, courage, action", "crystals": ["red-jasper", "carnelian", "bloodstone"], "note": "Martian stones for courage and will; Mars rules Tuesday." },
+    "mercury":  { "name": "Mercury",  "color": "green", "gem_vedic": "Emerald (Panna)", "theme": "communication, intellect, detail", "crystals": ["fluorite", "amazonite", "malachite"], "note": "Mercurial stones for clarity; Mercury rules Wednesday." },
+    "jupiter":  { "name": "Jupiter",  "color": "yellow / gold", "gem_vedic": "Yellow Sapphire (Pukhraj)", "theme": "wisdom, expansion, fortune", "crystals": ["citrine", "lapis", "sugilite"], "note": "Jupiterian stones for wisdom and growth; Jupiter rules Thursday. Note: citrine-adjacent for expansion." },
+    "venus":    { "name": "Venus",    "color": "white / pink / diamond", "gem_vedic": "Diamond (Heera)", "theme": "love, beauty, values", "crystals": ["rose-quartz", "rhodonite", "aventurine"], "note": "Venusian stones for love and harmony; Venus rules Friday." },
+    "saturn":   { "name": "Saturn",   "color": "dark blue / black", "gem_vedic": "Blue Sapphire (Neelam)", "theme": "structure, time, discipline", "crystals": ["hematite", "smoky-quartz", "garnet"], "note": "Saturnian stones for grounding; Saturn rules Saturday. Blue Sapphire is Vedic-only (potent, worn after testing)." }
+  },
+
+  "zodiac_power_stones": {
+    "aries":       { "element": "Fire",      "ruling_planet": "Mars",    "power_stones": ["carnelian", "red-jasper", "bloodstone"], "note": "Fire-starters benefit from Martian courage stones." },
+    "taurus":      { "element": "Earth",     "ruling_planet": "Venus",   "power_stones": ["rose-quartz", "aventurine", "malachite"], "note": "Earth sensuality meets Venus love stones." },
+    "gemini":      { "element": "Air",       "ruling_planet": "Mercury", "power_stones": ["fluorite", "amazonite", "selenite"], "note": "Airy minds benefit from Mercurial clarity stones." },
+    "cancer":      { "element": "Water",     "ruling_planet": "Moon",    "power_stones": ["moonstone", "selenite", "rose-quartz"], "note": "Watery emotion benefits from lunar stones." },
+    "leo":         { "element": "Fire",      "ruling_planet": "Sun",     "power_stones": ["citrine", "tiger-eye", "sunstone"], "note": "Solar radiance stones for Leo's light." },
+    "virgo":       { "element": "Earth",     "ruling_planet": "Mercury", "power_stones": ["fluorite", "amazonite", "red-jasper"], "note": "Detail-oriented Earth meets Mercurial order." },
+    "libra":       { "element": "Air",       "ruling_planet": "Venus",   "power_stones": ["rose-quartz", "lapis", "aventurine"], "note": "Balance-seeking Air meets Venus harmony stones." },
+    "scorpio":     { "element": "Water",     "ruling_planet": "Mars/Pluto", "power_stones": ["obsidian", "malachite", "smoky-quartz"], "note": "Deep waters benefit from shadow-working stones." },
+    "sagittarius": { "element": "Fire",      "ruling_planet": "Jupiter", "power_stones": ["lapis", "citrine", "tiger-eye"], "note": "Expansive Fire meets Jupiterian wisdom stones." },
+    "capricorn":   { "element": "Earth",     "ruling_planet": "Saturn",  "power_stones": ["garnet", "smoky-quartz", "hematite"], "note": "Structured Earth meets Saturnian grounding." },
+    "aquarius":    { "element": "Air",       "ruling_planet": "Saturn/Uranus", "power_stones": ["amethyst", "labradorite", "aquamarine"], "note": "Visionary Air benefits from insight stones." },
+    "pisces":      { "element": "Water",     "ruling_planet": "Jupiter/Neptune", "power_stones": ["amethyst", "aquamarine", "moonstone"], "note": "Mystic waters benefit from intuition stones." }
+  },
+
+  "gentle_note": "Astrology and crystal meanings draw on spiritual traditions, symbolism, and personal mindfulness practices. They are offered as a framework for self-reflection and intention-setting, not as a prediction of fixed outcomes or a substitute for professional medical, financial, or psychological advice.",
+  "faq_shared_halves": {
+    "is_doom_first_half": "No astrological transit — including retrogrades, eclipses, and Saturn Returns — is inherently 'bad.' These cycles are traditionally read as invitations to slow down, review, and grow, not as predictions of misfortune.",
+    "can_predict_future_first_half": "Astrology is a symbolic language used for self-reflection, not a system that predicts fixed future events. The transits surface themes and questions; your choices and actions determine what happens."
+  }
+}

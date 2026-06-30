@@ -1,7 +1,7 @@
 {
   "_meta": {
     "purpose": "Tarot Major Arcana 23 篇文章生产 config（22 Major 0-21 + 1 Hub）",
-    "framework": "模板-Tarot文章框架.md v2",
+    "framework": "模板-Tarot-牌义页框架.md v2",
     "data_source": "07-互动工具/_shared/tarot-knowledge.json（22 牌单源：archetype/upright/reversed/psych/eastern/crystals/chakra/related）",
     "cta_validation": "_qc/_cta-validation.json（meaning 16 颗含 Read CTA，其余 OMIT；Shop CATEGORY→SEARCH→HEALING_JEWELRY）",
     "module_weights_source": "框架 §2 module_weights 表（22 牌 M2/M3/M7 差异化重心）",

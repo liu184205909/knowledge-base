@@ -1,0 +1,46 @@
+{
+  "desktop": {
+    "checks": {
+      "http_200": true,
+      "deck_has_backs": true,
+      "deck_backs_le_36": true,
+      "validate_shown": true,
+      "flipped_to_front": true,
+      "result_shown": true,
+      "has_guidance": true,
+      "has_shop_cta": true,
+      "shop_href": "/product-category/healing-crystals-jewelry/",
+      "three_result_cards": 3,
+      "three_has_positions": 3,
+      "no_literal_bs": true,
+      "no_console_err": true,
+      "has_seo_accordion": true,
+      "has_faq_schema": true
+    },
+    "console_errors": [],
+    "crystal_name": "Prehnite",
+    "guidance_preview": "this crystal offers its qualities of love & relationships as something to sit wi"
+  },
+  "mobile": {
+    "checks": {
+      "http_200": true,
+      "deck_has_backs": true,
+      "deck_backs_le_36": true,
+      "validate_shown": true,
+      "flipped_to_front": true,
+      "result_shown": true,
+      "has_guidance": true,
+      "has_shop_cta": true,
+      "shop_href": "/product-category/healing-crystals-jewelry/",
+      "three_result_cards": 3,
+      "three_has_positions": 3,
+      "no_literal_bs": true,
+      "no_console_err": true,
+      "has_seo_accordion": true,
+      "has_faq_schema": true
+    },
+    "console_errors": [],
+    "crystal_name": "Garnierite",
+    "guidance_preview": "this crystal offers its qualities of love & relationships as something to sit wi"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "key": "cctarot",
+  "name": "cctarot.com",
+  "usedProxy": false,
+  "main": {
+    "url": "https://cctarot.com/divination/three-cards/",
+    "tag": "landing",
+    "ok": true,
+    "title": "三张牌占卜 | 塔罗牌在线占卜",
+    "viewport": "cctarot--landing--viewport.png",
+    "full": "cctarot--landing--full.png",
+    "buttons": [
+      "TAROT",
+      "三张牌占卜",
+      "凯尔特十字牌阵",
+      "生日牌阵",
+      "塔罗知识",
+      "关于我们",
+      "查看占卜说明",
+      "开始占卜",
+      "保存结果",
+      "分享结果",
+      "重新占卜",
+      "占卜记录",
+      "网站地图",
+      "塔罗牌在线占卜",
+      "Hugo",
+      "PaperMod"
+    ],
+    "text": "TAROT\n三张牌占卜\n凯尔特十字牌阵\n生日牌阵\n塔罗知识\n关于我们\n三张牌占卜\n通过三张牌占卜了解过去、现在和未来\n查看占卜说明\n \n一般问题\n爱情问题\n事业问题\n健康问题\n财富问题\n \n大阿尔卡纳占卜（22张牌）\n完整塔罗占卜（78张牌）\n 开始占卜\n占卜记录\n塔罗知识\n网站地图\n© 2025 塔罗牌在线占卜\n\n塔罗牌图片来源：Rider-Waite-Smith Tarot\n\n图片版权：Public Domain (1909)\n\n本网站仅用于教育和娱乐目的，不构成任何形式的建议或指导。\n\nPowered by Hugo & PaperMod"
+  },
+  "explore": [
+    {
+      "url": "https://cctarot.com/divination/",
+      "tag": "cctarot-com-divination",
+      "ok": false,
+      "error": "goto: Page.goto: net::ERR_NETWORK_CHANGED at https://cctarot.com/divination/\nCall log:\n  - navigating to \"https://cctarot.com/divination/\", waiting until \"domcontentloaded\"\n"
+    },
+    {
+      "url": "https://cctarot.com/divination/celtic-cross/",
+      "tag": "cctarot-com-divination-celtic-cross",
+      "ok": false,
+      "error": "goto: Page.goto: net::ERR_NETWORK_CHANGED at https://cctarot.com/divination/celtic-cross/\nCall log:\n  - navigating to \"https://cctarot.com/divination/celtic-cross/\", waiting until \"domcontentloaded\"\n"
+    },
+    {
+      "url": "https://cctarot.com/divination/birthday/",
+      "tag": "cctarot-com-divination-birthday",
+      "ok": true,
+      "title": "生日牌阵 | 塔罗牌在线占卜",
+      "viewport": "cctarot--cctarot-com-divination-birthday--viewport.png",
+      "full": "cctarot--cctarot-com-divination-birthday--full.png",
+      "buttons": [
+        "TAROT",
+        "三张牌占卜",
+        "凯尔特十字牌阵",
+        "生日牌阵",
+        "塔罗知识",
+        "关于我们",
+        "查看计算方法说明",
+        "开始计算",
+        "保存结果",
+        "分享结果",
+        "重新计算",
+        "占卜记录",
+        "网站地图",
+        "塔罗牌在线占卜",
+        "Hugo",
+        "PaperMod"
+      ],
+      "text": "TAROT\n三张牌占卜\n凯尔特十字牌阵\n生日牌阵\n塔罗知识\n关于我们\n生日牌阵\n通过生日牌阵了解你的人生主题和年度运势\n查看计算方法说明\n生日牌阵介绍\n\n生日牌阵是一种特殊的塔罗牌阵，它可以帮助你了解：\n\n你的生命主题牌（灵魂牌）\n你的人格牌（性格特质）\n你的年度牌（当年运势）\n你的月度牌（每月主题）\n如何计算\n生命主题牌\n\n将你的出生年月日的数字相加，直到得到一个22以内的数字。例如：\n\n出生日期：1990年8月15日\n\n计算：1+9+9+0+8+1+5 = 33\n\n继续相加：3+3 = 6\n\n生命主题牌：6号牌 - 恋人牌\n\n人格牌\n\n将你的出生日期的日数相加，直到得到一个22以内的数字。例如：\n\n出生日：15日\n\n计算：1+5 = 6\n\n人格牌：6号牌 - 恋人牌\n\n年度牌\n\n将当前年份与你的出生月日相加，直到得到一个22以内的数字。例如：\n\n当前年份：2024\n\n出生月日：8月15日\n\n计算：2+0+2+4+8+1+5 = 22\n\n年度牌：22号牌 - 愚者牌\n\n请输入你的出生日期，我们将为你计算生命主题牌、人格牌和年度运势\n\n开始计算\n生命主题牌\n人格牌\n年度牌\n1月\n2月\n3月\n4月\n5月\n6月\n7月\n8月\n9月\n10月\n11月\n12月\n塔罗生日牌阵解读\n保存结果\n分享结果\n重新计算\n占卜记录\n塔罗知识\n网站地图\n© 2025 塔罗牌在线占卜\n\n塔罗牌图片来源：Rider-Waite-Smith Tarot\n\n图片版权：Public Domain (1909)\n\n本网站仅用于教育和娱乐目的，不构成任何形式的建议或指导。\n\nPowered by Hugo & PaperMod"
+    },
+    {
+      "url": "https://cctarot.com/",
+      "tag": "cctarot-com",
+      "ok": true,
+      "title": "塔罗牌在线占卜",
+      "viewport": "cctarot--cctarot-com--viewport.png",
+      "full": "cctarot--cctarot-com--full.png",
+      "buttons": [
+        "TAROT",
+        "三张牌占卜",
+        "凯尔特十字牌阵",
+        "生日牌阵",
+        "塔罗知识",
+        "关于我们",
+        "开始占卜",
+        "占卜记录",
+        "网站地图",
+        "塔罗牌在线占卜",
+        "Hugo",
+        "PaperMod"
+      ],
+      "text": "TAROT\n三张牌占卜\n凯尔特十字牌阵\n生日牌阵\n塔罗知识\n关于我们\n✨ 塔罗牌在线占卜 ✨\n\n探索命运的奥秘，寻找生活的答案\n\n开始占卜\n塔罗知识\n占卜记录\n塔罗知识\n网站地图\n© 2025 塔罗牌在线占卜\n\n塔罗牌图片来源：Rider-Waite-Smith Tarot\n\n图片版权：Public Domain (1909)\n\n本网站仅用于教育和娱乐目的，不构成任何形式的建议或指导。\n\nPowered by Hugo & PaperMod"
+    }
+  ],
+  "errors": [],
+  "clicked": "开始"
+}

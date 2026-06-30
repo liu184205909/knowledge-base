@@ -1,0 +1,63 @@
+{
+  "generated": "2026-06-29T02:34:59.310Z",
+  "framework": "模板-Astrology文章框架.md v2",
+  "count": 7,
+  "articles": [
+    {
+      "slug": "mercury-retrograde",
+      "title": "Crystals for Mercury Retrograde: Stay Grounded & Clear",
+      "url": "/crystals-for-mercury-retrograde/",
+      "priority": "P0",
+      "line": "cross",
+      "name": "Mercury Retrograde"
+    },
+    {
+      "slug": "saturn-return",
+      "title": "Crystals for Your Saturn Return: Structure, Patience & Growth",
+      "url": "/crystals-for-saturn-return/",
+      "priority": "P0",
+      "line": "cross",
+      "name": "Saturn Return"
+    },
+    {
+      "slug": "full-moon",
+      "title": "Crystals for the Full Moon: Release, Clarity & Ritual",
+      "url": "/crystals-for-full-moon/",
+      "priority": "P0",
+      "line": "cross",
+      "name": "Full Moon"
+    },
+    {
+      "slug": "new-moon",
+      "title": "Crystals for the New Moon: Intentions & New Beginnings",
+      "url": "/crystals-for-new-moon/",
+      "priority": "P0",
+      "line": "cross",
+      "name": "New Moon"
+    },
+    {
+      "slug": "eclipse",
+      "title": "Crystals for Eclipse Season: Grounding Sudden Change",
+      "url": "/crystals-for-eclipse-season/",
+      "priority": "P0",
+      "line": "cross",
+      "name": "Eclipse Season"
+    },
+    {
+      "slug": "venus-retrograde",
+      "title": "Crystals for Venus Retrograde: Love, Worth & Reconnection",
+      "url": "/crystals-for-venus-retrograde/",
+      "priority": "P1",
+      "line": "cross",
+      "name": "Venus Retrograde"
+    },
+    {
+      "slug": "crystals-for-astrology-events",
+      "title": "Crystals for Astrology Events: Retrogrades, Eclipses, Moon Phases",
+      "url": "/crystals-for-astrology-events/",
+      "priority": "P0",
+      "line": "hub",
+      "name": "Astrology Events Hub"
+    }
+  ]
+}

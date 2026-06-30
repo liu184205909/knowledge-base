@@ -1,0 +1,39 @@
+{
+  "app_ready": true,
+  "deck_22": 22,
+  "console_errors": [],
+  "love_shows_scenario": "flex",
+  "scenario_option_count": 4,
+  "scenario_options": [
+    "What Is He/She Thinking?",
+    "True Love / Soulmate",
+    "Relationship Status",
+    "Getting Back Together?"
+  ],
+  "love_autoflip": 1,
+  "love_scenario_bar": 1,
+  "love_scenario_name": "What Is He/She Thinking?",
+  "love_meaning_lbl": "MEANING IN YOUR WHAT IS HE/SHE THINKING? READING",
+  "love_practice": "What is the climate between us right now, and what would an honest conversation ask of me first?",
+  "love_upright_meaning_lbl_logic": "Meaning in your what is he/she thinking? reading",
+  "love_stone_tags": [
+    "For love",
+    "Overall support"
+  ],
+  "three_autoflip": 3,
+  "three_pos_labels": [
+    "What shaped their view",
+    "Where they are now",
+    "Where this is tending"
+  ],
+  "general_hides_scenario": "none",
+  "general_autoflip": 1,
+  "general_meaning_lbl": "UPRIGHT MEANING",
+  "general_scenario_bar": 0,
+  "focus_required_picked_before": 0,
+  "focus_required_picked_after": 0,
+  "focus_required_hint": "Select your focus first, then pick your card.",
+  "free_field_before": "none",
+  "free_field_after": "flex",
+  "deck_overflow_x": "auto"
+}

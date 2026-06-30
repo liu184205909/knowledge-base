@@ -1,0 +1,25 @@
+======================================================================
+[home] https://www.tellmytarot.com/
+TITLE: Free Tarot Card Reading, Hyper-Personalized Tarot - Tellmytarot
+HEADINGS:
+  H1: Free Tarot Reading
+  H2: Let's Talk Tarot, Shall We?
+  H2: All free readings
+NAV:
+   | https://tellmytarot.com/
+  Tell My Tarot | https://tellmytarot.com/
+  FREE TAROT READING | https://tellmytarot.com/
+  LOVE TAROT | https://tellmytarot.com/love-tarot/
+  DAILY TAROT | https://tellmytarot.com/daily-tarot/
+  YES NO TAROT | https://tellmytarot.com/yes-no-reading/
+  TAROT CARD MEANINGS | https://tellmytarot.com/tarot-card-meanings/
+  FREE TAROT READING | https://tellmytarot.com/
+  LOVE TAROT | https://tellmytarot.com/love-tarot/
+  DAILY TAROT | https://tellmytarot.com/daily-tarot/
+  YES NO TAROT | https://tellmytarot.com/yes-no-reading/
+  TAROT CARD MEANINGS | https://tellmytarot.com/tarot-card-meanings/
+CTAS:
+  FREE TAROT READING | https://tellmytarot.com/
+  FREE TAROT READING | https://tellmytarot.com/
+  tarot readings | https://tellmytarot.com/
+
