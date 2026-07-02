@@ -142,7 +142,6 @@ const APP_JS = String.raw`(function () {
     sequence: [],          // [{type:'bead',id,size_mm} | {type:'charm',id,slotWeight}]
     selected: -1,
     filterColor: 'all',
-    selectedStone: (parts.beads[0] && parts.beads[0].id) || 'clear_quartz',
     catalogMode: 'bead'
   };
 
@@ -210,12 +209,18 @@ const APP_JS = String.raw`(function () {
     if (color === 'all') return true;
     return (b.color || []).indexOf(color) >= 0;
   }
-  function orderedBeads() {
-    return parts.beads.slice();
-  }
-  function selectedBead() {
-    return beadMap[state.selectedStone] || beadMap.clear_quartz || parts.beads[0];
-  }
+  var SHAPE_PRODUCTS = [
+    { id: 'shape_freeform_quartz', name: 'Clear Quartz Freeform', price: 8, size: '10mm', note: 'natural shape' },
+    { id: 'shape_clear_bear', name: 'Clear Quartz Bear', price: 12, size: '12mm', note: 'carved bead' },
+    { id: 'shape_moonstone_drop', name: 'Moonstone Drop', price: 9, size: '9mm', note: 'soft glow' },
+    { id: 'shape_obsidian_figure', name: 'Obsidian Figure', price: 10, size: '15mm', note: 'carved form' }
+  ];
+  var SPACER_PRODUCTS = [
+    { id: 'spacer_silver', name: 'Silver Spacer', price: 2, size: '4mm', note: 'roundel' },
+    { id: 'spacer_gold', name: 'Gold Spacer', price: 2, size: '4mm', note: 'warm metal' },
+    { id: 'spacer_rondelle', name: 'Clear Rondelle', price: 3, size: '6mm', note: 'sparkle' },
+    { id: 'spacer_matte', name: 'Matte Divider', price: 1.5, size: '5mm', note: 'soft break' }
+  ];
 
   // --- Procedural crystal texture (canvas) — shared by 3D bead + 2D thumbnail ---
   function makeBeadTexture(bead) {
@@ -386,28 +391,64 @@ const APP_JS = String.raw`(function () {
   }
 
   function renderLeft() {
-    var stoneEl = document.getElementById('t17-stone-list');
-    stoneEl.innerHTML = orderedBeads().map(function (b) {
-      return '<button type="button" class="stone-row' + (state.selectedStone === b.id ? ' is-active' : '') + '" data-stone="' + b.id + '">' +
-        '<span class="stone-mini" style="background-image:url(' + (b._thumb || '') + ')"></span>' +
-        '<span>' + b.name_en + '</span></button>';
-    }).join('');
+    renderCategoryList();
     renderBeadGrid();
+  }
+
+  function renderCategoryList() {
+    var cats = document.getElementById('t17-category-list');
+    var heading = document.getElementById('t17-category-heading');
+    if (!cats || !heading) return;
+    if (state.catalogMode === 'bead') {
+      heading.textContent = 'Crystal';
+      cats.innerHTML = COLOR_TABS.map(function (t) {
+        return '<button type="button" class="cat-row' + (state.filterColor === t.id ? ' is-active' : '') + '" data-color="' + t.id + '">' +
+          '<span class="cat-mark"></span><span>' + t.label + '</span></button>';
+      }).join('');
+      return;
+    }
+    if (state.catalogMode === 'charm') {
+      heading.textContent = 'Charms';
+      var groups = [
+        { id: 'all', label: 'All Charms' },
+        { id: 'eastern', label: 'Eastern' },
+        { id: 'classic', label: 'Classic' }
+      ];
+      cats.innerHTML = groups.map(function (g) {
+        return '<button type="button" class="cat-row' + (state.filterColor === g.id ? ' is-active' : '') + '" data-charm-cat="' + g.id + '">' +
+          '<span class="cat-mark"></span><span>' + g.label + '</span></button>';
+      }).join('');
+      return;
+    }
+    if (state.catalogMode === 'cord') {
+      heading.textContent = 'Cord';
+      cats.innerHTML = parts.cords.map(function (c) {
+        return '<button type="button" class="cat-row' + (state.cord === c.id ? ' is-active' : '') + '" data-cord="' + c.id + '">' +
+          '<span class="cat-mark"></span><span>' + c.name_en + '</span></button>';
+      }).join('');
+      return;
+    }
+    heading.textContent = state.catalogMode === 'shape' ? 'Shapes' : 'Spacers';
+    var rows = state.catalogMode === 'shape'
+      ? ['Freeform', 'Carved', 'Drop', 'Figure']
+      : ['Silver', 'Gold', 'Rondelle', 'Matte'];
+    cats.innerHTML = rows.map(function (label, i) {
+      return '<button type="button" class="cat-row' + (i === 0 ? ' is-active' : '') + '" disabled><span class="cat-mark"></span><span>' + label + '</span></button>';
+    }).join('');
   }
 
   function renderBeadGrid() {
     var grid = document.getElementById('t17-bead-grid');
     var title = document.getElementById('t17-catalog-title');
     var count = document.getElementById('t17-catalog-count');
-    var bead = selectedBead();
     if (!grid || !title || !count) return;
     title.textContent =
-      state.catalogMode === 'bead' ? bead.name_en :
+      state.catalogMode === 'bead' ? 'Beads' :
       state.catalogMode === 'charm' ? 'Charms' :
       state.catalogMode === 'shape' ? 'Crystal Shapes' :
       state.catalogMode === 'spacer' ? 'Spacers' : 'Cord';
     count.textContent =
-      state.catalogMode === 'bead' ? String((bead.sizes || []).length) :
+      state.catalogMode === 'bead' ? String(parts.beads.filter(function (b) { return beadMatchesColor(b, state.filterColor); }).length) :
       state.catalogMode === 'charm' ? String(parts.charms.length) :
       state.catalogMode === 'cord' ? String(parts.cords.length) : 'Soon';
     var tabs = document.getElementById('t17-catalog-tabs');
@@ -417,18 +458,25 @@ const APP_JS = String.raw`(function () {
       });
     }
     if (state.catalogMode === 'bead') {
-      var sizes = bead.sizes || [];
-      grid.innerHTML = sizes.map(function (s) {
-        return '<button type="button" class="bead-card" data-bead="' + bead.id + '" data-bead-size="' + s.size_mm + '" title="' + (bead.description_short || '') + '">' +
-          '<span class="bead-thumb large" style="background-image:url(' + (bead._thumb || '') + ')"></span>' +
-          '<span class="bead-meta"><b>' + bead.name_en + '</b>' +
-          '<small>' + s.size_mm + 'mm · ' + money(s.price) + '</small></span></button>';
+      var list = parts.beads.filter(function (b) { return beadMatchesColor(b, state.filterColor); });
+      if (!list.length) { grid.innerHTML = '<p class="empty">No stones in this category.</p>'; return; }
+      grid.innerHTML = list.map(function (b) {
+        var price = beadPrice(b.id, state.beadSizeMm);
+        var tierTag = b.tier === 'premium' ? '<em class="tier">Premium</em>' : '';
+        return '<button type="button" class="bead-card" data-bead="' + b.id + '" title="' + (b.description_short || '') + '">' +
+          '<span class="bead-thumb large" style="background-image:url(' + (b._thumb || '') + ')"></span>' +
+          '<span class="bead-meta"><b>' + b.name_en + tierTag + '</b>' +
+          '<small>' + state.beadSizeMm + 'mm · ' + money(price) + '</small></span></button>';
       }).join('');
       return;
     }
     if (state.catalogMode === 'charm') {
       ensureGlyphDataUrls();
-      grid.innerHTML = parts.charms.map(function (c) {
+      var charms = parts.charms.filter(function (c) {
+        return state.filterColor === 'all' || !state.filterColor || c.category === state.filterColor;
+      });
+      count.textContent = String(charms.length);
+      grid.innerHTML = charms.map(function (c) {
         var gUrl = _glyphDataUrls && _glyphDataUrls[c.symbol];
         return '<button type="button" class="bead-card charm-card" data-charm="' + c.id + '" title="' + c.description_short + '">' +
           '<span class="charm-coin card-coin">' + (gUrl ? '<img src="' + gUrl + '" alt="" class="charm-glyph" draggable="false">' : charmMark(c.symbol)) + '</span>' +
@@ -443,20 +491,11 @@ const APP_JS = String.raw`(function () {
       }).join('');
       return;
     }
-    var spacerNames = state.catalogMode === 'shape' ? [
-      { name: 'Freeform Quartz', price: '$8.00', note: 'natural shape' },
-      { name: 'Clear Bear', price: '$12.00', note: 'carved bead' },
-      { name: 'Moonstone Drop', price: '$9.00', note: 'soft glow' },
-      { name: 'Obsidian Figure', price: '$10.00', note: 'carved form' }
-    ] : [
-      { name: 'Silver Spacer', price: '$2.00', note: 'roundel' },
-      { name: 'Gold Spacer', price: '$2.00', note: 'warm metal' },
-      { name: 'Clear Rondelle', price: '$3.00', note: 'sparkle' },
-      { name: 'Matte Divider', price: '$1.50', note: 'soft break' }
-    ];
+    var spacerNames = state.catalogMode === 'shape' ? SHAPE_PRODUCTS : SPACER_PRODUCTS;
+    count.textContent = 'Soon';
     grid.innerHTML = spacerNames.map(function (s) {
       return '<button type="button" class="bead-card spacer-card" disabled title="Spacer SKU pending">' +
-        '<span class="spacer-thumb"></span><span class="bead-meta"><b>' + s.name + '</b><small>' + s.note + ' · ' + s.price + '</small></span>' +
+        '<span class="spacer-thumb"></span><span class="bead-meta"><b>' + s.name + '</b><small>' + s.size + ' · ' + money(s.price) + '</small></span>' +
         '<em class="unavailable">Pending</em></button>';
     }).join('');
   }
@@ -465,15 +504,17 @@ const APP_JS = String.raw`(function () {
     var charmCount = state.sequence.filter(function (i) { return i.type === 'charm'; }).length;
     ensureGlyphDataUrls();
     var charmEl = document.getElementById('t17-charms');
-    charmEl.innerHTML = '<span class="tb-label">Charm ' + charmCount + '/' + (settings.maxCharms || 5) + '</span>' +
-      parts.charms.map(function (c) {
-        var gUrl = _glyphDataUrls && _glyphDataUrls[c.symbol];
-        var coinInner = gUrl
-          ? '<img src="' + gUrl + '" alt="" class="charm-glyph" draggable="false">'
-          : charmMark(c.symbol);
-        return '<button type="button" class="charm-btn" data-charm="' + c.id + '" title="' + c.name_en + ' · ' + money(c.price) + '">' +
-          '<span class="charm-coin">' + coinInner + '</span><small>' + c.name_en + '</small></button>';
-      }).join('');
+    if (charmEl) {
+      charmEl.innerHTML = '<span class="tb-label">Charm ' + charmCount + '/' + (settings.maxCharms || 5) + '</span>' +
+        parts.charms.map(function (c) {
+          var gUrl = _glyphDataUrls && _glyphDataUrls[c.symbol];
+          var coinInner = gUrl
+            ? '<img src="' + gUrl + '" alt="" class="charm-glyph" draggable="false">'
+            : charmMark(c.symbol);
+          return '<button type="button" class="charm-btn" data-charm="' + c.id + '" title="' + c.name_en + ' · ' + money(c.price) + '">' +
+            '<span class="charm-coin">' + coinInner + '</span><small>' + c.name_en + '</small></button>';
+        }).join('');
+    }
 
     var cordEl = document.getElementById('t17-cords');
     cordEl.innerHTML = '<span class="tb-label">Cord</span>' + parts.cords.map(function (c) {
@@ -1175,10 +1216,10 @@ const APP_JS = String.raw`(function () {
       var sizeBtn = e.target.closest('[data-size]'); if (sizeBtn) return setBeadSize(sizeBtn.getAttribute('data-size'));
       var colorBtn = e.target.closest('[data-color]');
       if (colorBtn) { state.filterColor = colorBtn.getAttribute('data-color'); renderLeft(); return; }
-      var stoneBtn = e.target.closest('[data-stone]');
-      if (stoneBtn) { state.selectedStone = stoneBtn.getAttribute('data-stone'); state.catalogMode = 'bead'; renderLeft(); return; }
+      var charmCatBtn = e.target.closest('[data-charm-cat]');
+      if (charmCatBtn) { state.filterColor = charmCatBtn.getAttribute('data-charm-cat'); renderLeft(); return; }
       var modeBtn = e.target.closest('[data-mode]');
-      if (modeBtn) { state.catalogMode = modeBtn.getAttribute('data-mode'); renderBeadGrid(); return; }
+      if (modeBtn) { state.catalogMode = modeBtn.getAttribute('data-mode'); state.filterColor = 'all'; renderLeft(); return; }
       var slotBtn = e.target.closest('[data-slot]');
       if (slotBtn) { state.selected = Number(slotBtn.getAttribute('data-slot')); updateAll(false); return; }
       var actBtn = e.target.closest('[data-action]');
@@ -1264,7 +1305,7 @@ const APP_B64 = Buffer.from(asciiJS(APP_JS), 'utf8').toString('base64');
 // Refined light catalog UI for the live WordPress builder.
 const CSS = String.raw`
 #t17-app,#t17-app *{box-sizing:border-box;margin:0;padding:0}
-#t17-app{--paper:#fffdf9;--ink:#332d28;--muted:#81776e;--line:#e7dfd8;--soft:#f4f0ec;--wash:#f8f5f1;--accent:#d5504c;--green:#2d6a43;--blue:#2d7fd8;width:100%;max-width:1480px;min-height:820px;height:calc(100vh - 88px);margin:18px auto;overflow:hidden;font-family:Georgia,"Times New Roman",serif;background:#fff;color:var(--ink);-webkit-font-smoothing:antialiased;border:1px solid #eee4dc;border-radius:18px;box-shadow:0 20px 60px rgba(92,65,42,.12)}
+#t17-app{--paper:#fffdf9;--ink:#332d28;--muted:#81776e;--line:#e7dfd8;--soft:#f4f0ec;--wash:#f8f5f1;--accent:#d5504c;--green:#2d6a43;--blue:#2d7fd8;display:flex;width:100%;max-width:1480px;min-height:820px;height:calc(100vh - 88px);margin:18px auto;overflow:hidden;font-family:Georgia,"Times New Roman",serif;background:#fff;color:var(--ink);-webkit-font-smoothing:antialiased;border:1px solid #eee4dc;border-radius:18px;box-shadow:0 20px 60px rgba(92,65,42,.12)}
 #t17-left{display:none}
 #t17-left h3,.catalog-cats h3{font-size:24px;line-height:1;color:#211b17;font-weight:700;margin:4px 0 18px}
 .lh-title{display:none}
@@ -1274,8 +1315,17 @@ const CSS = String.raw`
 .stone-row:hover{background:rgba(255,255,255,.58);color:#433a33}
 .stone-row.is-active{background:#fff;color:#2f2924;box-shadow:0 1px 0 rgba(0,0,0,.03)}
 .stone-mini{width:22px;height:22px;flex:0 0 22px;border-radius:50%;background-size:cover;background-position:center;box-shadow:inset -3px -3px 6px rgba(45,37,30,.18),inset 2px 2px 4px rgba(255,255,255,.72),0 1px 2px rgba(45,37,30,.12)}
+.cat-row{width:100%;min-height:44px;border:0;background:transparent;border-radius:10px;padding:7px 8px;display:flex;align-items:center;gap:9px;color:#6f6760;font-family:Arial,sans-serif;font-size:14px;font-weight:700;text-align:left;cursor:pointer;transition:background .14s,color .14s}
+.cat-row:hover{background:rgba(255,255,255,.7);color:#2f2924}
+.cat-row.is-active{background:#fff;color:#2f2924;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+.cat-row:disabled{cursor:default;opacity:.75}
+.cat-mark{width:3px;height:18px;border-radius:2px;background:transparent;flex:0 0 3px}
+.cat-row.is-active .cat-mark{background:var(--green)}
 #t17-right{height:100%;display:grid;grid-template-columns:minmax(640px,1fr) minmax(520px,620px);grid-template-rows:auto 1fr auto;overflow:hidden;background:var(--paper)}
-#t17-toolbar{grid-column:1/3;background:#fff;border-bottom:1px solid var(--line);padding:16px 24px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+#t17-toolbar{grid-column:1/3;background:#fff;border-bottom:1px solid var(--line);padding:16px 24px;display:grid;grid-template-columns:minmax(230px,1fr) auto minmax(330px,420px);gap:22px;align-items:center}
+.tool-brand{display:flex;flex-direction:column;gap:5px}
+.tool-brand b{font-size:26px;line-height:1;color:#26211d}
+.tool-brand small{font-family:Arial,sans-serif;font-size:12px;color:#7d746c;letter-spacing:.2px}
 #t17-catalog{grid-column:2;grid-row:2/4;min-height:0;border-left:1px solid var(--line);padding:20px 22px;background:#fff;display:flex;flex-direction:column;gap:14px;overflow:hidden}
 .catalog-body{min-height:0;display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;flex:1}
 .catalog-cats{min-height:0;background:#f4f2f0;border-radius:18px;padding:18px 8px 16px 16px;display:flex;flex-direction:column;overflow:hidden}
@@ -1283,10 +1333,11 @@ const CSS = String.raw`
 .catalog-head{height:58px;border:1px solid var(--line);border-radius:28px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;background:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
 #t17-catalog-title{font-size:24px;font-weight:700;color:#473d36;line-height:1}
 #t17-catalog-count{min-width:52px;height:30px;border-radius:18px;background:#f7f2ee;border:1px solid #e2d8cf;color:#675d55;display:grid;place-items:center;font-size:20px}
-#t17-catalog-tabs{display:flex;gap:10px;align-items:center;padding:0 2px}
-.mode-tab{border:0;border-radius:18px;background:#f3f0ed;color:#7d746e;padding:8px 18px;font-family:inherit;font-size:16px;font-weight:700;cursor:pointer;box-shadow:0 1px 0 rgba(0,0,0,.03);transition:background .16s,color .16s,transform .16s}
-.mode-tab:hover{transform:translateY(-1px);color:#302a25}
-.mode-tab.is-active{background:#1f1e1d;color:#fff}
+#t17-catalog-tabs{display:flex;gap:24px;align-items:flex-end;padding:0 2px 4px;border-bottom:1px solid #eee7e0;min-height:36px}
+.mode-tab{position:relative;border:0;border-radius:0;background:transparent;color:#746b64;padding:0 0 10px;font-family:Arial,sans-serif;font-size:16px;font-weight:700;cursor:pointer;transition:color .16s}
+.mode-tab:hover{color:#302a25}
+.mode-tab.is-active{color:#202020}
+.mode-tab.is-active:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;border-radius:3px;background:#202020}
 #t17-bead-grid{overflow-y:auto;padding:4px 4px 18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .bead-card{position:relative;min-height:172px;background:#fff;border:1px solid #ebe4df;border-radius:14px;padding:14px 10px 12px;text-align:center;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:10px;box-shadow:0 10px 22px rgba(65,49,34,.05);transition:border-color .16s,box-shadow .16s,transform .16s}
 .bead-card:hover{border-color:#eeb6b2;box-shadow:0 14px 30px rgba(118,77,48,.1);transform:translateY(-2px)}
@@ -1308,14 +1359,14 @@ const CSS = String.raw`
 .cord-card.is-selected{border-color:#2d7fd8;background:#f4f9ff}
 .unavailable{position:absolute;right:10px;bottom:10px;background:#d8524d;color:#fff;font-style:normal;font-size:12px;font-family:Arial,sans-serif;border-radius:14px;padding:4px 10px}
 .empty{padding:24px;color:var(--muted);font-size:14px;text-align:center}
-.tb-group{display:flex;flex-direction:column;gap:6px}
+.tb-group{display:flex;flex-direction:column;gap:7px}
 .tb-label{font-family:Arial,sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:#8c8178;font-weight:700}
 #t17-charms-wrap,#t17-cords-wrap{display:none}
 #t17-cords,#t17-sizes{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.cord-btn,.size-btn{background:#f5f1ed;border:1px solid #e1d8cf;border-radius:9px;padding:9px 12px;cursor:pointer;color:#5d534b;font-family:Arial,sans-serif;font-size:12px;font-weight:700;transition:border-color .12s,background .12s}
+.cord-btn,.size-btn{background:#f7f3ef;border:1px solid #e1d8cf;border-radius:12px;padding:10px 13px;cursor:pointer;color:#5d534b;font-family:Arial,sans-serif;font-size:13px;font-weight:800;transition:border-color .12s,background .12s,box-shadow .12s}
 .cord-btn{display:flex;flex-direction:column;align-items:center;gap:1px}
 .cord-btn small{font-size:10px;color:#8d827a;font-weight:500}
-.cord-btn.is-active,.size-btn.is-active{border-color:#2d7fd8;background:#eaf4ff;color:#1e5c9d}
+.cord-btn.is-active,.size-btn.is-active{border-color:#2d7fd8;background:#eaf4ff;color:#1e5c9d;box-shadow:0 0 0 2px rgba(45,127,216,.1)}
 #t17-wrist-wrap{display:flex;flex-direction:column;gap:7px;min-width:330px}
 .wrist-row{display:flex;align-items:center;gap:6px}
 #t17-wrist-num{width:78px;background:#fff;border:1px solid #ded5cd;color:#312b27;border-radius:10px;padding:8px 10px;font-size:14px;font-weight:700}
@@ -1340,7 +1391,7 @@ const CSS = String.raw`
 #t17-draft-toast .draft-msg{line-height:1.4}
 #t17-draft-toast .draft-cta{background:#2d7fd8;border:0;color:#fff;border-radius:8px;padding:6px 10px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap}
 #t17-draft-toast .draft-x{background:transparent;border:0;color:#8c8178;font-size:14px;cursor:pointer;padding:2px 4px}
-#t17-stage{grid-column:1;grid-row:2;position:relative;min-height:0;background:radial-gradient(circle at 50% 42%,#ffffff 0%,#fbfbfa 34%,#f6f3ef 62%,#ece3da 100%);border-right:1px solid #eee4dc}
+#t17-stage{grid-column:1;grid-row:2;position:relative;min-height:0;background:radial-gradient(circle at 50% 42%,#ffffff 0%,#ffffff 34%,#faf8f5 62%,#f1ebe5 100%);border-right:1px solid #eee4dc}
 #t17-canvas{display:block;width:100%;height:100%}
 #t17-hint{position:absolute;top:16px;left:18px;background:rgba(255,255,255,.82);padding:10px 13px;border-radius:13px;font-family:Arial,sans-serif;font-size:11px;line-height:1.55;color:#6f645b;pointer-events:none;max-width:255px;box-shadow:0 10px 24px rgba(75,55,42,.08)}
 #t17-hint b{color:#2f2924}
@@ -1376,7 +1427,7 @@ const CSS = String.raw`
   #t17-app{flex-direction:column;height:auto;min-height:100vh;overflow:auto}
   #t17-left{display:none}
   #t17-left h3{font-size:24px;margin-bottom:12px}
-  #t17-stone-list{display:grid;grid-template-columns:1fr 1fr}
+  #t17-stone-list,#t17-category-list{display:grid;grid-template-columns:1fr 1fr}
   .stone-row{font-size:17px;min-height:42px}
   #t17-right{display:flex;flex-direction:column;overflow:visible}
   #t17-toolbar{display:flex;flex-direction:column;align-items:stretch;padding:14px}
@@ -1392,12 +1443,9 @@ const CSS = String.raw`
 const fragment = `<!-- ===== Earthward T17 Crystal Bracelet Builder WP Fragment ===== -->
 <style>${CSS}</style>
 <div id="t17-app">
-  <aside id="t17-left">
-    <h3>Crystal</h3>
-    <div class="scroll-area"><div id="t17-stone-list"></div></div>
-  </aside>
   <section id="t17-right">
     <div id="t17-toolbar">
+      <div class="tool-brand"><b>Earthward Composer</b><small>Design your crystal bracelet bead by bead</small></div>
       <div class="tb-group" id="t17-cords-wrap"><div id="t17-cords"></div></div>
       <div class="tb-group" id="t17-sizes-wrap"><div id="t17-sizes"></div></div>
       <div class="tb-group" id="t17-wrist-wrap"></div>
@@ -1410,8 +1458,16 @@ const fragment = `<!-- ===== Earthward T17 Crystal Bracelet Builder WP Fragment 
         <button type="button" class="mode-tab" data-mode="spacer">Spacers</button>
         <button type="button" class="mode-tab" data-mode="cord">Cord</button>
       </div>
-      <div class="catalog-head"><strong id="t17-catalog-title">Crystal</strong><span id="t17-catalog-count">4</span></div>
-      <div id="t17-bead-grid"></div>
+      <div class="catalog-body">
+        <div class="catalog-cats">
+          <h3 id="t17-category-heading">Crystal</h3>
+          <div class="scroll-area"><div id="t17-category-list"></div></div>
+        </div>
+        <div class="catalog-products">
+          <div class="catalog-head"><strong id="t17-catalog-title">Beads</strong><span id="t17-catalog-count">20</span></div>
+          <div id="t17-bead-grid"></div>
+        </div>
+      </div>
     </aside>
     <div id="t17-stage">
       <canvas id="t17-canvas"></canvas>

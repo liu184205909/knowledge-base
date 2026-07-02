@@ -6,6 +6,8 @@ config/api-credentials*.json
 # Environment variables
 .env
 .env.*
+!.env.example
+!.env.sample
 
 # OS files
 .DS_Store
@@ -70,3 +72,10 @@ nul
 **/_tmp_qc.py
 **/_tmp_wc.py
 **/_tmp_scan.py
+
+# 水晶手链 builder 诊断脚本与检查输出
+**/diag_*.js
+**/diag_*.py
+**/diag_*.json
+**/p1-check.json
+**/p2.json

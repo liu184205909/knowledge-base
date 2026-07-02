@@ -11,6 +11,28 @@
  */
 if (!defined('ABSPATH')) { exit; }
 
+// ---- Load .env from WordPress root (ABSPATH/.env) if DEEPSEEK_API_KEY not in env ----
+// 支持方案 A：服务器环境变量注入。优先读 OS env，缺失则解析站点根目录 .env。
+if (getenv('DEEPSEEK_API_KEY') === false) {
+    $envFile = ABSPATH . '.env';
+    if (is_readable($envFile)) {
+        foreach (file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
+            $line = trim($line);
+            if ($line === '' || $line[0] === '#') continue;
+            if (strpos($line, '=') === false) continue;
+            list($k, $v) = explode('=', $line, 2);
+            $k = trim($k);
+            $v = trim($v);
+            // 剥离首尾引号（单/双）
+            $len = strlen($v);
+            if ($len >= 2 && (($v[0] === '"' && $v[$len - 1] === '"') || ($v[0] === "'" && $v[$len - 1] === "'"))) {
+                $v = substr($v, 1, -1);
+            }
+            if (getenv($k) === false) putenv($k . '=' . $v);
+        }
+    }
+}
+
 define('EAC_DEEPSEEK_KEY', getenv('DEEPSEEK_API_KEY') ?: 'sk-REPLACE_WITH_DEEPSEEK_KEY');
 define('EAC_DEEPSEEK_URL', 'https://api.deepseek.com/v1/chat/completions');
 define('EAC_DAILY_LIMIT', 20); // free per-IP per day
