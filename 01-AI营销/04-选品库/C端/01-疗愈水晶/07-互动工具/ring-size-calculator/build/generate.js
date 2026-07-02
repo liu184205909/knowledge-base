@@ -8,6 +8,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { relatedHtml } = require('../../_shared/related-tools/related-html');
 
 // ===== 戒指尺码表（US 含半号 / EU / 港度 HK / CN / 内径 dia mm / 内周长 cir mm）=====
 const RING_SIZES = [
@@ -241,7 +242,7 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
 <!-- ===== End Ring Sizing Guide ===== -->`;
 
 const OUT = path.resolve(__dirname, 'ring-size-calculator.html');
-fs.writeFileSync(OUT, html, 'utf8');
+fs.writeFileSync(OUT, html + '\n' + relatedHtml('ring-size-calculator'), 'utf8');
 console.log(`✅ Ring Size Calculator 生成完成 → ${OUT}`);
 console.log(`   ${(fs.statSync(OUT).size / 1024).toFixed(1)} KB | 双方式计算器 + US/EU/HK/CN 转换表 + FAQ`);
 console.log(`   测量图(S2): 占位中，待 R-2 生图后替换 .ewr-method-img`);

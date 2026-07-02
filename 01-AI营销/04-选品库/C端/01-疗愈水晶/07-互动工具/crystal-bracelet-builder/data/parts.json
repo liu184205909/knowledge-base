@@ -1,0 +1,973 @@
+{
+  "schemaVersion": "t17-builder-v1",
+  "partsVersion": "2026-07-02-mvp",
+  "settings": {
+    "defaultBeadSizeMm": 8,
+    "defaultWristCm": 16,
+    "fitAllowanceCm": 1.5,
+    "minWristCm": 13,
+    "maxWristCm": 25,
+    "maxCharms": 5,
+    "currency": "USD"
+  },
+  "beads": [
+    {
+      "id": "amethyst",
+      "name_cn": "紫水晶",
+      "name_en": "Amethyst",
+      "color": [
+        "purple"
+      ],
+      "intention": [
+        "calm",
+        "third_eye",
+        "spiritual"
+      ],
+      "tier": "standard",
+      "monthly_volume": 33100,
+      "textureColors": [
+        "#6c4aa4",
+        "#b79adf",
+        "#33224f"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Calm, intuition, and steady spiritual focus."
+    },
+    {
+      "id": "rose_quartz",
+      "name_cn": "粉晶",
+      "name_en": "Rose Quartz",
+      "color": [
+        "pink"
+      ],
+      "intention": [
+        "love",
+        "self_love",
+        "heart"
+      ],
+      "tier": "standard",
+      "monthly_volume": 9900,
+      "textureColors": [
+        "#f0a9bd",
+        "#ffdbe5",
+        "#ad5b78"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Gentle love, compassion, and emotional softness."
+    },
+    {
+      "id": "carnelian",
+      "name_cn": "红玉髓",
+      "name_en": "Carnelian",
+      "color": [
+        "red",
+        "orange"
+      ],
+      "intention": [
+        "vitality",
+        "confidence",
+        "sacral"
+      ],
+      "tier": "standard",
+      "monthly_volume": 18100,
+      "textureColors": [
+        "#b9482f",
+        "#f08a42",
+        "#6e271f"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Momentum, courage, and warm creative drive."
+    },
+    {
+      "id": "bloodstone",
+      "name_cn": "血石",
+      "name_en": "Bloodstone",
+      "color": [
+        "green",
+        "red"
+      ],
+      "intention": [
+        "protection",
+        "root",
+        "strength"
+      ],
+      "tier": "standard",
+      "monthly_volume": 5400,
+      "textureColors": [
+        "#183b2c",
+        "#557b4d",
+        "#8e2f2d"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Grounded protection and resilient energy."
+    },
+    {
+      "id": "citrine",
+      "name_cn": "黄水晶",
+      "name_en": "Citrine",
+      "color": [
+        "yellow"
+      ],
+      "intention": [
+        "wealth",
+        "solar_plexus",
+        "optimism"
+      ],
+      "tier": "standard",
+      "monthly_volume": 27100,
+      "textureColors": [
+        "#d79a22",
+        "#ffe093",
+        "#8d5a12"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Brightness, abundance, and confident action."
+    },
+    {
+      "id": "tiger_eye",
+      "name_cn": "虎眼石",
+      "name_en": "Tiger Eye",
+      "color": [
+        "gold",
+        "brown"
+      ],
+      "intention": [
+        "confidence",
+        "focus",
+        "solar_plexus"
+      ],
+      "tier": "standard",
+      "monthly_volume": 9900,
+      "textureColors": [
+        "#2d1a0c",
+        "#c4892c",
+        "#f2c46d"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Clear willpower, confidence, and practical focus."
+    },
+    {
+      "id": "pyrite",
+      "name_cn": "黄铁矿",
+      "name_en": "Pyrite",
+      "color": [
+        "gold"
+      ],
+      "intention": [
+        "wealth",
+        "abundance",
+        "protection"
+      ],
+      "tier": "standard",
+      "monthly_volume": 9900,
+      "textureColors": [
+        "#d6b04a",
+        "#f3df92",
+        "#6b571f"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Bold abundance energy with a protective edge."
+    },
+    {
+      "id": "calcite",
+      "name_cn": "方解石",
+      "name_en": "Calcite",
+      "color": [
+        "orange",
+        "yellow"
+      ],
+      "intention": [
+        "energy",
+        "clarity",
+        "sacral"
+      ],
+      "tier": "standard",
+      "monthly_volume": 8100,
+      "textureColors": [
+        "#f2b35f",
+        "#ffe2b7",
+        "#d5792e"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Fresh energy, movement, and mental lightness."
+    },
+    {
+      "id": "aventurine",
+      "name_cn": "东陵玉",
+      "name_en": "Aventurine",
+      "color": [
+        "green"
+      ],
+      "intention": [
+        "luck",
+        "growth",
+        "heart"
+      ],
+      "tier": "standard",
+      "monthly_volume": 5400,
+      "textureColors": [
+        "#6aa36f",
+        "#c7d9b9",
+        "#2f6037"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Growth, luck, and relaxed heart energy."
+    },
+    {
+      "id": "jade",
+      "name_cn": "玉",
+      "name_en": "Jade",
+      "color": [
+        "green"
+      ],
+      "intention": [
+        "wisdom",
+        "harmony",
+        "heart"
+      ],
+      "tier": "premium",
+      "monthly_volume": 6600,
+      "textureColors": [
+        "#7faf87",
+        "#d6ead9",
+        "#315f45"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 2.5
+        },
+        {
+          "size_mm": 8,
+          "price": 3.5
+        },
+        {
+          "size_mm": 10,
+          "price": 4.8
+        },
+        {
+          "size_mm": 12,
+          "price": 6.5
+        }
+      ],
+      "description_short": "Harmony, wisdom, and a polished cultural note."
+    },
+    {
+      "id": "malachite",
+      "name_cn": "孔雀石",
+      "name_en": "Malachite",
+      "color": [
+        "green"
+      ],
+      "intention": [
+        "transformation",
+        "heart",
+        "protection"
+      ],
+      "tier": "premium",
+      "monthly_volume": 8100,
+      "textureColors": [
+        "#0d4b32",
+        "#2ca15d",
+        "#071f17"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 2.5
+        },
+        {
+          "size_mm": 8,
+          "price": 3.5
+        },
+        {
+          "size_mm": 10,
+          "price": 4.8
+        },
+        {
+          "size_mm": 12,
+          "price": 6.5
+        }
+      ],
+      "description_short": "Transformation, pattern-breaking, and visual drama."
+    },
+    {
+      "id": "aquamarine",
+      "name_cn": "海蓝宝",
+      "name_en": "Aquamarine",
+      "color": [
+        "blue"
+      ],
+      "intention": [
+        "communication",
+        "calm",
+        "throat"
+      ],
+      "tier": "standard",
+      "monthly_volume": 5400,
+      "textureColors": [
+        "#81c9d4",
+        "#d7f4f6",
+        "#2b7d90"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Calm speech, soft clarity, and fluid expression."
+    },
+    {
+      "id": "sodalite",
+      "name_cn": "方钠石",
+      "name_en": "Sodalite",
+      "color": [
+        "blue"
+      ],
+      "intention": [
+        "logic",
+        "focus",
+        "throat"
+      ],
+      "tier": "standard",
+      "monthly_volume": 8100,
+      "textureColors": [
+        "#183a8a",
+        "#4467bd",
+        "#f1f1e4"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Clear thinking, logic, and disciplined expression."
+    },
+    {
+      "id": "celestite",
+      "name_cn": "天青石",
+      "name_en": "Celestite",
+      "color": [
+        "blue",
+        "white"
+      ],
+      "intention": [
+        "peace",
+        "calm",
+        "throat"
+      ],
+      "tier": "standard",
+      "monthly_volume": 5400,
+      "textureColors": [
+        "#a9d7f1",
+        "#edf8ff",
+        "#5a96bd"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Peaceful tone, airy calm, and gentle openness."
+    },
+    {
+      "id": "obsidian",
+      "name_cn": "黑曜石",
+      "name_en": "Obsidian",
+      "color": [
+        "black"
+      ],
+      "intention": [
+        "protection",
+        "root",
+        "grounding"
+      ],
+      "tier": "standard",
+      "monthly_volume": 12100,
+      "textureColors": [
+        "#050607",
+        "#33363b",
+        "#0d1117"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Grounding, boundary-setting, and strong protection."
+    },
+    {
+      "id": "clear_quartz",
+      "name_cn": "白水晶",
+      "name_en": "Clear Quartz",
+      "color": [
+        "clear",
+        "white"
+      ],
+      "intention": [
+        "clarity",
+        "crown",
+        "all"
+      ],
+      "tier": "standard",
+      "monthly_volume": 14800,
+      "textureColors": [
+        "#eff7fb",
+        "#ffffff",
+        "#b8c7d1"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Clarity, amplification, and all-purpose balance."
+    },
+    {
+      "id": "moonstone",
+      "name_cn": "月光石",
+      "name_en": "Moonstone",
+      "color": [
+        "white",
+        "blue"
+      ],
+      "intention": [
+        "intuition",
+        "crown",
+        "love"
+      ],
+      "tier": "standard",
+      "monthly_volume": 6600,
+      "textureColors": [
+        "#dbe5ef",
+        "#f9f3df",
+        "#8ab0cc"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Intuition, cycles, and soft inner listening."
+    },
+    {
+      "id": "fluorite",
+      "name_cn": "萤石",
+      "name_en": "Fluorite",
+      "color": [
+        "purple",
+        "green"
+      ],
+      "intention": [
+        "focus",
+        "clarity",
+        "third_eye"
+      ],
+      "tier": "standard",
+      "monthly_volume": 14800,
+      "textureColors": [
+        "#7a55a3",
+        "#82bd83",
+        "#d7c9ef"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Focus, order, and multi-layered clarity."
+    },
+    {
+      "id": "labradorite",
+      "name_cn": "拉长石",
+      "name_en": "Labradorite",
+      "color": [
+        "gray",
+        "blue"
+      ],
+      "intention": [
+        "transformation",
+        "intuition",
+        "throat"
+      ],
+      "tier": "premium",
+      "monthly_volume": 6600,
+      "textureColors": [
+        "#38434a",
+        "#3e91a8",
+        "#b4c1bd"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 2.5
+        },
+        {
+          "size_mm": 8,
+          "price": 3.5
+        },
+        {
+          "size_mm": 10,
+          "price": 4.8
+        },
+        {
+          "size_mm": 12,
+          "price": 6.5
+        }
+      ],
+      "description_short": "Iridescent transformation and subtle intuition."
+    },
+    {
+      "id": "agate",
+      "name_cn": "玛瑙",
+      "name_en": "Agate",
+      "color": [
+        "multi"
+      ],
+      "intention": [
+        "balance",
+        "root",
+        "stability"
+      ],
+      "tier": "standard",
+      "monthly_volume": 5400,
+      "textureColors": [
+        "#8e5d4b",
+        "#e1c4aa",
+        "#5d3b35"
+      ],
+      "sizes": [
+        {
+          "size_mm": 6,
+          "price": 1.5
+        },
+        {
+          "size_mm": 8,
+          "price": 2
+        },
+        {
+          "size_mm": 10,
+          "price": 3
+        },
+        {
+          "size_mm": 12,
+          "price": 4.5
+        }
+      ],
+      "description_short": "Balance, steadiness, and natural layered beauty."
+    }
+  ],
+  "charms": [
+    {
+      "id": "lotus",
+      "name_cn": "莲花",
+      "name_en": "Lotus",
+      "category": "eastern",
+      "material": "925 silver",
+      "price": 8,
+      "slotWeight": 1,
+      "symbol": "lotus",
+      "model_url": null,
+      "description_short": "A soft Eastern symbol for awakening and renewal."
+    },
+    {
+      "id": "buddha_head",
+      "name_cn": "佛头",
+      "name_en": "Buddha Head",
+      "category": "eastern",
+      "material": "925 silver",
+      "price": 12,
+      "slotWeight": 1,
+      "symbol": "buddha",
+      "model_url": null,
+      "description_short": "A calm focal charm for mindfulness and steadiness."
+    },
+    {
+      "id": "om",
+      "name_cn": "Om",
+      "name_en": "Om",
+      "category": "eastern",
+      "material": "925 silver",
+      "price": 9,
+      "slotWeight": 1,
+      "symbol": "om",
+      "model_url": null,
+      "description_short": "A classic sound-symbol for centering and presence."
+    },
+    {
+      "id": "heart",
+      "name_cn": "心形",
+      "name_en": "Heart",
+      "category": "classic",
+      "material": "925 silver",
+      "price": 7,
+      "slotWeight": 1,
+      "symbol": "heart",
+      "model_url": null,
+      "description_short": "A simple love charm for soft, giftable designs."
+    },
+    {
+      "id": "cross",
+      "name_cn": "十字",
+      "name_en": "Cross",
+      "category": "classic",
+      "material": "925 silver",
+      "price": 8,
+      "slotWeight": 1,
+      "symbol": "cross",
+      "model_url": null,
+      "description_short": "A quiet faith-inspired accent with clean geometry."
+    },
+    {
+      "id": "anchor",
+      "name_cn": "锚",
+      "name_en": "Anchor",
+      "category": "classic",
+      "material": "925 silver",
+      "price": 8,
+      "slotWeight": 1,
+      "symbol": "anchor",
+      "model_url": null,
+      "description_short": "A grounded symbol for steadiness and commitment."
+    },
+    {
+      "id": "star",
+      "name_cn": "星星",
+      "name_en": "Star",
+      "category": "classic",
+      "material": "925 silver",
+      "price": 7,
+      "slotWeight": 1,
+      "symbol": "star",
+      "model_url": null,
+      "description_short": "A bright accent for hope, guidance, and sparkle."
+    }
+  ],
+  "cords": [
+    {
+      "id": "elastic_black",
+      "name_cn": "弹力线",
+      "name_en": "Elastic Cord",
+      "material": "elastic",
+      "color": "black",
+      "price": 0,
+      "description_short": "Comfortable everyday stretch cord."
+    },
+    {
+      "id": "braided_brown",
+      "name_cn": "编织线",
+      "name_en": "Braided Cord",
+      "material": "braided",
+      "color": "brown",
+      "price": 3,
+      "description_short": "A warmer handcrafted look with more texture."
+    },
+    {
+      "id": "silver_wire",
+      "name_cn": "银线",
+      "name_en": "Silver Wire",
+      "material": "silver wire",
+      "color": "silver",
+      "price": 8,
+      "description_short": "A brighter premium finish for charm-heavy designs."
+    }
+  ],
+  "presets": [
+    {
+      "id": "calm",
+      "name": "Calm",
+      "stones": [
+        "amethyst",
+        "clear_quartz",
+        "sodalite"
+      ]
+    },
+    {
+      "id": "prosperity",
+      "name": "Prosperity",
+      "stones": [
+        "citrine",
+        "tiger_eye",
+        "pyrite"
+      ]
+    },
+    {
+      "id": "love",
+      "name": "Love",
+      "stones": [
+        "rose_quartz",
+        "moonstone"
+      ]
+    },
+    {
+      "id": "protection",
+      "name": "Protection",
+      "stones": [
+        "obsidian",
+        "bloodstone"
+      ]
+    },
+    {
+      "id": "focus",
+      "name": "Focus",
+      "stones": [
+        "fluorite",
+        "sodalite",
+        "clear_quartz"
+      ]
+    },
+    {
+      "id": "confidence",
+      "name": "Confidence",
+      "stones": [
+        "carnelian",
+        "tiger_eye",
+        "pyrite"
+      ]
+    }
+  ]
+}

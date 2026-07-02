@@ -531,7 +531,32 @@ the three cards together for a few minutes before journaling.
 
 > 与 Numerology 不同（Numerology 依赖 Calculator 工具），Tarot 文章群**无工具前置依赖** —— 牌意 × 水晶内容自洽，M10 Mini Spread 是文章内嵌的教育性 spread，不需独立工具。未来若建 tarot-spread-generator 工具，可反向增强，但不阻塞 23 篇发布。
 
+### 数据层质量阀门（tarot-knowledge.json 验收，全塔罗普适见 [1F §0A.4](../../01-竞品分析/1F-塔罗内容写法研究.md)）⭐
+
+> tarot-knowledge.json 是 23 篇牌义页（+ 配对/场景/是与否/运势 4 类）的共同源头，错则全错。普适判定流程/抽审比例见 1F §0A.4，本节列**牌义页专属验收清单**。
+
+**tarot-knowledge.json 牌义页验收清单（任一不满足打回）**：
+- [ ] 每牌 archetype/upright_meaning 有 Rider-Waite 权威投射依据（画面象征可追溯）
+- [ ] 22 牌 archetype 主体象征词组重叠 < 30%（[1F §0A.4](../../01-竞品分析/1F-塔罗内容写法研究.md)）
+- [ ] 每牌 M3 reversed_keywords 写该牌独有 shadow（非 22 牌通用 resistance/blockage）
+- [ ] **Health/Finances 相关牌**（Empress/Tower/Death/Devil/Justice 等）的 upright/reversed 意象不触 [1F §0A.1](../../01-竞品分析/1F-塔罗内容写法研究.md) 合规红线（config 层验收，不带到正文）
+- [ ] 每牌 5 角色水晶有四源依据（source 字段命中，非 AI 通识选）
+- [ ] eastern_anchor 跨牌轮换不重复
+
 ## 16. Writing & Compliance Rules
+
+### 16.0 全塔罗普适规则（引用 1F，本节不重复全文）⭐
+
+> 牌义页守 [1F §0A 全塔罗普适规则](../../01-竞品分析/1F-塔罗内容写法研究.md)（合规边界 / 禁用表达库 / 质检语义去重 / 数据层质量阀门）。本节只列**牌义页专属合规重点**，普适黑名单/阈值/验收清单见 1F §0A 对应小节。
+
+**Health / Finances 合规（牌义页专属重点）**：
+牌义页是单牌普适深度页，**涉及健康/财运 archetype 的牌**（如 The Empress=丰育/The Tower=身体震荡预警/Death=转化/The Devil=执念/Justice=平衡）在 M2/M3 落到健康或财运维度时，必须守 [1F §0A.1 Health/Finances 黑名单](../../01-竞品分析/1F-塔罗内容写法研究.md)：
+- M2/M3 谈健康落点 → 只用 energy/stress/rest/body awareness/emotional pattern，禁 cure/diagnose/heals/predicts sickness
+- M2/M3 谈财运落点 → 只用 money mindset/risk awareness/spending pattern，禁 invest now/guaranteed gain/this stock
+- Health/Finances 主题牌的 FAQ（如 "Is The Tower a warning about my health?"）答案过 [1F §0A.1](../../01-竞品分析/1F-塔罗内容写法研究.md) 合规门，答 reflective not predictive
+- 牌义页**不强制加 Health/Finances 收尾免责**（牌义页是普适页非场景页）；但若该牌 FAQ 明确谈健康/财运，在该 FAQ 答案内嵌免责口径
+
+**禁用表达库**：全塔罗 6 类禁+替代表见 [1F §0A.2](../../01-竞品分析/1F-塔罗内容写法研究.md)。牌义页高发区：M4 水晶段（水晶万能句/医疗承诺/财务承诺）、M3 逆位段（恐吓逆位）、Intro 钩子（泛泛开头）。
 
 **Tarot 特有合规**（比 Numerology 更需谨慎，因涉及"预测/占卜"）：
 - ❌ "This card predicts / will tell you / foretells your future"
@@ -597,6 +622,17 @@ the three cards together for a few minutes before journaling.
 - 处理：命中句子**人工逐条改写**（非脚本自动替换，避免改坏语义）
 - 输出：`_qc/03-determinism.json`
 - 注：化学式校验区分大小写（memory `validate-riskwords-case-sensitive`）
+
+**关卡 0 — 合规前置门（Health/Finances + 禁用表达库，全塔罗统一 ⭐）**：
+- grep [1F §0A.1 Health/Finances 黑名单](../../01-竞品分析/1F-塔罗内容写法研究.md)（cure/diagnose/heals/invest now/guaranteed gain/this stock 等）+ [1F §0A.2 禁用表达库](../../01-竞品分析/1F-塔罗内容写法研究.md) 6 类
+- 命中即打回不进生产；重点扫 M4 水晶段（水晶万能/医疗承诺/财务承诺）、M3 逆位段（恐吓逆位）、Intro 钩子（泛泛开头）
+- 输出：`_qc/00-compliance.json`
+
+**关卡 4 — 语义去重 + 结构指纹（全塔罗普适升级 ⭐，见 [1F §0A.3](../../01-竞品分析/1F-塔罗内容写法研究.md)）**：
+- **语义去重**：22 牌牌义页 M2/M3 段（核心论证段）跨牌 embedding 余弦相似度 **> 0.85 触发复审**（换牌不换骨）。牌义页重点查 M2 archetype 段——22 牌 archetype 语义易雷同（如多牌都写"transformation/new beginning"）
+- **结构指纹**：22 牌模块开场句式 + 论证路径指纹重复率 **< 40%**；**强制 ≥ 30% 牌义页打乱默认起承转合**（如 M3/M6 合并、加 Myth vs Reality 段、M10 Mini Spread 前置等变体）
+- **人工连读兜底**：抽 5-10 牌连读，判断"换牌名能否互换"
+- 输出：`_qc/04-semantic-structure.json`
 
 ## 18. 与 Numerology / 天使号码的关系（避免内容重叠）
 

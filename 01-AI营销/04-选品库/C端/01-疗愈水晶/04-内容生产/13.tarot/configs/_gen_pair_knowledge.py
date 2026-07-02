@@ -1060,4 +1060,503 @@ PAIRS[(9,21)] = {
   "synergy_logic": "Labradorite(退省中段) + Clear Quartz(整合完成和合) → Labradorite 帮你退省，Clear Quartz 帮你整合，协同 = '退得深也合得拢'，让退省走到完整",
   "eastern_lens": "土(退中)土(合终)同元互补 — '闭关 retreat 退中'配 '曼荼罗整合合终'，东方'退中与合终、观与圆'的和合"}
 
-print("批1+2+3+4(至 a=9) 录入对数:", len(PAIRS))
+# ---- a=10 Wheel of Fortune × 11..21 ----
+PAIRS[(10,11)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Wheel=Fire 循环转折非自主(cycles beyond control) / Justice=Air 诚实称量自主部分(accountability for what you control) → 风火相克 + archetype 互补(认不可控 vs 称可控)：认轮转与称自主互补",
+  "combination_story_seed": "the turning wheel and the scales — Wheel's uncontrollable turning meets Justice weighing what is in your hands; the cycle that turns beyond will and the honesty that weighs your own actions complete each other, the rim and the balance, wisdom sorts what the wheel carries from what the scales weigh, fate and responsibility held together",
+  "synergy_logic": "Green Aventurine(认不可控随转) + Lapis Lazuli(称可控的诚实) → Aventurine 帮你认轮转，Lapis 帮你称自主，协同 = '认得清不可控、称得准可控'，让命运感与责任感并立",
+  "eastern_lens": "火(轮转)风(称量)相克互补 — '无常轮回转'配 '因果 cause-effect 称量'，东方'命与业、转与量'的和合"}
+PAIRS[(10,12)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Wheel=Fire 动态轮转(dynamic turning) / Hanged Man=Water 静态悬停(static pause) → 水火相克 + archetype 对立互补(动转 vs 静悬)：轮转与悬停互补",
+  "combination_story_seed": "the turning wheel and the inverted halo — Wheel's spinning meets the Hanged Man hanging upside down; the cycle that never stops and the surrender that stops time complete each other, the rim and the halo, the wheel needs the pause that lets you see which way it is turning, the pause serves the turning",
+  "synergy_logic": "Green Aventurine(随轮转) + Selenite(悬停反转清明) → Aventurine 帮你随转，Selenite 帮你停着看清，协同 = '转得顺也停得清'，让轮转有暂停定方向",
+  "eastern_lens": "火(转)水(悬)相克互补 — '无常轮回转'配 '反转视角悬'，东方'转与悬、运与止'的和合"}
+PAIRS[(10,13)] = {
+  "relationship_type": "amplifying",
+  "judgment_basis": "Wheel=Fire 转折变化(change/turning) / Death=Water 终结转化(ending/transformation) → 水火相克同主题 archetype(转折 × 终结 共振)：两种变化叠加",
+  "combination_story_seed": "the turning wheel before the pale horse — Wheel's turning meets Death's clearing; the cycle that turns phases and the transformation that ends forms amplify each other, the rim and the pale horse, two forms of change, one turns one clears, the wheel was always bound for the door death opens",
+  "synergy_logic": "Green Aventurine(随转折变化) + Obsidian(诚实面对终结转化) → Aventurine 帮你随转，Obsidian 帮你面对终结，协同 = '转得顺也化得稳'，共振放大整全的变化应对",
+  "eastern_lens": "火(转折)水(终结)的主题共振 — '无常轮回转折'配 '无常清场终结'，东方'转与终、运与化'的同频"}
+PAIRS[(10,14)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Wheel=Fire 急转(turning momentum) / Temperance=Fire 慢调(patient blending) → 同元素(火)+ archetype 互补(急转 vs 慢调)：轮转之急与调和之慢互补",
+  "combination_story_seed": "the turning wheel and the two cups — Wheel's momentum meets Temperance pouring slowly between two cups; the turning that asks you to ride and the blending that asks you to slow complete each other, the rim and the cups, the wheel needs the tempering or it spins you off, the cups need the wheel or nothing ever moves",
+  "synergy_logic": "Green Aventurine(随轮转) + Amethyst(慢调中道) → Aventurine 帮你随转，Amethyst 帮你慢调，协同 = '转得顺也调得稳'，让轮转有调和的节奏",
+  "eastern_lens": "火(急转)火(慢调)同元互补 — '无常轮回急转'配 '中道动态慢调'，东方'急与慢、转与调'的和合"}
+PAIRS[(10,15)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Wheel=Fire 认循环放手(ride cycles/let go) / Devil=Earth 执念抓握(cling to attachment) → 火土相生 + archetype 对立互补(放手随转 vs 执念抓握)：放手与执念互补，正是对治",
+  "combination_story_seed": "the turning wheel and the loose chains — Wheel's call to ride change meets the Devil's loose chains of attachment; the cycle that asks you to let go and the bond that asks you to hold on complete each other as opposites, the rim and the chain, the wheel teaches what the devil refuses, that what you clutch was always turning",
+  "synergy_logic": "Green Aventurine(放手随转) + Black Tourmaline(看清执念松链) → Aventurine 帮你放手，Black Tourmaline 帮你看清哪条链可解，协同 = '放得手也解得链'，让放手成为对治执念的解药",
+  "eastern_lens": "火(放手)土(执念)相生互补对立 — '无常轮回放手'配 '对治内魔执念'，东方'放手与执念、转与缚'的和合对治"}
+PAIRS[(10,16)] = {
+  "relationship_type": "transformation",
+  "judgment_basis": "Wheel=Fire 循环转折(turning point) / Tower=Fire 转折中的剧烈崩塌(sudden collapse within the turn) → 同元素(火)+ 阶段跃迁 archetype(平稳转折 → 那转折中有不稳则崩)：轮转触底剧烈崩塌见真，破局弧线",
+  "combination_story_seed": "the turning wheel struck by lightning — Wheel's turning point meets the Tower's lightning on a structure already unsound; the cycle that was turning through ordinary change is interrupted by the sudden collapse of what was unstable, and the rim meets the crown knocked from the tower, the turning sharpens into the break that reveals what was false",
+  "synergy_logic": "Green Aventurine(清明随平稳转折) + Smoky Quartz(剧烈崩塌中扎根) → Aventurine 帮你随转，Smoky Quartz 帮你崩时稳住，协同 = '转得稳也崩得住'，让轮转接得住剧烈见真",
+  "eastern_lens": "火(平转)→火(崩真)的同元跃迁 — '无常轮回平转'经 '无常崩塌即清明'检验，东方'平转经崩见真'的炼金"}
+PAIRS[(10,17)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Wheel=Fire 风暴式转折(storm-turning) / Star=Air 风暴后希望重连(renewal after the storm) → 风火相克 + 序列因果：Wheel 的风暴式转折是 Star 重连希望的前提（框架类代表对 Tower×Star 的轮转版）",
+  "combination_story_seed": "the turning wheel before the still pool — Wheel's stormy turning meets the Star kneeling in serene renewal; the cycle that turned through upheaval pulls toward the pool where hope is poured back, and the rim that carried the storm is met by the eight-pointed star that follows it, what turns down turns up again into renewal",
+  "synergy_logic": "Green Aventurine(随风暴转折) + Aquamarine(风暴后重连希望) → Aventurine 帮你扛转，Aquamarine 帮你转后重连，协同 = '扛得转也续得望'，让轮转有希望接得住",
+  "eastern_lens": "火(风暴转)→风(望续)的因果 — '无常轮回风暴转'以 '菩提心 re-arises 望续'为果，东方'风暴转后得望续、否极泰来'的因果"}
+PAIRS[(10,18)] = {
+  "relationship_type": "amplifying",
+  "judgment_basis": "Wheel=Fire 不确定循环(uncertain cycles) / Moon=Water 不确定迷雾(uncertain depths) → 水火相克同主题 archetype(不确定循环 × 不确定迷雾 共振)：两种不确定性叠加",
+  "combination_story_seed": "the turning wheel on the half-lit path — Wheel's uncertain turning meets the Moon's uncertain half-light; the cycle you cannot map and the depths you cannot see amplify each other, two forms of not-knowing, one in time one in mind, the rim and the crayfish both move through what reason cannot grasp",
+  "synergy_logic": "Green Aventurine(耐受不确定循环) + Moonstone(耐受不确定迷雾) → Aventurine 帮你待循环，Moonstone 帮你待迷雾，协同 = '双重耐受不确定'，共振放大对未知的整全安住",
+  "eastern_lens": "火(不确定循环)水(不确定迷雾)的主题共振 — '无常轮回不确定'配 '无意识深处不确定'，东方'循环不定与迷雾不定'的同频"}
+PAIRS[(10,19)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Wheel=Fire 循环有起落(cycles with ups and downs) / Sun=Fire 喜悦明朗常在(joy that endures) → 同元素(火)+ archetype 互补(起落循环 vs 常在喜悦)：循环起落与常在喜悦互补",
+  "combination_story_seed": "the turning wheel under the noon sun — Wheel's up-and-down turning meets the Sun's enduring joy; the cycle that carries fortune in both directions and the vitality that stays steady through the turn complete each other, the rim and the sunflowers, joy that does not depend on which way the wheel points",
+  "synergy_logic": "Green Aventurine(随起落循环) + Sunstone(守常在喜悦) → Aventurine 帮你接起落，Sunstone 帮你守常喜，协同 = '接得住起落也守得住常喜'，让循环不夺走喜悦",
+  "eastern_lens": "火(起落)火(常喜)同元互补 — '无常轮回起落'配 '明性 常在喜'，东方'起落与常喜、运与常'的和合"}
+PAIRS[(10,20)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Wheel=Fire 循环已转到底(cycle bottomed out) / Judgment=Fire 转到底后听见召呼觉醒(call heard after the turning) → 同元素(火)+ 序列因果：轮转到底是觉醒召呼的前提，否极而召",
+  "combination_story_seed": "the turning wheel hears the trumpet — Wheel's bottomed-out turning meets Judgment's trumpet calling figures from graves; the cycle that turned all the way down ripens into the call that wakes the dead, and the rim meets the angel's trumpet, what the wheel buried the call resurrects, the lowest turn is the prelude to the awakening",
+  "synergy_logic": "Green Aventurine(清明认轮转到底) + Angelite(转底后召呼听作指引) → Aventurine 帮你认转底，Angelite 帮你听召呼，协同 = '认得转底也听得召呼'，让轮转落为觉醒的契机",
+  "eastern_lens": "火(转底)→火(应召)的同元因果 — '无常轮回转底'接 '如实自省后的召呼'，东方'否极而召、转底而应'的因果"}
+PAIRS[(10,21)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Wheel=Fire 循环之中段(cycle mid-turn) / World=Earth 整合完成之终段(integrated completion) → 火土相生 + archetype 互补(循环中段 vs 完成终段)：轮转与完成互补",
+  "combination_story_seed": "the turning wheel inside the wreath — Wheel's mid-turn meets the World dancer inside the completed garland; the cycle still turning and the wholeness that closes a cycle complete each other, the rim opens into the wreath, the four fixed signs that read books in the wheel's corners become the four at the mandala's corners, the turn finds its closure",
+  "synergy_logic": "Green Aventurine(随循环中段转) + Clear Quartz(整合完成和合) → Aventurine 帮你随转，Clear Quartz 帮你合，协同 = '转得动也圆得满'，让轮转走到完成",
+  "eastern_lens": "火(转中)土(合终)相生始终互补 — '无常轮回转中'配 '曼荼罗整合合终'，东方'转中与合终、运与圆'的和合"}
+
+# ---- a=11 Justice × 12..21 ----
+PAIRS[(11,12)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Justice=Air 正立理性称量(upright rational weighing) / Hanged Man=Water 倒悬反转视角(inverted new view) → 风水相生 + archetype 对立互补(正立称 vs 倒悬看)：正立称量与倒悬视角互补",
+  "combination_story_seed": "the scales and the inverted halo — Justice's upright weighing meets the Hanged Man hanging upside down; the truth weighed from the standard angle and the truth seen from the inverted frame complete each other, the level balance and the halo, justice needs its inversion or it cannot see the angle it has been blind to",
+  "synergy_logic": "Lapis Lazuli(正立理性称量) + Selenite(倒悬反转清明) → Lapis 帮你正着称，Selenite 帮你倒着看，协同 = '正称 + 倒看'双视角，让公正不基于盲角",
+  "eastern_lens": "风(正称)水(倒看)相生互补 — '因果 cause-effect 正称'配 '反转视角倒看'，东方'正与倒、量与转'的和合"}
+PAIRS[(11,13)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Justice=Air 诚实称量(weigh truth) / Death=Water 称量后该终的就终(weigh then end what must) → 风水相生 + archetype 互补(称量 vs 终结)：诚实称量与该终则终互补",
+  "combination_story_seed": "the scales before the pale horse — Justice's weighing meets Death clearing what has completed; the honest assessment of what is and the transformation that ends what that assessment reveals as done complete each other, the level balance and the rising sun, you can only end well what you have weighed honestly first",
+  "synergy_logic": "Lapis Lazuli(诚实称量真相) + Obsidian(诚实放掉该终的) → Lapis 帮你称，Obsidian 帮你放，协同 = '称得准也放得下'，让诚实称量落为该终则终的转化",
+  "eastern_lens": "风(称)水(终)相生互补 — '因果 cause-effect 称'配 '无常清场终'，东方'称与终、量与化'的和合"}
+PAIRS[(11,14)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Justice=Air 刚正称量(rigid weighing) / Temperance=Fire 柔和调和(soft blending) → 风火相克 + archetype 互补(刚正 vs 柔调)：刚正称量与柔和调和互补",
+  "combination_story_seed": "the scales and the two cups — Justice's rigid weighing meets Temperance pouring between two cups; the truth weighed sharp and the opposites blended soft complete each other, the sword and the cups, justice needs temperance or it becomes cold verdict, temperance needs justice or it becomes mush",
+  "synergy_logic": "Lapis Lazuli(刚正称量) + Amethyst(柔和调和) → Lapis 帮你称得正，Amethyst 帮你调得柔，协同 = '正得有度、柔得有则'，让公正有温度",
+  "eastern_lens": "风(刚正)火(柔调)相克互补 — '因果 cause-effect 刚正'配 '中道动态柔调'，东方'刚正与柔调、量与融'的和合"}
+PAIRS[(11,15)] = {
+  "relationship_type": "transformation",
+  "judgment_basis": "Justice=Air 正向诚实公正(healthy honesty) / Devil=Earth 诚实的暗面—自欺(dishonesty as self-deception) → 风土相克 + 阶段跃迁 archetype(诚实公正 → 公正滑向自欺的暗面)：从'诚实称量'跌入'自欺式回避真相'暗面（shadow aspect）",
+  "combination_story_seed": "the scales behind the loose chains — Justice's honesty meets the Devil's self-deception; the same truth-weighing that holds things accountable can slide into the dishonesty that avoids what the scales would show, and the sword becomes the chain, the level balance and the horned pillar are the same demand for truth seen honored and seen dodged",
+  "synergy_logic": "Lapis Lazuli(清明分辨诚实 vs 自欺) + Black Tourmaline(看清自欺松链) → Lapis 帮你辨真，Black Tourmaline 帮你看清哪份'诚实'已变自欺链，协同 = '诚而不欺、正而不避'，让公正守住诚实",
+  "eastern_lens": "风(正诚)→土(暗欺)的暗面跃迁 — '因果 cause-effect 正诚'阴影即 '对治内魔 自欺'，东方'正诚与暗欺、量与蔽'的 shadow 转化"}
+PAIRS[(11,16)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Justice=Air 已称出真相(truth weighed/known) / Tower=Fire 那真相强行崩塌显形(truth forced into the open) → 风火相克 + 序列因果：Justice 称出的真相，正是 Tower 用崩塌强行揭露的同一个——称了不说，崩塌逼说",
+  "combination_story_seed": "the scales before the lightning — Justice's weighed truth meets the Tower's lightning ripping it open; the truth the scales already showed is the same truth the lightning forces into the open, and the collapse is the honest verdict refused its gentle weighing, the level balance and the bolt are one reckoning seen private and seen public",
+  "synergy_logic": "Lapis Lazuli(早已称出的真相) + Smoky Quartz(真相崩塌时扎根) → Lapis 帮你早称出，Smoky Quartz 帮你崩时稳住，协同 = '既已称出、崩了也站得住'，让真相在强行显形时不致击垮",
+  "eastern_lens": "风(已称真)→火(崩显真)的因果 — '因果 cause-effect 已称真'即 '无常崩塌所揭'的同一真，东方'称之于微、崩之于显'的因果"}
+PAIRS[(11,17)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Justice=Air 刚正称量(rigid truth-weighing) / Star=Air 柔信希望重连(soft hope renewal) → 同元素(风)+ archetype 互补(刚正 vs 柔信)：刚正称量与柔信希望互补",
+  "combination_story_seed": "the scales and the still pool — Justice's rigid weighing meets the Star kneeling in serene renewal; the truth weighed sharp and the hope poured soft complete each other, the sword and the water, justice needs the renewal or it cannot carry what it weighs, hope needs the honesty or it becomes denial",
+  "synergy_logic": "Lapis Lazuli(刚正称量) + Aquamarine(柔信希望重连) → Lapis 帮你称得正，Aquamarine 帮你柔着接，协同 = '正得有度、柔得有信'，让公正有希望托底",
+  "eastern_lens": "风(刚正)风(柔信)同元互补 — '因果 cause-effect 刚正'配 '菩提心 re-arises 柔信'，东方'刚正与柔信、量与望'的和合"}
+PAIRS[(11,18)] = {
+  "relationship_type": "tension",
+  "judgment_basis": "Justice=Air 清醒理性称量(clear rational weighing) / Moon=Water 半明不白潜意识迷雾 → 风水相济 + archetype 拉扯(清醒称量 vs 模糊未明)且难两全：清醒称量还是停在半明",
+  "combination_story_seed": "the scales on the half-lit path — Justice's clear weighing meets the Moon's path under uncertain light; the truth that needs sharp evidence stands in the half-light where the crayfish rises, and the pull is whether to weigh what is visible or to wait while the murky not-yet-known surfaces from the pool",
+  "synergy_logic": "Lapis Lazuli(清醒称可见) + Moonstone(耐受半明迷雾) → Lapis 帮你称可见的，Moonstone 帮你待未明，协同 = '可见处称、未明处待'，化解称量与迷雾的拉扯",
+  "eastern_lens": "风(清称)vs 水(晦潜)的拉扯 — '因果 cause-effect 清称' vs '无意识深处迷雾'，东方'清与晦、称与待'的张力"}
+PAIRS[(11,19)] = {
+  "relationship_type": "amplifying",
+  "judgment_basis": "Justice=Air 诚实公正之明(honest clarity) / Sun=Fire 喜悦明朗之明(joyful clarity) → 风火相克同主题 archetype(诚实之明 × 喜悦之明 共振)：两种明朗叠加",
+  "combination_story_seed": "the scales under the noon sun — Justice's honest clarity meets the Sun's radiant clarity; the truth weighed sharp and the joy lived bright amplify each other, the sword and the sunflowers, two forms of lucidity, one honest one joyful, justice shines when it is carried into the open daylight of simple joy",
+  "synergy_logic": "Lapis Lazuli(诚实公正之明) + Sunstone(喜悦明朗之明) → Lapis 帮你明真，Sunstone 帮你明喜，协同 = '明真 + 明喜'双重明朗，共振放大整全的清明",
+  "eastern_lens": "风(诚明)火(喜明)的主题共振 — '因果 cause-effect 诚明'配 '明性 喜明'，东方'诚明与喜明'的同频"}
+PAIRS[(11,20)] = {
+  "relationship_type": "amplifying",
+  "judgment_basis": "Justice=Air 诚实自省称量(honest self-reckoning) / Judgment=Fire 听召前的诚实自省(reckoning before the call) → 风火相克同主题 archetype(诚实称量 × 诚实自省 共振)：两种'诚实面对自己'叠加",
+  "combination_story_seed": "the scales hear the trumpet — Justice's honest weighing meets Judgment's reckoning before the call; the truth weighed on the scales and the honest self-assessment that precedes rebirth amplify each other, two forms of reckoning, one legal one spiritual, the sword and the trumpet both call for what is honest",
+  "synergy_logic": "Lapis Lazuli(诚实称量) + Angelite(诚实自省听作指引) → Lapis 帮你称，Angelite 帮你自省，协同 = '称得准也省得诚'，共振放大整全的诚实面对",
+  "eastern_lens": "风(诚称)火(诚省)的主题共振 — '因果 cause-effect 诚称'配 '如实自省后的召呼'，东方'诚称与诚省、量与省'的同频"}
+PAIRS[(11,21)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Justice=Air 诚实称量之中段(weighing mid-journey) / World=Earth 整合完成之终段(integrated completion) → 风土相克 + archetype 互补(称量中段 vs 完成终段)：称量与完成互补",
+  "combination_story_seed": "the scales inside the wreath — Justice's weighing meets the World dancer inside the completed garland; the honest assessment mid-journey and the wholeness that integrates the whole path complete each other, the level balance opens into the wreath, the sword becomes the four fixed signs, the reckoning was always bound for the mandala of completion",
+  "synergy_logic": "Lapis Lazuli(称量中段) + Clear Quartz(整合完成和合) → Lapis 帮你称，Clear Quartz 帮你合，协同 = '称得准也圆得满'，让称量走到完整",
+  "eastern_lens": "风(称)土(成)相克始终互补 — '因果 cause-effect 称'配 '曼荼罗整合成'，东方'称与成、量与圆'的和合"}
+
+# ---- a=12 The Hanged Man × 13..21 ----
+PAIRS[(12,13)] = {
+  "relationship_type": "transformation",
+  "judgment_basis": "Hanged Man=Water 自愿悬停换视角(willing pause for new view) / Death=Water 悬停后该放的就放(transformation after the pause) → 同元素(水)+ 阶段跃迁 archetype(悬停反转 → 反转后清场)：从'倒悬看清'升华到'看清后放掉该放的'",
+  "combination_story_seed": "the inverted halo before the pale horse — Hanged Man's willing pause meets Death clearing what has completed; the upside-down view that revealed what was stuck is met by the transformation that ends it, and the halo bows to the rising sun between two towers, the new angle becomes the release, the surrender ripens into the letting go",
+  "synergy_logic": "Selenite(悬停反转看清) + Obsidian(看清后诚实放掉) → Selenite 帮你看清，Obsidian 帮你放，协同 = '看得清也放得下'，让悬停升级为'有观有化'的转化",
+  "eastern_lens": "水(悬观)→水(化放)的同元跃迁 — '反转视角悬观'接 '无常清场化放'，东方'悬观与化放、止与化'的升华"}
+PAIRS[(12,14)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Hanged Man=Water 极静悬停(extreme still pause) / Temperance=Fire 动态调和(dynamic blending) → 水火相克 + archetype 对立互补(极静悬 vs 动态调)：极悬停与动态调和互补",
+  "combination_story_seed": "the inverted halo and the two cups — Hanged Man's extreme pause meets Temperance pouring between two cups; the surrender that holds the inverted frame and the active blending that holds opposites in motion complete each other, the halo and the cups, the pause serves the blending, the blending carries the insight of the pause",
+  "synergy_logic": "Selenite(极静悬停清明) + Amethyst(动态调和两端) → Selenite 帮你悬清，Amethyst 帮你调动，协同 = '悬得清也调得动'，让悬停与调和互为节奏",
+  "eastern_lens": "水(极悬)火(动调)相克互补 — '反转视角极悬'配 '中道动态调'，东方'极悬与动调、止与融'的和合"}
+PAIRS[(12,15)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Hanged Man=Water 清明自愿悬停(clear willing pause) / Devil=Earth 自欺式逃避停滞(stalling as avoidance) → 水土相克 + archetype 对立互补(清明悬停 vs 自欺停滞)：清明悬停与自欺停滞互补，正是对治",
+  "combination_story_seed": "the inverted halo behind the loose chains — Hanged Man's willing pause meets the Devil's stalling; the surrender that serves insight and the stalling that wears patience as identity are opposites, the halo and the horned pillar, an invitation to ask whether the pause is serving insight or hiding indecision, the inversion that frees versus the stuckness that binds",
+  "synergy_logic": "Selenite(清明分辨悬停 vs 停滞) + Black Tourmaline(看清逃避式停滞松链) → Selenite 帮你辨真悬，Black Tourmaline 帮你看清哪份'停'是逃，协同 = '悬而不滞、停而不藏'，让悬停不滑向逃避",
+  "eastern_lens": "水(清悬)vs 土(暗滞)的对立互补对治 — '反转视角清悬' vs '对治内魔 stalling 暗滞'，东方'清悬与暗滞、观与藏'的对治"}
+PAIRS[(12,16)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Hanged Man=Water 悬停已看清真相(truth seen in the pause) / Tower=Fire 那真相外化时崩掉虚假(structural collapse as the seen truth surfaces) → 水火相克 + 序列因果：悬停看清的内在真，正是 Tower 崩塌揭露的同一个——看清不说，崩塌逼显",
+  "combination_story_seed": "the inverted halo before the lightning — Hanged Man's seen truth meets the Tower's lightning ripping the structure open; the truth the upside-down view revealed is the same truth the lightning forces into the open, and the collapse is the inverted insight refused its quiet release, the halo and the bolt are one revelation seen within and without",
+  "synergy_logic": "Selenite(早已看清的内在真) + Smoky Quartz(真相崩塌时扎根) → Selenite 帮你早看清，Smoky Quartz 帮你崩时稳住，协同 = '既已看清、崩了也站得住'，让悬停之真在外化崩塌时不致击垮",
+  "eastern_lens": "水(已看清)→火(崩显真)的因果 — '反转视角已看清'即 '无常崩塌所揭'的同一真，东方'观之于未兆、崩之于已形'的因果"}
+PAIRS[(12,17)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Hanged Man=Water 悬停反转视角(inverted view) / Star=Air 风暴后希望重连(renewal/hope) → 水风相生 + archetype 互补(反转视角 vs 柔信希望)：反转看清与柔信希望互补",
+  "combination_story_seed": "the inverted halo and the still pool — Hanged Man's inverted view meets the Star kneeling in serene renewal; the new angle that freed the frame and the hope that returns after difficulty complete each other, the halo and the eight-pointed star, the pause needs the renewal or it stalls, the renewal needs the new view or it repeats the old",
+  "synergy_logic": "Selenite(反转视角看清) + Aquamarine(柔信希望重连) → Selenite 帮你看清新角度，Aquamarine 帮你柔着重连希望，协同 = '看得清也接得稳'，让悬停之见有希望接得住",
+  "eastern_lens": "水(反转观)风(柔信望)相生互补 — '反转视角观'配 '菩提心 re-arises 柔信望'，东方'反转观与柔信望、止与续'的和合"}
+PAIRS[(12,18)] = {
+  "relationship_type": "amplifying",
+  "judgment_basis": "Hanged Man=Water 悬停见潜意识之隐(pause to see what is hidden) / Moon=Water 潜意识迷雾(subconscious depths) → 同元素(水)+ 同主题 archetype(悬停见隐 × 潜意识深处 共振)：两种'向内见隐'叠加",
+  "combination_story_seed": "the inverted halo on the howling path — Hanged Man's pause meets the Moon's half-lit depths; the inversion that reveals what the upright frame hides and the subconscious that surfaces in half-light amplify each other, two forms of inward seeing, one inverted one reflected, the halo and the crayfish both bring up what lay beneath",
+  "synergy_logic": "Selenite(悬停见隐) + Moonstone(潜意识迷雾耐受) → Selenite 帮你悬着见隐，Moonstone 帮你待住深处，协同 = '悬见 + 深待'双轨，共振放大对潜意识的整全觉察",
+  "eastern_lens": "水(悬见隐)水(深处潜)同元共振 — '反转视角悬见隐'配 '无意识深处潜'，东方'悬见与深潜、观与潜'的同频"}
+PAIRS[(12,19)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Hanged Man=Water 内向悬停(inward pause) / Sun=Fire 外向明朗显白(outward clarity) → 水火相克 + archetype 对立互补(内向悬停 vs 外向明朗)：悬停与明朗互补",
+  "combination_story_seed": "the inverted halo before the noon sun — Hanged Man's inward pause meets the Sun's radiant exposure; the surrender that needs the inverted quiet and the joy that needs the open field complete each other, the halo and the sunflowers, the pause serves the daylight, the daylight carries the insight of the pause",
+  "synergy_logic": "Selenite(内向悬停清明) + Sunstone(外向明朗显) → Selenite 帮你悬，Sunstone 帮你显，协同 = '悬得清也敞得开'，让悬停与明朗互为节奏",
+  "eastern_lens": "水(内向悬)vs 火(外向明)的对立互补 — '反转视角内向悬' vs '明性 外向明朗'，东方'内向悬与外向明、止与显'的和合"}
+PAIRS[(12,20)] = {
+  "relationship_type": "transformation",
+  "judgment_basis": "Hanged Man=Water 臣服悬停换视角(surrender/perspective shift) / Judgment=Fire 听召觉醒回应(larger awakening) → 水火相克 + 阶段跃迁 archetype(臣服悬停 → 臣服后觉醒召呼)（框架代表对 Hanged Man×Judgement）：从'倒悬臣服看清'升华到'觉醒回应更大召呼'",
+  "combination_story_seed": "the inverted halo hears the trumpet — Hanged Man's surrender meets Judgment's trumpet calling figures from graves; the willing inversion that changed the view ripens into the call that must be answered, and the halo turns upright at the angel's trumpet, the surrendered figure rises to answer what the pause revealed, perspective shift becomes awakening",
+  "synergy_logic": "Selenite(臣服悬停看清) + Angelite(觉醒召呼听作指引) → Selenite 帮你悬清，Angelite 帮你听召，协同 = '悬得清 → 听得召'，让臣服升级为回应召呼的觉醒",
+  "eastern_lens": "水(臣服悬)→火(觉醒召)的跃迁 — '反转视角臣服悬'接 '如实自省后的召呼'，东方'臣服悬与觉醒召、止观与起应'的升华"}
+PAIRS[(12,21)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Hanged Man=Water 悬停反转之中段(pause mid-journey) / World=Earth 整合完成之终段(integrated completion) → 水土相克 + archetype 互补(悬停中段 vs 完成终段)：悬停与完成互补",
+  "combination_story_seed": "the inverted halo inside the wreath — Hanged Man's pause meets the World dancer inside the completed garland; the inversion that freed the view mid-journey and the wholeness that integrates the whole path complete each other, the halo opens into the wreath, the inverted figure becomes the upright dancer, the surrendered view becomes the integrated whole",
+  "synergy_logic": "Selenite(悬停反转中段) + Clear Quartz(整合完成和合) → Selenite 帮你悬，Clear Quartz 帮你合，协同 = '悬得清也圆得满'，让悬停走到完整",
+  "eastern_lens": "水(悬中)土(合终)相克始终互补 — '反转视角悬中'配 '曼荼罗整合合终'，东方'悬中与合终、观与圆'的和合"}
+
+# ---- a=13 Death × 14..21 ----
+PAIRS[(13,14)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Death=Water 终结清场(clear the completed form) / Temperance=Fire 清场后慢慢调和重建(blending after the clearing) → 水火相克 + 序列因果：Death 的清场是 Temperance 慢调和重建的前提，先死而后和",
+  "combination_story_seed": "the pale horse and the two cups — Death's clearing meets Temperance pouring slowly between two cups; the ending that emptied the old form is met by the patient blending that builds something new from what remains, and the rising sun between two towers meets the path to the crown of light, what died becomes the material for what is slowly mixed back to life",
+  "synergy_logic": "Obsidian(诚实清场放掉旧) + Amethyst(清场后慢调重建) → Obsidian 帮你清，Amethyst 帮你重建，协同 = '清得净也建得稳'，让终结落为慢调和的新生",
+  "eastern_lens": "水(清场)→火(调和重建)的因果 — '无常清场'以 '中道动态调和重建'为果，东方'死而后和、清而后调'的因果"}
+PAIRS[(13,15)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Death=Water 诚实终结真转化(honest ending/transformation) / Devil=Earth 自欺式拒绝终结(resistance to ending as attachment) → 水土相克 + archetype 对立互补(诚实终 vs 自欺拒终)：诚实终结与自欺拒终互补，正是对治",
+  "combination_story_seed": "the pale horse and the loose chains — Death's honest ending meets the Devil's refusal to let go; the transformation that ends what has completed and the attachment that keeps it alive by force are opposites, the rising sun and the horned pillar, an invitation to ask whether what is being kept is alive or only chained, death as release versus the devil as bondage",
+  "synergy_logic": "Obsidian(诚实面对该终的) + Black Tourmaline(看清拒终式执念松链) → Obsidian 帮你面对终，Black Tourmaline 帮你看清哪份'不舍'是链，协同 = '终得诚也放得下'，让终结不被执念拖成 stagnation",
+  "eastern_lens": "水(诚终)vs 土(拒终执)的对立互补对治 — '无常清场诚终' vs '对治内魔 拒终执'，东方'诚终与拒终、化与缚'的对治"}
+PAIRS[(13,16)] = {
+  "relationship_type": "amplifying",
+  "judgment_basis": "Death=Water 渐进终结(gradual ending/transformation) / Tower=Fire 突然剧烈崩塌(sudden violent collapse) → 水火相克同主题 archetype(渐进终结 × 突然崩塌 共振)：两种'结构性的结束'叠加",
+  "combination_story_seed": "the pale horse under the lightning — Death's gradual transformation meets the Tower's sudden collapse; the slow ending and the violent break amplify each other, two forms of structural finish, one that clears one that shatters, the rising sun between two towers meets the crown knocked from the tower top, what was ending anyway is forced into the open",
+  "synergy_logic": "Obsidian(诚实面对渐进终结) + Smoky Quartz(突然崩塌中扎根) → Obsidian 帮你面对终，Smoky Quartz 帮你崩时稳住，协同 = '终得稳也崩得住'，共振放大整全的'结束应对'",
+  "eastern_lens": "水(渐终)火(突崩)的主题共振 — '无常清场渐终'配 '无常崩塌突崩'，东方'渐终与突崩、化与破'的同频"}
+PAIRS[(13,17)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Death=Water 结束清场(ending/clearing) / Star=Air 结束后希望重连(renewal after the ending) → 水风相生 + 序列因果：Death 的清场是 Star 重连希望的前提，先死后望（框架类代表对 Death×Sun 的希望版）",
+  "combination_story_seed": "the pale horse before the still pool — Death's clearing meets the Star kneeling in serene renewal; the ending that emptied the form is met by the hope that returns, and the rising sun between two towers meets the eight-pointed star above the pool, what death cleared the star now fills, the ending is the doorway the renewal walks through",
+  "synergy_logic": "Obsidian(诚实清场放掉旧) + Aquamarine(结束后重连希望之水) → Obsidian 帮你放旧，Aquamarine 帮你重连新望，协同 = '放得下也接得稳'，让终结落为希望的新生",
+  "eastern_lens": "水(清终)→风(望续)的因果 — '无常清场清终'以 '菩提心 re-arises 望续'为果，东方'死而后望、终而后续'的因果"}
+PAIRS[(13,18)] = {
+  "relationship_type": "amplifying",
+  "judgment_basis": "Death=Water 结束转化深层(transformation/depth) / Moon=Water 潜意识深层(subconscious depths) → 同元素(水)+ 同主题 archetype(深层转化 × 深层潜意识 共振)：两种'深层'叠加",
+  "combination_story_seed": "the pale horse on the howling path — Death's transformation meets the Moon's deep subconscious; the ending that works at the root and the depths that surface in half-light amplify each other, two forms of depth, one of life-cycle one of mind, the rising sun and the crayfish both bring up what lay beneath",
+  "synergy_logic": "Obsidian(诚实面对深层转化) + Moonstone(深层潜意识耐受) → Obsidian 帮你化深层，Moonstone 帮你待深处，协同 = '化得深也待得稳'，共振放大对深层转化的整全应对",
+  "eastern_lens": "水(深转)水(深潜)同元共振 — '无常清场深转'配 '无意识深处深潜'，东方'深转与深潜、化与潜'的同频"}
+PAIRS[(13,19)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Death=Water 结束清场(ending/clearing) / Sun=Fire 结束后重生的喜悦(rebirth into joy) → 水火相克 + 序列因果（框架代表对 Death×Sun）：Death 的结束是 Sun 重生喜悦的前提，先死后生，凤凰叙事",
+  "combination_story_seed": "the pale horse before the noon sun — Death's clearing meets the Sun's radiant rebirth; the ending that made space is met by the joy that fills the space, and the rising sun between two towers meets the bright sun overhead, the phoenix narrative, what ends makes room for radiance, death is the prelude to the sun",
+  "synergy_logic": "Obsidian(诚实清场放掉旧) + Sunstone(结束后重生喜悦活力) → Obsidian 帮你放旧，Sunstone 帮你迎新喜，协同 = '放得下也活得喜'，让终结落为重生的喜悦",
+  "eastern_lens": "水(清终)→火(重生喜)的因果 — '无常清场清终'以 '明性 重生喜'为果，东方'死而后生、终而后喜'的因果（凤凰叙事）"}
+PAIRS[(13,20)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Death=Water 结束旧形态(end old form) / Judgment=Fire 结束后觉醒召呼(awakening/call after the end) → 水火相克 + 序列因果：Death 的终结是 Judgment 觉醒召呼的前提，旧形不死则召不闻",
+  "combination_story_seed": "the pale horse hears the trumpet — Death's ending meets Judgment's trumpet calling figures from graves; the old form that ended is exactly what needed to die for the call to be heard, and the rising sun between two towers meets the angel's trumpet, the cleared ground is where the figures rise, death is the threshold of the awakening",
+  "synergy_logic": "Obsidian(诚实终结旧形态) + Angelite(终结后觉醒召呼听作指引) → Obsidian 帮你终旧，Angelite 帮你听召，协同 = '终得旧 → 听得召'，让终结落为觉醒召呼的契机",
+  "eastern_lens": "水(终旧)→火(觉召)的因果 — '无常清场终旧'接 '如实自省后的召呼'，东方'终旧与觉召、死与起'的因果"}
+PAIRS[(13,21)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Death=Water 结束清场(end of a phase) / World=Earth 该 phase 整合完成(integrated completion of the phase) → 水土相克 + 序列因果：Death 的结束是 World 完成的最后一步，先死后圆",
+  "combination_story_seed": "the pale horse inside the wreath — Death's ending meets the World dancer inside the completed garland; the ending that closed the form is met by the wholeness that integrates the whole cycle, and the rising sun between two towers meets the green wreath, death is the last clearing before the mandala closes, every ending is the threshold of the world",
+  "synergy_logic": "Obsidian(诚实清场收尾) + Clear Quartz(整合完成和合) → Obsidian 帮你收尾，Clear Quartz 帮你合拢，协同 = '收得净也圆得满'，让终结落为完成的最后一步",
+  "eastern_lens": "水(终)→土(圆)的因果 — '无常清场终'接 '曼荼罗整合圆'，东方'终与圆、化与成'的因果"}
+
+# =========================================================================
+# 批 5（最后）：a=14 Temperance / a=15 Devil / a=16 Tower / a=17 Star /
+#              a=18 Moon / a=19 Sun / a=20 Judgment
+# =========================================================================
+# ---- a=14 Temperance × 15..21 ----
+PAIRS[(14,15)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Temperance=Fire 慢调和中道(patient blending/middle) / Devil=Earth 极端执念(extreme attachment) → 火土相生 + archetype 对立互补(慢调 vs 极执)：中道调和与极端执念互补，正是对治",
+  "combination_story_seed": "the two cups before the loose chains — Temperance's slow blending meets the Devil's extreme attachment; the middle way that holds opposites and the bondage that clings to one pole are opposites, the cups and the horned pillar, the patience that blends is the antidote to the attachment that cannot let either cup go",
+  "synergy_logic": "Amethyst(慢调中道) + Black Tourmaline(看清极端执念松链) → Amethyst 帮你调中道，Black Tourmaline 帮你看清哪端是执链，协同 = '调得中也解得链'，让调和成为对治执念的解药",
+  "eastern_lens": "火(中调)vs 土(极执)的对立互补对治 — '中道动态调' vs '对治内魔 极执'，东方'中调与极执、和与缚'的对治"}
+PAIRS[(14,16)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Temperance=Fire 慢调和稳(patient blending) / Tower=Fire 突然剧烈崩塌(sudden collapse) → 同元素(火)+ archetype 对立互补(慢调稳 vs 突然崩)：调和与崩塌互补",
+  "combination_story_seed": "the two cups struck by lightning — Temperance's slow blending meets the Tower's sudden collapse; the patience that holds the middle and the break that shatters the structure complete each other, the cups and the bolt, the middle way is tested by the lightning, the collapse is met by the blending that rebuilds",
+  "synergy_logic": "Amethyst(慢调中道) + Smoky Quartz(突然崩塌中扎根) → Amethyst 帮你调，Smoky Quartz 帮你崩时稳住，协同 = '调得稳也崩得住'，让调和接得住崩塌",
+  "eastern_lens": "火(慢调)vs 火(突崩)的同元对立互补 — '中道动态慢调' vs '无常崩塌突崩'，东方'慢调与突崩、和与破'的和合"}
+PAIRS[(14,17)] = {
+  "relationship_type": "amplifying",
+  "judgment_basis": "Temperance=Fire 调和 renewal(blending renewal) / Star=Air 风暴后 renewal(renewal after storm) → 风火相克同主题 archetype(调和 renewal × 希望 renewal 共振)：两种 renewal 叠加",
+  "combination_story_seed": "the two cups and the still pool — Temperance's blending meets the Star kneeling pouring water in serene renewal; the patient mixing and the serene hope amplify each other, two forms of renewal, one blended one poured, the cups and the eight-pointed star, the middle way ripens into the steady hope",
+  "synergy_logic": "Amethyst(调和 renewal) + Aquamarine(希望 renewal 之水) → Amethyst 帮你慢调，Aquamarine 帮你重连希望，协同 = '调得稳也望得续'，共振放大整全的 renewal",
+  "eastern_lens": "火(调和 renewal)风(希望 renewal)的主题共振 — '中道动态调和 renewal'配 '菩提心 re-arises 希望 renewal'，东方'调和续与希望续'的同频"}
+PAIRS[(14,18)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Temperance=Fire 清醒慢调和(clear blending) / Moon=Water 半明不白潜意识迷雾 → 水火相克 + archetype 拉扯(清醒调和 vs 模糊未明)且难两全：清醒调和还是停在半明",
+  "combination_story_seed": "the two cups on the half-lit path — Temperance's clear blending meets the Moon's path under uncertain light; the patience that mixes what is visible stands in the half-light where the crayfish rises, and the pull is whether to keep blending what you can see or to wait while the murky not-yet-known surfaces",
+  "synergy_logic": "Amethyst(清醒慢调) + Moonstone(耐受半明迷雾) → Amethyst 帮你调可见的，Moonstone 帮你待未明，协同 = '可见处调、未明处待'，化解调和与迷雾的拉扯",
+  "eastern_lens": "火(清调)vs 水(晦潜)的拉扯 — '中道动态清调' vs '无意识深处迷雾'，东方'清与晦、调与待'的张力"}
+PAIRS[(14,19)] = {
+  "relationship_type": "amplifying",
+  "judgment_basis": "Temperance=Fire 调和之平衡(balance/blending) / Sun=Fire 喜悦明朗(balance/joy) → 同元素(火)+ 同主题 archetype(调和之平 × 喜悦之明 共振)：两种平衡叠加",
+  "combination_story_seed": "the two cups under the noon sun — Temperance's balanced blending meets the Sun's radiant joy; the middle way that holds opposites and the simple vitality of being alive amplify each other, the cups and the sunflowers, two forms of well-being, one balanced one joyful, the path to the crown of light meets the bright sun overhead",
+  "synergy_logic": "Amethyst(调和之平) + Sunstone(喜悦之明活力) → Amethyst 帮你调得平，Sunstone 帮你活得喜，协同 = '平得稳也喜得明'，共振放大整全的安康",
+  "eastern_lens": "火(调平)火(喜明)同元共振 — '中道动态调平'配 '明性 喜明'，东方'调平与喜明、和与乐'的同频"}
+PAIRS[(14,20)] = {
+  "relationship_type": "transformation",
+  "judgment_basis": "Temperance=Fire 世俗慢调和(earthly blending) / Judgment=Fire 听召回应更大生命(call to larger life) → 同元素(火)+ 阶段跃迁 archetype(世俗调和 → 调和升华为回应召呼)：从'慢调和两端'升华到'回应更大召呼'",
+  "combination_story_seed": "the two cups hear the trumpet — Temperance's earthly blending meets Judgment's trumpet calling figures from graves; the patient middle way is met by a calling larger than any balance of opposites, and the cups turn toward the angel's trumpet, the blended life rises to answer something beyond the two poles it was holding",
+  "synergy_logic": "Amethyst(清明世俗调和) + Angelite(更大召呼听作指引) → Amethyst 帮你调两端，Angelite 帮你听更高召呼，协同 = '调得中也应得高'，让调和升级为回应召呼的活平衡",
+  "eastern_lens": "火(世调)→火(应召)的同元跃迁 — '中道动态世调'接 '如实自省后的更高召呼'，东方'世调与应召、和与应'的升华"}
+PAIRS[(14,21)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Temperance=Fire 调和之中段(blending mid-journey) / World=Earth 整合完成之终段(integrated completion) → 火土相生 + archetype 互补(调和中段 vs 完成终段)：调和与完成互补",
+  "combination_story_seed": "the two cups inside the wreath — Temperance's blending meets the World dancer inside the completed garland; the patient mixing mid-journey and the wholeness that integrates the whole path complete each other, the cups open into the wreath, the path to the crown of light meets the green garland, the blending was always bound for the mandala",
+  "synergy_logic": "Amethyst(调和中段) + Clear Quartz(整合完成和合) → Amethyst 帮你调，Clear Quartz 帮你合，协同 = '调得稳也圆得满'，让调和走到完整",
+  "eastern_lens": "火(调中)土(合终)相生始终互补 — '中道动态调中'配 '曼荼罗整合合终'，东方'调中与合终、和与圆'的和合"}
+
+# ---- a=15 The Devil × 16..21 ----
+PAIRS[(15,16)] = {
+  "relationship_type": "transformation",
+  "judgment_basis": "Devil=Earth 执念束缚执(attachment/bondage) / Tower=Fire 执念结构崩塌(bondage structure collapses) → 土火相生 + 阶段跃迁 archetype(执念 → 执念结构被雷击崩)（框架代表对 Devil×Tower）：执念触底崩塌见真，构成破局弧线（shadow aspect 口径）",
+  "combination_story_seed": "the loose chains struck by lightning — Devil's bondage meets the Tower's lightning on a structure already unsound; the attachment that felt solid is shattered, and what falls reveals the chains were loose all along, the horned pillar and the crown knocked from the tower, the collapse is the liberation the devil's figures refused to take, the breaking that frees",
+  "synergy_logic": "Black Tourmaline(看清执念松链) + Smoky Quartz(执念崩塌中扎根重自由) → Black Tourmaline 帮你看清链松，Smoky Quartz 帮你崩后稳稳自由，协同 = '看得清松链 + 崩后稳自由'，让执念触底崩塌落为解脱",
+  "eastern_lens": "土(执)→火(崩解)的跃迁 — '对治内魔执'经 '无常崩塌即清明'破执，东方'执念经崩而解、缚经破而脱'的炼金（shadow aspect）"}
+PAIRS[(15,17)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Devil=Earth 执念束缚(attachment/bondage) / Star=Air 执念解脱后重连希望(liberation then renewal) → 土风相克 + 序列因果：Devil 的执念被看清解脱，是 Star 重连希望的前提——链松了才有空手接星光",
+  "combination_story_seed": "the loose chains before the still pool — Devil's loosened bondage meets the Star kneeling in serene renewal; the attachment just seen through opens onto the pool where hope is poured back, and the chains lifted meet the eight-pointed star, what was bound is now free to receive, the liberation is the doorway the renewal walks through",
+  "synergy_logic": "Black Tourmaline(看清执念松链解脱) + Aquamarine(解脱后重连希望) → Black Tourmaline 帮你解链，Aquamarine 帮你接望，协同 = '解得链也接得望'，让执念解脱落为希望重连",
+  "eastern_lens": "土(执解)→风(望续)的因果 — '对治内魔执解'以 '菩提心 re-arises 望续'为果，东方'解缚而后得望、脱执而后续'的因果"}
+PAIRS[(15,18)] = {
+  "relationship_type": "amplifying",
+  "judgment_basis": "Devil=Earth 阴影执念(shadow/attachment) / Moon=Water 潜意识迷雾(subconscious depths) → 土水相克同主题 archetype(阴影执 × 潜意识深 共振)：两种'向暗处'叠加（shadow aspect 口径）",
+  "combination_story_seed": "the loose chains on the howling path — Devil's shadow meets the Moon's deep subconscious; the attachment that lives in shadow and the depths that surface in half-light amplify each other, two forms of the dark, one of bondage one of mind, the horned pillar and the crayfish both bring up what was disowned, the shadow-work that the moon illuminates",
+  "synergy_logic": "Black Tourmaline(面对阴影执念) + Moonstone(潜意识深处耐受) → Black Tourmaline 帮你直面阴影，Moonstone 帮你待住深处，协同 = '直面阴影 + 待住深处'双轨 shadow work，共振放大对暗处的整全觉察",
+  "eastern_lens": "土(阴影执)水(深处潜)的主题共振 — '对治内魔 阴影执'配 '无意识深处 潜'，东方'阴影执与深处潜、暗与暗'的同频（shadow aspect）"}
+PAIRS[(15,19)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Devil=Earth 执念阴影之暗(attachment shadow) / Sun=Fire 喜悦明朗之明(joyful clarity) → 土火相生 + archetype 对立互补(阴影暗 vs 明朗明)：阴影与明朗互补，光照见影",
+  "combination_story_seed": "the loose chains under the noon sun — Devil's shadow meets the Sun's radiant exposure; the attachment that lives in shadow and the joy that lives in full light complete each other, the horned pillar and the sunflowers, the sun illuminates the chains that were hidden, what was shadowed is brought into the simple clarity of daylight",
+  "synergy_logic": "Black Tourmaline(面对阴影执念) + Sunstone(明朗喜悦之光) → Black Tourmaline 帮你直面阴影，Sunstone 帮你带光，协同 = '直面阴影 + 带光入暗'，让明朗照亮执念",
+  "eastern_lens": "土(阴影暗)vs 火(明朗明)的对立互补 — '对治内魔 阴影暗' vs '明性 明朗明'，东方'阴影暗与明朗明、暗与明'的和合"}
+PAIRS[(15,20)] = {
+  "relationship_type": "transformation",
+  "judgment_basis": "Devil=Earth 执念束缚(attachment/bondage) / Judgment=Fire 执念解脱后觉醒召呼(liberation then awakening) → 土火相生 + 阶段跃迁 archetype(执念 → 执念解脱后觉醒召呼)：从'看清执念'升华到'解脱后觉醒回应更大召呼'（shadow aspect 口径）",
+  "combination_story_seed": "the loose chains hear the trumpet — Devil's bondage meets Judgment's trumpet calling figures from graves; the attachment just seen through ripens into the call that must be answered, and the chains lifted meet the angel's trumpet, the figures that were chained rise at the call, the liberation becomes the awakening, what was bound is now free to answer",
+  "synergy_logic": "Black Tourmaline(看清执念松链) + Angelite(解脱后觉醒召呼听作指引) → Black Tourmaline 帮你解链，Angelite 帮你听召，协同 = '解得链 → 听得召'，让执念解脱升级为觉醒召呼",
+  "eastern_lens": "土(执)→火(觉醒召)的跃迁 — '对治内魔 执'接 '如实自省后的召呼'，东方'解执而后觉醒、脱缚而后应召'的升华（shadow aspect）"}
+PAIRS[(15,21)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Devil=Earth 执念之中段(attachment mid-journey) / World=Earth 整合完成之全(integrated completion) → 同元素(土)+ archetype 对立互补(执念中段 vs 整合完成)：执念与整合互补，整合含摄阴影",
+  "combination_story_seed": "the loose chains inside the wreath — Devil's attachment meets the World dancer inside the completed garland; the bondage mid-journey and the wholeness that integrates everything, shadow included, complete each other, the chains are woven into the wreath, the horned pillar becomes one of the four fixed signs, true integration includes the shadow it once carried",
+  "synergy_logic": "Black Tourmaline(面对执念阴影) + Clear Quartz(整合含摄阴影的和合) → Black Tourmaline 帮你面对阴影，Clear Quartz 帮你把它整合进全，协同 = '面对得也整合得拢'，让整合含摄阴影而非排斥",
+  "eastern_lens": "土(执)土(整合全)同元对立互补 — '对治内魔 执'配 '曼荼罗整合全'，东方'执念与整合全、暗与圆'的和合"}
+
+# ---- a=16 The Tower × 17..21 ----
+PAIRS[(16,17)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Tower=Fire 突然崩塌(sudden collapse) / Star=Air 崩塌后希望重连(renewal after the collapse) → 风火相克 + 序列因果（框架代表对 Tower×Star）：Tower 的崩塌是 Star 重连希望的前提，先崩后望",
+  "combination_story_seed": "the lightning before the still pool — Tower's collapse meets the Star kneeling in serene renewal; the structure that fell is met by the hope that returns, and the crown knocked from the tower meets the eight-pointed star above the pool, what the lightning broke the star now mends, the collapse is the doorway the renewal walks through, the storm is the prelude to the calm",
+  "synergy_logic": "Smoky Quartz(崩塌中扎根) + Aquamarine(崩塌后重连希望) → Smoky Quartz 帮你崩时稳，Aquamarine 帮你崩后接望，协同 = '崩得住也接得望'，让崩塌落为希望的新生",
+  "eastern_lens": "火(崩)→风(望续)的因果 — '无常崩塌'以 '菩提心 re-arises 望续'为果，东方'崩而后望、破而后续'的因果"}
+PAIRS[(16,18)] = {
+  "relationship_type": "transformation",
+  "judgment_basis": "Tower=Fire 突然剧烈显形(sudden revelation) / Moon=Water 缓慢潜意识显形(slow subconscious surfacing) → 水火相克 + 阶段跃迁 archetype(突然显真 → 缓慢潜意识显真)：从'雷击式显形'转入'潜意识缓慢显形'",
+  "combination_story_seed": "the lightning on the howling path — Tower's sudden revelation meets the Moon's slow subconscious surfacing; the truth that arrived in a flash is followed by the murky depths that surface at their own pace, and the bolt and the crayfish are two forms of what-was-hidden coming to light, one violent one gradual, the collapse opens onto the half-lit path",
+  "synergy_logic": "Smoky Quartz(突然显形时扎根) + Moonstone(缓慢潜意识显形耐受) → Smoky Quartz 帮你扛突然，Moonstone 帮你待缓慢，协同 = '扛得突然也待得缓慢'，让显形从剧烈转入耐受",
+  "eastern_lens": "火(突显)→水(缓显)的跃迁 — '无常崩塌突显'接 '无意识深处缓显'，东方'突显与缓显、破与潜'的转化"}
+PAIRS[(16,19)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Tower=Fire 突然崩塌见真(collapse reveals truth) / Sun=Fire 崩塌见真后重生的喜悦(rebirth into joy) → 同元素(火)+ 序列因果：Tower 的崩塌见真是 Sun 重生喜悦的前提，先崩后喜",
+  "combination_story_seed": "the lightning before the noon sun — Tower's collapse meets the Sun's radiant rebirth; the structure that fell to reveal truth is met by the joy that fills the cleared ground, and the crown knocked from the tower meets the bright sun overhead, what collapsed makes room for radiance, the lightning is the prelude to the noon, truth then joy",
+  "synergy_logic": "Smoky Quartz(崩塌见真时扎根) + Sunstone(见真后重生喜悦) → Smoky Quartz 帮你崩时稳，Sunstone 帮你崩后喜，协同 = '崩得稳也喜得真'，让崩塌见真落为重生的喜悦",
+  "eastern_lens": "火(崩真)→火(重生喜)的同元因果 — '无常崩塌崩真'以 '明性 重生喜'为果，东方'崩而后喜、破而后乐'的因果"}
+PAIRS[(16,20)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Tower=Fire 崩塌见真(collapse/reckoning) / Judgment=Fire 崩塌后觉醒召呼(awakening after the reckoning) → 同元素(火)+ 序列因果：Tower 的崩塌见真是 Judgment 觉醒召呼的前提，崩后才听得见召呼",
+  "combination_story_seed": "the lightning hears the trumpet — Tower's collapse meets Judgment's trumpet calling figures from graves; the structure that fell to reveal truth is met by the call that the cleared ground makes audible, and the bolt meets the angel's trumpet, what the lightning broke open the call now fills with meaning, the reckoning is the prelude to the awakening",
+  "synergy_logic": "Smoky Quartz(崩塌见真时扎根) + Angelite(崩塌后觉醒召呼听作指引) → Smoky Quartz 帮你崩时稳，Angelite 帮你崩后听召，协同 = '崩得稳 → 听得召'，让崩塌见真落为觉醒召呼",
+  "eastern_lens": "火(崩真)→火(觉醒召)的同元因果 — '无常崩塌崩真'接 '如实自省后的召呼'，东方'崩而后觉、破而后应'的因果"}
+PAIRS[(16,21)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Tower=Fire 崩塌清场(collapse/clearing) / World=Earth 崩塌后该 cycle 完成(integrated completion) → 火土相生 + 序列因果：Tower 的崩塌清场是 World 完成的关键一步，崩后才圆",
+  "combination_story_seed": "the lightning inside the wreath — Tower's collapse meets the World dancer inside the completed garland; the structure that fell to clear the ground is met by the wholeness that integrates the cycle, and the crown knocked from the tower is woven into the green wreath, what collapsed makes the completion possible, the lightning is the last clearing before the mandala closes",
+  "synergy_logic": "Smoky Quartz(崩塌清场时扎根) + Clear Quartz(清场后整合完成和合) → Smoky Quartz 帮你崩时稳，Clear Quartz 帮你崩后合，协同 = '崩得稳也圆得满'，让崩塌落为完成的最后清场",
+  "eastern_lens": "火(崩清)→土(圆成)的因果 — '无常崩塌崩清'接 '曼荼罗整合圆成'，东方'崩而后圆、破而后成'的因果"}
+
+# ---- a=17 The Star × 18..21 ----
+PAIRS[(17,18)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Star=Air 风暴后清明希望(serene hope/renewal) / Moon=Water 半明不白潜意识迷雾 → 风水相生 + archetype 互补(清明希望 vs 模糊迷雾)：清明希望与潜意识迷雾互补",
+  "combination_story_seed": "the still pool on the howling path — Star's serene hope meets the Moon's uncertain depths; the renewal that pours clear water and the subconscious that churns in half-light complete each other, the eight-pointed star and the crayfish, hope needs to honor the murky depths or it becomes denial, the depths need the hope or they become despair",
+  "synergy_logic": "Aquamarine(清明希望重连) + Moonstone(潜意识迷雾耐受) → Aquamarine 帮你守清明希望，Moonstone 帮你待潜意识迷雾，协同 = '守得清明望、待得深处雾'，让希望不脱离对潜意识的耐受",
+  "eastern_lens": "风(清明望)水(深处潜)相生互补 — '菩提心 re-arises 清明望'配 '无意识深处 潜'，东方'清明望与深处潜、续与潜'的和合"}
+PAIRS[(17,19)] = {
+  "relationship_type": "amplifying",
+  "judgment_basis": "Star=Air 风暴后希望 renewal(hope/renewal) / Sun=Fire 喜悦明朗 vitality(joy/vitality) → 风火相克同主题 archetype(希望 renewal × 喜悦 vitality 共振)：两种光明叠加（框架代表对 Sun×Star 的希望版）",
+  "combination_story_seed": "the still pool under the noon sun — Star's renewal meets the Sun's radiant joy; the hope that returns after difficulty and the simple vitality of being alive amplify each other, the eight-pointed star and the bright sun overhead, two forms of light, one hoped for one simply lived, renewal ripens into open joy",
+  "synergy_logic": "Aquamarine(希望 renewal 之水) + Sunstone(喜悦 vitality 之光) → Aquamarine 帮你续望，Sunstone 帮你享喜，协同 = '续望 + 享喜'双重光明，共振放大整全的明朗",
+  "eastern_lens": "风(希望 renewal)火(喜悦 vitality)的主题共振 — '菩提心 re-arises 希望 renewal'配 '明性 喜悦 vitality'，东方'希望续与喜悦活'的同频"}
+PAIRS[(17,20)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Star=Air 风暴后重连意义(reconnect to meaning after storm) / Judgment=Fire 重连后听见更大召呼(call heard after reconnection) → 风火相克 + 序列因果：Star 的重连希望是 Judgment 听见召呼的前提，先续望后听召",
+  "combination_story_seed": "the still pool hears the trumpet — Star's renewal meets Judgment's trumpet calling figures from graves; the hope that returned after the storm ripens into the call that must be answered, and the eight-pointed star meets the angel's trumpet, the renewed spirit rises to answer what the hope was always pointing toward, renewal is the prelude to the calling",
+  "synergy_logic": "Aquamarine(重连希望意义) + Angelite(重连后召呼听作指引) → Aquamarine 帮你续望，Angelite 帮你听召，协同 = '续得望 → 听得召'，让希望重连落为回应召呼",
+  "eastern_lens": "风(续望)→火(听召)的因果 — '菩提心 re-arises 续望'接 '如实自省后的召呼'，东方'续望而后听召、续而后应'的因果"}
+PAIRS[(17,21)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Star=Air 希望之中段(hope mid-journey) / World=Earth 整合完成之终段(integrated completion) → 风土相克 + archetype 互补(希望中段 vs 完成终段)：希望与完成互补",
+  "combination_story_seed": "the still pool inside the wreath — Star's hope meets the World dancer inside the completed garland; the renewal mid-journey and the wholeness that integrates the whole path complete each other, the eight-pointed star opens into the wreath, the pouring water becomes the green garland, the hope was always bound for the mandala",
+  "synergy_logic": "Aquamarine(希望中段) + Clear Quartz(整合完成和合) → Aquamarine 帮你守望，Clear Quartz 帮你合，协同 = '守得望也圆得满'，让希望走到完整",
+  "eastern_lens": "风(望中)土(合终)相克始终互补 — '菩提心 re-arises 望中'配 '曼荼罗整合合终'，东方'望中与合终、续与圆'的和合"}
+
+# ---- a=18 The Moon × 19..21 ----
+PAIRS[(18,19)] = {
+  "relationship_type": "tension",
+  "judgment_basis": "Moon=Water 半明不白潜意识迷雾(subconscious/illusion) / Sun=Fire 喜悦明朗显白(clarity/joy) → 水火相克 + archetype 直接对立(潜意识迷雾 vs 显意识明朗)且难两全（框架代表对 Moon×Sun）：停在迷雾还是走向明朗",
+  "combination_story_seed": "the howling path before the noon sun — Moon's uncertain depths meet the Sun's radiant clarity; the subconscious that churns in half-light and the simple clarity of full day pull against each other, the crayfish and the sunflowers, and the question is whether to stay with the not-yet-clear or to step into the open joy of what can finally be seen",
+  "synergy_logic": "Moonstone(耐受潜意识迷雾) + Sunstone(走向喜悦明朗) → Moonstone 帮你待迷雾，Sunstone 帮你走向明朗，协同 = '待得住雾也走得向明'，化解潜意识与显意识的拉扯",
+  "eastern_lens": "水(晦潜)vs 火(明朗)的对立 — '无意识深处 晦潜' vs '明性 明朗'，东方'晦与明、潜与显'的张力"}
+PAIRS[(18,20)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Moon=Water 潜意识缓慢显形(slow subconscious surfacing) / Judgment=Fire 显形后觉醒召呼(awakening after surfacing) → 水火相克 + 序列因果：Moon 的潜意识显形是 Judgment 觉醒召呼的前提，潜出后听召",
+  "combination_story_seed": "the howling path hears the trumpet — Moon's surfacing depths meet Judgment's trumpet calling figures from graves; what rose from the subconscious in half-light ripens into the call that must be answered, and the crayfish and the dog and wolf meet the angel's trumpet, the murky depths that surfaced become the cleared ground where the figures rise, surfacing is the prelude to the awakening",
+  "synergy_logic": "Moonstone(潜意识缓慢显形耐受) + Angelite(显形后召呼听作指引) → Moonstone 帮你待显形，Angelite 帮你听召，协同 = '待得显形 → 听得召'，让潜意识显形落为觉醒召呼",
+  "eastern_lens": "水(潜显)→火(听召)的因果 — '无意识深处 潜显'接 '如实自省后的召呼'，东方'潜显而后听召、潜而后应'的因果"}
+PAIRS[(18,21)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Moon=Water 潜意识之中段(subconscious mid-journey) / World=Earth 整合完成之全(integrated completion) → 水土相克 + archetype 互补(潜意识中段 vs 整合完成全)：潜意识与整合全互补，整合含摄潜意识",
+  "combination_story_seed": "the howling path inside the wreath — Moon's subconscious meets the World dancer inside the completed garland; the murky depths mid-journey and the wholeness that integrates everything, depths included, complete each other, the crayfish and the dog and wolf are woven into the green wreath, the two towers become two of the four fixed signs, true integration includes what surfaced from the dark",
+  "synergy_logic": "Moonstone(潜意识中段耐受) + Clear Quartz(整合含摄潜意识的全) → Moonstone 帮你待潜意识，Clear Quartz 帮你把它整合进全，协同 = '待得住也整合得拢'，让整合含摄潜意识而非排斥",
+  "eastern_lens": "水(潜)土(整合全)相克互补 — '无意识深处 潜'配 '曼荼罗整合全'，东方'潜与整合全、暗与圆'的和合"}
+
+# ---- a=19 The Sun × 20..21 ----
+PAIRS[(19,20)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Sun=Fire 喜悦明朗之活(joyful living) / Judgment=Fire 听召回应更大生命(call to larger life) → 同元素(火)+ archetype 互补(单纯喜活 vs 回应召呼)：单纯喜活与回应召呼互补",
+  "combination_story_seed": "the noon sun hears the trumpet — Sun's joyful living meets Judgment's trumpet calling figures from graves; the simple vitality of being alive is met by a calling larger than personal joy, and the sunflowers turn toward the angel's trumpet, the radiant life rises to answer something beyond its own enjoyment, joy finds its larger purpose",
+  "synergy_logic": "Sunstone(喜悦明朗之活) + Angelite(更大召呼听作指引) → Sunstone 帮你享单纯活，Angelite 帮你听更大召呼，协同 = '享得单纯活 + 应得更大召'，让喜悦找到更大的目的",
+  "eastern_lens": "火(喜活)火(应召)同元互补 — '明性 喜活'配 '如实自省后的召呼'，东方'喜活与应召、乐与应'的和合"}
+PAIRS[(19,21)] = {
+  "relationship_type": "complementary",
+  "judgment_basis": "Sun=Fire 喜悦之中段(joy mid-journey) / World=Earth 整合完成之终段(integrated completion) → 火土相生 + archetype 互补(喜悦中段 vs 完成终段)：喜悦与完成互补",
+  "combination_story_seed": "the noon sun inside the wreath — Sun's joy meets the World dancer inside the completed garland; the vitality mid-journey and the wholeness that integrates the whole path complete each other, the sunflowers open into the wreath, the bright sun meets the green garland, the joy was always bound for the mandala, the dance in the sun becomes the dance in the wreath",
+  "synergy_logic": "Sunstone(喜悦中段) + Clear Quartz(整合完成和合) → Sunstone 帮你享喜中段，Clear Quartz 帮你合终段，协同 = '享得喜也圆得满'，让喜悦走到完整",
+  "eastern_lens": "火(喜中)土(合终)相生始终互补 — '明性 喜中'配 '曼荼罗整合合终'，东方'喜中与合终、乐与圆'的和合"}
+
+# ---- a=20 Judgment × 21 ----
+PAIRS[(20,21)] = {
+  "relationship_type": "causal",
+  "judgment_basis": "Judgment=Fire 觉醒召呼回应(awakening/call answered) / World=Earth 回应召呼后该 cycle 完成(integrated completion after the call) → 火土相生 + 序列因果：Judgment 的觉醒召呼是 World 完成的关键一步，应召后才圆",
+  "combination_story_seed": "the trumpet inside the wreath — Judgment's call meets the World dancer inside the completed garland; the awakening that answered the call is met by the wholeness that integrates the whole cycle, and the angel's trumpet and the rising figures meet the green wreath, what was awakened is now complete, the call was the last threshold before the mandala closes, every rebirth opens onto the world",
+  "synergy_logic": "Angelite(觉醒召呼听作指引) + Clear Quartz(应召后整合完成和合) → Angelite 帮你应召，Clear Quartz 帮你合，协同 = '应得召也圆得满'，让觉醒召呼落为完成的最后一步",
+  "eastern_lens": "火(应召)→土(圆成)的因果 — '如实自省后的召呼'接 '曼荼罗整合圆成'，东方'应召而后圆成、觉而后圆'的因果"}
+
+print("全部录入完成, 总对数:", len(PAIRS))
+
+# =========================================================================
+# 组装输出 + json.dump
+# =========================================================================
+import itertools
+# 验证：231 对全覆盖且无重复
+all_expected = [(a,b) for a in range(22) for b in range(a+1,22)]
+missing = [p for p in all_expected if p not in PAIRS]
+extra   = [p for p in PAIRS if p not in all_expected]
+assert not missing, f"缺失对({len(missing)}): {missing[:10]}..."
+assert not extra,   f"多余对({len(extra)}): {extra[:10]}..."
+assert len(PAIRS)==231, f"总对数={len(PAIRS)} 应=231"
+
+pairs_out = []
+for (a_num, b_num) in sorted(PAIRS.keys()):
+    A, B = CARDS[a_num], CARDS[b_num]
+    d = PAIRS[(a_num,b_num)]
+    pairs_out.append({
+        "card_a": {"slug": A["slug"], "number": a_num},
+        "card_b": {"slug": B["slug"], "number": b_num},
+        "pair_slug": f"{A['slug']}-and-{B['slug']}",
+        "relationship_type": d["relationship_type"],
+        "judgment_basis": d["judgment_basis"],
+        "combination_story_seed": d["combination_story_seed"],
+        "crystal_synergy": {
+            "a": {"slug": A["cslug"], "name": A["cname"]},
+            "b": {"slug": B["cslug"], "name": B["cname"]},
+            "logic": d["synergy_logic"],
+        },
+        "eastern_lens": d["eastern_lens"],
+    })
+
+# 关系类型分布统计
+from collections import Counter
+dist = Counter(p["relationship_type"] for p in pairs_out)
+
+out = {
+    "_meta": {
+        "purpose": "22 Major Arcana 两两配对关系判定 config（231 对）",
+        "framework": "模板-Tarot-配对文章框架.md（§3 互动叙事 / §5 关系类型 5 类 / §6 双水晶协同）",
+        "data_source": "07-互动工具/_shared/tarot-knowledge.json（22 牌 element/archetype/crystals.best_overall）",
+        "total_pairs": 231,
+        "relationship_type_distribution": dict(dist),
+        "rules": "牌号升序去重(a<b); relationship_type 5 类每对必属其一; combination_story_seed 禁三段拼接写两牌化学反应; crystal_synergy 写协同逻辑非并列; shadow 类组合用 shadow aspect 口径禁 bad omen/curse/evil",
+    },
+    "relationship_type_legend": {
+        "complementary": "互补：互补 element(火/水 风/土)+对立互补 archetype(始/终 做/收 父/母)，阴阳和合拼成完整图景",
+        "amplifying": "强化：同 element 或同主题 archetype，共振放大能量叠加",
+        "tension": "冲突：对立 archetype + 用户难两全，拉扯抉择",
+        "causal": "因果：序列关系，一张是另一张的因或果(时间先后)",
+        "transformation": "转化：阶段跃迁 archetype，蜕变升华构成转变弧线",
+    },
+    "pairs": pairs_out,
+}
+
+with open(OUT, "w", encoding="utf-8") as f:
+    json.dump(out, f, ensure_ascii=False, indent=2)
+
+print("\n=== 生成完成 ===")
+print("文件:", OUT)
+import os as _os
+print("字节数:", _os.path.getsize(OUT))
+print("总对数:", len(pairs_out))
+print("关系类型分布:")
+for k in ["complementary","amplifying","tension","causal","transformation"]:
+    print(f"  {k}: {dist[k]} 对")
+print("\n抽样3对不同类型:")
+samples = [("the-fool","the-world"),("the-lovers","the-devil"),("death","the-sun")]
+for sa, sb in samples:
+    p = next(x for x in pairs_out if x["card_a"]["slug"]==sa and x["card_b"]["slug"]==sb)
+    print(f"\n  [{p['relationship_type']}] {p['card_a']['slug']} × {p['card_b']['slug']}")
+    print(f"  pair_slug: {p['pair_slug']}")
+    print(f"  basis: {p['judgment_basis'][:90]}...")
+    print(f"  seed:  {p['combination_story_seed'][:110]}...")
+    print(f"  synergy.a={p['crystal_synergy']['a']['name']} b={p['crystal_synergy']['b']['name']}")
+    print(f"  synergy.logic: {p['crystal_synergy']['logic'][:80]}...")
+    print(f"  eastern: {p['eastern_lens'][:80]}...")

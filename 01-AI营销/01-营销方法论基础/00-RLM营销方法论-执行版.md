@@ -136,6 +136,12 @@ XX产品/
 关键词 -amazon.com -ebay.com -etsy.com -walmart.com -pinterest.com -reddit.com -youtube.com -facebook.com -tiktok.com -wikipedia.org -quora.com -target.com -aliexpress.com -alibaba.com
 ```
 
+> **AI 执行路径（DataForSEO `serp_check`）**：人工 Google 搜索用上面 `-site:` 语法；AI 用 mcp `serp_check` 时该语法无效，按以下 SOP：
+> 1. **深度 top20-30**：每个种子词查 top20-30，不只 top10。过滤大平台后真竞品常只剩 2-5 个，top10 不够。
+> 2. **大平台过滤**（`serp_check` 返回 organic 后，剔除以下域名）：电商 marketplace（amazon / ebay / etsy / walmart / target / aliexpress / alibaba / temu）+ 社媒 UGC（youtube / reddit / pinterest / facebook / tiktok / instagram / quora / medium）+ 百科参考（wikipedia）。
+> 3. **竞品类型二次筛选**：过滤大平台后，结果仍混有①成品电商（只卖成品，无定制配置器）②沟通定制（email/表单沟通，无交互式 builder）③简单下拉（选尺寸/石种，无 builder 交互）。这三类无可学的 UI/代码/操作流程，**剔除**；只留**真交互式 builder/配置器**（或本项目真正要对标的类型）进入 1D 深拆。
+> 4. **webReader 只抓 SERP 确认的真竞品**，不预设竞品再去搜（避免"我觉得是竞品"偏差——竞品只能来自 SERP top20-30 过滤后的真实排名）。
+
 ##### 轨道B：SEMrush Organic Competitors（人工操作）
 
 **核心任务**：

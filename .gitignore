@@ -44,3 +44,29 @@ nul
 
 # 生财有术付费内容采集（第三方付费社区内容，不可 commit）
 01-AI营销/生财玄学选题库/
+
+# 塔罗内容生产临时脚本与 QC 中间产物
+**/_tmp_*.py
+**/_tmp_*.json
+**/_tmp_*.txt
+**/_wc_*.py
+**/_wc_*.txt
+**/_wcsun.txt
+**/_qc_*.py
+**/_qc_*.txt
+**/_qc_*.json
+**/_qc_*.out.txt
+**/_qc/
+**/_pytest.txt
+**/_strength_knwl.tmp.txt
+**/_hier_tmp.json
+**/_count_tmp.py
+**/_*.tmp.txt
+**/_*.out.txt
+**/_extract_yesno_meta.py
+**/_tmp_cards_*.json
+**/_tmp_pair_*.json
+**/_tmp_extract.py
+**/_tmp_qc.py
+**/_tmp_wc.py
+**/_tmp_scan.py

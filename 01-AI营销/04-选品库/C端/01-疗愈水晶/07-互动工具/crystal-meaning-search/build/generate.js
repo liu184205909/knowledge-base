@@ -7,6 +7,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { relatedHtml } = require('../../_shared/related-tools/related-html');
 
 const DATA = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../data/search-data.json'), 'utf8'));
 const C = DATA.crystals;
@@ -179,7 +180,7 @@ html += `
 <!-- ===== End Crystal Meaning Search ===== -->`;
 
 const OUT = path.resolve(__dirname, 'crystal-meaning-search.html');
-fs.writeFileSync(OUT, html, 'utf8');
+fs.writeFileSync(OUT, html + '\n' + relatedHtml('crystal-meaning-search'), 'utf8');
 console.log(`✅ Crystal Meaning Search 生成完成 → ${OUT}`);
 console.log(`   ${(fs.statSync(OUT).size / 1024).toFixed(1)} KB | ${C.length} 颗水晶 | 4 facet (color/chakra/element/intention)`);
 console.log(`   SEO 折叠区: ${SEO_CONTENT.trim() ? '已注入' : '待 T2-3 产出 seo-content.html'}`);

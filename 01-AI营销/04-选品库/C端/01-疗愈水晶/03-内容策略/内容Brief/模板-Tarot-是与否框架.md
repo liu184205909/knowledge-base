@@ -108,11 +108,73 @@
 
 ---
 
+## 7A. Health / Finances 合规定制（是与否专属 ⭐⭐⭐ —— 5 类塔罗内容最易违规处）
+
+> **为什么是与否是重灾区**：是与否页的 verdict 天然是"判定"（该牌该问题 = Strong Yes / Conditional / Strong No）。当问题落在 Health（如 "Is The Tower yes for surgery?"）/ Finances（如 "Is The Magician yes for this investment?"）时，AI 极易生成**医疗判定 / 投资建议**——这是平台+广告政策高压区，比其余 4 类塔罗内容风险**高一个数量级**。
+> **本节为是与否页强制规则**，触发即打回不进生产。普适黑名单见 [1F §0A.1](../../01-竞品分析/1F-塔罗内容写法研究.md)，本节是**是与否页在该黑名单之上的类型专属加固**。
+
+### 7A.1 Health 问题判定规则（禁医疗判定）
+
+> **典型违规问题**：`Is {Card} yes for healing?` / `Is {Card} yes for recovery?` / `Is {Card} yes for surgery?` / `Is {Card} a warning about my illness?` / `Will {Card} mean I'll get better?`
+
+**强制规则**：
+1. **verdict 禁医疗判定**：是与否页对 Health 问题的判定，**只能谈 energy / rest / stress / body awareness / emotional pattern 层面**，**禁**判定该牌对"治愈/康复/手术/疾病"的 yes/no
+   - ❌ 违规：`The Tower is a no for surgery — it signals complications.`（医疗判定）
+   - ❌ 违规：`The Sun is a yes for healing — it means you will recover.`（疗效承诺）
+   - ✅ 合规：`For health questions, The Tower is better read as a prompt to slow down and check in with your body — not a verdict on any treatment or outcome. The card's sudden-change energy may point to stress you've been carrying; whether to pursue any medical path is a conversation for you and a qualified professional.`
+2. **verdict 禁用医疗词黑名单**（在 [1F §0A.1](../../01-竞品分析/1F-塔罗内容写法研究.md) Health 黑名单基础上，是与否页额外禁这些判定式表达）：
+   - `yes/no for surgery` / `yes/no for healing` / `yes/no for recovery` / `yes/no for treatment`
+   - `this card means you will get better/worse` / `the illness will...`
+   - `cure` / `heal` / `diagnose` / `illness` / `sickness`（在 verdict 上下文）
+3. **Health 问题统一加免责标签**：是与否页对 Health 问题的 verdict + M3 + FAQ 答案，**强制内嵌**（原文照搬禁改写）：
+   > `"For health questions, this reading is a reflection prompt, not medical advice — decisions about treatment belong with a qualified professional."`
+4. **三档判定在 Health 问题的改写**（禁直接 Strong Yes/No 医疗化）：
+   - Strong Yes/No 在 Health 问题 → 改写为"该牌的能量指向（如 rest/check-in/slow down）是否与该问题相关"，**不**判定疗效
+   - Conditional 在 Health 问题 → 谈"该牌提示的身体/能量觉察"，非"治不治"
+
+### 7A.2 Finances 问题判定规则（禁投资建议）
+
+> **典型违规问题**：`Is {Card} yes for this investment?` / `Is {Card} yes for buying this stock?` / `Is {Card} yes for lending money?` / `Will {Card} mean I'll make money?` / `Is {Card} a yes for crypto?`
+
+**强制规则**：
+1. **verdict 禁投资建议**：是与否页对 Finances 问题的判定，**只能谈 money mindset / risk awareness / spending pattern / planning behavior 层面**，**禁**判定该牌对"某项投资/某只股票/借贷/加密货币"的 yes/no
+   - ❌ 违规：`The Magician is a yes for this investment — it means manifestation and returns.`（投资建议 + 收益暗示）
+   - ❌ 违规：`The Fool is a yes for crypto — take the leap.`（具体投资品类建议）
+   - ✅ 合规：`For money questions, The Magician leans toward resourcefulness and agency — but that's a mindset read, not a signal to invest. The card can't tell you whether a specific asset will perform; it may simply invite you to review whether you've thought the decision through. Treat any yes/no here as a prompt to slow down, not a green light.`
+2. **verdict 禁用财务词黑名单**（在 [1F §0A.1](../../01-竞品分析/1F-塔罗内容写法研究.md) Finances 黑名单基础上，是与否页额外禁这些判定式表达）：
+   - `yes/no for this investment/stock/crypto/asset` / `yes/no for lending`
+   - `you will gain/profit` / `guaranteed return` / `this stock will...`
+   - `invest now` / `don't invest or you'll lose` / `predicts loss`
+3. **Finances 问题统一加免责标签**：是与否页对 Finances 问题的 verdict + M3 + FAQ 答案，**强制内嵌**（原文照搬禁改写）：
+   > `"For money questions, this reading is symbolic, not investment advice — financial decisions belong with a qualified professional."`
+4. **三档判定在 Finances 问题的改写**（禁直接 Strong Yes/No 投资化）：
+   - Strong Yes/No 在 Finances 问题 → 改写为"该牌的能量（如 review spending / slow down / risk awareness）是否与该问题相关"，**不**判定收益
+   - Conditional 在 Finances 问题 → 谈"该牌提示的财务觉察"，非"投不投"
+
+### 7A.3 是与否页问题类型合规分级
+
+| 问题类型 | 合规风险 | 是与否页专属规则 |
+|---|---|---|
+| Love（he loves me / new relationship） | 中 | 禁"对方一定回头/一定出轨"绝对预测；verdict 用 may/likely |
+| Career（new job / quit / launch） | 中 | 禁"一定升职/被裁"；verdict 用 decision-frame，可正常三档判定 |
+| Decision（should I do X） | 中 | 可正常三档判定（决策是是与否的天然主场），但守 [1F §0A.2](../../01-竞品分析/1F-塔罗内容写法研究.md) 绝对预测禁令 |
+| Timing（is now the right time） | 中 | 可正常三档判定，禁"X 时刻必发生"确定论 |
+| Move-or-Stay（move / stay / go back） | 中 | 可正常三档判定，禁"搬家必破财/必生病"连带违规 |
+| **Health（healing/recovery/surgery/illness）** | **极高** | ⭐**守 §7A.1 全量**：禁医疗判定 + verdict 谈能量觉察 + 强制免责标签 |
+| **Finances（investment/stock/lending/crypto）** | **极高** | ⭐**守 §7A.2 全量**：禁投资建议 + verdict 谈财务觉察 + 强制免责标签 |
+
+**硬约束**：
+1. 是与否页生产前，先判该篇问题类型；**Health/Finances 问题页全审**（不抽审，5 类里风险最高，错一篇即违规）
+2. Health/Finances 问题的 verdict 不进 Strong Yes/Strong No 的医疗/投资化判定，统一降级为"能量/觉察层 Conditional 改写" + 强制免责标签
+3. [1F §0A.1](../../01-竞品分析/1F-塔罗内容写法研究.md) Health/Finances 黑名单在是与否页是**关卡 0 必过项**，且 §7A.1/§7A.2 额外禁用判定式表达（yes/no for surgery / yes for this investment 等）一并 grep
+
+---
+
 ## 8. 通用组件（复用牌义页/配对页框架）
 
 | 组件 | 执行依据 | 是与否页专属 |
 |---|---|---|
-| 合规/去AI化 | 牌义页 §16 | 同 + **M7 强制免责 + 禁二元确定论** |
+| 合规/去AI化 | 牌义页 §16 + [1F §0A](../../01-竞品分析/1F-塔罗内容写法研究.md) + **本框架 §7A** | 同 + **M7 强制免责 + 禁二元确定论**；⭐**Health/Finances 问题页守 §7A 全量**（5 类最易违规，是与否专属加固）；**禁用表达库 6 类见 [1F §0A.2](../../01-竞品分析/1F-塔罗内容写法研究.md)**——是与否页对"绝对预测"类尤其敏感（判定天然倾向确定论，最易写成 guaranteed yes/definitely no）|
 | CTA 预验证 | 牌义页 §3 | conditional 水晶 meaning/category HEAD 检查 |
 | Schema | 牌义页 §12 | Article + FAQPage + BreadcrumbList（是与否页通常无水晶 ItemList，除非 M5 有水晶）|
 | 内链 | 2A §四塔罗页 | 牌义页（`/tarot-{card}-crystals/`）+ 同牌其他问题页 + 是与否 Hub + 配对页（可选）|
@@ -120,16 +182,45 @@
 
 ## 9. 质检关卡（是与否专属）
 
+- **关卡 0 合规前置门（Health/Finances 重点审 + 禁用表达库，全塔罗统一 ⭐⭐⭐ 是与否页最关键关卡）**：
+  - grep [1F §0A.1](../../01-竞品分析/1F-塔罗内容写法研究.md) Health/Finances 黑名单 + [1F §0A.2](../../01-竞品分析/1F-塔罗内容写法研究.md) 禁用表达库 6 类 + **§7A.1/§7A.2 是与否专属判定式黑名单**（`yes/no for surgery` / `yes for healing/recovery` / `yes for this investment/stock/crypto` / `you will gain` / `invest now` 等）
+  - **Health/Finances 问题页逐篇全审**（非抽审）：校验 verdict 不医疗化/投资化 + 强制免责标签原文存在（§7A.1/§7A.2 两句）
+  - 命中即打回不进生产
+  - 输出：`_qc/00-compliance.json`（标注每篇问题类型，Health/Finances 标红必过）
+
 - **关卡 1 三档判定**：M1/M2/M3 判定档位明确 + 为什么
 - **关卡 2 禁照抄 Selfgaze**：M2 与 Selfgaze 速答清单相似度 < 30%
 - **关卡 3 问题类型差异化**：M3 该问题判定与 M2 总体可有差异（非复制）
 - **关卡 4 免责存在性**：M7 含自由意志免责（前半一致+后半该牌差异化）
 - **关卡 5 合规**：grep 禁词 will predict/destined/guaranteed/curse/bad omen
 
+- **关卡 6 语义去重 + 结构指纹（全塔罗普适升级 ⭐，见 [1F §0A.3](../../01-竞品分析/1F-塔罗内容写法研究.md)）**：
+  - **语义去重**：100 是与否页 M2/M3 段（核心论证段）跨篇 embedding 余弦相似度 **> 0.85 触发复审**。重点查**同问题类型 + 同档位**之间（如多张 Conditional 牌在 Love 问题的 M2 最易"换牌不换骨"——都写"yes but with complications"）
+  - **结构指纹**：8 模块开场句式 + 论证路径指纹重复率 **< 40%**；**强制 ≥ 30% 是与否页打乱默认起承转合**（如 M4 正逆位前置、M5 conditional 并入 M3、加"误读警示"段、Strong No 牌用倒叙等变体）
+  - **人工连读兜底**：抽**同问题类型** 5-10 篇连读（如 5 张牌在 Health 问题的判定连读），判断"换牌名能否互换"
+
 ## 10. 数据层 + 生产流程
 
 - config：`yes-no-knowledge.json`（每牌 × 问题类型的 verdict 三档 + 条件 + 转化水晶）
-- 流程：22 牌 × 5 问题清单 → AI 判定三档 → CTA 预验证 → 填充 → 五质检 → 二审 → 图片 → upload → 防假完成
+- 流程：22 牌 × 5 问题清单 → AI 判定三档 → CTA 预验证 → 填充 → **关卡 0 合规前置门（Health/Finances 重点审）** → 五质检 → 二审 → 图片 → upload → 防假完成
+
+### 10.1 yes-no-knowledge.json 数据层质量阀门（全塔罗普适见 [1F §0A.4](../../01-竞品分析/1F-塔罗内容写法研究.md)，本节是与否专属 ⭐⭐⭐）
+
+> yes-no-knowledge.json 是 100 是与否页源头，错则全错。普适判定流程/抽审比例见 1F §0A.4，本节列**是与否专属验收清单**——Health/Finances 问题判定合规是重中之重。
+
+**yes-no-knowledge.json 验收清单（任一不满足打回）**：
+- [ ] 每条 verdict 三档判定（Strong Yes / Conditional / Strong No）有 archetype + upright/reversed 依据（非照抄 Selfgaze 速答，相似度 < 30%）
+- [ ] 100 条 verdict 论证主体词组重叠 < 30%（同档位同问题类型之间也必须落到该牌独有论证）
+- [ ] **Health 问题判定合规**（⭐重点审）：verdict 不医疗化（不判定 cure/healing/recovery/surgery），只谈 energy/rest/stress/body awareness；Health 问题条目带强制免责标签（§7A.1 句）
+- [ ] **Finances 问题判定合规**（⭐重点审）：verdict 不投资建议化（不判定 investment/stock/crypto/lending），只谈 money mindset/risk awareness/spending pattern；Finances 问题条目带强制免责标签（§7A.2 句）
+- [ ] conditional 牌的转化条件 + 水晶辅助落该牌该问题独有（非"wear X for luck"万能句）
+- [ ] M3 该问题判定可与 M2 总体判定不同（如 The Tower 总体 no 但 for "leave toxic job" = yes），差异化有依据
+
+**抽审比例（是与否页特殊，Health/Finances 全审）**：
+- **Health/Finances 问题页全审**（是与否 5 类里风险最高，错一篇即违规，不抽审）
+- 强 yes/no 高权重牌全审
+- conditional 牌抽 30%
+- 其余抽 20%（对齐 [1F §0A.4 ③](../../01-竞品分析/1F-塔罗内容写法研究.md)）
 
 ## 11. 与其他框架边界
 

@@ -1,4 +1,26 @@
 /**
+ * Crystal Tarot Reading v10.6 — v10.5 翻牌结果卡颜色修复: 绿色边框/光晕 → 金色外扩 + 文字区加宽
+ * v10.6 改进(对比v10.5):
+ *   1) 翻牌结果卡(.ect-card 详细解读卡) 边框灰 #EEE → 金 #CFAA3E + 金色外扩光晕(box-shadow 0 0 0 5px rgba(207,170,62,.22) 往外扩);
+ *      牌头(.ect-card-head)底边加 3px 金线 + body padding 26→32px 让文字区呼吸更宽(用户原话"字体就可以宽一点显示")
+ *   2) Deck 翻开牌(.ect-card-back.flipped/.ect-is-front) 消除翻牌后残留的 selected 绿色光晕 → 金色 border + 金色外扩(0 0 0 4px rgba(207,170,62,.32));
+ *      翻牌态视觉与详细解读卡统一金色外扩(检查 agent 发现翻牌后绿色 #2D6A4F + 绿光晕已修)
+ *   3) 牌头位置条(.ect-card-pos) 绿调 → 金调背景(#FBF3E5+金线+#7A5A12 字)协调金色外扩主题
+ * 保留 v10.5 全部: 每行 11 张完整 / 卡牌矮 142 / 删圈圈 / focus必选 / 自动翻 / 爱情场景 / 三模式 / 英文 / 合规 / base64
+ *
+ * Crystal Tarot Reading v10.5 — v10.4 deck 优化: 每行 11 张完整可见 + 滚动效果优化
+ * v10.5 改进(对比v10.4):
+ *   1) 每行 11 张牌完整可见(用户核心诉求): 桌面牌宽改为 flex:1 1 0 + width:100%(自适应均分) + min-width 96/max-width 134,
+ *      配合 .ect-deck-row flex nowrap + gap:6px → 11 张精确填满一行(1192视口≈108px/牌), 无溢出无需水平滚动看第 11 张;
+ *      v10.4 固定宽 114px → 11×114+60gap=1314>1192 溢出只显示 10; v10.5 自适应填满 11 张全可见(用户明确要 11 张不滚动最直观)
+ *   2) 滚动效果优化(用户不满意统一滚动条+拖动): 桌面 11 张完整无溢出 → horizontalMode()=false → 底部统一滚动条 JS 自动隐藏(桌面无需);
+ *      鼠标拖动(horizontalMode 才激活)桌面自动失效; 平板/移动 grid 多列本就无水平滚动; 滚动机制仅在溢出场景(极窄视口)保留兜底
+ *   3) 牌背水晶图形 48×60 + "Crystal Tarot"文字在 108px 仍清晰(比 114 仅小 6px); hover 浮起/selected/翻转动画不受影响
+ * 保留 v10.4 全部逻辑(机制层不动, 仅牌宽自适应让桌面无溢出): 两行 11+11 / focus必选 + 选满自动翻 + Reveal + 爱情场景 + 三模式 +
+ *   默认洗牌 + 卡牌矮 142px + 删圈圈 + 水晶牌背 + 英文 + 合规 + base64; 滚动条/拖动/同步代码保留, horizontalMode 守卫让桌面自动隐藏
+ * 保留 v10.3: 滚动统一+拖动机制 / 卡牌矮 / 删圈圈
+ * v10.4 详见 git 历史(滚动统一+拖动 / 卡牌矮 / 删圈圈)
+ *
  * Crystal Tarot Reading v10.1 — v10 + 爱情场景预设(focus=love → 显示场景子选择, 吸收爱情塔罗4场景)
  * v10.1 改进(对比v10):
  *   1) focus 选 love → 显示"Your love focus"场景子选择(thinking/truelove/status/reconcile 4场景, 吸收爱情塔罗)
@@ -7,7 +29,9 @@
  *      + meaning-lbl 场景化("Meaning in your [场景短名] reading") + practice 反思问题场景化(场景guide合规非命运确定论)
  *      + love 水晶优先 best_love(爱情石)
  *   3) focus 必选保留: focus 是必选第一步(value="" 占位), 场景是 love 下的子选(love 已满足 focusReady, 场景默认选第一个)
- * 保留 v10 全部: flex 左右滚动(大牌140px+) + 金色滚动条 + focus必选 + 选满0.5s自动翻牌 + hover浮起 + 按钮栏下方
+ * v10.2 改进(对比v10.1): deck flex 左右滚动单排 → grid 自适应换行(桌面 minmax(135px,1fr) 22牌自然 11+11 两行/多行, 移动 minmax(100px) 2-3列),
+ *   去掉 overflow-x 水平滚动条(grid 无滚动), 牌宽 width:100% 自适应单元格; 保留 hover 浮起/selected/翻转/shuffle 动画
+ * 保留 v10.1 全部: focus必选 + 选满0.5s自动翻牌 + Reveal 高亮 + 默认洗牌 + 水晶牌背 + 三模式 + 爱情场景预设 + 英文 + 合规 + base64
  *   + 默认洗牌(init buildDeck) + 水晶六棱牌背 + 三模式(single/three/free) + free-count + 英文 + self-reflection合规 + base64
  *
  * Crystal Tarot Reading v10 — 3 个 UX 改进: 卡牌左右滚动(大牌横排) + 选满0.5s自动翻牌(去Validate强制) + focus必选(明确第一步)
@@ -188,26 +212,38 @@ const APP_JS = `(function(){
   function renderDeck(){
     var el=document.getElementById('ect-deck');
     if(!el) return;
+    // v10.5: 22 张大牌分两行(11+11), 每行 .ect-deck-row(flex nowrap + overflow-x兜底); 桌面牌宽自适应(flex:1 1 0)→11张精确填满无溢出(无需滚动);
+    // 两行原生滚动条隐藏, 底部统一滚动条 .ect-deck-scrollbar 仅在溢出时(JS horizontalMode)显示, 桌面11张满显自动隐藏
+    var perRow=deck.length;
     var h='';
-    for(var i=0;i<deck.length;i++){
-      h+='<div class="ect-card-back ect-enter" data-pos="'+i+'">'
-        +'<div class="ect-back-inner">'
-        +'<div class="ect-back-crystal">'
-        +'<div class="ect-crystal-top"></div>'
-        +'<div class="ect-crystal-side ect-crystal-l"></div>'
-        +'<div class="ect-crystal-face ect-crystal-m"></div>'
-        +'<div class="ect-crystal-side ect-crystal-r"></div>'
-        +'<div class="ect-crystal-base"></div>'
-        +'</div>'
-        +'<div class="ect-back-label">Crystal Tarot</div>'
-        +'<div class="ect-back-spark">\\u2737</div>'
-        +'</div></div>';
+    for(var r=0;r<Math.ceil(deck.length/perRow);r++){
+      h+='<div class="ect-deck-row">';
+      for(var i=r*perRow;i<Math.min((r+1)*perRow,deck.length);i++){
+        h+='<div class="ect-card-back ect-enter" data-pos="'+i+'" style="--i:'+i+'">'
+          +'<div class="ect-back-inner">'
+          +'<div class="ect-back-crystal">'
+          +'<div class="ect-crystal-top"></div>'
+          +'<div class="ect-crystal-side ect-crystal-l"></div>'
+          +'<div class="ect-crystal-face ect-crystal-m"></div>'
+          +'<div class="ect-crystal-side ect-crystal-r"></div>'
+          +'<div class="ect-crystal-base"></div>'
+          +'</div>'
+          +'<div class="ect-back-label">Crystal Tarot</div>'
+          +'<div class="ect-back-spark">\\u2737</div>'
+          +'</div></div>';
+      }
+      h+='</div>';
     }
+    // v10.4: 底部统一滚动条(默认隐藏, 桌面横向模式时 JS 加 .ect-sb-show 显示)
+    h+='<div class="ect-deck-scrollbar" aria-hidden="true"><div class="ect-deck-thumb"></div></div>';
     el.innerHTML=h;
     var backs=el.querySelectorAll('.ect-card-back');
     for(var k=0;k<backs.length;k++){
       (function(b){ b.addEventListener('click', function(){ pickCard(parseInt(b.getAttribute('data-pos'),10)); }); })(backs[k]);
     }
+    // v10.4: DOM 重建后刷新统一滚动条可见性 + thumb(切回 initial 重新选牌时);
+    // 延迟一帧让浏览器完成新 22 张牌布局后再判 scrollWidth/clientWidth, 否则 horizontalMode() 会误判 false
+    if(typeof deckScrollRefresh==='function'){ try{ setTimeout(deckScrollRefresh, 30); }catch(_){} }
   }
 
   function setStage(s){
@@ -229,7 +265,7 @@ const APP_JS = `(function(){
         if(!focusReady()) hint.textContent='Select your focus, then pick '+(n===1?'1 card':n+' cards')+' from the spread below.';
         else hint.textContent='Pick '+(n===1?'1 card':n+' cards')+' from the spread below. Tap a card back to choose, tap again to undo.';
       }
-      else if(s==='revealed') hint.textContent='Your '+(n===1?'card':'reading')+' is revealed. Scroll down for the full interpretation.';
+      else if(s==='revealed') hint.textContent='Your '+(n===1?'card':'reading')+' is revealed. The interpretation is shown below.';
     }
   }
 
@@ -373,7 +409,7 @@ const APP_JS = `(function(){
       var backEl=document.querySelector('#ect-deck .ect-card-back[data-pos="'+pos+'"]');
       if(backEl){
         (function(el,card,rev){
-          el.classList.add('flipped');
+          el.classList.add('flipped','ect-reveal-card','ect-reveal-pos-'+i);
           setTimeout(function(){ el.classList.add('ect-is-front'); el.innerHTML=cardFrontHtml(card,rev); }, 280);
         })(backEl, CARDS[d.cardIdx], d.reversed);
       }
@@ -408,10 +444,14 @@ const APP_JS = `(function(){
     var resetBtn=document.getElementById('ect-reset-btn');
     if(resetBtn) resetBtn.style.display='inline-block';
     setTimeout(function(){
-      // 不跳到结果区(会把刚翻开的牌滚走); 仅最小滚动确保翻开牌可见, sticky提示引导下滚看解读
-      var ff=document.querySelector('#ect-deck .ect-card-back.flipped');
-      if(ff){ try{ ff.scrollIntoView({block:'nearest',behavior:'smooth'}); }catch(e){} }
-    },450);
+      var deckEl=document.getElementById('ect-deck');
+      if(deckEl){
+        var offset = window.innerWidth <= 640 ? 86 : 112;
+        var top = deckEl.getBoundingClientRect().top + window.pageYOffset - offset;
+        try { window.scrollTo({top:Math.max(0, top), behavior:'smooth'}); }
+        catch(e){ window.scrollTo(0, Math.max(0, top)); }
+      }
+    },520);
   }
 
   function resetDraw(){
@@ -528,9 +568,173 @@ const APP_JS = `(function(){
       +'</div></div>';
   }
 
+  // v10.4: deck 两行统一滚动 + 鼠标拖动卡牌滚动 + 底部统一滚动条同步
+  // 用事件委托(绑 deck 容器一次) + 全局 activeRow 处理, renderDeck 重建 DOM 后无需重新绑
+  function initDeckScroll(){
+    var deckEl=document.getElementById('ect-deck');
+    if(!deckEl) return;
+    // sb/thumb 都实时查询(renderDeck 会 innerHTML 重建 DOM, 旧引用失效), 闭包只持有 deckEl
+    function sb(){ return deckEl.querySelector('.ect-deck-scrollbar'); }
+    function thumb(){ var s=sb(); return s ? s.querySelector('.ect-deck-thumb') : null; }
+    function rows(){ return deckEl.querySelectorAll('.ect-deck-row'); }
+    // 判断当前是否处于"横向滚动模式"(桌面 flex); 平板/移动切 grid 后无横向溢出 → 隐藏统一滚动条
+    function horizontalMode(){
+      var rs=rows(); var r0=rs[0];
+      return r0 && (r0.scrollWidth - r0.clientWidth) > 2;
+    }
+    function maxScroll(){
+      var rs=rows(); var r0=rs[0];
+      return r0 ? Math.max(0, r0.scrollWidth - r0.clientWidth) : 0;
+    }
+    function updateThumb(){
+      var s=sb(); var th=thumb(); if(!th || !s) return;
+      var rs=rows(); var r0=rs[0]; if(!r0) return;
+      var trackW = s.clientWidth;
+      var ms = maxScroll();
+      var ratio = r0.scrollWidth > 0 ? r0.clientWidth / r0.scrollWidth : 1;
+      // thumb 宽度按可视/内容比例, 但封顶 55% 轨道宽(避免溢出小时 thumb 占满整条不利拖), 最少 48px 易点
+      var thumbW = Math.max(48, Math.min(Math.round(trackW * 0.55), Math.round(trackW * ratio)));
+      if(ms <= 0){ th.style.width = trackW + 'px'; th.style.left='1px'; return; }
+      th.style.width = thumbW + 'px';
+      var pct = r0.scrollLeft / ms;
+      var left = Math.max(1, Math.round((trackW - thumbW) * pct));
+      th.style.left = left + 'px';
+    }
+    function refreshSbVisibility(){
+      var s=sb(); if(!s) return;
+      if(horizontalMode()){ s.classList.add('ect-sb-show'); updateThumb(); }
+      else { s.classList.remove('ect-sb-show'); }
+    }
+
+    var syncing=false;
+    function syncFromRow(srcRow){
+      if(syncing) return; syncing=true;
+      var sl=srcRow.scrollLeft;
+      var rs=rows();
+      for(var i=0;i<rs.length;i++){ if(rs[i]!==srcRow) rs[i].scrollLeft=sl; }
+      updateThumb();
+      syncing=false;
+    }
+    function syncFromValue(sl){
+      if(syncing) return; syncing=true;
+      var rs=rows();
+      for(var i=0;i<rs.length;i++){ rs[i].scrollLeft=sl; }
+      updateThumb();
+      syncing=false;
+    }
+    // row scroll 同步(委托: 每次重建 DOM 仍生效)
+    deckEl.addEventListener('scroll', function(e){
+      var t=e.target;
+      if(t && t.classList && t.classList.contains('ect-deck-row')) syncFromRow(t);
+    }, true);
+
+    // 鼠标/触摸拖动卡牌滚动 — 全局 activeRow, mousedown 委托到 deck
+    var dragRow=null, dStartX=0, dStartScroll=0, dMoved=0;
+    function shouldIgnoreTarget(tgt){
+      return tgt && (tgt.closest && (tgt.closest('.ect-deck-scrollbar') || tgt.tagName==='BUTTON' || tgt.tagName==='A' || tgt.tagName==='SELECT' || tgt.tagName==='INPUT'));
+    }
+    function onDragDown(e){
+      if(!horizontalMode()) return;
+      var tgt=e.target;
+      if(shouldIgnoreTarget(tgt)) return;
+      var rowEl = tgt.closest ? tgt.closest('.ect-deck-row') : null;
+      if(!rowEl) return;
+      dragRow=rowEl; dMoved=0;
+      dStartX = (e.touches ? e.touches[0].clientX : e.clientX);
+      dStartScroll = rowEl.scrollLeft;
+      rowEl.classList.add('ect-dragging');
+      if(!e.touches){ try{ e.preventDefault(); }catch(_){} } // 鼠标阻止文字/图片选中
+    }
+    function onDragMove(e){
+      if(!dragRow) return;
+      var cx = (e.touches ? e.touches[0].clientX : e.clientX);
+      var dx = cx - dStartX;
+      if(Math.abs(dx) > 5) dMoved++;
+      syncFromValue(dStartScroll - dx);
+      if(e.touches){ try{ e.preventDefault(); }catch(_){} }
+    }
+    function onDragUp(){
+      if(!dragRow) return;
+      dragRow.classList.remove('ect-dragging');
+      // 若确为拖动(dMoved>1), 短暂标记吞掉紧接着的 click(避免拖完误点选牌)
+      if(dMoved>1){
+        var el=dragRow;
+        el.setAttribute('data-just-dragged','1');
+        setTimeout(function(){ el.removeAttribute('data-just-dragged'); }, 350);
+      }
+      dragRow=null;
+    }
+    deckEl.addEventListener('mousedown', onDragDown);
+    window.addEventListener('mousemove', onDragMove);
+    window.addEventListener('mouseup', onDragUp);
+    deckEl.addEventListener('touchstart', onDragDown, {passive:false});
+    deckEl.addEventListener('touchmove', onDragMove, {passive:false});
+    deckEl.addEventListener('touchend', onDragUp);
+    // 捕获阶段: 拖动刚结束的 row 上的 click 吞掉(委托)
+    deckEl.addEventListener('click', function(e){
+      var rowEl = e.target.closest ? e.target.closest('.ect-deck-row') : null;
+      if(rowEl && rowEl.getAttribute('data-just-dragged')==='1'){
+        e.preventDefault(); e.stopPropagation(); return false;
+      }
+    }, true);
+
+    // 拖统一滚动条 thumb → 两行一起滚(事件委托到 deckEl, renderDeck 重建 scrollbar 后仍生效)
+    var thDown=false, thStartX=0, thStartScroll=0;
+    function onThumbDown(e){
+      if(!horizontalMode()) return;
+      var th=thumb(); if(!th) return;
+      // target 是 thumb 或其内 → 启动拖动; (thumb 无子节点, 严格相等即可, 但用 contains 更稳健)
+      if(e.target!==th && !(th.contains && th.contains(e.target))) return;
+      thDown=true; thStartX=(e.touches ? e.touches[0].clientX : e.clientX);
+      var rs=rows(); thStartScroll = rs[0] ? rs[0].scrollLeft : 0;
+      th.classList.add('ect-sb-dragging');
+      try{ e.preventDefault(); e.stopPropagation(); }catch(_){}
+    }
+    function onThumbMove(e){
+      if(!thDown) return;
+      var s=sb(); var th=thumb(); if(!th||!s) return;
+      var cx=(e.touches ? e.touches[0].clientX : e.clientX);
+      var dx=cx-thStartX;
+      var rs=rows(); var r0=rs[0]; if(!r0) return;
+      var ms=maxScroll();
+      var reach = s.clientWidth - th.offsetWidth;
+      var ratio = reach>0 ? ms/reach : 0;
+      syncFromValue(thStartScroll + dx*ratio);
+      if(e.touches){ try{ e.preventDefault(); }catch(_){} }
+    }
+    function onThumbUp(){ if(!thDown) return; thDown=false; var th=thumb(); if(th) th.classList.remove('ect-sb-dragging'); }
+    // thumb 拖动 — 委托: mousedown 只在 target 是 thumb 时启动
+    deckEl.addEventListener('mousedown', onThumbDown, true);
+    window.addEventListener('mousemove', onThumbMove);
+    window.addEventListener('mouseup', onThumbUp);
+    deckEl.addEventListener('touchstart', onThumbDown, {passive:false, capture:true});
+    deckEl.addEventListener('touchmove', onThumbMove, {passive:false});
+    deckEl.addEventListener('touchend', onThumbUp);
+    // 点击轨道空白(非 thumb) → 跳一屏 — 委托: target 在 scrollbar 上但不是 thumb
+    deckEl.addEventListener('mousedown', function(e){
+      var s=sb(); if(!s || !s.contains(e.target)) return;
+      var th=thumb(); if(!th || e.target===th) return;
+      if(!horizontalMode()) return;
+      var rs=rows(); var r0=rs[0]; if(!r0) return;
+      var rect=s.getBoundingClientRect();
+      var x=e.clientX-rect.left;
+      var dir = (x < (parseFloat(th.style.left||0))) ? -1 : 1;
+      syncFromValue(r0.scrollLeft + dir*r0.clientWidth*0.85);
+    });
+
+    // 窗口尺寸变化 → 重新评估滚动条可见性 + thumb 比例
+    var rt;
+    window.addEventListener('resize', function(){ clearTimeout(rt); rt=setTimeout(refreshSbVisibility, 120); });
+    // 暴露刷新给 renderDeck 后调用
+    deckScrollRefresh = refreshSbVisibility;
+    // 初次刷新
+    setTimeout(refreshSbVisibility, 60);
+  }
+  var deckScrollRefresh = null;
   function init(){
     buildDeck();
     renderDeck();
+    initDeckScroll();
     var shBtn=document.getElementById('ect-shuffle-btn');
     var rstBtn=document.getElementById('ect-reset-btn');
     var valBtn=document.getElementById('ect-validate-btn');
@@ -553,7 +757,7 @@ const APP_JS = `(function(){
   else { init(); }
 })();`;
 
-let html = `<!-- ===== Earthward Crystal Tarot Reading v10 ===== -->
+let html = `<!-- ===== Earthward Crystal Tarot Reading v10.5 ===== -->
 <div id="ect-wrap">
   <h1 class="ect-h1">Crystal Tarot Reading</h1>
   <p class="ect-intro">The 22 Major Arcana are laid out face-down below, already shuffled. First choose your focus, then swipe through the deck and pick your card — each reveals an archetype for self-reflection, paired with crystals, a psychological lens, and an Eastern perspective. No card is "good" or "bad"; every reading is an invitation to look more closely.</p>
@@ -647,40 +851,77 @@ let html = `<!-- ===== Earthward Crystal Tarot Reading v10 ===== -->
 @keyframes ectHintShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
 .ect-disclaim-top{color:#888;font-size:13px;line-height:1.6;margin-top:22px;border-left:3px solid #DDD;padding-left:14px}
 
-/* v10 牌背布局: flex 横向单排 + 左右滚动(evatarot式横向铺开), 22张大牌(150px)横排, 水平滑动浏览选牌 */
-.ect-deck{display:flex;gap:14px;overflow-x:auto;margin-bottom:18px;padding:10px 4px 18px;transition:opacity .4s;-webkit-overflow-scrolling:touch;scrollbar-color:#CFAA3E #F0F0E8}
-.ect-deck::-webkit-scrollbar{height:10px}
-.ect-deck::-webkit-scrollbar-track{background:#F0F0E8;border-radius:6px}
-.ect-deck::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#CFAA3E 0%,#B8902A 100%);border-radius:6px;border:1px solid #F0F0E8}
-.ect-deck::-webkit-scrollbar-thumb:hover{background:#B8902A}
-.ect-card-back{flex:0 0 150px;width:150px;height:225px;border-radius:12px;position:relative;background:linear-gradient(135deg,#1A1A2E 0%,#2D2D52 100%);border:2px solid #CFAA3E;box-shadow:0 4px 14px rgba(26,26,46,.22);transition:transform .25s,box-shadow .25s,border-color .25s;cursor:default;transform-origin:center bottom}
+/* v10.5 牌背布局: deck 块容器垂直排两行(11+11), 每行 .ect-deck-row 是 flex nowrap + overflow-x:auto,
+   v10.5 改进(对比v10.4): 桌面牌宽改为 calc((100% - 60px)/11) 自适应(11张×6px gap=60px),
+   → 11 张精确填满一行无溢出(1192视口约108px/牌), 无需水平滚动看第11张(用户要"每行11张完整可见");
+   因桌面无溢出 horizontalMode()=false → 底部统一滚动条 JS 自动隐藏(逻辑现成, 桌面无需);
+   平板/移动切 grid 多列无水平滚动 */
+.ect-deck{display:block;margin:4px 0 18px;padding:22px 18px 16px;transition:opacity .4s;overflow:visible;background:linear-gradient(135deg,#FAFAFA 0%,#F8F5EC 100%);border:1px solid #EFE6D2;border-radius:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.75)}
+.ect-deck-rows-wrap{position:relative}
+.ect-deck-row{display:flex;flex-wrap:nowrap;gap:0;margin-bottom:8px;overflow-x:auto;overflow-y:hidden;padding:14px 0 18px;scroll-snap-type:x proximity;cursor:grab;user-select:none;-webkit-user-select:none;min-height:208px;align-items:center}
+.ect-deck-row.ect-dragging{cursor:grabbing;scroll-snap-type:none}
+.ect-deck-row:last-of-type{margin-bottom:0}
+/* v10.4: 隐藏两行各自原生滚动条(改用底部统一滚动条) */
+.ect-deck-row::-webkit-scrollbar{display:none}
+.ect-deck-row{scrollbar-width:none;-ms-overflow-style:none}
+/* v10.5: 卡牌矮(沿用v10.4 142px) + 宽自适应填满11张/行 — flex:1 1 0 + width:100% 让11张均分一行宽度(1192视口≈108px/牌),
+   配合 .ect-deck-row nowrap + gap:6px, 11张×6px=60px gap 占用固定, 剩余宽度11等分, 无溢出无需滚动(用户要"每行11张完整可见");
+   max-width 134px 防止超宽视口下单张过大(平衡可读性); min-width 96px 防极窄 */
+.ect-card-back{flex:0 0 126px;width:126px;min-width:126px;max-width:126px;height:178px;margin-left:-78px;scroll-snap-align:center;border-radius:14px;position:relative;background:radial-gradient(circle at 50% 24%,rgba(207,170,62,.18) 0 12%,transparent 34%),radial-gradient(circle at 80% 86%,rgba(127,209,168,.13),transparent 35%),linear-gradient(155deg,#0F1515 0%,#18201F 48%,#101326 100%);border:1px solid rgba(207,170,62,.9);box-shadow:0 9px 18px rgba(26,26,46,.2),inset 0 0 0 1px rgba(255,255,255,.08),inset 0 0 26px rgba(207,170,62,.08);transition:transform .25s,box-shadow .25s,border-color .25s,filter .25s;cursor:pointer;transform-origin:center bottom;z-index:var(--i,1)}
+.ect-card-back:first-child{margin-left:0}
+.ect-card-back:focus-visible{outline:3px solid rgba(127,209,168,.75);outline-offset:3px}
+.ect-card-back:before{content:'';position:absolute;inset:7px;border:1px solid rgba(207,170,62,.28);border-radius:11px;pointer-events:none}
+.ect-card-back:after{content:'';position:absolute;left:18px;right:18px;top:18px;height:1px;background:linear-gradient(90deg,transparent,rgba(207,170,62,.72),transparent);box-shadow:0 122px 0 rgba(207,170,62,.34);pointer-events:none}
 .ect-card-back.ect-enter{animation:ectEnter .45s ease backwards}
-.ect-back-inner{position:absolute;inset:8px;border:1px solid rgba(207,170,62,.5);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#CFAA3E}
+/* v10.4: 删中间圈圈(用户要) — .ect-back-inner 去掉金色 border + 圆角(原外圈装饰), 改为无边框纯定位容器;
+   水晶图形 + Crystal Tarot 文字直接显示在牌面上(无外圈包裹) */
+.ect-back-inner{position:absolute;inset:10px;border:none;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#E4C878;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,0))}
+.ect-back-inner:before,.ect-back-inner:after{content:'';position:absolute;left:50%;transform:translateX(-50%);width:42px;height:1px;background:linear-gradient(90deg,transparent,rgba(207,170,62,.62),transparent)}
+.ect-back-inner:before{top:14px}.ect-back-inner:after{bottom:14px}
 
-/* v10 水晶主题牌背放大(牌 150px 承接更多内容): 六棱柱水晶图形放大 */
-.ect-back-crystal{position:relative;width:62px;height:84px;margin-bottom:4px}
-.ect-crystal-top{position:absolute;top:0;left:50%;transform:translateX(-50%);width:0;height:0;border-left:21px solid transparent;border-right:21px solid transparent;border-bottom:21px solid rgba(127,209,168,.85)}
-.ect-crystal-face.ect-crystal-m{position:absolute;top:18px;left:10px;width:42px;height:50px;background:linear-gradient(180deg,rgba(127,209,168,.7) 0%,rgba(207,170,62,.6) 100%);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
-.ect-crystal-side.ect-crystal-l{position:absolute;top:21px;left:0;width:14px;height:44px;background:rgba(45,106,79,.75);clip-path:polygon(100% 0,80% 0,100% 100%,30% 100%)}
-.ect-crystal-side.ect-crystal-r{position:absolute;top:21px;right:0;width:14px;height:44px;background:rgba(45,106,79,.55);clip-path:polygon(0 0,20% 0,70% 100%,0 100%)}
-.ect-crystal-base{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:0;border-left:21px solid transparent;border-right:21px solid transparent;border-top:12px solid rgba(45,106,79,.85)}
-.ect-back-spark{position:absolute;font-size:18px;color:rgba(207,170,62,.85);opacity:.8}
-.ect-back-label{font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;text-align:center;line-height:1.2}
+/* v10.4 水晶主题牌背(适配矮牌 142px): 六棱柱水晶图形 48×60(原 54×74 缩小适配矮牌) + 火花 + 标签清晰 */
+.ect-back-crystal{position:relative;width:48px;height:60px;margin-bottom:4px}
+.ect-back-crystal:before{content:'';position:absolute;left:50%;top:50%;width:58px;height:58px;transform:translate(-50%,-50%);border:1px solid rgba(207,170,62,.32);border-radius:50%;background:radial-gradient(circle,rgba(127,209,168,.1),transparent 68%)}
+.ect-crystal-top{position:absolute;top:0;left:50%;transform:translateX(-50%);width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-bottom:15px solid rgba(127,209,168,.85)}
+.ect-crystal-face.ect-crystal-m{position:absolute;top:13px;left:8px;width:32px;height:36px;background:linear-gradient(180deg,rgba(127,209,168,.7) 0%,rgba(207,170,62,.6) 100%);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+.ect-crystal-side.ect-crystal-l{position:absolute;top:15px;left:0;width:11px;height:31px;background:rgba(45,106,79,.75);clip-path:polygon(100% 0,80% 0,100% 100%,30% 100%)}
+.ect-crystal-side.ect-crystal-r{position:absolute;top:15px;right:0;width:11px;height:31px;background:rgba(45,106,79,.55);clip-path:polygon(0 0,20% 0,70% 100%,0 100%)}
+.ect-crystal-base{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-top:9px solid rgba(45,106,79,.85)}
+.ect-back-spark{position:absolute;left:50%;bottom:17px;transform:translateX(-50%);font-size:12px;color:rgba(228,200,120,.82);opacity:.9}
+.ect-back-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;text-align:center;line-height:1.25;color:#E4C878;text-shadow:0 1px 0 rgba(0,0,0,.22)}
+/* v10.4 底部统一滚动条(两行同步): 加宽 16px 易点击/拖动 + 金色渐变明显 + 点击轨道跳转(JS); 默认隐藏 JS 加 .ect-sb-show */
+.ect-deck-scrollbar{position:relative;height:16px;margin:10px 4px 4px;background:linear-gradient(90deg,#FBF3E5 0%,#FFF8F0 100%);border-radius:10px;border:1px solid #F0E2C5;cursor:pointer;display:none}
+.ect-deck-scrollbar.ect-sb-show{display:block}
+.ect-deck-thumb{position:absolute;top:1px;left:1px;height:14px;min-width:48px;border-radius:8px;background:linear-gradient(90deg,#CFAA3E 0%,#E8C887 50%,#CFAA3E 100%);border:1px solid #B8932E;box-shadow:0 1px 4px rgba(184,147,46,.4);transition:width .1s}
+.ect-deck-thumb:hover{background:linear-gradient(90deg,#E8C887 0%,#F5D89A 50%,#E8C887 100%)}
+.ect-deck-thumb.ect-sb-dragging{background:linear-gradient(90deg,#E8C887 0%,#F5D89A 50%,#E8C887 100%);box-shadow:0 2px 8px rgba(184,147,46,.6)}
 .ect-deck:not(.ect-deck-pickable) .ect-card-back{opacity:.78}
-.ect-deck:not(.ect-deck-pickable) .ect-card-back:hover{transform:translateY(-8px);box-shadow:0 10px 22px rgba(26,26,46,.32);border-color:#7FD1A8;opacity:1}
+.ect-deck:not(.ect-deck-pickable) .ect-card-back:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(26,26,46,.28);border-color:#7FD1A8;opacity:1}
 .ect-deck-pickable .ect-card-back{cursor:pointer}
-.ect-deck-pickable .ect-card-back:hover{transform:translateY(-10px);box-shadow:0 14px 28px rgba(26,26,46,.38);border-color:#7FD1A8}
-.ect-card-back.selected{border-color:#2D6A4F;box-shadow:0 0 0 3px rgba(45,106,79,.35),0 8px 18px rgba(26,26,46,.3);transform:translateY(-7px)}
+.ect-deck-pickable .ect-card-back:hover{transform:translateY(-8px);box-shadow:0 16px 30px rgba(26,26,46,.34);border-color:#7FD1A8;filter:saturate(1.08)}
+.ect-card-back.selected{border-color:#7FD1A8;box-shadow:0 0 0 3px rgba(127,209,168,.42),0 18px 32px rgba(26,26,46,.32);transform:translateY(-12px)}
 .ect-card-back.selected .ect-back-inner{color:#7FD1A8}
 .ect-deck.ect-deck-done{pointer-events:none}
-.ect-deck.ect-deck-done .ect-card-back:not(.flipped){opacity:.3}
+.ect-deck.ect-deck-done{background:linear-gradient(135deg,#FFFDF8 0%,#F8F3E7 100%)}
+.ect-deck.ect-deck-done .ect-deck-row{justify-content:center;align-items:center;gap:14px;overflow-x:visible;overflow-y:visible;min-height:238px;padding:28px 0 30px;cursor:default}
+.ect-deck.ect-deck-done .ect-card-back:not(.flipped){display:none}
+.ect-deck.ect-deck-done .ect-card-back.flipped{display:block;flex:0 0 132px;width:132px;min-width:132px;max-width:132px;height:186px;margin-left:0;opacity:1;filter:none}
+.ect-deck.ect-deck-done .ect-reveal-card{transform:translateY(0) rotate(0);transition:transform .35s ease,box-shadow .35s ease}
+.ect-deck.ect-deck-done .ect-reveal-pos-0{transform:translateY(10px) rotate(-7deg)}
+.ect-deck.ect-deck-done .ect-reveal-pos-1{transform:translateY(-8px) rotate(0)}
+.ect-deck.ect-deck-done .ect-reveal-pos-2{transform:translateY(10px) rotate(7deg)}
+.ect-deck.ect-deck-done .ect-reveal-pos-3{transform:translateY(14px) rotate(-5deg)}
+.ect-deck.ect-deck-done .ect-reveal-pos-4{transform:translateY(4px) rotate(5deg)}
 .ect-card-back.flipped{animation:ectFlipOver .55s ease}
-.ect-card-back.ect-is-front{background:linear-gradient(135deg,#2D6A4F 0%,#1B4332 100%);opacity:1 !important;cursor:default}
-.ect-front-face{position:absolute;inset:8px;border:1px solid rgba(207,170,62,.55);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#fff;padding:8px;text-align:center}
-.ect-front-num{font-size:12px;color:#CFAA3E;font-weight:700}
-.ect-front-name{font-size:16px;font-weight:700;line-height:1.15}
-.ect-front-arch{font-size:12px;color:#CFAA3E;line-height:1.2}
-.ect-front-orient{font-size:11px;font-weight:700;padding:3px 9px;border-radius:8px;margin-top:4px}
+/* v10.6 翻牌态金色外扩(用户要"翻牌后黄色线条往外扩"): 翻开瞬间覆盖 selected 绿光晕 → 金色 border + 金色外扩光晕(0 0 0 4px rgba(207,170,62,.32) 往外扩) */
+.ect-card-back.flipped.selected{border-color:#CFAA3E;box-shadow:0 0 0 4px rgba(207,170,62,.32),0 18px 32px rgba(26,26,46,.3);z-index:90}
+.ect-card-back.ect-is-front{background:radial-gradient(circle at 50% 14%,rgba(207,170,62,.18),transparent 38%),linear-gradient(180deg,#FFFDF8 0%,#F7F0DF 100%);opacity:1 !important;cursor:default;border-color:#CFAA3E;box-shadow:0 0 0 4px rgba(207,170,62,.28),0 18px 32px rgba(26,26,46,.24);z-index:90}
+.ect-front-face{position:absolute;inset:8px;border:1px solid rgba(207,170,62,.72);border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:#1A1A2E;padding:8px;text-align:center;overflow:hidden;background:linear-gradient(180deg,rgba(255,255,255,.74),rgba(255,250,238,.42))}
+.ect-front-face:before{content:'';position:absolute;width:64px;height:64px;border:1px solid rgba(207,170,62,.22);border-radius:50%;top:18px;left:50%;transform:translateX(-50%);pointer-events:none}
+.ect-front-num{position:relative;font-size:10px;color:#8A6517;font-weight:700;line-height:1.1;text-transform:uppercase;letter-spacing:.02em}
+.ect-front-name{position:relative;font-size:15px;font-weight:700;line-height:1.08;color:#1A1A2E}
+.ect-front-arch{position:relative;font-size:10.5px;color:#7A5A12;line-height:1.15}
+.ect-front-orient{font-size:10px;font-weight:700;padding:3px 8px;border-radius:8px;margin-top:2px}
 .ect-front-up{background:#7FD1A8;color:#1A1A2E}
 .ect-front-rev{background:#B59AC9;color:#1A1A2E}
 @keyframes ectFlipOver{0%{transform:rotateY(0)}50%{transform:rotateY(90deg)}100%{transform:rotateY(0)}}
@@ -689,23 +930,26 @@ let html = `<!-- ===== Earthward Crystal Tarot Reading v10 ===== -->
 @keyframes ectShuffle{0%{transform:translateX(0)}20%{transform:translateX(-8px) rotate(-1deg)}40%{transform:translateX(8px) rotate(1deg)}60%{transform:translateX(-6px) rotate(-.5deg)}80%{transform:translateX(6px) rotate(.5deg)}100%{transform:translateX(0) rotate(0)}}
 
 /* 结果卡 */
-.ect-result{margin-top:8px}
+.ect-result{margin-top:14px;scroll-margin-top:120px}
+/* v10.6 翻牌结果卡金色外扩(用户要"翻牌后黄色线条往外扩+字体宽"): 边框灰→金 #CFAA3E + 金色外扩光晕(0 0 0 5px rgba(207,170,62,.3) 往外扩) */
+.ect-card{background:#fff;border:1px solid #CFAA3E;border-radius:16px;padding:0;margin-bottom:22px;overflow:hidden;box-shadow:0 0 0 5px rgba(207,170,62,.18),0 12px 28px rgba(26,26,46,.1);animation:ectReveal .5s ease}
 /* v10.1 爱情场景引导块(focus=love 时 revealAll 输出) */
 .ect-scenario-bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:linear-gradient(135deg,#FBF3E5 0%,#FFF8F0 100%);border:1px solid #E8C887;border-radius:12px;padding:14px 18px;margin-bottom:14px}
 .ect-scenario-tag{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#7A5A12;background:#fff;padding:4px 10px;border-radius:8px;border:1px solid #E8C887}
 .ect-scenario-name{font-size:18px;font-weight:700;color:#1A1A2E}
 .ect-scenario-guide{color:#666;font-size:15px;line-height:1.65;margin:0 0 20px;padding:0 4px}
-.ect-card{background:#fff;border:1px solid #EEE;border-radius:16px;padding:0;margin-bottom:22px;overflow:hidden;animation:ectReveal .5s ease}
 @keyframes ectReveal{0%{opacity:0;transform:translateY(14px) rotateY(-12deg)}100%{opacity:1;transform:translateY(0) rotateY(0)}}
-.ect-card-pos{background:#F0F7F4;border-bottom:1px solid #EEE;padding:8px 22px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#1B4332}
-.ect-card-head{background:#1A1A2E;padding:24px 26px;color:#fff}
+.ect-card-pos{background:#FBF3E5;border-bottom:1px solid #E8C887;padding:9px 28px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#7A5A12}
+/* v10.6 牌头/牌体 padding 加宽(26→32px) 让文字区呼吸更宽(用户要"字体就可以宽一点显示"); 牌头底边加金线协调金色外扩 */
+.ect-card-head{position:relative;background:radial-gradient(circle at 82% 18%,rgba(207,170,62,.2),transparent 32%),linear-gradient(135deg,#111525 0%,#1A1A2E 58%,#26324B 100%);padding:24px 32px;color:#fff;border-bottom:3px solid #CFAA3E;overflow:hidden}
+.ect-card-head:after{content:'';position:absolute;right:24px;top:18px;width:92px;height:92px;border:1px solid rgba(207,170,62,.28);border-radius:50%;box-shadow:inset 0 0 0 22px rgba(255,255,255,.02);pointer-events:none}
 .ect-card-num{display:inline-block;background:#CFAA3E;color:#1A1A2E;font-size:13px;font-weight:700;padding:3px 10px;border-radius:10px;margin-bottom:8px}
 .ect-card-name{font-size:32px;font-weight:700;line-height:1.1}
 .ect-card-arch{font-size:16px;color:#CFAA3E;font-weight:600;margin-top:4px}
 .ect-card-orient{display:inline-block;font-size:14px;font-weight:700;padding:5px 14px;border-radius:14px;margin-top:12px}
 .ect-upright{background:#2D6A4F;color:#fff}
 .ect-reversed{background:#6B4E8A;color:#fff}
-.ect-card-body{padding:22px 26px}
+.ect-card-body{padding:24px 32px;background:linear-gradient(180deg,#FFFFFF 0%,#FFFDF8 100%)}
 .ect-meta-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
 .ect-meta-chip{background:#FAFAFA;border:1px solid #EEE;border-radius:8px;padding:5px 11px;font-size:14px;color:#444}
 .ect-meta-chip b{color:#1A1A2E}
@@ -758,20 +1002,47 @@ let html = `<!-- ===== Earthward Crystal Tarot Reading v10 ===== -->
 .ect-seo-content h2:first-child{margin-top:0}
 .ect-seo-content h3{color:#1A1A2E;font-size:19px;margin:20px 0 8px}
 @media(max-width:900px){.ect-lens-grid{grid-template-columns:1fr}.ect-stones{grid-template-columns:1fr}}
-/* v10 平板: 保持 flex 横向滚动(牌 150px 大牌), 牌稍小 130px */
+/* v10.4 平板: deck-row 切回 grid 自适应换行(minmax 120px), 取消 flex 横向滚动; 卡牌矮(198→160); grid 模式统一滚动条 JS 自动隐藏 */
 @media(max-width:780px){
-  .ect-card-back{flex:0 0 130px;width:130px;height:195px}
+  .ect-input-row{gap:10px;margin-bottom:12px}
+  .ect-field{width:100%}
+  .ect-field-grow{min-width:0}
+  .ect-input-row select,.ect-input-row input{width:100%;min-width:0}
+  .ect-deck{padding:18px 14px 14px}
+  .ect-deck-row{display:flex;flex-wrap:nowrap;gap:0;overflow-x:auto;overflow-y:hidden;cursor:grab;padding:12px 0 16px;min-height:184px}
+  .ect-card-back{flex:0 0 112px;width:112px;height:156px;max-width:112px;min-width:112px;margin-left:-44px}
+  .ect-card-back:first-child{margin-left:0}
+  .ect-deck.ect-deck-done .ect-deck-row{gap:10px;min-height:214px;padding:24px 0 26px;flex-wrap:wrap}
+  .ect-deck.ect-deck-done .ect-card-back.flipped{flex:0 0 118px;width:118px;min-width:118px;max-width:118px;height:164px}
+  .ect-front-name{font-size:15px}
+  .ect-front-num,.ect-front-arch{font-size:11px}
+  .ect-result{scroll-margin-top:96px}
 }
-/* v10 移动: flex-wrap 换行 2-3 列(375px 以下大牌换行浏览), 取消横向滚动 */
+/* v10.4 移动: deck-row grid 自适应 2-3 列(minmax 100px), 无水平滚动; 卡牌矮(162→132) */
 @media(max-width:640px){
-  .ect-h1{font-size:26px}.ect-input-row select,.ect-input-row input{min-width:150px;font-size:15px}.ect-card-name{font-size:26px}
-  .ect-card-head{padding:20px 18px}.ect-card-body{padding:18px}
-  .ect-deck{flex-wrap:wrap;justify-content:center;overflow-x:visible;gap:10px}
-  .ect-card-back{flex:0 0 105px;width:105px;height:158px}
-  .ect-back-crystal{width:38px;height:52px}
+  .ect-h1{font-size:26px}.ect-input-row select,.ect-input-row input{min-width:0;font-size:15px}.ect-card-name{font-size:24px}
+  .ect-card-head{padding:16px 14px}.ect-card-body{padding:16px 14px}
+  .ect-card-pos{padding:8px 14px;font-size:12px}
+  .ect-deck{padding:16px 12px 12px;border-radius:12px}
+  .ect-deck-row{display:flex;grid-template-columns:none;gap:0;overflow-x:auto;overflow-y:hidden;cursor:grab;padding:10px 0 14px;min-height:166px}
+  .ect-card-back{flex:0 0 100px;width:100px;min-width:100px;max-width:100px;height:140px;margin-left:-38px}
+  .ect-card-back:first-child{margin-left:0}
+  .ect-deck.ect-deck-done .ect-deck-row{gap:8px;min-height:190px;padding:22px 0 24px;flex-wrap:wrap}
+  .ect-deck.ect-deck-done .ect-card-back.flipped{flex:0 0 104px;width:104px;min-width:104px;max-width:104px;height:146px}
+  .ect-deck.ect-deck-done .ect-reveal-pos-0{transform:translateY(6px) rotate(-5deg)}
+  .ect-deck.ect-deck-done .ect-reveal-pos-1{transform:translateY(-5px) rotate(0)}
+  .ect-deck.ect-deck-done .ect-reveal-pos-2{transform:translateY(6px) rotate(5deg)}
+  .ect-back-crystal{width:34px;height:44px}
+  .ect-back-label{font-size:10px;letter-spacing:.1em}
+  .ect-front-face{inset:6px;gap:4px;padding:6px}
+  .ect-front-name{font-size:13px}
+  .ect-front-num,.ect-front-arch{font-size:10px}
+  .ect-front-orient{font-size:10px;padding:3px 7px}
+  .ect-stone-card{padding:12px;gap:10px}
+  .ect-stone-img{width:54px;height:54px}
   .ect-btn{padding:12px 22px;font-size:14px;height:44px}
   .ect-btn-ritual{min-width:110px}
-  .ect-stage-hint{font-size:14px}
+  .ect-stage-hint{font-size:14px;padding:8px 12px}
 }
 </style>
 <!-- v10: JSON data in standalone application/json block -->

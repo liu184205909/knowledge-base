@@ -1,0 +1,83 @@
+{
+  "desktop_app_ready": true,
+  "desktop_deck_22": 22,
+  "desktop_console_errors": [],
+  "desktop_rows": {
+    "rowCount": 2,
+    "perRow": [
+      11,
+      11
+    ]
+  },
+  "scrollbar_info": {
+    "rowCount": 2,
+    "nativeScrollbar": [
+      {
+        "scrollbarWidth": "none",
+        "overflowX": "auto"
+      },
+      {
+        "scrollbarWidth": "none",
+        "overflowX": "auto"
+      }
+    ],
+    "scrollbarCount": 1,
+    "sbDisplay": "block",
+    "sbVisible": true
+  },
+  "one_unified_scrollbar": true,
+  "native_scrollbars_hidden": true,
+  "desktop_h_overflow": true,
+  "desktop_overflow_metrics": {
+    "scrollWidth": 1314,
+    "clientWidth": 1184,
+    "hasHOverflow": true
+  },
+  "desktop_card_size": {
+    "width": 114,
+    "height": 142
+  },
+  "card_is_shorter": true,
+  "back_inner_info": {
+    "found": true,
+    "border": "0px none rgb(207, 170, 62)",
+    "borderTopWidth": "0px",
+    "borderStyle": "none",
+    "borderRadius": "0px"
+  },
+  "circle_removed": true,
+  "drag_to_scroll": {
+    "before": 0,
+    "after_drag": 130,
+    "dragging_class": true,
+    "worked": true
+  },
+  "rows_sync": {
+    "row0": 0,
+    "row1": 0,
+    "sync": true
+  },
+  "thumb_follow": {
+    "found": true,
+    "left": "1px",
+    "width": "646px"
+  },
+  "drag_cursor": {
+    "cursor": "grab"
+  },
+  "autoflip_3": 3,
+  "autoflip_works": true,
+  "scenario_show_on_love": true,
+  "scenario_hide_on_non_love": true,
+  "three_spreads": [
+    "single",
+    "three",
+    "free"
+  ],
+  "mobile_card_size": {
+    "width": 108,
+    "height": 132
+  },
+  "mobile_scrollbar_hidden": true,
+  "mobile_console_errors": []
+}

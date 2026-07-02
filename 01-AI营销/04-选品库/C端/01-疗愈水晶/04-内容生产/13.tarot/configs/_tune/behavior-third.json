@@ -1,0 +1,156 @@
+{
+  "the-fool": {
+    "love": "trusting the spark before you've confirmed where it's going",
+    "career": "saying yes to a role that doesn't exist on your five-year plan yet",
+    "finances": "putting real money on an idea before anyone else sees it",
+    "health": "booking the first session of a practice you've never tried",
+    "spiritual": "asking the question everyone around you has stopped asking"
+  },
+  "the-magician": {
+    "love": "engineering a first date where every detail signals who you are",
+    "career": "staging the demo with only the tools already on your desk",
+    "finances": "turning one idle skill into a paid offer this month",
+    "health": "stacking three small habits into one daily protocol",
+    "spiritual": "closing the loop from intention to action in a single ritual"
+  },
+  "the-high-priestess": {
+    "love": "naming what you sense before asking them to confirm it",
+    "career": "speaking the read on the room you've been sitting on",
+    "finances": "holding cash when the crowd is buying on hype",
+    "health": "logging body signals for a cycle before changing anything",
+    "spiritual": "sitting with one question until something surfaces on its own"
+  },
+  "the-empress": {
+    "love": "cooking for, touching, and beautifying the shared space",
+    "career": "growing a person on your team instead of just their output",
+    "finances": "putting money into what genuinely nourishes over what impresses",
+    "health": "letting pleasure and rest back into the recovery plan",
+    "spiritual": "making something with your hands as an act of devotion"
+  },
+  "the-emperor": {
+    "love": "holding the line on the terms you both agreed to",
+    "career": "building the operating system others will run on",
+    "finances": "setting the rules for how money moves in and out before scaling",
+    "health": "installing a non-negotiable sleep and training block",
+    "spiritual": "standing on a principle you've tested rather than a vibe"
+  },
+  "the-hierophant": {
+    "love": "marking the milestone in the form your families recognize",
+    "career": "earning the title through the institution before going your own way",
+    "finances": "trusting the long-tested vehicle over this year's hot pitch",
+    "health": "working with a clinician's protocol instead of DIY biohacking",
+    "spiritual": "receiving transmission from an unbroken lineage rather than inventing alone"
+  },
+  "the-lovers": {
+    "love": "saying a conscious yes to the one whose values match",
+    "career": "choosing the co-founder whose principles align with yours",
+    "finances": "declining the lucrative deal that crosses your line",
+    "health": "stopping the war between what you believe and what your body needs",
+    "spiritual": "vowing to integrate the half of yourself you've disowned"
+  },
+  "the-chariot": {
+    "love": "holding the reins when the two of you want different speeds",
+    "career": "rallying competing priorities behind a single finish line",
+    "finances": "funneling every income pull toward one deadline-bound goal",
+    "health": "honoring the body's training boundary instead of overriding it for the win",
+    "spiritual": "steering the two impulses as one team instead of choosing between them"
+  },
+  "strength": {
+    "love": "staying present with a partner's anger instead of matching it",
+    "career": "winning the difficult room over with composure rather than volume",
+    "finances": "riding out the volatility without panic-selling",
+    "health": "giving a craving one minute of patient attention instead of suppressing it",
+    "spiritual": "taming the wild mind through non-violent attention"
+  },
+  "the-hermit": {
+    "love": "letting the silence surface what company could not",
+    "career": "protecting the deep-work block from every invitation to be reachable",
+    "finances": "reading the filings alone instead of riding the tip",
+    "health": "letting the solo reset week surface what daily noise has been drowning out",
+    "spiritual": "trusting the answer that arrives only when no one is watching"
+  },
+  "wheel-of-fortune": {
+    "love": "releasing the version of the bond that the turn has already closed",
+    "career": "pressing while the opening is here instead of waiting for certainty",
+    "finances": "reading where in the cycle an asset sits before moving",
+    "health": "matching effort to the season the body is actually in, not the one you wish it were",
+    "spiritual": "sorting what you can shape from what you must release"
+  },
+  "justice": {
+    "love": "weighing the bond on what actually happened, not on hope",
+    "career": "making the call on the evidence, not the politics",
+    "finances": "facing the actual number rather than rounding it away",
+    "health": "sorting the fact of the result from the story you tell about it",
+    "spiritual": "owning the consequence without appointing yourself judge"
+  },
+  "the-hanged-man": {
+    "love": "letting the upside-down view rewrite what you thought you wanted",
+    "career": "flipping the question upside down to break the stuck pattern",
+    "finances": "accepting the discomfort of the wait as the price of clarity",
+    "health": "letting the forced stop show you the body from a new angle",
+    "spiritual": "arguing the opposite of a fixed belief to loosen its grip"
+  },
+  "death": {
+    "love": "letting an old dynamic end so a new one can form",
+    "career": "grieving the old title before claiming the next one",
+    "finances": "writing off the dead income source to clear the books",
+    "health": "letting the old pattern die so the body can rebuild",
+    "spiritual": "letting an old identity die so a truer one can live"
+  },
+  "temperance": {
+    "love": "patiently measuring the pour rather than dumping one need into the other",
+    "career": "weighing quality and speed together instead of picking one",
+    "finances": "holding the allocation steady when impatience whispers to chase",
+    "health": "letting the body settle between effort and rest rather than swinging",
+    "spiritual": "trusting the pace of true blending over the relief of resolution"
+  },
+  "the-devil": {
+    "love": "testing whether the pull loosens once you stop calling it love",
+    "career": "admitting the golden handcuff and testing how loose it is",
+    "finances": "unmasking the story that makes the spending feel like a need",
+    "health": "meeting the craving without the shame that tightens its grip",
+    "spiritual": "dropping the fascination that keeps the chain interesting"
+  },
+  "the-tower": {
+    "love": "choosing honesty over the pretense that just got exposed",
+    "career": "pivoting onto a foundation that is actually true",
+    "finances": "restructuring around the number rather than hiding it",
+    "health": "letting the wake-up realign how you actually live day to day",
+    "spiritual": "dropping the belief that the fall just proved false"
+  },
+  "the-star": {
+    "love": "reopening the heart slowly after the long winter of it",
+    "career": "letting the original purpose steer the next concrete step out of drift",
+    "finances": "rebuilding gently, one pour at a time, without forcing the rebound",
+    "health": "giving the recovery its time rather than rushing the mending",
+    "spiritual": "letting meaning return without forcing it back"
+  },
+  "the-moon": {
+    "love": "staying with what you can't yet see about the other",
+    "career": "moving through the stretch the rational map can't cover",
+    "finances": "reading the terms again that hide in the half-light",
+    "health": "letting the signal sharpen at its own pace, not on demand",
+    "spiritual": "honoring the dream or sync that's trying to surface"
+  },
+  "the-sun": {
+    "love": "noticing the good before familiarity dulls it",
+    "career": "riding the recognition without inflating past it",
+    "finances": "tending the inflow instead of loosening discipline",
+    "health": "letting genuine ease be part of how the body recovers",
+    "spiritual": "letting the settled mind's clarity be a resource, not denial"
+  },
+  "judgment": {
+    "love": "having the wake-up conversation that asks for renewal or release",
+    "career": "rising to the version of the work that has been dormant in you",
+    "finances": "running the honest reckoning that clears the slate",
+    "health": "letting the wake-up moment actually change your daily habits",
+    "spiritual": "hearing the call as guidance instead of accusation"
+  },
+  "the-world": {
+    "love": "honoring the milestone the relationship has actually reached",
+    "career": "closing the chapter that's complete and stepping through",
+    "finances": "finishing the loose end that holds the cycle open",
+    "health": "trusting the wholeness instead of hunting the next fix",
+    "spiritual": "bowing to what the long path taught before turning the page"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "card_a": {
+    "slug": "the-chariot",
+    "number": 7
+  },
+  "card_b": {
+    "slug": "the-devil",
+    "number": 15
+  },
+  "pair_slug": "the-chariot-and-the-devil",
+  "relationship_type": "transformation",
+  "judgment_basis": "Chariot=Water 正向聚焦意志(healthy focused will) / Devil=Earth 意志的暗面(scattered force/aggression as bondage) → 水土相克 + 阶段跃迁 archetype(健康意志 → 意志滑向为驱而驱的暗面)：从'健康统驭'跌入'为控而控的散力'暗面（shadow aspect 口径）",
+  "combination_story_seed": "the chariot behind the loose chains — Chariot's healthy focused will meets the Devil's bondage; the same drive that harnessed opposing forces toward a goal can slide into the aggression that scatters for its own sake, and the reins become the chain, the two sphinxes and the two chained figures are the same will to control seen in service and in shadow",
+  "crystal_synergy": {
+    "a": {
+      "slug": "hematite",
+      "name": "Hematite"
+    },
+    "b": {
+      "slug": "black-tourmaline",
+      "name": "Black Tourmaline"
+    },
+    "logic": "Hematite(清明分辨健康驱 vs 散力控) + Black Tourmaline(看清为驱而驱的松链) → Hematite 帮你辨健康驱，Black Tourmaline 帮你看清哪份'驱'已变成缚，协同 = '驱而不散、控而不缚'，让意志守住健康"
+  },
+  "eastern_lens": "水(正驱)→土(暗散)的暗面跃迁 — '中道整合正驱'阴影即 '对治内魔 scattered force'，东方'正驱与暗散、驭与缚'的 shadow 转化",
+  "tension": "standard",
+  "depth_tier": "standard",
+  "structure_variants": [
+    "V4",
+    "V6"
+  ]
+}

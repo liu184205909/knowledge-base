@@ -1,0 +1,1851 @@
+{
+  "cards": [
+    {
+      "card": "the-fool",
+      "name": "The Fool",
+      "archetype": "The Innocent Pioneer",
+      "eastern_imagery": [
+        "悬崖",
+        "白玫瑰",
+        "小狗",
+        "初心",
+        "第一步"
+      ],
+      "eastern_anchor_name": "藏传佛教'初发心'对应 / 水晶'菩萨石'古称",
+      "eastern_anchors": {
+        "tibetan": "In Tibetan Buddhist practice, the energy of The Fool also resonates with bodhicitta — the beginner's heart, the first arising of aspiration on the path — the willingness to begin before knowing the outcome.",
+        "crystal_culture": "Clear quartz has a long history in East Asian tradition as a stone of clarity, called '菩萨石' (bodhisattva stone) in some old Chinese texts and used for Buddhist prayer beads."
+      },
+      "upright_keywords": [
+        "new beginnings",
+        "innocence",
+        "free spirit",
+        "leap of faith",
+        "spontaneity"
+      ],
+      "reversed_keywords": [
+        "recklessness",
+        "hesitation",
+        "naivety",
+        "avoidance of commitment"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        "best_upright": {
+          "slug": "aventurine",
+          "name": "Green Aventurine"
+        },
+        "best_reversed": {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "The Fool's leap-of-faith archetype leans yes for *opening* a relationship — beginner's-mind favors saying yes to a first date or letting someone in. But it is a conditional yes: innocence is the very quality that can slide into naivety here, so the leap has to be made with eyes open, not with the white rose over your eyes.",
+          "shift_condition": "Becomes a stronger yes if you have looked at this person realistically and the leap still feels right; stays no if you are ignoring red flags you have already half-noticed.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "The Fool favors launching, pivoting, or starting a venture from scratch — beginner's-mind is exactly the asset a new path needs. But it is conditional because the card never promises safety: quitting with no plan or savings is the reckless shadow of the leap, not its upright form.",
+          "shift_condition": "Stronger yes with even a thin plan and a savings runway; no if the move is pure impulse with no fallback.",
+          "crystal": "citrine"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "For decisions that benefit from fresh perspective and openness — start the project, take the meeting, change the angle — The Fool leans yes. But for decisions that need caution or permanence (signing the long lease, the irreversible commitment), the leap energy is the wrong tool, and the same card turns no.",
+          "shift_condition": "Yes where the choice is reversible or exploratory; no where it is binding and cannot be undone.",
+          "crystal": "quartz"
+        },
+        "timing": {
+          "verdict": "strong-yes",
+          "reasoning": "Timing is where The Fool's energy is most clearly favorable — the card's whole pulse is *begin now, the moment of openness is already here*. Hesitation is the very thing the card warns against (its reversed shadow), so on the question 'is now the time to leap,' the answer leans strongly yes.",
+          "shift_condition": "",
+          "crystal": "aventurine"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "The new-environment energy of The Fool leans toward *move* — a fresh landscape matches the archetype. But moving to escape unresolved issues is the reckless shadow of the leap, not its clean form, so the yes is conditional on whether the move is *toward* something or just *away*.",
+          "shift_condition": "Stronger-yes move when researched and chosen toward a real life; no if you are mainly running from what you have not faced.",
+          "crystal": "moonstone"
+        }
+      }
+    },
+    {
+      "card": "the-magician",
+      "name": "The Magician",
+      "archetype": "The Manifestor",
+      "eastern_imagery": [
+        "四要素",
+        "无限符号",
+        "指点天地",
+        "红色玫瑰",
+        "工具桌"
+      ],
+      "eastern_anchor_name": "东方创造之神象征 / 水晶念珠专注意图",
+      "eastern_anchors": {
+        "tibetan": "The Magician's archetype also appears in Eastern traditions as the creator-deity principle — the recognition that mind and matter shape each other, mirroring the card's 'as above, so below' theme.",
+        "crystal_culture": "Clear quartz, used for Buddhist malas to count mantra recitations, embodies focused intention — the same quality The Magician asks of your tools."
+      },
+      "upright_keywords": [
+        "manifestation",
+        "willpower",
+        "resourcefulness",
+        "skill",
+        "action"
+      ],
+      "reversed_keywords": [
+        "manipulation",
+        "illusion",
+        "misuse of power",
+        "untapped potential"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        "best_upright": {
+          "slug": "citrine",
+          "name": "Citrine"
+        },
+        "best_reversed": {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        "best_love": {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        "best_daily_wear": {
+          "slug": "tiger-eye",
+          "name": "Tiger Eye"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "The Magician says you have what it takes to *build* connection — the tools are on the table. But in love the card's shadow (charm sliding into manipulation, performance of attraction over honesty) is the exact risk, so it leans yes *only if* your intention is genuine rather than strategic.",
+          "shift_condition": "Strong yes if you are showing up honestly with the skills you have; no if you are managing the other person's impression of you.",
+          "crystal": "carnelian"
+        },
+        "career": {
+          "verdict": "strong-yes",
+          "reasoning": "Career is The Magician's home ground — 'as above, so below' is the manifesto of someone who can name an outcome and assemble the real tools to reach it. Upright, resourcefulness plus follow-through points clearly toward yes for launching, building, or taking skilled action at work.",
+          "shift_condition": "",
+          "crystal": "citrine"
+        },
+        "decision": {
+          "verdict": "strong-yes",
+          "reasoning": "Decisions where you already hold the needed resources, and the only missing piece is *directing* them — The Magician says yes, you have enough, choose and act. It is a card of agency, so for 'should I make this call myself' the answer leans strongly yes.",
+          "shift_condition": "",
+          "crystal": "quartz"
+        },
+        "timing": {
+          "verdict": "strong-yes",
+          "reasoning": "The Magician is an active, 'do the work now' card — the tools are present and waiting, and the card's energy is wasted by delay. On 'is now the time to act,' the willpower-and-action archetype leans strongly yes.",
+          "shift_condition": "",
+          "crystal": "tiger-eye"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "The Magician leans *move* if you have the skills and resources to make a new place work — resourcefulness is the deciding factor. But it is conditional: if the move would scatter your tools rather than direct them, the same card says no, because the archetype is about focused agency, not restless relocation.",
+          "shift_condition": "Yes-move if you can build wherever you land; no if the move is escapism dressed up as initiative.",
+          "crystal": "citrine"
+        }
+      }
+    },
+    {
+      "card": "the-high-priestess",
+      "name": "The High Priestess",
+      "archetype": "The Intuitive",
+      "eastern_imagery": [
+        "黑白双柱",
+        "石榴纱幔",
+        "月亮",
+        "卷轴",
+        "水池"
+      ],
+      "eastern_anchor_name": "藏传内观传统 / 印度月亮石(lunar象征)",
+      "eastern_anchors": {
+        "tibetan": "The High Priestess also resonates with the Tibetan contemplative ideal of stillness — the recognition that insight arises in the space between thoughts, not by chasing it.",
+        "crystal_culture": "Moonstone, sacred in Indian tradition as a moon-connected stone, mirrors the High Priestess's lunar symbolism — the subconscious that waxes and wanes beneath the surface."
+      },
+      "upright_keywords": [
+        "intuition",
+        "mystery",
+        "subconscious",
+        "stillness",
+        "inner voice"
+      ],
+      "reversed_keywords": [
+        "secrets",
+        "disconnection from intuition",
+        "surface-level",
+        "over-reliance on the rational"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        },
+        "best_upright": {
+          "slug": "selenite",
+          "name": "Selenite"
+        },
+        "best_reversed": {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "labradorite",
+          "name": "Labradorite"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "The High Priestess leans yes *only if* your gut already knows — she is the keeper of what is felt but not said. In love the card asks you to honor the quiet signal beneath the story you are telling yourself, so the verdict is conditional on whether you are willing to listen to it rather than over-talk the decision.",
+          "shift_condition": "Yes if a consistent inner sense is pointing toward this person; no if you are overriding a persistent gut feeling with rationalization.",
+          "crystal": "moonstone"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "For career she points to something you sense but have not yet surfaced — yes, but *after stillness*, not action. The card's conditional quality is that she refuses to give a loud yes when the answer needs to arrive from within first.",
+          "shift_condition": "Becomes yes once you have sat quietly with it and the inner read is clear; no if you try to force the answer from outside data alone.",
+          "crystal": "selenite"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "The High Priestess is the card of 'pause and listen' — she rarely gives a flat yes because her gift is the subtler knowing that arrives in stillness. For a decision she leans conditional: the answer exists, but you have to lower the noise to receive it before she will confirm.",
+          "shift_condition": "Yes once the inner read clarifies; no if you are deciding from anxiety rather than inner knowing.",
+          "crystal": "labradorite"
+        },
+        "timing": {
+          "verdict": "strong-no",
+          "reasoning": "On 'is now the time,' The High Priestess points to no — her archetype governs what is hidden and ripening, and her consistent counsel is to wait for the inner cue before acting. Forcing a date before the quieter signal has arrived is exactly what she declines to bless; the timing question reopens once that inner confirmation has actually landed.",
+          "shift_condition": "",
+          "crystal": "moonstone"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "She leans toward *stay* long enough to read the quieter layer of the question — the move's rightness may be felt before it can be proven. Conditional because she will not bless the move until the inner sense is clear, and she will not bless staying if intuition is already nudging you out.",
+          "shift_condition": "Move if the inner read settles on go; stay if your gut says the timing or reason is unclear.",
+          "crystal": "moonstone"
+        }
+      }
+    },
+    {
+      "card": "the-empress",
+      "name": "The Empress",
+      "archetype": "The Nurturer",
+      "eastern_imagery": [
+        "麦穗",
+        "星辰冠",
+        "丰饶花园",
+        "天鹅",
+        "大地"
+      ],
+      "eastern_anchor_name": "印度 Devi 大地母亲 / 东方玉石滋养传统",
+      "eastern_anchors": {
+        "tibetan": "The Empress archetype resonates with the Earth-mother / Devi tradition in Indian culture — the principle of generative, sustaining abundance that does not deplete itself.",
+        "crystal_culture": "Rose Quartz, the stone of the heart, embodies the Empress's Venus-ruled tenderness — a stone for both giving and receiving love, without which nurturing tips into sacrifice."
+      },
+      "upright_keywords": [
+        "abundance",
+        "nurturing",
+        "fertility",
+        "creativity",
+        "sensuality"
+      ],
+      "reversed_keywords": [
+        "smothering",
+        "dependence",
+        "creative block",
+        "neglect of self"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_upright": {
+          "slug": "aventurine",
+          "name": "Green Aventurine"
+        },
+        "best_reversed": {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        "best_love": {
+          "slug": "peridot",
+          "name": "Peridot"
+        },
+        "best_daily_wear": {
+          "slug": "rhodonite",
+          "name": "Rhodonite"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "strong-yes",
+          "reasoning": "Love is The Empress's natural soil — Venus-ruled abundance, sensuality, and care that takes embodied form. Upright she points toward yes for letting a relationship deepen, for receiving as well as giving, for a season where the heart is meant to flourish.",
+          "shift_condition": "",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "The Empress favors creative, generative work — building, tending, growing something into form leans yes. But her shadow is over-giving and burnout, so the yes is conditional on the project actually feeding you rather than draining you dry through over-functioning.",
+          "shift_condition": "Stronger yes if the work nourishes you and has room to receive; no if you would carry all the emotional labor and run yourself empty.",
+          "crystal": "aventurine"
+        },
+        "decision": {
+          "verdict": "strong-yes",
+          "reasoning": "For decisions about creativity, abundance, family, or embodied care, The Empress leans yes — her archetype is growth and fertility, so a choice that *tends something into being* is exactly what she blesses.",
+          "shift_condition": "",
+          "crystal": "aventurine"
+        },
+        "timing": {
+          "verdict": "conditional",
+          "reasoning": "The Empress governs organic growth, which has its own pace — she leans yes on 'now,' but only in the sense that *the season of growth has begun*, not that you should rush fruit before it is ripe. Conditional on allowing natural timing rather than forcing.",
+          "shift_condition": "Yes if you let things unfold at their own pace; no if you try to force readiness prematurely.",
+          "crystal": "peridot"
+        },
+        "move-or-stay": {
+          "verdict": "strong-yes",
+          "reasoning": "The Empress favors settling into a place that can be tended and made abundant — a home, a garden, embodied roots. For 'should I put down roots somewhere,' her archetype leans strongly yes, especially where the new place can be nurtured into a real home.",
+          "shift_condition": "",
+          "crystal": "rhodonite"
+        }
+      }
+    },
+    {
+      "card": "the-emperor",
+      "name": "The Emperor",
+      "archetype": "The Sovereign",
+      "eastern_imagery": [
+        "石座",
+        "公羊头",
+        "权杖",
+        "盔甲",
+        "山巅"
+      ],
+      "eastern_anchor_name": "东方'正'稳固原则 / 战士传统 Red Jasper",
+      "eastern_anchors": {
+        "tibetan": "The Emperor's stable-throne energy resonates with the Eastern principle of uprightness — the well-ordered foundation on which inner and outer life can stand without collapsing into either chaos or rigidity.",
+        "crystal_culture": "Red Jasper, used across warrior traditions as a stone of endurance, embodies The Emperor's grounded strength — the steady foundation, not the spike of force."
+      },
+      "upright_keywords": [
+        "authority",
+        "structure",
+        "stability",
+        "leadership",
+        "foundations"
+      ],
+      "reversed_keywords": [
+        "domination",
+        "rigidity",
+        "tyranny",
+        "abuse of control"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "red-jasper",
+          "name": "Red Jasper"
+        },
+        "best_upright": {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        "best_reversed": {
+          "slug": "sodalite",
+          "name": "Sodalite"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "tiger-eye",
+          "name": "Tiger Eye"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "The Emperor favors commitment, structure, and a stable foundation in relationship — leaning yes for *formalizing* a bond (moving in, marriage, agreed boundaries). But his shadow is control, so the yes is conditional on the structure serving the partnership rather than managing the partner.",
+          "shift_condition": "Yes if the structure protects both people; no if 'structure' is becoming domination of the other.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "strong-yes",
+          "reasoning": "Career is The Emperor's throne — authority, foundations, leadership, healthy discipline. Upright he points strongly yes for taking a leadership role, building structure into a messy situation, or making a stable long-term career move.",
+          "shift_condition": "",
+          "crystal": "red-jasper"
+        },
+        "decision": {
+          "verdict": "strong-yes",
+          "reasoning": "For decisions that need a framework, a boundary, or a firm commitment, The Emperor leans yes — his archetype is the scaffolding that lets anything be built, so a choice that establishes structure is exactly what he blesses.",
+          "shift_condition": "",
+          "crystal": "red-jasper"
+        },
+        "timing": {
+          "verdict": "conditional",
+          "reasoning": "The Emperor favors a *deliberate, structured* yes on timing — commit to a date and hold the line. But he can harden into rigidity, so the yes is conditional on the timeline being realistic rather than imposed by force of will alone.",
+          "shift_condition": "Yes if the date is grounded in real conditions; no if you are forcing a schedule the situation cannot support.",
+          "crystal": "tiger-eye"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "The Emperor leans toward *stay and build* — establish the foundation, hold the structure, root the throne. But his shadow is rigidity that refuses needed change, so the stay is conditional on the structure still being sound rather than clung to out of fear.",
+          "shift_condition": "Yes-stay if the foundation is solid and worth deepening; no if 'stability' has become a reason to never change what needs changing.",
+          "crystal": "tiger-eye"
+        }
+      }
+    },
+    {
+      "card": "the-hierophant",
+      "name": "The Hierophant",
+      "archetype": "The Teacher",
+      "eastern_imagery": [
+        "三重十字",
+        "双柱",
+        "两信徒",
+        "法杖",
+        "祭袍"
+      ],
+      "eastern_anchor_name": "藏传 lineage 传承 / Lapis Lazuli 跨波斯-埃及-佛教智慧石",
+      "eastern_anchors": {
+        "tibetan": "The Hierophant resonates deeply with the Tibetan lineage (lineage transmission) principle — the unbroken chain of teaching from teacher to student that carries wisdom forward without diluting it.",
+        "crystal_culture": "Amethyst, a stone long associated with spiritual devotion across both Western and Eastern traditions, embodies The Hierophant's reverence for the sacred and the taught."
+      },
+      "upright_keywords": [
+        "tradition",
+        "spiritual wisdom",
+        "teaching",
+        "conformity",
+        "lineage"
+      ],
+      "reversed_keywords": [
+        "dogma",
+        "rebellion",
+        "outdated belief",
+        "non-conformity"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        },
+        "best_upright": {
+          "slug": "sodalite",
+          "name": "Sodalite"
+        },
+        "best_reversed": {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "lapis",
+          "name": "Lapis Lazuli"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "The Hierophant favors *conventional* relationship steps — commitment, marriage, meeting family, the structured path. He leans yes for formalizing a bond, but his shadow is dogma, so the yes is conditional on the convention actually matching the couple rather than being followed empty.",
+          "shift_condition": "Yes if the traditional step genuinely fits; no if you are following a script that does not reflect your real values.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "He leans yes for career moves that follow a proven path — joining an established institution, learning from a teacher, taking the structured route. But conditional, because his shadow is rigid conformity that stifles your own way, so the yes applies only where the lineage still serves you.",
+          "shift_condition": "Stronger yes for moves within a respected structure or with real mentorship; no if it requires abandoning your own conviction to fit a mold.",
+          "crystal": "amethyst"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "For decisions where received wisdom, expert guidance, or a tested framework genuinely helps, The Hierophant leans yes — consult the lineage, learn from those before. But conditional, because for decisions that need your own authored answer, the same card's conformity can be the wrong guide.",
+          "shift_condition": "Yes where a tested structure applies; no where inherited belief is past its usefulness.",
+          "crystal": "lapis"
+        },
+        "timing": {
+          "verdict": "conditional",
+          "reasoning": "The Hierophant leans yes on timing *within* an established rhythm — the right season, the conventional sequence, the planned date. Conditional because following the calendar without checking reality is his shadow.",
+          "shift_condition": "Yes if the timing follows a sound order; no if you are obeying a schedule that no longer fits the situation.",
+          "crystal": "sodalite"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "He leans *stay* when the current place carries lineage, community, or tradition worth keeping — roots in a known structure. Conditional because staying only out of conformity (when the belief has gone stale) is his shadow.",
+          "shift_condition": "Yes-stay if tradition and community here genuinely sustain you; no if you are staying only because leaving feels like rule-breaking.",
+          "crystal": "lapis"
+        }
+      }
+    },
+    {
+      "card": "the-lovers",
+      "name": "The Lovers",
+      "archetype": "The Choosers",
+      "eastern_imagery": [
+        "天使",
+        "太阳",
+        "智慧树",
+        "生命树",
+        "赤裸"
+      ],
+      "eastern_anchor_name": "东方'right association'择友择道 / Rose Quartz 跨文化心轮石",
+      "eastern_anchors": {
+        "tibetan": "The Lovers' theme of conscious union resonates with the Eastern ideal of 'right association' — choosing companions and paths that support your stated values rather than fracture them.",
+        "crystal_culture": "Rose Quartz, the universal stone of the heart across cultures, anchors The Lovers' invitation to choose from love rather than fear or convenience."
+      },
+      "upright_keywords": [
+        "love",
+        "harmony",
+        "partnership",
+        "values alignment",
+        "choice"
+      ],
+      "reversed_keywords": [
+        "disharmony",
+        "misalignment",
+        "avoidance",
+        "broken trust"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "rhodonite",
+          "name": "Rhodonite"
+        },
+        "best_upright": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_reversed": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_love": {
+          "slug": "rhodochrosite",
+          "name": "Rhodochrosite"
+        },
+        "best_daily_wear": {
+          "slug": "malachite",
+          "name": "Malachite"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "strong-yes",
+          "reasoning": "Love is The Lovers' literal ground — but the yes is specifically for choices made from *values alignment*, not just attraction. Upright she leans strongly yes for entering or deepening a union where you genuinely know what you stand for and the other stands there too.",
+          "shift_condition": "",
+          "crystal": "rhodonite"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "The Lovers leans yes for a partnership or values-aligned choice (co-founder, collaborator, a path that matches your principles). But conditional, because the card's whole point is conscious choice — she says yes only where the option truly aligns with your values, and no where it pulls you off your center.",
+          "shift_condition": "Yes if the choice honors what you actually believe; no if the option misaligns with your core values even if it looks good.",
+          "crystal": "rose-quartz"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "The Lovers is the card of *values-based choice* — she does not give a flat yes because her job is to ask which option matches who you are. Conditional: yes for the option aligned with your real values, no for the option that fits only by pressure or convenience.",
+          "shift_condition": "Yes for the values-aligned branch; no for the convenient-but-misaligned one.",
+          "crystal": "malachite"
+        },
+        "timing": {
+          "verdict": "conditional",
+          "reasoning": "On timing she leans yes once you have *clarified your values* — the choice is ready to be made, but not before you know what you stand for. Conditional on doing the inner values-work first.",
+          "shift_condition": "Yes once you are clear what you actually want; no if you would decide from pressure before that clarity.",
+          "crystal": "rhodochrosite"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "The Lovers leans yes for a move undertaken *with* someone or *toward* values-aligned community — partnership is her domain. But conditional, because if the move would fracture a partnership or violate your values, the same card turns no.",
+          "shift_condition": "Yes if the move aligns with shared values or supports a valued union; no if it splits a relationship that matters or compromises what you believe.",
+          "crystal": "malachite"
+        }
+      }
+    },
+    {
+      "card": "the-chariot",
+      "name": "The Chariot",
+      "archetype": "The Victor",
+      "eastern_imagery": [
+        "双斯芬克斯",
+        "方形石座",
+        "星冠",
+        "缰绳",
+        "帷幔"
+      ],
+      "eastern_anchor_name": "东方'中道'整合对立力 / Hematite 扎根意志",
+      "eastern_anchors": {
+        "tibetan": "The Chariot's theme of harnessing opposing forces resonates with the Eastern principle of the middle way — strength that comes from integration, not from suppressing one side.",
+        "crystal_culture": "Hematite, used in many traditions as a grounding stone, embodies The Chariot's rooted, focused will — the kind of steadiness that holds opposing forces in line."
+      },
+      "upright_keywords": [
+        "determination",
+        "willpower",
+        "victory",
+        "focus",
+        "control"
+      ],
+      "reversed_keywords": [
+        "scattered force",
+        "aggression",
+        "lack of direction",
+        "opposing forces"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "hematite",
+          "name": "Hematite"
+        },
+        "best_upright": {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        "best_reversed": {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "tiger-eye",
+          "name": "Tiger Eye"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "The Chariot leans yes for *actively driving* a relationship toward a goal — committing, building momentum, moving forward together. But conditional, because his shadow is the drive to 'win' the partner overwhelming tenderness, so the yes applies only where both people pull in the same direction.",
+          "shift_condition": "Yes if you are rowing together toward a shared aim; no if one partner is dragging the other toward a finish line.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "strong-yes",
+          "reasoning": "Career is The Chariot's arena — focused will harnessing opposing forces toward a single aim is the archetype of victory through directed effort. Upright he points strongly yes for a career push, a competition, a goal worth driving toward with full focus.",
+          "shift_condition": "",
+          "crystal": "carnelian"
+        },
+        "decision": {
+          "verdict": "strong-yes",
+          "reasoning": "For decisions that need focus, will, and the harnessing of competing pulls, The Chariot leans yes — his archetype is momentum, the moment scattered energy aligns into a single direction. He blesses the choice to commit and drive.",
+          "shift_condition": "",
+          "crystal": "hematite"
+        },
+        "timing": {
+          "verdict": "strong-yes",
+          "reasoning": "The Chariot is pure forward motion — on 'is now the time,' the card's whole energy says move, the momentum is here, hesitation only scatters the force. Strongly yes for acting now with focused will.",
+          "shift_condition": "",
+          "crystal": "tiger-eye"
+        },
+        "move-or-stay": {
+          "verdict": "strong-yes",
+          "reasoning": "The Chariot leans strongly *move* — he is the card of departure, of driving toward a destination, of harnessing the opposing pulls of leave vs stay into forward motion. For a deliberate move with a clear destination, his archetype is a strong yes.",
+          "shift_condition": "",
+          "crystal": "carnelian"
+        }
+      }
+    },
+    {
+      "card": "strength",
+      "name": "Strength",
+      "archetype": "The Gentle Power",
+      "eastern_imagery": [
+        "狮子",
+        "无限符号",
+        "花环",
+        "白袍",
+        "徒手"
+      ],
+      "eastern_anchor_name": "东方'调伏'taming the mind 非暴力 / Tiger Eye 平衡勇气",
+      "eastern_anchors": {
+        "tibetan": "Strength's 'gentle taming of the lion' resonates with the Eastern contemplative principle of taming the mind through non-violent attention — strength that does not wage war on itself.",
+        "crystal_culture": "Tiger Eye, used across traditions as a stone of courage and integrity, embodies Strength's measured power — brave without being brutal."
+      },
+      "upright_keywords": [
+        "courage",
+        "patience",
+        "compassion",
+        "inner strength",
+        "mastery"
+      ],
+      "reversed_keywords": [
+        "self-doubt",
+        "raw instinct over mastery",
+        "burnout",
+        "low self-worth"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "tiger-eye",
+          "name": "Tiger Eye"
+        },
+        "best_upright": {
+          "slug": "sunstone",
+          "name": "Sunstone"
+        },
+        "best_reversed": {
+          "slug": "citrine",
+          "name": "Citrine"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "Strength leans yes for staying *patient and present* with a partner's raw edges — and your own — through compassion rather than force. But conditional, because the card's gift is gentle taming, not pushing; the yes applies where patience can soften the situation, not where strength has slid into managing the other person.",
+          "shift_condition": "Yes where patient presence can meet the difficulty; no where you are tolerating harm in the name of being 'strong.'",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "Strength leans yes for situations needing endurance, patience, and mastery of a difficult craft or boss — inner fortitude is the asset. But conditional because her shadow is burnout from pretending to be strong, so the yes applies only where the effort is sustainable and self-compassionate.",
+          "shift_condition": "Yes if you can meet the challenge with patience without burning out; no if it asks you to suppress your limits until you break.",
+          "crystal": "sunstone"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "Strength leans yes for decisions requiring courage and emotional regulation — the choice that asks you to face fear or anger with presence. Conditional, because she is gentle power, so she says no to decisions that require force, aggression, or suppression of instinct rather than taming it.",
+          "shift_condition": "Yes where courage and patience are the right tools; no where the decision needs hard force or where 'toughing it out' would bypass real instinct.",
+          "crystal": "tiger-eye"
+        },
+        "timing": {
+          "verdict": "conditional",
+          "reasoning": "Strength leans yes on timing in the sense of *patient, steady* readiness — not a sudden launch but sustained effort held over time. Conditional because her pace is gentle endurance, not haste.",
+          "shift_condition": "Yes if you can sustain steady effort over time; no if you are trying to force a moment that needs slow cultivation.",
+          "crystal": "carnelian"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "Strength leans *stay and endure* when the difficulty is workable through patience — her gift is taming what is hard, not fleeing it. But conditional, because endurance has a shadow: staying in a situation that requires real force to leave, mistaking suppression for strength. The yes-stay applies only where gentle presence can actually transform things.",
+          "shift_condition": "Yes-stay if patience can meet the difficulty; no if staying requires you to suppress your needs until they disappear.",
+          "crystal": "tiger-eye"
+        }
+      }
+    },
+    {
+      "card": "the-hermit",
+      "name": "The Hermit",
+      "archetype": "The Seeker",
+      "eastern_imagery": [
+        "六芒星灯笼",
+        "长杖",
+        "斗篷",
+        "雪峰",
+        "独照"
+      ],
+      "eastern_anchor_name": "藏传'闭关'retreat 传统 / Labradorite 内在之光",
+      "eastern_anchors": {
+        "tibetan": "The Hermit resonates deeply with the Tibetan practice of retreat — structured solitude undertaken for insight, not escape, with a defined end and a return to share what was learned.",
+        "crystal_culture": "Labradorite, with its hidden flash revealed only at certain angles, embodies The Hermit's theme of inner light — the guidance that does not need to be displayed to be real."
+      },
+      "upright_keywords": [
+        "solitude",
+        "introspection",
+        "inner guidance",
+        "soul-searching",
+        "wisdom"
+      ],
+      "reversed_keywords": [
+        "isolation",
+        "withdrawal",
+        "refusal to share wisdom",
+        "loneliness"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "labradorite",
+          "name": "Labradorite"
+        },
+        "best_upright": {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        },
+        "best_reversed": {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "lapis",
+          "name": "Lapis Lazuli"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "The Hermit leans *no for now* in love — not against the relationship, but because his archetype says the answer needs solitude to surface first. The yes becomes available only after real reflection; rushing partnership while ignoring the inner work is the very thing he warns against.",
+          "shift_condition": "Becomes yes after genuine reflection clarifies what you want; stays no if you seek the relationship to avoid being alone with yourself.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "He leans yes *for a pause* — step back, withdraw, study the situation alone before acting. Conditional, because his shadow is isolation that never returns; the yes is for retreat *in service of* a clearer move, not for hiding from the workplace.",
+          "shift_condition": "Yes for a deliberate, time-bound retreat that informs the next step; no if 'needing space' has become avoidance of the decision.",
+          "crystal": "labradorite"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "The Hermit rarely gives a flat yes — his lantern illuminates only after you have turned inward. For a decision he leans conditional: yes *once you have done the inner work*, no if you try to extract the answer from outside opinion alone.",
+          "shift_condition": "Yes once inner guidance has spoken; no while you are still outsourcing the answer to the crowd.",
+          "crystal": "amethyst"
+        },
+        "timing": {
+          "verdict": "strong-no",
+          "reasoning": "On 'is now the time,' The Hermit points to no — his archetype is deliberate solitude and the lantern of inner seeking, and his consistent counsel is to withdraw and reflect before acting. Moving now would skip the very inward look he exists to demand, so he declines the now; the timing question returns only after the period of reflection has clarified the moment.",
+          "shift_condition": "",
+          "crystal": "lapis"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "The Hermit leans *stay* in the sense of retreating into yourself before changing outer circumstances — the move needs inner clarity first. Conditional because his shadow is isolation disguised as retreat, so staying is right only if it feeds reflection rather than hides you.",
+          "shift_condition": "Yes-stay for a deliberate period of reflection that will inform the move; no if 'needing solitude' has become a way to avoid deciding.",
+          "crystal": "smoky-quartz"
+        }
+      }
+    },
+    {
+      "card": "wheel-of-fortune",
+      "name": "Wheel of Fortune",
+      "archetype": "The Turning",
+      "eastern_imagery": [
+        "大轮",
+        "斯芬克斯",
+        "蛇",
+        "四活物",
+        "转动"
+      ],
+      "eastern_anchor_name": "东方无常/轮回观非宿命 / Turquoise 丝路护身传统",
+      "eastern_anchors": {
+        "tibetan": "The Wheel resonates with the Eastern recognition of impermanence and cyclic existence — not as fatalism, but as the freedom that comes from no longer clinging to a single fixed outcome.",
+        "crystal_culture": "Turquoise, carried for protection across the Silk Road's turning fortunes, embodies the traveler's steady heart through change — fortune's companion, not its victim."
+      },
+      "upright_keywords": [
+        "cycles",
+        "change",
+        "destiny",
+        "turning point",
+        "luck"
+      ],
+      "reversed_keywords": [
+        "resistance to change",
+        "bad luck streak",
+        "stagnation",
+        "feeling out of control"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "aventurine",
+          "name": "Green Aventurine"
+        },
+        "best_upright": {
+          "slug": "citrine",
+          "name": "Citrine"
+        },
+        "best_reversed": {
+          "slug": "obsidian",
+          "name": "Obsidian"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "turquoise",
+          "name": "Turquoise"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "The Wheel leans yes *if the cycle is genuinely turning toward you* — momentum is shifting, the phase is changing. But conditional, because the card's truth is impermanence: a relationship in its downturn is not blessed just because you want it up. The yes depends on reading which way the wheel is actually moving.",
+          "shift_condition": "Yes if the cycle is genuinely turning toward connection; no if you are clinging to a phase that has already turned.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "strong-yes",
+          "reasoning": "Career momentum is the Wheel's home — upright she points to a turning point, fortune's upturn, the moment to ride change rather than resist. She leans strongly yes for acting when the wheel is clearly turning in your favor.",
+          "shift_condition": "",
+          "crystal": "aventurine"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "The Wheel leans yes for *moving with the turn* rather than gripping the old position — decisions that accept change and act on it. But conditional, because the card asks you to sort what is within your influence from what is not; she blesses action on the first and surrender on the second, not the reverse.",
+          "shift_condition": "Yes for acting on what you can influence; no for forcing what is genuinely outside your control.",
+          "crystal": "turquoise"
+        },
+        "timing": {
+          "verdict": "strong-yes",
+          "reasoning": "Timing is the Wheel's literal subject — the turning of cycles, the moment momentum shifts. Upright she leans strongly yes that *now* is a turning point, a moment to ride the change rather than wait.",
+          "shift_condition": "",
+          "crystal": "aventurine"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "The Wheel leans *move* if the cycle has clearly turned and the current phase has ended — she blesses riding the change. But conditional, because her other face is accepting what is outside your control; she says no to forcing a move against the actual grain of the cycle.",
+          "shift_condition": "Yes-move when the cycle has genuinely turned; no if you are forcing movement that the timing does not support.",
+          "crystal": "turquoise"
+        }
+      }
+    },
+    {
+      "card": "justice",
+      "name": "Justice",
+      "archetype": "The Truth-Seeker",
+      "eastern_imagery": [
+        "宝剑",
+        "天平",
+        "双柱",
+        "王座",
+        "面纱"
+      ],
+      "eastern_anchor_name": "东方因果(cause-effect非宿命)/ Lapis Lazuli 真理之石",
+      "eastern_anchors": {
+        "tibetan": "Justice resonates with the Eastern principle of karma understood as cause-and-effect — not fatalistic punishment, but the honest recognition that actions have consequences that can be examined and learned from.",
+        "crystal_culture": "Lapis Lazuli, associated with truth and just rule across Persian, Egyptian, and Buddhist art, embodies Justice's demand for what is honest and right."
+      },
+      "upright_keywords": [
+        "fairness",
+        "truth",
+        "law",
+        "accountability",
+        "balance"
+      ],
+      "reversed_keywords": [
+        "unfairness",
+        "dishonesty",
+        "avoidance of responsibility",
+        "imbalance"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "lapis",
+          "name": "Lapis Lazuli"
+        },
+        "best_upright": {
+          "slug": "sodalite",
+          "name": "Sodalite"
+        },
+        "best_reversed": {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "hematite",
+          "name": "Hematite"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "Justice leans yes *only if* the relationship is fair — her scales weigh honesty and accountability, not romance. Conditional, because for a bond that is imbalanced or dishonest the same card turns no; she will not bless a partnership that fails the fairness test.",
+          "shift_condition": "Yes if the relationship is honest and balanced; no where unfairness or dishonesty has not been faced.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "She leans yes for career moves decided on evidence and merit — the offer that is fair, the role earned, the contract equitable. Conditional, because Justice also names imbalance: for an unjust situation she points no, including 'no, leave' where the workplace is dishonest.",
+          "shift_condition": "Yes if the move is fair and evidence-based; no if the situation fails the honesty test (which can itself be a reason to leave).",
+          "crystal": "lapis"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "Justice is the card of weighing evidence — she does not give a flat yes because her job is to ask whether the choice is *fair and true*. Conditional: yes for the option that survives honest weighing, no for the option built on a story you are telling yourself.",
+          "shift_condition": "Yes for the choice that holds up under honest scrutiny; no where you are avoiding responsibility or rationalizing.",
+          "crystal": "sodalite"
+        },
+        "timing": {
+          "verdict": "conditional",
+          "reasoning": "Justice leans yes on timing *once the facts have been weighed* — she refuses to set a date before the evidence is in. Conditional because her pace is deliberate examination, not impulse.",
+          "shift_condition": "Yes once you have honestly gathered the facts; no while you are deciding from fear or wish rather than evidence.",
+          "crystal": "hematite"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "Justice weighs the move on its merits — leans yes *leave* if the current place is genuinely unfair or dishonest, leans yes *stay* if it is equitable and worth keeping. Conditional, because her verdict follows the evidence, not preference.",
+          "shift_condition": "Leave if the place fails the fairness test; stay if honest weighing shows it is just and worth keeping.",
+          "crystal": "lapis"
+        }
+      }
+    },
+    {
+      "card": "the-hanged-man",
+      "name": "The Hanged Man",
+      "archetype": "The Surrendered",
+      "eastern_imagery": [
+        "倒挂",
+        "T形树",
+        "光环",
+        "十字",
+        "安详"
+      ],
+      "eastern_anchor_name": "东方'反转惯常视角'内观 / Selenite 高维清明",
+      "eastern_anchors": {
+        "tibetan": "The Hanged Man's inversion resonates with the Eastern contemplative practice of 'reversing habitual view' — loosening the mind's fixed perspective to see what was always there but unseen.",
+        "crystal_culture": "Selenite, a stone of mental clarity and higher perspective, supports the cleansed mirror this card asks — the clean view that comes only after the old angle is released."
+      },
+      "upright_keywords": [
+        "surrender",
+        "new perspective",
+        "pause",
+        "letting go",
+        "sacrifice"
+      ],
+      "reversed_keywords": [
+        "stalling",
+        "martyrdom",
+        "refusal to let go",
+        "resistance"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "selenite",
+          "name": "Selenite"
+        },
+        "best_upright": {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        },
+        "best_reversed": {
+          "slug": "bloodstone",
+          "name": "Bloodstone"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "aquamarine",
+          "name": "Aquamarine"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "The Hanged Man leans *pause, not push* in love — a willing surrender that lets you see the relationship from a new angle. Conditional, because his shadow is stalling disguised as patience; the yes becomes available after the perspective shift, not before.",
+          "shift_condition": "Becomes yes once a new angle on the relationship has surfaced; stays no if 'giving it space' has become avoidance of the real question.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "He leans yes for a *deliberate pause* — step back, invert the assumption, let a new perspective arrive before acting. Conditional, because his shadow is stalling and martyrdom; the pause is right only if it serves insight, not if it postpones a needed decision indefinitely.",
+          "shift_condition": "Yes for a chosen pause that reframes the problem; no if waiting has become a way to avoid deciding.",
+          "crystal": "selenite"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "The Hanged Man is the card of *willing reversal* — he leans yes for a decision made *after* releasing the fixed perspective, not before. Conditional, because he refuses to bless a choice still locked in the old frame; the insight must come first.",
+          "shift_condition": "Yes once you have genuinely turned the question upside down; no while you are clinging to the original angle.",
+          "crystal": "amethyst"
+        },
+        "timing": {
+          "verdict": "strong-no",
+          "reasoning": "On 'is now the time,' The Hanged Man points clearly to no — his entire archetype is the chosen pause, the willing surrender that lets the right moment emerge rather than forcing it. Acting now would bypass the very reversal in perspective he exists to offer, so he declines the now; the timing question reopens only after the deliberate pause has done its work.",
+          "shift_condition": "",
+          "crystal": "aquamarine"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "He leans *stay and invert the view* — see the current place from a new angle before deciding to leave. Conditional, because his shadow is stalling; the stay is right only if it reframes the question, not if it avoids it.",
+          "shift_condition": "Yes-stay for a deliberate reframe; no if 'needing a new perspective' has become indefinite delay.",
+          "crystal": "bloodstone"
+        }
+      }
+    },
+    {
+      "card": "death",
+      "name": "Death",
+      "archetype": "The Transformer",
+      "eastern_imagery": [
+        "骷髅",
+        "苍白马",
+        "落日",
+        "倒地之王",
+        "主教"
+      ],
+      "eastern_anchor_name": "东方'无常'观(非病态)/ Obsidian 诚实之镜",
+      "eastern_anchors": {
+        "tibetan": "Death resonates with the Eastern contemplation of impermanence — not as morbidity, but as the clarity that frees you to live fully because nothing is held as permanent.",
+        "crystal_culture": "Obsidian, used in Mesoamerican and Eastern traditions for truth-telling and release, embodies Death's unflinching honesty about what must end."
+      },
+      "upright_keywords": [
+        "transformation",
+        "endings",
+        "transition",
+        "release",
+        "rebirth"
+      ],
+      "reversed_keywords": [
+        "resistance to change",
+        "stagnation",
+        "decay",
+        "inability to end"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "obsidian",
+          "name": "Obsidian"
+        },
+        "best_upright": {
+          "slug": "malachite",
+          "name": "Malachite"
+        },
+        "best_reversed": {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "garnet",
+          "name": "Garnet"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "Death leans yes for *ending* a relationship that has already completed, and yes for *transforming* one into a new form — but no for forcing a finished bond to stay the same. The verdict follows the question: 'should I let this end?' leans yes; 'will it continue as it was?' leans no.",
+          "shift_condition": "Yes for releasing what is already over, or letting the relationship transform; no for clinging to the old form.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "Death leans yes for *ending* a career path or role that has completed — the necessary close that makes the next chapter possible. But no for 'should I keep doing exactly this forever?' when the form has already died. The card blesses the ending, not the prolonging.",
+          "shift_condition": "Yes for closing the completed chapter and clearing space; no for forcing a dead form to continue.",
+          "crystal": "obsidian"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "Death leans yes for the decision that *ends* something to make room — release the old identity, close the finished project. But conditional, because for a decision about permanence or continuation his archetype says the old form cannot stay; the yes is for transformation, not preservation.",
+          "shift_condition": "Yes for the choice that releases what is complete; no for the choice that tries to keep the dead form alive.",
+          "crystal": "malachite"
+        },
+        "timing": {
+          "verdict": "conditional",
+          "reasoning": "Death leans yes on timing *for an ending* — the close is ripe, do not delay it. But his energy is not for beginnings; for 'is it time to start fresh in the same old frame,' he says no, end first. The yes is specifically for the moment of release.",
+          "shift_condition": "Yes to time an honest ending now; no to starting something new while refusing to close what is over.",
+          "crystal": "garnet"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "Death leans *move* when the current chapter has truly completed — leaving is the natural close. But conditional, because his real ask is to acknowledge the ending honestly; moving to avoid naming what is over is not the transformation he blesses.",
+          "shift_condition": "Yes-move as an honest closing of a completed chapter; no if you would move to escape admitting something has ended.",
+          "crystal": "smoky-quartz"
+        }
+      }
+    },
+    {
+      "card": "temperance",
+      "name": "Temperance",
+      "archetype": "The Alchemist",
+      "eastern_imagery": [
+        "双杯",
+        "一足水一足岸",
+        "天使翅膀",
+        "虹光小径",
+        "皇冠"
+      ],
+      "eastern_anchor_name": "东方'中道'(动态平衡非折中)/ Amethyst 古意'不醉'平衡心",
+      "eastern_anchors": {
+        "tibetan": "Temperance resonates directly with the Eastern principle of the middle way — not the mediocre average, but the dynamic balance that holds opposites in living tension.",
+        "crystal_culture": "Amethyst, historically associated with sobriety and balanced mind (the Greek root 'amethystos' means 'not intoxicated'), embodies Temperance's measured clarity."
+      },
+      "upright_keywords": [
+        "balance",
+        "moderation",
+        "patience",
+        "blending",
+        "harmony"
+      ],
+      "reversed_keywords": [
+        "excess",
+        "imbalance",
+        "impatience",
+        "extremes"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        },
+        "best_upright": {
+          "slug": "fluorite",
+          "name": "Fluorite"
+        },
+        "best_reversed": {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "amazonite",
+          "name": "Amazonite"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "Temperance leans yes for *patient blending* — two people slowly integrating different needs into something sustainable. But conditional, because her shadow is imbalance and impatience; the yes applies only where both partners are willing to mix patiently, not where one is forcing a quick resolution.",
+          "shift_condition": "Yes if both are willing to blend patiently; no where impatience or imbalance is pushing the relationship to extremes.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "She leans yes for career moves needing *moderation and integration* — the patient mixing of different inputs, the middle-way solution. Conditional, because her shadow is excess and impatience; she says no to moves driven by extreme swings or shortcuts.",
+          "shift_condition": "Yes for the measured, well-integrated path; no for the impulsive or all-or-nothing move.",
+          "crystal": "fluorite"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "Temperance leans yes for the *middle-way* decision — one that honors opposing needs rather than collapsing into either extreme. But conditional, because she is the patient blender; she says no to choices that demand an extreme or a forced either/or.",
+          "shift_condition": "Yes where a balanced integration is possible; no where the situation forces an extreme you would later regret.",
+          "crystal": "amazonite"
+        },
+        "timing": {
+          "verdict": "conditional",
+          "reasoning": "On timing Temperance points to *slow, steady* pace — the unhurried flow between two cups. She leans yes only if you accept the patient rhythm; no if you try to rush integration that needs time.",
+          "shift_condition": "Yes at the natural, measured pace; no if you are trying to force speed the situation cannot sustain.",
+          "crystal": "amethyst"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "Temperance leans yes for a *balanced* relocation — one foot tested in the new place before the other leaves the old. Conditional, because her shadow is excess; she says no to impulsive all-in moves or to swings between stay and go.",
+          "shift_condition": "Yes for a measured, well-blended transition; no for an extreme or impulsive move.",
+          "crystal": "amazonite"
+        }
+      }
+    },
+    {
+      "card": "the-devil",
+      "name": "The Devil",
+      "archetype": "The Shadow-Knower",
+      "eastern_imagery": [
+        "锁链",
+        "倒五芒星",
+        "羊角",
+        "黑暗石座",
+        "松链"
+      ],
+      "eastern_anchor_name": "东方'对治内魔'(非实体)/ Black Tourmaline 守护扎根",
+      "eastern_anchors": {
+        "tibetan": "The Devil resonates with the Eastern contemplative practice of facing 'inner demons' (the personified defilements) directly — not as literal entities, but as the named forms of attachment and aversion that lose their grip when seen clearly.",
+        "crystal_culture": "Black Tourmaline, used across traditions for protection and grounding, embodies the steady, unflinching presence needed to look at shadow without being swallowed by it."
+      },
+      "upright_keywords": [
+        "attachment",
+        "bondage",
+        "shadow",
+        "materialism",
+        "temptation"
+      ],
+      "reversed_keywords": [
+        "liberation",
+        "release",
+        "breaking chains",
+        "awareness of shadow"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "black-tourmaline",
+          "name": "Black Tourmaline"
+        },
+        "best_upright": {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        "best_reversed": {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "onyx",
+          "name": "Black Onyx"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "The Devil leans *no* for *entering* a relationship from attachment, compulsion, or fear of being alone — those are the very chains he names. But he turns yes for *seeing* the attachment clearly, because his upright gift is recognizing the chain is loose. The verdict hinges on awareness.",
+          "shift_condition": "Becomes a yes-for-leaving once you see the bond is compulsion, not love; stays no for pursuing someone through attachment or control.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "The Devil leans *no* for staying in a job through pure attachment (golden handcuffs, status compulsion, fear) — that is the bondage he points to. But conditional, because once you see the chain is loose, the same card blesses the decision to break it. Awareness shifts the verdict.",
+          "shift_condition": "Becomes yes-to-leave once you recognize the attachment holding you; stays no for acting from the same compulsion elsewhere.",
+          "crystal": "black-tourmaline"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "The Devil leans no for decisions driven by attachment, craving, or a self-limiting story — his archetype is exactly the pattern that binds. But conditional, because his gift is shadow-awareness; once you see the chain, the same card says yes to releasing it.",
+          "shift_condition": "No while the choice is driven by compulsion; yes once you have seen the attachment and are choosing freely.",
+          "crystal": "smoky-quartz"
+        },
+        "timing": {
+          "verdict": "strong-no",
+          "reasoning": "On 'is now the time,' The Devil points to no — the urgency pulsing beneath the question is the card's exact signature of compulsion and craving. Acting on this timing would be the compulsive lunge his archetype names, so he refuses to bless the now; the timing only reopens after the craving underneath has been examined.",
+          "shift_condition": "",
+          "crystal": "onyx"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "The Devil leans *stay* if the move would be an escape from an unexamined attachment you would carry with you — the chain travels. But conditional, because once you see the bond clearly, he can bless *staying to do the inner work*; the verdict follows awareness, not geography.",
+          "shift_condition": "Stay-and-work if the attachment is unexamined; the question of move reopens only after the inner chain is seen.",
+          "crystal": "black-tourmaline"
+        }
+      }
+    },
+    {
+      "card": "the-tower",
+      "name": "The Tower",
+      "archetype": "The Awakener",
+      "eastern_imagery": [
+        "闪电",
+        "崩塌",
+        "坠落王冠",
+        "火焰",
+        "双塔"
+      ],
+      "eastern_anchor_name": "东方'无常/结构性崩塌即清明'/ Smoky Quartz 动荡中扎根",
+      "eastern_anchors": {
+        "tibetan": "The Tower resonates with the Eastern recognition that the structures we build are impermanent — and that their collapse is not punishment but clarity, the false falling away to reveal what was always underneath.",
+        "crystal_culture": "Smoky Quartz, used for grounding through upheaval, embodies The Tower's call to land in the body when the familiar structure falls away."
+      },
+      "upright_keywords": [
+        "sudden change",
+        "upheaval",
+        "revelation",
+        "awakening",
+        "truth"
+      ],
+      "reversed_keywords": [
+        "avoiding the lesson",
+        "resisting necessary change",
+        "delayed collapse"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        "best_upright": {
+          "slug": "labradorite",
+          "name": "Labradorite"
+        },
+        "best_reversed": {
+          "slug": "black-tourmaline",
+          "name": "Black Tourmaline"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "hematite",
+          "name": "Hematite"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "The Tower leans yes for *leaving* a relationship built on a false foundation — the sudden truth that the structure was unstable is exactly his domain. But no for *continuing as if nothing is wrong* when the cracks are already showing; he blesses the honest collapse, not the pretense.",
+          "shift_condition": "Yes-to-leave where the relationship is built on a false foundation that has cracked; no for forcing the broken structure to stand.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "This is the classic 'leave the toxic job = yes' read: The Tower blesses the necessary collapse of a structure that was already unstable, so for leaving a dishonest or unsustainable workplace he leans yes. But no for *launching into* a reckless new venture mid-collapse without rebuilding on true foundations.",
+          "shift_condition": "Yes-to-leave a job/structure already shown to be unstable or false; no for jumping into a new venture without first landing the truth of what fell.",
+          "crystal": "smoky-quartz"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "The Tower leans no for decisions that *preserve* an already-unstable structure, and yes for decisions that *face* the sudden truth and rebuild on real foundations. The verdict follows whether the choice props up the false or meets the collapse honestly.",
+          "shift_condition": "No for shoring up what is already falling; yes for the decision that meets the truth and rebuilds on it.",
+          "crystal": "labradorite"
+        },
+        "timing": {
+          "verdict": "conditional",
+          "reasoning": "The Tower leans yes on *not delaying* a change that is already trying to happen — propping up the unstable structure only postpones the inevitable. But conditional, because he blesses the timing of honest collapse, not the timing of panicked reaction; act now to meet the truth, not to flee it.",
+          "shift_condition": "Yes to meet the necessary change now rather than forestall it; no to rash action that reacts to the fall without absorbing its lesson.",
+          "crystal": "hematite"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "The Tower leans *move* when the current structure is genuinely unstable and a sudden truth has already exposed it — staying to prop up the cracked foundation is his shadow. But conditional, because he says no to impulsive flight that reacts to the collapse without rebuilding anything real.",
+          "shift_condition": "Yes-move when the structure is truly unstable and the truth has landed; no if you would flee reactively without facing what collapsed.",
+          "crystal": "black-tourmaline"
+        }
+      }
+    },
+    {
+      "card": "the-star",
+      "name": "The Star",
+      "archetype": "The Hopeful",
+      "eastern_imagery": [
+        "八角星",
+        "双壶",
+        "水池",
+        "树上鸟",
+        "裸身"
+      ],
+      "eastern_anchor_name": "东方'菩提心'觉醒心(非否认)/ Aquamarine 清明之水",
+      "eastern_anchors": {
+        "tibetan": "The Star resonates with the Eastern ideal of bodhicitta, the awakened heart-mind — the steady, luminous aspiration that re-arises even after difficulty, not as denial but as renewed direction.",
+        "crystal_culture": "Aquamarine, the stone of calm courage and clear water, embodies The Star's serene renewal — the still pool this card depicts."
+      },
+      "upright_keywords": [
+        "hope",
+        "faith",
+        "renewal",
+        "serenity",
+        "guidance"
+      ],
+      "reversed_keywords": [
+        "despair",
+        "disconnection from hope",
+        "faith lost",
+        "feeling adrift"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "aquamarine",
+          "name": "Aquamarine"
+        },
+        "best_upright": {
+          "slug": "selenite",
+          "name": "Selenite"
+        },
+        "best_reversed": {
+          "slug": "lepidolite",
+          "name": "Lepidolite"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "strong-yes",
+          "reasoning": "The Star leans yes for *renewing* or *reopening* the heart after difficulty — she is the calm that follows The Tower, the guidance that returns. For letting hope back into love, for trusting again after a hard season, her archetype is a clear yes.",
+          "shift_condition": "",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "The Star leans yes for *renewing* a career path after a setback — reconnecting with what gives the work meaning. But conditional, because her pace is serene and patient; she says no to impatient launches that have not yet re-grounded in real hope after a fall.",
+          "shift_condition": "Yes for measured renewal grounded in renewed meaning; no for rushing forward before you have reconnected with what the work is actually for.",
+          "crystal": "aquamarine"
+        },
+        "decision": {
+          "verdict": "strong-yes",
+          "reasoning": "For decisions about hope, meaning, and renewal, The Star leans yes — her archetype is guidance after the storm, the quiet faith that the way forward is being shown. She blesses the choice made from renewed trust rather than from the wound.",
+          "shift_condition": "",
+          "crystal": "selenite"
+        },
+        "timing": {
+          "verdict": "conditional",
+          "reasoning": "The Star leans yes on timing in the sense of *hope has returned, the way is being shown* — but her pace is gentle, so she says no to forcing the moment and yes to acting once the renewed clarity has settled.",
+          "shift_condition": "Yes once renewed clarity has steadied; no if you are pushing forward to escape discouragement.",
+          "crystal": "moonstone"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "The Star leans *move* toward a place that renews hope and reconnects you with meaning — her archetype is the guiding light after a dark season. But conditional, because her gift is serene renewal, not escapism; the yes-move applies when the new place genuinely restores you, not when it merely offers escape.",
+          "shift_condition": "Yes-move toward a place that genuinely renews hope; no if the move is a flight from discouragement rather than a step toward meaning.",
+          "crystal": "aquamarine"
+        }
+      }
+    },
+    {
+      "card": "the-moon",
+      "name": "The Moon",
+      "archetype": "The Dreamer",
+      "eastern_imagery": [
+        "满月",
+        "双塔",
+        "螯虾",
+        "犬与狼",
+        "蜿蜒小径"
+      ],
+      "eastern_anchor_name": "东方'无意识深处'/梦观 / Moonstone 月光内映之石",
+      "eastern_anchors": {
+        "tibetan": "The Moon resonates with the Eastern contemplative recognition of 'the unconscious depths' — the layers of mind beneath ordinary awareness, approached through dream practice and quiet observation rather than force.",
+        "crystal_culture": "Moonstone, named for the moon itself across Indian and Roman traditions, embodies The Moon's lunar, intuitive quality — the inner light that is reflected rather than direct."
+      },
+      "upright_keywords": [
+        "intuition",
+        "illusion",
+        "subconscious",
+        "dreams",
+        "uncertainty"
+      ],
+      "reversed_keywords": [
+        "confusion releasing",
+        "deception surfacing",
+        "clarity returning",
+        "release of fear"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        },
+        "best_upright": {
+          "slug": "selenite",
+          "name": "Selenite"
+        },
+        "best_reversed": {
+          "slug": "labradorite",
+          "name": "Labradorite"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "The Moon leans *not yet* in love — not everything is clear, intuition is surfacing but illusion is also present, and the card asks you to stay with the uncertainty rather than force a verdict. The yes becomes available once the half-seen clarifies; rushing it is exactly what she warns against.",
+          "shift_condition": "Becomes yes once what is murky comes into focus; stays no while you are reading more into the situation than the evidence supports.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "The Moon leans *not yet* — the rational mind cannot fully map what is surfacing, and acting on incomplete or half-true information is the trap. Conditional yes only after the unclear layer resolves; flat no on signing or committing while the picture is still half-lit.",
+          "shift_condition": "Yes once the hidden information surfaces; no while key facts are still obscured or deceptive.",
+          "crystal": "selenite"
+        },
+        "decision": {
+          "verdict": "strong-no",
+          "reasoning": "The Moon is the archetype of uncertainty and illusion — and a decision made in fog is precisely what she refuses to bless. Her truth is that not everything is yet visible, so for 'should I decide this now' she points to no: the half-seen cannot be the ground of a real choice. The yes only reopens once the fog has genuinely lifted, which is a different moment, not this one.",
+          "shift_condition": "",
+          "crystal": "labradorite"
+        },
+        "timing": {
+          "verdict": "strong-no",
+          "reasoning": "On 'is now the time,' The Moon points to no — the path winds between two towers into uncertain light, and acting now means moving half-blind through illusion and unsurfaced information. Her archetype governs what is not yet clear, so she declines the now; the timing question can only be asked again once what is murky has actually come into focus.",
+          "shift_condition": "",
+          "crystal": "moonstone"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "The Moon leans *stay* until the picture clarifies — moving through half-lit information is her exact caution. Conditional, because once the hidden surfaces she can bless the move; the no is only against acting while the situation is still deceptive or unclear.",
+          "shift_condition": "Stay until what is obscured comes to light; reconsider the move once the fog has lifted and the path is visible.",
+          "crystal": "amethyst"
+        }
+      }
+    },
+    {
+      "card": "the-sun",
+      "name": "The Sun",
+      "archetype": "The Radiant",
+      "eastern_imagery": [
+        "向日葵",
+        "白马",
+        "孩童",
+        "阳光",
+        "围墙"
+      ],
+      "eastern_anchor_name": "东方'明性'luminosity(非执着)/ Sunstone 阳光之石",
+      "eastern_anchors": {
+        "tibetan": "The Sun resonates with the Eastern recognition of luminosity — the warm, radiant quality of an unobscured mind, neither grasping nor dimmed by avoidance.",
+        "crystal_culture": "Sunstone, named for the sun across traditions, embodies The Sun's warmth, confidence, and the leadership that comes from genuine vitality."
+      },
+      "upright_keywords": [
+        "joy",
+        "success",
+        "vitality",
+        "positivity",
+        "clarity"
+      ],
+      "reversed_keywords": [
+        "temporary setback",
+        "muted joy",
+        "ego inflation",
+        "excessive optimism"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "sunstone",
+          "name": "Sunstone"
+        },
+        "best_upright": {
+          "slug": "citrine",
+          "name": "Citrine"
+        },
+        "best_reversed": {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "strong-yes",
+          "reasoning": "The Sun is the archetype of joyful clarity — for love she points strongly yes: warmth, shared joy, a relationship in a season of light. Her one caveat is that joy must be tended rather than assumed, but the verdict itself leans clearly positive.",
+          "shift_condition": "",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "strong-yes",
+          "reasoning": "Career success and visibility are The Sun's ground — vitality, optimism, a season going well. Upright she leans strongly yes for a career move, a launch, a moment when confidence and circumstance align.",
+          "shift_condition": "",
+          "crystal": "citrine"
+        },
+        "decision": {
+          "verdict": "strong-yes",
+          "reasoning": "For decisions made in the light — clarity, positivity, the simple good — The Sun leans yes. Her archetype is the unobscured view, so a choice that flourishes in clarity rather than shadow is exactly what she blesses.",
+          "shift_condition": "",
+          "crystal": "sunstone"
+        },
+        "timing": {
+          "verdict": "strong-yes",
+          "reasoning": "The Sun leans strongly yes on *now* — the light is up, the season is warm, this is the moment visibility and vitality support action. Delay only dims what is currently lit.",
+          "shift_condition": "",
+          "crystal": "carnelian"
+        },
+        "move-or-stay": {
+          "verdict": "strong-yes",
+          "reasoning": "The Sun leans yes for a move toward a place that brings warmth, vitality, and clarity — her archetype favors environments where life flourishes in the light. A relocation toward joy and visibility is exactly what she blesses.",
+          "shift_condition": "",
+          "crystal": "sunstone"
+        }
+      }
+    },
+    {
+      "card": "judgment",
+      "name": "Judgment",
+      "archetype": "The Awakened",
+      "eastern_imagery": [
+        "号角",
+        "棺椁",
+        "白旗红十字",
+        "复活者",
+        "天使"
+      ],
+      "eastern_anchor_name": "东方'如实自省非自责'/ Angelite 温柔的更高沟通",
+      "eastern_anchors": {
+        "tibetan": "Judgment resonates with the Eastern contemplative practice of honest self-examination without self-condemnation — seeing clearly, with compassion, so that reflection leads to renewal rather than guilt.",
+        "crystal_culture": "Angelite, associated with gentle higher communication, embodies Judgment's call heard as guidance rather than as accusation."
+      },
+      "upright_keywords": [
+        "reckoning",
+        "awakening",
+        "renewal",
+        "calling",
+        "reflection"
+      ],
+      "reversed_keywords": [
+        "self-criticism",
+        "refusing the call",
+        "avoidance",
+        "doubt of one's path"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "angelite",
+          "name": "Angelite"
+        },
+        "best_upright": {
+          "slug": "citrine",
+          "name": "Citrine"
+        },
+        "best_reversed": {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "selenite",
+          "name": "Selenite"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "Judgment leans yes for *renewing* a relationship after honest reckoning — the rebirth that follows a clear-eyed look at what was. But conditional, because his shadow is self-criticism masquerading as reflection; the yes applies where honest reflection frees the bond, not where blame sentences it.",
+          "shift_condition": "Yes where honest reflection leads to renewal; no where reckoning has hardened into blame or self-condemnation.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "conditional",
+          "reasoning": "Judgment leans yes for answering a *calling* — a career move that follows a genuine reckoning about what your work is for. But conditional, because his gift is honest self-assessment, not harsh verdict; the yes applies where reflection frees you to step up, not where self-criticism paralyzes the move.",
+          "shift_condition": "Yes for a move grounded in honest reckoning with your direction; no where inner criticism is doing the deciding.",
+          "crystal": "citrine"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "Judgment leans yes for the decision that follows honest self-assessment — the reckoning that precedes a rebirth. But conditional, because his shadow is the inner judge replacing the inner guide; he says no to choices driven by self-condemnation and yes to those born from clear, compassionate reflection.",
+          "shift_condition": "Yes where reflection clarifies the next chapter; no where the 'reckoning' is really self-punishment in disguise.",
+          "crystal": "angelite"
+        },
+        "timing": {
+          "verdict": "conditional",
+          "reasoning": "Judgment leans yes on timing *after the reckoning* — the call has been heard, the reflection done, and the moment to answer is at hand. Conditional because his pace requires the self-assessment first; no to acting before the honest look is complete.",
+          "shift_condition": "Yes once honest reflection has clarified the call; no while you are still dodging the reckoning the moment requires.",
+          "crystal": "selenite"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "Judgment leans *move* when the move answers a genuine call that has surfaced through honest reckoning — he is the card of hearing a larger life and stepping toward it. But conditional, because his shadow is self-criticism; the yes-move applies where reflection frees you to go, not where blame is driving you out.",
+          "shift_condition": "Yes-move when the call is genuine and reflection-backed; no if you would move to escape self-condemnation rather than answer a real direction.",
+          "crystal": "angelite"
+        }
+      }
+    },
+    {
+      "card": "the-world",
+      "name": "The World",
+      "archetype": "The Complete",
+      "eastern_imagery": [
+        "花环",
+        "四活物",
+        "舞者",
+        "紫纱",
+        "权杖"
+      ],
+      "eastern_anchor_name": "东方'曼荼罗'圆满即下一环起点 / Clear Quartz 大师和合石",
+      "eastern_anchors": {
+        "tibetan": "The World resonates with the Eastern recognition of completion as mandala — the integrated whole that, once seen, also reveals itself as the seed of the next cycle (the wreath that contains, and the dance that opens).",
+        "crystal_culture": "Clear Quartz, the 'master healer' that harmonizes all energies, embodies The World's integration — the many brought into coherent wholeness."
+      },
+      "upright_keywords": [
+        "completion",
+        "wholeness",
+        "achievement",
+        "integration",
+        "fulfillment"
+      ],
+      "reversed_keywords": [
+        "incompletion",
+        "loose ends",
+        "delay of closure",
+        "almost there"
+      ],
+      "crystals": {
+        "best_overall": {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        "best_upright": {
+          "slug": "selenite",
+          "name": "Selenite"
+        },
+        "best_reversed": {
+          "slug": "bloodstone",
+          "name": "Bloodstone"
+        },
+        "best_love": {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        "best_daily_wear": {
+          "slug": "lapis",
+          "name": "Lapis Lazuli"
+        }
+      },
+      "verdicts": {
+        "love": {
+          "verdict": "conditional",
+          "reasoning": "The World leans yes for a relationship reaching a new level of *integration* — commitment, a chapter fulfilled, wholeness built together. But conditional, because her other face is *completion*: for a bond whose cycle has truly closed, she points yes-to-completing rather than yes-to-continuing. The verdict follows whether the chapter is ripe for integration or for closure.",
+          "shift_condition": "Yes for deepening where the cycle is still growing; yes (differently) for honoring a relationship whose natural chapter has completed — not for forcing one that has finished to keep going.",
+          "crystal": "rose-quartz"
+        },
+        "career": {
+          "verdict": "strong-yes",
+          "reasoning": "The World leans yes for career completion and achievement — the fulfilled chapter, the integrated whole, the summit reached. Upright she points strongly yes for finishing, graduating, launching the completed work, or stepping into the role a long cycle was building toward.",
+          "shift_condition": "",
+          "crystal": "quartz"
+        },
+        "decision": {
+          "verdict": "conditional",
+          "reasoning": "The World leans yes for the decision that *completes* a cycle — closing loose ends, finishing what was started, integrating the lessons. But conditional, because her shadow is incompletion and delay; she says yes to the choice that brings wholeness and no to choices that leave the cycle hanging.",
+          "shift_condition": "Yes for the choice that closes the cycle cleanly; no where the decision would prolong loose ends or avoid completion.",
+          "crystal": "selenite"
+        },
+        "timing": {
+          "verdict": "conditional",
+          "reasoning": "The World leans yes on timing *for completion* — the cycle is ripe, the work is integrated, this is the moment to close it well. But conditional, because her reversed shadow is 'almost there but not quite'; she says no if one loose end still genuinely needs finishing before the close.",
+          "shift_condition": "Yes to complete now if the cycle is truly ready; no — finish the last loose end first — if closure would be premature.",
+          "crystal": "lapis"
+        },
+        "move-or-stay": {
+          "verdict": "conditional",
+          "reasoning": "The World leans *move* when the current chapter has reached genuine completion — leaving is the natural threshold into the next cycle (back to The Fool). But conditional, because she says no to leaving while the cycle still has a real loose end; her blessing is on completed closure, not premature exit.",
+          "shift_condition": "Yes-move when this chapter is truly complete and the next is calling; no — finish what remains first — if you would leave mid-cycle.",
+          "crystal": "bloodstone"
+        }
+      }
+    }
+  ]
+}

@@ -10,6 +10,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { relatedHtml } = require('../../_shared/related-tools/related-html');
 
 // ===== 尺寸数据（通用标准，无外部数据依赖）=====
 
@@ -250,7 +251,7 @@ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded'
 <!-- ===== End Bracelet Sizing Guide ===== -->`;
 
 const OUT = path.resolve(__dirname, 'bracelet-size-calculator.html');
-fs.writeFileSync(OUT, html, 'utf8');
+fs.writeFileSync(OUT, html + '\n' + relatedHtml('bracelet-size-calculator'), 'utf8');
 console.log(`✅ Bracelet Size Calculator 生成完成 → ${OUT}`);
 console.log(`   ${(fs.statSync(OUT).size / 1024).toFixed(1)} KB | 计算器 + 测量方法(图占位) + 珠子建议 + FAQ`);
 console.log(`   测量图(S2): 占位中，待 T1-2 生图后替换 .ewb-method-img`);
