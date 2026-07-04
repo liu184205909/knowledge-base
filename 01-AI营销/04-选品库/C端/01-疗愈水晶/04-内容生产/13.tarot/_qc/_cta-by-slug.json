@@ -1,5 +1,5 @@
 {
-  "quartz": {
+  "quartz-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "SEARCH",
@@ -7,7 +7,7 @@
     "status": "OK",
     "no_meaning": true
   },
-  "aventurine": {
+  "aventurine-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/aventurine-meaning/",
     "shop_cta": "CATEGORY",
@@ -15,7 +15,7 @@
     "status": "OK",
     "no_meaning": false
   },
-  "amethyst": {
+  "amethyst-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/amethyst-meaning/",
     "shop_cta": "CATEGORY",
@@ -23,7 +23,7 @@
     "status": "OK",
     "no_meaning": false
   },
-  "citrine": {
+  "citrine-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/citrine-meaning/",
     "shop_cta": "CATEGORY",
@@ -31,7 +31,7 @@
     "status": "OK",
     "no_meaning": false
   },
-  "rose-quartz": {
+  "rose-quartz-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/rose-quartz-meaning/",
     "shop_cta": "CATEGORY",
@@ -39,7 +39,7 @@
     "status": "OK",
     "no_meaning": false
   },
-  "carnelian": {
+  "carnelian-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/carnelian-meaning/",
     "shop_cta": "CATEGORY",
@@ -47,7 +47,7 @@
     "status": "OK",
     "no_meaning": false
   },
-  "moonstone": {
+  "moonstone-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "SEARCH",
@@ -55,7 +55,7 @@
     "status": "OK",
     "no_meaning": true
   },
-  "smoky-quartz": {
+  "smoky-quartz-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/smoky-quartz-meaning/",
     "shop_cta": "SEARCH",
@@ -63,7 +63,7 @@
     "status": "OK",
     "no_meaning": false
   },
-  "selenite": {
+  "selenite-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/selenite-meaning/",
     "shop_cta": "CATEGORY",
@@ -71,7 +71,7 @@
     "status": "OK",
     "no_meaning": false
   },
-  "labradorite": {
+  "labradorite-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/labradorite-meaning/",
     "shop_cta": "CATEGORY",
@@ -79,7 +79,7 @@
     "status": "OK",
     "no_meaning": false
   },
-  "emerald": {
+  "emerald-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "HEALING_JEWELRY",
@@ -87,7 +87,7 @@
     "status": "DOWNGRADE",
     "no_meaning": true
   },
-  "peridot": {
+  "peridot-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "HEALING_JEWELRY",
@@ -95,7 +95,7 @@
     "status": "DOWNGRADE",
     "no_meaning": true
   },
-  "rhodonite": {
+  "rhodonite-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "CATEGORY",
@@ -103,7 +103,7 @@
     "status": "OK",
     "no_meaning": true
   },
-  "red-jasper": {
+  "red-jasper-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/red-jasper-meaning/",
     "shop_cta": "CATEGORY",
@@ -111,7 +111,7 @@
     "status": "OK",
     "no_meaning": false
   },
-  "sodalite": {
+  "sodalite-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "HEALING_JEWELRY",
@@ -119,7 +119,7 @@
     "status": "DOWNGRADE",
     "no_meaning": true
   },
-  "tiger-eye": {
+  "tiger-eye-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/tiger-eye-meaning/",
     "shop_cta": "CATEGORY",
@@ -127,7 +127,7 @@
     "status": "OK",
     "no_meaning": false
   },
-  "lapis": {
+  "lapis-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "HEALING_JEWELRY",
@@ -135,7 +135,7 @@
     "status": "DOWNGRADE",
     "no_meaning": true
   },
-  "hematite": {
+  "hematite-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "CATEGORY",
@@ -143,7 +143,7 @@
     "status": "OK",
     "no_meaning": true
   },
-  "onyx": {
+  "onyx-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "HEALING_JEWELRY",
@@ -151,7 +151,7 @@
     "status": "DOWNGRADE",
     "no_meaning": true
   },
-  "sunstone": {
+  "sunstone-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "HEALING_JEWELRY",
@@ -159,7 +159,7 @@
     "status": "DOWNGRADE",
     "no_meaning": true
   },
-  "obsidian": {
+  "obsidian-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/obsidian-meaning/",
     "shop_cta": "CATEGORY",
@@ -167,7 +167,7 @@
     "status": "OK",
     "no_meaning": false
   },
-  "turquoise": {
+  "turquoise-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "CATEGORY",
@@ -175,7 +175,7 @@
     "status": "OK",
     "no_meaning": true
   },
-  "bloodstone": {
+  "bloodstone-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "CATEGORY",
@@ -183,7 +183,7 @@
     "status": "OK",
     "no_meaning": true
   },
-  "malachite": {
+  "malachite-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/malachite-meaning/",
     "shop_cta": "CATEGORY",
@@ -191,7 +191,7 @@
     "status": "OK",
     "no_meaning": false
   },
-  "garnet": {
+  "garnet-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "HEALING_JEWELRY",
@@ -199,7 +199,7 @@
     "status": "DOWNGRADE",
     "no_meaning": true
   },
-  "fluorite": {
+  "fluorite-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/fluorite-meaning/",
     "shop_cta": "HEALING_JEWELRY",
@@ -207,7 +207,7 @@
     "status": "DOWNGRADE",
     "no_meaning": false
   },
-  "amazonite": {
+  "amazonite-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/amazonite-meaning/",
     "shop_cta": "HEALING_JEWELRY",
@@ -215,7 +215,7 @@
     "status": "DOWNGRADE",
     "no_meaning": false
   },
-  "black-tourmaline": {
+  "black-tourmaline-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/black-tourmaline-meaning/",
     "shop_cta": "CATEGORY",
@@ -223,7 +223,7 @@
     "status": "OK",
     "no_meaning": false
   },
-  "aquamarine": {
+  "aquamarine-meaning": {
     "meaning_cta": "INCLUDE",
     "meaning_url": "/gemstone/aquamarine-meaning/",
     "shop_cta": "HEALING_JEWELRY",
@@ -231,7 +231,7 @@
     "status": "DOWNGRADE",
     "no_meaning": false
   },
-  "lepidolite": {
+  "lepidolite-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "CATEGORY",
@@ -239,7 +239,7 @@
     "status": "OK",
     "no_meaning": true
   },
-  "angelite": {
+  "angelite-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "CATEGORY",
@@ -247,7 +247,7 @@
     "status": "OK",
     "no_meaning": true
   },
-  "rhodochrosite": {
+  "rhodochrosite-meaning": {
     "meaning_cta": "OMIT",
     "meaning_url": null,
     "shop_cta": "HEALING_JEWELRY",

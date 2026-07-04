@@ -1,0 +1,1525 @@
+{
+  "_meta": {
+    "purpose": "是与否 100 篇 hero 生图清单（slug 索引）",
+    "framework": "模板-Tarot-是与否框架.md",
+    "data_sources": [
+      "configs/yes-no-knowledge.json (verdict + crystal)",
+      "articles/is-{card}-yes-or-no-{question}.md (已生产 100 篇)"
+    ],
+    "hero_prompt_spec": {
+      "size": "1536x1024 → sharp resize 1536x864 webp",
+      "style_alignment": "scripts/generate-scenario-images.js (站点塔罗 hero 一致风格)",
+      "elements": [
+        "Rider-Waite 牌标志性画面（22 Major 内置映射表）",
+        "verdict 符号（strong-yes=绿色✓ / conditional=黄色? / strong-no=红色✗）",
+        "问题类型图标（love=心 / career=公文包 / decision=分叉路 / timing=时钟 / move-or-stay=房子）",
+        "best_overall 水晶 gemstone（底部）",
+        "Eastern-inspired Tibetan 调性 + sacred geometry + deep indigo"
+      ]
+    },
+    "crystal_slug_rule": "全部带 -meaning 后缀对齐 390 库",
+    "total_articles": 100
+  },
+  "articles": {
+    "is-the-fool-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Fool (The Innocent Pioneer) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a youthful figure poised at the edge of a cliff, a small white dog leaping at his heels, a white rose in his left hand and a wanderer's staff in his right, the sun high and bright behind the mountains. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-fool-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "the-fool",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-fool-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Fool (The Innocent Pioneer) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a youthful figure poised at the edge of a cliff, a small white dog leaping at his heels, a white rose in his left hand and a wanderer's staff in his right, the sun high and bright behind the mountains. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Citrine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-fool-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "the-fool",
+      "crystals": [
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine"
+        }
+      ]
+    },
+    "is-the-fool-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Fool (The Innocent Pioneer) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a youthful figure poised at the edge of a cliff, a small white dog leaping at his heels, a white rose in his left hand and a wanderer's staff in his right, the sun high and bright behind the mountains. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-fool-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "the-fool",
+      "crystals": [
+        {
+          "slug": "quartz-meaning",
+          "name": "Quartz"
+        }
+      ]
+    },
+    "is-the-fool-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Fool (The Innocent Pioneer) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a youthful figure poised at the edge of a cliff, a small white dog leaping at his heels, a white rose in his left hand and a wanderer's staff in his right, the sun high and bright behind the mountains. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Aventurine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-fool-yes-or-no-timing.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "timing",
+      "card": "the-fool",
+      "crystals": [
+        {
+          "slug": "aventurine-meaning",
+          "name": "Aventurine"
+        }
+      ]
+    },
+    "is-the-fool-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Fool (The Innocent Pioneer) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a youthful figure poised at the edge of a cliff, a small white dog leaping at his heels, a white rose in his left hand and a wanderer's staff in his right, the sun high and bright behind the mountains. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Moonstone crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-fool-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "the-fool",
+      "crystals": [
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone"
+        }
+      ]
+    },
+    "is-the-magician-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Magician (The Manifestor) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a magus standing before a table bearing a cup, sword, wand and pentacle, one hand raised with a wand toward the sky and the other pointing to the earth, an infinity symbol above his brow and a garden of roses and lilies before him. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Carnelian crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-magician-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "the-magician",
+      "crystals": [
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian"
+        }
+      ]
+    },
+    "is-the-magician-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Magician (The Manifestor) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a magus standing before a table bearing a cup, sword, wand and pentacle, one hand raised with a wand toward the sky and the other pointing to the earth, an infinity symbol above his brow and a garden of roses and lilies before him. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Citrine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-magician-yes-or-no-career.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "career",
+      "card": "the-magician",
+      "crystals": [
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine"
+        }
+      ]
+    },
+    "is-the-magician-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Magician (The Manifestor) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a magus standing before a table bearing a cup, sword, wand and pentacle, one hand raised with a wand toward the sky and the other pointing to the earth, an infinity symbol above his brow and a garden of roses and lilies before him. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-magician-yes-or-no-decision.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "decision",
+      "card": "the-magician",
+      "crystals": [
+        {
+          "slug": "quartz-meaning",
+          "name": "Quartz"
+        }
+      ]
+    },
+    "is-the-magician-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Magician (The Manifestor) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a magus standing before a table bearing a cup, sword, wand and pentacle, one hand raised with a wand toward the sky and the other pointing to the earth, an infinity symbol above his brow and a garden of roses and lilies before him. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Tiger Eye crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-magician-yes-or-no-timing.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "timing",
+      "card": "the-magician",
+      "crystals": [
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger Eye"
+        }
+      ]
+    },
+    "is-the-magician-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Magician (The Manifestor) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a magus standing before a table bearing a cup, sword, wand and pentacle, one hand raised with a wand toward the sky and the other pointing to the earth, an infinity symbol above his brow and a garden of roses and lilies before him. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Citrine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-magician-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "the-magician",
+      "crystals": [
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine"
+        }
+      ]
+    },
+    "is-the-high-priestess-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The High Priestess (The Intuitive) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a serene priestess seated between two pillars (one dark, one light), a scroll inscribed TORA on her lap, a solar cross at her breast, pomegranates behind her like a veil, a crescent moon at her feet. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Moonstone crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-high-priestess-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "the-high-priestess",
+      "crystals": [
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone"
+        }
+      ]
+    },
+    "is-the-high-priestess-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The High Priestess (The Intuitive) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a serene priestess seated between two pillars (one dark, one light), a scroll inscribed TORA on her lap, a solar cross at her breast, pomegranates behind her like a veil, a crescent moon at her feet. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Selenite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-high-priestess-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "the-high-priestess",
+      "crystals": [
+        {
+          "slug": "selenite-meaning",
+          "name": "Selenite"
+        }
+      ]
+    },
+    "is-the-high-priestess-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The High Priestess (The Intuitive) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a serene priestess seated between two pillars (one dark, one light), a scroll inscribed TORA on her lap, a solar cross at her breast, pomegranates behind her like a veil, a crescent moon at her feet. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Labradorite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-high-priestess-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "the-high-priestess",
+      "crystals": [
+        {
+          "slug": "labradorite-meaning",
+          "name": "Labradorite"
+        }
+      ]
+    },
+    "is-the-high-priestess-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The High Priestess (The Intuitive) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a serene priestess seated between two pillars (one dark, one light), a scroll inscribed TORA on her lap, a solar cross at her breast, pomegranates behind her like a veil, a crescent moon at her feet. To the upper right of the card visual, a large luminous crimson cross (X) rendered large, crisp and clearly legible in luminous crimson red, signifying a strong no verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Moonstone crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-high-priestess-yes-or-no-timing.webp"
+      },
+      "verdict": "strong-no",
+      "question": "timing",
+      "card": "the-high-priestess",
+      "crystals": [
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone"
+        }
+      ]
+    },
+    "is-the-high-priestess-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The High Priestess (The Intuitive) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a serene priestess seated between two pillars (one dark, one light), a scroll inscribed TORA on her lap, a solar cross at her breast, pomegranates behind her like a veil, a crescent moon at her feet. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Moonstone crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-high-priestess-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "the-high-priestess",
+      "crystals": [
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone"
+        }
+      ]
+    },
+    "is-the-empress-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Empress (The Nurturer) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a crowned empress seated on a cushioned throne in a lush wheat field, twelve stars over her head, a scepter in her right hand, a shield bearing the Venus symbol at her feet, trees and a flowing stream behind her. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-empress-yes-or-no-love.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "love",
+      "card": "the-empress",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-empress-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Empress (The Nurturer) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a crowned empress seated on a cushioned throne in a lush wheat field, twelve stars over her head, a scepter in her right hand, a shield bearing the Venus symbol at her feet, trees and a flowing stream behind her. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Aventurine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-empress-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "the-empress",
+      "crystals": [
+        {
+          "slug": "aventurine-meaning",
+          "name": "Aventurine"
+        }
+      ]
+    },
+    "is-the-empress-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Empress (The Nurturer) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a crowned empress seated on a cushioned throne in a lush wheat field, twelve stars over her head, a scepter in her right hand, a shield bearing the Venus symbol at her feet, trees and a flowing stream behind her. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Aventurine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-empress-yes-or-no-decision.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "decision",
+      "card": "the-empress",
+      "crystals": [
+        {
+          "slug": "aventurine-meaning",
+          "name": "Aventurine"
+        }
+      ]
+    },
+    "is-the-empress-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Empress (The Nurturer) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a crowned empress seated on a cushioned throne in a lush wheat field, twelve stars over her head, a scepter in her right hand, a shield bearing the Venus symbol at her feet, trees and a flowing stream behind her. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Peridot crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-empress-yes-or-no-timing.webp"
+      },
+      "verdict": "conditional",
+      "question": "timing",
+      "card": "the-empress",
+      "crystals": [
+        {
+          "slug": "peridot-meaning",
+          "name": "Peridot"
+        }
+      ]
+    },
+    "is-the-empress-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Empress (The Nurturer) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a crowned empress seated on a cushioned throne in a lush wheat field, twelve stars over her head, a scepter in her right hand, a shield bearing the Venus symbol at her feet, trees and a flowing stream behind her. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rhodonite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-empress-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "move-or-stay",
+      "card": "the-empress",
+      "crystals": [
+        {
+          "slug": "rhodonite-meaning",
+          "name": "Rhodonite"
+        }
+      ]
+    },
+    "is-the-emperor-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Emperor (The Sovereign) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a bearded emperor seated on a stone throne adorned with ram heads, a golden scepter in his right hand and an orange globe under his left arm, his armor visible beneath his red robe, a barren mountain range behind him. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-emperor-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "the-emperor",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-emperor-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Emperor (The Sovereign) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a bearded emperor seated on a stone throne adorned with ram heads, a golden scepter in his right hand and an orange globe under his left arm, his armor visible beneath his red robe, a barren mountain range behind him. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Red Jasper crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-emperor-yes-or-no-career.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "career",
+      "card": "the-emperor",
+      "crystals": [
+        {
+          "slug": "red-jasper-meaning",
+          "name": "Red Jasper"
+        }
+      ]
+    },
+    "is-the-emperor-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Emperor (The Sovereign) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a bearded emperor seated on a stone throne adorned with ram heads, a golden scepter in his right hand and an orange globe under his left arm, his armor visible beneath his red robe, a barren mountain range behind him. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Red Jasper crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-emperor-yes-or-no-decision.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "decision",
+      "card": "the-emperor",
+      "crystals": [
+        {
+          "slug": "red-jasper-meaning",
+          "name": "Red Jasper"
+        }
+      ]
+    },
+    "is-the-emperor-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Emperor (The Sovereign) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a bearded emperor seated on a stone throne adorned with ram heads, a golden scepter in his right hand and an orange globe under his left arm, his armor visible beneath his red robe, a barren mountain range behind him. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Tiger Eye crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-emperor-yes-or-no-timing.webp"
+      },
+      "verdict": "conditional",
+      "question": "timing",
+      "card": "the-emperor",
+      "crystals": [
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger Eye"
+        }
+      ]
+    },
+    "is-the-emperor-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Emperor (The Sovereign) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a bearded emperor seated on a stone throne adorned with ram heads, a golden scepter in his right hand and an orange globe under his left arm, his armor visible beneath his red robe, a barren mountain range behind him. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Tiger Eye crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-emperor-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "the-emperor",
+      "crystals": [
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger Eye"
+        }
+      ]
+    },
+    "is-the-hierophant-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Hierophant (The Teacher) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a robed pontiff seated between two temple pillars, raising his right hand in blessing with two acolytes kneeling before him in tonsure, his triple crown gleaming, crossed keys at his feet. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-hierophant-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "the-hierophant",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-hierophant-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Hierophant (The Teacher) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a robed pontiff seated between two temple pillars, raising his right hand in blessing with two acolytes kneeling before him in tonsure, his triple crown gleaming, crossed keys at his feet. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Amethyst crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-hierophant-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "the-hierophant",
+      "crystals": [
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst"
+        }
+      ]
+    },
+    "is-the-hierophant-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Hierophant (The Teacher) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a robed pontiff seated between two temple pillars, raising his right hand in blessing with two acolytes kneeling before him in tonsure, his triple crown gleaming, crossed keys at his feet. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Lapis crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-hierophant-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "the-hierophant",
+      "crystals": [
+        {
+          "slug": "lapis-meaning",
+          "name": "Lapis"
+        }
+      ]
+    },
+    "is-the-hierophant-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Hierophant (The Teacher) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a robed pontiff seated between two temple pillars, raising his right hand in blessing with two acolytes kneeling before him in tonsure, his triple crown gleaming, crossed keys at his feet. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Sodalite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-hierophant-yes-or-no-timing.webp"
+      },
+      "verdict": "conditional",
+      "question": "timing",
+      "card": "the-hierophant",
+      "crystals": [
+        {
+          "slug": "sodalite-meaning",
+          "name": "Sodalite"
+        }
+      ]
+    },
+    "is-the-hierophant-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Hierophant (The Teacher) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a robed pontiff seated between two temple pillars, raising his right hand in blessing with two acolytes kneeling before him in tonsure, his triple crown gleaming, crossed keys at his feet. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Lapis crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-hierophant-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "the-hierophant",
+      "crystals": [
+        {
+          "slug": "lapis-meaning",
+          "name": "Lapis"
+        }
+      ]
+    },
+    "is-the-lovers-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Lovers (The Choosers) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a man and a woman beneath a winged angel with outspread wings and a radiant sun, the woman before a tree of apples with a serpent coiled around its trunk, the man before a tree of flaming torches, a luminous cloud-draped mountain behind. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rhodonite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-lovers-yes-or-no-love.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "love",
+      "card": "the-lovers",
+      "crystals": [
+        {
+          "slug": "rhodonite-meaning",
+          "name": "Rhodonite"
+        }
+      ]
+    },
+    "is-the-lovers-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Lovers (The Choosers) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a man and a woman beneath a winged angel with outspread wings and a radiant sun, the woman before a tree of apples with a serpent coiled around its trunk, the man before a tree of flaming torches, a luminous cloud-draped mountain behind. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-lovers-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "the-lovers",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-lovers-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Lovers (The Choosers) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a man and a woman beneath a winged angel with outspread wings and a radiant sun, the woman before a tree of apples with a serpent coiled around its trunk, the man before a tree of flaming torches, a luminous cloud-draped mountain behind. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Malachite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-lovers-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "the-lovers",
+      "crystals": [
+        {
+          "slug": "malachite-meaning",
+          "name": "Malachite"
+        }
+      ]
+    },
+    "is-the-lovers-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Lovers (The Choosers) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a man and a woman beneath a winged angel with outspread wings and a radiant sun, the woman before a tree of apples with a serpent coiled around its trunk, the man before a tree of flaming torches, a luminous cloud-draped mountain behind. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rhodochrosite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-lovers-yes-or-no-timing.webp"
+      },
+      "verdict": "conditional",
+      "question": "timing",
+      "card": "the-lovers",
+      "crystals": [
+        {
+          "slug": "rhodochrosite-meaning",
+          "name": "Rhodochrosite"
+        }
+      ]
+    },
+    "is-the-lovers-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Lovers (The Choosers) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a man and a woman beneath a winged angel with outspread wings and a radiant sun, the woman before a tree of apples with a serpent coiled around its trunk, the man before a tree of flaming torches, a luminous cloud-draped mountain behind. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Malachite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-lovers-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "the-lovers",
+      "crystals": [
+        {
+          "slug": "malachite-meaning",
+          "name": "Malachite"
+        }
+      ]
+    },
+    "is-the-chariot-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Chariot (The Victor) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a warrior in a crown of stars standing within a canopy-decked chariot drawn by two sphinxes (one black, one white) facing opposite directions, a crescent moon on his shoulders and a scepter in his hand, a walled city behind him. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-chariot-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "the-chariot",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-chariot-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Chariot (The Victor) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a warrior in a crown of stars standing within a canopy-decked chariot drawn by two sphinxes (one black, one white) facing opposite directions, a crescent moon on his shoulders and a scepter in his hand, a walled city behind him. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Carnelian crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-chariot-yes-or-no-career.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "career",
+      "card": "the-chariot",
+      "crystals": [
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian"
+        }
+      ]
+    },
+    "is-the-chariot-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Chariot (The Victor) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a warrior in a crown of stars standing within a canopy-decked chariot drawn by two sphinxes (one black, one white) facing opposite directions, a crescent moon on his shoulders and a scepter in his hand, a walled city behind him. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Hematite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-chariot-yes-or-no-decision.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "decision",
+      "card": "the-chariot",
+      "crystals": [
+        {
+          "slug": "hematite-meaning",
+          "name": "Hematite"
+        }
+      ]
+    },
+    "is-the-chariot-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Chariot (The Victor) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a warrior in a crown of stars standing within a canopy-decked chariot drawn by two sphinxes (one black, one white) facing opposite directions, a crescent moon on his shoulders and a scepter in his hand, a walled city behind him. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Tiger Eye crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-chariot-yes-or-no-timing.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "timing",
+      "card": "the-chariot",
+      "crystals": [
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger Eye"
+        }
+      ]
+    },
+    "is-the-chariot-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Chariot (The Victor) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a warrior in a crown of stars standing within a canopy-decked chariot drawn by two sphinxes (one black, one white) facing opposite directions, a crescent moon on his shoulders and a scepter in his hand, a walled city behind him. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Carnelian crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-chariot-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "move-or-stay",
+      "card": "the-chariot",
+      "crystals": [
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian"
+        }
+      ]
+    },
+    "is-strength-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Strength (The Gentle Power) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a serene woman in a flowing white robe gently closing the jaws of a golden-maned lion with her bare hands, an infinity symbol above her head, wildflowers and distant green mountains in the background. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-strength-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "strength",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-strength-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Strength (The Gentle Power) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a serene woman in a flowing white robe gently closing the jaws of a golden-maned lion with her bare hands, an infinity symbol above her head, wildflowers and distant green mountains in the background. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Sunstone crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-strength-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "strength",
+      "crystals": [
+        {
+          "slug": "sunstone-meaning",
+          "name": "Sunstone"
+        }
+      ]
+    },
+    "is-strength-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Strength (The Gentle Power) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a serene woman in a flowing white robe gently closing the jaws of a golden-maned lion with her bare hands, an infinity symbol above her head, wildflowers and distant green mountains in the background. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Tiger Eye crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-strength-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "strength",
+      "crystals": [
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger Eye"
+        }
+      ]
+    },
+    "is-strength-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Strength (The Gentle Power) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a serene woman in a flowing white robe gently closing the jaws of a golden-maned lion with her bare hands, an infinity symbol above her head, wildflowers and distant green mountains in the background. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Carnelian crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-strength-yes-or-no-timing.webp"
+      },
+      "verdict": "conditional",
+      "question": "timing",
+      "card": "strength",
+      "crystals": [
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian"
+        }
+      ]
+    },
+    "is-strength-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Strength (The Gentle Power) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a serene woman in a flowing white robe gently closing the jaws of a golden-maned lion with her bare hands, an infinity symbol above her head, wildflowers and distant green mountains in the background. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Tiger Eye crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-strength-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "strength",
+      "crystals": [
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger Eye"
+        }
+      ]
+    },
+    "is-the-hermit-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Hermit (The Seeker) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: an aged robed hermit standing on an icy peak, holding aloft a six-pointed lantern that glows with an inner star, his staff in his other hand, head bowed in contemplation. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-hermit-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "the-hermit",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-hermit-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Hermit (The Seeker) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: an aged robed hermit standing on an icy peak, holding aloft a six-pointed lantern that glows with an inner star, his staff in his other hand, head bowed in contemplation. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Labradorite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-hermit-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "the-hermit",
+      "crystals": [
+        {
+          "slug": "labradorite-meaning",
+          "name": "Labradorite"
+        }
+      ]
+    },
+    "is-the-hermit-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Hermit (The Seeker) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: an aged robed hermit standing on an icy peak, holding aloft a six-pointed lantern that glows with an inner star, his staff in his other hand, head bowed in contemplation. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Amethyst crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-hermit-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "the-hermit",
+      "crystals": [
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst"
+        }
+      ]
+    },
+    "is-wheel-of-fortune-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Wheel Of Fortune (The Turning) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a great spoked wheel inscribed with the letters TARO and Hebrew letters, a sphinx perched atop it, a snake descending on the left and Anubis rising on the right, the four winged creatures of the evangelists reading books in the corners. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-wheel-of-fortune-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "wheel-of-fortune",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-wheel-of-fortune-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Wheel Of Fortune (The Turning) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a great spoked wheel inscribed with the letters TARO and Hebrew letters, a sphinx perched atop it, a snake descending on the left and Anubis rising on the right, the four winged creatures of the evangelists reading books in the corners. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Aventurine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-wheel-of-fortune-yes-or-no-career.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "career",
+      "card": "wheel-of-fortune",
+      "crystals": [
+        {
+          "slug": "aventurine-meaning",
+          "name": "Aventurine"
+        }
+      ]
+    },
+    "is-wheel-of-fortune-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Wheel Of Fortune (The Turning) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a great spoked wheel inscribed with the letters TARO and Hebrew letters, a sphinx perched atop it, a snake descending on the left and Anubis rising on the right, the four winged creatures of the evangelists reading books in the corners. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Turquoise crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-wheel-of-fortune-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "wheel-of-fortune",
+      "crystals": [
+        {
+          "slug": "turquoise-meaning",
+          "name": "Turquoise"
+        }
+      ]
+    },
+    "is-wheel-of-fortune-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Wheel Of Fortune (The Turning) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a great spoked wheel inscribed with the letters TARO and Hebrew letters, a sphinx perched atop it, a snake descending on the left and Anubis rising on the right, the four winged creatures of the evangelists reading books in the corners. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Aventurine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-wheel-of-fortune-yes-or-no-timing.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "timing",
+      "card": "wheel-of-fortune",
+      "crystals": [
+        {
+          "slug": "aventurine-meaning",
+          "name": "Aventurine"
+        }
+      ]
+    },
+    "is-wheel-of-fortune-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Wheel Of Fortune (The Turning) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a great spoked wheel inscribed with the letters TARO and Hebrew letters, a sphinx perched atop it, a snake descending on the left and Anubis rising on the right, the four winged creatures of the evangelists reading books in the corners. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Turquoise crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-wheel-of-fortune-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "wheel-of-fortune",
+      "crystals": [
+        {
+          "slug": "turquoise-meaning",
+          "name": "Turquoise"
+        }
+      ]
+    },
+    "is-justice-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Justice (The Truth-Seeker) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a crowned sovereign seated on a stone throne between two pillars, holding an upright sword in her right hand and balanced scales in her left, a purple veil draped behind her. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-justice-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "justice",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-justice-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Justice (The Truth-Seeker) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a crowned sovereign seated on a stone throne between two pillars, holding an upright sword in her right hand and balanced scales in her left, a purple veil draped behind her. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Lapis crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-justice-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "justice",
+      "crystals": [
+        {
+          "slug": "lapis-meaning",
+          "name": "Lapis"
+        }
+      ]
+    },
+    "is-justice-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Justice (The Truth-Seeker) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a crowned sovereign seated on a stone throne between two pillars, holding an upright sword in her right hand and balanced scales in her left, a purple veil draped behind her. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Sodalite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-justice-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "justice",
+      "crystals": [
+        {
+          "slug": "sodalite-meaning",
+          "name": "Sodalite"
+        }
+      ]
+    },
+    "is-justice-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Justice (The Truth-Seeker) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a crowned sovereign seated on a stone throne between two pillars, holding an upright sword in her right hand and balanced scales in her left, a purple veil draped behind her. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Hematite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-justice-yes-or-no-timing.webp"
+      },
+      "verdict": "conditional",
+      "question": "timing",
+      "card": "justice",
+      "crystals": [
+        {
+          "slug": "hematite-meaning",
+          "name": "Hematite"
+        }
+      ]
+    },
+    "is-justice-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Justice (The Truth-Seeker) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a crowned sovereign seated on a stone throne between two pillars, holding an upright sword in her right hand and balanced scales in her left, a purple veil draped behind her. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Lapis crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-justice-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "justice",
+      "crystals": [
+        {
+          "slug": "lapis-meaning",
+          "name": "Lapis"
+        }
+      ]
+    },
+    "is-the-hanged-man-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Hanged Man (The Surrendered) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a serene figure suspended upside down by one ankle from a T-shaped gallows, a radiant halo around his head, his free leg crossed behind the bound one, his hands behind his back, leafy green branches growing from the gallows wood. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-hanged-man-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "the-hanged-man",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-hanged-man-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Hanged Man (The Surrendered) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a serene figure suspended upside down by one ankle from a T-shaped gallows, a radiant halo around his head, his free leg crossed behind the bound one, his hands behind his back, leafy green branches growing from the gallows wood. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Selenite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-hanged-man-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "the-hanged-man",
+      "crystals": [
+        {
+          "slug": "selenite-meaning",
+          "name": "Selenite"
+        }
+      ]
+    },
+    "is-the-hanged-man-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Hanged Man (The Surrendered) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a serene figure suspended upside down by one ankle from a T-shaped gallows, a radiant halo around his head, his free leg crossed behind the bound one, his hands behind his back, leafy green branches growing from the gallows wood. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Amethyst crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-hanged-man-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "the-hanged-man",
+      "crystals": [
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst"
+        }
+      ]
+    },
+    "is-death-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Death (The Transformer) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a black-armored skeleton riding a pale white horse, bearing a banner emblazoned with a white rose, a fallen king at his feet, a bishop pleading, a child watching, and the sun rising between two towers in the distance. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-death-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "death",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-death-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Death (The Transformer) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a black-armored skeleton riding a pale white horse, bearing a banner emblazoned with a white rose, a fallen king at his feet, a bishop pleading, a child watching, and the sun rising between two towers in the distance. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Obsidian crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-death-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "death",
+      "crystals": [
+        {
+          "slug": "obsidian-meaning",
+          "name": "Obsidian"
+        }
+      ]
+    },
+    "is-death-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Death (The Transformer) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a black-armored skeleton riding a pale white horse, bearing a banner emblazoned with a white rose, a fallen king at his feet, a bishop pleading, a child watching, and the sun rising between two towers in the distance. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Malachite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-death-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "death",
+      "crystals": [
+        {
+          "slug": "malachite-meaning",
+          "name": "Malachite"
+        }
+      ]
+    },
+    "is-death-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Death (The Transformer) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a black-armored skeleton riding a pale white horse, bearing a banner emblazoned with a white rose, a fallen king at his feet, a bishop pleading, a child watching, and the sun rising between two towers in the distance. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Garnet crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-death-yes-or-no-timing.webp"
+      },
+      "verdict": "conditional",
+      "question": "timing",
+      "card": "death",
+      "crystals": [
+        {
+          "slug": "garnet-meaning",
+          "name": "Garnet"
+        }
+      ]
+    },
+    "is-death-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Death (The Transformer) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a black-armored skeleton riding a pale white horse, bearing a banner emblazoned with a white rose, a fallen king at his feet, a bishop pleading, a child watching, and the sun rising between two towers in the distance. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Smoky Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-death-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "death",
+      "crystals": [
+        {
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz"
+        }
+      ]
+    },
+    "is-temperance-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Temperance (The Alchemist) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a winged angel in a flowing white robe with a solar crown, standing with one foot in a pool and one on the rocks, pouring liquid between two golden cups, a path leading to twin peaks crowned with a glowing radiance. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-temperance-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "temperance",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-temperance-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Temperance (The Alchemist) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a winged angel in a flowing white robe with a solar crown, standing with one foot in a pool and one on the rocks, pouring liquid between two golden cups, a path leading to twin peaks crowned with a glowing radiance. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Fluorite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-temperance-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "temperance",
+      "crystals": [
+        {
+          "slug": "fluorite-meaning",
+          "name": "Fluorite"
+        }
+      ]
+    },
+    "is-temperance-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Temperance (The Alchemist) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a winged angel in a flowing white robe with a solar crown, standing with one foot in a pool and one on the rocks, pouring liquid between two golden cups, a path leading to twin peaks crowned with a glowing radiance. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Amazonite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-temperance-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "temperance",
+      "crystals": [
+        {
+          "slug": "amazonite-meaning",
+          "name": "Amazonite"
+        }
+      ]
+    },
+    "is-temperance-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Temperance (The Alchemist) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a winged angel in a flowing white robe with a solar crown, standing with one foot in a pool and one on the rocks, pouring liquid between two golden cups, a path leading to twin peaks crowned with a glowing radiance. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Amethyst crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-temperance-yes-or-no-timing.webp"
+      },
+      "verdict": "conditional",
+      "question": "timing",
+      "card": "temperance",
+      "crystals": [
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst"
+        }
+      ]
+    },
+    "is-temperance-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Temperance (The Alchemist) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a winged angel in a flowing white robe with a solar crown, standing with one foot in a pool and one on the rocks, pouring liquid between two golden cups, a path leading to twin peaks crowned with a glowing radiance. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Amazonite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-temperance-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "temperance",
+      "crystals": [
+        {
+          "slug": "amazonite-meaning",
+          "name": "Amazonite"
+        }
+      ]
+    },
+    "is-the-devil-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Devil (The Shadow-Knower) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a horned goat-headed demon perched on a black pillar, an inverted pentagram above its brow, a chained naked man and woman at its feet with small horns and tails, a black cave and an inverted torch behind. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-devil-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "the-devil",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-devil-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Devil (The Shadow-Knower) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a horned goat-headed demon perched on a black pillar, an inverted pentagram above its brow, a chained naked man and woman at its feet with small horns and tails, a black cave and an inverted torch behind. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Black Tourmaline crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-devil-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "the-devil",
+      "crystals": [
+        {
+          "slug": "black-tourmaline-meaning",
+          "name": "Black Tourmaline"
+        }
+      ]
+    },
+    "is-the-devil-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Devil (The Shadow-Knower) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a horned goat-headed demon perched on a black pillar, an inverted pentagram above its brow, a chained naked man and woman at its feet with small horns and tails, a black cave and an inverted torch behind. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Smoky Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-devil-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "the-devil",
+      "crystals": [
+        {
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz"
+        }
+      ]
+    },
+    "is-the-devil-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Devil (The Shadow-Knower) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a horned goat-headed demon perched on a black pillar, an inverted pentagram above its brow, a chained naked man and woman at its feet with small horns and tails, a black cave and an inverted torch behind. To the upper right of the card visual, a large luminous crimson cross (X) rendered large, crisp and clearly legible in luminous crimson red, signifying a strong no verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Onyx crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-devil-yes-or-no-timing.webp"
+      },
+      "verdict": "strong-no",
+      "question": "timing",
+      "card": "the-devil",
+      "crystals": [
+        {
+          "slug": "onyx-meaning",
+          "name": "Onyx"
+        }
+      ]
+    },
+    "is-the-tower-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Tower (The Awakener) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a tall stone tower struck by a lightning bolt, its crown shattering into flames as two figures (one crowned) tumble from the windows, twenty-two flames shaped like Hebrew letters leaping around the impact. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-tower-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "the-tower",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-tower-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Tower (The Awakener) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a tall stone tower struck by a lightning bolt, its crown shattering into flames as two figures (one crowned) tumble from the windows, twenty-two flames shaped like Hebrew letters leaping around the impact. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Smoky Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-tower-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "the-tower",
+      "crystals": [
+        {
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz"
+        }
+      ]
+    },
+    "is-the-tower-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Tower (The Awakener) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a tall stone tower struck by a lightning bolt, its crown shattering into flames as two figures (one crowned) tumble from the windows, twenty-two flames shaped like Hebrew letters leaping around the impact. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Labradorite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-tower-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "the-tower",
+      "crystals": [
+        {
+          "slug": "labradorite-meaning",
+          "name": "Labradorite"
+        }
+      ]
+    },
+    "is-the-tower-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Tower (The Awakener) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a tall stone tower struck by a lightning bolt, its crown shattering into flames as two figures (one crowned) tumble from the windows, twenty-two flames shaped like Hebrew letters leaping around the impact. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Hematite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-tower-yes-or-no-timing.webp"
+      },
+      "verdict": "conditional",
+      "question": "timing",
+      "card": "the-tower",
+      "crystals": [
+        {
+          "slug": "hematite-meaning",
+          "name": "Hematite"
+        }
+      ]
+    },
+    "is-the-tower-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Tower (The Awakener) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a tall stone tower struck by a lightning bolt, its crown shattering into flames as two figures (one crowned) tumble from the windows, twenty-two flames shaped like Hebrew letters leaping around the impact. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Black Tourmaline crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-tower-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "the-tower",
+      "crystals": [
+        {
+          "slug": "black-tourmaline-meaning",
+          "name": "Black Tourmaline"
+        }
+      ]
+    },
+    "is-the-star-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Star (The Hopeful) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a serene nude maiden kneeling at the edge of a pool, pouring water from two pitchers (one onto the land into a stream, one back into the pool), a great eight-pointed star above with seven smaller stars scattered around, a bird perched on a distant tree. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-star-yes-or-no-love.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "love",
+      "card": "the-star",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-star-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Star (The Hopeful) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a serene nude maiden kneeling at the edge of a pool, pouring water from two pitchers (one onto the land into a stream, one back into the pool), a great eight-pointed star above with seven smaller stars scattered around, a bird perched on a distant tree. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Aquamarine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-star-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "the-star",
+      "crystals": [
+        {
+          "slug": "aquamarine-meaning",
+          "name": "Aquamarine"
+        }
+      ]
+    },
+    "is-the-star-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Star (The Hopeful) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a serene nude maiden kneeling at the edge of a pool, pouring water from two pitchers (one onto the land into a stream, one back into the pool), a great eight-pointed star above with seven smaller stars scattered around, a bird perched on a distant tree. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Selenite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-star-yes-or-no-decision.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "decision",
+      "card": "the-star",
+      "crystals": [
+        {
+          "slug": "selenite-meaning",
+          "name": "Selenite"
+        }
+      ]
+    },
+    "is-the-star-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Star (The Hopeful) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a serene nude maiden kneeling at the edge of a pool, pouring water from two pitchers (one onto the land into a stream, one back into the pool), a great eight-pointed star above with seven smaller stars scattered around, a bird perched on a distant tree. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Moonstone crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-star-yes-or-no-timing.webp"
+      },
+      "verdict": "conditional",
+      "question": "timing",
+      "card": "the-star",
+      "crystals": [
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone"
+        }
+      ]
+    },
+    "is-the-star-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Star (The Hopeful) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a serene nude maiden kneeling at the edge of a pool, pouring water from two pitchers (one onto the land into a stream, one back into the pool), a great eight-pointed star above with seven smaller stars scattered around, a bird perched on a distant tree. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Aquamarine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-star-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "the-star",
+      "crystals": [
+        {
+          "slug": "aquamarine-meaning",
+          "name": "Aquamarine"
+        }
+      ]
+    },
+    "is-the-moon-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Moon (The Dreamer) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a full moon with a radiant human face hanging between two towers, a crustacean crawling up from a pool in the foreground, a wolf and a dog howling on either side of a winding path, drops of dew falling like Hebrew yod letters. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-moon-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "the-moon",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-moon-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Moon (The Dreamer) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a full moon with a radiant human face hanging between two towers, a crustacean crawling up from a pool in the foreground, a wolf and a dog howling on either side of a winding path, drops of dew falling like Hebrew yod letters. To the upper right of the card visual, a large luminous crimson cross (X) rendered large, crisp and clearly legible in luminous crimson red, signifying a strong no verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Labradorite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-moon-yes-or-no-decision.webp"
+      },
+      "verdict": "strong-no",
+      "question": "decision",
+      "card": "the-moon",
+      "crystals": [
+        {
+          "slug": "labradorite-meaning",
+          "name": "Labradorite"
+        }
+      ]
+    },
+    "is-the-sun-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Sun (The Radiant) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a radiant sun with a cheerful human face shining upon a naked joyful child riding a white horse, surrounded by a wall of green sunflowers, four sunflowers bending toward the child overhead. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-sun-yes-or-no-love.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "love",
+      "card": "the-sun",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-sun-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Sun (The Radiant) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a radiant sun with a cheerful human face shining upon a naked joyful child riding a white horse, surrounded by a wall of green sunflowers, four sunflowers bending toward the child overhead. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Citrine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-sun-yes-or-no-career.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "career",
+      "card": "the-sun",
+      "crystals": [
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine"
+        }
+      ]
+    },
+    "is-the-sun-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Sun (The Radiant) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a radiant sun with a cheerful human face shining upon a naked joyful child riding a white horse, surrounded by a wall of green sunflowers, four sunflowers bending toward the child overhead. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Sunstone crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-sun-yes-or-no-decision.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "decision",
+      "card": "the-sun",
+      "crystals": [
+        {
+          "slug": "sunstone-meaning",
+          "name": "Sunstone"
+        }
+      ]
+    },
+    "is-the-sun-yes-or-no-timing": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Sun (The Radiant) interpreted in a Yes-or-No Timing reading context. Central Rider-Waite imagery: a radiant sun with a cheerful human face shining upon a naked joyful child riding a white horse, surrounded by a wall of green sunflowers, four sunflowers bending toward the child overhead. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous clock icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Carnelian crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-sun-yes-or-no-timing.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "timing",
+      "card": "the-sun",
+      "crystals": [
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian"
+        }
+      ]
+    },
+    "is-the-sun-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The Sun (The Radiant) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a radiant sun with a cheerful human face shining upon a naked joyful child riding a white horse, surrounded by a wall of green sunflowers, four sunflowers bending toward the child overhead. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Sunstone crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-sun-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "move-or-stay",
+      "card": "the-sun",
+      "crystals": [
+        {
+          "slug": "sunstone-meaning",
+          "name": "Sunstone"
+        }
+      ]
+    },
+    "is-judgment-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Judgment (The Awakened) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a winged angel in a long trumpet sounding the call from a cloud, a cross-bearing banner streaming from the horn, three luminous figures in flowing white robes rising with arms outstretched from rectangular stone sarcophagi in the mountains below. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-judgment-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "judgment",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-judgment-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Judgment (The Awakened) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a winged angel in a long trumpet sounding the call from a cloud, a cross-bearing banner streaming from the horn, three luminous figures in flowing white robes rising with arms outstretched from rectangular stone sarcophagi in the mountains below. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Citrine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-judgment-yes-or-no-career.webp"
+      },
+      "verdict": "conditional",
+      "question": "career",
+      "card": "judgment",
+      "crystals": [
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine"
+        }
+      ]
+    },
+    "is-judgment-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Judgment (The Awakened) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a winged angel in a long trumpet sounding the call from a cloud, a cross-bearing banner streaming from the horn, three luminous figures in flowing white robes rising with arms outstretched from rectangular stone sarcophagi in the mountains below. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Angelite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-judgment-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "judgment",
+      "crystals": [
+        {
+          "slug": "angelite-meaning",
+          "name": "Angelite"
+        }
+      ]
+    },
+    "is-judgment-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Judgment (The Awakened) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a winged angel in a long trumpet sounding the call from a cloud, a cross-bearing banner streaming from the horn, three luminous figures in flowing white robes rising with arms outstretched from rectangular stone sarcophagi in the mountains below. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Angelite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-judgment-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "judgment",
+      "crystals": [
+        {
+          "slug": "angelite-meaning",
+          "name": "Angelite"
+        }
+      ]
+    },
+    "is-the-world-yes-or-no-love": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The World (The Complete) interpreted in a Yes-or-No Love reading context. Central Rider-Waite imagery: a wreath of green enclosing a joyous dancer wrapped in a violet sash, holding two wands, surrounded in the corners by the four fixed creatures (lion, ox, eagle, angel), a vista of distant mountains within the wreath. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous heart icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Rose Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-world-yes-or-no-love.webp"
+      },
+      "verdict": "conditional",
+      "question": "love",
+      "card": "the-world",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "is-the-world-yes-or-no-career": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The World (The Complete) interpreted in a Yes-or-No Career reading context. Central Rider-Waite imagery: a wreath of green enclosing a joyous dancer wrapped in a violet sash, holding two wands, surrounded in the corners by the four fixed creatures (lion, ox, eagle, angel), a vista of distant mountains within the wreath. To the upper right of the card visual, a large luminous green checkmark rendered large, crisp and clearly legible in luminous emerald green, signifying a strong yes verdict. A small luminous briefcase icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-world-yes-or-no-career.webp"
+      },
+      "verdict": "strong-yes",
+      "question": "career",
+      "card": "the-world",
+      "crystals": [
+        {
+          "slug": "quartz-meaning",
+          "name": "Quartz"
+        }
+      ]
+    },
+    "is-the-world-yes-or-no-decision": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The World (The Complete) interpreted in a Yes-or-No Decision reading context. Central Rider-Waite imagery: a wreath of green enclosing a joyous dancer wrapped in a violet sash, holding two wands, surrounded in the corners by the four fixed creatures (lion, ox, eagle, angel), a vista of distant mountains within the wreath. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous forked-path icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Selenite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-world-yes-or-no-decision.webp"
+      },
+      "verdict": "conditional",
+      "question": "decision",
+      "card": "the-world",
+      "crystals": [
+        {
+          "slug": "selenite-meaning",
+          "name": "Selenite"
+        }
+      ]
+    },
+    "is-the-world-yes-or-no-move-or-stay": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card The World (The Complete) interpreted in a Yes-or-No Move or Stay reading context. Central Rider-Waite imagery: a wreath of green enclosing a joyous dancer wrapped in a violet sash, holding two wands, surrounded in the corners by the four fixed creatures (lion, ox, eagle, angel), a vista of distant mountains within the wreath. To the upper right of the card visual, a large luminous golden question mark rendered large, crisp and clearly legible in luminous amber gold, signifying a conditional verdict. A small luminous house icon glows softly near the upper left corner, marking the question domain. At the base of the composition, a single Bloodstone crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "is-the-world-yes-or-no-move-or-stay.webp"
+      },
+      "verdict": "conditional",
+      "question": "move-or-stay",
+      "card": "the-world",
+      "crystals": [
+        {
+          "slug": "bloodstone-meaning",
+          "name": "Bloodstone"
+        }
+      ]
+    }
+  }
+}

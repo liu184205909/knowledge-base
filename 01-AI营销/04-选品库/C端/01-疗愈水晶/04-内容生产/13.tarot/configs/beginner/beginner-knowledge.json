@@ -1,0 +1,545 @@
+{
+  "_meta": {
+    "type": "tarot beginner's guide knowledge base",
+    "version": "v1",
+    "created": "2026-07-03",
+    "purpose": "goearthward 塔罗新手指南文章线数据层（P1，10-15 篇）。学塔罗路径节点 × 水晶实践（反思辅助口径）。每条 = 一篇 how-to/beginner 文章的唯一组合数据。",
+    "differentiation": "竞品 how-to 教育站（biddytarot/learntarot/almanac/vogue/cosmopolitan/suburbanwitchery）零水晶实践；goearthward「学塔罗 × 配水晶」首饰站独有新手路径——每步学牌 + 对应水晶 + 反思实践。差异化 = 教育 + 水晶 + 首饰 Shop CTA。",
+    "serp_evidence": "2026-07-03 serp_check 8 词实查（how to read tarot cards / tarot for beginners / tarot card meanings list / first tarot deck / how to shuffle tarot cards / how to cleanse tarot cards / learn tarot / storing tarot cards）。8 词中 5 触发 AIO（how to read / tarot for beginners / how to shuffle / how to cleanse / storing），AIO 多引用 reddit/forum/小博客 → 深度教学页有机会被引用。",
+    "competitor_whitelist": "biddytarot / labyrinthos / learntarot / thetarotlady / almanac / vogue / cosmopolitan / suburbanwitchery / daily-tarot-girl / ethony / joyvernon / lightwands / practicalmagic / the-line-up / cratejoy",
+    "crystal_source": "390 库 D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/04-内容生产/1.crystal-meaning/。所有 crystal slug 已 grep 验证文件存在。注意 clear quartz 的 slug 是 'quartz'（非 clear-quartz）。",
+    "compliance": "全量守 1F §0A 全塔罗普适规则（Health/Finances 黑名单 + 6 类禁用表达 + 反思辅助非万能论）。新手指南多 general 风险，但 #8 daily-pull 涉及 mental health 边界、#13 reader-for-others 涉及他人 autonomy —— 标 compliance_flag 提示加固。",
+    "free_will_disclaimer": "全站前半（原文照搬，禁改写）：\"Tarot is a tool for reflection, not a fixed forecast — the cards show energy and patterns, and you always have free will to choose your next step.\" + 该篇后半（差异化）。",
+    "crystal_role_rule": "M3/M4 水晶段必为「反思辅助 + 触觉锚」口径（helps you stay grounded / tactile cue / reminder to / a physical anchor for…），禁万能论（clears / attracts / manifests / cures / protects you from）。crystal_role 字段原文采用禁改写。",
+    "selection_priority": {
+      "P1_pilot": ["how-to-read-tarot", "tarot-for-beginners", "first-tarot-deck"],
+      "P1_high": ["how-to-shuffle-tarot", "how-to-cleanse-tarot", "tarot-card-meanings-list", "storing-tarot-cards"],
+      "P2_mid": ["daily-tarot-practice", "tarot-journaling", "reading-tarot-for-yourself"],
+      "P2_long_tail": ["reversed-tarot-cards", "reading-tarot-for-others", "tarot-ethics-free-will", "tarot-vs-oracle", "major-vs-minor-arcana"]
+    }
+  },
+
+  "articles": [
+
+    {
+      "slug": "how-to-read-tarot",
+      "name": "How to Read Tarot Cards (A Beginner's Complete Walkthrough)",
+      "serp_keyword": "how to read tarot cards",
+      "primary_kw": "how to read tarot cards",
+      "title_template": "How to Read Tarot Cards: A Beginner's Complete Walkthrough (+ Crystals)",
+      "h1_template": "How to Read Tarot Cards: A Beginner's Walkthrough with Crystals",
+      "url": "/how-to-read-tarot/",
+      "difficulty": "beginner",
+      "best_for": "完全新手第一次完整读牌；从提问到铺牌到解读的全流程",
+      "serp_evidence": "serp_check 2026-07-03: AIO=yes（引用 suburbanwitchery/the-line-up/almanac/vogue/panmacmillan/quora）。top10 含 biddytarot/learntarot/cosmopolitan/thetarotlady/almanac/vogue/panmacmillan/image.ie/the-line-up。",
+      "competitor_structure": "竞品 5-7 步线性教学（提问 → 洗牌 → 抽牌 → 铺牌 → 解读 → 收牌）；无水晶实践环节",
+      "word_count_target": "1800-2200",
+      "compliance_flag": "general(低)",
+      "eastern_lens": "三才（地-人-天）：地=铺牌前的准备与提问；人=抽牌解读的当下能动性；天=解读后留出空间让意义浮现",
+      "differentiation_hook": "竞品讲 5 步，我们讲 7 步——插入「提问前的水晶锚定」+「解读后的水晶反思」两个独有环节，把流程从机械操作变成可触觉的反思练习",
+      "process_steps": [
+        {"num": 1, "name": "Settle and Frame the Question", "crystal": "selenite", "crystal_role": "a physical cue to clear your mental space before framing the question — not magic, just a tactile reset that signals 'now I'm reading'", "anchor_practice": "place selenite beside your deck before you sit down; touch it once as you settle"},
+        {"num": 2, "name": "Shuffle with Focus", "crystal": "amethyst", "crystal_role": "a small weight in your non-shuffling hand to keep your attention in your body instead of drifting into 'what will the cards say'", "anchor_practice": "hold amethyst in your non-dominant hand while shuffling"},
+        {"num": 3, "name": "Cut and Draw", "crystal": "quartz", "crystal_role": "a neutral anchor for the moment of the draw — helping you see what's actually on the table rather than what you hoped to see", "anchor_practice": "set a clear quartz point beside the spread as you lay cards"},
+        {"num": 4, "name": "Lay the Spread", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal here — this step is purely mechanical"},
+        {"num": 5, "name": "Read Each Position", "crystal": "fluorite", "crystal_role": "a tactile prompt for layered thinking — fluorite traditionally associated with mental sorting, used here as a 'hold this when the reading feels muddled' cue", "anchor_practice": "pick up fluorite when a position feels confusing"},
+        {"num": 6, "name": "Read the Flow", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — second pass is pure attention"},
+        {"num": 7, "name": "Close and Reflect", "crystal": "smoky-quartz", "crystal_role": "a grounding anchor at the close — a reminder that what surfaced is information to sit with, not a verdict to brace against", "anchor_practice": "hold smoky quartz for a few breaths after closing the spread"}
+      ],
+      "internal_links": [
+        {"anchor": "tarot for beginners", "target": "/tarot-for-beginners/"},
+        {"anchor": "tarot card meanings list", "target": "/tarot-card-meanings-list/"},
+        {"anchor": "how to shuffle tarot cards", "target": "/how-to-shuffle-tarot/"},
+        {"anchor": "three card past present future tarot spread", "target": "/three-card-past-present-future/"},
+        {"anchor": "how to cleanse tarot cards", "target": "/how-to-cleanse-tarot/"}
+      ],
+      "faq_seed": [
+        "Do I need to be psychic to read tarot?",
+        "What if I draw a 'scary' card like the Tower or Death?",
+        "How often should I read for myself?",
+        "Can I read tarot if I don't believe in it?"
+      ],
+      "free_will_second_half": "For a first reading, the cards may surface a pattern or an angle you hadn't named yet — but what you do with that pattern is your call."
+    },
+
+    {
+      "slug": "tarot-for-beginners",
+      "name": "Tarot for Beginners: Where to Actually Start (A Crystal-Backed Path)",
+      "serp_keyword": "tarot for beginners",
+      "primary_kw": "tarot for beginners",
+      "title_template": "Tarot for Beginners: Where to Actually Start (With Crystals)",
+      "h1_template": "Tarot for Beginners: A No-Overwhelm Starting Path with Crystals",
+      "url": "/tarot-for-beginners/",
+      "difficulty": "beginner",
+      "best_for": "完全新手站在门口不知从哪进入；选牌、学牌、建立练习的整体路径",
+      "serp_evidence": "serp_check 2026-07-03: AIO=yes（引用 suburbanwitchery/image.ie/reddit/vogue/almanac）。top10 含 reddit/lightwands/cratejoy/usgamesinc/tarotarts/vogue/practicalmagic/almanac + amazon 书。",
+      "competitor_structure": "竞品给 3-5 步起点（选牌 → 学 Major Arcana → 每日抽牌 → 简单牌阵 → 记 journal）；无水晶配对",
+      "word_count_target": "1800-2200",
+      "compliance_flag": "general(低)",
+      "eastern_lens": "入门三宝（精-气-神）：精=选牌与物（实体基础）；气=每日抽牌的练习节律；神=通过水晶触觉锚保持的觉察",
+      "differentiation_hook": "竞品讲「学 Major Arcana」是抽象任务，我们讲「学 Major Arcana 时每张牌配一颗水晶做触觉锚」——把抽象学习变成可触摸的反思练习，是首饰站独有的新手路径",
+      "process_steps": [
+        {"num": 1, "name": "Choose a Beginner Deck", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — deck selection is aesthetic/personal, see first-tarot-deck for depth"},
+        {"num": 2, "name": "Start with the Major Arcana", "crystal": "quartz", "crystal_role": "a neutral, all-purpose anchor for the 22-card foundation — clear quartz is the 'study buddy' you set beside the deck while you learn", "anchor_practice": "place a clear quartz point beside the deck whenever you study a Major"},
+        {"num": 3, "name": "Pull a Daily Card", "crystal": "moonstone", "crystal_role": "a soft anchor for the daily draw — moonstone's receptive quality echoes 'receive the card of the day without gripping'", "anchor_practice": "hold moonstone for a breath before drawing your daily card"},
+        {"num": 4, "name": "Keep a Tarot Journal", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — journaling is cognitive"},
+        {"num": 5, "name": "Learn One 3-Card Spread", "crystal": "amethyst", "crystal_role": "a 'stay-with-the-confusion' anchor for the first spread attempts, when reading 3 cards in relationship feels overwhelming", "anchor_practice": "hold amethyst when the spread feels muddy"},
+        {"num": 6, "name": "Build a Touchstone Set", "crystal": null, "crystal_role": null, "anchor_practice": "the closing 'next step' — gather 3 stones (quartz/moonstone/smoky-quartz) as a beginner set that mirrors the learning path itself"}
+      ],
+      "internal_links": [
+        {"anchor": "first tarot deck", "target": "/first-tarot-deck/"},
+        {"anchor": "tarot card meanings list", "target": "/tarot-card-meanings-list/"},
+        {"anchor": "how to read tarot cards", "target": "/how-to-read-tarot/"},
+        {"anchor": "three card past present future tarot spread", "target": "/three-card-past-present-future/"},
+        {"anchor": "how to shuffle tarot cards", "target": "/how-to-shuffle-tarot/"}
+      ],
+      "faq_seed": [
+        "How long does it take to learn tarot?",
+        "Should I memorize all 78 meanings before reading?",
+        "What if I get a card I don't understand?",
+        "Do I need to be spiritual to read tarot?"
+      ],
+      "free_will_second_half": "For beginners, the cards may feel like a lot of new symbols at once — but the pace you learn at, and what you choose to do with each reading, is entirely yours."
+    },
+
+    {
+      "slug": "first-tarot-deck",
+      "name": "Your First Tarot Deck: How to Choose (and What to Do First)",
+      "serp_keyword": "first tarot deck",
+      "primary_kw": "first tarot deck",
+      "title_template": "Your First Tarot Deck: How to Choose + What to Do First (+ Crystals)",
+      "h1_template": "Choosing Your First Tarot Deck: A Beginner's Guide with Crystals",
+      "url": "/first-tarot-deck/",
+      "difficulty": "beginner",
+      "best_for": "新手选第一副牌与开牌仪式；解决「该不该买/被赠/选哪副」的常见困惑",
+      "serp_evidence": "serp_check 2026-07-03: AIO=no但有 featured_snippet（引用 wikipedia）。top10 含 thetarotlady/medium/yahoo/quora/medium misculture/youtube/rockpoolpublishing/sarahgbeck。PAA 丰富（what should my first deck be / what to do when you get it / should it be gifted）。",
+      "competitor_structure": "竞品讲：① RWS 系最易上手 ② 不必被赠，自购 OK ③ 选审美合的 ④ 开牌：通每张 / 净化 / 洗牌 / interview spread；无水晶配对",
+      "word_count_target": "1600-2000",
+      "compliance_flag": "general(低)",
+      "eastern_lens": "结缘（佛家「以心印物」）：选牌是结缘而非占有；开牌仪式是「与物建立关系」的觉察练习，对应藏传佛教对法器开光的非神秘化理解——重点在意图而非仪式本身",
+      "differentiation_hook": "竞品讲开牌仪式是「净化+洗牌+interview」纯操作，我们讲「开牌时配一颗水晶做整副牌的触觉锚」——这颗水晶之后每次读牌都可再握，成为你与这副牌关系的物化标记，是首饰站独有的开牌实践",
+      "process_steps": [
+        {"num": 1, "name": "Pick the Right Tradition (RWS First)", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — deck tradition is research"},
+        {"num": 2, "name": "Choose by Aesthetic Pull, Not 'Should'", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — aesthetic choice"},
+        {"num": 3, "name": "Forget the 'Must Be Gifted' Myth", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — myth-busting paragraph"},
+        {"num": 4, "name": "Go Through Every Card", "crystal": "rose-quartz", "crystal_role": "a gentle heart anchor for the 'meeting' pass — rose quartz's traditional association with warmth used here as 'meet the deck without judgment'", "anchor_practice": "set rose quartz beside the deck as you flip through all 78 cards for the first time"},
+        {"num": 5, "name": "Cleanse the Deck", "crystal": "selenite", "crystal_role": "a tactile 'fresh start' cue — pass the deck over or rest it on selenite as a physical gesture of 'new chapter', not because the deck has 'bad energy'", "anchor_practice": "rest the deck on a selenite plate/wand for a few minutes (see how-to-cleanse-tarot for full methods)"},
+        {"num": 6, "name": "Interview Your Deck", "crystal": "amethyst", "crystal_role": "an 'inward listening' anchor for the interview spread — amethyst's traditional association with reflection used as 'hold this while you listen to what the deck seems to emphasize'", "anchor_practice": "hold amethyst during the interview spread"},
+        {"num": 7, "name": "Choose a Touchstone Stone", "crystal": null, "crystal_role": null, "anchor_practice": "the closing step — pick one stone from this ritual (rose-quartz/selenite/amethyst) to keep with the deck as its paired anchor"}
+      ],
+      "internal_links": [
+        {"anchor": "tarot for beginners", "target": "/tarot-for-beginners/"},
+        {"anchor": "how to cleanse tarot cards", "target": "/how-to-cleanse-tarot/"},
+        {"anchor": "how to shuffle tarot cards", "target": "/how-to-shuffle-tarot/"},
+        {"anchor": "storing tarot cards", "target": "/storing-tarot-cards/"},
+        {"anchor": "tarot card meanings list", "target": "/tarot-card-meanings-list/"}
+      ],
+      "faq_seed": [
+        "Does my first tarot deck have to be a gift?",
+        "What's the best first tarot deck for a complete beginner?",
+        "What do I do first when I open a new tarot deck?",
+        "Can I have more than one tarot deck?"
+      ],
+      "free_will_second_half": "For choosing your first deck, the cards and traditions can inform your options — but the deck you actually bond with is a personal choice no guide can make for you."
+    },
+
+    {
+      "slug": "how-to-shuffle-tarot",
+      "name": "How to Shuffle Tarot Cards: 5 Methods + When to Stop",
+      "serp_keyword": "how to shuffle tarot cards",
+      "primary_kw": "how to shuffle tarot cards",
+      "title_template": "How to Shuffle Tarot Cards: 5 Methods + When to Stop (+ Crystals)",
+      "h1_template": "How to Shuffle Tarot Cards: A Beginner's Guide with Crystals",
+      "url": "/how-to-shuffle-tarot/",
+      "difficulty": "beginner",
+      "best_for": "新手学习洗牌手法（overhand/riffle/hand-washing/strip/waterfall）+ 何时停 + 反位处理",
+      "serp_evidence": "serp_check 2026-07-03: AIO=yes（引用 reddit/youtube x4/joyvernon/ethony）。top10 含 reddit/sherylwagner/joyvernon/ethony/thetarotlady/healingthrutarot/incandescenttarot/qpmarketnetwork/brittagrubin。PAA 丰富。",
+      "competitor_structure": "竞品讲：① 没有唯一正确方法 ② overhand/riffle/hand-washing/pile ③ 洗到「感觉对」/energetic shift ④ jumpers（飞牌）也算 ⑤ 反位是否 intentional；无水晶",
+      "word_count_target": "1500-1900",
+      "compliance_flag": "general(低)",
+      "eastern_lens": "调息（道家「以息御物」）：洗牌的节律对应呼吸节律；以水晶为「气口」——握石的触觉让洗牌从手部机械动作变成以息带动的整合练习",
+      "differentiation_hook": "竞品讲洗牌手法是纯手部技巧，我们讲「洗牌时握一颗水晶作为节律锚」——把洗牌从「把牌混匀」升级为「以触觉+呼吸带动洗牌节律」的整合练习，是首饰站独有",
+      "process_steps": [
+        {"num": 1, "name": "The Overhand Shuffle", "crystal": "amethyst", "crystal_role": "a slow-rhythm anchor for the most common method — hold amethyst in the non-shuffling hand to keep your breath steady (slow method suits a contemplative question)", "anchor_practice": "hold amethyst in non-dominant hand; let the shuffle match your breath"},
+        {"num": 2, "name": "The Hand-Washing Method", "crystal": "moonstone", "crystal_role": "a 'loosen the grip' anchor for when overhand feels too controlled — moonstone's soft quality echoes the releasing motion", "anchor_practice": "set moonstone in front of you and match its 'soft' quality to your hand motion"},
+        {"num": 3, "name": "The Riffle / Bridge", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — pure technique; some decks are too large/stiff for riffle"},
+        {"num": 4, "name": "The Strip Shuffle", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — pure technique"},
+        {"num": 5, "name": "The Waterfall", "crystal": "labradorite", "crystal_role": "a 'trust the cascade' anchor for the most flowing method — labradorite's traditional association with intuition used as 'let the cards fall without micromanaging'", "anchor_practice": "hold labradorite in your cupped hand briefly before the cascade"},
+        {"num": 6, "name": "When to Stop", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — section on cues (breath / count / intuitive nudge); reject 'must shuffle N times' rules"},
+        {"num": 7, "name": "What About Jumpers and Reversals?", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — myth-busting section"}
+      ],
+      "internal_links": [
+        {"anchor": "how to read tarot cards", "target": "/how-to-read-tarot/"},
+        {"anchor": "tarot for beginners", "target": "/tarot-for-beginners/"},
+        {"anchor": "how to cleanse tarot cards", "target": "/how-to-cleanse-tarot/"},
+        {"anchor": "reversed tarot cards", "target": "/reversed-tarot-cards/"},
+        {"anchor": "first tarot deck", "target": "/first-tarot-deck/"}
+      ],
+      "faq_seed": [
+        "How long should I shuffle tarot cards?",
+        "Is there a wrong way to shuffle tarot cards?",
+        "Why do cards fall out while shuffling?",
+        "Should I read reversed cards or flip them upright?"
+      ],
+      "free_will_second_half": "How you shuffle is your fingerprint on the cards — there's no 'correct' method, only the one that lets you draw with a clear head."
+    },
+
+    {
+      "slug": "how-to-cleanse-tarot",
+      "name": "How to Cleanse Tarot Cards: 7 Methods That Aren't Just Sage",
+      "serp_keyword": "how to cleanse tarot cards",
+      "primary_kw": "how to cleanse tarot cards",
+      "title_template": "How to Cleanse Tarot Cards: 7 Methods + When You Need To (+ Crystals)",
+      "h1_template": "How to Cleanse Tarot Cards: A Beginner's Guide with Crystals",
+      "url": "/how-to-cleanse-tarot/",
+      "difficulty": "beginner",
+      "best_for": "新手学习净化牌的方法（烟/月光/呼吸/敲击/水晶/盐/声音）+ 何时该净化 + 不靠 sage 的替代",
+      "serp_evidence": "serp_check 2026-07-03: AIO=yes（引用 mindbodygreen/goddessprovisions/psychicsisters/ibizatarot/quora/reddit）。top10 含 reddit/sherylwagner/creativesoultarot/quora/coppermoon/goddessprovisions/mindbodygreen/witchymama/stsoleil/spells8/psychicsisters。PAA 'crystals for cleanse' 直接出现。",
+      "competitor_structure": "竞品讲：① 烟净化（sage/palo santo/incense）② 月光 ③ 敲击 ④ 呼吸 ⑤ 盐（间接）⑥ 声音 ⑦ 水晶（selenite/clear quartz 放牌上）；竞品有提水晶但仅作净化工具，无首饰转化",
+      "word_count_target": "1600-2000",
+      "compliance_flag": "general(低)",
+      "eastern_lens": "拂尘（道家「除旧布新」）+ 开光（佛家「以念净物」）：净化的本质是意图的物化——重点不在 sage 是否「清能量」，而在你借这个动作说「这是新的开始」；与水晶触觉锚同理",
+      "differentiation_hook": "竞品把水晶列为「净化工具之一」，我们升级为「水晶作为长期触觉锚」——净化后水晶继续留在牌盒里，每次取牌都重新触发「净」的意图；首饰站可承接净化水晶的 Shop CTA，竞品无首饰转化",
+      "process_steps": [
+        {"num": 1, "name": "Smoke Cleanse (Sage, Palo Santo, Incense)", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — method itself; note: many avoid sage for cultural-sustainability reasons, offer palo santo / lavender / sandalwood / incense"},
+        {"num": 2, "name": "Moonlight (Full Moon Reset)", "crystal": "moonstone", "crystal_role": "a 'matched energy' companion for the moonlight method — set moonstone beside the deck on the sill so they 'reset together' (echoes rather than causes)", "anchor_practice": "place deck + moonstone on a windowsill overnight"},
+        {"num": 3, "name": "Breath (Quick Reset Between Readings)", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — fastest method; useful between querents"},
+        {"num": 4, "name": "Knocking / Tapping", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — sound method; knock on the deck 3 times"},
+        {"num": 5, "name": "Sound (Singing Bowl, Bells)", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — sound method"},
+        {"num": 6, "name": "Crystal Reset (Selenite or Clear Quartz)", "crystal": "selenite", "crystal_role": "the deck's long-term companion — set selenite on or under the deck between readings as a tactile 'fresh start' gesture; selenite's traditional association with clarity used here as 'a physical signal that the deck is at rest'", "anchor_practice": "rest deck on a selenite wand or plate between readings (this is the method that becomes a habit, not a one-off)"},
+        {"num": 7, "name": "Salt (Indirect Only — Never Direct)", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — caution: direct salt damages cards, only place a small bowl of salt NEAR the deck in an airtight container"}
+      ],
+      "internal_links": [
+        {"anchor": "storing tarot cards", "target": "/storing-tarot-cards/"},
+        {"anchor": "first tarot deck", "target": "/first-tarot-deck/"},
+        {"anchor": "tarot for beginners", "target": "/tarot-for-beginners/"},
+        {"anchor": "how to read tarot cards", "target": "/how-to-read-tarot/"},
+        {"anchor": "crystals for tarot cards", "target": "/crystals-for-tarot-cards/"}
+      ],
+      "faq_seed": [
+        "How often should I cleanse my tarot cards?",
+        "Do I have to use sage to cleanse tarot cards?",
+        "Can I cleanse tarot cards with crystals?",
+        "Should I cleanse a brand new tarot deck?"
+      ],
+      "free_will_second_half": "Cleansing is a ritual of attention, not a fix — it signals 'I'm showing up fresh', but the clarity comes from you, not from the smoke or the stone."
+    },
+
+    {
+      "slug": "tarot-card-meanings-list",
+      "name": "Tarot Card Meanings List: 78 Cards with Crystal Pairings",
+      "serp_keyword": "tarot card meanings list",
+      "primary_kw": "tarot card meanings list",
+      "title_template": "Tarot Card Meanings List: All 78 Cards + A Crystal for Each",
+      "h1_template": "The Tarot Card Meanings List: 78 Cards with Crystal Pairings",
+      "url": "/tarot-card-meanings-list/",
+      "difficulty": "beginner",
+      "best_for": "新手查表；78 牌简明意义 + 每牌一颗水晶（链向深度牌义页）",
+      "serp_evidence": "serp_check 2026-07-03: AIO=no。top10 全是 78 牌清单站：labyrinthos/thetarotlady/solisdivinity/daily-tarot-girl/biddytarot/tarot.com/ezracard/purplegarden/darkforest/urbanepics。竞争激烈但都是纯牌意清单，无水晶。",
+      "competitor_structure": "竞品讲：78 牌按 Major/Cups/Wands/Swords/Pentacles 分组，每牌 1 行（关键词 + 简意）；无水晶",
+      "word_count_target": "1800-2400（清单型，字数偏高因 78 牌铺开）",
+      "compliance_flag": "general(低)",
+      "eastern_lens": "对应（五行 vs 四元素）：塔罗四元素（火-权杖/水-圣杯/风-宝剑/土-钱币）对应东方五行（火/水/木-风/金-土）；Major Arcana 对应阴阳演化 22 步——一张表把塔罗系统与水晶能量系统做结构对照",
+      "differentiation_hook": "竞品是「78 牌纯牌意清单」，我们是「78 牌 + 每牌一颗水晶速配」——清单本身深度对标竞品，但加一列「crystal pairing」做触觉锚，每张牌链向自己的深度牌义页 + 水晶 meaning 页，是首饰站独有的清单结构",
+      "process_steps": [
+        {"num": 1, "name": "Major Arcana (22)", "crystal": "varies-by-card", "crystal_role": "each Major paired with one crystal matching its archetype — full pairing in dedicated card-meaning pages", "anchor_practice": "see crystals-for-tarot-cards hub"},
+        {"num": 2, "name": "Cups (Water — Emotion, Relationship)", "crystal": "rose-quartz", "crystal_role": "the heart stone for the water suit's emotional terrain", "anchor_practice": "set rose quartz beside the spread when reading Cups-heavy draws"},
+        {"num": 3, "name": "Wands (Fire — Action, Passion)", "crystal": "carnelian", "crystal_role": "the action stone for the fire suit's initiative terrain", "anchor_practice": "hold carnelian briefly when reading Wands-heavy draws about action"},
+        {"num": 4, "name": "Swords (Air — Thought, Conflict)", "crystal": "fluorite", "crystal_role": "the mental-sorting stone for the air suit's cognitive terrain", "anchor_practice": "set fluorite beside the spread when Swords-heavy draws feel tangled"},
+        {"num": 5, "name": "Pentacles (Earth — Body, Resource, Work)", "crystal": "smoky-quartz", "crystal_role": "the grounding stone for the earth suit's material terrain", "anchor_practice": "hold smoky quartz when reading Pentacles-heavy draws about resources"}
+      ],
+      "internal_links": [
+        {"anchor": "tarot for beginners", "target": "/tarot-for-beginners/"},
+        {"anchor": "how to read tarot cards", "target": "/how-to-read-tarot/"},
+        {"anchor": "crystals for tarot cards", "target": "/crystals-for-tarot-cards/"},
+        {"anchor": "major vs minor arcana", "target": "/major-vs-minor-arcana/"}
+      ],
+      "faq_seed": [
+        "Do I have to memorize all 78 tarot card meanings?",
+        "What's the difference between Major and Minor Arcana?",
+        "Where can I find a printable tarot meanings cheat sheet?",
+        "What if a card means something different to me than the book says?"
+      ],
+      "free_will_second_half": "Meaning lists are scaffolding, not scripture — the keywords here are training wheels to help you start; the meanings that matter most are the ones you build through your own readings."
+    },
+
+    {
+      "slug": "storing-tarot-cards",
+      "name": "How to Store Tarot Cards: Boxes, Bags, and the Crystal Companion",
+      "serp_keyword": "storing tarot cards",
+      "primary_kw": "how to store tarot cards",
+      "title_template": "How to Store Tarot Cards: Boxes, Bags + Crystal Companions",
+      "h1_template": "Storing Tarot Cards: A Practical Guide with Crystal Companions",
+      "url": "/storing-tarot-cards/",
+      "difficulty": "beginner",
+      "best_for": "新手解决存牌问题（盒/袋/布/防潮）+ 长期牌护 + 配一颗「守护水晶」",
+      "serp_evidence": "serp_check 2026-07-03: AIO=yes（引用 amazon/reddit/youtube/forum）。top10 含 reddit/daily-tarot-girl/interrobangtarot/taroticallyspeaking/forum.thetarot.guru/tarotelements/tarotliza/darkforest/learnreligions/benebellwen/elvitarot。PAA 'how to keep tarot cards safe / what not to do' 丰富。",
+      "competitor_structure": "竞品讲：① 原盒/袋/布/丝巾 ② 防潮（silica gel）③ 远离直阳光/高湿 ④ 木盒优于纸盒 ⑤ 丝/亚麻包布传统；竞品 learnreligions 提「wrap in silk scarf」但无水晶",
+      "word_count_target": "1500-1900",
+      "compliance_flag": "general(低)",
+      "eastern_lens": "安处（道家「物归其位」）+ 藏（佛家「静藏以养」）：存牌不只是物理保护，是「让物归位、静养待用」的觉察——存牌位置反映你与牌的关系是「随手工具」还是「用心伙伴」",
+      "differentiation_hook": "竞品讲存牌是「物理保护」，我们讲「存牌时配一颗守护水晶做能量伴侣」——这颗水晶随牌静藏，每次取牌触发「重新连接」的意图；首饰站可承接守护水晶的 Shop CTA，竞品无首饰转化",
+      "process_steps": [
+        {"num": 1, "name": "Choose a Container (Box vs Bag vs Cloth)", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — physical container choice (wood box / velvet bag / linen cloth / original box)"},
+        {"num": 2, "name": "Wrap in Cloth (Silk or Linen)", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — protective layer; silk traditional, linen practical"},
+        {"num": 3, "name": "Control Humidity (The Quiet Killer)", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — silica gel packet in the container; benebellwen source"},
+        {"num": 4, "name": "Keep Away from Direct Sunlight", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — UV fades card edges"},
+        {"num": 5, "name": "Add a Crystal Companion", "crystal": "selenite", "crystal_role": "a 'resting state' companion kept inside the container — selenite's traditional association with clarity used here as 'a small stone that says the deck is at rest, not in use'; this is the only step that becomes a long-term practice", "anchor_practice": "place a small selenite wand or tumbled stone inside the box with the deck"},
+        {"num": 6, "name": "Pick a Dedicated Spot", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — altar / drawer / shelf; consistency matters more than location"}
+      ],
+      "internal_links": [
+        {"anchor": "how to cleanse tarot cards", "target": "/how-to-cleanse-tarot/"},
+        {"anchor": "first tarot deck", "target": "/first-tarot-deck/"},
+        {"anchor": "tarot for beginners", "target": "/tarot-for-beginners/"},
+        {"anchor": "crystals for tarot cards", "target": "/crystals-for-tarot-cards/"}
+      ],
+      "faq_seed": [
+        "What is the best way to store tarot cards?",
+        "Should I wrap my tarot cards in silk?",
+        "Can I keep multiple tarot decks together?",
+        "Do I need to keep a crystal with my tarot cards?"
+      ],
+      "free_will_second_half": "How you store your cards is a small daily signal of how you regard the practice — there's no 'right' box, only the one that makes you want to come back to it."
+    },
+
+    {
+      "slug": "daily-tarot-practice",
+      "name": "The Daily Tarot Practice: A 5-Minute Morning Draw with Crystals",
+      "serp_keyword": "daily tarot card pull",
+      "primary_kw": "daily tarot pull",
+      "title_template": "Daily Tarot Practice: A 5-Minute Morning Pull with Crystals",
+      "h1_template": "Building a Daily Tarot Practice with Crystals",
+      "url": "/daily-tarot-practice/",
+      "difficulty": "beginner",
+      "best_for": "已掌握基础的新手建立每日练习；晨间抽牌 + 反思 + 水晶锚的可持续节奏",
+      "serp_evidence": "serp_check 衍生（learn-tarot/lightwajes/medium-casual-mystic 均 cite 'daily card pull' as core practice）",
+      "competitor_structure": "竞品讲：① 晨起抽 1 牌 ② 当晚回看（verification）③ journal 记录 ④ 不强解，先感受；无水晶",
+      "word_count_target": "1500-1900",
+      "compliance_flag": "general(低，但 mental-health adjacent — M5 reflection 段守 1F §0A.1 Health 边界，禁医疗承诺)",
+      "eastern_lens": "晨课（道家「朝食气，夕反观」）+ 时辰（子午流注早晨=大肠/胃经，主「清与纳」）：晨间抽牌对应「清」——把过夜的梦与情绪清出；晚间回看对应「纳」——把白天的体验收纳成洞察",
+      "differentiation_hook": "竞品讲每日抽牌是「抽+解」，我们讲「抽+水晶触觉锚+晚间回看」三段——水晶作为白天带在身上的牌意提醒（如抽 The Fool 装一颗 moonstone 在口袋），把练习从 5 分钟扩展为全天觉察，首饰站独有",
+      "process_steps": [
+        {"num": 1, "name": "Settle and Frame the Day's Question", "crystal": "selenite", "crystal_role": "a 'clear the slate' cue at the start — selenite placed on the table as a tactile signal that the day's reading is beginning", "anchor_practice": "place selenite beside the deck as you sit down"},
+        {"num": 2, "name": "Draw One Card", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — pure draw"},
+        {"num": 3, "name": "Sit with the Image First, Not the Meaning", "crystal": "amethyst", "crystal_role": "a 'stay with the perception' anchor — amethyst in the palm to slow the jump from 'see image' to 'look up meaning'", "anchor_practice": "hold amethyst in your palm while you look at the card's image for 30 seconds before checking any meaning"},
+        {"num": 4, "name": "Choose a Carry Crystal for the Day", "crystal": "moonstone", "crystal_role": "a tactile reminder of the card throughout the day — pick a stone whose traditional quality echoes the card (e.g. moonstone for The Fool/Star/High Priestess, carnelian for Wands, rose quartz for Cups). NOT magic — a physical prompt that brings your attention back to the card's reflection", "anchor_practice": "carry one pocket stone tied to the card's energy; touch it when the day's events echo the card"},
+        {"num": 5, "name": "Evening Review (The Verification Step)", "crystal": "smoky-quartz", "crystal_role": "a grounding anchor for the evening return — smoky quartz to help you sit with what actually happened today without spinning it", "anchor_practice": "hold smoky quartz for a few breaths as you re-read the morning's card and journal"}
+      ],
+      "internal_links": [
+        {"anchor": "tarot journaling", "target": "/tarot-journaling/"},
+        {"anchor": "how to read tarot cards", "target": "/how-to-read-tarot/"},
+        {"anchor": "tarot for beginners", "target": "/tarot-for-beginners/"},
+        {"anchor": "reading tarot for yourself", "target": "/reading-tarot-for-yourself/"}
+      ],
+      "faq_seed": [
+        "What time of day is best for a daily tarot pull?",
+        "What if my daily card doesn't make sense until that night?",
+        "Should I pull a card if I'm feeling unwell?",
+        "Can I pull more than one card a day?"
+      ],
+      "free_will_second_half": "A daily pull is a small appointment with your own attention — the card doesn't 'predict the day', it gives you one image to think with as the day unfolds."
+    },
+
+    {
+      "slug": "tarot-journaling",
+      "name": "Tarot Journaling: 7 Prompts That Go Deeper Than 'What Does This Card Mean?'",
+      "serp_keyword": "tarot journal prompts",
+      "primary_kw": "tarot journaling",
+      "title_template": "Tarot Journaling: 7 Prompts + A Crystal for Each (+ Printable)",
+      "h1_template": "Tarot Journaling: A Deeper Practice with Crystals",
+      "url": "/tarot-journaling/",
+      "difficulty": "beginner-to-intermediate",
+      "best_for": "想突破「查关键词」瓶颈的新手；7 个 journal prompt 把抽牌从查意变成自我对话",
+      "serp_evidence": "tarot for beginners / learn tarot SERP 衍生：journaling 反复被竞品 cite 为 'the' core practice",
+      "competitor_structure": "竞品讲：① 每日抽牌记录 ② 牌+感受+事件 ③ 月度回看找模式；无水晶；prompt 较浅",
+      "word_count_target": "1500-1900",
+      "compliance_flag": "general(低)",
+      "eastern_lens": "省察（儒家「日三省吾身」）+ 观照（佛家「毗钵舍那」）：journal 不是 diary，是有结构的「观」——把抽牌变成对当日内在模式的结构化观察",
+      "differentiation_hook": "竞品 prompt 浅（'card + feeling + event'），我们给 7 个有深度的 prompt + 每个配一颗水晶触觉锚——把 journaling 从记录升级为「带水晶触觉的结构化反思」，是首饰站独有",
+      "process_steps": [
+        {"num": 1, "name": "Prompt 1: 'What is this card asking me to notice?'", "crystal": "quartz", "crystal_role": "a neutral 'clear seeing' anchor for the noticing prompt — clear quartz to set beside the journal as you write what you actually see in the card's image", "anchor_practice": "place clear quartz beside the journal for this prompt"},
+        {"num": 2, "name": "Prompt 2: 'Where does this card show up in my body?'", "crystal": "smoky-quartz", "crystal_role": "a grounding anchor for the body prompt — smoky quartz to hold as you scan for where in the body the card's energy lands (NOT a medical prompt; pure body awareness)", "anchor_practice": "hold smoky quartz as you do the body scan"},
+        {"num": 3, "name": "Prompt 3: 'What is this card NOT saying?'", "crystal": "amethyst", "crystal_role": "an 'inward listening' anchor for the counter-prompt — amethyst to hold as you consider what the card leaves out", "anchor_practice": "hold amethyst while writing what the card is NOT about"},
+        {"num": 4, "name": "Prompt 4: 'If this card were a person, what would they say?'", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — purely imaginative prompt"},
+        {"num": 5, "name": "Prompt 5: 'What would shift if I acted on this card?'", "crystal": "carnelian", "crystal_role": "an action-cue anchor for the behavior prompt — carnelian to hold as you consider one concrete action the card suggests", "anchor_practice": "hold carnelian while writing the action step"},
+        {"num": 6, "name": "Prompt 6: 'What did I learn from the evening review?'", "crystal": "moonstone", "crystal_role": "a receptive anchor for the integration prompt — moonstone to hold as you re-read the morning's card and journal what actually happened", "anchor_practice": "hold moonstone during the evening review writing"},
+        {"num": 7, "name": "Prompt 7: 'What pattern am I seeing across the week?'", "crystal": "labradorite", "crystal_role": "a pattern-recognition anchor for the weekly review — labradorite to hold as you scan the week's draws for repeating cards or suits", "anchor_practice": "hold labradorite during the weekly pattern review"}
+      ],
+      "internal_links": [
+        {"anchor": "daily tarot practice", "target": "/daily-tarot-practice/"},
+        {"anchor": "reading tarot for yourself", "target": "/reading-tarot-for-yourself/"},
+        {"anchor": "tarot for beginners", "target": "/tarot-for-beginners/"},
+        {"anchor": "tarot card meanings list", "target": "/tarot-card-meanings-list/"}
+      ],
+      "faq_seed": [
+        "What should I write in a tarot journal?",
+        "Do I need a special notebook for tarot journaling?",
+        "How long should a tarot journal entry be?",
+        "Should I journal before or after looking up the card meaning?"
+      ],
+      "free_will_second_half": "A tarot journal is a long conversation with yourself — the prompts here are scaffolding, but the patterns that emerge over months are the actual teacher."
+    },
+
+    {
+      "slug": "reading-tarot-for-yourself",
+      "name": "Reading Tarot for Yourself: How to Stay Honest When You Want an Answer",
+      "serp_keyword": "reading tarot for yourself",
+      "primary_kw": "reading tarot for yourself",
+      "title_template": "Reading Tarot for Yourself: Staying Honest (+ Crystals)",
+      "h1_template": "Reading Tarot for Yourself: A Guide to Honest Self-Readings",
+      "url": "/reading-tarot-for-yourself/",
+      "difficulty": "beginner-to-intermediate",
+      "best_for": "新手遇到的最大难题——给自己读牌时如何避免「想要某个答案」的偏差",
+      "serp_evidence": "how to read tarot cards related_searches 直接含 'How to read tarot cards for yourself' / 'for yourself free'",
+      "competitor_structure": "竞品讲：① 承认 bias 存在 ② 提问要开放 ③ 不要重复抽 ④ journal ⑤ 找 second opinion；无水晶触觉锚",
+      "word_count_target": "1500-1900",
+      "compliance_flag": "general(低)",
+      "eastern_lens": "止观（天台宗「止」前「观」后）：自读的难点是「想要」盖过「看见」——「止」=先停下来让执念平息（用触觉锚稳住），「观」=再回头看牌上实际有什么",
+      "differentiation_hook": "竞品讲「承认 bias」是认知建议，我们讲「触觉锚先稳住身体再读牌」是身体层干预——水晶作为「先停一下」的物理指令，比纯认知建议更可操作，是首饰站独有",
+      "process_steps": [
+        {"num": 1, "name": "Name What You Want the Answer to Be", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — write down the answer you're secretly hoping for; this exposes the bias before you draw"},
+        {"num": 2, "name": "Settle the Body Before the Draw", "crystal": "smoky-quartz", "crystal_role": "a grounding anchor for the 'stop' phase — smoky quartz to hold for 3 breaths before drawing, so you read from settled attention rather than wanting", "anchor_practice": "hold smoky quartz for 3 breaths before drawing"},
+        {"num": 3, "name": "Ask an Open Question, Not a Leading One", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — rephrase 'will X happen?' into 'what do I need to understand about X?'"},
+        {"num": 4, "name": "Draw Once — Don't Re-Shuffle for a Better Answer", "crystal": "amethyst", "crystal_role": "a 'stay with what came up' anchor — amethyst to hold if you feel the urge to redraw because you didn't like the card", "anchor_practice": "hold amethyst if the redraw urge arises; sit with the original card"},
+        {"num": 5, "name": "Read What's on the Table, Not What You Hoped For", "crystal": "quartz", "crystal_role": "a 'clear seeing' anchor for the reading itself — clear quartz beside the spread as a prompt to see the cards as they are", "anchor_practice": "set clear quartz beside the spread while you read"},
+        {"num": 6, "name": "Journal Before You Decide", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — write what you see and what you feel before any decision"},
+        {"num": 7, "name": "Wait 24 Hours on Big Decisions", "crystal": "moonstone", "crystal_role": "a 'let it settle' companion for the wait — moonstone to carry or set by your bed as a tactile reminder to let the reading integrate overnight", "anchor_practice": "place moonstone by your bed if the reading concerns a big decision; revisit in 24 hours"}
+      ],
+      "internal_links": [
+        {"anchor": "how to read tarot cards", "target": "/how-to-read-tarot/"},
+        {"anchor": "daily tarot practice", "target": "/daily-tarot-practice/"},
+        {"anchor": "tarot journaling", "target": "/tarot-journaling/"},
+        {"anchor": "tarot for beginners", "target": "/tarot-for-beginners/"},
+        {"anchor": "reading tarot for others", "target": "/reading-tarot-for-others/"}
+      ],
+      "faq_seed": [
+        "Is it bad to read tarot for yourself?",
+        "Why do my self-readings always feel wrong?",
+        "How do I stop wanting a specific answer when I read for myself?",
+        "Should I read for myself every day?"
+      ],
+      "free_will_second_half": "Reading for yourself is the hardest kind of honesty — the cards can show you a pattern, but admitting it and acting on it is the work only you can do."
+    },
+
+    {
+      "slug": "reversed-tarot-cards",
+      "name": "Reversed Tarot Cards: What They Actually Mean (And Whether to Use Them)",
+      "serp_keyword": "reversed tarot cards meaning",
+      "primary_kw": "reversed tarot cards",
+      "title_template": "Reversed Tarot Cards: A Beginner's Guide (+ A Crystal for the Trickiest Ones)",
+      "h1_template": "Reversed Tarot Cards: What They Actually Mean",
+      "url": "/reversed-tarot-cards/",
+      "difficulty": "beginner",
+      "best_for": "新手面对反位牌的恐慌；统一「反位 ≠ 凶兆」的反思口径",
+      "serp_evidence": "how to shuffle / how to read 衍生；thetarotlady shuffle PAA 直接涉及 reversal",
+      "competitor_structure": "竞品讲：① 反位 = 内化/延迟/阴影/能量受阻（非凶兆）② 是否用反位是个人选择 ③ 5 种反位读法（受阻/内化/投射/反转/回归）；无水晶",
+      "word_count_target": "1500-1900",
+      "compliance_flag": "general(低，但禁凶兆口径是核心合规点——1F §0A.2 反位禁 curse/bad omen/doomed)",
+      "eastern_lens": "阴面（道家「阳中有阴，阴中有阳」）：反位不是「坏」，是「未显」——像月相的暗面，是能量尚未显化的状态；与正位构成完整周期",
+      "differentiation_hook": "竞品讲反位是「5 种读法」清单，我们讲「反位配水晶转化触觉锚」——遇到困难反位时握 grounding 水晶稳住，把反位从恐慌触发变成反思机会，首饰站独有",
+      "process_steps": [
+        {"num": 1, "name": "What a Reversed Card Actually Is", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — definition section: reversed = the card's energy is internalized, delayed, in shadow, or still forming — NOT a 'bad' card"},
+        {"num": 2, "name": "The 5 Readings of a Reversal", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — section on the 5 standard interpretations (blocked / internalized / projected / inverted / returning)"},
+        {"num": 3, "name": "Do You Have to Read Reversals at All?", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — section on the choice (intentional reversals vs upright-only reading)"},
+        {"num": 4, "name": "When a 'Scary' Card Shows Up Reversed", "crystal": "smoky-quartz", "crystal_role": "a grounding anchor for the moment a Tower/Death/Devil reversed appears — smoky quartz to hold for a breath before reading, so you read from settled attention rather than flinching", "anchor_practice": "hold smoky quartz for one breath when a 'heavy' card appears reversed"},
+        {"num": 5, "name": "The 'Stuck' Cards (Repeated Reversals)", "crystal": "black-tourmaline", "crystal_role": "a 'stay with the stuckness' anchor for cards that keep showing up reversed across readings — black tourmaline's traditional grounding quality used as 'a tactile cue to sit with the pattern instead of forcing a fix'", "anchor_practice": "hold black tourmaline when reflecting on a pattern of repeated reversals"},
+        {"num": 6, "name": "The 'Inner Work' Cards (Cups/Swords Reversed)", "crystal": "amethyst", "crystal_role": "a 'reflective' anchor for the emotional/cognitive suits reversed — amethyst to hold when doing the inner work that these reversals point to", "anchor_practice": "hold amethyst when journaling on a reversed Cups or Swords card"},
+        {"num": 7, "name": "Closing: Free Will and the Reversal", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — closing section: a reversal points to where energy is unfinished, not to a fixed outcome"}
+      ],
+      "internal_links": [
+        {"anchor": "how to read tarot cards", "target": "/how-to-read-tarot/"},
+        {"anchor": "how to shuffle tarot cards", "target": "/how-to-shuffle-tarot/"},
+        {"anchor": "tarot for beginners", "target": "/tarot-for-beginners/"},
+        {"anchor": "tarot card meanings list", "target": "/tarot-card-meanings-list/"}
+      ],
+      "faq_seed": [
+        "Do reversed tarot cards mean the opposite of upright?",
+        "Are reversed tarot cards bad?",
+        "Should beginners read reversed tarot cards?",
+        "What does it mean when a card keeps showing up reversed?"
+      ],
+      "free_will_second_half": "A reversal is an invitation, not a verdict — it points to where energy is still moving, and you always get to choose how to meet it."
+    },
+
+    {
+      "slug": "major-vs-minor-arcana",
+      "name": "Major vs Minor Arcana: What the Two Halts of the Deck Actually Do",
+      "serp_keyword": "major vs minor arcana",
+      "primary_kw": "major vs minor arcana",
+      "title_template": "Major vs Minor Arcana: A Beginner's Breakdown (+ Crystal Pairings)",
+      "h1_template": "Major vs Minor Arcana: What Each Half of the Deck Does",
+      "url": "/major-vs-minor-arcana/",
+      "difficulty": "beginner",
+      "best_for": "新手理解 22 大牌 vs 56 小牌的功能分工",
+      "serp_evidence": "tarot card meanings list / how to read 衍生（labyrinthos/almanac/cratejoy 都讲 Major vs Minor 区分）",
+      "competitor_structure": "竞品讲：① Major = 大主题/长期/原型 ② Minor = 日常/情境/具体 ③ 比喻：Major 是天气，Minor 是当日；无水晶系统配对",
+      "word_count_target": "1500-1900",
+      "compliance_flag": "general(低)",
+      "eastern_lens": "本末（儒家「本立而道生」）+ 经纬（Major=经/纵向主线，Minor=纬/横向日常）：Major 是「人生剧本」原型线，Minor 是日常情境线——一张牌阵里 Major 出现的位置决定这张牌是「主旋律」还是「场景」",
+      "differentiation_hook": "竞品讲 Major/Minor 是抽象区分，我们讲「Major 配原型水晶 / Minor 配花色水晶」两层触觉锚——让抽象区分变成可触摸的实践差异，首饰站独有",
+      "process_steps": [
+        {"num": 1, "name": "What the Major Arcana Does (22 Cards)", "crystal": "quartz", "crystal_role": "the 'big archetype' anchor — clear quartz for Major-dominant readings to support clear seeing of the larger pattern", "anchor_practice": "place clear quartz beside the spread when a Major appears in a key position"},
+        {"num": 2, "name": "What the Minor Arcana Does (56 Cards, 4 Suits)", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — section on the 4 suits' functions"},
+        {"num": 3, "name": "Wands (Fire) — Action & Passion", "crystal": "carnelian", "crystal_role": "the action stone — carnelian for Wands-heavy readings about initiative and drive", "anchor_practice": "hold carnelian when reading a Wands-heavy spread"},
+        {"num": 4, "name": "Cups (Water) — Emotion & Relationship", "crystal": "rose-quartz", "crystal_role": "the heart stone — rose quartz for Cups-heavy readings about feeling and connection", "anchor_practice": "hold rose quartz when reading a Cups-heavy spread"},
+        {"num": 5, "name": "Swords (Air) — Thought & Conflict", "crystal": "fluorite", "crystal_role": "the mental-sorting stone — fluorite for Swords-heavy readings that feel tangled", "anchor_practice": "hold fluorite when reading a Swords-heavy spread"},
+        {"num": 6, "name": "Pentacles (Earth) — Body, Work, Resource", "crystal": "smoky-quartz", "crystal_role": "the grounding stone — smoky quartz for Pentacles-heavy readings about resources and the body (NOT medical; pure material-world grounding)", "anchor_practice": "hold smoky quartz when reading a Pentacles-heavy spread"},
+        {"num": 7, "name": "Reading Major + Minor Together", "crystal": "labradorite", "crystal_role": "a 'pattern-weaving' anchor for spreads that mix Major and Minor — labradorite to hold as you consider how the 'weather' (Major) shapes the 'day' (Minor)", "anchor_practice": "hold labradorite while reading a spread that mixes Major and Minor cards"}
+      ],
+      "internal_links": [
+        {"anchor": "tarot card meanings list", "target": "/tarot-card-meanings-list/"},
+        {"anchor": "tarot for beginners", "target": "/tarot-for-beginners/"},
+        {"anchor": "how to read tarot cards", "target": "/how-to-read-tarot/"},
+        {"anchor": "crystals for tarot cards", "target": "/crystals-for-tarot-cards/"}
+      ],
+      "faq_seed": [
+        "Which is more important, Major or Minor Arcana?",
+        "How can I tell if a reading is about a big life theme or a daily situation?",
+        "Why are there more Minor Arcana cards than Major?",
+        "Should I learn Major Arcana before Minor?"
+      ],
+      "free_will_second_half": "Major and Minor are two lenses on the same life — neither predicts outcomes, both invite you to look more carefully at what's already moving."
+    },
+
+    {
+      "slug": "reading-tarot-for-others",
+      "name": "Reading Tarot for Others: Consent, Boundaries, and Staying in Your Lane",
+      "serp_keyword": "reading tarot for others",
+      "primary_kw": "reading tarot for others",
+      "title_template": "Reading Tarot for Others: Consent, Boundaries + Crystals",
+      "h1_template": "Reading Tarot for Others: A Beginner's Guide to Boundaries",
+      "url": "/reading-tarot-for-others/",
+      "difficulty": "intermediate",
+      "best_for": "新手首次为他人读牌；守住边界、不替他人决定、保持自主",
+      "serp_evidence": "tarot for beginners related_searches 含 'How to do a tarot reading for someone else'",
+      "competitor_structure": "竞品讲：① 先得 consent ② 不读第三方（不替不在场者）③ 不给医疗/法律/财务建议 ④ 留出 querent 自由意志 ⑤ 知何时拒绝；无水晶",
+      "word_count_target": "1500-1900",
+      "compliance_flag": "general(中——涉他人 autonomy + 易触 Health/Finances 黑名单，守 1F §0A.1 全量)",
+      "eastern_lens": "分位（儒家「不在其位，不谋其政」）+ 不越界（佛家「正语」）：为他人读牌要守住「译员」而非「决策者」的位置——你翻译牌的图案，决定权永远在 querent 手里",
+      "differentiation_hook": "竞品讲「不越界」是认知建议，我们讲「读牌前握 grounding 水晶做边界锚」——水晶作为「我不替你决定」的物理提醒，比纯认知建议更可操作，首饰站独有",
+      "process_steps": [
+        {"num": 1, "name": "Get Explicit Consent (And Skip Third Parties)", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — consent section: don't read for absent third parties; ask the querent what they want to explore"},
+        {"num": 2, "name": "Frame Your Role: Translator, Not Oracle", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — say upfront 'I read the symbols; the meaning and the decision are yours'"},
+        {"num": 3, "name": "Settle Before the Reading", "crystal": "smoky-quartz", "crystal_role": "a grounding anchor for the reader before the querent arrives — smoky quartz to help you stay grounded and not absorb the querent's charge", "anchor_practice": "hold smoky quartz for 3 breaths before the querent sits down"},
+        {"num": 4, "name": "Hold the Boundary on Health, Legal, Financial Questions", "crystal": null, "crystal_role": null, "anchor_practice": "no crystal — refuse to give medical/legal/financial ADVICE; refer to professionals (1F §0A.1 hard rule)"},
+        {"num": 5, "name": "Read the Cards, Not the Querent's Future", "crystal": "quartz", "crystal_role": "a 'clear seeing' anchor for the reading itself — clear quartz to keep you describing the cards rather than narrating the querent's future", "anchor_practice": "set clear quartz beside the spread while reading"},
+        {"num": 6, "name": "End with the Querent's Free Will", "crystal": "amethyst", "crystal_role": "a 'listening' anchor for the closing — amethyst to hold as you invite the querent to sit with the reading before acting", "anchor_practice": "hold amethyst during the closing reflection"},
+        {"num": 7, "name": "Cleanse and Close (For Yourself, Too)", "crystal": "selenite", "crystal_role": "a 'reset' anchor for the reader after the querent leaves — selenite as a tactile gesture of 'this reading is closed; I'm returning to my own space'", "anchor_practice": "pass selenite over or rest the deck on it after the querent leaves"}
+      ],
+      "internal_links": [
+        {"anchor": "reading tarot for yourself", "target": "/reading-tarot-for-yourself/"},
+        {"anchor": "how to read tarot cards", "target": "/how-to-read-tarot/"},
+        {"anchor": "how to cleanse tarot cards", "target": "/how-to-cleanse-tarot/"},
+        {"anchor": "tarot ethics and free will", "target": "/tarot-ethics-free-will/"}
+      ],
+      "faq_seed": [
+        "Can I read tarot for someone who isn't there?",
+        "What if the querent asks about health or money?",
+        "How do I say no to a reading I'm not comfortable doing?",
+        "Should I let the querent shuffle and cut the deck?"
+      ],
+      "free_will_second_half": "Reading for others is a position of trust — the cards may surface a pattern for them, but their choices and their life are entirely their own."
+    }
+
+  ]
+}

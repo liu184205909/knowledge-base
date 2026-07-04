@@ -1,0 +1,230 @@
+{
+  "_meta": {
+    "purpose": "塔罗新手指南 13 篇 hero 生图清单（slug 索引）",
+    "framework": "../../03-内容策略/内容Brief/模板-Tarot-新手框架.md",
+    "data_sources": [
+      "configs/beginner/beginner-knowledge.json"
+    ],
+    "hero_prompt_spec": "每张 = 学塔罗实践场景（关键词驱动）+ 水晶触觉锚（手边 1-2 颗水晶）+ 东方禅意锚点",
+    "total_articles": 13
+  },
+  "articles": {
+    "how-to-read-tarot": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot beginner article \"How to Read Tarot Cards (A Beginner's Complete Walkthrough)\". Scene: a beginner sitting at a wooden reading table laying out their first three tarot cards in a row, hands gently drawing the cards from a deck. a single Selenite crystal gemstone and a single Amethyst crystal gemstone placed gracefully beside the reading as a tactile anchor, its natural color and facets clearly visible. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters.",
+        "file": "how-to-read-tarot.webp"
+      },
+      "primary_kw": "how to read tarot cards",
+      "crystals": [
+        {
+          "slug": "selenite",
+          "name": "Selenite"
+        },
+        {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        }
+      ]
+    },
+    "tarot-for-beginners": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot beginner article \"Tarot for Beginners: Where to Actually Start (A Crystal-Backed Path)\". Scene: a complete beginner's starter setup: an open tarot deck, a single clear quartz point placed beside it, and a journal waiting to be written. a single Clear Quartz crystal gemstone and a single Moonstone crystal gemstone placed gracefully beside the reading as a tactile anchor, its natural color and facets clearly visible. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-for-beginners.webp"
+      },
+      "primary_kw": "tarot for beginners",
+      "crystals": [
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        }
+      ]
+    },
+    "first-tarot-deck": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot beginner article \"Your First Tarot Deck: How to Choose (and What to Do First)\". Scene: an unboxed brand-new tarot deck with its cards fanned out for the very first time, the practitioner's hands unwrapping the deck. a single Rose Quartz crystal gemstone and a single Selenite crystal gemstone placed gracefully beside the reading as a tactile anchor, its natural color and facets clearly visible. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters.",
+        "file": "first-tarot-deck.webp"
+      },
+      "primary_kw": "first tarot deck",
+      "crystals": [
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        {
+          "slug": "selenite",
+          "name": "Selenite"
+        }
+      ]
+    },
+    "how-to-shuffle-tarot": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot beginner article \"How to Shuffle Tarot Cards: 5 Methods + When to Stop\". Scene: hands shuffling a tarot deck in the bridge-shuffle style over a reading cloth, a small amethyst held loosely in the non-shuffling hand as a tactile anchor. a single Amethyst crystal gemstone and a single Moonstone crystal gemstone placed gracefully beside the reading as a tactile anchor, its natural color and facets clearly visible. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters.",
+        "file": "how-to-shuffle-tarot.webp"
+      },
+      "primary_kw": "how to shuffle tarot cards",
+      "crystals": [
+        {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        }
+      ]
+    },
+    "how-to-cleanse-tarot": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot beginner article \"How to Cleanse Tarot Cards: 7 Methods That Aren't Just Sage\". Scene: a tarot deck being cleansed: a piece of selenite laid across the top card of the deck, soft moonlight or sound-bowl energy suggested by luminous particles. a single Moonstone crystal gemstone and a single Selenite crystal gemstone placed gracefully beside the reading as a tactile anchor, its natural color and facets clearly visible. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters.",
+        "file": "how-to-cleanse-tarot.webp"
+      },
+      "primary_kw": "how to cleanse tarot cards",
+      "crystals": [
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        },
+        {
+          "slug": "selenite",
+          "name": "Selenite"
+        }
+      ]
+    },
+    "tarot-card-meanings-list": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot beginner article \"Tarot Card Meanings List: 78 Cards with Crystal Pairings\". Scene: a study reference layout: a Major Arcana card (The Fool) prominently displayed with smaller card-silhouettes arranged around it like a learning chart. a single Varies By Card crystal gemstone and a single Rose Quartz crystal gemstone placed gracefully beside the reading as a tactile anchor, its natural color and facets clearly visible. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-card-meanings-list.webp"
+      },
+      "primary_kw": "tarot card meanings list",
+      "crystals": [
+        {
+          "slug": "varies-by-card",
+          "name": "Varies By Card"
+        },
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "storing-tarot-cards": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot beginner article \"How to Store Tarot Cards: Boxes, Bags, and the Crystal Companion\". Scene: a tarot deck resting inside a wooden or silk-lined storage box, a piece of selenite placed at the side of the deck inside the box. a single Selenite crystal gemstone placed gracefully beside the reading as a tactile anchor, its natural color and facets clearly visible. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters.",
+        "file": "storing-tarot-cards.webp"
+      },
+      "primary_kw": "how to store tarot cards",
+      "crystals": [
+        {
+          "slug": "selenite",
+          "name": "Selenite"
+        }
+      ]
+    },
+    "daily-tarot-practice": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot beginner article \"The Daily Tarot Practice: A 5-Minute Morning Draw with Crystals\". Scene: a calm morning ritual: a single tarot card drawn for the day, a cup of tea and a small crystal placed beside it on a wooden tray. a single Selenite crystal gemstone and a single Amethyst crystal gemstone placed gracefully beside the reading as a tactile anchor, its natural color and facets clearly visible. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters.",
+        "file": "daily-tarot-practice.webp"
+      },
+      "primary_kw": "daily tarot pull",
+      "crystals": [
+        {
+          "slug": "selenite",
+          "name": "Selenite"
+        },
+        {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        }
+      ]
+    },
+    "tarot-journaling": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot beginner article \"Tarot Journaling: 7 Prompts That Go Deeper Than 'What Does This Card Mean?'\". Scene: an open journal beside a laid-out three-card spread, a hand poised to write, a clear quartz point resting on the journal as an intention anchor. a single Clear Quartz crystal gemstone and a single Smoky Quartz crystal gemstone placed gracefully beside the reading as a tactile anchor, its natural color and facets clearly visible. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-journaling.webp"
+      },
+      "primary_kw": "tarot journaling",
+      "crystals": [
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        }
+      ]
+    },
+    "reading-tarot-for-yourself": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot beginner article \"Reading Tarot for Yourself: How to Stay Honest When You Want an Answer\". Scene: a single practitioner reading tarot solo at a candle-lit table, a piece of smoky quartz held near the cards as a grounding anchor. a single Smoky Quartz crystal gemstone and a single Amethyst crystal gemstone placed gracefully beside the reading as a tactile anchor, its natural color and facets clearly visible. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters.",
+        "file": "reading-tarot-for-yourself.webp"
+      },
+      "primary_kw": "reading tarot for yourself",
+      "crystals": [
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        }
+      ]
+    },
+    "reversed-tarot-cards": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot beginner article \"Reversed Tarot Cards: What They Actually Mean (And Whether to Use Them)\". Scene: a tarot spread where two cards are upright and one card is drawn upside-down (reversed), the reversed card clearly marked by its inverted orientation. a single Smoky Quartz crystal gemstone and a single Black Tourmaline crystal gemstone placed gracefully beside the reading as a tactile anchor, its natural color and facets clearly visible. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters.",
+        "file": "reversed-tarot-cards.webp"
+      },
+      "primary_kw": "reversed tarot cards",
+      "crystals": [
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        {
+          "slug": "black-tourmaline",
+          "name": "Black Tourmaline"
+        }
+      ]
+    },
+    "major-vs-minor-arcana": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot beginner article \"Major vs Minor Arcana: What the Two Halts of the Deck Actually Do\". Scene: two rows of tarot cards: top row showing a Major Arcana card (The Sun) larger and ornate, bottom row showing a Minor Arcana pip card smaller, visually contrasting the two. a single Clear Quartz crystal gemstone and a single Carnelian crystal gemstone placed gracefully beside the reading as a tactile anchor, its natural color and facets clearly visible. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters.",
+        "file": "major-vs-minor-arcana.webp"
+      },
+      "primary_kw": "major vs minor arcana",
+      "crystals": [
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        }
+      ]
+    },
+    "reading-tarot-for-others": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot beginner article \"Reading Tarot for Others: Consent, Boundaries, and Staying in Your Lane\". Scene: two people sitting across a reading table, one laying cards for the other, an amethyst placed at the center of the table as a shared grounding anchor. a single Smoky Quartz crystal gemstone and a single Clear Quartz crystal gemstone placed gracefully beside the reading as a tactile anchor, its natural color and facets clearly visible. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters.",
+        "file": "reading-tarot-for-others.webp"
+      },
+      "primary_kw": "reading tarot for others",
+      "crystals": [
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        }
+      ]
+    }
+  }
+}

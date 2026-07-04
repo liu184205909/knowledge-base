@@ -1,0 +1,44 @@
+<div class="ew-tools-mega">
+<div class="ew-tm-grid">
+<div class="ew-tm-col">
+<div class="ew-tm-title">Compatibility &amp; Tests</div>
+<a href="/tools/crystal-compatibility-checker/">Crystal Compatibility</a>
+<a href="/tools/zodiac-compatibility-checker/">Zodiac Compatibility</a>
+<a href="/tools/chakra-test/">Chakra Test</a>
+<a href="/tools/element-test/">Element Test</a>
+<a href="/tools/crystal-quiz/">Crystal Quiz</a>
+</div>
+<div class="ew-tm-col">
+<div class="ew-tm-title">Search &amp; Sizing</div>
+<a href="/crystal-meaning-search/">Crystal Meaning Search</a>
+<a href="/bracelet-size-calculator/">Bracelet Size Calculator</a>
+<a href="/ring-size-calculator/">Ring Size Calculator</a>
+<a href="/tools/birthstone-finder/">Birthstone Finder</a>
+<a href="/tools/crystal-bracelet-builder/">Crystal Bracelet Builder</a>
+</div>
+<div class="ew-tm-col">
+<div class="ew-tm-title">Care, Moon &amp; Destiny</div>
+<a href="/tools/crystal-cleansing-timer/">Cleansing Timer</a>
+<a href="/tools/moon-calendar/">Moon Phase Calendar</a>
+<a href="/tools/numerology-calculator/">Life Path Calculator</a>
+<a href="/tools/chinese-zodiac-checker/">Chinese Zodiac Checker</a>
+</div>
+<div class="ew-tm-col">
+<div class="ew-tm-title">Tarot</div>
+<a href="/tools/crystal-tarot-reading/">Crystal Tarot Reading</a>
+<a href="/tools/yes-no-tarot/">Yes-No Tarot</a>
+<a href="/tools/crystal-oracle-cards/">Crystal Oracle Cards</a>
+<a href="/tools/tarot-birth-card/">Tarot Birth Card</a>
+<a href="/tools/ai-tarot-chat/">AI Tarot Chat</a>
+<a href="/tools/daily-tarot/">Daily Tarot</a>
+</div>
+</div>
+</div>
+<style>
+.ew-tools-mega{padding:6px 4px !important;line-height:1 !important}
+.ew-tm-grid{display:grid !important;grid-template-columns:repeat(4,1fr) !important;gap:14px 32px !important;min-width:760px !important}
+.ew-tm-col{line-height:1 !important}
+.ew-tm-title{font-size:13px !important;font-weight:700 !important;color:#2D6A4F !important;text-transform:uppercase !important;letter-spacing:.04em !important;margin:0 0 12px !important;padding-bottom:6px !important;border-bottom:2px solid #E8F3EE !important;line-height:1.2 !important}
+.ew-tm-col a{display:block !important;margin:0 !important;padding:1px 0 !important;font-size:14px !important;color:#444 !important;text-decoration:none !important;line-height:1.2 !important}
+.ew-tm-col a:hover{color:#2D6A4F !important}
+</style>

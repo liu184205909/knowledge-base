@@ -1,0 +1,213 @@
+{
+  "total": 16,
+  "articles": [
+    {
+      "slug": "mbti-intj-tarot",
+      "postSlug": "mbti-intj-tarot",
+      "type": "INTJ",
+      "primary_card": "the-hermit",
+      "growth_card": "the-magician",
+      "crystals": [
+        "amethyst",
+        "sodalite",
+        "carnelian"
+      ],
+      "focus_keyword": "intj tarot card"
+    },
+    {
+      "slug": "mbti-intp-tarot",
+      "postSlug": "mbti-intp-tarot",
+      "type": "INTP",
+      "primary_card": "the-hermit",
+      "growth_card": "the-star",
+      "crystals": [
+        "fluorite",
+        "quartz",
+        "citrine"
+      ],
+      "focus_keyword": "intp tarot card"
+    },
+    {
+      "slug": "mbti-entj-tarot",
+      "postSlug": "mbti-entj-tarot",
+      "type": "ENTJ",
+      "primary_card": "the-emperor",
+      "growth_card": "the-chariot",
+      "crystals": [
+        "tiger-eye",
+        "garnet",
+        "rose-quartz"
+      ],
+      "focus_keyword": "entj tarot card"
+    },
+    {
+      "slug": "mbti-entp-tarot",
+      "postSlug": "mbti-entp-tarot",
+      "type": "ENTP",
+      "primary_card": "the-magician",
+      "growth_card": "the-fool",
+      "crystals": [
+        "citrine",
+        "aventurine",
+        "sodalite"
+      ],
+      "focus_keyword": "entp tarot card"
+    },
+    {
+      "slug": "mbti-infj-tarot",
+      "postSlug": "mbti-infj-tarot",
+      "type": "INFJ",
+      "primary_card": "the-high-priestess",
+      "growth_card": "the-hermit",
+      "crystals": [
+        "moonstone",
+        "amethyst",
+        "labradorite"
+      ],
+      "focus_keyword": "infj tarot card"
+    },
+    {
+      "slug": "mbti-infp-tarot",
+      "postSlug": "mbti-infp-tarot",
+      "type": "INFP",
+      "primary_card": "the-moon",
+      "growth_card": "the-star",
+      "crystals": [
+        "moonstone",
+        "rose-quartz",
+        "aquamarine"
+      ],
+      "focus_keyword": "infp tarot card"
+    },
+    {
+      "slug": "mbti-enfj-tarot",
+      "postSlug": "mbti-enfj-tarot",
+      "type": "ENFJ",
+      "primary_card": "the-hierophant",
+      "growth_card": "the-lovers",
+      "crystals": [
+        "rose-quartz",
+        "lapis",
+        "carnelian"
+      ],
+      "focus_keyword": "enfj tarot card"
+    },
+    {
+      "slug": "mbti-enfp-tarot",
+      "postSlug": "mbti-enfp-tarot",
+      "type": "ENFP",
+      "primary_card": "the-fool",
+      "growth_card": "the-star",
+      "crystals": [
+        "aventurine",
+        "citrine",
+        "moonstone"
+      ],
+      "focus_keyword": "enfp tarot card"
+    },
+    {
+      "slug": "mbti-istj-tarot",
+      "postSlug": "mbti-istj-tarot",
+      "type": "ISTJ",
+      "primary_card": "justice",
+      "growth_card": "the-emperor",
+      "crystals": [
+        "hematite",
+        "smoky-quartz",
+        "carnelian"
+      ],
+      "focus_keyword": "istj tarot card"
+    },
+    {
+      "slug": "mbti-isfj-tarot",
+      "postSlug": "mbti-isfj-tarot",
+      "type": "ISFJ",
+      "primary_card": "the-hierophant",
+      "growth_card": "the-empress",
+      "crystals": [
+        "rose-quartz",
+        "smoky-quartz",
+        "moonstone"
+      ],
+      "focus_keyword": "isfj tarot card"
+    },
+    {
+      "slug": "mbti-estj-tarot",
+      "postSlug": "mbti-estj-tarot",
+      "type": "ESTJ",
+      "primary_card": "the-emperor",
+      "growth_card": "justice",
+      "crystals": [
+        "tiger-eye",
+        "hematite",
+        "rose-quartz"
+      ],
+      "focus_keyword": "estj tarot card"
+    },
+    {
+      "slug": "mbti-esfj-tarot",
+      "postSlug": "mbti-esfj-tarot",
+      "type": "ESFJ",
+      "primary_card": "the-empress",
+      "growth_card": "the-hierophant",
+      "crystals": [
+        "rose-quartz",
+        "carnelian",
+        "aventurine"
+      ],
+      "focus_keyword": "esfj tarot card"
+    },
+    {
+      "slug": "mbti-istp-tarot",
+      "postSlug": "mbti-istp-tarot",
+      "type": "ISTP",
+      "primary_card": "the-hermit",
+      "growth_card": "death",
+      "crystals": [
+        "black-tourmaline",
+        "hematite",
+        "bloodstone"
+      ],
+      "focus_keyword": "istp tarot card"
+    },
+    {
+      "slug": "mbti-isfp-tarot",
+      "postSlug": "mbti-isfp-tarot",
+      "type": "ISFP",
+      "primary_card": "strength",
+      "growth_card": "the-star",
+      "crystals": [
+        "rose-quartz",
+        "carnelian",
+        "sunstone"
+      ],
+      "focus_keyword": "isfp tarot card"
+    },
+    {
+      "slug": "mbti-estp-tarot",
+      "postSlug": "mbti-estp-tarot",
+      "type": "ESTP",
+      "primary_card": "the-chariot",
+      "growth_card": "the-fool",
+      "crystals": [
+        "carnelian",
+        "tiger-eye",
+        "bloodstone"
+      ],
+      "focus_keyword": "estp tarot card"
+    },
+    {
+      "slug": "mbti-esfp-tarot",
+      "postSlug": "mbti-esfp-tarot",
+      "type": "ESFP",
+      "primary_card": "the-sun",
+      "growth_card": "the-fool",
+      "crystals": [
+        "citrine",
+        "sunstone",
+        "carnelian"
+      ],
+      "focus_keyword": "esfp tarot card"
+    }
+  ]
+}

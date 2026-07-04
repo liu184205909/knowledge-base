@@ -53,7 +53,8 @@
           "shift_condition": "Stronger-yes move when researched and chosen toward a real life; no if you are mainly running from what you have not faced.",
           "crystal": "moonstone"
         }
-      }
+      },
+      "common_mistakes": true
     },
     {
       "card": "the-magician",
@@ -90,7 +91,8 @@
           "shift_condition": "Yes-move if you can build wherever you land; no if the move is escapism dressed up as initiative.",
           "crystal": "citrine"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "the-high-priestess",
@@ -127,7 +129,8 @@
           "shift_condition": "Move if the inner read settles on go; stay if your gut says the timing or reason is unclear.",
           "crystal": "moonstone"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "the-empress",
@@ -164,7 +167,8 @@
           "shift_condition": "",
           "crystal": "rhodonite"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "the-emperor",
@@ -201,7 +205,8 @@
           "shift_condition": "Yes-stay if the foundation is solid and worth deepening; no if 'stability' has become a reason to never change what needs changing.",
           "crystal": "tiger-eye"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "the-hierophant",
@@ -238,7 +243,8 @@
           "shift_condition": "Yes-stay if tradition and community here genuinely sustain you; no if you are staying only because leaving feels like rule-breaking.",
           "crystal": "lapis"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "the-lovers",
@@ -275,7 +281,8 @@
           "shift_condition": "Yes if the move aligns with shared values or supports a valued union; no if it splits a relationship that matters or compromises what you believe.",
           "crystal": "malachite"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "the-chariot",
@@ -312,7 +319,8 @@
           "shift_condition": "",
           "crystal": "carnelian"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "strength",
@@ -349,7 +357,8 @@
           "shift_condition": "Yes-stay if patience can meet the difficulty; no if staying requires you to suppress your needs until they disappear.",
           "crystal": "tiger-eye"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "the-hermit",
@@ -386,7 +395,8 @@
           "shift_condition": "Yes-stay for a deliberate period of reflection that will inform the move; no if 'needing solitude' has become a way to avoid deciding.",
           "crystal": "smoky-quartz"
         }
-      }
+      },
+      "common_mistakes": true
     },
     {
       "card": "wheel-of-fortune",
@@ -423,7 +433,8 @@
           "shift_condition": "Yes-move when the cycle has genuinely turned; no if you are forcing movement that the timing does not support.",
           "crystal": "turquoise"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "justice",
@@ -460,7 +471,8 @@
           "shift_condition": "Leave if the place fails the fairness test; stay if honest weighing shows it is just and worth keeping.",
           "crystal": "lapis"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "the-hanged-man",
@@ -497,7 +509,8 @@
           "shift_condition": "Yes-stay for a deliberate reframe; no if 'needing a new perspective' has become indefinite delay.",
           "crystal": "bloodstone"
         }
-      }
+      },
+      "common_mistakes": true
     },
     {
       "card": "death",
@@ -534,7 +547,8 @@
           "shift_condition": "Yes-move as an honest closing of a completed chapter; no if you would move to escape admitting something has ended.",
           "crystal": "smoky-quartz"
         }
-      }
+      },
+      "common_mistakes": true
     },
     {
       "card": "temperance",
@@ -571,7 +585,8 @@
           "shift_condition": "Yes for a measured, well-blended transition; no for an extreme or impulsive move.",
           "crystal": "amazonite"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "the-devil",
@@ -608,7 +623,8 @@
           "shift_condition": "Stay-and-work if the attachment is unexamined; the question of move reopens only after the inner chain is seen.",
           "crystal": "black-tourmaline"
         }
-      }
+      },
+      "common_mistakes": true
     },
     {
       "card": "the-tower",
@@ -645,7 +661,8 @@
           "shift_condition": "Yes-move when the structure is truly unstable and the truth has landed; no if you would flee reactively without facing what collapsed.",
           "crystal": "black-tourmaline"
         }
-      }
+      },
+      "common_mistakes": true
     },
     {
       "card": "the-star",
@@ -682,7 +699,8 @@
           "shift_condition": "Yes-move toward a place that genuinely renews hope; no if the move is a flight from discouragement rather than a step toward meaning.",
           "crystal": "aquamarine"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "the-moon",
@@ -719,7 +737,8 @@
           "shift_condition": "Stay until what is obscured comes to light; reconsider the move once the fog has lifted and the path is visible.",
           "crystal": "amethyst"
         }
-      }
+      },
+      "common_mistakes": true
     },
     {
       "card": "the-sun",
@@ -756,7 +775,8 @@
           "shift_condition": "",
           "crystal": "sunstone"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "judgment",
@@ -793,7 +813,8 @@
           "shift_condition": "Yes-move when the call is genuine and reflection-backed; no if you would move to escape self-condemnation rather than answer a real direction.",
           "crystal": "angelite"
         }
-      }
+      },
+      "common_mistakes": false
     },
     {
       "card": "the-world",
@@ -830,7 +851,8 @@
           "shift_condition": "Yes-move when this chapter is truly complete and the next is calling; no — finish what remains first — if you would leave mid-cycle.",
           "crystal": "bloodstone"
         }
-      }
+      },
+      "common_mistakes": false
     }
   ]
 }

@@ -7,7 +7,7 @@
 > **6 大差异化**（vs 竞品合集单页）：
 > 1. **独立深度页**：每牌独立 1800-2500 词页（竞品合集单页每牌 2-3 段低质）
 > 2. **首饰 Shop CTA**：每牌水晶链到首饰产品（竞品只讲水晶 raw，无购买承接）
-> 3. **Minor Arcana 空白占位**：明确声明 Major 优先，Minor 留扩展（竞品无人系统做 Minor × 水晶）
+> 3. **Minor Arcana 元素纵深**：Major 先行落地，Minor 作为四花色元素纵深扩展（数据层 `minor-knowledge.json` 56 条 + 框架见 [Minor 牌义框架](模板-Tarot-Minor牌义框架.md)；竞品 Crystal Coven 只做合集单页，我们做独立深度页 + 5 角色水晶 + 首饰 Shop + Eastern + 宫廷 archetype）
 > 4. **Eastern 藏式塔罗调性**：每牌至少 2 处 Eastern 锚点（藏传/印度/东亚水晶文化，对标 goearthward 东方调性首饰定位）
 > 5. **三视角自我反思**：牌意 + 心理学 + 水晶三视角（archetype for self-reflection 框架降灵性门槛）
 > 6. **逆位专章**：每牌独立逆位段 + 水晶支持（竞品合集页逆位仅一句带过）

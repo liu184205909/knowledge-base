@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "purpose": "365 daily tarot readings (2026) — date x card x crystal x astrology x Eastern hour. Programmatic, anti-template.",
+    "purpose": "daily-tarot 工具数据层（07-互动工具/daily-tarot/PRD.md）— 365 天星象+东方时辰数据。原 365 篇日期文章计划已于 2026-07-02 作废（SERP 证伪日期长尾），本文件保留作为 /tools/daily-tarot/ 工具的星象/月相/行星位/逆行/食相/东方时辰数据源（dates[date] 查表）。",
     "framework": "模板-Tarot-每日运势框架.md (5 modules, 600-1000 words, anti-template §3)",
     "data_sources": [
       "07-互动工具/_shared/tarot-knowledge.json (22 cards)",
@@ -12,7 +12,11 @@
     "total_days": 365,
     "compliance": "1F §0A (Health/Finances blacklist + 6-class banned phrases); no determinism ('today will/guaranteed'); crystal = tactile cue not cure/wealth charm",
     "anti_template": "each day's combination of (card x moon phase x retrograde x Eastern double-hour x crystal role) is unique; articles must weave the specific astrology, not generic card meaning",
-    "card_distribution_check": "see distribution.json — each of 22 cards lands on 16-17 days"
+    "card_distribution_check": "see distribution.json — each of 22 cards lands on 16-17 days",
+    "status": "文章计划作废，数据层复用于工具（2026-07-02 裁决）",
+    "original_framework_deprecated": "模板-Tarot-每日运势框架.md（已删除，迁移为 07-互动工具/daily-tarot/PRD.md）",
+    "tool_prd": "07-互动工具/daily-tarot/PRD.md",
+    "deprecated_fields_per_date": "url/title/focus_keyword/weekday/day_of_year 为旧文章计划残留，工具不使用（工具按 dateKey 查 moon/outer_backdrop/retrogrades/eclipse/special_event/eastern_hour/card/crystal）"
   },
   "dates": {
     "2026-01-01": {

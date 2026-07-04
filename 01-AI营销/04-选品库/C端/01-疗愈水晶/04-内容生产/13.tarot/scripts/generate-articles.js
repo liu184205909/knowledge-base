@@ -16,15 +16,19 @@ const args = process.argv.slice(2);
 const slugArg = args.find(a => a.startsWith('--slug='))?.split('=')[1];
 const onlyHub = args.includes('--hub');
 
+
+// >>>>>>> added by fix-major-crystal-slugs.js (兼容 tarot-knowledge -meaning slug + search-data 短 slug key)
+function normSlug(s){ return s ? String(s).replace(/-meaning$/,'') : s; }
+// <<<<<<< added by fix-major-crystal-slugs.js
 const DISPLAY_OVERRIDES = { quartz: 'Clear Quartz', lapis: 'Lapis Lazuli', aventurine: 'Green Aventurine' };
 function stoneName(slug) {
-  if (DISPLAY_OVERRIDES[slug]) return DISPLAY_OVERRIDES[slug];
-  const a = ATTR[slug + '-meaning'];
+  if (DISPLAY_OVERRIDES[normSlug(slug)]) return DISPLAY_OVERRIDES[normSlug(slug)];
+  const a = ATTR[slug.endsWith('-meaning') ? slug : slug + '-meaning'];
   if (a && a.title) {
     const stripped = a.title.replace(/\s*Meaning: Healing Properties.*$/i, '').trim();
     if (stripped) return stripped;
   }
-  return slug.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
+  return normSlug(slug).split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
 }
 
 // CTA 文案轮换池（3套）

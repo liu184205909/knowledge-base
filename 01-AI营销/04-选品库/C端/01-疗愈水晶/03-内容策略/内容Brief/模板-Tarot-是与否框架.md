@@ -1,19 +1,52 @@
-# Tarot 是与否框架 v1（单牌 × 问题类型，~100 篇）
+# Tarot 是与否框架 v2（单牌 × 问题类型，~100 篇）
 
-> **适用**：`is-{card}-yes-or-no-{question}/` 单牌在某问题下的是与否判定页（22 Major × 5 问题类型 Love/Career/Decision/Timing/Move-or-Stay = 110 篇基础，精选强 yes/强 no/conditional 牌优先 ~100 篇）
-> **与牌义页框架的关系**：[模板-Tarot-牌义页框架](模板-Tarot-牌义页框架.md) 写牌的普适意义；本框架写**该牌在某问题类型下的是与否判定 + 条件**。两框架物理隔离：是与否页不讲 archetype 深度，只讲判定逻辑。
-> **竞品依据**：[1F §2.4](../../01-竞品分析/1F-塔罗内容写法研究.md) —— **Selfgazer 是方法论王**（4000 词总览页：问题措辞原则/读牌法/正逆位判定/强度三档/78 牌速答清单/5 错误+禁用场景/自由意志免责）。我们做**独立"该牌该问题=是/否/视情况"页**（1000-1500 词），吸收 Selfgazer 方法论深度。
-> **数据源**：`07-互动工具/_shared/tarot-knowledge.json`（22 牌 upright/reversed）+ 本框架 §5 三档判定规则
-> **核心策略**：主词 `is {card} a yes or no card` / `is {card} yes or no for {question}` / `{card} yes or no love`。差异化：**三档判定 + conditional 转化条件 + 水晶辅助决策 + 易经阴阳对照**。
-> **⚠️ 最大风险**：照抄 Selfgaze 78 牌通用 yes/no 速答清单（重复内容）+ 二元答案太薄。**本框架核心 = 三档判定 + 该牌该问题独有论证 + 自由意志免责**。
+> **v2 变更**（按评审优化）：① 拆三层——母框架(本档) / [生产 Brief](Brief-Tarot-是与否-生产执行版.md) / [QC 清单](Checklist-Tarot-是与否-QC.md)；② **判定矩阵前置 §0**（数据层=第一交付物，先审矩阵再写文，从源头去重）；③ 8 模块 → **6 核心 + 2 可选**，词数放宽 1200-1800；④ 新增 **§8 选题优先级矩阵**（SEO 评分表）；⑤ 新增 **§9 内链配方**；⑥ **强制免责段排除相似度计算**；⑦ Common Mistakes 改可选（仅误读牌启用）。
+> **适用**：`is-{card}-yes-or-no-{question}/` 单牌在某问题下的是与否判定页（22 Major × 5 问题类型 = 110 篇基础，精选 ~100 篇）
+> **与牌义页框架关系**：[牌义页框架](模板-Tarot-牌义页框架.md) 写牌的普适意义；本框架写**该牌在某问题类型下的是与否判定 + 条件**。物理隔离：是与否页不讲 archetype 深度，只讲判定逻辑。
+> **竞品依据**：[1F §2.4](../../01-竞品分析/1F-塔罗内容写法研究.md) —— Selfgazer 是方法论王（4000 词总览页：问题措辞/读牌法/正逆位/强度三档/78 牌速答/5 错误+禁用场景/自由意志免责）。我们做独立"该牌该问题=是/否/视情况"页，吸收其方法论深度。
+> **数据源**：`yes-no-knowledge.json`（判定矩阵，**第一交付物**）+ `tarot-knowledge.json`（22 牌正逆位）
+> **核心策略**：主词 `is {card} a yes or no card` / `{card} yes or no for {question}`。差异化：**三档判定 + conditional 转化条件 + 水晶辅助反思 + 自由意志免责**。
+> **⚠️ 最大风险**：照抄 Selfgaze 78 牌速答清单（重复内容）+ 二元答案太薄 + Health/Finances 违规。
 
 ---
 
-## 1. URL + TKD
+## §0 判定矩阵前置（第一交付物）⭐⭐⭐
 
-- **URL**：`is-{card}-yes-or-no-{question}/`（根级 post）
-  - 示例：`/is-the-fool-yes-or-no-for-new-job/` / `/is-the-tower-yes-or-no-for-moving/` / `/is-the-fool-yes-or-no-he-loves-me/`
-  - 不加 `tarot-` 前缀（`is-...-yes-or-no` 已明确意图，无产品词污染）
+> **核心变更**：`yes-no-knowledge.json` 不再是生产中的附属配置，而是**整个项目的第一交付物**。矩阵审完才进文章生产。
+> **为什么前置**（解决 4 个源头问题）：① 避免同牌不同问题逻辑冲突；② 提前发现 100 篇里哪些太像——**选题去重在矩阵阶段做，不靠写作端补救**（治本）；③ Health/Finances 高风险页提前标红；④ 写作阶段只扩写不判断。
+
+**矩阵结构**（`yes-no-knowledge.json` 每条）：
+
+| 字段 | 内容 | 示例（The Fool × Love） |
+|---|---|---|
+| card | 牌 slug | the-fool |
+| question_type | 5 类 | love |
+| overall_verdict | 三档 | conditional |
+| specific_verdict | 该问题判定 | conditional yes（opening 关系）/ no（忽略 red flag） |
+| core_reason | 落该牌 archetype | leap-of-faith favors opening, but innocence slides to naivety |
+| shift_condition | 转化条件 | stronger yes if eyes open; no if ignoring red flags |
+| crystal | 反思辅助 | rose-quartz |
+| compliance_flag | 合规标红 | love(中) / health(极高) / finances(极高) |
+| common_mistakes | 是否启用 O2 | true/false |
+
+**矩阵阶段就去重**（⭐ 解决"防重复 vs 强制差异化"张力根源）：
+- 同档位 + 同问题类型的牌（如多张 Conditional 在 Love），core_reason **必须落到该牌独有 archetype**（The Fool=leap / The Hermit=introspection / The Hierophant=convention），**禁都用 "yes but with complications" 通用句**
+- 矩阵审时连读同档位同问题组，"换牌名能否互换"——能互换 = 打回重写 core_reason
+
+**矩阵验收清单**（任一不满足打回，详细可勾选项见 [QC 清单](Checklist-Tarot-是与否-QC.md)）：
+- [ ] 110 条 verdict 三档有 archetype + 正逆位依据（与 Selfgaze 速答相似度 < 30%）
+- [ ] core_reason 主体词组跨篇重叠 < 30%（同档位同问题之间也落独有论证）
+- [ ] Health/Finances 条目 verdict 不医疗/投资化 + 带强制免责标签
+- [ ] conditional 牌 shift_condition + crystal 落该牌该问题独有
+- [ ] 同牌不同问题 verdict 可不同（The Tower 总体 no，for "leave toxic job" = yes）
+
+**抽审比例**：Health/Finances 全审 / 强 yes·no 高权重牌全审 / conditional 抽 30% / 其余抽 20%
+
+---
+
+## §1 URL + TKD
+
+- **URL**：`is-{card}-yes-or-no-{question}/`（根级 post）。示例：`/is-the-fool-yes-or-no-love/` / `/is-the-tower-yes-or-no-for-moving/`
 - **Title**：`Is {Card} a Yes or No Card? (For {Question})`（≤60 字符）
 - **H1**：`Is {Card} a Yes or No Card for {Question}?`
 - **Primary KW**：`is {card} a yes or no card` / `{card} yes or no` / `{card} yes or no {question}`
@@ -21,207 +54,166 @@
 
 ---
 
-## 2. 模块结构（8 模块，目标 1000-1500 词）
+## §2 模块结构（6 核心 + 2 可选，1200-1800 词）⭐ 改
 
-| # | 模块 | H2 | 词数 | 要点 |
+| # | 模块 | H2 | 词数 | 必/可选 |
 |---|---|---|---|---|
-| Intro | Hero + 钩子 | | 120-180 | 该牌 yes/no 总体倾向 + 该问题特殊性 |
-| M1 | TL;DR | `Quick Answer` | 80-120 | **三档判定**（Strong Yes / Conditional / Strong No）+ 条件 + Featured Snippet bait |
-| **M2** | **Overall Tendency** ⭐ | `Is {Card} Generally a Yes or No Card?` | 250-350 | 该牌总体 yes/no 倾向 + **为什么**（非照抄清单，见 §3）|
-| **M3** | **For {Question} Specifically** ⭐ | `{Card} for {Question}: Yes or No?` | 250-350 | 该问题类型下**特殊读法**（同牌 Love vs Career 判定可能不同，见 §4）|
-| M4 | Upright vs Reversed | `Upright vs Reversed {Card}` | 180-250 | 正逆位判定差异（逆位≠否，常=not yet，见 §5）|
-| M5 | If Conditional | `What Would Shift It to Yes/No?` | 150-220 | **转化条件 + 水晶辅助**（conditional 牌配水晶转化，见 §6）|
-| M6 | Common Mistakes | `Common Mistakes Reading {Card}` | 120-180 | 该牌常见误读（吸收 Selfgaze 5 错误）|
-| M7 | Free Will + FAQ | | 150-220 | **自由意志免责**（合规+E-E-A-T）+ FAQ |
+| Intro | Hero + 钩子 | | 120-180 | 核心 |
+| M1 | Quick Answer | `Quick Answer` | 80-120 | 核心（Featured Snippet bait） |
+| **M2** | **Overall Tendency** | `Is {Card} Generally a Yes or No Card?` | 280-380 | **核心**（见 §3） |
+| **M3** | **For {Question}** | `{Card} for {Question}: Yes or No?` | 280-380 | **核心**（见 §4） |
+| M4 | What Would Shift It | `What Would Shift It to Yes/No?` | 150-220 | 核心（conditional 必写，strong yes/no 简写） |
+| M5 | Free Will + FAQ | | 150-220 | 核心（免责 + FAQ 2-3 个） |
+| O1 | Upright vs Reversed | `Upright vs Reversed {Card}` | 150-220 | **可选**（可并入 M2/M3，逆位关键牌才独立） |
+| O2 | Common Mistakes | `Common Mistakes Reading {Card}` | 100-160 | **可选**（仅误读牌启用，见下） |
+
+**Common Mistakes(O2) 启用规则**（⭐ 改：不硬塞，避免水字数）：
+- ✅ 启用：The Moon / The Tower / Death / The Devil / The Fool / The Hermit / The Hanged Man（有明显常见误读）
+- ❌ 不启用：The Sun / The World / The Star（强行写误读 = 水字数）
+- 判定：矩阵阶段标 `common_mistakes: true/false`
+
+**词数说明**：M2+M3 占 560-760 词（核心论证），其余分 440-1040 词，空间充足。Strong Yes/No 牌 M4 简写可控制在 1200-1400；Conditional 牌 M4 详写 1400-1800。
 
 ---
 
-## 3. M2 总体判定（核心防雷 ⭐⭐）
+## §3 M2 总体判定（核心防雷）
 
-> **竞品雷同根源**：Selfgaze 78 牌 yes/no 速答清单是**通用速答**，多家复制。照抄 = 重复内容。**本模块禁照抄，必须写该牌独有论证。**
+照抄 Selfgaze 速答清单 = 重复内容。M2 必须写**该牌独有论证**：
+- ❌ "The Fool is generally a yes card."
+- ✅ "The Fool leans yes — its archetype is the leap of faith... But it's a **conditional yes**: the leap must be informed, not reckless..."
 
-**判定 + 条件 > 二元答案**（Selfgaze 核心洞察：reversed doesn't mean opposite, often = not yet / yes but with complications）：
-
-| ❌ 禁（照抄速答清单） | ✅ 要（该牌独有论证） |
-|---|---|
-| "The Fool is generally a yes card." | "The Fool leans yes — its archetype is the leap of faith, so it favors questions where action and openness matter. But it's a **conditional yes**: the leap must be informed, not reckless. For 'should I take this risk?' it's yes; for 'is this a sure thing?' it's no, because The Fool never promises safety." |
-
-**硬约束**：
-1. M2 必须给**三档判定**（Strong Yes / Conditional / Strong No）之一 + **为什么**（基于该牌 archetype + upright/reversed 语义）
-2. 禁照抄 Selfgaze 速答句（grep 比对 Selfgaze 清单，相似度 < 30%）
-3. 判定必须落到该牌独有象征（The Tower=震荡→多数 no；The Sun=光明→多数 yes；The Hermit=内省→conditional yes only if reflected）
+**硬约束**：三档判定 + 为什么（archetype + 正逆位语义）/ 禁照抄 Selfgaze（相似度 < 30%）/ 落该牌独有象征（The Tower=震荡→多 no；The Sun=光明→多 yes；The Hermit=内省→conditional yes only if reflected）。
 
 ---
 
-## 4. M3 该问题类型特殊读法（⭐⭐）
+## §4 M3 该问题特殊读法
 
-> **Selfgaze 关键洞察**：同一张牌，不同问题判定可能不同。**Three of Swords might be yes for ending a painful relationship but no for pursuing someone.**
-
-**该问题类型下的特殊判定（每篇必须给）**：
-
-| 问题类型 | 该牌判定逻辑 |
-|---|---|
-| Love（he loves me / new relationship） | 该牌在感情问题的倾向 |
-| Career（new job / quit / launch） | 该牌在事业问题的倾向 |
-| Decision（should I do X） | 该牌在决策问题的倾向 |
-| Timing（is now the right time） | 该牌在时机的倾向 |
-| Move-or-Stay（move / stay / go back） | 该牌在去留问题的倾向 |
-
-**硬约束**：M3 必须写**该牌在该问题的独有判定**，且与 M2 总体判定**可不同**（如 The Tower 总体 no，但 for "should I leave toxic job?" = yes，必要崩塌）。
+同一张牌不同问题判定可不同（Three of Swords might be yes for ending a painful relationship but no for pursuing someone）。M3 写该牌该问题独有判定，**可与 M2 总体不同**（The Tower 总体 no，但 for "should I leave toxic job?" = yes，必要崩塌）。
 
 ---
 
-## 5. 三档判定规则（M1+M2+M3 系统化）
+## §5 三档判定规则
 
-| 档位 | 判定信号 | 典型牌 |
+| 档位 | 信号 | 典型牌 |
 |---|---|---|
-| **Strong Yes** | 正位 + 积极 archetype + 行动型牌 | The Sun / The World / The Star / The Magician（正位）|
-| **Conditional** | 中性牌 / 逆位 / 需附加条件 | The Fool（条件 yes）/ The Hermit（reflect 后 yes）/ 逆位牌（not yet）|
-| **Strong No** | 震荡/结束 archetype + 该问题忌动 | The Tower（忌大动）/ The Moon（不明朗）/ Death（结束，for 继续=否）|
+| **Strong Yes** | 正位 + 积极 archetype + 行动型 | The Sun / The World / The Star / The Magician（正位） |
+| **Conditional** | 中性牌 / 逆位 / 需附加条件 | The Fool（条件 yes）/ The Hermit（reflect 后 yes）/ 逆位（not yet） |
+| **Strong No** | 震荡/结束 archetype + 该问题忌动 | The Tower（忌大动）/ The Moon（不明朗）/ Death（结束，for 继续=否） |
 
-**逆位规则（合规+Selfgaze）**：逆位 **≠** 否定/凶兆。逆位常 = **not yet / yes but with complications / 内在能量受阻**。用 shadow aspect / invitation to reflect 口径。
-
----
-
-## 6. M5 conditional 转化 + 水晶辅助
-
-> conditional 牌的核心价值：给转化条件 + 水晶辅助。
-
-**写法**：
-- The Hermit = yes **only if** you've reflected enough → 配 **Amethyst** 助内省
-- The Fool = conditional yes → 配 **Clear Quartz** 帮你 discern 哪个 leap 值得
-- The Tower = no for now → 配 **Smoky Quartz** 帮你 grounding 度过震荡期
-
-**硬约束**：水晶辅助必须落**该牌该问题的转化条件**（非"wear X for luck"万能句），CTA 三级降级。
+**逆位规则**：逆位 **≠** 否定/凶兆，常 = **not yet / yes but with complications / 内在能量受阻**。用 shadow aspect / invitation to reflect 口径。
 
 ---
 
-## 7. 自由意志免责 + 合规（M7 ⭐）
+## §6 conditional 转化 + 水晶辅助
 
-> 吸收 Selfgaze 结尾 + 全站合规。是与否页涉及"预测"，**免责尤其重要**。
+- The Hermit = yes **only if** you've reflected enough → **Amethyst** 助内省
+- The Fool = conditional yes → **Clear Quartz** 帮 discern 哪个 leap 值得
+- The Tower = no for now → **Smoky Quartz** 助 grounding 度过震荡
+
+**水晶口径**（⭐ 反复强调，避免玄学承诺）：水晶**不是改变结果的工具**，而是**帮助执行该牌建议的反思辅助**。
+- ✅ "Use Amethyst to support the introspection The Hermit asks for"
+- ❌ "Wear Amethyst to turn this into a yes"
+
+CTA 三级降级（meaning → category → 总 shop）。
+
+---
+
+## §7 自由意志免责 + 合规
 
 **强制免责文案**（每篇必含，前半全站一致 + 后半该牌差异化）：
 - 全站前半："Cards reflect current energy and patterns, not fixed outcomes — you always have free will to shape what happens next."
 - 该牌后半：`For {Card}, the card may point to {该牌倾向}, but whether you act on it is your choice.`
 
-**合规禁词**（牌义页 §16）：`will predict` / `destined` / `guaranteed yes` / `definitely no` / `curse` / `bad omen`。
+**合规禁词**：`will predict` / `destined` / `guaranteed yes` / `definitely no` / `curse` / `bad omen`。
+
+### §7A Health / Finances 加固（是与否专属，5 类最易违规处）⭐⭐⭐
+
+> 是与否 verdict 天然是"判定"，落在 Health/Finances 时 AI 极易生成医疗判定/投资建议——平台+广告政策高压区，比其余 4 类塔罗内容风险**高一个数量级**。本节触发即打回。
+
+**§7A.1 Health**（禁医疗判定）：verdict 只谈 energy / rest / stress / body awareness / emotional pattern，**禁**判定 cure/healing/recovery/surgery。强制免责标签（原文照搬禁改写）：
+> "For health questions, this reading is a reflection prompt, not medical advice — decisions about treatment belong with a qualified professional."
+
+**§7A.2 Finances**（禁投资建议）：verdict 只谈 money mindset / risk awareness / spending pattern / planning behavior，**禁**判定 investment/stock/crypto/lending。强制免责标签：
+> "For money questions, this reading is symbolic, not investment advice — financial decisions belong with a qualified professional."
+
+**§7A.3 问题类型合规分级**：
+
+| 问题类型 | 风险 | 规则 |
+|---|---|---|
+| Love / Career / Decision / Timing / Move | 中 | 可正常三档判定，禁绝对预测（用 may/likely） |
+| **Health** | **极高** | 守 §7A.1 全量：禁医疗判定 + verdict 谈能量觉察 + 强制免责标签 |
+| **Finances** | **极高** | 守 §7A.2 全量：禁投资建议 + verdict 谈财务觉察 + 强制免责标签 |
 
 ---
 
-## 7A. Health / Finances 合规定制（是与否专属 ⭐⭐⭐ —— 5 类塔罗内容最易违规处）
+## §8 选题优先级矩阵（SEO 评分表）⭐ NEW
 
-> **为什么是与否是重灾区**：是与否页的 verdict 天然是"判定"（该牌该问题 = Strong Yes / Conditional / Strong No）。当问题落在 Health（如 "Is The Tower yes for surgery?"）/ Finances（如 "Is The Magician yes for this investment?"）时，AI 极易生成**医疗判定 / 投资建议**——这是平台+广告政策高压区，比其余 4 类塔罗内容风险**高一个数量级**。
-> **本节为是与否页强制规则**，触发即打回不进生产。普适黑名单见 [1F §0A.1](../../01-竞品分析/1F-塔罗内容写法研究.md)，本节是**是与否页在该黑名单之上的类型专属加固**。
+> 22×5=110 精选 ~100，"精选"不能只靠内容逻辑（强 yes/no/conditional），必须有 SEO 维度排序，否则冷启动吃亏。
 
-### 7A.1 Health 问题判定规则（禁医疗判定）
+**选题评分表**（每条 0-100）：
 
-> **典型违规问题**：`Is {Card} yes for healing?` / `Is {Card} yes for recovery?` / `Is {Card} yes for surgery?` / `Is {Card} a warning about my illness?` / `Will {Card} mean I'll get better?`
+| 维度 | 权重 | 说明 | 示例 |
+|---|---|---|---|
+| 搜索意图明确度 | 30% | "{card} yes or no {question}" 是否高频直查 | "the fool yes or no love" > 模糊长尾 |
+| 牌热度 | 25% | Major 牌搜索量梯队（查 Seed-Master） | Fool/Lovers/Tower/Death/Sun > 其他 |
+| 商业价值 | 20% | Love/Career/Decision > Timing/Move | love highest |
+| 差异化空间 | 15% | 有独有判断的牌×问题 | "The Tower for leaving job" 独特 |
+| 合规风险 | 10% | Health/Finances 降权（独立审查成本） | Health/Finances 默认 -10% |
 
-**强制规则**：
-1. **verdict 禁医疗判定**：是与否页对 Health 问题的判定，**只能谈 energy / rest / stress / body awareness / emotional pattern 层面**，**禁**判定该牌对"治愈/康复/手术/疾病"的 yes/no
-   - ❌ 违规：`The Tower is a no for surgery — it signals complications.`（医疗判定）
-   - ❌ 违规：`The Sun is a yes for healing — it means you will recover.`（疗效承诺）
-   - ✅ 合规：`For health questions, The Tower is better read as a prompt to slow down and check in with your body — not a verdict on any treatment or outcome. The card's sudden-change energy may point to stress you've been carrying; whether to pursue any medical path is a conversation for you and a qualified professional.`
-2. **verdict 禁用医疗词黑名单**（在 [1F §0A.1](../../01-竞品分析/1F-塔罗内容写法研究.md) Health 黑名单基础上，是与否页额外禁这些判定式表达）：
-   - `yes/no for surgery` / `yes/no for healing` / `yes/no for recovery` / `yes/no for treatment`
-   - `this card means you will get better/worse` / `the illness will...`
-   - `cure` / `heal` / `diagnose` / `illness` / `sickness`（在 verdict 上下文）
-3. **Health 问题统一加免责标签**：是与否页对 Health 问题的 verdict + M3 + FAQ 答案，**强制内嵌**（原文照搬禁改写）：
-   > `"For health questions, this reading is a reflection prompt, not medical advice — decisions about treatment belong with a qualified professional."`
-4. **三档判定在 Health 问题的改写**（禁直接 Strong Yes/No 医疗化）：
-   - Strong Yes/No 在 Health 问题 → 改写为"该牌的能量指向（如 rest/check-in/slow down）是否与该问题相关"，**不**判定疗效
-   - Conditional 在 Health 问题 → 谈"该牌提示的身体/能量觉察"，非"治不治"
+**优先级梯队**（生产前查 Seed-Master Sheet 精确搜索量微调，不臆断）：
 
-### 7A.2 Finances 问题判定规则（禁投资建议）
-
-> **典型违规问题**：`Is {Card} yes for this investment?` / `Is {Card} yes for buying this stock?` / `Is {Card} yes for lending money?` / `Will {Card} mean I'll make money?` / `Is {Card} a yes for crypto?`
-
-**强制规则**：
-1. **verdict 禁投资建议**：是与否页对 Finances 问题的判定，**只能谈 money mindset / risk awareness / spending pattern / planning behavior 层面**，**禁**判定该牌对"某项投资/某只股票/借贷/加密货币"的 yes/no
-   - ❌ 违规：`The Magician is a yes for this investment — it means manifestation and returns.`（投资建议 + 收益暗示）
-   - ❌ 违规：`The Fool is a yes for crypto — take the leap.`（具体投资品类建议）
-   - ✅ 合规：`For money questions, The Magician leans toward resourcefulness and agency — but that's a mindset read, not a signal to invest. The card can't tell you whether a specific asset will perform; it may simply invite you to review whether you've thought the decision through. Treat any yes/no here as a prompt to slow down, not a green light.`
-2. **verdict 禁用财务词黑名单**（在 [1F §0A.1](../../01-竞品分析/1F-塔罗内容写法研究.md) Finances 黑名单基础上，是与否页额外禁这些判定式表达）：
-   - `yes/no for this investment/stock/crypto/asset` / `yes/no for lending`
-   - `you will gain/profit` / `guaranteed return` / `this stock will...`
-   - `invest now` / `don't invest or you'll lose` / `predicts loss`
-3. **Finances 问题统一加免责标签**：是与否页对 Finances 问题的 verdict + M3 + FAQ 答案，**强制内嵌**（原文照搬禁改写）：
-   > `"For money questions, this reading is symbolic, not investment advice — financial decisions belong with a qualified professional."`
-4. **三档判定在 Finances 问题的改写**（禁直接 Strong Yes/No 投资化）：
-   - Strong Yes/No 在 Finances 问题 → 改写为"该牌的能量（如 review spending / slow down / risk awareness）是否与该问题相关"，**不**判定收益
-   - Conditional 在 Finances 问题 → 谈"该牌提示的财务觉察"，非"投不投"
-
-### 7A.3 是与否页问题类型合规分级
-
-| 问题类型 | 合规风险 | 是与否页专属规则 |
+| 梯队 | 量级 | 牌×问题组合 |
 |---|---|---|
-| Love（he loves me / new relationship） | 中 | 禁"对方一定回头/一定出轨"绝对预测；verdict 用 may/likely |
-| Career（new job / quit / launch） | 中 | 禁"一定升职/被裁"；verdict 用 decision-frame，可正常三档判定 |
-| Decision（should I do X） | 中 | 可正常三档判定（决策是是与否的天然主场），但守 [1F §0A.2](../../01-竞品分析/1F-塔罗内容写法研究.md) 绝对预测禁令 |
-| Timing（is now the right time） | 中 | 可正常三档判定，禁"X 时刻必发生"确定论 |
-| Move-or-Stay（move / stay / go back） | 中 | 可正常三档判定，禁"搬家必破财/必生病"连带违规 |
-| **Health（healing/recovery/surgery/illness）** | **极高** | ⭐**守 §7A.1 全量**：禁医疗判定 + verdict 谈能量觉察 + 强制免责标签 |
-| **Finances（investment/stock/lending/crypto）** | **极高** | ⭐**守 §7A.2 全量**：禁投资建议 + verdict 谈财务觉察 + 强制免责标签 |
+| **T1 先做** | ~30 篇 | Fool / Lovers / Tower / Death / Sun / Devil / Magician / Star / Moon × Love + Decision + 主要 Career |
+| T2 | ~60 篇 | Hermit / Empress / Emperor / High Priestess / Hierophant / Chariot / Strength / Wheel / Justice / Temperance × 5 问题 |
+| T3 补尾 | ~10 篇 | Judgment / World / Hanged Man + Move / Timing 长尾 |
 
-**硬约束**：
-1. 是与否页生产前，先判该篇问题类型；**Health/Finances 问题页全审**（不抽审，5 类里风险最高，错一篇即违规）
-2. Health/Finances 问题的 verdict 不进 Strong Yes/Strong No 的医疗/投资化判定，统一降级为"能量/觉察层 Conditional 改写" + 强制免责标签
-3. [1F §0A.1](../../01-竞品分析/1F-塔罗内容写法研究.md) Health/Finances 黑名单在是与否页是**关卡 0 必过项**，且 §7A.1/§7A.2 额外禁用判定式表达（yes/no for surgery / yes for this investment 等）一并 grep
+**精确搜索量来源**：Seed-Master Sheet（SEMrush-Seed-Keywords ID 1HhKDz7）或 `serp_check` 验证。
 
 ---
 
-## 8. 通用组件（复用牌义页/配对页框架）
+## §9 内链配方 ⭐ NEW
 
-| 组件 | 执行依据 | 是与否页专属 |
-|---|---|---|
-| 合规/去AI化 | 牌义页 §16 + [1F §0A](../../01-竞品分析/1F-塔罗内容写法研究.md) + **本框架 §7A** | 同 + **M7 强制免责 + 禁二元确定论**；⭐**Health/Finances 问题页守 §7A 全量**（5 类最易违规，是与否专属加固）；**禁用表达库 6 类见 [1F §0A.2](../../01-竞品分析/1F-塔罗内容写法研究.md)**——是与否页对"绝对预测"类尤其敏感（判定天然倾向确定论，最易写成 guaranteed yes/definitely no）|
-| CTA 预验证 | 牌义页 §3 | conditional 水晶 meaning/category HEAD 检查 |
-| Schema | 牌义页 §12 | Article + FAQPage + BreadcrumbList（是与否页通常无水晶 ItemList，除非 M5 有水晶）|
-| 内链 | 2A §四塔罗页 | 牌义页（`/tarot-{card}-crystals/`）+ 同牌其他问题页 + 是与否 Hub + 配对页（可选）|
-| 图片 | 牌义页 §14 | hero（牌视觉+是与否符号 yes/no/maybe，1536×864）|
+> 100 篇规模下内链必须结构化，否则失控。每篇固定配方：
 
-## 9. 质检关卡（是与否专属）
+| 内链类型 | 数量 | 锚文本示例 | 目标 |
+|---|---|---|---|
+| 同牌牌义页 | 1 | "{Card} tarot card meaning" | `/tarot-{card}-crystals/` |
+| 同牌其他 Yes/No 页 | 1-2 | "{Card} yes or no for {other-question}" | `is-{card}-yes-or-no-{other-q}/` |
+| 问题类型 Hub | 1 | "tarot yes or no {question} readings" | Hub 页 |
+| 水晶页 | 0-1 | "crystals for {crystal}" | `/{crystal}-crystals/` 或 meaning 页 |
+| 配对页 | 可选（语义自然时） | "{Card} with {Other}" | `/{card}-and-{other}/` |
 
-- **关卡 0 合规前置门（Health/Finances 重点审 + 禁用表达库，全塔罗统一 ⭐⭐⭐ 是与否页最关键关卡）**：
-  - grep [1F §0A.1](../../01-竞品分析/1F-塔罗内容写法研究.md) Health/Finances 黑名单 + [1F §0A.2](../../01-竞品分析/1F-塔罗内容写法研究.md) 禁用表达库 6 类 + **§7A.1/§7A.2 是与否专属判定式黑名单**（`yes/no for surgery` / `yes for healing/recovery` / `yes for this investment/stock/crypto` / `you will gain` / `invest now` 等）
-  - **Health/Finances 问题页逐篇全审**（非抽审）：校验 verdict 不医疗化/投资化 + 强制免责标签原文存在（§7A.1/§7A.2 两句）
-  - 命中即打回不进生产
-  - 输出：`_qc/00-compliance.json`（标注每篇问题类型，Health/Finances 标红必过）
+**每篇 3-5 条内链**，锚文本含主关键词变体，禁 "click here"。
 
-- **关卡 1 三档判定**：M1/M2/M3 判定档位明确 + 为什么
-- **关卡 2 禁照抄 Selfgaze**：M2 与 Selfgaze 速答清单相似度 < 30%
-- **关卡 3 问题类型差异化**：M3 该问题判定与 M2 总体可有差异（非复制）
-- **关卡 4 免责存在性**：M7 含自由意志免责（前半一致+后半该牌差异化）
-- **关卡 5 合规**：grep 禁词 will predict/destined/guaranteed/curse/bad omen
+---
 
-- **关卡 6 语义去重 + 结构指纹（全塔罗普适升级 ⭐，见 [1F §0A.3](../../01-竞品分析/1F-塔罗内容写法研究.md)）**：
-  - **语义去重**：100 是与否页 M2/M3 段（核心论证段）跨篇 embedding 余弦相似度 **> 0.85 触发复审**。重点查**同问题类型 + 同档位**之间（如多张 Conditional 牌在 Love 问题的 M2 最易"换牌不换骨"——都写"yes but with complications"）
-  - **结构指纹**：8 模块开场句式 + 论证路径指纹重复率 **< 40%**；**强制 ≥ 30% 是与否页打乱默认起承转合**（如 M4 正逆位前置、M5 conditional 并入 M3、加"误读警示"段、Strong No 牌用倒叙等变体）
-  - **人工连读兜底**：抽**同问题类型** 5-10 篇连读（如 5 张牌在 Health 问题的判定连读），判断"换牌名能否互换"
+## §10 质检关卡（概览，可勾选项见 [QC 清单](Checklist-Tarot-是与否-QC.md)）
 
-## 10. 数据层 + 生产流程
+- **关卡 0 合规前置门**：grep Health/Finances 黑名单 + §7A 判定式黑名单；**Health/Finances 页全审**；强制免责标签原文存在
+- **关卡 1 三档判定**：M1/M2/M3 档位明确 + 为什么
+- **关卡 2 禁照抄 Selfgaze**：M2 相似度 < 30%
+- **关卡 3 问题类型差异化**：M3 与 M2 可有差异
+- **关卡 4 免责存在性**：M5 含免责（前半一致 + 后半该牌）
+- **关卡 5 合规禁词**：grep will predict/destined/guaranteed/curse/bad omen
+- **关卡 6 语义去重 + 结构指纹**：
+  - M2/M3 embedding 余弦 > 0.85 触发复审（重点：同档位同问题组）
+  - 结构指纹重复率 < 40%，≥ 30% 打乱起承转合
+  - **⭐ 强制免责段（§7/§7A 两句原文）显式排除 embedding 相似度计算**（否则合规标签的重复性会被误判为重复内容）
+  - 人工连读：抽同问题类型 5-10 篇"换牌名能否互换"
 
-- config：`yes-no-knowledge.json`（每牌 × 问题类型的 verdict 三档 + 条件 + 转化水晶）
-- 流程：22 牌 × 5 问题清单 → AI 判定三档 → CTA 预验证 → 填充 → **关卡 0 合规前置门（Health/Finances 重点审）** → 五质检 → 二审 → 图片 → upload → 防假完成
+---
 
-### 10.1 yes-no-knowledge.json 数据层质量阀门（全塔罗普适见 [1F §0A.4](../../01-竞品分析/1F-塔罗内容写法研究.md)，本节是与否专属 ⭐⭐⭐）
-
-> yes-no-knowledge.json 是 100 是与否页源头，错则全错。普适判定流程/抽审比例见 1F §0A.4，本节列**是与否专属验收清单**——Health/Finances 问题判定合规是重中之重。
-
-**yes-no-knowledge.json 验收清单（任一不满足打回）**：
-- [ ] 每条 verdict 三档判定（Strong Yes / Conditional / Strong No）有 archetype + upright/reversed 依据（非照抄 Selfgaze 速答，相似度 < 30%）
-- [ ] 100 条 verdict 论证主体词组重叠 < 30%（同档位同问题类型之间也必须落到该牌独有论证）
-- [ ] **Health 问题判定合规**（⭐重点审）：verdict 不医疗化（不判定 cure/healing/recovery/surgery），只谈 energy/rest/stress/body awareness；Health 问题条目带强制免责标签（§7A.1 句）
-- [ ] **Finances 问题判定合规**（⭐重点审）：verdict 不投资建议化（不判定 investment/stock/crypto/lending），只谈 money mindset/risk awareness/spending pattern；Finances 问题条目带强制免责标签（§7A.2 句）
-- [ ] conditional 牌的转化条件 + 水晶辅助落该牌该问题独有（非"wear X for luck"万能句）
-- [ ] M3 该问题判定可与 M2 总体判定不同（如 The Tower 总体 no 但 for "leave toxic job" = yes），差异化有依据
-
-**抽审比例（是与否页特殊，Health/Finances 全审）**：
-- **Health/Finances 问题页全审**（是与否 5 类里风险最高，错一篇即违规，不抽审）
-- 强 yes/no 高权重牌全审
-- conditional 牌抽 30%
-- 其余抽 20%（对齐 [1F §0A.4 ③](../../01-竞品分析/1F-塔罗内容写法研究.md)）
-
-## 11. 与其他框架边界
+## §11 与其他框架边界
 
 见 [配对框架 §11](模板-Tarot-配对文章框架.md)。是与否页讲**单牌×问题的判定**，配对页 M5 是与否仅作可选补充。
+
+---
+
+## 附录：三层架构
+
+| 层 | 文件 | 用途 | 给谁 |
+|---|---|---|---|
+| 母框架 | 本档 | 策略 / 合规 / QC 逻辑标准 | 决策 / 合规审 |
+| 生产 Brief | [Brief-Tarot-是与否-生产执行版.md](Brief-Tarot-是与否-生产执行版.md) | 单篇生成模板（字段 + 模块填空） | 写手 / AI 生产 |
+| QC 清单 | [Checklist-Tarot-是与否-QC.md](Checklist-Tarot-是与否-QC.md) | 可勾选检查项 | 审核 |

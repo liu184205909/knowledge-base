@@ -1,11 +1,11 @@
 /**
- * Tarot Birth Card Calculator v10-UI — UI 对齐皇冠 v10 视觉(计算器, 非抽牌工具, 不应用抽牌 v10 标准)
- * v10-UI 视觉升级(对齐皇冠 crystal-tarot-draw v10 风格):
- *   1) 配色统一品牌(#2D6A4F 主绿 / #1A1A2E 深夜 / #CFAA3E 金)
- *   2) 字体 min14/min16, 标题层级 + label 大写letter-spacing 风格统一
- *   3) 按钮 v10 风格: 主按钮 hover 上浮 transform + 内层渐变; 输入框 focus 态金色边
- *   4) 卡片 hover 微浮起 + 阴影; 结果头深色卡片 + 金色 eyebrow
- *   5) 响应式: 移动端字体/间距对齐皇冠 v10
+ * Tarot Birth Card Calculator v10.6-UI — UI 对齐皇冠 v10.6 视觉(计算器, 非抽牌工具, 不应用抽牌 v10 标准)
+ * v10.6-UI 改进(对比 v10-UI):
+ *   1) 本命牌卡金色外扩(对齐皇冠 v10.6 翻牌结果卡): 边框灰 #EEE → 金 #CFAA3E + box-shadow 0 0 0 5px rgba(207,170,62,.18) 往外扩;
+ *      牌头底边加 3px 金线 + body padding 22→26px 文字区呼吸更宽; hover 金边强化
+ *   2) 位置标签条(label)金调: 绿调(#F0F7F4) → 金调背景(#FBF3E5 + 金线 + #7A5A12 字)协调金色外扩主题
+ *   3) 结果头深色卡片金边强化: border 1px → 2px 金 + 金色外扩光晕(0 0 0 5px rgba(207,170,62,.18))
+ * 保留 v10-UI 全部: 配色品牌 + 字体 min14 + 按钮 hover 上浮 + 输入框 focus 金边 + 响应式
  * 保留算法(Tarot.com 权威版, MM+DD+YY+YY 公式) + 2 本命牌 + 组合解读 + 水晶 + Shop CTA:
  *   Total = Month + Day + floor(Year/100) + (Year%100)   // e.g. 02+05+19+62 = 88
  *   Card1 = 反复相加 Total 各位直至落在 1-22 (0→22 The Fool)   // 88 → 8+8=16 (Tower)
@@ -20,15 +20,19 @@ const path = require('path');
 const TK = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../_shared/tarot-knowledge.json'), 'utf8'));
 const SD = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../crystal-meaning-search/data/search-data.json'), 'utf8'));
 
+// >>>>>>> added by fix-major-crystal-slugs.js (兼容 tarot-knowledge -meaning slug + search-data 短 slug key)
+function normSlug(s){ return s ? String(s).replace(/-meaning$/,'') : s; }
+// <<<<<<< added by fix-major-crystal-slugs.js
+
 const BY_SLUG = {};
 SD.crystals.forEach(c => {
-  BY_SLUG[c.slug] = { name: c.name, img: c.img || '', link: c.link || '', shop: c.shop || ('/shop/?s=' + c.slug) };
+  BY_SLUG[normSlug(c.slug)] = { name: c.name, img: c.img || '', link: c.link || '', shop: c.shop || ('/shop/?s=' + c.slug) };
 });
 const HEALING = '/product-category/healing-crystals-jewelry/';
 
 function enrichStone(s) {
   if (!s) return null;
-  const sc = BY_SLUG[s.slug] || { name: s.name, img: '', link: '', shop: HEALING };
+  const sc = BY_SLUG[normSlug(s.slug)] || { name: s.name, img: '', link: '', shop: HEALING };
   return { slug: s.slug, name: sc.name || s.name, reason: s.reason, img: sc.img, shop: sc.shop };
 }
 
@@ -261,8 +265,8 @@ let html = `<!-- ===== Earthward Tarot Birth Card Calculator ===== -->
 .ebc-disclaim-top{color:#888;font-size:13px;line-height:1.6;margin-top:22px;border-left:3px solid #DDD;padding-left:14px}
 
 .ebc-result{margin-top:18px}
-/* v10-UI: 结果头深色卡片 + 金色 eyebrow + 渐变(对齐皇冠结果卡) */
-.ebc-r-head{background:linear-gradient(135deg,#1A1A2E 0%,#2D2D52 100%);border:1px solid #CFAA3E;border-radius:16px;padding:28px 30px;color:#fff;margin-bottom:22px;animation:ebcReveal .5s ease}
+/* v10.6-UI: 结果头深色卡片金边强化(对齐皇冠 v10.6): border 1px→2px 金 + 金色外扩光晕 */
+.ebc-r-head{background:linear-gradient(135deg,#1A1A2E 0%,#2D2D52 100%);border:2px solid #CFAA3E;border-radius:16px;padding:28px 30px;color:#fff;margin-bottom:22px;box-shadow:0 0 0 5px rgba(207,170,62,.18),0 12px 28px rgba(26,26,46,.1);animation:ebcReveal .5s ease}
 @keyframes ebcReveal{0%{opacity:0;transform:translateY(14px)}100%{opacity:1;transform:translateY(0)}}
 .ebc-r-eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#CFAA3E}
 .ebc-r-pair{font-size:32px;font-weight:700;line-height:1.2;margin-top:6px}
@@ -270,16 +274,16 @@ let html = `<!-- ===== Earthward Tarot Birth Card Calculator ===== -->
 .ebc-r-step{font-size:15px;color:#C9D2E0;line-height:1.65;margin-top:14px}
 .ebc-r-step b{color:#fff}
 
-/* v10-UI: 本命牌卡(hover 微浮起 + 阴影) */
+/* v10.6-UI: 本命牌卡金色外扩(对齐皇冠 v10.6 翻牌结果卡): 边框灰→金 + 金色外扩光晕 + hover 金边强化 + label 金调 */
 .ebc-bc-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px}
-.ebc-bc-card{background:#fff;border:1px solid #EEE;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s,border-color .25s}
-.ebc-bc-card:hover{transform:translateY(-4px);box-shadow:0 12px 26px rgba(26,26,46,.14);border-color:#CFAA3E}
-.ebc-bc-label{background:#F0F7F4;border-bottom:1px solid #E0EDE6;padding:10px 20px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#1B4332}
-.ebc-bc-head{background:linear-gradient(135deg,#2D6A4F 0%,#1B4332 100%);padding:22px 24px;color:#fff}
+.ebc-bc-card{background:#fff;border:1px solid #CFAA3E;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 0 0 5px rgba(207,170,62,.18),0 12px 28px rgba(26,26,46,.1);transition:transform .25s,box-shadow .25s,border-color .25s}
+.ebc-bc-card:hover{transform:translateY(-4px);box-shadow:0 0 0 6px rgba(207,170,62,.28),0 16px 32px rgba(26,26,46,.16);border-color:#B8902A}
+.ebc-bc-label{background:#FBF3E5;border-bottom:1px solid #E8C887;padding:10px 20px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#7A5A12}
+.ebc-bc-head{position:relative;background:linear-gradient(135deg,#2D6A4F 0%,#1B4332 100%);padding:22px 24px;color:#fff;border-bottom:3px solid #CFAA3E;overflow:hidden}
 .ebc-bc-num{display:inline-block;background:#CFAA3E;color:#1A1A2E;font-size:12px;font-weight:700;padding:3px 10px;border-radius:10px;letter-spacing:.04em}
 .ebc-bc-name{font-size:24px;font-weight:700;line-height:1.15;margin-top:8px}
 .ebc-bc-arch{font-size:15px;color:#CFAA3E;font-weight:600;margin-top:4px}
-.ebc-bc-body{padding:20px 22px;flex:1;display:flex;flex-direction:column}
+.ebc-bc-body{padding:22px 26px;flex:1;display:flex;flex-direction:column}
 .ebc-meta-row{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px}
 .ebc-meta-chip{background:#FAFAFA;border:1px solid #EEE;border-radius:8px;padding:5px 11px;font-size:14px;color:#444}
 .ebc-meta-chip b{color:#1A1A2E}

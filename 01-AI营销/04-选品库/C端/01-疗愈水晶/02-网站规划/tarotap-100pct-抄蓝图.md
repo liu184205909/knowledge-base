@@ -40,7 +40,7 @@
 | `/tarot-spread/two-options-spread` | 牌阵页 | 二择一 |
 | `/tarot-spread/three-options-spread` | 牌阵页 | 三择一 |
 | `/tarot-spread/celtic-cross-spread` | 牌阵页 | 凯尔特十字（10 张） |
-| `/fortune/daily` | 运势 | 每日塔罗（每天 1 张） |
+| `/fortune/daily` | 运势 | 每日塔罗（每天 1 张）—— **goearthward 改 `/tools/daily-tarot/` 单工具页**（裁决 2026-07-02：SERP 证伪日期长尾，365 篇文章作废，改 1 工具页 JS 动态更新） |
 | `/fortune/monthly` | 运势 | 月运（3 张 = 上中下旬） |
 | `/fortune/yearly` | 运势 | 2026 年运（按季 4 维度） |
 | `/fortune/seasonal` | 运势 | 四季牌阵（5 张，节气限时） |

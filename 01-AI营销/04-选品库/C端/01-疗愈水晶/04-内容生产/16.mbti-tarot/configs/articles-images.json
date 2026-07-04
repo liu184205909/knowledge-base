@@ -1,0 +1,428 @@
+{
+  "_meta": {
+    "purpose": "MBTI 16 型 hub 文章 hero 图清单",
+    "total": 16,
+    "style": "MBTI 4 字母 + 本命大牌视觉 + 代表水晶 + 东方藏式 + flowing robes 避 naked + no text(除 4 字母)",
+    "model": "gpt-image-2",
+    "size": "1536x1024",
+    "source_type": "mbti-hero"
+  },
+  "articles": {
+    "mbti-intj-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "INTJ",
+      "primary_card": "the-hermit",
+      "growth_card": "the-magician",
+      "primary_kw": "intj tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"INTJ Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"INTJ\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The Hermit (visual motifs: solitude, introspection, inner guidance, soul-searching). A single natural Amethyst crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters INTJ, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-intj-tarot.webp",
+        "alt": "INTJ tarot birth card The Hermit with Amethyst crystal"
+      },
+      "crystals": [
+        {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        },
+        {
+          "slug": "sodalite",
+          "name": "Sodalite"
+        },
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        }
+      ]
+    },
+    "mbti-intp-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "INTP",
+      "primary_card": "the-hermit",
+      "growth_card": "the-star",
+      "primary_kw": "intp tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"INTP Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"INTP\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The Hermit (visual motifs: solitude, introspection, inner guidance, soul-searching). A single natural Fluorite crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters INTP, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-intp-tarot.webp",
+        "alt": "INTP tarot birth card The Hermit with Fluorite crystal"
+      },
+      "crystals": [
+        {
+          "slug": "fluorite",
+          "name": "Fluorite"
+        },
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        {
+          "slug": "citrine",
+          "name": "Citrine"
+        }
+      ]
+    },
+    "mbti-infj-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "INFJ",
+      "primary_card": "the-high-priestess",
+      "growth_card": "the-hermit",
+      "primary_kw": "infj tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"INFJ Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"INFJ\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The High Priestess (visual motifs: intuition, mystery, subconscious, stillness). A single natural Moonstone crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters INFJ, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-infj-tarot.webp",
+        "alt": "INFJ tarot birth card The High Priestess with Moonstone crystal"
+      },
+      "crystals": [
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        },
+        {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        },
+        {
+          "slug": "labradorite",
+          "name": "Labradorite"
+        }
+      ]
+    },
+    "mbti-infp-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "INFP",
+      "primary_card": "the-moon",
+      "growth_card": "the-star",
+      "primary_kw": "infp tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"INFP Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"INFP\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The Moon (visual motifs: intuition, illusion, subconscious, dreams). A single natural Moonstone crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters INFP, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-infp-tarot.webp",
+        "alt": "INFP tarot birth card The Moon with Moonstone crystal"
+      },
+      "crystals": [
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        },
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        {
+          "slug": "aquamarine",
+          "name": "Aquamarine"
+        }
+      ]
+    },
+    "mbti-entj-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "ENTJ",
+      "primary_card": "the-emperor",
+      "growth_card": "the-chariot",
+      "primary_kw": "entj tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"ENTJ Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"ENTJ\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The Emperor (visual motifs: authority, structure, stability, leadership). A single natural Tiger Eye crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters ENTJ, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-entj-tarot.webp",
+        "alt": "ENTJ tarot birth card The Emperor with Tiger Eye crystal"
+      },
+      "crystals": [
+        {
+          "slug": "tiger-eye",
+          "name": "Tiger Eye"
+        },
+        {
+          "slug": "garnet",
+          "name": "Garnet"
+        },
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "mbti-entp-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "ENTP",
+      "primary_card": "the-magician",
+      "growth_card": "the-fool",
+      "primary_kw": "entp tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"ENTP Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"ENTP\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The Magician (visual motifs: manifestation, willpower, resourcefulness, skill). A single natural Citrine crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters ENTP, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-entp-tarot.webp",
+        "alt": "ENTP tarot birth card The Magician with Citrine crystal"
+      },
+      "crystals": [
+        {
+          "slug": "citrine",
+          "name": "Citrine"
+        },
+        {
+          "slug": "aventurine",
+          "name": "Green Aventurine"
+        },
+        {
+          "slug": "sodalite",
+          "name": "Sodalite"
+        }
+      ]
+    },
+    "mbti-enfj-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "ENFJ",
+      "primary_card": "the-hierophant",
+      "growth_card": "the-lovers",
+      "primary_kw": "enfj tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"ENFJ Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"ENFJ\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The Hierophant (visual motifs: tradition, spiritual wisdom, teaching, conformity). A single natural Rose Quartz crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters ENFJ, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-enfj-tarot.webp",
+        "alt": "ENFJ tarot birth card The Hierophant with Rose Quartz crystal"
+      },
+      "crystals": [
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        {
+          "slug": "lapis",
+          "name": "Lapis Lazuli"
+        },
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        }
+      ]
+    },
+    "mbti-enfp-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "ENFP",
+      "primary_card": "the-fool",
+      "growth_card": "the-star",
+      "primary_kw": "enfp tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"ENFP Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"ENFP\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The Fool (visual motifs: new beginnings, innocence, free spirit, leap of faith). A single natural Green Aventurine crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters ENFP, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-enfp-tarot.webp",
+        "alt": "ENFP tarot birth card The Fool with Green Aventurine crystal"
+      },
+      "crystals": [
+        {
+          "slug": "aventurine",
+          "name": "Green Aventurine"
+        },
+        {
+          "slug": "citrine",
+          "name": "Citrine"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        }
+      ]
+    },
+    "mbti-istj-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "ISTJ",
+      "primary_card": "justice",
+      "growth_card": "the-emperor",
+      "primary_kw": "istj tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"ISTJ Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"ISTJ\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing Justice (visual motifs: fairness, truth, law, accountability). A single natural Hematite crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters ISTJ, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-istj-tarot.webp",
+        "alt": "ISTJ tarot birth card Justice with Hematite crystal"
+      },
+      "crystals": [
+        {
+          "slug": "hematite",
+          "name": "Hematite"
+        },
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        }
+      ]
+    },
+    "mbti-isfj-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "ISFJ",
+      "primary_card": "the-hierophant",
+      "growth_card": "the-empress",
+      "primary_kw": "isfj tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"ISFJ Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"ISFJ\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The Hierophant (visual motifs: tradition, spiritual wisdom, teaching, conformity). A single natural Rose Quartz crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters ISFJ, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-isfj-tarot.webp",
+        "alt": "ISFJ tarot birth card The Hierophant with Rose Quartz crystal"
+      },
+      "crystals": [
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        }
+      ]
+    },
+    "mbti-istp-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "ISTP",
+      "primary_card": "the-hermit",
+      "growth_card": "death",
+      "primary_kw": "istp tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"ISTP Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"ISTP\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The Hermit (visual motifs: solitude, introspection, inner guidance, soul-searching). A single natural Black Tourmaline crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters ISTP, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-istp-tarot.webp",
+        "alt": "ISTP tarot birth card The Hermit with Black Tourmaline crystal"
+      },
+      "crystals": [
+        {
+          "slug": "black-tourmaline",
+          "name": "Black Tourmaline"
+        },
+        {
+          "slug": "hematite",
+          "name": "Hematite"
+        },
+        {
+          "slug": "bloodstone",
+          "name": "Bloodstone"
+        }
+      ]
+    },
+    "mbti-isfp-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "ISFP",
+      "primary_card": "strength",
+      "growth_card": "the-star",
+      "primary_kw": "isfp tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"ISFP Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"ISFP\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing Strength (visual motifs: courage, patience, compassion, inner strength). A single natural Rose Quartz crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters ISFP, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-isfp-tarot.webp",
+        "alt": "ISFP tarot birth card Strength with Rose Quartz crystal"
+      },
+      "crystals": [
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        {
+          "slug": "sunstone",
+          "name": "Sunstone"
+        }
+      ]
+    },
+    "mbti-estj-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "ESTJ",
+      "primary_card": "the-emperor",
+      "growth_card": "justice",
+      "primary_kw": "estj tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"ESTJ Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"ESTJ\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The Emperor (visual motifs: authority, structure, stability, leadership). A single natural Tiger Eye crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters ESTJ, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-estj-tarot.webp",
+        "alt": "ESTJ tarot birth card The Emperor with Tiger Eye crystal"
+      },
+      "crystals": [
+        {
+          "slug": "tiger-eye",
+          "name": "Tiger Eye"
+        },
+        {
+          "slug": "hematite",
+          "name": "Hematite"
+        },
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "mbti-esfj-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "ESFJ",
+      "primary_card": "the-empress",
+      "growth_card": "the-hierophant",
+      "primary_kw": "esfj tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"ESFJ Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"ESFJ\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The Empress (visual motifs: abundance, nurturing, fertility, creativity). A single natural Rose Quartz crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters ESFJ, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-esfj-tarot.webp",
+        "alt": "ESFJ tarot birth card The Empress with Rose Quartz crystal"
+      },
+      "crystals": [
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        {
+          "slug": "aventurine",
+          "name": "Green Aventurine"
+        }
+      ]
+    },
+    "mbti-estp-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "ESTP",
+      "primary_card": "the-chariot",
+      "growth_card": "the-fool",
+      "primary_kw": "estp tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"ESTP Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"ESTP\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The Chariot (visual motifs: determination, willpower, victory, focus). A single natural Carnelian crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters ESTP, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-estp-tarot.webp",
+        "alt": "ESTP tarot birth card The Chariot with Carnelian crystal"
+      },
+      "crystals": [
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        {
+          "slug": "tiger-eye",
+          "name": "Tiger Eye"
+        },
+        {
+          "slug": "bloodstone",
+          "name": "Bloodstone"
+        }
+      ]
+    },
+    "mbti-esfp-tarot": {
+      "type": "mbti-hero",
+      "mbti_type": "ESFP",
+      "primary_card": "the-sun",
+      "growth_card": "the-fool",
+      "primary_kw": "esfp tarot card",
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the article \"ESFP Tarot: Birth Cards, Crystals & Cognitive Functions\". Central composition: the four large gilded letters \"ESFP\" rendered as luminous golden sacred-geometry monograms floating above a single tarot major arcana card representing The Sun (visual motifs: joy, success, vitality, positivity). A single natural Citrine crystal gemstone placed gracefully beside the card as a tactile anchor, its natural color and facets clearly visible. A serene figure in flowing white robes (fully draped, elegant, dignified) sits in contemplation beside the card, holding the crystal. The composition is rendered in warm elegant luminous golden line work with a soft glow, deep indigo background harmonized with the accent palette. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, contemplative and inviting educational atmosphere, premium editorial quality, no text, no words, no letters beyond the four MBTI letters ESFP, no nudity, fully clothed in flowing robes.",
+        "file": "generated/mbti-hero/mbti-esfp-tarot.webp",
+        "alt": "ESFP tarot birth card The Sun with Citrine crystal"
+      },
+      "crystals": [
+        {
+          "slug": "citrine",
+          "name": "Citrine"
+        },
+        {
+          "slug": "sunstone",
+          "name": "Sunstone"
+        },
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        }
+      ]
+    }
+  }
+}

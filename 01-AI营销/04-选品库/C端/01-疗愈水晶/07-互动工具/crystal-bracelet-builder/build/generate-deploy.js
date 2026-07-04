@@ -1,5 +1,5 @@
-/**
- * T17 Crystal Bracelet Builder — Step 3 DEPLOY generator (WP-adapted).
+﻿/**
+ * T17 Crystal Bracelet Builder 鈥?Step 3 DEPLOY generator (WP-adapted).
  *
  * Builds on the Step 2 generator (interaction completeness) and layers the
  * WP-deployment adaptations the production page needs:
@@ -9,12 +9,12 @@
  *       JS contains pointer-drag `&&`, `<` comparisons and CJK strings that
  *       wp_kses_post would otherwise mangle inside <!-- wp:html -->.
  *   - parts JSON delivered as ascii-escaped application/json block (CJK
- *       name_cn → \uXXXX so non-ASCII bytes never hit wp_kses).
+ *       name_cn 鈫?\uXXXX so non-ASCII bytes never hit wp_kses).
  *   - Add-to-cart wired to admin-ajax action=t17_add_custom_bracelet (Step 0
  *       Code Snippet id=20 endpoint), with cart toast + "View cart" link.
  *
  * Host mode: set HOST_MODE=selfhost to emit the self-hosted importmap
- * (/wp-content/uploads/builder/vendor/...) — the operator uploads the three
+ * (/wp-content/uploads/builder/vendor/...) 鈥?the operator uploads the three
  * vendor files there via WP media. Default = CDN (simplest, no upload).
  *
  * Outputs:
@@ -29,6 +29,7 @@ const ROOT = path.resolve(__dirname, '..');
 const SOURCE_PATH = path.join(ROOT, 'data', 'parts-source.json');
 const OUT_PATH = path.join(__dirname, 'crystal-bracelet-builder-wp-fragment.html');
 const PREVIEW_PATH = path.join(__dirname, 'crystal-bracelet-builder-preview.html');
+const TRAY_PATH = path.join(__dirname, 'tray-assets', 'tray-default.png');
 
 // Host mode: 'cdn' (default, jsdelivr) or 'selfhost' (/wp-content/uploads/builder/vendor/).
 // Flip via env var HOST_MODE=selfhost once the vendor files are uploaded.
@@ -42,13 +43,14 @@ const IMPORTMAP = {
 };
 
 const source = JSON.parse(fs.readFileSync(SOURCE_PATH, 'utf8'));
+const TRAY_DATA_URI = 'data:image/png;base64,' + fs.readFileSync(TRAY_PATH).toString('base64');
 
 function fail(msg) { throw new Error('[T17 deploy build] ' + msg); }
 function assertArray(name, value, min) {
   if (!Array.isArray(value) || value.length < min) fail(name + ' must contain at least ' + min + ' items');
 }
 
-// PRD R5: validate source (same checks as Step 2 — single source of truth).
+// PRD R5: validate source (same checks as Step 2 鈥?single source of truth).
 function validateSource(data) {
   assertArray('beads', data.beads, 20);
   assertArray('charms', data.charms, 7);
@@ -98,7 +100,7 @@ function compactParts(data) {
 validateSource(source);
 const parts = compactParts(source);
 
-// asciiJSON: non-ASCII → \uXXXX so wp_kses never sees raw multi-byte chars
+// asciiJSON: non-ASCII 鈫?\uXXXX so wp_kses never sees raw multi-byte chars
 // that would corrupt the JSON block. Also escape </ to prevent </script> breakout.
 function asciiJSON(v) {
   return JSON.stringify(v).replace(/<\//g, '<\\/').replace(/[^\x00-\x7F]/g, function (ch) {
@@ -109,7 +111,7 @@ const DATA_BLOCK = asciiJSON(parts);
 const DATA_B64 = Buffer.from(DATA_BLOCK, 'utf8').toString('base64');
 
 // ---------------------------------------------------------------------------
-// Application JS (WP-deploy: base64-wrapped, runs via atob→eval loader).
+// Application JS (WP-deploy: base64-wrapped, runs via atob鈫抏val loader).
 // Step 3 change vs Step 2: handleAddToCart now POSTs to admin-ajax
 // action=t17_add_custom_bracelet (Code Snippet id=20 endpoint) instead of
 // console.log. Everything else is the Step 2 interaction surface unchanged.
@@ -125,6 +127,11 @@ const APP_JS = String.raw`(function () {
   var parts = JSON.parse(atob(document.getElementById('t17-data').textContent));
   var settings = parts.settings || {};
   var STORAGE_KEY = 't17-step1-draft';
+  var TRAY_IMAGE_SRC = '${TRAY_DATA_URI}';
+  var trayImage = new Image();
+  trayImage.decoding = 'async';
+  trayImage.onload = function () { draw2DBracelet(); };
+  trayImage.src = TRAY_IMAGE_SRC;
 
   // WP admin-ajax URL + builder product id (catalog_hidden product 49026).
   var AJAX_URL = (window.T17_AJAX_URL) || '/wp-admin/admin-ajax.php';
@@ -137,12 +144,20 @@ const APP_JS = String.raw`(function () {
   var state = {
     wristCm: settings.defaultWristCm || 16,
     wristUnit: 'cm',       // F8: cm | in
+    heightCm: 165,
+    weightKg: 46,
     beadSizeMm: settings.defaultBeadSizeMm || 8,
     cord: 'elastic_black',
     sequence: [],          // [{type:'bead',id,size_mm} | {type:'charm',id,slotWeight}]
     selected: -1,
     filterColor: 'all',
-    catalogMode: 'bead'
+    filterType: 'all',
+    categoryView: 'color',
+    dimensionOpen: false,
+    catalogMode: 'bead',
+    seqView: 'bead',
+    viewMode: '2d',
+    beadLayout: 'gathered'
   };
 
   // --- 3D globals ---
@@ -155,6 +170,9 @@ const APP_JS = String.raw`(function () {
   function money(v) { return '$' + Number(v || 0).toFixed(2); }
   function clamp(n, a, b) { return Math.max(a, Math.min(b, n)); }
   function uniq(a) { return Array.from(new Set(a)); }
+  function titleCase(text) {
+    return String(text || '').toLowerCase().replace(/\b[a-z]/g, function (m) { return m.toUpperCase(); });
+  }
 
   // --- Sizing (PRD R3: target inner circumference) ---
   function targetCm() { return Number(state.wristCm) + Number(settings.fitAllowanceCm || 1.5); }
@@ -169,6 +187,12 @@ const APP_JS = String.raw`(function () {
   // F8: cm <-> inch conversion (1 inch = 2.54cm exactly). Round to .25 for inch display.
   function cmToIn(cm) { return Math.round((Number(cm) / 2.54) * 4) / 4; }
   function inToCm(inch) { return Number(inch) * 2.54; }
+  function estimateWristFromBody(heightCm, weightKg) {
+    var h = clamp(Number(heightCm) || 165, 145, 190);
+    var w = clamp(Number(weightKg) || 46, 35, 100);
+    var cm = 14.6 + (h - 165) * 0.045 + (w - 46) * 0.055;
+    return clamp(Math.round(cm * 10) / 10, settings.minWristCm || 13, settings.maxWristCm || 20);
+  }
   // F8 (PRD R3): the builder uses discrete slots, not circular bead packing.
   function suggestedBeadCount() {
     return targetSlots();
@@ -188,6 +212,19 @@ const APP_JS = String.raw`(function () {
     });
     return t;
   }
+  function estimateWeightG() {
+    var total = 0;
+    state.sequence.forEach(function (it) {
+      if (it.type === 'bead') {
+        var mm = Number(it.size_mm || state.beadSizeMm);
+        total += Math.pow(mm, 3) * 0.00135;
+      } else if (it.type === 'charm') {
+        total += 1.2 * Number(it.slotWeight || 1);
+      }
+    });
+    if (state.sequence.length) total += 0.5;
+    return total;
+  }
 
   // --- Color tab mapping (PRD 7-color narrative) ---
   var COLOR_TABS = [
@@ -205,9 +242,31 @@ const APP_JS = String.raw`(function () {
     { id: 'white', label: 'White' },
     { id: 'multi', label: 'Rainbow' }
   ];
+  function colorSwatch(id) {
+    return ({
+      all: 'linear-gradient(135deg,#efe7dc,#ffffff 48%,#c8b59a)',
+      purple: '#7a4db2',
+      pink: '#e6a7bd',
+      red: '#b34b47',
+      orange: '#c97137',
+      yellow: '#d4a22e',
+      gold: '#b98925',
+      green: '#2f7d58',
+      blue: '#6a9fbd',
+      black: '#2e2b2a',
+      clear: '#d9dde3',
+      white: '#eee9e2',
+      multi: 'linear-gradient(135deg,#7a4db2,#e6a7bd,#d4a22e,#2f7d58,#6a9fbd)'
+    })[id] || '#d9d2ca';
+  }
   function beadMatchesColor(b, color) {
     if (color === 'all') return true;
     return (b.color || []).indexOf(color) >= 0;
+  }
+  function beadMatchesActiveFilters(b) {
+    var byType = state.filterType === 'all' || b.id === state.filterType;
+    var byColor = state.filterColor === 'all' || beadMatchesColor(b, state.filterColor);
+    return byType && byColor;
   }
   var SHAPE_PRODUCTS = [
     { id: 'shape_freeform_quartz', name: 'Clear Quartz Freeform', price: 8, size: '10mm', note: 'natural shape' },
@@ -221,8 +280,13 @@ const APP_JS = String.raw`(function () {
     { id: 'spacer_rondelle', name: 'Clear Rondelle', price: 3, size: '6mm', note: 'sparkle' },
     { id: 'spacer_matte', name: 'Matte Divider', price: 1.5, size: '5mm', note: 'soft break' }
   ];
+  var PACKAGING_PRODUCTS = [
+    { id: 'pack_basic', name: 'Basic Pouch', price: 0, size: 'Gift ready', note: 'included' },
+    { id: 'pack_gift_box', name: 'Gift Box', price: 6, size: 'Box', note: 'gift packaging' },
+    { id: 'pack_premium_box', name: 'Premium Gift Box', price: 15, size: 'Box', note: 'premium packaging' }
+  ];
 
-  // --- Procedural crystal texture (canvas) — shared by 3D bead + 2D thumbnail ---
+  // --- Procedural crystal texture (canvas) 鈥?shared by 3D bead + 2D thumbnail ---
   function makeBeadTexture(bead) {
     var key = bead.id;
     if (textureCache[key]) return textureCache[key];
@@ -333,7 +397,7 @@ const APP_JS = String.raw`(function () {
       case 'om': {
         ctx.font = 'bold ' + (size * 0.55) + 'px Georgia, "Noto Sans", serif';
         ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-        ctx.fillText('ॐ', cx, cy + size * 0.02); // Devanagari OM (escaped for asciiJSON safety)
+        ctx.fillText('OM', cx, cy + size * 0.02);
         break;
       }
       case 'heart': {
@@ -400,38 +464,39 @@ const APP_JS = String.raw`(function () {
     var heading = document.getElementById('t17-category-heading');
     if (!cats || !heading) return;
     if (state.catalogMode === 'bead') {
-      heading.textContent = 'Crystal';
-      cats.innerHTML = COLOR_TABS.map(function (t) {
-        return '<button type="button" class="cat-row' + (state.filterColor === t.id ? ' is-active' : '') + '" data-color="' + t.id + '">' +
-          '<span class="cat-mark"></span><span>' + t.label + '</span></button>';
-      }).join('');
+      heading.innerHTML =
+        '<button type="button" class="cat-switch-btn' + (state.categoryView === 'color' ? ' is-active' : '') + '" data-cat-view="color">Color</button>' +
+        '<button type="button" class="cat-switch-btn' + (state.categoryView === 'type' ? ' is-active' : '') + '" data-cat-view="type">Type</button>';
+      if (state.categoryView === 'type') {
+        cats.innerHTML = ['all'].concat(parts.beads.map(function (b) { return b.id; })).map(function (id) {
+          var bead = beadMap[id];
+          var label = id === 'all' ? 'All' : titleCase(bead.name_en);
+          var thumb = bead && bead._thumb ? 'background-image:url(' + bead._thumb + ')' : '--cat-color:' + colorSwatch('all');
+          return '<button type="button" class="cat-row' + (state.filterType === id ? ' is-active' : '') + '" data-type-filter="' + id + '">' +
+            '<span class="cat-mark" style="' + thumb + '"></span><span>' + label + '</span></button>';
+        }).join('');
+      } else {
+        cats.innerHTML = COLOR_TABS.map(function (t) {
+          return '<button type="button" class="cat-row' + (state.filterColor === t.id ? ' is-active' : '') + '" data-color="' + t.id + '">' +
+            '<span class="cat-mark" style="--cat-color:' + colorSwatch(t.id) + '"></span><span>' + titleCase(t.label) + '</span></button>';
+        }).join('');
+      }
       return;
     }
     if (state.catalogMode === 'charm') {
       heading.textContent = 'Charms';
-      var groups = [
-        { id: 'all', label: 'All Charms' },
-        { id: 'eastern', label: 'Eastern' },
-        { id: 'classic', label: 'Classic' }
-      ];
-      cats.innerHTML = groups.map(function (g) {
-        return '<button type="button" class="cat-row' + (state.filterColor === g.id ? ' is-active' : '') + '" data-charm-cat="' + g.id + '">' +
-          '<span class="cat-mark"></span><span>' + g.label + '</span></button>';
-      }).join('');
+      cats.innerHTML = '<button type="button" class="cat-row is-active" data-charm-cat="all"><span class="cat-mark"></span><span>All</span></button>';
       return;
     }
     if (state.catalogMode === 'cord') {
       heading.textContent = 'Cord';
-      cats.innerHTML = parts.cords.map(function (c) {
-        return '<button type="button" class="cat-row' + (state.cord === c.id ? ' is-active' : '') + '" data-cord="' + c.id + '">' +
-          '<span class="cat-mark"></span><span>' + c.name_en + '</span></button>';
-      }).join('');
+      cats.innerHTML = '<button type="button" class="cat-row is-active"><span class="cat-mark"></span><span>All</span></button>';
       return;
     }
-    heading.textContent = state.catalogMode === 'shape' ? 'Shapes' : 'Spacers';
+    heading.textContent = state.catalogMode === 'shape' ? 'Accessories' : 'Packaging';
     var rows = state.catalogMode === 'shape'
-      ? ['Freeform', 'Carved', 'Drop', 'Figure']
-      : ['Silver', 'Gold', 'Rondelle', 'Matte'];
+      ? ['All', 'Spacers', 'Floral', 'Zodiac', 'Decor', 'Caps']
+      : ['All'];
     cats.innerHTML = rows.map(function (label, i) {
       return '<button type="button" class="cat-row' + (i === 0 ? ' is-active' : '') + '" disabled><span class="cat-mark"></span><span>' + label + '</span></button>';
     }).join('');
@@ -439,18 +504,7 @@ const APP_JS = String.raw`(function () {
 
   function renderBeadGrid() {
     var grid = document.getElementById('t17-bead-grid');
-    var title = document.getElementById('t17-catalog-title');
-    var count = document.getElementById('t17-catalog-count');
-    if (!grid || !title || !count) return;
-    title.textContent =
-      state.catalogMode === 'bead' ? 'Beads' :
-      state.catalogMode === 'charm' ? 'Charms' :
-      state.catalogMode === 'shape' ? 'Crystal Shapes' :
-      state.catalogMode === 'spacer' ? 'Spacers' : 'Cord';
-    count.textContent =
-      state.catalogMode === 'bead' ? String(parts.beads.filter(function (b) { return beadMatchesColor(b, state.filterColor); }).length) :
-      state.catalogMode === 'charm' ? String(parts.charms.length) :
-      state.catalogMode === 'cord' ? String(parts.cords.length) : 'Soon';
+    if (!grid) return;
     var tabs = document.getElementById('t17-catalog-tabs');
     if (tabs) {
       tabs.querySelectorAll('[data-mode]').forEach(function (btn) {
@@ -458,7 +512,7 @@ const APP_JS = String.raw`(function () {
       });
     }
     if (state.catalogMode === 'bead') {
-      var list = parts.beads.filter(function (b) { return beadMatchesColor(b, state.filterColor); });
+      var list = parts.beads.filter(beadMatchesActiveFilters);
       if (!list.length) { grid.innerHTML = '<p class="empty">No stones in this category.</p>'; return; }
       grid.innerHTML = list.map(function (b) {
         var price = beadPrice(b.id, state.beadSizeMm);
@@ -466,7 +520,7 @@ const APP_JS = String.raw`(function () {
         return '<button type="button" class="bead-card" data-bead="' + b.id + '" title="' + (b.description_short || '') + '">' +
           '<span class="bead-thumb large" style="background-image:url(' + (b._thumb || '') + ')"></span>' +
           '<span class="bead-meta"><b>' + b.name_en + tierTag + '</b>' +
-          '<small>' + state.beadSizeMm + 'mm · ' + money(price) + '</small></span></button>';
+          '<small>' + money(price) + '</small></span></button>';
       }).join('');
       return;
     }
@@ -475,28 +529,26 @@ const APP_JS = String.raw`(function () {
       var charms = parts.charms.filter(function (c) {
         return state.filterColor === 'all' || !state.filterColor || c.category === state.filterColor;
       });
-      count.textContent = String(charms.length);
       grid.innerHTML = charms.map(function (c) {
         var gUrl = _glyphDataUrls && _glyphDataUrls[c.symbol];
         return '<button type="button" class="bead-card charm-card" data-charm="' + c.id + '" title="' + c.description_short + '">' +
           '<span class="charm-coin card-coin">' + (gUrl ? '<img src="' + gUrl + '" alt="" class="charm-glyph" draggable="false">' : charmMark(c.symbol)) + '</span>' +
-          '<span class="bead-meta"><b>' + c.name_en + '</b><small>' + c.material + ' · ' + money(c.price) + '</small></span></button>';
+          '<span class="bead-meta"><b>' + c.name_en + '</b><small>' + c.material + ' - ' + money(c.price) + '</small></span></button>';
       }).join('');
       return;
     }
     if (state.catalogMode === 'cord') {
       grid.innerHTML = parts.cords.map(function (c) {
         return '<button type="button" class="bead-card cord-card' + (state.cord === c.id ? ' is-selected' : '') + '" data-cord="' + c.id + '" title="' + c.description_short + '">' +
-          '<span class="cord-thumb ' + c.id + '"></span><span class="bead-meta"><b>' + c.name_en + '</b><small>' + c.material + ' · ' + money(c.price) + '</small></span></button>';
+          '<span class="cord-thumb ' + c.id + '"></span><span class="bead-meta"><b>' + c.name_en + '</b><small>' + c.material + ' - ' + money(c.price) + '</small></span></button>';
       }).join('');
       return;
     }
-    var spacerNames = state.catalogMode === 'shape' ? SHAPE_PRODUCTS : SPACER_PRODUCTS;
-    count.textContent = 'Soon';
+    var spacerNames = state.catalogMode === 'shape' ? SPACER_PRODUCTS : PACKAGING_PRODUCTS;
     grid.innerHTML = spacerNames.map(function (s) {
-      return '<button type="button" class="bead-card spacer-card" disabled title="Spacer SKU pending">' +
-        '<span class="spacer-thumb"></span><span class="bead-meta"><b>' + s.name + '</b><small>' + s.size + ' · ' + money(s.price) + '</small></span>' +
-        '<em class="unavailable">Pending</em></button>';
+      return '<button type="button" class="bead-card spacer-card" disabled title="SKU pending">' +
+        '<span class="spacer-thumb"></span><span class="bead-meta"><b>' + s.name + '</b><small>' + s.size + ' - ' + money(s.price) + '</small></span>' +
+        (state.catalogMode === 'shape' ? '<em class="unavailable">Pending</em>' : '') + '</button>';
     }).join('');
   }
 
@@ -511,53 +563,56 @@ const APP_JS = String.raw`(function () {
           var coinInner = gUrl
             ? '<img src="' + gUrl + '" alt="" class="charm-glyph" draggable="false">'
             : charmMark(c.symbol);
-          return '<button type="button" class="charm-btn" data-charm="' + c.id + '" title="' + c.name_en + ' · ' + money(c.price) + '">' +
+          return '<button type="button" class="charm-btn" data-charm="' + c.id + '" title="' + c.name_en + ' ' + money(c.price) + '">' +
             '<span class="charm-coin">' + coinInner + '</span><small>' + c.name_en + '</small></button>';
         }).join('');
     }
 
-    var cordEl = document.getElementById('t17-cords');
-    cordEl.innerHTML = '<span class="tb-label">Cord</span>' + parts.cords.map(function (c) {
-      return '<button type="button" class="cord-btn' + (state.cord === c.id ? ' is-active' : '') + '" data-cord="' + c.id + '" title="' + c.description_short + '">' +
-        c.name_en + '<small>' + money(c.price) + '</small></button>';
-    }).join('');
-
     var sizeEl = document.getElementById('t17-sizes');
-    sizeEl.innerHTML = '<span class="tb-label">Bead size</span>' + [6,8,10,12].map(function (s) {
-      return '<button type="button" class="size-btn' + (Number(state.beadSizeMm) === s ? ' is-active' : '') + '" data-size="' + s + '">' + s + 'mm</button>';
-    }).join('');
+    if (sizeEl) sizeEl.innerHTML = '';
 
     var wristEl = document.getElementById('t17-wrist-wrap');
-    var unit = state.wristUnit || 'cm';
-    var shown = unit === 'in' ? cmToIn(state.wristCm) : state.wristCm;
+    if (!wristEl) return;
     var suggested = suggestedBeadCount();
     var fitAllow = Number(settings.fitAllowanceCm || 1.5);
+    var displayCm = Number(state.wristCm).toFixed(1).replace(/\.0$/, '');
+    var recommendedCm = estimateWristFromBody(state.heightCm, state.weightKg).toFixed(1).replace(/\.0$/, '');
+    var sizeOptions = [6,8,10,12].map(function (s) {
+      return '<button type="button" class="stage-size-btn' + (Number(state.beadSizeMm) === s ? ' is-active' : '') + '" data-size="' + s + '">' + s + 'mm</button>';
+    }).join('');
     wristEl.innerHTML =
-      '<span class="tb-label">Wrist circumference · target inner ' + targetCm().toFixed(1) + 'cm (+' + fitAllow + 'cm fit) · ~' + targetSlots() + ' slots</span>' +
-      '<div class="wrist-row">' +
-        '<input id="t17-wrist-num" type="number" min="' + (unit === 'cm' ? settings.minWristCm : cmToIn(settings.minWristCm)) + '" max="' + (unit === 'cm' ? settings.maxWristCm : cmToIn(settings.maxWristCm)) + '" step="' + (unit === 'cm' ? '0.5' : '0.25') + '" value="' + shown + '" inputmode="decimal">' +
-        '<div class="unit-toggle" role="group" aria-label="wrist unit">' +
-          '<button type="button" class="unit-btn' + (unit === 'cm' ? ' is-active' : '') + '" data-unit="cm">cm</button>' +
-          '<button type="button" class="unit-btn' + (unit === 'in' ? ' is-active' : '') + '" data-unit="in">in</button>' +
+      '<button type="button" id="t17-dimension-toggle" class="dimension-pill" aria-expanded="' + (state.dimensionOpen ? 'true' : 'false') + '">' +
+        '<span class="dimension-hand" aria-hidden="true">&#9995;</span>' +
+        '<span class="dimension-copy"><small>Hand Dimension</small><b>' + displayCm + ' cm</b></span>' +
+      '</button>' +
+      '<div class="stage-size-row" aria-label="bead size"><span>Bead Size</span><div class="stage-size-options">' + sizeOptions + '</div></div>' +
+      '<div class="dimension-popover' + (state.dimensionOpen ? ' is-open' : '') + '" role="dialog" aria-modal="true" aria-label="Customize wrist size">' +
+        '<div class="dimension-modal-head"><b>Customize Wrist</b><button type="button" id="t17-dimension-close" aria-label="Close">×</button></div>' +
+        '<div class="dimension-field body-measure-field">' +
+          '<div class="dimension-field-head"><span>Height*</span><strong>' + state.heightCm + 'cm</strong></div>' +
+          '<div class="ruler-card measure-ruler"><input id="t17-height" type="range" min="145" max="190" step="1" value="' + state.heightCm + '"><div class="ruler-ticks"><span>150</span><span>165</span><span>180</span></div></div>' +
         '</div>' +
-        '<button type="button" class="measure-btn" id="t17-measure-toggle" title="How to measure your wrist" aria-label="How to measure your wrist">' + MEASURE_ICON_SVG + '</button>' +
-      '</div>' +
-      '<input id="t17-wrist" type="range" min="' + settings.minWristCm + '" max="' + settings.maxWristCm + '" step="0.25" value="' + state.wristCm + '">' +
-      '<div class="wrist-suggest">Target slots for ' + state.beadSizeMm + 'mm beads: <b>' + suggested + '</b> ' +
-        '(target inner cm × 10 / bead size mm)</div>' +
-      '<div class="measure-teach" id="t17-measure-teach" hidden>' +
-        '<div class="measure-teach-inner">' +
-          MEASURE_TEACH_SVG +
-          '<p>Wrap a soft tailor\'s tape (or a paper strip you mark + measure) snugly around the <b>wrist bone</b>, then add ~1.5cm for a comfortable fit. Not sure? Pick an XS–XL quick size below.</p>' +
-          '<div class="quick-sizes">' +
-            [{k:'XS',v:13},{k:'S',v:15},{k:'M',v:16.5},{k:'L',v:18},{k:'XL',v:20}].map(function(q){
-              return '<button type="button" class="quick-size" data-quick="' + q.v + '">' + q.k + '<small>' + q.v + 'cm</small></button>';
-            }).join('') +
+        '<div class="dimension-field body-measure-field">' +
+          '<div class="dimension-field-head"><span>Weight*</span><strong>' + state.weightKg + 'kg</strong></div>' +
+          '<div class="ruler-card measure-ruler"><input id="t17-weight" type="range" min="35" max="100" step="1" value="' + state.weightKg + '"><div class="ruler-ticks"><span>35</span><span>50</span><span>70</span></div></div>' +
+        '</div>' +
+        '<div class="wrist-recommend wrist-edit"><span>Recommended circumference (editable)</span><label><input id="t17-wrist-num" type="number" min="' + settings.minWristCm + '" max="' + settings.maxWristCm + '" step="0.1" value="' + displayCm + '" inputmode="decimal" aria-label="Recommended wrist circumference"><b>cm</b></label></div>' +
+        '<div class="quick-size-head"><b>Common sizes</b><span>Click a card to fill</span></div>' +
+        '<div class="quick-sizes">' +
+          [{k:'13cm',v:13,d:'Slim wrist'},{k:'14cm',v:14,d:'Small wrist'},{k:'15cm',v:15,d:'Fine wrist'},{k:'16cm',v:16,d:'Regular'},{k:'17cm',v:17,d:'Relaxed'},{k:'18cm',v:18,d:'Large wrist'},{k:'19cm',v:19,d:'Loose fit'},{k:'20cm',v:20,d:'Big wrist'}].map(function(q){
+            return '<button type="button" class="quick-size" data-quick="' + q.v + '"><b>' + q.k + '</b><small>' + q.d + '</small></button>';
+          }).join('') +
+        '</div>' +
+        '<div class="wrist-suggest">Body estimate: <b>' + recommendedCm + 'cm</b> · target slots: <b>' + suggested + '</b> · fit +' + fitAllow + 'cm</div>' +
+        '<div class="measure-teach" id="t17-measure-teach" hidden>' +
+          '<div class="measure-teach-inner">' +
+            MEASURE_TEACH_SVG +
+            '<p>Wrap a soft tailor\'s tape around the wrist bone, then add about 1.5cm for comfort.</p>' +
           '</div>' +
         '</div>' +
+        '<button type="button" id="t17-dimension-confirm">Confirm Settings</button>' +
       '</div>';
   }
-
   function renderPricing() {
     var beadCount = state.sequence.filter(function (i) { return i.type === 'bead'; }).length;
     var charmCount = state.sequence.filter(function (i) { return i.type === 'charm'; }).length;
@@ -568,20 +623,67 @@ const APP_JS = String.raw`(function () {
     var cordTotal = cordMap[state.cord] ? Number(cordMap[state.cord].price) : 0;
     var diff = targetSlots() - usedSlots();
     var fitMsg = diff > 0 ? 'Add ' + diff + ' more to fill' : diff < 0 ? 'Over by ' + Math.abs(diff) : 'Perfect fit';
+    var summary = document.getElementById('t17-design-summary');
+    if (summary) {
+      summary.innerHTML =
+        '<b>Design Summary</b>' +
+        '<span>Wrist: <strong>' + Number(state.wristCm).toFixed(1).replace(/\\.0$/, '') + ' cm</strong></span>' +
+        '<span>Bead Size: <strong>' + state.beadSizeMm + 'mm</strong></span>' +
+        '<span>Slots: <strong>' + usedSlots() + '/' + targetSlots() + '</strong></span>' +
+        '<span>Weight: <strong>~' + estimateWeightG().toFixed(1) + 'g</strong></span>';
+    }
     document.getElementById('t17-price').innerHTML =
       '<div class="price-rows">' +
         '<div class="pr"><span>Beads (' + beadCount + ')</span><span>' + money(beadTotal) + '</span></div>' +
         '<div class="pr"><span>Charms (' + charmCount + ')</span><span>' + money(charmTotal) + '</span></div>' +
-        '<div class="pr"><span>Cord · ' + (cordMap[state.cord] ? cordMap[state.cord].name_en : '') + '</span><span>' + money(cordTotal) + '</span></div>' +
+        '<div class="pr"><span>Cord - ' + (cordMap[state.cord] ? cordMap[state.cord].name_en : '') + '</span><span>' + money(cordTotal) + '</span></div>' +
       '</div>' +
-      '<div class="price-total"><span>Total</span><span>' + money(beadTotal + charmTotal + cordTotal) + '</span></div>' +
-      '<div class="price-fit ' + (diff === 0 ? 'ok' : diff < 0 ? 'over' : '') + '">' + fitMsg + ' · ' + usedSlots() + '/' + targetSlots() + ' slots</div>';
+      '<div class="price-total"><span>Total</span><span>' + money(beadTotal + charmTotal + cordTotal) + '</span></div>';
+    var checkoutNote = document.getElementById('t17-checkout-note');
+    if (checkoutNote) {
+      checkoutNote.className = 'checkout-note ' + (diff === 0 ? 'ok' : diff < 0 ? 'over' : '');
+      checkoutNote.textContent = fitMsg + ' - ' + usedSlots() + '/' + targetSlots() + ' slots';
+    }
   }
 
   function renderSequenceStrip() {
+    var summaryEl = document.getElementById('t17-seq-summary');
     var el = document.getElementById('t17-seq');
     ensureGlyphDataUrls();
-    el.innerHTML = state.sequence.map(function (it, i) {
+    var beadItems = state.sequence.map(function (it, i) { return { item: it, index: i }; }).filter(function (row) { return row.item.type === 'bead'; });
+    var charmItems = state.sequence.map(function (it, i) { return { item: it, index: i }; }).filter(function (row) { return row.item.type === 'charm'; });
+    var cord = cordMap[state.cord];
+    var activeView = state.seqView || 'bead';
+    if (activeView === 'charm' && !charmItems.length) activeView = 'bead';
+    if (activeView === 'cord' && !cord) activeView = 'bead';
+    state.seqView = activeView;
+    if (summaryEl) {
+      var rows = [
+        { id: 'bead', label: 'Beads', count: beadItems.length },
+        { id: 'charm', label: 'Charms', count: charmItems.length },
+        { id: 'shape', label: 'Accessories', count: state.sequence.filter(function (it) { return it.type === 'shape'; }).length },
+        { id: 'spacer', label: 'Packaging', count: state.sequence.filter(function (it) { return it.type === 'spacer'; }).length },
+        { id: 'cord', label: 'Cord', count: cord ? 1 : 0 }
+      ];
+      summaryEl.innerHTML = '<b>Strand Sequence</b>' + rows.map(function (row) {
+        return '<button type="button" class="seq-summary-btn' + (activeView === row.id ? ' is-active' : '') + '" data-seq-view="' + row.id + '">' +
+          '<span>' + row.label + ' (' + row.count + ')</span></button>';
+      }).join('');
+    }
+    var rowsToShow = activeView === 'charm' ? charmItems : (activeView === 'bead' ? beadItems : []);
+    if (activeView === 'cord') {
+      el.innerHTML = cord
+        ? '<button type="button" class="seq-item seq-cord-item" data-cord="' + cord.id + '"><span class="cord-thumb ' + cord.id + '"></span><small>' + titleCase(cord.name_en) + '</small></button>'
+        : '<div class="seq-empty">Choose a cord to finish the bracelet.</div>';
+      return;
+    }
+    if (!rowsToShow.length) {
+      el.innerHTML = '<div class="seq-empty">' + (activeView === 'charm' ? 'No charms in use yet.' : activeView === 'bead' ? 'Select crystals below to start.' : 'No items in use yet.') + '</div>';
+      return;
+    }
+    el.innerHTML = rowsToShow.map(function (row) {
+      var it = row.item;
+      var i = row.index;
       var part = it.type === 'bead' ? beadMap[it.id] : charmMap[it.id];
       var label = it.type === 'bead' ? (part ? part.name_en : it.id) : (part ? part.name_en + ' charm' : it.id);
       var dot;
@@ -593,8 +695,23 @@ const APP_JS = String.raw`(function () {
           (glyphUrl ? '' : (part ? charmMark(part.symbol) : '')) + '</span>';
       }
       return '<button type="button" class="seq-item' + (state.selected === i ? ' is-selected' : '') + '" data-slot="' + i + '">' +
-        dot + '<small>' + label + '</small></button>';
+        dot + '<small>' + titleCase(label) + '</small><span class="seq-remove" data-remove-slot="' + i + '" aria-label="Remove">&times;</span></button>';
     }).join('');
+  }
+  function renderViewMode() {
+    var stage = document.getElementById('t17-stage');
+    var btn = document.getElementById('t17-view-toggle');
+    var gatherBtn = document.getElementById('t17-gather-toggle');
+    if (!stage || !btn) return;
+    stage.setAttribute('data-view', state.viewMode);
+    btn.innerHTML = state.viewMode === '3d'
+      ? '<span aria-hidden="true">&#9635;</span><b>3D Preview</b>'
+      : '<span aria-hidden="true">&#9635;</span><b>2D View</b>';
+    if (gatherBtn) {
+      gatherBtn.innerHTML = state.beadLayout === 'released'
+        ? '<span aria-hidden="true">&#8764;</span><b>Gather Beads</b>'
+        : '<span aria-hidden="true">&#8764;</span><b>Release Beads</b>';
+    }
   }
   var _glyphDataUrls = null;
   function ensureGlyphDataUrls() {
@@ -607,15 +724,17 @@ const APP_JS = String.raw`(function () {
 
   function renderSelectedActions() {
     var el = document.getElementById('t17-sel-actions');
+    if (!el) return;
+    if (state.dimensionOpen) { el.innerHTML = ''; return; }
     if (state.selected < 0 || state.selected >= state.sequence.length) { el.innerHTML = ''; return; }
     var it = state.sequence[state.selected];
     var part = it.type === 'bead' ? beadMap[it.id] : charmMap[it.id];
     var name = part ? part.name_en : it.id;
-    el.innerHTML = '<span>Selected: <b>' + name + '</b></span>' +
-      '<button type="button" class="mini" data-action="move-left">◀</button>' +
-      '<button type="button" class="mini" data-action="move-right">▶</button>' +
+    el.innerHTML = '<span>Selected<br><b>' + name + '</b></span>' +
+      '<button type="button" class="mini" data-action="move-left">Prev</button>' +
+      '<button type="button" class="mini" data-action="move-right">Next</button>' +
       '<button type="button" class="mini danger" data-action="remove-selected">Remove</button>' +
-      '<button type="button" class="mini" data-action="deselect">✕</button>';
+      '<button type="button" class="mini" data-action="deselect">Done</button>';
   }
 
   // --- Three.js scene (identical to Step 2) ---
@@ -674,6 +793,7 @@ const APP_JS = String.raw`(function () {
   var dragGhost = null;
   var DRAG_START_PX = 6;
   var DELETE_MULT = 1.55;
+  var hit2DSlots = [];
 
   function ndcFromEvent(e) {
     var rect = renderer.domElement.getBoundingClientRect();
@@ -772,7 +892,7 @@ const APP_JS = String.raw`(function () {
       }
     });
   }
-  function updateGhost() { /* visual refinement hook — drop-slot computed on pointerup */ }
+  function updateGhost() { /* visual refinement hook 鈥?drop-slot computed on pointerup */ }
   function endGhost() {
     if (!drag.mesh) return;
     drag.mesh.traverse(function (o) {
@@ -785,12 +905,12 @@ const APP_JS = String.raw`(function () {
 
   function animate() {
     requestAnimationFrame(animate);
-    if (ringGroup) ringGroup.rotation.y += 0.0016;
     if (controls) controls.update();
-    if (renderer) renderer.render(scene, camera);
+    if (renderer && state.viewMode === '3d') renderer.render(scene, camera);
   }
 
   function renderBracelet() {
+    if (state.viewMode !== '3d') { draw2DBracelet(); return; }
     if (!THREE || !braceletGroup) return;
     buildCordVisuals();
     while (braceletGroup.children.length) {
@@ -956,6 +1076,7 @@ const APP_JS = String.raw`(function () {
     renderToolbar();
     renderPricing();
     renderSequenceStrip();
+    renderViewMode();
     renderSelectedActions();
     if (redraw3d) renderBracelet();
     saveDraft();
@@ -963,9 +1084,10 @@ const APP_JS = String.raw`(function () {
 
   function addBead(id) {
     if (!beadMap[id]) return;
-    if (!canAdd(1)) { flash('Ring is full — remove a bead or raise bead size.'); return; }
+    if (!canAdd(1)) { flash('Ring is full. Remove a bead or raise bead size.'); return; }
     state.sequence.push({ type: 'bead', id: id, size_mm: state.beadSizeMm });
     state.selected = state.sequence.length - 1;
+    state.seqView = 'bead';
     updateAll();
   }
   function addCharm(id) {
@@ -975,6 +1097,7 @@ const APP_JS = String.raw`(function () {
     if (!canAdd(Number(c.slotWeight || 1))) { flash('Not enough room for this charm.'); return; }
     state.sequence.push({ type: 'charm', id: id, slotWeight: Number(c.slotWeight || 1) });
     state.selected = state.sequence.length - 1;
+    state.seqView = 'charm';
     updateAll();
   }
   function removeSlot(i) {
@@ -1040,26 +1163,151 @@ const APP_JS = String.raw`(function () {
     var label = wrap.querySelector('.tb-label');
     if (label) {
       var fitAllow = Number(settings.fitAllowanceCm || 1.5);
-      label.textContent = 'Wrist circumference · target inner ' + targetCm().toFixed(1) + 'cm (+' + fitAllow + 'cm fit) · ~' + targetSlots() + ' slots';
+      label.textContent = 'Wrist circumference - target inner ' + targetCm().toFixed(1) + 'cm (+' + fitAllow + 'cm fit) - ~' + targetSlots() + ' slots';
     }
+    var pillValue = wrap.querySelector('.dimension-copy b');
+    if (pillValue) pillValue.textContent = Number(state.wristCm).toFixed(1).replace(/\.0$/, '') + ' cm';
     var slider = document.getElementById('t17-wrist');
     if (slider && String(Number(slider.value)) !== String(state.wristCm)) slider.value = state.wristCm;
     var sug = wrap.querySelector('.wrist-suggest');
     if (sug) {
       var fitAllow2 = Number(settings.fitAllowanceCm || 1.5);
       sug.innerHTML = 'Target slots for ' + state.beadSizeMm + 'mm beads: <b>' + suggestedBeadCount() + '</b> ' +
-        '(target inner cm × 10 / bead size mm)';
+        '(target inner cm x 10 / bead size mm)';
     }
   }
-  function setCord(id) { if (cordMap[id]) { state.cord = id; updateAll(); } }
+  function draw2DBracelet() {
+    var canvas = document.getElementById('t17-canvas-2d');
+    if (!canvas) return;
+    var rect = canvas.getBoundingClientRect();
+    var dpr = window.devicePixelRatio || 1;
+    var w = Math.max(1, Math.floor(rect.width * dpr));
+    var h = Math.max(1, Math.floor(rect.height * dpr));
+    if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+    var ctx = canvas.getContext('2d');
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, rect.width, rect.height);
+    var bg = ctx.createLinearGradient(0, 0, rect.width, rect.height);
+    bg.addColorStop(0, '#f6f0e7');
+    bg.addColorStop(0.45, '#eadfce');
+    bg.addColorStop(1, '#f8f5ef');
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, rect.width, rect.height);
+    hit2DSlots = [];
+    var cx = rect.width / 2, cy = rect.height * 0.54;
+    var board = Math.min(rect.width * 0.84, rect.height * 0.72, 620);
+    var bx = cx - board / 2, by = cy - board / 2;
+    ctx.save();
+    ctx.shadowColor = 'rgba(56,32,12,.24)';
+    ctx.shadowBlur = 28;
+    ctx.shadowOffsetY = 18;
+    if (trayImage && trayImage.complete && trayImage.naturalWidth) {
+      ctx.drawImage(trayImage, bx, by, board, board);
+    } else {
+      ctx.fillStyle = '#d8b277';
+      roundRect(ctx, bx, by, board, board, board * .085);
+      ctx.fill();
+    }
+    ctx.restore();
+    ctx.save();
+    var slotMarks = targetSlots();
+    var markCount = Math.min(slotMarks, 40);
+    ctx.translate(cx, cy);
+    ctx.strokeStyle = 'rgba(98,58,22,.42)';
+    ctx.fillStyle = 'rgba(98,58,22,.46)';
+    ctx.lineWidth = 1;
+    ctx.font = Math.max(7, board * .024) + 'px Georgia, serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    for (var mi = 0; mi < markCount; mi++) {
+      var mt = (mi / markCount) * Math.PI * 2 - Math.PI / 2;
+      var outerX = Math.cos(mt) * board * .285;
+      var outerY = Math.sin(mt) * board * .285;
+      var innerX = Math.cos(mt) * board * .254;
+      var innerY = Math.sin(mt) * board * .254;
+      ctx.beginPath();
+      ctx.moveTo(innerX, innerY);
+      ctx.lineTo(outerX, outerY);
+      ctx.stroke();
+      if (markCount <= 24 && mi % 2 === 0) {
+        ctx.fillText(String(mi + 1), Math.cos(mt) * board * .218, Math.sin(mt) * board * .218);
+      }
+    }
+    ctx.restore();
+    ctx.fillStyle = 'rgba(72,45,22,.50)';
+    ctx.font = '700 ' + Math.max(30, board * .12) + 'px Georgia, serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(String(Math.round(state.wristCm)), cx, cy - board * .01);
+    ctx.font = '700 ' + Math.max(8, board * .024) + 'px Arial, sans-serif';
+    ctx.fillText('CM', cx, cy + board * .105);
+    var rx = board * 0.315;
+    var ry = board * 0.315;
+    ctx.save();
+    ctx.strokeStyle = state.beadLayout === 'gathered' ? 'rgba(91,111,126,.34)' : 'rgba(91,111,126,.18)';
+    ctx.setLineDash([5, 5]);
+    ctx.lineWidth = 1.4;
+    ctx.beginPath();
+    ctx.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    var list = state.sequence.filter(function (it) { return it.type === 'bead'; });
+    if (!list.length) {
+      ctx.restore();
+      return;
+    }
+    list.forEach(function (it, i) {
+      var slotIndex = state.sequence.indexOf(it);
+      var t = (i / list.length) * Math.PI * 2 - Math.PI / 2;
+      var seed = (i * 37 + String(it.id).length * 11) % 100;
+      var scatterX = bx + board * (0.18 + ((seed * 17) % 61) / 100);
+      var scatterY = by + board * (0.16 + ((seed * 29) % 66) / 100);
+      var x = state.beadLayout === 'released' ? scatterX : cx + Math.cos(t) * rx;
+      var y = state.beadLayout === 'released' ? scatterY : cy + Math.sin(t) * ry;
+      var b = beadMap[it.id];
+      var size = Math.max(18, Math.min(44, Number(it.size_mm || state.beadSizeMm) * 3.2));
+      var col = b && b.textureColors ? b.textureColors : ['#d8d0c8', '#fff', '#8d8378'];
+      var g = ctx.createRadialGradient(x - size * .22, y - size * .28, 2, x, y, size * .62);
+      g.addColorStop(0, col[1]); g.addColorStop(.35, col[0]); g.addColorStop(1, col[2]);
+      ctx.fillStyle = g;
+      ctx.beginPath(); ctx.arc(x, y, size / 2, 0, Math.PI * 2); ctx.fill();
+      if (slotIndex === state.selected) {
+        ctx.strokeStyle = '#d5504c';
+        ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.arc(x, y, size / 2 + 4, 0, Math.PI * 2); ctx.stroke();
+      }
+      ctx.strokeStyle = 'rgba(255,255,255,.45)'; ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.arc(x - size * .08, y - size * .08, size * .22, 0, Math.PI * 2); ctx.stroke();
+      hit2DSlots.push({ slot: slotIndex, x: x, y: y, r: size / 2 + 8 });
+    });
+    ctx.restore();
+  }
+  function roundRect(ctx, x, y, w, h, r) {
+    r = Math.min(r, w / 2, h / 2);
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.lineTo(x + w - r, y);
+    ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+    ctx.lineTo(x + w, y + h - r);
+    ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+    ctx.lineTo(x + r, y + h);
+    ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+    ctx.lineTo(x, y + r);
+    ctx.quadraticCurveTo(x, y, x + r, y);
+  }
+  function setCord(id) { if (cordMap[id]) { state.cord = id; state.seqView = 'cord'; updateAll(); } }
 
   function initDefault() {
-    var mix = ['rose_quartz', 'amethyst', 'rose_quartz', 'clear_quartz', 'amethyst', 'rose_quartz'];
     state.sequence = [];
-    for (var i = 0; i < targetSlots(); i++) {
-      state.sequence.push({ type: 'bead', id: mix[i % mix.length], size_mm: state.beadSizeMm });
-    }
     state.selected = -1;
+    state.beadLayout = 'gathered';
+  }
+  function resetDesign() {
+    state.sequence = [];
+    state.selected = -1;
+    state.beadLayout = 'gathered';
+    updateAll();
+    flash('Design reset.');
   }
 
   // --- localStorage draft (PRD R9: versioned) ---
@@ -1070,7 +1318,9 @@ const APP_JS = String.raw`(function () {
         partsVersion: parts.partsVersion,
         savedAt: new Date().toISOString(),
         wristCm: state.wristCm, wristUnit: state.wristUnit,
+        heightCm: state.heightCm, weightKg: state.weightKg,
         beadSizeMm: state.beadSizeMm, cord: state.cord,
+        beadLayout: state.beadLayout,
         sequence: state.sequence
       }));
     } catch (e) {}
@@ -1085,9 +1335,12 @@ const APP_JS = String.raw`(function () {
         return 'expired';
       }
       state.wristCm = clamp(Number(d.wristCm || state.wristCm), settings.minWristCm, settings.maxWristCm);
+      state.heightCm = clamp(Number(d.heightCm || state.heightCm), 145, 190);
+      state.weightKg = clamp(Number(d.weightKg || state.weightKg), 35, 100);
       if (d.wristUnit === 'in' || d.wristUnit === 'cm') state.wristUnit = d.wristUnit;
       var sz = Number(d.beadSizeMm); state.beadSizeMm = [6,8,10,12].indexOf(sz) >= 0 ? sz : state.beadSizeMm;
       state.cord = cordMap[d.cord] ? d.cord : state.cord;
+      if (d.beadLayout === 'released' || d.beadLayout === 'gathered') state.beadLayout = d.beadLayout;
       state.sequence = (d.sequence || []).filter(function (it) {
         return (it.type === 'bead' && beadMap[it.id]) || (it.type === 'charm' && charmMap[it.id]);
       }).map(function (it) {
@@ -1100,20 +1353,22 @@ const APP_JS = String.raw`(function () {
   function clearDraftAndReset() {
     try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
     state.wristUnit = 'cm';
+    state.heightCm = 165;
+    state.weightKg = 46;
     state.wristCm = settings.defaultWristCm || 16;
     state.beadSizeMm = settings.defaultBeadSizeMm || 8;
     state.cord = 'elastic_black';
     initDefault();
     updateAll();
     hideDraftToast();
-    flash('Started fresh — your previous draft was cleared.');
+    flash('Started fresh. Your previous draft was cleared.');
   }
   function showDraftToast(msg, ctaLabel) {
     var el = document.getElementById('t17-draft-toast');
     if (!el) return;
     el.innerHTML = '<span class="draft-msg">' + msg + '</span>' +
       (ctaLabel ? '<button type="button" class="draft-cta" id="t17-draft-clear">' + ctaLabel + '</button>' : '') +
-      '<button type="button" class="draft-x" id="t17-draft-x" aria-label="dismiss">✕</button>';
+      '<button type="button" class="draft-x" id="t17-draft-x" aria-label="Dismiss">&times;</button>';
     el.classList.add('show');
     clearTimeout(el._t);
     el._t = setTimeout(function () { hideDraftToast(); }, 6000);
@@ -1135,7 +1390,7 @@ const APP_JS = String.raw`(function () {
   }
 
   // ============================================================
-  // STEP 3 — Add to cart via admin-ajax (Code Snippet id=20 endpoint)
+  // STEP 3 鈥?Add to cart via admin-ajax (Code Snippet id=20 endpoint)
   // POST /wp-admin/admin-ajax.php?action=t17_add_custom_bracelet
   // body: product_id + config{sequence[], bead_size, cord, wrist...}
   // response: {success, data:{cart_item_key, server_recalc_total, cart_url}}
@@ -1159,9 +1414,9 @@ const APP_JS = String.raw`(function () {
     if (!state.sequence.length) { flash('Add at least one bead first.'); return; }
     _cartBusy = true;
     var btn = document.getElementById('t17-add-cart');
-    if (btn) { btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = 'Adding…'; }
+    if (btn) { btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = 'Adding...'; }
     var cfg = configPayload();
-    // urlencoded form body — admin-ajax expects form params, not JSON.
+    // urlencoded form body 鈥?admin-ajax expects form params, not JSON.
     var params = new URLSearchParams();
     params.append('action', 't17_add_custom_bracelet');
     params.append('product_id', String(PRODUCT_ID));
@@ -1174,19 +1429,19 @@ const APP_JS = String.raw`(function () {
     }).then(function (r) { return r.json(); }).then(function (j) {
       if (j && j.success && j.data && j.data.cart_item_key) {
         var srv = j.data.server_recalc_total;
-        var cartUrl = j.data.cart_url || '/cart';
-        flash('Added — ' + money(srv) + '. Redirecting to cart…');
-        // Brief pause so the user sees the confirmation, then go to cart.
-        setTimeout(function () { window.location.href = cartUrl; }, 700);
+        var checkoutUrl = j.data.checkout_url || '/checkout/';
+        flash('Added ' + money(srv) + '. Redirecting to checkout...');
+        // Brief pause so the user sees the confirmation, then go to checkout.
+        setTimeout(function () { window.location.href = checkoutUrl; }, 700);
       } else {
         var msg = (j && j.data && j.data.message) ? j.data.message : 'Add to cart failed.';
         flash(msg);
-        if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label || 'Add custom bracelet to cart'; }
+        if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label || 'Checkout custom bracelet'; }
         _cartBusy = false;
       }
     }).catch(function (e) {
-      flash('Network error — please try again.');
-      if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label || 'Add custom bracelet to cart'; }
+      flash('Network error. Please try again.');
+      if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label || 'Checkout custom bracelet'; }
       _cartBusy = false;
     });
   }
@@ -1197,29 +1452,68 @@ const APP_JS = String.raw`(function () {
   function bindEvents() {
     var root = document.getElementById('t17-app');
     root.addEventListener('click', function (e) {
+      if (e.target && e.target.id === 't17-canvas-2d') {
+        var cr = e.target.getBoundingClientRect();
+        var px = e.clientX - cr.left, py = e.clientY - cr.top;
+        for (var hi = hit2DSlots.length - 1; hi >= 0; hi--) {
+          var hit = hit2DSlots[hi];
+          if (Math.hypot(px - hit.x, py - hit.y) <= hit.r) {
+            state.selected = hit.slot;
+            updateAll();
+            return;
+          }
+        }
+      }
       var beadBtn = e.target.closest('[data-bead]');
       if (beadBtn) {
         var chosenSize = Number(beadBtn.getAttribute('data-bead-size') || state.beadSizeMm);
         state.beadSizeMm = chosenSize;
-        if (state.selected >= 0 && state.sequence[state.selected] && state.sequence[state.selected].type === 'bead') {
-          state.sequence[state.selected].id = beadBtn.getAttribute('data-bead');
-          state.sequence[state.selected].size_mm = chosenSize;
-          updateAll();
-        } else {
-          addBead(beadBtn.getAttribute('data-bead'));
-        }
+        addBead(beadBtn.getAttribute('data-bead'));
         return;
       }
       var charmBtn = e.target.closest('[data-charm]'); if (charmBtn) return addCharm(charmBtn.getAttribute('data-charm'));
       var presetBtn = e.target.closest('[data-preset]'); if (presetBtn) return fillPreset(presetBtn.getAttribute('data-preset'));
       var cordBtn = e.target.closest('[data-cord]'); if (cordBtn) return setCord(cordBtn.getAttribute('data-cord'));
       var sizeBtn = e.target.closest('[data-size]'); if (sizeBtn) return setBeadSize(sizeBtn.getAttribute('data-size'));
+      var seqViewBtn = e.target.closest('[data-seq-view]');
+      if (seqViewBtn) {
+        state.seqView = seqViewBtn.getAttribute('data-seq-view');
+        renderSequenceStrip();
+        return;
+      }
+      if (e.target.closest('#t17-view-toggle')) {
+        state.viewMode = state.viewMode === '3d' ? '2d' : '3d';
+        updateAll();
+        return;
+      }
+      if (e.target.closest('#t17-gather-toggle')) {
+        state.beadLayout = state.beadLayout === 'released' ? 'gathered' : 'released';
+        updateAll();
+        return;
+      }
+      if (e.target.closest('#t17-stage-reset')) {
+        resetDesign();
+        return;
+      }
+      if (e.target.closest('#t17-dimension-toggle')) { state.dimensionOpen = !state.dimensionOpen; renderToolbar(); renderSelectedActions(); return; }
+      if (e.target.closest('#t17-dimension-close') || e.target.closest('#t17-dimension-confirm')) {
+        state.dimensionOpen = false;
+        renderToolbar();
+        renderSelectedActions();
+        return;
+      }
+      var catViewBtn = e.target.closest('[data-cat-view]');
+      if (catViewBtn) { state.categoryView = catViewBtn.getAttribute('data-cat-view'); renderLeft(); return; }
       var colorBtn = e.target.closest('[data-color]');
       if (colorBtn) { state.filterColor = colorBtn.getAttribute('data-color'); renderLeft(); return; }
+      var typeBtn = e.target.closest('[data-type-filter]');
+      if (typeBtn) { state.filterType = typeBtn.getAttribute('data-type-filter'); renderLeft(); return; }
       var charmCatBtn = e.target.closest('[data-charm-cat]');
       if (charmCatBtn) { state.filterColor = charmCatBtn.getAttribute('data-charm-cat'); renderLeft(); return; }
       var modeBtn = e.target.closest('[data-mode]');
-      if (modeBtn) { state.catalogMode = modeBtn.getAttribute('data-mode'); state.filterColor = 'all'; renderLeft(); return; }
+      if (modeBtn) { state.catalogMode = modeBtn.getAttribute('data-mode'); state.filterColor = 'all'; state.filterType = 'all'; renderLeft(); return; }
+      var removeSeqBtn = e.target.closest('[data-remove-slot]');
+      if (removeSeqBtn) return removeSlot(Number(removeSeqBtn.getAttribute('data-remove-slot')));
       var slotBtn = e.target.closest('[data-slot]');
       if (slotBtn) { state.selected = Number(slotBtn.getAttribute('data-slot')); updateAll(false); return; }
       var actBtn = e.target.closest('[data-action]');
@@ -1244,14 +1538,24 @@ const APP_JS = String.raw`(function () {
       if (e.target.id === 't17-draft-x') return hideDraftToast();
     });
     root.addEventListener('input', function (e) {
+      if (e.target.id === 't17-height' || e.target.id === 't17-weight') {
+        if (e.target.id === 't17-height') state.heightCm = clamp(Number(e.target.value) || 165, 145, 190);
+        if (e.target.id === 't17-weight') state.weightKg = clamp(Number(e.target.value) || 46, 35, 100);
+        setWrist(estimateWristFromBody(state.heightCm, state.weightKg), true);
+        renderToolbar();
+        return;
+      }
       if (e.target.id === 't17-wrist') setWrist(e.target.value);
       if (e.target.id === 't17-wrist-num') {
         var v = parseFloat(e.target.value);
         if (isNaN(v)) return;
-        var cm = state.wristUnit === 'in' ? inToCm(v) : v;
-        setWrist(cm, true);
+        setWrist(v, true);
       }
     });
+    root.addEventListener('change', function (e) {
+      if (e.target.id === 't17-bead-size-select') setBeadSize(e.target.value);
+    });
+    window.addEventListener('resize', function () { renderBracelet(); });
   }
 
   // --- Boot ---
@@ -1262,6 +1566,8 @@ const APP_JS = String.raw`(function () {
   renderToolbar();
   renderPricing();
   renderSequenceStrip();
+  renderViewMode();
+  renderBracelet();
   renderSelectedActions();
   bindEvents();
   if (draftStatus === 'restored') {
@@ -1270,7 +1576,7 @@ const APP_JS = String.raw`(function () {
     showDraftToast('Your saved draft was from an older version and has been reset.', null);
   }
 
-  // 3D progressive enhancement — dynamic import (CDN/self-host via importmap).
+  // 3D progressive enhancement 鈥?dynamic import (CDN/self-host via importmap).
   (async function () {
     try {
       var mod = await import('three');
@@ -1292,7 +1598,7 @@ const APP_JS = String.raw`(function () {
 })();
 `;
 
-// ascii-escape the APP JS (non-ASCII → \uXXXX), then base64. The JS contains
+// ascii-escape the APP JS (non-ASCII 鈫?\uXXXX), then base64. The JS contains
 // pointer-drag `&&`, `<` comparisons and CJK that wp_kses would otherwise
 // entity-encode and break inside <!-- wp:html --> (memory wp-html-block-js-base64).
 function asciiJS(s) {
@@ -1305,8 +1611,8 @@ const APP_B64 = Buffer.from(asciiJS(APP_JS), 'utf8').toString('base64');
 // Refined light catalog UI for the live WordPress builder.
 const CSS = String.raw`
 #t17-app,#t17-app *{box-sizing:border-box;margin:0;padding:0}
-#t17-app{--paper:#fffdf9;--ink:#332d28;--muted:#81776e;--line:#e7dfd8;--soft:#f4f0ec;--wash:#f8f5f1;--accent:#d5504c;--green:#2d6a43;--blue:#2d7fd8;display:flex;width:100%;max-width:1480px;min-height:820px;height:calc(100vh - 88px);margin:18px auto;overflow:hidden;font-family:Georgia,"Times New Roman",serif;background:#fff;color:var(--ink);-webkit-font-smoothing:antialiased;border:1px solid #eee4dc;border-radius:18px;box-shadow:0 20px 60px rgba(92,65,42,.12)}
-#t17-left{display:none}
+#t17-app{--paper:#fffdf9;--ink:#332d28;--muted:#81776e;--line:#e7dfd8;--soft:#f4f0ec;--wash:#f8f5f1;--accent:#d5504c;--green:#2d6a43;--blue:#2d7fd8;position:relative;left:50%;display:flex;width:calc(100vw - 40px);max-width:none;min-height:0;height:min(690px,calc(100vh - 105px));margin:12px 0 8px calc(-50vw + 20px);scroll-margin-top:150px;transform:none;overflow:hidden;font-family:Georgia,"Times New Roman",serif;background:#fff;color:var(--ink);-webkit-font-smoothing:antialiased;border:1px solid #eee4dc;border-radius:18px;box-shadow:0 20px 60px rgba(92,65,42,.12)}
+#t17-left{display:flex;flex-direction:column;width:300px;flex:0 0 300px;background:var(--soft);border-right:1px solid var(--line);padding:18px 14px;overflow:hidden}
 #t17-left h3,.catalog-cats h3{font-size:24px;line-height:1;color:#211b17;font-weight:700;margin:4px 0 18px}
 .lh-title{display:none}
 .scroll-area{overflow-y:auto;flex:1;padding-right:10px}
@@ -1315,66 +1621,74 @@ const CSS = String.raw`
 .stone-row:hover{background:rgba(255,255,255,.58);color:#433a33}
 .stone-row.is-active{background:#fff;color:#2f2924;box-shadow:0 1px 0 rgba(0,0,0,.03)}
 .stone-mini{width:22px;height:22px;flex:0 0 22px;border-radius:50%;background-size:cover;background-position:center;box-shadow:inset -3px -3px 6px rgba(45,37,30,.18),inset 2px 2px 4px rgba(255,255,255,.72),0 1px 2px rgba(45,37,30,.12)}
-.cat-row{width:100%;min-height:44px;border:0;background:transparent;border-radius:10px;padding:7px 8px;display:flex;align-items:center;gap:9px;color:#6f6760;font-family:Arial,sans-serif;font-size:14px;font-weight:700;text-align:left;cursor:pointer;transition:background .14s,color .14s}
+.cat-row{width:100%;min-height:31px;border:0;background:transparent;border-radius:10px;padding:5px 7px 5px 20px;display:flex;align-items:center;justify-content:flex-start;gap:8px;color:#6f6760;font-family:Arial,sans-serif;font-size:11px;font-weight:650;text-align:left;text-transform:none;cursor:pointer;transition:background .14s,color .14s}
+#t17-app .cat-row{padding:5px 7px 5px 20px;justify-content:flex-start;text-align:left}
 .cat-row:hover{background:rgba(255,255,255,.7);color:#2f2924}
 .cat-row.is-active{background:#fff;color:#2f2924;box-shadow:0 1px 0 rgba(0,0,0,.04)}
 .cat-row:disabled{cursor:default;opacity:.75}
-.cat-mark{width:3px;height:18px;border-radius:2px;background:transparent;flex:0 0 3px}
-.cat-row.is-active .cat-mark{background:var(--green)}
-#t17-right{height:100%;display:grid;grid-template-columns:minmax(640px,1fr) minmax(520px,620px);grid-template-rows:auto 1fr auto;overflow:hidden;background:var(--paper)}
-#t17-toolbar{grid-column:1/3;background:#fff;border-bottom:1px solid var(--line);padding:16px 24px;display:grid;grid-template-columns:minmax(230px,1fr) auto minmax(330px,420px);gap:22px;align-items:center}
+.cat-mark{width:15px;height:15px;border-radius:50%;background:var(--cat-color,#d9d2ca);flex:0 0 15px;box-shadow:inset -3px -3px 5px rgba(50,42,35,.18),inset 2px 2px 4px rgba(255,255,255,.65),0 1px 2px rgba(60,45,35,.12)}
+.cat-row.is-active .cat-mark{background:var(--cat-color,var(--green));box-shadow:inset -3px -3px 5px rgba(50,42,35,.18),inset 2px 2px 4px rgba(255,255,255,.65),0 0 0 2px #fff,0 0 0 3px rgba(213,80,76,.34)}
+#t17-right{height:100%;display:grid;grid-template-columns:minmax(0,55%) minmax(0,45%);grid-template-rows:1fr auto;overflow:hidden;background:var(--paper);width:100%}
 .tool-brand{display:flex;flex-direction:column;gap:5px}
 .tool-brand b{font-size:26px;line-height:1;color:#26211d}
 .tool-brand small{font-family:Arial,sans-serif;font-size:12px;color:#7d746c;letter-spacing:.2px}
-#t17-catalog{grid-column:2;grid-row:2/4;min-height:0;border-left:1px solid var(--line);padding:20px 22px;background:#fff;display:flex;flex-direction:column;gap:14px;overflow:hidden}
-.catalog-body{min-height:0;display:grid;grid-template-columns:150px minmax(0,1fr);gap:16px;flex:1}
-.catalog-cats{min-height:0;background:#f4f2f0;border-radius:18px;padding:18px 8px 16px 16px;display:flex;flex-direction:column;overflow:hidden}
+#t17-catalog{grid-column:2;grid-row:1/3;min-height:0;border-left:1px solid var(--line);padding:5px 10px 5px 8px;background:#fff;display:flex;flex-direction:column;gap:7px;overflow:hidden}
+.catalog-body{min-height:0;display:grid;grid-template-columns:130px minmax(0,1fr);gap:14px;flex:0 0 400px;max-height:400px}
+.catalog-cats{min-height:0;background:#f4f2f0;border-radius:14px;padding:2px 6px 9px;display:flex;flex-direction:column;align-items:stretch;overflow:hidden}
 .catalog-products{min-height:0;display:flex;flex-direction:column;gap:14px;overflow:hidden}
 .catalog-head{height:58px;border:1px solid var(--line);border-radius:28px;padding:0 16px;display:flex;align-items:center;justify-content:space-between;background:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
 #t17-catalog-title{font-size:24px;font-weight:700;color:#473d36;line-height:1}
 #t17-catalog-count{min-width:52px;height:30px;border-radius:18px;background:#f7f2ee;border:1px solid #e2d8cf;color:#675d55;display:grid;place-items:center;font-size:20px}
-#t17-catalog-tabs{display:flex;gap:24px;align-items:flex-end;padding:0 2px 4px;border-bottom:1px solid #eee7e0;min-height:36px}
-.mode-tab{position:relative;border:0;border-radius:0;background:transparent;color:#746b64;padding:0 0 10px;font-family:Arial,sans-serif;font-size:16px;font-weight:700;cursor:pointer;transition:color .16s}
-.mode-tab:hover{color:#302a25}
-.mode-tab.is-active{color:#202020}
-.mode-tab.is-active:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:3px;border-radius:3px;background:#202020}
-#t17-bead-grid{overflow-y:auto;padding:4px 4px 18px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
-.bead-card{position:relative;min-height:172px;background:#fff;border:1px solid #ebe4df;border-radius:14px;padding:14px 10px 12px;text-align:center;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:10px;box-shadow:0 10px 22px rgba(65,49,34,.05);transition:border-color .16s,box-shadow .16s,transform .16s}
+#t17-app .catalog-cats .scroll-area{padding-left:0;padding-top:0;padding-right:0}
+#t17-app .catalog-cats h3.cat-switch{display:flex;justify-content:flex-start;gap:5px;padding:0 0 5px;margin:0 0 5px;border-bottom:1px solid #e8e2dc}
+.cat-switch-btn{height:18px!important;min-height:18px!important;flex:0 0 48px;border:0;border-radius:999px;background:#fff;color:#756c64;font-family:Arial,sans-serif;font-size:8px;font-weight:800;letter-spacing:0;line-height:1!important;text-transform:none;padding:0!important;cursor:pointer;appearance:none}
+.cat-switch-btn.is-active{background:#171717;color:#fff}
+#t17-catalog-tabs{display:flex;gap:7px;align-items:center;justify-content:center;padding:0 0 5px;border-bottom:1px solid #eee7e0;min-height:31px;overflow:hidden}
+.mode-tab{position:relative;border:0;border-radius:999px;background:#f5f4f3;color:#746b64;min-width:84px;height:24px!important;min-height:0!important;padding:0 12px!important;font-family:Arial,sans-serif;font-size:8.5px;font-weight:800;line-height:1!important;text-transform:none;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;cursor:pointer;transition:color .16s,background .16s,box-shadow .16s;appearance:none}
+.mode-tab:hover{color:#302a25;background:#efedeb}
+.mode-tab.is-active{color:#fff;background:#171717;box-shadow:0 8px 18px rgba(0,0,0,.12)}
+.mode-tab.is-active:after{display:none}
+#t17-bead-grid{min-height:0;flex:1;overflow-y:auto;padding:0 10px 7px 0;display:grid;grid-template-columns:repeat(3,minmax(104px,1fr));gap:7px;align-content:start;justify-content:stretch}
+.bead-card{position:relative;min-height:52px;background:#fff;border:1px solid #ebe4df;border-radius:10px;padding:4px 5px;text-align:center;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;box-shadow:0 4px 10px rgba(65,49,34,.03);transition:border-color .16s,box-shadow .16s,transform .16s}
+#t17-app .bead-card{padding:3px 5px;justify-content:center}
 .bead-card:hover{border-color:#eeb6b2;box-shadow:0 14px 30px rgba(118,77,48,.1);transform:translateY(-2px)}
 .bead-card:disabled{cursor:not-allowed;opacity:.72;transform:none}
-.bead-thumb{width:58px;height:58px;border-radius:50%;background-size:cover;background-position:center;box-shadow:inset -6px -6px 10px rgba(54,45,38,.2),inset 4px 4px 8px rgba(255,255,255,.72),0 4px 10px rgba(75,58,46,.12)}
-.bead-thumb.large{width:76px;height:76px}
-.bead-meta{display:flex;flex-direction:column;align-items:center;gap:4px;line-height:1.05;width:100%}
-.bead-meta b{font-size:16px;font-weight:700;color:#554a42;max-width:100%;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
-.bead-meta small{font-size:16px;color:#756a62}
+.bead-thumb{width:22px;height:22px;border-radius:50%;flex:0 0 22px;background-size:cover;background-position:center;box-shadow:inset -4px -4px 7px rgba(54,45,38,.2),inset 3px 3px 6px rgba(255,255,255,.72),0 2px 6px rgba(75,58,46,.1)}
+.bead-thumb.large{width:22px;height:22px}
+.bead-meta{display:flex;flex-direction:column;align-items:center;gap:3px;line-height:1.08;min-width:0;width:100%}
+.bead-meta b{font-size:10px;font-weight:650;letter-spacing:0;text-transform:none;color:#554a42;max-width:100%;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.bead-meta small{font-size:10px;color:#756a62}
 .bead-meta small::first-letter{font-weight:700}
-.card-coin{width:70px;height:70px}
+.card-coin{width:46px;height:46px;flex:0 0 46px}
 .charm-coin{width:30px;height:30px;border-radius:50%;background:linear-gradient(145deg,#f6dfa5,#bc8d32);display:grid;place-items:center;font-size:9px;font-weight:800;color:#2b210c;box-shadow:inset -3px -3px 5px rgba(0,0,0,.24),0 4px 8px rgba(69,52,28,.12);overflow:hidden}
 .charm-glyph{width:24px;height:24px;display:block;filter:drop-shadow(0 1px 1px rgba(0,0,0,.24))}
-.card-coin .charm-glyph{width:48px;height:48px}
-.spacer-thumb{width:76px;height:42px;border-radius:20px;background:linear-gradient(90deg,#d9d2ca,#fff,#bdb3aa,#f7f1ec);box-shadow:inset -5px -5px 8px rgba(64,52,45,.18),0 6px 14px rgba(70,54,42,.08)}
-.cord-thumb{width:82px;height:18px;border-radius:18px;background:#202020;box-shadow:0 8px 16px rgba(60,45,35,.08),inset 0 2px 4px rgba(255,255,255,.25)}
+.card-coin .charm-glyph{width:34px;height:34px}
+.spacer-thumb{width:54px;height:30px;flex:0 0 30px;border-radius:20px;background:linear-gradient(90deg,#d9d2ca,#fff,#bdb3aa,#f7f1ec);box-shadow:inset -5px -5px 8px rgba(64,52,45,.18),0 6px 14px rgba(70,54,42,.08)}
+.cord-thumb{width:58px;height:14px;flex:0 0 14px;border-radius:18px;background:#202020;box-shadow:0 8px 16px rgba(60,45,35,.08),inset 0 2px 4px rgba(255,255,255,.25)}
 .cord-thumb.braided_brown{background:repeating-linear-gradient(45deg,#6a442a 0 6px,#9b704b 6px 12px)}
 .cord-thumb.silver_wire{background:linear-gradient(90deg,#b8bcc0,#fff,#8f969d,#eef2f4)}
 .cord-card.is-selected{border-color:#2d7fd8;background:#f4f9ff}
 .unavailable{position:absolute;right:10px;bottom:10px;background:#d8524d;color:#fff;font-style:normal;font-size:12px;font-family:Arial,sans-serif;border-radius:14px;padding:4px 10px}
 .empty{padding:24px;color:var(--muted);font-size:14px;text-align:center}
 .tb-group{display:flex;flex-direction:column;gap:7px}
-.tb-label{font-family:Arial,sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:#8c8178;font-weight:700}
-#t17-charms-wrap,#t17-cords-wrap{display:none}
-#t17-cords,#t17-sizes{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.cord-btn,.size-btn{background:#f7f3ef;border:1px solid #e1d8cf;border-radius:12px;padding:10px 13px;cursor:pointer;color:#5d534b;font-family:Arial,sans-serif;font-size:13px;font-weight:800;transition:border-color .12s,background .12s,box-shadow .12s}
+.tb-label{font-family:Arial,sans-serif;font-size:10px;text-transform:none;letter-spacing:.5px;color:#8c8178;font-weight:700}
+#t17-charms-wrap{display:none}
+#t17-sizes{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cord-btn,.size-btn{background:#f7f3ef;border:1px solid #e1d8cf;border-radius:999px;padding:6px 9px;cursor:pointer;color:#5d534b;font-family:Arial,sans-serif;font-size:11px;font-weight:800;text-transform:none;transition:border-color .12s,background .12s,box-shadow .12s}
 .cord-btn{display:flex;flex-direction:column;align-items:center;gap:1px}
 .cord-btn small{font-size:10px;color:#8d827a;font-weight:500}
 .cord-btn.is-active,.size-btn.is-active{border-color:#2d7fd8;background:#eaf4ff;color:#1e5c9d;box-shadow:0 0 0 2px rgba(45,127,216,.1)}
-#t17-wrist-wrap{display:flex;flex-direction:column;gap:7px;min-width:330px}
-.wrist-row{display:flex;align-items:center;gap:6px}
-#t17-wrist-num{width:78px;background:#fff;border:1px solid #ded5cd;color:#312b27;border-radius:10px;padding:8px 10px;font-size:14px;font-weight:700}
+#t17-wrist-wrap{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:10px;min-width:0}
+.wrist-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:10px}
+#t17-wrist-num{width:100%;background:#fff;border:1px solid #e8ddd4;color:#1f1d1b;border-radius:12px;padding:10px 12px;font-size:18px;font-weight:800;text-align:center}
+#t17-app #t17-wrist-num{padding:10px 12px!important}
 #t17-wrist-num:focus{outline:none;border-color:#2d7fd8}
-.unit-toggle{display:inline-flex;background:#f4f0ec;border:1px solid #ded5cd;border-radius:10px;overflow:hidden}
-.unit-btn{background:transparent;border:0;color:#7f746c;padding:8px 10px;font-size:12px;font-weight:700;cursor:pointer}
+.unit-toggle{display:inline-flex;background:#f7f3ef;border:1px solid #e5dad1;border-radius:12px;overflow:hidden}
+.unit-btn{background:transparent;border:0;color:#7f746c;padding:10px 12px;font-size:14px;font-weight:800;cursor:pointer}
+#t17-app .unit-btn{padding:10px 12px!important;min-height:42px!important}
 .unit-btn.is-active{background:#2d7fd8;color:#fff}
-.measure-btn{background:#f4f0ec;border:1px solid #ded5cd;border-radius:10px;color:#665b53;width:36px;height:36px;display:grid;place-items:center;cursor:pointer;padding:0}
+.measure-btn{background:#f4f0ec;border:1px solid #ded5cd;border-radius:12px;color:#665b53;width:46px;height:46px;display:grid;place-items:center;cursor:pointer;padding:0}
+#t17-app .measure-btn{width:46px!important;height:46px!important;min-height:46px!important}
 .wrist-suggest{font-family:Arial,sans-serif;font-size:11px;color:#82776e;line-height:1.45}
 .wrist-suggest b{color:#2f2924;font-weight:800}
 .measure-teach{margin-top:6px;background:#fff;border:1px solid #e1d8cf;border-radius:12px;padding:10px}
@@ -1382,47 +1696,157 @@ const CSS = String.raw`
 .measure-teach-inner{display:flex;gap:12px;align-items:flex-start}
 .measure-teach-inner p{font-family:Arial,sans-serif;font-size:12px;color:#5d534b;line-height:1.55;flex:1}
 .measure-teach-inner p b{color:#2d7fd8}
-.quick-sizes{display:flex;gap:5px;margin-top:6px;flex-wrap:wrap}
-.quick-size{background:#f5f1ed;border:1px solid #ded5cd;border-radius:8px;padding:5px 9px;cursor:pointer;color:#5d534b;font-size:11px;font-weight:700;display:flex;flex-direction:column;align-items:center;line-height:1.2}
-.quick-size small{font-size:9px;color:#8d827a;font-weight:400}
+.quick-size-head{display:flex;align-items:end;justify-content:space-between;margin-top:2px;font-family:Arial,sans-serif}
+.quick-size-head b{font-size:13px;color:#25211e}
+.quick-size-head span{font-size:10px;color:#a49a91}
+.quick-sizes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;margin-top:0}
+.quick-size{background:#fff;border:1px solid #e8dfd7;border-radius:10px;padding:4px 7px;cursor:pointer;color:#34302c;font-family:Arial,sans-serif;font-size:12px;font-weight:800;display:flex;flex-direction:column;align-items:center;line-height:1.15;box-shadow:0 2px 6px rgba(70,50,34,.04)}
+#t17-app .quick-size{padding:4px 7px!important;min-height:34px!important}
+.quick-size small{font-size:9px;color:#8d827a;font-weight:500;margin-top:3px}
 #t17-wrist{width:100%;accent-color:#2d7fd8;cursor:pointer}
-#t17-draft-toast{position:absolute;top:12px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.98);border:1px solid #d9cfc6;color:#3c352f;padding:9px 12px;border-radius:12px;font-size:12px;display:flex;align-items:center;gap:10px;max-width:78%;box-shadow:0 12px 28px rgba(80,59,45,.16);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:5}
-#t17-draft-toast.show{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(2px)}
+#t17-draft-toast{position:absolute;top:12px;right:14px;background:rgba(255,255,255,.96);border:1px solid #d9cfc6;color:#3c352f;padding:7px 8px 7px 10px;border-radius:12px;font-size:11px;display:flex;align-items:center;gap:7px;max-width:315px;box-shadow:0 12px 28px rgba(80,59,45,.14);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;transform:translateY(-4px);z-index:5}
+#t17-draft-toast.show{opacity:1;pointer-events:auto;transform:translateY(0)}
 #t17-draft-toast .draft-msg{line-height:1.4}
-#t17-draft-toast .draft-cta{background:#2d7fd8;border:0;color:#fff;border-radius:8px;padding:6px 10px;font-size:11px;font-weight:700;cursor:pointer;white-space:nowrap}
-#t17-draft-toast .draft-x{background:transparent;border:0;color:#8c8178;font-size:14px;cursor:pointer;padding:2px 4px}
-#t17-stage{grid-column:1;grid-row:2;position:relative;min-height:0;background:radial-gradient(circle at 50% 42%,#ffffff 0%,#ffffff 34%,#faf8f5 62%,#f1ebe5 100%);border-right:1px solid #eee4dc}
-#t17-canvas{display:block;width:100%;height:100%}
-#t17-hint{position:absolute;top:16px;left:18px;background:rgba(255,255,255,.82);padding:10px 13px;border-radius:13px;font-family:Arial,sans-serif;font-size:11px;line-height:1.55;color:#6f645b;pointer-events:none;max-width:255px;box-shadow:0 10px 24px rgba(75,55,42,.08)}
+#t17-draft-toast .draft-cta{background:#2d6a43;border:0;color:#fff;border-radius:8px;padding:5px 8px;font-size:10px;font-weight:800;cursor:pointer;white-space:nowrap}
+#t17-draft-toast .draft-x{width:22px;height:22px;min-height:22px!important;background:#f3eee8;border:0;border-radius:50%;color:#7a7067;font-size:16px;line-height:1;cursor:pointer;padding:0!important;display:grid;place-items:center}
+#t17-stage{grid-column:1;grid-row:1;position:relative;min-height:0;background:#f6f0e7;border-right:1px solid #eee4dc;overflow:hidden}
+#t17-canvas,#t17-canvas-2d{position:absolute;inset:0;display:block;width:100%;height:100%}
+#t17-stage[data-view="2d"] #t17-canvas{opacity:0;pointer-events:none}
+#t17-stage[data-view="3d"] #t17-canvas-2d{opacity:0;pointer-events:none}
+#t17-stage-panel{position:absolute;top:14px;left:50%;z-index:7;display:block;width:min(560px,calc(100% - 40px));transform:translateX(-50%);pointer-events:none}
+#t17-stage-panel>*{pointer-events:auto}
+.stage-card{background:transparent;border:0;border-radius:0;padding:0;box-shadow:none}
+.stage-controls{display:flex;flex-direction:column;align-items:center;gap:7px;position:relative}
+.dimension-pill{height:40px;min-width:188px;border:1px solid #c8bc93;border-radius:999px;background:#d4c9a2;color:#332d28;display:flex;align-items:center;gap:9px;padding:4px 14px 4px 10px;box-shadow:0 8px 18px rgba(91,67,32,.09);cursor:pointer;text-align:left}
+#t17-app .dimension-pill{padding:4px 14px 4px 10px!important}
+.dimension-hand{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#d1bd8e;color:#fff;font-size:15px;line-height:1}
+.dimension-copy{display:flex;flex-direction:column;line-height:1.08;min-width:0}
+.dimension-copy small{font-family:Arial,sans-serif;font-size:10px;letter-spacing:.4px;text-transform:none;color:#776d5a;font-weight:800}
+.dimension-copy b{font-size:17px;color:#3f352c;font-weight:800;text-shadow:none}
+.stage-size-row{height:40px;display:flex;flex-direction:row;align-items:center;gap:7px;background:#ece5d5;border:1px solid #d8cdbb;border-radius:999px;padding:4px 6px 4px 12px;box-shadow:0 8px 18px rgba(91,67,32,.08);font-family:Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.2px;text-transform:none;color:#756b60}
+#t17-app .stage-size-row{padding:4px 6px 4px 12px!important}
+.stage-size-row>span{line-height:1;white-space:nowrap}
+.stage-size-options{display:flex;gap:4px;align-items:center}
+.stage-size-btn{height:32px;min-width:50px;border:1px solid #d8cdbb;border-radius:10px;background:#fffaf3;color:#5f554b;font-family:Arial,sans-serif;font-size:13px;font-weight:800;cursor:pointer}
+#t17-app .stage-size-btn{padding:0!important;min-height:32px!important}
+.stage-size-btn.is-active{background:#171717;border-color:#171717;color:#fff}
+.dimension-popover{display:none;position:absolute;top:44px;left:50%;z-index:8;transform:translateX(-50%);width:min(520px,calc(100% - 8px));max-height:420px;background:rgba(255,255,255,.98);border:1px solid #e4d9cf;border-radius:18px;padding:0;box-shadow:0 22px 48px rgba(58,42,30,.20);overflow:auto;user-select:none}
+#t17-app .dimension-popover{padding:0!important}
+.dimension-popover.is-open{display:flex;flex-direction:column;gap:0}
+.dimension-popover *{box-sizing:border-box}
+.dimension-popover input{user-select:text}
+.dimension-modal-head{height:42px;padding:0 12px 0 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eee7e1}
+#t17-app .dimension-modal-head{padding:0 12px 0 18px!important}
+.dimension-modal-head b{font-family:Arial,sans-serif;font-size:16px;color:#181614}
+#t17-dimension-close{width:30px;height:30px;min-height:30px!important;border:0;border-radius:50%;background:#f4f1ee;color:#1f1d1a;font-size:20px;line-height:1;cursor:pointer;padding:0!important}
+.dimension-field{padding:12px 18px 0;display:flex;flex-direction:column;gap:7px}
+#t17-app .dimension-field{padding:12px 18px 0!important}
+.body-measure-field{gap:8px}
+.measure-ruler input{width:100%;accent-color:#e0202b;cursor:pointer}
+.dimension-field-head{display:flex;align-items:center;justify-content:space-between;font-family:Arial,sans-serif}
+.dimension-field-head span{font-size:13px;font-weight:800;color:#24211e}
+.dimension-field-head strong{font-size:17px;color:#d32222}
+.ruler-card{border:1px solid #eee5de;border-radius:13px;padding:7px 10px 5px;background:linear-gradient(180deg,#fff,#fbfaf8)}
+#t17-app .ruler-card{padding:7px 10px 5px!important}
+.ruler-ticks{display:flex;justify-content:space-between;padding:0 20px;font-family:Arial,sans-serif;font-size:10px;color:#9a9189}
+.wrist-recommend{margin:8px 18px 0;background:#fff0f0;border-radius:12px;padding:7px 10px;display:flex;align-items:center;justify-content:space-between;font-family:Arial,sans-serif}
+#t17-app .wrist-recommend{margin:8px 18px 0!important;padding:7px 10px!important}
+.wrist-recommend span{font-size:12px;font-weight:800;color:#2a2623;white-space:nowrap}
+.wrist-recommend b{background:#fff;border:1px solid #f1d9d9;border-radius:9px;padding:5px 12px;font-size:16px;color:#d32222}
+.wrist-edit label{display:flex;align-items:center;gap:4px;background:#fff;border:1px solid #f1d9d9;border-radius:10px;padding:0 10px}
+#t17-app .wrist-edit label{padding:0 10px!important}
+.wrist-edit input{width:72px;border:0;background:transparent;color:#d32222;font-size:18px;font-weight:900;text-align:right;padding:7px 0!important}
+.wrist-edit input:focus{outline:none}
+.wrist-edit label b{border:0;border-radius:0;background:transparent;padding:0;font-size:13px}
+.dimension-popover .quick-size-head,.dimension-popover .quick-sizes,.dimension-popover .wrist-suggest{margin-left:18px;margin-right:18px}
+.dimension-popover .quick-size-head{margin-top:8px}
+.dimension-popover .quick-sizes{margin-top:5px}
+.dimension-popover .wrist-suggest{margin-top:6px}
+#t17-app .dimension-popover .quick-size-head,#t17-app .dimension-popover .quick-sizes,#t17-app .dimension-popover .wrist-suggest{margin-left:18px!important;margin-right:18px!important}
+#t17-app .dimension-popover .quick-size-head{margin-top:8px!important}
+#t17-app .dimension-popover .quick-sizes{margin-top:5px!important}
+#t17-app .dimension-popover .wrist-suggest{margin-top:6px!important}
+.dimension-popover .wrist-suggest{display:none}
+#t17-dimension-confirm{height:38px!important;min-height:38px!important;border:0;border-radius:999px;background:#111;color:#fff;margin:10px 18px 14px;padding:0 16px!important;font-size:13px;font-weight:800;cursor:pointer}
+.dimension-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.size-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+#t17-stage-actions{position:absolute;left:50%;bottom:14px;z-index:4;transform:translateX(-50%);display:flex;gap:12px;align-items:center;justify-content:center;pointer-events:auto}
+#t17-stage-actions button{height:30px!important;min-height:30px!important;border:0;border-radius:999px;display:inline-flex;align-items:center;justify-content:center;gap:7px;padding:0 14px!important;font-family:Georgia,"Times New Roman",serif;font-size:12px;font-weight:700;line-height:1!important;box-shadow:0 10px 22px rgba(80,59,45,.12);cursor:pointer;white-space:nowrap}
+#t17-stage-reset{min-width:82px;background:#d4c38e;color:#fff}
+#t17-gather-toggle{min-width:132px;background:#f7f2ea;color:#4c4036}
+#t17-view-toggle{min-width:122px;background:#9a8d61;color:#fff}
+#t17-stage-actions button:hover{transform:translateY(-1px);filter:saturate(1.08);box-shadow:0 13px 24px rgba(80,59,45,.18)}
+#t17-stage[data-view="3d"] #t17-view-toggle{background:#f7f2ea;color:#45392f}
+#t17-stage-actions span{font-family:Arial,sans-serif;font-size:14px;line-height:1}
+#t17-hint{display:none}
 #t17-hint b{color:#2f2924}
-#t17-sel-actions{position:absolute;top:16px;right:18px;background:rgba(255,255,255,.92);padding:9px 12px;border-radius:12px;display:flex;align-items:center;gap:8px;font-size:12px;color:#3c352f;max-width:60%;flex-wrap:wrap;box-shadow:0 10px 24px rgba(75,55,42,.08)}
+#t17-sel-actions{position:absolute;top:76px;right:18px;background:rgba(255,255,255,.9);padding:8px;border-radius:12px;display:flex;flex-direction:column;align-items:stretch;gap:5px;font-size:10px;color:#3c352f;width:112px;box-shadow:0 10px 24px rgba(75,55,42,.08)}
 #t17-sel-actions:empty{display:none}
 #t17-sel-actions b{color:#a56f28}
-#t17-sel-actions .mini{background:#f5f1ed;border:1px solid #ded5cd;color:#4c433d;border-radius:8px;padding:5px 9px;font-size:11px;cursor:pointer}
+#t17-sel-actions .mini{height:27px!important;min-height:27px!important;background:#f5f1ed;border:1px solid #ded5cd;color:#4c433d;border-radius:8px;padding:0 7px!important;font-size:9px;font-weight:800;line-height:1!important;cursor:pointer}
 #t17-sel-actions .mini.danger{background:#fff0ef;border-color:#edb2ad;color:#b33b36}
 #t17-flash{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:rgba(31,30,29,.94);color:#fff;padding:9px 18px;border-radius:18px;font-size:13px;font-weight:700;opacity:0;pointer-events:none;transition:opacity .2s;max-width:80%;text-align:center;z-index:4}
 #t17-flash.show{opacity:1}
-#t17-bottom{grid-column:1;grid-row:3;background:#fff;border-top:1px solid var(--line);padding:12px 24px;display:grid;grid-template-columns:1fr 330px;gap:18px;align-items:stretch}
-#t17-seq-wrap{min-width:0}
-#t17-seq-wrap .tb-label{display:block;margin-bottom:6px}
-#t17-seq{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;align-items:stretch}
-.seq-item{flex:0 0 auto;background:#f8f5f2;border:1px solid #e5dcd4;border-radius:12px;padding:7px 10px;cursor:pointer;display:flex;align-items:center;gap:8px;min-width:122px;transition:border-color .12s,background .12s}
+#t17-bottom{grid-column:1;grid-row:2;background:#fff;border-top:1px solid var(--line);padding:6px 12px;display:grid;grid-template-columns:minmax(190px,.42fr) minmax(430px,1fr);gap:10px;align-items:center;overflow:hidden}
+#t17-checkout-panel{width:100%;min-width:0;justify-self:end;display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,210px);grid-template-rows:auto auto;gap:6px 10px;align-items:center}
+#t17-design-summary{align-self:center;border:1px solid #e9dfd6;border-radius:12px;background:linear-gradient(180deg,#fffdfb,#f7f1eb);padding:7px 10px;font-family:Arial,sans-serif;color:#746960;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px;row-gap:5px;min-width:0;min-height:46px;overflow:hidden;box-shadow:0 7px 18px rgba(72,52,34,.045)}
+#t17-design-summary b{grid-column:1/-1;font-size:12px;letter-spacing:.5px;text-transform:none;color:#9a7d61;line-height:1}
+#t17-design-summary span{display:block;font-size:13px;line-height:1.2;min-width:0;white-space:nowrap}
+#t17-design-summary strong{font-size:13px;color:#2f2924;white-space:nowrap}
+#t17-seq-wrap{min-width:0;height:160px;background:#d4c9a2;border:0;border-radius:12px;padding:0;margin:0 0 4px;overflow:hidden;display:grid;grid-template-columns:136px minmax(0,1fr);gap:8px}
+#t17-seq-summary{min-width:0;min-height:0;height:100%;box-sizing:border-box;overflow:hidden;padding:9px 0 9px 10px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:min-content;gap:4px}
+#t17-seq-summary b{grid-column:1/-1;font-family:Georgia,"Times New Roman",serif;font-size:15px;line-height:1.05;color:#473d36}
+.seq-summary-btn{height:20px!important;min-height:20px!important;border:1px solid rgba(120,105,82,.22);border-radius:999px;background:rgba(255,255,255,.34);color:#62594d;display:flex;align-items:center;justify-content:center;gap:5px;padding:0 7px!important;font-family:Arial,sans-serif;font-size:8.5px;font-weight:800;line-height:1!important;text-transform:none;cursor:pointer;appearance:none;min-width:0}
+#t17-app .seq-summary-btn{text-transform:none}
+.seq-summary-btn span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.seq-summary-btn.is-active{background:#fff;color:#2f2924;box-shadow:0 4px 10px rgba(80,60,38,.08)}
+#t17-seq{min-width:0;min-height:0;height:calc(100% - 20px);box-sizing:border-box;margin:10px 10px 10px 0;background:rgba(255,255,255,.55);border-radius:10px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:5px;overflow-y:auto;overflow-x:hidden;padding:7px;align-items:start;align-content:start}
+.seq-item{min-width:0;background:#f8f5f2;border:1px solid #e5dcd4;border-radius:10px;padding:3px 5px;cursor:pointer;display:flex;align-items:center;gap:5px;transition:border-color .12s,background .12s}
+#t17-app .seq-item{padding:3px 5px;text-transform:none}
 .seq-item:hover{border-color:#d5b8a1;background:#fff}
 .seq-item.is-selected{border-color:#d5504c;box-shadow:0 0 0 2px rgba(213,80,76,.12)}
-.seq-dot{width:28px;height:28px;border-radius:50%;flex:0 0 28px;background-size:cover;background-position:center;box-shadow:inset -3px -3px 6px rgba(66,50,40,.2)}
+.seq-dot{width:20px;height:20px;border-radius:50%;flex:0 0 20px;background-size:cover;background-position:center;box-shadow:inset -3px -3px 6px rgba(66,50,40,.2)}
 .seq-dot.charm-dot{background:linear-gradient(145deg,#f4dda1,#b58a2f);display:grid;place-items:center;font-size:8px;font-weight:800;color:#2b210c;background-size:18px 18px;background-position:center;background-repeat:no-repeat}
-.seq-item small{font-family:Arial,sans-serif;font-size:11px;color:#574d45;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-#t17-price{background:#fbf8f5;border:1px solid #e5dcd4;border-radius:14px;padding:11px 13px;display:flex;flex-direction:column;gap:3px}
-.price-rows .pr{display:flex;justify-content:space-between;font-family:Arial,sans-serif;font-size:12px;color:#746960;padding:1px 0}
-.price-total{display:flex;justify-content:space-between;border-top:1px solid #e0d6cd;margin-top:6px;padding-top:7px;font-size:20px;font-weight:700;color:#2d2824}
-.price-fit{font-family:Arial,sans-serif;font-size:11px;color:#82776e;margin-top:4px}
-.price-fit.ok{color:#3d8b4f}.price-fit.over{color:#c8423d}
-#t17-add-cart{margin-top:8px;background:#1f1e1d;color:#fff;border:0;border-radius:12px;padding:11px;font-size:13px;font-weight:800;cursor:pointer}
-#t17-add-cart:hover{background:#d5504c}
+.seq-item small{font-family:Arial,sans-serif;font-size:9px;color:#574d45;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1;text-align:left;text-transform:none}
+#t17-app .seq-item small{text-transform:none}
+.seq-remove{width:16px;height:16px;border-radius:50%;display:grid;place-items:center;flex:0 0 16px;background:#e9ded3;color:#675b51;font-family:Arial,sans-serif;font-size:12px;font-weight:800;line-height:1}
+.seq-remove:hover{background:#d5504c;color:#fff}
+.seq-empty{grid-column:1/-1;min-height:74px;display:grid;place-items:center;text-align:center;color:#7f7469;font-family:Arial,sans-serif;font-size:11px}
+.seq-cord-item{grid-column:1/span 2}
+#t17-price{background:linear-gradient(180deg,#fffdfb,#f8f2ed);border:1px solid #e5dcd4;border-radius:14px;padding:7px 12px;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;row-gap:2px;align-items:end;box-shadow:0 7px 18px rgba(72,52,34,.045)}
+.price-rows{display:grid;grid-template-columns:1fr 1fr;column-gap:12px;row-gap:1px}
+.price-rows .pr{display:flex;justify-content:space-between;font-family:Arial,sans-serif;font-size:14px;color:#746960;padding:0;gap:8px;line-height:1.22}
+.price-rows .pr:last-child{grid-column:1/-1}
+.price-total{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;border-left:1px solid #e0d6cd;padding-left:12px;font-size:12px;font-weight:700;color:#8b8177;white-space:nowrap}
+.price-total span:last-child{font-family:Georgia,"Times New Roman",serif;font-size:26px;color:#2d2824;line-height:1}
+#t17-add-cart{grid-column:2;grid-row:1;align-self:stretch;justify-self:end;width:100%;height:48px!important;min-height:48px!important;margin-top:0;background:#2d6a43;color:#fff;border:0;border-radius:14px;padding:0 13px!important;font-size:13px;font-weight:800;line-height:1.1!important;cursor:pointer;box-shadow:0 10px 22px rgba(45,106,67,.18)}
+.checkout-note{grid-column:2;grid-row:2;font-family:Arial,sans-serif;font-size:13px;color:#82776e;line-height:1.15;text-align:center}
+.checkout-note.ok{color:#3d8b4f}.checkout-note.over{color:#c8423d}
+#t17-add-cart:hover{background:#d4a72c}
 #t17-add-cart:disabled{opacity:.6;cursor:default}
 .scroll-area::-webkit-scrollbar,#t17-bead-grid::-webkit-scrollbar,#t17-seq::-webkit-scrollbar{width:10px;height:10px}
-.scroll-area::-webkit-scrollbar-thumb,#t17-bead-grid::-webkit-scrollbar-thumb,#t17-seq::-webkit-scrollbar-thumb{background:#c7c0ba;border-radius:8px;border:2px solid transparent;background-clip:padding-box}
+.scroll-area::-webkit-scrollbar-thumb,#t17-bead-grid::-webkit-scrollbar-thumb{background:#b8aca1;border-radius:8px;border:2px solid transparent;background-clip:padding-box}
+#t17-seq::-webkit-scrollbar-thumb{background:#8f7f55;border-radius:8px;border:2px solid #d4c9a2;background-clip:padding-box}
 .scroll-area::-webkit-scrollbar-track,#t17-bead-grid::-webkit-scrollbar-track,#t17-seq::-webkit-scrollbar-track{background:transparent}
+@media(max-width:1400px){
+  #t17-app{width:calc(100vw - 24px);margin-left:calc(-50vw + 12px)}
+  #t17-right{grid-template-columns:minmax(0,52%) minmax(0,48%)}
+  #t17-catalog{padding:5px 7px}
+  .catalog-body{grid-template-columns:118px minmax(0,1fr);gap:10px}
+  #t17-bead-grid{grid-template-columns:repeat(3,minmax(92px,1fr));gap:6px}
+  #t17-bottom{grid-template-columns:minmax(0,1fr);gap:5px}
+  #t17-checkout-panel{grid-template-columns:minmax(0,1fr) 178px}
+}
+@media(max-width:1180px){
+  #t17-right{grid-template-columns:minmax(0,50%) minmax(0,50%)}
+  #t17-seq-wrap{height:142px}
+  .catalog-body{grid-template-columns:104px minmax(0,1fr);max-height:390px;flex-basis:390px}
+  #t17-bead-grid{grid-template-columns:repeat(2,minmax(92px,1fr))}
+  .mode-tab{min-width:72px;padding:0 8px!important;font-size:8px}
+  #t17-stage-actions{gap:8px}
+  #t17-stage-actions button{padding:0 10px!important}
+  .dimension-popover{width:min(430px,calc(100vw - 34px))}
+}
 @media(max-width:820px){
   #t17-app{flex-direction:column;height:auto;min-height:100vh;overflow:auto}
   #t17-left{display:none}
@@ -1430,7 +1854,6 @@ const CSS = String.raw`
   #t17-stone-list,#t17-category-list{display:grid;grid-template-columns:1fr 1fr}
   .stone-row{font-size:17px;min-height:42px}
   #t17-right{display:flex;flex-direction:column;overflow:visible}
-  #t17-toolbar{display:flex;flex-direction:column;align-items:stretch;padding:14px}
   #t17-catalog{border-left:0;border-top:1px solid var(--line);order:2;max-height:620px}
   .catalog-body{grid-template-columns:120px minmax(0,1fr)}
   .catalog-cats{padding:14px 6px 14px 12px}
@@ -1444,52 +1867,57 @@ const fragment = `<!-- ===== Earthward T17 Crystal Bracelet Builder WP Fragment 
 <style>${CSS}</style>
 <div id="t17-app">
   <section id="t17-right">
-    <div id="t17-toolbar">
-      <div class="tool-brand"><b>Earthward Composer</b><small>Design your crystal bracelet bead by bead</small></div>
-      <div class="tb-group" id="t17-cords-wrap"><div id="t17-cords"></div></div>
-      <div class="tb-group" id="t17-sizes-wrap"><div id="t17-sizes"></div></div>
-      <div class="tb-group" id="t17-wrist-wrap"></div>
-    </div>
     <aside id="t17-catalog">
+      <section id="t17-seq-wrap" class="catalog-section">
+        <div id="t17-seq-summary"></div>
+        <div id="t17-seq"></div>
+      </section>
       <div id="t17-catalog-tabs">
-        <button type="button" class="mode-tab is-active" data-mode="bead">Beads</button>
+        <button type="button" class="mode-tab is-active" data-mode="bead">Crystals</button>
+        <button type="button" class="mode-tab" data-mode="shape">Accessories</button>
         <button type="button" class="mode-tab" data-mode="charm">Charms</button>
-        <button type="button" class="mode-tab" data-mode="shape">Crystal Shapes</button>
-        <button type="button" class="mode-tab" data-mode="spacer">Spacers</button>
+        <button type="button" class="mode-tab" data-mode="spacer">Packaging</button>
         <button type="button" class="mode-tab" data-mode="cord">Cord</button>
       </div>
       <div class="catalog-body">
         <div class="catalog-cats">
-          <h3 id="t17-category-heading">Crystal</h3>
+          <h3 id="t17-category-heading" class="cat-switch"></h3>
           <div class="scroll-area"><div id="t17-category-list"></div></div>
         </div>
         <div class="catalog-products">
-          <div class="catalog-head"><strong id="t17-catalog-title">Beads</strong><span id="t17-catalog-count">20</span></div>
           <div id="t17-bead-grid"></div>
         </div>
       </div>
     </aside>
     <div id="t17-stage">
+      <canvas id="t17-canvas-2d"></canvas>
       <canvas id="t17-canvas"></canvas>
-      <div id="t17-hint"><b>Builder</b><br>Drag empty = rotate · Drag a bead = reorder · Drag off-ring = delete<br>Scroll/pinch = zoom · Click bead card to add</div>
+      <div id="t17-stage-actions">
+        <button type="button" id="t17-stage-reset">Reset</button>
+        <button type="button" id="t17-gather-toggle"></button>
+        <button type="button" id="t17-view-toggle" aria-label="Toggle 2D and 3D view"></button>
+      </div>
+      <div id="t17-stage-panel">
+        <div class="stage-card stage-controls">
+          <div class="tb-group" id="t17-sizes-wrap"><div id="t17-sizes"></div></div>
+          <div class="tb-group" id="t17-wrist-wrap"></div>
+        </div>
+      </div>
       <div id="t17-sel-actions"></div>
       <div id="t17-flash"></div>
-      <div id="t17-draft-toast" role="status" aria-live="polite"></div>
     </div>
     <div id="t17-bottom">
-      <div id="t17-seq-wrap">
-        <span class="tb-label">Strand sequence</span>
-        <div id="t17-seq"></div>
-      </div>
-      <div>
+      <div id="t17-design-summary"></div>
+      <div id="t17-checkout-panel">
         <div id="t17-price"></div>
-        <button type="button" id="t17-add-cart">Add custom bracelet to cart</button>
+        <button type="button" id="t17-add-cart">Checkout custom bracelet</button>
+        <div id="t17-checkout-note"></div>
       </div>
     </div>
   </section>
 </div>
 
-<!-- parts JSON (ascii-escaped; non-ASCII → \\uXXXX so wp_kses never sees raw bytes) -->
+<!-- parts JSON (ascii-escaped; non-ASCII 鈫?\\uXXXX so wp_kses never sees raw bytes) -->
 <script type="text/plain" id="t17-data">${DATA_B64}</script>
 
 <!-- importmap: CDN (jsdelivr three@0.160.0) by default. Flip HOST_MODE=selfhost
@@ -1512,7 +1940,7 @@ const preview = `<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crystal Bracelet Builder — Design Bead by Bead</title>
+<title>Crystal Bracelet Builder - Design Bead by Bead</title>
 <style>html,body{margin:0;min-height:100%;background:#0e1116}</style>
 </head>
 <body>

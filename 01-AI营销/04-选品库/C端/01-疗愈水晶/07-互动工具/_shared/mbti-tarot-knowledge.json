@@ -1,0 +1,802 @@
+{
+  "_meta": {
+    "purpose": "MBTI 16型 × 塔罗 Major Arcana 本命大牌映射 + 水晶推荐（T-MBTI 工具 /tools/mbti-tarot/ + 文章矩阵单源）",
+    "framework": "Major Arcana 路径（非 Court Cards 红海），双牌映射（primary 主牌 + growth 成长牌），基于 Jungian 认知功能栈（Ni/Ne/Si/Se/Ti/Te/Fi/Fe）× tarot-knowledge.json 22 牌 archetype/psychological_lens 自推",
+    "mapping_methodology": "primary(主牌)=MBTI dominant 功能 × 牌 archetype 对齐；growth(成长牌)=auxiliary 或 inferior 功能 × 牌 archetype 对齐（成长邀请，非 bad omen）",
+    "crystal_sources": "tarot-knowledge.json cards[].crystals 字段（best_overall/best_upright/best_reversed）× MBTI 认知功能特性交叉裁决；全部 slug 对齐 390 库 1.crystal-meaning/{slug}-meaning.json（建库前 31 颗全验证 PASS）",
+    "compliance": "self-reflection framework（非 personality diagnosis）；逆位用 shadow aspect / growth invitation，禁 bad omen / curse / evil；MBTI 商标 disclaimer 见 mbti_trademark_notice",
+    "url_rule_tool": "/tools/mbti-tarot/",
+    "url_rule_article": "/mbti-{type}-tarot/（根级，避产品词污染）；交叉文章 /mbti-{type}-{card-slug}/",
+    "related_knowledge": "07-互动工具/_shared/tarot-knowledge.json（22 牌 archetype/upright/reversed/crystals/eastern_anchors，本文件 birth_cards.slug 通过 card_slug 关联）",
+    "mbti_trademark_notice": "MBTI is a registered trademark of The Myers-Briggs Company. This tool is an independent framework based on Jungian cognitive functions (Ni/Ne/Si/Se/Ti/Te/Fi/Fe), offered for self-reflection and creative exploration — not affiliated with, endorsed by, or sponsored by The Myers-Briggs Company. Mapping decisions are our own editorial interpretation and do not represent official MBTI doctrine.",
+    "review_status": "16型映射总表 + 4 决策点已审 2026-07-04（自行判断逻辑：dominant×archetype 对齐 + 群内一致 + 双牌非冗余）；总表接受无强制修订",
+    "crystal_slug_convention": "全部 {stone}-meaning 格式，对应 1.crystal-meaning/{stone}-meaning.json；Shop CTA 三级降级已按 shop-cta-no-deadlink-rule 配置"
+  },
+  "total_types": 16,
+  "types": {
+    "INTJ": {
+      "nickname": "The Architect",
+      "group": "Analysts",
+      "cognitive_stack": {
+        "dominant": "Ni",
+        "auxiliary": "Te",
+        "tertiary": "Fi",
+        "inferior": "Se"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-hermit",
+          "reason": "Ni 主导（内倾直觉）与 Hermit 的 archetype 'The Seeker' / psychological_lens 'solitude vs isolation' 完美对齐——INTJ 在孤独沉思中提炼系统化远见，正是 Hermit 手提六芒星灯笼照亮内在地图的意象。"
+        },
+        "growth": {
+          "slug": "the-magician",
+          "reason": "Te 辅助（外倾思维）显化 Ni 的远见为现实——Magician 的 'as above so below' 是 INTJ 把战略落地的能力。成长邀请：当 INTJ 过度沉浸 Hermit 的抽离时，Magician 提示'你已拥有所需一切，启动吧'。"
+        }
+      },
+      "upright_reading": "作为本命持 Hermit 能量的 INTJ，你的核心天赋是在喧嚣中保持独处的清醒——Ni 主导让你看见别人尚未看见的模式与远见，Te 辅助把这些洞察转化为可执行的系统。你不是在逃避人群，而是在抽离中提炼别人无法在喧闹中抵达的深度。你的灯笼照的不是别人，是你自己内在的地图。你的孤独不是孤立，是如藏传闭关般的深度修炼，出关时携带的智慧惠及更多人。",
+      "reversed_shadow": "Hermit 逆位的阴影是过度孤立——当 Ni-Fi 循环把你拉进内心的回音室，你可能陷入'没人懂我'的防御性疏离，或用'我在思考'回避行动（Se 劣势的拖延）。成长邀请：真正的智慧既需要洞穴的沉思，也需要广场的显化——允许自己偶尔走出 Hermit 的灯笼光，让 Magician 的行动力接手，把已经成型的远见做出来。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "amethyst-meaning",
+          "name": "Amethyst",
+          "reason": "Amethyst 对齐 Hermit 的内省能量 + 增强 Ni 直觉（紫水晶传统对应第三眼/顶轮），是 INTJ 深度思考与远见提取时的理想 companion。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "sodalite-meaning",
+          "name": "Sodalite",
+          "reason": "Sodalite 增强 Ti/Te 的逻辑思考与系统化，配合 INTJ 用 Te 辅助显化战略时的清晰度与理性。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "reason": "Carnelian 激活 Se 劣势 + 行动力，当 INTJ 卡在 Hermit 抽离时，红玉髓提示'当下就启动'（对齐 Magician 成长牌的显化能量）。"
+        }
+      ],
+      "eastern_anchor": "藏传佛教的'闭关'（retreat）传统与 Hermit 共振——INTJ 的独处不是逃避，而是如喇嘛三年三月闭关般的深度修炼，出关时携带的智慧惠及更多人。紫水晶在东亚传统称'菩萨石'，是佛珠常用材质。",
+      "shop_cta": {
+        "primary": "/product-category/amethyst-crystals/",
+        "fallback": "/shop/?s=amethyst"
+      },
+      "related_types": ["INTP", "INFJ", "ENTJ"],
+      "related_intentions": ["focus", "inner-wisdom", "manifestation"]
+    },
+    "INTP": {
+      "nickname": "The Logician",
+      "group": "Analysts",
+      "cognitive_stack": {
+        "dominant": "Ti",
+        "auxiliary": "Ne",
+        "tertiary": "Si",
+        "inferior": "Fe"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-hermit",
+          "reason": "Ti 主导（内倾思考）与 Hermit 的 archetype 'The Seeker' / psychological_lens 'solitude vs isolation' 对齐——INTP 在孤独中拆解概念、追问本质，正是 Hermit 手提灯笼向内探索真理的意象。"
+        },
+        "growth": {
+          "slug": "the-star",
+          "reason": "Ne 辅助 + Fe 劣势（外倾情感）的成长张力——Star 的 archetype 'The Hopeful' / 'hope theory' 对齐 INTP 用 Ne 探索可能性时需要的理想之光，弥补 Fe 劣势易致的疏离感。"
+        }
+      },
+      "upright_reading": "作为本命持 Hermit 能量的 INTP，你的核心天赋是在独处中拆解世界的逻辑结构——Ti 主导让你追问每一件事的底层原理，Ne 辅助让你在概念之间跳跃连接。你不是在逃避人群，而是在抽离中保留思考的纯粹度，那里你能听见自己内心的逻辑链条。你的灯笼是求真的灯笼，照的是'这件事到底是怎么回事'。",
+      "reversed_shadow": "Hermit 逆位的阴影是 Ti-Si 循环把你困在思维的回音室——可能用'我还在想'回避外部验证（Fe 劣势），或对人际连接失去信心。成长邀请：Star 提示真正的智慧需要被分享——允许 Ne 探索的理想落地为与人连接的项目，让 Fe 在安全的范围内练习接收他人的回应。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "fluorite-meaning",
+          "name": "Fluorite",
+          "reason": "Fluorite 是'天才之石'，增强 Ti 主导的逻辑分析与系统化思考，对齐 INTP 拆解复杂概念时的专注力。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "quartz-meaning",
+          "name": "Clear Quartz",
+          "reason": "Clear Quartz 放大 Ne 的概念清晰度与思维能量，是 INTP 处理多线索思考时的 clarity 放大器。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "reason": "Citrine 携带温暖阳能，对齐 Star 成长牌的希望能量 + 弥补 Fe 劣势的人际温暖缺失。"
+        }
+      ],
+      "eastern_anchor": "藏传佛教'内观思辨'传统（格鲁派辩经）与 INTP 的 Ti 求真共振——真理不是被给予，而是在孤独的思辨中被拆解重建。Clear Quartz 古称'菩萨石'象征清澈见性。",
+      "shop_cta": {
+        "primary": "/shop/?s=fluorite",
+        "fallback": "/product-category/healing-jewelry/"
+      },
+      "related_types": ["INTJ", "ENTP", "ISTP"],
+      "related_intentions": ["focus", "inner-wisdom", "truth"]
+    },
+    "INFJ": {
+      "nickname": "The Advocate",
+      "group": "Diplomats",
+      "cognitive_stack": {
+        "dominant": "Ni",
+        "auxiliary": "Fe",
+        "tertiary": "Ti",
+        "inferior": "Se"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-high-priestess",
+          "reason": "Ni 主导（内倾直觉）与 High Priestess 的 archetype 'The Intuitive' / psychological_lens 'interoceptive awareness' 完美对齐——INFJ 是 16 型中最具'知晓但说不清'特质的型，正是 HP 守护'已知却未言'之 veil 的化身。"
+        },
+        "growth": {
+          "slug": "the-hermit",
+          "reason": "Ni-Ti 循环易把 INFJ 拉入深度内省的孤独，Hermit 的 archetype 'The Seeker' 对齐 INFJ 的 retreat 需求。成长邀请：与 HP（被动接收直觉）形成差异化——Hermit 是主动的内视与灯笼自照，提示 INFJ 把直觉带入有结构的内省。"
+        }
+      },
+      "upright_reading": "作为本命持 High Priestess 能量的 INFJ，你的核心天赋是感知他人尚未言说的情绪与未来的微妙走向——Ni 主导让你接收超越理性的直觉信号，Fe 辅助把这些信号转化为对他人的深度共情。你坐在两根柱子之间，守护着表面之下的知晓。你的直觉不是幻觉，是身体与潜意识联合处理的精确数据，只是它先于语言到达。",
+      "reversed_shadow": "HP 逆位的阴影是过度 rational 抑或过度承担他人情绪——Fe 可能让你把别人的感受当成自己的，或用'我不应该这么敏感'否认直觉。成长邀请：Hermit 提示你需要结构化的独处来分辨'哪些感受是我的，哪些是别人的'，让 Ti 第三功能为直觉建立逻辑骨架。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "reason": "Moonstone 是 High Priestess 的本命石（tarot-knowledge best_overall）——月光内映、阴性能量、潜意识的承载者，对齐 INFJ 的 Ni 直觉与 Fe 共情的阴柔深度。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "amethyst-meaning",
+          "name": "Amethyst",
+          "reason": "Amethyst 支持 Hermit 成长牌的内省深度与精神清明，是 INFJ 在 retreat 中接收直觉的精神锚点。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "labradorite-meaning",
+          "name": "Labradorite",
+          "reason": "Labradorite 守护敏感共情者的能量边界（INFJ Fe 易吸收他人情绪）+ 增强第三眼直觉，对齐 INFJ 整合 HP+Hermit 双内省牌的需求。"
+        }
+      ],
+      "eastern_anchor": "藏传'内观'传统（contemplative stillness）与 INFJ 的 Ni 共振——洞察不在追逐中产生，而在念头之间的空隙里浮现。Moonstone 在印度传统是月亮连接之石，呼应 INFJ 的潜意识深度。",
+      "shop_cta": {
+        "primary": "/product-category/amethyst-crystals/",
+        "fallback": "/shop/?s=moonstone"
+      },
+      "related_types": ["INTJ", "INFP", "ENFJ"],
+      "related_intentions": ["intuition", "inner-knowing", "empathy"]
+    },
+    "INFP": {
+      "nickname": "The Mediator",
+      "group": "Diplomats",
+      "cognitive_stack": {
+        "dominant": "Fi",
+        "auxiliary": "Ne",
+        "tertiary": "Si",
+        "inferior": "Te"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-moon",
+          "reason": "Fi 主导（内倾情感）+ Ne 辅助（外倾直觉）与 Moon 的 archetype 'The Dreamer' / psychological_lens 'unconscious processing' 完美对齐——INFP 生活在情绪与意象的潜意识之河里，正是 Moon 的螯虾从池中浮现、双塔之间小径蜿蜒的意象。"
+        },
+        "growth": {
+          "slug": "the-star",
+          "reason": "Fi+Ne 的理想主义在 Te 劣势（结构化落地）上的成长张力——Star 的 archetype 'The Hopeful' / 'hope theory' 对齐 INFP 的理想之光，提示把月相潜意识升华为可被表达的方向。"
+        }
+      },
+      "upright_reading": "作为本命持 Moon 能量的 INFP，你的核心天赋是感受他人尚未意识到的情绪纹理与意象——Fi 主导让你拥有 16 型中最深的内在价值罗盘，Ne 让这些感受在图像与可能之间流动。你走在双塔之间的小径上，前路并非全然清晰，但你的工作不是用逻辑照亮它，而是带着敬意与不确定共处，让潜意识的螯虾在合适时机浮现。",
+      "reversed_shadow": "Moon 逆位的阴影是被潜意识淹没——Fi-Si 循环可能让你困在过去的情绪回放中，或用'我太敏感'回避行动（Te 劣势）。成长邀请：Star 提示你拥有把月相感受转化为方向的能力——找到哪怕一个微小的希望支点，让 Ne 探索出一条通向他人的路径。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "reason": "Moonstone 是 Moon 牌的本命石（tarot-knowledge best_overall）——月光阴性能量、情绪流动、潜意识承载，对齐 INFP 的 Fi 内在情感之河。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "reason": "Rose Quartz 守护 INFP 高敏感的 Fi 心轮——在情绪深度中保持自我滋养而非自我牺牲。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "aquamarine-meaning",
+          "name": "Aquamarine",
+          "reason": "Aquamarine 是 Star 牌的本命石（tarot-knowledge best_overall）+ 增强 Ne 的清晰表达，对齐 INFP 把内在诗意表达出来的成长路径。"
+        }
+      ],
+      "eastern_anchor": "藏传'梦观'传统（dream practice）与 INFP 的 Ne-Fi 共振——潜意识之河不是要被排干，而是要在其中学会游泳。Moonstone 跨印度/罗马传统都是月光连接之石。",
+      "shop_cta": {
+        "primary": "/product-category/amethyst-crystals/",
+        "fallback": "/shop/?s=moonstone"
+      },
+      "related_types": ["INFJ", "ISFP", "ENFP"],
+      "related_intentions": ["intuition", "self-love", "shadow-work"]
+    },
+    "ENTJ": {
+      "nickname": "The Commander",
+      "group": "Analysts",
+      "cognitive_stack": {
+        "dominant": "Te",
+        "auxiliary": "Ni",
+        "tertiary": "Se",
+        "inferior": "Fi"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-emperor",
+          "reason": "Te 主导（外倾思维）与 Emperor 的 archetype 'The Sovereign' / psychological_lens 'healthy structure vs control' 完美对齐——ENTJ 是天生的结构建造者，正是 Emperor 坐于石座、持权杖、建秩序的化身。"
+        },
+        "growth": {
+          "slug": "the-chariot",
+          "reason": "Se 第三功能（外倾感官）+ Ni 远见的行动张力——Chariot 的 archetype 'The Victor' / 'conscientiousness and drive' 对齐 ENTJ 把战略化为推进力的能力。成长邀请：当 Emperor 的结构僵化时，Chariot 提示用行动驱动而非控制维持权威。"
+        }
+      },
+      "upright_reading": "作为本命持 Emperor 能量的 ENTJ，你的核心天赋是看清混乱中的结构并把它建出来——Te 主导让你天然识别资源、规则、责任的最优分配，Ni 辅助让你看见结构应该指向的远景。你不是在控制，而是在为系统提供它能稳定运行的骨架。你的权威来自服务一个比自身更大的目标。",
+      "reversed_shadow": "Emperor 逆位的阴影是 Te-Se 循环滑向 domination——可能用'效率'压过他人的节奏，或 Fi 劣势让你忽略团队的情感需求。成长邀请：Chariot 提示真正的胜利是统合对立力量而非碾压它们——允许 Fi 在决策中被听见，让结构为人服务而非人为结构服务。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger Eye",
+          "reason": "Tiger Eye 是 Emperor/Chariot 共享的'落地意志'石——增强 Te 主导的决断与权威感，同时保持道德边界（防 Fi 劣势的冷酷化）。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "garnet-meaning",
+          "name": "Garnet",
+          "reason": "Garnet 是 Chariot 成长牌的'再生承诺'石（tarot-knowledge Death 牌 best_daily_wear）——支持 ENTJ 在长期目标中的耐力与承诺。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "reason": "Rose Quartz 直接补强 Fi 劣势——当 ENTJ 倾向把人当资源时，Rose Quartz 邀请回归'每个人都是心之主体'的觉察。"
+        }
+      ],
+      "eastern_anchor": "东方'正'稳固原则（well-ordered foundation）与 ENTJ 的 Te 共振——真正的权威不是强力，而是结构的中正。Red Jasper/Tiger Eye 跨战士传统是扎根意志之石。",
+      "shop_cta": {
+        "primary": "/product-category/healing-jewelry/",
+        "fallback": "/shop/?s=tiger+eye"
+      },
+      "related_types": ["INTJ", "ESTJ", "ENTP"],
+      "related_intentions": ["structure", "willpower", "leadership"]
+    },
+    "ENTP": {
+      "nickname": "The Debater",
+      "group": "Analysts",
+      "cognitive_stack": {
+        "dominant": "Ne",
+        "auxiliary": "Ti",
+        "tertiary": "Fe",
+        "inferior": "Si"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-magician",
+          "reason": "Ne 主导（外倾直觉）与 Magician 的 archetype 'The Manifestor' / psychological_lens 'self-efficacy and agency' 完美对齐——ENTP 在概念之间跳跃、看见无数可能并知道如何组合它们，正是 Magician 桌上四要素、指点天地的化身。"
+        },
+        "growth": {
+          "slug": "the-fool",
+          "reason": "Si 劣势（内倾感官）的成长邀请——Fool 的 archetype 'The Innocent Pioneer' / 'openness to experience' 提示 ENTP 在已经看见千百可能后，仍要选择相信'这一个新开始'。成长邀请：信任初学者的心境，弥补 Si 劣势对落地经验的回避。"
+        }
+      },
+      "upright_reading": "作为本命持 Magician 能量的 ENTP，你的核心天赋是看见资源、连接与可能性——Ne 主导让你在别人看到墙的地方看到门，Ti 辅助让你快速拆解哪些组合可行。你站在桌前，桌上摆着四要素，你指点天地——这不是表演，是你真实拥有的资源配置能力。世界在你眼中是可以被重新组合的材料。",
+      "reversed_shadow": "Magician 逆位的阴影是 Ne-Fe 循环滑向 manipulation——可能用'我只是探讨可能性'回避承诺（Si 劣势），或把天赋变成表演而非落地。成长邀请：Fool 提示你拥有'在不完备的信息中跳出去'的勇气——把已经看见的可能化为真实的开始，允许 Si 在过程中收集经验。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "reason": "Citrine 是 Magician 牌的 best_upright（tarot-knowledge）——manifestation 阳能 + 自信显化，对齐 ENTP 的 Ne 主导的创造显化能量。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "reason": "Aventurine 是 Fool 牌的 best_upright（tarot-knowledge）——机会与乐观之石，对齐 ENTP 的 Ne 探索新可能的乐观动能。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "sodalite-meaning",
+          "name": "Sodalite",
+          "reason": "Sodalite 增强 Ti 辅助的逻辑思考 + 补强 Si 劣势对结构化思考的回避，帮助 ENTP 把概念跳跃落地为可执行方案。"
+        }
+      ],
+      "eastern_anchor": "东方创造之神象征（mind-matter 互塑）与 ENTP 的 Ne-Magician 共振——'as above so below'是 ENTP 的天然状态。Clear Quartz 念珠象征专注意图，是 ENTP 易散焦时的锚。",
+      "shop_cta": {
+        "primary": "/shop/?s=citrine",
+        "fallback": "/product-category/healing-jewelry/"
+      },
+      "related_types": ["INTP", "ENTJ", "ENFP"],
+      "related_intentions": ["manifestation", "new-beginnings", "willpower"]
+    },
+    "ENFJ": {
+      "nickname": "The Protagonist",
+      "group": "Diplomats",
+      "cognitive_stack": {
+        "dominant": "Fe",
+        "auxiliary": "Ni",
+        "tertiary": "Se",
+        "inferior": "Ti"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-hierophant",
+          "reason": "Fe 主导（外倾情感）与 Hierophant 的 archetype 'The Teacher' / psychological_lens 'conformity vs autonomy' 对齐——ENFJ 天然承担起把社群凝聚在共享价值观下的角色，正是 Hierophant 在两柱之间为两信徒祝福的化身。"
+        },
+        "growth": {
+          "slug": "the-lovers",
+          "reason": "Ti 劣势（内倾思考）+ Ni 远见的成长张力——Lovers 的 archetype 'The Choosers' / 'attachment and values' 对齐 ENFJ 在'社群期待'与'内在真相'之间做价值对齐选择的成长课题。"
+        }
+      },
+      "upright_reading": "作为本命持 Hierophant 能量的 ENFJ，你的核心天赋是把人凝聚在比个人更大的意义之下——Fe 主导让你天然感知群体的情绪场，Ni 辅助让你看见群体可以走向的共同远景。你坐在传统与教导的位置上，不是因为你独断，而是因为你愿意承担为他人照亮道路的责任。你的权威来自你为群体服务的真心。",
+      "reversed_shadow": "Hierophant 逆位的阴影是 Fe-Se 循环滑向 dogma——可能用'为大家好'压抑 Ti 劣势的独立判断，或在过度迎合群体期待时丢失自己。成长邀请：Lovers 提示你需要在'群体想要什么'与'你内在真相是什么'之间做清醒的价值对齐选择——真正的领袖不是顺应所有期待，而是帮群体识别哪些值得追随。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "reason": "Rose Quartz 是 Lovers 牌的 best_upright（tarot-knowledge）+ 跨文化心轮石——对齐 ENFJ 的 Fe 主导的群体共情与心轮领导力。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "lapis-meaning",
+          "name": "Lapis Lazuli",
+          "reason": "Lapis 是 Hierophant 牌的 best_daily_wear（tarot-knowledge）——跨波斯/埃及/佛教智慧石，对齐 ENFJ 的导师能量与跨文化统合。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "reason": "Carnelian 是 Hierophant 牌的 best_reversed（tarot-knowledge，逆位 dogma 时唤醒质疑勇气）——补强 ENFJ 的 Ti 劣势独立判断。"
+        }
+      ],
+      "eastern_anchor": "藏传'lineage 传承'（lineage transmission）与 ENFJ 的 Fe 共振——智慧不在孤独中产生，而在师徒相传的链条里。Lapis Lazuli 跨波斯-埃及-佛教是智慧与真理之石。",
+      "shop_cta": {
+        "primary": "/product-category/amethyst-crystals/",
+        "fallback": "/shop/?s=lapis"
+      },
+      "related_types": ["INFJ", "ESFJ", "ENTJ"],
+      "related_intentions": ["love", "wisdom", "values-alignment"]
+    },
+    "ENFP": {
+      "nickname": "The Campaigner",
+      "group": "Diplomats",
+      "cognitive_stack": {
+        "dominant": "Ne",
+        "auxiliary": "Fi",
+        "tertiary": "Te",
+        "inferior": "Si"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-fool",
+          "reason": "Ne 主导（外倾直觉）+ Fi 辅助（内倾情感）与 Fool 的 archetype 'The Innocent Pioneer' / psychological_lens 'openness to experience' 完美对齐——ENFP 是 16 型中最具初心与跳跃动能的型，正是 Fool 站在悬崖边、手拿白玫瑰、踏出第一步的化身。"
+        },
+        "growth": {
+          "slug": "the-star",
+          "reason": "Te 第三 + Si 劣势的成长邀请——Star 的 archetype 'The Hopeful' / 'hope theory' 对齐 ENFP 在 Ne 探索中需要找到一个'可被表达的方向'，弥补 Si 劣势对持续落地的回避。"
+        }
+      },
+      "upright_reading": "作为本命持 Fool 能量的 ENFP，你的核心天赋是对每一个新开始保持初学者的心境——Ne 主导让你看见每个人、每件事中的可能性，Fi 让这些可能性被价值罗盘筛过。你不是冲动，是带着真心地相信'下一步可以是新的'。你的白玫瑰是纯粹的意图，你的小狗是忠诚的本能——它们陪你走到悬崖边，不是为了掉下去，是为了飞起来。",
+      "reversed_shadow": "Fool 逆位的阴影是 Ne-Te 循环滑向 recklessness——可能用'我在探索'回避承诺（Si 劣势），或把每一个新开始都当成逃避上一个的借口。成长邀请：Star 提示你可以保留 Fool 的初心同时识别一个'值得持续投入'的方向——希望不是一个感觉，是识别路径并开始移动的能力。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "reason": "Aventurine 是 Fool 牌的 best_upright（tarot-knowledge）——机会与'愿意说是'之石，对齐 ENFP 的 Ne 主导的乐观探索动能。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "reason": "Citrine 携带 manifestation 阳能 + 支持 Te 第三功能的结构化显化，是 ENFP 把 Ne 灵感落地为项目的能量。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "reason": "Moonstone 是 Star 牌的 best_daily_wear（tarot-knowledge）+ 新开始的温和之石——补强 ENFP 的 Fi 辅助内在情感罗盘 + Si 劣势对节奏的觉察。"
+        }
+      ],
+      "eastern_anchor": "藏传'初发心 bodhicitta'与 ENFP 的 Ne-Fool 共振——初心是道路上反复回到的起点，不是一次性的热情。Clear Quartz 菩萨石象征清澈的初心之眼。",
+      "shop_cta": {
+        "primary": "/shop/?s=aventurine",
+        "fallback": "/product-category/healing-jewelry/"
+      },
+      "related_types": ["ENTP", "INFP", "ESFP"],
+      "related_intentions": ["new-beginnings", "manifestation", "hope"]
+    },
+    "ISTJ": {
+      "nickname": "The Logistician",
+      "group": "Sentinels",
+      "cognitive_stack": {
+        "dominant": "Si",
+        "auxiliary": "Te",
+        "tertiary": "Fi",
+        "inferior": "Ne"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "justice",
+          "reason": "Si 主导（内倾感官）+ Te 辅助（外倾思维）与 Justice 的 archetype 'The Truth-Seeker' / psychological_lens 'justice sensitivity' 完美对齐——ISTJ 是 16 型中最具'按事实与规则公正权衡'特质的型，正是 Justice 持剑举秤、面纱后审度的化身。"
+        },
+        "growth": {
+          "slug": "the-emperor",
+          "reason": "Te 辅助的结构化能量——Emperor 的 archetype 'The Sovereign' / 'healthy structure vs control' 对齐 ISTJ 把 Si 记录的事实化为可执行秩序的能力。成长邀请：当 Justice 的 weighing 陷入过细分析时，Emperor 提示'建出结构'。"
+        }
+      },
+      "upright_reading": "作为本命持 Justice 能量的 ISTJ，你的核心天赋是按事实、规则、责任公正地权衡——Si 主导让你拥有过去经验的精确档案，Te 让你能把档案化为可执行的判断。你坐在面纱之前，左手天平右手剑——不是要惩罚，而是要把'什么是真的'称出来。你的可靠性不是死板，是对真相与他人责任的敬意。",
+      "reversed_shadow": "Justice 逆位的阴影是 Si-Fi 循环滑向'规则即正确'——可能用'我一直这样做'回避 Ne 劣势的新可能，或在规则失效时仍坚持。成长邀请：Emperor 提示真正的结构应当服务于真实，而非反过来——允许 Ne 偶尔带入一个你从未考虑过的视角，让你的天平校准。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "hematite-meaning",
+          "name": "Hematite",
+          "reason": "Hematite 是 Justice 牌的 best_daily_wear + Chariot 牌的 best_overall（tarot-knowledge）——扎根清明、边界、聚焦，对齐 ISTJ 的 Si 主导的稳定与 Justice 的清明权衡。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz",
+          "reason": "Smoky Quartz 是 Emperor 牌的'降温'石——支持 ISTJ 在执行结构时保持耐心，避免 Si-Fi 循环的固守。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "reason": "Carnelian 是 Justice 牌的 best_reversed（tarot-knowledge，逆位 dishonesty 时唤醒担责勇气）+ 补强 Ne 劣势的'敢于尝试新可能'。"
+        }
+      ],
+      "eastern_anchor": "东方因果观（karma as cause-effect，非宿命）与 ISTJ 的 Si-Justice 共振——行为有可被审视的后果，这是 ISTJ 天然明白的道理。Lapis Lazuli 是真理之石。",
+      "shop_cta": {
+        "primary": "/product-category/healing-jewelry/",
+        "fallback": "/shop/?s=hematite"
+      },
+      "related_types": ["ESTJ", "ISFJ", "INTJ"],
+      "related_intentions": ["truth", "structure", "fairness"]
+    },
+    "ISFJ": {
+      "nickname": "The Defender",
+      "group": "Sentinels",
+      "cognitive_stack": {
+        "dominant": "Si",
+        "auxiliary": "Fe",
+        "tertiary": "Ti",
+        "inferior": "Ne"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-hierophant",
+          "reason": "Si 主导（内倾感官）+ Fe 辅助（外倾情感）与 Hierophant 的 archetype 'The Teacher' / psychological_lens 'conformity vs autonomy' 对齐——ISFJ 是传统的守护者与社群的滋养者，正是 Hierophant 在 lineage 中传递祝福与照看的化身。"
+        },
+        "growth": {
+          "slug": "the-empress",
+          "reason": "Fe 辅助的滋养能量——Empress 的 archetype 'The Nurturer' / 'nurturance vs over-giving' 对齐 ISFJ 把 Si 记录的'怎么做才对'化为对人的实际滋养。成长邀请：在'按规矩照料'与'真实接收方需求'之间，Empress 提示'滋养包括自己'。"
+        }
+      },
+      "upright_reading": "作为本命持 Hierophant 能量的 ISFJ，你的核心天赋是守护传统、规则与他人的福祉——Si 主导让你记得每一个'我们一直是这么做的'细节，Fe 让这些细节指向群体的温暖。你是社群的隐形支柱，坐在 lineage 的位置上不是因为你想要权威，而是因为你愿意承担让事情被做到位。你的忠诚不是盲从，是对共同价值的稳定守护。",
+      "reversed_shadow": "Hierophant 逆位的阴影是 Si-Ti 循环滑向 dogma——可能用'这是规矩'回避 Ne 劣势的新视角，或在过度照料他人时丢失自己。成长邀请：Empress 提示真正的滋养是双向的——允许自己接收（而不只是给），允许 Ne 偶尔带入一个比传统更鲜活的解法。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "reason": "Rose Quartz 是 Empress 牌的 best_overall（tarot-knowledge）+ 跨文化心轮石——对齐 ISFJ 的 Fe 辅助的滋养与心轮照护，同时提示滋养包括自己。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz",
+          "reason": "Smoky Quartz 帮 ISFJ 在过度承担他人情绪时扎根回身体——保护 Si 主导者免于 Fe 过度耗损。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "reason": "Moonstone 补强 Ne 劣势的'对未知保持柔软' + 对齐 Empress 的阴性能量，提醒 ISFJ 在守传统的同时允许新节奏。"
+        }
+      ],
+      "eastern_anchor": "藏传 lineage 传承与 ISFJ 的 Si-Hierophant 共振——智慧在师徒相传中被稳定守护。Amethyst 紫水晶（菩萨石）是佛珠常用材质，对齐 ISFJ 的虔诚照护能量。",
+      "shop_cta": {
+        "primary": "/product-category/amethyst-crystals/",
+        "fallback": "/shop/?s=rose+quartz"
+      },
+      "related_types": ["ISTJ", "ESFJ", "INFJ"],
+      "related_intentions": ["wisdom", "nurturing", "lineage"]
+    },
+    "ISTP": {
+      "nickname": "The Virtuoso",
+      "group": "Explorers",
+      "cognitive_stack": {
+        "dominant": "Ti",
+        "auxiliary": "Se",
+        "tertiary": "Ni",
+        "inferior": "Fe"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-hermit",
+          "reason": "Ti 主导（内倾思考）与 Hermit 的 archetype 'The Seeker' / 'solitude vs isolation' 对齐——ISTP 在孤独中拆解机械、工具、系统的运作原理，正是 Hermit 手提灯笼向内探究事物本质的意象（与 INTJ/INTP 同为 Ti/Ni 主导内省家族）。"
+        },
+        "growth": {
+          "slug": "death",
+          "reason": "Ti-Ni 第三循环易让 ISTP 陷入'破而后立'的内省——Death 的 archetype 'The Transformer' / 'meaning-making after loss' 对齐 ISTP 的破局重生能量。成长邀请：当 Hermit 的内省变成停滞时，Death 提示'结束也是开始'，允许旧工具/旧身份退场。"
+        }
+      },
+      "upright_reading": "作为本命持 Hermit 能量的 ISTP，你的核心天赋是在独处中拆解世界的运作机制——Ti 主导让你追问每一个机械、规则、系统的原理，Se 让你用手验证这些原理。你不是在逃避人群，而是在亲手操作中理解事物，那里你的思考最纯粹。你的灯笼是实用的——你照的是'这个东西到底怎么工作'。",
+      "reversed_shadow": "Hermit 逆位的阴影是 Ti-Ni 循环滑向愤世嫉俗——可能用'我看透了'回避 Fe 劣势的人际连接，或用'我不需要任何人'掩饰亲密恐惧。成长邀请：Death 提示某些'独行侠'的身份已经完成使命——允许它们退场，让 Fe 在小范围内练习接收他人的回应。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "black-tourmaline-meaning",
+          "name": "Black Tourmaline",
+          "reason": "Black Tourmaline 是 Devil/Tower 牌的守护石——为 ISTP 的 Ti-Ni 内省提供能量边界，防止 Fe 劣势被他人能量入侵。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "hematite-meaning",
+          "name": "Hematite",
+          "reason": "Hematite 扎根 + 聚焦，对齐 ISTP 的 Se 辅助的手作实操能量——保持 Ti 思考与身体操作的同步。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "bloodstone-meaning",
+          "name": "Bloodstone",
+          "reason": "Bloodstone 是 Hanged Man/World 牌的'回到行动'石（tarot-knowledge best_reversed）——对齐 Death 成长牌的破局后行动能量，补强 Fe 劣势。"
+        }
+      ],
+      "eastern_anchor": "藏传'如实自省'与 ISTP 的 Ti-Hermit 共振——真相不在群体共识中，而在亲手验证中。Black Tourmaline 跨传统是守护扎根之石，对齐 ISTP 的独行者能量。",
+      "shop_cta": {
+        "primary": "/product-category/black-tourmaline-crystals/",
+        "fallback": "/shop/?s=black+tourmaline"
+      },
+      "related_types": ["INTP", "ISFP", "ESTP"],
+      "related_intentions": ["focus", "inner-wisdom", "transformation"]
+    },
+    "ISFP": {
+      "nickname": "The Adventurer",
+      "group": "Explorers",
+      "cognitive_stack": {
+        "dominant": "Fi",
+        "auxiliary": "Se",
+        "tertiary": "Ni",
+        "inferior": "Te"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "strength",
+          "reason": "Fi 主导（内倾情感）+ Se 辅助（外倾感官）与 Strength 的 archetype 'The Gentle Power' / psychological_lens 'emotional regulation' 完美对齐——ISFP 是 16 型中最具'以柔克刚的内在力量'特质的型，正是 Strength 徒手开狮口、戴花环的化身。"
+        },
+        "growth": {
+          "slug": "the-star",
+          "reason": "Ni 第三功能 + Te 劣势的成长邀请——Star 的 archetype 'The Hopeful' / 'hope theory' 对齐 ISFP 在 Fi 内在价值与外部表达之间找到方向的成长课题。"
+        }
+      },
+      "upright_reading": "作为本命持 Strength 能量的 ISFP，你的核心天赋是以温柔驯服内在的猛兽——Fi 主导让你拥有深刻的情感与价值共鸣，Se 让你在感官之美中安顿这些感受。你徒手开狮口，不是用强力，而是用耐心与慈悲。你的力量不靠压制，靠临在。花环戴在你和狮子头上——美与野性可以共存。",
+      "reversed_shadow": "Strength 逆位的阴影是 Fi-Ni 循环滑向自我怀疑——可能用'我太敏感'回避 Te 劣势的结构化表达，或在过度适应他人时丢失内在价值。成长邀请：Star 提示你拥有把感受化为方向的能力——找到哪怕一个值得表达的支点，让 Te 在小范围内练习把内在真相说出口。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "reason": "Rose Quartz 是 Strength 牌的 best_love（tarot-knowledge）+ 跨文化心轮石——对齐 ISFP 的 Fi 主导的温柔力量与心轮临在。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "reason": "Carnelian 是 Strength 牌的 best_daily_wear（tarot-knowledge）——温柔勇气与落地自信，对齐 ISFP 的 Se 辅助的感官临在。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "sunstone-meaning",
+          "name": "Sunstone",
+          "reason": "Sunstone 是 Strength 牌的 best_upright（tarot-knowledge）+ Leo 太阳能——补强 ISFP 的 Te 劣势的自我价值感与 Ni 第三的希望之光。"
+        }
+      ],
+      "eastern_anchor": "东方'调伏'（taming the mind 非暴力）与 ISFP 的 Fi-Strength 共振——力量不与自身开战。Tiger Eye 跨传统是平衡勇气之石。",
+      "shop_cta": {
+        "primary": "/product-category/healing-jewelry/",
+        "fallback": "/shop/?s=rose+quartz"
+      },
+      "related_types": ["INFP", "ISTP", "ESFP"],
+      "related_intentions": ["courage", "patience", "self-love"]
+    },
+    "ESTJ": {
+      "nickname": "The Executive",
+      "group": "Sentinels",
+      "cognitive_stack": {
+        "dominant": "Te",
+        "auxiliary": "Si",
+        "tertiary": "Ne",
+        "inferior": "Fi"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-emperor",
+          "reason": "Te 主导（外倾思维）与 Emperor 的 archetype 'The Sovereign' / 'healthy structure vs control' 完美对齐——ESTJ 是 16 型中最具'建立并维护秩序'特质的型，正是 Emperor 坐于石座、为混乱提供骨架的化身（与 ENTJ 同为 Te 主导）。"
+        },
+        "growth": {
+          "slug": "justice",
+          "reason": "Si 辅助（内倾感官）+ Te 主导的成长张力——Justice 的 archetype 'The Truth-Seeker' / 'justice sensitivity' 对齐 ESTJ 把 Si 记录的规则与事实公正权衡的能力。成长邀请：当 Emperor 的结构变成控制时，Justice 提示回到'公平权衡'。"
+        }
+      },
+      "upright_reading": "作为本命持 Emperor 能量的 ESTJ，你的核心天赋是把混乱化为可执行的秩序——Te 主导让你天然识别责任、流程、标准，Si 让你坚持'我们验证过有效的方法'。你不是为控制而控制，而是为系统提供它能稳定运行的骨架。你的权威来自你愿意承担把事情做到位的责任。",
+      "reversed_shadow": "Emperor 逆位的阴影是 Te-Si 循环滑向 rigidity——可能用'按规矩'压抑 Fi 劣势的情感需求，或在规则失效时仍坚持。成长邀请：Justice 提示真正的权威来自公平权衡——允许 Fi 在决策中被听见，让 Ne 在'我们一直这么做'之外带来新可能。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger Eye",
+          "reason": "Tiger Eye 是 Emperor 牌的 best_daily_wear（tarot-knowledge）——落地意志 + 道德边界，对齐 ESTJ 的 Te 主导的稳定权威。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "hematite-meaning",
+          "name": "Hematite",
+          "reason": "Hematite 是 Justice 成长牌的 best_daily_wear（tarot-knowledge）——扎根清明与边界，对齐 ESTJ 的 Si 辅助的稳定权衡。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "reason": "Rose Quartz 直接补强 Fi 劣势——当 ESTJ 倾向把人当流程节点时，Rose Quartz 邀请回归心轮觉察。"
+        }
+      ],
+      "eastern_anchor": "东方'正'稳固原则与 ESTJ 的 Te-Emperor 共振——真正的权威是结构的中正，不是强力。Red Jasper/Tiger Eye 跨战士传统是扎根意志之石。",
+      "shop_cta": {
+        "primary": "/product-category/healing-jewelry/",
+        "fallback": "/shop/?s=tiger+eye"
+      },
+      "related_types": ["ISTJ", "ENTJ", "ESFJ"],
+      "related_intentions": ["structure", "fairness", "boundaries"]
+    },
+    "ESFJ": {
+      "nickname": "The Consul",
+      "group": "Sentinels",
+      "cognitive_stack": {
+        "dominant": "Fe",
+        "auxiliary": "Si",
+        "tertiary": "Ne",
+        "inferior": "Ti"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-empress",
+          "reason": "Fe 主导（外倾情感）+ Si 辅助（内倾感官）与 Empress 的 archetype 'The Nurturer' / psychological_lens 'nurturance vs over-giving' 完美对齐——ESFJ 是 16 型中最具'照护群体、维护和谐'特质的型，正是 Empress 在麦田中 reclining、戴星辰冠的化身。"
+        },
+        "growth": {
+          "slug": "the-hierophant",
+          "reason": "Si 辅助的传统守护能量——Hierophant 的 archetype 'The Teacher' / 'conformity vs autonomy' 对齐 ESFJ 把 Fe 共情化为可传递的社群规则与仪式。成长邀请：当 Empress 的滋养变成过度给时，Hierophant 提示'lineage 比个人给更重要'。"
+        }
+      },
+      "upright_reading": "作为本命持 Empress 能量的 ESFJ，你的核心天赋是照护群体的实际福祉——Fe 主导让你天然感知每个人的需求，Si 让你记得'谁喜欢什么、谁需要什么'。你 recline 在丰饶的花园中，不是因为享受，而是因为你愿意让每个人都感到被看见。你的滋养不是牺牲，是 Venus 般丰盈的爱。",
+      "reversed_shadow": "Empress 逆位的阴影是 Fe-Si 循环滑向 smothering——可能用'为你好'过度照料而压制对方自主，或 Ne 劣势让你在'一直这么做的关怀'失效时仍坚持。成长邀请：Hierophant 提示真正的照护是传递可被他人继承的智慧——允许 Ti 在'什么是真正的善'上做独立判断。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "reason": "Rose Quartz 是 Empress 牌的 best_overall（tarot-knowledge）+ Venus 心轮石——对齐 ESFJ 的 Fe 主导的群体滋养与心轮照护。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "reason": "Carnelian 是 Empress 牌的 best_reversed（tarot-knowledge，逆位 creative block 时唤醒 vitality）——支持 ESFJ 在过度给之后回到自身生命力。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "reason": "Aventurine 是 Empress 牌的 best_upright（tarot-knowledge，生长能量）+ 补强 ESFJ 的 Ne 第三功能的'对新可能保持柔软'。"
+        }
+      ],
+      "eastern_anchor": "印度 Devi 大地母亲传统与 ESFJ 的 Fe-Empress 共振——滋养不是耗尽，是丰盈的流动。Rose Quartz 跨文化是心轮 Venus 之石。",
+      "shop_cta": {
+        "primary": "/product-category/rose-quartz-crystals/",
+        "fallback": "/shop/?s=rose+quartz"
+      },
+      "related_types": ["ISFJ", "ENFJ", "ESTJ"],
+      "related_intentions": ["nurturing", "love", "abundance"]
+    },
+    "ESTP": {
+      "nickname": "The Entrepreneur",
+      "group": "Explorers",
+      "cognitive_stack": {
+        "dominant": "Se",
+        "auxiliary": "Ti",
+        "tertiary": "Fe",
+        "inferior": "Ni"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-chariot",
+          "reason": "Se 主导（外倾感官）+ Ti 辅助（内倾思考）与 Chariot 的 archetype 'The Victor' / psychological_lens 'conscientiousness and drive' 完美对齐——ESTP 是 16 型中最具'在感官行动中统合对立力量推进'特质的型，正是 Chariot 驾驭黑白双斯芬克斯的化身。"
+        },
+        "growth": {
+          "slug": "the-fool",
+          "reason": "Ni 劣势（内倾直觉）的成长邀请——Fool 的 archetype 'The Innocent Pioneer' / 'openness to experience' 提示 ESTP 在已经计算清楚的胜负之外，允许自己偶尔回到初学者心境，相信'未知也可被探索'。"
+        }
+      },
+      "upright_reading": "作为本命持 Chariot 能量的 ESTP，你的核心天赋是在感官临在中识别机会并即刻推进——Se 主导让你看见现场的每一个细节，Ti 让你快速判断哪些力量可被统合。你驾着黑白双 sphinx，它们本要向相反方向拉，但你的手稳稳握着缰绳。胜利不是来自蛮力，而是来自对对立力量的精妙统合。",
+      "reversed_shadow": "Chariot 逆位的阴影是 Se-Fe 循环滑向 scattered force——可能用'冲就完了'回避 Ni 劣势的'这指向哪里'，或在过度追求即时反馈时丢失方向。成长邀请：Fool 提示偶尔回到悬崖边的初心——允许 Ni 在'这是不是值得长久投入的方向'上做内省。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "reason": "Carnelian 是 Chariot 牌的 best_upright（tarot-knowledge）——前进勇气与持久动能，对齐 ESTP 的 Se 主导的临场推进能量。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger Eye",
+          "reason": "Tiger Eye 是 Chariot 牌的 best_daily_wear（tarot-knowledge）——聚焦意志 + 道德边界，对齐 ESTP 的 Ti 辅助的方向判断。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "bloodstone-meaning",
+          "name": "Bloodstone",
+          "reason": "Bloodstone 是 World/Hanged Man 牌的'回到行动'石（tarot-knowledge）+ 补强 ESTP 的 Ni 劣势'从当下行动回到内在方向'的觉察。"
+        }
+      ],
+      "eastern_anchor": "东方'中道'（harness opposing forces 非压制任一方）与 ESTP 的 Se-Chariot 共振——胜利来自统合而非碾压。Hematite 跨传统是扎根意志之石。",
+      "shop_cta": {
+        "primary": "/product-category/healing-jewelry/",
+        "fallback": "/shop/?s=carnelian"
+      },
+      "related_types": ["ISTP", "ESFP", "ENTP"],
+      "related_intentions": ["willpower", "focus", "new-beginnings"]
+    },
+    "ESFP": {
+      "nickname": "The Entertainer",
+      "group": "Explorers",
+      "cognitive_stack": {
+        "dominant": "Se",
+        "auxiliary": "Fi",
+        "tertiary": "Te",
+        "inferior": "Ni"
+      },
+      "birth_cards": {
+        "primary": {
+          "slug": "the-sun",
+          "reason": "Se 主导（外倾感官）+ Fi 辅助（内倾情感）与 Sun 的 archetype 'The Radiant' / psychological_lens 'positive affect' 完美对齐——ESFP 是 16 型中最具'活的临在感与温暖辐射'特质的型，正是 Sun 高悬、孩童骑白马、向日葵转光的化身。"
+        },
+        "growth": {
+          "slug": "the-fool",
+          "reason": "Ni 劣势（内倾直觉）的成长邀请——Fool 的 archetype 'The Innocent Pioneer' / 'openness to experience' 提示 ESFP 在已经享受当下之外，允许自己偶尔回到'不知道下一步会去哪'的初心，相信直觉会在跳跃中显形。"
+        }
+      },
+      "upright_reading": "作为本命持 Sun 能量的 ESFP，你的核心天赋是把每一个当下活成值得庆祝的——Se 主导让你完全临在于感官之美，Fi 让这些时刻与你的内在价值共鸣。你骑在白马上，向日葵转向你的光——这不是表演，是你真实地活着。你的喜悦是被注意并照料的，不是被假设的。你给别人带来的，是'此刻就值得全心投入'的提醒。",
+      "reversed_shadow": "Sun 逆位的阴影是 Se-Te 循环滑向 ego inflation——可能用'活在当下'回避 Ni 劣势的'这指向哪里'，或在追求即时反馈时丢失内在价值（Fi 退位）。成长邀请：Fool 提示偶尔回到初学者心境——允许 Ni 在'哪个方向值得长久投入'上做温柔的探索。",
+      "crystals": [
+        {
+          "role": "best_overall",
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "reason": "Citrine 是 Sun 牌的 best_upright（tarot-knowledge）+ Sun/Citrine 共享太阳能——对齐 ESFP 的 Se 主导的阳性能量与 Fi 辅助的喜悦共鸣。"
+        },
+        {
+          "role": "best_upright",
+          "slug": "sunstone-meaning",
+          "name": "Sunstone",
+          "reason": "Sunstone 是 Sun 牌的 best_overall（tarot-knowledge）——辐射喜悦 + 自信温暖，对齐 ESFP 的 Se 主导的临场辐射能量。"
+        },
+        {
+          "role": "best_growth",
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "reason": "Carnelian 是 Sun 牌的 best_daily_wear（tarot-knowledge）+ Fool 牌的'启动勇气'——补强 ESFP 的 Ni 劣势'偶尔回到初心跳跃'。"
+        }
+      ],
+      "eastern_anchor": "东方'明性'（luminosity 非执着）与 ESFP 的 Se-Sun 共振——光亮来自不被遮蔽的心，不在抓取中产生。Sunstone/Citrine 跨传统是辐射喜悦之石。",
+      "shop_cta": {
+        "primary": "/product-category/healing-jewelry/",
+        "fallback": "/shop/?s=citrine"
+      },
+      "related_types": ["ISFP", "ESTP", "ENFP"],
+      "related_intentions": ["joy", "vitality", "new-beginnings"]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # SEO与GEO 知识库索引
 
-> 最后更新：2026-06-17（+ 02 存量 vs 流量框架 / 多尺度存量 / 祖父化 / 地区≠个性化 / 相关性侵蚀，来源：鸭老师SEO）
+> 最后更新：2026-07-02（+ 17 PRNS链接权威与最短路径模型：专利+API Leak+DOJ三源 / 外链内链统一 / 准种子界面 / 代表文档聚类 / Reasonable Surfer加权）
 
 ---
 
@@ -22,7 +22,10 @@
 ├── 11-内容成熟度模型.md            ← 诊断内容策略成熟度时看这个
 ├── 12-过程内容策略-B2B信任建设.md   ← B2B品牌信任建设时看这个
 ├── 13-大规模关键词排名策略.md       ← 从数百到数百万索引关键词（电商/通用）
-└── 14-AI搜索数据驱动策略与Prompt执行库.md  ← X研究数据+影响力者框架+工具生态+Claude Prompt（核心文档）
+├── 14-AI搜索数据驱动策略与Prompt执行库.md  ← X研究数据+影响力者框架+工具生态+Claude Prompt（核心文档）
+├── 15-SEO漂移监控.md               ← 上线后SEO信号持续监控
+├── 16-Query-Fanout-子问题选题策略.md ← 关键词→子问题的选题方法
+└── 17-PRNS链接权威与最短路径模型.md ← 外链/内链权威机制（专利+API Leak+DOJ三源）
 ```
 
 > **执行层文档**（工作流、工具配置）已迁移至 [01-营销方法论基础/](../01-营销方法论基础/)
@@ -64,6 +67,10 @@
 | 用向量嵌入做SEO分析 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) + [09](./09-向量搜索与嵌入优化.md) | Screaming Frog嵌入提取、SCaNN索引、5大应用场景 |
 | 学习AI搜索优化体系 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | learningaisearch.com路线图、9位专家实践技巧 |
 | 做Programmatic SEO | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) + [13](./13-大规模关键词排名策略.md) | 三层解耦架构、JSON Schema驱动、渐进式发布 |
+| 做外链建设 | [17](./17-PRNS链接权威与最短路径模型.md) | 最短路径模型、准种子界面、出链密度筛选、可操作变量清单 |
+| 规划内链架构 | [17](./17-PRNS链接权威与最短路径模型.md) | 内外链统一、从落点页出发、路径最后一段管理 |
+| 判断负面SEO是否有效 | [17](./17-PRNS链接权威与最短路径模型.md) | 垃圾外链不稀释（PRNS管道）、负SEO走的是SpamBrain管道 |
+| 理解PageRank/PageRank_NS | [17](./17-PRNS链接权威与最短路径模型.md) | 2006年替换时间线、专利谱系、API Leak代码级证据 |
 
 ---
 
@@ -77,11 +84,13 @@
 └──────┬──────┘          └──────┬───────┘
        │                        │
        ▼                        ▼
-┌─────────────┐          ┌──────────────┐
-│ 04-实体与   │◄────────►│ 03-AI        │
-│   知识图谱  │          │   Citation   │
-└──────────────┘          │   优化策略   │◄───────────┐
-                         └──────┬───────┘            │
+┌─────────────┐ ┌────────────┐ ┌──────────────┐
+│ 17-PRNS     │ │ 04-实体与  │ │ 03-AI        │
+│  链接权威   │◄┼──────────►│   Citation   │
+│   模型      │ │   知识图谱 │◄►│   优化策略   │◄───────┐
+└─────────────┘ └────────────┘ └──────┬───────┘        │
+(权威信号管道)  (实体/图谱管道)        │                │
+                                ┌──────┴───────┐        │
                                 │                    │
                     ┌───────────┼───────────┐  ┌─────┴──────┐
                     │           │           │  │ 07-SEO     │
@@ -156,3 +165,13 @@
 | controlaltdigital.com（AI Search 2026） | 研究 | 03（44.2%前置引用 + 87% ChatGPT引用来自Bing Top 10 + 3月新鲜度悬崖） |
 | GenOptima（GEO Agency实测数据） | 实践 | 03（Definition Lead句式 + Schema Stacking 3.1× + 85%第三方提及 + 6.5×外部来源 + 各平台引用风格 + 季度更新3×失引用） |
 | 鸭老师SEO《没有固定排名，排名是现算的》（2026.06） | 行业 | 02（存量vs流量框架 + 多尺度存量 + 祖父化 + 地区≠个性化 + 相关性侵蚀≠新鲜度奖励） |
+| Google 专利 US9165040 / US9953049 | **法律文件** | 17（PRNS 最短路径模型 Claim 1 + 种子集合定义 + 约简链接图） |
+| Google 专利 US7716215 / US8117209 | **法律文件** | 17（Reasonable Surfer 模型 + 链接位置加权） |
+| Bill Slawski / SEO by the Sea | 专利分析 | 17（专利逐条拆解 + 种子 hub 属性 + 2006 年替换时间线 + TrustRank 谱系） |
+| Bohdan Lytvyn / Google Leaks 技术分析 | 代码级分析 | 17（pagerank_ns() 字段 + AnchorsAnchorSource 模块 + 内外链无主要区别 + indexing tier） |
+| DOJ 反垄断案工程师证词 | **法律证词** | 17（PageRank = "link distance from trusted seed sites" + 经 Hobo/Mindbees/SEJ 引述） |
+| iPullRank / API Leak 分析 | 研究 | 17（pagerank_ns 可识别 spam + nullify negative SEO attack） |
+| Koray Tuğberk GÜBÜR | 实践 | 17（Representative Document Selection + Cluster Ranking + NS = 共享 PageRank） |
+| Search Engine Journal / Link Distance | 行业 | 17（Link Distance Ranking Algorithms 专题 + reduced link graph 分析） |
+| David Quaid 链接衰减实测 | 研究 | 17（每跳损失 85% 实测 + 阻尼 15% vs 净衰减 85% 差额分析） |
+| 鸭老师SEO《什么是 PRNS》 | 行业 | 17（中文原文 + 种子/最短路径拆解 + 可操作变量清单 + 话语区分） |

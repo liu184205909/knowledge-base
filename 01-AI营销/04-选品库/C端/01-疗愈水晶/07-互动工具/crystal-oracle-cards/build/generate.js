@@ -1,13 +1,14 @@
 /**
- * Crystal Oracle Cards v10 — 升级 v10 抽牌标准(对齐皇冠 crystal-tarot-draw v10)
- * v10 改进(对比旧 v7 引擎):
- *   1) 卡牌左右滚动: deck flex 横向 + overflow-x:auto(大牌 150px), 金色滚动条; 移动端(640px 以下)flex-wrap(105px)
- *   2) focus 必选: intent select 加 placeholder(第一个 option value="" disabled selected), 未选意图点牌无效 + 红色提示
- *      focus = 意图选择(love/protection/wealth/healing/guidance), 明确第一步
- *   3) 默认洗牌: init 即 buildDeck(initial 态可选牌, revealed 态拦截); 点牌直接有效, 不再需 Shuffle/Cut/Validate
- *   4) 选满自动翻牌(去 Validate 强制): 选满 → 0.5s 后自动 revealAll + Shuffle Again 变 "Reveal" 高亮
- *   5) 按钮栏下方居中(justify-content:center)
- * 保留: 390 水晶牌面 + 意图筛选 + 水晶信息(含义/脉轮/意图/element) + Shop CTA(直接卖该水晶)
+ * Crystal Oracle Cards v10.6 — 对齐皇冠 crystal-tarot-draw v10.6(每行多张自适应/矮牌/删圈圈/金色外扩结果卡)
+ * v10.6 改进(对比 v10):
+ *   1) 卡牌布局: 36 张牌背固定 150px 横排单滚动 → 每行 12 张自适应(flex:1 1 0 + min88/max120)三行全可见无水平滚动
+ *   2) 卡牌矮化: 225px → 178px(桌面)/156px(平板)/140px(移动); 牌背水晶图形 48×60 适配矮牌
+ *   3) 删牌背圈圈: .eoc-back-inner 去 border + 圆角 → 无边框纯定位容器(对齐皇冠 v10.4)
+ *   4) 翻牌结果卡金色外扩: 边框灰 #EEE → 金 #CFAA3E + box-shadow 0 0 0 5px rgba(207,170,62,.18) 往外扩;
+ *      牌头底边加 3px 金线 + body padding 26→32px; 翻牌态 deck 金色外扩(flipped.selected)
+ *   5) 牌头位置条金调: .eoc-card-pos 绿调 → 金调背景(#FBF3E5 + 金线 + #7A5A12 字)
+ * 保留 v10 全部: 390 水晶牌面 + 意图筛选 + focus 必选 + 选满 0.5s 自动翻 + Reveal 高亮 + 默认洗牌
+ *   + 水晶信息(含义/脉轮/意图/element) + Shop CTA + base64 + asciiJSON + 字体 min14 + CSS 前缀 eoc-
  * 数据: crystal-meaning-search/data/search-data.json (390: name/img/excerpt/intentions/chakras/element/shop/link)
  * 约束: base64 包装 JS + asciiJSON 数据块 + 翻牌 scrollIntoView({block:'nearest'}) + 字体 min14 + self-reflection 合规 + CSS 前缀 eoc-
  * URL /tools/crystal-oracle-cards/ (page 48074). Shop 三级降级. 输出: ./crystal-oracle-cards.html
@@ -126,20 +127,27 @@ const APP_JS = `(function(){
     var el = document.getElementById('eoc-deck');
     if (!el) return;
     var n = Math.min(deck.length, 36); // 最多铺 36 张牌背(够选 1-3)
+    // v10.8: 36 张牌背一排（不分三行），单 .eoc-deck-row 横向 margin-left:-78px 堆叠 + overflow scroll
+    var perRow = n;
+    var rows = Math.ceil(n / perRow);
     var h = '';
-    for (var i = 0; i < n; i++) {
-      h += '<div class="eoc-card-back eoc-enter" data-pos="' + i + '">'
-        + '<div class="eoc-back-inner">'
-        + '<div class="eoc-back-crystal">'
-        + '<div class="eoc-crystal-top"></div>'
-        + '<div class="eoc-crystal-face eoc-crystal-m"></div>'
-        + '<div class="eoc-crystal-side eoc-crystal-l"></div>'
-        + '<div class="eoc-crystal-side eoc-crystal-r"></div>'
-        + '<div class="eoc-crystal-base"></div>'
-        + '</div>'
-        + '<div class="eoc-back-label">Crystal Oracle</div>'
-        + '<div class="eoc-back-spark">\\u2737</div>'
-        + '</div></div>';
+    for (var r = 0; r < rows; r++) {
+      h += '<div class="eoc-deck-row">';
+      for (var i = r * perRow; i < Math.min((r + 1) * perRow, n); i++) {
+        h += '<div class="eoc-card-back eoc-enter" data-pos="' + i + '" style="--i:' + i + '">'
+          + '<div class="eoc-back-inner">'
+          + '<div class="eoc-back-crystal">'
+          + '<div class="eoc-crystal-top"></div>'
+          + '<div class="eoc-crystal-face eoc-crystal-m"></div>'
+          + '<div class="eoc-crystal-side eoc-crystal-l"></div>'
+          + '<div class="eoc-crystal-side eoc-crystal-r"></div>'
+          + '<div class="eoc-crystal-base"></div>'
+          + '</div>'
+          + '<div class="eoc-back-label">Crystal Oracle</div>'
+          + '<div class="eoc-back-spark">\\u2737</div>'
+          + '</div></div>';
+      }
+      h += '</div>';
     }
     el.innerHTML = h;
     var backs = el.querySelectorAll('.eoc-card-back');
@@ -340,10 +348,10 @@ const APP_JS = `(function(){
       var ci = deck[pos];
       var backEl = document.querySelector('#eoc-deck .eoc-card-back[data-pos="' + pos + '"]');
       if (backEl) {
-        (function (el, card) {
-          el.classList.add('flipped');
+        (function (el, card, idx) {
+          el.classList.add('flipped', 'eoc-reveal-card', 'eoc-reveal-pos-' + idx);
           setTimeout(function () { el.classList.add('eoc-is-front'); el.innerHTML = cardFrontHtml(card); }, 280);
-        })(backEl, CARDS[ci]);
+        })(backEl, CARDS[ci], i);
       }
     }
     // 2) 下方详细解读
@@ -477,51 +485,71 @@ let html = `<!-- ===== Earthward Crystal Oracle Cards v10 ===== -->
 .eoc-deck-count{color:#888;font-size:13px;margin:0 0 8px;text-align:center}
 .eoc-disclaim-top{color:#888;font-size:13px;line-height:1.6;margin-top:22px;border-left:3px solid #DDD;padding-left:14px}
 
-/* v10 牌背布局: flex 横向单排 + 左右滚动(大牌 150px), 金色滚动条 */
-.eoc-deck{display:flex;gap:14px;overflow-x:auto;margin-bottom:8px;padding:10px 4px 18px;transition:opacity .4s;-webkit-overflow-scrolling:touch;scrollbar-color:#CFAA3E #F0F0E8}
-.eoc-deck::-webkit-scrollbar{height:10px}
-.eoc-deck::-webkit-scrollbar-track{background:#F0F0E8;border-radius:6px}
-.eoc-deck::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#CFAA3E 0%,#B8902A 100%);border-radius:6px;border:1px solid #F0F0E8}
-.eoc-deck::-webkit-scrollbar-thumb:hover{background:#B8902A}
-.eoc-card-back{flex:0 0 150px;width:150px;height:225px;border-radius:12px;position:relative;background:linear-gradient(135deg,#1A1A2E 0%,#2D2D52 100%);border:2px solid #CFAA3E;box-shadow:0 4px 14px rgba(26,26,46,.22);transition:transform .25s,box-shadow .25s,border-color .25s;cursor:default;transform-origin:center bottom}
+/* v10.7 牌背布局(完全对齐皇冠选牌态): deck 块容器 + 多行 .eoc-deck-row(flex nowrap + gap:0 + overflow-x + scroll-snap + cursor:grab),
+   卡牌固定宽 126px + margin-left:-78px → 牌背横向重叠堆叠(扇形连排, 和皇冠一样), 可拖滚 + snap 吸附 */
+.eoc-deck{display:block;margin:4px 0 8px;padding:22px 18px 16px;transition:opacity .4s;overflow:visible;background:linear-gradient(135deg,#FAFAFA 0%,#F8F5EC 100%);border:1px solid #EFE6D2;border-radius:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.75)}
+.eoc-deck-row{display:flex;flex-wrap:nowrap;gap:0;margin-bottom:8px;overflow-x:auto;overflow-y:hidden;padding:14px 0 18px;scroll-snap-type:x proximity;cursor:grab;user-select:none;-webkit-user-select:none;min-height:208px;align-items:center}
+.eoc-deck-row.eoc-dragging{cursor:grabbing;scroll-snap-type:none}
+.eoc-deck-row:last-of-type{margin-bottom:0}
+.eoc-deck-row::-webkit-scrollbar{height:8px}
+.eoc-deck-row::-webkit-scrollbar-track{background:transparent}
+.eoc-deck-row::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#CFAA3E 0%,#B8902A 100%);border-radius:6px}
+.eoc-deck-row{scrollbar-color:#CFAA3E transparent}
+/* v10.7 卡牌矮(178px 对齐皇冠) + 固定宽 126px + margin-left:-78px 牌背重叠堆叠(扇形连排) + 深色 radial 渐变牌背 + 金边 + 删圈圈(back-inner 无 border) */
+.eoc-card-back{flex:0 0 126px;width:126px;min-width:126px;max-width:126px;height:178px;margin-left:-78px;scroll-snap-align:center;border-radius:14px;position:relative;background:radial-gradient(circle at 50% 24%,rgba(207,170,62,.18) 0 12%,transparent 34%),radial-gradient(circle at 80% 86%,rgba(127,209,168,.13),transparent 35%),linear-gradient(155deg,#0F1515 0%,#18201F 48%,#101326 100%);border:1px solid rgba(207,170,62,.9);box-shadow:0 9px 18px rgba(26,26,46,.2),inset 0 0 0 1px rgba(255,255,255,.08),inset 0 0 26px rgba(207,170,62,.08);transition:transform .25s,box-shadow .25s,border-color .25s,filter .25s;cursor:pointer;transform-origin:center bottom;z-index:var(--i,1)}
+.eoc-card-back:first-child{margin-left:0}
 .eoc-card-back.eoc-enter{animation:eocEnter .45s ease backwards}
-.eoc-back-inner{position:absolute;inset:8px;border:1px solid rgba(207,170,62,.5);border-radius:8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#CFAA3E}
+.eoc-card-back:before{content:'';position:absolute;inset:7px;border:1px solid rgba(207,170,62,.28);border-radius:11px;pointer-events:none}
+.eoc-card-back:after{content:'';position:absolute;left:18px;right:18px;top:18px;height:1px;background:linear-gradient(90deg,transparent,rgba(207,170,62,.72),transparent);box-shadow:0 122px 0 rgba(207,170,62,.34);pointer-events:none}
+/* v10.6 删中间圈圈(对齐皇冠 v10.4): .eoc-back-inner 去 border + 圆角 → 无边框纯定位容器 */
+.eoc-back-inner{position:absolute;inset:10px;border:none;border-radius:10px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#E4C878;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,0))}
+.eoc-back-inner:before,.eoc-back-inner:after{content:'';position:absolute;left:50%;transform:translateX(-50%);width:42px;height:1px;background:linear-gradient(90deg,transparent,rgba(207,170,62,.62),transparent)}
+.eoc-back-inner:before{top:14px}.eoc-back-inner:after{bottom:14px}
 
-/* v10 水晶主题牌背(六棱柱水晶图形放大) */
-.eoc-back-crystal{position:relative;width:62px;height:84px;margin-bottom:4px}
-.eoc-crystal-top{position:absolute;top:0;left:50%;transform:translateX(-50%);width:0;height:0;border-left:21px solid transparent;border-right:21px solid transparent;border-bottom:21px solid rgba(127,209,168,.85)}
-.eoc-crystal-face.eoc-crystal-m{position:absolute;top:18px;left:10px;width:42px;height:50px;background:linear-gradient(180deg,rgba(127,209,168,.7) 0%,rgba(207,170,62,.6) 100%);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
-.eoc-crystal-side.eoc-crystal-l{position:absolute;top:21px;left:0;width:14px;height:44px;background:rgba(45,106,79,.75);clip-path:polygon(100% 0,80% 0,100% 100%,30% 100%)}
-.eoc-crystal-side.eoc-crystal-r{position:absolute;top:21px;right:0;width:14px;height:44px;background:rgba(45,106,79,.55);clip-path:polygon(0 0,20% 0,70% 100%,0 100%)}
-.eoc-crystal-base{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:0;border-left:21px solid transparent;border-right:21px solid transparent;border-top:12px solid rgba(45,106,79,.85)}
-.eoc-back-spark{position:absolute;font-size:18px;color:rgba(207,170,62,.85);opacity:.8}
-.eoc-back-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;text-align:center;line-height:1.2}
+/* v10.6 水晶主题牌背(对齐皇冠矮牌): 六棱柱水晶图形 48×60 + 火花 + 标签清晰 */
+.eoc-back-crystal{position:relative;width:48px;height:60px;margin-bottom:4px}
+.eoc-back-crystal:before{content:'';position:absolute;left:50%;top:50%;width:58px;height:58px;transform:translate(-50%,-50%);border:1px solid rgba(207,170,62,.32);border-radius:50%;background:radial-gradient(circle,rgba(127,209,168,.1),transparent 68%)}
+.eoc-crystal-top{position:absolute;top:0;left:50%;transform:translateX(-50%);width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-bottom:15px solid rgba(127,209,168,.85)}
+.eoc-crystal-face.eoc-crystal-m{position:absolute;top:13px;left:8px;width:32px;height:36px;background:linear-gradient(180deg,rgba(127,209,168,.7) 0%,rgba(207,170,62,.6) 100%);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+.eoc-crystal-side.eoc-crystal-l{position:absolute;top:15px;left:0;width:11px;height:31px;background:rgba(45,106,79,.75);clip-path:polygon(100% 0,80% 0,100% 100%,30% 100%)}
+.eoc-crystal-side.eoc-crystal-r{position:absolute;top:15px;right:0;width:11px;height:31px;background:rgba(45,106,79,.55);clip-path:polygon(0 0,20% 0,70% 100%,0 100%)}
+.eoc-crystal-base{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:0;height:0;border-left:16px solid transparent;border-right:16px solid transparent;border-top:9px solid rgba(45,106,79,.85)}
+.eoc-back-spark{position:absolute;left:50%;bottom:17px;transform:translateX(-50%);font-size:12px;color:rgba(228,200,120,.82);opacity:.9}
+.eoc-back-label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;text-align:center;line-height:1.25;color:#E4C878;text-shadow:0 1px 0 rgba(0,0,0,.22)}
 .eoc-deck:not(.eoc-deck-pickable) .eoc-card-back{opacity:.78}
-.eoc-deck:not(.eoc-deck-pickable) .eoc-card-back:hover{transform:translateY(-8px);box-shadow:0 10px 22px rgba(26,26,46,.32);border-color:#7FD1A8;opacity:1}
+.eoc-deck:not(.eoc-deck-pickable) .eoc-card-back:hover{transform:translateY(-2px);box-shadow:0 10px 20px rgba(26,26,46,.28);border-color:#7FD1A8;opacity:1}
 .eoc-deck-pickable .eoc-card-back{cursor:pointer}
-.eoc-deck-pickable .eoc-card-back:hover{transform:translateY(-10px);box-shadow:0 14px 28px rgba(26,26,46,.38);border-color:#7FD1A8}
-.eoc-card-back.selected{border-color:#2D6A4F;box-shadow:0 0 0 3px rgba(45,106,79,.35),0 8px 18px rgba(26,26,46,.3);transform:translateY(-7px)}
+.eoc-deck-pickable .eoc-card-back:hover{transform:translateY(-8px);box-shadow:0 16px 30px rgba(26,26,46,.34);border-color:#7FD1A8;filter:saturate(1.08)}
+.eoc-card-back.selected{border-color:#7FD1A8;box-shadow:0 0 0 3px rgba(127,209,168,.42),0 18px 32px rgba(26,26,46,.32);transform:translateY(-12px)}
 .eoc-card-back.selected .eoc-back-inner{color:#7FD1A8}
-.eoc-deck.eoc-deck-done{pointer-events:none}
-.eoc-deck.eoc-deck-done .eoc-card-back:not(.flipped){opacity:.3}
+.eoc-deck.eoc-deck-done{pointer-events:none;background:linear-gradient(135deg,#FFFDF8 0%,#F8F3E7 100%)}
+.eoc-deck.eoc-deck-done .eoc-deck-row{justify-content:center;align-items:center;gap:14px;overflow-x:visible;overflow-y:visible;min-height:238px;padding:28px 0 30px;cursor:default}
+.eoc-deck.eoc-deck-done .eoc-card-back:not(.flipped){display:none}
+.eoc-deck.eoc-deck-done .eoc-card-back.flipped{display:block;flex:0 0 132px;width:132px;min-width:132px;max-width:132px;height:186px;margin-left:0;opacity:1;filter:none}
+.eoc-deck.eoc-deck-done .eoc-reveal-card{transform:translateY(0) rotate(0);transition:transform .35s ease,box-shadow .35s ease}
+.eoc-deck.eoc-deck-done .eoc-reveal-pos-0{transform:translateY(10px) rotate(-7deg)}
+.eoc-deck.eoc-deck-done .eoc-reveal-pos-1{transform:translateY(-8px) rotate(0)}
+.eoc-deck.eoc-deck-done .eoc-reveal-pos-2{transform:translateY(10px) rotate(7deg)}
 .eoc-card-back.flipped{animation:eocFlipOver .55s ease}
-.eoc-card-back.eoc-is-front{background:#fff;border-color:#2D6A4F;opacity:1 !important;cursor:default}
-.eoc-front-face{position:absolute;inset:6px;border-radius:8px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;background:#fff;padding:6px;text-align:center}
+/* v10.6 翻牌态金色外扩(对齐皇冠 v10.6): 翻开瞬间覆盖 selected 绿光晕 → 金色 border + 金色外扩光晕 */
+.eoc-card-back.flipped.selected{border-color:#CFAA3E;box-shadow:0 0 0 4px rgba(207,170,62,.32),0 18px 32px rgba(26,26,46,.3);z-index:90}
+.eoc-card-back.eoc-is-front{background:radial-gradient(circle at 50% 14%,rgba(207,170,62,.18),transparent 38%),linear-gradient(180deg,#FFFDF8 0%,#F7F0DF 100%);opacity:1 !important;cursor:default;border-color:#CFAA3E;box-shadow:0 0 0 4px rgba(207,170,62,.28),0 18px 32px rgba(26,26,46,.24);z-index:90}
+.eoc-front-face{position:absolute;inset:8px;border:1px solid rgba(207,170,62,.72);border-radius:10px;overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:4px;background:#fff;padding:6px;text-align:center}
 .eoc-card-img{width:100%;height:78%;object-fit:cover;border-radius:6px;background:#EEE}
 .eoc-card-img-ph{width:100%;height:78%;border-radius:6px;background:linear-gradient(135deg,#7FD1A8,#CFAA3E)}
-.eoc-front-name{font-size:14px;font-weight:700;color:#1A1A2E;line-height:1.15;padding:2px 4px}
+.eoc-front-name{font-size:13px;font-weight:700;color:#1A1A2E;line-height:1.15;padding:2px 4px}
 .eoc-front-sub{font-size:9px;color:#888;letter-spacing:.08em;text-transform:uppercase}
 @keyframes eocFlipOver{0%{transform:rotateY(0)}50%{transform:rotateY(90deg)}100%{transform:rotateY(0)}}
 .eoc-deck.eoc-shuffle-anim{animation:eocShuffle .55s ease}
 @keyframes eocEnter{0%{transform:translateY(-14px) rotate(-3deg);opacity:0}100%{transform:translateY(0) rotate(0);opacity:1}}
 @keyframes eocShuffle{0%{transform:translateX(0)}20%{transform:translateX(-8px) rotate(-1deg)}40%{transform:translateX(8px) rotate(1deg)}60%{transform:translateX(-6px) rotate(-.5deg)}80%{transform:translateX(6px) rotate(.5deg)}100%{transform:translateX(0) rotate(0)}}
 
-/* 结果卡 */
-.eoc-result{margin-top:8px}
-.eoc-card{background:#fff;border:1px solid #EEE;border-radius:16px;padding:0;margin-bottom:22px;overflow:hidden;animation:eocReveal .5s ease}
+/* v10.6 结果卡金色外扩(对齐皇冠 v10.6): 边框灰→金 #CFAA3E + 金色外扩光晕 + 牌头 3px 金线 + body 32px 文字区呼吸更宽 */
+.eoc-result{margin-top:8px;scroll-margin-top:120px}
+.eoc-card{background:#fff;border:1px solid #CFAA3E;border-radius:16px;padding:0;margin-bottom:22px;overflow:hidden;box-shadow:0 0 0 5px rgba(207,170,62,.18),0 12px 28px rgba(26,26,46,.1);animation:eocReveal .5s ease}
 @keyframes eocReveal{0%{opacity:0;transform:translateY(14px) rotateY(-12deg)}100%{opacity:1;transform:translateY(0) rotateY(0)}}
-.eoc-card-pos{background:#F0F7F4;border-bottom:1px solid #EEE;padding:8px 22px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#1B4332}
-.eoc-card-head{background:#1A1A2E;padding:22px 26px;color:#fff;display:flex;gap:18px;align-items:center}
+.eoc-card-pos{background:#FBF3E5;border-bottom:1px solid #E8C887;padding:9px 28px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#7A5A12}
+.eoc-card-head{position:relative;background:radial-gradient(circle at 82% 18%,rgba(207,170,62,.2),transparent 32%),linear-gradient(135deg,#111525 0%,#1A1A2E 58%,#26324B 100%);padding:22px 32px;color:#fff;display:flex;gap:18px;align-items:center;border-bottom:3px solid #CFAA3E;overflow:hidden}
 .eoc-card-headimg{flex:0 0 84px;width:84px;height:84px;border-radius:50%;overflow:hidden;border:2px solid #CFAA3E;background:#EEE}
 .eoc-card-headimg img,.eoc-card-headimg .eoc-card-img-ph{width:100%;height:100%;object-fit:cover}
 .eoc-card-headimg .eoc-card-img-ph{border-radius:0}
@@ -532,7 +560,7 @@ let html = `<!-- ===== Earthward Crystal Oracle Cards v10 ===== -->
 .eoc-chip{font-size:12px;font-weight:600;padding:3px 9px;border-radius:10px}
 .eoc-chip-intent{background:rgba(127,209,168,.2);color:#7FD1A8;border:1px solid rgba(127,209,168,.4)}
 .eoc-chip-chakra{background:rgba(207,170,62,.2);color:#E8C887;border:1px solid rgba(207,170,62,.4)}
-.eoc-card-body{padding:22px 26px}
+.eoc-card-body{padding:24px 32px;background:linear-gradient(180deg,#FFFFFF 0%,#FFFDF8 100%)}
 .eoc-meta-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
 .eoc-meta-chip{background:#FAFAFA;border:1px solid #EEE;border-radius:8px;padding:5px 11px;font-size:14px;color:#444}
 .eoc-meta-chip b{color:#1A1A2E}
@@ -555,18 +583,38 @@ let html = `<!-- ===== Earthward Crystal Oracle Cards v10 ===== -->
 .eoc-seo-content h2{color:#1A1A2E;font-size:24px;margin:26px 0 10px}
 .eoc-seo-content h2:first-child{margin-top:0}
 .eoc-seo-content h3{color:#1A1A2E;font-size:19px;margin:20px 0 8px}
-/* v10 平板: 保持 flex 横向滚动(大牌 150px), 牌稍小 130px */
+/* v10.6 平板(对齐皇冠 v10.4): deck-row flex 横向滚动兜底, 卡牌矮(156px);牌宽固定 112px */
 @media(max-width:780px){
-  .eoc-card-back{flex:0 0 130px;width:130px;height:195px}
+  .eoc-input-row{gap:10px;margin-bottom:12px}
+  .eoc-field{width:100%}
+  .eoc-field-grow{min-width:0}
+  .eoc-input-row select,.eoc-input-row input{width:100%;min-width:0}
+  .eoc-deck{padding:18px 14px 14px}
+  .eoc-deck-row{display:flex;flex-wrap:nowrap;gap:0;overflow-x:auto;overflow-y:hidden;padding:12px 0 16px;min-height:184px}
+  .eoc-card-back{flex:0 0 112px;width:112px;min-width:112px;max-width:112px;height:156px;margin-left:-44px}
+  .eoc-card-back:first-child{margin-left:0}
+  .eoc-deck.eoc-deck-done .eoc-deck-row{gap:10px;min-height:214px;padding:24px 0 26px;flex-wrap:wrap}
+  .eoc-deck.eoc-deck-done .eoc-card-back.flipped{flex:0 0 118px;width:118px;min-width:118px;max-width:118px;height:164px}
   .eoc-card-head{flex-direction:column;text-align:center}
+  .eoc-result{scroll-margin-top:96px}
 }
-/* v10 移动: flex-wrap 换行 2-3 列(105px), 取消横向滚动 */
+/* v10.6 移动(对齐皇冠 v10.4): deck-row flex 兜底, 卡牌矮(140px);牌宽固定 100px */
 @media(max-width:640px){
-  .eoc-h1{font-size:26px}.eoc-input-row select,.eoc-input-row input{min-width:150px;font-size:15px}.eoc-card-name{font-size:23px}
-  .eoc-card-head{padding:18px}.eoc-card-body{padding:18px}
-  .eoc-deck{flex-wrap:wrap;justify-content:center;overflow-x:visible;gap:10px}
-  .eoc-card-back{flex:0 0 105px;width:105px;height:158px}
-  .eoc-back-crystal{width:38px;height:52px}
+  .eoc-h1{font-size:26px}.eoc-input-row select,.eoc-input-row input{min-width:0;font-size:15px}.eoc-card-name{font-size:23px}
+  .eoc-card-head{padding:18px}.eoc-card-body{padding:16px 14px}
+  .eoc-card-pos{padding:8px 14px;font-size:12px}
+  .eoc-deck{padding:16px 12px 12px;border-radius:12px}
+  .eoc-deck-row{display:flex;gap:0;overflow-x:auto;overflow-y:hidden;padding:10px 0 14px;min-height:166px}
+  .eoc-card-back{flex:0 0 100px;width:100px;min-width:100px;max-width:100px;height:140px;margin-left:-38px}
+  .eoc-card-back:first-child{margin-left:0}
+  .eoc-deck.eoc-deck-done .eoc-deck-row{gap:8px;min-height:190px;padding:22px 0 24px;flex-wrap:wrap}
+  .eoc-deck.eoc-deck-done .eoc-card-back.flipped{flex:0 0 104px;width:104px;min-width:104px;max-width:104px;height:146px}
+  .eoc-deck.eoc-deck-done .eoc-reveal-pos-0{transform:translateY(6px) rotate(-5deg)}
+  .eoc-deck.eoc-deck-done .eoc-reveal-pos-1{transform:translateY(-5px) rotate(0)}
+  .eoc-deck.eoc-deck-done .eoc-reveal-pos-2{transform:translateY(6px) rotate(5deg)}
+  .eoc-back-crystal{width:34px;height:44px}
+  .eoc-back-label{font-size:10px;letter-spacing:.1em}
+  .eoc-front-name{font-size:12px}
   .eoc-btn{padding:12px 22px;font-size:14px;height:44px}
   .eoc-btn-ritual{min-width:110px}
   .eoc-stage-hint{font-size:14px}

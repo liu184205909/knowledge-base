@@ -11,6 +11,10 @@ const DIR = path.resolve(__dirname, '..');
 const idx = JSON.parse(fs.readFileSync(path.join(DIR, 'articles-index.json'), 'utf8'));
 const KNOW = require('../../../07-互动工具/_shared/tarot-knowledge.json');
 const ATTR = require('../../../07-互动工具/_shared/crystal-attributes.json').crystals;
+
+// >>>>>>> added by fix-major-crystal-slugs.js (兼容 tarot-knowledge -meaning slug + search-data 短 slug key)
+function normSlug(s){ return s ? String(s).replace(/-meaning$/,'') : s; }
+// <<<<<<< added by fix-major-crystal-slugs.js
 const QC = path.join(DIR, '_qc');
 fs.mkdirSync(QC, { recursive: true });
 
@@ -107,7 +111,7 @@ for (const art of idx.articles.filter(a => !a.is_hub)) {
   const m4text = text(m4);
   for (const [role, info] of Object.entries(card.crystals)) {
     const slug = info.slug;
-    const attr = ATTR[slug + '-meaning'] || {};
+    const attr = ATTR[slug.endsWith('-meaning') ? slug : slug + '-meaning'] || {};
     const ov = attr.overview || {};
     const intentions = (ov.Intentions || '').toLowerCase();
     // 要素1: 牌具体依据（archetype/upright/reversed/画面词命中）

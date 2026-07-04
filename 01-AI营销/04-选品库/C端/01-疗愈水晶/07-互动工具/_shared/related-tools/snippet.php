@@ -10,7 +10,7 @@
  * (default + Elementor Canvas + WoodMart custom), unlike a the_content filter
  * which the 3 root-level tool pages (built May) bypass.
  *
- * One snippet maintains all 18 tools (two config arrays below).
+ * One snippet maintains all 21 tools (two config arrays below).
  */
 if (!defined('ABSPATH')) { exit; }
 
@@ -21,7 +21,7 @@ function ew_related_tools_footer() {
     $slug = get_post_field('post_name', get_the_ID());
     if (empty($slug)) return;
 
-    // 18 tool display metadata: slug => [title, url-path, one-line desc, icon]
+    // 21 tool display metadata: slug => [title, url-path, one-line desc, icon]
     $tools = array(
         'crystal-tarot-reading'         => array('t'=>'Crystal Tarot Reading',   'u'=>'/tools/crystal-tarot-reading/',         'd'=>'Draw cards and decode their meaning with matching crystals', 'i'=>'🔮'),
         'yes-no-tarot'                  => array('t'=>'Yes or No Tarot',          'u'=>'/tools/yes-no-tarot/',                   'd'=>'A clear yes, no, or maybe from a single card', 'i'=>'✅'),
@@ -42,21 +42,25 @@ function ew_related_tools_footer() {
         'bracelet-size-calculator'      => array('t'=>'Bracelet Size Calculator', 'u'=>'/bracelet-size-calculator/',            'd'=>'Find your perfect bracelet fit', 'i'=>'📿'),
         'ring-size-calculator'          => array('t'=>'Ring Size Calculator',     'u'=>'/ring-size-calculator/',                'd'=>'Find your ring size in any system', 'i'=>'💍'),
         'crystal-bracelet-builder'      => array('t'=>'Crystal Bracelet Builder', 'u'=>'/tools/crystal-bracelet-builder/',      'd'=>'Design bead by bead', 'i'=>'📿'),
+        'daily-tarot'                   => array('t'=>'Daily Tarot',              'u'=>'/tools/daily-tarot/',                   'd'=>"Today's tarot card and crystal for the whole community", 'i'=>'🌅'),
+        'mbti-tarot'                    => array('t'=>'MBTI Tarot',               'u'=>'/tools/mbti-tarot/',                    'd'=>'Find your MBTI tarot birth card and crystals', 'i'=>'🧬'),
     );
 
     // recommendation graph: current tool slug => 2-3 related tool slugs (same family first, then cross)
     $map = array(
-        'crystal-tarot-reading'         => array('ai-tarot-chat', 'tarot-birth-card', 'yes-no-tarot'),
+        'crystal-tarot-reading'         => array('ai-tarot-chat', 'daily-tarot', 'yes-no-tarot'),
         'yes-no-tarot'                  => array('crystal-tarot-reading', 'ai-tarot-chat', 'tarot-birth-card'),
         'crystal-oracle-cards'          => array('crystal-tarot-reading', 'ai-tarot-chat', 'crystal-quiz'),
-        'tarot-birth-card'              => array('crystal-tarot-reading', 'ai-tarot-chat', 'numerology-calculator'),
-        'ai-tarot-chat'                 => array('crystal-tarot-reading', 'tarot-birth-card', 'yes-no-tarot'),
+        'tarot-birth-card'              => array('crystal-tarot-reading', 'ai-tarot-chat', 'mbti-tarot'),
+        'ai-tarot-chat'                 => array('crystal-tarot-reading', 'daily-tarot', 'tarot-birth-card'),
         'zodiac-compatibility-checker'  => array('chinese-zodiac-checker', 'numerology-calculator', 'moon-calendar'),
         'chinese-zodiac-checker'        => array('zodiac-compatibility-checker', 'birthstone-finder', 'numerology-calculator'),
-        'numerology-calculator'         => array('tarot-birth-card', 'chinese-zodiac-checker', 'birthstone-finder'),
+        'numerology-calculator'         => array('tarot-birth-card', 'mbti-tarot', 'chinese-zodiac-checker'),
         'birthstone-finder'             => array('chinese-zodiac-checker', 'numerology-calculator', 'moon-calendar'),
-        'moon-calendar'                 => array('birthstone-finder', 'chinese-zodiac-checker', 'crystal-cleansing-timer'),
-        'crystal-quiz'                  => array('chakra-test', 'element-test', 'crystal-bracelet-builder'),
+        'moon-calendar'                 => array('daily-tarot', 'birthstone-finder', 'crystal-cleansing-timer'),
+        'daily-tarot'                   => array('crystal-tarot-reading', 'ai-tarot-chat', 'moon-calendar'),
+        'mbti-tarot'                    => array('tarot-birth-card', 'numerology-calculator', 'crystal-quiz'),
+        'crystal-quiz'                  => array('chakra-test', 'mbti-tarot', 'crystal-bracelet-builder'),
         'chakra-test'                   => array('crystal-quiz', 'element-test', 'crystal-cleansing-timer'),
         'element-test'                  => array('crystal-quiz', 'chakra-test', 'crystal-compatibility-checker'),
         'crystal-compatibility-checker' => array('crystal-quiz', 'crystal-meaning-search', 'chakra-test'),

@@ -1,0 +1,1682 @@
+{
+  "_meta": {
+    "purpose": "Minor Arcana 56 张牌 hero 生图清单（slug 索引）",
+    "framework": "Minor-Arcana-牌义竞品研究.md",
+    "data_sources": [
+      "configs/minor-knowledge.json (crystals 5角色 + suit_element)",
+      "articles/tarot-{slug}-crystals.md (已生产 20 篇)"
+    ],
+    "hero_prompt_spec": {
+      "size": "1536x1024 → sharp resize 1536x864 webp",
+      "style_alignment": "scripts/generate-scenario-images.js (站点塔罗 hero 一致风格)",
+      "elements": [
+        "Rider-Waite Minor 牌画面（20 张内置映射表）",
+        "花色元素色背景渐变（Wands=fire红橙 / Cups=water蓝青 / Swords=air浅黄 / Pentacles=earth绿棕）",
+        "花色符号（Wands=火焰权杖 / Cups=圣杯 / Swords=宝剑 / Pentacles=星币）",
+        "best_overall 水晶 gemstone（底部）",
+        "数字牌编码数字 / 宫廷牌编码角色",
+        "Eastern-inspired Tibetan 调性 + sacred geometry + deep indigo"
+      ]
+    },
+    "crystal_slug_rule": "全部带 -meaning 后缀对齐 390 库（5 角色：best_overall/upright/reversed/love/daily_wear）",
+    "total_articles": 56
+  },
+  "articles": {
+    "tarot-queen-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Queen of Wands (The Magnetic Leader) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: a confident queen seated on an ornate throne adorned with lions and sunflowers, a wand in one hand and a sunflower in the other, a black cat of self-possession curled at her feet, a barren desert behind her. The figure carries the unmistakable presence of the queen (the The Magnetic Leader). The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a single Sunstone crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-queen-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "sunstone-meaning",
+          "name": "Sunstone",
+          "role": "best_overall"
+        },
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "role": "best_upright"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger's Eye",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-king-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card King of Wands (The Visionary Founder) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: a commanding king on a throne decorated with salamanders and lions, holding a flowering wand as a scepter, a fire-salamander crest on his cloak, his gaze fixed on a distant horizon. The figure carries the unmistakable presence of the king (the The Visionary Founder). The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a single Tiger's Eye crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-king-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger's Eye",
+          "role": "best_overall"
+        },
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "role": "best_upright"
+        },
+        {
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-page-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Page of Cups (The Dreamer) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: a gentle youth in a floral blue tunic standing at the seashore, holding a golden cup from which a small curious fish emerges like a message, the calm sea and distant ships behind him. The figure carries the unmistakable presence of the page (the The Dreamer). The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a single Moonstone crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-page-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "role": "best_overall"
+        },
+        {
+          "slug": "aquamarine-meaning",
+          "name": "Aquamarine",
+          "role": "best_upright"
+        },
+        {
+          "slug": "rhodochrosite-meaning",
+          "name": "Rhodochrosite",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "blue-lace-agate-meaning",
+          "name": "Blue Lace Agate",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-knight-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Knight of Cups (The Romantic) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: a romantic knight in fish-patterned armor riding a slow graceful white horse, holding aloft a cup as if offering a gift or proposal, crossing a barren riverbed under a soft sky. The figure carries the unmistakable presence of the knight (the The Romantic). The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a single Aquamarine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-knight-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "aquamarine-meaning",
+          "name": "Aquamarine",
+          "role": "best_overall"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_upright"
+        },
+        {
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-king-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card King of Cups (The Emotional Master) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: a calm bearded king on a stone throne adorned with dolphins and water motifs, holding a cup and a scepter, his throne floating upon a calm sea with a ship and a leaping fish behind, a stable wave on his right and a turbulent one on his left. The figure carries the unmistakable presence of the king (the The Emotional Master). The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a single Lapis Lazuli crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-king-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "lapis-meaning",
+          "name": "Lapis Lazuli",
+          "role": "best_overall"
+        },
+        {
+          "slug": "aquamarine-meaning",
+          "name": "Aquamarine",
+          "role": "best_upright"
+        },
+        {
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-queen-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Queen of Swords (The Clear-Eyed Judge) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a clear-eyed queen seated on an ornate stone throne adorned with a butterfly and winged cherub, holding an upright sword in her right hand, her left hand raised in a gesture of reception, a bound figure on the ground before her and stormy clouds behind. The figure carries the unmistakable presence of the queen (the The Clear-Eyed Judge). The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a single Lapis Lazuli crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-queen-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "lapis-meaning",
+          "name": "Lapis Lazuli",
+          "role": "best_overall"
+        },
+        {
+          "slug": "sodalite-meaning",
+          "name": "Sodalite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "selenite-meaning",
+          "name": "Selenite",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-page-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Page of Pentacles (The Apprentice) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: a studious youth in earth-toned robes standing on a green meadow, holding up and gazing attentively at a golden pentacle coin, distant trees and a freshly furrowed field behind him. The figure carries the unmistakable presence of the page (the The Apprentice). The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a single Green Aventurine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-page-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_overall"
+        },
+        {
+          "slug": "jade-meaning",
+          "name": "Jade",
+          "role": "best_upright"
+        },
+        {
+          "slug": "red-jasper-meaning",
+          "name": "Red Jasper",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-queen-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Queen of Pentacles (The Nurturing Provider) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: a nurturing queen seated on an ornate throne adorned with fruits, goats and cherubs, a glowing pentacle cradled in her lap, a rabbit at her feet, a lush landscape of greenery, mountains and a flowing stream behind her. The figure carries the unmistakable presence of the queen (the The Nurturing Provider). The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a single Green Aventurine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-queen-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_overall"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_upright"
+        },
+        {
+          "slug": "red-jasper-meaning",
+          "name": "Red Jasper",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "jade-meaning",
+          "name": "Jade",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-king-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card King of Pentacles (The Master of Manifestation) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: a robust king on a throne decorated with bull heads, grapes and carved trees, a golden pentacle resting on his knee and a scepter in his hand, his robe embroidered with grapevines, a flourishing field and castle behind him. The figure carries the unmistakable presence of the king (the The Master of Manifestation). The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a single Tiger's Eye crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-king-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger's Eye",
+          "role": "best_overall"
+        },
+        {
+          "slug": "pyrite-meaning",
+          "name": "Pyrite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "jade-meaning",
+          "name": "Jade",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-ace-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Ace of Wands (The Spark) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: a single living hand emerging from a luminous cloud, holding a flourishing leafy wand upright, green leaves sprouting from its tip, a verdant valley and a castle in the distant landscape. A single luminous hand emerges from a glowing cloud, marking this as the Ace — the spark and seed of the suit. The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a single Carnelian crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-ace-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "role": "best_overall"
+        },
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "role": "best_upright"
+        },
+        {
+          "slug": "sunstone-meaning",
+          "name": "Sunstone",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger's Eye",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-ace-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Ace of Cups (The Wellspring) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: a single living hand emerging from a luminous cloud, holding an ornate overflowing golden chalice, five streams of water shaped like the letter W pouring onto a buttercup-dotted meadow, a dove bearing a wafer descending into the cup. A single luminous hand emerges from a glowing cloud, marking this as the Ace — the spark and seed of the suit. The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a single Moonstone crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-ace-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "role": "best_overall"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_upright"
+        },
+        {
+          "slug": "aquamarine-meaning",
+          "name": "Aquamarine",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "blue-lace-agate-meaning",
+          "name": "Blue Lace Agate",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-ace-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Ace of Swords (The Breakthrough) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a single living right hand emerging from a luminous cloud, gripping an upright shining silver sword, a golden crown of victory suspended at its tip, jagged mountains carved beneath the blade and storm clouds clearing. A single luminous hand emerges from a glowing cloud, marking this as the Ace — the spark and seed of the suit. The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a single Selenite crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-ace-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "selenite-meaning",
+          "name": "Selenite",
+          "role": "best_overall"
+        },
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst",
+          "role": "best_upright"
+        },
+        {
+          "slug": "fluorite-meaning",
+          "name": "Fluorite",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "lapis-meaning",
+          "name": "Lapis Lazuli",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-ace-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Ace of Pentacles (The Seed of Abundance) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: a single living hand emerging from a luminous cloud, offering a glowing golden pentacle coin engraved with a five-pointed star, a verdant garden and a flowering archway of white lilies and red roses beneath a distant pathway. A single luminous hand emerges from a glowing cloud, marking this as the Ace — the spark and seed of the suit. The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a single Green Aventurine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-ace-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_overall"
+        },
+        {
+          "slug": "jade-meaning",
+          "name": "Jade",
+          "role": "best_upright"
+        },
+        {
+          "slug": "pyrite-meaning",
+          "name": "Pyrite",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "red-jasper-meaning",
+          "name": "Red Jasper",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-three-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Three of Pentacles (The Collaborative Builder) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: a master mason, a monk and an architect gathered before an arched cathedral doorway examining a blueprint together, three pentacles mounted on the arch above, scaffolding and carved stone around them. The composition subtly encodes the number three in the arrangement of the suit symbols. The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a single Jade crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-three-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "jade-meaning",
+          "name": "Jade",
+          "role": "best_overall"
+        },
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_upright"
+        },
+        {
+          "slug": "pyrite-meaning",
+          "name": "Pyrite",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "red-jasper-meaning",
+          "name": "Red Jasper",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-six-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Six of Pentacles (The Generous Scale) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: a wealthy merchant in red robes holding a balance scale in one hand, distributing coins to two kneeling beggars from a bag of pentacles, three pentacles arranged in an arch above his head. The composition subtly encodes the number six in the arrangement of the suit symbols. The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a single Green Aventurine crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-six-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_overall"
+        },
+        {
+          "slug": "jade-meaning",
+          "name": "Jade",
+          "role": "best_upright"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "pyrite-meaning",
+          "name": "Pyrite",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-seven-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Seven of Pentacles (The Patient Gardener) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: a patient farmer in blue leaning on his hoe, gazing up at a flourishing vine heavy with six pentacles arranged like a chandelier, one pentacle resting at his feet, a distant farmhouse and rolling fields behind. The composition subtly encodes the number seven in the arrangement of the suit symbols. The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a single Moss Agate crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-seven-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "moss-agate-meaning",
+          "name": "Moss Agate",
+          "role": "best_overall"
+        },
+        {
+          "slug": "jade-meaning",
+          "name": "Jade",
+          "role": "best_upright"
+        },
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "red-jasper-meaning",
+          "name": "Red Jasper",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-eight-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Eight of Pentacles (The Devoted Apprentice) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: a dedicated apprentice engraving a pentacle coin at a workbench, six finished pentacles stacked neatly beside him on the wall and one in progress in his hands, an arched window and a distant town behind. The composition subtly encodes the number eight in the arrangement of the suit symbols. The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a single Red Jasper crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-eight-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "red-jasper-meaning",
+          "name": "Red Jasper",
+          "role": "best_overall"
+        },
+        {
+          "slug": "moss-agate-meaning",
+          "name": "Moss Agate",
+          "role": "best_upright"
+        },
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "hematite-meaning",
+          "name": "Hematite",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-two-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Two of Wands (The Planner at the Threshold) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: a nobleman in red robes standing on a castle parapet, holding a globe of the world in his right hand and a wand in his left, a second wand mounted beside him in a stone bracket, a distant sea, ships and coastline below. The composition subtly encodes the number two in the arrangement of the suit symbols. The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a single Clear Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-two-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "quartz-meaning",
+          "name": "Clear Quartz",
+          "role": "best_overall"
+        },
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "role": "best_upright"
+        },
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger's Eye",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-nine-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Nine of Swords (The Mind at 3 AM) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a figure sitting bolt upright in bed, hands covering their weeping face, nine swords mounted in a row on the dark wall above the quilt decorated with zodiac and floral squares, a single bed and a window with a moon-and-stars quilt. The composition subtly encodes the number nine in the arrangement of the suit symbols. The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a single Amethyst crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-nine-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst",
+          "role": "best_overall"
+        },
+        {
+          "slug": "selenite-meaning",
+          "name": "Selenite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "angelite-meaning",
+          "name": "Angelite",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-ten-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Ten of Swords (The Dawn After the Ending) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a still figure lying face down on the ground at dawn, ten swords driven across their back in a fan, a blood-red figure in the landscape, a distant river, mountains and a deep black sky with a single yellow sunrise breaking through. The composition subtly encodes the number ten in the arrangement of the suit symbols. The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a single Smoky Quartz crystal gemstone placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo background harmonized with the accent palette, glowing light rays, floating luminous particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-ten-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz",
+          "role": "best_overall"
+        },
+        {
+          "slug": "black-tourmaline-meaning",
+          "name": "Black Tourmaline",
+          "role": "best_upright"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_reversed"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_love"
+        },
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst",
+          "role": "best_daily_wear"
+        }
+      ]
+    },
+    "tarot-page-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Page of Wands (The Spark-Seeker) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: a youthful figure in a flame-patterned tunic standing alone in a barren desert, holding a living wand upright with both hands while a small salamander bites its own tail on his clothing - the eternal spark of newly lit passion before it has found a direction. The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a large prominent Carnelian crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-page-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "role": "best_overall"
+        },
+        {
+          "slug": "sunstone-meaning",
+          "name": "Sunstone",
+          "role": "best_upright"
+        },
+        {
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-knight-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Knight of Wands (The Adventurer) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: a bold knight in salamander-patterned armour charging forward on a rearing horse, the wand raised high like a torch, his horse hooves lifted off the ground in fearless forward momentum toward a distant horizon. The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a large prominent Carnelian crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-knight-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "role": "best_overall"
+        },
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger's Eye",
+          "role": "best_upright"
+        },
+        {
+          "slug": "hematite-meaning",
+          "name": "Hematite",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-three-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Three of Wands (The Far-Sighted Expansion) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: a figure in a red robe standing on a high cliff, three wands planted firmly before him as he gazes out over a golden sea where his ships sail toward distant ports - the launched venture already in motion, the long view of a fire-seeded expedition. The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a large prominent Citrine crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-three-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "role": "best_overall"
+        },
+        {
+          "slug": "sunstone-meaning",
+          "name": "Sunstone",
+          "role": "best_upright"
+        },
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-four-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Four of Wands (The Celebrated Threshold) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: four wands laced together into a floral bridal canopy of greenery and blossoms, two figures dancing joyfully beneath them with bunches of myrtle, a grand castle rising in the distance as the first milestone of a long venture is honoured. The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a large prominent Carnelian crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-four-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "role": "best_overall"
+        },
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "role": "best_upright"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-five-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Five of Wands (The Constructive Friction) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: five youthful figures clashing with raised wands in a free-for-all across a barren field, each aiming from a different angle, the wands crossing mid-air in energetic but bloodless rivalry - the productive friction of competing fires. The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a large prominent Tiger's Eye crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-five-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger's Eye",
+          "role": "best_overall"
+        },
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "role": "best_upright"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-six-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Six of Wands (The Crowned Victory) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: a triumphant rider on a white horse moving through a cheering crowd, a laurel wreath on his brow and a victory-wreathed wand raised upright in his hand, the surrounding figures raising their own wands in salute - public recognition of the contest won. The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a large prominent Sunstone crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-six-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "sunstone-meaning",
+          "name": "Sunstone",
+          "role": "best_overall"
+        },
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "role": "best_upright"
+        },
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger's Eye",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-seven-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Seven of Wands (The Defiant Stand) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: a lone figure standing on raised high ground, six wands jabbing up at him from challengers below while he holds his own wand - the seventh - diagonally in a defiant defensive posture, holding the position he has won. The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a large prominent Tiger's Eye crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-seven-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "tiger-eye-meaning",
+          "name": "Tiger's Eye",
+          "role": "best_overall"
+        },
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "role": "best_upright"
+        },
+        {
+          "slug": "hematite-meaning",
+          "name": "Hematite",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-eight-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Eight of Wands (The Arrows in Flight) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: eight wands streaking across a clear open sky in a swift diagonal line like arrows in flight, no human figure present because the subject is pure motion itself - momentum unblocked, the logjam broken, energy released toward its target. The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a large prominent Carnelian crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-eight-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "role": "best_overall"
+        },
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "role": "best_upright"
+        },
+        {
+          "slug": "selenite-meaning",
+          "name": "Selenite",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-nine-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Nine of Wands (The Battle-Tested Sentinel) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: a weary sentinel with a bandaged head leaning on a single wand, a barrier of eight more wands lined upright behind him, his posture tired but unyielding - the last stand of resilience holding the final perimeter through sustained endurance. The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a large prominent Red Jasper crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-nine-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "red-jasper-meaning",
+          "name": "Red Jasper",
+          "role": "best_overall"
+        },
+        {
+          "slug": "carnelian-meaning",
+          "name": "Carnelian",
+          "role": "best_upright"
+        },
+        {
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-ten-of-wands-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Ten of Wands (The Burden of the Carrier) from the Minor Arcana, set in the realm of the wands suit (fire element). Central Rider-Waite imagery: a figure bent nearly double under a heavy faggot of ten wands, struggling along a road toward a distant town, the load so great that arrival itself is in question - the overload of passion and commitments compounded beyond what one body can carry. The background is built from a warm gradient of crimson, burnt-orange and ember-red flame tones. Beside the card visual, a living flourishing wand / staff wrapped in green leaves and small salamanders glows as the suit emblem. At the base of the composition, a large prominent Smoky Quartz crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-ten-of-wands-crystals.webp"
+      },
+      "suit": "wands",
+      "suit_element": "fire",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz",
+          "role": "best_overall"
+        },
+        {
+          "slug": "hematite-meaning",
+          "name": "Hematite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-queen-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Queen of Cups (The Compassionate Heart) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: a serene queen seated on a stone throne at the water edge, holding an ornate closed cup carefully so nothing spills, the only court figure whose cup is closed - holding deep feeling without being flooded by it - a calm sea and distant ship behind her. The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a large prominent Rose Quartz crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-queen-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_overall"
+        },
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "role": "best_upright"
+        },
+        {
+          "slug": "labradorite-meaning",
+          "name": "Labradorite",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-two-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Two of Cups (The Mutual Recognition) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: two figures facing each other on a green hill, each holding a cup, the caduceus of Hermes with its twin serpents and lion-headed staff rising between them as the symbol of balanced exchange - the first real joining of two equal hearts. The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a large prominent Rose Quartz crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-two-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_overall"
+        },
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "role": "best_upright"
+        },
+        {
+          "slug": "aquamarine-meaning",
+          "name": "Aquamarine",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-three-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Three of Cups (The Circle of Joy) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: three women in floral garlands dancing together in a field, each raising a cup, a harvest of fruit and pumpkins on the ground behind them - the union of two expanded into the shared joy and friendship of a circle. The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a large prominent Aquamarine crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-three-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "aquamarine-meaning",
+          "name": "Aquamarine",
+          "role": "best_overall"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_upright"
+        },
+        {
+          "slug": "blue-lace-agate-meaning",
+          "name": "Blue Lace Agate",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-four-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Four of Cups (The Apathy at the Offering) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: a youth sitting beneath a tree with arms crossed, three cups arrayed before him on the grass while a hand emerges from a cloud offering a fourth cup he refuses to notice - the heart turned indifferent to a real offering. The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a large prominent Moonstone crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-four-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "role": "best_overall"
+        },
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "role": "best_upright"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-five-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Five of Cups (The Grief That Turns Away) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: a figure in a black cloak standing beside three overturned cups with golden liquid spilled on the ground, a bridge crossing the stream behind him and two full cups standing unattended - the gaze fixed on what is lost rather than what remains. The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a large prominent Rose Quartz crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-five-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_overall"
+        },
+        {
+          "slug": "rhodochrosite-meaning",
+          "name": "Rhodochrosite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-six-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Six of Cups (The Tender Memory) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: an older figure in a white tunic accepting a cup brimming with blossoms from a smaller child in a sunlit town, six flower-filled cups arranged around them - the tender turning toward childhood memory and innocent nostalgia. The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a large prominent Moonstone crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-six-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "role": "best_overall"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_upright"
+        },
+        {
+          "slug": "aquamarine-meaning",
+          "name": "Aquamarine",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-seven-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Seven of Cups (The Mirage of Choices) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: seven cups floating in a mysterious cloud before a shadowed figure, each cup holding a different shimmering temptation - a victory wreath, a serpent, a castle, jewels, a dragon, a shrouded figure, a laurel - the seduction of untested fantasy. The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a large prominent Amethyst crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-seven-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst",
+          "role": "best_overall"
+        },
+        {
+          "slug": "fluorite-meaning",
+          "name": "Fluorite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-eight-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Eight of Cups (The Pilgrim Who Walks Away) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: a figure with a staff in one hand and a small flask in the other walking away from eight carefully stacked cups, an eclipsed moon above and a rocky mountain path leading upward - the courage to leave what no longer fills the heart. The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a large prominent Labradorite crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-eight-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "labradorite-meaning",
+          "name": "Labradorite",
+          "role": "best_overall"
+        },
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "role": "best_upright"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-nine-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Nine of Cups (The Wish Fulfilled) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: a contented figure sitting on a bench with arms folded across a satisfied chest, nine cups arranged in a graceful arc behind him like the curve of a fulfilled smile - the emotional arrival, the wish received, the heart at ease. The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a large prominent Rose Quartz crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-nine-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_overall"
+        },
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "role": "best_upright"
+        },
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-ten-of-cups-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Ten of Cups (The Rainbow Over the Family) from the Minor Arcana, set in the realm of the cups suit (water element). Central Rider-Waite imagery: ten cups arranged in a rainbow arc across a bright sky, below a couple embrace with raised arms while two children dance beside them, a snug home among trees beside a flowing river - the heart completion into lasting shared joy. The background is built from a cool gradient of deep blue, teal and luminous aqua water tones. Beside the card visual, an ornate golden chalice overflowing with light glows as the suit emblem. At the base of the composition, a large prominent Rose Quartz crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-ten-of-cups-crystals.webp"
+      },
+      "suit": "cups",
+      "suit_element": "water",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_overall"
+        },
+        {
+          "slug": "moonstone-meaning",
+          "name": "Moonstone",
+          "role": "best_upright"
+        },
+        {
+          "slug": "aquamarine-meaning",
+          "name": "Aquamarine",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-page-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Page of Swords (The Curious Mind) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a youthful figure standing on a raised windy mound, sword held upright with both hands on the hilt, hair blown back by the air of his own element, birds wheeling overhead - alert, curious, mentally alive, ready to defend a position he has not yet tested. The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a large prominent Sodalite crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-page-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "sodalite-meaning",
+          "name": "Sodalite",
+          "role": "best_overall"
+        },
+        {
+          "slug": "fluorite-meaning",
+          "name": "Fluorite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-knight-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Knight of Swords (The Truth-Seeker) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a determined knight charging at full gallop, sword thrust forward like a lance, horse hooves lifted clear off the ground, trees and birds bending aside in the wind of his passage - pure directed mental force in relentless pursuit of truth. The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a large prominent Selenite crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-knight-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "selenite-meaning",
+          "name": "Selenite",
+          "role": "best_overall"
+        },
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst",
+          "role": "best_upright"
+        },
+        {
+          "slug": "sodalite-meaning",
+          "name": "Sodalite",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-king-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card King of Swords (The Principled Authority) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a commanding king seated on an ornate throne adorned with a butterfly of transformed thought, sword raised upright in his right hand of action while his left hand opens in receiving - sovereign authority grounded in clear judgement and ethical structure. The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a large prominent Lapis Lazuli crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-king-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "lapis-meaning",
+          "name": "Lapis Lazuli",
+          "role": "best_overall"
+        },
+        {
+          "slug": "sodalite-meaning",
+          "name": "Sodalite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-two-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Two of Swords (The Truce at the Blindfold) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a blindfolded woman seated at the edge of a moonlit calm sea, two swords crossed horizontally across her chest in a deliberate barrier, a waxing moon behind her and two rocky crags flanking the water - the mind holding two opposing truths in suspended stalemate. The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a large prominent Selenite crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-two-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "selenite-meaning",
+          "name": "Selenite",
+          "role": "best_overall"
+        },
+        {
+          "slug": "fluorite-meaning",
+          "name": "Fluorite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-three-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Three of Swords (The Heart That Breaks Open) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a bright red heart floating against a grey stormy sky, pierced by three swords, heavy rain falling into the same colour as the heart blood - the moment a truth the heart was holding against breaks through and the feeling is genuine grief. The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a large prominent Rose Quartz crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-three-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_overall"
+        },
+        {
+          "slug": "rhodochrosite-meaning",
+          "name": "Rhodochrosite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "smoky-quartz-meaning",
+          "name": "Smoky Quartz",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-four-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Four of Swords (The Mind at Rest) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a knight lying in effigy on a tomb, hands folded in prayer, three swords hung on the wall above him and a fourth resting horizontally beneath his body, a stained-glass window of the Virgin and Child watching over the scene - the mind permitted to lie down for genuine restoration. The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a large prominent Amethyst crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-four-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst",
+          "role": "best_overall"
+        },
+        {
+          "slug": "selenite-meaning",
+          "name": "Selenite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-five-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Five of Swords (The Hollow Victory) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a smirking figure on a windswept shore gathering three swords from the ground, two opponents walking away bent in defeat, two more swords scattered behind - the hollow victory where the mind has won but the cost has emptied the win of its meaning. The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a large prominent Sodalite crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-five-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "sodalite-meaning",
+          "name": "Sodalite",
+          "role": "best_overall"
+        },
+        {
+          "slug": "lapis-meaning",
+          "name": "Lapis Lazuli",
+          "role": "best_upright"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-six-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Six of Swords (The Passage to Calmer Water) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a woman wrapped in a shawl and a small child seated in a flat-bottomed boat, a boatman poling them across calm water toward a distant shore, six swords standing upright in the vessel bow - the deliberate passage from turbulence toward calmer understanding. The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a large prominent Aquamarine crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-six-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "aquamarine-meaning",
+          "name": "Aquamarine",
+          "role": "best_overall"
+        },
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst",
+          "role": "best_upright"
+        },
+        {
+          "slug": "selenite-meaning",
+          "name": "Selenite",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-seven-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Seven of Swords (The Strategist in the Shadows) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a figure in a red cap crouching as he slips away from a striped tent, five swords gathered in his arms and two left standing in the ground behind, the distant camp he is leaving - the indirect strategy of stealth, tactical retreat or concealed move. The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a large prominent Sodalite crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-seven-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "sodalite-meaning",
+          "name": "Sodalite",
+          "role": "best_overall"
+        },
+        {
+          "slug": "fluorite-meaning",
+          "name": "Fluorite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "lapis-meaning",
+          "name": "Lapis Lazuli",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-eight-of-swords-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Eight of Swords (The Self-Made Cage) from the Minor Arcana, set in the realm of the swords suit (air element). Central Rider-Waite imagery: a blindfolded woman in a flowing robe standing bound in the open, eight swords arranged upright around her in a loose cage, water lapping at her feet and a castle on open ground behind her - the trap largely woven by the mind itself, the path open but unseen. The background is built from a pale gradient of soft yellow, cream and dawn-grey wind tones. Beside the card visual, an upright silver sword with an ornate hilt piercing through a crown of clouds glows as the suit emblem. At the base of the composition, a large prominent Amethyst crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-eight-of-swords-crystals.webp"
+      },
+      "suit": "swords",
+      "suit_element": "air",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "amethyst-meaning",
+          "name": "Amethyst",
+          "role": "best_overall"
+        },
+        {
+          "slug": "selenite-meaning",
+          "name": "Selenite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "citrine-meaning",
+          "name": "Citrine",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-knight-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Knight of Pentacles (The Steady Plodder) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: a patient knight seated on a heavy workhorse at a standstill, pentacle held in both hands, no charge and no rearing - the only knight whose horse is still, the relentless consistent progress of Earth that no pace can rush. The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a large prominent Hematite crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-knight-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "court",
+      "crystals": [
+        {
+          "slug": "hematite-meaning",
+          "name": "Hematite",
+          "role": "best_overall"
+        },
+        {
+          "slug": "red-jasper-meaning",
+          "name": "Red Jasper",
+          "role": "best_upright"
+        },
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-two-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Two of Pentacles (The Juggler at the Crossroads) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: a young man juggling two pentacles in an infinite loop, his body bent like the lemniscate infinity symbol above his head, two ships riding a choppy sea behind him - the practiced balancing of two competing demands kept simultaneously in motion. The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a large prominent Green Aventurine crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-two-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_overall"
+        },
+        {
+          "slug": "jade-meaning",
+          "name": "Jade",
+          "role": "best_upright"
+        },
+        {
+          "slug": "hematite-meaning",
+          "name": "Hematite",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-ten-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Ten of Pentacles (The Lasting Legacy) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: an elder in a richly patterned robe at the archway of his home, a younger couple and a child playing with two dogs at his feet, ten pentacles arranged across the image like the Tree of Life - three generations and the long build become a lasting foundation. The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a large prominent Jade crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-ten-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "jade-meaning",
+          "name": "Jade",
+          "role": "best_overall"
+        },
+        {
+          "slug": "pyrite-meaning",
+          "name": "Pyrite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-four-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Four of Pentacles (The Holder of What He Has) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: a figure in a cap and rich robe crouching on a stone bench, one pentacle clutched tight to his chest, another balanced precariously on his head, one under each foot, the city behind him - security that has crossed into desperate clutching possession. The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a large prominent Pyrite crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-four-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "pyrite-meaning",
+          "name": "Pyrite",
+          "role": "best_overall"
+        },
+        {
+          "slug": "red-jasper-meaning",
+          "name": "Red Jasper",
+          "role": "best_upright"
+        },
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-five-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Five of Pentacles (The Ones Outside the Light) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: two figures - a man on crutches and a thinly wrapped woman - trudging through falling snow past a glowing stained-glass church window, five pentacles fixed into the church wall - material hardship and exclusion, the warm help nearby not yet seen. The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a large prominent Red Jasper crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-five-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "red-jasper-meaning",
+          "name": "Red Jasper",
+          "role": "best_overall"
+        },
+        {
+          "slug": "hematite-meaning",
+          "name": "Hematite",
+          "role": "best_upright"
+        },
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_reversed"
+        }
+      ]
+    },
+    "tarot-nine-of-pentacles-crystals": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot card Nine of Pentacles (The Self-Sufficient Garden) from the Minor Arcana, set in the realm of the pentacles suit (earth element). Central Rider-Waite imagery: a woman in a beautiful yellow gown standing alone in a lush vineyard, a hooded falcon on her gloved wrist, a snail at her feet, nine pentacles arranged in the grapevines like ripe fruit - the single-made harvest of disciplined work enjoyed in dignified solitude. The background is built from a grounded gradient of moss-green, forest and warm umber-brown earth tones. Beside the card visual, a glowing golden pentacle coin engraved with a five-pointed star glows as the suit emblem. At the base of the composition, a large prominent Green Aventurine crystal cluster resting in the FOREGROUND at the bottom, detailed facets and natural color clearly visible, placed gracefully as the recommended stone. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, sacred geometry motifs, deep indigo velvet background harmonized with the accent palette, faint mandala sacred geometry in the deep indigo background, glowing light rays, floating luminous golden particles, symmetrical balanced composition, mystical contemplative Eastern-inspired Tibetan gallery atmosphere, highly detailed digital art, premium editorial quality, no text, no words, no letters.",
+        "file": "tarot-nine-of-pentacles-crystals.webp"
+      },
+      "suit": "pentacles",
+      "suit_element": "earth",
+      "card_type": "number",
+      "crystals": [
+        {
+          "slug": "aventurine-meaning",
+          "name": "Green Aventurine",
+          "role": "best_overall"
+        },
+        {
+          "slug": "jade-meaning",
+          "name": "Jade",
+          "role": "best_upright"
+        },
+        {
+          "slug": "rose-quartz-meaning",
+          "name": "Rose Quartz",
+          "role": "best_reversed"
+        }
+      ]
+    }
+  }
+}

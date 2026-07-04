@@ -1,0 +1,128 @@
+[
+  {
+    "id": "43180",
+    "slug": "crystal-compatibility-checker",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "43246",
+    "slug": "zodiac-compatibility-checker",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "44461",
+    "slug": "crystal-meaning-search",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "44469",
+    "slug": "bracelet-size-calculator",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "44471",
+    "slug": "ring-size-calculator",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "45647",
+    "slug": "chakra-test",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "45663",
+    "slug": "element-test",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "45670",
+    "slug": "crystal-quiz",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "45681",
+    "slug": "crystal-cleansing-timer",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "45772",
+    "slug": "birthstone-finder",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "45777",
+    "slug": "moon-calendar",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "47687",
+    "slug": "numerology-calculator",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "47972",
+    "slug": "chinese-zodiac-checker",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "48050",
+    "slug": "crystal-tarot-reading",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "48070",
+    "slug": "yes-no-tarot",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "48073",
+    "slug": "love-tarot",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "48074",
+    "slug": "crystal-oracle-cards",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "48075",
+    "slug": "tarot-birth-card",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "48154",
+    "slug": "ai-tarot-chat",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "50319",
+    "slug": "daily-tarot",
+    "ok": true,
+    "err": ""
+  },
+  {
+    "id": "50236",
+    "slug": "crystal-bracelet-builder",
+    "ok": true,
+    "err": ""
+  }
+]

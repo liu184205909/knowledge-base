@@ -1,0 +1,580 @@
+{
+  "_meta": {
+    "purpose": "塔罗牌阵 25 篇 hero 生图清单（slug 索引）",
+    "framework": "../../03-内容策略/内容Brief/模板-Tarot-牌阵框架.md",
+    "data_sources": [
+      "configs/spreads/spreads-knowledge.json"
+    ],
+    "hero_prompt_spec": "每张 = 牌阵布局示意（layout keyword 驱动）+ 卡位水晶落位（最多 3 颗代表性水晶）+ 东方阵法调性（mandala/Tibetan gallery）",
+    "total_articles": 25
+  },
+  "articles": {
+    "three-card-past-present-future": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Past-Present-Future Spread\" (3-card layout, linear pattern). Central composition: a horizontal row of evenly spaced tarot cards laid face up in a straight line rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Smoky Quartz (left), Clear Quartz (center), Moonstone (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "three-card-past-present-future.webp"
+      },
+      "spread": "Past-Present-Future Spread",
+      "layout": "linear",
+      "card_count": 3,
+      "crystals": [
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        }
+      ]
+    },
+    "celtic-cross-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Celtic Cross Spread\" (10-card layout, cross-and-staff pattern). Central composition: intricate Celtic Cross pattern with a central cross and vertical staff, a complex Celtic Cross layout: a central cross of overlapping cards plus a vertical staff of cards running to the right rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Clear Quartz (left), Black Tourmaline (center), Smoky Quartz (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "celtic-cross-spread.webp"
+      },
+      "spread": "Celtic Cross Spread",
+      "layout": "cross-and-staff",
+      "card_count": 10,
+      "crystals": [
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        {
+          "slug": "black-tourmaline",
+          "name": "Black Tourmaline"
+        },
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        }
+      ]
+    },
+    "yes-no-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Yes/No Spread\" (3-card layout, linear pattern). Central composition: a horizontal row of evenly spaced tarot cards laid face up in a straight line rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Carnelian (left), Smoky Quartz (center), Amethyst (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "yes-no-spread.webp"
+      },
+      "spread": "Yes/No Spread",
+      "layout": "linear",
+      "card_count": 3,
+      "crystals": [
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        }
+      ]
+    },
+    "love-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Love Spread\" (5-card layout, fan pattern). Central composition: cards arranged in an elegant symmetrical fan arc rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Rose Quartz (left), Moonstone (center), Rhodonite (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "love-spread.webp"
+      },
+      "spread": "Love Spread",
+      "layout": "fan",
+      "card_count": 5,
+      "crystals": [
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        },
+        {
+          "slug": "rhodonite",
+          "name": "Rhodonite"
+        }
+      ]
+    },
+    "mind-body-spirit-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Mind-Body-Spirit Spread\" (3-card layout, balanced-triangle pattern). Central composition: three cards arranged in an upward-pointing equilateral triangle rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Fluorite (left), Bloodstone (center), Amethyst (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "mind-body-spirit-spread.webp"
+      },
+      "spread": "Mind-Body-Spirit Spread",
+      "layout": "balanced-triangle",
+      "card_count": 3,
+      "crystals": [
+        {
+          "slug": "fluorite",
+          "name": "Fluorite"
+        },
+        {
+          "slug": "bloodstone",
+          "name": "Bloodstone"
+        },
+        {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        }
+      ]
+    },
+    "single-card-daily-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Single Card Daily Draw\" (1-card layout, single pattern). Central composition: a single tarot card laid flat and centered rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 1 natural crystal gemstones placed gracefully as the recommended stones for this spread — Clear Quartz (left) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "single-card-daily-spread.webp"
+      },
+      "spread": "Single Card Daily Draw",
+      "layout": "single",
+      "card_count": 1,
+      "crystals": [
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        }
+      ]
+    },
+    "situation-action-outcome-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Situation-Action-Outcome Spread\" (3-card layout, linear pattern). Central composition: a horizontal row of evenly spaced tarot cards laid face up in a straight line rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Clear Quartz (left), Carnelian (center), Moonstone (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "situation-action-outcome-spread.webp"
+      },
+      "spread": "Situation-Action-Outcome Spread",
+      "layout": "linear",
+      "card_count": 3,
+      "crystals": [
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        }
+      ]
+    },
+    "relationship-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Relationship Spread\" (6-card layout, two-columns pattern). Central composition: two vertical columns of cards facing each other across a central divide rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Rose Quartz (left), Moonstone (center), Rhodonite (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "relationship-spread.webp"
+      },
+      "spread": "Relationship Spread",
+      "layout": "two-columns",
+      "card_count": 6,
+      "crystals": [
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        },
+        {
+          "slug": "rhodonite",
+          "name": "Rhodonite"
+        }
+      ]
+    },
+    "career-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Career Spread\" (5-card layout, linear pattern). Central composition: a horizontal row of evenly spaced tarot cards laid face up in a straight line rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Tiger Eye (left), Carnelian (center), Citrine (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "career-spread.webp"
+      },
+      "spread": "Career Spread",
+      "layout": "linear",
+      "card_count": 5,
+      "crystals": [
+        {
+          "slug": "tiger-eye",
+          "name": "Tiger Eye"
+        },
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        {
+          "slug": "citrine",
+          "name": "Citrine"
+        }
+      ]
+    },
+    "decision-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Decision Spread (Two Paths)\" (5-card layout, fork pattern). Central composition: cards arranged in a Y-shaped fork with two diverging paths branching from one base card rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Clear Quartz (left), Carnelian (center), Aquamarine (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "decision-spread.webp"
+      },
+      "spread": "Decision Spread (Two Paths)",
+      "layout": "fork",
+      "card_count": 5,
+      "crystals": [
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        {
+          "slug": "aquamarine",
+          "name": "Aquamarine"
+        }
+      ]
+    },
+    "shadow-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Shadow Work Spread\" (4-card layout, diamond pattern). Central composition: four cards arranged in a diamond rhombus shape rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Labradorite (left), Smoky Quartz (center), Rose Quartz (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "shadow-spread.webp"
+      },
+      "spread": "Shadow Work Spread",
+      "layout": "diamond",
+      "card_count": 4,
+      "crystals": [
+        {
+          "slug": "labradorite",
+          "name": "Labradorite"
+        },
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "new-moon-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"New Moon Spread\" (5-card layout, crescent pattern). Central composition: cards arranged in a gentle crescent moon arc rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Smoky Quartz (left), Moonstone (center), Clear Quartz (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "new-moon-spread.webp"
+      },
+      "spread": "New Moon Spread",
+      "layout": "crescent",
+      "card_count": 5,
+      "crystals": [
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        },
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        }
+      ]
+    },
+    "full-moon-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Full Moon Spread\" (5-card layout, circle pattern). Central composition: cards arranged in a complete circle ring rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Selenite (left), Moonstone (center), Smoky Quartz (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "full-moon-spread.webp"
+      },
+      "spread": "Full Moon Spread",
+      "layout": "circle",
+      "card_count": 5,
+      "crystals": [
+        {
+          "slug": "selenite",
+          "name": "Selenite"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        },
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        }
+      ]
+    },
+    "self-love-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Self-Love Spread\" (4-card layout, heart pattern). Central composition: cards arranged in the outline of a heart shape rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Rose Quartz (left), Rhodonite (center), Kunzite (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "self-love-spread.webp"
+      },
+      "spread": "Self-Love Spread",
+      "layout": "heart",
+      "card_count": 4,
+      "crystals": [
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        {
+          "slug": "rhodonite",
+          "name": "Rhodonite"
+        },
+        {
+          "slug": "kunzite",
+          "name": "Kunzite"
+        }
+      ]
+    },
+    "money-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Money Mindset Spread\" (4-card layout, linear pattern). Central composition: a horizontal row of evenly spaced tarot cards laid face up in a straight line rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Aventurine (left), Pyrite (center), Jade (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "money-spread.webp"
+      },
+      "spread": "Money Mindset Spread",
+      "layout": "linear",
+      "card_count": 4,
+      "crystals": [
+        {
+          "slug": "aventurine",
+          "name": "Aventurine"
+        },
+        {
+          "slug": "pyrite",
+          "name": "Pyrite"
+        },
+        {
+          "slug": "jade",
+          "name": "Jade"
+        }
+      ]
+    },
+    "dream-interpretation-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Dream Interpretation Spread\" (5-card layout, star pattern). Central composition: a precise five-pointed star geometry, cards arranged in a five-pointed star pattern rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Labradorite (left), Moonstone (center), Clear Quartz (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "dream-interpretation-spread.webp"
+      },
+      "spread": "Dream Interpretation Spread",
+      "layout": "star",
+      "card_count": 5,
+      "crystals": [
+        {
+          "slug": "labradorite",
+          "name": "Labradorite"
+        },
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        },
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        }
+      ]
+    },
+    "blockages-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Blockages Spread\" (4-card layout, cross pattern). Central composition: four cards arranged in a plus-sign / cross shape rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Black Tourmaline (left), Smoky Quartz (center), Labradorite (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "blockages-spread.webp"
+      },
+      "spread": "Blockages Spread",
+      "layout": "cross",
+      "card_count": 4,
+      "crystals": [
+        {
+          "slug": "black-tourmaline",
+          "name": "Black Tourmaline"
+        },
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        {
+          "slug": "labradorite",
+          "name": "Labradorite"
+        }
+      ]
+    },
+    "week-ahead-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Week Ahead Spread\" (7-card layout, days-row pattern). Central composition: seven cards laid in a horizontal row labeled by days of the week rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Clear Quartz (left), Carnelian (center), Fluorite (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "week-ahead-spread.webp"
+      },
+      "spread": "Week Ahead Spread",
+      "layout": "days-row",
+      "card_count": 7,
+      "crystals": [
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        {
+          "slug": "fluorite",
+          "name": "Fluorite"
+        }
+      ]
+    },
+    "year-ahead-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Year Ahead Spread (Birthday)\" (12-card layout, wheel pattern). Central composition: a twelve-position zodiac wheel pattern, twelve cards arranged in a circular wheel like zodiac positions rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Clear Quartz (left), Carnelian (center), Aventurine (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "year-ahead-spread.webp"
+      },
+      "spread": "Year Ahead Spread (Birthday)",
+      "layout": "wheel",
+      "card_count": 12,
+      "crystals": [
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        {
+          "slug": "carnelian",
+          "name": "Carnelian"
+        },
+        {
+          "slug": "aventurine",
+          "name": "Aventurine"
+        }
+      ]
+    },
+    "twin-flame-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Twin Flame Spread\" (6-card layout, mirror pattern). Central composition: two mirrored rows of cards facing each other across a central axis rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Rose Quartz (left), Labradorite (center), Amethyst (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "twin-flame-spread.webp"
+      },
+      "spread": "Twin Flame Spread",
+      "layout": "mirror",
+      "card_count": 6,
+      "crystals": [
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        },
+        {
+          "slug": "labradorite",
+          "name": "Labradorite"
+        },
+        {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        }
+      ]
+    },
+    "letting-go-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Letting Go Spread\" (4-card layout, descending pattern). Central composition: cards arranged in a descending staircase diagonal from upper left to lower right rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Smoky Quartz (left), Labradorite (center), Rose Quartz (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "letting-go-spread.webp"
+      },
+      "spread": "Letting Go Spread",
+      "layout": "descending",
+      "card_count": 4,
+      "crystals": [
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        {
+          "slug": "labradorite",
+          "name": "Labradorite"
+        },
+        {
+          "slug": "rose-quartz",
+          "name": "Rose Quartz"
+        }
+      ]
+    },
+    "truth-or-lie-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Truth or Lie Spread\" (3-card layout, linear pattern). Central composition: a horizontal row of evenly spaced tarot cards laid face up in a straight line rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Clear Quartz (left), Labradorite (center), Amethyst (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "truth-or-lie-spread.webp"
+      },
+      "spread": "Truth or Lie Spread",
+      "layout": "linear",
+      "card_count": 3,
+      "crystals": [
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        {
+          "slug": "labradorite",
+          "name": "Labradorite"
+        },
+        {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        }
+      ]
+    },
+    "wish-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Wish Spread\" (4-card layout, star pattern). Central composition: a precise five-pointed star geometry, cards arranged in a five-pointed star pattern rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Moonstone (left), Labradorite (center), Citrine (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "wish-spread.webp"
+      },
+      "spread": "Wish Spread",
+      "layout": "star",
+      "card_count": 4,
+      "crystals": [
+        {
+          "slug": "moonstone",
+          "name": "Moonstone"
+        },
+        {
+          "slug": "labradorite",
+          "name": "Labradorite"
+        },
+        {
+          "slug": "citrine",
+          "name": "Citrine"
+        }
+      ]
+    },
+    "five-card-advice-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"5-Card Advice Spread\" (5-card layout, plus pattern). Central composition: five cards arranged in a plus-sign shape with one center card rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Clear Quartz (left), Black Tourmaline (center), Amethyst (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "five-card-advice-spread.webp"
+      },
+      "spread": "5-Card Advice Spread",
+      "layout": "plus",
+      "card_count": 5,
+      "crystals": [
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        {
+          "slug": "black-tourmaline",
+          "name": "Black Tourmaline"
+        },
+        {
+          "slug": "amethyst",
+          "name": "Amethyst"
+        }
+      ]
+    },
+    "horseshoe-spread": {
+      "hero": {
+        "prompt": "A symbolic editorial illustration for the tarot spread titled \"Horseshoe Spread\" (7-card layout, horseshoe pattern). Central composition: cards arranged in a U-shaped horseshoe arc opening upward rendered on a deep indigo velvet reading cloth. The cards are shown as elegant backs with subtle Rider-Waite-style ornamental borders, suggesting the layout structure itself rather than specific card faces. At the base of the composition, 3 natural crystal gemstones placed gracefully as the recommended stones for this spread — Smoky Quartz (left), Clear Quartz (center), Labradorite (right) — their natural color and facets clearly visible. A luminous golden sacred-geometry mandala glow softly frames the entire spread arrangement, marking the energetic field of the reading. The composition is rendered in elegant luminous golden line work with a soft glow. Rich spiritual graphic design, subtle Eastern-inspired Tibetan gallery atmosphere, sacred geometry motifs, faint mandala line work in the deep indigo background, luminous golden particles floating, soft glow of contemplative practice, symmetrical balanced composition, premium editorial quality, no text, no words, no letters.",
+        "file": "horseshoe-spread.webp"
+      },
+      "spread": "Horseshoe Spread",
+      "layout": "horseshoe",
+      "card_count": 7,
+      "crystals": [
+        {
+          "slug": "smoky-quartz",
+          "name": "Smoky Quartz"
+        },
+        {
+          "slug": "quartz",
+          "name": "Clear Quartz"
+        },
+        {
+          "slug": "labradorite",
+          "name": "Labradorite"
+        }
+      ]
+    }
+  }
+}

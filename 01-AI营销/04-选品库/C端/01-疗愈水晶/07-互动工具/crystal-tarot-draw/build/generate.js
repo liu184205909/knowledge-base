@@ -59,15 +59,19 @@ const TK = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../_shared/tar
 const CFG = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../../04-内容生产/13.tarot/configs/tarot-config.json'), 'utf8'));
 const SD = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../../crystal-meaning-search/data/search-data.json'), 'utf8'));
 
+// >>>>>>> added by fix-major-crystal-slugs.js (兼容 tarot-knowledge -meaning slug + search-data 短 slug key)
+function normSlug(s){ return s ? String(s).replace(/-meaning$/,'') : s; }
+// <<<<<<< added by fix-major-crystal-slugs.js
+
 const BY_SLUG = {};
 SD.crystals.forEach(c => {
-  BY_SLUG[c.slug] = { name: c.name, img: c.img || '', link: c.link || '', shop: c.shop || ('/shop/?s=' + c.slug) };
+  BY_SLUG[normSlug(c.slug)] = { name: c.name, img: c.img || '', link: c.link || '', shop: c.shop || ('/shop/?s=' + c.slug) };
 });
 const HEALING = '/product-category/healing-crystals-jewelry/';
 
 function enrichStone(s) {
   if (!s) return null;
-  const sc = BY_SLUG[s.slug] || { name: s.name, img: '', link: '', shop: HEALING };
+  const sc = BY_SLUG[normSlug(s.slug)] || { name: s.name, img: '', link: '', shop: HEALING };
   return { slug: s.slug, name: sc.name || s.name, reason: s.reason, img: sc.img, shop: sc.shop };
 }
 
