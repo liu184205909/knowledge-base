@@ -1,3 +1,0 @@
-WORDS=1360
-STITCH=[]
-COMPL=[]

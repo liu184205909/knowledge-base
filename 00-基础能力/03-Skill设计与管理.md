@@ -357,7 +357,7 @@ description: |
 
 ## 4. 推荐外部 Skills
 
-> 按实际项目需求从 GitHub 高星仓库筛选，不装全量，避免索引层 token 浪费。
+> ⚠️ **本节为历史参考，不是当前配置**。下列仓库中 marketing-skills 的 `content-strategy`/`keyword-research`/`copywriting` 等已在 2026-07-05 清理中删除（与 `01-AI营销` 文档库重叠，会截胡定制方法论）。**当前实际白名单和判断框架见 [§5 Skill 管理办法](#5-skill-管理办法)**。以下仅保留作"可选安装"参考，装前必须过 §5.1 判断框架。
 
 ### 4.1 执行层（有 Python 脚本，可自动化验证）
 
@@ -415,3 +415,101 @@ Layer 1.5: Script + LLM        ← OpenCLI = Script 层，零 Token；LLM 只解
 - 微信聊天记录读取需 root 权限（macOS `sudo wx init`），Windows 支持待验证
 - 复用 Chrome 登录态 = 暴露所有登录身份，注意安全边界
 - 私域数据访问需自行评估合规风险
+
+---
+
+## 5. Skill 管理办法
+
+> **核心原则**：skill 是"动作"（高频可自动触发的执行单元），文档是"知识"（需判断何时加载的方法论）。装 skill 前先判断：这是动作，还是知识冒充动作？这条区分是 2026-07-05 清理 13 个 skill 后沉淀的，避免再发生"通用 skill 截胡定制文档"。
+
+### 5.1 判断框架：装不装新 skill
+
+装新 skill 前，依次过这五道门（任一不通过即不装）：
+
+| # | 问题 | 不通过则 |
+|---|------|---------|
+| 1 | 这件事是**高频触发**（每周 3+ 次）还是一次性？ | 一次性 → 用 prompt 或脚本 |
+| 2 | 你的文档库里有没有**更贴业务的版本**？ | 有 → 删通用 skill 留文档（如 content-strategy 截胡 RLM） |
+| 3 | SOP 是否**稳定固化**（迭代慢）？ | 还在演进、项目特化多 → 留文档 |
+| 4 | context 占用是否**可控**（SKILL.md <500 行）？ | 太大 → 拆子 skill，母文档留文档形态 |
+| 5 | 触发词是否**精确**（不会撞日常对话）？ | 泛词触发（"写文案""做策略"）→ 会误触发，不建 |
+
+**反面信号**（命中即不建/即删）：
+- 内容是"通用营销理论/写作原则" → 这是知识，且你的文档库版本更贴业务
+- 触发词和日常对话撞（"做内容""写文案""想策略"）→ 会截胡
+- 依赖特定平台但你没在用（如 workctl 依赖阿里 Work Agent）
+
+### 5.2 当前白名单（2026-07-05，11 个）
+
+> 真源 `~/.claude/skills/`。Codex 侧 `~/.agents/skills` 是 symlink 指回真源。已删 skill 备份在 `~/.claude/skills-disabled-20260705/`（实体目录 mv，非 rm，可恢复）。
+
+| 类别 | Skill | 作用 |
+|---|---|---|
+| **文件处理** | `docx` / `pdf` / `xlsx` | Office/PDF 格式化生成（动作类刚需，低频但不可替代） |
+| **联网** | `web-access` | CDP 浏览器自动化（JS 渲染/登录态/反爬） |
+| **防护** | `fable-discipline` | 防假完成（先验证再完成，踩过大坑） |
+| **开发** | `frontend-design` | 审美决策（拒绝 AI slop） |
+| | `wordpress-block-theming` | WP FSE 主题开发 |
+| **SEO** | `gsc-radar` | GSC 数据驱动主动扫描 |
+| | `analytics-tracking` | GA4/GTM 埋点实施（近期要做 GTM） |
+| **记忆** | `mem-search` / `knowledge-agent` | claude-mem 跨会话记忆 |
+
+### 5.3 已删黑名单（13 个，备份可恢复）
+
+| 批次 | Skill | 删除理由 |
+|---|---|---|
+| **营销理论（11）** | `copywriting` / `copy-editing` | 重叠 [07-去AI化工作流](../01-AI营销/01-营销方法论基础/07-英文SEO批量写作与去AI化工作流.md)（禁用词库+反模式） |
+| | `content-strategy`（最危险） | 90% 重叠 RLM+1F+ACE，会截胡定制方法论 |
+| | `marketing-ideas` / `marketing-psychology` | 重叠 `01-营销方法论基础/` 文档库 |
+| | `customer-research` / `seo-keyword-research` | 重叠 1C + Hermes 闭环 + DataForSEO |
+| | `competitor-alternatives` | SaaS 对比页工具，水晶内容站用不上 |
+| | `site-architecture` / `programmatic-seo` | 有布局方案文档 + 不做 pSEO |
+| | `social-content` | 不做社媒运营 |
+| **平台/监控（2）** | `workctl` | 阿里 Work Agent 平台 wrapper，没用过该平台 |
+| | `alert-manager` | 持续监控预警，现阶段站点没量级，gsc-radar 够用 |
+
+**通用教训**：这些都是某个 skill 包顺带装进来的"通用知识冒充动作"。留着会污染 skill 选择、截胡定制文档、输出 SaaS 通用策略稀释项目方法论。
+
+### 5.4 与 01-AI营销 文档库的分工边界
+
+**铁律**：营销理论 / 内容策略 / 写作规范类需求，**先查 `01-AI营销` 文档库，不装通用 skill**。
+
+| 需求 | 用文档（不装 skill） | 为什么文档更强 |
+|---|---|---|
+| 写文案/去 AI 化 | [07-英文SEO批量写作与去AI化工作流](../01-AI营销/01-营销方法论基础/07-英文SEO批量写作与去AI化工作流.md) | 带水晶站例句 + 禁用词库 + 三道门禁 |
+| 内容策略/选题 | [RLM 执行版](../01-AI营销/01-营销方法论基础/00-RLM营销方法论-执行版.md) + 1F + ACE | 三源验证逻辑，非通用 4 因子评分 |
+| 关键词研究 | [1C 关键词研究方法论](../01-AI营销/01-营销方法论基础/01-关键词研究方法论.md) + Seed-Master | 项目数据驱动 |
+| 竞品分析 | Hermes 闭环 + DataForSEO + memory `competitor-research-serp-driven-strict` | 已有完整 SOP |
+
+### 5.5 生命周期规则
+
+| 信号 | 动作 | 典型 |
+|---|---|---|
+| 装了 3 个月没用过 | 移到备份目录 | workctl（不清楚用途） |
+| 通用 skill 和文档库重叠 | 删 skill 留文档 | copywriting / content-strategy |
+| 项目阶段过去了 | 移到备份 | alert-manager（站点还没量级） |
+| 临时任务但近期高频 | 保留 | analytics-tracking（要做 GTM） |
+| 文档里某高频片段稳定出来 | 拆成子 skill（触发条件见 §5.6） | 暂不拆，文档形态够用 |
+
+**清理节奏**：每季度过一遍 `ls ~/.claude/skills/`，对每个 skill 问"过去 3 个月用过吗？"。删比装容易，备份目录兜底。
+
+### 5.6 候选子 skill（触发条件未到，暂不拆）
+
+RLM 执行版里的高频片段，理论上是子 skill 候选。但**现在不拆**——文档还在演进、反面案例还不够、加载痛点还没出现。等触发条件满足再动手，不要为"完成待办"而拆。
+
+**拆子 skill 的四个触发信号**（任一出现再考虑）：
+- 每次都要**手动粘贴**某段规则到 prompt → 加载痛感出现
+- 积累了 **20+ 个反面案例**（"AI 又在这里露馅"）→ skill 内容才丰富
+- 源文档**连续 2 个月没大改** → SOP 稳定了
+- 需要给**非 Claude Code 的工具/agent** 复用 → 跨工具需求
+
+**候选清单**（触发前不动，触发后按需拆）：
+
+| 候选子 skill | 来源片段 | 现状 |
+|---|---|---|
+| `rlm-deai-edit` | 07 §5（禁用词库+反模式+三道门禁） | 07 还在迭代（06-28/06-01 大改），反面案例不够 |
+| `rlm-brief-gate` | RLM 3.4（Brief 锁定门槛+DREAM） | Brief 流程稳定后再考虑 |
+| `rlm-competitor-serp` | 1A 轨道 A（serp_check SOP） | 已有 memory `competitor-research-serp-driven-strict`，文档够用 |
+| `rlm-qa-route` | 3.6（质检路由矩阵） | 矩阵类规则，文档形态反而更清晰 |
+
+> 当前用文档形态跑水晶站几百篇文章都很顺，没有"加载痛点"。痛点没出现就别建——这是 §5.1 第 1 条的反面应用。

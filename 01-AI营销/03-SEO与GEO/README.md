@@ -175,3 +175,5 @@
 | Search Engine Journal / Link Distance | 行业 | 17（Link Distance Ranking Algorithms 专题 + reduced link graph 分析） |
 | David Quaid 链接衰减实测 | 研究 | 17（每跳损失 85% 实测 + 阻尼 15% vs 净衰减 85% 差额分析） |
 | 鸭老师SEO《什么是 PRNS》 | 行业 | 17（中文原文 + 种子/最短路径拆解 + 可操作变量清单 + 话语区分） |
+| Lois / 海外SEO与ASO（GSC AI 数据复盘, 2026.07） | 行业 | 05（GSC Generative AI features 实证：586K 曝光 / 223 国 / 日波动 3K-22K / 工具型 AI 检索） |
+| Ahrefs（140 亿页分析, 2023.12） | 研究 | 05（96.55% 零流量基线 + 1.74% 新页进 Top 10） |

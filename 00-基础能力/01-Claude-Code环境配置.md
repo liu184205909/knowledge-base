@@ -143,40 +143,31 @@ claude mcp add -s user seoctopus -- node ~/tools/seoctopus/dist/index.js
 
 ## Skill 安装
 
-> `npx skills add` 加 `-g` 装全局；`npx clawhub@latest install` 建议 `cd ~/` 后执行。
+> `npx skills add` 加 `-g` 装全局；`npx clawhub@latest install` 建议 `cd ~/` 后执行。**装前必须过 [03-Skill §5.1 判断框架](./03-Skill设计与管理.md#51-判断框架装不装新-skill)**——避免装回来刚清理掉的"通用知识冒充动作"类 skill。
+
+**真源**：`~/.claude/skills/`。Codex 侧 `~/.agents/skills` 是 symlink 自动同步。新 skill 只装真源，别往 `~/.agents/skills/` 放实体。
+
+### 白名单安装源（11 个）
 
 ```bash
-# 浏览器 — 详见上方 "Web-Access Skill" 章节
-# git clone https://github.com/eze-is/web-access ~/.claude/skills/web-access
-git clone https://github.com/liu184205909/tabbit-ai ~/.claude/skills/tabbit-ai
+# 文件处理（Anthropic 官方）
+npx skills add anthropics/skills --skill pdf xlsx docx --agent claude-code -y -g
 
-# 文档生成
-npx skills add anthropics/skills --skill pdf xlsx docx pptx skill-creator --agent claude-code -y -g
+# 联网（CDP 浏览器自动化）— 详见上方 "Web-Access Skill" 章节
+git clone https://github.com/eze-is/web-access ~/.claude/skills/web-access
 
-# SEO
-npx skills add AgriciDaniel/claude-seo -g
-npx skills add Bhanunamikaze/Agentic-SEO-Skill --agent claude-code -y -g
-npx skills add aaron-he-zhu/seo-geo-claude-skills -g
-npx skills add JeffLi1993/seo-audit-skill -g
+# 防护（fable-discipline）/ 开发（frontend-design / wordpress-block-theming）
+# 已就位，非 npx 安装，见各自专节
 
-# 博客 + 广告 + 内容改写
-npx skills add AgriciDaniel/claude-blog -g
-npx skills add AgriciDaniel/claude-ads -g
-npx skills add AgriciDaniel/claude-repurpose -g
+# SEO（gsc-radar 自建 / analytics-tracking）
+# gsc-radar 见上方专节；analytics-tracking 按需 npx skills add
 
-# 营销 + 社媒
-npx skills add coreyhaines31/marketingskills --agent claude-code -y -g
-npx skills add typefully/agent-skills --agent claude-code -y -g
-
-# WordPress 建站
-npx skills.add Automattic/wordpress-agent-skills --agent claude-code -y -g
-
-# 辅助工具
+# 记忆（claude-mem，含 mem-search + knowledge-agent）
 npx skills add thedotmack/claude-mem --agent claude-code -y -g
-npx clawhub@latest install image-generation
 ```
 
 > ⚠️ 第三方 Skill 存在供应链风险，安装前审查源码和 Star 数，优先选官方或高 Star 仓库。
+> **已删 skill 备份在 `~/.claude/skills-disabled-20260705/`**，恢复任一个：`mv ~/.claude/skills-disabled-20260705/<name> ~/.claude/skills/`
 
 ### fable-discipline（执行纪律 — 已移植，非第三方直装）
 
@@ -312,21 +303,18 @@ cp ~/Downloads/DESIGN.md /path/to/project/DESIGN.md
 
 ## Skill 速查
 
+> **当前白名单（11 个，2026-07-05）**。完整管理规则、判断框架和已删黑名单见 [03-Skill设计与管理.md §5](./03-Skill设计与管理.md#5-skill-管理办法)。
+
 | 场景 | Skill | 触发词 |
 |------|-------|--------|
 | 浏览器操作/JS渲染/反爬/登录态 | **web-access** | "打开网页" / "去小红书搜" / "读这个PDF" / "帮我登录XX" |
-| 博客创作+SEO | **claude-blog** | "写博客" |
-| SEO 审计 | **claude-seo** / **Agentic-SEO** / **seo-audit-skill** | "SEO审计" |
-| 付费广告审计 | **claude-ads** | "审计广告" |
-| 营销策略全家桶 | **marketingskills** | "营销策略" / "定价" |
-| 内容改写（1→18平台） | **claude-repurpose** | `/repurpose <URL>` |
-| 社媒发布 | **typefully** | "发推文" |
-| 办公文档生成 | **pdf/xlsx/docx/pptx** | "生成PDF" |
-| 配图 | **image-generation** | "配图" |
-| 跨会话记忆 | **claude-mem** | "上次怎么解决的" |
+| 办公文档生成 | **pdf / xlsx / docx** | "生成PDF" / "做个Excel" / "导出Word" |
 | 多步任务防假完成 / 严格执行 | **fable-discipline** | "fable风格" / "严格执行" / "先验证再完成" / "防假完成" / "建目标账本" |
 | GSC 数据驱动 SEO（扫机会+深挖竞品） | **gsc-radar** | "扫一下X的机会" / "X站SEO体检" / "深挖这个关键词" |
+| GA4/GTM 埋点实施 | **analytics-tracking** | "配GA4" / "GTM埋点" / "设转化追踪" / "加事件" |
 | UI 设计（Claude Design 平替，详见专节） | **frontend-design** + DESIGN.md | "做个UI" / "建网页" / "有设计感的界面" / "用frontend-design风格" |
+| WordPress FSE 主题开发 | **wordpress-block-theming** | "改WP主题" / "建WP站" / "主题模板" |
+| 跨会话记忆 | **mem-search** / **knowledge-agent** | "上次怎么解决的" / "建知识库" |
 
 ### 按需安装（未本地部署，需时再装）
 

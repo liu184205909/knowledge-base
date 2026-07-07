@@ -144,6 +144,17 @@ const DICHOTOMIES = [
   ]}
 ];
 
+// ===== 28 题测试器（ABCD 4 选项 Likert，aa17d11e 设计 + a46a276a 整合）=====
+// 数据真源：build/mbti-quiz-4opt.json（28 题 × 4 选项 + 计分 meta）
+// 维度映射：EI（能量方向）/ NS（信息收集）/ TF（决策）/ JP（生活方式）
+// 每题 4 选项 A/B/C/D → 加权计分：A=+2X / B=+1X / C=+1Y / D=+2Y（X/Y 是维度两端）
+// 每维度两极累计 0..14（7 题 × 权重 1 或 2，全答 X+Y=14）
+// 决主导极：decide(X,Y) 用 >= tiebreak（first-letter-wins，与原 binary 一致，无静默翻转）
+// strength 标签：4 维 gap 平均 → ≥6 strong / 3-5.99 moderate / <3 mild
+// 关联站特色：部分题干带水晶/冥想/塔罗场景（#2 持握水晶 / #9 塔罗 / #11 冥想 / #12 选水晶 / #17 选石）
+const QUIZ_SRC = JSON.parse(fs.readFileSync(path.resolve(__dirname, 'mbti-quiz-4opt.json'), 'utf8'));
+const QUIZ = QUIZ_SRC.questions;
+
 const MBTI_NOTICE = (M._meta && M._meta.mbti_trademark_notice) || 'MBTI is a registered trademark of The Myers-Briggs Company. This tool is an independent framework based on Jungian cognitive functions, offered for self-reflection — not affiliated with, endorsed by, or sponsored by The Myers-Briggs Company.';
 
 // ===== asciiJSON + safeJSON（皇冠/daily-tarot 同款，wp_kses 防）=====
@@ -157,6 +168,7 @@ const DATA_BLOCK = asciiJSON({
   cards: CARDS,
   card_by_slug: CARD_BY_SLUG,
   dichotomies: DICHOTOMIES,
+  quiz: QUIZ,
   healing: HEALING,
   notice: MBTI_NOTICE
 });
@@ -169,10 +181,33 @@ const APP_JS = `(function(){
   catch (e) { console.error('EMT data parse failed', e); return; }
 
   var TYPES = DATA.types, CARDS = DATA.cards, CARD_BY_SLUG = DATA.card_by_slug;
-  var DICHOTOMIES = DATA.dichotomies, HEALING = DATA.healing, NOTICE = DATA.notice;
+  var DICHOTOMIES = DATA.dichotomies, QUIZ = DATA.quiz, HEALING = DATA.healing, NOTICE = DATA.notice;
 
   // ---------- 工具函数 ----------
   function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+  // Case transforms (rendering layer only — JSON data unchanged)
+  // toTitleCaseEvery: 每词首字母大写（含小词 at/of/the 都大写），保留尾部标点（— , .）和连字符词
+  function toTitleCaseEvery(s){
+    s = String(s==null?'':s);
+    return s.split(' ').map(function(w){
+      // 跳过纯标点/破折号 token（如 "—" 或 "—")
+      if (!w || !/[a-zA-Z]/.test(w)) return w;
+      // 连字符词：每段首字母大写（self-reflection → Self-Reflection）
+      return w.split('-').map(function(seg){
+        if (!seg || !/[a-zA-Z]/.test(seg.charAt(0))) return seg;
+        return seg.charAt(0).toUpperCase() + seg.slice(1);
+      }).join('-');
+    }).join(' ');
+  }
+  // sentenceCase: 句首大写，其余保持（如 label 全小写则首字母大写其余不动；不强制 lower-case 后续）
+  function sentenceCase(s){
+    s = String(s==null?'':s);
+    if (!s) return s;
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+  // displayType: INTJ → Intj（前端显示柔和；数据层 type=INTJ 不变，用于查表/deep link 解析）
+  // 商标 "MBTI" 本身仍全大写（NOTICE 文案不动）。
+  function displayType(t){ t = String(t||''); return t ? (t[0] + t.slice(1).toLowerCase()) : t; }
   function shopUrl(stone){
     if (!stone) return HEALING;
     if (stone.shop) return stone.shop;
@@ -210,6 +245,229 @@ const APP_JS = `(function(){
     return html;
   }
 
+  // ---------- 模式切换（顶部）----------
+  function renderModeSwitch(active){
+    active = active || 'quick';
+    var html = '';
+    html += '<section class="emt-mode-switch" role="tablist" aria-label="Choose how to find your type">';
+    html += '  <button type="button" class="emt-mode-tab' + (active==='quick' ? ' emt-mode-tab-active' : '') + '" role="tab" aria-selected="' + (active==='quick' ? 'true' : 'false') + '" data-mode="quick">';
+    html += '    <span class="emt-mode-tab-num">A</span>';
+    html += '    <span class="emt-mode-tab-t">Quick Pick</span>';
+    html += '    <span class="emt-mode-tab-d">Already know your 4 letters? Pick them.</span>';
+    html += '  </button>';
+    html += '  <button type="button" class="emt-mode-tab' + (active==='test' ? ' emt-mode-tab-active' : '') + '" role="tab" aria-selected="' + (active==='test' ? 'true' : 'false') + '" data-mode="test">';
+    html += '    <span class="emt-mode-tab-num">B</span>';
+    html += '    <span class="emt-mode-tab-t">Take the 28-Question Test</span>';
+    html += '    <span class="emt-mode-tab-d">Not sure yet? Answer 28 scenario questions.</span>';
+    html += '  </button>';
+    html += '</section>';
+    return html;
+  }
+
+  // ---------- Test mode (28-question ABCD Likert) ----------
+  // 4-option weighted scoring: A=+2X / B=+1X / C=+1Y / D=+2Y (X/Y are the two poles; poles[0]=X, poles[1]=Y)
+  // Each dimension pole sum 0..14; decide(X,Y) uses >= tiebreak (first-letter-wins, identical to the old binary version)
+  // strength: average of the 4 |X-Y| gaps -> >=6 strong / 3-5.99 moderate / <3 mild
+  function scoreQuiz(answers){
+    // answers: { questionId: 'A'|'B'|'C'|'D' }
+    var poles = { E:0, I:0, N:0, S:0, T:0, F:0, J:0, P:0 };
+    for (var i = 0; i < QUIZ.length; i++){
+      var q = QUIZ[i];
+      var pick = answers[q.id];
+      if (!pick) continue;
+      var opt = null;
+      for (var k = 0; k < q.options.length; k++){
+        if (q.options[k].key === pick) { opt = q.options[k]; break; }
+      }
+      if (!opt || !opt.score) continue;
+      var scoreKeys = Object.keys(opt.score);
+      for (var ki = 0; ki < scoreKeys.length; ki++){
+        var pole = scoreKeys[ki];
+        if (poles.hasOwnProperty(pole)) poles[pole] += opt.score[pole];
+      }
+    }
+    function decide(xLetter, yLetter){
+      return poles[xLetter] >= poles[yLetter] ? xLetter : yLetter;
+    }
+    var gapEI = Math.abs(poles.E - poles.I);
+    var gapNS = Math.abs(poles.N - poles.S);
+    var gapTF = Math.abs(poles.T - poles.F);
+    var gapJP = Math.abs(poles.J - poles.P);
+    var avgGap = (gapEI + gapNS + gapTF + gapJP) / 4;
+    var strength = avgGap >= 6 ? 'strong' : (avgGap >= 3 ? 'moderate' : 'mild');
+    return {
+      type: decide('E','I') + decide('N','S') + decide('T','F') + decide('J','P'),
+      counts: poles,
+      gaps: { EI: gapEI, NS: gapNS, TF: gapTF, JP: gapJP },
+      strength: strength
+    };
+  }
+
+  function renderTest(){
+    var html = '';
+    html += '<section class="emt-test-card">';
+    html += '  <h2 class="emt-input-h2">The 28-Question MBTI Test</h2>';
+    html += '  <p class="emt-input-sub">Twenty-eight honest scenarios &mdash; pick the option that feels more like you in everyday life. There is no right answer. At the end, we match your type to a Major Arcana card.</p>';
+    html += '  <div class="emt-test-stage" id="emt-test-stage"></div>';
+    html += '  <div class="emt-test-progress" id="emt-test-progress"></div>';
+    html += '</section>';
+    return html;
+  }
+
+  // renderTestQuestion — Layout B 2x2 grid (cols = poles X/Y, rows = strength strong/slight, diagonal strength pairing)
+  // Source order: A(strong X) / C(slight Y) / B(slight X) / D(strong Y) -> explicit grid-area into 2x2
+  function renderTestQuestion(idx, answers){
+    // idx: 0-based question index; answers: current answers
+    var q = QUIZ[idx];
+    var total = QUIZ.length;
+    var pct = Math.round(((idx) / total) * 100);
+    var picked = answers[q.id];
+    // Index the 4 options by key (A/B/C/D); strength is derived from key (A/D = strong, B/C = slight)
+    var optBy = {};
+    for (var i = 0; i < q.options.length; i++) optBy[q.options[i].key] = q.options[i];
+    var dimNames = { EI: 'Energy', NS: 'Information', TF: 'Decisions', JP: 'Lifestyle' };
+    var xLetter = q.poles[0], yLetter = q.poles[1];
+    var dimLabel = dimNames[q.dimension] || q.dimension;
+    var html = '';
+    // Progress
+    html += '<div class="emt-q-progress-bar"><div class="emt-q-progress-fill" style="width:' + pct + '%"></div></div>';
+    html += '<div class="emt-q-progress-meta">Question ' + (idx+1) + ' of ' + total + ' &middot; ' + esc(dimLabel) + '</div>';
+    // Question (scenario → Title Case every word, per user spec)
+    html += '<div class="emt-q-prompt">' + esc(toTitleCaseEvery(q.scenario)) + '</div>';
+    // 4 options in a 2x2 grid (top row: A strong X, C slight Y; bottom row: B slight X, D strong Y)
+    // Column headers (left X / right Y) + diagonal strength pairing (strong A<->D, slight B<->C)
+    html += '<div class="emt-q-opts emt-q-opts-grid">';
+    html += '  <div class="emt-q-col-head emt-q-col-x">' + esc(xLetter) + '<span class="emt-q-col-tag">Strongly / Slightly</span></div>';
+    html += '  <div class="emt-q-col-head emt-q-col-y">' + esc(yLetter) + '<span class="emt-q-col-tag">Slightly / Strongly</span></div>';
+    // Top row: A (strong X), C (slight Y)
+    html += renderOptCell(optBy['A'], q.id, 'strong', xLetter, picked);
+    html += renderOptCell(optBy['C'], q.id, 'slight', yLetter, picked);
+    // Bottom row: B (slight X), D (strong Y)
+    html += renderOptCell(optBy['B'], q.id, 'slight', xLetter, picked);
+    html += renderOptCell(optBy['D'], q.id, 'strong', yLetter, picked);
+    html += '</div>';
+    // Nav
+    html += '<div class="emt-q-nav">';
+    html += '  <button type="button" class="emt-q-back" data-act="back"' + (idx === 0 ? ' disabled' : '') + '>&larr; Back</button>';
+    if (idx < total - 1){
+      html += '  <button type="button" class="emt-q-next" data-act="next"' + (picked ? '' : ' disabled') + '>Next &rarr;</button>';
+    } else {
+      html += '  <button type="button" class="emt-q-finish" data-act="finish"' + (picked ? '' : ' disabled') + '>See my MBTI tarot card &rarr;</button>';
+    }
+    html += '</div>';
+    return html;
+  }
+  function renderOptCell(opt, qid, strength, pole, picked){
+    if (!opt) return '';
+    var isActive = picked === opt.key;
+    var cls = 'emt-q-opt emt-q-opt-' + strength + (isActive ? ' emt-q-opt-active' : '');
+    var tag = strength === 'strong' ? 'Strongly' : 'Slightly';
+    var html = '';
+    html += '<button type="button" class="' + cls + '" data-qid="' + qid + '" data-pick="' + opt.key + '" aria-label="Option ' + opt.key + ', ' + tag + ' ' + pole + '">';
+    html += '  <span class="emt-q-opt-mark">' + opt.key + '</span>';
+    html += '  <span class="emt-q-opt-tag">' + tag + ' ' + pole + '</span>';
+    html += '  <span class="emt-q-opt-text">' + esc(opt.label.toLowerCase()) + '</span>';
+    html += '</button>';
+    return html;
+  }
+
+  // Test 状态机
+  var testState = { idx: 0, answers: {} };
+
+  function mountTest(){
+    var stage = document.getElementById('emt-test-stage');
+    if (!stage) return;
+    stage.innerHTML = renderTestQuestion(testState.idx, testState.answers);
+    bindTestOpts();
+  }
+  function bindTestOpts(){
+    var stage = document.getElementById('emt-test-stage');
+    if (!stage) return;
+    var opts = stage.querySelectorAll('.emt-q-opt');
+    for (var i = 0; i < opts.length; i++){
+      opts[i].addEventListener('click', function(){
+        var qid = this.getAttribute('data-qid');
+        var pick = this.getAttribute('data-pick');
+        testState.answers[qid] = pick;
+        // 重渲当前题（点亮选中）+ 自动推进下一题（最后一题不推进，让用户点 finish）
+        var total = QUIZ.length;
+        if (testState.idx < total - 1){
+          testState.idx++;
+          mountTest();
+        } else {
+          mountTest();
+        }
+      });
+    }
+    var nav = stage.querySelectorAll('[data-act]');
+    for (var j = 0; j < nav.length; j++){
+      nav[j].addEventListener('click', function(){
+        var act = this.getAttribute('data-act');
+        if (act === 'back' && testState.idx > 0){
+          testState.idx--;
+          mountTest();
+        } else if (act === 'next' && testState.idx < QUIZ.length - 1){
+          testState.idx++;
+          mountTest();
+        } else if (act === 'finish'){
+          finishTest();
+        }
+      });
+    }
+  }
+  function finishTest(){
+    var r = scoreQuiz(testState.answers);
+    if (!r || !TYPES[r.type]) { return; }
+    showResult(r.type, r.counts, { strength: r.strength, gaps: r.gaps });
+  }
+
+  // Scroll to the target section (avoids sticky header via scroll-margin-top CSS + scrollIntoView)
+  // Target class: quick -> .emt-input-card; test -> .emt-test-card (mode switcher itself is not a landing target)
+  function scrollToModeTarget(mode){
+    var sel = mode === 'test' ? '.emt-test-card' : '.emt-input-card';
+    var el = document.querySelector(sel);
+    if (!el) return;
+    try { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    catch (e) { el.scrollIntoView(); }
+  }
+  function setMode(mode, opts){
+    opts = opts || {};
+    var fromTabClick = !!opts.fromTabClick;
+    var inputMount = document.getElementById('emt-input-mount');
+    var resultMount = document.getElementById('emt-result-mount');
+    if (!inputMount) return;
+    // Clear result mount
+    if (resultMount) resultMount.innerHTML = '';
+    if (mode === 'quick'){
+      inputMount.innerHTML = renderModeSwitch('quick') + renderInput();
+      bindModeSwitch();
+      bindOpts();
+      updateStepStates();
+    } else if (mode === 'test'){
+      testState = { idx: 0, answers: {} };
+      inputMount.innerHTML = renderModeSwitch('test') + renderTest();
+      bindModeSwitch();
+      mountTest();
+    }
+    if (history.replaceState) history.replaceState(null, '', '#' + mode);
+    // Scroll behavior:
+    //   - tab click (fromTabClick): smooth-scroll to the chosen section (quick -> input card, test -> test card)
+    //   - deep-link (noScroll=true): do not scroll (user is at top on first paint)
+    //   - other callers: also scroll to the target section for consistency
+    if (opts.noScroll) return;
+    // Wait for re-render + paint before scrolling (inputMount.innerHTML just changed; layout needs a frame)
+    setTimeout(function(){ scrollToModeTarget(mode); }, 60);
+  }
+  function bindModeSwitch(){
+    var tabs = document.querySelectorAll('.emt-mode-tab');
+    for (var i = 0; i < tabs.length; i++){
+      tabs[i].addEventListener('click', function(){
+        var m = this.getAttribute('data-mode');
+        setMode(m, { fromTabClick: true });
+      });
+    }
+  }
+
   // ---------- Input 模块（4 步选择 + 选填生日）----------
   function renderInput(){
     var html = '';
@@ -229,7 +487,7 @@ const APP_JS = `(function(){
         html += '        <button type="button" class="emt-opt" data-dich="' + d.key + '" data-val="' + o.v + '">';
         html += '          <span class="emt-opt-letter">' + o.v + '</span>';
         html += '          <span class="emt-opt-t">' + esc(o.t) + '</span>';
-        html += '          <span class="emt-opt-d">' + esc(o.d) + '</span>';
+        html += '          <span class="emt-opt-d">' + esc(o.d.toLowerCase()) + '</span>';
         html += '        </button>';
       }
       html += '      </div>';
@@ -253,19 +511,65 @@ const APP_JS = `(function(){
   }
 
   // ---------- 结果渲染 ----------
-  function renderResult(type){
+  function renderResult(type, counts, extra){
     var tp = TYPES[type];
     if (!tp) return '';
     var primary = CARD_BY_SLUG[tp.birth_cards.primary.slug];
     var growth = CARD_BY_SLUG[tp.birth_cards.growth.slug];
+    var strength = (extra && extra.strength) ? extra.strength : '';
+    var gaps = (extra && extra.gaps) ? extra.gaps : null;
+    var strengthLabel = strength ? (strength.charAt(0).toUpperCase() + strength.slice(1)) : '';
     var html = '';
+
+    // Test 计分小条（counts 存在时显示，test 模式专用）+ strength 徽章 + 4 维 gap 迷你柱图
+    if (counts){
+      html += '<section class="emt-test-result">';
+      html += '  <div class="emt-test-result-h">Your answers at a glance' + (strengthLabel ? ' &mdash; <span class="emt-strength-badge emt-strength-' + strength + '">' + strengthLabel + ' clarity</span>' : '') + '</div>';
+      html += '  <div class="emt-test-result-dims">';
+      var pairs = [['E','I'],['N','S'],['T','F'],['J','P']];
+      for (var pi = 0; pi < pairs.length; pi++){
+        var a = pairs[pi][0], b = pairs[pi][1];
+        var ca = counts[a] || 0, cb = counts[b] || 0;
+        var total = ca + cb || 1;
+        var pa = Math.round((ca / total) * 100);
+        var pb = 100 - pa;
+        var winA = ca >= cb;
+        html += '    <div class="emt-test-dim">';
+        html += '      <div class="emt-test-dim-pair"><span class="' + (winA?'win':'') + '">' + a + ' ' + ca + '</span><span class="' + (!winA?'win':'') + '">' + cb + ' ' + b + '</span></div>';
+        html += '      <div class="emt-test-dim-bar"><div class="emt-test-dim-bar-a" style="width:' + pa + '%"></div><div class="emt-test-dim-bar-b" style="width:' + pb + '%"></div></div>';
+        html += '    </div>';
+      }
+      html += '  </div>';
+      // 4-axis gap mini-chart (Likert dividend: users see which axes are decisive and which are close)
+      if (gaps){
+        var gapPairs = [['EI', 'E', 'I'], ['NS', 'N', 'S'], ['TF', 'T', 'F'], ['JP', 'J', 'P']];
+        var sumGap = 0;
+        for (var gi = 0; gi < gapPairs.length; gi++) sumGap += gaps[gapPairs[gi][0]] || 0;
+        var avgGap = sumGap / 4;
+        html += '  <div class="emt-gap-chart">';
+        html += '    <div class="emt-gap-chart-h">Decisiveness per axis <span class="emt-gap-avg">(avg ' + avgGap.toFixed(1) + ' / 14)</span></div>';
+        for (var gj = 0; gj < gapPairs.length; gj++){
+          var dimKey = gapPairs[gj][0], xLet = gapPairs[gj][1], yLet = gapPairs[gj][2];
+          var g = gaps[dimKey] || 0;
+          var gPct = Math.round((g / 14) * 100);
+          var gBand = g >= 8 ? 'strong' : (g >= 4 ? 'moderate' : 'mild');
+          html += '  <div class="emt-gap-row">';
+          html += '    <span class="emt-gap-dim">' + xLet + ' / ' + yLet + '</span>';
+          html += '    <span class="emt-gap-track"><span class="emt-gap-fill emt-gap-fill-' + gBand + '" style="width:' + gPct + '%"></span></span>';
+          html += '    <span class="emt-gap-num">' + g + '</span>';
+          html += '  </div>';
+        }
+        html += '  </div>';
+      }
+      html += '</section>';
+    }
 
     // Hero
     html += '<section class="emt-hero-card">';
     html += '  <div class="emt-hero-head">';
     html += '    <div class="emt-hero-left">';
-    html += '      <div class="emt-type-badge">' + esc(type) + ' &middot; ' + esc(tp.group) + '</div>';
-    html += '      <h1 class="emt-h1">' + esc(type) + ' &mdash; ' + esc(tp.nickname) + '</h1>';
+    html += '      <div class="emt-type-badge">' + esc(displayType(type)) + ' &middot; ' + esc(tp.group) + (strength ? ' &middot; ' + strengthLabel : '') + '</div>';
+    html += '      <h1 class="emt-h1">' + esc(displayType(type)) + ' &mdash; ' + esc(tp.nickname) + '</h1>';
     html += '      <div class="emt-stack">';
     html += '        <span class="emt-stack-lbl">Cognitive stack</span>';
     html += '        <span class="emt-stack-fn dom">' + esc(tp.cognitive_stack.dominant) + '</span>';
@@ -299,7 +603,7 @@ const APP_JS = `(function(){
     html += '      <div class="emt-card-arch">' + esc(primary.archetype) + ' &middot; ' + esc(primary.astrology) + ' &middot; ' + esc(primary.element) + '</div>';
     html += '      <div class="emt-card-theme">' + esc(primary.theme) + '</div>';
     if (tp.birth_cards.primary.reason){
-      html += '      <div class="emt-reason"><span class="emt-reason-lbl">Why this card for ' + esc(type) + '</span><p>' + esc(tp.birth_cards.primary.reason) + '</p></div>';
+      html += '      <div class="emt-reason"><span class="emt-reason-lbl">Why this card for ' + esc(displayType(type)) + '</span><p>' + esc(tp.birth_cards.primary.reason) + '</p></div>';
     }
     html += '      <p class="emt-body">' + esc(tp.upright_reading) + '</p>';
     html += '      <div class="emt-lens"><span class="emt-lens-lbl">A psychological lens</span><p>' + esc(primary.psych || primary.upright_meaning.slice(0, 180)) + '</p></div>';
@@ -339,7 +643,7 @@ const APP_JS = `(function(){
 
     // M3 Crystals
     html += '<section class="emt-module emt-m3" id="emt-m3">';
-    html += '  <div class="emt-mod-head"><span class="emt-mod-num edt-mod-num-gold">M3</span><h2>Three Crystals for ' + esc(type) + '</h2></div>';
+    html += '  <div class="emt-mod-head"><span class="emt-mod-num edt-mod-num-gold">M3</span><h2>Three Crystals for ' + esc(displayType(type)) + '</h2></div>';
     html += '  <p class="emt-lede edt-lede-soft">Mindful companions for your card&apos;s archetype &mdash; traditionally paired, traditionally worn.</p>';
     html += '  <div class="emt-stones">';
     (tp.crystals || []).forEach(function(stone, idx){
@@ -388,7 +692,7 @@ const APP_JS = `(function(){
       if (!r) return;
       var rp = CARD_BY_SLUG[r.birth_cards.primary.slug];
       html += '    <a class="emt-rel-card" href="#' + rt.toLowerCase() + '" data-type="' + rt + '">';
-      html += '      <span class="emt-rel-type">' + esc(rt) + ' &middot; ' + esc(r.nickname) + '</span>';
+      html += '      <span class="emt-rel-type">' + esc(displayType(rt)) + ' &middot; ' + esc(r.nickname) + '</span>';
       html += '      <span class="emt-rel-card-name">' + esc(rp.name) + '</span>';
       html += '    </a>';
     });
@@ -431,9 +735,9 @@ const APP_JS = `(function(){
       showResult(type);
     }
   }
-  function showResult(type){
+  function showResult(type, counts, extra){
     var mount = document.getElementById('emt-result-mount');
-    if (mount) mount.innerHTML = renderResult(type);
+    if (mount) mount.innerHTML = renderResult(type, counts, extra);
     var inputMount = document.getElementById('emt-input-mount');
     if (inputMount) inputMount.style.display = 'none';
     if (history.replaceState) history.replaceState(null, '', '#' + type.toLowerCase());
@@ -443,12 +747,15 @@ const APP_JS = `(function(){
     bindRelCards();
   }
   function reset(){
+    // 重置回 Quick Pick 模式（含顶部模式切换）
     selected = { attitude: '', perceiving: '', judging: '', lifestyle: '' };
+    testState = { idx: 0, answers: {} };
     var inputMount = document.getElementById('emt-input-mount');
-    if (inputMount) { inputMount.style.display = ''; inputMount.innerHTML = renderInput(); }
+    if (inputMount) { inputMount.style.display = ''; inputMount.innerHTML = renderModeSwitch('quick') + renderInput(); }
     var mount = document.getElementById('emt-result-mount');
     if (mount) mount.innerHTML = '';
-    if (history.replaceState) history.replaceState(null, '', '#');
+    if (history.replaceState) history.replaceState(null, '', '#quick');
+    bindModeSwitch();
     bindOpts();
     updateStepStates();
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -472,10 +779,10 @@ const APP_JS = `(function(){
     var tp = TYPES[type];
     var cardName = tp && CARD_BY_SLUG[tp.birth_cards.primary.slug] ? CARD_BY_SLUG[tp.birth_cards.primary.slug].name : type;
     var url = window.location.origin + window.location.pathname + '#' + type.toLowerCase();
-    var text = 'My MBTI tarot birth card is ' + cardName + ' (' + type + '). What\\'s yours? ' + url;
+    var text = 'My MBTI tarot birth card is ' + cardName + ' (' + displayType(type) + '). What\\'s yours? ' + url;
     btn.addEventListener('click', function(){
       if (navigator.share){
-        navigator.share({ title: 'MBTI Tarot: ' + type + ' — ' + cardName, text: text, url: url }).catch(function(){});
+        navigator.share({ title: 'MBTI Tarot: ' + displayType(type) + ' — ' + cardName, text: text, url: url }).catch(function(){});
       } else if (navigator.clipboard){
         navigator.clipboard.writeText(text).then(function(){
           if (hint){ hint.textContent = 'Copied!'; setTimeout(function(){ if(hint) hint.textContent = ''; }, 2200); }
@@ -503,14 +810,27 @@ const APP_JS = `(function(){
 
   function init(){
     var inputMount = document.getElementById('emt-input-mount');
-    if (inputMount) inputMount.innerHTML = renderInput();
+    if (inputMount) inputMount.innerHTML = renderModeSwitch('quick') + renderInput();
+    bindModeSwitch();
     bindOpts();
-    // deep link: 解析 location.hash → 自动选型 + 渲染
-    var hash = (window.location.hash || '').replace(/^#/, '').toUpperCase();
-    if (hash && TYPES[hash] && /^[EI][NS][TF][JP]$/.test(hash)) {
-      selected = { attitude: hash[0], perceiving: hash[1], judging: hash[2], lifestyle: hash[3] };
-      showResult(hash);
+    // Page-hero deck preview: 22 Major Arcana 视觉锚（取 The Fool + The Hermit 作意象，避免绑定具体型）
+    var deckEl = document.getElementById('emt-page-hero-deck');
+    if (deckEl && CARDS.length){
+      var fool = CARD_BY_SLUG['the-fool'] || CARDS[0];
+      var hermit = CARD_BY_SLUG['the-hermit'] || CARDS[8] || CARDS[0];
+      if (fool && hermit) deckEl.innerHTML = cardFace(fool, 'med') + cardFace(hermit, 'med growth');
+    }
+    // deep link 优先级：4 字母型 (#intj) > #test > #quick（默认）
+    var hashRaw = (window.location.hash || '').replace(/^#/, '');
+    var hashUp = hashRaw.toUpperCase();
+    if (hashUp && TYPES[hashUp] && /^[EI][NS][TF][JP]$/.test(hashUp)) {
+      // 4 字母型 → 直接出结果（不强制模式，沿用 quick mount）
+      selected = { attitude: hashUp[0], perceiving: hashUp[1], judging: hashUp[2], lifestyle: hashUp[3] };
+      showResult(hashUp);
+    } else if (hashRaw.toLowerCase() === 'test') {
+      setMode('test', { noScroll: true });
     } else {
+      // 默认 quick（含 #quick 或空 hash）
       updateStepStates();
     }
   }
@@ -530,6 +850,24 @@ try { SEO_CONTENT = fs.readFileSync(path.resolve(__dirname, 'seo-content.html'),
 const html = `<!-- ===== MBTI Tarot v1.0 (tool #22) ===== -->
 <div class="emt-root">
   <div class="emt-inner">
+
+    <!-- Page Hero: tool-level banner (above selector) -->
+    <section class="emt-page-hero" aria-label="MBTI Tarot Birth Card Finder intro">
+      <div class="emt-page-hero-left">
+        <div class="emt-page-hero-eyebrow">Free Tool &middot; Self-Reflection</div>
+        <h1 class="emt-page-hero-title">MBTI Tarot Birth Card Finder</h1>
+        <p class="emt-page-hero-sub">Match your MBTI type to a Major Arcana card through Jungian cognitive functions &mdash; a primary birth card, a growth card, and three crystals. A mirror for contemplation, not a diagnosis.</p>
+        <div class="emt-page-hero-trust">
+          <span class="emt-trust-pill">16 types</span>
+          <span class="emt-trust-pill">22 Major Arcana</span>
+          <span class="emt-trust-pill">No sign-up</span>
+        </div>
+      </div>
+      <div class="emt-page-hero-right" aria-hidden="true">
+        <div class="emt-page-hero-deck" id="emt-page-hero-deck"></div>
+        <div class="emt-page-hero-deck-cap">22 Major Arcana &middot; 16 type mirrors</div>
+      </div>
+    </section>
 
     <!-- Input: 4-step selector + optional birthday -->
     <div id="emt-input-mount"><div class="emt-loading">Loading the MBTI tarot selector&hellip;</div></div>
@@ -551,8 +889,106 @@ const html = `<!-- ===== MBTI Tarot v1.0 (tool #22) ===== -->
 
 .emt-loading{padding:60px 20px;text-align:center;color:#888;font-size:16px}
 
+/* Page Hero (tool-level banner above selector) */
+.emt-page-hero{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;background:linear-gradient(135deg,#FBF8F1 0%,#F0F7F4 60%,#fff 100%);border:1px solid #E8E2D5;border-radius:20px;padding:36px 40px;margin-bottom:24px;overflow:hidden;position:relative}
+.emt-page-hero:before{content:"";position:absolute;top:-40px;right:-40px;width:240px;height:240px;background:radial-gradient(circle,rgba(207,170,62,.12) 0%,transparent 70%);pointer-events:none}
+.emt-page-hero-left{min-width:0;position:relative}
+.emt-page-hero-eyebrow{display:inline-block;background:#fff;color:#7A5A12;font-size:11px;font-weight:800;padding:5px 12px;border-radius:20px;letter-spacing:.08em;text-transform:uppercase;border:1px solid #E8C77A;margin-bottom:14px}
+.emt-page-hero-title{font-size:34px;font-weight:800;color:#1A1A2E;margin:0 0 12px;line-height:1.15;letter-spacing:-.015em}
+.emt-page-hero-sub{font-size:16px;color:#444;margin:0 0 18px;line-height:1.65;max-width:560px}
+.emt-page-hero-trust{display:flex;gap:8px;flex-wrap:wrap}
+.emt-trust-pill{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid #C8E6D5;color:#2D6A4F;font-size:12px;font-weight:700;padding:6px 12px;border-radius:20px}
+.emt-trust-pill:before{content:"";width:6px;height:6px;border-radius:50%;background:#2D6A4F}
+.emt-page-hero-right{display:flex;flex-direction:column;align-items:center;position:relative}
+.emt-page-hero-deck{display:flex;gap:14px}
+.emt-page-hero-deck .emt-tarot-face{box-shadow:0 12px 32px rgba(26,26,46,.22)}
+.emt-page-hero-deck .emt-tarot-face:first-child{transform:rotate(-4deg)}
+.emt-page-hero-deck .emt-tarot-face:last-child{transform:rotate(4deg) translateY(-8px)}
+.emt-page-hero-deck-cap{margin-top:14px;font-size:11px;font-weight:800;color:#888;text-transform:uppercase;letter-spacing:.08em;text-align:center}
+
+/* Mode switch (top dual-mode) */
+.emt-mode-switch{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px}
+.emt-mode-tab{display:flex;flex-direction:column;align-items:flex-start;text-align:left;background:#fff;border:2px solid #E8E2D5;border-radius:14px;padding:16px 20px;cursor:pointer;transition:border-color .2s,box-shadow .2s,background .2s;font-family:inherit;-webkit-tap-highlight-color:transparent}
+@media (hover:hover){.emt-mode-tab:hover{border-color:#2D6A4F;box-shadow:0 2px 10px rgba(26,26,46,.07)}}
+.emt-mode-tab-active{border-color:#2D6A4F;background:#F0F7F4;box-shadow:0 0 0 3px rgba(45,106,79,.12)}
+.emt-mode-tab-num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#CFAA3E;color:#fff;border-radius:50%;font-size:14px;font-weight:800;margin-bottom:8px}
+.emt-mode-tab-active .emt-mode-tab-num{background:#2D6A4F}
+.emt-mode-tab-t{font-size:16px;font-weight:800;color:#1A1A2E;margin-bottom:3px}
+.emt-mode-tab-d{font-size:13px;color:#5A5A6E;line-height:1.45;text-transform:none}
+
+/* Test mode */
+.emt-test-card{background:#fff;border:1px solid #E8E2D5;border-radius:18px;padding:32px 36px;margin-bottom:24px;scroll-margin-top:90px}
+.emt-q-progress-bar{width:100%;height:6px;background:#F0F0F0;border-radius:6px;overflow:hidden;margin-bottom:8px}
+.emt-q-progress-fill{height:100%;background:linear-gradient(90deg,#2D6A4F 0%,#CFAA3E 100%);transition:width .3s}
+.emt-q-progress-meta{font-size:12px;font-weight:800;color:#888;text-transform:uppercase;letter-spacing:.06em;margin-bottom:22px}
+.emt-q-prompt{font-size:21px;font-weight:700;color:#1A1A2E;line-height:1.4;margin-bottom:20px;letter-spacing:-.005em}
+/* 2x2 grid: columns = poles (X left, Y right), rows = strength (strong top, slight bottom); source order A,C,B,D -> explicit grid-area */
+.emt-q-opts-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto;gap:12px 14px;margin-bottom:20px}
+.emt-q-col-head{display:flex;flex-direction:column;font-size:13px;font-weight:800;color:#2D6A4F;text-transform:uppercase;letter-spacing:.06em;padding:0 4px 6px}
+.emt-q-col-head .emt-q-col-tag{font-size:10px;font-weight:600;color:#888;text-transform:none;letter-spacing:.02em;margin-top:2px}
+.emt-q-col-head.emt-q-col-y{color:#7A5A12}
+.emt-q-opts-grid > .emt-q-col-x{grid-area:1 / 1}
+.emt-q-opts-grid > .emt-q-col-y{grid-area:1 / 2}
+.emt-q-opts-grid > button:nth-of-type(1){grid-area:2 / 1} /* A strong X */
+.emt-q-opts-grid > button:nth-of-type(2){grid-area:2 / 2} /* C slight Y */
+.emt-q-opts-grid > button:nth-of-type(3){grid-area:3 / 1} /* B slight X */
+.emt-q-opts-grid > button:nth-of-type(4){grid-area:3 / 2} /* D strong Y */
+.emt-q-opt{display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-align:left;background:#FAFAFA;border:2px solid #E8E2D5;border-radius:12px;padding:14px 16px;cursor:pointer;transition:border-color .15s,box-shadow .15s,background .15s;font-family:inherit;-webkit-tap-highlight-color:transparent;min-height:100%}
+@media (hover:hover){.emt-q-opt:hover{border-color:#2D6A4F;box-shadow:0 2px 8px rgba(26,26,46,.07);transform:translateY(-1px)}}
+.emt-q-opt-active{border-color:#2D6A4F;background:#F0F7F4;box-shadow:0 0 0 3px rgba(45,106,79,.12)}
+.emt-q-opt:focus-visible{outline:2px solid #2D6A4F;outline-offset:2px}
+.emt-q-opt-mark{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:#fff;border:2px solid #CFAA3E;color:#7A5A12;border-radius:50%;font-size:13px;font-weight:800;text-transform:uppercase}
+.emt-q-opt-active .emt-q-opt-mark{background:#2D6A4F;border-color:#2D6A4F;color:#fff}
+.emt-q-opt-tag{display:inline-block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:#888;background:#F0F0F0;padding:2px 8px;border-radius:10px}
+.emt-q-opt-active .emt-q-opt-tag{background:#CFAA3E;color:#1A1A2E}
+.emt-q-opt-text{font-size:14px;color:#1A1A2E;line-height:1.5;font-weight:500;text-transform:capitalize}
+/* Strength accents: strong = deep pole-colored left border, slight = pale left border */
+.emt-q-opt-strong{border-left-width:4px;border-left-color:#2D6A4F}
+.emt-q-opt-strong.emt-q-opt-active{border-left-color:#2D6A4F}
+.emt-q-opt-slight{border-left-width:4px;border-left-color:#C8E6D5}
+.emt-q-opt-slight.emt-q-opt-active{border-left-color:#CFAA3E}
+.emt-q-nav{display:flex;justify-content:space-between;gap:12px;margin-top:6px}
+.emt-q-back,.emt-q-next,.emt-q-finish{font-family:inherit;border-radius:8px;padding:12px 22px;font-size:14px;font-weight:600;cursor:pointer;transition:background .2s,border-color .2s,opacity .15s;-webkit-tap-highlight-color:transparent}
+.emt-q-back{background:transparent;color:#5A5A6E;border:1px solid #E8E2D5}
+@media (hover:hover){.emt-q-back:not(:disabled):hover{border-color:#CFAA3E;color:#1A1A2E}}
+.emt-q-next{background:#2D6A4F;color:#fff;border:none}
+@media (hover:hover){.emt-q-next:not(:disabled):hover{background:#1B4332}}
+.emt-q-finish{background:#CFAA3E;color:#1A1A2E;border:none}
+@media (hover:hover){.emt-q-finish:not(:disabled):hover{background:#B89530}}
+.emt-q-back:disabled,.emt-q-next:disabled,.emt-q-finish:disabled{opacity:.4;cursor:not-allowed}
+
+/* Test result summary bar (above hero, test-mode only) */
+.emt-test-result{background:#F0F7F4;border:1px solid #C8E6D5;border-radius:12px;padding:14px 18px;margin-bottom:18px}
+.emt-test-result-h{font-size:13px;font-weight:800;color:#2D6A4E;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.emt-test-result-dims{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.emt-test-dim{display:flex;flex-direction:column;gap:4px}
+.emt-test-dim-pair{font-size:13px;font-weight:700;color:#5A5A6E;display:flex;justify-content:space-between}
+.emt-test-dim-pair .win{color:#2D6A4F}
+.emt-test-dim-bar{height:8px;background:#fff;border:1px solid #E8E2D5;border-radius:6px;overflow:hidden;display:flex}
+.emt-test-dim-bar-a{background:#2D6A4F;height:100%}
+.emt-test-dim-bar-b{background:#CFAA3E;height:100%}
+
+/* Strength badge (Likert strength summary) */
+.emt-strength-badge{display:inline-block;font-size:12px;font-weight:800;padding:3px 10px;border-radius:12px;letter-spacing:.04em;text-transform:uppercase;margin-left:4px}
+.emt-strength-strong{background:#2D6A4F;color:#fff}
+.emt-strength-moderate{background:#CFAA3E;color:#1A1A2E}
+.emt-strength-mild{background:#E8E2D5;color:#5A5A6E}
+
+/* Gap chart (4-axis decisiveness, Likert dividend) */
+.emt-gap-chart{margin-top:14px;padding-top:14px;border-top:1px dashed #C8E6D5}
+.emt-gap-chart-h{font-size:12px;font-weight:800;color:#5A5A6E;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.emt-gap-avg{font-size:11px;font-weight:600;color:#888;text-transform:none;letter-spacing:.02em;margin-left:4px}
+.emt-gap-row{display:grid;grid-template-columns:46px 1fr 28px;gap:10px;align-items:center;margin-bottom:6px}
+.emt-gap-dim{font-size:12px;font-weight:700;color:#5A5A6E}
+.emt-gap-track{height:8px;background:#F0F0F0;border-radius:6px;overflow:hidden}
+.emt-gap-fill{display:block;height:100%;border-radius:6px}
+.emt-gap-fill-strong{background:#2D6A4F}
+.emt-gap-fill-moderate{background:#CFAA3E}
+.emt-gap-fill-mild{background:#C8E6D5}
+.emt-gap-num{font-size:12px;font-weight:800;color:#1A1A2E;text-align:right}
+
 /* Input card */
-.emt-input-card{background:#fff;border:1px solid #E8E2D5;border-radius:18px;padding:32px 36px;margin-bottom:24px}
+.emt-input-card{background:#fff;border:1px solid #E8E2D5;border-radius:18px;padding:32px 36px;margin-bottom:24px;scroll-margin-top:90px}
 .emt-input-h2{font-size:28px;font-weight:800;color:#1A1A2E;margin:0 0 6px;letter-spacing:-.01em}
 .emt-input-sub{font-size:15px;color:#5A5A6E;margin:0 0 22px}
 .emt-steps{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
@@ -568,8 +1004,8 @@ const html = `<!-- ===== MBTI Tarot v1.0 (tool #22) ===== -->
 .emt-opt-active{border-color:#2D6A4F;background:#F0F7F4;box-shadow:0 0 0 3px rgba(45,106,79,.15)}
 .emt-opt-letter{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;background:#2D6A4F;color:#fff;border-radius:50%;font-size:15px;font-weight:800;margin-bottom:8px}
 .emt-opt-active .emt-opt-letter{background:#CFAA3E}
-.emt-opt-t{font-size:14px;font-weight:700;color:#1A1A2E;margin-bottom:2px}
-.emt-opt-d{font-size:12px;color:#5A5A6E;line-height:1.4}
+.emt-opt-t{font-size:14px;font-weight:700;color:#1A1A2E;margin-bottom:2px;text-transform:none}
+.emt-opt-d{font-size:12px;color:#5A5A6E;line-height:1.4;text-transform:capitalize}
 
 /* Birthday optional */
 .emt-birthday{margin-top:18px;background:#FAFAFA;border:1px solid #E8E2D5;border-radius:12px;padding:14px 20px}
@@ -604,7 +1040,7 @@ const html = `<!-- ===== MBTI Tarot v1.0 (tool #22) ===== -->
 .emt-hero-duo{display:flex;gap:14px}
 .emt-hero-duo-cap{display:flex;justify-content:space-between;width:100%;font-size:11px;font-weight:800;color:#888;text-transform:uppercase;letter-spacing:.06em;margin-top:8px;padding:0 6px}
 
-/* Tarot face (程序化牌面) */
+/* Tarot face (procedural card) */
 .emt-tarot-face{width:200px;height:286px;border-radius:12px;background:linear-gradient(160deg,#2D6A4F 0%,#1B4332 100%);border:3px solid #CFAA3E;box-shadow:0 8px 24px rgba(26,26,46,.18);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px 14px;position:relative;overflow:hidden}
 .emt-tarot-face.med{width:130px;height:186px;border-radius:9px;border-width:2px;padding:12px 8px;box-shadow:0 4px 12px rgba(26,26,46,.15)}
 .emt-tarot-face.med.growth{background:linear-gradient(160deg,#7A5A12 0%,#5A4010 100%);border-color:#E8C77A;opacity:.92}
@@ -649,7 +1085,7 @@ const html = `<!-- ===== MBTI Tarot v1.0 (tool #22) ===== -->
 .emt-prac-lbl{display:block;font-size:12px;font-weight:700;color:#2D6A4F;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
 .emt-practice p{margin:0;font-size:15px;color:#1A1A2E;line-height:1.6;font-style:italic}
 
-/* Fusion (生日融合段) */
+/* Fusion (birthday merge) */
 .emt-fusion{background:linear-gradient(135deg,#FBF8F1 0%,#fff 100%);border:1px solid #CFAA3E;border-radius:12px;padding:16px 20px;margin-top:18px}
 .emt-fusion-h{font-size:16px;font-weight:800;color:#7A5A12;margin-bottom:6px}
 .emt-fusion-body{font-size:14px;color:#444;margin:0;line-height:1.65}
@@ -718,8 +1154,26 @@ const html = `<!-- ===== MBTI Tarot v1.0 (tool #22) ===== -->
 
 /* Responsive: tablet/mobile */
 @media(max-width:900px){
+  .emt-page-hero{grid-template-columns:1fr;gap:24px;padding:28px 26px;text-align:center}
+  .emt-page-hero-sub{margin-left:auto;margin-right:auto}
+  .emt-page-hero-trust{justify-content:center}
+  .emt-page-hero-title{font-size:28px}
+  .emt-page-hero-right{order:-1}
+  .emt-page-hero-deck{justify-content:center}
   .emt-input-card{padding:24px 22px}
   .emt-steps{grid-template-columns:1fr;gap:14px}
+  .emt-mode-switch{grid-template-columns:1fr 1fr;gap:10px}
+  .emt-test-card{padding:24px 22px}
+  /* 2x2 grid stays 2 columns on mobile (per user spec: A/B top, C/D bottom); only tighten gaps + compact cells */
+  .emt-q-opts-grid{gap:10px 10px}
+  .emt-q-col-head{font-size:11px;padding:0 2px 4px}
+  .emt-q-col-head .emt-q-col-tag{font-size:9px}
+  .emt-q-opt{padding:12px 12px;gap:5px}
+  .emt-q-opt-mark{width:24px;height:24px;font-size:12px}
+  .emt-q-opt-tag{font-size:9px;padding:2px 6px}
+  .emt-q-opt-text{font-size:13px;line-height:1.45}
+  .emt-test-result-dims{grid-template-columns:repeat(2,1fr);gap:10px}
+  .emt-q-prompt{font-size:19px}
   .emt-hero-card{padding:24px}
   .emt-hero-head{grid-template-columns:1fr;gap:20px;text-align:center}
   .emt-hero-right{order:-1}
@@ -735,9 +1189,24 @@ const html = `<!-- ===== MBTI Tarot v1.0 (tool #22) ===== -->
 }
 @media(max-width:640px){
   .emt-inner{padding:16px 14px 32px;border-radius:12px}
+  .emt-page-hero{padding:22px 18px;gap:18px;border-radius:16px}
+  .emt-page-hero-title{font-size:24px}
+  .emt-page-hero-sub{font-size:15px}
+  .emt-page-hero-deck .emt-tarot-face.med{width:96px;height:138px}
   .emt-input-card{padding:20px 16px}
   .emt-input-h2{font-size:22px}
-  .emt-step-opts{grid-template-columns:1fr}
+  .emt-test-card{padding:20px 16px}
+  .emt-q-prompt{font-size:18px;line-height:1.4}
+  .emt-q-opt{padding:11px 11px;gap:5px}
+  .emt-q-opt-mark{width:23px;height:23px;font-size:11px}
+  .emt-q-opt-text{font-size:12.5px;line-height:1.42}
+  .emt-q-opt-tag{font-size:9px;padding:1px 6px}
+  .emt-q-col-head{font-size:10px;padding:0 2px 3px}
+  .emt-q-col-head .emt-q-col-tag{font-size:8px}
+  .emt-q-opts-grid{gap:8px 8px}
+  .emt-q-back,.emt-q-next,.emt-q-finish{padding:11px 16px;font-size:13px;flex:1}
+  .emt-test-result-dims{grid-template-columns:1fr 1fr;gap:8px}
+  /* Quick Pick: keep 2 columns on mobile (per user spec — 2 options side-by-side) */
   .emt-hero-card{padding:20px 16px}
   .emt-tarot-face{width:170px;height:244px;padding:16px 10px}
   .emt-tarot-name{font-size:17px}
@@ -757,6 +1226,9 @@ const html = `<!-- ===== MBTI Tarot v1.0 (tool #22) ===== -->
 }
 @media(max-width:380px){
   .emt-inner{padding:14px 10px 28px;border-radius:10px}
+  .emt-page-hero{padding:18px 14px;border-radius:14px}
+  .emt-page-hero-title{font-size:21px}
+  .emt-page-hero-deck .emt-tarot-face.med{width:84px;height:120px}
   .emt-input-card{padding:18px 14px}
   .emt-hero-card{padding:16px 12px}
   .emt-tarot-face{width:150px;height:214px;padding:14px 8px}
@@ -765,6 +1237,14 @@ const html = `<!-- ===== MBTI Tarot v1.0 (tool #22) ===== -->
   .emt-module{padding:18px 14px;margin-bottom:18px}
   .emt-mod-head h2{font-size:19px}
   .emt-share-btn,.emt-reset-btn{flex:1;padding:11px 14px;font-size:13px}
+  /* 2x2 grid stays; tighten further for 320-380px screens */
+  .emt-q-opt{padding:10px 9px;gap:4px}
+  .emt-q-opt-mark{width:22px;height:22px;font-size:11px}
+  .emt-q-opt-text{font-size:12px;line-height:1.38}
+  .emt-q-opt-tag{display:none}
+  .emt-q-col-head{font-size:10px;padding:0 2px 2px}
+  .emt-q-col-head .emt-q-col-tag{display:none}
+  .emt-q-opts-grid{gap:7px 7px}
 }
 </style>
 

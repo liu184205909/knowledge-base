@@ -197,6 +197,12 @@ const APP_JS = String.raw`(function () {
   function suggestedBeadCount() {
     return targetSlots();
   }
+  function beadPathRatio(sizeMm, fillRatio) {
+    var s = Number(sizeMm || state.beadSizeMm || 8);
+    var base = s <= 6 ? 0.318 : (s <= 8 ? 0.338 : (s <= 10 ? 0.358 : 0.378));
+    var densityBoost = Math.max(0, Number(fillRatio || 0) - 0.82) * (s >= 10 ? 0.026 : 0.014);
+    return base + densityBoost;
+  }
 
   // --- Pricing ---
   function beadPrice(id, size) {
@@ -580,12 +586,15 @@ const APP_JS = String.raw`(function () {
     var sizeOptions = [6,8,10,12].map(function (s) {
       return '<button type="button" class="stage-size-btn' + (Number(state.beadSizeMm) === s ? ' is-active' : '') + '" data-size="' + s + '">' + s + 'mm</button>';
     }).join('');
+    var selectOptions = [6,8,10,12].map(function (s) {
+      return '<option value="' + s + '"' + (Number(state.beadSizeMm) === s ? ' selected' : '') + '>' + s + 'mm</option>';
+    }).join('');
     wristEl.innerHTML =
       '<button type="button" id="t17-dimension-toggle" class="dimension-pill" aria-expanded="' + (state.dimensionOpen ? 'true' : 'false') + '">' +
         '<span class="dimension-hand" aria-hidden="true">&#9995;</span>' +
         '<span class="dimension-copy"><small>Hand Dimension</small><b>' + displayCm + ' cm</b></span>' +
       '</button>' +
-      '<div class="stage-size-row" aria-label="bead size"><span>Bead Size</span><div class="stage-size-options">' + sizeOptions + '</div></div>' +
+      '<div class="stage-size-row" aria-label="bead size"><span>Bead Size</span><div class="stage-size-options">' + sizeOptions + '</div><select id="t17-bead-size-select" class="stage-size-select" aria-label="Bead Size">' + selectOptions + '</select></div>' +
       '<div class="dimension-popover' + (state.dimensionOpen ? ' is-open' : '') + '" role="dialog" aria-modal="true" aria-label="Customize wrist size">' +
         '<div class="dimension-modal-head"><b>Customize Wrist</b><button type="button" id="t17-dimension-close" aria-label="Close">×</button></div>' +
         '<div class="dimension-field body-measure-field">' +
@@ -628,21 +637,21 @@ const APP_JS = String.raw`(function () {
       summary.innerHTML =
         '<b>Design Summary</b>' +
         '<span>Wrist: <strong>' + Number(state.wristCm).toFixed(1).replace(/\\.0$/, '') + ' cm</strong></span>' +
-        '<span>Bead Size: <strong>' + state.beadSizeMm + 'mm</strong></span>' +
+        '<span>Bead: <strong>' + state.beadSizeMm + 'mm</strong></span>' +
         '<span>Slots: <strong>' + usedSlots() + '/' + targetSlots() + '</strong></span>' +
         '<span>Weight: <strong>~' + estimateWeightG().toFixed(1) + 'g</strong></span>';
     }
     document.getElementById('t17-price').innerHTML =
       '<div class="price-rows">' +
-        '<div class="pr"><span>Beads (' + beadCount + ')</span><span>' + money(beadTotal) + '</span></div>' +
-        '<div class="pr"><span>Charms (' + charmCount + ')</span><span>' + money(charmTotal) + '</span></div>' +
-        '<div class="pr"><span>Cord - ' + (cordMap[state.cord] ? cordMap[state.cord].name_en : '') + '</span><span>' + money(cordTotal) + '</span></div>' +
+        '<div class="pr"><span class="pr-label">Beads:</span><strong>' + money(beadTotal) + '</strong></div>' +
+        '<div class="pr"><span class="pr-label">Charms:</span><strong>' + money(charmTotal) + '</strong></div>' +
+        '<div class="pr pr-cord"><span class="pr-label">Cord: ' + (cordMap[state.cord] ? cordMap[state.cord].name_en.replace(' Cord', '') : '') + '</span><strong>' + money(cordTotal) + '</strong></div>' +
       '</div>' +
       '<div class="price-total"><span>Total</span><span>' + money(beadTotal + charmTotal + cordTotal) + '</span></div>';
     var checkoutNote = document.getElementById('t17-checkout-note');
     if (checkoutNote) {
       checkoutNote.className = 'checkout-note ' + (diff === 0 ? 'ok' : diff < 0 ? 'over' : '');
-      checkoutNote.textContent = fitMsg + ' - ' + usedSlots() + '/' + targetSlots() + ' slots';
+      checkoutNote.textContent = diff > 0 ? 'Need ' + diff + ' more beads' : diff < 0 ? 'Over by ' + Math.abs(diff) + ' beads' : 'Ready to checkout';
     }
   }
 
@@ -661,8 +670,8 @@ const APP_JS = String.raw`(function () {
       var rows = [
         { id: 'bead', label: 'Beads', count: beadItems.length },
         { id: 'charm', label: 'Charms', count: charmItems.length },
-        { id: 'shape', label: 'Accessories', count: state.sequence.filter(function (it) { return it.type === 'shape'; }).length },
-        { id: 'spacer', label: 'Packaging', count: state.sequence.filter(function (it) { return it.type === 'spacer'; }).length },
+        { id: 'shape', label: 'Acc.', count: state.sequence.filter(function (it) { return it.type === 'shape'; }).length },
+        { id: 'spacer', label: 'Pack.', count: state.sequence.filter(function (it) { return it.type === 'spacer'; }).length },
         { id: 'cord', label: 'Cord', count: cord ? 1 : 0 }
       ];
       summaryEl.innerHTML = '<b>Strand Sequence</b>' + rows.map(function (row) {
@@ -794,6 +803,8 @@ const APP_JS = String.raw`(function () {
   var DRAG_START_PX = 6;
   var DELETE_MULT = 1.55;
   var hit2DSlots = [];
+  var layout2D = { cx: 0, cy: 0, rx: 0, ry: 0 };
+  var drag2D = { active: false, dragging: false, slot: -1, startX: 0, startY: 0, lastX: 0, lastY: 0 };
 
   function ndcFromEvent(e) {
     var rect = renderer.domElement.getBoundingClientRect();
@@ -812,6 +823,83 @@ const APP_JS = String.raw`(function () {
     el.addEventListener('pointermove', onDragMove, { passive: false });
     window.addEventListener('pointerup', onDragUp);
     window.addEventListener('pointercancel', onDragUp);
+  }
+  function bind2DDragHandlers() {
+    var el = document.getElementById('t17-canvas-2d');
+    if (!el || el._t17DragBound) return;
+    el._t17DragBound = true;
+    el.addEventListener('pointerdown', on2DDragDown, { passive: false });
+    el.addEventListener('pointermove', on2DDragMove, { passive: false });
+    window.addEventListener('pointerup', on2DDragUp);
+    window.addEventListener('pointercancel', on2DDragUp);
+  }
+  function canvas2DPoint(e) {
+    var el = document.getElementById('t17-canvas-2d');
+    var rect = el.getBoundingClientRect();
+    return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+  }
+  function hit2DSlotAt(x, y) {
+    for (var hi = hit2DSlots.length - 1; hi >= 0; hi--) {
+      var hit = hit2DSlots[hi];
+      if (Math.hypot(x - hit.x, y - hit.y) <= hit.r) return hit.slot;
+    }
+    return -1;
+  }
+  function beadSequenceSlots() {
+    var slots = [];
+    state.sequence.forEach(function (it, i) {
+      if (it.type === 'bead' || it.type === 'charm') slots.push(i);
+    });
+    return slots;
+  }
+  function slotFrom2DAngle(x, y) {
+    var slots = beadSequenceSlots();
+    if (!slots.length || !layout2D.rx) return -1;
+    var angle = Math.atan2(y - layout2D.cy, x - layout2D.cx);
+    var ordinal = Math.round(((angle + Math.PI / 2) / (Math.PI * 2)) * slots.length);
+    ordinal = ((ordinal % slots.length) + slots.length) % slots.length;
+    return slots[ordinal];
+  }
+  function on2DDragDown(e) {
+    if (state.viewMode === '3d') return;
+    var p = canvas2DPoint(e);
+    var slot = hit2DSlotAt(p.x, p.y);
+    if (slot < 0) return;
+    drag2D.active = true;
+    drag2D.dragging = false;
+    drag2D.slot = slot;
+    drag2D.startX = drag2D.lastX = p.x;
+    drag2D.startY = drag2D.lastY = p.y;
+    state.selected = slot;
+    updateAll(false);
+    e.currentTarget.setPointerCapture && e.currentTarget.setPointerCapture(e.pointerId);
+    e.preventDefault();
+  }
+  function on2DDragMove(e) {
+    if (!drag2D.active) return;
+    var p = canvas2DPoint(e);
+    drag2D.lastX = p.x;
+    drag2D.lastY = p.y;
+    if (!drag2D.dragging && Math.hypot(p.x - drag2D.startX, p.y - drag2D.startY) >= DRAG_START_PX) {
+      drag2D.dragging = true;
+    }
+    draw2DBracelet();
+    e.preventDefault();
+  }
+  function on2DDragUp(e) {
+    if (!drag2D.active) return;
+    var slot = drag2D.slot;
+    var target = drag2D.dragging ? slotFrom2DAngle(drag2D.lastX, drag2D.lastY) : -1;
+    drag2D.active = false;
+    drag2D.dragging = false;
+    drag2D.slot = -1;
+    if (target >= 0 && target !== slot) {
+      moveSlotTo(slot, target);
+    } else {
+      state.selected = slot;
+      updateAll(false);
+    }
+    e.preventDefault();
   }
   function onDragDown(e) {
     if (!THREE || !controls || !slotMeshIndex.length) return;
@@ -1188,19 +1276,19 @@ const APP_JS = String.raw`(function () {
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.clearRect(0, 0, rect.width, rect.height);
     var bg = ctx.createLinearGradient(0, 0, rect.width, rect.height);
-    bg.addColorStop(0, '#f6f0e7');
-    bg.addColorStop(0.45, '#eadfce');
-    bg.addColorStop(1, '#f8f5ef');
+    bg.addColorStop(0, '#fbfaf6');
+    bg.addColorStop(0.48, '#f4efe6');
+    bg.addColorStop(1, '#fbfaf7');
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, rect.width, rect.height);
     hit2DSlots = [];
-    var cx = rect.width / 2, cy = rect.height * 0.54;
-    var board = Math.min(rect.width * 0.84, rect.height * 0.72, 620);
+    var cx = rect.width / 2, cy = rect.height * 0.505;
+    var board = Math.min(rect.width * 0.68, rect.height * 0.70, 580);
     var bx = cx - board / 2, by = cy - board / 2;
     ctx.save();
-    ctx.shadowColor = 'rgba(56,32,12,.24)';
-    ctx.shadowBlur = 28;
-    ctx.shadowOffsetY = 18;
+    ctx.shadowColor = 'rgba(56,32,12,.10)';
+    ctx.shadowBlur = 12;
+    ctx.shadowOffsetY = 7;
     if (trayImage && trayImage.complete && trayImage.naturalWidth) {
       ctx.drawImage(trayImage, bx, by, board, board);
     } else {
@@ -1212,7 +1300,14 @@ const APP_JS = String.raw`(function () {
     ctx.save();
     var slotMarks = targetSlots();
     var markCount = Math.min(slotMarks, 40);
-    ctx.translate(cx, cy);
+    var trayCx = bx + board * 0.5;
+    var trayCy = by + board * 0.5;
+    var markRadius = board * 0.242;
+    var layoutItems = state.sequence.map(function (it, i) { return { item: it, index: i }; })
+      .filter(function (row) { return row.item.type === 'bead' || row.item.type === 'charm'; });
+    var fillRatio = usedSlots() / Math.max(1, targetSlots());
+    var beadPathRadius = board * beadPathRatio(state.beadSizeMm, fillRatio);
+    ctx.translate(trayCx, trayCy);
     ctx.strokeStyle = 'rgba(98,58,22,.42)';
     ctx.fillStyle = 'rgba(98,58,22,.46)';
     ctx.lineWidth = 1;
@@ -1221,56 +1316,79 @@ const APP_JS = String.raw`(function () {
     ctx.textBaseline = 'middle';
     for (var mi = 0; mi < markCount; mi++) {
       var mt = (mi / markCount) * Math.PI * 2 - Math.PI / 2;
-      var outerX = Math.cos(mt) * board * .285;
-      var outerY = Math.sin(mt) * board * .285;
-      var innerX = Math.cos(mt) * board * .254;
-      var innerY = Math.sin(mt) * board * .254;
+      var outerX = Math.cos(mt) * markRadius;
+      var outerY = Math.sin(mt) * markRadius;
+      var innerX = Math.cos(mt) * markRadius * .88;
+      var innerY = Math.sin(mt) * markRadius * .88;
       ctx.beginPath();
       ctx.moveTo(innerX, innerY);
       ctx.lineTo(outerX, outerY);
       ctx.stroke();
       if (markCount <= 24 && mi % 2 === 0) {
-        ctx.fillText(String(mi + 1), Math.cos(mt) * board * .218, Math.sin(mt) * board * .218);
+        ctx.fillText(String(mi + 1), Math.cos(mt) * markRadius * .72, Math.sin(mt) * markRadius * .72);
       }
     }
     ctx.restore();
-    ctx.fillStyle = 'rgba(72,45,22,.50)';
-    ctx.font = '700 ' + Math.max(30, board * .12) + 'px Georgia, serif';
+    ctx.fillStyle = 'rgba(72,45,22,.16)';
+    ctx.font = '700 ' + Math.max(11, board * .024) + 'px Georgia, serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText(String(Math.round(state.wristCm)), cx, cy - board * .01);
-    ctx.font = '700 ' + Math.max(8, board * .024) + 'px Arial, sans-serif';
-    ctx.fillText('CM', cx, cy + board * .105);
-    var rx = board * 0.315;
-    var ry = board * 0.315;
+    ctx.fillText('EarthWard', trayCx, trayCy + board * .006);
+    var rx = beadPathRadius;
+    var ry = beadPathRadius;
+    layout2D = { cx: trayCx, cy: trayCy, rx: rx, ry: ry };
     ctx.save();
     ctx.strokeStyle = state.beadLayout === 'gathered' ? 'rgba(91,111,126,.34)' : 'rgba(91,111,126,.18)';
     ctx.setLineDash([5, 5]);
     ctx.lineWidth = 1.4;
     ctx.beginPath();
-    ctx.ellipse(cx, cy, rx, ry, 0, 0, Math.PI * 2);
+    ctx.ellipse(trayCx, trayCy, rx, ry, 0, 0, Math.PI * 2);
     ctx.stroke();
     ctx.setLineDash([]);
-    var list = state.sequence.filter(function (it) { return it.type === 'bead'; });
-    if (!list.length) {
+    if (!layoutItems.length) {
       ctx.restore();
       return;
     }
-    list.forEach(function (it, i) {
-      var slotIndex = state.sequence.indexOf(it);
-      var t = (i / list.length) * Math.PI * 2 - Math.PI / 2;
+    layoutItems.forEach(function (row, i) {
+      var it = row.item;
+      var slotIndex = row.index;
+      var t = (i / layoutItems.length) * Math.PI * 2 - Math.PI / 2;
       var seed = (i * 37 + String(it.id).length * 11) % 100;
       var scatterX = bx + board * (0.18 + ((seed * 17) % 61) / 100);
       var scatterY = by + board * (0.16 + ((seed * 29) % 66) / 100);
-      var x = state.beadLayout === 'released' ? scatterX : cx + Math.cos(t) * rx;
-      var y = state.beadLayout === 'released' ? scatterY : cy + Math.sin(t) * ry;
-      var b = beadMap[it.id];
-      var size = Math.max(18, Math.min(44, Number(it.size_mm || state.beadSizeMm) * 3.2));
-      var col = b && b.textureColors ? b.textureColors : ['#d8d0c8', '#fff', '#8d8378'];
+      var isDragged = drag2D.active && drag2D.dragging && slotIndex === drag2D.slot;
+      var x = state.beadLayout === 'released' ? scatterX : trayCx + Math.cos(t) * rx;
+      var y = state.beadLayout === 'released' ? scatterY : trayCy + Math.sin(t) * ry;
+      if (isDragged) {
+        x = drag2D.lastX;
+        y = drag2D.lastY;
+      }
+      var b = it.type === 'bead' ? beadMap[it.id] : null;
+      var charm = it.type === 'charm' ? charmMap[it.id] : null;
+      var size = it.type === 'charm'
+        ? Math.max(18, Math.min(34, Number(state.beadSizeMm) * 2.55))
+        : Math.max(18, Math.min(44, Number(it.size_mm || state.beadSizeMm) * 3.2));
+      var col = b && b.textureColors ? b.textureColors : ['#d7b35f', '#fff7c7', '#8d6c26'];
       var g = ctx.createRadialGradient(x - size * .22, y - size * .28, 2, x, y, size * .62);
       g.addColorStop(0, col[1]); g.addColorStop(.35, col[0]); g.addColorStop(1, col[2]);
+      if (isDragged) {
+        ctx.save();
+        ctx.fillStyle = 'rgba(45,106,67,.10)';
+        ctx.strokeStyle = 'rgba(45,106,67,.62)';
+        ctx.lineWidth = 2.5;
+        ctx.setLineDash([5, 4]);
+        ctx.beginPath(); ctx.arc(x, y, size / 2 + 12, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+        ctx.restore();
+      }
       ctx.fillStyle = g;
       ctx.beginPath(); ctx.arc(x, y, size / 2, 0, Math.PI * 2); ctx.fill();
+      if (it.type === 'charm') {
+        ctx.fillStyle = 'rgba(72,45,22,.72)';
+        ctx.font = '700 ' + Math.max(8, size * .28) + 'px Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(charmMark(charm && charm.symbol), x, y + size * .02);
+      }
       if (slotIndex === state.selected) {
         ctx.strokeStyle = '#d5504c';
         ctx.lineWidth = 2;
@@ -1364,14 +1482,7 @@ const APP_JS = String.raw`(function () {
     flash('Started fresh. Your previous draft was cleared.');
   }
   function showDraftToast(msg, ctaLabel) {
-    var el = document.getElementById('t17-draft-toast');
-    if (!el) return;
-    el.innerHTML = '<span class="draft-msg">' + msg + '</span>' +
-      (ctaLabel ? '<button type="button" class="draft-cta" id="t17-draft-clear">' + ctaLabel + '</button>' : '') +
-      '<button type="button" class="draft-x" id="t17-draft-x" aria-label="Dismiss">&times;</button>';
-    el.classList.add('show');
-    clearTimeout(el._t);
-    el._t = setTimeout(function () { hideDraftToast(); }, 6000);
+    return;
   }
   function hideDraftToast() {
     var el = document.getElementById('t17-draft-toast');
@@ -1451,6 +1562,7 @@ const APP_JS = String.raw`(function () {
   // ---------------------------------------------------------------------------
   function bindEvents() {
     var root = document.getElementById('t17-app');
+    bind2DDragHandlers();
     root.addEventListener('click', function (e) {
       if (e.target && e.target.id === 't17-canvas-2d') {
         var cr = e.target.getBoundingClientRect();
@@ -1570,11 +1682,6 @@ const APP_JS = String.raw`(function () {
   renderBracelet();
   renderSelectedActions();
   bindEvents();
-  if (draftStatus === 'restored') {
-    showDraftToast('Restored your saved design.', 'Clear draft & start over');
-  } else if (draftStatus === 'expired') {
-    showDraftToast('Your saved draft was from an older version and has been reset.', null);
-  }
 
   // 3D progressive enhancement 鈥?dynamic import (CDN/self-host via importmap).
   (async function () {
@@ -1589,6 +1696,7 @@ const APP_JS = String.raw`(function () {
       var stage = document.getElementById('t17-stage');
       if (stage) {
         var fb = document.createElement('div');
+        fb.className = 'three-fallback';
         fb.style.cssText = 'position:absolute;inset:0;display:grid;place-items:center;color:#9aa4b2;font-size:13px;text-align:center;padding:24px;line-height:1.6;';
         fb.innerHTML = '3D preview could not load.<br>The builder on the left and the pricing below are fully functional in 2D.';
         stage.appendChild(fb);
@@ -1611,7 +1719,8 @@ const APP_B64 = Buffer.from(asciiJS(APP_JS), 'utf8').toString('base64');
 // Refined light catalog UI for the live WordPress builder.
 const CSS = String.raw`
 #t17-app,#t17-app *{box-sizing:border-box;margin:0;padding:0}
-#t17-app{--paper:#fffdf9;--ink:#332d28;--muted:#81776e;--line:#e7dfd8;--soft:#f4f0ec;--wash:#f8f5f1;--accent:#d5504c;--green:#2d6a43;--blue:#2d7fd8;position:relative;left:50%;display:flex;width:calc(100vw - 40px);max-width:none;min-height:0;height:min(690px,calc(100vh - 105px));margin:12px 0 8px calc(-50vw + 20px);scroll-margin-top:150px;transform:none;overflow:hidden;font-family:Georgia,"Times New Roman",serif;background:#fff;color:var(--ink);-webkit-font-smoothing:antialiased;border:1px solid #eee4dc;border-radius:18px;box-shadow:0 20px 60px rgba(92,65,42,.12)}
+body:has(#t17-app){overflow-x:hidden}
+#t17-app{--paper:#fffdf9;--ink:#332d28;--muted:#81776e;--line:#e7dfd8;--soft:#f4f0ec;--wash:#f8f5f1;--accent:#d5504c;--green:#2d6a43;--blue:#2d7fd8;position:relative;left:50%;transform:translateX(-50%);display:flex;width:calc(100vw - 24px);max-width:none;min-height:0;height:min(690px,calc(100vh - 105px));margin:10px 0;scroll-margin-top:150px;overflow:hidden;font-family:Georgia,"Times New Roman",serif;background:#fff;color:var(--ink);-webkit-font-smoothing:antialiased;border:1px solid #eee4dc;border-radius:18px;box-shadow:0 20px 60px rgba(92,65,42,.12)}
 #t17-left{display:flex;flex-direction:column;width:300px;flex:0 0 300px;background:var(--soft);border-right:1px solid var(--line);padding:18px 14px;overflow:hidden}
 #t17-left h3,.catalog-cats h3{font-size:24px;line-height:1;color:#211b17;font-weight:700;margin:4px 0 18px}
 .lh-title{display:none}
@@ -1709,10 +1818,11 @@ const CSS = String.raw`
 #t17-draft-toast .draft-msg{line-height:1.4}
 #t17-draft-toast .draft-cta{background:#2d6a43;border:0;color:#fff;border-radius:8px;padding:5px 8px;font-size:10px;font-weight:800;cursor:pointer;white-space:nowrap}
 #t17-draft-toast .draft-x{width:22px;height:22px;min-height:22px!important;background:#f3eee8;border:0;border-radius:50%;color:#7a7067;font-size:16px;line-height:1;cursor:pointer;padding:0!important;display:grid;place-items:center}
-#t17-stage{grid-column:1;grid-row:1;position:relative;min-height:0;background:#f6f0e7;border-right:1px solid #eee4dc;overflow:hidden}
+#t17-stage{grid-column:1;grid-row:1;position:relative;min-height:0;background:#fbfaf6;border-right:1px solid #eee4dc;overflow:hidden}
 #t17-canvas,#t17-canvas-2d{position:absolute;inset:0;display:block;width:100%;height:100%}
 #t17-stage[data-view="2d"] #t17-canvas{opacity:0;pointer-events:none}
 #t17-stage[data-view="3d"] #t17-canvas-2d{opacity:0;pointer-events:none}
+#t17-stage[data-view="2d"] .three-fallback{display:none!important}
 #t17-stage-panel{position:absolute;top:14px;left:50%;z-index:7;display:block;width:min(560px,calc(100% - 40px));transform:translateX(-50%);pointer-events:none}
 #t17-stage-panel>*{pointer-events:auto}
 .stage-card{background:transparent;border:0;border-radius:0;padding:0;box-shadow:none}
@@ -1727,11 +1837,12 @@ const CSS = String.raw`
 #t17-app .stage-size-row{padding:4px 6px 4px 12px!important}
 .stage-size-row>span{line-height:1;white-space:nowrap}
 .stage-size-options{display:flex;gap:4px;align-items:center}
+.stage-size-select{display:none;height:32px;min-width:82px;border:1px solid #d8cdbb;border-radius:10px;background:#fffaf3;color:#2d2924;font-family:Arial,sans-serif;font-size:13px;font-weight:800;padding:0 26px 0 10px;cursor:pointer}
 .stage-size-btn{height:32px;min-width:50px;border:1px solid #d8cdbb;border-radius:10px;background:#fffaf3;color:#5f554b;font-family:Arial,sans-serif;font-size:13px;font-weight:800;cursor:pointer}
 #t17-app .stage-size-btn{padding:0!important;min-height:32px!important}
 .stage-size-btn.is-active{background:#171717;border-color:#171717;color:#fff}
-.dimension-popover{display:none;position:absolute;top:44px;left:50%;z-index:8;transform:translateX(-50%);width:min(520px,calc(100% - 8px));max-height:420px;background:rgba(255,255,255,.98);border:1px solid #e4d9cf;border-radius:18px;padding:0;box-shadow:0 22px 48px rgba(58,42,30,.20);overflow:auto;user-select:none}
-#t17-app .dimension-popover{padding:0!important}
+.dimension-popover{display:none;position:absolute;top:46px;left:50%;z-index:8;transform:translateX(-50%);width:min(520px,calc(100% - 8px));max-height:420px;background:rgba(255,255,255,.98);border:1px solid #e4d9cf;border-radius:18px;padding:20px 0;box-shadow:0 22px 48px rgba(58,42,30,.20);overflow:auto;user-select:none}
+#t17-app .dimension-popover{padding:20px 0!important}
 .dimension-popover.is-open{display:flex;flex-direction:column;gap:0}
 .dimension-popover *{box-sizing:border-box}
 .dimension-popover input{user-select:text}
@@ -1787,9 +1898,9 @@ const CSS = String.raw`
 #t17-sel-actions .mini.danger{background:#fff0ef;border-color:#edb2ad;color:#b33b36}
 #t17-flash{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:rgba(31,30,29,.94);color:#fff;padding:9px 18px;border-radius:18px;font-size:13px;font-weight:700;opacity:0;pointer-events:none;transition:opacity .2s;max-width:80%;text-align:center;z-index:4}
 #t17-flash.show{opacity:1}
-#t17-bottom{grid-column:1;grid-row:2;background:#fff;border-top:1px solid var(--line);padding:6px 12px;display:grid;grid-template-columns:minmax(190px,.42fr) minmax(430px,1fr);gap:10px;align-items:center;overflow:hidden}
-#t17-checkout-panel{width:100%;min-width:0;justify-self:end;display:grid;grid-template-columns:minmax(0,1fr) minmax(170px,210px);grid-template-rows:auto auto;gap:6px 10px;align-items:center}
-#t17-design-summary{align-self:center;border:1px solid #e9dfd6;border-radius:12px;background:linear-gradient(180deg,#fffdfb,#f7f1eb);padding:7px 10px;font-family:Arial,sans-serif;color:#746960;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px;row-gap:5px;min-width:0;min-height:46px;overflow:hidden;box-shadow:0 7px 18px rgba(72,52,34,.045)}
+#t17-bottom{grid-column:1;grid-row:2;background:#fff;border-top:1px solid var(--line);padding:8px 10px;display:grid;grid-template-columns:minmax(170px,.86fr) minmax(245px,1.24fr) minmax(160px,.72fr);gap:9px;align-items:stretch;overflow:hidden}
+#t17-checkout-panel{width:100%;min-width:0;justify-self:stretch;display:grid;grid-template-rows:1fr auto;gap:5px;align-items:stretch;border:1px solid #e5dcd4;border-radius:14px;background:linear-gradient(180deg,#fffdfb,#f8f2ed);padding:7px;box-shadow:0 7px 18px rgba(72,52,34,.045);height:100%;min-height:86px;overflow:hidden}
+#t17-design-summary{align-self:stretch;border:1px solid #e9dfd6;border-radius:14px;background:linear-gradient(180deg,#fffdfb,#f7f1eb);padding:9px 11px;font-family:Arial,sans-serif;color:#746960;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:12px;row-gap:5px;min-width:0;height:100%;min-height:88px;overflow:hidden;box-shadow:0 7px 18px rgba(72,52,34,.045)}
 #t17-design-summary b{grid-column:1/-1;font-size:12px;letter-spacing:.5px;text-transform:none;color:#9a7d61;line-height:1}
 #t17-design-summary span{display:block;font-size:13px;line-height:1.2;min-width:0;white-space:nowrap}
 #t17-design-summary strong{font-size:13px;color:#2f2924;white-space:nowrap}
@@ -1813,14 +1924,16 @@ const CSS = String.raw`
 .seq-remove:hover{background:#d5504c;color:#fff}
 .seq-empty{grid-column:1/-1;min-height:74px;display:grid;place-items:center;text-align:center;color:#7f7469;font-family:Arial,sans-serif;font-size:11px}
 .seq-cord-item{grid-column:1/span 2}
-#t17-price{background:linear-gradient(180deg,#fffdfb,#f8f2ed);border:1px solid #e5dcd4;border-radius:14px;padding:7px 12px;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:12px;row-gap:2px;align-items:end;box-shadow:0 7px 18px rgba(72,52,34,.045)}
-.price-rows{display:grid;grid-template-columns:1fr 1fr;column-gap:12px;row-gap:1px}
-.price-rows .pr{display:flex;justify-content:space-between;font-family:Arial,sans-serif;font-size:14px;color:#746960;padding:0;gap:8px;line-height:1.22}
-.price-rows .pr:last-child{grid-column:1/-1}
-.price-total{display:flex;flex-direction:column;align-items:flex-end;justify-content:center;border-left:1px solid #e0d6cd;padding-left:12px;font-size:12px;font-weight:700;color:#8b8177;white-space:nowrap}
-.price-total span:last-child{font-family:Georgia,"Times New Roman",serif;font-size:26px;color:#2d2824;line-height:1}
-#t17-add-cart{grid-column:2;grid-row:1;align-self:stretch;justify-self:end;width:100%;height:48px!important;min-height:48px!important;margin-top:0;background:#2d6a43;color:#fff;border:0;border-radius:14px;padding:0 13px!important;font-size:13px;font-weight:800;line-height:1.1!important;cursor:pointer;box-shadow:0 10px 22px rgba(45,106,67,.18)}
-.checkout-note{grid-column:2;grid-row:2;font-family:Arial,sans-serif;font-size:13px;color:#82776e;line-height:1.15;text-align:center}
+#t17-price{height:100%;min-height:86px;background:linear-gradient(180deg,#fffdfb,#f8f2ed);border:1px solid #e5dcd4;border-radius:14px;padding:8px 9px;display:grid;grid-template-columns:minmax(0,1fr) minmax(68px,76px);column-gap:8px;align-items:center;box-shadow:0 7px 18px rgba(72,52,34,.045);min-width:0;overflow:hidden}
+.price-rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px 6px;align-items:center;min-width:0}
+.price-rows .pr{min-height:26px;display:flex;align-items:center;justify-content:space-between;font-family:Arial,sans-serif;font-size:12px;color:#746960;padding:3px 7px;gap:6px;line-height:1;border-radius:9px;background:rgba(255,255,255,.58);white-space:nowrap;min-width:0}
+.price-rows .pr-cord{grid-column:1/-1}
+.price-rows .pr .pr-label{overflow:hidden;text-overflow:ellipsis;max-width:100%;min-width:0}
+.price-rows .pr strong{font-size:13px;font-weight:850;color:#2f2924;white-space:nowrap;text-align:right}
+.price-total{min-height:54px;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;border-left:1px solid #e0d6cd;padding-left:8px;font-size:12px;font-weight:700;color:#8b8177;white-space:nowrap}
+.price-total span:last-child{font-family:Georgia,"Times New Roman",serif;font-size:22px;color:#2d2824;line-height:1}
+#t17-add-cart{align-self:stretch;justify-self:stretch;width:100%;height:auto!important;min-height:48px!important;margin-top:0;background:#2d6a43;color:#fff;border:0;border-radius:13px;padding:0 10px!important;font-size:11px;font-weight:800;line-height:1.12!important;cursor:pointer;box-shadow:0 10px 22px rgba(45,106,67,.18)}
+.checkout-note{font-family:Arial,sans-serif;font-size:12px;color:#82776e;line-height:1.15;text-align:center;white-space:nowrap}
 .checkout-note.ok{color:#3d8b4f}.checkout-note.over{color:#c8423d}
 #t17-add-cart:hover{background:#d4a72c}
 #t17-add-cart:disabled{opacity:.6;cursor:default}
@@ -1829,37 +1942,72 @@ const CSS = String.raw`
 #t17-seq::-webkit-scrollbar-thumb{background:#8f7f55;border-radius:8px;border:2px solid #d4c9a2;background-clip:padding-box}
 .scroll-area::-webkit-scrollbar-track,#t17-bead-grid::-webkit-scrollbar-track,#t17-seq::-webkit-scrollbar-track{background:transparent}
 @media(max-width:1400px){
-  #t17-app{width:calc(100vw - 24px);margin-left:calc(-50vw + 12px)}
+  #t17-app{width:calc(100vw - 16px);margin:8px 0}
   #t17-right{grid-template-columns:minmax(0,52%) minmax(0,48%)}
+  #t17-stage,#t17-catalog{min-width:0}
   #t17-catalog{padding:5px 7px}
   .catalog-body{grid-template-columns:118px minmax(0,1fr);gap:10px}
   #t17-bead-grid{grid-template-columns:repeat(3,minmax(92px,1fr));gap:6px}
-  #t17-bottom{grid-template-columns:minmax(0,1fr);gap:5px}
-  #t17-checkout-panel{grid-template-columns:minmax(0,1fr) 178px}
+  #t17-bottom{grid-template-columns:minmax(150px,.86fr) minmax(220px,1.24fr) minmax(145px,.72fr);gap:7px}
 }
 @media(max-width:1180px){
+  #t17-app{width:100%;margin:6px 0;border-radius:0}
   #t17-right{grid-template-columns:minmax(0,50%) minmax(0,50%)}
-  #t17-seq-wrap{height:142px}
-  .catalog-body{grid-template-columns:104px minmax(0,1fr);max-height:390px;flex-basis:390px}
-  #t17-bead-grid{grid-template-columns:repeat(2,minmax(92px,1fr))}
-  .mode-tab{min-width:72px;padding:0 8px!important;font-size:8px}
+  #t17-stage,#t17-catalog{min-width:0}
+  #t17-stage-panel{width:min(500px,calc(100% - 16px));top:10px}
+  .stage-size-options{display:none!important}
+  .stage-size-select{display:block}
+  .stage-size-row{height:36px;padding:3px 7px 3px 11px!important}
+  .stage-size-row>span{font-size:11px}
+  .dimension-pill{height:36px;min-width:168px}
+  #t17-seq-wrap{height:126px;grid-template-columns:108px minmax(0,1fr);gap:6px}
+  #t17-seq-summary{padding:7px 0 7px 8px;gap:3px}
+  #t17-seq{height:calc(100% - 14px);margin:7px 7px 7px 0;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;padding:5px}
+  #t17-catalog{padding:4px 6px;gap:5px}
+  .catalog-body{grid-template-columns:96px minmax(0,1fr);gap:8px;max-height:330px;flex-basis:330px}
+  .catalog-cats{padding:2px 4px 7px;overflow:hidden}
+  #t17-app .catalog-cats .scroll-area{overflow-y:auto!important;overflow-x:hidden!important}
+  #t17-category-list{display:block!important;grid-template-columns:none!important}
+  .cat-row{padding-left:10px!important}
+  #t17-bead-grid{grid-template-columns:repeat(2,minmax(82px,1fr));gap:6px;padding-right:6px}
+  .mode-tab{min-width:68px;padding:0 7px!important;font-size:7.8px}
   #t17-stage-actions{gap:8px}
   #t17-stage-actions button{padding:0 10px!important}
   .dimension-popover{width:min(430px,calc(100vw - 34px))}
 }
 @media(max-width:820px){
-  #t17-app{flex-direction:column;height:auto;min-height:100vh;overflow:auto}
+  #t17-app{width:100%;margin:0;border-radius:0;flex-direction:column;height:auto;min-height:100vh;overflow:visible}
   #t17-left{display:none}
-  #t17-left h3{font-size:24px;margin-bottom:12px}
-  #t17-stone-list,#t17-category-list{display:grid;grid-template-columns:1fr 1fr}
-  .stone-row{font-size:17px;min-height:42px}
-  #t17-right{display:flex;flex-direction:column;overflow:visible}
-  #t17-catalog{border-left:0;border-top:1px solid var(--line);order:2;max-height:620px}
-  .catalog-body{grid-template-columns:120px minmax(0,1fr)}
-  .catalog-cats{padding:14px 6px 14px 12px}
-  #t17-stage{order:3;min-height:420px}
-  #t17-bottom{grid-template-columns:1fr}
-  #t17-bead-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #t17-right{display:flex;flex-direction:column;overflow:visible;width:100%}
+  #t17-stage{order:1;min-height:400px;border-right:0}
+  #t17-catalog{order:2;border-left:0;border-top:1px solid var(--line);max-height:none;padding:5px 6px}
+  #t17-bottom{order:3;grid-template-columns:1fr;gap:6px;padding:8px 10px}
+  #t17-stage-panel{top:8px;width:calc(100% - 14px)}
+  .stage-controls{justify-content:center;gap:7px}
+  #t17-wrist-wrap{gap:6px}
+  .dimension-pill{height:34px;min-width:150px}
+  .stage-size-row{height:34px;gap:6px;padding:2px 7px!important}
+  .stage-size-select{height:28px;min-width:76px;font-size:12px;border-radius:9px}
+  .dimension-popover{top:40px;width:min(420px,calc(100vw - 18px));max-height:390px}
+  #t17-seq-wrap{height:108px;grid-template-columns:92px minmax(0,1fr);gap:5px}
+  #t17-seq-summary{padding:6px 0 6px 7px;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px}
+  #t17-seq-summary b{font-size:13px}
+  .seq-summary-btn{height:17px!important;font-size:7.5px;padding:0 5px!important}
+  #t17-seq{height:calc(100% - 12px);margin:6px 6px 6px 0;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;padding:5px}
+  .seq-item{height:30px;padding:2px 4px}
+  .seq-dot{width:20px;height:20px;flex-basis:20px}
+  .seq-item small{font-size:8px}
+  .catalog-body{grid-template-columns:96px minmax(0,1fr);gap:8px;flex:0 0 300px;max-height:300px}
+  .catalog-cats{padding:2px 4px 7px;overflow:hidden}
+  #t17-app .catalog-cats .scroll-area{overflow-y:auto!important;overflow-x:hidden!important;min-height:0}
+  #t17-category-list{display:block!important;grid-template-columns:none!important}
+  .cat-row{min-height:34px;font-size:13px;padding-left:10px!important}
+  .cat-mark{width:14px;height:14px;flex-basis:14px}
+  #t17-bead-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;max-height:300px;overflow-y:auto;padding:0 5px 6px 0}
+  .bead-card{min-height:64px;padding:4px 5px}
+  .bead-card .card-coin{width:26px;height:26px}
+  .bead-meta b{font-size:10px}
+  .bead-meta small{font-size:9px}
 }
 `;
 
@@ -1908,8 +2056,8 @@ const fragment = `<!-- ===== Earthward T17 Crystal Bracelet Builder WP Fragment 
     </div>
     <div id="t17-bottom">
       <div id="t17-design-summary"></div>
+      <div id="t17-price"></div>
       <div id="t17-checkout-panel">
-        <div id="t17-price"></div>
         <button type="button" id="t17-add-cart">Checkout custom bracelet</button>
         <div id="t17-checkout-note"></div>
       </div>

@@ -1,0 +1,391 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "design": "ABCD 4-option Likert (strength-aware)",
+    "purpose": "Upgrade 28-q MBTI test from binary A/B to 4-option Likert so users feel a stronger 'test' sense and can express degree, not just direction.",
+    "structure": "4 dimensions (EI/NS/TF/JP) x 7 questions = 28. Each question = 1 scenario + 4 options mapping to [Strong X, Slight X, Slight Y, Strong Y] where X/Y are the two poles of that dimension.",
+    "option_keys": {
+      "A": "Strong pole X (e.g. Strongly Extraverted) — weight 2",
+      "B": "Slight pole X (e.g. Slightly Extraverted) — weight 1",
+      "C": "Slight pole Y (e.g. Slightly Introverted) — weight 1",
+      "D": "Strong pole Y (e.g. Strongly Introverted) — weight 2"
+    },
+    "scoring": {
+      "mechanic": "Sum weights per pole across the 7 questions of each dimension. Pole with larger sum wins; the absolute difference |X - Y| maps to strength.",
+      "weights": "A = +2 to pole X; B = +1 to pole X; C = +1 to pole Y; D = +2 to pole Y",
+      "per_dimension_max": 14,
+      "per_dimension_pole_range": "0..14 each; X+Y always = 14 if all 7 answered",
+      "strength_bands": {
+        "strong": "winner pole score >= 11 (i.e. >= 79% of 14) — |X-Y| >= 8",
+        "moderate": "winner pole score 8..10 (i.e. 57-71%) — |X-Y| in 4..7",
+        "mild": "winner pole score 7 (i.e. 50%, only reachable on a 7-7 tie broken by tiebreak) — |X-Y| in 0..3"
+      },
+      "tiebreak": {
+        "rule": "If a dimension is tied 7-7 (only possible when answers split as 1x Strong + 2x Slight on each side, or 3x Slight-Strong mixes that net equal), fall back to the dominant cognitive-function axis already implied by the OTHER three dimensions. Concretely: tiebreak order = attitude (EI) -> perceiving (NS) -> judging (TF) -> lifestyle (JP). For the tied dimension, pick the pole whose letter leads its dichotomy in DICHOTOMIES order (E over I, N over S, T over F, J over P) UNLESS the user's already-decided dominant function suggests otherwise. In practice this resolves to: EI tie -> E; NS tie -> N; TF tie -> T; JP tie -> J. This is the same A-pole-wins rule the binary version used.",
+        "rationale": "Keeps behaviour identical to the existing binary scoreQuiz on the boundary, so old test users see no personality flip."
+      }
+    },
+    "tie_strength_summary": "Final result = 4-letter type + one of {strong, moderate, mild} computed from the AVERAGE of per-dimension |X-Y| gaps. Avg gap >= 6 -> strong; 3..5.99 -> moderate; < 3 -> mild. This gives a single honest strength label rather than 4 separate ones.",
+    "design_principles": [
+      "Cognitive-function rooted, not stereotype-rooted: scenarios are concrete situations (holding a crystal, guided meditation, picking a stone for a friend, reading a tarot deck), not abstract trait claims.",
+      "Strength is in the option wording, not a separate slider: A/D options commit visibly harder than B/C, so the user themselves decides how strongly they lean.",
+      "Avoid value-laden language: no option reads as 'better'. Each pole has its own dignity.",
+      "Reverse-coded options kept to a minimum: in this design X is always A/B and Y is always C/D for every question, so there is no key-inversion cognitive load. (Trade-off accepted: a small order-effect bias. Mitigated by varying which pole is socially 'desirable' across questions.)",
+      "All English, all ASCII-safe text (CJK is in surrounding UI strings, not here)."
+    ],
+    "compat": {
+      "data_layer_field": "DATA.quiz (replaces the binary QUIZ constant in generate.js)",
+      "field_shape_change": "binary had {id, dim, a, b, q, optA, optB}; 4-opt has {id, dim, poles:[X,Y], q, options:[{key,label,score:{pole:weight}} x4]}. scoreQuiz and renderTestQuestion in generate.js MUST be rewritten to consume the new shape.",
+      "backward_compat": "none — this is a deliberate break. Old deep links to ?type=INTJ still work because the result-type string format is unchanged."
+    }
+  },
+
+  "dimensions": {
+    "EI": { "poles": ["E", "I"], "names": ["Extraversion", "Introversion"], "cognitive_axis": "energy direction — where attention naturally flows, outward to people and motion or inward to thought and solitude" },
+    "NS": { "poles": ["N", "S"], "names": ["Intuition", "Sensing"], "cognitive_axis": "information intake — patterns, meanings, future possibilities vs concrete details, present reality, lived texture" },
+    "TF": { "poles": ["T", "F"], "names": ["Thinking", "Feeling"], "cognitive_axis": "decision criteria — principle, consistency, fairness vs harmony, relational impact, felt values" },
+    "JP": { "poles": ["J", "P"], "names": ["Judging", "Perceiving"], "cognitive_axis": "outer-world stance — closure, structure, planned sequence vs openness, options, responsive flow" }
+  },
+
+  "questions": [
+    {
+      "id": 1,
+      "dimension": "EI",
+      "poles": ["E", "I"],
+      "scenario": "After a long, loud week, the thought that genuinely refills your cup is —",
+      "options": [
+        { "key": "A", "label": "a dinner with two or three close friends, talking late into the night — I can already feel the energy coming back", "score": { "E": 2 } },
+        { "key": "B", "label": "a small hangout sounds good, but only for an hour or two before I want my own space", "score": { "E": 1 } },
+        { "key": "C", "label": "a quiet evening alone sounds good, but I would not say no to one short call", "score": { "I": 1 } },
+        { "key": "D", "label": "a quiet evening alone — a book, soft music, no one needing anything from me", "score": { "I": 2 } }
+      ]
+    },
+    {
+      "id": 2,
+      "dimension": "EI",
+      "poles": ["E", "I"],
+      "scenario": "You are holding a new crystal at a market stall. Your instinct is to —",
+      "options": [
+        { "key": "A", "label": "strike up a conversation with the seller right away — where it was mined, who else has held it", "score": { "E": 2 } },
+        { "key": "B", "label": "ask one or two questions out loud, then decide", "score": { "E": 1 } },
+        { "key": "C", "label": "sit with it quietly for a minute, maybe mention a brief thanks to the seller", "score": { "I": 1 } },
+        { "key": "D", "label": "sit with it silently in your palm for a full minute before saying a word to anyone", "score": { "I": 2 } }
+      ]
+    },
+    {
+      "id": 3,
+      "dimension": "EI",
+      "poles": ["E", "I"],
+      "scenario": "At a gathering where you know almost no one, an hour in you are usually —",
+      "options": [
+        { "key": "A", "label": "wired and unable to wind down — you have been talking for an hour straight and cannot seem to stop", "score": { "E": 2 } },
+        { "key": "B", "label": "loudly in the mix, though part of you knows you will crash hard on the walk home", "score": { "E": 1 } },
+        { "key": "C", "label": "polite and present, glancing at the door now and then", "score": { "I": 1 } },
+        { "key": "D", "label": "polite but ready for the car — it has been enough", "score": { "I": 2 } }
+      ]
+    },
+    {
+      "id": 4,
+      "dimension": "EI",
+      "poles": ["E", "I"],
+      "scenario": "A big idea lands in your head. The first thing you want to do is —",
+      "options": [
+        { "key": "A", "label": "say it out loud to someone straight away — it only becomes real once it is spoken", "score": { "E": 2 } },
+        { "key": "B", "label": "mention it to whoever is around, then keep refining it with them", "score": { "E": 1 } },
+        { "key": "C", "label": "sit with it for an hour or two before mentioning it", "score": { "I": 1 } },
+        { "key": "D", "label": "sit with it privately until it has shape — maybe for days, maybe until someone asks the right question", "score": { "I": 2 } }
+      ]
+    },
+    {
+      "id": 5,
+      "dimension": "EI",
+      "poles": ["E", "I"],
+      "scenario": "Looking honestly at your friendships, the truer description is —",
+      "options": [
+        { "key": "A", "label": "a wide circle — but if I am honest, most of them do not really know me", "score": { "E": 2 } },
+        { "key": "B", "label": "a healthy mix on paper — though I sometimes realise I have not checked on the close ones in too long", "score": { "E": 1 } },
+        { "key": "C", "label": "a small inner circle plus a few acquaintances I do not chase", "score": { "I": 1 } },
+        { "key": "D", "label": "a deep few — I would rather know three people down to the bone", "score": { "I": 2 } }
+      ]
+    },
+    {
+      "id": 6,
+      "dimension": "EI",
+      "poles": ["E", "I"],
+      "scenario": "You have been alone with your thoughts for most of the day. By evening you feel —",
+      "options": [
+        { "key": "A", "label": "decidedly under-stimulated — you want voices, motion, company, anything with a pulse", "score": { "E": 2 } },
+        { "key": "B", "label": "a touch restless — a short call or a walk somewhere with people would settle it", "score": { "E": 1 } },
+        { "key": "C", "label": "mostly fine — solitude is easy, though you might text one person", "score": { "I": 1 } },
+        { "key": "D", "label": "rested and clear — solitude is where you recharge, full stop", "score": { "I": 2 } }
+      ]
+    },
+    {
+      "id": 7,
+      "dimension": "EI",
+      "poles": ["E", "I"],
+      "scenario": "When something difficult happens, your first move is usually to —",
+      "options": [
+        { "key": "A", "label": "talk it through with someone immediately — out loud is how you process", "score": { "E": 2 } },
+        { "key": "B", "label": "send a voice note or short message to someone, then see how it lands", "score": { "E": 1 } },
+        { "key": "C", "label": "sit with it alone for a while, then maybe bring it up later", "score": { "I": 1 } },
+        { "key": "D", "label": "retreat and feel it through on your own first — you will share it only once it has settled", "score": { "I": 2 } }
+      ]
+    },
+
+    {
+      "id": 8,
+      "dimension": "NS",
+      "poles": ["N", "S"],
+      "scenario": "A friend describes their new job. What you actually tune into first is —",
+      "options": [
+        { "key": "A", "label": "what it could become in two years — though I catch myself skipping past what the job actually is today", "score": { "N": 2 } },
+        { "key": "B", "label": "the direction it points — sometimes before I have heard what the work even is", "score": { "N": 1 } },
+        { "key": "C", "label": "the basic facts — pay, hours, who they report to — before the bigger picture", "score": { "S": 1 } },
+        { "key": "D", "label": "the concrete details — the salary, the hours, the commute, the team size", "score": { "S": 2 } }
+      ]
+    },
+    {
+      "id": 9,
+      "dimension": "NS",
+      "poles": ["N", "S"],
+      "scenario": "You pick up a tarot deck you have never seen. You want to understand it through —",
+      "options": [
+        { "key": "A", "label": "the symbolic system underneath — the patterns, the archetypes, the through-line across the whole deck", "score": { "N": 2 } },
+        { "key": "B", "label": "the bigger meanings the cards point to, even before I know each one", "score": { "N": 1 } },
+        { "key": "C", "label": "what each card plainly pictures, with a quick glance at the booklet", "score": { "S": 1 } },
+        { "key": "D", "label": "what each card plainly pictures — the figures, the colours, the numbers, exactly as drawn", "score": { "S": 2 } }
+      ]
+    },
+    {
+      "id": 10,
+      "dimension": "NS",
+      "poles": ["N", "S"],
+      "scenario": "Someone gives you directions to their house. You prefer —",
+      "options": [
+        { "key": "A", "label": "a rough sketch of the route — landmarks and the general shape is plenty", "score": { "N": 2 } },
+        { "key": "B", "label": "the gist plus one or two key landmarks to anchor it", "score": { "N": 1 } },
+        { "key": "C", "label": "the main turns written down, plus a landmark or two as backup", "score": { "S": 1 } },
+        { "key": "D", "label": "step-by-step turns with exact street names and distances", "score": { "S": 2 } }
+      ]
+    },
+    {
+      "id": 11,
+      "dimension": "NS",
+      "poles": ["N", "S"],
+      "scenario": "In a guided meditation, your mind naturally drifts toward —",
+      "options": [
+        { "key": "A", "label": "a web of associations — what the image reminds you of, where it leads, what it might mean", "score": { "N": 2 } },
+        { "key": "B", "label": "the wider feelings and themes the guidance stirs up", "score": { "N": 1 } },
+        { "key": "C", "label": "the texture of the moment, with the occasional thought drifting past", "score": { "S": 1 } },
+        { "key": "D", "label": "the texture of the moment — the breath, the room, the physical sensation, exactly as it is", "score": { "S": 2 } }
+      ]
+    },
+    {
+      "id": 12,
+      "dimension": "NS",
+      "poles": ["N", "S"],
+      "scenario": "You are choosing a crystal for a friend. You tend to pick by —",
+      "options": [
+        { "key": "A", "label": "what it symbolises and what they are becoming — the stone as a marker of a chapter", "score": { "N": 2 } },
+        { "key": "B", "label": "the meaning behind it, loosely held", "score": { "N": 1 } },
+        { "key": "C", "label": "what it visibly is — the colour they love, the weight — plus a quick check on its meaning", "score": { "S": 1 } },
+        { "key": "D", "label": "what it visibly is — the colour they love, the weight in the hand, the surface they will run a thumb over", "score": { "S": 2 } }
+      ]
+    },
+    {
+      "id": 13,
+      "dimension": "NS",
+      "poles": ["N", "S"],
+      "scenario": "When a problem lands at work, your instinct is to —",
+      "options": [
+        { "key": "A", "label": "reframe it — maybe it is the wrong problem entirely; the framing is the real lever", "score": { "N": 2 } },
+        { "key": "B", "label": "ask what the problem is really pointing at before solving it", "score": { "N": 1 } },
+        { "key": "C", "label": "check what we already know works and start from there", "score": { "S": 1 } },
+        { "key": "D", "label": "look at what has worked before and do more of that", "score": { "S": 2 } }
+      ]
+    },
+    {
+      "id": 14,
+      "dimension": "NS",
+      "poles": ["N", "S"],
+      "scenario": "Reading a book, the parts that stay with you are —",
+      "options": [
+        { "key": "A", "label": "the underlying ideas — though half the time I could not tell you what actually happened in the story", "score": { "N": 2 } },
+        { "key": "B", "label": "the patterns and the bigger argument — I sometimes skim past the scenes themselves to reach them", "score": { "N": 1 } },
+        { "key": "C", "label": "the vivid scenes, plus a sense of what the book was really about", "score": { "S": 1 } },
+        { "key": "D", "label": "the vivid scenes — the things you could picture clearly, almost replay", "score": { "S": 2 } }
+      ]
+    },
+
+    {
+      "id": 15,
+      "dimension": "TF",
+      "poles": ["T", "F"],
+      "scenario": "A friend is upset and asks for your read on a conflict. You lead with —",
+      "options": [
+        { "key": "A", "label": "the principle of the thing, plainly stated — even when I can see their face fall as I say it", "score": { "T": 2 } },
+        { "key": "B", "label": "the principle first, then a stilted, too-late note about how everyone is feeling", "score": { "T": 1 } },
+        { "key": "C", "label": "how everyone is feeling first, then the principle as a quiet anchor", "score": { "F": 1 } },
+        { "key": "D", "label": "how everyone in the room is actually feeling — the principle can wait", "score": { "F": 2 } }
+      ]
+    },
+    {
+      "id": 16,
+      "dimension": "TF",
+      "poles": ["T", "F"],
+      "scenario": "You have to give honest feedback that will sting. You —",
+      "options": [
+        { "key": "A", "label": "say it straight, because dancing around it is a form of dishonesty", "score": { "T": 2 } },
+        { "key": "B", "label": "say it clearly but soften the edges once", "score": { "T": 1 } },
+        { "key": "C", "label": "find a kinder angle and deliver it warm, with the relationship in mind", "score": { "F": 1 } },
+        { "key": "D", "label": "find the kindest true version, because the relationship matters as much as the point", "score": { "F": 2 } }
+      ]
+    },
+    {
+      "id": 17,
+      "dimension": "TF",
+      "poles": ["T", "F"],
+      "scenario": "Picking a stone for yourself, the deciding factor is usually —",
+      "options": [
+        { "key": "A", "label": "a clear reason — what it is traditionally used for, what it does, full stop", "score": { "T": 2 } },
+        { "key": "B", "label": "a clear reason, with a small nod to how drawn I feel to it", "score": { "T": 1 } },
+        { "key": "C", "label": "a felt yes, with a quick check that the traditional use fits", "score": { "F": 1 } },
+        { "key": "D", "label": "a felt yes — something in you simply leans toward it and that is enough", "score": { "F": 2 } }
+      ]
+    },
+    {
+      "id": 18,
+      "dimension": "TF",
+      "poles": ["T", "F"],
+      "scenario": "A decision has to be made for the group. Your instinct is —",
+      "options": [
+        { "key": "A", "label": "lay out the pros and cons, then pick the option that holds up under scrutiny", "score": { "T": 2 } },
+        { "key": "B", "label": "weigh pros and cons, then briefly check the room", "score": { "T": 1 } },
+        { "key": "C", "label": "check in with everyone first, then weigh the options", "score": { "F": 1 } },
+        { "key": "D", "label": "check in with everyone first — a choice people can live with beats a perfect one on paper", "score": { "F": 2 } }
+      ]
+    },
+    {
+      "id": 19,
+      "dimension": "TF",
+      "poles": ["T", "F"],
+      "scenario": "When someone is venting at you, your inner first response is —",
+      "options": [
+        { "key": "A", "label": "to spot the flaw in their reasoning — there is usually one and it is the actual lever", "score": { "T": 2 } },
+        { "key": "B", "label": "to notice where their logic slipped, while still listening", "score": { "T": 1 } },
+        { "key": "C", "label": "to feel the weight of what they are carrying, while half-noticing the logic", "score": { "F": 1 } },
+        { "key": "D", "label": "to feel the weight of what they are carrying with them — the logic can wait until they are steady", "score": { "F": 2 } }
+      ]
+    },
+    {
+      "id": 20,
+      "dimension": "TF",
+      "poles": ["T", "F"],
+      "scenario": "You would rather be seen as —",
+      "options": [
+        { "key": "A", "label": "fair, even when fairness costs someone their preference — and I will not pretend otherwise to soften it", "score": { "T": 2 } },
+        { "key": "B", "label": "fair-minded, though I have been told I can land as cold when I lead with it", "score": { "T": 1 } },
+        { "key": "C", "label": "kind-hearted, with room for the hard truth", "score": { "F": 1 } },
+        { "key": "D", "label": "kind, even when kindness softens a hard truth", "score": { "F": 2 } }
+      ]
+    },
+    {
+      "id": 21,
+      "dimension": "TF",
+      "poles": ["T", "F"],
+      "scenario": "A long-held value of yours collides with a friend's need. You are more likely to —",
+      "options": [
+        { "key": "A", "label": "hold the value — bending it once means bending it always, and they would understand", "score": { "T": 2 } },
+        { "key": "B", "label": "hold the value, but find a small way to soften the cost to them", "score": { "T": 1 } },
+        { "key": "C", "label": "make some room for them, while keeping the value mostly intact", "score": { "F": 1 } },
+        { "key": "D", "label": "make room for the friend — values are for people, not the other way around", "score": { "F": 2 } }
+      ]
+    },
+
+    {
+      "id": 22,
+      "dimension": "JP",
+      "poles": ["J", "P"],
+      "scenario": "A free weekend with no plans, by Sunday night you usually feel —",
+      "options": [
+        { "key": "A", "label": "restless and oddly tired — the openness itself became work", "score": { "J": 2 } },
+        { "key": "B", "label": "fine but faintly itchy — at least one anchor would have helped", "score": { "J": 1 } },
+        { "key": "C", "label": "mostly replenished, with maybe one small wish that I had planned a thing or two", "score": { "P": 1 } },
+        { "key": "D", "label": "deeply replenished — the openness was the whole point", "score": { "P": 2 } }
+      ]
+    },
+    {
+      "id": 23,
+      "dimension": "JP",
+      "poles": ["J", "P"],
+      "scenario": "Booking a trip, your tendency is —",
+      "options": [
+        { "key": "A", "label": "the itinerary locked weeks ahead — and honestly, a plan that changes after that rattles me for the rest of the trip", "score": { "J": 2 } },
+        { "key": "B", "label": "the flights and first two nights locked, and quietly stressed about leaving the rest open", "score": { "J": 1 } },
+        { "key": "C", "label": "the first night booked, the rest left to figure out on the road", "score": { "P": 1 } },
+        { "key": "D", "label": "a one-way ticket and a vague idea — let the road decide", "score": { "P": 2 } }
+      ]
+    },
+    {
+      "id": 24,
+      "dimension": "JP",
+      "poles": ["J", "P"],
+      "scenario": "Your desk or kitchen, honestly, is —",
+      "options": [
+        { "key": "A", "label": "usually in order — and if someone moves a thing on it, I cannot relax until it is back", "score": { "J": 2 } },
+        { "key": "B", "label": "mostly tidy, with one small pile I am willing to defend — though I do judge other people's mess more than I admit", "score": { "J": 1 } },
+        { "key": "C", "label": "a working mess, with corners I clear when I cannot stand it", "score": { "P": 1 } },
+        { "key": "D", "label": "a creative mess — I mostly know where everything is and that is enough", "score": { "P": 2 } }
+      ]
+    },
+    {
+      "id": 25,
+      "dimension": "JP",
+      "poles": ["J", "P"],
+      "scenario": "A deadline is two weeks out. You —",
+      "options": [
+        { "key": "A", "label": "start early and finish early — the open task nags at me until it is closed", "score": { "J": 2 } },
+        { "key": "B", "label": "sketch a plan in week one, execute in week two", "score": { "J": 1 } },
+        { "key": "C", "label": "let it simmer, start in earnest with five or six days to go", "score": { "P": 1 } },
+        { "key": "D", "label": "feel the spark closer to the deadline — pressure clarifies what actually matters", "score": { "P": 2 } }
+      ]
+    },
+    {
+      "id": 26,
+      "dimension": "JP",
+      "poles": ["J", "P"],
+      "scenario": "A plan you made gets disrupted at the last minute. Your honest first feeling is —",
+      "options": [
+        { "key": "A", "label": "real irritation — I built the plan for a reason and now I have to rebuild it", "score": { "J": 2 } },
+        { "key": "B", "label": "mild annoyance, then I regroup and replan", "score": { "J": 1 } },
+        { "key": "C", "label": "a flicker of curiosity — okay, what is the new shape of the day?", "score": { "P": 1 } },
+        { "key": "D", "label": "a small thrill — what else is now possible?", "score": { "P": 2 } }
+      ]
+    },
+    {
+      "id": 27,
+      "dimension": "JP",
+      "poles": ["J", "P"],
+      "scenario": "When a friend asks \"want to do something tonight?\", your default leans —",
+      "options": [
+        { "key": "A", "label": "\"let me check my calendar\" — I genuinely prefer to know", "score": { "J": 2 } },
+        { "key": "B", "label": "\"probably — let me look at what I had planned\"", "score": { "J": 1 } },
+        { "key": "C", "label": "\"sure, sounds fun\" — I rarely say no to a last-minute plan, even when I probably should", "score": { "P": 1 } },
+        { "key": "D", "label": "\"sure, what did you have in mind?\" — open is genuinely my favourite way", "score": { "P": 2 } }
+      ]
+    },
+    {
+      "id": 28,
+      "dimension": "JP",
+      "poles": ["J", "P"],
+      "scenario": "For you, a list of half-finished projects is mostly —",
+      "options": [
+        { "key": "A", "label": "a quiet source of stress — I would rather close them out before starting anything new", "score": { "J": 2 } },
+        { "key": "B", "label": "a small weight I plan to clear, on principle", "score": { "J": 1 } },
+        { "key": "C", "label": "a living garden I tend in seasons, with one or two I keep meaning to finish", "score": { "P": 1 } },
+        { "key": "D", "label": "a garden of options — I will return to each in its season", "score": { "P": 2 } }
+      ]
+    }
+  ]
+}
