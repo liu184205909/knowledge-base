@@ -302,3 +302,25 @@ Education and the Use of Crystals to Support Healing'."
 ---
 
 *分析完成于 2026-05-03 | 数据来源: healingcrystals.com 首页完整爬取*
+
+---
+
+## §9 候选策略点（汇入1H）
+
+> 基于以上拆解，提取可被 1H 策略清单引用的候选策略。
+
+### 可模仿点
+1. **7 维度标签体系** —— Stone/Chakra/Astrological/Color/Condition/Mineral/Shape 七维分类（依据：§7）。落地：我们的水晶库支持 7 维筛选
+2. **"By Condition"功效分类** —— 按症状分类（Anxiety/Sleep/Love 等 30-60 种），直接命中搜索意图（依据：§6.1）。落地：Crystals for Condition 32 页
+3. **Metaphysical Directory 百科** —— 每种水晶详细解读的完整百科（依据：§6.1）。落地：Crystal Meaning 390 篇百科
+4. **Crystal Grid Kits 套装** —— 水晶阵套装+配套指南，增加客单价（依据：§6.1）。落地：Crystal Grid Kit 产品线
+5. **Affiliate Program** —— 建立联盟营销，让灵性博客导流（依据：§6.1）。落地：5% 佣金 Affiliate 计划
+
+### 可超越点
+1. **网站设计老式** —— 2003 年风格，用户体验差（依据：§6.2）。落地：现代化设计+移动端优化
+2. **产品散货低价为主** —— 缺乏品牌溢价（依据：§6.2）。落地：精选手链品牌+品牌溢价
+3. **无订阅/无社区** —— 缺复购机制和用户互动（依据：§6.2）。落地：月度能量盒订阅+Crystal Stories 社区
+
+### 差异化机会
+1. **7 维标签×现代化设计** —— Healing Crystals 有 7 维标签但网站老旧，我们用现代化设计执行同样理念（依据：§6.2"网站设计"差异）
+2. **情感化内容 vs 学术化** —— Healing Crystals 是百科式/学术化，我们做情感化/故事化内容（依据：§6.2"内容风格"差异）
