@@ -1,0 +1,25 @@
+{
+  "input_counts": {
+    "candidates": 1323,
+    "priority": {
+      "P3": 1120,
+      "P0": 11,
+      "P1": 36,
+      "Parked": 34,
+      "P2": 122
+    },
+    "route_requirement": {
+      "requires_route": 972,
+      "clean_candidate": 351
+    }
+  },
+  "output_file_counts": {
+    "evidence": 4,
+    "briefs": 30,
+    "articles": 10,
+    "images": 11
+  },
+  "findings_count": 0,
+  "findings_by_severity": {},
+  "findings_sample": []
+}

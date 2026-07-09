@@ -1,0 +1,116 @@
+{
+  "_meta": {
+    "generated_at": "2026-07-08T18:01:10.894Z",
+    "output_dir": "dreams/briefs",
+    "shard_size": 100,
+    "note": "Generated without deleting existing files."
+  },
+  "counts": {
+    "total_candidates": 1323,
+    "target_p0_p1_p2_p3": 1289,
+    "parked_excluded": 34,
+    "by_priority": {
+      "P0": 11,
+      "P1": 36,
+      "P2": 122,
+      "P3": 1120
+    },
+    "by_page_type": {
+      "Lens": 886,
+      "Subject": 390,
+      "Emotion": 8,
+      "Type": 2,
+      "Splinter": 3
+    },
+    "by_status": {
+      "publishable_draft": 351,
+      "blocked_revision": 938
+    },
+    "by_knowledge_match": {
+      "matched": 247,
+      "unmatched": 1042
+    },
+    "noise_nonempty_blocked_revision": 938,
+    "noise_empty_publishable_draft": 351
+  },
+  "shards": [
+    {
+      "shard": "001",
+      "json": "dream-briefs-p0-p3-shard-001.json",
+      "markdown": "dream-briefs-p0-p3-shard-001.md",
+      "count": 100
+    },
+    {
+      "shard": "002",
+      "json": "dream-briefs-p0-p3-shard-002.json",
+      "markdown": "dream-briefs-p0-p3-shard-002.md",
+      "count": 100
+    },
+    {
+      "shard": "003",
+      "json": "dream-briefs-p0-p3-shard-003.json",
+      "markdown": "dream-briefs-p0-p3-shard-003.md",
+      "count": 100
+    },
+    {
+      "shard": "004",
+      "json": "dream-briefs-p0-p3-shard-004.json",
+      "markdown": "dream-briefs-p0-p3-shard-004.md",
+      "count": 100
+    },
+    {
+      "shard": "005",
+      "json": "dream-briefs-p0-p3-shard-005.json",
+      "markdown": "dream-briefs-p0-p3-shard-005.md",
+      "count": 100
+    },
+    {
+      "shard": "006",
+      "json": "dream-briefs-p0-p3-shard-006.json",
+      "markdown": "dream-briefs-p0-p3-shard-006.md",
+      "count": 100
+    },
+    {
+      "shard": "007",
+      "json": "dream-briefs-p0-p3-shard-007.json",
+      "markdown": "dream-briefs-p0-p3-shard-007.md",
+      "count": 100
+    },
+    {
+      "shard": "008",
+      "json": "dream-briefs-p0-p3-shard-008.json",
+      "markdown": "dream-briefs-p0-p3-shard-008.md",
+      "count": 100
+    },
+    {
+      "shard": "009",
+      "json": "dream-briefs-p0-p3-shard-009.json",
+      "markdown": "dream-briefs-p0-p3-shard-009.md",
+      "count": 100
+    },
+    {
+      "shard": "010",
+      "json": "dream-briefs-p0-p3-shard-010.json",
+      "markdown": "dream-briefs-p0-p3-shard-010.md",
+      "count": 100
+    },
+    {
+      "shard": "011",
+      "json": "dream-briefs-p0-p3-shard-011.json",
+      "markdown": "dream-briefs-p0-p3-shard-011.md",
+      "count": 100
+    },
+    {
+      "shard": "012",
+      "json": "dream-briefs-p0-p3-shard-012.json",
+      "markdown": "dream-briefs-p0-p3-shard-012.md",
+      "count": 100
+    },
+    {
+      "shard": "013",
+      "json": "dream-briefs-p0-p3-shard-013.json",
+      "markdown": "dream-briefs-p0-p3-shard-013.md",
+      "count": 89
+    }
+  ]
+}

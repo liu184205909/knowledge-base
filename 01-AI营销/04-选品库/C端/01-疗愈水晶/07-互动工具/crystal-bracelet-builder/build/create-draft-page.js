@@ -16,7 +16,7 @@ const path = require('path');
 const TITLE = 'Crystal Bracelet Builder';
 const SLUG = 'crystal-bracelet-builder';
 const PARENT = 43101;   // tools hub
-const HTML_PATH = path.resolve(__dirname, 'crystal-bracelet-builder-deploy.html');
+const HTML_PATH = path.resolve(__dirname, 'crystal-bracelet-builder-wp-fragment.html');
 
 const env = fs.readFileSync(path.join(os.homedir(), '.env'), 'utf8');
 const SITE = env.match(/WP_SITE=(.+)/)[1].trim();
@@ -55,10 +55,10 @@ async function run() {
   const payload = {
     title: TITLE,
     slug: SLUG,
-    status: 'draft',          // RED LINE: never publish in step 3
     content,
     parent: PARENT
   };
+  if (!existing) payload.status = 'draft';
 
   let r;
   if (existing && existing.id) {

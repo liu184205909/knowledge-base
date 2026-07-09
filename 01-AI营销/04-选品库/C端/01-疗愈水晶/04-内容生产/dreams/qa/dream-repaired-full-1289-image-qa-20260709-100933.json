@@ -1,0 +1,137 @@
+{
+  "report_type": "dream_repaired_full_1289_image_qa",
+  "generated_at": "2026-07-09T10:09:33+08:00",
+  "scope": {
+    "queue_path": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\dreams\\images\\dream-image-queue-repaired-full-1289.jsonl",
+    "results_path": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\dreams\\images\\dream-image-generation-results-repaired-full-1289.jsonl",
+    "assets_dir": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\02-网站规划\\assets\\images\\generated\\dreams",
+    "result_log_write_policy": "read-only QA check; production result log was not written by this report"
+  },
+  "summary": {
+    "queue_rows": 1289,
+    "queue_unique_slugs": 1287,
+    "queue_bad_json_lines": 0,
+    "results_rows": 167,
+    "results_unique_slugs": 167,
+    "results_bad_json_lines": 0,
+    "hero_completed_ok_with_existing_file": 156,
+    "hero_failed_latest": 11,
+    "hero_pending_no_result": 1120,
+    "ok_records_missing_expected_file": 0,
+    "queue_duplicate_slug_count": 2,
+    "results_duplicate_slug_count": 0,
+    "asset_slug_dirs": 521,
+    "asset_webp_files": 507
+  },
+  "status_counts": {
+    "all_result_lines": {
+      "ok": 156,
+      "fail": 11
+    },
+    "latest_status_for_queue_unique_slugs": {
+      "pending_no_result": 1120,
+      "ok": 156,
+      "fail": 11
+    }
+  },
+  "failure_reason_distribution": {
+    "HTTP 524: {\"error\":{\"message\":\"openai_error\",\"type\":\"bad_response_status_code\",\"param\":\"\",\"code\":\"bad_response_status_code\"}}": 11
+  },
+  "failures": [
+    {
+      "slug": "bat-symbol-spiritual-dream-meaning",
+      "status": "fail",
+      "reason": "HTTP 524: {\"error\":{\"message\":\"openai_error\",\"type\":\"bad_response_status_code\",\"param\":\"\",\"code\":\"bad_response_status_code\"}}",
+      "result_line": 149,
+      "ts": "2026-07-09T02:02:56.728Z"
+    },
+    {
+      "slug": "deer-omen-dream-meaning",
+      "status": "fail",
+      "reason": "HTTP 524: {\"error\":{\"message\":\"openai_error\",\"type\":\"bad_response_status_code\",\"param\":\"\",\"code\":\"bad_response_status_code\"}}",
+      "result_line": 58,
+      "ts": "2026-07-09T01:30:11.250Z"
+    },
+    {
+      "slug": "frog-represent-spiritually-dream-meaning",
+      "status": "fail",
+      "reason": "HTTP 524: {\"error\":{\"message\":\"openai_error\",\"type\":\"bad_response_status_code\",\"param\":\"\",\"code\":\"bad_response_status_code\"}}",
+      "result_line": 144,
+      "ts": "2026-07-09T02:01:10.838Z"
+    },
+    {
+      "slug": "meaning-of-lightning-biblical-dream-meaning",
+      "status": "fail",
+      "reason": "HTTP 524: {\"error\":{\"message\":\"openai_error\",\"type\":\"bad_response_status_code\",\"param\":\"\",\"code\":\"bad_response_status_code\"}}",
+      "result_line": 72,
+      "ts": "2026-07-09T01:36:35.401Z"
+    },
+    {
+      "slug": "sea-lion-spiritual-meaning-dream-meaning",
+      "status": "fail",
+      "reason": "HTTP 524: {\"error\":{\"message\":\"openai_error\",\"type\":\"bad_response_status_code\",\"param\":\"\",\"code\":\"bad_response_status_code\"}}",
+      "result_line": 63,
+      "ts": "2026-07-09T01:32:16.341Z"
+    },
+    {
+      "slug": "seeing-white-light-spiritual-meaning-dream-meaning",
+      "status": "fail",
+      "reason": "HTTP 524: {\"error\":{\"message\":\"openai_error\",\"type\":\"bad_response_status_code\",\"param\":\"\",\"code\":\"bad_response_status_code\"}}",
+      "result_line": 152,
+      "ts": "2026-07-09T02:04:21.955Z"
+    },
+    {
+      "slug": "spiritual-meaning-of-gold-dream-meaning",
+      "status": "fail",
+      "reason": "HTTP 524: {\"error\":{\"message\":\"openai_error\",\"type\":\"bad_response_status_code\",\"param\":\"\",\"code\":\"bad_response_status_code\"}}",
+      "result_line": 127,
+      "ts": "2026-07-09T01:55:17.806Z"
+    },
+    {
+      "slug": "spiritual-meaning-of-hitting-a-deer-dream-meaning",
+      "status": "fail",
+      "reason": "HTTP 524: {\"error\":{\"message\":\"openai_error\",\"type\":\"bad_response_status_code\",\"param\":\"\",\"code\":\"bad_response_status_code\"}}",
+      "result_line": 130,
+      "ts": "2026-07-09T01:56:50.821Z"
+    },
+    {
+      "slug": "spiritual-meaning-of-red-roses-dream-meaning",
+      "status": "fail",
+      "reason": "HTTP 524: {\"error\":{\"message\":\"openai_error\",\"type\":\"bad_response_status_code\",\"param\":\"\",\"code\":\"bad_response_status_code\"}}",
+      "result_line": 102,
+      "ts": "2026-07-09T01:46:54.289Z"
+    },
+    {
+      "slug": "tiger-horoscope-tomorrow-dream-meaning",
+      "status": "fail",
+      "reason": "HTTP 524: {\"error\":{\"message\":\"openai_error\",\"type\":\"bad_response_status_code\",\"param\":\"\",\"code\":\"bad_response_status_code\"}}",
+      "result_line": 126,
+      "ts": "2026-07-09T01:55:08.635Z"
+    },
+    {
+      "slug": "toad-meaning-spiritual-dream-meaning",
+      "status": "fail",
+      "reason": "HTTP 524: {\"error\":{\"message\":\"openai_error\",\"type\":\"bad_response_status_code\",\"param\":\"\",\"code\":\"bad_response_status_code\"}}",
+      "result_line": 158,
+      "ts": "2026-07-09T02:06:37.700Z"
+    }
+  ],
+  "duplicate_slugs": {
+    "queue": [
+      {
+        "slug": "biblical-dream-meaning",
+        "count": 2
+      },
+      {
+        "slug": "christian-dream-meaning",
+        "count": 2
+      }
+    ],
+    "results": []
+  },
+  "missing_ok_records": [],
+  "parse_errors": {
+    "queue": [],
+    "results": []
+  }
+}

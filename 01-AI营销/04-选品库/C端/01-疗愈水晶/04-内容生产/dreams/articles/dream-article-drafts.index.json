@@ -1,0 +1,77 @@
+{
+  "generated_at": "2026-07-09",
+  "worker": "Dream Article Draft worker",
+  "scope": "All P0/P1/P2/P3 candidates from dreams-candidates.json; Parked excluded.",
+  "input_files": {
+    "candidates": "01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\dreams\\_shared\\dreams-candidates.json",
+    "knowledge": "01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\dreams\\_shared\\dreams-knowledge.json",
+    "brief_template": "01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\03-内容策略\\内容Brief\\Dream-Brief模板族-9套.md",
+    "data_image_strategy": "01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\03-内容策略\\Dream数据层与图片策略.md"
+  },
+  "output_files": [
+    "01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\dreams\\articles\\dream-article-drafts.shard-001.jsonl",
+    "01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\dreams\\articles\\dream-article-drafts.shard-002.jsonl",
+    "01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\dreams\\articles\\dream-article-drafts.shard-003.jsonl",
+    "01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\dreams\\articles\\dream-article-drafts.shard-004.jsonl",
+    "01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\dreams\\articles\\dream-article-drafts.shard-005.jsonl",
+    "01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\dreams\\articles\\dream-article-drafts.shard-006.jsonl"
+  ],
+  "counts": {
+    "total_candidates_in_source": 1323,
+    "included_p0_p1_p2_p3": 1289,
+    "excluded_parked": 34,
+    "by_route": {
+      "blocked": 657,
+      "needs_revision": 127,
+      "draft": 505
+    },
+    "by_priority": {
+      "P3": 1120,
+      "P0": 11,
+      "P1": 36,
+      "P2": 122
+    },
+    "by_page_type": {
+      "Lens": 886,
+      "Subject": 390,
+      "Emotion": 8,
+      "Type": 2,
+      "Splinter": 3
+    },
+    "knowledge_layer_matched": {
+      "true": 247,
+      "false": 1042
+    },
+    "route_reason_distribution": {
+      "brand_query": 21,
+      "generic_navigation": 18,
+      "duplicate_slug": 125,
+      "cross_vertical": 636
+    },
+    "source_noise_flag_distribution": {
+      "brand_query": 21,
+      "duplicate_slug": 217,
+      "generic_navigation": 19,
+      "cross_vertical": 636,
+      "typo": 3,
+      "low_confidence": 344
+    }
+  },
+  "global_rules": {
+    "publication_ready_forced_false": true,
+    "dream_dictionary_url_forbidden": true,
+    "root_level_post_url_only": true,
+    "blocked_or_needs_revision_no_publishable_body": true,
+    "required_fields_per_record": [
+      "url",
+      "title",
+      "meta",
+      "h2_outline",
+      "body",
+      "faq",
+      "internal_links",
+      "cta",
+      "compliance_flags"
+    ]
+  }
+}
