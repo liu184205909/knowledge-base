@@ -1,0 +1,14 @@
+{
+  "ts": "2026-07-09T16:58:37.063Z",
+  "base_url": "https://api.moleapi.com/v1",
+  "model": "gpt-image-2",
+  "attempted_this_run": 1,
+  "counts": {
+    "ok": 1,
+    "fail": 0,
+    "skip": 0
+  },
+  "output_root": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\02-网站规划\\assets\\images\\generated\\dreams",
+  "raw_root": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\dreams\\images\\raw\\backbone-16",
+  "results_log": "D:\\Code\\knowledge-base\\01-AI营销\\04-选品库\\C端\\01-疗愈水晶\\04-内容生产\\dreams\\images\\dream-image-generation-results-backbone-16.jsonl"
+}

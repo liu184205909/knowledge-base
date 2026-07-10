@@ -1,0 +1,1335 @@
+[
+  {
+    "id": "sym_teeth_falling_out",
+    "symbol": "teeth falling out",
+    "category": "body",
+    "keywords": [
+      "communication",
+      "self-image",
+      "powerlessness",
+      "embarrassment",
+      "life transition",
+      "voice"
+    ],
+    "trigger_words": [
+      "teeth",
+      "tooth",
+      "dental",
+      "molar",
+      "fang",
+      "falling out",
+      "crumbling",
+      "rotting",
+      "losing teeth"
+    ],
+    "digest_hint": "Teeth falling out often signals anxiety about self-image, communication (feeling unheard or unable to find words), or powerlessness during life transitions. A Jungian-style lens reads it as an identity threshold — the old self-image shedding. Reflective prompt: where am I feeling unheard, insecure, or mid-transition? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "blue-lace-agate-meaning",
+        "why": "Blue Lace Agate is associated with the throat chakra and gentle self-expression; offered as an intention focus for the 'communication/voice' theme that dream dictionaries highlight, NOT a cure.",
+        "shop_url": "/crystals-for-dreams/",
+        "cta_level": "L3"
+      },
+      "variant_anxiety": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Smoky Quartz is traditionally used for grounding and stabilizing intention; offered as an anchor for the powerlessness/anxiety variant, NOT a treatment.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_snake",
+    "symbol": "snake",
+    "category": "animal",
+    "keywords": [
+      "hidden threat",
+      "transformation",
+      "subconscious",
+      "instinct",
+      "healing",
+      "renewal"
+    ],
+    "trigger_words": [
+      "snake",
+      "serpent",
+      "python",
+      "cobra",
+      "viper",
+      "adder",
+      "reptile",
+      "slither"
+    ],
+    "digest_hint": "Snakes often point to hidden threats or betrayal, repressed instinctual material surfacing, transformation (shedding skin), or healing. A Jungian-style lens reads the snake as shadow/unconscious material or transformation, also carrying healing dimensions. Reflective prompt: what hidden material — fear, instinct, or change underway — is asking for attention? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Black Tourmaline is traditionally associated with boundary-setting and protection from unwanted energies; offered as an intention focus for the 'hidden threat / callous person' theme, NOT a cure or guarantee.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_transformation": {
+        "slug": "labradorite-meaning",
+        "why": "Labradorite is associated with transformation, change, and intuitive insight; offered as an intention focus for the 'shedding skin / renewal' variant when the dream tone is positive, NOT a treatment.",
+        "shop_url": "/product-category/labradorite-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_falling",
+    "symbol": "falling",
+    "category": "scene",
+    "keywords": [
+      "loss of control",
+      "insecurity",
+      "overwhelm",
+      "instability",
+      "shame",
+      "groundlessness"
+    ],
+    "trigger_words": [
+      "fall",
+      "falling",
+      "fell",
+      "dropped",
+      "plummet",
+      "plunge",
+      "tumble"
+    ],
+    "digest_hint": "Falling often reflects a loss of control, overwhelm, or insecurity and fear of not measuring up; sometimes it is purely physiological (sleep-onset jerk). A Jungian-style lens reads it as the ego footing giving way — an invitation to reconnect with what grounds you. Reflective prompt: where have I lost my footing, and what would re-stabilize me? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Smoky Quartz is traditionally used for grounding and stabilizing; offered as an intention anchor for the 'loss of control / groundlessness' theme, NOT a cure.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      },
+      "variant_fear": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Black Tourmaline is associated with safety, boundaries, and protective grounding; offered as an intention focus for the fear/insecurity variant, NOT a treatment.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_flying",
+    "symbol": "flying",
+    "category": "scene",
+    "keywords": [
+      "freedom",
+      "liberation",
+      "perspective",
+      "control",
+      "escape",
+      "ambition"
+    ],
+    "trigger_words": [
+      "fly",
+      "flying",
+      "flew",
+      "soar",
+      "floating",
+      "levitat",
+      "airborne",
+      "flight"
+    ],
+    "digest_hint": "Flying often reflects freedom, wider perspective, and personal power — or, as a shadow side, escape from stress and inflation when expansion isn't grounded. Difficulty staying in flight may flag hesitation or fear of success. A Jungian-style lens reads flight as expanding consciousness and the risk of inflation. Reflective prompt: am I soaring with groundedness, escaping pressure, or inflating above others? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Black Tourmaline is associated with grounding and energetic balance; offered as an intention anchor for the 'escape / inflation / difficulty staying in flight' theme — helping the dreamer stay connected to the ground while expanding, NOT a cure.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_anxiety": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Smoky Quartz is traditionally used for grounding and stabilizing; offered as an intention focus for the fear-of-success / obstacle variant when flight feels fearful, NOT a treatment.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_being_chased",
+    "symbol": "being chased",
+    "category": "scene",
+    "keywords": [
+      "avoidance",
+      "fear",
+      "disowned self",
+      "stress",
+      "flight response",
+      "unresolved conflict"
+    ],
+    "trigger_words": [
+      "chase",
+      "chasing",
+      "pursued",
+      "pursuing",
+      "running from",
+      "flee",
+      "fleeing",
+      "after me",
+      "chaser"
+    ],
+    "digest_hint": "Being chased usually signals avoidance — running from fears, stressors, or disowned parts of the self (anger, jealousy, even love) projected onto the pursuer. The chaser is often an aspect of your own psyche. A Jungian-style lens reads the pursuer as shadow material asking to be integrated, not outrun. Reflective prompt: what am I avoiding, and what part of myself might the chaser represent? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Black Tourmaline is associated with safety, boundaries, and protective grounding; offered as an intention focus for the 'fear / feeling pursued' theme, NOT a cure or guarantee.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_anxiety": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Smoky Quartz is traditionally used for grounding and releasing tension; offered as an intention anchor for the anxiety/avoidance variant, NOT a treatment.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_cat",
+    "symbol": "cat",
+    "category": "animal",
+    "keywords": [
+      "independence",
+      "intuition",
+      "feminine energy",
+      "mystery",
+      "creativity"
+    ],
+    "trigger_words": [
+      "cat",
+      "cats",
+      "kitten",
+      "kittens",
+      "feline"
+    ],
+    "digest_hint": "Cats are consistently tied to independence, intuition, the feminine, creativity, and mystery. A Jungian-style lens reads the cat as an anima figure — the dreamer inner feminine — so an attacking or sick cat may flag a strained relationship with that inner side. Reflective prompt: where is my intuition or feminine energy asking for attention — or is a catty dynamic at play? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Long associated in crystal lore with grounding and energetic boundary-setting. Offered here as a tangible anchor for the 'protection / boundary against catty dynamics' theme the dream may highlight — not a cure or guarantee.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_feminine_intuition": {
+        "slug": "labradorite-meaning",
+        "why": "Linked in crystal tradition to intuition, transformation, and the unseen/mysterious. Offered as an object to focus the intuition-and-feminine-energy reflection surfaced by the dream — not a guarantee of any outcome.",
+        "shop_url": "/product-category/labradorite-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_blood",
+    "symbol": "blood",
+    "category": "object",
+    "keywords": [
+      "life force",
+      "vitality",
+      "emotional energy",
+      "passion",
+      "depletion"
+    ],
+    "trigger_words": [
+      "blood",
+      "bloody",
+      "bleeding",
+      "bleed",
+      "wound"
+    ],
+    "digest_hint": "Blood often symbolizes life force, vitality, and emotional energy rather than a literal medical sign — bleeding is commonly read as depletion, blood inside the body as strength; positively it can signal renewed energy. A Jungian-style lens reads it as the currency of passion and life energy. Reflective prompt: where do my energy, passion, or emotional reserves feel drained or intensified? Reflective frame, NOT diagnosis or prediction. NOT prediction of bleeding/illness.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "garnet-meaning",
+        "why": "Long associated in crystal lore with vitality, life force, and the root chakra. Offered as a physical anchor for the 'life force / vitality' theme the dream may highlight — not a medical treatment, cure, or guarantee of any health outcome.",
+        "shop_url": "/shop/?s=garnet",
+        "cta_level": "L2"
+      },
+      "variant_grounding": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Traditionally used in crystal practice for grounding and stabilizing when emotions feel intense or depleting. Offered as a grounding focus for the depletion/emotional-drain theme — not a cure.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": [
+        "medical_outcome",
+        "bleeding_prediction"
+      ]
+    }
+  },
+  {
+    "id": "sym_fire",
+    "symbol": "fire",
+    "category": "disaster",
+    "keywords": [
+      "transformation",
+      "passion",
+      "anger",
+      "purification",
+      "destruction"
+    ],
+    "trigger_words": [
+      "fire",
+      "flame",
+      "flaming",
+      "burning",
+      "burn",
+      "blaze",
+      "smoke",
+      "inferno",
+      "on fire"
+    ],
+    "digest_hint": "Fire is a dual symbol of transformation and destruction — uncontrolled fire often links to unconscious anger, jealousy, rage, or desire, while controlled fire points to purification, power, and new beginnings. A Jungian-style lens reads it as transformation, with passion as a driving force. Reflective prompt: what in my life is being transformed, purified, or intensified? Reflective frame, NOT diagnosis or prediction. NOT prediction of actual disaster.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Traditionally associated in crystal lore with grounding and the gentle transmutation of intense energy. Offered as a grounding anchor for the 'uncontrolled anger / intensity' theme a fire dream may surface — not a cure or guarantee.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      },
+      "variant_passion": {
+        "slug": "carnelian-meaning",
+        "why": "Linked in crystal tradition to creative energy, courage, and motivated action. Offered as a focus for the 'passion / new beginnings' side of the fire symbol — not a guarantee of any outcome.",
+        "shop_url": "/product-category/carnelian-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": [
+        "disaster_prediction"
+      ]
+    }
+  },
+  {
+    "id": "sym_tornado",
+    "symbol": "tornado",
+    "category": "disaster",
+    "keywords": [
+      "emotional upheaval",
+      "loss of control",
+      "anxiety",
+      "sudden change",
+      "suppressed emotion"
+    ],
+    "trigger_words": [
+      "tornado",
+      "twister",
+      "cyclone",
+      "funnel",
+      "storm",
+      "hurricane"
+    ],
+    "digest_hint": "A tornado often mirrors emotional upheaval and forces outside your control — accumulated stress or suppressed feelings rising to the surface like warm air trapped beneath cold. A Jungian-style lens reads the vortex as shadow material breaking through into view. Reflective prompt: where does life feel out of control, and what feeling am I avoiding? Reflective frame, NOT diagnosis or prediction. NOT prediction of actual disaster.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "hematite-meaning",
+        "why": "Traditionally associated in crystal lore with grounding, stabilization, and a sense of embodied steadiness. Offered as a grounding anchor for the 'out-of-control / emotional upheaval' theme the dream may surface — not a cure or guarantee.",
+        "shop_url": "/product-category/hematite-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_grounding": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Used in crystal practice for grounding and stabilizing when anxiety feels spiraling. Offered as a focus for the 'stabilize after the storm' theme — not a treatment.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": [
+        "disaster_prediction"
+      ]
+    }
+  },
+  {
+    "id": "sym_naked_public",
+    "symbol": "naked in public",
+    "category": "scene",
+    "keywords": [
+      "vulnerability",
+      "exposure",
+      "fear of judgment",
+      "authenticity",
+      "insecurity"
+    ],
+    "trigger_words": [
+      "naked",
+      "nude",
+      "undressed",
+      "bare",
+      "exposed",
+      "no clothes",
+      "in public"
+    ],
+    "digest_hint": "Naked-in-public dreams usually reflect vulnerability, exposure, and fear of being seen or judged — the specific location (school, work, store) often points to the domain where confidence feels shaken. A Jungian-style lens reads it as the authentic self feeling exposed. Reflective prompt: where am I feeling under-confident, over-exposed, or out of step with my true self? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Traditionally associated in crystal lore with grounding and a felt sense of safety and boundary. Offered as a tangible anchor for the 'safety / protection from judgment' theme the dream may surface — not a cure or guarantee.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_grounding": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Used in crystal practice for grounding and easing the felt sense of exposure. Offered as a grounding focus when vulnerability feels destabilizing — not a treatment.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_water",
+    "symbol": "water",
+    "category": "object",
+    "keywords": [
+      "emotions",
+      "subconscious",
+      "emotional clarity",
+      "intuition",
+      "purification",
+      "renewal",
+      "overwhelm"
+    ],
+    "trigger_words": [
+      "water",
+      "ocean",
+      "sea",
+      "river",
+      "lake",
+      "pool",
+      "flood",
+      "wave",
+      "swim"
+    ],
+    "digest_hint": "Water is widely read as a symbol of the emotional life and the unconscious — clear water signals clarity and positive flow, murky or turbulent water confusion and suppressed feeling, floods or drowning feeling overwhelmed. A Jungian-style lens reads water as what moves beneath the surface of awareness. Reflective prompt: what is my emotional weather right now — clear, turbulent, or rising? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "moonstone-meaning",
+        "why": "Moonstone is traditionally associated in crystal lore with the moon, the emotional body, intuition, and the feminine/unconscious (water-like themes). Offered as an intention anchor for the 'emotions / subconscious / intuition' frame the dream may surface — not a cure or guarantee.",
+        "shop_url": "/product-category/rainbow-moonstone-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_overwhelm": {
+        "slug": "aquamarine-meaning",
+        "why": "Aquamarine is associated in crystal tradition with the water element, calm communication, and soothing turbulent emotion (throat chakra). Offered as a focus for the 'murky / overwhelmed / rising water' variant when emotion feels hard to settle — not a treatment.",
+        "shop_url": "/shop/?s=aquamarine",
+        "cta_level": "L2"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_death",
+    "symbol": "death",
+    "category": "spiritual",
+    "keywords": [
+      "transformation",
+      "transition",
+      "ending",
+      "rebirth",
+      "letting go",
+      "grief",
+      "change"
+    ],
+    "trigger_words": [
+      "die",
+      "died",
+      "dead",
+      "death",
+      "dying",
+      "kill",
+      "killed",
+      "funeral",
+      "passed away"
+    ],
+    "digest_hint": "Death in dreams is widely read as transformation, transition, and the ending of one phase so another can begin — not a literal omen of physical death. It can also surface around grief or fear of change. A Jungian-style lens reads it as an ego/transformation symbol — an old self-image dissolving so a new one can form. Reflective prompt: what is ending or being released, and what wants to be born? Reflective frame, NOT diagnosis or prediction. NOT prediction of any death.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "amethyst-meaning",
+        "why": "Amethyst is traditionally associated in crystal lore with the third-eye/crown, spiritual transition, stillness, and gentle transformation. Offered as an intention anchor for the 'transformation / transition / letting go' frame a death dream may surface — not a cure or guarantee.",
+        "shop_url": "/product-category/amethyst-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_rebirth": {
+        "slug": "labradorite-meaning",
+        "why": "Labradorite is associated in crystal tradition with transformation, change, and the unseen thresholds of the psyche. Offered as a focus for the 'rebirth / new phase emerging' side of the symbol when the dream tone is positive — not a treatment.",
+        "shop_url": "/product-category/labradorite-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": true,
+      "determinism_blocks": [
+        "death_prediction"
+      ]
+    }
+  },
+  {
+    "id": "sym_ex_partner",
+    "symbol": "ex partner",
+    "category": "emotion",
+    "keywords": [
+      "unresolved feelings",
+      "closure",
+      "relationship patterns",
+      "nostalgia",
+      "transition",
+      "letting go"
+    ],
+    "trigger_words": [
+      "ex-boyfriend",
+      "ex-girlfriend",
+      "ex-husband",
+      "ex-wife",
+      "ex partner",
+      "former partner",
+      "my ex"
+    ],
+    "digest_hint": "An ex in a dream usually symbolizes feelings, qualities, or relationship patterns the dreamer is working with now — not the literal person or a sign they are returning. Recurring themes: unresolved feelings, a need for closure, or missing certain qualities rather than the person. A Jungian-style lens reads the ex as an inner image carrying qualities active in your current life. Reflective prompt: what feeling, quality, or pattern is this dream really about — and is it present now? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "rose-quartz-meaning",
+        "why": "Rose Quartz is traditionally associated in crystal lore with the heart chakra, love, emotional healing, and gentle release. Offered as an intention anchor for the 'relationship / emotional healing / closure' frame the dream may surface — not a cure or guarantee.",
+        "shop_url": "/product-category/rose-quartz-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_closure": {
+        "slug": "moonstone-meaning",
+        "why": "Moonstone is associated in crystal tradition with emotional cycles, intuition, and the feminine/unconscious. Offered as a focus for the 'cycles / letting go / unresolved feeling' variant when the dream points to repeating patterns — not a treatment.",
+        "shop_url": "/product-category/rainbow-moonstone-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_being_pregnant",
+    "symbol": "being pregnant",
+    "category": "body",
+    "keywords": [
+      "new beginning",
+      "creation",
+      "creativity",
+      "growth",
+      "new aspect of self",
+      "anxiety",
+      "hope"
+    ],
+    "trigger_words": [
+      "pregnant",
+      "pregnancy",
+      "baby bump",
+      "expecting",
+      "with child"
+    ],
+    "digest_hint": "Being pregnant in a dream is widely read as a metaphor for something new developing — a new idea, phase, or aspect of self — not a prediction of actual pregnancy. It can carry excitement/hope or anxiety about change and responsibility. A Jungian-style lens reads it as creative/psychic gestation asking to be nurtured into form. Reflective prompt: what new idea, phase, or aspect of self is growing right now, and how do I feel about it? Reflective frame, NOT diagnosis or prediction. NOT a pregnancy prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "moonstone-meaning",
+        "why": "Moonstone is traditionally associated in crystal lore with the feminine, cycles, new beginnings, and intuitive creativity (mirroring the dream's 'new life gestating' imagery). Offered as an intention anchor for the 'creation / new beginning' frame — not a fertility promise, cure, or guarantee.",
+        "shop_url": "/product-category/rainbow-moonstone-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_anxiety": {
+        "slug": "blue-lace-agate-meaning",
+        "why": "Blue Lace Agate is associated in crystal tradition with gentle expression and calming anxious, overwhelmed energy (throat chakra). Offered as a focus for the 'anxiety about change' variant when the dream tone is fearful or heavy — not a treatment.",
+        "shop_url": "/crystals-for-dreams/",
+        "cta_level": "L3"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": [
+        "pregnancy_prediction"
+      ]
+    }
+  },
+  {
+    "id": "sym_money",
+    "symbol": "money",
+    "category": "object",
+    "keywords": [
+      "self-worth",
+      "personal power",
+      "confidence",
+      "abundance",
+      "opportunity",
+      "material attachment",
+      "inner resources"
+    ],
+    "trigger_words": [
+      "money",
+      "cash",
+      "dollar",
+      "coin",
+      "rich",
+      "wealth",
+      "currency",
+      "bills"
+    ],
+    "digest_hint": "Money in dreams is usually less about literal finances and more about self-worth, personal power, confidence, and inner resources — finding money can signal opportunity, over-attaching to it material over-valuation. A Jungian-style lens reads money as the currency of the self — libido, value, and energy. Reflective prompt: where am I feeling resourceful, powerful, undervalued, or over-attached to the material? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "citrine-meaning",
+        "why": "Citrine is traditionally associated in crystal lore with abundance, personal power, confidence, and the solar-plexus energy of self-worth. Offered as an intention anchor for the 'self-worth / personal power / abundance' frame the dream may surface — not a wealth guarantee or cure.",
+        "shop_url": "/product-category/citrine-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_insecurity": {
+        "slug": "carnelian-meaning",
+        "why": "Carnelian is associated in crystal tradition with courage, motivated action, and grounded confidence. Offered as a focus for the 'insecurity / undervalued / under-resourced' variant when the dream tone is anxious — not a treatment.",
+        "shop_url": "/product-category/carnelian-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_dog",
+    "symbol": "dog",
+    "category": "animal",
+    "keywords": [
+      "loyalty",
+      "companionship",
+      "protection",
+      "friendship",
+      "intuition",
+      "trust"
+    ],
+    "trigger_words": [
+      "dog",
+      "dogs",
+      "puppy",
+      "puppies",
+      "canine",
+      "hound"
+    ],
+    "digest_hint": "Dogs in dreams point to loyalty, companionship, protection, friendship, and intuition — or, when aggressive or biting, conflict, disloyalty, and feeling attacked by people close to you. A Jungian-style lens reads the dog as instinctual energy, so a wounded or neglected dog may flag an instinctual side needing care. Reflective prompt: where are loyalty, trust, or my instinctual nature asking for attention — or feeling betrayed? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Traditionally associated in crystal lore with grounding, boundaries, and protection. Offered as a tangible anchor for the 'protection / boundary / loyalty tested' theme the dream may surface — not a cure or guarantee.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_intuition": {
+        "slug": "labradorite-meaning",
+        "why": "Linked in crystal tradition to intuition, instinct, and the unseen. Offered as a focus for the 'intuition / instinctual side' reflection a wounded or guiding dog may surface — not a treatment.",
+        "shop_url": "/product-category/labradorite-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_bear",
+    "symbol": "bear",
+    "category": "animal",
+    "keywords": [
+      "strength",
+      "boundaries",
+      "independence",
+      "repressed anger",
+      "protection",
+      "solitude"
+    ],
+    "trigger_words": [
+      "bear",
+      "bears",
+      "cub",
+      "grizzly"
+    ],
+    "digest_hint": "Bears often symbolize strength, independence, and boundaries — or, when attacking or chasing, repressed anger, possessiveness, and an overbearing person or authority in your life. A hibernating bear can point to a need for retreat, solitude, and real inner change. A Jungian-style lens reads the bear as powerful instinctual strength and the boundary-setting self. Reflective prompt: where do I need to stand my ground, release anger, or withdraw and restore? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Traditionally associated in crystal lore with grounding, boundaries, and protective strength. Offered as an anchor for the 'boundaries / strength / anger held underground' theme the dream may surface — not a cure or guarantee.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_instinct": {
+        "slug": "labradorite-meaning",
+        "why": "Linked in crystal tradition to instinct, the unconscious, and transformation. Offered as a focus for the 'retreat / inner change / instinctual strength' side of the bear symbol — not a treatment.",
+        "shop_url": "/product-category/labradorite-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_spider",
+    "symbol": "spider",
+    "category": "animal",
+    "keywords": [
+      "entanglement",
+      "manipulation",
+      "feminine archetype",
+      "shadow",
+      "creativity",
+      "unseen threat"
+    ],
+    "trigger_words": [
+      "spider",
+      "spiders",
+      "cobweb",
+      "arachnid",
+      "tarantula",
+      "spider web"
+    ],
+    "digest_hint": "Spiders commonly point to feeling trapped or entangled, manipulation, an unseen threat, or the feminine/mother archetype — while also carrying creativity, patience, and craftiness. A Jungian-style lens reads the spider as shadow material — the hidden, cunning, or creative parts of yourself asking to be seen. Reflective prompt: am I caught in a web, weaving one, or avoiding a shadow that wants attention? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Traditionally associated in crystal lore with grounding, boundary-setting, and protection from unwanted or manipulative energies. Offered as an anchor for the 'entanglement / unseen threat / boundary' theme the dream may surface — not a cure or guarantee.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_creativity": {
+        "slug": "labradorite-meaning",
+        "why": "Linked in crystal tradition to intuition, transformation, and the unseen/creative. Offered as a focus for the 'shadow-work / repressed creativity / feminine material' side of the spider symbol — not a treatment.",
+        "shop_url": "/product-category/labradorite-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_drowning",
+    "symbol": "drowning",
+    "category": "disaster",
+    "keywords": [
+      "emotional overwhelm",
+      "loss of control",
+      "repressed emotions",
+      "stress",
+      "being pulled under"
+    ],
+    "trigger_words": [
+      "drown",
+      "drowning",
+      "sank",
+      "sinking",
+      "underwater",
+      "submerge",
+      "suffocat"
+    ],
+    "digest_hint": "Drowning in a dream usually mirrors emotional overwhelm — feeling pulled under by emotions, responsibilities, or repressed issues surfacing all at once, often when you feel you can't stay on top. A Jungian-style lens reads it as unconscious emotional material flooding faster than it can be processed. Reflective prompt: where am I in over my head, and what feeling am I struggling to keep above the surface? Reflective frame, NOT diagnosis or prediction. NOT prediction of actual disaster.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "hematite-meaning",
+        "why": "Traditionally associated in crystal lore with grounding, stabilization, and a felt sense of embodied steadiness. Offered as a grounding anchor for the 'emotional overwhelm / being pulled under' theme the dream may surface — not a cure or guarantee.",
+        "shop_url": "/product-category/hematite-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_grounding": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Used in crystal practice for grounding and stabilizing when emotion feels overwhelming or depleting. Offered as a focus for the 'stabilize and resurface' theme — not a treatment.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": [
+        "disaster_prediction"
+      ]
+    }
+  },
+  {
+    "id": "sym_driving",
+    "symbol": "driving",
+    "category": "scene",
+    "keywords": [
+      "control",
+      "life direction",
+      "ambition",
+      "autonomy",
+      "life journey",
+      "loss of control"
+    ],
+    "trigger_words": [
+      "driving",
+      "drove",
+      "car",
+      "vehicle",
+      "steering wheel",
+      "behind the wheel",
+      "traffic",
+      "car crash"
+    ],
+    "digest_hint": "Driving in a dream often reflects your sense of control and direction over your life's path — driving yourself signals active agency, while someone else driving points to passivity, dependence, or feeling steered by others. Losing control, can't see the road, or driving at night flags confusion about where you're headed. A Jungian-style lens reads the car as the ego navigating life's journey. Reflective prompt: who is at the wheel of my life right now? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Traditionally associated in crystal lore with grounding and a felt sense of agency, safety, and boundary. Offered as an anchor for the 'loss of control / passivity / regaining the wheel' theme the dream may surface — not a cure or guarantee.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_grounding": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Used in crystal practice for grounding and stabilizing when life feels confusing or out of control. Offered as a focus for the 'steady the direction' theme — not a treatment.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_test_exam",
+    "symbol": "test or exam",
+    "category": "scene",
+    "keywords": [
+      "anxiety",
+      "unpreparedness",
+      "scrutiny",
+      "fear of failure",
+      "self-esteem",
+      "life transition"
+    ],
+    "trigger_words": [
+      "test",
+      "exam",
+      "quiz",
+      "test paper",
+      "final exam",
+      "midterm",
+      "school test"
+    ],
+    "digest_hint": "Test or exam dreams usually surface as anxiety about being unprepared, scrutinized, or not measuring up — often recurring long after school, pointing to a current challenge, life transition, or fear of falling short. A Jungian-style lens reads the exam as a threshold: the self being tested before moving to a next stage. Reflective prompt: where do I feel unprepared, judged, or afraid of falling short — and is the standard mine or someone else's? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Traditionally used in crystal practice for grounding and easing anxious, overwhelmed energy. Offered as an anchor for the 'anxiety / unpreparedness' theme that is the dominant consensus of test dreams — not a cure or guarantee.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      },
+      "variant_scrutiny": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Traditionally associated in crystal lore with grounding, boundaries, and a felt sense of protection. Offered as a focus for the 'being judged / scrutinized / self-esteem' variant when the dream tone is one of exposure — not a treatment.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_being_lost",
+    "symbol": "being lost",
+    "category": "scene",
+    "keywords": [
+      "anxiety",
+      "confusion",
+      "directionlessness",
+      "vulnerability",
+      "search for purpose",
+      "life transition"
+    ],
+    "trigger_words": [
+      "lost",
+      "losing my way",
+      "cant find",
+      "maze",
+      "wandering",
+      "unfamiliar place"
+    ],
+    "digest_hint": "Being lost in a dream often signals anxiety, confusion, or feeling directionless — usually about relationships, career, purpose, or an unfamiliar situation rather than a literal place. Searching for home can point to not feeling at home in yourself. A Jungian-style lens reads it as the ego losing its bearings, inviting re-orientation toward what matters. Reflective prompt: where do I feel I've lost my way — and what am I really searching for? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Traditionally associated in crystal lore with grounding and a felt sense of stability and boundary. Offered as an anchor for the 'directionlessness / re-grounding / finding one's way' theme the dream may surface — not a cure or guarantee.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_anxiety": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Used in crystal practice for grounding and easing anxious, confused energy. Offered as a focus for the 'anxiety / confusion' variant when the dream tone is unsettled — not a treatment.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_intruder",
+    "symbol": "intruder",
+    "category": "scene",
+    "keywords": [
+      "boundary violation",
+      "personal boundaries",
+      "safety",
+      "shadow",
+      "unwelcome change",
+      "intrusive thoughts"
+    ],
+    "trigger_words": [
+      "intruder",
+      "break-in",
+      "burglar",
+      "stranger in my",
+      "invaded",
+      "home invasion",
+      "broke in"
+    ],
+    "digest_hint": "An intruder in a dream usually represents a breach of personal boundaries — someone or something, even an unconscious feeling or intrusive thought, invading your sense of safety or peace of mind. A faceless intruder often points to shadow material demanding attention. A Jungian-style lens reads the intruder as disowned psychic content pushing into awareness. Reflective prompt: what am I letting in that threatens my peace, and what boundary needs securing? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Traditionally associated in crystal lore with grounding, boundaries, and a felt sense of safety and protection. Offered as an anchor for the 'boundary violation / securing safety' theme the dream may surface — not a cure or guarantee.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_grounding": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Used in crystal practice for grounding and stabilizing when one feels violated, unsafe, or unsettled. Offered as a focus for the 'restore a sense of safety' variant — not a treatment.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_wedding_marriage",
+    "symbol": "wedding/marriage",
+    "category": "object",
+    "keywords": [
+      "commitment",
+      "new beginning",
+      "transition",
+      "union of opposites",
+      "independence",
+      "fear of commitment"
+    ],
+    "trigger_words": [
+      "wedding",
+      "marry",
+      "marriage",
+      "bride",
+      "groom",
+      "aisle",
+      "vow",
+      "engaged",
+      "getting married"
+    ],
+    "digest_hint": "Weddings in dreams usually signal new beginnings, transition, commitment, and the unification of opposite aspects of the self (masculine and feminine); the shadow side is anxiety about commitment and loss of independence. A Jungian-style lens reads the wedding as an inner sacred marriage, integrating opposing parts of the psyche. Reflective prompt: what is being committed to, integrated, or feared, and how do independence and union meet? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "citrine-meaning",
+        "why": "Citrine is traditionally associated in crystal lore with abundance, optimism, and new beginnings (solar plexus). Offered as an intention anchor for the new beginning / commitment celebration frame, not a cure or guarantee.",
+        "shop_url": "/product-category/citrine-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_anxiety": {
+        "slug": "carnelian-meaning",
+        "why": "Carnelian is associated in crystal tradition with courage, grounded confidence, and motivated action. Offered as a focus for the fear of commitment / loss of independence variant, not a treatment.",
+        "shop_url": "/product-category/carnelian-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_baby",
+    "symbol": "baby",
+    "category": "person",
+    "keywords": [
+      "new beginning",
+      "new idea",
+      "personal growth",
+      "inner child",
+      "potential",
+      "new responsibility"
+    ],
+    "trigger_words": [
+      "baby",
+      "babies",
+      "infant",
+      "newborn",
+      "toddler",
+      "holding a baby"
+    ],
+    "digest_hint": "Babies in dreams usually symbolize new beginnings, new ideas, a new phase, or a nascent aspect of the self; the shadow side is new responsibility or inexperience, and a neglected or crying baby may flag a part of you that needs care. A Jungian-style lens reads the baby as the inner child / Divine Child asking to be nurtured. Reflective prompt: what new idea, phase, or part of self is being born, and how am I caring for it? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "moonstone-meaning",
+        "why": "Moonstone is traditionally associated in crystal lore with the feminine, cycles, new beginnings, and intuitive creativity. Offered as an intention anchor for the new beginning / nascent self frame, not a fertility promise, cure, or guarantee.",
+        "shop_url": "/product-category/rainbow-moonstone-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_nurturing": {
+        "slug": "rose-quartz-meaning",
+        "why": "Rose Quartz is associated in crystal tradition with the heart chakra, gentle nurturing, and emotional healing. Offered as a focus for the inner child / caring for a nascent part of self variant, not a treatment.",
+        "shop_url": "/product-category/rose-quartz-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_dead_friend_relative",
+    "symbol": "dead friend/relative",
+    "category": "person",
+    "keywords": [
+      "grief",
+      "longing",
+      "closure",
+      "unfinished business",
+      "memory",
+      "advice seeking"
+    ],
+    "trigger_words": [
+      "dead friend",
+      "deceased",
+      "late grand",
+      "passed away",
+      "relative died",
+      "ghost",
+      "loved one died"
+    ],
+    "digest_hint": "Dreaming of a deceased friend or relative is usually read as the mind processing grief and longing, missing the person advice or company, seeking closure, or noting a current situation that echoes their qualities. A Jungian-style lens reads the deceased as an inner image still charged with feeling, an internal relationship continuing after loss. Reflective prompt: what feeling, memory, or unfinished thread is asking for attention now? Reflective frame, NOT diagnosis or prediction. NOT prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "rose-quartz-meaning",
+        "why": "Rose Quartz is traditionally associated in crystal lore with the heart chakra, gentle grief support, and emotional healing. Offered as an intention anchor for the grief / longing / heart healing frame, not a cure or guarantee.",
+        "shop_url": "/product-category/rose-quartz-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_remembering": {
+        "slug": "moonstone-meaning",
+        "why": "Moonstone is associated in crystal tradition with emotional cycles, intuition, and the feminine/unconscious. Offered as a focus for the memory / cycles / unfinished feeling variant, not a treatment.",
+        "shop_url": "/product-category/rainbow-moonstone-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": true,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_hair_falling_out",
+    "symbol": "hair falling out",
+    "category": "body",
+    "keywords": [
+      "loss of control",
+      "aging",
+      "self-image",
+      "vitality",
+      "stress",
+      "vulnerability",
+      "identity"
+    ],
+    "trigger_words": [
+      "hair",
+      "falling hair",
+      "bald",
+      "balding",
+      "losing hair",
+      "strand of hair"
+    ],
+    "digest_hint": "Hair falling out in dreams usually signals anxiety about self-image, aging, vitality, or a felt loss of control; positively it can reflect readiness to release old inhibitions. A Jungian-style lens reads hair as a vitality/identity symbol, the dream surfacing a felt loss of power, attractiveness, or coherence. Reflective prompt: where do I feel a loss of vitality, control, or self-image, and what would restore coherence? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "moonstone-meaning",
+        "why": "Moonstone is traditionally associated in crystal lore with the feminine, cycles, and the emotional body, including self-image and the felt sense of vitality. Offered as an intention anchor for the self-image / aging / emotional body frame, not a cure or guarantee.",
+        "shop_url": "/product-category/rainbow-moonstone-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_grounding": {
+        "slug": "aquamarine-meaning",
+        "why": "Aquamarine is associated in crystal tradition with calm, soothing, and gentle self-expression (throat chakra). Offered as a focus for the stress / vulnerability / shame variant, not a treatment.",
+        "shop_url": "/shop/?s=aquamarine",
+        "cta_level": "L2"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_earthquake",
+    "symbol": "earthquake",
+    "category": "disaster",
+    "keywords": [
+      "instability",
+      "major shift",
+      "loss of foundation",
+      "loss of control",
+      "disruption",
+      "transformation"
+    ],
+    "trigger_words": [
+      "earthquake",
+      "quake",
+      "tremor",
+      "shaking ground",
+      "seismic",
+      "ground shaking"
+    ],
+    "digest_hint": "An earthquake in a dream usually mirrors instability, a major life shift, or the shaking of your foundations, rarely a literal event. It can flag insecurity, loss of support, or rigid structures cracking so new ground can form. A Jungian-style lens reads it as the psyche foundation shifting, old ego-structures giving way. Reflective prompt: where does the ground feel unstable, and what old structure is asking to shift? Reflective frame, NOT diagnosis or prediction. NOT prediction of actual disaster.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "hematite-meaning",
+        "why": "Hematite is traditionally associated in crystal lore with grounding, stabilization, and a felt sense of embodied steadiness. Offered as a grounding anchor for the instability / shaking foundations / loss of support frame, not a cure or guarantee.",
+        "shop_url": "/product-category/hematite-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_anxiety": {
+        "slug": "smoky-quartz-meaning",
+        "why": "Smoky Quartz is traditionally used in crystal practice for grounding and stabilizing when anxiety or upheaval feels spiraling. Offered as a focus for the after-shock / re-stabilize variant, not a treatment.",
+        "shop_url": "/shop/?s=smoky+quartz",
+        "cta_level": "L2"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": [
+        "disaster_prediction"
+      ]
+    }
+  },
+  {
+    "id": "sym_frog",
+    "symbol": "frog",
+    "category": "animal",
+    "keywords": [
+      "transformation",
+      "renewal",
+      "transition",
+      "intuition",
+      "cleansing",
+      "unconscious material"
+    ],
+    "trigger_words": [
+      "frog",
+      "frogs",
+      "tadpole",
+      "toad",
+      "amphibian"
+    ],
+    "digest_hint": "Frogs are widely read as symbols of transformation and renewal, drawn from their tadpole-to-frog metamorphosis and life between water (unconscious) and land (conscious). Fear of frogs in the dream can flag discomfort with a change underway. A Jungian-style lens reads the frog as a threshold creature moving psychic material between depths and surface. Reflective prompt: what change is moving between my surface and depths, and am I embracing or resisting it? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Black Tourmaline is traditionally associated in crystal lore with grounding, boundaries, and steadiness during change. Offered as an intention anchor for the grounding through transformation / boundary during transition frame, not a cure or guarantee.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_transformation": {
+        "slug": "labradorite-meaning",
+        "why": "Labradorite is associated in crystal tradition with transformation, change, intuition, and the unseen thresholds of the psyche. Offered as a focus for the renewal / conscious-unconscious bridge side, not a treatment.",
+        "shop_url": "/product-category/labradorite-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  },
+  {
+    "id": "sym_bird",
+    "symbol": "bird",
+    "category": "animal",
+    "keywords": [
+      "freedom",
+      "transcendence",
+      "perspective",
+      "spiritual connection",
+      "communication",
+      "independence"
+    ],
+    "trigger_words": [
+      "bird",
+      "birds",
+      "flock",
+      "sparrow",
+      "eagle",
+      "feather",
+      "wing",
+      "flying bird"
+    ],
+    "digest_hint": "Birds are widely read as an archetype of freedom, transcendence, and spiritual connection, soaring birds signal ideals and wider perspective, attacking birds suppressed fears, caged birds feeling trapped, a flock community and shared purpose. A Jungian-style lens reads the bird as the psyche capacity to lift above the immediate and take a wider view. Reflective prompt: where am I seeking freedom, wider perspective, or freer expression, and where does it feel blocked? Reflective frame, NOT diagnosis or prediction.",
+    "crystal_mapping": {
+      "primary": {
+        "slug": "labradorite-meaning",
+        "why": "Labradorite is associated in crystal tradition with intuition, transformation, and the unseen/transcendent dimensions of the psyche. Offered as an intention anchor for the freedom / transcendence / wider perspective frame, not a cure or guarantee.",
+        "shop_url": "/product-category/labradorite-crystals/",
+        "cta_level": "L1"
+      },
+      "variant_fear": {
+        "slug": "black-tourmaline-meaning",
+        "why": "Black Tourmaline is traditionally associated in crystal lore with grounding, safety, and boundary. Offered as a focus for the attacking bird / suppressed fears / feeling trapped variant, not a treatment.",
+        "shop_url": "/product-category/black-tourmaline-crystals/",
+        "cta_level": "L1"
+      }
+    },
+    "compliance_trigger": {
+      "not_medical_advice": true,
+      "not_mental_health_diagnosis": true,
+      "not_a_religious_ruling": true,
+      "religious_sensitivity": false,
+      "determinism_blocks": []
+    }
+  }
+]

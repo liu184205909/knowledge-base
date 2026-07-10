@@ -1,0 +1,35 @@
+{
+  "audited_at": "2026-07-10T08:10:26.448Z",
+  "site": "goearthward.com",
+  "scope": "WordPress posts, status=any, English source content only",
+  "total_posts": 1738,
+  "status_counts": {
+    "publish": 268,
+    "future": 1470
+  },
+  "cjk": {
+    "posts_with_cjk": 0,
+    "intentional_term_or_gloss": 0,
+    "needs_editorial_review": 0
+  },
+  "products": {
+    "level_counts": {
+      "dynamic_product_module": 1736,
+      "specific_product": 2
+    },
+    "no_commerce_entry": 0
+  },
+  "tarot": {
+    "total_posts": 690,
+    "status_counts": {
+      "future": 658,
+      "publish": 32
+    },
+    "posts_with_cjk": 0,
+    "needs_editorial_review": 0,
+    "product_level_counts": {
+      "dynamic_product_module": 690
+    },
+    "no_commerce_entry": 0
+  }
+}

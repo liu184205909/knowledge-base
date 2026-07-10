@@ -243,6 +243,24 @@ def semrush_block(row):
     }
 
 
+def sleep_science_stub(subject):
+    return {
+        "status": "needs_editorial_review",
+        "sleep_mechanism": "General dream-science framing: dreams during REM may reflect memory consolidation and emotional processing; mechanism only, not a fixed symbol meaning.",
+        "public_data_point": "",
+        "evidence_boundary": "Science can describe how dreaming happens (REM, memory, emotion); it has not confirmed that this specific symbol has one fixed meaning.",
+        "humility_line": f"Researchers haven't specifically studied whether {subject} dreams specifically mean any one thing.",
+        "source_status": "needs_verification",
+    }
+
+
+def key_takeaways_stub():
+    return {
+        "status": "assemble_at_generation",
+        "note": "3-4 items assembled at article generation: 1 sleep_science (humility_line), 1 crystal reflection (best_overall use_case, no efficacy claim), 1-2 core meaning (psychology.angle).",
+    }
+
+
 def crystal_items_for(category, lens):
     choices = list(CRYSTAL_CHOICES[:2])
     if category in {"Emotion", "Type"}:
@@ -305,6 +323,8 @@ def knowledge_object(row, content_depth="candidate_skeleton"):
             "angle": "Frame as possible emotions, stressors, memory processing, or personal associations; avoid diagnosis.",
             "evidence_status": "not_yet_sourced",
         },
+        "sleep_science": sleep_science_stub(subject),
+        "key_takeaways": key_takeaways_stub(),
         "spiritual": {
             "status": "sensitive" if religious else "optional_interpretive",
             "lens": lens or "general",
@@ -378,6 +398,7 @@ def enrich_candidates(raw_rows):
         language = detect_language(row["keyword"])
         flags = noise_flags(row["keyword"], row["page_type"], row.get("volume") or 0, row.get("kd") or 0, language)
         priority = priority_for(row, flags)
+        subject = extract_subject(row["keyword"], row["page_type"]) or row["keyword"]
         row.update({
             "slug": build_slug(row["keyword"], row["page_type"]),
             "canonical_slug": build_slug(row["keyword"], row["page_type"]),
@@ -386,6 +407,8 @@ def enrich_candidates(raw_rows):
             "language": language,
             "noise_flag": flags,
             "source_row": idx,
+            "sleep_science": sleep_science_stub(subject),
+            "key_takeaways": key_takeaways_stub(),
         })
         enriched.append(row)
 

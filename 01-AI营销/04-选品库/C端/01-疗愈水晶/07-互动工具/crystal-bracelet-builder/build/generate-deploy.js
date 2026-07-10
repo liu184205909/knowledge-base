@@ -596,7 +596,7 @@ const APP_JS = String.raw`(function () {
         '<span class="dimension-hand" aria-hidden="true">&#9995;</span>' +
         '<span class="dimension-copy"><small>Hand Dimension</small><b>' + displayCm + ' cm</b></span>' +
       '</button>' +
-      '<button type="button" class="stage-size-row' + (state.sizeOpen ? ' is-open' : '') + '" aria-label="bead size" aria-expanded="' + (state.sizeOpen ? 'true' : 'false') + '"><span>Bead Size</span><strong>' + state.beadSizeMm + 'mm</strong><i aria-hidden="true"></i><div class="stage-size-options">' + sizeOptions + '</div><select id="t17-bead-size-select" class="stage-size-select" aria-label="Bead Size">' + selectOptions + '</select></button>' +
+      '<div class="stage-size-row' + (state.sizeOpen ? ' is-open' : '') + '" role="button" tabindex="0" aria-label="bead size" aria-expanded="' + (state.sizeOpen ? 'true' : 'false') + '"><span>Bead Size</span><strong>' + state.beadSizeMm + 'mm</strong><i aria-hidden="true"></i><div class="stage-size-options">' + sizeOptions + '</div><select id="t17-bead-size-select" class="stage-size-select" aria-label="Bead Size">' + selectOptions + '</select></div>' +
       '<div class="dimension-popover' + (state.dimensionOpen ? ' is-open' : '') + '" role="dialog" aria-modal="true" aria-label="Customize wrist size">' +
         '<div class="dimension-modal-head"><b>Customize Wrist</b><button type="button" id="t17-dimension-close" aria-label="Close">×</button></div>' +
         '<div class="dimension-field body-measure-field">' +
@@ -1306,7 +1306,7 @@ const APP_JS = String.raw`(function () {
     ctx.fillRect(0, 0, rect.width, rect.height);
     hit2DSlots = [];
     var isCompactStage = rect.width <= 820;
-    var cx = rect.width / 2, cy = rect.height * (isCompactStage ? 0.515 : 0.52);
+    var cx = rect.width / 2, cy = rect.height * (isCompactStage ? 0.535 : 0.52);
     var board = isCompactStage
       ? Math.min(rect.width * 0.70, rect.height * 0.69, 620)
       : Math.min(rect.width * 0.72, rect.height * 0.74, 620);
@@ -1701,16 +1701,7 @@ const APP_JS = String.raw`(function () {
     root.addEventListener('change', function (e) {
       if (e.target.id === 't17-bead-size-select') setBeadSize(e.target.value);
     });
-    var syncScrollState = function () {
-      var app = document.getElementById('t17-app');
-      if (!app) return;
-      var r = app.getBoundingClientRect();
-      var compact = window.innerWidth <= 820 && r.top < -46;
-      app.classList.toggle('is-mobile-scrolled', compact);
-    };
-    window.addEventListener('scroll', syncScrollState, { passive: true });
-    window.addEventListener('resize', function () { syncScrollState(); renderBracelet(); });
-    syncScrollState();
+    window.addEventListener('resize', function () { renderBracelet(); });
   }
 
   // --- Boot ---
@@ -1763,6 +1754,11 @@ const APP_B64 = Buffer.from(asciiJS(APP_JS), 'utf8').toString('base64');
 const CSS = String.raw`
 #t17-app,#t17-app *{box-sizing:border-box;margin:0;padding:0}
 body:has(#t17-app){overflow-x:hidden}
+body:has(#t17-app) nav.trp-language-switcher,
+body:has(#t17-app) .trp-language-switcher,
+body:has(#t17-app) .trp-floating-switcher,
+body:has(#t17-app) .trp-floater-ls,
+body:has(#t17-app) .translatepress-floating-language-switcher{display:none!important}
 #t17-app{--paper:#fffdf9;--ink:#332d28;--muted:#81776e;--line:#e7dfd8;--soft:#f4f0ec;--wash:#f8f5f1;--accent:#d5504c;--green:#2d6a43;--blue:#2d7fd8;position:relative;left:50%;transform:translateX(-50%);display:flex;width:min(1360px,calc(100vw - 32px));max-width:calc(100vw - 32px);min-height:0;height:min(690px,calc(100vh - 105px));margin:10px 0;scroll-margin-top:150px;overflow:hidden;font-family:Georgia,"Times New Roman",serif;background:#fff;color:var(--ink);-webkit-font-smoothing:antialiased;border:1px solid #eee4dc;border-radius:18px;box-shadow:0 20px 60px rgba(92,65,42,.12)}
 #t17-root,#t17-right,#t17-stage,#t17-catalog,#t17-bottom,#t17-seq-wrap,.catalog-body,#t17-bead-grid{min-width:0;max-width:100%}
 #t17-left{display:flex;flex-direction:column;width:300px;flex:0 0 300px;background:var(--soft);border-right:1px solid var(--line);padding:18px 14px;overflow:hidden}
@@ -2058,6 +2054,7 @@ body:has(#t17-app){overflow-x:hidden}
 @media(max-width:820px){
   #t17-shell{padding-top:8px}
   body:has(#t17-app){padding-bottom:0!important}
+  html:has(#t17-app){scroll-padding-top:88px}
   body:has(#t17-app) .wd-toolbar,
   body:has(#t17-app) .woodmart-toolbar,
   body:has(#t17-app) .wd-sticky-btn,
@@ -2073,7 +2070,7 @@ body:has(#t17-app){overflow-x:hidden}
   #t17-app{left:auto;transform:none;width:100%;max-width:100%;margin:0!important;border-radius:0;flex-direction:column;height:auto;min-height:0;overflow:hidden}
   #t17-left{display:none}
   #t17-right{display:flex;flex-direction:column;overflow:visible;width:100%;min-width:0}
-  #t17-stage{order:1;min-height:340px;border-right:0;width:100%;min-width:0}
+  #t17-stage{order:1;min-height:340px;border-right:0;width:100%;min-width:0;scroll-margin-top:88px}
   #t17-catalog{order:2;border-left:0;border-top:1px solid var(--line);max-height:none;padding:5px 6px;display:flex;flex-direction:column}
   #t17-catalog-tabs{order:1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;min-height:26px;padding:0 0 4px;overflow:visible}
   .mode-tab{width:100%;min-width:0;height:24px!important;font-size:7.8px;padding:0 3px!important}
@@ -2102,7 +2099,6 @@ body:has(#t17-app){overflow-x:hidden}
   #t17-add-cart{min-height:48px;border-radius:12px;box-shadow:0 8px 20px rgba(45,106,67,.24)}
   #t17-checkout-panel .checkout-note{display:none}
   #t17-stage-panel{top:4px;width:calc(100% - 14px)}
-  #t17-app.is-mobile-scrolled #t17-stage-panel{opacity:0;pointer-events:none;transform:translate(-50%,-8px);transition:opacity .16s ease,transform .16s ease}
   .stage-controls{width:100%;display:grid;grid-template-columns:1fr;justify-items:center;gap:5px}
   #t17-wrist-wrap{width:min(100%,360px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px;justify-items:stretch}
   .dimension-pill{height:36px;min-height:36px!important;min-width:0;width:100%;padding:0 9px!important;gap:7px}
@@ -2114,9 +2110,9 @@ body:has(#t17-app){overflow-x:hidden}
   .stage-size-row>strong{display:block;font-size:15px;color:#3f352c;line-height:1;white-space:nowrap}
   .stage-size-row>i{display:block;width:7px;height:7px;border-right:2px solid #b4aa9e;border-bottom:2px solid #b4aa9e;transform:rotate(45deg);margin:0 2px 3px 3px}
   .stage-size-select{display:none!important}
-  .stage-size-options{position:absolute;left:50%;top:calc(100% + 5px);z-index:12;transform:translateX(-50%);display:none!important;grid-template-columns:repeat(4,42px);gap:4px;padding:5px;background:rgba(255,253,249,.98);border:1px solid #e2d8cf;border-radius:14px;box-shadow:0 12px 28px rgba(58,42,30,.18)}
+  .stage-size-options{position:absolute;right:10px;top:calc(100% + 4px);z-index:12;display:none!important;width:70px;grid-template-columns:1fr;gap:2px;padding:3px;background:rgba(255,253,249,.98);border:1px solid #e2d8cf;border-radius:10px;box-shadow:0 10px 24px rgba(58,42,30,.16)}
   .stage-size-row.is-open .stage-size-options{display:grid!important}
-  .stage-size-btn{height:30px!important;min-height:30px!important;min-width:0;border-radius:10px;font-size:11px}
+  .stage-size-btn{height:21px!important;min-height:21px!important;min-width:0;border-radius:7px;font-size:9.5px;line-height:1!important}
   .dimension-popover{top:38px;width:min(408px,calc(100vw - 18px));max-height:min(292px,calc(100vh - 220px));padding:8px!important;border-radius:14px}
   .dimension-modal-head{height:28px;padding:0 6px 0 9px!important}
   .dimension-field{padding:6px 8px 0!important;gap:3px}
@@ -2176,8 +2172,8 @@ body:has(#t17-app){overflow-x:hidden}
   .stage-size-row{height:34px;min-height:34px!important;padding:0 8px!important}
   .stage-size-row>span{font-size:12px}
   .stage-size-row>strong{font-size:14px}
-  .stage-size-options{grid-template-columns:repeat(4,38px)}
-  .stage-size-btn{height:28px!important;min-height:28px!important;font-size:10px}
+  .stage-size-options{right:8px;width:66px}
+  .stage-size-btn{height:20px!important;min-height:20px!important;font-size:9px}
   .dimension-popover{max-height:min(274px,calc(100vh - 200px))}
   #t17-catalog-tabs{grid-template-columns:repeat(5,minmax(0,1fr));gap:3px}
   .mode-tab{font-size:7px;padding:0 2px!important}

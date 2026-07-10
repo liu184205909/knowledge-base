@@ -3,6 +3,7 @@
 > **日期**：2026-07-09
 > **定位**：1C（关键词验证）到 3.4（Brief 锁定）之间的桥梁——把"关键词机会"变成"分层候选词表"
 > **⚠️ 非最终词表**：P0-P3 是候选池与投产层级，**不机械相加**（总目标池 800-1500 对标千页级，见 3.3 批次规划）
+> **🔄 2026-07-10 口径更新**：候选池经三层门禁筛后，**发布集 = 366**（350 wp_draft_ready + 16 Subject backbone）已进 WP draft；**938 低质候选已剔除**（cross_vertical/low_confidence/duplicate/brand/nav/typo）。下文 P0-P3 为候选池口径，**实际投产第一批 366**。
 > **数据状态**：CLEAN_DreamOpportunity（1,443 行）Vol/KD 来自 SEMrush 实测（部分 suggest 漏网词待回填，标"初步"）；dreambible 6666 符号不可 URL join（§11.2.1）
 
 ---

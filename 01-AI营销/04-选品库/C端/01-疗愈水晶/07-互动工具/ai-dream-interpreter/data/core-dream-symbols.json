@@ -1,0 +1,1512 @@
+{
+  "_meta": {
+    "purpose": "AI Dream Interpreter 主匹配池(工具专用, 给 DeepSeek digest + 水晶匹配). 非直接发布内容; psychology_skeleton 是给 LLM 的框架提示, 最终解读由 DeepSeek 实时生成.",
+    "schema_version": "1.2",
+    "category_enum": [
+      "animal",
+      "body",
+      "scene",
+      "emotion",
+      "spiritual",
+      "disaster",
+      "object",
+      "person"
+    ],
+    "total_planned_mvp": 30,
+    "total_filled": 30,
+    "pending": [],
+    "evidence_policy": "psychology_skeleton = 竞品字典站明文共识(dreammoods/dreamdictionary/dreambible/auntyflo) + 荣格角度推断标注【推断】; 无编造经文/学者直引(学者观点均标竞品转述未核对原著).",
+    "shop_url_status": "已验证 2026-07-09 (curl UA): L1 类目200×8(black-tourmaline/labradorite/carnelian/hematite/amethyst/rose-quartz/citrine + moonstone→rainbow-moonstone) + L2 搜索×3(garnet/aquamarine/smoky-quartz → /shop/?s=) + L3 /crystals-for-dreams/×2(blue-lace-agate, teeth primary + pregnant variant, 404 且 L2 不确定). 30 crystal 项无死链.",
+    "compliance": "全对象 not_medical_advice + not_mental_health_diagnosis + not_a_religious_ruling = true; blood/fire/tornado 加 determinism(不预测出血/疾病/灾难); crystal why 全基于属性, 无 cure/guarantee.",
+    "design_doc": "02-网站规划/AI-Dream-Interpreter-数据层与工具设计.md §4.2",
+    "shop_url_verified_date": "2026-07-09",
+    "v1_1_fields": "evidence_notes(长,人审,不进prompt) + digest_hint(80-160字,进LLM prompt; 无竞品名/无Jung直引,改Jungian-style) + compliance_trigger.determinism_blocks(机器拦截数组: death_prediction/pregnancy_prediction/medical_outcome/bleeding_prediction/disaster_prediction)",
+    "digest_hint_status": "agent 精修完成 2026-07-09: 350-520字符(四要素: 2-4维度+Jungian-style lens+reflective prompt+合规结尾); 无竞品名; death/pregnant/bleeding/disaster 对应 NOT prediction.",
+    "v1_2_fields": "新增 trigger_words(字面识别词, 后端 stripos 匹配用); keywords 保留给 LLM 维度提示. 修 review C1(keywords 全抽象词致匹配失效)."
+  },
+  "symbols": [
+    {
+      "id": "sym_teeth_falling_out",
+      "symbol": "teeth falling out",
+      "category": "body",
+      "dream_type": null,
+      "keywords": [
+        "communication",
+        "self-image",
+        "powerlessness",
+        "embarrassment",
+        "life transition",
+        "voice"
+      ],
+      "trigger_words": [
+        "teeth",
+        "tooth",
+        "dental",
+        "molar",
+        "fang",
+        "falling out",
+        "crumbling",
+        "rotting",
+        "losing teeth"
+      ],
+      "evidence_notes": "Common dream themes (consensus across dream dictionaries): anxieties about appearance/self-image and aging; communication issues — feeling unable to speak up, be heard, or find the right words; fear of embarrassment or being unprepared; a sense of powerlessness (teeth as agency, bite, assertiveness). Dreams often cluster around transitions — new relationship, job change, or a new life stage. Jungian angle【推断】: teeth as a threshold symbol of identity transitions — the old self-image shedding during change, with the dreamer's voice/agency feeling temporarily absent. Reflective prompt: where am I feeling unheard, insecure, or mid-transition? Reflective frame for contemplation, NOT diagnosis or prediction.",
+      "digest_hint": "Teeth falling out often signals anxiety about self-image, communication (feeling unheard or unable to find words), or powerlessness during life transitions. A Jungian-style lens reads it as an identity threshold — the old self-image shedding. Reflective prompt: where am I feeling unheard, insecure, or mid-transition? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "blue-lace-agate-meaning",
+          "shop_url": "/crystals-for-dreams/",
+          "why": "Blue Lace Agate is associated with the throat chakra and gentle self-expression; offered as an intention focus for the 'communication/voice' theme that dream dictionaries highlight, NOT a cure.",
+          "shop_url_validated": true,
+          "cta_level": "L3"
+        },
+        "variant_anxiety": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Smoky Quartz is traditionally used for grounding and stabilizing intention; offered as an anchor for the powerlessness/anxiety variant, NOT a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_snake",
+      "symbol": "snake",
+      "category": "animal",
+      "dream_type": null,
+      "keywords": [
+        "hidden threat",
+        "transformation",
+        "subconscious",
+        "instinct",
+        "healing",
+        "renewal"
+      ],
+      "trigger_words": [
+        "snake",
+        "serpent",
+        "python",
+        "cobra",
+        "viper",
+        "adder",
+        "reptile",
+        "slither"
+      ],
+      "evidence_notes": "Common dream themes (consensus across dream dictionaries): hidden threats or betrayal (snake hard to see, lies in wait); fear of the unpredictable and unknown; contact with repressed instinctual or emotional material (slithering along the ground / in water = the subconscious); a callous or ruthless person metaphor; transformation and renewal (shedding skin); healing (caduceus); creativity. Snake carries both danger and healing dimensions depending on dream tone. Jungian angle【明文 — dreamdictionary.org quotes Jung directly】: snake as shadow / unconscious content emerging; Jung linked the belly-snake image to Kundalini life-force and 'the great wisdom of Nature.' Reflective prompt: what hidden material — fear, instinct, or a change already underway — is asking for attention? Reflective frame, NOT diagnosis.",
+      "digest_hint": "Snakes often point to hidden threats or betrayal, repressed instinctual material surfacing, transformation (shedding skin), or healing. A Jungian-style lens reads the snake as shadow/unconscious material or transformation, also carrying healing dimensions. Reflective prompt: what hidden material — fear, instinct, or change underway — is asking for attention? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Black Tourmaline is traditionally associated with boundary-setting and protection from unwanted energies; offered as an intention focus for the 'hidden threat / callous person' theme, NOT a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_transformation": {
+          "slug": "labradorite-meaning",
+          "shop_url": "/product-category/labradorite-crystals/",
+          "why": "Labradorite is associated with transformation, change, and intuitive insight; offered as an intention focus for the 'shedding skin / renewal' variant when the dream tone is positive, NOT a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_falling",
+      "symbol": "falling",
+      "category": "scene",
+      "dream_type": null,
+      "keywords": [
+        "loss of control",
+        "insecurity",
+        "overwhelm",
+        "instability",
+        "shame",
+        "groundlessness"
+      ],
+      "trigger_words": [
+        "fall",
+        "falling",
+        "fell",
+        "dropped",
+        "plummet",
+        "plunge",
+        "tumble"
+      ],
+      "evidence_notes": "Common dream themes (strong cross-source consensus): loss of control in waking life — feeling overwhelmed and unable to keep up with demands; insecurity and instability — shame, inferiority, low self-esteem, fear of not measuring up; sometimes a wake-up call about reckless behavior or heading the wrong direction; sometimes purely physiological (myoclonic jerk at sleep onset, not symbolic). Dream Moods, Dream Dictionary, Aunty Flo converge on the loss-of-control / insecurity frame. Jungian angle【推断】: falling as descent of the ego — loss of the conscious stance's footing, an invitation to reconnect with what genuinely grounds the dreamer. Reflective prompt: where have I lost my footing, and what would re-stabilize me? Reflective frame, NOT diagnosis or prediction (the popular 'you die if you hit the ground' myth is false).",
+      "digest_hint": "Falling often reflects a loss of control, overwhelm, or insecurity and fear of not measuring up; sometimes it is purely physiological (sleep-onset jerk). A Jungian-style lens reads it as the ego footing giving way — an invitation to reconnect with what grounds you. Reflective prompt: where have I lost my footing, and what would re-stabilize me? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Smoky Quartz is traditionally used for grounding and stabilizing; offered as an intention anchor for the 'loss of control / groundlessness' theme, NOT a cure.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        },
+        "variant_fear": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Black Tourmaline is associated with safety, boundaries, and protective grounding; offered as an intention focus for the fear/insecurity variant, NOT a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_flying",
+      "symbol": "flying",
+      "category": "scene",
+      "dream_type": null,
+      "keywords": [
+        "freedom",
+        "liberation",
+        "perspective",
+        "control",
+        "escape",
+        "ambition"
+      ],
+      "trigger_words": [
+        "fly",
+        "flying",
+        "flew",
+        "soar",
+        "floating",
+        "levitat",
+        "airborne",
+        "flight"
+      ],
+      "evidence_notes": "Common dream themes (cross-source consensus): sense of control and personal power; wider perspective / bigger picture; freedom, hope, possibility, freedom of expression; spiritual connection; escape from daily stress; an inflated sense of self (looking down on others). Difficulty staying in flight, obstacles, or fear while flying are flagged as lack of confidence, hesitation, unrealistic goals, or fear of new challenge/success. Aunty Flo, Dream Dictionary, Dream Moods converge on freedom/liberation/empowerment as dominant frame, with escape and inflation as shadow sides. Jungian angle【推断】: flight as expansion of consciousness / ascent — and the risk of inflation when expansion is not grounded. Reflective prompt: am I soaring with groundedness, escaping pressure, or inflating above others? Reflective frame, NOT diagnosis.",
+      "digest_hint": "Flying often reflects freedom, wider perspective, and personal power — or, as a shadow side, escape from stress and inflation when expansion isn't grounded. Difficulty staying in flight may flag hesitation or fear of success. A Jungian-style lens reads flight as expanding consciousness and the risk of inflation. Reflective prompt: am I soaring with groundedness, escaping pressure, or inflating above others? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Black Tourmaline is associated with grounding and energetic balance; offered as an intention anchor for the 'escape / inflation / difficulty staying in flight' theme — helping the dreamer stay connected to the ground while expanding, NOT a cure.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_anxiety": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Smoky Quartz is traditionally used for grounding and stabilizing; offered as an intention focus for the fear-of-success / obstacle variant when flight feels fearful, NOT a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_being_chased",
+      "symbol": "being chased",
+      "category": "scene",
+      "dream_type": null,
+      "keywords": [
+        "avoidance",
+        "fear",
+        "disowned self",
+        "stress",
+        "flight response",
+        "unresolved conflict"
+      ],
+      "trigger_words": [
+        "chase",
+        "chasing",
+        "pursued",
+        "pursuing",
+        "running from",
+        "flee",
+        "fleeing",
+        "after me",
+        "chaser"
+      ],
+      "evidence_notes": "Common dream themes (strong cross-source consensus): avoidance — running from issues, stressors, or fears instead of confronting them; close-mindedness; running from disowned parts of the Self (anger, jealousy, fear, even love projected onto the unknown chaser); literal fear of attack (more commonly reported among women). Dream Moods, Dream Dictionary, Aunty Flo converge on the avoidance / 'what are you running from?' frame. The pursuer is often an aspect of the dreamer's own psyche rather than an external threat. Jungian angle【推断】: pursuer as shadow — disowned Self-material demanding integration; the dream's request is to turn and face, not to outrun. Reflective prompt: what am I avoiding, and what part of myself might the chaser represent? Reflective frame, NOT diagnosis.",
+      "digest_hint": "Being chased usually signals avoidance — running from fears, stressors, or disowned parts of the self (anger, jealousy, even love) projected onto the pursuer. The chaser is often an aspect of your own psyche. A Jungian-style lens reads the pursuer as shadow material asking to be integrated, not outrun. Reflective prompt: what am I avoiding, and what part of myself might the chaser represent? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Black Tourmaline is associated with safety, boundaries, and protective grounding; offered as an intention focus for the 'fear / feeling pursued' theme, NOT a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_anxiety": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Smoky Quartz is traditionally used for grounding and releasing tension; offered as an intention anchor for the anxiety/avoidance variant, NOT a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_cat",
+      "symbol": "cat",
+      "category": "animal",
+      "dream_type": null,
+      "keywords": [
+        "independence",
+        "intuition",
+        "feminine energy",
+        "mystery",
+        "creativity"
+      ],
+      "trigger_words": [
+        "cat",
+        "cats",
+        "kitten",
+        "kittens",
+        "feline"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis). Across dream dictionaries, cats are consistently tied to independence, intuition, and the feminine — dreamdictionary.org names the cat an emblem of 'creativity, feminine, unconscious emotions, sexuality, and independence,' and auntyflo.com links it to self-sufficiency, feminine instincts, and the Egyptian goddess Bastet (protection of home, women, and children)【明文竞品共识】. Carl Jung, cited by dreamdictionary.org, treats the cat as an anima figure — the dreamer's inner feminine — so an attacking or sick cat may flag a strained relationship with that inner side【明文, sourced via dreamdictionary.org's paraphrase of Jung, 未直接核对原著】. A reflective reading invites the dreamer to notice intuition, feminine energy, or a 'catty'/toxic dynamic in waking relationships. It does NOT predict events, diagnose mental health, or constitute a religious ruling.",
+      "digest_hint": "Cats are consistently tied to independence, intuition, the feminine, creativity, and mystery. A Jungian-style lens reads the cat as an anima figure — the dreamer inner feminine — so an attacking or sick cat may flag a strained relationship with that inner side. Reflective prompt: where is my intuition or feminine energy asking for attention — or is a catty dynamic at play? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Long associated in crystal lore with grounding and energetic boundary-setting. Offered here as a tangible anchor for the 'protection / boundary against catty dynamics' theme the dream may highlight — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_feminine_intuition": {
+          "slug": "labradorite-meaning",
+          "shop_url": "/product-category/labradorite-crystals/",
+          "why": "Linked in crystal tradition to intuition, transformation, and the unseen/mysterious. Offered as an object to focus the intuition-and-feminine-energy reflection surfaced by the dream — not a guarantee of any outcome.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_blood",
+      "symbol": "blood",
+      "category": "object",
+      "dream_type": null,
+      "keywords": [
+        "life force",
+        "vitality",
+        "emotional energy",
+        "passion",
+        "depletion"
+      ],
+      "trigger_words": [
+        "blood",
+        "bloody",
+        "bleeding",
+        "bleed",
+        "wound"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis, NOT prediction). Competitor dictionaries converge on blood as a symbol of life force and emotional energy rather than a literal medical sign — dreamdictionary.org frames blood as 'the element of your vital energy' tied to 'life, love, spirit and passion; but also anger, loss and defeat,' dreambible.com as 'energy or vitality' that 'reflects how healthy or strong some aspect of your life is' (blood inside the body = strength; outside = loss of strength), and auntyflo.com as 'life force, happiness, life energy, spirits, and the essence of humanity'【明文竞品共识】. Bleeding is consistently read as depletion — 'your vital life energy is being depleted' (dreamdictionary.org), 'losing strength, vigor, and vitality' (dreambible.com)【明文竞品共识】. Positively, blood can signal confronting problems, vitality, and renewed energy【明文 dreambible】. A reflective reading invites the dreamer to notice where energy, passion, or emotional reserves feel drained or intensified. It does NOT predict bleeding, illness, injury, violence, or any medical/physical outcome; it is not a mental-health diagnosis【合规边界 — determinism: 工具输出不预测出血/疾病/暴力事件】.",
+      "digest_hint": "Blood often symbolizes life force, vitality, and emotional energy rather than a literal medical sign — bleeding is commonly read as depletion, blood inside the body as strength; positively it can signal renewed energy. A Jungian-style lens reads it as the currency of passion and life energy. Reflective prompt: where do my energy, passion, or emotional reserves feel drained or intensified? Reflective frame, NOT diagnosis or prediction. NOT prediction of bleeding/illness.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "garnet-meaning",
+          "shop_url": "/shop/?s=garnet",
+          "why": "Long associated in crystal lore with vitality, life force, and the root chakra. Offered as a physical anchor for the 'life force / vitality' theme the dream may highlight — not a medical treatment, cure, or guarantee of any health outcome.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        },
+        "variant_grounding": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Traditionally used in crystal practice for grounding and stabilizing when emotions feel intense or depleting. Offered as a grounding focus for the depletion/emotional-drain theme — not a cure.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": [
+          "medical_outcome",
+          "bleeding_prediction"
+        ]
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_fire",
+      "symbol": "fire",
+      "category": "disaster",
+      "dream_type": null,
+      "keywords": [
+        "transformation",
+        "passion",
+        "anger",
+        "purification",
+        "destruction"
+      ],
+      "trigger_words": [
+        "fire",
+        "flame",
+        "flaming",
+        "burning",
+        "burn",
+        "blaze",
+        "smoke",
+        "inferno",
+        "on fire"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis, NOT prediction). Dream dictionaries describe fire as a dual symbol of transformation and destruction — dreamdictionary.org frames it as 'inner transformation' where 'destruction of your old aspects' lets 'the new to flourish,' and links uncontrolled fire to unconscious 'anger, jealousy, rage or desires,' plus alchemical purification【明文竞品共识】. auntyflo.com cites Carl Jung's view that fires appear 'when a transformation is predicted' and Sigmund Freud's link to libido/passion, while listing power, passion, purification, and new beginnings as recurring themes【明文竞品共识, Jung/Freud 转述自 auntyflo, 未直接核对原著】. A reflective reading invites the dreamer to notice what is being transformed, purified, or intensified in waking life. It does NOT predict an actual fire, accident, or destructive event【合规边界 — determinism】.",
+      "digest_hint": "Fire is a dual symbol of transformation and destruction — uncontrolled fire often links to unconscious anger, jealousy, rage, or desire, while controlled fire points to purification, power, and new beginnings. A Jungian-style lens reads it as transformation, with passion as a driving force. Reflective prompt: what in my life is being transformed, purified, or intensified? Reflective frame, NOT diagnosis or prediction. NOT prediction of actual disaster.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Traditionally associated in crystal lore with grounding and the gentle transmutation of intense energy. Offered as a grounding anchor for the 'uncontrolled anger / intensity' theme a fire dream may surface — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        },
+        "variant_passion": {
+          "slug": "carnelian-meaning",
+          "shop_url": "/product-category/carnelian-crystals/",
+          "why": "Linked in crystal tradition to creative energy, courage, and motivated action. Offered as a focus for the 'passion / new beginnings' side of the fire symbol — not a guarantee of any outcome.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": [
+          "disaster_prediction"
+        ]
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_tornado",
+      "symbol": "tornado",
+      "category": "disaster",
+      "dream_type": null,
+      "keywords": [
+        "emotional upheaval",
+        "loss of control",
+        "anxiety",
+        "sudden change",
+        "suppressed emotion"
+      ],
+      "trigger_words": [
+        "tornado",
+        "twister",
+        "cyclone",
+        "funnel",
+        "storm",
+        "hurricane"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis, NOT prediction). Dream dictionaries consistently read the tornado as a metaphor for emotional upheaval and forces outside the dreamer's control — dreamdictionary.org calls it 'an uncontrollable or unpredictable outside force' tied to 'emotional build-up' and 'internal or external turmoil,' and reads the meteorological fact that tornadoes form when warm air is trapped beneath cold air as a metaphor for trapped feelings rising to the surface (linking it to Jung's 'shadow work')【明文竞品共识】. auntyflo.com frames the vortex as the dreamer's inner emotional state, notes these dreams often appear when 'life spiritually seems out of control,' and reads being chased by a tornado as avoidance of an issue that needs facing【明文竞品共识】. A reflective reading invites the dreamer to notice accumulated stress, suppressed emotion, or a situation that feels out of control. It does NOT predict an actual storm, disaster, or destructive event【合规边界 — determinism】.",
+      "digest_hint": "A tornado often mirrors emotional upheaval and forces outside your control — accumulated stress or suppressed feelings rising to the surface like warm air trapped beneath cold. A Jungian-style lens reads the vortex as shadow material breaking through into view. Reflective prompt: where does life feel out of control, and what feeling am I avoiding? Reflective frame, NOT diagnosis or prediction. NOT prediction of actual disaster.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "hematite-meaning",
+          "shop_url": "/product-category/hematite-crystals/",
+          "why": "Traditionally associated in crystal lore with grounding, stabilization, and a sense of embodied steadiness. Offered as a grounding anchor for the 'out-of-control / emotional upheaval' theme the dream may surface — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_grounding": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Used in crystal practice for grounding and stabilizing when anxiety feels spiraling. Offered as a focus for the 'stabilize after the storm' theme — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": [
+          "disaster_prediction"
+        ]
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_naked_public",
+      "symbol": "naked in public",
+      "category": "scene",
+      "dream_type": null,
+      "keywords": [
+        "vulnerability",
+        "exposure",
+        "fear of judgment",
+        "authenticity",
+        "insecurity"
+      ],
+      "trigger_words": [
+        "naked",
+        "nude",
+        "undressed",
+        "bare",
+        "exposed",
+        "no clothes",
+        "in public"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis, NOT commentary on the dreamer's body). Dream dictionaries converge on naked-in-public as a symbol of vulnerability, exposure, and the fear of being seen — auntyflo.com reads it as reflecting 'a person's surety in a situation in their life,' where the specific location (school, work, store) points to the domain where confidence feels shaken, and lists guilt, shame, and rejection as common accompanying feelings【明文竞品共识】. A reflective reading invites the dreamer to notice where they feel under-confident, over-exposed, or out of step with their authentic self. It does NOT predict social failure, diagnose social anxiety, or comment on the dreamer's body【合规边界】.",
+      "digest_hint": "Naked-in-public dreams usually reflect vulnerability, exposure, and fear of being seen or judged — the specific location (school, work, store) often points to the domain where confidence feels shaken. A Jungian-style lens reads it as the authentic self feeling exposed. Reflective prompt: where am I feeling under-confident, over-exposed, or out of step with my true self? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Traditionally associated in crystal lore with grounding and a felt sense of safety and boundary. Offered as a tangible anchor for the 'safety / protection from judgment' theme the dream may surface — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_grounding": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Used in crystal practice for grounding and easing the felt sense of exposure. Offered as a grounding focus when vulnerability feels destabilizing — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_water",
+      "symbol": "water",
+      "category": "object",
+      "dream_type": null,
+      "keywords": [
+        "emotions",
+        "subconscious",
+        "emotional clarity",
+        "intuition",
+        "purification",
+        "renewal",
+        "overwhelm"
+      ],
+      "trigger_words": [
+        "water",
+        "ocean",
+        "sea",
+        "river",
+        "lake",
+        "pool",
+        "flood",
+        "wave",
+        "swim"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis). Across dream dictionaries, water is consistently read as a symbol of the emotional life and the unconscious. auntyflo.com frames it as 'emotional stability' — 'the more calm, and clear the water...the more you are able to deal with the challenges of life' — and ties it to 'fertility, creativity, emotional well-being, renewal, purity, and new endeavors' as 'the progenitor of life'【明文竞品共识, auntyflo.com/dream-dictionary/water】. The state of the water is read as the state of the emotion: clear water points to clarity, harmony, and positive flow; murky, dirty, or turbulent water to confusion, obstacles, and suppressed feeling; drowning, floods, and rising water to feeling overwhelmed or that situations are out of control【明文竞品共识, auntyflo】. Jungian angle【推断】: water as the unconscious — what moves beneath the surface of awareness; the dream invites attention to emotional material rising into view. Reflective prompt: what is the emotional weather right now — clear, turbulent, or rising? Reflective frame for contemplation, NOT diagnosis or prediction.",
+      "digest_hint": "Water is widely read as a symbol of the emotional life and the unconscious — clear water signals clarity and positive flow, murky or turbulent water confusion and suppressed feeling, floods or drowning feeling overwhelmed. A Jungian-style lens reads water as what moves beneath the surface of awareness. Reflective prompt: what is my emotional weather right now — clear, turbulent, or rising? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "moonstone-meaning",
+          "shop_url": "/product-category/rainbow-moonstone-crystals/",
+          "why": "Moonstone is traditionally associated in crystal lore with the moon, the emotional body, intuition, and the feminine/unconscious (water-like themes). Offered as an intention anchor for the 'emotions / subconscious / intuition' frame the dream may surface — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_overwhelm": {
+          "slug": "aquamarine-meaning",
+          "shop_url": "/shop/?s=aquamarine",
+          "why": "Aquamarine is associated in crystal tradition with the water element, calm communication, and soothing turbulent emotion (throat chakra). Offered as a focus for the 'murky / overwhelmed / rising water' variant when emotion feels hard to settle — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_death",
+      "symbol": "death",
+      "category": "spiritual",
+      "dream_type": null,
+      "keywords": [
+        "transformation",
+        "transition",
+        "ending",
+        "rebirth",
+        "letting go",
+        "grief",
+        "change"
+      ],
+      "trigger_words": [
+        "die",
+        "died",
+        "dead",
+        "death",
+        "dying",
+        "kill",
+        "killed",
+        "funeral",
+        "passed away"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis, NOT prediction of any death). Across dream dictionaries, death is consistently read as a symbol of transformation, transition, and the ending of one phase so another can begin — NOT as a literal omen of physical death. auntyflo.com frames death dreams as being 'about change,' where 'for death to occur, we must end old feelings, and remove outdated values as a brand new life is on the horizon'【明文竞品共识, auntyflo.com/dream-dictionary/death】. dreammoods.com reads dreaming of one's own death as symbolizing 'inner changes, transformation, self-discovery and positive development...you are undergoing a transitional phase'【明文竞品共识, dreammoods.com /commondreams/death-dreams (SERP snippet; full page path changed, 未直接核全页)】. dreamdictionary.org frames the dying dream as 'a symbolic goodbye to a relationship, a job, or a change of identity — the ego dies all the time only to be reborn — bringing you to the next phase of your life'【明文竞品共识, dreamdictionary.org/meaning/death-dreams】. Death dreams can also surface around grief, unprocessed emotion, or fear of change【明文, choosingtherapy.com PAA snippet】. Jungian angle【推断】: death as an ego/transformation symbol — an old self-image or life-chapter dissolving so a new one can form. Reflective prompt: what is ending or being released, and what wants to be born? It does NOT predict any actual death, illness, or loss, and is not a religious ruling【合规边界 — determinism: 工具输出绝不预测死亡】.",
+      "digest_hint": "Death in dreams is widely read as transformation, transition, and the ending of one phase so another can begin — not a literal omen of physical death. It can also surface around grief or fear of change. A Jungian-style lens reads it as an ego/transformation symbol — an old self-image dissolving so a new one can form. Reflective prompt: what is ending or being released, and what wants to be born? Reflective frame, NOT diagnosis or prediction. NOT prediction of any death.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "amethyst-meaning",
+          "shop_url": "/product-category/amethyst-crystals/",
+          "why": "Amethyst is traditionally associated in crystal lore with the third-eye/crown, spiritual transition, stillness, and gentle transformation. Offered as an intention anchor for the 'transformation / transition / letting go' frame a death dream may surface — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_rebirth": {
+          "slug": "labradorite-meaning",
+          "shop_url": "/product-category/labradorite-crystals/",
+          "why": "Labradorite is associated in crystal tradition with transformation, change, and the unseen thresholds of the psyche. Offered as a focus for the 'rebirth / new phase emerging' side of the symbol when the dream tone is positive — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": true,
+        "determinism_blocks": [
+          "death_prediction"
+        ]
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_ex_partner",
+      "symbol": "ex partner",
+      "category": "emotion",
+      "dream_type": null,
+      "keywords": [
+        "unresolved feelings",
+        "closure",
+        "relationship patterns",
+        "nostalgia",
+        "transition",
+        "letting go"
+      ],
+      "trigger_words": [
+        "ex-boyfriend",
+        "ex-girlfriend",
+        "ex-husband",
+        "ex-wife",
+        "ex partner",
+        "former partner",
+        "my ex"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis, NOT a prediction that the ex is thinking of you or returning). Across dream dictionaries and psychology sources, an ex-partner in a dream is consistently read as a symbol rather than a literal signal about the person. auntyflo.com states such a dream 'does NOT mean you necessarily want them back,' that the ex 'represent[s] or symbolize[s] something in your current life...not the actual person that you want — it is what they represent,' and that these dreams often point to 'similar feelings or relationship patterns in our current life' or 'certain qualities, feelings, or a time in your life'【明文竞品共识, auntyflo.com/dream-dictionary/ex-partner】. psychcentral.com reads the dream as a signal 'to reflect on feelings or lessons learned from the relationship'【明文, psychcentral.com SERP snippet】; reachlink.com frames it as 'unresolved emotions related to your past relationship...subconsciously seeking closure and peace'【明文, reachlink.com PAA snippet】. Recurring themes: unresolved feelings, a need for closure, repeating relationship patterns, missing certain qualities (rather than the person), or — when current life is in motion — readiness for change【明文竞品共识】. Jungian angle【推断】: the ex as an inner image carrying qualities the dreamer is working with now. Reflective prompt: what feeling, quality, or pattern is this dream really about — and is it present in my current life? It does NOT predict the ex returning, diagnose attachment, or constitute a religious ruling.",
+      "digest_hint": "An ex in a dream usually symbolizes feelings, qualities, or relationship patterns the dreamer is working with now — not the literal person or a sign they are returning. Recurring themes: unresolved feelings, a need for closure, or missing certain qualities rather than the person. A Jungian-style lens reads the ex as an inner image carrying qualities active in your current life. Reflective prompt: what feeling, quality, or pattern is this dream really about — and is it present now? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "rose-quartz-meaning",
+          "shop_url": "/product-category/rose-quartz-crystals/",
+          "why": "Rose Quartz is traditionally associated in crystal lore with the heart chakra, love, emotional healing, and gentle release. Offered as an intention anchor for the 'relationship / emotional healing / closure' frame the dream may surface — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_closure": {
+          "slug": "moonstone-meaning",
+          "shop_url": "/product-category/rainbow-moonstone-crystals/",
+          "why": "Moonstone is associated in crystal tradition with emotional cycles, intuition, and the feminine/unconscious. Offered as a focus for the 'cycles / letting go / unresolved feeling' variant when the dream points to repeating patterns — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_being_pregnant",
+      "symbol": "being pregnant",
+      "category": "body",
+      "dream_type": null,
+      "keywords": [
+        "new beginning",
+        "creation",
+        "creativity",
+        "growth",
+        "new aspect of self",
+        "anxiety",
+        "hope"
+      ],
+      "trigger_words": [
+        "pregnant",
+        "pregnancy",
+        "baby bump",
+        "expecting",
+        "with child"
+      ],
+      "evidence_notes": "Reflective frame (NOT a pregnancy prediction, NOT medical advice). Across dream dictionaries and psychology sources, being pregnant in a dream is consistently read as a metaphor for something new developing in the dreamer's life — NOT as a prediction of actual pregnancy. dreamdictionary.org states such a dream is 'most often...a metaphor for a new condition in your life — new developments, a new idea, an altered circumstance — rather than a prediction of pregnancy'【明文竞品共识, dreamdictionary.org/pregnancy-or-pregnant】. dreams.co.uk frames it as 'reflecting personal growth, new beginnings, or even anxieties about life changes'【明文, dreams.co.uk Sleep Matters Club】. today.com notes it can 'symbolize a new beginning, creativity or personal transformation...nurturing an idea or starting on a journey that has yet to fully develop'【明文, today.com PAA snippet】; choosingtherapy.com frames it as 'creating a new personality or developing a new aspect of yourself'【明文, choosingtherapy.com SERP snippet】. The dream can carry excitement/hope about something new, or anxiety about change and responsibility【明文竞品共识】. Jungian angle【推断】: pregnancy as a symbol of creative/psychic gestation — something nascent in the self asking to be nurtured into form. Reflective prompt: what new idea, phase, or aspect of self is growing right now — and how do I feel about it? It does NOT predict, confirm, or diagnose pregnancy, and is not medical advice【合规边界 — determinism: 工具输出绝不做怀孕判断】.",
+      "digest_hint": "Being pregnant in a dream is widely read as a metaphor for something new developing — a new idea, phase, or aspect of self — not a prediction of actual pregnancy. It can carry excitement/hope or anxiety about change and responsibility. A Jungian-style lens reads it as creative/psychic gestation asking to be nurtured into form. Reflective prompt: what new idea, phase, or aspect of self is growing right now, and how do I feel about it? Reflective frame, NOT diagnosis or prediction. NOT a pregnancy prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "moonstone-meaning",
+          "shop_url": "/product-category/rainbow-moonstone-crystals/",
+          "why": "Moonstone is traditionally associated in crystal lore with the feminine, cycles, new beginnings, and intuitive creativity (mirroring the dream's 'new life gestating' imagery). Offered as an intention anchor for the 'creation / new beginning' frame — not a fertility promise, cure, or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_anxiety": {
+          "slug": "blue-lace-agate-meaning",
+          "shop_url": "/crystals-for-dreams/",
+          "why": "Blue Lace Agate is associated in crystal tradition with gentle expression and calming anxious, overwhelmed energy (throat chakra). Offered as a focus for the 'anxiety about change' variant when the dream tone is fearful or heavy — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L3"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": [
+          "pregnancy_prediction"
+        ]
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_money",
+      "symbol": "money",
+      "category": "object",
+      "dream_type": null,
+      "keywords": [
+        "self-worth",
+        "personal power",
+        "confidence",
+        "abundance",
+        "opportunity",
+        "material attachment",
+        "inner resources"
+      ],
+      "trigger_words": [
+        "money",
+        "cash",
+        "dollar",
+        "coin",
+        "rich",
+        "wealth",
+        "currency",
+        "bills"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis, NOT financial advice). Across dream dictionaries, money in dreams is consistently read less as a literal financial omen and more as a symbol of the self's value, power, and inner resources. dreamdictionary.org states that money dreams are 'rarely connected to financial gain, but rather a symbol that is often connected with personal freedom, energy, power, self worth and confidence,' revealing 'your inner strength and inner resources — money as the \"currency\" of the self'【明文竞品共识, dreamdictionary.org/meaning/money-dream-meaning】. auntyflo.com reads seeing money as 'your subconscious desire for financial success and stability,' while also warning (via the King Midas image) that 'you are attaching too much value to material things'【明文竞品共识, auntyflo.com/dream-dictionary/money】. Recurring readings: self-worth and confidence; personal power and freedom; opportunity and optimism (especially finding money); or — as a shadow side — material attachment and over-valuing the tangible【明文竞品共识, dreamdictionary.org + auntyflo.com + hermoney.com PAA on self-worth】. Jungian angle【推断】: money as a libido/energy symbol — the dreamer's relationship to their own power, value, and resources. Reflective prompt: where am I feeling resourceful, powerful, or undervalued — and where am I over-attaching to the material? It is NOT financial advice or a prediction of gain/loss.",
+      "digest_hint": "Money in dreams is usually less about literal finances and more about self-worth, personal power, confidence, and inner resources — finding money can signal opportunity, over-attaching to it material over-valuation. A Jungian-style lens reads money as the currency of the self — libido, value, and energy. Reflective prompt: where am I feeling resourceful, powerful, undervalued, or over-attached to the material? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "citrine-meaning",
+          "shop_url": "/product-category/citrine-crystals/",
+          "why": "Citrine is traditionally associated in crystal lore with abundance, personal power, confidence, and the solar-plexus energy of self-worth. Offered as an intention anchor for the 'self-worth / personal power / abundance' frame the dream may surface — not a wealth guarantee or cure.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_insecurity": {
+          "slug": "carnelian-meaning",
+          "shop_url": "/product-category/carnelian-crystals/",
+          "why": "Carnelian is associated in crystal tradition with courage, motivated action, and grounded confidence. Offered as a focus for the 'insecurity / undervalued / under-resourced' variant when the dream tone is anxious — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_dog",
+      "symbol": "dog",
+      "category": "animal",
+      "dream_type": null,
+      "keywords": [
+        "loyalty",
+        "companionship",
+        "protection",
+        "friendship",
+        "intuition",
+        "trust"
+      ],
+      "trigger_words": [
+        "dog",
+        "dogs",
+        "puppy",
+        "puppies",
+        "canine",
+        "hound"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis). Across dream dictionaries, the dog is consistently read as a symbol of loyalty, companionship, protection, friendship, and intuition. dreamdictionary.org frames dogs as directing the dreamer 'towards loyalty, companionship, intuition, masculine energy, protection and our unconscious instincts,' and cites Carl Jung's view that the dog appears in a woman's dreams as the ANIMUS — the masculine within the feminine — so an attacking or wounded dog may signal an instinctual/masculine side needing care or integration【明文竞品共识, dreamdictionary.org/dream-dictionary/dreaming-about-dogs/; Jung 转述自 dreamdictionary, 未直接核对原著】. auntyflo.com frames the dog as 'the symbol of protection... if the dog is friendly, then this suggests that someone... is actually protecting you,' and reads aggressive/biting dogs as disloyalty, conflict, or feeling attacked by people close to you; a black dog points to negative emotions【明文竞品共识, auntyflo.com/dream-dictionary/dog】. A reflective reading invites attention to trust, loyalty, and the instinctual nature — or a friendship/boundary feeling betrayed. It does NOT predict events or diagnose mental health.",
+      "digest_hint": "Dogs in dreams point to loyalty, companionship, protection, friendship, and intuition — or, when aggressive or biting, conflict, disloyalty, and feeling attacked by people close to you. A Jungian-style lens reads the dog as instinctual energy, so a wounded or neglected dog may flag an instinctual side needing care. Reflective prompt: where are loyalty, trust, or my instinctual nature asking for attention — or feeling betrayed? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Traditionally associated in crystal lore with grounding, boundaries, and protection. Offered as a tangible anchor for the 'protection / boundary / loyalty tested' theme the dream may surface — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_intuition": {
+          "slug": "labradorite-meaning",
+          "shop_url": "/product-category/labradorite-crystals/",
+          "why": "Linked in crystal tradition to intuition, instinct, and the unseen. Offered as a focus for the 'intuition / instinctual side' reflection a wounded or guiding dog may surface — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_bear",
+      "symbol": "bear",
+      "category": "animal",
+      "dream_type": null,
+      "keywords": [
+        "strength",
+        "boundaries",
+        "independence",
+        "repressed anger",
+        "protection",
+        "solitude"
+      ],
+      "trigger_words": [
+        "bear",
+        "bears",
+        "cub",
+        "grizzly"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis). Dream dictionaries converge on the bear as a symbol of strength, independence, boundaries, and powerful instinct — with an attacking bear pointing to repressed anger, possessiveness, or an overbearing person. dreambible.com frames the bear as 'an aspect of yourself that is aggressively independent or that doesn't like to share,' with possessiveness and 'unhealthy loner tendencies' as shadow sides; being chased points to 'an aversion to someone else's possessiveness, jealousy, or unwillingness to share,' and being attacked to 'conflict... with a dominant jealous person' or 'overbearing selfish parents or authority figures'【明文竞品共识, dreambible.com/search.php?q=Bears】. auntyflo.com reads the bear as 'spiritual strength, power, and growth of the unconscious mind' and stamina; a bear attack points to 'repressed anger and rage... the primal, instinctual side of yourself,' and connects to boundaries being violated; a hibernating bear signals 'doing the work for real change'【明文竞品共识, auntyflo.com/dream-dictionary/bear】. A reflective reading invites attention to strength, boundaries, anger held underground, or a need for retreat. It does NOT predict events or diagnose mental health.",
+      "digest_hint": "Bears often symbolize strength, independence, and boundaries — or, when attacking or chasing, repressed anger, possessiveness, and an overbearing person or authority in your life. A hibernating bear can point to a need for retreat, solitude, and real inner change. A Jungian-style lens reads the bear as powerful instinctual strength and the boundary-setting self. Reflective prompt: where do I need to stand my ground, release anger, or withdraw and restore? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Traditionally associated in crystal lore with grounding, boundaries, and protective strength. Offered as an anchor for the 'boundaries / strength / anger held underground' theme the dream may surface — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_instinct": {
+          "slug": "labradorite-meaning",
+          "shop_url": "/product-category/labradorite-crystals/",
+          "why": "Linked in crystal tradition to instinct, the unconscious, and transformation. Offered as a focus for the 'retreat / inner change / instinctual strength' side of the bear symbol — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_spider",
+      "symbol": "spider",
+      "category": "animal",
+      "dream_type": null,
+      "keywords": [
+        "entanglement",
+        "manipulation",
+        "feminine archetype",
+        "shadow",
+        "creativity",
+        "unseen threat"
+      ],
+      "trigger_words": [
+        "spider",
+        "spiders",
+        "cobweb",
+        "arachnid",
+        "tarantula",
+        "spider web"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis). Dream dictionaries describe the spider as a dual symbol — both creative and threatening, often tied to the feminine/mother archetype and the shadow. dreamdictionary.org frames it as bringing 'attention to danger, feminine archetypes or bad omens,' connecting the web to 'feelings of estrangement, entanglement and alienation' and manipulation/captivity, while reading the spider as belonging to the dreamer's SHADOW — 'the dark side of your personality that connects with unconscious behaviours'; the positive side covers creativity, patience, craftiness, and the Jungian Self (wholeness)【明文竞品共识, dreamdictionary.org/meaning/dreaming-of-spiders/】. auntyflo.com frames the spider as representing 'motherhood, especially in dreams,' and cites Freud's view of it as 'the phallic mom, of whom are we afraid'【明文竞品共识, auntyflo.com/dream-dictionary/spider; Freud 转述自 auntyflo, 未直接核对原著】. Jungian angle【推断, via dreamdictionary's shadow framing】: spider as shadow material — the hidden, cunning, or creative parts of the self asking to be seen. A reflective reading invites attention to entanglement, manipulation, or repressed feminine/creative material. It does NOT predict events or diagnose mental health.",
+      "digest_hint": "Spiders commonly point to feeling trapped or entangled, manipulation, an unseen threat, or the feminine/mother archetype — while also carrying creativity, patience, and craftiness. A Jungian-style lens reads the spider as shadow material — the hidden, cunning, or creative parts of yourself asking to be seen. Reflective prompt: am I caught in a web, weaving one, or avoiding a shadow that wants attention? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Traditionally associated in crystal lore with grounding, boundary-setting, and protection from unwanted or manipulative energies. Offered as an anchor for the 'entanglement / unseen threat / boundary' theme the dream may surface — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_creativity": {
+          "slug": "labradorite-meaning",
+          "shop_url": "/product-category/labradorite-crystals/",
+          "why": "Linked in crystal tradition to intuition, transformation, and the unseen/creative. Offered as a focus for the 'shadow-work / repressed creativity / feminine material' side of the spider symbol — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_drowning",
+      "symbol": "drowning",
+      "category": "disaster",
+      "dream_type": null,
+      "keywords": [
+        "emotional overwhelm",
+        "loss of control",
+        "repressed emotions",
+        "stress",
+        "being pulled under"
+      ],
+      "trigger_words": [
+        "drown",
+        "drowning",
+        "sank",
+        "sinking",
+        "underwater",
+        "submerge",
+        "suffocat"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis, NOT prediction). Dream dictionaries converge on drowning as a metaphor for emotional overwhelm and being pulled under by feeling or responsibility — NOT a literal omen of drowning. dreammoods.com states 'to dream that you are drowning indicates that you are feeling overwhelmed by emotions. Repressed issues may be coming back to haunt you'【明文竞品共识, dreammoods.com/dreamdictionary/d3.htm (Disasters/Drowning entry)】. dreamdictionary.org frames drowning around 'feelings of feeling overwhelmed in relationships, family or work' and 'overwhelming stress and anxieties that keep you down'【明文竞品共识, dreamdictionary.org/meaning/dreams-about-drowning/】. auntyflo.com reads drowning as pointing to being 'fearful of the future, maybe you are trying to stay on top but you can't'【明文竞品共识, auntyflo.com/dream-dictionary/drowning】. Jungian angle【推断】: water as the unconscious, drowning as emotional material rising faster than it can be processed. A reflective reading invites attention to where life feels 'in too deep.' It does NOT predict an actual drowning, accident, or disaster【合规边界 — determinism】.",
+      "digest_hint": "Drowning in a dream usually mirrors emotional overwhelm — feeling pulled under by emotions, responsibilities, or repressed issues surfacing all at once, often when you feel you can't stay on top. A Jungian-style lens reads it as unconscious emotional material flooding faster than it can be processed. Reflective prompt: where am I in over my head, and what feeling am I struggling to keep above the surface? Reflective frame, NOT diagnosis or prediction. NOT prediction of actual disaster.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "hematite-meaning",
+          "shop_url": "/product-category/hematite-crystals/",
+          "why": "Traditionally associated in crystal lore with grounding, stabilization, and a felt sense of embodied steadiness. Offered as a grounding anchor for the 'emotional overwhelm / being pulled under' theme the dream may surface — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_grounding": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Used in crystal practice for grounding and stabilizing when emotion feels overwhelming or depleting. Offered as a focus for the 'stabilize and resurface' theme — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": [
+          "disaster_prediction"
+        ]
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_driving",
+      "symbol": "driving",
+      "category": "scene",
+      "dream_type": null,
+      "keywords": [
+        "control",
+        "life direction",
+        "ambition",
+        "autonomy",
+        "life journey",
+        "loss of control"
+      ],
+      "trigger_words": [
+        "driving",
+        "drove",
+        "car",
+        "vehicle",
+        "steering wheel",
+        "behind the wheel",
+        "traffic",
+        "car crash"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis). Dream dictionaries converge on driving as a metaphor for control, direction, and the life journey. dreammoods.com frames the dream car as 'representative of your drive and ambition' and 'your ability to navigate from one stage of your life to another'; 'if you are driving the car, then you are taking an active role in the way your life is going. However, if you are the passenger, then you are taking a passive role'; the backseat indicates 'putting yourself down and are allowing others to take over'; driving and cannot see the road, or driving at night, indicates 'you do not know where you are headed in life'【明文竞品共识, dreammoods.com/dreamthemes/car-dream-symbols.htm】. auntyflo.com frames 'driving a car represents freedom, maturity, and self-reliability,' while somebody else driving 'refers to your need to learn from somebody else... your immaturity or your position as a subordinate,' and losing control 'could also mean that you have lost control of your life'【明文竞品共识, auntyflo.com/dream-dictionary/driving】. Jungian angle【推断】: the car as the ego navigating life's journey — who holds the wheel mirrors the dreamer's sense of agency. A reflective reading invites attention to who is steering one's life. It does NOT predict an accident or diagnose mental health.",
+      "digest_hint": "Driving in a dream often reflects your sense of control and direction over your life's path — driving yourself signals active agency, while someone else driving points to passivity, dependence, or feeling steered by others. Losing control, can't see the road, or driving at night flags confusion about where you're headed. A Jungian-style lens reads the car as the ego navigating life's journey. Reflective prompt: who is at the wheel of my life right now? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Traditionally associated in crystal lore with grounding and a felt sense of agency, safety, and boundary. Offered as an anchor for the 'loss of control / passivity / regaining the wheel' theme the dream may surface — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_grounding": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Used in crystal practice for grounding and stabilizing when life feels confusing or out of control. Offered as a focus for the 'steady the direction' theme — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_test_exam",
+      "symbol": "test or exam",
+      "category": "scene",
+      "dream_type": null,
+      "keywords": [
+        "anxiety",
+        "unpreparedness",
+        "scrutiny",
+        "fear of failure",
+        "self-esteem",
+        "life transition"
+      ],
+      "trigger_words": [
+        "test",
+        "exam",
+        "quiz",
+        "test paper",
+        "final exam",
+        "midterm",
+        "school test"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis). Test/exam dreams are among the most common recurring dream themes and converge on anxiety, unpreparedness, scrutiny, and self-esteem. dreammoods.com states 'taking an exam in your dream implies that you are being put to the test or being scrutinized in some area of your waking life. As with most common dream themes, dreams about taking a test have to do with anxiety,' and links them to feeling 'unprepared for some challenge,' 'fear of failing,' and 'lack of confidence... your self-esteem and confidence or the lack of'【明文竞品共识, dreammoods.com/commondreams/test-dreams.html】. dreamdictionary.org frames exam dreams as tending 'to manifest when we are experiencing difficulty moving to the next stage in our life,' where 'your own inadequacy and confidence is really at the forefront of this dream and not actually failing the test'【明文竞品共识, dreamdictionary.org/common/test-dreams/】. auntyflo.com reads sitting an exam as indicating 'that you are experiencing anxiety, especially if things keep going wrong'【明文竞品共识, auntyflo.com/dream-dictionary/exam】. Jungian angle【推断】: the exam as a threshold — the self being tested before a next stage can begin. A reflective reading invites attention to where one feels unprepared or judged. It does NOT predict failure or diagnose mental health.",
+      "digest_hint": "Test or exam dreams usually surface as anxiety about being unprepared, scrutinized, or not measuring up — often recurring long after school, pointing to a current challenge, life transition, or fear of falling short. A Jungian-style lens reads the exam as a threshold: the self being tested before moving to a next stage. Reflective prompt: where do I feel unprepared, judged, or afraid of falling short — and is the standard mine or someone else's? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Traditionally used in crystal practice for grounding and easing anxious, overwhelmed energy. Offered as an anchor for the 'anxiety / unpreparedness' theme that is the dominant consensus of test dreams — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        },
+        "variant_scrutiny": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Traditionally associated in crystal lore with grounding, boundaries, and a felt sense of protection. Offered as a focus for the 'being judged / scrutinized / self-esteem' variant when the dream tone is one of exposure — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_being_lost",
+      "symbol": "being lost",
+      "category": "scene",
+      "dream_type": null,
+      "keywords": [
+        "anxiety",
+        "confusion",
+        "directionlessness",
+        "vulnerability",
+        "search for purpose",
+        "life transition"
+      ],
+      "trigger_words": [
+        "lost",
+        "losing my way",
+        "cant find",
+        "maze",
+        "wandering",
+        "unfamiliar place"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis). Dream dictionaries converge on being lost as a symbol of anxiety, confusion, and the search for direction or belonging. dreamdictionary.org frames it as stemming 'from anxiety, fears and confusion resulting in the search for something in your life,' and invites reflection 'on your relationships, career, emotional support, or even your unconscious fears'; driving-and-lost connects to 'your drive or path in life... confusion or an inability to find your way... the future might concern you because you don't have direction,' while trying to get home reflects 'not being mentally comfortable in some area in your life'【明文竞品共识, dreamdictionary.org/meaning/dreams-of-getting-lost/】. auntyflo.com reads being lost as signifying 'that you feel a sense of loss in life... not able to experience fulfilling relationships'【明文竞品共识, auntyflo.com/dream-dictionary/lost】. Jungian angle【推断】: being lost as the ego losing its bearings — an invitation to re-orient toward what genuinely matters. A reflective reading invites attention to where one feels directionless or out of place. It does NOT predict events or diagnose mental health.",
+      "digest_hint": "Being lost in a dream often signals anxiety, confusion, or feeling directionless — usually about relationships, career, purpose, or an unfamiliar situation rather than a literal place. Searching for home can point to not feeling at home in yourself. A Jungian-style lens reads it as the ego losing its bearings, inviting re-orientation toward what matters. Reflective prompt: where do I feel I've lost my way — and what am I really searching for? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Traditionally associated in crystal lore with grounding and a felt sense of stability and boundary. Offered as an anchor for the 'directionlessness / re-grounding / finding one's way' theme the dream may surface — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_anxiety": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Used in crystal practice for grounding and easing anxious, confused energy. Offered as a focus for the 'anxiety / confusion' variant when the dream tone is unsettled — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_intruder",
+      "symbol": "intruder",
+      "category": "scene",
+      "dream_type": null,
+      "keywords": [
+        "boundary violation",
+        "personal boundaries",
+        "safety",
+        "shadow",
+        "unwelcome change",
+        "intrusive thoughts"
+      ],
+      "trigger_words": [
+        "intruder",
+        "break-in",
+        "burglar",
+        "stranger in my",
+        "invaded",
+        "home invasion",
+        "broke in"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis). Dream dictionaries converge on the intruder as a symbol of boundary violation — often tied to weak personal boundaries or disowned/unconscious material. dreamdictionary.org frames dreaming of an intruder as 'an infringement from both our inner and outer worlds,' where the house represents the mind/psyche and the intruder is 'someone or something that is infringing on your personal boundaries'; a faceless intruder 'points the dreamer in direction of what is hidden or unconscious — emotional states, intrusive thoughts, repressed feelings'; it notes 'people who have an agreeable disposition often have dreams about people breaking into their houses as they are unable to set limitation'【明文竞品共识, dreamdictionary.org/meaning/dreams-about-intruder/】. dreambible.com frames the intruder as 'feelings of violation, unwelcome change, or the breach of personal boundaries that makes you feel you have to protect yourself... A situation where your safety, security, or sense of control feels compromised'【明文竞品共识, dreambible.com/search.php?q=Intruder】. Jungian angle【推断】: the intruder as shadow or disowned psychic content pushing into awareness. A reflective reading invites attention to boundaries needing securing or feelings being let in. It does NOT predict an actual break-in or diagnose mental health【合规边界 — NOT a security prediction】.",
+      "digest_hint": "An intruder in a dream usually represents a breach of personal boundaries — someone or something, even an unconscious feeling or intrusive thought, invading your sense of safety or peace of mind. A faceless intruder often points to shadow material demanding attention. A Jungian-style lens reads the intruder as disowned psychic content pushing into awareness. Reflective prompt: what am I letting in that threatens my peace, and what boundary needs securing? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Traditionally associated in crystal lore with grounding, boundaries, and a felt sense of safety and protection. Offered as an anchor for the 'boundary violation / securing safety' theme the dream may surface — not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_grounding": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Used in crystal practice for grounding and stabilizing when one feels violated, unsafe, or unsettled. Offered as a focus for the 'restore a sense of safety' variant — not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_wedding_marriage",
+      "symbol": "wedding/marriage",
+      "category": "object",
+      "dream_type": null,
+      "keywords": [
+        "commitment",
+        "new beginning",
+        "transition",
+        "union of opposites",
+        "independence",
+        "fear of commitment"
+      ],
+      "trigger_words": [
+        "wedding",
+        "marry",
+        "marriage",
+        "bride",
+        "groom",
+        "aisle",
+        "vow",
+        "engaged",
+        "getting married"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis, NOT prediction). Dream dictionaries consistently read weddings/marriage as a symbol of new beginnings, transition, and commitment, and as the unification of formerly separate or opposite aspects of the self. dreammoods states a marriage signifies commitment, harmony or transitions, an important developmental phase, the unification of formerly separate or opposite aspects of yourself, in particular the union of masculine or feminine aspects, and a wedding reflects issues about commitment and independence【明文竞品共识, dreammoods dreamthemes wedding】. auntyflo frames weddings as reflecting how you feel inside about commitment to other people, independence is important, and a new beginning on the horizon【明文竞品共识, auntyflo wedding】. Shadow side: dreammoods notes weddings can also refer to feelings of bitterness, sorrow, or death, anxiety or fear, including fear of commitment and loss of independence【明文, dreammoods】. Jungian angle【推断, derived from the union-of-opposites frame】: wedding as hieros gamos, the sacred marriage of masculine and feminine within the psyche, an inner integration rather than an outer event. Reflective prompt: what is being committed to, integrated, or feared, and how do independence and union meet? It does NOT predict an actual marriage, divorce, or any external event, and is not a religious ruling.",
+      "digest_hint": "Weddings in dreams usually signal new beginnings, transition, commitment, and the unification of opposite aspects of the self (masculine and feminine); the shadow side is anxiety about commitment and loss of independence. A Jungian-style lens reads the wedding as an inner sacred marriage, integrating opposing parts of the psyche. Reflective prompt: what is being committed to, integrated, or feared, and how do independence and union meet? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "citrine-meaning",
+          "shop_url": "/product-category/citrine-crystals/",
+          "why": "Citrine is traditionally associated in crystal lore with abundance, optimism, and new beginnings (solar plexus). Offered as an intention anchor for the new beginning / commitment celebration frame, not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_anxiety": {
+          "slug": "carnelian-meaning",
+          "shop_url": "/product-category/carnelian-crystals/",
+          "why": "Carnelian is associated in crystal tradition with courage, grounded confidence, and motivated action. Offered as a focus for the fear of commitment / loss of independence variant, not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_baby",
+      "symbol": "baby",
+      "category": "person",
+      "dream_type": null,
+      "keywords": [
+        "new beginning",
+        "new idea",
+        "personal growth",
+        "inner child",
+        "potential",
+        "new responsibility"
+      ],
+      "trigger_words": [
+        "baby",
+        "babies",
+        "infant",
+        "newborn",
+        "toddler",
+        "holding a baby"
+      ],
+      "evidence_notes": "Reflective frame (NOT a pregnancy prediction, NOT medical advice, NOT a comment on actual children). Dream dictionaries converge on the baby as a symbol of new beginnings, new ideas, and nascent aspects of the self, NOT a literal pregnancy omen. dreambible states a baby represents new beginnings, new ways of thinking, new ideas, or new life developments, a new project or new potential; negatively, new responsibilities or problems requiring constant care, and feeling inexperienced【明文竞品共识, dreambible Baby】. dreamdictionary frames babies as appearing during personal transformation, a new growth phase, ties them to the inner child in analytical psychology, with a shadow reading of immature behaviors wanting attention【明文竞品共识, dreamdictionary baby】. Jungian angle【推断】: baby as the Divine Child archetype, a nascent Self-aspect asking to be nurtured into form; crying or neglected babies shadow neglect of that nascent part. Reflective prompt: what new idea, phase, responsibility, or aspect of self is being born, and how am I caring for or avoiding it? It does NOT predict, confirm, or diagnose pregnancy, fertility, or any medical outcome.",
+      "digest_hint": "Babies in dreams usually symbolize new beginnings, new ideas, a new phase, or a nascent aspect of the self; the shadow side is new responsibility or inexperience, and a neglected or crying baby may flag a part of you that needs care. A Jungian-style lens reads the baby as the inner child / Divine Child asking to be nurtured. Reflective prompt: what new idea, phase, or part of self is being born, and how am I caring for it? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "moonstone-meaning",
+          "shop_url": "/product-category/rainbow-moonstone-crystals/",
+          "why": "Moonstone is traditionally associated in crystal lore with the feminine, cycles, new beginnings, and intuitive creativity. Offered as an intention anchor for the new beginning / nascent self frame, not a fertility promise, cure, or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_nurturing": {
+          "slug": "rose-quartz-meaning",
+          "shop_url": "/product-category/rose-quartz-crystals/",
+          "why": "Rose Quartz is associated in crystal tradition with the heart chakra, gentle nurturing, and emotional healing. Offered as a focus for the inner child / caring for a nascent part of self variant, not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_dead_friend_relative",
+      "symbol": "dead friend/relative",
+      "category": "person",
+      "dream_type": null,
+      "keywords": [
+        "grief",
+        "longing",
+        "closure",
+        "unfinished business",
+        "memory",
+        "advice seeking"
+      ],
+      "trigger_words": [
+        "dead friend",
+        "deceased",
+        "late grand",
+        "passed away",
+        "relative died",
+        "ghost",
+        "loved one died"
+      ],
+      "evidence_notes": "Reflective frame (NOT a prediction of any death, NOT medical advice; the deceased is already gone, this is grief/longing/closure work, not divination). Dream dictionaries and grief-research sources consistently read dreaming of a deceased friend or relative as the mind processing loss, missing the person, or working through unfinished feeling, not an omen. auntyflo frames such dreams as a wish that person was still part of your life, missing their advice or company; if the person died long ago, a current situation or relationship reminds you of their qualities; a dead relative alive in the dream suggests you miss them and are trying to resurrect the time spent【明文竞品共识, auntyflo dead】. Recurring themes: grief processing, longing, seeking closure or advice, unfinished business, comfort【明文竞品共识】. Jungian angle【推断】: the dead friend or relative as an inner image or complex still charged with feeling, an internal relationship continuing after outer loss, sometimes carrying qualities the dreamer is integrating. Reflective prompt: what feeling, memory, or unfinished thread with this person is asking for attention now? It does NOT predict another death, is not a religious ruling on the afterlife, and is not a mental-health diagnosis.",
+      "digest_hint": "Dreaming of a deceased friend or relative is usually read as the mind processing grief and longing, missing the person advice or company, seeking closure, or noting a current situation that echoes their qualities. A Jungian-style lens reads the deceased as an inner image still charged with feeling, an internal relationship continuing after loss. Reflective prompt: what feeling, memory, or unfinished thread is asking for attention now? Reflective frame, NOT diagnosis or prediction. NOT prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "rose-quartz-meaning",
+          "shop_url": "/product-category/rose-quartz-crystals/",
+          "why": "Rose Quartz is traditionally associated in crystal lore with the heart chakra, gentle grief support, and emotional healing. Offered as an intention anchor for the grief / longing / heart healing frame, not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_remembering": {
+          "slug": "moonstone-meaning",
+          "shop_url": "/product-category/rainbow-moonstone-crystals/",
+          "why": "Moonstone is associated in crystal tradition with emotional cycles, intuition, and the feminine/unconscious. Offered as a focus for the memory / cycles / unfinished feeling variant, not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": true,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_hair_falling_out",
+      "symbol": "hair falling out",
+      "category": "body",
+      "dream_type": null,
+      "keywords": [
+        "loss of control",
+        "aging",
+        "self-image",
+        "vitality",
+        "stress",
+        "vulnerability",
+        "identity"
+      ],
+      "trigger_words": [
+        "hair",
+        "falling hair",
+        "bald",
+        "balding",
+        "losing hair",
+        "strand of hair"
+      ],
+      "evidence_notes": "Reflective frame (NOT a medical diagnosis, NOT a prediction of actual hair loss or illness). Dream dictionaries and psychology sources consistently read hair-loss dreams as a symbol of self-image, vitality, and control rather than a literal medical sign. auntyflo frames hair falling out as areas of life where you feel out of control, where circumstances are becoming over the top, ties it to stress and aging, and notes it can signal readiness to release inhibitions【明文竞品共识, auntyflo hair falling out】. healthline lists fear of actual hair loss, worries related to death, disease, or loss of sexual appeal, a sign of stress【明文, healthline PAA】. dreams.co.uk names fear of ageing, loss of control, deep-seated anxieties about personal change【明文, dreams.co.uk】. Jungian angle【推断】: hair as a vitality/identity symbol (Samson archetype), the dream surfacing anxiety about a felt loss of power, attractiveness, or self-coherence. Reflective prompt: where do I feel a loss of vitality, control, or self-image, and what would restore a sense of coherence? It does NOT predict hair loss, illness, or any medical outcome.",
+      "digest_hint": "Hair falling out in dreams usually signals anxiety about self-image, aging, vitality, or a felt loss of control; positively it can reflect readiness to release old inhibitions. A Jungian-style lens reads hair as a vitality/identity symbol, the dream surfacing a felt loss of power, attractiveness, or coherence. Reflective prompt: where do I feel a loss of vitality, control, or self-image, and what would restore coherence? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "moonstone-meaning",
+          "shop_url": "/product-category/rainbow-moonstone-crystals/",
+          "why": "Moonstone is traditionally associated in crystal lore with the feminine, cycles, and the emotional body, including self-image and the felt sense of vitality. Offered as an intention anchor for the self-image / aging / emotional body frame, not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_grounding": {
+          "slug": "aquamarine-meaning",
+          "shop_url": "/shop/?s=aquamarine",
+          "why": "Aquamarine is associated in crystal tradition with calm, soothing, and gentle self-expression (throat chakra). Offered as a focus for the stress / vulnerability / shame variant, not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_earthquake",
+      "symbol": "earthquake",
+      "category": "disaster",
+      "dream_type": null,
+      "keywords": [
+        "instability",
+        "major shift",
+        "loss of foundation",
+        "loss of control",
+        "disruption",
+        "transformation"
+      ],
+      "trigger_words": [
+        "earthquake",
+        "quake",
+        "tremor",
+        "shaking ground",
+        "seismic",
+        "ground shaking"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis, NOT prediction of any actual earthquake or disaster). Dream dictionaries consistently read earthquake dreams as a metaphor for instability, major life shift, and the shaking of foundations, not a literal disaster omen. dreamdictionary states earthquakes signify a personal shake up, major shift or instability, not necessarily literal or bad, more about transformations affecting the psychological foundation【明文竞品共识, dreamdictionary earthquake】. dreambible frames it as a major disruption, change, shake-up, or shift, feelings of insecurity, instability, no support【明文, dreambible】. auntyflo reads an earthquake as indicating detachment or a chaotic time in life, feeling insecure【明文, auntyflo earthquake】. Jungian angle【推断】: earthquake as the psyche foundation shaking, old ego-structures and rigid stances cracking so new ground can form. Reflective prompt: where does the ground feel unstable, and what old structure is asking to shift? It does NOT predict an actual earthquake, geological event, or any disaster【合规边界 — determinism】.",
+      "digest_hint": "An earthquake in a dream usually mirrors instability, a major life shift, or the shaking of your foundations, rarely a literal event. It can flag insecurity, loss of support, or rigid structures cracking so new ground can form. A Jungian-style lens reads it as the psyche foundation shifting, old ego-structures giving way. Reflective prompt: where does the ground feel unstable, and what old structure is asking to shift? Reflective frame, NOT diagnosis or prediction. NOT prediction of actual disaster.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "hematite-meaning",
+          "shop_url": "/product-category/hematite-crystals/",
+          "why": "Hematite is traditionally associated in crystal lore with grounding, stabilization, and a felt sense of embodied steadiness. Offered as a grounding anchor for the instability / shaking foundations / loss of support frame, not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_anxiety": {
+          "slug": "smoky-quartz-meaning",
+          "shop_url": "/shop/?s=smoky+quartz",
+          "why": "Smoky Quartz is traditionally used in crystal practice for grounding and stabilizing when anxiety or upheaval feels spiraling. Offered as a focus for the after-shock / re-stabilize variant, not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L2"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": [
+          "disaster_prediction"
+        ]
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_frog",
+      "symbol": "frog",
+      "category": "animal",
+      "dream_type": null,
+      "keywords": [
+        "transformation",
+        "renewal",
+        "transition",
+        "intuition",
+        "cleansing",
+        "unconscious material"
+      ],
+      "trigger_words": [
+        "frog",
+        "frogs",
+        "tadpole",
+        "toad",
+        "amphibian"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis). Dream dictionaries consistently read the frog as a symbol of transformation, renewal, and the bridge between conscious and unconscious, drawn from its amphibious life and tadpole-to-frog metamorphosis. dreambible frames the frog as personal transformation, change, and renewal, the ability to live in water and on land as handling both conscious and unconscious, the life cycle as a metaphor for transformation; fear of frogs as uncomfortable with change or afraid of transformation【明文竞品共识, dreambible Frog】. auntyflo reads the frog as generally very positive, a new beginning, its amphibious nature a bridge between conscious and unconscious, a symbol of transformation【明文竞品共识, auntyflo frog】. Jungian angle【推断】: frog as a threshold creature moving between water (unconscious) and land (conscious ego), an image of psychic material crossing between realms. Reflective prompt: what change is moving between my surface and depths, and am I embracing or resisting it? It does NOT predict events or constitute a religious ruling.",
+      "digest_hint": "Frogs are widely read as symbols of transformation and renewal, drawn from their tadpole-to-frog metamorphosis and life between water (unconscious) and land (conscious). Fear of frogs in the dream can flag discomfort with a change underway. A Jungian-style lens reads the frog as a threshold creature moving psychic material between depths and surface. Reflective prompt: what change is moving between my surface and depths, and am I embracing or resisting it? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Black Tourmaline is traditionally associated in crystal lore with grounding, boundaries, and steadiness during change. Offered as an intention anchor for the grounding through transformation / boundary during transition frame, not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_transformation": {
+          "slug": "labradorite-meaning",
+          "shop_url": "/product-category/labradorite-crystals/",
+          "why": "Labradorite is associated in crystal tradition with transformation, change, intuition, and the unseen thresholds of the psyche. Offered as a focus for the renewal / conscious-unconscious bridge side, not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    },
+    {
+      "id": "sym_bird",
+      "symbol": "bird",
+      "category": "animal",
+      "dream_type": null,
+      "keywords": [
+        "freedom",
+        "transcendence",
+        "perspective",
+        "spiritual connection",
+        "communication",
+        "independence"
+      ],
+      "trigger_words": [
+        "bird",
+        "birds",
+        "flock",
+        "sparrow",
+        "eagle",
+        "feather",
+        "wing",
+        "flying bird"
+      ],
+      "evidence_notes": "Reflective frame (NOT diagnosis). Dream dictionaries consistently read birds as an archetype of freedom, transcendence, and connection to the spiritual. dreamdictionary frames birds as an archetype of transcendence, freedom, and connection to the spiritual realm, connected to the soul; soaring birds freedom ideals spiritual connection, attacking bird suppressed fears, flying freedom perspective, flock community shared purpose, caged trapped, dead end of freedom【明文竞品共识, dreamdictionary bird】. dreambible reads a bird as freedom, escape, or independence, transcendence, spiritual liberation, feeling lighter; attacking suppressed fears, caged trapped, in house spiritual messages【明文竞品共识, dreambible Bird】. auntyflo frames a bird dream as a longing for freedom; healthline lists freedom, perspective, communication, or spiritual messages【明文】. Jungian angle【推断】: bird as a symbol of spirit/thought, the capacity of the psyche to lift above the immediate situation and take a wider view; flight as ascent of perspective, caged or dead birds as blocked or ended expression. Reflective prompt: where am I seeking freedom, wider perspective, or freer expression, and where does it feel blocked? It does NOT predict events or constitute a religious ruling.",
+      "digest_hint": "Birds are widely read as an archetype of freedom, transcendence, and spiritual connection, soaring birds signal ideals and wider perspective, attacking birds suppressed fears, caged birds feeling trapped, a flock community and shared purpose. A Jungian-style lens reads the bird as the psyche capacity to lift above the immediate and take a wider view. Reflective prompt: where am I seeking freedom, wider perspective, or freer expression, and where does it feel blocked? Reflective frame, NOT diagnosis or prediction.",
+      "crystal_mapping": {
+        "primary": {
+          "slug": "labradorite-meaning",
+          "shop_url": "/product-category/labradorite-crystals/",
+          "why": "Labradorite is associated in crystal tradition with intuition, transformation, and the unseen/transcendent dimensions of the psyche. Offered as an intention anchor for the freedom / transcendence / wider perspective frame, not a cure or guarantee.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        },
+        "variant_fear": {
+          "slug": "black-tourmaline-meaning",
+          "shop_url": "/product-category/black-tourmaline-crystals/",
+          "why": "Black Tourmaline is traditionally associated in crystal lore with grounding, safety, and boundary. Offered as a focus for the attacking bird / suppressed fears / feeling trapped variant, not a treatment.",
+          "shop_url_validated": true,
+          "cta_level": "L1"
+        }
+      },
+      "compliance_trigger": {
+        "not_medical_advice": true,
+        "not_mental_health_diagnosis": true,
+        "not_a_religious_ruling": true,
+        "religious_sensitivity": false,
+        "determinism_blocks": []
+      },
+      "shop_url_validated": true
+    }
+  ]
+}

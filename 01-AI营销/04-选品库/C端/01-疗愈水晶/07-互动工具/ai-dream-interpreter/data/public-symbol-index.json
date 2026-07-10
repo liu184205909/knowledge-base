@@ -1,0 +1,660 @@
+[
+  {
+    "id": "sym_teeth_falling_out",
+    "symbol": "teeth falling out",
+    "category": "body",
+    "keywords": [
+      "communication",
+      "self-image",
+      "powerlessness",
+      "embarrassment",
+      "life transition",
+      "voice"
+    ],
+    "trigger_words": [
+      "teeth",
+      "tooth",
+      "dental",
+      "molar",
+      "fang",
+      "falling out",
+      "crumbling",
+      "rotting",
+      "losing teeth"
+    ]
+  },
+  {
+    "id": "sym_snake",
+    "symbol": "snake",
+    "category": "animal",
+    "keywords": [
+      "hidden threat",
+      "transformation",
+      "subconscious",
+      "instinct",
+      "healing",
+      "renewal"
+    ],
+    "trigger_words": [
+      "snake",
+      "serpent",
+      "python",
+      "cobra",
+      "viper",
+      "adder",
+      "reptile",
+      "slither"
+    ]
+  },
+  {
+    "id": "sym_falling",
+    "symbol": "falling",
+    "category": "scene",
+    "keywords": [
+      "loss of control",
+      "insecurity",
+      "overwhelm",
+      "instability",
+      "shame",
+      "groundlessness"
+    ],
+    "trigger_words": [
+      "fall",
+      "falling",
+      "fell",
+      "dropped",
+      "plummet",
+      "plunge",
+      "tumble"
+    ]
+  },
+  {
+    "id": "sym_flying",
+    "symbol": "flying",
+    "category": "scene",
+    "keywords": [
+      "freedom",
+      "liberation",
+      "perspective",
+      "control",
+      "escape",
+      "ambition"
+    ],
+    "trigger_words": [
+      "fly",
+      "flying",
+      "flew",
+      "soar",
+      "floating",
+      "levitat",
+      "airborne",
+      "flight"
+    ]
+  },
+  {
+    "id": "sym_being_chased",
+    "symbol": "being chased",
+    "category": "scene",
+    "keywords": [
+      "avoidance",
+      "fear",
+      "disowned self",
+      "stress",
+      "flight response",
+      "unresolved conflict"
+    ],
+    "trigger_words": [
+      "chase",
+      "chasing",
+      "pursued",
+      "pursuing",
+      "running from",
+      "flee",
+      "fleeing",
+      "after me",
+      "chaser"
+    ]
+  },
+  {
+    "id": "sym_cat",
+    "symbol": "cat",
+    "category": "animal",
+    "keywords": [
+      "independence",
+      "intuition",
+      "feminine energy",
+      "mystery",
+      "creativity"
+    ],
+    "trigger_words": [
+      "cat",
+      "cats",
+      "kitten",
+      "kittens",
+      "feline"
+    ]
+  },
+  {
+    "id": "sym_blood",
+    "symbol": "blood",
+    "category": "object",
+    "keywords": [
+      "life force",
+      "vitality",
+      "emotional energy",
+      "passion",
+      "depletion"
+    ],
+    "trigger_words": [
+      "blood",
+      "bloody",
+      "bleeding",
+      "bleed",
+      "wound"
+    ]
+  },
+  {
+    "id": "sym_fire",
+    "symbol": "fire",
+    "category": "disaster",
+    "keywords": [
+      "transformation",
+      "passion",
+      "anger",
+      "purification",
+      "destruction"
+    ],
+    "trigger_words": [
+      "fire",
+      "flame",
+      "flaming",
+      "burning",
+      "burn",
+      "blaze",
+      "smoke",
+      "inferno",
+      "on fire"
+    ]
+  },
+  {
+    "id": "sym_tornado",
+    "symbol": "tornado",
+    "category": "disaster",
+    "keywords": [
+      "emotional upheaval",
+      "loss of control",
+      "anxiety",
+      "sudden change",
+      "suppressed emotion"
+    ],
+    "trigger_words": [
+      "tornado",
+      "twister",
+      "cyclone",
+      "funnel",
+      "storm",
+      "hurricane"
+    ]
+  },
+  {
+    "id": "sym_naked_public",
+    "symbol": "naked in public",
+    "category": "scene",
+    "keywords": [
+      "vulnerability",
+      "exposure",
+      "fear of judgment",
+      "authenticity",
+      "insecurity"
+    ],
+    "trigger_words": [
+      "naked",
+      "nude",
+      "undressed",
+      "bare",
+      "exposed",
+      "no clothes",
+      "in public"
+    ]
+  },
+  {
+    "id": "sym_water",
+    "symbol": "water",
+    "category": "object",
+    "keywords": [
+      "emotions",
+      "subconscious",
+      "emotional clarity",
+      "intuition",
+      "purification",
+      "renewal",
+      "overwhelm"
+    ],
+    "trigger_words": [
+      "water",
+      "ocean",
+      "sea",
+      "river",
+      "lake",
+      "pool",
+      "flood",
+      "wave",
+      "swim"
+    ]
+  },
+  {
+    "id": "sym_death",
+    "symbol": "death",
+    "category": "spiritual",
+    "keywords": [
+      "transformation",
+      "transition",
+      "ending",
+      "rebirth",
+      "letting go",
+      "grief",
+      "change"
+    ],
+    "trigger_words": [
+      "die",
+      "died",
+      "dead",
+      "death",
+      "dying",
+      "kill",
+      "killed",
+      "funeral",
+      "passed away"
+    ]
+  },
+  {
+    "id": "sym_ex_partner",
+    "symbol": "ex partner",
+    "category": "emotion",
+    "keywords": [
+      "unresolved feelings",
+      "closure",
+      "relationship patterns",
+      "nostalgia",
+      "transition",
+      "letting go"
+    ],
+    "trigger_words": [
+      "ex-boyfriend",
+      "ex-girlfriend",
+      "ex-husband",
+      "ex-wife",
+      "ex partner",
+      "former partner",
+      "my ex"
+    ]
+  },
+  {
+    "id": "sym_being_pregnant",
+    "symbol": "being pregnant",
+    "category": "body",
+    "keywords": [
+      "new beginning",
+      "creation",
+      "creativity",
+      "growth",
+      "new aspect of self",
+      "anxiety",
+      "hope"
+    ],
+    "trigger_words": [
+      "pregnant",
+      "pregnancy",
+      "baby bump",
+      "expecting",
+      "with child"
+    ]
+  },
+  {
+    "id": "sym_money",
+    "symbol": "money",
+    "category": "object",
+    "keywords": [
+      "self-worth",
+      "personal power",
+      "confidence",
+      "abundance",
+      "opportunity",
+      "material attachment",
+      "inner resources"
+    ],
+    "trigger_words": [
+      "money",
+      "cash",
+      "dollar",
+      "coin",
+      "rich",
+      "wealth",
+      "currency",
+      "bills"
+    ]
+  },
+  {
+    "id": "sym_dog",
+    "symbol": "dog",
+    "category": "animal",
+    "keywords": [
+      "loyalty",
+      "companionship",
+      "protection",
+      "friendship",
+      "intuition",
+      "trust"
+    ],
+    "trigger_words": [
+      "dog",
+      "dogs",
+      "puppy",
+      "puppies",
+      "canine",
+      "hound"
+    ]
+  },
+  {
+    "id": "sym_bear",
+    "symbol": "bear",
+    "category": "animal",
+    "keywords": [
+      "strength",
+      "boundaries",
+      "independence",
+      "repressed anger",
+      "protection",
+      "solitude"
+    ],
+    "trigger_words": [
+      "bear",
+      "bears",
+      "cub",
+      "grizzly"
+    ]
+  },
+  {
+    "id": "sym_spider",
+    "symbol": "spider",
+    "category": "animal",
+    "keywords": [
+      "entanglement",
+      "manipulation",
+      "feminine archetype",
+      "shadow",
+      "creativity",
+      "unseen threat"
+    ],
+    "trigger_words": [
+      "spider",
+      "spiders",
+      "cobweb",
+      "arachnid",
+      "tarantula",
+      "spider web"
+    ]
+  },
+  {
+    "id": "sym_drowning",
+    "symbol": "drowning",
+    "category": "disaster",
+    "keywords": [
+      "emotional overwhelm",
+      "loss of control",
+      "repressed emotions",
+      "stress",
+      "being pulled under"
+    ],
+    "trigger_words": [
+      "drown",
+      "drowning",
+      "sank",
+      "sinking",
+      "underwater",
+      "submerge",
+      "suffocat"
+    ]
+  },
+  {
+    "id": "sym_driving",
+    "symbol": "driving",
+    "category": "scene",
+    "keywords": [
+      "control",
+      "life direction",
+      "ambition",
+      "autonomy",
+      "life journey",
+      "loss of control"
+    ],
+    "trigger_words": [
+      "driving",
+      "drove",
+      "car",
+      "vehicle",
+      "steering wheel",
+      "behind the wheel",
+      "traffic",
+      "car crash"
+    ]
+  },
+  {
+    "id": "sym_test_exam",
+    "symbol": "test or exam",
+    "category": "scene",
+    "keywords": [
+      "anxiety",
+      "unpreparedness",
+      "scrutiny",
+      "fear of failure",
+      "self-esteem",
+      "life transition"
+    ],
+    "trigger_words": [
+      "test",
+      "exam",
+      "quiz",
+      "test paper",
+      "final exam",
+      "midterm",
+      "school test"
+    ]
+  },
+  {
+    "id": "sym_being_lost",
+    "symbol": "being lost",
+    "category": "scene",
+    "keywords": [
+      "anxiety",
+      "confusion",
+      "directionlessness",
+      "vulnerability",
+      "search for purpose",
+      "life transition"
+    ],
+    "trigger_words": [
+      "lost",
+      "losing my way",
+      "cant find",
+      "maze",
+      "wandering",
+      "unfamiliar place"
+    ]
+  },
+  {
+    "id": "sym_intruder",
+    "symbol": "intruder",
+    "category": "scene",
+    "keywords": [
+      "boundary violation",
+      "personal boundaries",
+      "safety",
+      "shadow",
+      "unwelcome change",
+      "intrusive thoughts"
+    ],
+    "trigger_words": [
+      "intruder",
+      "break-in",
+      "burglar",
+      "stranger in my",
+      "invaded",
+      "home invasion",
+      "broke in"
+    ]
+  },
+  {
+    "id": "sym_wedding_marriage",
+    "symbol": "wedding/marriage",
+    "category": "object",
+    "keywords": [
+      "commitment",
+      "new beginning",
+      "transition",
+      "union of opposites",
+      "independence",
+      "fear of commitment"
+    ],
+    "trigger_words": [
+      "wedding",
+      "marry",
+      "marriage",
+      "bride",
+      "groom",
+      "aisle",
+      "vow",
+      "engaged",
+      "getting married"
+    ]
+  },
+  {
+    "id": "sym_baby",
+    "symbol": "baby",
+    "category": "person",
+    "keywords": [
+      "new beginning",
+      "new idea",
+      "personal growth",
+      "inner child",
+      "potential",
+      "new responsibility"
+    ],
+    "trigger_words": [
+      "baby",
+      "babies",
+      "infant",
+      "newborn",
+      "toddler",
+      "holding a baby"
+    ]
+  },
+  {
+    "id": "sym_dead_friend_relative",
+    "symbol": "dead friend/relative",
+    "category": "person",
+    "keywords": [
+      "grief",
+      "longing",
+      "closure",
+      "unfinished business",
+      "memory",
+      "advice seeking"
+    ],
+    "trigger_words": [
+      "dead friend",
+      "deceased",
+      "late grand",
+      "passed away",
+      "relative died",
+      "ghost",
+      "loved one died"
+    ]
+  },
+  {
+    "id": "sym_hair_falling_out",
+    "symbol": "hair falling out",
+    "category": "body",
+    "keywords": [
+      "loss of control",
+      "aging",
+      "self-image",
+      "vitality",
+      "stress",
+      "vulnerability",
+      "identity"
+    ],
+    "trigger_words": [
+      "hair",
+      "falling hair",
+      "bald",
+      "balding",
+      "losing hair",
+      "strand of hair"
+    ]
+  },
+  {
+    "id": "sym_earthquake",
+    "symbol": "earthquake",
+    "category": "disaster",
+    "keywords": [
+      "instability",
+      "major shift",
+      "loss of foundation",
+      "loss of control",
+      "disruption",
+      "transformation"
+    ],
+    "trigger_words": [
+      "earthquake",
+      "quake",
+      "tremor",
+      "shaking ground",
+      "seismic",
+      "ground shaking"
+    ]
+  },
+  {
+    "id": "sym_frog",
+    "symbol": "frog",
+    "category": "animal",
+    "keywords": [
+      "transformation",
+      "renewal",
+      "transition",
+      "intuition",
+      "cleansing",
+      "unconscious material"
+    ],
+    "trigger_words": [
+      "frog",
+      "frogs",
+      "tadpole",
+      "toad",
+      "amphibian"
+    ]
+  },
+  {
+    "id": "sym_bird",
+    "symbol": "bird",
+    "category": "animal",
+    "keywords": [
+      "freedom",
+      "transcendence",
+      "perspective",
+      "spiritual connection",
+      "communication",
+      "independence"
+    ],
+    "trigger_words": [
+      "bird",
+      "birds",
+      "flock",
+      "sparrow",
+      "eagle",
+      "feather",
+      "wing",
+      "flying bird"
+    ]
+  }
+]

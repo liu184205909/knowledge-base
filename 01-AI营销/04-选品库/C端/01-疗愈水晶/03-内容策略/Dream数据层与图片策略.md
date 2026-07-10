@@ -86,6 +86,23 @@
     "reflection_prompt": "name one transition you are currently in, and what your reaction to the snake tells you about how you meet change"
   },
 
+  "sleep_science": {
+    "sleep_mechanism": "梦的机制简述（REM 阶段 / 记忆巩固 / 情绪处理），解释为什么 {symbol} 梦会生动、重复、或与情绪相关。只讲机制与边界，不做梦象定论。",
+    "public_data_point": "公开睡眠科学数据点（如 'about 20% of people report dreaming about {symbol}'），必须可核验；未核验时 source_status=needs_verification",
+    "evidence_boundary": "科学能解释的（梦的机制）vs 不能证实的（{symbol} 梦 = 某固定含义）边界声明",
+    "humility_line": "科学谦逊句式（如 'Researchers haven't specifically studied whether {symbol} dreams specifically mean X'）",
+    "source_status": "needs_verification"
+  },
+
+  "key_takeaways": {
+    "_generation": "组装字段（生成时拼装，非独立素材）：3-4 条速览",
+    "items": [
+      {"type": "sleep_science", "from": "sleep_science.humility_line / sleep_mechanism"},
+      {"type": "crystal_reflection", "from": "crystal_recommendations.best_overall（journaling ritual 视角，不做疗效承诺）"},
+      {"type": "core_meaning", "from": "psychology.common_interpretation"}
+    ]
+  },
+
   "spiritual": {
     "islamic": {
       "available": true,
@@ -265,6 +282,8 @@
 | faq | ✅ 5-8 条 | ✅ 3-5 条 | ✅ | ✅ | ⬜ 0-2 条 | ✅ | ⬜ | ✅ |
 | images | hero+symbol+crystal | hero+symbol | hero | hero+symbol | hero 单图 | hero+symbol | hero | hero+crystal×3 |
 | shop_cta | L1-L3 | L1-L3 | L1-L3 | L1-L3 | L1-L3 | L1-L3 | L3 | **L1 套装** |
+| sleep_science | ✅ | ✅（边界铺垫，不压信仰）| ✅ | ✅ | ⬜ 轻量 | ✅ | ⬜ | ⬜ |
+| key_takeaways | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⬜ | ✅ |
 
 ### 1.4 关键字段说明
 

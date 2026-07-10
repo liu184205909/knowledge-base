@@ -1,0 +1,107 @@
+{
+  "scope": "C1 core content anti-placeholder validation",
+  "rows": 1289,
+  "complete": true,
+  "section_stats": {
+    "Psychological Reflection": {
+      "missing": 0,
+      "short_under_45_words": 0,
+      "unique": 1279,
+      "top_duplicate_count": 3,
+      "old_placeholder_hits": 0,
+      "top_samples": [
+        {
+          "count": 3,
+          "text": "In a psychological reading, dreamscape is best treated as a scene built around personal context, emotion, memory, and the symbolic role this image played in the dream. Start with the role of dreamscape: was it threatening, comforting, stran"
+        },
+        {
+          "count": 2,
+          "text": "In a psychological reading, biblical dream meaning is best treated as a scene built around personal context, emotion, memory, and the symbolic role this image played in the dream. Start with the role of biblical dream meaning: was it threat"
+        },
+        {
+          "count": 2,
+          "text": "In a psychological reading, biblical dream symbols is best treated as a scene built around personal context, emotion, memory, and the symbolic role this image played in the dream. Start with the role of biblical dream symbols: was it threat"
+        },
+        {
+          "count": 2,
+          "text": "In a psychological reading, biblical dream dictionary is best treated as a scene built around personal context, emotion, memory, and the symbolic role this image played in the dream. Start with the role of biblical dream dictionary: was it "
+        },
+        {
+          "count": 2,
+          "text": "In a psychological reading, biblical dream interpretation is best treated as a scene built around personal context, emotion, memory, and the symbolic role this image played in the dream. Start with the role of biblical dream interpretation:"
+        }
+      ]
+    },
+    "Spiritual Symbolism": {
+      "missing": 0,
+      "short_under_45_words": 0,
+      "unique": 1100,
+      "top_duplicate_count": 10,
+      "old_placeholder_hits": 0,
+      "top_samples": [
+        {
+          "count": 10,
+          "text": "For a religious lens, keep the interpretation respectful, non-doctrinal, and open to qualified guidance from the reader's own tradition. In this page, jesus can be explored as a symbolic mirror for personal context, emotion, memory, and the"
+        },
+        {
+          "count": 8,
+          "text": "For a biblical lens, connect the dream to prayerful reflection, conscience, and moral attention without claiming a direct message from God. In this page, snakes can be explored as a symbolic mirror for instinct, hidden pressure, and the nee"
+        },
+        {
+          "count": 8,
+          "text": "For a religious lens, keep the interpretation respectful, non-doctrinal, and open to qualified guidance from the reader's own tradition. In this page, god can be explored as a symbolic mirror for personal context, emotion, memory, and the s"
+        },
+        {
+          "count": 5,
+          "text": "For a biblical lens, connect the dream to prayerful reflection, conscience, and moral attention without claiming a direct message from God. In this page, death can be explored as a symbolic mirror for endings, grief, memory, and the symboli"
+        },
+        {
+          "count": 5,
+          "text": "Spiritually, the symbol can be read as an invitation to notice patterns, values, and inner timing without treating the dream as proof. In this page, dreamscape can be explored as a symbolic mirror for personal context, emotion, memory, and "
+        }
+      ]
+    },
+    "Crystals for Dream Reflection": {
+      "missing": 0,
+      "short_under_45_words": 0,
+      "unique": 1029,
+      "top_duplicate_count": 11,
+      "old_placeholder_hits": 0,
+      "top_samples": [
+        {
+          "count": 11,
+          "text": "For crystal reflection, use Amethyst as the primary journaling anchor for this dream, then pair it with Quartz and Celestite if you want a fuller ritual. Place the stones beside a notebook, write the phrase 'snakes in my dream may be pointi"
+        },
+        {
+          "count": 10,
+          "text": "For crystal reflection, use Labradorite as the primary journaling anchor for this dream, then pair it with Black Tourmaline and Amethyst if you want a fuller ritual. Place the stones beside a notebook, write the phrase 'jesus in my dream ma"
+        },
+        {
+          "count": 8,
+          "text": "For crystal reflection, use Amethyst as the primary journaling anchor for this dream, then pair it with Quartz and Celestite if you want a fuller ritual. Place the stones beside a notebook, write the phrase 'spiders in my dream may be point"
+        },
+        {
+          "count": 8,
+          "text": "For crystal reflection, use Labradorite as the primary journaling anchor for this dream, then pair it with Black Tourmaline and Amethyst if you want a fuller ritual. Place the stones beside a notebook, write the phrase 'god in my dream may "
+        },
+        {
+          "count": 6,
+          "text": "For crystal reflection, use Amethyst as the primary journaling anchor for this dream, then pair it with Quartz and Celestite if you want a fuller ritual. Place the stones beside a notebook, write the phrase 'maggots in my dream may be point"
+        }
+      ]
+    }
+  },
+  "brief_coverage": {
+    "psychological_reflection": 1289,
+    "spiritual_symbolism": 1289,
+    "crystals_for_dream_reflection": 1289,
+    "journal_prompts": 1289
+  },
+  "evidence_coverage": {
+    "psychology_angle": 1289,
+    "spiritual_angle": 1289,
+    "crystal_angle": 1289
+  },
+  "findings_count": 0,
+  "findings": []
+}

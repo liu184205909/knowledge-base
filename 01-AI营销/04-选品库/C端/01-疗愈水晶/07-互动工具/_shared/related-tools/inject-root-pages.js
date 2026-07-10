@@ -21,8 +21,10 @@ const ROOT = [
     const raw = await E.apiRequest('/wp-json/wp/v2/pages/' + p.id + '?context=edit&_fields=content,slug', 'GET');
     if (!raw || !raw.content || !raw.content.raw) { console.log(p.slug, '❌ 取 raw content 失败'); continue; }
     let html = raw.content.raw;
-    if (html.indexOf('ew-related') >= 0) { console.log(p.slug, '⏭ 已含 related，跳过'); continue; }
-    const rel = '\n\n<!-- ===== Related Tools (managed by _shared/related-tools) ===== -->\n' + relatedHtml(p.slug);
+    // 清旧 trailing related(块外 freeform Gutenberg 不渲染)
+    html = html.replace(/\n*<!-- ===== Related Tools[\s\S]*$/, '');
+    // 新 related 包 wp:html 块(Gutenberg 渲染 trailing 块)
+    const rel = '\n\n<!-- wp:html -->\n<!-- ===== Related Tools (managed by _shared/related-tools) ===== -->\n' + relatedHtml(p.slug) + '\n<!-- /wp:html -->';
     const r = await E.apiRequest('/wp-json/wp/v2/pages/' + p.id, 'POST', { content: html + rel });
     console.log(p.slug, '✅ 已追加 related | modified:', r.modified, '| +bytes:', rel.length);
   }

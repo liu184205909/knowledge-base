@@ -30,6 +30,7 @@ const TOOLS = {
   'crystal-bracelet-builder':      { t: 'Crystal Bracelet Builder', u: '/tools/crystal-bracelet-builder/',        d: 'Design bead by bead', i: '📿' },
   'daily-tarot':                   { t: 'Daily Tarot',              u: '/tools/daily-tarot/',                     d: "Today's tarot card and crystal for the whole community", i: '🌅' },
   'mbti-tarot':                    { t: 'MBTI Tarot',               u: '/tools/mbti-tarot/',                      d: 'Find your MBTI tarot birth card and crystals', i: '🧬' },
+  'ai-dream-interpreter':          { t: 'AI Dream Interpreter',     u: '/tools/ai-dream-interpreter/',            d: 'Decode your dream with AI and matching crystals', i: '🌙' },
 };
 
 const MAP = {
@@ -54,6 +55,7 @@ const MAP = {
   'bracelet-size-calculator':      ['ring-size-calculator', 'crystal-quiz', 'crystal-bracelet-builder'],
   'ring-size-calculator':          ['bracelet-size-calculator', 'crystal-quiz', 'crystal-bracelet-builder'],
   'crystal-bracelet-builder':      ['bracelet-size-calculator', 'crystal-meaning-search', 'crystal-quiz'],
+  'ai-dream-interpreter':          ['ai-tarot-chat', 'mbti-tarot', 'numerology-calculator'],
 };
 
 const CSS = ''

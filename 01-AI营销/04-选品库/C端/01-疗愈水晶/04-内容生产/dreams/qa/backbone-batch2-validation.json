@@ -1,0 +1,39 @@
+{
+  "complete": true,
+  "findings_count": 0,
+  "rows": 10,
+  "expected_rows": 10,
+  "slugs": [
+    "house-dream-meaning",
+    "car-dream-meaning",
+    "fire-dream-meaning",
+    "baby-dream-meaning",
+    "lost-dream-meaning",
+    "sex-dream-meaning",
+    "being-chased-dream-meaning",
+    "dying-dream-meaning",
+    "wedding-dream-meaning",
+    "naked-dream-meaning"
+  ],
+  "word_counts": {
+    "house-dream-meaning": 2117,
+    "car-dream-meaning": 2072,
+    "fire-dream-meaning": 2031,
+    "baby-dream-meaning": 2035,
+    "lost-dream-meaning": 2056,
+    "sex-dream-meaning": 2102,
+    "being-chased-dream-meaning": 2049,
+    "dying-dream-meaning": 2044,
+    "wedding-dream-meaning": 1988,
+    "naked-dream-meaning": 2011
+  },
+  "section_uniqueness": {
+    "psychological": 10,
+    "spiritual": 10,
+    "crystal": 10
+  },
+  "readiness_rows": 1304,
+  "readiness_batch2_count": 10,
+  "crystal_missing_count": 0,
+  "findings": []
+}

@@ -28,7 +28,7 @@ const API_KEY = process.env.OPENAI_API_KEY;
 const args = process.argv.slice(2);
 const concurrencyArg = args.find((a) => a.startsWith('--concurrency='))?.split('=')[1];
 const limitArg = args.find((a) => a.startsWith('--limit='))?.split('=')[1];
-const CONCURRENCY = Math.max(1, Math.min(4, Number(concurrencyArg || 3)));
+const CONCURRENCY = Math.max(1, Math.min(8, Number(concurrencyArg || 3)));
 const LIMIT = limitArg ? Number(limitArg) : Infinity;
 
 function readJsonl(file) {

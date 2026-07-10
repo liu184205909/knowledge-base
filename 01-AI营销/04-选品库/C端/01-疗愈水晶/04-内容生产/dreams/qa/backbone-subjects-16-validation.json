@@ -1,0 +1,32 @@
+{
+  "complete": true,
+  "findings_count": 0,
+  "backbone_rows": 16,
+  "readiness_backbone_rows": 16,
+  "slugs": [
+    "teeth-falling-out-dream-meaning",
+    "water-dream-meaning",
+    "falling-dream-meaning",
+    "flying-dream-meaning",
+    "death-dream-meaning",
+    "spider-dream-meaning",
+    "house-dream-meaning",
+    "car-dream-meaning",
+    "fire-dream-meaning",
+    "baby-dream-meaning",
+    "lost-dream-meaning",
+    "sex-dream-meaning",
+    "being-chased-dream-meaning",
+    "dying-dream-meaning",
+    "wedding-dream-meaning",
+    "naked-dream-meaning"
+  ],
+  "publication_ready_counts": {
+    "False": 16
+  },
+  "requires_human_review_counts": {
+    "True": 16
+  },
+  "min_word_count": 1978,
+  "findings": []
+}
