@@ -2,14 +2,14 @@
 /**
  * Plugin Name: EarthWard T17 Bracelet Builder
  * Description: Variant-driven 2D crystal bracelet builder with WooCommerce order snapshots.
- * Version: 0.1.0
+ * Version: 0.1.5
  * Author: EarthWard
  * Text Domain: earthward-t17
  */
 
 defined('ABSPATH') || exit;
 
-define('EW_T17_VERSION', '0.1.0');
+define('EW_T17_VERSION', '0.1.5');
 define('EW_T17_FILE', __FILE__);
 define('EW_T17_DIR', plugin_dir_path(__FILE__));
 define('EW_T17_URL', plugin_dir_url(__FILE__));

@@ -1,0 +1,3 @@
+material_key,component_type,name_en,primary_color,color_tags,intention_tags,material_image_url,material_status,variant_key,size_mm,shape,price,weight_g,occupied_length_mm,variant_image_url,stock_status,stock_quantity,compatibility,variant_status,source_name
+amethyst,bead,Amethyst,purple,"purple,violet","calm,focus",https://example.com/amethyst.png,draft,amethyst-6mm,6,round,2.00,0.50,6.2,https://example.com/amethyst-6mm.png,instock,,"bead,elastic-cord",draft,own-source
+amethyst,bead,Amethyst,purple,"purple,violet","calm,focus",https://example.com/amethyst.png,draft,amethyst-8mm,8,round,2.80,1.10,8.2,https://example.com/amethyst-8mm.png,instock,,"bead,elastic-cord",draft,own-source
