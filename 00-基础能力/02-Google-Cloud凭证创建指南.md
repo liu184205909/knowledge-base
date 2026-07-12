@@ -37,6 +37,8 @@
 | `Google Sheets API` | 表格读写 |
 | `Google Docs API` | 文档读写 |
 | `Gmail API` | 邮件搜索/发送 |
+| `Tag Manager API` | 通过 API 管理 GTM 容器、变量、触发器、标签、版本与发布 |
+| `Google Analytics Admin API` | 管理 GA4 属性配置、关键事件与自定义维度 |
 
 ### 第三步：配置 OAuth 同意屏幕
 
@@ -118,6 +120,24 @@ pipx runpip google-seo-mcp install pysocks
 ```
 
 > **注意**：`pipx upgrade google-seo-mcp` 会覆盖 googleapiclient、清掉补丁，需重打上面 2 步。补丁只影响 Mario venv，不影响系统其他 Python。
+
+### 第六步补遗：GTM + GA4 Admin 管理权限
+
+**凭证边界**：
+
+- `google-seo-mcp` 保持只读，仅使用自己的 `webmasters.readonly` 和 `analytics.readonly` token 做 GSC/GA4 分析与 `gsc-radar` 数据层。
+- GTM 写入和 GA4 Admin 配置统一使用 Workspace 凭证：`~/.google_workspace_mcp/credentials/lzn184205909@gmail.com.json`。不要另建第三套 OAuth/token。
+
+`C:\Users\Dylan\tools\refresh_google_token.py` 的 `SCOPES_LIST` 已包含以下管理 scope；新增任一 scope 后必须跑一次 `--reauth`，普通刷新不会把新 scope 加到旧 refresh token：
+
+```text
+https://www.googleapis.com/auth/tagmanager.edit.containers
+https://www.googleapis.com/auth/tagmanager.edit.containerversions
+https://www.googleapis.com/auth/tagmanager.publish
+https://www.googleapis.com/auth/analytics.edit
+```
+
+操作顺序：先用 API 列出现有 GTM / GA4 实体并查重；GTM 改动在 Workspace 创建后先检查冲突，再创建具名 Container Version 并发布；GA4 事件参数须在 `properties/{propertyId}/customDimensions` 注册为 `EVENT` 级自定义维度。授权完成后跳转 `localhost:8000` 显示 `ERR_CONNECTION_REFUSED` 是正常现象，复制完整回调 URL 给 `refresh_google_token.py --reauth` 交换 token 即可。
 
 ---
 

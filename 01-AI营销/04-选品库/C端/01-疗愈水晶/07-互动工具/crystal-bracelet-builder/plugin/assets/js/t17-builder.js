@@ -1,0 +1,278 @@
+(function () {
+  'use strict';
+
+  var root = document.querySelector('.ew-t17-builder');
+  if (!root) return;
+
+  var config = window.EW_T17 || {};
+  var money = function (value) { return (config.currencySymbol || '$') + Number(value || 0).toFixed(2); };
+  var storageKey = 'ew-t17-v3-draft';
+  var state = {
+    type: 'bead',
+    search: '',
+    color: 'all',
+    target_wrist_cm: 16,
+    fit_preference: 'regular',
+    sequence: [],
+    catalog: null,
+    quote: null
+  };
+  var variantMap = new Map();
+  var quoteTimer;
+  var ring = root.querySelector('.ew-t17-ring');
+  var empty = root.querySelector('.ew-t17-canvas__empty');
+  var grid = root.querySelector('[data-grid]');
+  var filters = root.querySelector('[data-filters]');
+  var notice = root.querySelector('.ew-t17-builder__notice');
+
+  function notify(message, isError) {
+    notice.textContent = message || '';
+    notice.classList.toggle('is-error', Boolean(isError));
+    notice.classList.toggle('is-visible', Boolean(message));
+    if (message) window.setTimeout(function () { notice.classList.remove('is-visible'); }, 3600);
+  }
+
+  function recipeFromMarkup() {
+    try { return JSON.parse(root.getAttribute('data-recipe') || '{}'); } catch (err) { return {}; }
+  }
+
+  function restoreDraft() {
+    var recipe = recipeFromMarkup();
+    if (recipe && Array.isArray(recipe.sequence) && recipe.sequence.length) {
+      state.sequence = recipe.sequence.map(function (item) { return { variant_id: item.variant_id }; });
+      state.target_wrist_cm = Number(recipe.target_wrist_cm || state.target_wrist_cm);
+      state.fit_preference = recipe.fit_preference || state.fit_preference;
+      return;
+    }
+    try {
+      var draft = JSON.parse(window.localStorage.getItem(storageKey) || '{}');
+      if (Array.isArray(draft.sequence)) Object.assign(state, draft);
+    } catch (err) {}
+  }
+
+  function saveDraft() {
+    var draft = {
+      target_wrist_cm: state.target_wrist_cm,
+      fit_preference: state.fit_preference,
+      sequence: state.sequence
+    };
+    window.localStorage.setItem(storageKey, JSON.stringify(draft));
+    notify('Design saved on this device.');
+  }
+
+  function variantsForCurrentType() {
+    if (!state.catalog) return [];
+    return state.catalog.materials
+      .filter(function (material) { return material.component_type === state.type; })
+      .flatMap(function (material) {
+        return (material.variants || []).map(function (variant) {
+          return Object.assign({ material: material }, variant);
+        });
+      })
+      .filter(function (variant) {
+        var haystack = [variant.material.name_en, variant.id, variant.material.primary_color, (variant.material.color_tags || []).join(' ')].join(' ').toLowerCase();
+        var matchesSearch = !state.search || haystack.indexOf(state.search) !== -1;
+        var matchesColor = state.color === 'all' || variant.material.primary_color === state.color || (variant.material.color_tags || []).indexOf(state.color) !== -1;
+        return matchesSearch && matchesColor;
+      });
+  }
+
+  function beadStyle(variant) {
+    var color = variant.material.primary_color || 'rgba(126, 113, 100, .75)';
+    return 'background:radial-gradient(circle at 32% 25%,rgba(255,255,255,.9),transparent 19%),radial-gradient(circle at 64% 72%,rgba(0,0,0,.28),transparent 50%),' + color + ';';
+  }
+
+  function renderFilters() {
+    if (!state.catalog) return;
+    var colors = new Set(['all']);
+    state.catalog.materials.filter(function (m) { return m.component_type === state.type; }).forEach(function (m) {
+      if (m.primary_color) colors.add(m.primary_color);
+      (m.color_tags || []).forEach(function (color) { colors.add(color); });
+    });
+    filters.innerHTML = Array.from(colors).map(function (color) {
+      var label = color === 'all' ? 'All' : color.replace(/(^|[-_ ])\w/g, function (m) { return m.toUpperCase(); });
+      return '<button type="button" data-color="' + escapeHtml(color) + '" class="' + (state.color === color ? 'is-active' : '') + '">' + escapeHtml(label) + '</button>';
+    }).join('');
+  }
+
+  function renderGrid() {
+    var items = variantsForCurrentType();
+    if (!items.length) {
+      grid.innerHTML = '<p class="ew-t17-builder__catalog-empty">' + escapeHtml(config.strings && config.strings.catalogEmpty || 'No matching materials.') + '</p>';
+      return;
+    }
+    grid.innerHTML = items.map(function (variant) {
+      var count = state.sequence.filter(function (item) { return item.variant_id === variant.id; }).length;
+      var image = variant.image_url ? '<img src="' + escapeAttr(variant.image_url) + '" alt="' + escapeAttr(variant.material.name_en) + '">' : '<span class="ew-t17-builder__thumb-fallback" style="' + beadStyle(variant) + '"></span>';
+      return '<button type="button" class="ew-t17-card" data-variant="' + escapeAttr(variant.id) + '">' +
+        '<span class="ew-t17-card__image">' + image + '</span>' +
+        '<span class="ew-t17-card__name">' + escapeHtml(variant.material.name_en) + '</span>' +
+        '<span class="ew-t17-card__meta"><b>' + escapeHtml(String(variant.size_mm)) + ' mm</b><b>' + money(variant.price) + '</b></span>' +
+        (count ? '<span class="ew-t17-card__count">' + count + '</span>' : '') +
+      '</button>';
+    }).join('');
+  }
+
+  function renderRing() {
+    var selected = state.sequence.map(function (item) { return variantMap.get(item.variant_id); }).filter(Boolean);
+    ring.innerHTML = '';
+    empty.hidden = selected.length > 0;
+    if (!selected.length) return;
+    selected.forEach(function (variant, index) {
+      var angle = (Math.PI * 2 * index / selected.length) - Math.PI / 2;
+      var size = Math.min(68, Math.max(20, Number(variant.size_mm || 8) * 4.8));
+      var x = 50 + Math.cos(angle) * 29;
+      var y = 50 + Math.sin(angle) * 29;
+      var element = document.createElement('button');
+      element.type = 'button';
+      element.className = 'ew-t17-bead';
+      element.style.setProperty('--x', x + '%');
+      element.style.setProperty('--y', y + '%');
+      element.style.setProperty('--size', size + 'px');
+      element.title = variant.material.name_en + ' ' + variant.size_mm + 'mm';
+      if (variant.image_url) element.innerHTML = '<img src="' + escapeAttr(variant.image_url) + '" alt="">';
+      else element.innerHTML = '<span style="' + beadStyle(variant) + '"></span>';
+      element.addEventListener('click', function () { removeLastVariant(variant.id); });
+      ring.appendChild(element);
+    });
+  }
+
+  function renderMetrics() {
+    var quote = state.quote;
+    root.querySelector('[data-metric="length"]').textContent = quote ? quote.used_length_mm + ' mm' : '0 mm';
+    root.querySelector('[data-metric="weight"]').textContent = quote ? quote.weight_g + ' g' : '0 g';
+    root.querySelector('[data-metric="pieces"]').textContent = state.sequence.length;
+    var wrist = root.querySelector('.ew-t17-wrist strong');
+    wrist.textContent = state.target_wrist_cm.toFixed(1).replace('.0', '') + ' cm';
+    var fit = root.querySelector('.ew-t17-fit');
+    var labels = { empty: 'Start with a material', fit: 'Wrist fit looks good', short: 'Design is short', long: 'Design is long' };
+    var fitStatus = quote ? quote.fit_status : 'empty';
+    fit.dataset.fit = fitStatus;
+    fit.textContent = labels[fitStatus] || labels.empty;
+  }
+
+  function renderAll() {
+    renderFilters();
+    renderGrid();
+    renderRing();
+    renderMetrics();
+  }
+
+  function requestQuote() {
+    window.clearTimeout(quoteTimer);
+    if (!state.sequence.length) {
+      state.quote = null;
+      renderAll();
+      return;
+    }
+    quoteTimer = window.setTimeout(function () {
+      fetch(config.restUrl + 'quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          target_wrist_cm: state.target_wrist_cm,
+          fit_preference: state.fit_preference,
+          sequence: state.sequence
+        })
+      }).then(function (response) { return response.json().then(function (data) { return { ok: response.ok, data: data }; }); })
+        .then(function (result) {
+          if (!result.ok) throw new Error(result.data && result.data.message || 'Quote error');
+          state.quote = result.data;
+          renderAll();
+        }).catch(function () { notify(config.strings && config.strings.quoteError || 'Price unavailable.', true); });
+    }, 180);
+  }
+
+  function addVariant(id) {
+    if (!variantMap.has(id)) return;
+    state.sequence.push({ variant_id: id });
+    renderAll();
+    requestQuote();
+  }
+
+  function removeLastVariant(id) {
+    for (var i = state.sequence.length - 1; i >= 0; i -= 1) {
+      if (state.sequence[i].variant_id === id) {
+        state.sequence.splice(i, 1);
+        renderAll();
+        requestQuote();
+        return;
+      }
+    }
+  }
+
+  function openDialog(name) {
+    var dialog = root.querySelector('[data-dialog="' + name + '"]');
+    if (!dialog) return;
+    if (name === 'finish') {
+      if (!state.quote) { notify('Add materials before finishing your design.', true); return; }
+      dialog.querySelector('[data-summary]').innerHTML = '<dl><div><dt>Total</dt><dd>' + money(state.quote.total) + '</dd></div><div><dt>Wrist</dt><dd>' + state.target_wrist_cm + ' cm</dd></div><div><dt>Materials</dt><dd>' + state.sequence.length + '</dd></div><div><dt>Fit</dt><dd>' + escapeHtml(state.quote.fit_status) + '</dd></div></dl>';
+    }
+    dialog.showModal();
+  }
+
+  function addToCart() {
+    if (!state.quote) return;
+    var body = new URLSearchParams({
+      action: 'ew_t17_add_custom',
+      nonce: config.nonce,
+      config: JSON.stringify({
+        target_wrist_cm: state.target_wrist_cm,
+        fit_preference: state.fit_preference,
+        sequence: state.sequence
+      })
+    });
+    fetch(config.ajaxUrl, { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' }, body: body.toString() })
+      .then(function (response) { return response.json(); })
+      .then(function (result) {
+        if (!result.success) throw new Error(result.data && result.data.message || 'Cart error');
+        window.location.assign(result.data.cart_url || config.cartUrl);
+      }).catch(function (error) { notify(error.message || 'Unable to add your design to cart.', true); });
+  }
+
+  function escapeHtml(value) {
+    return String(value == null ? '' : value).replace(/[&<>'"]/g, function (char) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[char]; });
+  }
+  function escapeAttr(value) { return escapeHtml(value); }
+
+  root.addEventListener('click', function (event) {
+    var card = event.target.closest('[data-variant]');
+    if (card) { addVariant(card.dataset.variant); return; }
+    var type = event.target.closest('[data-type]');
+    if (type) { state.type = type.dataset.type; state.color = 'all'; root.querySelectorAll('[data-type]').forEach(function (button) { button.classList.toggle('is-active', button === type); }); renderAll(); return; }
+    var color = event.target.closest('[data-color]');
+    if (color) { state.color = color.dataset.color; renderAll(); return; }
+    var action = event.target.closest('[data-action]');
+    if (!action) return;
+    switch (action.dataset.action) {
+      case 'edit-wrist': openDialog('wrist'); break;
+      case 'reset': state.sequence = []; state.quote = null; renderAll(); break;
+      case 'save': saveDraft(); break;
+      case 'finish': openDialog('finish'); break;
+      case 'confirm-wrist':
+        event.preventDefault();
+        state.target_wrist_cm = Math.max(10, Math.min(30, Number(root.querySelector('[data-wrist-input]').value || 16)));
+        var preference = root.querySelector('[name="fit"]:checked');
+        state.fit_preference = preference ? preference.value : 'regular';
+        root.querySelector('[data-dialog="wrist"]').close();
+        requestQuote(); renderAll();
+        break;
+      case 'add-cart': event.preventDefault(); addToCart(); break;
+      case 'toggle-search': root.classList.toggle('has-search'); root.querySelector('[data-search]').focus(); break;
+    }
+  });
+
+  root.querySelector('[data-search]').addEventListener('input', function (event) { state.search = event.target.value.trim().toLowerCase(); renderGrid(); });
+
+  restoreDraft();
+  fetch(config.restUrl + 'catalog')
+    .then(function (response) { return response.json(); })
+    .then(function (catalog) {
+      state.catalog = catalog;
+      catalog.materials.forEach(function (material) { (material.variants || []).forEach(function (variant) { variantMap.set(variant.id, Object.assign({ material: material }, variant)); }); });
+      state.sequence = state.sequence.filter(function (item) { return variantMap.has(item.variant_id); });
+      renderAll();
+      requestQuote();
+    })
+    .catch(function () { notify('The catalog could not be loaded.', true); });
+}());

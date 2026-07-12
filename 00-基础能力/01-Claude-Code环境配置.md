@@ -14,7 +14,7 @@
 | zread | `claude mcp add -s user -t http zread https://open.bigmodel.cn/api/mcp/zread/mcp --header "Authorization: Bearer {{API_KEY}}"` | GitHub 仓库阅读 |
 | google-workspace | 见下方 | Google 表格/文档/硬盘/Gmail |
 | dataforseo | 见下方 | SEO 关键词/SERP 数据 |
-| seoctopus | 见下方 | SEO 关键词聚类/搜索意图检测/网站审计 |
+| google-seo-mcp | 见下方 | 唯一保留的 GSC/GA4 综合 SEO MCP：DataForSEO SERP 与诊断 |
 | **web-access** | **见下方（Skill）** | **CDP 浏览器自动化 — JS渲染页面/登录态操作/反爬绕过** |
 
 ### Web-Access Skill（浏览器自动化 — 替代 Playwright）
@@ -66,11 +66,11 @@ claude mcp add -s user dataforseo \
   -- node ~/tools/mcp-server-typescript/build/main/main/cli.js
 ```
 
-### Google SEO MCP（GSC+GA4+100 SEO 工具，已替代轻量 gsc-mcp-server）
+### Google SEO MCP（唯一保留的 GSC/GA4 综合 SEO MCP）
 
-[官方仓库 mario-hernandez/google-seo-mcp-claude-code](https://github.com/mario-hernandez/google-seo-mcp-claude-code) | MIT | v0.8.x | 二进制名 `google-seo-mcp` | 装出来的命令就叫 google-seo-mcp（不是另一个工具）
+[官方仓库 mario-hernandez/google-seo-mcp-claude-code](https://github.com/mario-hernandez/google-seo-mcp-claude-code) | MIT | v0.8.5（2026-05-04） | 二进制名 `google-seo-mcp` | 装出来的命令就叫 google-seo-mcp（不是另一个工具）
 
-GSC + GA4 + Lighthouse/CrUX/Schema/AEO/迁移 全家桶，102 工具，含 `gsc_quick_wins`/`gsc_traffic_drops`/`gsc_cannibalization`/`cross_opportunity_matrix` 等高阶分析。Google 官方只有 GA4 MCP（裸接口），无官方 GSC MCP；这是当前最全的统一方案。
+GSC + GA4 + Lighthouse/CrUX/Schema/AEO/迁移 全家桶，100+ 工具，含 `gsc_quick_wins`/`gsc_traffic_drops`/`gsc_cannibalization`/`cross_opportunity_matrix` 等高阶分析。它也是 `gsc-radar` 的唯一数据层：把 GSC 排名机会与 GA4 行为/关键事件连起来，并复用 DataForSEO 做 SERP 验证。Google 官方只有 GA4 MCP（裸接口），无官方 GSC MCP；这是当前唯一保留的 GSC/GA4 综合 SEO MCP。
 
 ```bash
 # 1. 安装（Python 3.11+，pipx）
@@ -115,29 +115,13 @@ claude mcp add -s user google-seo-mcp \
 | History (3) | 快照对比（save/list/diff） |
 | 其余 | Suggest/Trends/Indexing/IndexNow/系统 |
 
-### SEOctopus MCP（关键词聚类/SEO 审计）
+### SEOctopus（不作为常驻 MCP）
 
-[官方仓库](https://github.com/AgrimCltv/seoctopus) | 开源免费 | 23 个 SEO 工具
+2026-07-11 已复核。本机克隆源为 [itsjwill/seoctopus](https://github.com/itsjwill/seoctopus)，不是旧文档中的 `AgrimCltv/seoctopus`；上游只有 2 次提交，最后一次为 2026-02-12，且没有发布版本。本机也未配置其独立的 GSC/GA4 OAuth。
 
-```bash
-git clone https://github.com/AgrimCltv/seoctopus.git ~/tools/seoctopus
-cd ~/tools/seoctopus && npm install && npm run build
-claude mcp add -s user seoctopus -- node ~/tools/seoctopus/dist/index.js
-```
+它的 23 个工具中，`keywords_cluster`（Jaccard 聚类/意图推断）、`audit_page`、`competitive_content_gap` 和基于 Playwright 的 `rank_check` 对一次性本地研究有价值；但它与 Google SEO MCP 重叠地读取 GSC/GA4，并会引入第二套 OAuth、Playwright 和本地 SQLite 状态。水晶项目的主链路是“GSC 机会 → SERP 验证 → GA4 工具/商店转化”，应由 `google-seo-mcp + gsc-radar + web-access` 完成。
 
-**核心工具**（与关键词清洗流程相关）：
-
-| 工具 | 功能 | 典型用法 |
-|------|------|---------|
-| `keywords_cluster` | Jaccard 词相似度聚类 + 搜索意图检测 | 近重复检测、语义分组验证 |
-| `keyword_suggestions` | 关键词建议 | 补充长尾词 |
-| `content_gap_analysis` | 内容缺口分析 | 竞品关键词差距 |
-| `on_page_audit` | 页面 SEO 审计 | 内容优化 |
-| `rank_check` | 排名检查（需 Playwright，可用 web-access 替代） | SERP 排名追踪 |
-
-> `keywords_cluster` 使用 Union-Find + Jaccard 相似度（默认阈值 0.3）自动聚类，同时推断每个聚类的搜索意图（informational/commercial/transactional/navigational）。适合 Seed-* 近重复检测和 Entity 分组交叉验证。
->
-> `rank_check` 工具依赖 Playwright，但本项目已有 `web-access` skill 替代浏览器操作，无需安装 Playwright。
+**因此：不要安装或注册 SEOctopus MCP。** 删除清单为 `C:\Users\Dylan\tools\seoctopus`（目录删除须人工执行）；若未来确有大批关键词的离线 Jaccard 聚类需求，重建为独立本地工具，而不是恢复为第二个 MCP。
 
 ---
 
