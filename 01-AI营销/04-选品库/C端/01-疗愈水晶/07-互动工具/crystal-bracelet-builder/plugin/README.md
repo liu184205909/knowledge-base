@@ -4,8 +4,8 @@
 
 1. Upload `earthward-t17-bracelet-builder-<version>.zip` in WordPress Admin > Plugins > Add New > Upload Plugin.
 2. Activate `EarthWard T17 Bracelet Builder`.
-3. Create a normal WordPress page for the editor and add `[ew_t17_bracelet_builder]`.
-4. In T17 Builder > Material Catalog, set the Builder page ID and a price version.
+3. Do not create a new WordPress page for T17. The existing `/tools/crystal-bracelet-builder/` route remains the only formal tool page; this plugin supplies backend capability only.
+4. In T17 Builder > Material Catalog, set the existing `/tools/crystal-bracelet-builder/` page ID and a price version. This is only the target of official-design Customize links; the plugin does not render the editor page or register a builder shortcode.
 5. Create one hidden WooCommerce virtual product named `Custom Crystal Bracelet`. Set it purchasable and add its product ID to the T17 Builder settings.
 6. Import draft materials with the CSV template, review them, then set both material and variant status to `live`.
 
@@ -46,3 +46,19 @@ The importer creates or updates records by stable ID. Use `draft` until price, i
 ## Order Boundary
 
 DIY checkout uses the one hidden Woo product only as an order carrier. Before it enters the cart, the server recalculates price from live variant IDs. The resulting recipe and price version are saved as immutable Woo line-item metadata for production and support.
+
+## Future Plugin Updates
+
+From version 0.1.6 onward, use T17 Builder > Release Updates to publish a newer version and the HTTPS URL of its reviewed ZIP. Upload the ZIP to the Media Library first. WordPress will then show the update in its normal Plugins or Updates screen. Automatic updates remain off by default.
+
+The release ZIP must use `earthward-t17-bracelet-builder/` as its top-level directory. The release form is intentionally separate from catalog and Woo product data.
+
+## Post-Deployment Public Check
+
+Run the read-only public verifier after an installation or update:
+
+```powershell
+..\scripts\verify-live-post-upgrade.ps1 -BaseUrl 'https://goearthward.com'
+```
+
+It checks the public catalog route and page output without credentials or WordPress writes. It intentionally reports an empty catalog and an inaccessible draft preview as waiting/manual items rather than a deployment failure; the administrator checks printed by the script still gate production migration.

@@ -1,0 +1,21 @@
+legacy_item_id,component_type,name_en,name_zh,legacy_source,legacy_status,migration_status,why_not_production_ready
+amethyst,bead,Amethyst,紫水晶,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+rose_quartz,bead,Rose Quartz,粉晶,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+carnelian,bead,Carnelian,红玉髓,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+bloodstone,bead,Bloodstone,血石,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+citrine,bead,Citrine,黄水晶,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+tiger_eye,bead,Tiger Eye,虎眼石,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+pyrite,bead,Pyrite,黄铁矿,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+calcite,bead,Calcite,方解石,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+aventurine,bead,Aventurine,东陵玉,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+jade,bead,Jade,玉,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+malachite,bead,Malachite,孔雀石,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+aquamarine,bead,Aquamarine,海蓝宝,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+sodalite,bead,Sodalite,方钠石,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+celestite,bead,Celestite,天青石,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+obsidian,bead,Obsidian,黑曜石,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+clear_quartz,bead,Clear Quartz,白水晶,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+moonstone,bead,Moonstone,月光石,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+fluorite,bead,Fluorite,萤石,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+labradorite,bead,Labradorite,拉长石,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review
+agate,bead,Agate,玛瑙,data/parts-source.json,pending,unreviewed,Legacy static price and size assumptions require production image specification and price review

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>T17 Local UI Fixture</title>
+  <link rel="stylesheet" href="t17-builder-ui.css">
+  <style>body{margin:0;background:#eeeae2;padding:24px;font-family:Arial,sans-serif}.t17-fixture-note{max-width:1320px;margin:0 auto 12px;padding:10px 12px;border:1px solid #d7cbb8;background:#fffaf1;color:#5b5145;font-size:14px}@media(max-width:700px){body{padding:0}.t17-fixture-note{margin:0;border-width:0 0 1px}}</style>
+</head>
+<body>
+  <p class="t17-fixture-note">Local fixture only. Material names, prices, and images are placeholders; WooCommerce checkout is disabled.</p>
+  <section class="ew-t17-ui" data-t17-ui>
+    <div class="ew-t17-ui__notice" data-notice aria-live="polite"></div>
+    <div class="ew-t17-ui__stage">
+      <div class="ew-t17-ui__topbar"><button class="ew-t17-ui__wrist" type="button" data-action="wrist"><span>Wrist fit</span><strong data-wrist>16 cm</strong></button><span class="ew-t17-ui__fit" data-fit>Start with a material</span></div>
+      <div class="ew-t17-ui__canvas" data-canvas><img class="ew-t17-ui__tray" data-tray alt="Wood tray"><div class="ew-t17-ui__ring" data-ring></div><p class="ew-t17-ui__empty" data-empty>Choose a material to begin your bracelet.</p></div>
+      <div class="ew-t17-ui__metrics"><span><small>Length</small><b data-length>0 mm</b></span><span><small>Weight</small><b data-weight>0 g</b></span><span><small>Pieces</small><b data-pieces>0</b></span></div>
+      <div class="ew-t17-ui__actions"><button type="button" title="Reset design" data-action="reset">Reset</button><button type="button" data-action="save">Save</button><button class="is-primary" type="button" data-action="finish">Finish design</button></div>
+    </div>
+    <section class="ew-t17-ui__catalog" aria-label="Materials"><div class="ew-t17-ui__catalog-head"><div class="ew-t17-ui__tabs" role="tablist"><button class="is-active" type="button" data-type="bead">Beads</button><button type="button" data-type="decor">Decor</button><button type="button" data-type="finish">Finish</button></div><button class="ew-t17-ui__search-toggle" type="button" title="Search materials" data-action="search">Search</button></div><input class="ew-t17-ui__search" type="search" data-search placeholder="Search materials" aria-label="Search materials"><div class="ew-t17-ui__filters" data-filters></div><div class="ew-t17-ui__grid" data-grid></div></section>
+    <dialog class="ew-t17-ui__dialog" data-dialog="wrist"><form method="dialog"><button class="ew-t17-ui__close" value="cancel" aria-label="Close">x</button><h2>Wrist setting</h2><label>Wrist circumference<input type="number" min="10" max="30" step="0.1" value="16" data-wrist-input> cm</label><fieldset><legend>Fit preference</legend><label><input type="radio" name="fit" value="snug"> Snug</label><label><input type="radio" name="fit" value="regular" checked> Regular</label><label><input type="radio" name="fit" value="loose"> Loose</label></fieldset><button class="is-primary" value="confirm" data-action="apply-wrist">Apply</button></form></dialog>
+    <dialog class="ew-t17-ui__dialog" data-dialog="finish"><form method="dialog"><button class="ew-t17-ui__close" value="cancel" aria-label="Close">x</button><h2>Your design</h2><div data-summary></div><button class="is-primary" type="button" data-action="cart">Add to cart</button></form></dialog>
+  </section>
+  <script src="t17-builder-mock-config.js"></script>
+  <script>window.EW_T17_UI_CONFIG.trayImage = '../plugin/assets/images/tray-default.png';</script>
+  <script src="t17-builder-ui.js"></script>
+</body>
+</html>

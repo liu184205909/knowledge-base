@@ -39,70 +39,11 @@ final class EW_T17_Frontend {
                 'finishDesign' => __('Finish Design', 'earthward-t17'),
             ),
         ));
-        wp_add_inline_script('ew-t17-builder', <<<'JS'
-(function () {
-  var root = document.querySelector('.ew-t17-builder');
-  if (!root) return;
-
-  var ring = root.querySelector('.ew-t17-ring');
-  var toolbox = root.querySelector('[data-selection-toolbox]');
-  var label = root.querySelector('[data-selection-label]');
-  var selected = null;
-  var allowRemoval = false;
-
-  function clearSelection() {
-    if (selected) selected.classList.remove('is-selected');
-    selected = null;
-    toolbox.hidden = true;
-  }
-
-  function selectBead(bead) {
-    if (selected && selected !== bead) selected.classList.remove('is-selected');
-    selected = bead;
-    selected.classList.add('is-selected');
-    label.textContent = selected.title || 'Selected bead';
-
-    var canvas = root.querySelector('.ew-t17-canvas');
-    var canvasBox = canvas.getBoundingClientRect();
-    var beadBox = selected.getBoundingClientRect();
-    var left = Math.max(72, Math.min(canvasBox.width - 72, beadBox.left - canvasBox.left + (beadBox.width / 2)));
-    var top = Math.max(42, Math.min(canvasBox.height - 42, beadBox.top - canvasBox.top - 26));
-    toolbox.style.left = left + 'px';
-    toolbox.style.top = top + 'px';
-    toolbox.hidden = false;
-  }
-
-  root.addEventListener('click', function (event) {
-    var bead = event.target.closest('.ew-t17-bead');
-    if (!bead || !root.contains(bead) || allowRemoval) return;
-    event.preventDefault();
-    event.stopImmediatePropagation();
-    selectBead(bead);
-  }, true);
-
-  root.addEventListener('click', function (event) {
-    var action = event.target.closest('[data-selection-action]');
-    if (!action) return;
-    event.preventDefault();
-    if (action.dataset.selectionAction === 'remove' && selected) {
-      allowRemoval = true;
-      selected.click();
-      allowRemoval = false;
-    }
-    clearSelection();
-  });
-
-  new MutationObserver(function () {
-    if (selected && !ring.contains(selected)) clearSelection();
-  }).observe(ring, { childList: true });
-}());
-JS
-        , 'after');
-
         ob_start();
         ?>
-        <section class="ew-t17-builder" id="t17-builder" data-product-id="<?php echo esc_attr($product_id); ?>" data-scene="<?php echo esc_attr($scene); ?>" data-recipe="<?php echo esc_attr(wp_json_encode($recipe ?: new stdClass())); ?>">
+        <section class="ew-t17-builder" id="t17-builder" data-product-id="<?php echo esc_attr($product_id); ?>" data-scene="<?php echo esc_attr($scene); ?>" data-recipe="<?php echo esc_attr(wp_json_encode($recipe ?: new stdClass())); ?>" data-insertion-policy="after-selected-or-append" data-insertion-position="append" data-selected-item-index="" data-selected-variant-key="" data-selected-component-type="" data-orientation-state="none">
             <div class="ew-t17-builder__notice" aria-live="polite"></div>
+            <div class="screen-reader-text" role="status" aria-live="polite" aria-atomic="true" data-editor-status data-insertion-position="append" data-selected-item-index="" data-selected-variant-key="" data-selected-component-type="" data-orientation-state="none"><?php esc_html_e('No material is selected. New materials will be appended to the bracelet.', 'earthward-t17'); ?></div>
             <div class="ew-t17-builder__workbench">
                 <section class="ew-t17-builder__stage" aria-label="<?php esc_attr_e('Bracelet design', 'earthward-t17'); ?>">
                     <div class="ew-t17-builder__topline">

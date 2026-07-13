@@ -1,0 +1,19 @@
+{
+  "_template_status": "NOT_VALID_FOR_WOO_UNTIL_ALL_NULLS_AND_PLACEHOLDERS_ARE_REPLACED",
+  "woo_product_meta": {
+    "_ew_t17_official_design": "yes",
+    "_ew_t17_customize_enabled": "yes",
+    "_ew_t17_primary_scene": "replace-with-one-registry-primary-scene",
+    "_ew_t17_design_version": "replace-with-approved-design-version",
+    "_ew_t17_price_version": "replace-with-approved-price-version"
+  },
+  "_ew_t17_recipe_json": {
+    "target_wrist_cm": null,
+    "fit_preference": "replace-with-snug-regular-or-loose",
+    "sequence": [
+      {
+        "variant_id": "replace-with-live-variant-key"
+      }
+    ]
+  }
+}

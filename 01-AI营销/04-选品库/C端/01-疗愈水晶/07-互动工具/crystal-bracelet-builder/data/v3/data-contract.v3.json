@@ -1,0 +1,42 @@
+{
+  "schema_version": "ew-t17-v3-data-contract-2026-07",
+  "catalog_import": {
+    "file": "approved-production-catalog.import.csv",
+    "status": "current-importer-compatible",
+    "record_policy": "header-only until every production field is approved",
+    "exact_header_count": 30,
+    "headers": [
+      "material_key", "component_type", "category_slug", "name_en", "primary_color", "color_tags", "intention_tags", "material_image_url", "material_status", "material_sort_order", "variant_key", "size_mm", "shape", "price", "weight_g", "occupied_length_mm", "display_scale", "variant_image_url", "stock_status", "stock_quantity", "compatibility", "compatible_bead_sizes", "orientation_mode", "mirrored_variant_key", "allowed_orientations", "allowed_positions", "neighbor_constraints", "variant_status", "variant_sort_order", "source_name"
+    ],
+    "component_type_values": ["bead", "decor", "finish"],
+    "material_status_values": ["draft", "live"],
+    "variant_status_values": ["draft", "live", "disabled"],
+    "stock_status_values": ["instock", "outofstock", "onbackorder"],
+    "orientation_mode_values": ["none", "fixed_left", "fixed_right", "mirrorable", "rotatable"],
+    "orientation_values": ["none", "left", "right", "rotate_0", "rotate_90", "rotate_180", "rotate_270"],
+    "allowed_position_values": ["any", "start", "end", "interior"],
+    "neighbor_constraint_keys": ["previous_component_types", "next_component_types", "previous_variant_keys", "next_variant_keys"],
+    "current_importer_boundary": "Catalog importer rejects blank or non-numeric size, price, weight, and occupied length; live variants require all four values to be greater than zero. It also validates display_scale and compatible_bead_sizes, plus stock, orientation mode, allowed-orientation, allowed-position, and neighbor-constraint inputs. Catalog importer, database schema, REST response, quote payload, and order snapshot persist approved decor orientation. Directional fields remain empty for non-decor variants and cannot replace distinct physical left/right variant keys."
+  },
+  "decor_orientation_review": {
+    "file": "decor-orientation-review.template.csv",
+    "record_policy": "non-production review only; never import directly",
+    "headers": [
+      "record_scope", "production_import_eligible", "schema_version", "variant_key", "orientation_mode", "mirrored_variant_key", "allowed_orientations", "allowed_positions", "neighbor_constraints", "sequence_orientation_value", "production_notes", "reference_image_url", "asset_review_status", "orientation_review_status", "approval_status", "approved_by", "approved_at_utc", "notes"
+    ],
+    "orientation_mode_values": ["none", "fixed_left", "fixed_right", "mirrorable", "rotatable"],
+    "allowed_position_values": ["any", "start", "end", "interior"],
+    "rules": [
+      "fixed_left and fixed_right are separate physical variants and must reference one another through mirrored_variant_key.",
+      "mirrorable and rotatable describe a single approved physical variant only when production confirms that its orientation can be changed without substituting a distinct part.",
+      "Any chosen orientation must be preserved in future design sequence, official recipe, quote, cart snapshot, order snapshot, and production summary before it can be made sellable."
+    ]
+  },
+  "legacy_mapping": {
+    "file": "legacy-candidate-to-production-mapping.template.csv",
+    "record_policy": "review-only; all rows must remain production_import_eligible=no until approval",
+    "required_blank_target_fields": [
+      "target_material_key", "target_variant_key", "target_component_type", "target_name_en", "target_size_mm", "target_price_version", "target_unit_price", "target_material_image_url", "target_variant_image_url", "target_variant_stock_status", "target_orientation_mode", "target_mirrored_variant_key", "target_allowed_positions", "target_orientation_review_status", "target_variant_stock_quantity", "target_variant_approval_status"
+    ]
+  }
+}
