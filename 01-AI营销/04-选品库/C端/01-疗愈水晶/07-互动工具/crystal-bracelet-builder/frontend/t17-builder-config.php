@@ -5,6 +5,8 @@
  */
 defined('ABSPATH') || exit;
 
+$ew_t17_official_design_id = isset($_GET['t17_design']) ? absint($_GET['t17_design']) : 0;
+
 // Restrict this snippet to the T17 preview/production page before enabling it.
 // Replace the placeholder IDs with the approved page IDs during deployment.
 if (!is_page(array(50236, 54723))) {
@@ -19,5 +21,6 @@ window.EW_T17_UI_CONFIG = <?php echo wp_json_encode(array(
   'cartUrl' => function_exists('wc_get_cart_url') ? esc_url_raw(wc_get_cart_url()) : '',
   'currencySymbol' => function_exists('get_woocommerce_currency_symbol') ? get_woocommerce_currency_symbol() : '$',
   'trayImage' => '', // Set to the approved WordPress Media URL for the preserved wood tray.
+  'officialDesignId' => $ew_t17_official_design_id,
 )); ?>;
 </script>

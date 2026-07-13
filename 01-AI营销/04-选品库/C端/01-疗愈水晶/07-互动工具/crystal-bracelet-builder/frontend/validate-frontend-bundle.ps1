@@ -28,7 +28,7 @@ $preview = Get-Content -LiteralPath (Join-Path $root 'preview.html') -Raw
 foreach ($needle in @('t17-builder-mock-config.js', 't17-builder-ui.js', '../plugin/assets/images/tray-default.png')) {
   if ($preview -notmatch [regex]::Escape($needle)) { throw "Local preview is missing $needle" }
 }
-foreach ($needle in @('catalog', 'quote', 'ew_t17_add_custom', 'EW_T17_UI_CONFIG', 'display_scale', 'previewData', 'preview_data')) {
+foreach ($needle in @('catalog', 'quote', 'official-design/', 'officialDesignId', 't17_design', 'ew_t17_add_custom', 'EW_T17_UI_CONFIG', 'display_scale', 'previewData', 'preview_data')) {
   if ($script -notmatch [regex]::Escape($needle)) { throw "UI script is missing backend boundary $needle" }
 }
 foreach ($forbidden in @('t17_add_custom_bracelet', 'three.module', 'OrbitControls', 'price_table')) {

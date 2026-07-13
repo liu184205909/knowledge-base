@@ -9,7 +9,9 @@ This directory is the visual delivery layer for T17. It is intentionally separat
 - `t17-builder-config.php`: a small PHP Code Snippet that only exposes runtime URLs and a nonce. It contains no visual markup or price logic.
 - The plugin remains responsible for catalog storage, `GET /catalog`, `POST /quote`, Woo add-to-cart, and order snapshots.
 
-The UI expects `window.EW_T17_UI_CONFIG`. The config snippet supplies it at render time. Do not put material prices, product IDs, or quote rules into this bundle.
+The UI expects `window.EW_T17_UI_CONFIG`. The config snippet supplies it at render time. Do not put material prices, recipes, or quote rules into this bundle.
+
+For an official Woo preset that is enabled for customization, link to the existing tool route with `?t17_design=<product-id>`. The page-scoped configuration reads only a positive integer ID; the UI then requests `GET /official-design/<product-id>` and imports the server-validated recipe, packaging, and quote. It never accepts a recipe or price from the URL.
 
 ## Local UI fixture
 

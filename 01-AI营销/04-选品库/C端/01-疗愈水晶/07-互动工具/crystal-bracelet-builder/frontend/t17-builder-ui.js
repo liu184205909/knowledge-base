@@ -3,7 +3,7 @@
   var root = document.querySelector('[data-t17-ui]');
   if (!root) return;
   var cfg = window.EW_T17_UI_CONFIG || {};
-  var state = { type: 'bead', color: 'all', search: '', wrist: 16, fit: 'regular', sequence: [], catalog: null, quote: null };
+  var state = { type: 'bead', color: 'all', search: '', wrist: 16, fit: 'regular', sequence: [], packaging: {}, catalog: null, quote: null };
   var variants = new Map(); var timer; var lastRequest = 0;
   var $ = function (selector) { return root.querySelector(selector); };
   var money = function (n) { return (cfg.currencySymbol || '$') + Number(n || 0).toFixed(2); };
@@ -34,5 +34,7 @@
   $('[data-search]').addEventListener('input',function(e){state.search=e.target.value.trim().toLowerCase();renderCatalog();});
   if(cfg.trayImage)$('[data-tray]').src=cfg.trayImage; else $('[data-tray]').hidden=true;
   function loadCatalog() { if(cfg.mockMode && cfg.mockCatalog){return Promise.resolve(cfg.mockCatalog);}return fetch((cfg.restUrl||'/wp-json/ew-t17/v1/')+'catalog').then(function(r){if(!r.ok)throw Error('The material catalog is unavailable.');return r.json();}); }
-  loadCatalog().then(function(data){state.catalog=data;allVariants().forEach(function(v){variants.set(v.id,v);});restore();quote();render();}).catch(function(){notice('The material catalog is unavailable.',true);});
+  function officialDesignId() { var fromConfig=Number(cfg.officialDesignId||0); if(Number.isInteger(fromConfig)&&fromConfig>0)return fromConfig; try { var fromUrl=Number(new URLSearchParams(window.location.search).get('t17_design')||0); return Number.isInteger(fromUrl)&&fromUrl>0?fromUrl:0; } catch(e) { return 0; } }
+  function importOfficialDesign() { var id=officialDesignId(); if(!id||cfg.mockMode)return Promise.resolve(false); return fetch((cfg.restUrl||'/wp-json/ew-t17/v1/')+'official-design/'+encodeURIComponent(id)).then(function(r){return r.json().then(function(data){return {ok:r.ok,data:data};});}).then(function(result){if(!result.ok)throw Error(result.data.message||'The official design is unavailable.'); var recipe=result.data.recipe||{}, sequence=Array.isArray(recipe.sequence)?recipe.sequence:[]; if(!sequence.length||sequence.some(function(item){return !item||!variants.has(item.variant_id);})){throw Error('The official design references unavailable materials.');} state.sequence=sequence.map(function(item){return item.orientation?{variant_id:item.variant_id,orientation:item.orientation}:{variant_id:item.variant_id};}); state.wrist=Number(recipe.target_wrist_cm)||16; state.fit=recipe.fit_preference||'regular'; state.packaging=recipe.packaging||{}; state.quote=result.data.quote||null; localStorage.removeItem('ew-t17-ui-draft'); render(); notice('Official design imported.'); return true; }).catch(function(error){notice(error.message,true); return false;}); }
+  loadCatalog().then(function(data){state.catalog=data;allVariants().forEach(function(v){variants.set(v.id,v);}); if(officialDesignId()&&!cfg.mockMode){return importOfficialDesign().then(function(imported){if(!imported){restore();quote();render();}});} restore();quote();render();return false;}).catch(function(){notice('The material catalog is unavailable.',true);});
 }());
