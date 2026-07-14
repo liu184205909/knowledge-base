@@ -141,7 +141,7 @@ for (const nd of list) {
   // M10 Related + Closing（兄弟号码互链）
   const related = nd.related_numbers.map(rn => {
     const rc = KNOW.numbers.find(n => String(n.number) === String(rn));
-    return rc ? `<li><a href="/numerology/life-path-${rc.slug}/">Life Path ${rc.number}: ${rc.archetype.split('/')[0].trim()}</a> — ${rc.theme}</li>` : '';
+    return rc ? `<li><a href="/life-path-${rc.slug}/">Life Path ${rc.number}: ${rc.archetype.split('/')[0].trim()}</a> — ${rc.theme}</li>` : '';
   }).filter(Boolean).join('\n');
   const m10 = `<h2>Related Life Path Numbers</h2>\n<ul>\n${related}\n</ul>\n<p>{{AI_CLOSING}}</p>`;
 
@@ -154,7 +154,7 @@ for (const nd of list) {
     : `Life Path ${num}: Meaning, Personality & Best Crystals`;
   const focusKw = `life path ${num}`;
   const article = {
-    title, slug: nd.slug, url: `/numerology/life-path-${nd.slug}/`,
+    title, slug: nd.slug, url: `/life-path-${nd.slug}/`,
     number: num, is_master: isMaster,
     archetype: nd.archetype, theme: nd.theme, unique_angle: nd.unique_angle,
     primary_intent: nd.primary_intent, secondary_intent: nd.secondary_intent,

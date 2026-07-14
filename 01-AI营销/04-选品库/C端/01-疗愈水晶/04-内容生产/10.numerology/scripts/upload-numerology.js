@@ -4,7 +4,7 @@
  * category: numerology(自动查/建)
  * rank_math: createPost后调 rankmath/v1/updateMeta
  * schema: Article + FAQPage + BreadcrumbList + ItemList(指meaning页,禁Product) 写入 rank_math schema 或 content
- * URL: /numerology/life-path-{slug}/
+ * URL: /life-path-{slug}/（根级，无 /numerology/ 前缀，site-url-rule-post-vs-category-archive）
  * Shop CTA 已预验证(全用/shop/?s= 搜索页200), 计算器CTA降级到/numerology/how-to-calculate/(文章内M2段,不死链)
  * 用法：node upload-numerology.js --slug=1 | (全12篇)
  * 需 socks5 + disableSandbox

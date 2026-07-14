@@ -22,7 +22,7 @@ if ($catalog -notmatch [regex]::Escape("EXISTS (SELECT 1 FROM " + '" . self::var
 foreach ($needle in @("'category_slug' => sanitize_key(wp_unslash(`$_POST['category_slug'] ?? ''))", "v.status = %s", "m.status = %s AND (v.status = %s OR v.id IS NULL)")) {
   if ($catalog -notmatch [regex]::Escape($needle)) { throw "Catalog backend is missing operational library behavior: $needle" }
 }
-foreach ($needle in @('official-design/(?P<product_id>', 'get_official_design', 'ew_t17_add_custom', 'EW_T17_Catalog::quote_config', 'ew_t17_snapshot', "'preview_data' => `$recipe['preview_data']", "'resolved_variant' => `$quote['packaging_snapshot']", "'wrap_mode' => 'single'", 'ew_t17_invalid_recipe_wrap_mode')) {
+foreach ($needle in @('official-design/(?P<product_id>', 'get_official_design', 'ew_t17_add_custom', 'EW_T17_Catalog::quote_config', 'ew_t17_snapshot', "'preview_data' => `$recipe['preview_data']", "'resolved_variant' => `$quote['packaging_snapshot']", "'wrap_mode' => 'single'", 'ew_t17_invalid_recipe_wrap_mode', "add_query_arg('t17_design'")) {
   if ($commerce -notmatch [regex]::Escape($needle)) { throw "Commerce backend is missing $needle" }
 }
 foreach ($forbidden in @('three.module', 'OrbitControls', 't17_add_custom_bracelet')) {

@@ -32,7 +32,7 @@ foreach ($needle in @('t17-builder-mock-config.js', 't17-builder-ui.js', '../plu
 foreach ($needle in @('catalog', 'quote', 'official-design/', 'officialDesignId', 't17_design', 'ew_t17_add_custom', 'EW_T17_UI_CONFIG', 'display_scale', 'previewData', 'preview_data')) {
   if ($script -notmatch [regex]::Escape($needle)) { throw "UI script is missing backend boundary $needle" }
 }
-foreach ($needle in @("insertAt=state.selectedIndex===null?state.sequence.length:state.selectedIndex+1", "action==='move-left'", "action==='move-right'", "action==='remove-selected'", "action==='orientation'", "item={variant_id:id,size_mm:Number(variant.size_mm)}")) {
+foreach ($needle in @("insertAt=state.selectedIndex===null?state.sequence.length:state.selectedIndex+1", "action==='move-left'", "action==='move-right'", "action==='remove-selected'", "action==='orientation'", "item={variant_id:id,size_mm:Number(variant.size_mm)}", "wrap_mode:'single'", "size_mm:Number(variants.get(item.variant_id).size_mm)")) {
     if ($script -notmatch [regex]::Escape($needle)) { throw "Independent editor must provide deterministic $needle behavior." }
 }
 foreach ($forbidden in @('t17_add_custom_bracelet', 'three.module', 'OrbitControls', 'price_table')) {
