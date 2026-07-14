@@ -1,0 +1,8 @@
+﻿{
+    "status":  "pending-export-and-verification",
+    "source_image_evidence":  "visible-in-authorized-session",
+    "saved_file":  null,
+    "reason":  "Visible in the authorized mini-program session, but no unmapped cache file is treated as a design image.",
+    "next_action":  "Export from the mini-program or verify the cache-file-to-design-ID mapping, then save design-reference-image.webp or design-reference-image.png in this folder.",
+    "usage_rights_note":  "Source image is internal design reference only and is not a Woo product primary image."
+}

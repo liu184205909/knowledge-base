@@ -5,7 +5,9 @@
 
 ## 当前结论
 
-Dream 内容生产已跑到 repaired draft layer, 但没有进入可发布完成态。
+> **🎯 2026-07-14 决策（用户确认）**：**保留 366 篇排期上线**（线上 REST 核实：3 publish + 363 future，无删除），**放弃 938 篇 repair 扩量**（thin content 风险，宁少勿滥，守 dreaminterpreter 警戒线）。**解梦线最终规模 = 366 篇，不再追加**；§3.3 "800-1500 对标千页"远期目标搁置，除非 SEMrush 验证有明确可抢的高质长尾。AI Dream Interpreter 工具不受影响（用 dreams-knowledge.json 骨架 + LLM 实时生成，不依赖文章量）。
+
+Dream 内容生产已推进到 WP 排期层：366 篇 status=any 全在线上（3 publish + 363 future），不再处于 draft 草稿态。
 
 - Candidate source: `_shared/dreams-candidates.json`
 - Knowledge skeleton: `_shared/dreams-knowledge.json`
