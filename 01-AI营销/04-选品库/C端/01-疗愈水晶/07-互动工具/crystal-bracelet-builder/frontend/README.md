@@ -17,6 +17,8 @@ For an official Woo preset that is enabled for customization, link to the existi
 
 `t17-builder-mock-config.js` is an explicit, non-production fixture for validating the mobile editor before the plugin is installed. It supplies placeholder materials and a local display-only quote, disables Woo add-to-cart, and must never be loaded together with `t17-builder-config.php`. Its values are not approved catalog or sales data.
 
+For local-only validation of the official import path, append `?t17_design=9001` to `preview.html`. This resolves only the placeholder `mockOfficialDesigns[9001]` fixture; it never represents a Woo product or approved preset.
+
 `preview.html` is only a local development-validation artifact. It is not a WordPress page, does not replace `/tools/crystal-bracelet-builder/`, and must not be described or deployed as a new page route. It uses the preserved tray asset only for local visual QA; the page-scoped WordPress config must still receive an approved Media Library URL before frontend deployment.
 
 ## Verification

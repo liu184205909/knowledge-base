@@ -9,8 +9,11 @@ Run before creating a candidate ZIP:
 ```powershell
 ./validate-backend-material-loop.ps1
 ../data/v3/validate-v3-data-contract.ps1
+../data/v3/preflight-approved-production-import.ps1
 ../frontend/validate-frontend-bundle.ps1
 ```
+
+`preflight-approved-production-import.ps1` is mandatory before an approved catalog upload. It cross-checks each live Variant against its approved image-provenance and price-review records, and checks every directional Decor against its non-importable, approved orientation review. It does not upload, import, or modify any record.
 
 ## Test-site public REST check
 

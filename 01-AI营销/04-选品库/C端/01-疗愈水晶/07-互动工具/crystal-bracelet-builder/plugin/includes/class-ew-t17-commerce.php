@@ -80,7 +80,7 @@ final class EW_T17_Commerce {
         woocommerce_wp_textarea_input(array(
             'id' => '_ew_t17_recipe_json',
             'label' => __('T17 recipe JSON', 'earthward-t17'),
-            'description' => __('Stores target_wrist_cm, fit_preference, and sequence items using variant_id.', 'earthward-t17'),
+            'description' => __('Stores a single-wrap wrist, fit preference, optional packaging, and sequence items using variant_id.', 'earthward-t17'),
             'desc_tip' => true,
         ));
         echo '</div>';
@@ -141,7 +141,7 @@ final class EW_T17_Commerce {
         if (!$builder_url) {
             return;
         }
-        $url = add_query_arg('t17_product', $product->get_id(), $builder_url);
+        $url = add_query_arg('t17_design', $product->get_id(), $builder_url);
         echo '<a class="button ew-t17-customize-product" href="' . esc_url($url) . '">' . esc_html__('Customize this design', 'earthward-t17') . '</a>';
     }
 
@@ -182,9 +182,10 @@ final class EW_T17_Commerce {
             'schema_version' => 'ew-t17-v3',
             'order_mode' => 'custom',
             'target_wrist_cm' => max(10, min(30, (float) ($config['target_wrist_cm'] ?? 16))),
+            'wrap_mode' => $config['wrap_mode'],
             'fit_preference' => self::normalize_fit_preference($config['fit_preference'] ?? 'regular'),
             'sequence' => $quote['snapshot'],
-            'packaging' => $config['packaging'],
+            'packaging' => array_merge($config['packaging'], array('resolved_variant' => $quote['packaging_snapshot'] ?? array())),
             'preview_data' => $config['preview_data'],
             'preview_image_url' => $config['preview_image_url'],
             'quote' => $quote,
@@ -385,6 +386,10 @@ final class EW_T17_Commerce {
         if (!is_array($recipe) || !isset($recipe['target_wrist_cm'], $recipe['fit_preference'], $recipe['sequence']) || !is_array($recipe['sequence'])) {
             return new WP_Error('ew_t17_invalid_recipe_shape', __('T17 recipe JSON must include target_wrist_cm, fit_preference, and a sequence array.', 'earthward-t17'));
         }
+        $wrap_mode = sanitize_key((string) ($recipe['wrap_mode'] ?? 'single'));
+        if ($wrap_mode !== 'single') {
+            return new WP_Error('ew_t17_invalid_recipe_wrap_mode', __('T17 currently supports single-wrap recipes only.', 'earthward-t17'));
+        }
         if (!is_numeric($recipe['target_wrist_cm']) || (float) $recipe['target_wrist_cm'] < 10 || (float) $recipe['target_wrist_cm'] > 30) {
             return new WP_Error('ew_t17_invalid_recipe_wrist', __('T17 recipe target_wrist_cm must be between 10 and 30.', 'earthward-t17'));
         }
@@ -403,6 +408,12 @@ final class EW_T17_Commerce {
                 return new WP_Error('ew_t17_invalid_recipe_variant', __('Every T17 recipe sequence item must include a valid variant_id.', 'earthward-t17'));
             }
             $normalized_item = array('variant_id' => $variant_id);
+            if (array_key_exists('size_mm', $item)) {
+                if (!is_numeric($item['size_mm']) || (float) $item['size_mm'] <= 0) {
+                    return new WP_Error('ew_t17_invalid_recipe_variant_size', __('T17 recipe item size_mm must be a positive number when provided.', 'earthward-t17'));
+                }
+                $normalized_item['size_mm'] = (float) $item['size_mm'];
+            }
             if (array_key_exists('orientation', $item)) {
                 $orientation = self::normalize_orientation($item['orientation']);
                 if (is_wp_error($orientation)) {
@@ -424,6 +435,7 @@ final class EW_T17_Commerce {
         $preview_image_url = isset($recipe['preview_image_url']) ? esc_url_raw((string) $recipe['preview_image_url']) : '';
         return array(
             'target_wrist_cm' => (float) $recipe['target_wrist_cm'],
+            'wrap_mode' => 'single',
             'fit_preference' => $fit_preference,
             'sequence' => $sequence,
             'packaging' => $packaging,
@@ -448,6 +460,9 @@ final class EW_T17_Commerce {
         $notes = isset($packaging['notes']) ? sanitize_textarea_field((string) $packaging['notes']) : '';
         if ($variant_id === '' && $label === '' && $notes === '') {
             return array();
+        }
+        if ($variant_id === '') {
+            return new WP_Error('ew_t17_invalid_packaging', __('T17 packaging must reference a Finish variant.', 'earthward-t17'));
         }
         return array_filter(array('variant_id' => $variant_id, 'label' => $label, 'notes' => $notes), static function ($value) { return $value !== ''; });
     }
@@ -523,9 +538,10 @@ final class EW_T17_Commerce {
             'design_version' => (string) $product->get_meta('_ew_t17_design_version'),
             'primary_scene' => (string) $product->get_meta('_ew_t17_primary_scene'),
             'target_wrist_cm' => $recipe['target_wrist_cm'],
+            'wrap_mode' => $recipe['wrap_mode'],
             'fit_preference' => $recipe['fit_preference'],
             'sequence' => $quote['snapshot'],
-            'packaging' => $recipe['packaging'],
+            'packaging' => array_merge($recipe['packaging'], array('resolved_variant' => $quote['packaging_snapshot'] ?? array())),
             'preview_data' => $recipe['preview_data'],
             'preview_image_url' => $recipe['preview_image_url'] ?: (get_the_post_thumbnail_url($product->get_id(), 'large') ?: ''),
             'quote' => $quote,
@@ -557,7 +573,9 @@ final class EW_T17_Commerce {
         return EW_T17_Catalog::quote_config(array(
             'sequence' => $snapshot['sequence'],
             'target_wrist_cm' => $snapshot['target_wrist_cm'] ?? 16,
+            'wrap_mode' => $snapshot['wrap_mode'] ?? 'single',
             'fit_preference' => $snapshot['fit_preference'] ?? 'regular',
+            'packaging' => $snapshot['packaging'] ?? array(),
         ));
     }
 

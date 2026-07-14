@@ -10,7 +10,7 @@
     401/403/404/redirect is reported as a manual-admin verification item.
 
 .EXAMPLE
-    .\verify-live-post-upgrade.ps1 -BaseUrl 'https://goearthward.com' -ExpectedPluginVersion '0.1.8'
+    .\verify-live-post-upgrade.ps1 -BaseUrl 'https://goearthward.com'
 
 .EXAMPLE
     # Page-only deployment: no plugin release or plugin version change is required.
@@ -36,8 +36,10 @@ param(
 
     [string]$DraftPath = '/?p=54723&preview=true',
 
-    [ValidatePattern('^\d+\.\d+\.\d+$')]
-    [string]$ExpectedPluginVersion = '0.1.8',
+    # Backend-only candidates do not expose a public frontend asset or version endpoint.
+    # Keep this as an administrator-attestation value, not a public HTTP assertion.
+    [ValidatePattern('^$|^\d+\.\d+\.\d+$')]
+    [string]$ExpectedPluginVersion = '',
 
     # UI-only deployments validate page rendering without asserting a plugin release.
     [ValidateSet('UiDeployment', 'PluginMilestone', 'Full')]
@@ -184,8 +186,8 @@ function Test-CatalogSchema {
         throw 'Catalog materials must be an array.'
     }
 
-    $materialFields = @('id', 'material_key', 'component_type', 'name_en', 'primary_color', 'color_tags', 'intention_tags', 'image_url', 'variants')
-    $variantFields = @('id', 'size_mm', 'shape', 'price', 'weight_g', 'occupied_length_mm', 'image_url', 'stock_status', 'stock_quantity', 'compatibility', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints')
+    $materialFields = @('id', 'material_key', 'component_type', 'category_slug', 'name_en', 'primary_color', 'color_tags', 'intention_tags', 'image_url', 'variants')
+    $variantFields = @('id', 'size_mm', 'shape', 'price', 'weight_g', 'occupied_length_mm', 'display_scale', 'image_url', 'stock_status', 'stock_quantity', 'compatibility', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'sort_order')
     $privateFields = @('internal_name', 'source_name', 'source_url', 'notes', 'created_at', 'updated_at')
     $materialCount = 0
     $variantCount = 0
@@ -248,32 +250,6 @@ function Test-QuoteResponse {
     }
 }
 
-function Test-RuntimeVersionEvidence {
-    param(
-        [Parameter(Mandatory = $true)][System.Net.Http.HttpClient]$Client,
-        [Parameter(Mandatory = $true)][string]$BaseUrl,
-        [Parameter(Mandatory = $true)][string]$ExpectedVersion
-    )
-
-    $assetPath = '/wp-content/plugins/earthward-t17-bracelet-builder/assets/js/t17-builder.js?ver=' + [Uri]::EscapeDataString($ExpectedVersion)
-    $assetUrl = Join-T17Url -Origin $BaseUrl -Path $assetPath
-    $asset = Get-T17Response -Client $Client -Url $assetUrl
-    Write-Host ('[Runtime version evidence] {0}' -f $asset.Url)
-    if ($asset.Error) {
-        throw "Could not fetch the versioned runtime asset: $($asset.Error)"
-    }
-    if ($asset.StatusCode -ne 200) {
-        throw "Versioned runtime asset returned HTTP $($asset.StatusCode), expected HTTP 200."
-    }
-    $sentinels = @('var quoteRequestId = 0;', 'window.localStorage.removeItem(storageKey);', 'data.orientationState')
-    $missing = @($sentinels | Where-Object { -not $asset.Body.Contains($_) })
-    if ($missing.Count -gt 0) {
-        throw "Runtime asset does not contain the expected $ExpectedVersion release sentinel(s): $($missing -join ' | ')."
-    }
-    Write-Host ('  PASS: Expected version query and {0} runtime release sentinels were served.' -f $sentinels.Count)
-    Write-Host '  NOTE: This proves the public runtime asset; still confirm the exact version label in WordPress Plugins as an administrator.'
-}
-
 function Write-PageMarkers {
     param(
         [Parameter(Mandatory = $true)][string]$Label,
@@ -325,7 +301,12 @@ try {
     Write-Host ('Base URL: {0}' -f $normalizedBaseUrl)
     Write-Host ('Verification scope: {0}' -f $VerificationScope)
     if ($runPluginMilestones) {
-        Write-Host ('Expected plugin version: {0}' -f $ExpectedPluginVersion)
+        if ($ExpectedPluginVersion) {
+            Write-Host ('Expected plugin version (administrator verification): {0}' -f $ExpectedPluginVersion)
+        }
+        else {
+            Write-Host 'Plugin version is verified by an administrator; no public frontend asset is expected from the backend-only plugin.'
+        }
     }
     else {
         Write-Host 'UI-only scope: no plugin version assertion, REST call, quote, cart, or order test will run.'
@@ -333,15 +314,6 @@ try {
     Write-Host ''
 
     if ($runPluginMilestones) {
-    try {
-        Test-RuntimeVersionEvidence -Client $client -BaseUrl $normalizedBaseUrl -ExpectedVersion $ExpectedPluginVersion
-    }
-    catch {
-        Write-Host ('  FAIL: {0}' -f $_.Exception.Message)
-        $hardFailure = $true
-    }
-
-    Write-Host ''
     $catalog = Get-T17Response -Client $client -Url $catalogUrl
     Write-Host ('[Catalog REST] {0}' -f $catalog.Url)
     if ($catalog.Error) {
@@ -490,12 +462,17 @@ try {
     Write-Host '[Manual administrator verification still required]'
     $manualChecks = @()
     if ($runPluginMilestones) {
-        $manualChecks += ('Confirm EarthWard T17 Bracelet Builder shows version {0} and remains active in WordPress Plugins.' -f $ExpectedPluginVersion)
+        if ($ExpectedPluginVersion) {
+            $manualChecks += ('Confirm EarthWard T17 Bracelet Builder shows version {0} and remains active in WordPress Plugins.' -f $ExpectedPluginVersion)
+        }
+        else {
+            $manualChecks += 'Confirm EarthWard T17 Bracelet Builder remains active in WordPress Plugins; public REST verification intentionally does not infer its version.'
+        }
         $manualChecks += 'Open T17 Materials: test Media Library selection, create/edit one draft variant, then verify it can be saved.'
         $manualChecks += 'Import a small draft-only CSV batch and verify the catalog, stock state, and duplicate stable-ID behavior.'
         $manualChecks += 'Create one hidden Custom Crystal Bracelet carrier product and test a server-quoted DIY design through cart, checkout, order metadata, and refund.'
         $manualChecks += 'Create one official Woo product with a valid recipe; test direct purchase and Customize loading its full sequence.'
-        $manualChecks += 'Verify Release Updates on an isolated test site before relying on it for future plugin releases.'
+        $manualChecks += 'Do not use plugin release updates for frontend iteration; UI changes remain in the independent frontend module and plugin packages stay milestone-only.'
     }
     if ($runUiDeployment) {
         $manualChecks += 'Inspect mobile 320/375/390/425px and desktop 768/1280/1440px: tray fully visible, no global bead size or 3D entry, no overlap with WoodMart/TranslatePress controls.'

@@ -234,7 +234,30 @@ $orientationPath = Join-Path $DataDirectory $contract.decor_orientation_review.f
 $orientationHeader = Read-CsvHeader $orientationPath
 Assert-Condition (($orientationHeader -join ',') -eq (($contract.decor_orientation_review.headers) -join ',')) 'Decor orientation review header does not match the contract.'
 $orientationRows = @(Import-Csv -LiteralPath $orientationPath -Encoding UTF8)
-Assert-Condition ($orientationRows.Count -eq 0) 'Decor orientation review template must not contain unapproved rows.'
+$orientationRowNumber = 1
+foreach ($row in $orientationRows) {
+    $orientationRowNumber++
+    Assert-Condition ((Get-Text $row.record_scope) -eq 'decor_orientation_review_only') "Decor review row $orientationRowNumber must remain review-only."
+    Assert-Condition ((Get-Text $row.production_import_eligible) -eq 'no') "Decor review row $orientationRowNumber must never be directly importable."
+    Assert-Condition ((Get-Text $row.schema_version) -eq $contract.schema_version) "Decor review row $orientationRowNumber has an unexpected schema version."
+    [void](Assert-StrictKey $row.variant_key 'decor review variant_key' $orientationRowNumber)
+    $mode = (Get-Text $row.orientation_mode).ToLowerInvariant()
+    Assert-Condition ($contract.decor_orientation_review.orientation_mode_values -contains $mode) "Decor review row $orientationRowNumber has an invalid orientation_mode."
+    $orientationValues = Get-StrictList $row.allowed_orientations 'decor review allowed_orientations' $orientationRowNumber
+    $defaults = Get-OrientationDefaults $mode
+    Assert-Condition (-not @($orientationValues | Where-Object { $defaults -notcontains $_ })) "Decor review row $orientationRowNumber has an orientation not allowed by its mode."
+    $positionValues = Get-StrictList $row.allowed_positions 'decor review allowed_positions' $orientationRowNumber
+    Assert-Condition (-not @($positionValues | Where-Object { $contract.decor_orientation_review.allowed_position_values -notcontains $_ })) "Decor review row $orientationRowNumber has an invalid allowed position."
+    Assert-Condition (-not (($positionValues -contains 'any') -and $positionValues.Count -ne 1)) "Decor review row $orientationRowNumber cannot combine any with another position."
+    Assert-NeighborConstraints $row.neighbor_constraints @($contract.catalog_import.neighbor_constraint_keys) $orientationRowNumber
+    if ($mode -in @('fixed_left', 'fixed_right')) {
+        [void](Assert-StrictKey $row.mirrored_variant_key 'decor review mirrored_variant_key' $orientationRowNumber)
+    }
+    foreach ($statusField in @('asset_review_status', 'orientation_review_status', 'approval_status')) {
+        Assert-Condition ((Get-Text $row.$statusField).ToLowerInvariant() -eq 'approved') "Decor review row $orientationRowNumber requires approved $statusField."
+    }
+    Assert-Condition ((Get-Text $row.approved_by) -ne '' -and (Get-Text $row.approved_at_utc) -ne '') "Decor review row $orientationRowNumber requires approver and timestamp."
+}
 
 $mappingPath = Join-Path $DataDirectory $contract.legacy_mapping.file
 $mappingRows = @(Import-Csv -LiteralPath $mappingPath -Encoding UTF8)
@@ -254,6 +277,6 @@ Assert-Condition ($null -eq $recipe._ew_t17_recipe_json.target_wrist_cm) 'Offici
 
 Write-Output 'PASS: v3 data contract is valid.'
 Write-Output "PASS: approved production catalog has the exact 30-column importer header and $($catalogRows.Count) valid data row(s)."
-Write-Output 'PASS: decor orientation review is non-production and has zero data rows.'
+Write-Output "PASS: decor orientation review has $($orientationRows.Count) validated non-production review row(s)."
 Write-Output 'PASS: 20 legacy candidates remain non-importable with blank production targets.'
 Write-Output 'PASS: official recipe JSON remains an invalid placeholder template.'

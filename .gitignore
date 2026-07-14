@@ -79,3 +79,12 @@ nul
 **/diag_*.json
 **/p1-check.json
 **/p2.json
+
+# 水晶手链 builder 研究素材图片（体积大，本地保留）
+**/crystal-bracelet-builder/data/v3/research/domestic-image-evidence-20260713/
+**/crystal-bracelet-builder/data/v3/research/overseas-competitors/
+**/crystal-bracelet-builder/data/v3/research/overseas-visual-evidence/
+**/crystal-bracelet-builder/data/v3/research/MyAstris数据-20260714/
+**/crystal-bracelet-builder/data/v3/research/domestic-image-evidence*/
+**/crystal-bracelet-builder/data/v3/research/overseas-visual*/
+**/crystal-bracelet-builder/images/raw/

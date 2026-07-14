@@ -8,6 +8,7 @@ final class EW_T17_Catalog {
     private const ORIENTATION_MODES = array('none', 'fixed_left', 'fixed_right', 'mirrorable', 'rotatable');
     private const ORIENTATION_VALUES = array('none', 'left', 'right', 'rotate_0', 'rotate_90', 'rotate_180', 'rotate_270');
     private const POSITION_TYPES = array('any', 'start', 'end', 'interior');
+    private const IMPORT_HEADERS = array('material_key', 'component_type', 'category_slug', 'name_en', 'primary_color', 'color_tags', 'intention_tags', 'material_image_url', 'material_status', 'material_sort_order', 'variant_key', 'size_mm', 'shape', 'price', 'weight_g', 'occupied_length_mm', 'display_scale', 'variant_image_url', 'stock_status', 'stock_quantity', 'compatibility', 'compatible_bead_sizes', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'variant_status', 'variant_sort_order', 'source_name');
 
     public static function init() {
         add_action('rest_api_init', array(__CLASS__, 'register_rest_routes'));
@@ -121,6 +122,10 @@ JS
     public static function quote_config($raw) {
         global $wpdb;
         $raw = is_array($raw) ? $raw : array();
+        $wrap_mode = sanitize_key((string) ($raw['wrap_mode'] ?? 'single'));
+        if ($wrap_mode !== 'single') {
+            return new WP_Error('ew_t17_invalid_wrap_mode', __('T17 currently supports single-wrap bracelets only.', 'earthward-t17'), array('status' => 400));
+        }
         $sequence = isset($raw['sequence']) && is_array($raw['sequence']) ? $raw['sequence'] : array();
         if (!$sequence) {
             return new WP_Error('ew_t17_empty_design', __('Add at least one material before requesting a quote.', 'earthward-t17'), array('status' => 400));
@@ -132,6 +137,11 @@ JS
         $ids = array_values(array_unique(array_filter(array_map(static function ($item) {
             return isset($item['variant_id']) ? sanitize_key((string) $item['variant_id']) : '';
         }, $sequence))));
+        $packaging_variant_id = isset($raw['packaging']) && is_array($raw['packaging']) ? sanitize_key((string) ($raw['packaging']['variant_id'] ?? '')) : '';
+        if ($packaging_variant_id !== '') {
+            $ids[] = $packaging_variant_id;
+            $ids = array_values(array_unique($ids));
+        }
         if (!$ids) {
             return new WP_Error('ew_t17_invalid_design', __('The design has no valid variants.', 'earthward-t17'), array('status' => 400));
         }
@@ -151,6 +161,9 @@ JS
         foreach ($sequence as $item) {
             $key = sanitize_key((string) ($item['variant_id'] ?? ''));
             $requested_quantities[$key] = ($requested_quantities[$key] ?? 0) + 1;
+        }
+        if ($packaging_variant_id !== '') {
+            $requested_quantities[$packaging_variant_id] = ($requested_quantities[$packaging_variant_id] ?? 0) + 1;
         }
         foreach ($requested_quantities as $key => $quantity) {
             if (!isset($map[$key])) {
@@ -172,6 +185,16 @@ JS
                 return new WP_Error('ew_t17_unknown_variant', sprintf(__('Variant %s is unavailable.', 'earthward-t17'), $key), array('status' => 400));
             }
             $row = $map[$key];
+            if (array_key_exists('size_mm', $item) && (!is_numeric($item['size_mm']) || abs((float) $item['size_mm'] - (float) $row['size_mm']) > 0.001)) {
+                return new WP_Error('ew_t17_variant_size_mismatch', sprintf(__('Variant %s does not match the submitted size.', 'earthward-t17'), $key), array('status' => 400));
+            }
+            if ($row['component_type'] !== 'decor' && self::orientation_mode($row['orientation_mode'] ?? 'none') !== 'none') {
+                return new WP_Error('ew_t17_invalid_variant_rules', sprintf(__('%s cannot use a directional decor rule.', 'earthward-t17'), $row['name_en']), array('status' => 400));
+            }
+            $mirror_pair = self::validate_live_mirror_pair($row);
+            if (is_wp_error($mirror_pair)) {
+                return $mirror_pair;
+            }
             $direction_rules = self::validated_direction_rules($row);
             if (is_wp_error($direction_rules)) {
                 return new WP_Error('ew_t17_invalid_variant_rules', sprintf(__('%s has invalid placement rules and cannot be quoted.', 'earthward-t17'), $row['name_en']), array('status' => 400));
@@ -208,6 +231,32 @@ JS
                 'unit_price' => (float) $row['price'],
                 'weight_g' => (float) $row['weight_g'],
                 'occupied_length_mm' => (float) $row['occupied_length_mm'],
+                'display_scale' => (float) $row['display_scale'],
+                'image_url' => self::image_url((int) ($row['image_id'] ?? 0), (string) ($row['image_url'] ?? '')),
+            );
+        }
+
+        $packaging_snapshot = array();
+        if ($packaging_variant_id !== '') {
+            if (!isset($map[$packaging_variant_id])) {
+                return new WP_Error('ew_t17_unknown_packaging_variant', __('The selected packaging variant is unavailable.', 'earthward-t17'), array('status' => 400));
+            }
+            $packaging = $map[$packaging_variant_id];
+            if ($packaging['component_type'] !== 'finish') {
+                return new WP_Error('ew_t17_invalid_packaging_variant', __('Packaging must reference a live Finish variant.', 'earthward-t17'), array('status' => 400));
+            }
+            $total += (float) $packaging['price'];
+            $weight += (float) $packaging['weight_g'];
+            $packaging_snapshot = array(
+                'variant_id' => $packaging['variant_key'],
+                'material_id' => $packaging['material_key'],
+                'name' => $packaging['name_en'],
+                'component_type' => $packaging['component_type'],
+                'size_mm' => (float) $packaging['size_mm'],
+                'unit_price' => (float) $packaging['price'],
+                'weight_g' => (float) $packaging['weight_g'],
+                'display_scale' => (float) $packaging['display_scale'],
+                'image_url' => self::image_url((int) ($packaging['image_id'] ?? 0), (string) ($packaging['image_url'] ?? '')),
             );
         }
 
@@ -226,7 +275,9 @@ JS
             'used_length_mm' => round($length, 1),
             'target_length_mm' => round($target_length, 1),
             'fit_status' => $fit_status,
+            'wrap_mode' => 'single',
             'snapshot' => $snapshot,
+            'packaging_snapshot' => $packaging_snapshot,
             'price_version' => (string) get_option('ew_t17_price_version', 'draft'),
         );
     }
@@ -680,8 +731,7 @@ JS
             self::redirect_import(0, 0, 'headers');
         }
         $headers = array_map(static function ($header) { return sanitize_key((string) $header); }, $headers);
-        $required = array('material_key', 'component_type', 'name_en', 'variant_key', 'size_mm', 'price', 'weight_g', 'occupied_length_mm');
-        if (array_diff($required, $headers)) {
+        if ($headers !== self::IMPORT_HEADERS) {
             fclose($handle);
             self::redirect_import(0, 0, 'columns');
         }
@@ -689,7 +739,21 @@ JS
         global $wpdb;
         $imported = 0;
         $skipped = 0;
-        while (($values = fgetcsv($handle)) !== false) {
+        $csv_rows = array();
+        while (($csv_values = fgetcsv($handle)) !== false) {
+            $csv_rows[] = $csv_values;
+        }
+        $preflight = self::preflight_import_csv_rows($csv_rows, $headers);
+        if (is_wp_error($preflight)) {
+            fclose($handle);
+            self::redirect_import(0, count($csv_rows), 'preflight');
+        }
+        $wpdb->query('START TRANSACTION');
+        foreach ($csv_rows as $values) {
+            if (count($values) !== count($headers)) {
+                $skipped++;
+                continue;
+            }
             $row = array_combine($headers, array_pad(array_slice($values, 0, count($headers)), count($headers), ''));
             if (!$row) {
                 $skipped++;
@@ -789,6 +853,11 @@ JS
             $imported++;
         }
         fclose($handle);
+        if ($skipped > 0) {
+            $wpdb->query('ROLLBACK');
+            self::redirect_import(0, $skipped, 'preflight');
+        }
+        $wpdb->query('COMMIT');
         self::redirect_import($imported, $skipped, 'done');
     }
 
@@ -903,6 +972,52 @@ JS
         return $attachment_id && wp_attachment_is_image($attachment_id) ? $attachment_id : 0;
     }
 
+    private static function preflight_import_csv_rows($rows, $headers) {
+        $variants = array();
+        foreach ($rows as $offset => $values) {
+            $row_number = $offset + 2;
+            if (count($values) !== count($headers)) {
+                return new WP_Error('ew_t17_import_column_count', sprintf(__('T17 import row %d has an incorrect column count.', 'earthward-t17'), $row_number));
+            }
+            $row = array_combine($headers, $values);
+            if (!is_array($row)) {
+                return new WP_Error('ew_t17_import_row_shape', sprintf(__('T17 import row %d could not be read.', 'earthward-t17'), $row_number));
+            }
+            $material_key = sanitize_key($row['material_key'] ?? '');
+            $variant_key = sanitize_key($row['variant_key'] ?? '');
+            $component_type = sanitize_key($row['component_type'] ?? '');
+            if (!$material_key || !$variant_key || !sanitize_text_field($row['name_en'] ?? '') || !in_array($component_type, self::COMPONENT_TYPES, true)) {
+                return new WP_Error('ew_t17_import_required_fields', sprintf(__('T17 import row %d is missing a required catalog field.', 'earthward-t17'), $row_number));
+            }
+            if (isset($variants[$variant_key])) {
+                return new WP_Error('ew_t17_import_duplicate_variant', sprintf(__('T17 import row %d duplicates variant %s.', 'earthward-t17'), $row_number, $variant_key));
+            }
+            $validation = self::validate_import_row($row);
+            if (is_wp_error($validation)) {
+                return new WP_Error('ew_t17_import_invalid_row', sprintf(__('T17 import row %d is invalid: %s.', 'earthward-t17'), $row_number, $validation->get_error_message()));
+            }
+            if ($component_type !== 'decor' && $validation['orientation_mode'] !== 'none') {
+                return new WP_Error('ew_t17_import_directional_component', sprintf(__('T17 import row %d uses directional rules outside Decor.', 'earthward-t17'), $row_number));
+            }
+            $variants[$variant_key] = array(
+                'component_type' => $component_type,
+                'orientation_mode' => $validation['orientation_mode'],
+                'mirrored_variant_key' => sanitize_key($row['mirrored_variant_key'] ?? ''),
+            );
+        }
+        foreach ($variants as $variant_key => $variant) {
+            if (!in_array($variant['orientation_mode'], array('fixed_left', 'fixed_right'), true)) {
+                continue;
+            }
+            $other_key = $variant['mirrored_variant_key'];
+            $expected = $variant['orientation_mode'] === 'fixed_left' ? 'fixed_right' : 'fixed_left';
+            if ($other_key === '' || !isset($variants[$other_key]) || $variants[$other_key]['component_type'] !== 'decor' || $variants[$other_key]['orientation_mode'] !== $expected || $variants[$other_key]['mirrored_variant_key'] !== $variant_key) {
+                return new WP_Error('ew_t17_import_mirror_pair', sprintf(__('T17 import directional variant %s is missing its reciprocal physical partner.', 'earthward-t17'), $variant_key));
+            }
+        }
+        return true;
+    }
+
     private static function validate_import_row($row) {
         $required_numeric = array('size_mm', 'price', 'weight_g', 'occupied_length_mm');
         foreach ($required_numeric as $field) {
@@ -962,6 +1077,27 @@ JS
             'allowed_positions' => $positions,
             'neighbor_constraints' => $constraints,
         );
+    }
+
+    private static function validate_live_mirror_pair($row) {
+        $mode = self::orientation_mode($row['orientation_mode'] ?? 'none');
+        if (!in_array($mode, array('fixed_left', 'fixed_right'), true)) {
+            return true;
+        }
+        $mirror_key = sanitize_key((string) ($row['mirrored_variant_key'] ?? ''));
+        if ($mirror_key === '') {
+            return new WP_Error('ew_t17_missing_mirrored_variant', __('A fixed directional decor variant must reference its opposite physical variant.', 'earthward-t17'), array('status' => 400));
+        }
+        global $wpdb;
+        $counterpart = $wpdb->get_row($wpdb->prepare(
+            "SELECT v.variant_key, v.orientation_mode, v.mirrored_variant_key, v.status, m.component_type, m.status AS material_status FROM " . self::variants_table() . " v INNER JOIN " . self::materials_table() . " m ON m.id = v.material_id WHERE v.variant_key = %s",
+            $mirror_key
+        ), ARRAY_A);
+        $expected_mode = $mode === 'fixed_left' ? 'fixed_right' : 'fixed_left';
+        if (!$counterpart || $counterpart['status'] !== 'live' || $counterpart['material_status'] !== 'live' || $counterpart['component_type'] !== 'decor' || self::orientation_mode($counterpart['orientation_mode'] ?? 'none') !== $expected_mode || sanitize_key((string) ($counterpart['mirrored_variant_key'] ?? '')) !== sanitize_key((string) ($row['variant_key'] ?? ''))) {
+            return new WP_Error('ew_t17_invalid_mirrored_variant', __('The opposite physical directional decor variant is unavailable or not reciprocally configured.', 'earthward-t17'), array('status' => 400));
+        }
+        return true;
     }
 
     private static function strict_list($value) {

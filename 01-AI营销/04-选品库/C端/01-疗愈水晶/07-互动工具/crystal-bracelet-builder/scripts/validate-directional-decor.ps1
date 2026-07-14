@@ -72,9 +72,10 @@ try {
     $install = Get-RequiredFileContent (Join-Path $plugin 'includes\class-ew-t17-install.php')
     $catalog = Get-RequiredFileContent (Join-Path $plugin 'includes\class-ew-t17-catalog.php')
     $commerce = Get-RequiredFileContent (Join-Path $plugin 'includes\class-ew-t17-commerce.php')
-    $frontend = Get-RequiredFileContent (Join-Path $plugin 'includes\class-ew-t17-frontend.php')
-    $javascript = Get-RequiredFileContent (Join-Path $plugin 'assets\js\t17-builder.js')
-    $css = Get-RequiredFileContent (Join-Path $plugin 'assets\css\t17-builder.css')
+    $frontendRoot = Join-Path $Root 'frontend'
+    $frontend = Get-RequiredFileContent (Join-Path $frontendRoot 't17-builder-fragment.html')
+    $javascript = Get-RequiredFileContent (Join-Path $frontendRoot 't17-builder-ui.js')
+    $css = Get-RequiredFileContent (Join-Path $frontendRoot 't17-builder-ui.css')
 
     Write-Host "T17 directional decor validation (read-only)"
     Write-Host "Root: $Root"
@@ -84,14 +85,14 @@ try {
     Test-PatternSet -Name 'Installer persists directional fields' -Content $install -Patterns @('orientation|direction|mirror|rotat') -Detail 'Variant schema must own directional data, not only a review CSV.'
     Test-PatternSet -Name 'Catalog accepts or presents directional fields' -Content $catalog -Patterns @('orientation|direction|mirror|rotat') -Detail 'Catalog API/admin path must carry directional data.'
     Test-PatternSet -Name 'Commerce validates and snapshots orientation' -Content $commerce -Patterns @('normalize_orientation', 'merge_sequence_orientations', 'format_orientation') -Detail 'Order and official-design snapshots retain validated orientation.'
-    Test-PatternSet -Name 'Frontend markup exposes orientation controls or state' -Content $frontend -Patterns @('orientation|direction|mirror|rotat') -Detail 'Frontend PHP must provide a directional interaction boundary.'
+    Test-PatternSet -Name 'Independent frontend markup exposes orientation controls or state' -Content $frontend -Patterns @('orientation|direction|mirror|rotat') -Detail 'The independent editor must provide a directional interaction boundary.'
     Test-PatternSet -Name 'Editor state carries orientation' -Content $javascript -Patterns @('orientation|direction|mirror|rotat') -Detail 'Editor JS must send a selected direction with a sequence item.'
 
     Write-Host ''
     Write-Host 'Deterministic insertion'
-    Test-PatternSet -Name 'Editor has deterministic append mutation' -Content $javascript -Patterns @('function\s+addVariant\s*\(', 'state\.sequence\.splice\s*\(', 'state\.sequence\.length') -Detail 'A material click uses one deterministic insert path; append is the selected-index fallback.'
+    Test-PatternSet -Name 'Editor has deterministic insertion mutation' -Content $javascript -Patterns @('function\s+add\s*\(', 'state\.sequence\.splice\s*\(', 'state\.sequence\.length') -Detail 'A material click uses one deterministic insert path; append is the selected-index fallback.'
     Test-PatternSet -Name 'Editor has explicit selected-slot insertion' -Content $javascript -Patterns @('selected[_A-Za-z]*index|insert[_A-Za-z]*index|target[_A-Za-z]*index') -Detail 'Required for insert-at-selection instead of append-only behavior.'
-    Write-Check -Passed ($javascript -notmatch 'Math\.random\s*\(') -Name 'Editor has no random sequence mutation' -Detail 'Static check: t17-builder.js does not call Math.random.'
+    Write-Check -Passed ($javascript -notmatch 'Math\.random\s*\(') -Name 'Editor has no random sequence mutation' -Detail 'Static check: t17-builder-ui.js does not call Math.random.'
 
     Write-Host ''
     Write-Host 'Reduced-motion boundary'
