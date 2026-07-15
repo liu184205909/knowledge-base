@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "name": "planet-in-sign-knowledge",
+    "purpose": "Astrology planet-in-sign 矩阵数据层（10行星×12星座=120篇，程式化 generate）",
+    "evidence_tier": "西方占星公开通识（确证）：行星/星座属性源自 Hellenistic/Medieval 占星传统，公开标准化",
+    "caveat": "占星为象征/反思框架非科学；planet-in-sign 组合含义由 AI 基于行星+星座属性组合生成（非逐组合 research）；crystals 按行星代表石（现代配伍）"
+  },
+  "planets": {
+    "sun": { "name": "Sun", "keywords": ["identity", "ego", "vitality", "self-expression", "life purpose"], "drives": "who you are at your core, your life force and creative self-expression", "crystals": ["citrine", "tiger-eye"], "crystals_note": "Sun stones (modern association): citrine for solar vitality, tiger-eye for confident identity" },
+    "moon": { "name": "Moon", "keywords": ["emotions", "instincts", "inner world", "habits", "needs"], "drives": "your emotional nature, inner needs, and instinctive reactions", "crystals": ["moonstone", "selenite"], "crystals_note": "Moon stones: moonstone for emotional flow, selenite for lunar clarity" },
+    "mercury": { "name": "Mercury", "keywords": ["communication", "thinking", "learning", "logic", "trade"], "drives": "how you think, speak, learn, and process information", "crystals": ["sodalite", "clear-quartz"], "crystals_note": "Mercury stones: sodalite for clear thinking, clear-quartz for mental clarity" },
+    "venus": { "name": "Venus", "keywords": ["love", "beauty", "values", "relationship", "pleasure"], "drives": "what you love, value, and attract; how you relate", "crystals": ["rose-quartz", "rhodonite"], "crystals_note": "Venus stones: rose-quartz for love, rhodonite for relationship harmony" },
+    "mars": { "name": "Mars", "keywords": ["action", "energy", "desire", "drive", "conflict", "courage"], "drives": "how you assert, act, pursue desire, and handle conflict", "crystals": ["red-jasper", "garnet"], "crystals_note": "Mars stones: red-jasper for grounded action, garnet for drive" },
+    "jupiter": { "name": "Jupiter", "keywords": ["growth", "expansion", "belief", "opportunity", "wisdom"], "drives": "where you grow, seek meaning, and find opportunity", "crystals": ["citrine", "lapis"], "crystals_note": "Jupiter stones: citrine for abundance, lapis for wisdom" },
+    "saturn": { "name": "Saturn", "keywords": ["structure", "discipline", "responsibility", "limitation", "mastery"], "drives": "where you face discipline, responsibility, and long-term mastery", "crystals": ["smoky-quartz", "hematite"], "crystals_note": "Saturn stones: smoky-quartz for grounding discipline, hematite for structure" },
+    "uranus": { "name": "Uranus", "keywords": ["change", "innovation", "rebellion", "awakening", "freedom"], "drives": "where you seek change, break rules, and awaken", "crystals": ["amethyst", "labradorite"], "crystals_note": "Uranus stones: amethyst for awakening, labradorite for transformation" },
+    "neptune": { "name": "Neptune", "keywords": ["dreams", "imagination", "spirituality", "illusion", "compassion"], "drives": "where you dream, dissolve boundaries, and seek the transcendent", "crystals": ["amethyst", "moonstone"], "crystals_note": "Neptune stones: amethyst for spiritual intuition, moonstone for dreamwork" },
+    "pluto": { "name": "Pluto", "keywords": ["transformation", "power", "death-rebirth", "depth", "obsession"], "drives": "where you transform, face power and shadow, and regenerate", "crystals": ["obsidian", "smoky-quartz"], "crystals_note": "Pluto stones: obsidian for shadow work, smoky-quartz for transformation" }
+  },
+  "signs": {
+    "aries": { "name": "Aries", "element": "Fire", "quality": "Cardinal", "keywords": ["initiation", "courage", "action", "pioneer", "impulse"], "traits": "bold, pioneering, direct, energetic; the initiator of the zodiac" },
+    "taurus": { "name": "Taurus", "element": "Earth", "quality": "Fixed", "keywords": ["stability", "sensuality", "patience", "values", "determination"], "traits": "steady, sensual, determined, grounded; the builder" },
+    "gemini": { "name": "Gemini", "element": "Air", "quality": "Mutable", "keywords": ["communication", "curiosity", "versatility", "duality", "learning"], "traits": "curious, communicative, adaptable, quick-witted; the messenger" },
+    "cancer": { "name": "Cancer", "element": "Water", "quality": "Cardinal", "keywords": ["emotion", "nurturing", "home", "protection", "memory"], "traits": "nurturing, sensitive, protective, intuitive; the caregiver" },
+    "leo": { "name": "Leo", "element": "Fire", "quality": "Fixed", "keywords": ["expression", "pride", "generosity", "creativity", "warmth"], "traits": "expressive, generous, proud, warm; the performer/leader" },
+    "virgo": { "name": "Virgo", "element": "Earth", "quality": "Mutable", "keywords": ["analysis", "service", "precision", "health", "craft"], "traits": "analytical, service-oriented, precise, practical; the craftsman/healer" },
+    "libra": { "name": "Libra", "element": "Air", "quality": "Cardinal", "keywords": ["balance", "relationship", "beauty", "justice", "harmony"], "traits": "diplomatic, harmonizing, aesthetic, partnership-oriented; the diplomat" },
+    "scorpio": { "name": "Scorpio", "element": "Water", "quality": "Fixed", "keywords": ["intensity", "transformation", "depth", "passion", "power"], "traits": "intense, penetrating, transformative, magnetic; the detective/transformer" },
+    "sagittarius": { "name": "Sagittarius", "element": "Fire", "quality": "Mutable", "keywords": ["exploration", "freedom", "philosophy", "optimism", "truth"], "traits": "adventurous, philosophical, freedom-loving, optimistic; the explorer" },
+    "capricorn": { "name": "Capricorn", "element": "Earth", "quality": "Cardinal", "keywords": ["ambition", "structure", "responsibility", "discipline", "achievement"], "traits": "ambitious, disciplined, responsible, strategic; the achiever" },
+    "aquarius": { "name": "Aquarius", "element": "Air", "quality": "Fixed", "keywords": ["innovation", "community", "rebellion", "vision", "detachment"], "traits": "innovative, humanitarian, detached, visionary; the reformer" },
+    "pisces": { "name": "Pisces", "element": "Water", "quality": "Mutable", "keywords": ["dreams", "compassion", "mysticism", "surrender", "imagination"], "traits": "compassionate, dreamy, mystical, empathic; the mystic/dreamer" }
+  },
+  "eastern_anchor_note": "Parallel Eastern reference (not historical correspondence): 七曜 (Seven Luminaries: Sun/Moon + Mars=火/水/木/金/土 五星 mapped to 火曜/水曜/木曜/金曜/土曜). Use as parallel frame only, not as Western-Eastern historical equivalence."
+}

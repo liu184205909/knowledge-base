@@ -1,0 +1,695 @@
+{
+  "_meta": {
+    "name": "animal-symbolism-knowledge",
+    "purpose": "灵兽（Spirit Animal / Animal Symbolism）× 水晶首饰配对线知识层（mainpages 兼容，供 generate/fill/upload 复用）",
+    "evidence_tier": "行业通识 + 竞品交叉验证（API Leak/竞品分析级）",
+    "evidence_sources": [
+      "https://www.sagegoddess.com/blog/crystals/crystal-guide-for-spirit-animals/ （150+ 灵兽×水晶权威表，Sage Goddess）",
+      "https://www.surrendertohappiness.com/crystal-and-spirit-animal-pairings/ （10 组经典配对）",
+      "https://mysticsouljewelry.com/blogs/news/spirit-animal-jewelry-guide （8 灵兽×水晶，首饰站直接竞品）",
+      "SERP 2026-07-15 'spirit animal meanings and crystals' us/mobile：AIO 存在，生态活跃（spiritanimal.info / crystalvaults / sagegoddess 等）"
+    ],
+    "caveat": "灵兽寓意来自跨文化通识与上述竞品（常见关联 common association），非科学实证。水晶配对以竞品明证优先（surrender/mysticsouljewelry 直接列出的配对），其余按灵兽寓意关键词映射到 390 库常见 slug；sagegoddess 表中罕见石种（ammonite/kambaba jasper/super 7 等）已替换为寓意对应的主流水晶。eastern_note 标注准确传统来源，东西方差异（尤其 Dragon/Phoenix）刻意区分不混贴。",
+    "crystal_slug_policy": "全部用 390 库常见英文 slug（howlite/moonstone/amethyst/citrine/rose-quartz/black-tourmaline/tiger-eye/lapis/clear-quartz/carnelian/sodalite/garnet/labradorite/malachite/aquamarine/aventurine/jade/onyx/smoky-quartz 等），便于内链 /{slug}-meaning/",
+    "page_scope": "每页 = 单只灵兽深度页（寓意 + 连接方法 + 3-5 traits + 2-3 水晶 + FAQ），URL 根级 /{slug}-spirit-animal/；26 灵兽覆盖 wolf/bear/owl/fox/deer/eagle/hawk/butterfly/cat/raven/crow/snake/tiger/lion/horse/dog/dolphin/whale/turtle/frog/spider/dragon/phoenix/swan/dove/hummingbird",
+    "generated": "2026-07-15"
+  },
+  "mainpages": [
+    {
+      "slug": "wolf-spirit-animal",
+      "title": "Wolf Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "wolf spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Wolf spirit animal symbolizes loyalty, intuition, freedom, and guardianship. As a pack animal and a creature tied to the moon, the Wolf teaches the balance between independence and community — knowing when to lead, when to follow, and when to trust your inner voice. Those who carry Wolf medicine are often natural guides with deep instinct and a strong sense of family or chosen tribe.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Spend quiet time outdoors at dusk or under moonlight to attune to Wolf's lunar energy",
+          "Hold a moonstone or labradorite and set an intention to receive intuitive guidance",
+          "Journal on the question: 'Where am I being called to lead, and where must I trust the pack?'",
+          "Watch for repeating wolf imagery in dreams, media, or encounters over the next 7 days"
+        ],
+        "example": "If Wolf appears repeatedly in your dreams or you feel drawn to wolf howls, moon imagery, or pack dynamics, it may be your spirit guide calling you to strengthen intuition and loyal community bonds."
+      },
+      "traits": ["loyalty", "intuition", "freedom", "community", "guardianship"],
+      "crystals": ["moonstone", "labradorite", "howlite"],
+      "faq_seeds": [
+        "What does the wolf spirit animal mean?",
+        "Which crystals are best for connecting with wolf energy?",
+        "How do I know if the wolf is my spirit animal?",
+        "What is the spiritual meaning of a wolf howling at the moon?"
+      ],
+      "eastern_note": "Native American（多部落视狼为导师/图腾，象征忠诚与教学）；Norse（奥丁的双狼 Geri 与 Freki，及巨狼 Fenrir）；Celtic（狼为向导）。东方传统中狼不突出。"
+    },
+    {
+      "slug": "bear-spirit-animal",
+      "title": "Bear Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "bear spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Bear spirit animal represents strength, introspection, grounding, and healing. Associated with the Earth and with the practice of hibernation, Bear teaches the power of solitude, rest, and going within to emerge renewed. Those guided by Bear are often protective, patient, and grounded, with quiet inner power that does not need to roar to be felt.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Create a quiet, grounded space indoors — Bear energy favors stillness over action",
+          "Hold smoky quartz or howlite and breathe slowly, inviting grounded strength",
+          "Reflect on what needs to 'hibernate' or rest in your life before the next phase",
+          "Set a boundary or protection intention to honor Bear's guardianship"
+        ],
+        "example": "If you feel called to retreat, rest deeply, or are repeatedly drawn to bear imagery during a transition, Bear may be guiding you to gather strength in solitude."
+      },
+      "traits": ["strength", "introspection", "grounding", "protection", "healing"],
+      "crystals": ["smoky-quartz", "howlite", "black-tourmaline"],
+      "faq_seeds": [
+        "What does the bear spirit animal symbolize?",
+        "Which crystals help me connect with bear energy?",
+        "What does it mean to dream of a bear?",
+        "How does the bear teach about rest and hibernation?"
+      ],
+      "eastern_note": "Native American（熊为内在力量与内省的图腾，熊 medicine 代表治愈与权威）；Celtic（熊女神 Artio）；Norse（狂战士 Berserker 字面意为'熊衫'）。"
+    },
+    {
+      "slug": "owl-spirit-animal",
+      "title": "Owl Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "owl spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Owl spirit animal symbolizes wisdom, intuition, clairvoyance, and the ability to see hidden truth. As a nocturnal bird that sees in the dark, the Owl guides you to perceive what others miss, trust your inner knowing, and navigate the unseen. Owl medicine often appears to those undergoing spiritual awakening or seeking deeper insight.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Sit in darkness or dim light and hold lapis lazuli or amethyst to deepen inner vision",
+          "Ask aloud: 'What truth am I not seeing?' and listen for the first answer that arises",
+          "Record dreams for a week — Owl guidance often comes through night-time symbolism",
+          "Pay attention to synchronicities involving books, messages, or overheard conversations"
+        ],
+        "example": "If owls appear in dreams, you keep noticing owl imagery, or you feel called to develop intuition, Owl may be your guide into hidden wisdom."
+      },
+      "traits": ["wisdom", "intuition", "vision", "truth", "clairvoyance"],
+      "crystals": ["amethyst", "lapis", "sodalite"],
+      "faq_seeds": [
+        "What does the owl spirit animal mean?",
+        "Which crystals enhance owl wisdom?",
+        "Is seeing an owl a spiritual sign?",
+        "What does an owl symbolize in different cultures?"
+      ],
+      "eastern_note": "Greek（雅典娜 Athena 的圣鸟 = 智慧）；Hindu（财富女神 Lakshmi 的猫头鹰）；Native American（因部落而异：部分部落视智慧，部分视为死亡/转变的预兆）。多传统并存，不可混贴。"
+    },
+    {
+      "slug": "fox-spirit-animal",
+      "title": "Fox Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "fox spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Fox spirit animal represents cunning, adaptability, cleverness, and patience. As a creature that thrives in many environments and observes before acting, the Fox teaches you to move through challenges with quick thinking, tact, and observation rather than force. Fox medicine favors those who need to navigate complex situations with grace.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold carnelian or tiger-eye and set an intention for clever, graceful action",
+          "Before a challenging situation, pause and observe — Fox teaches watch-then-move",
+          "Ask: 'Where can adaptability serve me better than stubbornness?'",
+          "Notice whether foxes or the word 'fox' appear as omens during decisions"
+        ],
+        "example": "If you face a situation requiring tact, or feel drawn to fox imagery during a transition, Fox may be guiding you to blend cleverness with patience."
+      },
+      "traits": ["cunning", "adaptability", "cleverness", "patience", "observation"],
+      "crystals": ["carnelian", "tiger-eye", "citrine"],
+      "faq_seeds": [
+        "What does the fox spirit animal symbolize?",
+        "Which crystals support fox energy?",
+        "What does seeing a fox mean spiritually?",
+        "How does fox teach adaptability?"
+      ],
+      "eastern_note": "East Asian（中国九尾狐 = 狡黠与灵异；日本 kitsune 狐仙 = 智慧/神使/变形；韩国类似）；Native American（部分部落为 trickster 恶作剧者）。东方传统最丰富。"
+    },
+    {
+      "slug": "deer-spirit-animal",
+      "title": "Deer Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "deer spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Deer spirit animal symbolizes gentleness, grace, compassion, and alertness. As a creature both tender and keenly aware, the Deer teaches you to move through the world with an open heart while staying attuned to your surroundings. Deer medicine appears to those learning to lead with kindness and listen deeply.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold rose quartz or howlite and soften your breathing to attune to Deer's gentle frequency",
+          "Practice listening fully to someone without planning your reply — Deer teaches attention",
+          "Ask: 'Where can gentleness be my strength this week?'",
+          "Walk in nature slowly and notice what you usually miss"
+        ],
+        "example": "If deer cross your path repeatedly or you feel drawn to gentleness as a practice, Deer may be guiding you toward compassionate awareness."
+      },
+      "traits": ["gentleness", "grace", "compassion", "alertness", "listening"],
+      "crystals": ["rose-quartz", "howlite", "clear-quartz"],
+      "faq_seeds": [
+        "What does the deer spirit animal mean?",
+        "Which crystals help me connect with deer energy?",
+        "What does seeing a deer symbolize?",
+        "How does the deer teach compassion?"
+      ],
+      "eastern_note": "Celtic（鹿角神 Cernunnos = 野性与生育）；Hindu（《罗摩衍那》金鹿 Maya）；东方传统中鹿为长寿/禄的象征（鹿=禄谐音），与西方侧重不同。"
+    },
+    {
+      "slug": "eagle-spirit-animal",
+      "title": "Eagle Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "eagle spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Eagle spirit animal represents vision, courage, freedom, and spiritual power. As the bird that flies highest, the Eagle teaches you to rise above the mundane, see the bigger picture, and connect with higher truth. Eagle medicine often appears to leaders, visionaries, and those undergoing spiritual initiation.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold lapis or citrine at the brow and set an intention for clear higher vision",
+          "When stuck in detail, ask: 'What would this look like from Eagle's height?'",
+          "Spend time in high places (hills, rooftops) to mirror Eagle's perspective",
+          "Watch for eagle feathers, imagery, or the word as confirmation of guidance"
+        ],
+        "example": "If you repeatedly see eagles or feel called to step back and see the whole picture, Eagle may be guiding you to lead with vision and courage."
+      },
+      "traits": ["vision", "courage", "freedom", "power", "leadership"],
+      "crystals": ["lapis", "citrine", "tiger-eye"],
+      "faq_seeds": [
+        "What does the eagle spirit animal symbolize?",
+        "Which crystals enhance eagle energy?",
+        "What does seeing an eagle mean spiritually?",
+        "How does the eagle connect to the divine?"
+      ],
+      "eastern_note": "Native American（鹰为最高的灵性信使，雷鸟 Thunderbird 关联，羽毛神圣）；Roman（朱庇特之鹰/军旗）；Greek（宙斯的神鸟）；圣经（以赛亚）。通用象征，Native American 体系最系统。"
+    },
+    {
+      "slug": "hawk-spirit-animal",
+      "title": "Hawk Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "hawk spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Hawk spirit animal symbolizes focus, clear vision, awareness, and connection with spirit. Closely related to the Eagle but more everyday and alert, the Hawk teaches you to pay attention to signs, sharpen your perception, and act on the messages you receive. Hawk medicine often appears when you need a wake-up call or clearer direction.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold clear quartz or sodalite and ask for clarity on a specific question",
+          "Watch closely for signs over 48 hours — Hawk heightens synchronicity awareness",
+          "Write down every 'coincidence' and look for a pattern",
+          "Act on the first clear nudge you receive — Hawk rewards decisive attention"
+        ],
+        "example": "If a hawk crosses your path or circles overhead during a moment of uncertainty, it may be a call to sharpen focus and trust the messages around you."
+      },
+      "traits": ["focus", "clear-vision", "awareness", "spiritual-connection", "protection"],
+      "crystals": ["clear-quartz", "sodalite", "amethyst"],
+      "faq_seeds": [
+        "What does the hawk spirit animal mean?",
+        "Which crystals support hawk vision?",
+        "What does seeing a hawk symbolize?",
+        "How is hawk different from eagle as a spirit animal?"
+      ],
+      "eastern_note": "Egyptian（天空神 Horus 常作鹰/隼首，荷鲁斯之眼）；Celtic（隼为远见）；Native American（信使）。Hawk 与 Eagle 在 Egyptian/Native American 传统中角色相近。"
+    },
+    {
+      "slug": "butterfly-spirit-animal",
+      "title": "Butterfly Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "butterfly spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Butterfly spirit animal represents transformation, joy, renewal, and growth. As the universal symbol of metamorphosis, the Butterfly teaches that profound change happens in stages — egg, caterpillar, chrysalis, wing — and that each phase is necessary. Butterfly medicine appears during transitions, rebirth, and the release of an old self.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold moonstone or amethyst and name the change you are moving through",
+          "Identify which stage you are in: beginning, dissolving, resting, or emerging",
+          "Release one habit, belief, or item that belongs to your old self",
+          "Welcome joy as part of the process — Butterfly carries lightness, not just effort"
+        ],
+        "example": "If butterflies appear around a major life change, or you feel you are in a 'chrysalis' phase, Butterfly may be guiding your transformation."
+      },
+      "traits": ["transformation", "joy", "renewal", "freedom", "growth"],
+      "crystals": ["moonstone", "rose-quartz", "amethyst"],
+      "faq_seeds": [
+        "What does the butterfly spirit animal symbolize?",
+        "Which crystals support butterfly transformation?",
+        "What does it mean when a butterfly visits you?",
+        "How does the butterfly teach about change?"
+      ],
+      "eastern_note": "Greek（Psyche 灵魂 = 蝴蝶，象征灵魂与转化）；East Asian（庄子梦蝶 = 现实与虚妄；梁祝化蝶 = 爱情）；Celtic；Aztec（战士灵魂化为蝴蝶）。多传统共同指向'灵魂/转化'。"
+    },
+    {
+      "slug": "cat-spirit-animal",
+      "title": "Cat Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "cat spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Cat spirit animal represents independence, curiosity, courage, and magic. As a creature that walks between the domestic and the wild, the Cat teaches self-sufficiency, the value of mystery, and the courage to explore the unknown on your own terms. Cat medicine appears to those learning to trust their own timing and autonomy.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold carnelian or onyx and claim space for independence without guilt",
+          "Follow your curiosity for one afternoon with no fixed destination",
+          "Ask: 'Where am I over-explaining myself when I could simply act?'",
+          "Embrace mystery — Cat teaches that not everything needs to be revealed"
+        ],
+        "example": "If cats are drawn to you, or you feel called to reclaim independence and mystery, Cat may be your spirit guide."
+      },
+      "traits": ["independence", "curiosity", "courage", "magic", "mystery"],
+      "crystals": ["carnelian", "tiger-eye", "onyx"],
+      "faq_seeds": [
+        "What does the cat spirit animal mean?",
+        "Which crystals enhance cat energy?",
+        "What does a black cat symbolize spiritually?",
+        "How does the cat teach independence?"
+      ],
+      "eastern_note": "Egyptian（猫神 Bastet = 家庭/生育/保护，杀猫者死）；Norse（爱神 Freya 的猫拉战车）；Celtic。东方传统中猫不突出，凯尔特也有'猫 Sith' fairy 传说。"
+    },
+    {
+      "slug": "raven-spirit-animal",
+      "title": "Raven Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "raven spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Raven spirit animal symbolizes prophecy, transformation, ancestral wisdom, and magic. As one of the most intelligent birds and a known mimic, the Raven carries messages between worlds and often appears at thresholds of death and rebirth (literal or symbolic). Raven medicine favors those doing deep shadow work, ancestral healing, or divination.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold labradorite or amethyst in dim light and set an intention to receive hidden knowledge",
+          "Ask about an ancestral pattern or recurring theme in your lineage",
+          "Record any unusual bird encounters, dreams, or repeating words over 7 days",
+          "Honor the message with a small ritual — Raven responds to being witnessed"
+        ],
+        "example": "If ravens appear during grief, transition, or ancestral questions, Raven may be carrying wisdom between worlds for you."
+      },
+      "traits": ["prophecy", "transformation", "intelligence", "ancestral-wisdom", "magic"],
+      "crystals": ["labradorite", "amethyst", "black-tourmaline"],
+      "faq_seeds": [
+        "What does the raven spirit animal mean?",
+        "Which crystals support raven magic?",
+        "What does seeing a raven symbolize?",
+        "How is raven different from crow as a spirit animal?"
+      ],
+      "eastern_note": "Norse（奥丁的双鸦 Huginn 思想与 Muninn 记忆，每日飞遍世界回报）；Celtic（战争女神 Morrigan 化身为鸦）；Native American（太平洋西北沿岸：渡鸦为创世者/智者/Trickster）。三大传统均强。"
+    },
+    {
+      "slug": "crow-spirit-animal",
+      "title": "Crow Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "crow spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Crow spirit animal represents intelligence, communication, adaptability, and transformation. Closely related to the Raven but more social and everyday, the Crow teaches the magic of community, problem-solving, and carrying messages. Crow medicine appears when you need to speak your truth, adapt quickly, or decipher a sign.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold onyx or sodalite and notice the conversations around you for patterns",
+          "Ask: 'What message am I meant to deliver or receive?'",
+          "Pay attention to groups and community — Crow is collective as well as personal",
+          "Speak a truth you have been holding back"
+        ],
+        "example": "If crows gather around you, call loudly, or you notice crow imagery during a communication challenge, Crow may be guiding your voice."
+      },
+      "traits": ["intelligence", "communication", "adaptability", "transformation", "magic"],
+      "crystals": ["onyx", "sodalite", "labradorite"],
+      "faq_seeds": [
+        "What does the crow spirit animal mean?",
+        "Which crystals support crow energy?",
+        "What does a flock of crows symbolize?",
+        "How does crow teach communication?"
+      ],
+      "eastern_note": "Celtic（Morrigan 也以乌鸦/秃鼻鸦形态出现）；Native American（Trickster 与创世者，多个部落）；Hindu（祖先灵魂化鸦）。Crow 与 Raven 在 Celtic/Native American 传统中角色重叠。"
+    },
+    {
+      "slug": "snake-spirit-animal",
+      "title": "Snake Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "snake spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Snake spirit animal represents transformation, healing, rebirth, and primal life-force energy. As a creature that sheds its skin, the Snake is the universal symbol of renewal and the kundalini energy that coils at the base of the spine. Snake medicine appears during healing journeys, shadow work, and the release of what no longer fits.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold malachite or garnet at the base of the spine and breathe into the root",
+          "Name what you are ready to shed — a habit, identity, or old story",
+          "Move your body gently (yoga, dance) to awaken Snake's coiled energy",
+          "Trust the renewal that follows release — Snake teaches that shedding is sacred"
+        ],
+        "example": "If snakes appear in dreams, you are shedding a major identity, or you feel primal energy moving, Snake may be guiding your rebirth."
+      },
+      "traits": ["transformation", "healing", "rebirth", "wisdom", "primal-energy"],
+      "crystals": ["malachite", "labradorite", "garnet"],
+      "faq_seeds": [
+        "What does the snake spirit animal symbolize?",
+        "Which crystals support snake transformation?",
+        "What does dreaming of a snake mean?",
+        "How does the snake teach healing and rebirth?"
+      ],
+      "eastern_note": "Greek（医神 Asclepius 的蛇杖 = 治愈，至今医学标志）；Hindu（Kundalini 蛇能量盘踞脊底）；East Asian（女娲/伏羲蛇身 = 创世；龙蛇相通）。多传统均指向治愈与转化。"
+    },
+    {
+      "slug": "tiger-spirit-animal",
+      "title": "Tiger Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "tiger spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Tiger spirit animal represents power, courage, confidence, and raw strength. As the apex predator of the Asian forest, the Tiger teaches personal power wielded with patience and timing — knowing when to stalk, when to wait, and when to strike. Tiger medicine appears to those reclaiming confidence, willpower, and physical vitality.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold tiger-eye or carnelian at the solar plexus and breathe into personal power",
+          "Identify where you have been shrinking — Tiger asks you to take up space",
+          "Combine patience with action: pick one goal, stalk it, then move decisively",
+          "Move your body vigorously to awaken Tiger's physical energy"
+        ],
+        "example": "If tigers appear in dreams, you feel called to reclaim confidence, or tiger imagery keeps finding you, Tiger may be guiding your power."
+      },
+      "traits": ["power", "courage", "confidence", "strength", "willpower"],
+      "crystals": ["tiger-eye", "carnelian", "citrine"],
+      "faq_seeds": [
+        "What does the tiger spirit animal mean?",
+        "Which crystals enhance tiger energy?",
+        "What does seeing a tiger symbolize?",
+        "How does the tiger teach personal power?"
+      ],
+      "eastern_note": "East Asian（中国白虎 = 西方四象之一，镇邪与秋金之力；虎为百兽之王，符箓/儿童虎头鞋辟邪）；Hindu（杜尔迦女神 Durga 骑虎降魔）。东方传统最系统，西方较弱。"
+    },
+    {
+      "slug": "lion-spirit-animal",
+      "title": "Lion Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "lion spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Lion spirit animal represents leadership, courage, nobility, and strength. As the 'king of beasts,' the Lion teaches you to lead with dignity, protect those in your care, and stand in your authority without aggression. Lion medicine appears to those stepping into leadership, reclaiming their voice, or learning to balance power with responsibility.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold citrine or tiger-eye at the solar plexus and claim your authority calmly",
+          "Ask: 'Where am I being called to lead, and who depends on my courage?'",
+          "Practice speaking with calm conviction rather than volume",
+          "Protect someone or something vulnerable this week — Lion leads by guardianship"
+        ],
+        "example": "If you are stepping into a leadership role or lion imagery appears during a confidence challenge, Lion may be guiding your authority."
+      },
+      "traits": ["leadership", "courage", "nobility", "strength", "pride"],
+      "crystals": ["citrine", "tiger-eye", "carnelian"],
+      "faq_seeds": [
+        "What does the lion spirit animal symbolize?",
+        "Which crystals enhance lion energy?",
+        "What does seeing a lion mean spiritually?",
+        "How does the lion teach leadership?"
+      ],
+      "eastern_note": "East Asian（佛教：佛为'狮子座'说法，文殊菩萨骑狮 = 智慧之威）；Egyptian（Sphinx 狮身人面）；Greek（Nemean lion / Heracles 十二功）；Judeo-Christian（犹大之狮 = 王权）。多传统，东方佛教视角独特。"
+    },
+    {
+      "slug": "horse-spirit-animal",
+      "title": "Horse Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "horse spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Horse spirit animal represents freedom, power, stamina, and the drive to move forward. As a creature that carried humanity across continents, the Horse symbolizes travel, endurance, and the balance between wild independence and partnership. Horse medicine appears during journeys, new chapters, and the reclaiming of personal drive.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold garnet or citrine and set an intention for forward momentum",
+          "Identify what has been holding you in place — Horse asks what you would run toward",
+          "Move your body (walk, run, ride) to awaken Horse's stamina",
+          "Balance freedom with commitment — Horse teaches partnership, not just escape"
+        ],
+        "example": "If you feel a strong pull to travel, start a new venture, or horses keep appearing in dreams, Horse may be guiding your next chapter."
+      },
+      "traits": ["freedom", "power", "stamina", "endurance", "partnership"],
+      "crystals": ["garnet", "citrine", "clear-quartz"],
+      "faq_seeds": [
+        "What does the horse spirit animal mean?",
+        "Which crystals support horse energy?",
+        "What does seeing a wild horse symbolize?",
+        "How does the horse teach freedom and stamina?"
+      ],
+      "eastern_note": "East Asian（中国'龙马负图' = 河图之源，龙马为文明信使）；Celtic（马神 Epona = 生育/丰饶）；Norse（奥丁的八足神马 Sleipnir）；Greek（飞马 Pegasus）。多传统，均指向力量与旅程。"
+    },
+    {
+      "slug": "dog-spirit-animal",
+      "title": "Dog Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "dog spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Dog spirit animal represents loyalty, friendship, protection, and unconditional love. As humanity's oldest companion, the Dog teaches faithfulness, service, and the courage to protect those you love. Dog medicine appears to those learning about trust, companionship, and the balance between serving others and caring for self.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold rose quartz or black tourmaline and name those you are loyal to",
+          "Ask: 'Where am I over-giving, and where must I protect my own energy?'",
+          "Practice being fully present with one person — Dog teaches undivided companionship",
+          "Honor a friendship this week with a deliberate act of care"
+        ],
+        "example": "If dogs are drawn to you, or you are navigating questions of loyalty and trust, Dog may be guiding your bonds."
+      },
+      "traits": ["loyalty", "friendship", "protection", "faithfulness", "companionship"],
+      "crystals": ["rose-quartz", "black-tourmaline", "howlite"],
+      "faq_seeds": [
+        "What does the dog spirit animal symbolize?",
+        "Which crystals support dog loyalty?",
+        "What does it mean when a dog is drawn to you?",
+        "How does the dog teach unconditional love?"
+      ],
+      "eastern_note": "East Asian（中国二郎神哮天犬 = 忠诚神犬）；Greek（冥府三头犬 Cerberus，Hecate 的猎犬）；Celtic；Norse（Garmr）。多传统中犬 = 守护与忠诚。"
+    },
+    {
+      "slug": "dolphin-spirit-animal",
+      "title": "Dolphin Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "dolphin spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Dolphin spirit animal represents playfulness, joy, harmony, and communication. As one of the most intelligent and social ocean beings, the Dolphin teaches the medicine of breath, rhythm, and finding joy even in deep waters. Dolphin medicine appears to those who need to lighten their heart, breathe, and reconnect with community.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold aquamarine near water (a bath, the sea) and breathe deeply — Dolphin teaches breath",
+          "Ask: 'Where have I lost joy, and where can I play?'",
+          "Practice harmonious communication — listen as much as you speak",
+          "Spend time near water or listen to ocean sounds to attune to Dolphin's rhythm"
+        ],
+        "example": "If dolphins appear in dreams, you are drawn to the ocean, or you need to rediscover play, Dolphin may be guiding your joy."
+      },
+      "traits": ["playfulness", "joy", "harmony", "communication", "freedom"],
+      "crystals": ["aquamarine", "rose-quartz", "clear-quartz"],
+      "faq_seeds": [
+        "What does the dolphin spirit animal mean?",
+        "Which crystals support dolphin energy?",
+        "What does seeing a dolphin symbolize?",
+        "How does the dolphin teach joy and breath?"
+      ],
+      "eastern_note": "Greek（Apollo 与 Delphi 神谕，地名源于海豚；海豚为救人水手的仁慈象征）；Celtic（海豚为水域守护）。东方传统中海豚不突出，主要希腊/地中海体系。"
+    },
+    {
+      "slug": "whale-spirit-animal",
+      "title": "Whale Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "whale spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Whale spirit animal represents creativity, deep wisdom, ancient knowledge, and the power of your own song. As the largest creature on Earth and a being that sings across oceans, the Whale teaches you to listen to your inner voice and trust the deep currents beneath the surface. Whale medicine appears to artists, healers, and those accessing ancient memory.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold lapis or labradorite in deep quiet and listen for your own inner 'song'",
+          "Ask: 'What deep knowing am I not yet voicing?'",
+          "Spend time near or listening to the ocean to attune to Whale's ancient frequency",
+          "Create something from that depth — Whale carries creativity"
+        ],
+        "example": "If you feel called to the deep ocean, whale songs move you, or you are accessing old memories, Whale may be guiding your depth."
+      },
+      "traits": ["creativity", "wisdom", "depth", "intuition", "ancient-knowledge"],
+      "crystals": ["lapis", "sodalite", "labradorite"],
+      "faq_seeds": [
+        "What does the whale spirit animal mean?",
+        "Which crystals support whale wisdom?",
+        "What does hearing a whale song symbolize?",
+        "How does the whale teach creativity and depth?"
+      ],
+      "eastern_note": "Inuit/Innu（海之女神 Sedna 与鲸灵，因纽特创世神话中鲸为生命之源）；Native American（太平洋西北沿岸鲸为氏族图腾）；Australian Aboriginal。东方传统中鲸不突出，主要原住民海洋文化。"
+    },
+    {
+      "slug": "turtle-spirit-animal",
+      "title": "Turtle Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "turtle spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Turtle spirit animal represents patience, protection, grounding, longevity, and determination. As a creature that carries its home on its back and moves slowly but surely, the Turtle teaches steady progress, healthy boundaries, and the wisdom of not rushing. Turtle medicine appears to those who need to slow down, ground, and trust divine timing.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold howlite or aventurine at the root and slow your pace deliberately",
+          "Ask: 'Where am I rushing, and where does steady win?'",
+          "Set one boundary that protects your energy — Turtle's shell is sacred",
+          "Trust divine timing for one outcome you have been forcing"
+        ],
+        "example": "If turtles cross your path, you feel rushed and exhausted, or you are learning patience, Turtle may be guiding your pace."
+      },
+      "traits": ["patience", "protection", "grounding", "longevity", "determination"],
+      "crystals": ["howlite", "aventurine", "rose-quartz"],
+      "faq_seeds": [
+        "What does the turtle spirit animal mean?",
+        "Which crystals support turtle energy?",
+        "What does seeing a turtle symbolize?",
+        "How does the turtle teach patience and protection?"
+      ],
+      "eastern_note": "East Asian（中国玄武 = 北方四象，龟蛇合体，主长寿与水；女娲断鳖足立四极；龟甲为占卜与文字载体）；Native American（'Turtle Island' = 北美洲，龟载大地）；Hindu（神龟 Kurma 为毗湿奴第二大化身）。东西方均强，寓意高度一致。"
+    },
+    {
+      "slug": "frog-spirit-animal",
+      "title": "Frog Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "frog spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Frog spirit animal represents transformation, adaptation, cleansing, and renewal. As an amphibian that lives between water and land, the Frog teaches the ability to thrive in two worlds and to cleanse what is stagnant. Frog medicine appears during emotional cleansing, transitions between life phases, and the release of old emotional waters.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold aventurine or amethyst near water and name what needs emotional cleansing",
+          "Identify a transition you are straddling — Frog thrives at thresholds",
+          "Drink water mindfully and cleanse one space in your home",
+          "Adapt to one change this week instead of resisting it"
+        ],
+        "example": "If frogs appear in dreams, near water, or during an emotional release, Frog may be guiding your cleansing and adaptation."
+      },
+      "traits": ["transformation", "adaptation", "cleansing", "renewal", "fertility"],
+      "crystals": ["aventurine", "amethyst", "jade"],
+      "faq_seeds": [
+        "What does the frog spirit animal mean?",
+        "Which crystals support frog cleansing?",
+        "What does seeing a frog symbolize?",
+        "How does the frog teach adaptation?"
+      ],
+      "eastern_note": "East Asian（中国三足金蟾 = 招财，刘海戏金蟾；蛙/蟾为月精）；Egyptian（蛙神 Heqet = 生育与生命之力）；Aztec。东方金蟾侧重财富，与西方侧重转化/生育不同。"
+    },
+    {
+      "slug": "spider-spirit-animal",
+      "title": "Spider Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "spider spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Spider spirit animal represents creativity, patience, and the weaving of destiny. As the master weaver of the web, the Spider teaches that all things are connected, that you are weaving your own fate with every choice, and that patient, deliberate work creates lasting form. Spider medicine appears to creators, writers, and those seeing the pattern of their life.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold labradorite or clear quartz and ask: 'What pattern am I weaving with my choices?'",
+          "Create something patiently — Spider rewards deliberate, focused craft",
+          "Notice one connection in your life that is part of a larger web",
+          "Sit with a creative project longer than feels comfortable — Spider teaches endurance"
+        ],
+        "example": "If spiders appear while you are creating, or you sense a hidden pattern in your life, Spider may be guiding your weaving."
+      },
+      "traits": ["creativity", "patience", "weaving-destiny", "connection", "focus"],
+      "crystals": ["labradorite", "sodalite", "clear-quartz"],
+      "faq_seeds": [
+        "What does the spider spirit animal mean?",
+        "Which crystals support spider creativity?",
+        "What does seeing a spider symbolize?",
+        "How does the spider teach about destiny?"
+      ],
+      "eastern_note": "Native American（Hopi/Navajo 的 Grandmother Spider 蜘蛛祖母 = 创世者，织出世界与星辰）；African（Anansi 蜘蛛 = Trickster 与故事之神）；Greek（Arachne 被雅典娜变成蜘蛛）。三大传统均强。"
+    },
+    {
+      "slug": "dragon-spirit-animal",
+      "title": "Dragon Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "dragon spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Dragon spirit animal represents power, protection, wisdom, abundance, and mastery of the elements. As the legendary creature that appears in nearly every tradition, the Dragon teaches you to claim your inner treasure, guard what is sacred, and move with ancient force. Dragon medicine appears to those stepping into full authority and reclaiming hidden power.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold black tourmaline or citrine at the solar plexus and claim your inner treasure",
+          "Ask: 'What power have I been afraid to wield?'",
+          "Guard what is sacred — set one firm protection around your energy or work",
+          "Move with intention — Dragon teaches mastery, not chaos"
+        ],
+        "example": "If dragon imagery calls to you strongly, or you are stepping into authority, Dragon may be guiding your power. Note: Eastern and Western dragon symbolism differ significantly (see eastern_note)."
+      },
+      "traits": ["power", "protection", "wisdom", "abundance", "mastery"],
+      "crystals": ["black-tourmaline", "citrine", "labradorite"],
+      "faq_seeds": [
+        "What does the dragon spirit animal mean?",
+        "Which crystals enhance dragon energy?",
+        "What is the difference between Eastern and Western dragons?",
+        "How does the dragon teach personal power?"
+      ],
+      "eastern_note": "东西方龙含义差异显著，不可混贴。East Asian（中国龙 = 吉祥/帝王/雨神/龙脉，司水，阳刚权威；四象之东方青龙）；Western（Norse Níðhöggr 啮根之龙，Celtic 红龙，圣经撒旦之龙，Greek 守金苹果的 Ladon = 多为混沌/守财/邪龙）。东方=祥瑞权威，西方=混沌需征服，两者在灵兽线中是两种不同的精神象征。"
+    },
+    {
+      "slug": "phoenix-spirit-animal",
+      "title": "Phoenix Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "phoenix spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Phoenix spirit animal represents rebirth, renewal, transformation, and resilience. As the legendary firebird that burns itself and rises anew from its own ashes, the Phoenix teaches that the end of one cycle is the fuel for the next. Phoenix medicine appears during recovery, reinvention, and the courage to begin again from nothing.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold carnelian or citrine at the solar plexus and name what has 'burned down'",
+          "Ask: 'What is rising from these ashes?'",
+          "Take one bold first step toward reinvention — Phoenix rewards action",
+          "Honor the fire that cleared the old — it is not loss, it is fuel"
+        ],
+        "example": "If you are rebuilding after loss, the phoenix story moves you deeply, or fire imagery appears in dreams, Phoenix may be guiding your rebirth. Note: Eastern fenghuang and Western phoenix are distinct (see eastern_note)."
+      },
+      "traits": ["rebirth", "renewal", "transformation", "resilience", "power"],
+      "crystals": ["carnelian", "citrine", "garnet"],
+      "faq_seeds": [
+        "What does the phoenix spirit animal symbolize?",
+        "Which crystals support phoenix rebirth?",
+        "What is the difference between phoenix and fenghuang?",
+        "How does the phoenix teach resilience?"
+      ],
+      "eastern_note": "东西方凤凰含义差异显著，不可混贴。Western/Greek（phoenix 浴火自焚后从灰烬重生 = 复活与永恒循环，太阳关联）；East Asian（中国凤凰 fenghuang = 阴柔祥瑞，百鸟之王，龙凤呈祥，不死但不自焚——浴火重生是近代东西方融合的后起说法）。灵兽线中应明确区分：西方 phoenix = 火/重生循环，东方 fenghuang = 祥瑞/阴柔/德行。"
+    },
+    {
+      "slug": "swan-spirit-animal",
+      "title": "Swan Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "swan spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Swan spirit animal represents grace, inner beauty, love, and transformation. As a creature of elegance on the surface and powerful paddling beneath, the Swan teaches poise, self-worth, and the journey from 'ugly duckling' to authentic beauty. Swan medicine appears to those learning to recognize their own worth and move through the world with quiet grace.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold rose quartz or moonstone at the heart and affirm your inherent worth",
+          "Ask: 'Where am I still seeing myself as the ugly duckling?'",
+          "Practice grace under pressure — Swan stays calm above while working hard below",
+          "Honor your transformation story without comparing it to others'"
+        ],
+        "example": "If swans appear in your dreams, you are navigating self-worth, or you feel you are 'becoming,' Swan may be guiding your grace."
+      },
+      "traits": ["grace", "beauty", "love", "transformation", "elegance"],
+      "crystals": ["rose-quartz", "moonstone", "howlite"],
+      "faq_seeds": [
+        "What does the swan spirit animal mean?",
+        "Which crystals enhance swan grace?",
+        "What does seeing a swan symbolize?",
+        "How does the swan teach self-worth?"
+      ],
+      "eastern_note": "Celtic（天鹅少女 swan maidens，Children of Lir 被变为天鹅的传说）；Greek（宙斯化天鹅，天鹅之歌 = 天鹅临终最美之歌）；Hindu（hamsa 天鹅/雁 = 梵与至我的象征）。东方传统中天鹅不突出（日本侧重鹤 tsuru）。"
+    },
+    {
+      "slug": "dove-spirit-animal",
+      "title": "Dove Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "dove spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Dove spirit animal represents peace, harmony, love, hope, and gentleness. As the universal symbol of peace, the Dove teaches non-violence, the softening of conflict, and the return of hope after storm. Dove medicine appears to peacemakers, healers, and those called to soften their hearts or relationships.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold rose quartz or clear quartz at the heart and soften any held tension",
+          "Ask: 'Where am I being called to bring peace — within or between?'",
+          "Practice one act of gentleness toward yourself or another this week",
+          "Release a grudge — Dove carries olive branches, not grievances"
+        ],
+        "example": "If doves appear around a reconciliation, you feel called to soften conflict, or you need hope after hardship, Dove may be guiding your peace."
+      },
+      "traits": ["peace", "harmony", "love", "hope", "gentleness"],
+      "crystals": ["rose-quartz", "clear-quartz", "howlite"],
+      "faq_seeds": [
+        "What does the dove spirit animal symbolize?",
+        "Which crystals enhance dove peace?",
+        "What does seeing a dove mean spiritually?",
+        "How does the dove teach harmony?"
+      ],
+      "eastern_note": "Abrahamic（诺亚方舟的鸽子衔橄榄枝 = 洪水退去/希望；基督教中鸽子 = 圣灵）；Greek（阿佛洛狄忒的圣鸟 = 爱）；Japanese（ dove 为和平与忠诚的使者）。多传统均指向和平与爱。"
+    },
+    {
+      "slug": "hummingbird-spirit-animal",
+      "title": "Hummingbird Spirit Animal: Meaning, Traits & Crystals",
+      "focus_keyword": "hummingbird spirit animal",
+      "page_type": "spirit-animal",
+      "definition": "The Hummingbird spirit animal represents joy, presence, playfulness, swiftness, and the enjoyment of life's sweetness. As a tiny bird that hovers, flies backwards, and migrates incredible distances, the Hummingbird teaches you to savor the moment, find nectar in everyday life, and pursue what lights you up. Hummingbird medicine appears when you need to lighten up and reconnect with joy.",
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          "Hold citrine or rose quartz and name three sweet things in your day",
+          "Ask: 'Where have I lost the nectar — what actually lights me up?'",
+          "Pursue one small joy with full presence today",
+          "Embrace lightness — Hummingbird teaches that joy is strength, not frivolity"
+        ],
+        "example": "If hummingbirds hover near you, you are rediscovering joy after heaviness, or you need more sweetness, Hummingbird may be guiding your presence."
+      },
+      "traits": ["joy", "presence", "playfulness", "swiftness", "resilience"],
+      "crystals": ["citrine", "rose-quartz", "aventurine"],
+      "faq_seeds": [
+        "What does the hummingbird spirit animal mean?",
+        "Which crystals enhance hummingbird joy?",
+        "What does seeing a hummingbird symbolize?",
+        "How does the hummingbird teach presence?"
+      ],
+      "eastern_note": "Mesoamerican（阿兹特克战神 Huitzilopochtli = 蜂鸟之神，太阳与战争；蜂鸟羽毛神圣）；Native American（joy 与 healing 的信使）；Caribbean（Taíno 视蜂鸟为创造之神的化身）。蜂鸟灵兽主要源自美洲原住民传统。"
+    }
+  ]
+}

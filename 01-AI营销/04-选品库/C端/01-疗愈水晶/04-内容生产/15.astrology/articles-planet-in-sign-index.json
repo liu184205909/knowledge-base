@@ -1,0 +1,365 @@
+{
+  "total": 60,
+  "articles": [
+    {
+      "slug": "jupiter-in-aries",
+      "title": "Jupiter in Aries: Meaning, Traits & Crystals",
+      "planet": "jupiter",
+      "sign": "aries"
+    },
+    {
+      "slug": "jupiter-in-taurus",
+      "title": "Jupiter in Taurus: Meaning, Traits & Crystals",
+      "planet": "jupiter",
+      "sign": "taurus"
+    },
+    {
+      "slug": "jupiter-in-gemini",
+      "title": "Jupiter in Gemini: Meaning, Traits & Crystals",
+      "planet": "jupiter",
+      "sign": "gemini"
+    },
+    {
+      "slug": "jupiter-in-cancer",
+      "title": "Jupiter in Cancer: Meaning, Traits & Crystals",
+      "planet": "jupiter",
+      "sign": "cancer"
+    },
+    {
+      "slug": "jupiter-in-leo",
+      "title": "Jupiter in Leo: Meaning, Traits & Crystals",
+      "planet": "jupiter",
+      "sign": "leo"
+    },
+    {
+      "slug": "jupiter-in-virgo",
+      "title": "Jupiter in Virgo: Meaning, Traits & Crystals",
+      "planet": "jupiter",
+      "sign": "virgo"
+    },
+    {
+      "slug": "jupiter-in-libra",
+      "title": "Jupiter in Libra: Meaning, Traits & Crystals",
+      "planet": "jupiter",
+      "sign": "libra"
+    },
+    {
+      "slug": "jupiter-in-scorpio",
+      "title": "Jupiter in Scorpio: Meaning, Traits & Crystals",
+      "planet": "jupiter",
+      "sign": "scorpio"
+    },
+    {
+      "slug": "jupiter-in-sagittarius",
+      "title": "Jupiter in Sagittarius: Meaning, Traits & Crystals",
+      "planet": "jupiter",
+      "sign": "sagittarius"
+    },
+    {
+      "slug": "jupiter-in-capricorn",
+      "title": "Jupiter in Capricorn: Meaning, Traits & Crystals",
+      "planet": "jupiter",
+      "sign": "capricorn"
+    },
+    {
+      "slug": "jupiter-in-aquarius",
+      "title": "Jupiter in Aquarius: Meaning, Traits & Crystals",
+      "planet": "jupiter",
+      "sign": "aquarius"
+    },
+    {
+      "slug": "jupiter-in-pisces",
+      "title": "Jupiter in Pisces: Meaning, Traits & Crystals",
+      "planet": "jupiter",
+      "sign": "pisces"
+    },
+    {
+      "slug": "saturn-in-aries",
+      "title": "Saturn in Aries: Meaning, Traits & Crystals",
+      "planet": "saturn",
+      "sign": "aries"
+    },
+    {
+      "slug": "saturn-in-taurus",
+      "title": "Saturn in Taurus: Meaning, Traits & Crystals",
+      "planet": "saturn",
+      "sign": "taurus"
+    },
+    {
+      "slug": "saturn-in-gemini",
+      "title": "Saturn in Gemini: Meaning, Traits & Crystals",
+      "planet": "saturn",
+      "sign": "gemini"
+    },
+    {
+      "slug": "saturn-in-cancer",
+      "title": "Saturn in Cancer: Meaning, Traits & Crystals",
+      "planet": "saturn",
+      "sign": "cancer"
+    },
+    {
+      "slug": "saturn-in-leo",
+      "title": "Saturn in Leo: Meaning, Traits & Crystals",
+      "planet": "saturn",
+      "sign": "leo"
+    },
+    {
+      "slug": "saturn-in-virgo",
+      "title": "Saturn in Virgo: Meaning, Traits & Crystals",
+      "planet": "saturn",
+      "sign": "virgo"
+    },
+    {
+      "slug": "saturn-in-libra",
+      "title": "Saturn in Libra: Meaning, Traits & Crystals",
+      "planet": "saturn",
+      "sign": "libra"
+    },
+    {
+      "slug": "saturn-in-scorpio",
+      "title": "Saturn in Scorpio: Meaning, Traits & Crystals",
+      "planet": "saturn",
+      "sign": "scorpio"
+    },
+    {
+      "slug": "saturn-in-sagittarius",
+      "title": "Saturn in Sagittarius: Meaning, Traits & Crystals",
+      "planet": "saturn",
+      "sign": "sagittarius"
+    },
+    {
+      "slug": "saturn-in-capricorn",
+      "title": "Saturn in Capricorn: Meaning, Traits & Crystals",
+      "planet": "saturn",
+      "sign": "capricorn"
+    },
+    {
+      "slug": "saturn-in-aquarius",
+      "title": "Saturn in Aquarius: Meaning, Traits & Crystals",
+      "planet": "saturn",
+      "sign": "aquarius"
+    },
+    {
+      "slug": "saturn-in-pisces",
+      "title": "Saturn in Pisces: Meaning, Traits & Crystals",
+      "planet": "saturn",
+      "sign": "pisces"
+    },
+    {
+      "slug": "uranus-in-aries",
+      "title": "Uranus in Aries: Meaning, Traits & Crystals",
+      "planet": "uranus",
+      "sign": "aries"
+    },
+    {
+      "slug": "uranus-in-taurus",
+      "title": "Uranus in Taurus: Meaning, Traits & Crystals",
+      "planet": "uranus",
+      "sign": "taurus"
+    },
+    {
+      "slug": "uranus-in-gemini",
+      "title": "Uranus in Gemini: Meaning, Traits & Crystals",
+      "planet": "uranus",
+      "sign": "gemini"
+    },
+    {
+      "slug": "uranus-in-cancer",
+      "title": "Uranus in Cancer: Meaning, Traits & Crystals",
+      "planet": "uranus",
+      "sign": "cancer"
+    },
+    {
+      "slug": "uranus-in-leo",
+      "title": "Uranus in Leo: Meaning, Traits & Crystals",
+      "planet": "uranus",
+      "sign": "leo"
+    },
+    {
+      "slug": "uranus-in-virgo",
+      "title": "Uranus in Virgo: Meaning, Traits & Crystals",
+      "planet": "uranus",
+      "sign": "virgo"
+    },
+    {
+      "slug": "uranus-in-libra",
+      "title": "Uranus in Libra: Meaning, Traits & Crystals",
+      "planet": "uranus",
+      "sign": "libra"
+    },
+    {
+      "slug": "uranus-in-scorpio",
+      "title": "Uranus in Scorpio: Meaning, Traits & Crystals",
+      "planet": "uranus",
+      "sign": "scorpio"
+    },
+    {
+      "slug": "uranus-in-sagittarius",
+      "title": "Uranus in Sagittarius: Meaning, Traits & Crystals",
+      "planet": "uranus",
+      "sign": "sagittarius"
+    },
+    {
+      "slug": "uranus-in-capricorn",
+      "title": "Uranus in Capricorn: Meaning, Traits & Crystals",
+      "planet": "uranus",
+      "sign": "capricorn"
+    },
+    {
+      "slug": "uranus-in-aquarius",
+      "title": "Uranus in Aquarius: Meaning, Traits & Crystals",
+      "planet": "uranus",
+      "sign": "aquarius"
+    },
+    {
+      "slug": "uranus-in-pisces",
+      "title": "Uranus in Pisces: Meaning, Traits & Crystals",
+      "planet": "uranus",
+      "sign": "pisces"
+    },
+    {
+      "slug": "neptune-in-aries",
+      "title": "Neptune in Aries: Meaning, Traits & Crystals",
+      "planet": "neptune",
+      "sign": "aries"
+    },
+    {
+      "slug": "neptune-in-taurus",
+      "title": "Neptune in Taurus: Meaning, Traits & Crystals",
+      "planet": "neptune",
+      "sign": "taurus"
+    },
+    {
+      "slug": "neptune-in-gemini",
+      "title": "Neptune in Gemini: Meaning, Traits & Crystals",
+      "planet": "neptune",
+      "sign": "gemini"
+    },
+    {
+      "slug": "neptune-in-cancer",
+      "title": "Neptune in Cancer: Meaning, Traits & Crystals",
+      "planet": "neptune",
+      "sign": "cancer"
+    },
+    {
+      "slug": "neptune-in-leo",
+      "title": "Neptune in Leo: Meaning, Traits & Crystals",
+      "planet": "neptune",
+      "sign": "leo"
+    },
+    {
+      "slug": "neptune-in-virgo",
+      "title": "Neptune in Virgo: Meaning, Traits & Crystals",
+      "planet": "neptune",
+      "sign": "virgo"
+    },
+    {
+      "slug": "neptune-in-libra",
+      "title": "Neptune in Libra: Meaning, Traits & Crystals",
+      "planet": "neptune",
+      "sign": "libra"
+    },
+    {
+      "slug": "neptune-in-scorpio",
+      "title": "Neptune in Scorpio: Meaning, Traits & Crystals",
+      "planet": "neptune",
+      "sign": "scorpio"
+    },
+    {
+      "slug": "neptune-in-sagittarius",
+      "title": "Neptune in Sagittarius: Meaning, Traits & Crystals",
+      "planet": "neptune",
+      "sign": "sagittarius"
+    },
+    {
+      "slug": "neptune-in-capricorn",
+      "title": "Neptune in Capricorn: Meaning, Traits & Crystals",
+      "planet": "neptune",
+      "sign": "capricorn"
+    },
+    {
+      "slug": "neptune-in-aquarius",
+      "title": "Neptune in Aquarius: Meaning, Traits & Crystals",
+      "planet": "neptune",
+      "sign": "aquarius"
+    },
+    {
+      "slug": "neptune-in-pisces",
+      "title": "Neptune in Pisces: Meaning, Traits & Crystals",
+      "planet": "neptune",
+      "sign": "pisces"
+    },
+    {
+      "slug": "pluto-in-aries",
+      "title": "Pluto in Aries: Meaning, Traits & Crystals",
+      "planet": "pluto",
+      "sign": "aries"
+    },
+    {
+      "slug": "pluto-in-taurus",
+      "title": "Pluto in Taurus: Meaning, Traits & Crystals",
+      "planet": "pluto",
+      "sign": "taurus"
+    },
+    {
+      "slug": "pluto-in-gemini",
+      "title": "Pluto in Gemini: Meaning, Traits & Crystals",
+      "planet": "pluto",
+      "sign": "gemini"
+    },
+    {
+      "slug": "pluto-in-cancer",
+      "title": "Pluto in Cancer: Meaning, Traits & Crystals",
+      "planet": "pluto",
+      "sign": "cancer"
+    },
+    {
+      "slug": "pluto-in-leo",
+      "title": "Pluto in Leo: Meaning, Traits & Crystals",
+      "planet": "pluto",
+      "sign": "leo"
+    },
+    {
+      "slug": "pluto-in-virgo",
+      "title": "Pluto in Virgo: Meaning, Traits & Crystals",
+      "planet": "pluto",
+      "sign": "virgo"
+    },
+    {
+      "slug": "pluto-in-libra",
+      "title": "Pluto in Libra: Meaning, Traits & Crystals",
+      "planet": "pluto",
+      "sign": "libra"
+    },
+    {
+      "slug": "pluto-in-scorpio",
+      "title": "Pluto in Scorpio: Meaning, Traits & Crystals",
+      "planet": "pluto",
+      "sign": "scorpio"
+    },
+    {
+      "slug": "pluto-in-sagittarius",
+      "title": "Pluto in Sagittarius: Meaning, Traits & Crystals",
+      "planet": "pluto",
+      "sign": "sagittarius"
+    },
+    {
+      "slug": "pluto-in-capricorn",
+      "title": "Pluto in Capricorn: Meaning, Traits & Crystals",
+      "planet": "pluto",
+      "sign": "capricorn"
+    },
+    {
+      "slug": "pluto-in-aquarius",
+      "title": "Pluto in Aquarius: Meaning, Traits & Crystals",
+      "planet": "pluto",
+      "sign": "aquarius"
+    },
+    {
+      "slug": "pluto-in-pisces",
+      "title": "Pluto in Pisces: Meaning, Traits & Crystals",
+      "planet": "pluto",
+      "sign": "pisces"
+    }
+  ]
+}

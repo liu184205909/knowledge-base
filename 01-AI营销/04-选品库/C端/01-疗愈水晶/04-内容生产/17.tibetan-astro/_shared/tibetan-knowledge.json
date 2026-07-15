@@ -1,0 +1,385 @@
+{
+  "_meta": {
+    "source": "WebSearch 聚合: gandhanra.art (Complete Guide to Tibetan Dzi Symbolism) + dharmashop.com (9 Eye Meaning) + mantrapiece.com (6-eye Dzi) + studybuddhism.com (Tibetan Astrology Animal-Signs and Elements, Berzen Archives) + kailashenergy.com + ancientdzishop.com + Wikipedia (Dzi bead / Tibetan astrology)",
+    "competitors_verified": ["gandhanra.com", "dharmashop.com", "mantrapiece.com", "dakotastones.com"],
+    "for": "藏式 Astro 线 (17.tibetan-astro) generate-articles.js 输入 + 未来藏式工具",
+    "version": "v1.0 (2026-07-15)",
+    "evidence_tier": "WebSearch 聚合 (API 级证据 B+); dharmashop/gandhanra 直抓因 WAF/网络错误失败, 内容由 SERP 摘要聚合 + 行业通识构成",
+    "caveat_key_points": [
+      "★ 文化准确性是生命线: 拿不准的字段标 '待核文化源', 不编",
+      "★★ 五行注明: 藏历生肖用汉五行影响变体 (Wood/Fire/Earth/Iron/Water, Iron=汉式Metal), 非藏传五大 (地水火风空)",
+      "★★★ Tibetan vs Chinese zodiac 区分: 每个animal加note说明藏式独特性 (Mouse非Rat / Bird非Rooster / Bön变体象替牛Garuda替鸟 / Mewa九宫 / Lungta风马 / Iron改Metal)",
+      "站点真源 (2026-07): turquoise=16款 / carnelian=20款 / lapis=16款 / dzi=0款 (天珠0款, Dzi bead系列文章CTA降级到turquoise/carnelian/lapis产品页或Shop总页)",
+      "Dzi bead 各眼寓意基于 dharmashop/gandhanra/kailashenergy/mantrapiece SERP聚合, 7眼/15眼数据较少标待核",
+      "crystals字段为中文名 (便于内容生成); 站点实卖 (turquoise/carnelian/lapis) 优先匹配, 其次按寓意匹配390库"
+    ]
+  },
+
+  "dzi_beads": [
+    {
+      "eyes": 1,
+      "slug": "dzi-bead-1-eye",
+      "name_en": "1-Eye Dzi (Bead of Light)",
+      "name_zh": "一眼天珠",
+      "meaning": "智慧与专注 · 光明之珠。象征心念专一、明心见性, 增强思维清晰度与内在光明。传统认为能带来安全、繁荣与特殊力量。",
+      "benefits": [
+        "提升思维清晰度与专注力",
+        "促进智慧、明辨是非",
+        "带来安全感与繁荣",
+        "强化单一目标的决心"
+      ],
+      "who_should_wear": "学生、冥想修习者、需要长时间专注的职业人群 (研究/写作/编程), 以及追求智慧与内在清明者",
+      "who_should_avoid": "无明显禁忌; 心神散乱者尤宜",
+      "crystals": ["青金石", "紫水晶"],
+      "crystals_note": "青金石=藏传药师佛色+智慧石; 紫水晶=清明智慧",
+      "cultural_source": "dharmashop.com / scribd DZI Beads 经典 (行业通识)"
+    },
+    {
+      "eyes": 2,
+      "slug": "dzi-bead-2-eye",
+      "name_en": "2-Eye Dzi",
+      "name_zh": "二眼天珠",
+      "meaning": "和谐与平衡 · 姻缘之珠。象征阴阳/刚柔/男女二元合一, 祈求婚姻幸福、家庭和睦、人际关系圆融。",
+      "benefits": [
+        "促进姻缘与婚姻和谐",
+        "平衡人际关系与情感",
+        "培育智慧与慈悲的并起",
+        "调和内在阴阳能量"
+      ],
+      "who_should_wear": "求姻缘者、已婚求和睦者、情感关系需调和者、希望平衡生活各方者",
+      "who_should_avoid": "无禁忌",
+      "crystals": ["粉晶", "月光石"],
+      "crystals_note": "粉晶=姻缘心轮; 月光石=阴柔调和",
+      "cultural_source": "Wangdungyel (Dzi meanings & benefits) / gandhanra.art (行业通识)"
+    },
+    {
+      "eyes": 3,
+      "slug": "dzi-bead-3-eye",
+      "name_en": "3-Eye Dzi",
+      "name_zh": "三眼天珠",
+      "meaning": "财富·健康·长寿 三福之珠。象征藏传'三福' (物质财富 + 身体健康 + 灵性财富), 与财神 Jambhala (藏巴拉/Kubera) 相关, 历来为僧侣、旅人、修行者所佩。",
+      "benefits": [
+        "招财纳福 (三福齐至)",
+        "增健康、延寿",
+        "提升灵性洞察力",
+        "连接'三星'吉运 (幸福/荣耀/长寿)"
+      ],
+      "who_should_wear": "经商者、创业者、求财运与健康长寿者、修行者",
+      "who_should_avoid": "无禁忌; 求财者尤宜",
+      "crystals": ["黄水晶", "绿幽灵"],
+      "crystals_note": "黄水晶=财石之王; 绿幽灵=招财聚宝 (待核文化源: 此水晶对应为现代配伍, 非藏传经典)",
+      "cultural_source": "Pinterest/Scribd DZI Beads / mantrapiece.com (行业通识+现代配伍)"
+    },
+    {
+      "eyes": 5,
+      "slug": "dzi-bead-5-eye",
+      "name_en": "5-Eye Dzi",
+      "name_zh": "五眼天珠",
+      "meaning": "五方佛加持之珠。象征五方佛 (五智如来 Vairochana/Akshobhya/Ratnasambhava/Amitabha/Amoghasiddhi) 的全方位护佑, 跨人生各领域带来好运与保护。",
+      "benefits": [
+        "五方佛全方位加持",
+        "整体运势提升",
+        "防护人生各领域 (事业/家庭/健康/人际/灵性)",
+        "积累福德"
+      ],
+      "who_should_wear": "寻求全方位庇佑者、修行佛学者、人生转折期者",
+      "who_should_avoid": "无禁忌",
+      "crystals": ["白水晶", "青金石"],
+      "crystals_note": "白水晶=五方佛总持清净; 青金石=药师佛色 (待核文化源: 此配伍为推断)",
+      "cultural_source": "gandhanra.art Complete Guide (五方佛义理确证, 具体配石为推断)"
+    },
+    {
+      "eyes": 6,
+      "slug": "dzi-bead-6-eye",
+      "name_en": "6-Eye Dzi",
+      "name_zh": "六眼天珠",
+      "meaning": "六道轮回解脱 · 平衡守护之珠。象征藏传宇宙观'六道轮回' (天/阿修罗/人/畜生/饿鬼/地狱), 与六字真言 OM MANI PADME HUM 相应, 是结构最完整的眼数之一。",
+      "benefits": [
+        "消除人生忧愁与苦难",
+        "积累中观智慧",
+        "平衡内在能量",
+        "护佑持守佛性、积累善业",
+        "被视为幸福与善业的根源"
+      ],
+      "who_should_wear": "修行者、求解脱道者、人生低谷期需守护者、修观世音菩萨法门者",
+      "who_should_avoid": "无禁忌",
+      "crystals": ["绿松石", "红玉髓"],
+      "crystals_note": "绿松石=藏地七宝之首+净化; 红玉髓=藏传佛事血色庄严 (站点实卖)",
+      "cultural_source": "mantrapiece.com 6-eye Dzi / ancientdzishop.com Six-Eye Symbolism (确证)"
+    },
+    {
+      "eyes": 7,
+      "slug": "dzi-bead-7-eye",
+      "name_en": "7-Eye Dzi",
+      "name_zh": "七眼天珠",
+      "meaning": "待核文化源 (SERP数据较少)。已知方向: 增强清明、自信、灵性觉察, 协助配齐灵修路径。",
+      "benefits": [
+        "增强清明与自信 (待核)",
+        "提升灵性觉察 (待核)",
+        "协助对齐灵修路径 (待核)"
+      ],
+      "who_should_wear": "待核文化源",
+      "who_should_avoid": "无禁忌",
+      "crystals": ["紫水晶", "白水晶"],
+      "crystals_note": "待核文化源 (配伍为推断, 非经典依据)",
+      "cultural_source": "待核经典源 (dharmashop/gandhanra 直抓失败, 行业通识记载简略)"
+    },
+    {
+      "eyes": 9,
+      "slug": "dzi-bead-9-eye",
+      "name_en": "9-Eye Dzi (Supreme Grade)",
+      "name_zh": "九眼天珠",
+      "meaning": "至高尊贵 · 九德圆满之珠。九眼天珠为所有天珠中最受尊崇的至高等级, 九眼象征九行星运作, 聚九德 (智慧/慈悲/清明/权力/财富/健康/长寿/名望/业力), 汇聚宇宙能量。",
+      "benefits": [
+        "挡一切灾祸、化解不幸",
+        "招财纳贵、增权威与名望",
+        "扩张智慧、慈悲与个人力量",
+        "扫除障碍、促进和谐好运",
+        "促进灵性成长"
+      ],
+      "who_should_wear": "求至高事业成就者、领导者、求大富大贵者、修行高位者",
+      "who_should_avoid": "无禁忌; 历史上为王者与高僧所佩",
+      "crystals": ["黄水晶", "发晶"],
+      "crystals_note": "黄水晶=大富尊贵; 发晶=财富力量 (现代配伍, 待核文化源)",
+      "cultural_source": "dharmashop.com 9 Eye Meaning / potalastore.com (确证+多源一致)"
+    },
+    {
+      "eyes": 12,
+      "slug": "dzi-bead-12-eye",
+      "name_en": "12-Eye Dzi",
+      "name_zh": "十二眼天珠",
+      "meaning": "圆满成就之珠。象征人生各领域的圆满, 助持心愿达成、培育勇气, 令佩戴者于事业/家庭/灵性等诸方面皆达圆满境地。",
+      "benefits": [
+        "助心愿达成",
+        "培育勇气与胆识",
+        "促成人生全方位圆满",
+        "用于念珠mala时增智慧与守护"
+      ],
+      "who_should_wear": "求圆满成就者、立志大业者、需要勇气突破困境者、修行念珠持有者",
+      "who_should_avoid": "无禁忌",
+      "crystals": ["黄水晶", "青金石"],
+      "crystals_note": "黄水晶=成愿之力; 青金石=智慧圆满 (待核: 配伍推断)",
+      "cultural_source": "nirvanamala.com 12-eye Mala / gandhanra.art Complete Guide (确证)"
+    },
+    {
+      "eyes": 15,
+      "slug": "dzi-bead-15-eye",
+      "name_en": "15-Eye Dzi",
+      "name_zh": "十五眼天珠",
+      "meaning": "待核文化源 (SERP数据稀少)。已知方向: 高眼数珠一般放大守护、积福、灵性成就的综合加持, 具体十五眼义理待核实经典。",
+      "benefits": [
+        "放大守护与积福 (待核, 通则推断)",
+        "灵性成就加持 (待核)"
+      ],
+      "who_should_wear": "待核文化源",
+      "who_should_avoid": "无禁忌",
+      "crystals": ["青金石", "红玉髓"],
+      "crystals_note": "待核文化源 (配伍为推断)",
+      "cultural_source": "待核经典源 (dharmashop/gandhanra 直抓失败, 行业通识未详)"
+    }
+  ],
+
+  "dzi_authenticity_and_care": {
+    "authenticity": {
+      "title": "天珠真伪鉴别 (行业通识)",
+      "old_dzi_signs": [
+        "表面风化纹 (俗称'月牙纹'/风化皮壳, 千年自然形成)",
+        "孔道磨损 (老工艺对打孔, 孔口有使用磨痕)",
+        "色泽温润内敛 (年久包浆, 非化学艳色)",
+        "朱砂点 (部分老天珠内含铁质红点, 非必有)",
+        "蚀花线条自然渗透 (与玛瑙基质融为一体)"
+      ],
+      "new_dzi_signs": [
+        "现代工艺玛瑙蚀花 (高温化学染色)",
+        "线条浮于表面、色泽均一艳丽",
+        "无风化纹或人为做旧痕迹",
+        "孔道机械钻孔无磨损"
+      ],
+      "market_note": "市面'至纯老天珠'极稀少且价格高昂, 多数为新天珠; 站点天珠0款, 文章聚焦文化讲解不涉真伪交易背书",
+      "cultural_source": "行业通识待核经典源 (dakotastones.com / 古珠藏家谱系)"
+    },
+    "care": {
+      "title": "天珠保养 (行业通识)",
+      "dos": [
+        "定期净化 (月光沐浴、晶簇净化、藏香熏涤)",
+        "佩戴时贴近皮肤以养包浆",
+        "单独收纳避免硬物碰撞",
+        "心存敬意, 视为法物而非普通饰品"
+      ],
+      "donts": [
+        "避免接触化学洗剂 (香水/沐浴露/清洁剂)",
+        "避免高温暴晒与剧烈温差",
+        "避免汗渍长期浸泡 (运动时取下)",
+        "避免与硬物磕碰 (玛瑙硬度虽高但仍脆)"
+      ],
+      "cultural_source": "行业通识待核经典源 (gandhanra.com 保养指南)"
+    }
+  },
+
+  "tibetan_zodiac": {
+    "_intro": "藏历生肖 (Tibetan zodiac) 与汉式 12 生肖共享 12 年动物循环, 但在动物命名、五行体系、灵数系统 (Mewa 九宫)、风马 (Lungta) 运势、以及与佛教业力的整合上有独特差异。藏历新年 Losar 与农历新年日期不同。",
+    "common_animals": ["Mouse", "Ox", "Tiger", "Hare", "Dragon", "Snake", "Horse", "Sheep", "Monkey", "Bird", "Dog", "Pig"],
+    "bon_variant_animals_note": "Bön (本教) 古本传统中, 牛位或被象 (Elephant) 替, 鸟位或被 Garuda (大鹏金翅鸟) 替——属古本变体, 非藏传主流。",
+    "signs": [
+      {
+        "animal": "Mouse",
+        "tibetan": "byi",
+        "slug": "tibetan-zodiac-mouse",
+        "element": "Water (汉五行影响变体)",
+        "meaning": "机智灵活、适应力强、洞察细节。藏式中文化中 Mouse (byi) 取代汉式 Rat, 同样象征机敏与丰饶积累。",
+        "crystals": ["海蓝宝", "黑曜石", "月光石"],
+        "note": "藏式独特性: 用 Mouse 不用 Rat (语感更亲和); 藏历 mewa 九宫为鼠年生人赋独立灵数; 区别于汉式'鼠咬天开'创世神话, 藏式更强调与五源的缘起。"
+      },
+      {
+        "animal": "Ox",
+        "tibetan": "lang",
+        "slug": "tibetan-zodiac-ox",
+        "element": "Earth (汉五行影响变体)",
+        "meaning": "勤恳坚毅、稳健积累。藏式 lang (牛) 与农耕/牧业双重文化相系, 象征耐力与地基之力。",
+        "crystals": ["红玉髓", "绿幽灵", "黄水晶"],
+        "note": "藏式独特性: Bön 古本变体中牛位或被 Elephant (象) 替——象征普贤菩萨行愿之力; 主流藏传仍用 Ox; 区别于汉式'牛郎织女'农耕叙事。"
+      },
+      {
+        "animal": "Tiger",
+        "tibetan": "stag",
+        "slug": "tibetan-zodiac-tiger",
+        "element": "Wood (汉五行影响变体)",
+        "meaning": "威猛勇决、开拓进取。藏式 stag 与藏地山神崇拜 (如念青唐古拉山神骑虎) 紧密相连, 是护法力量的象征。",
+        "crystals": ["虎眼石", "黑碧玺", "绿松石"],
+        "note": "藏式独特性: 融合藏传山神信仰 (虎为诸多护法坐骑); 格萨尔王传说中虎威为勇气象征; 区别于汉式白虎西方金神, 藏式虎归 Wood 行 (汉五行)。"
+      },
+      {
+        "animal": "Hare",
+        "tibetan": "yos",
+        "slug": "tibetan-zodiac-hare",
+        "element": "Wood (汉五行影响变体)",
+        "meaning": "温柔机敏、祥瑞长寿。藏式 yos (兔) 与月兔神话 (藏印汉共有) 紧密相连, 象征月神恩赐。",
+        "crystals": ["月光石", "粉晶", "和田玉"],
+        "note": "藏式独特性: 用 Hare 不用 Rabbit; 藏传佛教中玉兔为月藏 (菩提月光) 的象征; 区别于汉式'玉兔捣药', 藏式更强调慈悲柔光的特质。"
+      },
+      {
+        "animal": "Dragon",
+        "tibetan": "brug",
+        "slug": "tibetan-zodiac-dragon",
+        "element": "Earth (汉五行影响变体)",
+        "meaning": "'brug (雷龙) 字面含'雷霆'之意, 象征天威与伏藏守护之力。藏式龙非汉式水龙, 而是腾云致雨的苍龙, 与莲师伏藏法系相关。",
+        "crystals": ["青金石", "黄水晶", "发晶"],
+        "note": "藏式独特性: 藏文 'brug 字面=雷, 不丹国号 Druk (雷龙之国) 即源于此; 藏传伏藏 (terma) 守护与龙族 (lu/那伽) 关联; 区别于汉式龙王体系。"
+      },
+      {
+        "animal": "Snake",
+        "tibetan": "sbrul",
+        "slug": "tibetan-zodiac-snake",
+        "element": "Fire (汉五行影响变体)",
+        "meaning": "智慧深邃、蜕变重生。藏式 sbrul 与藏医五行中的水族/那伽 (lu, 龙蛇类) 相系, 兼具智与毒的双重性。",
+        "crystals": ["红玉髓", "石榴石", "黑曜石"],
+        "note": "藏式独特性: 藏传中蛇 (sbrul) 与那伽 (lu, 龙蛇神) 边界模糊, 常作护法颈饰; 藏医以蛇入药理象征; 区别于汉式'小龙'附会, 藏式更近印度那伽崇拜。"
+      },
+      {
+        "animal": "Horse",
+        "tibetan": "rta",
+        "slug": "tibetan-zodiac-horse",
+        "element": "Fire (汉五行影响变体)",
+        "meaning": "自由奔放、风马运势。藏式 rta 是 Lungta (风马 rlung rta) 的核心象征, 代表运势、晋升、成功飞升之力。",
+        "crystals": ["红玉髓", "黄水晶", "红玛瑙"],
+        "note": "藏式独特性: 风马 (Lungta) 是藏历生肖的核心独有概念——经幡上即绘风马, 驮三宝, 象征运势蒸腾; 区别于汉式马仅生肖, 藏式马上升为灵性图腾。"
+      },
+      {
+        "animal": "Sheep",
+        "tibetan": "lug",
+        "slug": "tibetan-zodiac-sheep",
+        "element": "Earth (汉五行影响变体)",
+        "meaning": "温顺祥和、五谷丰登。藏式 lug (绵羊) 深植青藏高原游牧文化, 象征家庭与丰饶。",
+        "crystals": ["和田玉", "月光石", "粉晶"],
+        "note": "藏式独特性: 藏文 lug 专指绵羊 (区别汉式 Goat/羊模糊); 藏地游牧文明中羊为财富与婚聘重要聘礼; 区别于汉式'三羊开泰', 藏式更强调牧业生活底色。"
+      },
+      {
+        "animal": "Monkey",
+        "tibetan": "spre'u",
+        "slug": "tibetan-zodiac-monkey",
+        "element": "Metal (Iron 影响变体)",
+        "meaning": "聪慧灵动、权变机敏。藏式 spre'u 与藏传哈努曼法王传说及观音化现相关。",
+        "crystals": ["白水晶", "黄铁矿", "海蓝宝"],
+        "note": "藏式独特性: 藏传中猴与观音化现的哈努曼 (Hanuman) 法王传说相连 (藏族起源神话中猕猴与罗刹女结合); 区别于汉式孙悟空叙事, 藏式猴为族源图腾。"
+      },
+      {
+        "animal": "Bird",
+        "tibetan": "bya",
+        "slug": "tibetan-zodiac-bird",
+        "element": "Metal (Iron 影响变体)",
+        "meaning": "警觉敏锐、守时守信。藏式 bya (鸟) 取代汉式 Rooster (鸡), 范畴更宽, 象征破晓通报与高远视野。",
+        "crystals": ["青金石", "白水晶", "紫水晶"],
+        "note": "藏式独特性: 用 Bird 不用 Rooster (范畴更宽, 含鹏/鹰/雉等); Bön 古本变体中鸟位或被 Garuda (大鹏金翅鸟) 替——金翅鸟为佛教重要护法; 区别于汉式雄鸡报晓。"
+      },
+      {
+        "animal": "Dog",
+        "tibetan": "khyi",
+        "slug": "tibetan-zodiac-dog",
+        "element": "Earth (汉五行影响变体)",
+        "meaning": "忠诚守护、正义感强。藏式 khyi 与藏獒 (do-khyi) 牧犬文化深度结合, 象征家园守护与不二忠心。",
+        "crystals": ["黑碧玺", "茶晶", "红玉髓"],
+        "note": "藏式独特性: 藏獒 (do-khyi, '拴系之犬') 是高原游牧与寺院守护象征, 文化地位远高于汉式家犬; 区别于汉式看家狗, 藏式犬承载高原信仰守护意涵。"
+      },
+      {
+        "animal": "Pig",
+        "tibetan": "phag",
+        "slug": "tibetan-zodiac-pig",
+        "element": "Water (汉五行影响变体)",
+        "meaning": "知足厚道、福泽丰盈。藏式 phag 象征物质与精神双重丰盈, 不带汉式'懒'贬义。",
+        "crystals": ["海蓝宝", "月光石", "黑曜石"],
+        "note": "藏式独特性: phag-pa (八思巴) 为元代藏传萨迦派国师同名, 文化名讳增添敬意; 藏传中猪较少负面联想; 区别于汉式猪八戒俗文学, 藏式猪更近'圆满'象征。"
+      }
+    ]
+  },
+
+  "tibetan_five_elements_note": {
+    "core_tibetan_five": "藏传核心五大 (pancha-mahabhuta, 来自印度佛教): 地 (sa) / 水 (chu) / 火 (me) / 风 (lung) / 空 (nam mkha')——用于藏医 (Sowa Rigpa)、宇宙观、禅修",
+    "zodiac_element_system": "藏历生肖融合汉五行 (Wood/Fire/Earth/Iron/Water), Iron 替汉式 Metal——用于生肖运势推算, 称'黑算' (nag rtsis, 汉源算法)",
+    "our_positioning": "本数据层 tibetan_zodiac.element 字段使用'汉五行影响下的藏历变体' (Wood/Fire/Earth/Iron/Water), 明确非藏传五大。文章写作时必须注明此区别, 不混用。",
+    "mewa_note": "九宫 (Mewa, sme ba) 是藏历独有 3×3 灵数方阵 (1-9), 每数对应一行/方向/色/神, 表跨生业力——汉式生肖无对应。",
+    "lungta_note": "风马 (Lungta, rlung rta) 是藏历生肖独有运势概念, 经幡上风马驮三宝 (佛/法/僧) 与三兽 (虎/狮/鹏/龙), 象征运势腾升——区别汉式生肖无此图腾。"
+  },
+
+  "mo_divination": {
+    "intro": "Mo (mo divination) 是藏传佛教传统的占卜方法, 常用念珠、骰子、或专门卦签进行。多与文殊菩萨、绿度母、马头明王等本尊相应。历史上为高僧大德决策的重要辅助。",
+    "cultural_note": "本数据层与 goearthward 站点仅介绍 Mo 文化背景与历史, 不提供在线占卜功能 (避免商业占卜争议与佛教戒律敏感)。",
+    "famous_practitioners_note": "待核文化源 (高僧传记中的 Mo 占例)",
+    "cultural_source": "studybuddhism.com Berzin Archives / Wikipedia Tibetan astrology (行业通识)"
+  },
+
+  "product_reality": {
+    "_checked_date": "2026-07-15",
+    "inventory": {
+      "turquoise": 16,
+      "carnelian": 20,
+      "lapis": 16,
+      "dzi": 0
+    },
+    "cta_strategy": {
+      "dzi_bead_articles": "天珠0款 → Dzi bead 系列文章 Shop CTA 降级到 turquoise/carnelian/lapis 产品页 (天珠文化相近的'藏地七宝'宝石), 或 /shop/ 总页, 不链接空天珠分类页",
+      "turquoise_articles": "绿松石16款 → 直链 /product-category/turquoise-crystals/ (待核URL, 若404降级 /shop/?s=turquoise)",
+      "carnelian_articles": "红玉髓20款 → 直链 /product-category/carnelian-crystals/ (待核URL, 若404降级 /shop/?s=carnelian)",
+      "lapis_articles": "青金石16款 → 直链 /product-category/lapis-lazuli-crystals/ (待核URL, 若404降级 /shop/?s=lapis)",
+      "tibetan_zodiac_articles": "各生肖文章 Shop CTA 按该生肖 crystals 字段优先链站点实卖石 (turquoise/carnelian/lapis), 其次降级 /shop/?s={stone} 搜索, 再降级 /healing-jewelry/"
+    },
+    "site_reality_note": "藏式线核心叙事应与站点实卖 (绿松石/红玉髓/青金石 + 铜器/原石) 对齐, 避免纯天珠叙事脱节 (水晶站之前教训: 文档西方纯水晶手链叙事脱节)。"
+  },
+
+  "cultural_respect_guidelines": {
+    "tone": "尊重藏传佛教文化、不神秘化不猎奇、不商业化滥用神圣符号",
+    "avoid": [
+      "避免将天珠/藏传法器简单包装成'万能灵物'营销话术",
+      "避免歪曲藏传义理 (如五大 vs 汉五行的混淆)",
+      "避免对藏族宗教人物/仪轨做不当描述",
+      "避免文化挪用 (如随意使用藏文咒语/神圣图腾作纯装饰)"
+    ],
+    "disclosure": "文章需声明: 本站介绍藏传文化背景, 不代表宗教权威意见; 真伪鉴定与法物加持请咨询具格上师或专业机构。"
+  },
+
+  "article_types_plan": {
+    "dzi_bead_articles": "9-10篇 (1/2/3/5/6/7/9/12/15眼 + authentic/care综合页), URL: /dzi-bead-{n}-eye-meaning/ (根级, 避产品词污染)",
+    "tibetan_zodiac_articles": "12篇 (12动物), URL: /tibetan-zodiac-{animal}-crystals/ (根级)",
+    "culture_hub_pages": "天珠文化总入口 /tibetan-dzi-beads/ + 藏历生肖总入口 /tibetan-zodiac/ (待与2A网站结构对齐)",
+    "crystal_x_tibetan": "绿松石/红玉髓/青金石各出1篇藏文化深度文 (站点实卖石的藏地七宝叙事), URL: /turquoise-tibetan-meaning/ /carnelian-tibetan-meaning/ /lapis-lazuli-tibetan-meaning/"
+  }
+}

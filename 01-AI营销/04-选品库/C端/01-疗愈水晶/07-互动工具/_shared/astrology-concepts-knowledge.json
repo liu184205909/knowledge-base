@@ -1,0 +1,546 @@
+{
+  "_meta": {
+    "name": "astrology-concepts-knowledge",
+    "purpose": "Astrology 概念主词页知识层（8 概念 hub/concept + 12 宫位页），补占星知识骨架漏斗上层，mainpages 兼容格式。区别于 events(事件型)/planet-in-sign(10×12 矩阵)/moon-knowledge(daily 4 阶段)",
+    "evidence_tier": "西方占星公开通识（确证）：星座/行星/宫位/相位/元素/形态概念源自 Hellenistic–Medieval 占星传统，公开标准化（Cafe Astrology / Astro.com / The Astrology Dictionary / Hellenistic Texts Society 等共识）",
+    "compliance": "占星为象征/自我反思框架，非科学；非预测/非确定论；逆行/食相/土星回归 = invitation to reflect 非 doom；Gentle Note 全站统一；与 crystal-attributes 配伍不涉疗效承诺",
+    "scope_note": "本文件 = 概念页(8)+宫位页(12)。互补不重复：astrology-knowledge.json = 6 个 events（mercury-retrograde 等）+ planets(7) + zodiac_power_stones；planet-in-sign-knowledge.json = 10 行星×12 星座矩阵；moon-knowledge.json = daily-tarot 用 4 粗阶段(new/waxing/full/waning)+zodiac_themes",
+    "crystals_ref": "slug 对应 crystal-attributes.json 的 {slug}-meaning 条目（390 库）。引用简短形式（carnelian/tiger-eye/lapis…）。clear-quartz 沿用 planet-in-sign-knowledge.json 引用惯例（库内 key=quartz-meaning，存在 slug 映射）。所有引用 slug 已核对在库",
+    "crystals_selection": "贴主题配伍（非通用堆砌）：retrogrades→grounding(black-tourmaline/smokey-quartz/hematite)；moon-phases→lunar(moonstone/selenite)；transits→perception(labradorite/fluorite)；1st house→vitality(carnelian/tiger-eye)；7th→love(rose-quartz/rhodonite)；8th→shadow(obsidian/black-tourmaline)；9th→wisdom(lapis/sodalite/amethyst)；12th→subconscious(amethyst/selenite/labradorite)",
+    "eastern_note_unified": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence.",
+    "eastern_note_field": "每篇 eastern_note 字段复用 unified 锚点（七曜），保持 single-source。东方平行仅作反思参照非历史对应； houses 与东方堪舆/十二宫/七政四余的关系不在本层数据展开（避免未核实对应）",
+    "page_count": 20,
+    "page_types": { "concept": 8, "house": 12 },
+    "houses_index": {
+      "first-house": "self / identity / body / appearance",
+      "second-house": "values / money / possessions / self-worth",
+      "third-house": "communication / siblings / short trips / learning",
+      "fourth-house": "home / family / roots / inner foundation",
+      "fifth-house": "creativity / romance / children / joy",
+      "sixth-house": "health / daily routine / work / service",
+      "seventh-house": "partnership / marriage / contracts",
+      "eighth-house": "transformation / shared resources / intimacy",
+      "ninth-house": "philosophy / higher education / travel",
+      "tenth-house": "career / public image / reputation",
+      "eleventh-house": "community / friends / aspirations",
+      "twelfth-house": "subconscious / solitude / spirituality"
+    },
+    "hub_pages": ["astrology", "astrology-houses"],
+    "validated_at": "2026-07-15"
+  },
+
+  "mainpages": [
+    {
+      "slug": "astrology",
+      "title": "Astrology: Complete Guide to Signs, Planets & the Birth Chart",
+      "focus_keyword": "astrology",
+      "page_type": "concept",
+      "definition": "Western astrology is a symbolic system that maps the positions of the Sun, Moon, and planets against the 12 zodiac signs and 12 houses at a specific moment in time. Rather than a predictive science, it functions as a language of archetypes and cycles — a framework for self-reflection on personality, relationships, timing, and life themes. The foundational map is the birth chart (natal chart), cast from your exact date, time, and place of birth.",
+      "calculation": {
+        "method": "birth_chart_overview",
+        "steps": [
+          "Record exact birth date, birth time (to the minute), and birth location",
+          "Use an ephemeris or astrology software to compute planetary ecliptic longitudes in the zodiac",
+          "Determine the Ascendant (rising sign) from birth time and geographic latitude",
+          "Place planets into the 12 houses based on the Ascendant",
+          "Read the chart as a whole: signs = style, planets = drives, houses = life areas, aspects = relationships between planets"
+        ]
+      },
+      "crystals": ["clear-quartz", "selenite"],
+      "faq_seeds": [
+        "What is astrology and how does it work?",
+        "Is astrology a science?",
+        "What is the difference between a Sun sign and a rising sign?",
+        "Can astrology predict the future?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "birth-chart",
+      "title": "Birth Chart (Natal Chart): What It Is & How to Read Yours",
+      "focus_keyword": "birth chart",
+      "page_type": "concept",
+      "definition": "A birth chart — also called a natal chart — is a snapshot of the exact positions of the Sun, Moon, and planets at the precise moment and location of your birth. It is the foundational map of Western astrology, showing which zodiac sign each planet occupies, which house it falls into, and the angular relationships (aspects) between them. Think of it as a symbolic blueprint of potential themes, not a fixed script.",
+      "calculation": {
+        "method": "ephemeris_lookup",
+        "steps": [
+          "Gather exact birth date, birth time (to the minute, from a birth certificate), and birth city",
+          "Compute planetary ecliptic longitudes using an ephemeris (e.g., Swiss Ephemeris)",
+          "Calculate the Ascendant from birth time and geographic latitude/longitude",
+          "Determine house cusps using a house system (Whole Sign, Placidus, Equal House, or Koch)",
+          "Identify planetary aspects by angular separation: conjunction 0°, opposition 180°, square 90°, trine 120°, sextile 60°"
+        ]
+      },
+      "crystals": ["selenite", "labradorite", "amethyst"],
+      "faq_seeds": [
+        "What is a birth chart and how do I get mine?",
+        "Do I need my exact birth time for a birth chart?",
+        "What is the most important placement in a birth chart?",
+        "What is the difference between a birth chart and a horoscope?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "astrology-houses",
+      "title": "The 12 Astrology Houses: Meanings & Life Areas",
+      "focus_keyword": "astrology houses",
+      "page_type": "concept",
+      "definition": "The 12 houses are divisions of the birth chart that represent distinct life areas — from self-identity (1st) to subconscious and solitude (12th). While the planets describe what energy is at work and the signs describe how it expresses, the houses show where in your life it plays out. The house a planet occupies reveals which life themes it tends to color, and the house system you choose determines how those 12 divisions are drawn.",
+      "calculation": {
+        "method": "house_division",
+        "steps": [
+          "Determine the Ascendant (rising degree) from exact birth time and location",
+          "Choose a house system: Whole Sign (oldest, simplest), Placidus (most common modern), Equal House, or Koch",
+          "Divide the 360° ecliptic into 12 segments starting from the Ascendant",
+          "Identify which house each natal planet falls into",
+          "Note angular houses (1, 4, 7, 10) as most influential; succedent (2, 5, 8, 11) and cadent (3, 6, 9, 12) as successively less dominant"
+        ]
+      },
+      "crystals": ["clear-quartz", "selenite"],
+      "faq_seeds": [
+        "What are the 12 houses in astrology?",
+        "Which astrology house system is the most accurate?",
+        "What does an empty house mean in a birth chart?",
+        "What is the difference between houses and zodiac signs?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "retrogrades",
+      "title": "Planetary Retrogrades: Meaning & How to Work With Them",
+      "focus_keyword": "planetary retrogrades",
+      "page_type": "concept",
+      "definition": "Retrograde describes the apparent backward motion of a planet against the zodiac as seen from Earth — an optical illusion caused by differing orbital speeds. Astrologically, when a planet stations retrograde, the themes it rules are said to turn inward for review, revisiting, and reassessment rather than outward progress. All planets (except the Sun and Moon) retrograde on regular cycles; Mercury is the most famous but not the most significant.",
+      "calculation": {
+        "method": "apparent_motion",
+        "steps": [
+          "Track a planet's ecliptic longitude day by day in an ephemeris",
+          "Identify the station retrograde point where apparent motion reverses to westward",
+          "Note the retrograde zone — the degrees the planet traverses three times: forward, back, forward again",
+          "Mark the station direct point where apparent motion resumes eastward",
+          "Consider the shadow period — the weeks before and after the actual retrograde when the zone is activated"
+        ]
+      },
+      "crystals": ["black-tourmaline", "smoky-quartz", "hematite"],
+      "faq_seeds": [
+        "What does it mean when a planet is retrograde?",
+        "How often does Mercury retrograde happen?",
+        "Do all planets go retrograde?",
+        "What should you avoid doing during retrograde season?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "moon-phases",
+      "title": "Moon Phases: 8 Lunar Cycle Meanings & Timing",
+      "focus_keyword": "moon phases",
+      "page_type": "concept",
+      "definition": "Moon phases are the eight visible shapes the Moon cycles through every ~29.5 days (the synodic month), from New Moon through Full Moon and back to New. Each phase describes a shifting relationship between the Sun's illumination and the Moon as seen from Earth. In modern lunar practice, the cycle is used as a rhythm for setting intentions (waxing) and releasing (waning) — a reflective cadence rather than a rule.",
+      "calculation": {
+        "method": "lunar_synodic_cycle",
+        "steps": [
+          "The cycle begins at New Moon, when the Moon is conjunct the Sun (0° separation)",
+          "Waxing phases (Waxing Crescent, First Quarter, Waxing Gibbous) span 0°–180° of Sun–Moon separation",
+          "Full Moon occurs at 180° opposition",
+          "Waning phases (Waning Gibbous, Last Quarter, Waning Crescent) span 180°–360° back to the next New Moon",
+          "Each full cycle lasts ~29.53 days; each quarter phase lasts about 7.4 days"
+        ]
+      },
+      "crystals": ["moonstone", "selenite"],
+      "faq_seeds": [
+        "What are the 8 phases of the moon in order?",
+        "How long is a complete moon phase cycle?",
+        "Which moon phase is best for setting new intentions?",
+        "How do moon phases relate to cleansing crystals?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "astrological-transits",
+      "title": "Astrological Transits: How Current Planets Affect Your Chart",
+      "focus_keyword": "astrological transits",
+      "page_type": "concept",
+      "definition": "Transits are the real-time, ongoing positions of the planets and how they interact with the planets in your birth chart. A transit reading compares today's sky to your natal chart, noting which of your planets and house cusps are currently being aspected. Astrologers use transits as a timing framework — a way to reflect on which life themes are being activated and for how long, rather than as prediction.",
+      "calculation": {
+        "method": "current_sky_to_natal",
+        "steps": [
+          "Cast your birth chart (requires exact birth data)",
+          "Generate current planetary positions for the date in question using an ephemeris",
+          "Identify transiting planets forming aspects (by degree) to your natal planets and angles",
+          "Note the orb — transits within roughly 1–3° are strongest",
+          "Weigh significance: outer planets (Saturn, Uranus, Neptune, Pluto) form long transits of months to years; inner planets (Moon to Mars) form short transits of hours to days"
+        ]
+      },
+      "crystals": ["labradorite", "selenite", "fluorite"],
+      "faq_seeds": [
+        "What are transits in astrology?",
+        "How long do planetary transits last?",
+        "Which transits are the most important to track?",
+        "How do I find my current transits?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "zodiac-elements",
+      "title": "Zodiac Elements: Fire, Earth, Air & Water Signs",
+      "focus_keyword": "zodiac elements",
+      "page_type": "concept",
+      "definition": "The 12 zodiac signs are grouped into four elements (also called triplicities), each describing a core temperament. Fire signs (Aries, Leo, Sagittarius) are active and inspired; Earth signs (Taurus, Virgo, Capricorn) are practical and grounding; Air signs (Gemini, Libra, Aquarius) are conceptual and social; Water signs (Cancer, Scorpio, Pisces) are emotional and intuitive. Each element contains one cardinal, one fixed, and one mutable sign.",
+      "calculation": {
+        "method": "triplicity_grouping",
+        "steps": [
+          "Fire (Aries / Leo / Sagittarius) — inspiration, action, courage, identity",
+          "Earth (Taurus / Virgo / Capricorn) — stability, resources, sensibility, craft",
+          "Air (Gemini / Libra / Aquarius) — ideas, communication, relationship, principle",
+          "Water (Cancer / Scorpio / Pisces) — feeling, intuition, bonding, release",
+          "Read a chart's element balance (which element holds the most placements) as a tendency, not a fixed trait"
+        ]
+      },
+      "crystals": ["carnelian", "smoky-quartz", "aquamarine"],
+      "faq_seeds": [
+        "What are the four zodiac elements?",
+        "Which zodiac signs are Fire, Earth, Air, and Water?",
+        "What does it mean to lack an element in your birth chart?",
+        "Which zodiac element is the most compatible?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "zodiac-modalities",
+      "title": "Zodiac Modalities: Cardinal, Fixed & Mutable Signs",
+      "focus_keyword": "zodiac modalities",
+      "page_type": "concept",
+      "definition": "The 12 signs are grouped into three modalities (also called qualities or quadruplicities), describing how each sign expresses its energy. Cardinal signs (Aries, Cancer, Libra, Capricorn) initiate and lead; Fixed signs (Taurus, Leo, Scorpio, Aquarius) stabilize and sustain; Mutable signs (Gemini, Virgo, Sagittarius, Pisces) adapt and transition. Each modality contains one sign from each of the four elements.",
+      "calculation": {
+        "method": "quadruplicity_grouping",
+        "steps": [
+          "Cardinal (Aries / Cancer / Libra / Capricorn) — initiators of the seasons, enterprising and catalytic",
+          "Fixed (Taurus / Leo / Scorpio / Aquarius) — sustainers, resolute and consolidating",
+          "Mutable (Gemini / Virgo / Sagittarius / Pisces) — adapters, flexible and synthesizing",
+          "Read a chart's modality balance (which has the most placements) as a style of action, not a verdict"
+        ]
+      },
+      "crystals": ["selenite", "amethyst"],
+      "faq_seeds": [
+        "What are the three modalities in astrology?",
+        "What does cardinal, fixed, and mutable mean?",
+        "How do I find which modality is strongest in my chart?",
+        "How do modalities work together with elements?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+
+    {
+      "slug": "first-house",
+      "title": "First House in Astrology: Self, Identity & Appearance",
+      "focus_keyword": "first house astrology",
+      "page_type": "house",
+      "life_area": "self / identity / physical body / appearance / first impression",
+      "definition": "The First House — the House of Self — begins at the Ascendant (the degree rising on the eastern horizon at your birth) and governs how you present to the world. It covers identity, the physical body, vitality, personal style, and first impressions. The sign on your Ascendant (the rising sign) colors how others experience you before they know you, and is considered as influential as your Sun sign.",
+      "calculation": {
+        "method": "ascendant_based",
+        "steps": [
+          "The 1st house cusp is the Ascendant, computed from exact birth time and location",
+          "The sign on the cusp is your rising sign — note any planets within the house",
+          "A planet in the 1st house strongly colors your appearance and outward energy",
+          "Whole Sign system: the 1st house equals the entire rising sign; Placidus: it spans from the Ascendant downward",
+          "Read the 1st house alongside the Sun and Moon for a complete sense of self"
+        ]
+      },
+      "crystals": ["carnelian", "tiger-eye"],
+      "faq_seeds": [
+        "What does the first house represent in astrology?",
+        "Is the first house the same as the rising sign?",
+        "What does an empty first house mean?",
+        "Which planet is the natural ruler of the first house?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "second-house",
+      "title": "Second House in Astrology: Money, Values & Self-Worth",
+      "focus_keyword": "second house astrology",
+      "page_type": "house",
+      "life_area": "values / money / possessions / self-worth / material resources",
+      "definition": "The Second House — the House of Values — governs money, possessions, earning, spending, and material resources, as well as the deeper layer of self-worth and what you value. It describes not just what you own but your relationship to security, abundance, and the things you treat as valuable enough to maintain.",
+      "calculation": {
+        "method": "house_two_analysis",
+        "steps": [
+          "Find the sign on the 2nd house cusp (the cusp following the Ascendant sign)",
+          "Note any planets within the house and their aspects",
+          "Venus is the natural ruler of the 2nd house; its placement adds nuance",
+          "Consider Taurus associations (the sign naturally linked to this house)",
+          "Interpret the sign and planets as describing your money style, not a fixed income"
+        ]
+      },
+      "crystals": ["citrine", "tiger-eye"],
+      "faq_seeds": [
+        "What does the second house mean in astrology?",
+        "Which planet rules the second house?",
+        "What does an empty second house mean for money?",
+        "How does the second house relate to self-worth?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "third-house",
+      "title": "Third House in Astrology: Communication, Learning & Siblings",
+      "focus_keyword": "third house astrology",
+      "page_type": "house",
+      "life_area": "communication / thinking / learning / siblings / short trips",
+      "definition": "The Third House — the House of Communication — governs thinking, speaking, writing, learning, short-distance travel, neighbors, and siblings. It covers the everyday exchange of ideas: how you process information, the kind of language you use, and the close relationships formed through routine interaction rather than deep intimacy.",
+      "calculation": {
+        "method": "house_three_analysis",
+        "steps": [
+          "Find the sign on the 3rd house cusp",
+          "Note any planets within the house and their aspects",
+          "Mercury is the natural ruler of the 3rd house; its placement adds nuance",
+          "Consider Gemini associations (the sign naturally linked to this house)",
+          "Read the sign and planets as describing your communication and learning style"
+        ]
+      },
+      "crystals": ["sodalite", "fluorite"],
+      "faq_seeds": [
+        "What does the third house represent?",
+        "Which planet rules the third house?",
+        "What does the third house say about siblings?",
+        "How does the third house relate to communication?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "fourth-house",
+      "title": "Fourth House in Astrology: Home, Family & Roots",
+      "focus_keyword": "fourth house astrology",
+      "page_type": "house",
+      "life_area": "home / family / parents / ancestry / inner foundation",
+      "definition": "The Fourth House — the House of Home and Family, also called the Imum Coeli (IC) — governs home, household, parents (often the nurturing parent or the parent of formative influence), ancestry, roots, and your inner emotional foundation. As the lowest point of the chart, it represents the private base from which you operate and the place you return to for restoration.",
+      "calculation": {
+        "method": "house_four_analysis",
+        "steps": [
+          "The 4th house cusp is the Imum Coeli (IC), exactly opposite the Midheaven (MC)",
+          "Find the sign on the IC and any planets within the house",
+          "The Moon is the natural ruler of the 4th house; its placement adds nuance",
+          "Consider Cancer associations (the sign naturally linked to this house)",
+          "Read the sign and planets as describing your home life, family inheritance, and inner base"
+        ]
+      },
+      "crystals": ["moonstone", "rose-quartz"],
+      "faq_seeds": [
+        "What does the fourth house represent?",
+        "Does the fourth house represent the mother or the father?",
+        "What is the IC (Imum Coeli) in astrology?",
+        "What does an empty fourth house mean?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "fifth-house",
+      "title": "Fifth House in Astrology: Creativity, Romance & Joy",
+      "focus_keyword": "fifth house astrology",
+      "page_type": "house",
+      "life_area": "creativity / romance / children / play / self-expression",
+      "definition": "The Fifth House — the House of Pleasure and Creativity — governs self-expression, play, romance (the early dating stage rather than partnership), children, artistic creation, hobbies, games, and what you do for pure joy. It is the house of spontaneous creativity and the things you give birth to, whether children, artworks, or ideas.",
+      "calculation": {
+        "method": "house_five_analysis",
+        "steps": [
+          "Find the sign on the 5th house cusp",
+          "Note any planets within the house and their aspects",
+          "The Sun is the natural ruler of the 5th house; its placement adds nuance",
+          "Consider Leo associations (the sign naturally linked to this house)",
+          "Read the sign and planets as describing how you play, create, and fall in love"
+        ]
+      },
+      "crystals": ["carnelian", "sunstone", "citrine"],
+      "faq_seeds": [
+        "What does the fifth house represent?",
+        "Does the fifth house rule children?",
+        "Which planet rules the fifth house?",
+        "How does the fifth house relate to creativity?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "sixth-house",
+      "title": "Sixth House in Astrology: Health, Work & Daily Routine",
+      "focus_keyword": "sixth house astrology",
+      "page_type": "house",
+      "life_area": "health / daily routine / work / service / habits",
+      "definition": "The Sixth House — the House of Work and Health — governs daily routines, habits, employment (the nature of work rather than career status), service to others, physical health, and the small disciplines that maintain wellbeing. It is the house of the everyday: how you organize your time, tend your body, and contribute through labor.",
+      "calculation": {
+        "method": "house_six_analysis",
+        "steps": [
+          "Find the sign on the 6th house cusp",
+          "Note any planets within the house and their aspects",
+          "Mercury is traditionally associated with the 6th house; its placement adds nuance",
+          "Consider Virgo associations (the sign naturally linked to this house)",
+          "Read the sign and planets as describing your work habits, health routines, and service orientation"
+        ]
+      },
+      "crystals": ["fluorite", "hematite", "red-jasper"],
+      "faq_seeds": [
+        "What does the sixth house represent?",
+        "Is the sixth house about health or about work?",
+        "Which planet rules the sixth house?",
+        "What does an empty sixth house mean?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "seventh-house",
+      "title": "Seventh House in Astrology: Partnership, Marriage & Contracts",
+      "focus_keyword": "seventh house astrology",
+      "page_type": "house",
+      "life_area": "partnership / marriage / contracts / one-on-one relationships",
+      "definition": "The Seventh House — the House of Partnership, also called the Descendant — governs one-on-one relationships: marriage, long-term partnership, business contracts, close collaborations, and at times open rivals. It begins at the western horizon (the Descendant, opposite the Ascendant) and describes the kind of partner you attract and the qualities you seek in committed relationship.",
+      "calculation": {
+        "method": "house_seven_analysis",
+        "steps": [
+          "The 7th house cusp is the Descendant, exactly opposite the Ascendant",
+          "Find the sign on the Descendant and any planets within the house",
+          "Venus is the natural ruler of the 7th house; its placement adds nuance",
+          "Consider Libra associations (the sign naturally linked to this house)",
+          "Read the sign and planets as describing the partners you attract and how you relate"
+        ]
+      },
+      "crystals": ["rose-quartz", "rhodonite"],
+      "faq_seeds": [
+        "What does the seventh house represent?",
+        "Is the seventh house the house of marriage?",
+        "What is the Descendant in astrology?",
+        "Which planet rules the seventh house?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "eighth-house",
+      "title": "Eighth House in Astrology: Transformation, Intimacy & Shared Resources",
+      "focus_keyword": "eighth house astrology",
+      "page_type": "house",
+      "life_area": "transformation / shared resources / intimacy / psychology",
+      "definition": "The Eighth House — the House of Transformation — governs shared resources (a partner's money, inheritance, taxes, debt), deep intimacy, sexuality, psychological depths, death and rebirth, and the things we merge or surrender. It is the house of what passes between people and between life phases — the territory of transformation rather than surface exchange.",
+      "calculation": {
+        "method": "house_eight_analysis",
+        "steps": [
+          "Find the sign on the 8th house cusp",
+          "Note any planets within the house and their aspects — this house tends to feel intense",
+          "Pluto is the modern ruler and Mars the traditional ruler of the 8th house",
+          "Consider Scorpio associations (the sign naturally linked to this house)",
+          "Read the sign and planets as describing how you handle shared resources, intimacy, and change"
+        ]
+      },
+      "crystals": ["obsidian", "smoky-quartz", "black-tourmaline"],
+      "faq_seeds": [
+        "What does the eighth house represent?",
+        "Is the eighth house really about death?",
+        "Which planet rules the eighth house?",
+        "What does the eighth house say about money?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "ninth-house",
+      "title": "Ninth House in Astrology: Philosophy, Travel & Higher Learning",
+      "focus_keyword": "ninth house astrology",
+      "page_type": "house",
+      "life_area": "philosophy / higher education / long travel / beliefs / meaning",
+      "definition": "The Ninth House — the House of Philosophy — governs higher education, long-distance travel, belief systems, religion, ethics, law, publishing, and the search for meaning. Where the 3rd house covers everyday learning, the 9th covers the big-picture quest: worldviews, foreign cultures, and the frameworks through which you make sense of life.",
+      "calculation": {
+        "method": "house_nine_analysis",
+        "steps": [
+          "Find the sign on the 9th house cusp",
+          "Note any planets within the house and their aspects",
+          "Jupiter is the natural ruler of the 9th house; its placement adds nuance",
+          "Consider Sagittarius associations (the sign naturally linked to this house)",
+          "Read the sign and planets as describing your beliefs, learning path, and relationship to meaning"
+        ]
+      },
+      "crystals": ["lapis", "sodalite", "amethyst"],
+      "faq_seeds": [
+        "What does the ninth house represent?",
+        "Is the ninth house about travel?",
+        "Which planet rules the ninth house?",
+        "How does the ninth house differ from the third house?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "tenth-house",
+      "title": "Tenth House in Astrology: Career, Public Image & Reputation",
+      "focus_keyword": "tenth house astrology",
+      "page_type": "house",
+      "life_area": "career / public image / reputation / authority / legacy",
+      "definition": "The Tenth House — the House of Career and Public Status, also called the Midheaven (MC) — governs vocation, reputation, authority, achievement, public role, and legacy. As the highest point of the chart, it represents your visible contribution to the world and the standing you build over time — distinct from the 6th house, which covers daily work habits.",
+      "calculation": {
+        "method": "house_ten_analysis",
+        "steps": [
+          "The 10th house cusp is the Midheaven (MC), the highest point above the horizon at birth",
+          "Find the sign on the MC and any planets within the house",
+          "Saturn is the natural ruler of the 10th house; its placement adds nuance",
+          "Consider Capricorn associations (the sign naturally linked to this house)",
+          "Read the sign and planets as describing your public role and direction of ambition"
+        ]
+      },
+      "crystals": ["citrine", "tiger-eye", "sunstone"],
+      "faq_seeds": [
+        "What does the tenth house represent?",
+        "What is the MC (Midheaven) in astrology?",
+        "Which planet rules the tenth house?",
+        "What does an empty tenth house mean for career?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "eleventh-house",
+      "title": "Eleventh House in Astrology: Community, Friends & Aspirations",
+      "focus_keyword": "eleventh house astrology",
+      "page_type": "house",
+      "life_area": "community / friends / groups / hopes / aspirations",
+      "definition": "The Eleventh House — the House of Community and Hopes — governs friendships, groups, networks, social causes, collective ideals, and long-term aspirations. It describes the circles you move in and the futures you imagine alongside others — distinct from the 5th house (personal creativity) and the 7th house (one-on-one partnership).",
+      "calculation": {
+        "method": "house_eleven_analysis",
+        "steps": [
+          "Find the sign on the 11th house cusp",
+          "Note any planets within the house and their aspects",
+          "Uranus is the modern ruler and Saturn the traditional ruler of the 11th house",
+          "Consider Aquarius associations (the sign naturally linked to this house)",
+          "Read the sign and planets as describing your friendships, group affiliations, and ideals"
+        ]
+      },
+      "crystals": ["amazonite", "aquamarine"],
+      "faq_seeds": [
+        "What does the eleventh house represent?",
+        "Is the eleventh house the house of friendship?",
+        "Which planet rules the eleventh house?",
+        "What does an empty eleventh house mean?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    },
+    {
+      "slug": "twelfth-house",
+      "title": "Twelfth House in Astrology: Subconscious, Solitude & Spirituality",
+      "focus_keyword": "twelfth house astrology",
+      "page_type": "house",
+      "life_area": "subconscious / solitude / spirituality / hidden matters / endings",
+      "definition": "The Twelfth House — the House of the Subconscious, sometimes called the house of the hidden — governs solitude, retreat, the unconscious mind, dreams, spirituality, hidden matters, institutions (hospitals, monasteries, retreats), and endings. As the final house, it represents what is out of view: the inner work, the private wounds, and the dissolving of boundaries that precedes a new cycle.",
+      "calculation": {
+        "method": "house_twelve_analysis",
+        "steps": [
+          "Find the sign on the 12th house cusp (the house immediately above the Ascendant)",
+          "Note any planets within the house — placements here often work privately or unconsciously",
+          "Neptune is the modern ruler of the 12th house; its placement adds nuance",
+          "Consider Pisces associations (the sign naturally linked to this house)",
+          "Read the sign and planets as describing your inner life, spiritual patterns, and need for retreat"
+        ]
+      },
+      "crystals": ["amethyst", "selenite", "labradorite"],
+      "faq_seeds": [
+        "What does the twelfth house represent?",
+        "Is the twelfth house a bad house in astrology?",
+        "Which planet rules the twelfth house?",
+        "What does an empty twelfth house mean?"
+      ],
+      "eastern_note": "Parallel Eastern frame (not historical equivalence): 七曜 (Seven Luminaries) — Sun, Moon + five visible planets, mapped in Eastern astronomy to 火水木金土曜 (Mars/Mercury/Jupiter/Venus/Saturn). Cross-cultural parallel for reflection, not historical correspondence."
+    }
+  ]
+}

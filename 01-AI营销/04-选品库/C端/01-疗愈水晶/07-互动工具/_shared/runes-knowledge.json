@@ -1,0 +1,772 @@
+{
+  "_meta": {
+    "name": "runes-knowledge",
+    "version": "1.0",
+    "created": "2026-07-15",
+    "scope": "Runes 数据层（P2 新线，24-30 篇 Elder Futhark 符文 × 水晶）",
+    "evidence_tier": "Elder Futhark 古典(确证) + 水晶现代配伍",
+    "caveat": "24 符寓意源自 Elder Futhark 公开古典（Anglo-Saxon Rune Poem / Old Norse 传统），跨竞品源一致确证；水晶配伍为现代关联（modern association），非古典记载，按符文寓意主题映射",
+    "sources": [
+      {"tier": "竞品/SERP top1", "name": "labyrinthos - Elder Futhark Rune Meanings List", "use": "现代关键词 + 3 aett 结构 + 正逆位"},
+      {"tier": "竞品/SERP top1", "name": "shieldmaidenssanctum - The Elder Futhark Runes And Their Meanings", "use": "24 符实体象征（livestock/bull/thorn 等）"},
+      {"tier": "竞品/crystal runes top2", "name": "jacarandacrystals - Crystal Runes", "use": "水晶符文概念 + 每符 Unicode 符号"},
+      {"tier": "竞品/SERP top5", "name": "runedictionary - Elder Futhark: Rune Symbols & Meanings", "use": "逐符深度释义 + Anglo-Saxon Rune Poem 古典出处"}
+    ],
+    "serp_findings": {
+      "elder_futhark_rune_meanings": {"has_aio": false, "has_featured_snippet": false, "gap": "无 AIO 无大媒体垄断，SERP 缝最宽，竞品为 labyrinthos/shieldmaidenssanctum/runedictionary 等小站"},
+      "crystal_runes_meanings": {"has_aio": true, "note": "crystal runes 词有 AIO，但 elder futhark rune meanings 主词无 AIO；rune jewelry 是首饰产品线，goearthward 可吃 rune + crystal 长尾"}
+    },
+    "structure_notes": {
+      "aett": "3 aett × 8 符 = 24。Aett 1 (Freyja's/Fehu 起头，物质/成功)；Aett 2 (Heimdall's/Hagalaz 起头，破坏/转变)；Aett 3 (Tyr's/Tiwaz 起头，升华/神性)",
+      "slug_rule": "/{rune-lowercase}-rune-meaning/ 根级 URL（如 fehu-rune-meaning），避开产品类目词污染",
+      "crystals_rule": "英文 slug，2-3 个/符，从站内常见水晶选（citrine/green-aventurine/amethyst/black-tourmaline/clear-quartz/garnet/carnelian/moonstone/rose-quartz/labradorite/obsidian/sodalite/jade/selenite/hematite/tigers-eye 等）",
+      "eastern_note_rule": "全部标 'Norse tradition'（符文源自北欧/日耳曼古典，与站内东方锚点区分）"
+    }
+  },
+  "mainpages": [
+    {
+      "slug": "fehu-rune-meaning",
+      "title": "Fehu Rune: Meaning & Crystals",
+      "focus_keyword": "fehu rune",
+      "page_type": "rune",
+      "definition": "Fehu (ᚠ) is the rune of wealth, abundance, prosperity, and material success. Rooted in the Old Norse word for cattle — the measure of movable wealth in ancient times — Fehu represents energy that flows, grows, and multiplies when shared freely. It is the first rune of the Elder Futhark and the mother rune of Freyja's Aett.",
+      "rune": "Fehu",
+      "rune_symbol": "ᚠ",
+      "aett": 1,
+      "phonetic": "F",
+      "literal_meaning": "Cattle, livestock, movable wealth",
+      "keywords": ["wealth", "abundance", "prosperity", "success", "fertility"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Hold the Fehu rune in mind when working with money, career, or abundance intentions.",
+          "Meditate on the flow of value — wealth circulates, it does not stagnate.",
+          "Pair Fehu with a prosperity crystal (citrine or green aventurine) on your desk or wallet to anchor the intention.",
+          "Affirm: 'Abundance flows to me and through me, and I share it freely.'"
+        ]
+      },
+      "crystals": ["citrine", "green-aventurine", "pyrite"],
+      "crystals_note": "Modern association — citrine and green aventurine are classic abundance stones; pyrite amplifies the wealth-attracting frequency.",
+      "faq_seeds": [
+        "What does the Fehu rune mean?",
+        "Which crystals work best with Fehu?",
+        "Is Fehu a lucky rune?",
+        "What is the difference between Fehu upright and reversed?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "uruz-rune-meaning",
+      "title": "Uruz Rune: Meaning & Crystals",
+      "focus_keyword": "uruz rune",
+      "page_type": "rune",
+      "definition": "Uruz (ᚢ) is the rune of raw strength, vitality, endurance, and untamed potential. Named after the aurochs — the wild bull that roamed the ancient forests — Uruz is the driving force behind manifestation, the willpower that shapes chaos into form. It governs physical and mental well-being and the courage to push through obstacles.",
+      "rune": "Uruz",
+      "rune_symbol": "ᚢ",
+      "aett": 1,
+      "phonetic": "U",
+      "literal_meaning": "Aurochs, wild bull",
+      "keywords": ["strength", "vitality", "endurance", "courage", "willpower"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Uruz when you need a surge of physical or emotional energy.",
+          "Meditate on the wild aurochs — feel your inner power and refusal to be tamed.",
+          "Carry a grounding strength stone (garnet or carnelian) during challenging tasks.",
+          "Affirm: 'I have the strength to meet whatever stands before me.'"
+        ]
+      },
+      "crystals": ["garnet", "carnelian", "bloodstone"],
+      "crystals_note": "Modern association — garnet and carnelian fuel the root and sacral energy centers tied to vitality; bloodstone is a traditional warrior's stone of endurance.",
+      "faq_seeds": [
+        "What does the Uruz rune symbolize?",
+        "Which crystals pair with Uruz for strength?",
+        "What is the aurochs in Norse tradition?",
+        "Is Uruz a positive rune?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "thurisaz-rune-meaning",
+      "title": "Thurisaz Rune: Meaning & Crystals",
+      "focus_keyword": "thurisaz rune",
+      "page_type": "rune",
+      "definition": "Thurisaz (ᚦ) is the rune of the thorn, the giant, and the defensive force. Sharp and reactive, it carries the protective sting of a thorn hedge and the cathartic power of Thor's hammer Mjolnir. Thurisaz teaches that boundaries defend what is precious and that conflict, when met consciously, can regenerate rather than destroy.",
+      "rune": "Thurisaz",
+      "rune_symbol": "ᚦ",
+      "aett": 1,
+      "phonetic": "Th",
+      "literal_meaning": "Thorn, giant, Mjolnir",
+      "keywords": ["protection", "defense", "conflict", "boundaries", "regeneration"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Use Thurisaz when establishing protective boundaries around yourself, your home, or your work.",
+          "Meditate on the thorn — it guards the rose, and its sting wakes you to what needs attention.",
+          "Pair with a shielding stone (black tourmaline or obsidian) placed at doorways or worn as jewelry.",
+          "Affirm: 'I am protected, and my boundaries keep what I value safe.'"
+        ]
+      },
+      "crystals": ["black-tourmaline", "obsidian", "smoky-quartz"],
+      "crystals_note": "Modern association — black tourmaline and obsidian are premier protection stones; smoky quartz transmutes the negative energy that thorny situations stir up.",
+      "faq_seeds": [
+        "What does the Thurisaz rune mean?",
+        "Is Thurisaz a protective rune?",
+        "Which crystals work with Thurisaz?",
+        "What is the difference between Thurisaz and Algiz for protection?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "ansuz-rune-meaning",
+      "title": "Ansuz Rune: Meaning & Crystals",
+      "focus_keyword": "ansuz rune",
+      "page_type": "rune",
+      "definition": "Ansuz (ᚨ) is the rune of communication, divine inspiration, and the spoken word. Linked to Odin — who gifted humanity önd (breath of life) and ódhr (the power of thought) — Ansuz governs messages, listening, and the wisdom that comes through honest speech. It reminds us that words shape reality and that true communication is as much receiving as sending.",
+      "rune": "Ansuz",
+      "rune_symbol": "ᚨ",
+      "aett": 1,
+      "phonetic": "A",
+      "literal_meaning": "Mouth, breath, a god (Odin)",
+      "keywords": ["communication", "wisdom", "inspiration", "messages", "speech"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Ansuz when you have something important to say, write, or hear.",
+          "Take a deep breath before speaking — Ansuz is the rune of mindful breath and careful words.",
+          "Pair with a throat-chakra stone (sodalite or blue lace agate) when teaching, negotiating, or praying.",
+          "Affirm: 'My words are clear, true, and aligned with higher wisdom.'"
+        ]
+      },
+      "crystals": ["sodalite", "blue-lace-agate", "clear-quartz"],
+      "crystals_note": "Modern association — sodalite and blue lace agate open the throat chakra tied to expression; clear quartz amplifies the clarity of messages received.",
+      "faq_seeds": [
+        "What does the Ansuz rune mean?",
+        "Is Ansuz connected to Odin?",
+        "Which crystals help with the Ansuz rune?",
+        "What does Ansuz reversed mean?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "raidho-rune-meaning",
+      "title": "Raidho Rune: Meaning & Crystals",
+      "focus_keyword": "raidho rune",
+      "page_type": "rune",
+      "definition": "Raidho (ᚱ) is the rune of the journey, the wagon, and the rhythm of right action. It represents both literal travel and the soul's path — the steady momentum that carries you from where you are to where you are meant to be. Raidho teaches that progress is the harmony of direction and discipline, the discipline to stay the course once the wheel is in motion.",
+      "rune": "Raidho",
+      "rune_symbol": "ᚱ",
+      "aett": 1,
+      "phonetic": "R",
+      "literal_meaning": "Wagon, ride, journey",
+      "keywords": ["journey", "travel", "progress", "rhythm", "direction"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Raidho before a trip, a new chapter, or any long arc of work that needs steady momentum.",
+          "Find your rhythm — Raidho rewards consistent right action over frantic bursts.",
+          "Pair with a travel and intuition stone (moonstone) or an all-purpose anchor (clear quartz) kept in your bag.",
+          "Affirm: 'I move forward in rhythm, and the right road leads to the right result.'"
+        ]
+      },
+      "crystals": ["moonstone", "clear-quartz", "agate"],
+      "crystals_note": "Modern association — moonstone is the classic traveler's talisman (safe passage); clear quartz keeps intentions clear on the road; agate provides steady grounding.",
+      "faq_seeds": [
+        "What does the Raidho rune mean?",
+        "Is Raidho a travel rune?",
+        "Which crystals pair with Raidho?",
+        "What does Raidho reversed signify?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "kenaz-rune-meaning",
+      "title": "Kenaz Rune: Meaning & Crystals",
+      "focus_keyword": "kenaz rune",
+      "page_type": "rune",
+      "definition": "Kenaz (ᚲ) is the rune of the torch — the controlled flame of knowledge, creativity, and illumination. It is the spark that lights the workshop, the inner fire of inspiration, and the beacon that guides through darkness. Kenaz governs all acts of making: crafting, learning, teaching, and shaping raw material into something useful and beautiful.",
+      "rune": "Kenaz",
+      "rune_symbol": "ᚲ",
+      "aett": 1,
+      "phonetic": "C/K",
+      "literal_meaning": "Torch, ulcer (knowledge through heat)",
+      "keywords": ["knowledge", "creativity", "illumination", "craft", "inspiration"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Light Kenaz when starting a creative project, learning a skill, or seeking insight into a problem.",
+          "Picture the torch in your hand — its flame is warm, focused, and entirely under your control.",
+          "Pair with a fiery creative stone (carnelian or citrine) on your workspace.",
+          "Affirm: 'I am the flame that shapes my work, and I see clearly what was hidden.'"
+        ]
+      },
+      "crystals": ["carnelian", "citrine", "tigers-eye"],
+      "crystals_note": "Modern association — carnelian is the foremost creativity stone; citrine carries the sun/fire frequency; tiger's eye focuses creative will into disciplined craft.",
+      "faq_seeds": [
+        "What does the Kenaz rune represent?",
+        "Is Kenaz a creativity rune?",
+        "Which crystals work best with Kenaz?",
+        "What does Kenaz reversed mean?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "gebo-rune-meaning",
+      "title": "Gebo Rune: Meaning & Crystals",
+      "focus_keyword": "gebo rune",
+      "page_type": "rune",
+      "definition": "Gebo (ᚷ) is the rune of the gift, the sacred exchange that binds people together. It represents generosity, partnership, and the law of reciprocity — the understanding that giving and receiving are two halves of one cycle. Gebo has no reversed position: a gift, once given, always carries its weight.",
+      "rune": "Gebo",
+      "rune_symbol": "ᚷ",
+      "aett": 1,
+      "phonetic": "G",
+      "literal_meaning": "Gift, exchange",
+      "keywords": ["gift", "partnership", "generosity", "exchange", "balance"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Honor Gebo when entering or refreshing a partnership — romantic, business, or friendship.",
+          "Practice both halves of the cycle: give freely, and receive with grace.",
+          "Pair with a heart stone (rose quartz or rhodonite) to keep the exchange loving and balanced.",
+          "Affirm: 'I give freely and receive with grace, and every exchange blesses both giver and receiver.'"
+        ]
+      },
+      "crystals": ["rose-quartz", "rhodonite", "emerald"],
+      "crystals_note": "Modern association — rose quartz and rhodonite govern the heart and compassionate exchange; emerald has long symbolized faithful partnership.",
+      "faq_seeds": [
+        "What does the Gebo rune mean?",
+        "Why does Gebo have no reversed meaning?",
+        "Which crystals pair with Gebo for love?",
+        "Is Gebo a marriage rune?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "wunjo-rune-meaning",
+      "title": "Wunjo Rune: Meaning & Crystals",
+      "focus_keyword": "wunjo rune",
+      "page_type": "rune",
+      "definition": "Wunjo (ᚹ) is the rune of joy, harmony, and the deep fulfillment that comes when all parts of your life align. It is the pleasure of belonging — to yourself, to your people, and to a purpose that fits. Wunjo marks the moment when struggle gives way to ease and the harvest of right effort finally tastes sweet.",
+      "rune": "Wunjo",
+      "rune_symbol": "ᚹ",
+      "aett": 1,
+      "phonetic": "W",
+      "literal_meaning": "Joy, bliss",
+      "keywords": ["joy", "harmony", "fulfillment", "alignment", "belonging"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Wunjo when seeking joy, reunion, or the feeling that your life is in alignment.",
+          "Identify what is out of harmony and gently bring it back into accord with the rest.",
+          "Pair with a joy-bearing stone (citrine or sunstone) worn close to the heart.",
+          "Affirm: 'My life is in harmony, and joy flows from aligned effort.'"
+        ]
+      },
+      "crystals": ["citrine", "sunstone", "rose-quartz"],
+      "crystals_note": "Modern association — citrine and sunstone carry the radiant joy frequency; rose quartz softens the heart so joy can be felt and shared.",
+      "faq_seeds": [
+        "What does the Wunjo rune mean?",
+        "Is Wunjo a positive rune?",
+        "Which crystals work with Wunjo?",
+        "What does Wunjo reversed mean?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "hagalaz-rune-meaning",
+      "title": "Hagalaz Rune: Meaning & Crystals",
+      "focus_keyword": "hagalaz rune",
+      "page_type": "rune",
+      "definition": "Hagalaz (ᚺ) is the rune of hail — the disruptive force of nature that tests, breaks, and ultimately transforms. As the mother rune of the second aett (Heimdall's Aett), Hagalaz governs the crises that cannot be avoided, only survived and learned from. It is the catalyst: the storm whose meltwater feeds the next year's growth. Hagalaz has no reversed position.",
+      "rune": "Hagalaz",
+      "rune_symbol": "ᚺ",
+      "aett": 2,
+      "phonetic": "H",
+      "literal_meaning": "Hail",
+      "keywords": ["disruption", "upheaval", "crisis", "catalyst", "transformation"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Honor Hagalaz during upheaval — do not fight the storm, but stay present with it.",
+          "Pause and reflect; Hagalaz often delivers its lesson after the hail has melted.",
+          "Pair with a grounding stone (obsidian or smoky quartz) to anchor you while the storm passes.",
+          "Affirm: 'This disruption is the catalyst that clears what no longer serves me.'"
+        ]
+      },
+      "crystals": ["obsidian", "smoky-quartz", "hematite"],
+      "crystals_note": "Modern association — obsidian and smoky quartz ground the nervous system during upheaval; hematite keeps the root anchored when everything else is in motion.",
+      "faq_seeds": [
+        "What does the Hagalaz rune mean?",
+        "Is Hagalaz a negative rune?",
+        "Why does Hagalaz have no reversed meaning?",
+        "Which crystals help during a Hagalaz period?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "nauthiz-rune-meaning",
+      "title": "Nauthiz Rune: Meaning & Crystals",
+      "focus_keyword": "nauthiz rune",
+      "page_type": "rune",
+      "definition": "Nauthiz (ᚾ) is the rune of need, constraint, and the friction that forges willpower. It teaches that scarcity and hardship, when met consciously, become the mother of self-reliance. Nauthiz is not the absence of resources — it is the demand that you find what is hidden inside yourself when external supply runs short.",
+      "rune": "Nauthiz",
+      "rune_symbol": "ᚾ",
+      "aett": 2,
+      "phonetic": "N",
+      "literal_meaning": "Need",
+      "keywords": ["need", "constraint", "endurance", "self-reliance", "friction"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Nauthiz when resources are tight or when a goal demands sustained discipline.",
+          "Identify the real need beneath the surface want — Nauthiz sharpens priorities.",
+          "Pair with an endurance stone (hematite or black onyx) carried through long stretches of effort.",
+          "Affirm: 'My need is the forge that shapes my will, and I have what it takes inside me.'"
+        ]
+      },
+      "crystals": ["hematite", "black-onyx", "garnet"],
+      "crystals_note": "Modern association — hematite and black onyx are premier endurance and grounding stones; garnet sustains vitality through long effort.",
+      "faq_seeds": [
+        "What does the Nauthiz rune mean?",
+        "Is Nauthiz a rune of hardship?",
+        "Which crystals pair with Nauthiz?",
+        "What does Nauthiz reversed signify?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "isa-rune-meaning",
+      "title": "Isa Rune: Meaning & Crystals",
+      "focus_keyword": "isa rune",
+      "page_type": "rune",
+      "definition": "Isa (ᛁ) is the rune of ice — frozen stillness, the deliberate pause, and the clarity that comes when motion stops. It is the principle of preservation: ice holds what is precious until the thaw. Isa teaches that there are seasons to wait, to watch, and to do nothing but observe, and that forcing action on frozen ground only breaks what you wish to build. Isa has no reversed position.",
+      "rune": "Isa",
+      "rune_symbol": "ᛁ",
+      "aett": 2,
+      "phonetic": "I",
+      "literal_meaning": "Ice",
+      "keywords": ["stillness", "patience", "pause", "preservation", "clarity"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Isa when you are tempted to push but the moment asks for stillness.",
+          "Watch without acting — Isa brings the diamond clarity of a frozen lake.",
+          "Pair with a clarifying stone (clear quartz or selenite) to keep the mind pristine while you wait.",
+          "Affirm: 'I trust the season of stillness; the thaw will come at its right time.'"
+        ]
+      },
+      "crystals": ["clear-quartz", "selenite", "blue-lace-agate"],
+      "crystals_note": "Modern association — clear quartz and selenite are pure, high-clarity stones that mirror Isa's pristine stillness; blue lace agate calms the restlessness that waiting stirs.",
+      "faq_seeds": [
+        "What does the Isa rune mean?",
+        "Why does Isa have no reversed meaning?",
+        "Is Isa a negative rune?",
+        "Which crystals pair with Isa?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "jera-rune-meaning",
+      "title": "Jera Rune: Meaning & Crystals",
+      "focus_keyword": "jera rune",
+      "page_type": "rune",
+      "definition": "Jera (ᛃ) is the rune of the year, the harvest, and the cyclical reward of patient effort. It marks the turning point when the longest night gives way to the slow return of light — a gentle transformation that asks only for time and steady work. Jera promises that what you have sown with care will be reaped in its proper season. Jera has no reversed position.",
+      "rune": "Jera",
+      "rune_symbol": "ᛃ",
+      "aett": 2,
+      "phonetic": "J/Y",
+      "literal_meaning": "Year, harvest, season",
+      "keywords": ["harvest", "cycles", "reward", "patience", "fruition"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Jera when you need faith in a long arc — a project, a healing, a relationship grown over years.",
+          "Trust the cycle: anything worth harvesting takes time. Do not rush the fruit.",
+          "Pair with a growth and abundance stone (green aventurine or jade) on your garden, desk, or altar.",
+          "Affirm: 'I reap what I have sown with care, and the right harvest comes at the right season.'"
+        ]
+      },
+      "crystals": ["green-aventurine", "citrine", "jade"],
+      "crystals_note": "Modern association — green aventurine and jade are growth and prosperity stones that match Jera's patient fertility; citrine honors the sun's return.",
+      "faq_seeds": [
+        "What does the Jera rune mean?",
+        "Is Jera a rune of good luck?",
+        "Why does Jera have no reversed meaning?",
+        "Which crystals work best with Jera?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "eihwaz-rune-meaning",
+      "title": "Eihwaz Rune: Meaning & Crystals",
+      "focus_keyword": "eihwaz rune",
+      "page_type": "rune",
+      "definition": "Eihwaz (ᛇ) is the rune of the yew tree — the world tree Yggdrasil, the axis that connects life and death, underworld and heavens. Eihwaz teaches that endings are gateways, not annihilations: to pass through, something old must be released so something new can be born. It is the rune of transformative endurance, the steady wisdom of the longest-lived tree in the northern forest. Eihwaz has no reversed position.",
+      "rune": "Eihwaz",
+      "rune_symbol": "ᛇ",
+      "aett": 2,
+      "phonetic": "Ei/I",
+      "literal_meaning": "Yew tree",
+      "keywords": ["transformation", "endurance", "transition", "rebirth", "the world tree"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Eihwaz during a major life transition — loss, relocation, reinvention.",
+          "Picture the yew: it outlives centuries by letting old growth compost into new. Allow the old to feed what is being born.",
+          "Pair with a tree/earth stone (moss agate or bloodstone) to root you through the passage.",
+          "Affirm: 'I walk through the gateway; what ends feeds what begins.'"
+        ]
+      },
+      "crystals": ["bloodstone", "moss-agate", "smoky-quartz"],
+      "crystals_note": "Modern association — bloodstone and moss agate are classic endurance and earth-connection stones; smoky quartz supports release during transformation.",
+      "faq_seeds": [
+        "What does the Eihwaz rune symbolize?",
+        "Is Eihwaz connected to Yggdrasil?",
+        "Why does Eihwaz have no reversed meaning?",
+        "Which crystals work with Eihwaz?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "perthro-rune-meaning",
+      "title": "Perthro Rune: Meaning & Crystals",
+      "focus_keyword": "perthro rune",
+      "page_type": "rune",
+      "definition": "Perthro (ᛈ) is the rune of fate, mystery, and the dice cup — the cup that hides the lots until they are cast. It governs divination, hidden knowledge, and the recognition that your life is shaped by choices made long ago. Perthro does not say fate is fixed; it says the future is yours to create once you take ownership of the patterns that brought you here.",
+      "rune": "Perthro",
+      "rune_symbol": "ᛈ",
+      "aett": 2,
+      "phonetic": "P",
+      "literal_meaning": "Dice cup, casting lots",
+      "keywords": ["fate", "mystery", "divination", "destiny", "hidden things"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Perthro for divination, journaling, or whenever you seek insight into hidden patterns.",
+          "Look honestly at the choices that shaped today — Perthro returns authorship to your hands.",
+          "Pair with a mystery stone (labradorite or moonstone) during meditation or rune casting.",
+          "Affirm: 'I am the architect of my fate, and the hidden becomes visible when I seek it.'"
+        ]
+      },
+      "crystals": ["labradorite", "moonstone", "amethyst"],
+      "crystals_note": "Modern association — labradorite and moonstone are stones of mystery, intuition, and the unseen; amethyst supports divination and the third-eye center.",
+      "faq_seeds": [
+        "What does the Perthro rune mean?",
+        "Is Perthro a divination rune?",
+        "Which crystals pair with Perthro?",
+        "What does Perthro reversed mean?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "algiz-rune-meaning",
+      "title": "Algiz Rune: Meaning & Crystals",
+      "focus_keyword": "algiz rune",
+      "page_type": "rune",
+      "definition": "Algiz (ᛉ) is the rune of protection, the elk, and the sanctuary. Shaped like outstretched arms or the elk-sedge that wounds anything that touches it, Algiz is the guardian that wards off harm while reaching toward higher consciousness. It calls you to stay alert, raise your awareness, and seek safety in the knowledge that comes from being fully awake.",
+      "rune": "Algiz",
+      "rune_symbol": "ᛉ",
+      "aett": 2,
+      "phonetic": "Z/R",
+      "literal_meaning": "Elk, elk-sedge, protection",
+      "keywords": ["protection", "guardianship", "instinct", "sanctuary", "higher awareness"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Algiz whenever you feel vulnerable — physically, emotionally, or psychically.",
+          "Picture the rune's open arms: a shield that also reaches upward for guidance.",
+          "Pair with a protective stone (black tourmaline or amethyst) worn as a pendant or placed by the bed.",
+          "Affirm: 'I am guarded, awake, and connected to higher protection.'"
+        ]
+      },
+      "crystals": ["black-tourmaline", "amethyst", "clear-quartz"],
+      "crystals_note": "Modern association — black tourmaline is the premier warding stone; amethyst offers spiritual protection and higher awareness; clear quartz amplifies the protective field.",
+      "faq_seeds": [
+        "What does the Algiz rune mean?",
+        "Is Algiz the strongest protection rune?",
+        "Which crystals work with Algiz?",
+        "What does Algiz reversed warn of?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "sowilo-rune-meaning",
+      "title": "Sowilo Rune: Meaning & Crystals",
+      "focus_keyword": "sowilo rune",
+      "page_type": "rune",
+      "definition": "Sowilo (ᛊ) is the rune of the sun — success, victory, illumination, and the active will to achieve. It is the life-giving light that dispels doubt and the inner spark of determination that carries goals to completion. Sowilo is both the destination and the guidepost: the purpose you aim toward and the energy that powers the journey there. Sowilo has no reversed position.",
+      "rune": "Sowilo",
+      "rune_symbol": "ᛊ",
+      "aett": 2,
+      "phonetic": "S",
+      "literal_meaning": "Sun",
+      "keywords": ["success", "victory", "illumination", "willpower", "vitality"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Sowilo for the final push toward a goal, a competition, or any moment that demands full willpower.",
+          "Feel the sun's light pierce doubt — Sowilo dispels confusion with clear illumination.",
+          "Pair with a solar stone (citrine or sunstone) worn or held during the push.",
+          "Affirm: 'I am lit from within, and success flows from my aligned will.'"
+        ]
+      },
+      "crystals": ["citrine", "sunstone", "carnelian"],
+      "crystals_note": "Modern association — citrine and sunstone are the classic solar stones of success and joy; carnelian fuels the willpower that turns ambition into achievement.",
+      "faq_seeds": [
+        "What does the Sowilo rune mean?",
+        "Is Sowilo a victory rune?",
+        "Why does Sowilo have no reversed meaning?",
+        "Which crystals pair with Sowilo?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "tiwaz-rune-meaning",
+      "title": "Tiwaz Rune: Meaning & Crystals",
+      "focus_keyword": "tiwaz rune",
+      "page_type": "rune",
+      "definition": "Tiwaz (ᛏ) is the rune of Tyr, the Norse god of justice, honor, and self-sacrificing leadership. Named after the guiding North Star, Tiwaz governs the courage to do what is right at personal cost — as Tyr proved when he placed his hand in the wolf Fenrir's mouth to keep a promise and save the gods. It is the mother rune of Tyr's Aett, the third family, which ascends toward higher ideals.",
+      "rune": "Tiwaz",
+      "rune_symbol": "ᛏ",
+      "aett": 3,
+      "phonetic": "T",
+      "literal_meaning": "Tyr (the god), the north star",
+      "keywords": ["justice", "honor", "courage", "leadership", "sacrifice"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Tiwaz when an ethical choice costs you something — that is precisely when its guidance is sharpest.",
+          "Remember Tyr's example: real honor pays its price willingly.",
+          "Pair with a truth-and-justice stone (sodalite or lapis lazuli) worn during hard decisions.",
+          "Affirm: 'I do what is right, and my honor is my guiding star.'"
+        ]
+      },
+      "crystals": ["sodalite", "lapis-lazuli", "hematite"],
+      "crystals_note": "Modern association — sodalite and lapis lazuli govern truth, justice, and clear judgment; hematite grounds the courage needed to act honorably under pressure.",
+      "faq_seeds": [
+        "What does the Tiwaz rune symbolize?",
+        "Is Tiwaz connected to the god Tyr?",
+        "Which crystals work with Tiwaz?",
+        "What does Tiwaz reversed mean?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "berkano-rune-meaning",
+      "title": "Berkano Rune: Meaning & Crystals",
+      "focus_keyword": "berkano rune",
+      "page_type": "rune",
+      "definition": "Berkano (ᛒ) is the rune of the birch goddess — birth, nurturing growth, and the divine feminine. Birch is the first tree to leaf in spring, and Berkano carries that energy of fresh beginnings: a new project, a new phase of life, a healing. It governs all forms of care that help something tender grow strong.",
+      "rune": "Berkano",
+      "rune_symbol": "ᛒ",
+      "aett": 3,
+      "phonetic": "B",
+      "literal_meaning": "Birch twig, birch goddess",
+      "keywords": ["growth", "birth", "nurturing", "renewal", "divine feminine"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Berkano at the start of any new chapter — pregnancy, a venture, a creative work, a healing.",
+          "Nurture as the birch nurtures new leaves: with patience, light, and gentle consistency.",
+          "Pair with a growth stone (moss agate or rose quartz) placed near what you are tending.",
+          "Affirm: 'I nurture new life with patience, and growth comes in its right season.'"
+        ]
+      },
+      "crystals": ["moss-agate", "rose-quartz", "clear-quartz"],
+      "crystals_note": "Modern association — moss agate is the gardener's stone of steady growth; rose quartz brings the loving care of the divine feminine; clear quartz amplifies any new beginning.",
+      "faq_seeds": [
+        "What does the Berkano rune mean?",
+        "Is Berkano a fertility rune?",
+        "Which crystals pair with Berkano?",
+        "What does Berkano reversed signify?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "ehwaz-rune-meaning",
+      "title": "Ehwaz Rune: Meaning & Crystals",
+      "focus_keyword": "ehwaz rune",
+      "page_type": "rune",
+      "definition": "Ehwaz (ᛖ) is the rune of the horse — partnership, trust, and the forward progress that comes when two forces move as one. Just as horse and rider create momentum neither could alone, Ehwaz governs harmonious cooperation in marriage, business, friendship, and the inner union of body and will. It rewards loyalty, trust, and shared purpose.",
+      "rune": "Ehwaz",
+      "rune_symbol": "ᛖ",
+      "aett": 3,
+      "phonetic": "E",
+      "literal_meaning": "Horse",
+      "keywords": ["partnership", "trust", "progress", "cooperation", "harmony"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Ehwaz when entering or repairing a partnership that needs trust and shared direction.",
+          "Ask: are both forces pulling toward the same goal? Ehwaz accelerates only when aligned.",
+          "Pair with a harmony stone (rose quartz or citrine) shared between partners or kept at a shared desk.",
+          "Affirm: 'We move forward together, and our shared trust creates momentum.'"
+        ]
+      },
+      "crystals": ["rose-quartz", "citrine", "agate"],
+      "crystals_note": "Modern association — rose quartz fosters the trust and harmony at the heart of partnership; citrine fuels the shared joy of progress; agate provides steady grounding for the long road.",
+      "faq_seeds": [
+        "What does the Ehwaz rune represent?",
+        "Is Ehwaz a partnership rune?",
+        "Which crystals work with Ehwaz?",
+        "What does Ehwaz reversed mean?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "mannaz-rune-meaning",
+      "title": "Mannaz Rune: Meaning & Crystals",
+      "focus_keyword": "mannaz rune",
+      "page_type": "rune",
+      "definition": "Mannaz (ᛗ) is the rune of humanity — the self in community, the divine spark within the ordinary person. It governs identity, social harmony, and the lifelong work of becoming the highest version of yourself in relation to others. Mannaz reminds you that you are a link between the spiritual and physical worlds, and that self-knowledge and service are two sides of one coin.",
+      "rune": "Mannaz",
+      "rune_symbol": "ᛗ",
+      "aett": 3,
+      "phonetic": "M",
+      "literal_meaning": "Man, human being",
+      "keywords": ["humanity", "identity", "community", "self-knowledge", "divine potential"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Mannaz for self-reflection, community work, or questions of identity and purpose.",
+          "Ask: who am I becoming, and how does my growth serve the whole?",
+          "Pair with a clarity-and-self stone (clear quartz or smoky quartz) used in meditation or journaling.",
+          "Affirm: 'I am becoming my highest self, in harmony with my community.'"
+        ]
+      },
+      "crystals": ["clear-quartz", "smoky-quartz", "citrine"],
+      "crystals_note": "Modern association — clear quartz clarifies self-knowledge; smoky quartz keeps the human grounding steady; citrine lights the divine spark within ordinary life.",
+      "faq_seeds": [
+        "What does the Mannaz rune mean?",
+        "Is Mannaz a rune of humanity?",
+        "Which crystals pair with Mannaz?",
+        "What does Mannaz reversed signify?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "laguz-rune-meaning",
+      "title": "Laguz Rune: Meaning & Crystals",
+      "focus_keyword": "laguz rune",
+      "page_type": "rune",
+      "definition": "Laguz (ᛚ) is the rune of water — intuition, emotion, the subconscious, and the life-giving flow that nourishes all things. It speaks to the connection between water and feeling, the way inner tides ebb and flow, and the journey into the depths of the self. Laguz teaches adaptability: like water, the intuitive self finds its way around any obstacle.",
+      "rune": "Laguz",
+      "rune_symbol": "ᛚ",
+      "aett": 3,
+      "phonetic": "L",
+      "literal_meaning": "Water, lake, leek",
+      "keywords": ["intuition", "flow", "emotion", "subconscious", "adaptability"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Laguz for any work involving intuition, dreams, emotional healing, or going with the flow.",
+          "Tune in to your inner tide: what is your intuition telling you that your reasoning cannot?",
+          "Pair with a water stone (moonstone or aquamarine) placed by your bedside or bath.",
+          "Affirm: 'I trust the flow of my intuition, and I move around obstacles like water.'"
+        ]
+      },
+      "crystals": ["moonstone", "aquamarine", "labradorite"],
+      "crystals_note": "Modern association — moonstone and aquamarine are classic water-element stones of intuition and emotion; labradorite opens the subconscious and dream realms.",
+      "faq_seeds": [
+        "What does the Laguz rune mean?",
+        "Is Laguz an intuition rune?",
+        "Which crystals work best with Laguz?",
+        "What does Laguz reversed mean?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "ingwaz-rune-meaning",
+      "title": "Ingwaz Rune: Meaning & Crystals",
+      "focus_keyword": "ingwaz rune",
+      "page_type": "rune",
+      "definition": "Ingwaz (ᛜ) is the rune of the seed — stored potential, the divine masculine, and the quiet gestation that precedes any new beginning. Named after the fertility god Ing (Freyr), Ingwaz holds the energy of what has not yet sprouted but is already whole inside its shell. It teaches patience with the unseen work that prepares breakthrough. Ingwaz has no reversed position.",
+      "rune": "Ingwaz",
+      "rune_symbol": "ᛜ",
+      "aett": 3,
+      "phonetic": "Ng",
+      "literal_meaning": "Seed, Ing (fertility god)",
+      "keywords": ["potential", "fertility", "gestation", "divine masculine", "long-term goals"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Ingwaz during a season of preparation — when nothing seems to be happening on the surface but a great deal is being readied underneath.",
+          "Trust gestation: the seed holds its full future inside it, and forcing the shell only damages what is forming.",
+          "Pair with a fertility-and-growth stone (jade or moss agate) placed where long-term work is being nurtured.",
+          "Affirm: 'My potential is whole inside me, and it gestates in its right time.'"
+        ]
+      },
+      "crystals": ["jade", "moss-agate", "carnelian"],
+      "crystals_note": "Modern association — jade and moss agate are classic fertility and growth stones; carnelian offers the sacral vitality that fuels new life.",
+      "faq_seeds": [
+        "What does the Ingwaz rune symbolize?",
+        "Is Ingwaz connected to the god Freyr?",
+        "Why does Ingwaz have no reversed meaning?",
+        "Which crystals pair with Ingwaz?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "dagaz-rune-meaning",
+      "title": "Dagaz Rune: Meaning & Crystals",
+      "focus_keyword": "dagaz rune",
+      "page_type": "rune",
+      "definition": "Dagaz (ᛞ) is the rune of dawn — the breakthrough moment when night and day meet and a new reality clicks into place. It is the awakening, the sudden clarity, the perspective shift after which nothing looks the same. Dagaz marks the completion of one cycle and the radiant opening of the next, the instant when anything becomes possible. Dagaz has no reversed position.",
+      "rune": "Dagaz",
+      "rune_symbol": "ᛞ",
+      "aett": 3,
+      "phonetic": "D",
+      "literal_meaning": "Day, dawn",
+      "keywords": ["breakthrough", "awakening", "new beginnings", "clarity", "completion"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Dagaz at the threshold of a major shift — when a long dark period is about to break.",
+          "Stay open: Dagaz often arrives as a sudden flash of insight, not a gradual improvement.",
+          "Pair with a light-bringing stone (citrine or selenite) to anchor the new dawn once it breaks.",
+          "Affirm: 'I welcome the breakthrough, and I step into the new day.'"
+        ]
+      },
+      "crystals": ["citrine", "clear-quartz", "selenite"],
+      "crystals_note": "Modern association — citrine carries the sun-at-dawn frequency; clear quartz and selenite are pure light-bringers that match Dagaz's radiant clarity.",
+      "faq_seeds": [
+        "What does the Dagaz rune mean?",
+        "Is Dagaz a positive rune?",
+        "Why does Dagaz have no reversed meaning?",
+        "Which crystals work with Dagaz for breakthrough?"
+      ],
+      "eastern_note": "Norse tradition"
+    },
+    {
+      "slug": "othala-rune-meaning",
+      "title": "Othala Rune: Meaning & Crystals",
+      "focus_keyword": "othala rune",
+      "page_type": "rune",
+      "definition": "Othala (ᛟ) is the rune of ancestral heritage — inherited land, family legacy, and the spiritual wealth passed down through generations. It represents the home, the sense of belonging, and the responsibility to honor what was given to you while releasing the patterns that no longer serve. Othala closes the Elder Futhark by reminding you that you stand on the shoulders of those who came before, and that what you build will outlast you.",
+      "rune": "Othala",
+      "rune_symbol": "ᛟ",
+      "aett": 3,
+      "phonetic": "O",
+      "literal_meaning": "Ancestral property, heritage",
+      "keywords": ["heritage", "ancestry", "legacy", "home", "belonging"],
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Call on Othala for work involving family, ancestry, your home, or what you wish to leave behind.",
+          "Honor what was passed down — both gifts and wounds — and consciously choose what to carry forward.",
+          "Pair with a grounding ancestral stone (smoky quartz or bloodstone) placed on a family altar or by the front door.",
+          "Affirm: 'I honor my heritage, carry its gifts forward, and heal what no longer serves.'"
+        ]
+      },
+      "crystals": ["smoky-quartz", "bloodstone", "petrified-wood"],
+      "crystals_note": "Modern association — smoky quartz and bloodstone are deep grounding stones connected to lineage and earth; petrified wood carries the literal energy of deep time and ancestry.",
+      "faq_seeds": [
+        "What does the Othala rune mean?",
+        "Is Othala an ancestry rune?",
+        "Which crystals pair with Othala?",
+        "What does Othala reversed signify?"
+      ],
+      "eastern_note": "Norse tradition"
+    }
+  ]
+}

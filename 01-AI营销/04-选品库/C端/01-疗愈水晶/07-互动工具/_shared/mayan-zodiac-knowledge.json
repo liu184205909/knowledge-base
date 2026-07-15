@@ -1,0 +1,617 @@
+{
+  "_meta": {
+    "name": "mayan-zodiac-knowledge",
+    "purpose": "玛雅 Zodiac 主词页知识层（20 日符 Nawales × 水晶 + Dreamspell 体系）。P2 新线，覆盖 Mayan astrology 20 day signs 矩阵。",
+    "evidence_tier": "Mayan Tzolkin/Dreamspell 公开体系(确证) + 水晶现代配伍(modern association)",
+    "caveat": "20 日符寓意源自 Mayan Tzolk'in 圣历（260 天 = 20 日符 × 13 数字）公开体系；Dreamspell archetype 英文关键词源自 José Argüelles 1987-1992 公开出版的 Dreamspell/Tzolk'in 体系（公开标准化映射，非我们原创）。水晶配伍第一颗为 cmramsburg.com 公开 lucky gem（现代占星博客），第 2-3 颗为按寓意/颜色/元素的现代关联（modern association，非玛雅原住民传统）。玛雅原住民传统本身无系统水晶配伍体系——这是现代西方玄学叠加。",
+    "source_notes": {
+      "meaning_sources": ["cmramsburg.com/post/basics-of-mayan-astrology (20 日符完整属性: 颜色/动物/方向/性格/兼容/lucky gem)", "mymayansign.com/blog/mayan-zodiac-signs (20 日符寓意独立确证)", "Smithsonian NMAI maya.nmai.si.edu Maya Sacred Calendar PDF (学术参照)"],
+      "crystal_source": "cmramsburg.com lucky gem 配伍（每符 1 颗）+ 按寓意现代补充",
+      "cmramsburg_caveat": "cmramsburg 对 Men(Eagle) 与 Kib(Vulture) 的 lucky gem 均列为 moonstone，疑似作者抄录重复（笔误）。本文件保留 moonstone 作为来源记录，同时按寓意补充更贴合的水晶（Men→lapis-lazuli 远见/第三眼；Kib→tiger-eye 战略/洞察）。",
+      "serp_evidence": "serp_check (us/en/mobile, 2026-07-15): 'mayan zodiac day signs meanings' 有 AIO 无 featured snippet; 'mayan sign crystals and meanings' 有 AIO 无 featured snippet; 'mayan dreamspell tzolkin 20 day signs' 无 AIO 无 SERP（空）。9线审核判断'无 AIO'需复核——当前 mayan zodiac / mayan sign crystals 两词已出现 AIO，但 20 日符矩阵页（长尾，每符独立页）仍无明显 AIO 占位，内容矩阵有机会。"
+    },
+    "structure_note": "day_sign 拼法采用 Classical Yucatec 标准化学术拼法（Imix/Ik/Akbal/Kan/Chicchan/Cimi/Manik/Lamat/Muluc/Oc/Chuen/Eb/Ben/Ix/Men/Kib/Kaban/Etznab/Kawak/Ajaw），cmramsburg 用 Chikchan/Kimi/Muluk/Ok/Chuwen/K'aban/Etz'nab/K'awak/Ahau（变体），mymayansign 用 Cib/Caban/Cauac/Ahau（变体）。所有变体在 definition 中标注以便 SEO 覆盖。"
+  },
+  "mainpages": [
+    {
+      "slug": "imix-mayan-sign",
+      "title": "Imix (Crocodile): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "imix mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Imix (Crocodile) is the first of the 20 Mayan day signs, representing new beginnings, primal creation, and nurturing instinct. Those born under this Red East sign are brave, hardworking, and determined natural warriors, yet must balance tendencies toward aggression, indecision, and possessiveness. Imix carries the primordial creative force — the raw life energy that initiates all things.",
+      "day_sign": "Imix",
+      "number": 1,
+      "animal": "Crocodile",
+      "color": "Red",
+      "direction": "East",
+      "dreamspell_archetype": "Dragon (Nurturing / Being)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Begin new projects on days carrying Imix energy to seed them with primal creative force.",
+          "Nurture your ideas like a crocodile guarding her young — protect early-stage visions from premature criticism.",
+          "Channel natural warrior determination into disciplined action rather than aggression or dominance.",
+          "Meditate with red jasper or garnet at sunrise (east) to awaken Imix's initiating fire."
+        ]
+      },
+      "crystals": ["red-jasper", "garnet", "carnelian"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "red-jasper",
+        "modern_associations": ["garnet (red / new beginnings / root energy)", "carnelian (creative vitality / courage)"]
+      },
+      "mayan_compatibility": {"compatible": "Ik (Wind)", "incompatible": "Chuen (Monkey)"},
+      "faq_seeds": ["What does the Imix Mayan sign mean?", "Which crystals are best for the Imix Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Crocodile (Imix) is the primordial reptile of Mayan cosmology that carries the waters of creation"
+    },
+    {
+      "slug": "ik-mayan-sign",
+      "title": "Ik (Wind): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "ik mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Ik (Wind) is the sign of breath, spirit, and communication, associated with the hummingbird and the color white. Ik individuals are spiritual, imaginative, free-spirited dreamers who bring clarity and inspiration to others, though they can struggle with inconsistency and negligence. In Mayan cosmology, Ik governs the life-giving force of air and the sacred exchange of ideas.",
+      "day_sign": "Ik",
+      "number": 2,
+      "animal": "Hummingbird",
+      "color": "White",
+      "direction": "North",
+      "dreamspell_archetype": "Wind (Spirit / Communication)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Practice conscious breathwork (pranayama) to attune to Ik's airy life-force.",
+          "Speak your truth clearly — Ik governs communication and the exchange of ideas.",
+          "Spend time in open, airy spaces or on windy days to recharge your spiritual batteries.",
+          "Journal to capture the imaginative visions and inspiration Ik energy carries."
+        ]
+      },
+      "crystals": ["sodalite", "clear-quartz", "blue-lace-agate"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "sodalite",
+        "modern_associations": ["clear-quartz (clarity / communication amplification)", "blue-lace-agate (throat chakra / gentle expression)"]
+      },
+      "mayan_compatibility": {"compatible": "Akbal (Night)", "incompatible": "Eb (Road)"},
+      "faq_seeds": ["What does the Ik Mayan sign mean?", "Which crystals are best for the Ik Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Ik is the breath of life and the wind that carries spirit between worlds"
+    },
+    {
+      "slug": "akbal-mayan-sign",
+      "title": "Akbal (Night): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "akbal mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Akbal (Night) is the sign of the dreamer and visionary, associated with the bat, the color blue, and the west. Akbal people are optimistic, ambitious problem-solvers with strong intuition and loyalty, though they can become vindictive and inflexible. Akbal invites exploration of the subconscious, dreams, and the fertile darkness from which all creation emerges.",
+      "day_sign": "Akbal",
+      "number": 3,
+      "animal": "Bat",
+      "color": "Blue",
+      "direction": "West",
+      "dreamspell_archetype": "Night (Abundance / Dream)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Keep a dream journal — Akbal's gifts arrive through the subconscious and nighttime vision.",
+          "Create a quiet, dark meditation space to access Akbal's patient, loyal wisdom.",
+          "Tackle complex problems during early morning or evening hours when Akbal intuition peaks.",
+          "Trust instinct over pure logic when Akbal energy is active in your sign."
+        ]
+      },
+      "crystals": ["snowflake-obsidian", "labradorite", "amethyst"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "snowflake-obsidian",
+        "modern_associations": ["labradorite (night magic / intuition / third eye)", "amethyst (spiritual dreaming / subconscious access)"]
+      },
+      "mayan_compatibility": {"compatible": "Kan (Seed)", "incompatible": "Ben (Reed)"},
+      "faq_seeds": ["What does the Akbal Mayan sign mean?", "Which crystals are best for the Akbal Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Akbal is the night and the cave, the interior space where dreams and abundance gestate"
+    },
+    {
+      "slug": "kan-mayan-sign",
+      "title": "Kan (Seed): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "kan mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Kan (Seed) is the sign of growth, potential, and creative abundance, symbolized by the lizard or iguana, the color yellow, and the south. Kan individuals are passionate, wise communicators and skilled negotiators who plant ideas that grow, though they may become argumentative and difficult. Kan represents the infinite potential held within a single seed waiting to unfold.",
+      "day_sign": "Kan",
+      "number": 4,
+      "animal": "Lizard / Iguana",
+      "color": "Yellow",
+      "direction": "South",
+      "dreamspell_archetype": "Seed (Flowering / Targeting)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Plant literal or metaphorical seeds — Kan energy amplifies anything started with clear intention.",
+          "Practice clear, passionate communication in negotiations and conflict resolution.",
+          "Honor your creative potential by dedicating weekly time to artistic or intellectual growth.",
+          "Work with citrine or yellow stones to amplify Kan's abundance and growth frequency."
+        ]
+      },
+      "crystals": ["dumortierite", "citrine", "tiger-eye"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "dumortierite",
+        "modern_associations": ["citrine (yellow / abundance / growth / solar plexus)", "tiger-eye (wisdom / disciplined will / negotiation)"]
+      },
+      "mayan_compatibility": {"compatible": "Chicchan (Serpent)", "incompatible": "Ix (Jaguar)"},
+      "faq_seeds": ["What does the Kan Mayan sign mean?", "Which crystals are best for the Kan Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Kan is the seed of corn, the sacred staple of Mayan civilization, carrying the code of unfolding life"
+    },
+    {
+      "slug": "chicchan-mayan-sign",
+      "title": "Chicchan (Serpent): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "chicchan mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Chicchan (Serpent), also spelled Chikchan, is the sign of life-force energy, passion, and transformation, associated with the serpent, the color red, and the east. Chicchan people are energetic, intelligent, empathetic, and charismatic, though they must guard against opportunism and disloyalty. Chicchan embodies the kundalini-like creative power that animates all living things and drives radical transformation.",
+      "day_sign": "Chicchan",
+      "number": 5,
+      "animal": "Serpent",
+      "color": "Red",
+      "direction": "East",
+      "dreamspell_archetype": "Serpent (Life Force / Instinct / Sex)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Work with the body's vital energy — Chicchan rules the life-force (kin to kundalini traditions).",
+          "Channel intense charisma and passion into a cause, not into opportunism.",
+          "Use shadow-work stones (obsidian, garnet) to transmute and integrate, rather than suppress, strong emotion.",
+          "Practice conscious embodiment (yoga, dance) to keep the serpent fire flowing rather than coiling into anger."
+        ]
+      },
+      "crystals": ["amethyst", "garnet", "black-obsidian"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "amethyst",
+        "modern_associations": ["garnet (passion / life-force / root-red frequency)", "black-obsidian (shadow integration / transformation / serpent shedding)"]
+      },
+      "mayan_compatibility": {"compatible": "Cimi (Death)", "incompatible": "Men (Eagle)"},
+      "faq_seeds": ["What does the Chicchan Mayan sign mean?", "Which crystals are best for the Chicchan Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Chicchan is the feathered serpent (Kukulkan / Quetzalcoatl), the awakened life-force that bridges earth and sky"
+    },
+    {
+      "slug": "cimi-mayan-sign",
+      "title": "Cimi (Death): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "cimi mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Cimi (Death), also spelled Kimi, is the sign of renewal, transformation, and selfless service, associated with the owl, the color white, and the north. Cimi individuals are patient, generous, and open-minded helpers who embrace change and endings, though they can be oversensitive and unappreciative. In Mayan tradition, Cimi represents sacred death — the necessary ending that makes every rebirth possible.",
+      "day_sign": "Cimi",
+      "number": 6,
+      "animal": "Owl",
+      "color": "White",
+      "direction": "North",
+      "dreamspell_archetype": "World-Bridger (Death / Equality / Opportunity)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Honor endings — release what is complete so that renewal can enter (Cimi is not literal death but sacred transition).",
+          "Practice generous, open-hearted service without keeping score.",
+          "Spend reflective time in nature during seasonal thresholds (solstice, equinox) when Cimi energy peaks.",
+          "Work with smoky quartz or howlite to soften oversensitivity and support grief or transition."
+        ]
+      },
+      "crystals": ["carnelian", "smoky-quartz", "howlite"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "carnelian",
+        "modern_associations": ["smoky-quartz (release / transition / grounding after loss)", "howlite (white / patience / calming emotional reactivity)"]
+      },
+      "mayan_compatibility": {"compatible": "Manik (Deer)", "incompatible": "Kib (Vulture)"},
+      "faq_seeds": ["What does the Cimi Mayan sign mean?", "Is Cimi (Death) a bad Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Cimi/Kimi is the Lord of Death in Mayan cosmology, a benevolent guide who bridges worlds, not an evil force"
+    },
+    {
+      "slug": "manik-mayan-sign",
+      "title": "Manik (Deer): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "manik mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Manik (Deer / Hand) is the sign of peace, grace, protection, and accomplishment, associated with the deer, the color blue, and the west. Manik individuals are well-respected, confident, responsible, and strong community pillars, though they can become angry and demanding when overburdened. Manik represents the helping hand and the protective power of the deer spirit.",
+      "day_sign": "Manik",
+      "number": 7,
+      "animal": "Deer",
+      "color": "Blue",
+      "direction": "West",
+      "dreamspell_archetype": "Hand (Knowledge / Accomplishment / Healing)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Offer your skills in service — Manik is the hand that accomplishes and heals.",
+          "Protect those who cannot protect themselves, as the deer spirit protects the herd.",
+          "Practice graceful de-escalation in conflict; Manik energy favors peace over force.",
+          "Use amazonite or aquamarine to soothe anger and demanding tendencies under pressure."
+        ]
+      },
+      "crystals": ["amazonite", "aquamarine", "rose-quartz"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "amazonite",
+        "modern_associations": ["aquamarine (peace / blue / soothing anger)", "rose-quartz (compassion / protective heart)"]
+      },
+      "mayan_compatibility": {"compatible": "Lamat (Star)", "incompatible": "Kaban (Earth)"},
+      "faq_seeds": ["What does the Manik Mayan sign mean?", "Which crystals are best for the Manik Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Manik is the deer and the grasping hand, the sign of skilled accomplishment and peaceful guardianship"
+    },
+    {
+      "slug": "lamat-mayan-sign",
+      "title": "Lamat (Star): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "lamat mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Lamat (Star / Rabbit) is the sign of beauty, harmony, artistic energy, and abundance, associated with the rabbit, the color yellow, and the south. Lamat individuals are fortunate, responsible, lively, and intuitive, guided by emotion and aesthetic sense, though they can become rebellious and self-centered. Lamat carries the radiant energy of the morning star and the fertile multiplication of the rabbit.",
+      "day_sign": "Lamat",
+      "number": 8,
+      "animal": "Rabbit",
+      "color": "Yellow",
+      "direction": "South",
+      "dreamspell_archetype": "Star (Art / Beauty / Elegance)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Create beauty — Lamat energy amplifies art, design, music, and aesthetic pursuits.",
+          "Practice gratitude for abundance; the rabbit multiplies whatever you focus on.",
+          "Balance emotional intensity with grounding practices to avoid self-centered spirals.",
+          "Work with clear quartz or citrine to keep Lamat's radiant frequency clear and generous."
+        ]
+      },
+      "crystals": ["hematite", "citrine", "clear-quartz"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "hematite",
+        "modern_associations": ["citrine (yellow / abundance / joy / solar radiance)", "clear-quartz (starlight / clarity / amplification of beauty)"]
+      },
+      "mayan_compatibility": {"compatible": "Muluc (Moon)", "incompatible": "Etznab (Mirror)"},
+      "faq_seeds": ["What does the Lamat Mayan sign mean?", "Which crystals are best for the Lamat Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Lamat is the planet Venus as morning star, the Mayan symbol of beauty, fertility, and harmonious timekeeping"
+    },
+    {
+      "slug": "muluc-mayan-sign",
+      "title": "Muluc (Moon): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "muluc mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Muluc (Moon / Water), also spelled Muluk, is the sign of emotional and spiritual healing, associated with the shark, the color red, and the east. Muluc individuals are sincere, imaginative, and compassionate souls who would sacrifice themselves for loved ones or a greater cause, though they can be emotionally volatile and vengeful. Muluc governs the tides of feeling and the purifying flow of water.",
+      "day_sign": "Muluc",
+      "number": 9,
+      "animal": "Shark",
+      "color": "Red",
+      "direction": "East",
+      "dreamspell_archetype": "Moon (Water / Purification / Universal Flow)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Work with the moon cycles — Muluc is lunar-tidal energy; track emotions against moon phases.",
+          "Practice emotional purification through water (ritual bathing, ocean walks, hydration mindfulness).",
+          "Honor your impulse to serve and sacrifice, but set boundaries to avoid martyrdom or vengeance.",
+          "Carry moonstone or aquamarine to stabilize emotional tides and support compassionate clarity."
+        ]
+      },
+      "crystals": ["lapis-lazuli", "moonstone", "aquamarine"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "lapis-lazuli",
+        "modern_associations": ["moonstone (lunar / emotional healing / divine feminine)", "aquamarine (water element / emotional flow / calming)"]
+      },
+      "mayan_compatibility": {"compatible": "Oc (Dog)", "incompatible": "Kawak (Storm)"},
+      "faq_seeds": ["What does the Muluc Mayan sign mean?", "Which crystals are best for the Muluc Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Muluc is the moon-goddess Ixchel's domain, the waters, rains, and tides that purify and heal"
+    },
+    {
+      "slug": "oc-mayan-sign",
+      "title": "Oc (Dog): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "oc mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Oc (Dog), also spelled Ok, is the sign of loyalty, unconditional love, and protective guidance, associated with the dog, the color white, and the north. Oc individuals are courageous, honest, helpful, and alert — the faithful friends and guardians of the zodiac, though they can be naive and insecure. In Mayan tradition, Oc represents the dog spirit that guides souls through the underworld.",
+      "day_sign": "Oc",
+      "number": 10,
+      "animal": "Dog",
+      "color": "White",
+      "direction": "North",
+      "dreamspell_archetype": "Dog (Heart / Loyalty / Guidance)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Lead with the heart — Oc is the sign of unconditional love and faithful companionship.",
+          "Offer honest guidance to those who trust you; Oc energy makes you a natural soul-guide.",
+          "Guard against naivety by pairing loyalty with discernment.",
+          "Work with rose quartz or bloodstone to strengthen the heart and steady occasional insecurity."
+        ]
+      },
+      "crystals": ["bloodstone", "rose-quartz", "rhodonite"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "bloodstone",
+        "modern_associations": ["rose-quartz (unconditional love / heart chakra)", "rhodonite (loyalty / compassion / emotional balance)"]
+      },
+      "mayan_compatibility": {"compatible": "Chuen (Monkey)", "incompatible": "Ajaw (Sun)"},
+      "faq_seeds": ["What does the Oc Mayan sign mean?", "Which crystals are best for the Oc Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Oc is the dog (Tlaloc's guide in some traditions), the faithful animal that leads souls through Xibalba (the underworld)"
+    },
+    {
+      "slug": "chuen-mayan-sign",
+      "title": "Chuen (Monkey): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "chuen mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Chuen (Monkey), also spelled Chuwen, is the sign of play, creativity, artistry, and humor, associated with the monkey, the color blue, and the west. Chuen individuals are fun-loving socialites with natural charisma and artistic talent, though they must guard against superficiality and arrogance. Chuen embodies the trickster-creator energy that weaves beauty, illusion, and laughter into the fabric of the world.",
+      "day_sign": "Chuen",
+      "number": 11,
+      "animal": "Monkey",
+      "color": "Blue",
+      "direction": "West",
+      "dreamspell_archetype": "Monkey (Magic / Illusion / Art)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Make art daily — Chuen is the master craftsman and cosmic trickster who weaves creation through play.",
+          "Use humor consciously as a bridge in social situations, not as a mask for depth.",
+          "Balance play with commitment to avoid the superficiality Chuen energy can slip into.",
+          "Carry aventurine or citrine to keep creative joy grounded and generous."
+        ]
+      },
+      "crystals": ["aventurine", "citrine", "sunstone"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "aventurine",
+        "modern_associations": ["citrine (creative joy / abundance / solar playfulness)", "sunstone (vitality / leadership through charisma)"]
+      },
+      "mayan_compatibility": {"compatible": "Eb (Road)", "incompatible": "Imix (Crocodile)"},
+      "faq_seeds": ["What does the Chuen Mayan sign mean?", "Which crystals are best for the Chuen Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Chuen is the howler monkey, the patron of artisans, scribes, and calendar-keepers in Mayan codices"
+    },
+    {
+      "slug": "eb-mayan-sign",
+      "title": "Eb (Road): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "eb mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Eb (Road / Grass / Human Path), associated with the mountain lion, the color yellow, and the south, is the sign of destiny, life's journey, and humble service. Eb individuals are hardworking, organized, adaptable travelers on the human road of life, though they can be reserved and aloof. Eb represents the path itself — the open road each person walks toward their fate.",
+      "day_sign": "Eb",
+      "number": 12,
+      "animal": "Mountain Lion",
+      "color": "Yellow",
+      "direction": "South",
+      "dreamspell_archetype": "Human (Free Will / Influence / Wisdom)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Clarify the road ahead — Eb energy favors deliberate, step-by-step progress over impulsive leaps.",
+          "Serve others along your path; Eb finds meaning in humble, organized contribution.",
+          "Travel when you feel stuck — movement along an actual road reactivates Eb's destiny-flow.",
+          "Work with malachite or tiger-eye to stay disciplined and opportunistic on your chosen path."
+        ]
+      },
+      "crystals": ["malachite", "tiger-eye", "moss-agate"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "malachite",
+        "modern_associations": ["tiger-eye (destiny / disciplined will / road-protector)", "moss-agate (earth road / steady growth / nature's path)"]
+      },
+      "mayan_compatibility": {"compatible": "Ben (Reed)", "incompatible": "Ik (Wind)"},
+      "faq_seeds": ["What does the Eb Mayan sign mean?", "Which crystals are best for the Eb Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Eb is the road of life (the 'human road'), the sacred path walked by all people; in Dreamspell it maps to Human, the free-will bearer"
+    },
+    {
+      "slug": "ben-mayan-sign",
+      "title": "Ben (Reed): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "ben mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Ben (Reed / Pillar), associated with the armadillo, the color red, and the east, is the sign of strength, leadership, and protection of family and community. Ben individuals are wise, supportive, generous perfectionists who anchor their communities, though they can become authoritative and prefer to work alone. Ben represents the cosmic pillar or reed that connects heaven and earth.",
+      "day_sign": "Ben",
+      "number": 13,
+      "animal": "Armadillo",
+      "color": "Red",
+      "direction": "East",
+      "dreamspell_archetype": "Skywalker (Space / Exploration / Wakefulness)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Stand as the pillar — Ben energy makes you the steady axis around which family or team turns.",
+          "Offer generous mentorship; channel perfectionism into supporting others' growth, not just your own.",
+          "Honor your need for occasional solitude to recharge your leadership strength.",
+          "Work with turquoise or black tourmaline for protective, grounded authority."
+        ]
+      },
+      "crystals": ["turquoise", "red-jasper", "black-tourmaline"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "turquoise",
+        "modern_associations": ["red-jasper (strength / rooted leadership / foundation)", "black-tourmaline (protection / grounding authority)"]
+      },
+      "mayan_compatibility": {"compatible": "Ix (Jaguar)", "incompatible": "Akbal (Night)"},
+      "faq_seeds": ["What does the Ben Mayan sign mean?", "Which crystals are best for the Ben Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Ben is the reed or maize stalk, the world-axis pillar that joins sky and earth in Mayan cosmology"
+    },
+    {
+      "slug": "ix-mayan-sign",
+      "title": "Ix (Jaguar): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "ix mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Ix (Jaguar), associated with the jaguar, the color white, and the north, is the sign of the spiritual warrior — magic, intuition, and courage. Ix individuals are sophisticated, clever, decisive, astute, and patient with deep practical wisdom, though they can be arrogant and overbearing. Ix embodies the shamanic power of the jaguar, guardian of the forests and the liminal night.",
+      "day_sign": "Ix",
+      "number": 14,
+      "animal": "Jaguar",
+      "color": "White",
+      "direction": "North",
+      "dreamspell_archetype": "Wizard (Timelessness / Receptivity / Enchantment)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Develop your magical intuition — Ix is the shaman-jaguar sign, attuned to unseen worlds.",
+          "Practice decisive action tempered with patience; Ix energy is both swift and still.",
+          "Spend solo time in forests or wilderness to charge the jaguar's earth-magic.",
+          "Work with moonstone or labradorite to refine intuition; obsidian to anchor shadow power."
+        ]
+      },
+      "crystals": ["moonstone", "labradorite", "black-obsidian"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "moonstone",
+        "modern_associations": ["labradorite (shamanic magic / intuition / third eye)", "black-obsidian (jaguar shadow-power / protection / scrying)"]
+      },
+      "mayan_compatibility": {"compatible": "Men (Eagle)", "incompatible": "Kan (Seed)"},
+      "faq_seeds": ["What does the Ix Mayan sign mean?", "Which crystals are best for the Ix Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Ix is the jaguar (Balam), the most sacred animal of the Maya, guardian of the forest and the night, patron of shamans"
+    },
+    {
+      "slug": "men-mayan-sign",
+      "title": "Men (Eagle): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "men mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Men (Eagle), associated with the eagle, the color blue, and the west, is the sign of vision, strategy, and the higher perspective. Men individuals are independent, ambitious, analytical perfectionists who see life from a soaring vantage point, though they can become critical and stubborn. Men represents the eagle's gift of far-seeing clarity and the cosmic overview needed for strategic leadership.",
+      "day_sign": "Men",
+      "number": 15,
+      "animal": "Eagle",
+      "color": "Blue",
+      "direction": "West",
+      "dreamspell_archetype": "Eagle (Mind / Vision / Hope)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Cultivate the eagle's overview — regularly step back from detail to see the larger pattern.",
+          "Use your analytical mind for strategy, but soften criticism of those who cannot match your altitude.",
+          "Meditate on a high place (hill, rooftop) to strengthen Men's far-seeing faculty.",
+          "Work with lapis lazuli or clear quartz to open the third-eye and clarify long-range vision."
+        ]
+      },
+      "crystals": ["moonstone", "lapis-lazuli", "clear-quartz"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "moonstone (note: cmramsburg lists moonstone for both Men and Kib — likely transcription repeat)",
+        "modern_associations": ["lapis-lazuli (third eye / vision / blue / strategic insight)", "clear-quartz (mental clarity / far-seeing)"]
+      },
+      "mayan_compatibility": {"compatible": "Kib (Vulture)", "incompatible": "Chicchan (Serpent)"},
+      "faq_seeds": ["What does the Men Mayan sign mean?", "Which crystals are best for the Men Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Men is the eagle, the sacred messenger of the sun that carries vision between heaven and earth"
+    },
+    {
+      "slug": "kib-mayan-sign",
+      "title": "Kib (Vulture): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "kib mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Kib (Vulture), also spelled Cib, associated with the vulture (or condor), the color yellow, and the south, is the sign of knowledge, forgiveness, and enlightened strategy. Kib individuals are studious, knowledgeable visionaries and strategists who see through to the essence of things, though they can become cynical and jaded. Kib represents the condor-vulture that soars above and transforms what is no longer needed.",
+      "day_sign": "Kib",
+      "number": 16,
+      "animal": "Vulture / Condor",
+      "color": "Yellow",
+      "direction": "South",
+      "dreamspell_archetype": "Warrior (Cunning / Questioning / Fearlessness)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Practice forgiveness — Kib is the sign that transforms the no-longer-needed into wisdom.",
+          "Study deeply; Kib individuals are natural scholars and systems-thinkers.",
+          "Guard against cynicism by pairing analysis with compassion for human limitation.",
+          "Work with tiger-eye or citrine to keep strategic intelligence warm and clear rather than jaded."
+        ]
+      },
+      "crystals": ["moonstone", "tiger-eye", "citrine"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "moonstone (note: cmramsburg lists moonstone for both Men and Kib — likely transcription repeat)",
+        "modern_associations": ["tiger-eye (strategic insight / yellow / solar intelligence)", "citrine (wisdom / mental clarity / anti-cynicism)"]
+      },
+      "mayan_compatibility": {"compatible": "Kaban (Earth)", "incompatible": "Cimi (Death)"},
+      "faq_seeds": ["What does the Kib Mayan sign mean?", "Which crystals are best for the Kib Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Kib is the king vulture, the sacred scavenger that purifies and transforms, associated with foresight and the condor's high flight"
+    },
+    {
+      "slug": "kaban-mayan-sign",
+      "title": "Kaban (Earth): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "kaban mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Kaban (Earth / Navigation), also spelled Caban, associated with the woodpecker, the color red, and the east, is the sign of grounding, mindfulness, balance, and innovation. Kaban individuals are conservative, practical, and philosophical people who value justice and creative problem-solving, though they can be condescending and overly curious. Kaban represents the intelligence of the earth itself and the evolutionary navigation of life.",
+      "day_sign": "Kaban",
+      "number": 17,
+      "animal": "Woodpecker",
+      "color": "Red",
+      "direction": "East",
+      "dreamspell_archetype": "Earth (Navigation / Synchronicity / Intelligence)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Ground daily — Kaban is earth-intelligence; barefoot contact with soil restores its balance.",
+          "Practice mindful navigation of change; Kaban thrives on synchronicity and well-timed innovation.",
+          "Channel curiosity into genuine inquiry rather than condescension toward others' pace.",
+          "Work with agate or hematite to stabilize Kaban's practical, philosophical energy."
+        ]
+      },
+      "crystals": ["agate", "hematite", "smoky-quartz"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "agate",
+        "modern_associations": ["hematite (grounding / rooting into earth / mental balance)", "smoky-quartz (grounding / practical wisdom / earth anchor)"]
+      },
+      "mayan_compatibility": {"compatible": "Etznab (Mirror)", "incompatible": "Manik (Deer)"},
+      "faq_seeds": ["What does the Kaban Mayan sign mean?", "Which crystals are best for the Kaban Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Kaban is the earth and its rotation, the intelligence of the planet that guides migration, agriculture, and the navigation of life"
+    },
+    {
+      "slug": "etznab-mayan-sign",
+      "title": "Etznab (Mirror): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "etznab mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Etznab (Mirror / Flint), also spelled Etz'nab, associated with the fish, the color white, and the north, is the sign of truth, logic, and cutting through illusion. Etznab individuals are selfless, courageous truth-seekers who sacrifice for the greater good and act with logic and caution, though they can be reserved and resentful. Etznab represents the obsidian mirror and flint knife that reflect truth and sever falsehood.",
+      "day_sign": "Etznab",
+      "number": 18,
+      "animal": "Fish",
+      "color": "White",
+      "direction": "North",
+      "dreamspell_archetype": "Mirror (Endlessness / Order / Reflection)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Seek truth without flinching — Etznab is the mirror that shows reality exactly as it is.",
+          "Use the flint-knife quality to decisively cut away illusion, toxic patterns, and falsehood.",
+          "Temper logic with warmth so that truth-telling does not isolate or embitter you.",
+          "Work with clear quartz or selenite to keep the mirror clear and the mind impartial."
+        ]
+      },
+      "crystals": ["rhodonite", "clear-quartz", "selenite"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "rhodonite",
+        "modern_associations": ["clear-quartz (mirror / clarity / impartial truth-reflection)", "selenite (mental clarity / cutting illusion / high-vibration white)"]
+      },
+      "mayan_compatibility": {"compatible": "Kawak (Storm)", "incompatible": "Lamat (Star)"},
+      "faq_seeds": ["What does the Etznab Mayan sign mean?", "Which crystals are best for the Etznab Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Etznab is the obsidian mirror (Tezcatlipoca's smoking mirror in related traditions) and the flint knife, instruments of truth and sacrifice"
+    },
+    {
+      "slug": "kawak-mayan-sign",
+      "title": "Kawak (Storm): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "kawak mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Kawak (Storm), also spelled Cauac or K'awak, associated with the turtle, the color blue, and the west, is the sign of purification, renewal, and deep spiritual healing. Kawak individuals are calm, nurturing, imaginative healers connected to nature and the rhythms of transformation, though they can be idealistic and fragile. Kawak embodies the thunderstorm that cleanses, restores, and makes all things new.",
+      "day_sign": "Kawak",
+      "number": 19,
+      "animal": "Turtle",
+      "color": "Blue",
+      "direction": "West",
+      "dreamspell_archetype": "Storm (Catalysis / Energy / Transformation)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Welcome the storm — Kawak energy transforms through catharsis; do not resist necessary upheaval.",
+          "Practice cleansing rituals (smoke, salt baths, sound) to work with Kawak's purification current.",
+          "Protect your sensitivity by balancing idealism with grounding in daily routine.",
+          "Work with jade or aquamarine to keep the healing, watery quality of the storm steady and nurturing."
+        ]
+      },
+      "crystals": ["jade", "aquamarine", "amethyst"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "jade",
+        "modern_associations": ["aquamarine (water / purification / calming the storm)", "amethyst (spiritual healing / calming / blue-violet frequency)"]
+      },
+      "mayan_compatibility": {"compatible": "Ajaw (Sun)", "incompatible": "Muluc (Moon)"},
+      "faq_seeds": ["What does the Kawak Mayan sign mean?", "Which crystals are best for the Kawak Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Kawak is the thunderstorm and the rain-bringer, the agent of Chaac (the Mayan rain god) that purifies and renews all energy"
+    },
+    {
+      "slug": "ajaw-mayan-sign",
+      "title": "Ajaw (Sun): Mayan Day Sign Meaning & Crystals",
+      "focus_keyword": "ajaw mayan sign",
+      "page_type": "mayan-day-sign",
+      "definition": "Ajaw (Sun / Lord), also spelled Ahau, associated with the snail, the color yellow, and the south, is the sign of illumination, leadership, wisdom, and creative mastery. Ajaw individuals are honest, affectionate, creative, and wise — natural-born leaders who radiate warmth, though they can become closed-minded and resistant to being taught. Ajaw represents the sun itself, the supreme source of light, life, and enlightenment.",
+      "day_sign": "Ajaw",
+      "number": 20,
+      "animal": "Snail",
+      "color": "Yellow",
+      "direction": "South",
+      "dreamspell_archetype": "Sun (Enlightenment / Universal Fire / Mastery)",
+      "calculation": {
+        "method": "explanation",
+        "steps": [
+          "Radiate without forcing — Ajaw is the sun that illumines by being, not by argument.",
+          "Stay teachable; the mastered master remains a student (Ajaw's core challenge).",
+          "Lead through warmth and creative example rather than authority or pride.",
+          "Work with citrine or sunstone to amplify solar radiance; rose quartz to keep the heart open and affectionate."
+        ]
+      },
+      "crystals": ["rose-quartz", "citrine", "sunstone"],
+      "crystal_sources": {
+        "lucky_gem_cmramsburg": "rose-quartz",
+        "modern_associations": ["citrine (solar / yellow / abundance / illumination)", "sunstone (sun / leadership / radiant warmth)"]
+      },
+      "mayan_compatibility": {"compatible": "Imix (Crocodile)", "incompatible": "Oc (Dog)"},
+      "faq_seeds": ["What does the Ajaw Mayan sign mean?", "Which crystals are best for the Ajaw Mayan sign?"],
+      "eastern_note": "Mesoamerican Mayan Tzolk'in tradition — Ajaw (also Ahau) means 'Lord' and denotes the Sun and the enlightened ruler; it is the 20th and culminating day sign, the apex of the Tzolk'in cycle"
+    }
+  ]
+}

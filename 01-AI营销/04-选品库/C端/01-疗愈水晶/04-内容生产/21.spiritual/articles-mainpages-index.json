@@ -1,0 +1,80 @@
+{
+  "total": 15,
+  "articles": [
+    {
+      "slug": "spiritual-awakening",
+      "title": "Spiritual Awakening: Signs, Stages & Crystals for Support",
+      "page_type": "guide"
+    },
+    {
+      "slug": "spiritual-growth",
+      "title": "Spiritual Growth: What It Is & How to Cultivate It",
+      "page_type": "guide"
+    },
+    {
+      "slug": "spiritual-cleansing",
+      "title": "Spiritual Cleansing: Practices to Clear Energy & Space",
+      "page_type": "practice"
+    },
+    {
+      "slug": "spiritual-protection",
+      "title": "Spiritual Protection: Grounding, Shielding & Crystals",
+      "page_type": "practice"
+    },
+    {
+      "slug": "spiritual-journey",
+      "title": "The Spiritual Journey: Stages, Milestones & Crystals",
+      "page_type": "guide"
+    },
+    {
+      "slug": "crystal-altar",
+      "title": "How to Build a Crystal Altar: A Simple Guide",
+      "page_type": "practice"
+    },
+    {
+      "slug": "how-to-make-crystal-grid",
+      "title": "How to Make a Crystal Grid: Patterns & Steps",
+      "page_type": "practice"
+    },
+    {
+      "slug": "spiritual-crystals",
+      "title": "7 Must-Have Spiritual Crystals & Their Uses",
+      "page_type": "list"
+    },
+    {
+      "slug": "third-eye-opening",
+      "title": "Third Eye Opening: Signs, Practices & Crystals",
+      "page_type": "guide"
+    },
+    {
+      "slug": "raise-vibration",
+      "title": "How to Raise Your Vibration: Practices & Crystals",
+      "page_type": "practice"
+    },
+    {
+      "slug": "spiritual-meaning-of-stones",
+      "title": "Spiritual Meaning of Stones: Why Crystals Matter",
+      "page_type": "concept"
+    },
+    {
+      "slug": "spiritual-healing",
+      "title": "Spiritual Healing: A Reflection Framework (Not Medical Care)",
+      "page_type": "concept"
+    },
+    {
+      "slug": "spiritual-practices",
+      "title": "Spiritual Practices: 12 Ways to Cultivate Daily Awareness",
+      "page_type": "overview"
+    },
+    {
+      "slug": "spiritual-gifts",
+      "title": "Spiritual Gifts: A Reflection Framework (Not Superpowers)",
+      "page_type": "concept"
+    },
+    {
+      "slug": "spiritual-alignment",
+      "title": "Spiritual Alignment: What It Means & How to Find It",
+      "page_type": "guide"
+    }
+  ]
+}

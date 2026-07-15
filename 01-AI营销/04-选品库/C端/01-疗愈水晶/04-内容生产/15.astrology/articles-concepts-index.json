@@ -1,0 +1,105 @@
+{
+  "total": 20,
+  "articles": [
+    {
+      "slug": "astrology",
+      "title": "Astrology: Complete Guide to Signs, Planets & the Birth Chart",
+      "page_type": "concept"
+    },
+    {
+      "slug": "birth-chart",
+      "title": "Birth Chart (Natal Chart): What It Is & How to Read Yours",
+      "page_type": "concept"
+    },
+    {
+      "slug": "astrology-houses",
+      "title": "The 12 Astrology Houses: Meanings & Life Areas",
+      "page_type": "concept"
+    },
+    {
+      "slug": "retrogrades",
+      "title": "Planetary Retrogrades: Meaning & How to Work With Them",
+      "page_type": "concept"
+    },
+    {
+      "slug": "moon-phases",
+      "title": "Moon Phases: 8 Lunar Cycle Meanings & Timing",
+      "page_type": "concept"
+    },
+    {
+      "slug": "astrological-transits",
+      "title": "Astrological Transits: How Current Planets Affect Your Chart",
+      "page_type": "concept"
+    },
+    {
+      "slug": "zodiac-elements",
+      "title": "Zodiac Elements: Fire, Earth, Air & Water Signs",
+      "page_type": "concept"
+    },
+    {
+      "slug": "zodiac-modalities",
+      "title": "Zodiac Modalities: Cardinal, Fixed & Mutable Signs",
+      "page_type": "concept"
+    },
+    {
+      "slug": "first-house",
+      "title": "First House in Astrology: Self, Identity & Appearance",
+      "page_type": "house"
+    },
+    {
+      "slug": "second-house",
+      "title": "Second House in Astrology: Money, Values & Self-Worth",
+      "page_type": "house"
+    },
+    {
+      "slug": "third-house",
+      "title": "Third House in Astrology: Communication, Learning & Siblings",
+      "page_type": "house"
+    },
+    {
+      "slug": "fourth-house",
+      "title": "Fourth House in Astrology: Home, Family & Roots",
+      "page_type": "house"
+    },
+    {
+      "slug": "fifth-house",
+      "title": "Fifth House in Astrology: Creativity, Romance & Joy",
+      "page_type": "house"
+    },
+    {
+      "slug": "sixth-house",
+      "title": "Sixth House in Astrology: Health, Work & Daily Routine",
+      "page_type": "house"
+    },
+    {
+      "slug": "seventh-house",
+      "title": "Seventh House in Astrology: Partnership, Marriage & Contracts",
+      "page_type": "house"
+    },
+    {
+      "slug": "eighth-house",
+      "title": "Eighth House in Astrology: Transformation, Intimacy & Shared Resources",
+      "page_type": "house"
+    },
+    {
+      "slug": "ninth-house",
+      "title": "Ninth House in Astrology: Philosophy, Travel & Higher Learning",
+      "page_type": "house"
+    },
+    {
+      "slug": "tenth-house",
+      "title": "Tenth House in Astrology: Career, Public Image & Reputation",
+      "page_type": "house"
+    },
+    {
+      "slug": "eleventh-house",
+      "title": "Eleventh House in Astrology: Community, Friends & Aspirations",
+      "page_type": "house"
+    },
+    {
+      "slug": "twelfth-house",
+      "title": "Twelfth House in Astrology: Subconscious, Solitude & Spirituality",
+      "page_type": "house"
+    }
+  ]
+}

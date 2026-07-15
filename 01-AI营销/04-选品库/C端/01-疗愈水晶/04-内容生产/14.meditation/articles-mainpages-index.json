@@ -1,0 +1,61 @@
+{
+  "total": 14,
+  "articles": [
+    {
+      "slug": "how-to-meditate",
+      "title": "How to Meditate: A Complete Beginner's Guide"
+    },
+    {
+      "slug": "types-of-meditation",
+      "title": "Types of Meditation: 9 Styles Explained"
+    },
+    {
+      "slug": "mindfulness-meditation",
+      "title": "Mindfulness Meditation: How to Practice"
+    },
+    {
+      "slug": "benefits-of-meditation",
+      "title": "Benefits of Meditation: What Science Says"
+    },
+    {
+      "slug": "meditation-techniques",
+      "title": "Meditation Techniques for Beginners: 7 Methods"
+    },
+    {
+      "slug": "walking-meditation",
+      "title": "Walking Meditation: How to Practice Mindful Walking"
+    },
+    {
+      "slug": "chakra-meditation",
+      "title": "Chakra Meditation: Balancing the 7 Energy Centers"
+    },
+    {
+      "slug": "third-eye-meditation",
+      "title": "Third Eye Meditation: Opening the Ajna Center"
+    },
+    {
+      "slug": "breath-meditation",
+      "title": "Breath Meditation (Anapanasati): A Complete Guide"
+    },
+    {
+      "slug": "loving-kindness-meditation",
+      "title": "Loving-Kindness Meditation (Metta): How to Practice"
+    },
+    {
+      "slug": "body-scan-meditation",
+      "title": "Body Scan Meditation: A Step-by-Step Guide"
+    },
+    {
+      "slug": "transcendental-meditation",
+      "title": "Transcendental Meditation: What It Is & How It Works"
+    },
+    {
+      "slug": "meditation-postures",
+      "title": "Meditation Postures: How to Sit for Meditation"
+    },
+    {
+      "slug": "how-long-to-meditate",
+      "title": "How Long Should I Meditate? A Guide for Beginners"
+    }
+  ]
+}

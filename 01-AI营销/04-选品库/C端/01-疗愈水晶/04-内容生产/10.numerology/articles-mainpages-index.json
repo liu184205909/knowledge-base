@@ -1,0 +1,55 @@
+{
+  "total": 10,
+  "articles": [
+    {
+      "slug": "numerology",
+      "title": "Numerology: Complete Guide to Numbers & Meaning",
+      "page_type": "hub"
+    },
+    {
+      "slug": "life-path-number",
+      "title": "Life Path Number: Meaning, How to Calculate & Crystals",
+      "page_type": "concept"
+    },
+    {
+      "slug": "destiny-number",
+      "title": "Destiny Number (Expression Number): Meaning & How to Calculate",
+      "page_type": "concept"
+    },
+    {
+      "slug": "soul-urge-number",
+      "title": "Soul Urge Number (Heart's Desire): Meaning & Calculation",
+      "page_type": "concept"
+    },
+    {
+      "slug": "personality-number",
+      "title": "Personality Number: How Others See You & Calculation",
+      "page_type": "concept"
+    },
+    {
+      "slug": "birth-day-number",
+      "title": "Birth Day Number: Your Innate Gift & Meaning",
+      "page_type": "concept"
+    },
+    {
+      "slug": "master-numbers",
+      "title": "Master Numbers 11, 22, 33: Meaning & Power in Numerology",
+      "page_type": "concept"
+    },
+    {
+      "slug": "karmic-debt-numbers",
+      "title": "Karmic Debt Numbers 13, 14, 16, 19: Meaning & Lessons",
+      "page_type": "concept"
+    },
+    {
+      "slug": "numerology-compatibility",
+      "title": "Numerology Compatibility: Life Path Number Love Match",
+      "page_type": "concept"
+    },
+    {
+      "slug": "numerology-chart",
+      "title": "Numerology Chart: How to Read Your Core Numbers",
+      "page_type": "concept"
+    }
+  ]
+}

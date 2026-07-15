@@ -1,0 +1,159 @@
+{
+  "_meta": {
+    "name": "numerology-mainpages-knowledge",
+    "purpose": "Numerology 主词深度页知识层（补 life path 交叉页之上的知识中心）",
+    "calculation_note": "Pythagorean 体系（A=1,B=2...I=9 循环）。灵数本质毕达哥拉斯西方体系，东方数理为平行参照非历史对应。",
+    "number_values_ref": "各数字 1-9/11/22/33 的独立深度解读复用 numerology-knowledge.json 的 numbers，本文件只放灵数类型层（概念+计算+水晶+FAQ）"
+  },
+  "mainpages": [
+    {
+      "slug": "numerology",
+      "title": "Numerology: Complete Guide to Numbers & Meaning",
+      "focus_keyword": "numerology",
+      "page_type": "hub",
+      "definition": "Numerology is the belief in a mystical relationship between numbers and coinciding events or human traits. It assigns meaning to numbers derived from your birth date and full name, suggesting they reveal personality, life purpose, and cycles.",
+      "calculation": {
+        "method": "overview",
+        "formula": "Core numbers: Life Path (birth date), Destiny/Expression (full name), Soul Urge (vowels), Personality (consonants), Birth Day (day of month)",
+        "steps": ["Reduce each component separately before summing", "Master Numbers 11/22/33 are not reduced", "Pythagorean letter-value system A=1..I=9 repeating"]
+      },
+      "core_numbers": ["Life Path Number", "Destiny (Expression) Number", "Soul Urge Number", "Personality Number", "Birth Day Number", "Master Numbers", "Karmic Debt Numbers"],
+      "crystals": ["clear-quartz", "selenite"],
+      "faq_seeds": ["What is numerology and how does it work?", "Which numerology number is most important?", "Is numerology accurate?", "How do I calculate my numerology numbers?"],
+      "eastern_note": "Parallel (not historical) reference: 洛书/河图数字观、七曜 — 灵数体系源自毕达哥拉斯，东方数理为平行参照非对应"
+    },
+    {
+      "slug": "life-path-number",
+      "title": "Life Path Number: Meaning, How to Calculate & Crystals",
+      "focus_keyword": "life path number",
+      "page_type": "concept",
+      "definition": "Your Life Path Number is the most important number in numerology, calculated from your full birth date. It reveals your life's purpose, natural talents, and the overarching theme of your journey.",
+      "calculation": {
+        "method": "birth_date",
+        "formula": "Month + Day + Year (reduce each separately, then sum and reduce to single digit; keep 11/22/33)",
+        "steps": ["Reduce month to single digit", "Reduce day to single digit", "Reduce year to single digit", "Add three reduced numbers", "Reduce sum to single digit (keep Master 11/22/33)"],
+        "example": "Dec 25, 1990: 1+2 (Dec) + 2+5 (25) + 1+9+9+0=19→1+9=10→1 (1990) → 3+7+1 = 11 → Master Number 11"
+      },
+      "crystals": ["clear-quartz", "selenite"],
+      "faq_seeds": ["How do I find my life path number?", "What does life path number mean?", "Which life path number is the most powerful?"],
+      "boundary_note": "本页只写 Life Path 整体概念+计算+1-9 总览；各数字独立深度归现有 /life-path-N/ 交叉页",
+      "eastern_note": "平行参照：洛书数字观"
+    },
+    {
+      "slug": "destiny-number",
+      "title": "Destiny Number (Expression Number): Meaning & How to Calculate",
+      "focus_keyword": "destiny number",
+      "page_type": "concept",
+      "definition": "Your Destiny Number (also called Expression Number) is calculated from the letters of your full birth name. It reveals your natural talents, abilities, and the path you're meant to walk in this lifetime.",
+      "calculation": {
+        "method": "full_name_letters",
+        "formula": "Sum Pythagorean values of ALL letters in full birth name, reduce to single digit (keep 11/22/33). Pythagorean: A=1,B=2,C=3,D=4,E=5,F=6,G=7,H=8,I=9, J=1,K=2,L=3,M=4,N=5,O=6,P=7,Q=8,R=9, S=1,T=2,U=3,V=4,W=5,X=6,Y=7,Z=8",
+        "steps": ["Convert each letter of full birth name to number", "Sum all numbers", "Reduce to single digit (keep 11/22/33)"],
+        "example": "JOHN: J=1+O=6+H=8+N=5 = 20 → 2"
+      },
+      "crystals": ["citrine", "tiger-eye"],
+      "faq_seeds": ["What is a destiny number?", "How is destiny number different from life path?", "What is my destiny number?"]
+    },
+    {
+      "slug": "soul-urge-number",
+      "title": "Soul Urge Number (Heart's Desire): Meaning & Calculation",
+      "focus_keyword": "soul urge number",
+      "page_type": "concept",
+      "definition": "Your Soul Urge Number (Heart's Desire Number) is calculated from the VOWELS in your full birth name. It reveals your inner motivations, deepest desires, and what your soul truly longs for.",
+      "calculation": {
+        "method": "vowels_only",
+        "formula": "Sum Pythagorean values of VOWELS (A,E,I,O,U — Y counts as vowel if it sounds like one) in full birth name, reduce (keep 11/22/33)",
+        "steps": ["Identify all vowels in full birth name", "Convert each vowel to Pythagorean number", "Sum and reduce (keep 11/22/33)"],
+        "example": "JOHN has only O: O=6 → Soul Urge 6"
+      },
+      "crystals": ["rose-quartz", "moonstone"],
+      "faq_seeds": ["What is a soul urge number?", "Is Y a vowel in numerology?", "What does soul urge number mean?"]
+    },
+    {
+      "slug": "personality-number",
+      "title": "Personality Number: How Others See You & Calculation",
+      "focus_keyword": "personality number",
+      "page_type": "concept",
+      "definition": "Your Personality Number is calculated from the CONSONANTS in your full birth name. It describes how others perceive you and the impression you make on the world.",
+      "calculation": {
+        "method": "consonants_only",
+        "formula": "Sum Pythagorean values of CONSONANTS in full birth name, reduce (keep 11/22/33)",
+        "steps": ["Identify all consonants in full birth name", "Convert each to Pythagorean number", "Sum and reduce (keep 11/22/33)"],
+        "example": "JOHN consonants J,H,N: 1+8+5=14 → 5"
+      },
+      "crystals": ["amethyst", "black-tourmaline"],
+      "faq_seeds": ["What is a personality number?", "How is personality number calculated?", "Personality vs soul urge number?"]
+    },
+    {
+      "slug": "birth-day-number",
+      "title": "Birth Day Number: Your Innate Gift & Meaning",
+      "focus_keyword": "birth day number",
+      "page_type": "concept",
+      "definition": "Your Birth Day Number is simply the day of the month you were born (1-31, reduced if double-digit). It reveals a special gift or talent you were born with.",
+      "calculation": {
+        "method": "birth_day",
+        "formula": "The day of month of birth; reduce double-digit days (except 11/22) to single digit",
+        "steps": ["Take the day of month you were born", "If 10-31 (except 11/22), reduce to single digit"],
+        "example": "Born on 25th: 2+5=7"
+      },
+      "crystals": ["citrine", "carnelian"],
+      "faq_seeds": ["What is a birth day number?", "How does birth day number affect me?"]
+    },
+    {
+      "slug": "master-numbers",
+      "title": "Master Numbers 11, 22, 33: Meaning & Power in Numerology",
+      "focus_keyword": "master numbers",
+      "page_type": "concept",
+      "definition": "Master Numbers 11, 22, and 33 are not reduced to single digits in numerology. They carry intensified, higher-purpose energy with greater potential — and greater demands.",
+      "calculation": {
+        "method": "non_reduction",
+        "formula": "When a calculation yields 11, 22, or 33, do NOT reduce. Keep the double-digit form.",
+        "meaning": {"11": "Intuitive & spiritual messenger (root 2)", "22": "Master Builder — turns dreams into reality (root 4)", "33": "Master Teacher — compassion & healing (root 6)"}
+      },
+      "crystals": ["selenite", "amethyst", "clear-quartz"],
+      "faq_seeds": ["What are master numbers?", "Is 11 a master number?", "What does master number 22 mean?"]
+    },
+    {
+      "slug": "karmic-debt-numbers",
+      "title": "Karmic Debt Numbers 13, 14, 16, 19: Meaning & Lessons",
+      "focus_keyword": "karmic debt numbers",
+      "page_type": "concept",
+      "definition": "Karmic Debt Numbers 13, 14, 16, and 19 appear in numerology calculations and are believed to indicate lessons carried over from past lives — challenges meant to be resolved in this lifetime.",
+      "calculation": {
+        "method": "detection",
+        "formula": "If a calculation (before final reduction) yields 13, 14, 16, or 19, it flags karmic debt",
+        "meaning": {"13": "Rebirth through hard work & discipline", "14": "Balance, freedom & moderation", "16": "Ego transcendence & spiritual rebirth", "19": "Independence & standing on your own"}
+      },
+      "crystals": ["black-tourmaline", "smoky-quartz", "hematite"],
+      "faq_seeds": ["What are karmic debt numbers?", "How do I know if I have karmic debt?", "What does karmic debt 16 mean?"]
+    },
+    {
+      "slug": "numerology-compatibility",
+      "title": "Numerology Compatibility: Life Path Number Love Match",
+      "focus_keyword": "numerology compatibility",
+      "page_type": "concept",
+      "definition": "Numerology compatibility compares two people's core numbers (especially Life Path) to assess relationship harmony, challenges, and growth potential.",
+      "calculation": {
+        "method": "comparison",
+        "formula": "Compare both partners' Life Path Numbers against compatibility patterns; some numbers naturally harmonize, others challenge",
+        "boundary_note": "本页只写 compatibility 概念+方法；具体 life path 配对归现有 /life-path-N/ 交叉页"
+      },
+      "crystals": ["rose-quartz", "rhodonite", "moonstone"],
+      "faq_seeds": ["Which life path numbers are compatible?", "How does numerology compatibility work?", "Best life path number matches?"]
+    },
+    {
+      "slug": "numerology-chart",
+      "title": "Numerology Chart: How to Read Your Core Numbers",
+      "focus_keyword": "numerology chart",
+      "page_type": "concept",
+      "definition": "A numerology chart maps your core numbers (Life Path, Destiny, Soul Urge, Personality, Birth Day) together, giving a complete picture of your numerological profile.",
+      "calculation": {
+        "method": "synthesis",
+        "formula": "Calculate all 5 core numbers from birth date + full name; read them together for full profile",
+        "core_numbers": ["Life Path", "Destiny/Expression", "Soul Urge", "Personality", "Birth Day"]
+      },
+      "crystals": ["clear-quartz", "selenite"],
+      "faq_seeds": ["What is a numerology chart?", "How do I read my numerology chart?", "Which numbers are in a numerology chart?"]
+    }
+  ]
+}
