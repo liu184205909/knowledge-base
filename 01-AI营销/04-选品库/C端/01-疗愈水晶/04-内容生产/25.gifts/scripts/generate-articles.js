@@ -109,7 +109,7 @@ function faqSeeds(t) {
 function buildListicle(t, crystals) {
   const n = crystals.length;
   const who = t.recipient ? WHO[t.recipient] : (OCC_WHO[t.occasion] || 'Loved Ones');
-  const title = `${n} Best Crystal Gifts for ${who} (by Stone Meaning)`;
+  const title = `${n} Best Crystal Gifts for ${who}`;
   const subj = who;
   const quickRows = crystals.map((c, i) => `<tr><td>${i + 1}</td><td>${stoneName(c)}</td><td>{{AI_QUICK_${i + 1}}}</td></tr>`).join('\n');
   const quickPicks = `<h2>Quick Picks</h2>\n<table class="quick-picks"><tr><th>#</th><th>Crystal</th><th>Best For</th></tr>\n${quickRows}\n</table>`;

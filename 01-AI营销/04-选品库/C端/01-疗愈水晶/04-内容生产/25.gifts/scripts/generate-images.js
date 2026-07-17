@@ -9,9 +9,10 @@ function loadEnv() { const p = path.join(require('os').homedir(), '.env'); if (f
 loadEnv();
 const DIR = path.resolve(__dirname, '..');
 const ART_DIR = path.join(DIR, 'articles');
-const BASE_URL = (process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1').replace(/\/$/, '');
-const MODEL = process.env.IMAGE_MODEL || 'gpt-image-2';
-const API_KEY = process.env.OPENAI_API_KEY;
+// moleapi gpt-image-2 额度耗尽(403)，换 agnes-image-2.1-flash（免费全模态）
+const BASE_URL = (process.env.AGNES_BASE_URL || process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1').replace(/\/$/, '');
+const MODEL = process.env.AGNES_IMAGE_MODEL || process.env.IMAGE_MODEL || 'gpt-image-2';
+const API_KEY = process.env.AGNES_API_KEY || process.env.OPENAI_API_KEY;
 const PROJECT_ROOT = path.resolve(__dirname, '../../../02-网站规划');
 const slugArg = process.argv.slice(2).find(a => a.startsWith('--slug='))?.split('=')[1];
 
@@ -60,7 +61,7 @@ function promptFor(art) {
 function reqImg(prompt, size) {
   return new Promise((res, rej) => {
     const u = new URL(BASE_URL + '/images/generations');
-    const body = JSON.stringify({ model: MODEL, prompt, size, quality: 'medium', response_format: 'b64_json' });
+    const body = JSON.stringify({ model: MODEL, prompt, size });
     const r = https.request({ hostname: u.hostname, port: u.port || 443, path: u.pathname, method: 'POST', headers: { Authorization: 'Bearer ' + API_KEY, 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) } }, x => {
       let d = ''; x.on('data', c => d += c); x.on('end', () => { if (x.statusCode >= 400) return rej(new Error('HTTP ' + x.statusCode + ': ' + d.slice(0, 300))); try { res(JSON.parse(d)); } catch (e) { rej(new Error('Bad JSON')); } });
     });
@@ -98,7 +99,7 @@ async function gen(art) {
   if (slugArg) files = files.filter(f => f === slugArg + '.json');
   else { const OFFSET = parseInt(process.argv.slice(2).find(a => a.startsWith('--offset='))?.split('=')[1] || '0'); const LIMIT = parseInt(process.argv.slice(2).find(a => a.startsWith('--limit='))?.split('=')[1] || '0'); if (OFFSET) files = files.slice(OFFSET); if (LIMIT) files = files.slice(0, LIMIT); }
   console.log('base=' + BASE_URL + ' model=' + MODEL + ' count=' + files.length + ' (待生成)');
-  let ok = 0, fail = 0, skip = 0; const CONC = 3; let cur = 0;
+  let ok = 0, fail = 0, skip = 0; const CONC = 5; let cur = 0;
   const workers = Array.from({ length: CONC }, async () => {
     while (true) { const i = cur++; if (i >= files.length) break; const art = JSON.parse(fs.readFileSync(path.join(ART_DIR, files[i]), 'utf8')); const r = await gen(art); if (r === 'skip') skip++; else if (r) ok++; else fail++; }
   });
