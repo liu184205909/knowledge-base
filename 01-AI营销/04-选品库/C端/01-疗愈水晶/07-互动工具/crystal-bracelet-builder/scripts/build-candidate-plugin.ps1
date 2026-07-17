@@ -1,5 +1,5 @@
 param(
-    [string]$Version = '0.1.9'
+    [string]$Version = '0.1.10'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -10,6 +10,20 @@ $plugin = Join-Path $project 'plugin'
 $build = Join-Path $project 'build'
 $topLevel = 'earthward-t17-bracelet-builder'
 $output = Join-Path $build "earthward-t17-bracelet-builder-$Version.zip"
+$legacy3dFiles = @(
+    'crystal-bracelet-builder-deploy.html',
+    'crystal-bracelet-builder-preview.html',
+    'crystal-bracelet-builder-wp-fragment.html',
+    'generate-deploy.js',
+    'generate.js',
+    'prototype.html',
+    'vendor\OrbitControls.js',
+    'vendor\three.module.min.js'
+) | ForEach-Object { Join-Path $build $_ } | Where-Object { Test-Path -LiteralPath $_ }
+
+if ($legacy3dFiles) {
+    throw "Legacy 3D artifacts must be manually removed before creating a T17 candidate ZIP:`n$($legacy3dFiles -join "`n")"
+}
 
 if (Test-Path -LiteralPath $output) {
     throw "Candidate already exists and will not be overwritten: $output"
@@ -22,6 +36,8 @@ if ($bootstrap -notmatch [regex]::Escape("define('EW_T17_VERSION', '$Version')")
 
 & (Join-Path $root 'validate-backend-material-loop.ps1')
 & (Join-Path $project 'data\v3\validate-v3-data-contract.ps1')
+& (Join-Path $project 'data\v3\preflight-approved-production-import.ps1')
+& (Join-Path $project 'frontend\validate-frontend-bundle.ps1')
 
 Add-Type -AssemblyName System.IO.Compression
 Add-Type -AssemblyName System.IO.Compression.FileSystem

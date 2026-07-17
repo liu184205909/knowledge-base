@@ -1,32 +1,37 @@
 <section class="ew-t17-ui" data-t17-ui>
   <div class="ew-t17-ui__notice" data-notice aria-live="polite"></div>
-  <div class="ew-t17-ui__stage">
-    <div class="ew-t17-ui__topbar">
-      <button class="ew-t17-ui__wrist" type="button" data-action="wrist"><span>Wrist fit</span><strong data-wrist>16 cm</strong></button>
-      <span class="ew-t17-ui__fit" data-fit>Start with a material</span>
-    </div>
-    <div class="ew-t17-ui__canvas" data-canvas>
-      <img class="ew-t17-ui__tray" data-tray alt="">
-      <div class="ew-t17-ui__tray-calibration" aria-hidden="true"><span>Earthward</span></div>
-      <div class="ew-t17-ui__ring" data-ring></div>
-      <p class="ew-t17-ui__empty" data-empty>Choose a material to begin your bracelet.</p>
-    </div>
-    <div class="ew-t17-ui__toolbox" data-toolbox hidden aria-label="Selected material controls">
-      <span data-selection-label>No material selected</span>
-      <button type="button" data-action="move-left" title="Move selected material earlier">Move left</button>
-      <button type="button" data-action="move-right" title="Move selected material later">Move right</button>
-      <button type="button" data-action="orientation" data-orientation hidden>Direction</button>
-      <button type="button" data-action="remove-selected" title="Remove selected material">Remove</button>
-    </div>
-    <div class="ew-t17-ui__metrics"><span><small>Length</small><b data-length>0 mm</b></span><span><small>Weight</small><b data-weight>0 g</b></span><span><small>Pieces</small><b data-pieces>0</b></span></div>
-    <div class="ew-t17-ui__actions"><button type="button" title="Reset design" data-action="reset">Reset</button><button type="button" data-action="save">Save</button><button class="is-primary" type="button" data-action="finish">Finish design</button></div>
+  <p class="ew-t17-ui__fixture-note" data-fixture-note hidden>Development fixture — local visual references and test prices only. Not for sale.</p>
+  <div class="ew-t17-ui__heading">
+    <div><span class="ew-t17-ui__eyebrow">CUSTOM BRACELET STUDIO</span><h1>Build your bracelet, bead by bead.</h1><p>Mix independent sizes freely. Every selected Variant keeps its own scale, price and weight.</p></div>
   </div>
-  <section class="ew-t17-ui__catalog" aria-label="Materials">
-    <div class="ew-t17-ui__catalog-head"><div class="ew-t17-ui__tabs" role="tablist"><button class="is-active" type="button" data-type="bead">Beads</button><button type="button" data-type="decor">Decor</button><button type="button" data-type="finish">Finish</button></div><button class="ew-t17-ui__search-toggle" type="button" title="Search materials" data-action="search">Search</button></div>
-    <input class="ew-t17-ui__search" type="search" data-search placeholder="Search materials" aria-label="Search materials">
-    <div class="ew-t17-ui__filters" data-filters></div>
-    <div class="ew-t17-ui__grid" data-grid></div>
-  </section>
-  <dialog class="ew-t17-ui__dialog" data-dialog="wrist"><form method="dialog"><button class="ew-t17-ui__close" value="cancel" aria-label="Close">x</button><h2>Wrist setting</h2><label>Wrist circumference<input type="number" min="10" max="30" step="0.1" value="16" data-wrist-input> cm</label><fieldset><legend>Fit preference</legend><label><input type="radio" name="fit" value="snug"> Snug</label><label><input type="radio" name="fit" value="regular" checked> Regular</label><label><input type="radio" name="fit" value="loose"> Loose</label></fieldset><button class="is-primary" value="confirm" data-action="apply-wrist">Apply</button></form></dialog>
-  <dialog class="ew-t17-ui__dialog" data-dialog="finish"><form method="dialog"><button class="ew-t17-ui__close" value="cancel" aria-label="Close">x</button><h2>Your design</h2><div data-summary></div><button class="is-primary" type="button" data-action="cart">Add to cart</button></form></dialog>
+  <div class="ew-t17-ui__workspace">
+    <section class="ew-t17-ui__stage" aria-label="Bracelet design canvas">
+      <div class="ew-t17-ui__stage-head"><div><span class="ew-t17-ui__eyebrow">YOUR DESIGN</span><strong data-fit>Start with a material</strong></div><div class="ew-t17-ui__mobile-stats" aria-label="Current design measurements"><span><small>Length</small><b data-mobile-length>0 mm</b></span><span><small>Weight</small><b data-mobile-weight>0 g</b></span><span><small>Pieces</small><b data-mobile-pieces>0</b></span></div></div>
+      <div class="ew-t17-ui__canvas" data-canvas>
+        <img class="ew-t17-ui__tray" data-tray alt="Bracelet design tray">
+        <div class="ew-t17-ui__ring" data-ring></div>
+        <div class="ew-t17-ui__tray-brand" data-tray-brand aria-label="Earthward"><span>EW</span><b>Earthward</b></div>
+        <p class="ew-t17-ui__empty" data-empty>Choose a material to begin your bracelet.</p>
+        <button class="ew-t17-ui__undo" type="button" data-action="undo" aria-label="Undo last edit" title="Undo last edit" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.5 8 4.5 12l4 4"></path><path d="M5 12h8.5a5 5 0 1 1-4.3 7.5"></path></svg></button>
+      </div>
+      <div class="ew-t17-ui__stage-actions" data-stage-actions aria-label="Design actions">
+        <button class="ew-t17-ui__stage-wrist" type="button" data-action="wrist" aria-label="Set wrist measurement" title="Set wrist measurement"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8.5h16v7H4z"></path><path d="M7 8.5v3M10 8.5v2M13 8.5v3M16 8.5v2"></path></svg><span data-wrist-action>Set wrist</span></button>
+        <button type="button" data-action="background" aria-label="Change tray background" title="Change tray background"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4z"></path><circle cx="9" cy="10" r="1.5"></circle><path d="m5 17 5-5 3 3 2-2 4 4"></path></svg></button>
+        <button type="button" data-action="reset" aria-label="Clear design" title="Clear design"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14"></path><path d="M10 11v6M14 11v6"></path><path d="M8 7l1-3h6l1 3"></path><path d="M7 7l1 13h8l1-13"></path></svg></button>
+        <button type="button" data-action="save" aria-label="Save design" title="Save design"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h12l3 3v13H5z"></path><path d="M8 4v6h8V4"></path><path d="M8 20v-6h8v6"></path></svg></button>
+        <button class="is-assemble" type="button" data-action="assemble" aria-label="Assemble bracelet" title="Assemble bracelet"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"></circle><circle cx="18" cy="9" r="2"></circle><circle cx="18" cy="15" r="2"></circle><circle cx="12" cy="19" r="2"></circle><circle cx="6" cy="15" r="2"></circle><circle cx="6" cy="9" r="2"></circle></svg><span class="ew-t17-ui__assemble-label" data-assemble-label>Assemble</span></button>
+      </div>
+      <section class="ew-t17-ui__sequence-panel" aria-label="Order and details"><button class="ew-t17-ui__sequence-toggle" type="button" data-action="toggle-sequence" aria-expanded="false"><span>Order &amp; details</span><b data-sequence-count>0 pieces</b><i aria-hidden="true">⌄</i></button><div class="ew-t17-ui__sequence" data-sequence hidden></div></section>
+      <div class="ew-t17-ui__metrics"><span><small>Length</small><b data-length>0 mm</b></span><span><small>Weight</small><b data-weight>0 g</b></span><span><small>Pieces</small><b data-pieces>0</b></span><span class="ew-t17-ui__total"><small>Design total</small><b data-total>$0.00</b></span></div>
+      <div class="ew-t17-ui__actions"><button type="button" data-action="save">Save draft</button><button class="is-primary" type="button" data-action="finish">Finish design <span aria-hidden="true">→</span></button></div>
+    </section>
+    <section class="ew-t17-ui__catalog" aria-label="Materials">
+      <div class="ew-t17-ui__catalog-title"><div><span class="ew-t17-ui__eyebrow">MATERIAL LIBRARY</span><h2>Choose a Variant</h2></div></div>
+      <div class="ew-t17-ui__tabs" role="tablist"><button class="is-active" type="button" data-type="bead">Crystals</button><button type="button" data-type="decor">Accessories</button><button type="button" data-type="charms">Charms</button><button type="button" data-type="packaging">Packaging</button><button class="ew-t17-ui__search-toggle" type="button" aria-label="Search materials" title="Search materials" data-action="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4.25 4.25"></path></svg></button></div>
+      <input class="ew-t17-ui__search" type="search" data-search placeholder="Search materials" aria-label="Search materials">
+      <div class="ew-t17-ui__library-body"><aside class="ew-t17-ui__filter-panel"><span class="ew-t17-ui__filter-title">Color</span><div class="ew-t17-ui__filters" data-filters></div></aside><div class="ew-t17-ui__library-results"><div class="ew-t17-ui__library-note">Use − / + to choose the size, then tap the card to add that Variant. Filters never alter the bracelet already on the tray.</div><div class="ew-t17-ui__grid" data-grid></div></div></div>
+    </section>
+  </div>
+  <dialog class="ew-t17-ui__dialog" data-dialog="wrist"><form method="dialog"><button class="ew-t17-ui__close" value="cancel" aria-label="Close">×</button><span class="ew-t17-ui__eyebrow">WRIST SETTING</span><h2>Your wrist fit</h2><label>Wrist circumference<input type="number" min="10" max="30" step="0.1" value="16" data-wrist-input> cm</label><fieldset><legend>Fit preference</legend><label><input type="radio" name="fit" value="snug"> Snug</label><label><input type="radio" name="fit" value="regular" checked> Regular</label><label><input type="radio" name="fit" value="loose"> Loose</label></fieldset><button class="is-primary" value="confirm" data-action="apply-wrist">Apply wrist setting</button></form></dialog>
+  <dialog class="ew-t17-ui__dialog" data-dialog="finish"><form method="dialog"><button class="ew-t17-ui__close" value="cancel" aria-label="Close">×</button><span class="ew-t17-ui__eyebrow">DESIGN REVIEW</span><h2>Your bracelet</h2><div data-summary></div><button class="is-primary" type="button" data-action="cart">Add to cart</button></form></dialog>
 </section>

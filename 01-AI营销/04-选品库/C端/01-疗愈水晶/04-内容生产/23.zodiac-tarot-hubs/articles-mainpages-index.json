@@ -1,0 +1,40 @@
+{
+  "total": 7,
+  "articles": [
+    {
+      "slug": "zodiac-signs",
+      "title": "Zodiac Signs: Complete Guide to All 12 Signs",
+      "page_type": "hub"
+    },
+    {
+      "slug": "zodiac-compatibility",
+      "title": "Zodiac Compatibility: Which Signs Match?",
+      "page_type": "hub"
+    },
+    {
+      "slug": "zodiac-elements",
+      "title": "Zodiac Elements: Fire, Earth, Air, Water Explained",
+      "page_type": "hub"
+    },
+    {
+      "slug": "zodiac-modalities",
+      "title": "Zodiac Modalities: Cardinal, Fixed & Mutable Signs",
+      "page_type": "hub"
+    },
+    {
+      "slug": "zodiac-dates",
+      "title": "Zodiac Signs Dates: Complete 12-Sign Calendar",
+      "page_type": "hub"
+    },
+    {
+      "slug": "tarot-card-meanings",
+      "title": "Tarot Card Meanings: Complete Guide to All 78 Cards",
+      "page_type": "hub"
+    },
+    {
+      "slug": "major-arcana-meanings",
+      "title": "Major Arcana Meanings: The 22 Trump Cards Explained",
+      "page_type": "hub"
+    }
+  ]
+}

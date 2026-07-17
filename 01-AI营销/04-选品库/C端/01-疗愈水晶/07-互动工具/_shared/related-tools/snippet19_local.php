@@ -33,6 +33,9 @@ function ew_related_tools_content($content) {
         'daily-tarot'                   => array('t'=>'Daily Tarot',              'u'=>'/tools/daily-tarot/',                     'd'=>"Today's tarot card and crystal for the whole community", 'i'=>"\xF0\x9F\x8C\x85"),
         'mbti-tarot'                    => array('t'=>'MBTI Tarot',               'u'=>'/tools/mbti-tarot/',                      'd'=>'Find your MBTI tarot birth card and crystals', 'i'=>"\xF0\x9F\xA7\xAC"),
         'ai-dream-interpreter'          => array('t'=>'AI Dream Interpreter',     'u'=>'/tools/ai-dream-interpreter/',            'd'=>'Decode your dream with AI and matching crystals', 'i'=>"\xF0\x9F\x8C\x99"),
+        'kua-number-calculator'         => array('t'=>'Kua Number Calculator',    'u'=>'/tools/kua-number-calculator/',           'd'=>'Find your feng shui Kua number, directions, and birth crystals', 'i'=>"\xF0\x9F\xA7\xAD"),
+        'bagua-map'                     => array('t'=>'Feng Shui Bagua Map',      'u'=>'/tools/bagua-map/',                       'd'=>'Interactive bagua map with crystals for each area', 'i'=>"\xE2\x98\xAF\xEF\xB8\x8F"),
+        'feng-shui-wealth-corner'       => array('t'=>'Wealth Corner Finder',     'u'=>'/tools/feng-shui-wealth-corner/',         'd'=>'Find your feng shui wealth corner and its best crystals', 'i'=>"\xF0\x9F\x92\xB0"),
     );
     $MAP = array(
         'crystal-tarot-reading'         => array('ai-tarot-chat', 'daily-tarot', 'yes-no-tarot'),
@@ -57,6 +60,9 @@ function ew_related_tools_content($content) {
         'ring-size-calculator'          => array('bracelet-size-calculator', 'crystal-quiz', 'crystal-bracelet-builder'),
         'crystal-bracelet-builder'      => array('bracelet-size-calculator', 'crystal-meaning-search', 'crystal-quiz'),
         'ai-dream-interpreter'          => array('ai-tarot-chat', 'mbti-tarot', 'numerology-calculator'),
+        'kua-number-calculator'         => array('bagua-map', 'feng-shui-wealth-corner', 'chinese-zodiac-checker'),
+        'bagua-map'                     => array('kua-number-calculator', 'feng-shui-wealth-corner', 'crystal-meaning-search'),
+        'feng-shui-wealth-corner'       => array('bagua-map', 'kua-number-calculator', 'crystal-quiz'),
     );
 
     if (!isset($MAP[$slug])) return $content;

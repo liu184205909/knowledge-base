@@ -15,11 +15,23 @@ For an official Woo preset that is enabled for customization, link to the existi
 
 ## Local UI fixture
 
-`t17-builder-mock-config.js` is an explicit, non-production fixture for validating the mobile editor before the plugin is installed. It supplies placeholder materials and a local display-only quote, disables Woo add-to-cart, and must never be loaded together with `t17-builder-config.php`. Its values are not approved catalog or sales data.
+The fixture marker is page-level only: material cards retain their clean display names and do not show a `Development fixture` replacement label.
+
+`t17-builder-mock-config.js` is an explicit, non-production fixture for validating the mobile editor before the plugin is installed. It supplies placeholder materials and a local display-only quote, disables Woo add-to-cart, and must never be loaded together with `t17-builder-config.php`. The small fixture may reuse preserved local tray assets, local visual-reference images, and legacy-v2 test figures solely for visual and interaction QA. Each card and the editor banner mark this state as `Development fixture — not for sale`; those inputs are not approved catalog, sales, pricing, or production-import data.
 
 For local-only validation of the official import path, append `?t17_design=9001` to `preview.html`. This resolves only the placeholder `mockOfficialDesigns[9001]` fixture; it never represents a Woo product or approved preset.
 
 `preview.html` is only a local development-validation artifact. It is not a WordPress page, does not replace `/tools/crystal-bracelet-builder/`, and must not be described or deployed as a new page route. It uses the preserved tray asset only for local visual QA; the page-scoped WordPress config must still receive an approved Media Library URL before frontend deployment.
+
+The optional local visual-reference images resolve only when the static-server root is `01-疗愈水晶` (not this `frontend` subdirectory). For example, from that root, serve locally and open `/07-互动工具/crystal-bracelet-builder/frontend/preview.html`. This is a local QA convenience only; it neither copies those images into the plugin nor creates a production asset path.
+
+## Editor interaction boundary
+
+- A product-card tap adds its currently selected Variant; its `− / +` controls change that card's selected size only.
+- The card badge reports how many of that material are currently in the bracelet.
+- On mobile, direct tray selection is the primary editing mode. `Order & details` is an optional advanced disclosure, not the default sequence UI.
+- Dragging a bead outside the tray removes it. The round undo control beside the tray restores the immediately preceding local edit.
+- These interactions are local UI validation only until the server catalog and quote endpoints return approved data.
 
 ## Verification
 

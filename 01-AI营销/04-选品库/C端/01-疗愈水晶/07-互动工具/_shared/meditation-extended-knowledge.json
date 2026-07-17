@@ -1,0 +1,722 @@
+{
+  "_meta": {
+    "name": "meditation-extended-knowledge",
+    "purpose": "扩 9 场景交叉页（crystals×新场景），补现有 9 交叉页（focus/sleep/emotional/grounding/beginners/manifestation/script/room/best）→ 共 18",
+    "note": "不与现有 9 交叉页 + 14 主词页（how-to-meditate/types/mindfulness/benefits/techniques/walking/chakra/third-eye/breath/loving-kindness/body-scan/transcendental/postures/how-long）重复",
+    "version": "v1.0",
+    "created": "2026-07-15",
+    "framework": "03-内容策略/内容Brief/模板-Meditation文章框架.md v2（沿用现有 meditation-knowledge.json 场景结构）",
+    "serp_evidence": {
+      "verified_date": "2026-07-15",
+      "method": "serp_check us/en/mobile 对 11 个候选词；筛选标准 = 真实竞品文章生态（剔除大平台/空 SERP）",
+      "candidates_run": [
+        "crystals for anxiety meditation",
+        "morning meditation crystals",
+        "crystals for self-love meditation",
+        "crystals for confidence meditation",
+        "sound bath meditation crystals",
+        "crystals for creativity meditation",
+        "crystals for gratitude meditation",
+        "visualization meditation crystals",
+        "crystals for healing meditation",
+        "crystals for stress meditation",
+        "crystals for grief meditation",
+        "full moon meditation crystals",
+        "new moon meditation crystals",
+        "crystals for shadow work meditation"
+      ],
+      "selected_9": [
+        "anxiety",
+        "morning",
+        "self-love",
+        "confidence",
+        "creativity",
+        "gratitude",
+        "grief",
+        "full-moon",
+        "shadow-work"
+      ],
+      "rejected": {
+        "sound-bath": "SERP 空结果",
+        "stress": "SERP 空结果（anxiety 已覆盖相近意图）",
+        "visualization": "SERP 多平台（Reddit/Facebook/Amazon），缺独立竞品文章",
+        "healing": "与现有 best-crystals-for-meditation 高度重叠",
+        "new-moon": "SERP 强但与现有 manifestation 场景重叠（皆为 intention-setting），选 shadow-work 替补（完全独特深度场景）",
+        "sleep-for-adults": "与现有 sleep 场景重叠",
+        "pain-relief": "医疗合规风险高，留待后续"
+      }
+    },
+    "compliance_baseline": "support / invite / gentle companion / mindful anchor / wind-down；禁 cures/heals/treats anxiety/depression/trauma/ptsd/grief（grief 改 'gentle companion for loss'）",
+    "eastern_accuracy": "shamatha/vipassana=南传上座部；Metta=南传；Dzogchen/Mahamudra/Chöd=藏传；nyasa/sankalpa=瑜伽坦特罗；kinhin/zazen=禅宗；子午卯酉=道家内丹活子时。按场景选准确术语不混贴",
+    "meaning_url_pattern": "/gemstone/{meaning_slug}-meaning/（只链已验证 200 的，未上线不强链）",
+    "crystal_slug_source": "沿用 meditation-knowledge.json crystal_pool 已验证 slug；新增 slug（blue-lace-agate/sunstone/lapis-lazuli/red-jasper/green-aventurine/sodalite/blue-apatite/rhodonite/black-obsidian/malachite）为 390 库常见英文 slug"
+  },
+  "mainpages": [
+    {
+      "id": "E1",
+      "slug": "crystals-for-anxiety-meditation",
+      "url": "/crystals-for-anxiety-meditation/",
+      "title": "Crystals for Anxiety Meditation: 7 Calming Stones & a 6-Step Wind-Down",
+      "h1": "How to Use Crystals for an Anxiety Meditation Practice",
+      "focus_keyword": "crystals for anxiety meditation",
+      "secondary_kw": ["crystals for anxiety", "best stones for anxiety meditation", "meditation crystals for overthinking", "amethyst lepidolite anxiety"],
+      "page_type": "scene",
+      "definition": "An anxiety meditation uses a tactile anchor (a calming crystal), slow extended exhalation, and a gentle attentional resting point to support the mind when it feels sped up. This guide covers seven stones traditionally paired with this kind of wind-down, plus a six-step script anyone can follow.",
+      "scene": {
+        "pain_point": "racing thoughts, chest tightness, looping worry, difficulty exhaling fully",
+        "breath": "coherent breath (inhale 4, exhale 6 — longer exhale signals settling; do not hold if it adds tension)",
+        "hold_hand": "left (traditionally the receiving side, inviting calm in)",
+        "scan_focus": "base of the throat and center of the chest (where worry often lands)",
+        "visualization": "a wide slow river carrying worried thoughts past, without trying to stop them",
+        "chakra": "throat + heart",
+        "duration": "8-15 min",
+        "affirmation": "I can let the mind settle, one long exhale at a time.",
+        "compliance_phrasing": "a calming companion for anxious moments / wind-down support (NOT cures / treats / heals anxiety or anxiety disorders)"
+      },
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          {"step": 1, "name": "Settle with the coherent breath", "text": "inhale through the nose for 4, exhale through the mouth for 6 — repeat six rounds; if the count adds tension, just make the exhale longer than the inhale"},
+          {"step": 2, "name": "Hold the stone in the left palm", "text": "feel its temperature and weight; let the cool or smooth surface be a single point of contact"},
+          {"step": 3, "name": "Soften the jaw and drop the shoulders", "text": "anxiety often grips these two places first; on each exhale, let them release a little more"},
+          {"step": 4, "name": "Rest attention at the base of the throat", "text": "the place where the breath turns; if the mind races, return there, no judgment"},
+          {"step": 5, "name": "Set a one-line intention", "text": "\"I can let the mind settle, one long exhale at a time.\""},
+          {"step": 6, "name": "Close by noticing the floor", "text": "feel the contact of feet or seat before opening the eyes; transition slowly, not standing up abruptly"}
+        ]
+      },
+      "crystals": ["amethyst", "lepidolite", "blue-lace-agate", "howlite", "black-tourmaline", "moonstone", "selenite"],
+      "crystal_rationale": {
+        "amethyst": "传统 calm 主题；紫色作视觉柔和焦点，含天然铁致色（科学角度）",
+        "lepidolite": "含天然锂云母类矿物（科学事实，非药理断言）；柔和淡紫色调传统上与 settled state 关联",
+        "blue-lace-agate": "蓝色带状纹路作视觉柔和锚；脉轮传统中常与 throat center 关联",
+        "howlite": "白色多孔质地，传统睡前 / 风暴心智用途；柔白作视觉减压",
+        "black-tourmaline": "重量感（高比重）作触觉锚，传统 grounding 用途",
+        "moonstone": "adularescence 浮动光，给眼睛一个 non-fixed 流动焦点（不固定 = 不执着）",
+        "selenite": "半透长柱状，作 'resting place' 物件；质地极软（Mohs 2）只能持不能盘玩"
+      },
+      "faq_seeds": [
+        "What are the best crystals for anxiety meditation?",
+        "How do I meditate with crystals for anxiety?",
+        "How long should an anxiety meditation be?",
+        "Can I hold more than one crystal for anxiety?",
+        "Which crystal should I wear daily for anxious moments?",
+        "Do I need to cleanse crystals after an anxious practice?",
+        "Is there scientific evidence crystals help anxiety?",
+        "Are crystals a substitute for anxiety treatment?"
+      ],
+      "eastern_note": "南传：anapanasati 长呼气版（佛陀教导风灾 / worry 的对治是 awareness of long breath）；藏传 Medicine Buddha 传统以蓝色 / 紫色石作 calm 支持（非医疗）；道家 '松'（释放）为对治 '紧'（焦虑体感）—皆为冥想支持而非医疗断言",
+      "internal_links": {
+        "hub": "M0",
+        "sibling": ["E7", "E2"],
+        "condition": "/crystals-for-anxiety/",
+        "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/healing-crystals-jewelry/"
+      },
+      "differentiation_from_existing": "vs sleep (M2): sleep 用 4-7-8 + crown；anxiety 用 coherent 4-6 + throat（不同 breath/chakra）；vs emotional (M3): emotional 是 general held feelings，anxiety 特指 sped-up worry loops"
+    },
+    {
+      "id": "E2",
+      "slug": "crystals-for-morning-meditation",
+      "url": "/crystals-for-morning-meditation/",
+      "title": "Crystals for Morning Meditation: 7 Stones to Begin the Day With Intention",
+      "h1": "How to Build a Morning Meditation with Crystals",
+      "focus_keyword": "crystals for morning meditation",
+      "secondary_kw": ["morning meditation crystals", "best stones for morning routine", "citrine selenite morning ritual", "crystals to start the day"],
+      "page_type": "scene",
+      "definition": "A morning crystal meditation is a short intention-setting practice done within the first hour of waking, using warm or bright stones as tactile cues for how you want to meet the day. This guide covers seven stones traditionally paired with morning practice, plus a six-step morning script.",
+      "scene": {
+        "pain_point": "grogginess, immediately reaching for the phone, entering the day reactively instead of by choice",
+        "breath": "awakening breath (deep inhale through the nose, brief hold at the top, full exhale through the mouth with a soft 'ha')",
+        "hold_hand": "right (traditionally the activating / projective side, paired with 'meeting the day')",
+        "scan_focus": "solar plexus (just above the navel) and the crown of the head",
+        "visualization": "low warm morning light filling the body from the feet upward, like dawn rising",
+        "chakra": "solar-plexus + crown",
+        "duration": "5-12 min within first hour of waking",
+        "affirmation": "I meet today from a chosen intention, not from reaction.",
+        "compliance_phrasing": "intention-setting morning ritual / awakening practice (NOT guarantees success / boosts productivity)"
+      },
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          {"step": 1, "name": "Before the phone, pick up the stone", "text": "within the first hour of waking; even before getting out of bed is fine"},
+          {"step": 2, "name": "Three awakening breaths", "text": "deep inhale through the nose, brief natural hold, full exhale through the mouth with a soft 'ha' — repeat three times"},
+          {"step": 3, "name": "Hold the stone in the right hand over the solar plexus", "text": "just above the navel; feel the warmth of the hand meeting the stone"},
+          {"step": 4, "name": "Set one intention for the day", "text": "not a to-do item — one phrase for how you want to meet today (e.g. 'steady', 'kind', 'clear')"},
+          {"step": 5, "name": "Picture low morning light rising", "text": "a warm dawn light filling the body from feet to crown, slow and unhurried"},
+          {"step": 6, "name": "Close by setting the stone somewhere visible", "text": "desk, pocket, or wrist — a tactile reminder of the morning intention through the day"}
+        ]
+      },
+      "crystals": ["citrine", "carnelian", "sunstone", "clear-quartz", "selenite", "tiger-eye", "green-aventurine"],
+      "crystal_rationale": {
+        "citrine": "暖黄橙色（铁致色）作 dawn light 视觉锚；传统 'sun-stone' 联想",
+        "carnelian": "透橙红色蜡状光泽作 gentle activation 视觉；古埃及 / 罗马传统 vitality 联想",
+        "sunstone": "aventurescence 闪光（日光效应）作 morning sparkle；太阳联想直接",
+        "clear-quartz": "中性无色作 blank-slate intention 载体；piezoelectric 科学事实",
+        "selenite": "EnergyMuse / TinyRituals 等多源推荐 'start day with selenite'；长柱形作 wand-like awakening 工具",
+        "tiger-eye": "chatoyancy 移动眼线作 steady alertness；grounded confidence 视觉",
+        "green-aventurine": "淡绿柔和色作 opportunity / growth 联想；早晨 'fresh start' 传统"
+      },
+      "faq_seeds": [
+        "What are the best crystals for a morning meditation?",
+        "How do I start a morning crystal ritual?",
+        "How long should my morning meditation be?",
+        "Should I use a different crystal each morning?",
+        "Which crystal should I wear through the day after a morning meditation?",
+        "Can I do a morning meditation in bed?",
+        "Is morning the best time to meditate with crystals?",
+        "Do I need to cleanse morning crystals differently?"
+      ],
+      "eastern_note": "道家每日子午时（子时 23-1 / 午时 11-13）为传统静坐窗口；藏传黎明修法（'dawn practice' 在 Medicine Buddha / Tara 传统中重要）；印度瑜伽 sunrise sandhya（晨昏交接修法）—皆传统时间学，非泛养生",
+      "internal_links": {
+        "hub": "M0",
+        "sibling": ["E4", "E6"],
+        "how_to_h5": "/blog/how-to-meditate-with-crystals/",
+        "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/healing-crystals-jewelry/"
+      },
+      "differentiation_from_existing": "vs manifestation (M6): manifestation 是 active goal-alignment（rising breath + solar plexus + aim realized）；morning 是 time-of-day ritual（awakening breath + dawn light + how-I-meet-today）；vs beginners (M5): beginners 教方法，morning 是 ritual 应用"
+    },
+    {
+      "id": "E3",
+      "slug": "crystals-for-self-love-meditation",
+      "url": "/crystals-for-self-love-meditation/",
+      "title": "Crystals for Self-Love Meditation: 7 Stones for a Heart-Centered Practice",
+      "h1": "How to Use Crystals for a Self-Love Meditation",
+      "focus_keyword": "crystals for self-love meditation",
+      "secondary_kw": ["self love crystals meditation", "rose quartz self love meditation", "crystals for self-compassion", "heart chakra self-love stones"],
+      "page_type": "scene",
+      "definition": "A self-love meditation is a heart-centered practice of directing warmth, patience, and acceptance toward yourself, often using a pink or green stone over the heart center as a tactile anchor. This guide covers seven stones traditionally paired with self-directed compassion work.",
+      "scene": {
+        "pain_point": "inner critic, harsh self-judgment, feeling unworthy of care, difficulty receiving kindness",
+        "breath": "heart breath (slow inhale into the chest as if breathing into the heart, soft exhale with a gentle half-smile)",
+        "hold_hand": "left over the heart center (sternum)",
+        "scan_focus": "heart center (center of chest)",
+        "visualization": "a soft warm pink or green light expanding outward from the heart with each inhale, surrounding the body",
+        "chakra": "heart",
+        "duration": "10-18 min",
+        "affirmation": "I am worth the warmth I would offer a friend.",
+        "compliance_phrasing": "self-directed warmth / heart-centered practice (NOT heals low self-esteem / treats self-worth disorders)"
+      },
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          {"step": 1, "name": "Settle with the heart breath", "text": "slow inhale into the chest as if filling the heart, soft exhale with a gentle half-smile — repeat five rounds"},
+          {"step": 2, "name": "Place the stone over the heart center", "text": "left hand resting on the sternum, stone beneath the palm or between both hands"},
+          {"step": 3, "name": "Silently offer yourself one kind phrase", "text": "\"May I be gentle with myself today.\" — said silently, three times, slowly"},
+          {"step": 4, "name": "Picture soft pink or green light at the heart", "text": "expanding outward with each inhale, like a warm halo surrounding you"},
+          {"step": 5, "name": "If the inner critic rises, name it kindly", "text": "\"that is the critic speaking\" — return to the stone's weight and the kind phrase, no arguing with it"},
+          {"step": 6, "name": "Close by placing a hand on the heart", "text": "before lifting the stone, place your free hand over the first and feel the warmth of your own two hands for three breaths"}
+        ]
+      },
+      "crystals": ["rose-quartz", "rhodochrosite", "moonstone", "amethyst", "green-aventurine", "rhodonite", "citrine"],
+      "crystal_rationale": {
+        "rose-quartz": "传统跨文化 heart / gentleness 联想；柔和粉色作视觉温润焦点；自然 palm stone 形状契合 hand-curve",
+        "rhodochrosite": "粉白带纹；现代传统中 self-compassion 主题（与 rose-quartz 相近但更内省）",
+        "moonstone": "adularescence 浮动光作 'mirror of the inner self' 视觉；新开始联想",
+        "amethyst": "传统 calm 主题；softening the inner critic 支持",
+        "green-aventurine": "淡绿柔和；heart-secondary 传统（绿与粉皆配 heart center）",
+        "rhodonite": "粉黑对比；现代传统 self-forgiveness / inner-wound 主题",
+        "citrine": "暖黄作 self-warmth 联想（非仅 manifestation）；'sun on the inside' 视觉"
+      },
+      "faq_seeds": [
+        "What are the best crystals for self-love meditation?",
+        "How is self-love meditation different from loving-kindness?",
+        "How do I meditate on self-love with crystals?",
+        "Which chakra is for self-love?",
+        "Can I do a self-love meditation every day?",
+        "What if I feel worse during a self-love meditation?",
+        "Which crystal should I wear for self-love?",
+        "Do I need to program a crystal for self-love?"
+      ],
+      "eastern_note": "与 14 主词页 'loving-kindness' 的关键区别：loving-kindness (metta) 是南传 formal 序列（self→loved→neutral→difficult→all beings）；self-love 是 Western 当代 framing，专注 self-directed heart warmth（无 formal 序列，可单独作）。术语区分：'metta phrases' 是南传 Pali；'self-compassion' 是当代心理学（Kristin Neff 等）。",
+      "internal_links": {
+        "hub": "M0",
+        "sibling": ["E4", "E7"],
+        "condition": null,
+        "intention": "self-love",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/rose-quartz-crystals/"
+      },
+      "differentiation_from_existing": "vs emotional (M3): emotional 是 general held feelings release（sighing breath + flowing water）；self-love 是 self-directed warmth（heart breath + soft light expansion）；vs loving-kindness (主词页): metta formal 序列包含 5 方向，self-love 专注 self 一个方向但更深"
+    },
+    {
+      "id": "E4",
+      "slug": "crystals-for-confidence-meditation",
+      "url": "/crystals-for-confidence-meditation/",
+      "title": "Crystals for Confidence Meditation: 7 Stones for Inner Steadiness",
+      "h1": "How to Use Crystals for a Confidence Meditation",
+      "focus_keyword": "crystals for confidence meditation",
+      "secondary_kw": ["confidence crystals meditation", "tiger eye carnelian confidence", "solar plexus confidence stones", "crystals for self-belief"],
+      "page_type": "scene",
+      "definition": "A confidence meditation uses a warm, weighted, or reflective stone, steady breath, and a felt sense of one's own capacity to support meeting challenges from a grounded center rather than a braced front. This guide covers seven stones traditionally paired with this kind of steadying practice.",
+      "scene": {
+        "pain_point": "self-doubt, imposter feelings, bracing before a challenge, shrinking in front of others",
+        "breath": "steady power breath (inhale 4, hold gently for 2 at the top, exhale 4 — even ratio, no forcing)",
+        "hold_hand": "right over the solar plexus (just above the navel)",
+        "scan_focus": "solar plexus (will / aligned action) and the soles of the feet (ground)",
+        "visualization": "a low steady sun at the solar plexus, not flashy — a warm steady glow, grounded",
+        "chakra": "solar-plexus + root",
+        "duration": "8-15 min, especially before a challenge",
+        "affirmation": "I meet this from a steady center, not a braced front.",
+        "compliance_phrasing": "inner steadiness practice / aligned-action support (NOT cures low self-esteem / guarantees success)"
+      },
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          {"step": 1, "name": "Settle with the steady power breath", "text": "inhale 4, hold 2 at the top without strain, exhale 4 — repeat six rounds"},
+          {"step": 2, "name": "Hold the stone in the right hand over the solar plexus", "text": "just above the navel; feel the warmth of the hand and the weight of the stone"},
+          {"step": 3, "name": "Press the feet into the floor", "text": "confidence is not 'up' — it is grounded; press feet gently and feel the support"},
+          {"step": 4, "name": "Picture a low steady sun at the solar plexus", "text": "not flashy, not bright — a warm stable glow that doesn't flicker"},
+          {"step": 5, "name": "Set the one-line intention", "text": "\"I meet this from a steady center, not a braced front.\" — say silently three times"},
+          {"step": 6, "name": "Close by touching the stone once and standing tall", "text": "press the stone gently, set it down, roll the shoulders back, and step into the next moment"}
+        ]
+      },
+      "crystals": ["tiger-eye", "carnelian", "citrine", "sunstone", "pyrite", "red-jasper", "hematite"],
+      "crystal_rationale": {
+        "tiger-eye": "chatoyancy 移动眼线作 'steady gaze' 视觉；传统跨文化 grounded alertness 联想",
+        "carnelian": "透橙红色作 gentle activation（非 aggression）；古埃及 / 罗马 courage 传统",
+        "citrine": "暖黄作 steady sun 视觉；非仅 manifestation，亦是 identity-warmth",
+        "sunstone": "日光效应闪光作 confidence-spark 视觉；乐观联想",
+        "pyrite": "金属金色立方晶体作 'sun-stone' mineral counterpart；重量感 + 反射光",
+        "red-jasper": "土红色 opaque；grounded endurance 传统；earth-toned steadiness",
+        "hematite": "金属重（高比重）作触觉 anchor；'weight in hand = ground in body' 直接感受"
+      },
+      "faq_seeds": [
+        "What are the best crystals for confidence meditation?",
+        "How is confidence meditation different from manifestation?",
+        "Which chakra is for confidence?",
+        "How long should a confidence meditation be?",
+        "Can I meditate for confidence before public speaking?",
+        "Which crystal should I wear for daily confidence?",
+        "Do confidence crystals need to be cleansed differently?",
+        "Is there evidence crystals help confidence?"
+      ],
+      "eastern_note": "瑜伽：manipura (solar plexus) 为 fire / will 中心；藏传：kriya 传统 body-speech-mind 对齐（'aligned action' 非 'aggressive push'）；道家中正之气（不偏不倚）—'steady center' 是跨传统共通 framing。注意：confidence 在东方传统中常并入 'right action / dharma' 而非独立的 self-concept。",
+      "internal_links": {
+        "hub": "M0",
+        "sibling": ["E2", "E5"],
+        "condition": null,
+        "intention": "confidence",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/tiger-eye-crystals/"
+      },
+      "differentiation_from_existing": "vs manifestation (M6): manifestation 是 active goal-alignment（aim realized in body）；confidence 是 identity-steadiness（steady center 不为特定目标）；vs self-love (E3): self-love 是 self-warmth（heart），confidence 是 self-trust（solar plexus + root）"
+    },
+    {
+      "id": "E5",
+      "slug": "crystals-for-creativity-meditation",
+      "url": "/crystals-for-creativity-meditation/",
+      "title": "Crystals for Creativity Meditation: 7 Stones to Open Creative Flow",
+      "h1": "How to Use Crystals for a Creativity Meditation",
+      "focus_keyword": "crystals for creativity meditation",
+      "secondary_kw": ["creativity crystals", "best stones for creative meditation", "carnelian labradorite creativity", "crystals for artists and writers"],
+      "page_type": "scene",
+      "definition": "A creativity meditation uses warm orange or iridescent stones, a flowing or rhythmic breath, and an open attentional field (not single-pointed) to soften the critic and invite novel connections. This guide covers seven stones traditionally paired with creative practice.",
+      "scene": {
+        "pain_point": "creative block, perfectionism, fear of the blank page, second-guessing mid-flow",
+        "breath": "flowing breath (alternating-nostril style or rhythmic inhale 4 / exhale 4, soft and unforced)",
+        "hold_hand": "left (the receiving side, inviting images and ideas in)",
+        "scan_focus": "sacral (lower belly, below the navel) and the third-eye (between the brows)",
+        "visualization": "a warm orange pool of water in the lower belly, gently rising as a fountain up to the brow",
+        "chakra": "sacral + third-eye",
+        "duration": "10-15 min, before a creative session",
+        "affirmation": "I make space, and something new arrives.",
+        "compliance_phrasing": "creative practice support / opening attention (NOT boosts IQ / enhances intelligence)"
+      },
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          {"step": 1, "name": "Settle with flowing breath", "text": "soft rhythmic inhale 4, exhale 4 — or alternate-nostril if you know it; nothing forced"},
+          {"step": 2, "name": "Hold the stone in the left palm", "text": "warm orange (carnelian) or iridescent (labradorite); let the eye rest on its color or sheen"},
+          {"step": 3, "name": "Bring attention to the sacral center", "text": "lower belly, below the navel — the center traditionally associated with creative origination"},
+          {"step": 4, "name": "Picture a warm fountain rising", "text": "orange water pooling in the lower belly, rising as a fountain up to the brow and out through the crown"},
+          {"step": 5, "name": "When an idea arrives, do not grip it", "text": "just notice — gripping kills the flow; let it pass and another will come"},
+          {"step": 6, "name": "Close by writing one line", "text": "before lifting the stone, write down the first simple phrase, color, or image — anchor it before the mind closes"}
+        ]
+      },
+      "crystals": ["carnelian", "labradorite", "citrine", "lapis-lazuli", "blue-apatite", "clear-quartz", "moonstone"],
+      "crystal_rationale": {
+        "carnelian": "透橙红色蜡状光泽作 gentle activation；古埃及 / 罗马传统中 'stone of creativity'（GemSelect 等多源）",
+        "labradorite": "labradorescence 蓝/金闪光作 'surprise flash' 视觉 — 创意 'aha' 的视觉对应；Crystals.com / MooncatCrystals 推荐",
+        "citrine": "暖黄作 'clear the fog' 传统；mental space clearing 支持",
+        "lapis-lazuli": "深蓝含金铁矿斑点；历史 'stone of artists / poets'（古希腊罗马传统）；third-eye 触发",
+        "blue-apatite": "蓝绿色；现代传统中 inspiration / motivation 主题（AngelGrotto / MuseMoonstone 推荐）",
+        "clear-quartz": "中性无色作 blank-canvas 联想；'master' 传统作 all-purpose creative companion",
+        "moonstone": "adularescence 浮动光作 'dreamy / vision' 视觉；新想法联想"
+      },
+      "faq_seeds": [
+        "What are the best crystals for creativity meditation?",
+        "How do I meditate for creative inspiration?",
+        "Which chakra is for creativity?",
+        "Can crystals really help with creative block?",
+        "Which crystal should I keep on my desk?",
+        "How long should a creativity meditation be?",
+        "Should I meditate before or during creative work?",
+        "Do different art forms call for different crystals?"
+      ],
+      "eastern_note": "瑜伽：svadhisthana (sacral) 为 creativity / emotion 中心；印度传统 ajna (third-eye) 为 insight / vision 中心；藏传 arts 传统（如 thangka painting）以 carnelian / lapis 为传统颜料原料 — mineral 与 arts 历史关联深厚。道家中 'water generating wood'（水生木）= 创意流动五行类比（非医疗）。",
+      "internal_links": {
+        "hub": "M0",
+        "sibling": ["E4", "E2"],
+        "condition": null,
+        "intention": "creativity",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/carnelian-crystals/"
+      },
+      "differentiation_from_existing": "vs focus (M1): focus 是 single-pointed concentration（box breathing + third-eye + steady light）；creativity 是 open flowing attention（flowing breath + sacral + rising fountain）；vs manifestation (M6): manifestation 是 goal-oriented，creativity 是 process-oriented"
+    },
+    {
+      "id": "E6",
+      "slug": "crystals-for-gratitude-meditation",
+      "url": "/crystals-for-gratitude-meditation/",
+      "title": "Crystals for Gratitude Meditation: 7 Stones for a Thankfulness Practice",
+      "h1": "How to Use Crystals for a Gratitude Meditation",
+      "focus_keyword": "crystals for gratitude meditation",
+      "secondary_kw": ["gratitude crystals", "best stones for gratitude practice", "citrine rose quartz gratitude", "crystals for thankfulness"],
+      "page_type": "scene",
+      "definition": "A gratitude meditation uses warm-toned or heart-centered stones, a slow receiving breath, and a deliberate naming of small specific things you appreciate to deepen a felt sense of thankfulness. This guide covers seven stones traditionally paired with gratitude practice.",
+      "scene": {
+        "pain_point": "taking things for granted, comparative scarcity mindset, difficulty feeling warmth toward what is already here",
+        "breath": "receiving breath (slow inhale as if receiving a gift, gentle exhale with a soft half-smile)",
+        "hold_hand": "both hands cupping the stone at the heart center",
+        "scan_focus": "heart center (center of chest)",
+        "visualization": "a warm golden honey-colored light filling the chest with each named thing, slowly expanding outward",
+        "chakra": "heart",
+        "duration": "8-15 min, ideally at end of day or week",
+        "affirmation": "I notice what is already here, and let it warm me.",
+        "compliance_phrasing": "thankfulness practice / appreciation cultivation (NOT attracts abundance / guarantees prosperity)"
+      },
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          {"step": 1, "name": "Settle with the receiving breath", "text": "slow inhale as if receiving a small gift, gentle exhale with a soft half-smile — repeat five rounds"},
+          {"step": 2, "name": "Cup the stone in both hands at the heart", "text": "rest both palms around the stone, hands at the center of the chest"},
+          {"step": 3, "name": "Name three small specific things", "text": "not 'health / family / job' — instead 'the warmth of the cup this morning', 'the colour of the sky at 4pm', 'a kind word from a coworker'"},
+          {"step": 4, "name": "Let each one warm the chest", "text": "with each named thing, picture a little honey-colored light collecting at the heart"},
+          {"step": 5, "name": "When the mind argues ('yes but'), do not fight", "text": "just return to the next small thing — gratitude is a noticing practice, not a forced feeling"},
+          {"step": 6, "name": "Close by holding the stone to the heart", "text": "press it gently to the sternum once, set it down, and let the warmth carry forward"}
+        ]
+      },
+      "crystals": ["citrine", "rose-quartz", "amethyst", "clear-quartz", "green-aventurine", "sunstone", "moonstone"],
+      "crystal_rationale": {
+        "citrine": "暖黄作 'sun-warmth' 视觉；传统跨文化 'abundance / positivity' 联想（注：abundance framing 不等于 manifest wealth）",
+        "rose-quartz": "柔和粉色 + palm stone 形状契合 heart center；传统跨文化 gentleness / love 主题",
+        "amethyst": "传统 calm 主题；softening the 'yes but' 内在争论",
+        "clear-quartz": "中性无色作 'clear lens to see what is here' 联想；'master' 传统作 all-purpose",
+        "green-aventurine": "淡绿柔和；heart-secondary + opportunity / growth 传统",
+        "sunstone": "日光效应闪光作 'small joys / sparkle' 视觉",
+        "moonstone": "adularescence 浮动光作 'soft surprise / new eyes for the ordinary' 联想"
+      },
+      "faq_seeds": [
+        "What are the best crystals for gratitude meditation?",
+        "How is gratitude meditation different from manifestation?",
+        "What do I name during a gratitude meditation?",
+        "Which chakra is for gratitude?",
+        "How long should a gratitude meditation be?",
+        "Can gratitude meditation feel forced — what then?",
+        "Which crystal should I keep on my nightstand for gratitude?",
+        "Should I journal before or after a gratitude meditation?"
+      ],
+      "eastern_note": "佛教：gārava (尊敬 / 感恩) 与 kataññu (知恩) 是 Pali 传统；藏传 tsog feast（供养 / 感恩仪式）；道家中 '知足'（知止足）—gratitude 在东方传统中常作为德目而非独立冥想。基督教传统 eucharist 字根 = thanksgiving（仅作文化参照，非宗教推广）。",
+      "internal_links": {
+        "hub": "M0",
+        "sibling": ["E3", "E2"],
+        "condition": null,
+        "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/citrine-crystals/"
+      },
+      "differentiation_from_existing": "vs manifestation (M6): manifestation 是 active goal-aligned intention；gratitude 是 noticing what is already here（passive receiving）；vs self-love (E3): self-love 是 self-directed warmth，gratitude 是 outward-directed appreciation"
+    },
+    {
+      "id": "E7",
+      "slug": "crystals-for-grief-meditation",
+      "url": "/crystals-for-grief-meditation/",
+      "title": "Crystals for Grief Meditation: 7 Gentle Stones for Loss",
+      "h1": "How to Use Crystals for a Grief Meditation",
+      "focus_keyword": "crystals for grief meditation",
+      "secondary_kw": ["crystals for grief and loss", "best stones for grief meditation", "rose quartz smoky quartz grief", "comfort crystals for mourning"],
+      "page_type": "scene",
+      "definition": "A grief meditation uses soft, grounding, or gently protective stones alongside a witnessing breath (no fixing) to hold space for the natural waves of loss without rushing them. This guide covers seven stones traditionally offered as gentle companions for mourning.",
+      "scene": {
+        "pain_point": "waves of grief, heaviness in the chest, feeling ungrounded by loss, difficulty facing memories",
+        "breath": "wave breath (inhale as the wave rises — do not resist; exhale as it falls — let it pass)",
+        "hold_hand": "left over the heart center, or both hands cupping a heavier grounding stone in the lap",
+        "scan_focus": "heart center and the soles of the feet (the latter for ground)",
+        "visualization": "a wide slow tide coming in and going out — no resistance to the wave, no chasing it either",
+        "chakra": "heart + root",
+        "duration": "10-20 min, on difficult days or anniversaries",
+        "affirmation": "I let the wave move through, and I remain.",
+        "compliance_phrasing": "gentle companion for loss / holding-space practice (NOT cures grief / treats depression / heals trauma / processes PTSD — grief is a natural response, not a disorder to fix)"
+      },
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          {"step": 1, "name": "Settle with the wave breath", "text": "no counting, no forcing — let the inhale rise like a wave, the exhale fall; just witness"},
+          {"step": 2, "name": "Place one stone over the heart, a heavier one in the lap", "text": "left hand on the heart stone (rose quartz or smoky quartz); heavier grounding stone (black tourmaline or hematite) resting in the lap"},
+          {"step": 3, "name": "Feel the feet on the floor", "text": "grief lifts us out of the body — press the feet gently, return to the contact"},
+          {"step": 4, "name": "If a wave rises, do not resist or chase", "text": "let it move through like a tide; the stone's weight is your anchor while it passes"},
+          {"step": 5, "name": "If a memory comes, let it", "text": "do not analyze — just witness it like a passing cloud; return to the breath when ready"},
+          {"step": 6, "name": "Close gently and slowly", "text": "do not rush to stand; press the feet, place a hand on the heart, transition softly — grief work is tiring"}
+        ]
+      },
+      "crystals": ["rose-quartz", "smoky-quartz", "amethyst", "moonstone", "black-tourmaline", "rhodonite", "lepidolite"],
+      "crystal_rationale": {
+        "rose-quartz": "柔和粉色 + palm stone 形状；传统跨文化 gentle comfort / heart-holding 联想（CharmsofLight / WildMountain 推荐）",
+        "smoky-quartz": "半透棕灰；传统 release + grounding 双重联想（MuseMoonstone / SaskiaHeydon 推荐深色石短期使用）",
+        "amethyst": "传统 calm / spiritual support；helps soften without numbing",
+        "moonstone": "adularescence 浮动光；'new beginnings' 传统联想（CharmsofLight WildMountain 列为 grief stone）",
+        "black-tourmaline": "重量感（高比重）；grounding anchor in storm（WhalersLocker / 普遍推荐）",
+        "rhodonite": "粉黑对比；现代传统 inner wound / compassion for self in loss",
+        "lepidolite": "含天然锂云母（科学事实，非药理断言）；柔和淡紫色；现代传统 calm in grief"
+      },
+      "faq_seeds": [
+        "What are the best crystals for grief meditation?",
+        "How is grief meditation different from emotional release?",
+        "How do I meditate when I'm grieving?",
+        "Can crying happen during a grief meditation?",
+        "How long should a grief meditation be?",
+        "Which crystal should I carry through a difficult anniversary?",
+        "Are crystals a substitute for grief counseling?",
+        "How do I cleanse crystals after a grief practice?"
+      ],
+      "eastern_note": "佛教：maranānussati (死随念) 是南传十随念之一；藏传 bardo（中阴）传统对死亡 / 失去有完整修法；净土宗 / 禅宗皆有丧祭仪轨。注意 framing：东方传统对死亡的态度是修行的一部分（非'治愈' grief）—此页保持 secular 'holding-space' 立场，传统术语仅作文化参照。",
+      "internal_links": {
+        "hub": "M0",
+        "sibling": ["E3", "E9"],
+        "condition": null,
+        "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/rose-quartz-crystals/"
+      },
+      "differentiation_from_existing": "vs emotional (M3): emotional 是 general held feelings release（sighing breath + flowing water）；grief 特指 loss / mourning（wave breath + no fixing + grounding）；vs shadow-work (E9): shadow 是整合 suppressed parts，grief 是 holding space for loss"
+    },
+    {
+      "id": "E8",
+      "slug": "full-moon-meditation-crystals",
+      "url": "/full-moon-meditation-crystals/",
+      "title": "Full Moon Meditation with Crystals: 7 Stones & a Release Practice",
+      "h1": "How to Do a Full Moon Meditation with Crystals",
+      "focus_keyword": "full moon meditation crystals",
+      "secondary_kw": ["full moon crystals", "crystals for full moon ritual", "moonstone selenite full moon", "full moon release meditation"],
+      "page_type": "scene",
+      "definition": "A full moon meditation uses light-catching, white, or iridescent stones at the peak of the lunar cycle to support a release practice — letting go of what has culminated and no longer serves. This guide covers seven stones traditionally paired with full moon ritual.",
+      "scene": {
+        "pain_point": "accumulated tension over the cycle, difficulty letting go of completed things, sleep disruption near full moons",
+        "breath": "releasing breath (inhale slowly, long extended exhale as if letting something fall away)",
+        "hold_hand": "left, with the stone placed where moonlight can touch it (windowsill or outdoors)",
+        "scan_focus": "crown of the head and the heart center",
+        "visualization": "a wide bright moonlight pouring down through the crown, washing accumulated tension down and out through the soles of the feet",
+        "chakra": "crown + heart",
+        "duration": "10-20 min on or near the full moon night",
+        "affirmation": "I release what is complete, and trust the next cycle.",
+        "compliance_phrasing": "lunar-cycle release ritual / cyclical reflection practice (NOT guarantees manifestation / amplifies energy — frame as traditional ritual, not magical claim)"
+      },
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          {"step": 1, "name": "Settle where moonlight reaches", "text": "windowsill, garden, or any spot under the night sky — even an open window counts"},
+          {"step": 2, "name": "Place or hold the stone in moonlight", "text": "let the stone sit in the moonlight too; many traditions hold this also cleanses it (parallel practice to our cleansing timer)"},
+          {"step": 3, "name": "Settle with the releasing breath", "text": "slow inhale through the nose, long extended exhale through the mouth as if releasing — repeat eight rounds"},
+          {"step": 4, "name": "Name what is complete this cycle", "text": "silently name three things that have run their course — projects, worries, patterns; no judgment, just naming"},
+          {"step": 5, "name": "Picture moonlight washing through", "text": "bright white light entering through the crown, dissolving what was named, flowing out through the soles"},
+          {"step": 6, "name": "Close by thanking the cycle", "text": "place the stone down, briefly thank what is releasing, transition gently to rest"}
+        ]
+      },
+      "crystals": ["moonstone", "selenite", "clear-quartz", "amethyst", "labradorite", "howlite", "smoky-quartz"],
+      "crystal_rationale": {
+        "moonstone": "adularescence 浮动光直接类比月光；跨文化 lunar / new beginnings 传统（EmpressWolf / GoldenLotusMala 推荐）",
+        "selenite": "希腊语 selene = moon（词源）；半透长柱形作 'moonlight in mineral form' 视觉；'self-cleansing' 传统（ChalmersGems 等推荐为 full moon crystal）",
+        "clear-quartz": "中性无色透光作 moonlight amplifier 联想；'master' 传统 all-purpose",
+        "amethyst": "紫色 crown 联想；TinyRituals 等推荐 full moon charging 组合",
+        "labradorite": "蓝金闪光作 'surprise illumination' 视觉；满月 intuition / vision 传统",
+        "howlite": "白色多孔；calm + sleep support 满月（满月常 sleep 受扰）",
+        "smoky-quartz": "半透棕灰；release + grounding 双重联想，配合 'letting go' 主题"
+      },
+      "faq_seeds": [
+        "What crystals are best for a full moon meditation?",
+        "How do I do a full moon release ritual with crystals?",
+        "Should I charge my crystals in the full moon?",
+        "How is full moon meditation different from new moon?",
+        "What if I can't see the moon from where I am?",
+        "How long should a full moon meditation be?",
+        "Which crystals should I avoid putting in moonlight?",
+        "Is full moon meditation a religious practice?"
+      ],
+      "eastern_note": "藏传：每月十五 (Purnima / 满月) 为吉祥日，Tsog（供养荟供）传统在此日修法；印度 Purnima vrat（满月斋）传统；道教十五 '望日'（朔望概念，月相术语）。注意：本页保持 cultural-ritual framing（'traditional practice'）非 magical claim；满月与 sleep 的研究有少量证据（2013 Cajochen 等）但不强 — 保持 'some people report' 中立措辞。",
+      "internal_links": {
+        "hub": "M0",
+        "sibling": ["E6", "E2"],
+        "condition": null,
+        "intention": "calm-mindfulness",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "moon_phase_tool": "/moon-phase/",
+        "shop_fallback": "/product-category/selenite-crystals/"
+      },
+      "differentiation_from_existing": "vs manifestation (M6): manifestation 是 personal goal alignment；full-moon 是 cyclical release ritual（不同 timing / framing）；vs gratitude (E6): gratitude 是 noticing，full-moon 是 releasing（一来一去）"
+    },
+    {
+      "id": "E9",
+      "slug": "crystals-for-shadow-work-meditation",
+      "url": "/crystals-for-shadow-work-meditation/",
+      "title": "Crystals for Shadow Work Meditation: 7 Stones for Inner Integration",
+      "h1": "How to Use Crystals for a Shadow Work Meditation",
+      "focus_keyword": "crystals for shadow work meditation",
+      "secondary_kw": ["shadow work crystals", "best stones for shadow work", "black obsidian labradorite shadow work", "crystals for inner healing and reflection"],
+      "page_type": "scene",
+      "definition": "A shadow work meditation uses dark, reflective, or iridescent stones alongside a witnessing, non-judgmental attention to gently look at the parts of yourself that have been hidden, suppressed, or pushed away — not to fix them, but to integrate. This guide covers seven stones traditionally paired with this kind of depth practice.",
+      "scene": {
+        "pain_point": "avoiding uncomfortable parts of self, projecting onto others, patterns repeating despite awareness, feeling stuck in old stories",
+        "breath": "witness breath (slow natural breath, no counting, no forcing — just observing what arises without trying to change it)",
+        "hold_hand": "left (the receiving side, allowing what is hidden to surface)",
+        "scan_focus": "root (ground for safety) and the heart (compassion for what arises)",
+        "visualization": "no fixed image — instead, a dark protective cave with a small lamp; whatever arises is met there, witnessed, not driven out",
+        "chakra": "root + heart",
+        "duration": "15-25 min (longer than other scenes — depth work needs time and should not be rushed)",
+        "affirmation": "I am willing to see, and what I see, I welcome.",
+        "compliance_phrasing": "inner reflection / integration practice (NOT treats trauma / processes PTSD / heals deep wounds — shadow work in the Jungian sense is self-exploration, not therapy; for clinical concerns, work with a qualified therapist)"
+      },
+      "calculation": {
+        "method": "how-to",
+        "steps": [
+          {"step": 1, "name": "Settle with the witness breath", "text": "no count, no forcing — natural breath, just observing the inhale and exhale for a few rounds to arrive"},
+          {"step": 2, "name": "Hold the stone in the left palm", "text": "dark reflective (obsidian, tourmaline) or iridescent (labradorite); feel its weight and surface"},
+          {"step": 3, "name": "Press the feet into the floor and feel grounded", "text": "shadow work needs safety first — root down before going inward"},
+          {"step": 4, "name": "Silently ask: 'What part of me am I avoiding?'", "text": "then wait — do not answer with the mind; let an image, feeling, or memory surface on its own"},
+          {"step": 5, "name": "When something arises, do not fix or argue", "text": "just witness it like meeting a stranger — 'I see you'; the stone's weight is your anchor; if it gets too much, open your eyes and press your feet"},
+          {"step": 6, "name": "Close by placing a hand on the heart", "text": "before setting the stone down, place your free hand on your heart and silently say 'I welcome all of me' — transition gently, drink water, rest"}
+        ]
+      },
+      "crystals": ["black-obsidian", "labradorite", "smoky-quartz", "amethyst", "black-tourmaline", "moonstone", "malachite"],
+      "crystal_rationale": {
+        "black-obsidian": "天然火山玻璃，反射表面作 'mirror of the soul' 视觉；传统跨文化 shadow / truth-facing（CrystalHappenings / RocksWithSass / 多源推荐）",
+        "labradorite": "蓝金闪光作 'flash of insight from the hidden' 视觉；protection during inner work（LoveOfRocks / EnergyMuse 推荐）",
+        "smoky-quartz": "半透棕灰；grounding + release 双重联想 — shadow work 后稳定化的传统石",
+        "amethyst": "紫色 calm / spiritual insight 传统；witness without numbing 支持",
+        "black-tourmaline": "重量 + grounding；safety anchor during depth work（普遍推荐）",
+        "moonstone": "adularescence 浮动光；'shadow moonstone' (black moonstone) 是 shadow work 特殊变体（EnergyMuse / GoddessProvisions 推荐）",
+        "malachite": "绿色带纹；transformation 传统（LoveOfRocks 列为 shadow work stone）；注意：含水洗敏感，保养需谨慎"
+      },
+      "faq_seeds": [
+        "What are the best crystals for shadow work meditation?",
+        "How is shadow work meditation different from emotional release?",
+        "Is shadow work meditation safe?",
+        "What if something painful comes up during shadow work?",
+        "How long should a shadow work meditation be?",
+        "Which crystal is best for beginners to shadow work?",
+        "Should I journal after a shadow work meditation?",
+        "Is shadow work the same as therapy?"
+      ],
+      "eastern_note": "西方：Carl Jung 的 'shadow' (Schatten) 概念源于分析心理学 — 本页 framing 主以此为根。东方平行参照（非等价）：藏传 Chöd（施身法 — Machig Labdrön 传统，'feeding the demons' 即面对而非驱除内心阴暗）；南传 asubha bhāvanā（不净观）与 defilements (kilesa) 的 sati。注意：shadow work 是 Western psychology 概念，本页保持 Jungian 立场不强行东方对应。",
+      "internal_links": {
+        "hub": "M0",
+        "sibling": ["E7", "E3"],
+        "condition": null,
+        "intention": "self-discovery",
+        "cleansing_timer": "/tools/crystal-cleansing-timer/",
+        "shop_fallback": "/product-category/black-tourmaline-crystals/"
+      },
+      "differentiation_from_existing": "vs emotional (M3): emotional 是 general held feelings release（sighing breath + flowing water）；shadow 是 intentional integration of suppressed self（witness breath + cave）；vs grief (E7): grief 是 holding space for loss，shadow 是 meeting what was hidden"
+    }
+  ],
+  "crystal_pool_extensions": {
+    "_note": "以下为 9 新场景引用、但不在 meditation-knowledge.json 原 crystal_pool 中的晶体；按 390 库常见英文 slug；正式生产前需 1.crystal-meaning/ json 核对",
+    "blue-lace-agate": {
+      "name": "Blue Lace Agate",
+      "mineral": "SiO₂ (chalcedony variety, banded)",
+      "science_angle": "Mohs 6.5-7, translucent blue with white banding (microcrystalline quartz)",
+      "tradition_angle": "modern tradition associates soft blue with calm speech and the throat center",
+      "mindfulness_angle": "soft blue bands as a calming visual anchor; palm stone shape common",
+      "safety": "durable; brief water safe; moonlight/selenite/sound safe",
+      "meaning_slug": "blue-lace-agate",
+      "shop_category": "/shop/?s=blue-lace-agate"
+    },
+    "sunstone": {
+      "name": "Sunstone",
+      "mineral": "(Ca,Na)(Al,Si)₂O₈ plagioclase feldspar, aventurescence",
+      "science_angle": "Mohs 6-6.5, displays aventurescence (sparkle from copper/hematite inclusions)",
+      "tradition_angle": "associated with sun imagery, vitality, and confidence in modern traditions",
+      "mindfulness_angle": "warm sparkle as a visual cue for confidence and morning activation",
+      "safety": "durable; brief water safe; moonlight/selenite/sound safe",
+      "meaning_slug": "sunstone",
+      "shop_category": "/shop/?s=sunstone"
+    },
+    "lapis-lazuli": {
+      "name": "Lapis Lazuli",
+      "mineral": "Complex rock: lazurite + calcite + pyrite + sodalite",
+      "science_angle": "Mohs 5-5.5, deep blue with gold flecks (pyrite) and white veining (calcite)",
+      "tradition_angle": "historic pigment (ultramarine), used in ancient Egyptian and Renaissance art; associated with vision and insight",
+      "mindfulness_angle": "deep blue with gold flecks as a 'night-sky' visual anchor for third-eye focus",
+      "safety": "relatively soft and porous; keep dry (avoid water/salt); moonlight/selenite/sound safe",
+      "meaning_slug": "lapis-lazuli",
+      "shop_category": "/shop/?s=lapis-lazuli"
+    },
+    "red-jasper": {
+      "name": "Red Jasper",
+      "mineral": "SiO₂ (chalcedony/quartz variety, iron color)",
+      "science_angle": "Mohs 6.5-7, opaque red from iron oxide; microcrystalline",
+      "tradition_angle": "associated across cultures with endurance, grounding, and steady energy",
+      "mindfulness_angle": "warm earth-red as a visual anchor for grounded steadiness",
+      "safety": "durable; brief water safe; moonlight/selenite/sound safe",
+      "meaning_slug": "red-jasper",
+      "shop_category": "/shop/?s=red-jasper"
+    },
+    "green-aventurine": {
+      "name": "Green Aventurine",
+      "mineral": "SiO₂ (quartz variety, fuchsite inclusions)",
+      "science_angle": "Mohs 6.5-7, green from fuchsite (chrome-bearing mica), slight aventurescence",
+      "tradition_angle": "modern tradition associates green aventurine with opportunity and growth",
+      "mindfulness_angle": "soft green as a calming heart-secondary visual anchor",
+      "safety": "durable; brief water safe; moonlight/selenite/sound safe",
+      "meaning_slug": "green-aventurine",
+      "shop_category": "/shop/?s=green-aventurine"
+    },
+    "blue-apatite": {
+      "name": "Blue Apatite",
+      "mineral": "Ca₅(PO₄)₃(F,Cl,OH) (apatite group)",
+      "science_angle": "Mohs 5, translucent blue-green; slightly soft",
+      "tradition_angle": "modern tradition associates blue apatite with inspiration and motivation",
+      "mindfulness_angle": "blue-green translucent tone as a creative visual anchor",
+      "safety": "slightly soft; keep dry; moonlight/selenite/sound safe",
+      "meaning_slug": "blue-apatite",
+      "shop_category": "/shop/?s=blue-apatite"
+    },
+    "rhodonite": {
+      "name": "Rhodonite",
+      "mineral": "(Mn²⁺,Fe²⁺,Mg,Ca)SiO₃ (manganese inosilicate)",
+      "science_angle": "Mohs 5.5-6.5, pink with black manganese oxide veining",
+      "tradition_angle": "modern tradition associates rhodonite with self-forgiveness and inner wound healing",
+      "mindfulness_angle": "pink-black contrast as a focal for holding both softness and weight",
+      "safety": "durable; brief water safe; moonlight/selenite/sound safe",
+      "meaning_slug": "rhodonite",
+      "shop_category": "/shop/?s=rhodonite"
+    },
+    "black-obsidian": {
+      "name": "Black Obsidian",
+      "mineral": "Volcanic glass (amorphous SiO₂), from rapidly cooled lava",
+      "science_angle": "Mohs 5-5.5 (softer than quartz), conchoidal fracture produces razor-sharp edges; mirrors were historically cut from it",
+      "tradition_angle": "used in Mesoamerican (Aztec) cultures for mirrors and ritual; modern tradition associates it with shadow-facing and truth-seeing",
+      "mindfulness_angle": "reflective dark surface as a 'mirror' for inner reflection",
+      "safety": "brittle (can chip); keep dry; moonlight/selenite/sound safe — handle polished pieces, not raw (sharp edges)",
+      "meaning_slug": "black-obsidian",
+      "shop_category": "/shop/?s=obsidian"
+    },
+    "malachite": {
+      "name": "Malachite",
+      "mineral": "Cu₂CO₃(OH)₂ (copper carbonate)",
+      "science_angle": "Mohs 3.5-4 (soft), vivid green with concentric banding; copper-bearing (handle dry, wash hands after)",
+      "tradition_angle": "historic pigment, used in Egyptian and Russian ornament; modern tradition associates it with transformation",
+      "mindfulness_angle": "vivid banded green as a focal for transformation imagery",
+      "safety": "soft and water-sensitive (copper-bearing — keep dry, do not soak, wash hands after handling raw); moonlight/selenite/sound safe — safer in polished/tumbled form",
+      "meaning_slug": "malachite",
+      "shop_category": "/shop/?s=malachite"
+    }
+  },
+  "compliance_notes": {
+    "medical_compliance_summary": "anxiety/grief/shadow-work 三个场景严格 medical framing：用 'support/wind-down/holding-space/integration' 非 'cures/treats/heals'；FAQ 显式声明 'crystals are not a substitute for professional treatment / therapy'",
+    "magical_claim_compliance": "full-moon / morning / gratitude 三个场景保持 'traditional ritual practice' framing，不写 'amplifies energy / guarantees manifestation / attracts wealth'；eastern_note 注明文化来源非断言",
+    "differentiation_check": "9 场景 breath 全部差异化：anxiety=coherent(4-6)/morning=awakening/self-love=heart/confidence=steady-power/creativity=flowing/gratitude=receiving/grief=wave/full-moon=releasing/shadow=witness；9 场景 chakra 全部差异化（heart 三个但 breath/visualization/hand 不同）"
+  }
+}

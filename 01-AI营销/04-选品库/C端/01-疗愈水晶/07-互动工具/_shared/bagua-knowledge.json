@@ -1,0 +1,165 @@
+{
+  "_meta": {
+    "name": "bagua-knowledge",
+    "purpose": "Bagua 九宫 × 元素 × 颜色 × 激活法 × 水晶映射（Bagua Map 工具 + 文章矩阵单源）",
+    "school_primary": "BTB (Black Sect Tantric Buddhism, Master Lin Yun 传承) 门对齐 — 西方主流，适合公寓/现代户型",
+    "school_compass": "Classical/Compass 罗盘方位 — Career=北, Fame=南，按房屋实际朝向（高级选项）",
+    "btb_orientation": "BTB 前门对齐：门在底部那排（Knowledge/Career/Helpful People），九宫叠到平面图，不依赖罗盘",
+    "purple_wealth_note": "Wealth 宫 BTB 主色为紫色（Amethyst），非 Classical 的绿色 — BTB 流派标志（karenrauchcarter 强调 Best Color: Purple）",
+    "compliance": "based on traditional Feng Shui Bagua; a tool for reflecting on your space and intentions, not a guarantee of outcomes",
+    "url_rule_tool": "/tools/bagua-map/",
+    "url_rule_article": "/feng-shui-bagua-map/",
+    "crystal_sources": "每宫 Element × BTB 主色 × 五行准确 × 竞品稀疏共识；所有 slug 已验证存在于 390 库"
+  },
+  "school_orientation": {
+    "btb": "前门对齐（default）：站在入口面向屋内，九宫底边对齐前门墙。门在底部那排 Knowledge/Career/Helpful People。任何户型都能叠，缺角/凸角可补救。",
+    "compass": "罗盘方位（advanced）：Career 永远=北，Fame 永远=南，Love=西南，Wealth=东南。按房屋实际罗盘朝向定位，适合独立屋。"
+  },
+  "areas": [
+    {
+      "position": "front_left",
+      "name": "Knowledge & Self-Cultivation",
+      "trigram": { "name": "Gen", "symbol": "☶" },
+      "element": "Earth",
+      "colors": { "primary": "blue", "secondary": ["black", "green"] },
+      "shape": "flat, horizontal",
+      "life_area": "wisdom, self-cultivation, study, inner growth, skill-building",
+      "activation": "Create a quiet study or meditation nook here. Add books, a meditation cushion, a small Buddha or wisdom figure, and blue or deep-green accents. Keep this corner peaceful and screen-free to support inner growth and focused learning.",
+      "crystals": [
+        { "role": "primary", "slug": "lapis-meaning", "reason": "Deep blue stone of wisdom and insight, aligning with the Knowledge area's call to inner study and self-awareness." },
+        { "role": "support", "slug": "sodalite-meaning", "reason": "Blue stone supporting clear thinking and honest self-inquiry — the foundation of self-cultivation." },
+        { "role": "amplify", "slug": "howlite-meaning", "reason": "Calming white stone that quiets the mind for meditation and patient learning." }
+      ],
+      "shop_cta": { "primary_category": "/product-category/lapis-crystals/", "fallback_search": "/shop/?s=lapis+lazuli", "final_fallback": "/product-category/healing-jewelry/" }
+    },
+    {
+      "position": "front_center",
+      "name": "Career & Life Path",
+      "trigram": { "name": "Kan", "symbol": "☵" },
+      "element": "Water",
+      "colors": { "primary": "black", "secondary": ["deep blue", "white"] },
+      "shape": "wavy, flowing, irregular",
+      "life_area": "career, life path, direction, journey, flow in work and life",
+      "activation": "Strengthen this area with Water symbols — a small fountain, a mirror, or images of flowing water. Black and deep-blue accents support flow. Keep the path from your front door clear and unobstructed so opportunity can enter your life smoothly.",
+      "crystals": [
+        { "role": "primary", "slug": "black-tourmaline-meaning", "reason": "Black Water-element stone grounding your career path while offering protection as you move forward." },
+        { "role": "support", "slug": "obsidian-meaning", "reason": "Black volcanic glass supporting clarity of direction and protective flow along your life path." },
+        { "role": "amplify", "slug": "aquamarine-meaning", "reason": "Light Water stone easing communication and adaptability in your work journey." }
+      ],
+      "shop_cta": { "primary_category": "/product-category/black-tourmaline-crystals/", "fallback_search": "/shop/?s=black+tourmaline", "final_fallback": "/product-category/healing-jewelry/" }
+    },
+    {
+      "position": "front_right",
+      "name": "Helpful People & Travel",
+      "trigram": { "name": "Qian", "symbol": "☰" },
+      "element": "Metal",
+      "colors": { "primary": "gray", "secondary": ["white", "silver", "gold"] },
+      "shape": "round, spherical, metallic",
+      "life_area": "helpful people, benefactors, mentors, travel, networking, synchronicity",
+      "activation": "Add metal objects, a silver box for written wishes, or images of mentors and travel destinations. Gray, white, and metallic tones attract supportive allies. This area governs the people and fortunate synchronicities that help your path — honor your mentors here.",
+      "crystals": [
+        { "role": "primary", "slug": "hematite-meaning", "reason": "Silvery metallic stone attracting helpful allies and grounding your networking intentions." },
+        { "role": "support", "slug": "golden-obsidian-meaning", "reason": "Golden-sheen protective stone drawing benefactors and fortunate synchronicity." },
+        { "role": "amplify", "slug": "quartz-meaning", "reason": "Clear Metal-element quartz amplifying intentions for mentorship and beneficial connections." }
+      ],
+      "shop_cta": { "primary_category": "/product-category/hematite-crystals/", "fallback_search": "/shop/?s=hematite", "final_fallback": "/product-category/healing-jewelry/" }
+    },
+    {
+      "position": "middle_left",
+      "name": "Family & Health",
+      "trigram": { "name": "Zhen", "symbol": "☳" },
+      "element": "Wood",
+      "colors": { "primary": "green", "secondary": ["blue", "black"] },
+      "shape": "rectangular, columnar, vertical",
+      "life_area": "family, health, ancestors, new beginnings, vitality, community",
+      "activation": "Nourish this area with healthy plants, family photos in wooden frames, and fresh green accents. Wood loves living things — a thriving plant here supports family harmony and physical vitality. Address any broken items or family tensions reflected in this sector.",
+      "crystals": [
+        { "role": "primary", "slug": "aventurine-meaning", "reason": "Green Wood stone nurturing family harmony, vitality, and healthy new growth." },
+        { "role": "support", "slug": "moss-agate-meaning", "reason": "Forest-green agate supporting deep-rooted family bonds and steady health." },
+        { "role": "amplify", "slug": "jade-meaning", "reason": "Eastern Wood stone of longevity and family wisdom, treasured across generations." }
+      ],
+      "shop_cta": { "primary_category": "/product-category/aventurine-crystals/", "fallback_search": "/shop/?s=green+aventurine", "final_fallback": "/product-category/healing-jewelry/" }
+    },
+    {
+      "position": "center",
+      "name": "Center / Health (Tai Ji)",
+      "trigram": { "name": "Tai Ji", "symbol": "☯" },
+      "element": "Earth",
+      "colors": { "primary": "yellow", "secondary": ["earth tones", "brown", "orange"] },
+      "shape": "square, earthen, grounded",
+      "life_area": "health, unity, balance, the hub connecting all eight areas of life",
+      "activation": "The center is the heart connecting all life areas — keep it open, clean, and grounded. Earthy yellow, terracotta, and ceramic objects support overall wellbeing. Avoid clutter here, as stagnation at the center affects every other area of life.",
+      "crystals": [
+        { "role": "primary", "slug": "citrine-meaning", "reason": "Golden Earth stone radiating from the center, warming and uniting all eight life areas." },
+        { "role": "support", "slug": "tiger-eye-meaning", "reason": "Golden-brown Earth stone grounding and balancing the central hub of health." },
+        { "role": "amplify", "slug": "quartz-meaning", "reason": "Clear quartz amplifying the center's unifying intention across all life areas." }
+      ],
+      "shop_cta": { "primary_category": "/product-category/citrine-crystals/", "fallback_search": "/shop/?s=citrine", "final_fallback": "/product-category/healing-jewelry/" }
+    },
+    {
+      "position": "middle_right",
+      "name": "Children & Creativity",
+      "trigram": { "name": "Dui", "symbol": "☱" },
+      "element": "Metal",
+      "colors": { "primary": "white", "secondary": ["pastels", "earth tones"] },
+      "shape": "round, playful, metallic",
+      "life_area": "creativity, children, joy, playfulness, fertility, completing projects",
+      "activation": "Spark this area with creative tools, art supplies, children's artwork, or playful white and pastel objects. Metal thrives on purity and joy — keep this corner fresh and inspiring to support creative flow and the completion of joyful projects.",
+      "crystals": [
+        { "role": "primary", "slug": "quartz-meaning", "reason": "Pure white Metal stone clearing the creative channel for fresh, joyful expression." },
+        { "role": "support", "slug": "selenite-meaning", "reason": "Luminous white stone keeping creative space clear and inspiration flowing." },
+        { "role": "amplify", "slug": "moonstone-meaning", "reason": "Playful, fertile stone supporting creativity, children, and new joyful beginnings." }
+      ],
+      "shop_cta": { "primary_category": "/product-category/quartz-crystals/", "fallback_search": "/shop/?s=clear+quartz", "final_fallback": "/product-category/healing-jewelry/" }
+    },
+    {
+      "position": "back_left",
+      "name": "Wealth & Prosperity",
+      "trigram": { "name": "Xun", "symbol": "☴" },
+      "element": "Wood",
+      "colors": { "primary": "purple", "secondary": ["green", "red", "gold"] },
+      "shape": "rectangular, columnar, lush",
+      "life_area": "abundance, prosperity, wealth, gratefulness, flow of resources",
+      "activation": "This is the celebrated wealth corner. Add a healthy lush plant (Water nourishes Wood), a small fountain, purple items, or fresh flowers. Keep this area clean, uncluttered, and vibrant to allow abundance to flow. A small gratitude practice here anchors prosperity mindset.",
+      "crystals": [
+        { "role": "primary", "slug": "amethyst-meaning", "reason": "BTB signature purple stone of the wealth corner — the traditional prosperity anchor in Black Sect Feng Shui." },
+        { "role": "support", "slug": "pyrite-meaning", "reason": "Golden 'fool's gold' magnetizing abundance and confident prosperity." },
+        { "role": "amplify", "slug": "aventurine-meaning", "reason": "Green Wood stone of luck and opportunity, nourished by Water to grow wealth." }
+      ],
+      "shop_cta": { "primary_category": "/product-category/amethyst-crystals/", "fallback_search": "/shop/?s=amethyst", "final_fallback": "/product-category/healing-jewelry/" },
+      "note": "BTB 主色为紫色（非 Classical 绿色）；amethyst 是 BTB wealth corner 标志石。"
+    },
+    {
+      "position": "back_center",
+      "name": "Fame & Reputation",
+      "trigram": { "name": "Li", "symbol": "☲" },
+      "element": "Fire",
+      "colors": { "primary": "red", "secondary": ["purple", "orange"] },
+      "shape": "triangular, pointed, fiery",
+      "life_area": "fame, reputation, recognition, visibility, how you are seen in the world",
+      "activation": "Ignite this area with Fire elements — candles, warm lighting, red accents, awards, or symbols of recognition. Keep it bright and honored. This sector governs how the world sees you; place imagery of how you wish to be recognized here.",
+      "crystals": [
+        { "role": "primary", "slug": "carnelian-meaning", "reason": "Warm Fire stone fueling confident visibility and a radiant, recognizable presence." },
+        { "role": "support", "slug": "sunstone-meaning", "reason": "Sunlit Fire stone supporting joyful leadership and shining reputation." },
+        { "role": "amplify", "slug": "red-jasper-meaning", "reason": "Earthy red stone grounding Fire into steady, sustainable recognition." }
+      ],
+      "shop_cta": { "primary_category": "/product-category/carnelian-crystals/", "fallback_search": "/shop/?s=carnelian", "final_fallback": "/product-category/healing-jewelry/" }
+    },
+    {
+      "position": "back_right",
+      "name": "Love & Relationships",
+      "trigram": { "name": "Kun", "symbol": "☷" },
+      "element": "Earth",
+      "colors": { "primary": "pink", "secondary": ["red", "white", "earth tones"] },
+      "shape": "square, paired, balanced",
+      "life_area": "love, marriage, partnerships, romantic and platonic relationships",
+      "activation": "Strengthen this area with pairs — two candles, two crystals, matching nightstands, or paired decor. Pink and warm accents invite tender partnership. Keep this corner balanced and free of lonely or single imagery to support harmonious relationships.",
+      "crystals": [
+        { "role": "primary", "slug": "rose-quartz-meaning", "reason": "The quintessential love stone, anchoring tender, open-hearted partnership in the relationships corner." },
+        { "role": "support", "slug": "rhodonite-meaning", "reason": "Pink stone of compassion and emotional healing, supporting deep, resilient bonds." },
+        { "role": "amplify", "slug": "strawberry-quartz-meaning", "reason": "Warm pink stone amplifying joyful, heart-centered connection and attraction." }
+      ],
+      "shop_cta": { "primary_category": "/product-category/rose-quartz-crystals/", "fallback_search": "/shop/?s=rose+quartz", "final_fallback": "/product-category/healing-jewelry/" }
+    }
+  ]
+}

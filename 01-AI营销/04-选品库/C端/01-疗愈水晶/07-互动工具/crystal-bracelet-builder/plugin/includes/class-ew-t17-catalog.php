@@ -267,6 +267,11 @@ JS
         $target_length = ($target_wrist + $fit_allowance) * 10;
         $difference = $length - $target_length;
         $fit_status = abs($difference) <= 6 ? 'fit' : ($difference < 0 ? 'short' : 'long');
+        $piece_count = count($snapshot);
+        $average_occupied_length = $piece_count > 0 ? $length / $piece_count : 0.0;
+        $recommended_piece_count = $average_occupied_length > 0
+            ? max(1, min(80, (int) round($target_length / $average_occupied_length)))
+            : $piece_count;
 
         return array(
             'currency' => function_exists('get_woocommerce_currency') ? (get_woocommerce_currency() ?: 'USD') : 'USD',
@@ -275,6 +280,9 @@ JS
             'used_length_mm' => round($length, 1),
             'target_length_mm' => round($target_length, 1),
             'fit_status' => $fit_status,
+            'average_occupied_length_mm' => round($average_occupied_length, 2),
+            'recommended_piece_count' => $recommended_piece_count,
+            'piece_delta' => $recommended_piece_count - $piece_count,
             'wrap_mode' => 'single',
             'snapshot' => $snapshot,
             'packaging_snapshot' => $packaging_snapshot,

@@ -31,6 +31,9 @@ const TOOLS = {
   'daily-tarot':                   { t: 'Daily Tarot',              u: '/tools/daily-tarot/',                     d: "Today's tarot card and crystal for the whole community", i: '🌅' },
   'mbti-tarot':                    { t: 'MBTI Tarot',               u: '/tools/mbti-tarot/',                      d: 'Find your MBTI tarot birth card and crystals', i: '🧬' },
   'ai-dream-interpreter':          { t: 'AI Dream Interpreter',     u: '/tools/ai-dream-interpreter/',            d: 'Decode your dream with AI and matching crystals', i: '🌙' },
+  'kua-number-calculator':         { t: 'Kua Number Calculator',    u: '/tools/kua-number-calculator/',           d: 'Find your feng shui Kua number, directions, and birth crystals', i: '🧭' },
+  'bagua-map':                     { t: 'Feng Shui Bagua Map',      u: '/tools/bagua-map/',                       d: 'Interactive bagua map with crystals for each area', i: '☯️' },
+  'feng-shui-wealth-corner':       { t: 'Wealth Corner Finder',     u: '/tools/feng-shui-wealth-corner/',         d: 'Find your feng shui wealth corner and its best crystals', i: '💰' },
 };
 
 const MAP = {
@@ -56,6 +59,9 @@ const MAP = {
   'ring-size-calculator':          ['bracelet-size-calculator', 'crystal-quiz', 'crystal-bracelet-builder'],
   'crystal-bracelet-builder':      ['bracelet-size-calculator', 'crystal-meaning-search', 'crystal-quiz'],
   'ai-dream-interpreter':          ['ai-tarot-chat', 'mbti-tarot', 'numerology-calculator'],
+  'kua-number-calculator':         ['bagua-map', 'feng-shui-wealth-corner', 'chinese-zodiac-checker'],
+  'bagua-map':                     ['kua-number-calculator', 'feng-shui-wealth-corner', 'crystal-meaning-search'],
+  'feng-shui-wealth-corner':       ['bagua-map', 'kua-number-calculator', 'crystal-quiz'],
 };
 
 const CSS = ''

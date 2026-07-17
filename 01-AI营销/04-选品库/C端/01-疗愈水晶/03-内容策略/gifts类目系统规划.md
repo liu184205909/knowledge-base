@@ -1,8 +1,9 @@
 # Gifts 类目系统规划文档（goearthward.com）
 
 > **数据源**：Semrush 关键词表 3 张（gift for 28471 行 / crystal gifts 56 行 / gift ideas 8437 行，去重后 33002 词，Google Sheets id=`1TcAo4JPZ64NVDk_75-Dbjt0poX82quIor3BlMwcR-00`）+ Google SERP 实测（12 个核心词，location=us/mobile，2026-06-24）
-> **站点定位**：矿石水晶首饰 + 能量手链（Eastern-inspired crystal jewelry），US 英文站，有 Bundle any 3 save 20% 机制
+> **站点定位**：矿石水晶首饰 + 能量手链（Eastern-inspired crystal jewelry），US 英文站
 > **生成**：2026-06-24，gift 系统 research agent（全面关键词+竞品SERP+系统文档）
+> **修订**：2026-07-17——①删除 §六 Bundle 产品线段（站点核实无 "Bundle any 3 save 20%" 机制，套装组合属电商运营/上架，非内容生产线产出；文章内链改指向现有单石 product category）；②统一 collection 术语（collection 为 Shopify 用法，本站 WordPress/WooCommerce 对应 product category 或自定义 /gifts/ hub 页）。
 
 ---
 
@@ -14,8 +15,8 @@
    - 头部(pos1-5)：Waterford/Tiffany/Swarovski/Baccarat/Amazon（**水晶玻璃器皿+3D激光雕刻照片水晶**，非矿石首饰）
    - 中尾部(pos8-26)：tinyrituals/crystals.com/selfgaia/satincrystals/opulentzen/mindfulsouls/consciousitems（独立矿石水晶博客+小店 listicle）
    - **goearthward 抢中尾 listicle 位**——竞品权重不高、内容多为"7/10/12个礼物"清单，深度可超越。
-4. **黄金切入点 = "15th anniversary = crystal 传统主题"**：传统婚庆历法 15 周年=crystal（clarity/enduring love），PAA 反复出现"what anniversary is crystal"——把"矿石水晶首饰/能量手链 bundle"重新定义为"真正的 crystal 周年礼"（区别玻璃器皿）。
-5. **under $50 / housewaming SERP 头部全是独立小店 collection page**，无大媒体 listicle，KD 极低——配 Bundle 机制是快赢。
+4. **黄金切入点 = "15th anniversary = crystal 传统主题"**：传统婚庆历法 15 周年=crystal（clarity/enduring love），PAA 反复出现"what anniversary is crystal"——把"矿石水晶首饰/能量手链"重新定义为"真正的 crystal 周年礼"（区别玻璃器皿）。
+5. **under $50 / housewaming SERP 头部全是独立小店类目页（Shopify collection）**，无大媒体 listicle，KD 极低——快赢机会。
 6. **绝对不碰**：luxury graduation(lv/tiffany/dior/AIO)、crystal photo gifts(KD62,3D雕刻照片)、3d crystal gifts(KD69)、versace/swarovski 品牌词。
 
 ---
@@ -67,7 +68,7 @@ gifts for tea lovers(2900/KD14)、travelers(2900/13)、doctors(2400/10)、senior
 
 **直接竞品（第二梯队，重点对标）**：tinyrituals.com、crystals.com、selfgaia.com、satincrystals.com、opulentzen.com、consciousitems.com、mindfulsouls.com、crystalvaults.com。
 
-**内容类型规律**：Commercial 词头部=品牌 collection；Info/混合词中尾="N best/unique crystal gifts for X" listicle 博客。**goearthward 做 listicle 博客（N礼物+矿石寓意+内链 bundle/产品）**。
+**内容类型规律**：Commercial 词头部=品牌 collection；Info/混合词中尾="N best/unique crystal gifts for X" listicle 博客。**goearthward 做 listicle 博客（N礼物+矿石寓意+内链单石 product category）**。
 
 ---
 
@@ -94,55 +95,46 @@ gifts for tea lovers / travelers / doctors / senior women / knitters / hikers / 
 
 ---
 
-## 五、Gifts 类目结构 + URL
+## 五、URL 与归档结构（2026-07-17 修订）
+
+**决策：不建独立 `/gifts/` hub 页**。post 文章走**根级 URL**（符合 [site-url-rule](../../../../../)，post 根级无前缀）：
 
 ```
-/gifts/                         (hub)
-├── /gifts/for-her/  /for-him/  /for-mom/  /for-women/  /for-men/  /for-crystal-lovers/
-├── /gifts/anniversary/         (主题 hub - 最大量)
-│   ├── /gifts/anniversary/15th-crystal/   (P0 核心)
-│   ├── for-her/  for-him/  for-wife/
-├── /gifts/wedding/  /gifts/housewarming/  /gifts/new-home/
-├── /gifts/under-50/  /under-30/  /luxury/
-└── /gifts/by-intention/        (差异化：按水晶意图选礼)
-    ├── love-relationship/(rose quartz)  protection/(black tourmaline)
-    ├── prosperity/(citrine/pyrite)  calm-stress/(amethyst/howlite)
+/crystal-anniversary-gifts/        /crystal-gifts-for-him/
+/15th-anniversary-crystal-gifts/   /crystal-gifts-for-her/
+/crystal-wedding-gifts/            /crystal-housewarming-gifts/
+/crystal-gifts-under-50/           /crystal-gifts-for-men/
+...（全量 slug 见 25.gifts/configs/gift-topics.json）
 ```
-faceted 结构（人群/主题/场景/价格/意图 5 facet），与现有 category 融合，避免与 /product-category/ 冲突。
+
+**归档靠 post category**（非独立 hub 页）：
+- 建一个 post category `Crystal Gifts`（slug `crystal-gifts`，archive = `/category/crystal-gifts/`）归集全部 gift 文章
+- 子主题维度（anniversary / wedding / housewarming / under-50 / by-recipient / by-intention）用 **sub-category 或 tag** 组织，**不建独立 faceted 页面**
+
+**量级≥30 篇后启用 category-hub 模式**：参照 [category-hub-seo-deployment]，给 `/category/crystal-gifts/` 及子类目 archive 加常青 SEO intro（Code Snippets 部署），把 archive 升级为 HUB。**量级达标前不建 hub，纯归档**。
+
+> 原 faceted `/gifts/` 独立页结构已废弃（2026-07-17）——避免与 `/product-category/` 冲突 + 避免 content-thin 的空 hub。
 
 ---
 
-## 六、Post 选题（首批 20 篇）+ Bundle 产品线
+## 六、Post 选题（首批 20 篇）
 
-### Blog Post（每篇：N礼物 listicle + 矿石寓意 + 内链 bundle）
+### Blog Post（每篇：N礼物 listicle + 矿石寓意 + 内链单石 product category）
 1. 15 Best Crystal Anniversary Gifts for Her (by Stone Meaning) — P0
 2. Crystal Gifts for Him: 10 Meaningful Stones Men Actually Wear — P0(男性缺口)
 3. The 15th Anniversary Crystal Gift Guide (Traditional+Modern) — P0(争AIO)
 4. Crystal Wedding Gifts: Meaningful Stones for Newlyweds — P0
 5. 7 Crystals for a New Home: Housewarming Gift Guide — P0(KD极低)
-6. Crystal Gifts Under $50: 12 Affordable Healing Crystal Sets — P0(配bundle)
+6. Crystal Gifts Under $50: 12 Affordable Healing Crystal Sets — P0
 7-20: unique for women / for mom / what crystal is 15th anniversary / for travelers / tea lovers / doctors / for wife / for crystal lovers / by intention / swarovski vs natural / what does gifting a crystal mean / housewarming / valentine's / mother's day
 
-### Bundle 产品线（接 Bundle any 3 save 20%）
-| Bundle | 内含 | 目标词 |
-|---|---|---|
-| 15th Anniversary Crystal Bundle | Rose Quartz+Clear Quartz+Amethyst | crystal anniversary gifts |
-| New Home Blessing Set | Black Tourmaline+Selenite+Citrine | crystal housewarming/for home |
-| Love & Relationship Trio | Rose Quartz+Rhodonite+Moonstone | for her/anniversary for wife |
-| Protection Travel Set | Black Tourmaline+Hematite+Tiger's Eye | for travelers/for him |
-| Calming Stress-Relief Bundle | Amethyst+Howlite+Lepidolite | for doctors/calm |
-| Prosperity Trio | Citrine+Pyrite+Green Aventurine | new home/new beginnings |
-| Gentleman's Grounding Set | Tiger's Eye+Hematite+Black Onyx | crystal gifts for men |
-| Under $50 Gift Box | 3入门手链+礼盒 | crystal gifts under $50 |
-| Crystal Lover's Curated Box | 稀有标本+手链+净化套装 | gifts for crystal lovers |
-
-配件：水晶礼盒/meaning card/Selenite净化棒/首饰盘（housewarming/for home 切入）。
+> **内链目标说明**（2026-07-17 修订）：站点无 bundle/套装产品，文章推荐的水晶一律内链到现有单石 product category（如 `/product-category/rose-quartz-crystals/`），类目 404 时按 [shop-cta-no-deadlink-rule] 降级到 `/shop/?s={stone}` 搜索页。
 
 ---
 
 ## 七、生产优先级
 
-- **第一批(4-6周,P0)**：建 /gifts/ hub + anniversary/under-50/housewarming 4 collection；出 3 Bundle(15th/New Home/Under $50)；写 6 篇核心 post(选题1-6)；对标 tinyrituals/crystals.com/selfgaia 深度(1500-2500字+矿石寓意表+内链)。
+- **第一批(4-6周,P0)**：建 /gifts/ 总 hub + anniversary/under-50/housewarming 等 4 个 /gifts/ 子主题 hub 页；写 6 篇核心 post(选题1-6)；对标 tinyrituals/crystals.com/selfgaia 深度(1500-2500字+矿石寓意表+内链)。
 - **第二批(7-12周,P1+季节)**：补人群 facet；P1 post；季节内容提前6周(Mother's Day/Valentine's/Christmas)。
 - **第三批(13周+,P2)**：跨主题 post；对比页；AIO 优化。
 

@@ -85,7 +85,7 @@ try {
     Test-PatternSet -Name 'Installer persists directional fields' -Content $install -Patterns @('orientation|direction|mirror|rotat') -Detail 'Variant schema must own directional data, not only a review CSV.'
     Test-PatternSet -Name 'Catalog accepts or presents directional fields' -Content $catalog -Patterns @('orientation|direction|mirror|rotat') -Detail 'Catalog API/admin path must carry directional data.'
     Test-PatternSet -Name 'Commerce validates and snapshots orientation' -Content $commerce -Patterns @('normalize_orientation', 'merge_sequence_orientations', 'format_orientation') -Detail 'Order and official-design snapshots retain validated orientation.'
-    Test-PatternSet -Name 'Independent frontend markup exposes orientation controls or state' -Content $frontend -Patterns @('orientation|direction|mirror|rotat') -Detail 'The independent editor must provide a directional interaction boundary.'
+    Test-PatternSet -Name 'Independent editor applies automatic layout orientation' -Content $javascript -Patterns @('layoutOrientationMode', 'visualOrientationTransform', 'layoutOrientation') -Detail 'Direction is derived from Variant/component rules during assembled layout; the customer does not need a manual direction button.'
     Test-PatternSet -Name 'Editor state carries orientation' -Content $javascript -Patterns @('orientation|direction|mirror|rotat') -Detail 'Editor JS must send a selected direction with a sequence item.'
 
     Write-Host ''

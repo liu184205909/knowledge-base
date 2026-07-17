@@ -4,6 +4,8 @@ param(
     [string]$BeadVariantId,
     [string]$DecorVariantId,
     [string]$IncompatibleDecorVariantId,
+    [string]$IncompatibleBeadVariantId,
+    [string]$PackagingVariantId,
     [int]$OfficialDesignProductId = 0,
     [ValidateRange(10, 30)]
     [double]$TargetWristCm = 16
@@ -79,23 +81,31 @@ if ([string]::IsNullOrWhiteSpace($BeadVariantId)) {
         $sequence = @(@{ variant_id = $BeadVariantId }, @{ variant_id = $DecorVariantId }, @{ variant_id = $BeadVariantId })
     }
 
-    $quoteRequest = @{ target_wrist_cm = $TargetWristCm; fit_preference = 'regular'; sequence = $sequence } | ConvertTo-Json -Depth 5
+    $packaging = if ([string]::IsNullOrWhiteSpace($PackagingVariantId)) { @{} } else { @{ variant_id = $PackagingVariantId } }
+    $quoteRequest = @{ wrap_mode = 'single'; target_wrist_cm = $TargetWristCm; fit_preference = 'regular'; sequence = $sequence; packaging = $packaging } | ConvertTo-Json -Depth 5
     $quote = Invoke-RestMethod -Method Post -Uri "$api/quote" -ContentType 'application/json' -Body $quoteRequest
     foreach ($field in @('currency', 'total', 'weight_g', 'used_length_mm', 'target_length_mm', 'fit_status', 'snapshot', 'price_version')) {
         Assert-Condition ($null -ne $quote.$field) "Quote response is missing $field."
     }
     Assert-Condition (@($quote.snapshot).Count -eq @($sequence).Count) 'Quote snapshot count must match the submitted sequence.'
+    if (-not [string]::IsNullOrWhiteSpace($PackagingVariantId)) {
+        Assert-Condition ($quote.packaging_snapshot.variant_id -eq $PackagingVariantId) 'Quote packaging snapshot must be resolved by the server from the supplied Finish Variant.'
+        Assert-QuoteRejected @{ wrap_mode = 'single'; target_wrist_cm = $TargetWristCm; fit_preference = 'regular'; sequence = $sequence; packaging = @{ variant_id = $BeadVariantId } } 'ew_t17_invalid_packaging_variant' 'a non-Finish packaging Variant'
+    }
     Write-Output "PASS: server quote returned $($quote.currency) $($quote.total) for $(@($sequence).Count) material(s); price_version=$($quote.price_version)."
 
-    Assert-QuoteRejected @{ target_wrist_cm = $TargetWristCm; fit_preference = 'regular'; sequence = @(@{ variant_id = 'missing-runtime-variant' }) } 'ew_t17_unknown_variant' 'an unknown Variant'
+    Assert-QuoteRejected @{ wrap_mode = 'single'; target_wrist_cm = $TargetWristCm; fit_preference = 'regular'; sequence = @(@{ variant_id = 'missing-runtime-variant' }) } 'ew_t17_unknown_variant' 'an unknown Variant'
+    Assert-QuoteRejected @{ wrap_mode = 'single'; target_wrist_cm = $TargetWristCm; fit_preference = 'regular'; sequence = @(@{ variant_id = $BeadVariantId; size_mm = 999 }) } 'ew_t17_variant_size_mismatch' 'a mismatched client Variant size'
 
     if (-not [string]::IsNullOrWhiteSpace($IncompatibleDecorVariantId)) {
         $incompatible = Find-Variant $catalog $IncompatibleDecorVariantId
         Assert-Condition ($null -ne $incompatible) "Live incompatible decor variant $IncompatibleDecorVariantId was not found in catalog."
         Assert-Condition ($incompatible.Material.component_type -in @('decor', 'finish')) "$IncompatibleDecorVariantId must be a decor or finish variant."
-        Assert-QuoteRejected @{ target_wrist_cm = $TargetWristCm; fit_preference = 'regular'; sequence = @(@{ variant_id = $BeadVariantId }, @{ variant_id = $IncompatibleDecorVariantId }, @{ variant_id = $BeadVariantId }) } 'ew_t17_incompatible_bead_size' 'a decor with incompatible bead-size rules'
+        $incompatibleBead = if ([string]::IsNullOrWhiteSpace($IncompatibleBeadVariantId)) { $BeadVariantId } else { $IncompatibleBeadVariantId }
+        Assert-Condition ($null -ne (Find-Variant $catalog $incompatibleBead)) "Live incompatible-test bead variant $incompatibleBead was not found in catalog."
+        Assert-QuoteRejected @{ wrap_mode = 'single'; target_wrist_cm = $TargetWristCm; fit_preference = 'regular'; sequence = @(@{ variant_id = $incompatibleBead }, @{ variant_id = $IncompatibleDecorVariantId }, @{ variant_id = $incompatibleBead }) } 'ew_t17_incompatible_bead_size' 'a decor with incompatible bead-size rules'
     } else {
-        Write-Output 'SKIP: incompatible-size rejection test requires -IncompatibleDecorVariantId.'
+        Write-Output 'SKIP: incompatible-size rejection test requires -IncompatibleDecorVariantId and, when needed, -IncompatibleBeadVariantId.'
     }
 }
 

@@ -25,6 +25,8 @@ After the user manually installs the candidate ZIP once and creates explicit tes
   -BeadVariantId 'test-bead-8mm' `
   -DecorVariantId 'test-spacer-2mm' `
   -IncompatibleDecorVariantId 'test-spacer-6mm-only' `
+  -IncompatibleBeadVariantId 'test-bead-10mm' `
+  -PackagingVariantId 'test-finish-variant' `
   -OfficialDesignProductId 123
 ```
 
@@ -35,7 +37,13 @@ The script reads only public T17 REST endpoints. It checks material-card fields,
 After local source checks pass, create a single candidate package without uploading it:
 
 ```powershell
-./build-candidate-plugin.ps1 -Version '0.1.9'
+./build-candidate-plugin.ps1 -Version '0.1.10'
 ```
 
 The package deliberately contains only backend plugin files and the catalog CSV template. It excludes legacy shortcode frontend files, plugin UI assets, and 3D assets. The user installs this candidate manually once on the test site; do not use it as a repeated UI delivery mechanism.
+
+Candidate creation is also hard-blocked while the identified legacy 3D prototype files remain in `build/`. Remove those files manually before any later candidate build; exclusion from the ZIP is not treated as source cleanup.
+
+## Disposable local acceptance data
+
+For the installed runtime check, use only [the explicit local fixture](../data/v3/local-fixtures/README.md) in a local or disposable test instance. It is intentionally outside the production import path and must never be imported to the public site.

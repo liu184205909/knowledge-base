@@ -1,0 +1,1430 @@
+{
+  "_meta": {
+    "name": "fengshui-knowledge",
+    "purpose": "风水文章线 45 篇 mainpages（hub+概念8+意图5+房间5+单石×feng shui 27），与 kua-knowledge/bagua-knowledge 工具数据共用单源",
+    "school": "BTB (Black Sect Tantric Buddhism) 门对齐为主 + 八宅 Ba Zhai + 五行 Five Elements",
+    "scope_rule": "只做水晶交叉词，不碰泛 feng shui 大媒体垄断词；不进 PiXiu 工厂红海；BTB 流派为主",
+    "crystal_sources": "crystals 字段对齐 390 库 {slug}-meaning；五行映射 Water→obsidian·Wood→aventurine·Fire→carnelian·Earth→citrine·Metal→quartz",
+    "compliance": "BTB framing + 参考传统不强装大师；禁 cures/guarantees/will bring wealth；Wealth宫BTB主色=紫(Amethyst)非绿；立春Feb4太阳历年份切换",
+    "url_rule": "全根级无前缀（/feng-shui/、/citrine-in-feng-shui/、/feng-shui-bagua-map/）",
+    "crystal_slug_note": "文章 slug 用人类可读全名（clear-quartz-in-feng-shui），crystals 数组用 390 真实 slug（quartz）",
+    "pipeline": "复用 meditation mainpages 管线（generate→fill分批→fill-from→image→upload）+ feng shui 专用 fill prompt（BTB+水晶现代配伍+合规+去AI化）",
+    "related_tool_data": [
+      "kua-knowledge.json (Kua工具)",
+      "bagua-knowledge.json (Bagua工具)"
+    ],
+    "article_count": {
+      "hub": 2,
+      "concept": 6,
+      "intention": 5,
+      "room": 5,
+      "crystal": 27,
+      "total": 45
+    }
+  },
+  "mainpages": [
+    {
+      "slug": "feng-shui",
+      "title": "Feng Shui: Complete Guide to Energy, Elements & Crystals",
+      "focus_keyword": "feng shui",
+      "page_type": "hub",
+      "definition": "Feng shui is a traditional Chinese practice for arranging objects and living spaces to support harmony between people and their surrounding environment. Sometimes translated as 'wind-water,' it observes how the flow of energy, or qi, moves through a room, building, or landscape. Based on traditional principles, practitioners use the bagua map, the five elements, and directional alignment to invite balance, clarity, and a sense of ease. Many people find that applying these principles becomes a reflective framework for intention-setting rather than a promise of outcomes.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Align the bagua map over your floor plan so each life area corresponds to its directional position, then place an element or crystal that supports that area's intention.",
+        "steps": [
+          "Draw your floor plan and orient the bagua map with the front door aligned to the bottom row (Career, Knowledge, or Helpful People).",
+          "Identify which of the nine areas you want to support, such as Wealth (back-left), Love (back-right), or Career (front-center).",
+          "Match the area's ruling element to a supporting crystal or object, for example purple Amethyst in the Wealth area.",
+          "Place one to three crystals, keeping the space uncluttered so energy can circulate.",
+          "Refresh the arrangement each season or whenever your intention shifts."
+        ],
+        "example": "Place a clear Quartz cluster on a side table near the center of your home to invite overall clarity and balance."
+      },
+      "crystals": [
+        "quartz",
+        "citrine",
+        "jade"
+      ],
+      "faq_seeds": [
+        "What is feng shui and how does it work?",
+        "Do I need to believe in feng shui for crystals to help?",
+        "What are the five elements in feng shui?",
+        "How is BTB feng shui different from the Compass school?"
+      ],
+      "eastern_note": "Feng shui draws on several classical lineages, including the BTB (Black Sect Tantric Buddhist) school taught by Professor Thomas Lin Yun, which overlays the bagua from the door, and the Compass school's Ba Zhai (Eight Mansions) method, which calculates four favorable directions (Sheng Chi for success, Tien Yi for health, Nien Yen for relationships, Fu Wei for stability). Based on tradition, these tools support reflection and intention, not fixed predictions."
+    },
+    {
+      "slug": "feng-shui-crystals",
+      "title": "Crystals in Feng Shui: Complete Guide to Placement & Meaning",
+      "focus_keyword": "feng shui crystals",
+      "page_type": "hub",
+      "definition": "In feng shui practice, crystals serve as energetic anchors that support the intention of a specific bagua area. Each stone is traditionally associated with an element and a quality, for example Citrine with abundance, Black Tourmaline with protection, and Rose Quartz with compassion. Based on traditional use, crystals are placed where their element and meaning align with the life area you want to support. Many people find that this pairing turns a decorative stone into a daily reminder of an intention, rather than a promise of a result.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Match a crystal's traditional element and meaning to the bagua area that shares that element, then place it in the corresponding sector.",
+        "steps": [
+          "Choose the bagua area you want to support and note its ruling element and traditional color.",
+          "Select one to three crystals whose element and meaning align with that area.",
+          "Cleanse the stones with moonlight, sound, or smoke before placing them.",
+          "Position them on a stable surface, ideally in a cluster of three for the BTB tradition.",
+          "Dust and reset them monthly to keep the arrangement feeling intentional."
+        ],
+        "example": "Place three Citrine points in the Wealth area (back-left) to invite abundance, paired with one Amethyst since purple is the traditional Wealth color."
+      },
+      "crystals": [
+        "citrine",
+        "black-tourmaline",
+        "rose-quartz"
+      ],
+      "faq_seeds": [
+        "Which crystals are best for feng shui?",
+        "How many crystals should I place in one bagua area?",
+        "Do I need to cleanse feng shui crystals?",
+        "Can I use the same crystal in multiple areas?"
+      ],
+      "eastern_note": "BTB practice favors placing stones in groups of three (a trinity) to represent heaven, earth, and humanity. The Compass school instead prioritizes placing a stone in your personal Sheng Chi (success) direction based on your Kua number, calculated from your solar birth year that begins at Li Chun (the Start of Spring, around February 4). Based on tradition, both approaches frame the stone as a focus for reflection."
+    },
+    {
+      "slug": "feng-shui-bagua-map",
+      "title": "Feng Shui Bagua Map: The 9 Areas & Best Crystals",
+      "focus_keyword": "feng shui bagua map",
+      "page_type": "concept",
+      "definition": "The bagua map is a three-by-three grid used in feng shui to map nine life areas onto a floor plan or a single room. In the BTB school, the map is oriented from the entry door: Career sits at the front-center, Knowledge at the front-left, Helpful People at the front-right, Family at the middle-left, Children at the middle-right, the Tai Chi center, Wealth at the back-left, Fame at the back-center, and Love (Relationships) at the back-right. Based on tradition, each area aligns with an element, a color, and a life theme that practitioners use as a focus for intention.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Overlay the BTB bagua so the bottom row (Knowledge, Career, Helpful People) aligns with the main entry wall, matching each area's element and color.",
+        "steps": [
+          "Stand at the main entry and imagine a three-by-three grid extending into the space.",
+          "Locate the Wealth area in the back-left corner (traditional color: purple) and the Love area in the back-right corner (traditional color: pink).",
+          "Note each area's element, for example Wealth is Wood, Fame is Fire, Children is Metal.",
+          "Place a crystal whose element matches: Amethyst supports the Wealth corner's purple resonance, Citrine lifts Fame's Fire, Rose Quartz softens Love.",
+          "Keep each area clutter-free so the intention, not the object, stays central."
+        ],
+        "example": "In a bedroom, place Rose Quartz in the back-right (Love) area and Amethyst in the back-left (Wealth) area to honor the traditional colors."
+      },
+      "crystals": [
+        "amethyst",
+        "citrine",
+        "rose-quartz"
+      ],
+      "faq_seeds": [
+        "What are the nine areas of the bagua map?",
+        "How do I overlay the bagua map on my home?",
+        "What is the traditional color of the Wealth corner in BTB feng shui?",
+        "Where is the Love and Relationships area?"
+      ],
+      "eastern_note": "The BTB bagua taught by Professor Thomas Lin Yun differs from the Classical Compass bagua: BTB always aligns the map from the door, while Classical methods orient it from magnetic north. Wealth's traditional BTB color is purple (hence Amethyst), not the green many newer guides suggest. Based on tradition, the bagua is a mirror for self-reflection rather than a mechanism that forces change."
+    },
+    {
+      "slug": "feng-shui-bracelet",
+      "title": "Feng Shui Bracelet: Meaning, Which Hand & Best Crystals",
+      "focus_keyword": "feng shui bracelet",
+      "page_type": "concept",
+      "definition": "A feng shui bracelet is a strand of beads worn on the wrist as a personal, wearable form of placement. Based on traditional use, the receiving (non-dominant) hand is said to draw energy in, while the giving (dominant) hand projects it outward, so many practitioners wear abundance stones like Citrine on the left wrist and protective stones like Black Tourmaline on the right. The bracelet serves as a tactile reminder of an intention throughout the day, not a certain outcome.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Wear receiving-energy stones (abundance, love) on the non-dominant hand and projecting or protective stones on the dominant hand.",
+        "steps": [
+          "Identify your dominant hand (most right-handed people use the right).",
+          "Choose an intention such as abundance, protection, or clarity.",
+          "For abundance, wear Citrine beads on the non-dominant (receiving) wrist.",
+          "For protection, wear Black Tourmaline on the dominant (giving) wrist to support a boundary.",
+          "Cleanse the bracelet monthly under moonlight or with sound."
+        ],
+        "example": "Wear a Citrine beaded bracelet on the left wrist to invite abundance and a Black Tourmaline bracelet on the right to support a sense of protection."
+      },
+      "crystals": [
+        "citrine",
+        "black-tourmaline",
+        "amethyst"
+      ],
+      "faq_seeds": [
+        "Which hand should I wear a feng shui bracelet on?",
+        "What is the best crystal for a feng shui bracelet?",
+        "How many beads should a feng shui bracelet have?",
+        "Can I wear multiple feng shui bracelets at once?"
+      ],
+      "eastern_note": "Wrist-worn stones appear in several Asian traditions, including Tibetan Buddhist prayer bead (mala) practice, where 108 beads count repetitions. The hand-assignment principle (receiving on the non-dominant side, projecting on the dominant) comes from BTB teaching. Based on tradition, wearing a stone this way is a mindfulness anchor, not a promise of prosperity."
+    },
+    {
+      "slug": "feng-shui-wealth-corner",
+      "title": "Feng Shui Wealth Corner: How to Activate It with Crystals",
+      "focus_keyword": "feng shui wealth corner",
+      "page_type": "concept",
+      "definition": "In BTB feng shui, the Wealth corner is the back-left area of a space when standing from the main entry. Its traditional color is purple (not green), its element is Wood, and it relates to abundance, prosperity, and gratitude. Based on traditional placement, this corner is activated by keeping it clean, well-lit, and supported by objects including crystals that symbolize abundance. Many people find that tending this corner becomes a daily practice of noticing what they already have, rather than a promise of money.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Locate the back-left sector from the entry door and place Wood-element or abundance-symbol stones there, honoring the traditional purple color.",
+        "steps": [
+          "Stand at the main entry and walk to the far-back-left corner of the home or room.",
+          "Clear clutter, fix broken items, and add a healthy plant or purple accent.",
+          "Place Pyrite (symbolic fool's gold) or Citrine here to invite abundance.",
+          "Add Aventurine alongside to support growth, since the area's element is Wood.",
+          "Refresh the arrangement at the new moon or each season."
+        ],
+        "example": "Set a Pyrite cluster, a Citrine point, and a piece of Aventurine on a purple cloth in the back-left corner of your living room."
+      },
+      "crystals": [
+        "pyrite",
+        "citrine",
+        "aventurine"
+      ],
+      "faq_seeds": [
+        "Where is the wealth corner in feng shui?",
+        "What is the traditional color of the wealth corner?",
+        "Which crystals invite abundance in feng shui?",
+        "How do I activate my wealth corner?"
+      ],
+      "eastern_note": "The traditional BTB Wealth color is purple, which is why Amethyst is the classical stone for this corner; the golden and green stones in this guide are complementary, not replacements. In the Compass school, prosperity directions are calculated individually through the Ba Zhai method (Sheng Chi direction). Based on tradition, activating the Wealth corner is a reflective practice of aligning attention with gratitude."
+    },
+    {
+      "slug": "feng-shui-five-elements",
+      "title": "Five Elements in Feng Shui: Wood, Fire, Earth, Metal, Water",
+      "focus_keyword": "feng shui five elements",
+      "page_type": "concept",
+      "definition": "The Five Elements (Wu Xing) are Wood, Fire, Earth, Metal, and Water, the foundational energy categories in classical Chinese metaphysics including feng shui. Each element relates to specific directions, colors, seasons, and life themes. Wood supports growth (Family, Wealth), Fire supports recognition (Fame), Earth supports stability (Center, Knowledge), Metal supports precision (Children, Helpful People), and Water supports flow (Career). Based on tradition, balancing the elements in a space invites equilibrium; many people find this framework useful for reflection rather than as a fixed rule.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place an object or crystal whose element either nourishes or balances the element of the bagua area it sits in.",
+        "steps": [
+          "Map each bagua area to its element: Wealth and Family are Wood, Fame is Fire, Career is Water, Children and Helpful People are Metal, Knowledge is Earth.",
+          "Use the nourishing cycle: Water feeds Wood, Wood feeds Fire, Fire creates Earth, Earth creates Metal, Metal collects Water.",
+          "Place an Aventurine (Wood) stone in the Family area (middle-left) to support growth.",
+          "Place an Obsidian (Water-related) stone near the Career area (front-center) to support flow.",
+          "Balance any dominant element with its reducing counterpart if a room feels stuck."
+        ],
+        "example": "Place Carnelian (Fire) in the Fame area (back-center) to invite recognition, and Aventurine (Wood) in the Family area (middle-left) to invite growth."
+      },
+      "crystals": [
+        "obsidian",
+        "aventurine",
+        "carnelian"
+      ],
+      "faq_seeds": [
+        "What are the five elements in feng shui?",
+        "How do the five elements interact?",
+        "Which element belongs to the wealth area?",
+        "How do I balance elements in my home?"
+      ],
+      "eastern_note": "The Five Elements theory comes from classical Chinese philosophy and underpins both the BTB and Compass schools. The elements interact through nourishing (sheng) and controlling (ke) cycles. Based on tradition, working with the elements is a way to notice imbalances in a space and reflect on them, not a formula that produces fixed outcomes."
+    },
+    {
+      "slug": "feng-shui-kua-number",
+      "title": "Kua Number: How to Calculate & Your Lucky Directions",
+      "focus_keyword": "kua number",
+      "page_type": "concept",
+      "definition": "The Kua (or Gua) number is a personal calculation in Compass school feng shui used to identify four favorable and four unfavorable directions for an individual. It is derived from your birth year and gender. People with Kua numbers 1, 3, 4, or 9 belong to the East group; those with 2, 5, 6, 7, or 8 belong to the West group. Based on tradition, the four favorable directions (Sheng Chi for success, Tien Yi for health, Nien Yen for relationships, Fu Wei for stability) guide placement of beds, desks, and crystals for reflective support.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Calculate Kua from the solar birth year (which begins at Li Chun, around February 4) and gender, then identify your four favorable directions.",
+        "steps": [
+          "Use your solar birth year; note that the feng shui year begins at Li Chun (Start of Spring, around February 4), so if born before that date, use the prior year.",
+          "For a female: add the last two digits of the birth year, reduce to a single digit, then add 5 (or add 6 for years from 2000 on).",
+          "For a male: add the last two digits of the birth year, reduce to a single digit, then subtract from 10 (or 9 for years from 2000 on).",
+          "Identify your group: 1, 3, 4, 9 are East; 2, 5, 6, 7, 8 are West.",
+          "Place a Citrine in your Sheng Chi (success) direction or Black Tourmaline in your Fu Wei (stability) direction."
+        ],
+        "example": "A male born in 1990: 9+0 = 9; 10 minus 9 = 1, an East-group Kua with Sheng Chi (success) to the Southeast."
+      },
+      "crystals": [
+        "black-tourmaline",
+        "citrine",
+        "carnelian"
+      ],
+      "faq_seeds": [
+        "How do I calculate my Kua number?",
+        "What is the difference between East and West Kua groups?",
+        "Does the Kua year start on January 1 or in February?",
+        "What are the four favorable directions in Ba Zhai?"
+      ],
+      "eastern_note": "The Kua number belongs to the Ba Zhai (Eight Mansions) branch of Compass school feng shui. A common error is using the lunar new year as the cutoff; classical practice uses the solar term Li Chun (around February 4) as the year boundary. Based on tradition, the four favorable directions are a framework for aligning personal energy with a space, not a prediction."
+    },
+    {
+      "slug": "feng-shui-protection",
+      "title": "Feng Shui for Protection: Clearing & Shielding Your Space",
+      "focus_keyword": "feng shui protection",
+      "page_type": "concept",
+      "definition": "Protection in feng shui refers to practices that support a sense of energetic boundary and clarity in a space. Based on traditional use, this includes clearing clutter, repairing broken items, and placing grounding stones near entry points where energy enters. Protective work is not about removing specific forces but about creating a felt sense of safety and stability. Many people find that a clean, well-tended entry combined with a dark, grounding crystal helps them feel more settled in their home.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place grounding, dark-colored stones at the main entry and along commanding position sightlines to support a sense of boundary.",
+        "steps": [
+          "Identify the main entry (the door you use most often, ideally the original front door).",
+          "Clear clutter from the entry and the line of sight that opens from it.",
+          "Place Black Tourmaline near the door, on a console table or in a bowl.",
+          "Add Obsidian in the Helpful People area (front-right) to invite supportive energy.",
+          "Reset the stones monthly with sound, smoke, or moonlight."
+        ],
+        "example": "Set a Black Tourmaline cluster on the entry console and a Hematite stone in the front-right (Helpful People) corner to invite a sense of protection."
+      },
+      "crystals": [
+        "black-tourmaline",
+        "obsidian",
+        "hematite"
+      ],
+      "faq_seeds": [
+        "How do I protect my home with feng shui?",
+        "Which crystal is best for feng shui protection?",
+        "What is the commanding position in feng shui?",
+        "Where should I place protection crystals?"
+      ],
+      "eastern_note": "In BTB practice, the commanding position (where you can see the door without being directly in line with it) is central to feeling protected. The Compass school additionally considers the inauspicious directions of an individual's Kua number. Based on tradition, protective placement supports a mindful sense of safety; it does not ward off specific negative forces in any assured way."
+    },
+    {
+      "slug": "crystals-for-wealth-feng-shui",
+      "title": "Crystals for Wealth: Feng Shui Money Crystals Guide",
+      "focus_keyword": "crystals for wealth",
+      "page_type": "intention",
+      "definition": "Wealth-focused crystals in feng shui are stones traditionally associated with abundance, growth, and gratitude. Placed in the Wealth corner (back-left in BTB) or in your personal Sheng Chi direction, they serve as visual anchors for an abundance mindset. Based on traditional use, the classical Wealth color is purple (Amethyst), while golden and green stones like Pyrite, Citrine, and Jade complement the area's Wood element. Many people find that tending a wealth arrangement is a reflective practice of noticing opportunity, not a promise of income.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place abundance-themed stones in the back-left Wealth corner or your Sheng Chi direction, pairing gold (Pyrite, Citrine) and green (Jade, Aventurine, Malachite) stones.",
+        "steps": [
+          "Locate the back-left Wealth corner from the main entry.",
+          "Clear the area and add a purple or Wood-element accent such as a plant or green cloth.",
+          "Place Pyrite and Citrine together to symbolize gold and abundance.",
+          "Add Jade, Aventurine, and Malachite to support the Wood element and growth.",
+          "Refresh at the new moon, holding a clear intention of gratitude."
+        ],
+        "example": "Arrange five stones (Pyrite, Citrine, Jade, Aventurine, and Malachite) in a small bowl in the back-left corner of your office."
+      },
+      "crystals": [
+        "pyrite",
+        "citrine",
+        "jade",
+        "aventurine",
+        "malachite"
+      ],
+      "faq_seeds": [
+        "Which crystals attract wealth in feng shui?",
+        "Where should I place money crystals?",
+        "Is the wealth corner purple or green in BTB?",
+        "Can Pyrite and Citrine be placed together?"
+      ],
+      "eastern_note": "The classical BTB Wealth color is purple, so Amethyst is the traditional primary stone for this corner; the golden and green stones listed here work alongside that resonance. The Compass school maps personal prosperity to your Sheng Chi direction from your Kua number. Based on tradition, these arrangements support reflection on abundance rather than promising financial results."
+    },
+    {
+      "slug": "crystals-for-love-feng-shui",
+      "title": "Crystals for Love: Feng Shui for Relationships",
+      "focus_keyword": "crystals for love feng shui",
+      "page_type": "intention",
+      "definition": "Love-focused crystals in feng shui are stones associated with compassion, emotional openness, and partnership. In the BTB bagua, the Love and Relationships area sits in the back-right corner, and its traditional color is pink. Based on traditional placement, pairs of pink and soft-colored stones are set there to invite harmony in partnerships, whether romantic, familial, or friendship. Many people find this arrangement functions as a daily reminder of care and connection, not a promise that a specific relationship will form.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place pink-toned stones in pairs in the back-right (Love) corner, which rules relationships in the BTB bagua.",
+        "steps": [
+          "Locate the back-right corner of your bedroom or home from the main entry.",
+          "Clear clutter and remove any single-object imagery, replacing it with pairs.",
+          "Place two Rose Quartz hearts or stones as the centerpiece.",
+          "Add Moonstone or Strawberry Quartz alongside to invite emotional softness.",
+          "Add Rhodonite if working through a hurt or supporting self-compassion."
+        ],
+        "example": "Set two Rose Quartz stones, one Moonstone, one Strawberry Quartz, and one Rhodonite on a pink cloth in the back-right corner of the bedroom."
+      },
+      "crystals": [
+        "rose-quartz",
+        "rhodonite",
+        "moonstone",
+        "strawberry-quartz"
+      ],
+      "faq_seeds": [
+        "Which crystals support love in feng shui?",
+        "Where is the love area on the bagua map?",
+        "Should love crystals be placed in pairs?",
+        "What color represents the love corner?"
+      ],
+      "eastern_note": "The Love area in BTB is the back-right corner, with pink as its traditional color; the Compass school instead locates personal relationship energy in the Nien Yen direction from your Kua number. Based on tradition, pairs of stones (rather than singles) symbolize partnership, and tending this area is a reflective practice of openness, not a prediction."
+    },
+    {
+      "slug": "feng-shui-protection-crystals",
+      "title": "Protection Crystals in Feng Shui: Warding Negative Energy",
+      "focus_keyword": "feng shui protection crystals",
+      "page_type": "intention",
+      "definition": "Protection crystals in feng shui are dark, grounding stones traditionally placed at entry points and in spaces that feel tense or stuck. Based on traditional use, they support a sense of boundary and stability rather than removing specific forces. The four most commonly used are Black Tourmaline (general boundary), Obsidian (deep grounding), Hematite (stability), and Smoky Quartz (gentle release). Many people find that placing these stones near doors and electronics helps them feel more settled, which is the practice's primary aim.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place dark, grounding stones at the main entry and in the Helpful People (front-right) area to support a sense of energetic boundary.",
+        "steps": [
+          "Identify the main entry and any commanding position sightlines where your back faces a door.",
+          "Place Black Tourmaline at the entry to invite a sense of boundary.",
+          "Add Obsidian in the front-right (Helpful People) area for deep grounding.",
+          "Set Hematite near electronics or under a desk to invite stability.",
+          "Place Smoky Quartz in any room that feels tense, refreshing monthly."
+        ],
+        "example": "Set Black Tourmaline, Obsidian, Hematite, and Smoky Quartz in a row on the entry console to support a sense of protection."
+      },
+      "crystals": [
+        "black-tourmaline",
+        "obsidian",
+        "hematite",
+        "smoky-quartz"
+      ],
+      "faq_seeds": [
+        "What are the best protection crystals for feng shui?",
+        "Where do I place Black Tourmaline in my home?",
+        "Does Obsidian belong at the front door?",
+        "How often should I cleanse protection crystals?"
+      ],
+      "eastern_note": "BTB teaching pairs protective stones with the commanding position concept (sitting so you can see the door without being directly aligned with it). The Compass school additionally considers an individual's four unfavorable directions from the Kua number. Based on tradition, protection practice supports a felt sense of safety and clarity; it is not a promise that any specific energy is cleared."
+    },
+    {
+      "slug": "feng-shui-good-luck-crystals",
+      "title": "Feng Shui Crystals for Good Luck & Opportunity",
+      "focus_keyword": "feng shui good luck crystals",
+      "page_type": "intention",
+      "definition": "Good luck crystals in feng shui are stones traditionally associated with opportunity, optimism, and forward momentum. Rather than promising luck, based on tradition they invite a noticing of opportunity: Citrine for abundance, Aventurine for new possibilities, Tiger Eye for confident action, and Sunstone for warmth. Placed in the Wealth (back-left), Fame (back-center), or Helpful People (front-right) areas, they support an openness to what the day may bring. Many people find that tending these stones becomes a daily practice of attention, not a promise.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place warm-toned, opportunity-themed stones in the Wealth, Fame, or Helpful People areas to invite openness to opportunity.",
+        "steps": [
+          "Choose the area that matches your intention: Wealth for abundance, Fame for recognition, Helpful People for supportive connections.",
+          "Clear the space and add a small mirror or light to invite flow.",
+          "Place Citrine and Aventurine together in the Wealth area.",
+          "Add Tiger Eye for grounded confidence and Sunstone for warmth.",
+          "Reset the arrangement at the new moon or each Monday."
+        ],
+        "example": "Place Citrine, Aventurine, Tiger Eye, and Sunstone in a bowl in the back-left Wealth corner to invite opportunity."
+      },
+      "crystals": [
+        "citrine",
+        "aventurine",
+        "tiger-eye",
+        "sunstone"
+      ],
+      "faq_seeds": [
+        "Which crystals invite good luck in feng shui?",
+        "Where should I place luck crystals?",
+        "What is the difference between Tiger Eye and Sunstone?",
+        "Does feng shui promise specific luck?"
+      ],
+      "eastern_note": "The BTB school does not promise luck as an outcome; based on tradition, stones are anchors for attention and intention. The Compass school would map personal opportunity to the Sheng Chi (success) direction from your Kua number, calculated from the solar year that begins at Li Chun (around February 4). Practitioners frame these arrangements as reflective tools, not assured results."
+    },
+    {
+      "slug": "feng-shui-career-crystals",
+      "title": "Feng Shui Crystals for Career & Life Path Success",
+      "focus_keyword": "feng shui career crystals",
+      "page_type": "intention",
+      "definition": "Career-focused crystals in feng shui are stones placed in the Career area (front-center of the BTB bagua) to support clarity, focus, and a sense of forward movement along your life path. The Career area's element is Water, which governs flow and direction. Based on traditional use, deep-blue and clarity stones like Lapis and Fluorite are set near the front door or in a home office, alongside Citrine for abundance and Black Tourmaline for boundary. Many people find this arrangement supports concentration and reflection, not an assured promotion.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place Water-element and clarity stones in the front-center (Career) area to invite flow and direction in work.",
+        "steps": [
+          "Locate the front-center sector of your home or office from the main entry.",
+          "Add a small water feature or mirror to honor the Water element.",
+          "Place Lapis for clear communication and Fluorite for mental focus.",
+          "Add Citrine to invite abundance from work and Black Tourmaline to support a boundary.",
+          "Keep the entry pathway clear so energy can flow in."
+        ],
+        "example": "Place Lapis, Fluorite, Citrine, and Black Tourmaline on a console near your front door or at the center of your desk."
+      },
+      "crystals": [
+        "lapis",
+        "fluorite",
+        "citrine",
+        "black-tourmaline"
+      ],
+      "faq_seeds": [
+        "Which crystals support career in feng shui?",
+        "Where is the career area on the bagua map?",
+        "Which element rules the career area?",
+        "Should I place career crystals near my desk?"
+      ],
+      "eastern_note": "The Career area in BTB sits at the front-center, governed by the Water element; the Compass school instead locates career support in the Sheng Chi (success) direction from your Kua number. Based on tradition, placing stones here is a way to notice the flow of opportunity and reflect on direction, not a promise of advancement."
+    },
+    {
+      "slug": "feng-shui-bedroom",
+      "title": "Feng Shui Bedroom: Best Crystals for Rest & Romance",
+      "focus_keyword": "feng shui bedroom",
+      "page_type": "room",
+      "definition": "In feng shui, the bedroom is the most personal room and governs rest, intimacy, and renewal. Based on traditional placement, the bed should sit in the commanding position (able to see the door without being directly in line with it), with a solid headboard and matching nightstands. Stones are chosen to support rest and softness: Rose Quartz for warmth in the back-right (Love) area, Moonstone for calm, Amethyst for the back-left (Wealth) area's purple resonance, and Smoky Quartz to invite gentle release. Many people find this arrangement supports a sense of sanctuary.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place the bed in commanding position and set soft-toned stones on the nightstands and in the back-left and back-right corners.",
+        "steps": [
+          "Move the bed so you can see the bedroom door from it, without being directly in line with the door.",
+          "Add a solid headboard and matching nightstands for partnership balance.",
+          "Place Rose Quartz on each nightstand to invite warmth in the Love area (back-right).",
+          "Set Amethyst in the back-left (Wealth) corner, since purple is its traditional color.",
+          "Add Moonstone for calm and Smoky Quartz under the bed to invite gentle release."
+        ],
+        "example": "Set two Rose Quartz stones on matching nightstands, an Amethyst cluster on the back-left dresser, and a Smoky Quartz tumbled stone under the bed."
+      },
+      "crystals": [
+        "rose-quartz",
+        "moonstone",
+        "amethyst",
+        "smoky-quartz"
+      ],
+      "faq_seeds": [
+        "Which crystals belong in a feng shui bedroom?",
+        "Where should the bed face in feng shui?",
+        "Where do I place Rose Quartz in the bedroom?",
+        "Is Amethyst good for sleep?"
+      ],
+      "eastern_note": "BTB teaching prioritizes the bed's commanding position and paired objects for partnership; the Compass school additionally considers an individual's Nien Yen (relationship) and Tien Yi (health) directions from the Kua number. Based on tradition, bedroom placement supports rest and intimacy through reflection, not assured outcomes."
+    },
+    {
+      "slug": "feng-shui-living-room",
+      "title": "Feng Shui Living Room: Crystals for Harmony & Welcome",
+      "focus_keyword": "feng shui living room",
+      "page_type": "room",
+      "definition": "The living room is the social heart of a home in feng shui, governing gathering, welcome, and everyday harmony. Based on traditional placement, the sofa should sit in the commanding position (able to see the main entry) and the center of the room (the Tai Chi) should stay open to invite flow. Warm, clear stones like Citrine and Quartz support a sense of welcome, while Aventurine in the Family area (middle-left) invites growth. Many people find this arrangement fosters ease and connection, not an assured mood.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place the sofa in commanding position, keep the center open, and set welcoming stones near the entry and the Family sector.",
+        "steps": [
+          "Angle the sofa so it faces or sees the main entry without sitting directly in line with the door.",
+          "Keep the center of the room (Tai Chi) open and free of clutter.",
+          "Place Citrine near the entry or on a coffee table to invite warmth.",
+          "Set a clear Quartz cluster on a side table to invite overall clarity.",
+          "Place Aventurine in the middle-left (Family) area to invite harmony."
+        ],
+        "example": "Place Citrine and a Quartz cluster on the coffee table, and an Aventurine stone on a shelf in the middle-left part of the room."
+      },
+      "crystals": [
+        "citrine",
+        "quartz",
+        "aventurine"
+      ],
+      "faq_seeds": [
+        "Which crystals are best for a feng shui living room?",
+        "Where should the sofa face in feng shui?",
+        "Where is the Tai Chi center of a room?",
+        "How do I invite harmony into my living room?"
+      ],
+      "eastern_note": "BTB practice regards the living room as the primary gathering space and prioritizes the commanding position of the largest seat; the Compass school considers the home's sitting direction and the individual's Kua group. Based on tradition, these arrangements support a reflective sense of welcome and ease, rather than promising harmony."
+    },
+    {
+      "slug": "feng-shui-office-desk",
+      "title": "Feng Shui Office & Desk: Crystals for Focus & Success",
+      "focus_keyword": "feng shui office desk",
+      "page_type": "room",
+      "definition": "A feng shui office or desk arrangement supports focus, clear communication, and a sense of forward movement in work. Based on traditional placement, the desk sits in the commanding position (facing the door without being directly in line with it) with a solid wall behind. Stones are chosen to match intention: Citrine for abundance, Fluorite for mental focus, Tiger Eye for grounded confidence, and Pyrite for a symbol of success. Many people find this arrangement helps them settle into deep work; it is not a promise of promotion or income.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place the desk in commanding position and set focus- and abundance-themed stones on the Wealth (back-left) corner of the desk.",
+        "steps": [
+          "Position the desk so you can see the office door while seated, ideally with a solid wall behind you.",
+          "Keep the center of the desk clear to invite focus.",
+          "Place Citrine and Pyrite in the back-left corner of the desk to invite abundance.",
+          "Set Fluorite near your dominant hand to support mental clarity.",
+          "Add Tiger Eye near the phone or computer to invite grounded communication."
+        ],
+        "example": "Place Citrine and Pyrite in the back-left corner of the desk, Fluorite to the right of the keyboard, and Tiger Eye beside the monitor."
+      },
+      "crystals": [
+        "citrine",
+        "fluorite",
+        "tiger-eye",
+        "pyrite"
+      ],
+      "faq_seeds": [
+        "How should I arrange my desk for feng shui?",
+        "Which crystals belong on a feng shui desk?",
+        "Where is the commanding position for an office desk?",
+        "Which crystal supports focus at work?"
+      ],
+      "eastern_note": "BTB teaching applies the commanding position to the desk just as to the bed; the Compass school would orient the desk toward the individual's Sheng Chi (success) direction from the Kua number, calculated from the solar year starting at Li Chun (around February 4). Based on tradition, these arrangements support reflection on work and intention, not assured results."
+    },
+    {
+      "slug": "feng-shui-front-door",
+      "title": "Feng Shui Front Door: Crystals to Welcome Energy",
+      "focus_keyword": "feng shui front door",
+      "page_type": "room",
+      "definition": "The front door in feng shui is called the mouth of qi, the primary point where energy enters a home. Based on traditional placement, the door should open fully, the path to it should be clear, and the entry should feel welcoming and uncluttered. Stones placed at the front door support a sense of boundary and welcome: Black Tourmaline for grounding, Quartz for clarity, and Citrine for warmth. Many people find that tending the entry becomes a daily practice of inviting in what they want, not a promise of any result.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Keep the front door clear and place grounding and welcoming stones just inside the entry to support a sense of boundary and flow.",
+        "steps": [
+          "Clear the pathway to the front door, both outside and inside.",
+          "Make sure the door opens fully without sticking or squeaking.",
+          "Place Black Tourmaline on a console or in a bowl just inside the door to invite grounding.",
+          "Set Quartz nearby to invite clarity as energy enters.",
+          "Add Citrine to invite warmth and abundance."
+        ],
+        "example": "Place Black Tourmaline, a clear Quartz cluster, and a Citrine point in a shallow bowl on the entry console."
+      },
+      "crystals": [
+        "black-tourmaline",
+        "quartz",
+        "citrine"
+      ],
+      "faq_seeds": [
+        "Why is the front door important in feng shui?",
+        "Which crystals belong at the front door?",
+        "What is the mouth of qi in feng shui?",
+        "How do I welcome energy into my home?"
+      ],
+      "eastern_note": "BTB teaching calls the front door the mouth of qi and considers it the most important feature of a home's energy; the Compass school considers the door's facing direction relative to the building's sitting direction and the occupant's Kua group. Based on tradition, tending the entry supports a reflective sense of welcome and intention, rather than promising prosperity."
+    },
+    {
+      "slug": "feng-shui-kitchen",
+      "title": "Feng Shui Kitchen: Crystals for Nourishment & Abundance",
+      "focus_keyword": "feng shui kitchen",
+      "page_type": "room",
+      "definition": "The kitchen in feng shui governs nourishment, health, and the wealth that comes from having enough to eat. Based on traditional placement, the stove (the fire mouth) should sit in a commanding position, the refrigerator and sink (Water) should not directly face or clash with the stove (Fire), and the space should stay clean and well-stocked. Stones chosen for the kitchen invite warmth and vitality: Carnelian for appetite and motivation, Citrine for abundance, and Jade for health. Many people find this arrangement supports a mindful relationship with food, not a certain outcome.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Balance the Fire (stove) and Water (sink) elements in the kitchen and place warm-toned stones to invite nourishment and abundance.",
+        "steps": [
+          "Check that the stove and sink are not directly facing each other (a Fire-Water clash); add a Wood element such as a plant between them if they are.",
+          "Keep the stove clean and use all burners regularly to invite vitality.",
+          "Place Carnelian near the stove to invite warmth and appetite.",
+          "Set Citrine on a windowsill or shelf to invite abundance.",
+          "Add Jade to invite health and harmony in the Family area (middle-left) of the kitchen."
+        ],
+        "example": "Place Carnelian beside the stove, Citrine on a sunny windowsill, and Jade on a shelf in the middle-left part of the kitchen."
+      },
+      "crystals": [
+        "carnelian",
+        "citrine",
+        "jade"
+      ],
+      "faq_seeds": [
+        "Which crystals belong in a feng shui kitchen?",
+        "Why shouldn't the stove face the sink?",
+        "Where should the stove sit in feng shui?",
+        "How do I invite abundance through the kitchen?"
+      ],
+      "eastern_note": "BTB teaching views the stove as a fire mouth and considers it central to the home's prosperity; the Compass school considers the kitchen's direction relative to the occupant's Kua group and the five elements. Based on tradition, these placements support a reflective, mindful relationship with nourishment and abundance, not an assured result."
+    },
+    {
+      "slug": "citrine-in-feng-shui",
+      "title": "Citrine in Feng Shui: Meaning, Placement & Benefits",
+      "focus_keyword": "citrine feng shui",
+      "page_type": "crystal",
+      "definition": "Citrine carries the Earth element in feng shui, known traditionally as the merchant's stone for its long association with abundance. Its warm golden frequency resonates with the Wealth bagua area (the far-left corner from the entry), where it is used to invite prosperity energy. In BTB practice, citrine is paired with purple Wealth-corner stones like amethyst to anchor intention. As an Earth-element crystal, it also grounds and stabilizes financial intentions, making it a favored placement for home offices, cash boxes, and business entryways where steady abundance is desired.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place citrine in the Wealth bagua area (far-left corner from the main door) with Earth-element support to invite prosperity.",
+        "steps": [
+          "Locate the Wealth area: stand at your front door facing in; the far-left corner is the Wealth bagua.",
+          "Place citrine on a yellow or earth-tone cloth to reinforce its Earth element.",
+          "Pair it with amethyst (the traditional purple Wealth-corner stone) for combined abundance intention.",
+          "Set a clear financial intention while placing the stone.",
+          "Cleanse monthly under moonlight or with sound."
+        ],
+        "example": "Place a citrine cluster on the desk in your home office's far-left corner with a written abundance goal beneath it."
+      },
+      "crystals": [
+        "citrine",
+        "pyrite",
+        "aventurine"
+      ],
+      "faq_seeds": [
+        "Where should I place citrine for wealth in feng shui?",
+        "Can I combine citrine with amethyst in the Wealth corner?",
+        "How do I activate citrine's feng shui energy?",
+        "Is citrine an Earth or Fire element in feng shui?"
+      ],
+      "eastern_note": "In Black Sect Tantric Buddhism (BTB) feng shui, the Wealth bagua area is traditionally marked by the color purple, which is why amethyst is the signature Wealth-corner stone. Citrine, while an Earth-element crystal, has earned its merchant's stone reputation through centuries of use in trade and shopkeeping. Its placement in the Wealth area works through Earth-energy grounding rather than color correspondence, creating a stable foundation for prosperity intention based on traditional practice."
+    },
+    {
+      "slug": "black-tourmaline-in-feng-shui",
+      "title": "Black Tourmaline in Feng Shui: Protection & Placement",
+      "focus_keyword": "black tourmaline feng shui",
+      "page_type": "crystal",
+      "definition": "Black tourmaline carries the Water element in feng shui and is the primary stone used for protection against sha qi (harsh or cutting energy). Its dense, grounding frequency makes it the traditional choice for placing near entryways, where it is said to deflect negative energy from entering the home. In bagua terms, black tourmaline resonates with the Career area (the center-front of the home, near the entry) and the Helpful People area (front-right), both associated with Water. It is also used to neutralize electromagnetic stress near electronics.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place black tourmaline at the main entry or in the Career and Helpful People bagua areas to deflect sha qi.",
+        "steps": [
+          "Place a piece of black tourmaline on either side of your front door, inside the home.",
+          "For the Career area (center-front from the entry), set a larger specimen near the threshold.",
+          "Pair with obsidian or hematite for layered protective energy.",
+          "Cleanse weekly under running water or with sound, as tourmaline absorbs heavily.",
+          "Set the intention that this stone deflects what does not serve this space."
+        ],
+        "example": "Set two black tourmaline stones flanking the inside of your front door, with a clear quartz cluster behind them to amplify."
+      },
+      "crystals": [
+        "black-tourmaline",
+        "obsidian",
+        "hematite"
+      ],
+      "faq_seeds": [
+        "Where should I place black tourmaline for protection?",
+        "Can I put black tourmaline near my front door?",
+        "How do I cleanse black tourmaline in feng shui?",
+        "Does black tourmaline block electromagnetic energy?"
+      ],
+      "eastern_note": "In BTB feng shui, the front entry is called the mouth of qi, the primary channel through which energy enters. Black tourmaline's Water-element nature aligns with the Career gua (front-center), which governs life path and work. Traditional practice places protective stones in mirror pairs at the threshold, reflecting harsh energy outward while allowing supportive energy to flow in. Obsidian and hematite share this Water-element protective function based on traditional use."
+    },
+    {
+      "slug": "pyrite-in-feng-shui",
+      "title": "Pyrite in Feng Shui: Wealth Crystal Placement",
+      "focus_keyword": "pyrite feng shui",
+      "page_type": "crystal",
+      "definition": "Pyrite, with its metallic gold luster, bridges Earth and Metal elements in feng shui and is prized as a wealth-attracting stone. Its reflective surface is said to mirror abundance back into a space, making it a popular placement in the Wealth bagua area (far-left corner from the entry). In BTB tradition, pyrite is often paired with citrine and goldstone to create a layered prosperity anchor. Its Metal-element quality also connects it to the Helpful People and Children areas, while its Earth nature grounds financial intentions in stability.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place pyrite in the Wealth bagua area or near a cash box, paired with citrine, to anchor prosperity intention.",
+        "steps": [
+          "Identify the Wealth area (far-left from the front door).",
+          "Place pyrite on a dark surface to amplify its metallic reflection.",
+          "Pair with citrine and goldstone for a three-stone wealth cluster.",
+          "Position near financial documents, a cash box, or a business desk.",
+          "Wipe weekly with a dry cloth to keep its reflective surface clear."
+        ],
+        "example": "Set a pyrite cluster beside a citrine point and a piece of goldstone in the far-left corner of your home office."
+      },
+      "crystals": [
+        "pyrite",
+        "citrine",
+        "goldstone"
+      ],
+      "faq_seeds": [
+        "Where should I place pyrite for wealth in feng shui?",
+        "Can I combine pyrite with citrine?",
+        "What element is pyrite in feng shui?",
+        "How do I cleanse pyrite?"
+      ],
+      "eastern_note": "Pyrite's fool's gold nickname reflects its long folk association with wealth attraction. In BTB practice, the metallic luster is valued for its ability to reflect and multiply intention, a principle called activation through resonance. Combining pyrite (Earth and Metal) with citrine (Earth) and goldstone (Metal-affiliated) creates a prosperity triad that aligns with traditional Wealth-corner enhancement methods based on lineage teaching."
+    },
+    {
+      "slug": "jade-in-feng-shui",
+      "title": "Jade in Feng Shui: Meaning, Placement & Benefits",
+      "focus_keyword": "jade feng shui",
+      "page_type": "crystal",
+      "definition": "Jade carries the Wood element in feng shui and is one of the most revered stones in Chinese tradition, associated with longevity, harmony, and family wellbeing. Its green frequency resonates with the Family bagua area (center-left from the entry), which governs ancestry, health, and household harmony. In BTB practice, jade is placed in the Family area or the center of the home to support vitality and ancestral blessings. Paired with aventurine and moss agate, both green Wood-element stones, it creates a layered foundation for growth, healing, and rooted energy.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place jade in the Family bagua area (center-left from the entry) or the center of the home to support health and harmony.",
+        "steps": [
+          "Locate the Family area: stand at the front door facing in; the center-left wall is the Family gua.",
+          "Place jade on a wooden surface or green cloth to reinforce Wood element.",
+          "Pair with aventurine and moss agate for a green-stone family triad.",
+          "Set an intention for family harmony or health.",
+          "Cleanse monthly with smoke or moonlight."
+        ],
+        "example": "Place a jade bangle or tumble on a wooden shelf in your living room's center-left wall with family photos nearby."
+      },
+      "crystals": [
+        "jade",
+        "aventurine",
+        "moss-agate"
+      ],
+      "faq_seeds": [
+        "Where should I place jade in feng shui?",
+        "What element is jade in feng shui?",
+        "Can I place jade in the bedroom?",
+        "How do I cleanse jade?"
+      ],
+      "eastern_note": "Jade has been venerated in Chinese culture for over 7,000 years, predating the formalization of bagua theory. In BTB feng shui, the Wood element connects to the Family gua (Zhen), the energy of spring, new growth, and ancestral roots. The green stones aventurine and moss agate share this Wood resonance, creating what traditional practitioners call a wood cluster to nourish household harmony and physical vitality based on classical correspondence."
+    },
+    {
+      "slug": "clear-quartz-in-feng-shui",
+      "title": "Clear Quartz in Feng Shui: Meaning & Placement",
+      "focus_keyword": "clear quartz feng shui",
+      "page_type": "crystal",
+      "definition": "Clear quartz carries the Metal element in feng shui and is known as the master amplifier, a stone that intensifies the energy of any space or other crystal it sits near. Its clarity and geometric structure make it versatile across all nine bagua areas. In BTB practice, clear quartz is most associated with the Helpful People and Children areas (front-right and center-right), which are governed by Metal. It is placed to clarify intention, amplify other placements, and support precision in communication and travel. Paired with selenite, it creates a high-frequency clearing field.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place clear quartz in the Helpful People or Children bagua area, or beside other crystals to amplify their energy.",
+        "steps": [
+          "Locate the Helpful People area: front-right corner from the entry.",
+          "Place a clear quartz cluster there to support mentors, travel, and helpful connections.",
+          "Use as an amplifier: place a small point beside any other feng shui crystal.",
+          "Pair with selenite for clearing and citrine for amplified abundance.",
+          "Cleanse monthly under moonlight."
+        ],
+        "example": "Set a clear quartz cluster in the front-right corner of your office with a list of mentors you wish to attract beneath it."
+      },
+      "crystals": [
+        "quartz",
+        "selenite",
+        "citrine"
+      ],
+      "faq_seeds": [
+        "Where should I place clear quartz in feng shui?",
+        "Can clear quartz amplify other crystals?",
+        "What element is clear quartz?",
+        "How do I cleanse clear quartz?"
+      ],
+      "eastern_note": "In BTB feng shui, the Metal element rules the Helpful People (Chien) and Children (Dui) guas, areas connected to heaven energy, mentors, and new beginnings. Clear quartz, with its Metal-element clarity and piezoelectric properties, is treated as a universal amplifier. Selenite, also Metal-affiliated, works synergistically for energetic clearing, while citrine (Earth) feeds Metal through the generating cycle of five-element theory based on traditional teaching."
+    },
+    {
+      "slug": "rose-quartz-in-feng-shui",
+      "title": "Rose Quartz in Feng Shui: Love & Placement",
+      "focus_keyword": "rose quartz feng shui",
+      "page_type": "crystal",
+      "definition": "Rose quartz carries the Earth element in feng shui and is the signature stone for the Love and Relationships bagua area (the far-right corner from the entry). Its soft pink frequency is used to invite harmonious partnerships, self-love, and emotional healing. In BTB practice, rose quartz is placed in the bedroom or the Love gua in pairs to symbolize mutual affection. As an Earth-element stone, it also supports the center of the home, which governs overall wellbeing. Paired with rhodonite and strawberry quartz, it creates a layered field for relational harmony.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place rose quartz in the Love bagua area (far-right from the entry) or the bedroom, in pairs, to invite harmonious relationships.",
+        "steps": [
+          "Locate the Love area: stand at the front door; the far-right corner is the Relationships gua.",
+          "Place two rose quartz stones (a pair) to symbolize partnership.",
+          "Set them on pink fabric or beside a pair of candles.",
+          "Pair with rhodonite for emotional healing and strawberry quartz for heart attraction.",
+          "Cleanse monthly under moonlight."
+        ],
+        "example": "Place two rose quartz hearts on the nightstand in the far-right corner of your bedroom, with a photo of you and your partner between them."
+      },
+      "crystals": [
+        "rose-quartz",
+        "rhodonite",
+        "strawberry-quartz"
+      ],
+      "faq_seeds": [
+        "Where should I place rose quartz for love in feng shui?",
+        "Should rose quartz be placed in pairs?",
+        "Can I put rose quartz in the bedroom?",
+        "What element is rose quartz?"
+      ],
+      "eastern_note": "In BTB feng shui, the Love gua (Kun) sits in the far-right corner and is traditionally activated in pairs, two stones, two candles, two symbols of partnership. Rose quartz, as an Earth-element stone, feeds the Kun area's earthy nature through resonance. Rhodonite and strawberry quartz share heart-chakra correspondence in Western crystal traditions, aligning naturally with the Love gua in blended practice based on lineage teaching."
+    },
+    {
+      "slug": "amethyst-in-feng-shui",
+      "title": "Amethyst in Feng Shui: Wealth Corner Crystal",
+      "focus_keyword": "amethyst feng shui",
+      "page_type": "crystal",
+      "definition": "Amethyst is the signature stone of the Wealth bagua area in BTB feng shui, where its purple color directly matches the traditional color correspondence of the Wealth gua (the far-left corner from the entry). Despite its common association with spiritual work, in feng shui amethyst is primarily a wealth and abundance stone. It carries a Wood-element frequency that supports the growth and expansion of prosperity. Paired with clear quartz to amplify and lapis lazuli for deep abundance resonance, amethyst anchors the prosperity intention at the heart of the BTB wealth corner.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place amethyst in the Wealth bagua area (far-left corner from the entry) as the traditional purple Wealth-corner stone.",
+        "steps": [
+          "Locate the Wealth area: far-left corner from the front door.",
+          "Place an amethyst cluster or geode in that corner.",
+          "Pair with clear quartz to amplify and lapis for deep abundance resonance.",
+          "Add a small green plant nearby to feed the Wood element.",
+          "Cleanse monthly under moonlight."
+        ],
+        "example": "Place a large amethyst geode in the far-left corner of your living room with a clear quartz point in front and a small jade plant beside it."
+      },
+      "crystals": [
+        "amethyst",
+        "quartz",
+        "lapis"
+      ],
+      "faq_seeds": [
+        "Where should I place amethyst for wealth in feng shui?",
+        "Why is amethyst the wealth corner stone?",
+        "Can I combine amethyst with clear quartz?",
+        "What element is amethyst in feng shui?"
+      ],
+      "eastern_note": "In BTB feng shui, the Wealth gua (Xun) is governed by the color purple, which is why amethyst is the canonical Wealth-corner crystal in this lineage. This differs from Western crystal traditions that treat amethyst primarily as a spiritual or meditation stone. The Wood element of the Xun area relates to wind, growth, and the multiplication of resources, aligning with abundance based on classical teaching. Lapis lazuli, valued since antiquity, adds depth to this prosperity cluster."
+    },
+    {
+      "slug": "green-aventurine-in-feng-shui",
+      "title": "Green Aventurine in Feng Shui: Luck & Wealth",
+      "focus_keyword": "green aventurine feng shui",
+      "page_type": "crystal",
+      "definition": "Green aventurine carries the Wood element in feng shui and is widely used to invite luck, new opportunities, and gentle growth. Its green frequency connects it to both the Family area (center-left, governing health and ancestry) and the Wealth area (far-left, governing prosperity). In BTB practice, aventurine is often the first green stone recommended for someone beginning wealth work, as its energy is described as soft and inviting rather than forceful. Paired with jade and moss agate, both Wood-element green stones, it creates a growth cluster that supports steady abundance.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place green aventurine in the Wealth or Family bagua area (left side of the home from the entry) to invite luck and growth.",
+        "steps": [
+          "Locate the Wealth area (far-left) or Family area (center-left).",
+          "Place aventurine on wood, green cloth, or near a healthy plant.",
+          "Pair with jade for traditional grounding and moss agate for nature connection.",
+          "Set an intention for new opportunity or steady growth.",
+          "Cleanse monthly under moonlight or with sound."
+        ],
+        "example": "Place green aventurine tumbles in a small bowl in the far-left corner of your office with a piece of jade beside it."
+      },
+      "crystals": [
+        "aventurine",
+        "jade",
+        "moss-agate"
+      ],
+      "faq_seeds": [
+        "Where should I place green aventurine in feng shui?",
+        "What element is green aventurine?",
+        "Can I combine aventurine with jade?",
+        "Is green aventurine good for wealth?"
+      ],
+      "eastern_note": "In BTB feng shui, the left side of the bagua map (as you stand at the entry) holds the Family (Zhen), Knowledge (Gen), and Wealth (Xun) guas, all Wood-affiliated areas associated with growth, spring energy, and upward expansion. Green aventurine, jade, and moss agate form a natural green cluster that nourishes these Wood areas, following the traditional principle of matching a stone's color and element to a gua's nature based on classical correspondence."
+    },
+    {
+      "slug": "tigers-eye-in-feng-shui",
+      "title": "Tiger's Eye in Feng Shui: Protection & Prosperity",
+      "focus_keyword": "tiger's eye feng shui",
+      "page_type": "crystal",
+      "definition": "Tiger's eye bridges Earth and Fire elements in feng shui, combining the grounding stability of Earth with the active, protective quality of Fire. Its banded golden-brown surface is traditionally associated with both wealth attraction and protection, a dual function that makes it versatile across the Wealth bagua area (far-left) and protective placements near entryways. In BTB practice, tiger's eye is valued for grounded prosperity, inviting abundance while keeping one aligned and protected from deception. Paired with citrine and hematite, it creates a balanced cluster for steady, protected prosperity.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place tiger's eye in the Wealth bagua area for abundance with protection, or near the entry for grounded prosperity.",
+        "steps": [
+          "Locate the Wealth area (far-left from the entry).",
+          "Place tiger's eye on a brown or gold surface to reinforce Earth-Fire balance.",
+          "Pair with citrine for abundance and hematite for grounding.",
+          "Alternatively, place a piece near the front door for protection and opportunity.",
+          "Cleanse monthly with sound or brief sunlight."
+        ],
+        "example": "Set a tiger's eye sphere in the far-left corner of your office desk with citrine and hematite nearby, facing the door."
+      },
+      "crystals": [
+        "tiger-eye",
+        "citrine",
+        "hematite"
+      ],
+      "faq_seeds": [
+        "Where should I place tiger's eye in feng shui?",
+        "What element is tiger's eye?",
+        "Can tiger's eye be used for protection and wealth?",
+        "How do I cleanse tiger's eye?"
+      ],
+      "eastern_note": "Tiger's eye has been used across Mediterranean and Asian traditions as a stone of both protection and prosperity, qualities that in BTB feng shui map to the Wealth gua (Xun) and the threshold. Its Earth-Fire combination reflects the generating cycle of five-element theory, where Fire creates Earth. This makes tiger's eye a balanced stone for sustained abundance: citrine amplifies the wealth aspect, while hematite grounds the protective function based on traditional correspondence."
+    },
+    {
+      "slug": "carnelian-in-feng-shui",
+      "title": "Carnelian in Feng Shui: Fame & Creativity",
+      "focus_keyword": "carnelian feng shui",
+      "page_type": "crystal",
+      "definition": "Carnelian carries the Fire element in feng shui and is the signature stone for the Fame and Reputation bagua area (the center-back of the home, directly opposite the front door). Its warm orange-red frequency is used to invite recognition, creative energy, and visibility. In BTB practice, carnelian is placed in the Fame gua to support public reputation, artistic work, and the fire of one's name in the world. Paired with sunstone and red jasper, both Fire-affiliated stones, it creates a high-energy cluster that fuels creative projects, professional recognition, and passionate expression.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place carnelian in the Fame bagua area (center-back, opposite the front door) to invite recognition and creative fire.",
+        "steps": [
+          "Locate the Fame area: stand at the front door; the center-back wall is the Fame gua.",
+          "Place carnelian on red or orange fabric with a candle.",
+          "Pair with sunstone for radiance and red jasper for grounded vitality.",
+          "Light the candle weekly to activate the Fire element.",
+          "Cleanse monthly with brief sunlight."
+        ],
+        "example": "Place carnelian, sunstone, and red jasper in a triangle on the center-back shelf of your studio with a red candle in the middle."
+      },
+      "crystals": [
+        "carnelian",
+        "sunstone",
+        "red-jasper"
+      ],
+      "faq_seeds": [
+        "Where should I place carnelian in feng shui?",
+        "What element is carnelian?",
+        "Can carnelian be placed in the Fame area?",
+        "How do I activate carnelian's feng shui energy?"
+      ],
+      "eastern_note": "In BTB feng shui, the Fame gua (Li) sits at the center-back of the home and is governed by the Fire element and the color red. This area relates to how one is seen in the world: reputation, integrity, and creative visibility. Carnelian, sunstone, and red jasper form a Fire triad that aligns with traditional Fame-enhancement methods, where candle light and red objects are used to feed the Li trigram's illuminating energy based on classical practice."
+    },
+    {
+      "slug": "obsidian-in-feng-shui",
+      "title": "Obsidian in Feng Shui: Protection & Grounding",
+      "focus_keyword": "obsidian feng shui",
+      "page_type": "crystal",
+      "definition": "Obsidian carries the Water element in feng shui and is one of the most powerful protection stones used to neutralize sha qi (cutting or harsh energy). Formed from rapidly cooled volcanic lava, its glass-like density is traditionally associated with energetic mirroring and deflection. In bagua terms, obsidian resonates with the Career area (center-front, near the entry) and the Helpful People area (front-right), both governed by Water. It is commonly placed near the front door, at windows facing busy streets, or in spaces where one wants to create an energetic boundary based on traditional practice.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place obsidian near the main entry or in the Career and Helpful People bagua areas to deflect sha qi and ground the space.",
+        "steps": [
+          "Place obsidian at the front entry, either side of the door.",
+          "For the Career area (center-front), set a larger piece near the threshold.",
+          "Pair with black tourmaline for layered protection and mahogany obsidian for grounded strength.",
+          "Place at windows facing sharp corners, poles, or busy roads.",
+          "Cleanse weekly with running water or sound."
+        ],
+        "example": "Set a black obsidian sphere on a table just inside your front door, flanked by two black tourmaline stones."
+      },
+      "crystals": [
+        "obsidian",
+        "black-tourmaline",
+        "mahogany-obsidian"
+      ],
+      "faq_seeds": [
+        "Where should I place obsidian for protection?",
+        "What element is obsidian in feng shui?",
+        "Can I combine obsidian with black tourmaline?",
+        "How do I cleanse obsidian?"
+      ],
+      "eastern_note": "In BTB feng shui, the Career gua (Kan) sits at the center-front of the home, the mouth of qi, and is governed by the Water element. Obsidian, formed from water-quenched volcanic fire, embodies a paradox that traditional practice values for protection: it both grounds and reflects. Black tourmaline and mahogany obsidian share this Water-element protective function, creating what practitioners call a black water boundary at the threshold based on lineage teaching."
+    },
+    {
+      "slug": "moonstone-in-feng-shui",
+      "title": "Moonstone in Feng Shui: Love & Intuition",
+      "focus_keyword": "moonstone feng shui",
+      "page_type": "crystal",
+      "definition": "Moonstone carries a blended Metal and Water element frequency in feng shui, connecting it to both the Children and Creativity area (center-right, Metal) and the Career area (center-front, Water). Its soft, lunar sheen is traditionally associated with intuition, cycles, and feminine energy. In BTB practice, moonstone is placed in the bedroom or the Love gua (far-right) to support emotional tenderness and new beginnings. It is also used in the Children area to invite creativity. Paired with rose quartz and selenite, moonstone creates a gentle field for emotional balance and intuitive clarity.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place moonstone in the Love or Children bagua area, or the bedroom, to invite intuition, tenderness, and new beginnings.",
+        "steps": [
+          "Locate the Love area (far-right) or Children area (center-right).",
+          "Place moonstone on white or silver fabric.",
+          "Pair with rose quartz for emotional warmth and selenite for clearing.",
+          "Place in the bedroom on the nightstand for restful, intuitive sleep.",
+          "Cleanse under moonlight (full moon preferred)."
+        ],
+        "example": "Place moonstone and rose quartz on your bedroom nightstand with a selenite wand pointing toward the window."
+      },
+      "crystals": [
+        "moonstone",
+        "rose-quartz",
+        "selenite"
+      ],
+      "faq_seeds": [
+        "Where should I place moonstone in feng shui?",
+        "What element is moonstone?",
+        "Can moonstone be placed in the bedroom?",
+        "How do I cleanse moonstone?"
+      ],
+      "eastern_note": "In BTB feng shui, the Children and Creativity gua (Dui, center-right) is governed by Metal, the element of new beginnings, precision, and joy. Moonstone's lunar-metal nature bridges this area with the Water-affiliated Career gua, supporting both creative fertility and emotional flow. Rose quartz (Earth) feeds Metal through the five-element generating cycle, while selenite (Metal) amplifies clarity, a traditional trio for gentle, intuitive work based on classical correspondence."
+    },
+    {
+      "slug": "hematite-in-feng-shui",
+      "title": "Hematite in Feng Shui: Grounding & Protection",
+      "focus_keyword": "hematite feng shui",
+      "page_type": "crystal",
+      "definition": "Hematite carries the Metal element in feng shui and is the primary grounding stone used to stabilize scattered energy and create an energetic boundary. Its heavy, metallic density is traditionally associated with rooting one's intention and deflecting sha qi. In bagua terms, hematite resonates with the Helpful People and Children areas (front-right and center-right), both governed by Metal. It is also placed near the front door for protection, in workspaces to support focus, and beside other crystals to ground their energy. Paired with black tourmaline and smoky quartz, hematite forms a grounding triad that stabilizes space.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place hematite in the Helpful People bagua area (front-right) or near the entry, to ground and protect the space.",
+        "steps": [
+          "Locate the Helpful People area: front-right corner from the entry.",
+          "Place hematite on a metal or dark surface.",
+          "Pair with black tourmaline for protection and smoky quartz for clearing.",
+          "Hold during meditation or place under a chair to stay grounded during meetings.",
+          "Cleanse weekly with running water or sound."
+        ],
+        "example": "Set hematite stones in the front-right corner of your office with black tourmaline and a smoky quartz point nearby."
+      },
+      "crystals": [
+        "hematite",
+        "black-tourmaline",
+        "smoky-quartz"
+      ],
+      "faq_seeds": [
+        "Where should I place hematite in feng shui?",
+        "What element is hematite?",
+        "Can hematite be used for grounding?",
+        "How do I cleanse hematite?"
+      ],
+      "eastern_note": "In BTB feng shui, the Helpful People gua (Chien, front-right) is governed by Metal, the element of heaven, mentors, and benefactors. Hematite's metallic weight and density make it a natural fit for this area, where it is said to anchor the presence of supportive allies. Black tourmaline (Water) and smoky quartz (Earth) complement hematite through the five-element generating and controlling cycles, creating a stable, protective field based on traditional practice."
+    },
+    {
+      "slug": "smoky-quartz-in-feng-shui",
+      "title": "Smoky Quartz in Feng Shui: Clearing & Grounding",
+      "focus_keyword": "smoky quartz feng shui",
+      "page_type": "crystal",
+      "definition": "Smoky quartz carries the Earth element in feng shui and is the primary stone used for energetic clearing and grounding. Its smoky brown frequency is traditionally associated with neutralizing negative energy and absorbing electromagnetic stress. In bagua terms, smoky quartz resonates with the center of the home (which governs overall wellbeing) and is also placed in the Career area (center-front) to support clear life-path energy. In BTB practice, it is valued as a gentler alternative to black stones for those sensitive to heavier protection stones. Paired with obsidian and black tourmaline, it creates a layered clearing field that both grounds and deflects.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place smoky quartz in the center of the home for clearing, or in the Career area and near electronics for grounding.",
+        "steps": [
+          "Locate the center of the home (the Health and Unity area).",
+          "Place smoky quartz on the floor or a low surface to ground the space.",
+          "Pair with obsidian and black tourmaline near the front entry for layered protection.",
+          "Place beside computers or routers to absorb electromagnetic stress.",
+          "Cleanse weekly with sound, moonlight, or brief soil contact."
+        ],
+        "example": "Set a large smoky quartz cluster in the center of your living room with obsidian and black tourmaline at the front door."
+      },
+      "crystals": [
+        "smoky-quartz",
+        "obsidian",
+        "black-tourmaline"
+      ],
+      "faq_seeds": [
+        "Where should I place smoky quartz in feng shui?",
+        "What element is smoky quartz?",
+        "Can smoky quartz absorb electromagnetic energy?",
+        "How do I cleanse smoky quartz?"
+      ],
+      "eastern_note": "In BTB feng shui, the center of the bagua map (the Health and Unity area) is governed by the Earth element and the color yellow; it is the energetic heart of the home. Smoky quartz, as an Earth-element clearing stone, naturally anchors this central area. The pairing with obsidian and black tourmaline (both Water-element) follows the five-element controlling cycle, where Earth dams Water, a traditional method for neutralizing harsh energy at the threshold while maintaining a grounded center based on classical teaching."
+    },
+    {
+      "slug": "lapis-lazuli-in-feng-shui",
+      "title": "Lapis Lazuli in Feng Shui: Wisdom & Career",
+      "focus_keyword": "lapis lazuli feng shui",
+      "page_type": "crystal",
+      "definition": "Lapis lazuli carries both Water and Earth elemental energy, making it a bridge between the Knowledge (Gen) and Career (Kan) bagua areas. Its deep celestial blue resonates with the Water element that governs life path, professional flow, and communication, while golden pyrite inclusions add Earth's grounding wisdom and inner authority. Traditionally placed where study, writing, or career decisions unfold, lapis supports truthful self-expression, focused insight, and mental order. Based on traditional practice, it invites aligned ambition and scholarly clarity rather than scattered striving, helping the mind settle into considered judgment.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place lapis lazuli in the Knowledge (front-left, Gen) or Career (front-center, Kan) bagua sector, aligned with Water and Earth elements.",
+        "steps": [
+          "Identify the Knowledge sector at the front-left of your space from the doorway, or the Career sector at the front-center.",
+          "Cleanse the lapis with sound or moonlight before placement to clear prior energy.",
+          "Set the stone on a desk, bookshelf, or altar where focused work and decisions happen.",
+          "Pair with a clear quartz point to amplify its clarifying influence.",
+          "Refresh the arrangement at each season change to keep the energy current."
+        ],
+        "example": "Place a lapis sphere on your home-office desk in the Career sector to support clear professional decisions and aligned communication."
+      },
+      "crystals": [
+        "lapis",
+        "sodalite",
+        "quartz"
+      ],
+      "faq_seeds": [
+        "Where should I place lapis lazuli in feng shui?",
+        "What element is lapis lazuli in the bagua?",
+        "Can lapis lazuli support career and study energy?",
+        "How do I cleanse lapis lazuli before placement?"
+      ],
+      "eastern_note": "In BTB feng shui, lapis lazuli's deep blue anchors the Water element associated with the Career (Kan) palace, while its Earth-toned pyrite links to the Knowledge (Gen) palace. Classical Chinese tradition reveres lapis as a stone of spiritual vision and imperial authority, often carved for scholar's objects. The pairing of Water's reflective wisdom with Earth's steadiness supports considered judgment rather than reaction. This bridging quality makes lapis suited to thresholds between learning and livelihood, where insight must translate into aligned action."
+    },
+    {
+      "slug": "malachite-in-feng-shui",
+      "title": "Malachite in Feng Shui: Wealth Transformation",
+      "focus_keyword": "malachite feng shui",
+      "page_type": "crystal",
+      "definition": "Malachite carries the Wood element through its vivid green banding, aligning it with the Wealth and Abundance (Xun) bagua area in BTB feng shui. Wood governs growth, vitality, and the expansion of resources, making malachite a traditional stone for inviting transformed prosperity and the courage to release stagnant patterns. Its layered green reflects organic accumulation, the way forests compound over seasons. Based on traditional practice, malachite supports intentional change in financial habits and invites the conditions for growth, while grounding the nervous system during transitions that accompany material evolution.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place malachite in the Wealth and Abundance sector (back-left, Xun) of your home or office, aligned with the Wood element.",
+        "steps": [
+          "Locate the Wealth sector at the back-left corner of your space from the standing doorway position.",
+          "Cleanse malachite with sound or a dry smudge, avoiding water which can affect its surface.",
+          "Place it near financial records, a cash box, or a vision board for abundance intentions.",
+          "Pair with green aventurine or jade to strengthen the Wood element cluster.",
+          "Set a clear intention for the transformation you invite before leaving the stone."
+        ],
+        "example": "Position a polished malachite slice in the Wealth corner of your home office beside your business ledger to support steady financial growth."
+      },
+      "crystals": [
+        "malachite",
+        "aventurine",
+        "jade"
+      ],
+      "faq_seeds": [
+        "Where does malachite go in the feng shui bagua?",
+        "What element is malachite in feng shui?",
+        "How do I use malachite for wealth energy?",
+        "Is malachite safe to place in water for feng shui?"
+      ],
+      "eastern_note": "In BTB feng shui, malachite's green belongs to the Wood element and the Wealth (Xun) palace, which governs abundance, growth, and fortunate blessings. Classical Chinese lapidary valued malachite as a 'peacock stone' associated with verdant life force and the gradual accumulation of prosperity. Wood's nature is upward expansion through consistent seasons, a reminder that durable wealth grows through transformed habits, not sudden windfalls. Malachite's banded layers mirror this patient compounding, supporting grounded change during material transitions."
+    },
+    {
+      "slug": "selenite-in-feng-shui",
+      "title": "Selenite in Feng Shui: Space Clearing",
+      "focus_keyword": "selenite feng shui",
+      "page_type": "crystal",
+      "definition": "Selenite carries the Metal element with a high, clear vibration traditionally used for space clearing across every bagua area. Its fibrous white structure is understood to move stagnant energy and restore clarity, making it a favored tool before any specific placement work begins. In BTB practice selenite is especially aligned with the Children and Creativity (Dui) and Career (Kan) sectors, where fresh flow and unblocked expression matter most. Based on traditional use, selenite invites a sense of purified openness rather than any guaranteed outcome, supporting a clean energetic baseline for intention-setting.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Use selenite as a clearing tool across all bagua areas, with standing placement in the Children and Creativity (middle-right, Dui) or Career (front-center, Kan) sectors.",
+        "steps": [
+          "Sweep selenite through the air near doorways and corners to disperse stagnant energy before deeper placement.",
+          "Stand a selenite tower near the entrance to set a cleared threshold for the whole space.",
+          "Place a selenite slab on your desk in the Career sector to support mental clarity.",
+          "Rest other crystals on selenite between uses to maintain their cleared state.",
+          "Keep selenite dry, as moisture can damage its fibrous structure."
+        ],
+        "example": "Position a selenite tower beside the front door to clear energy entering the home and establish a neutral baseline for the bagua."
+      },
+      "crystals": [
+        "selenite",
+        "quartz",
+        "moonstone"
+      ],
+      "faq_seeds": [
+        "Where should selenite be placed in feng shui?",
+        "Can selenite clear other crystals in feng shui practice?",
+        "What element is selenite in the bagua?",
+        "Is selenite safe to use with water?"
+      ],
+      "eastern_note": "BTB feng shui treats selenite as a Metal-element clearing tool aligned with the Children and Creativity (Dui) palace, which governs pure expression and new beginnings. The name derives from Selene, the Greek moon goddess, and its translucent white has long signaled purification across Western esoteric and Eastern traditions alike. Metal's nature is contraction and refinement, drawing impurity outward so essence can show. Because clearing precedes all placement work, selenite functions as a preparatory instrument that establishes a clean field before more specific bagua intentions are set."
+    },
+    {
+      "slug": "fluorite-in-feng-shui",
+      "title": "Fluorite in Feng Shui: Career & Focus",
+      "focus_keyword": "fluorite feng shui",
+      "page_type": "crystal",
+      "definition": "Fluorite carries the Water element through its flowing bands of purple, green, and blue, aligning it with the Career (Kan) and Knowledge (Gen) bagua areas in BTB feng shui. Water governs the movement of opportunity, the flow of information, and the reflective depth needed for focused decisions. Fluorite is traditionally valued for inviting structured thinking and orderly study, qualities that suit workspaces and learning environments. Based on traditional practice, it supports concentration and decision-making during complex tasks, helping the mind hold many threads without scattering, a useful ally where career and self-cultivation meet.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place fluorite in the Career (front-center, Kan) or Knowledge (front-left, Gen) sector, aligned with the Water element for focused flow.",
+        "steps": [
+          "Locate the Career sector at the front-center of your space or the Knowledge sector at the front-left.",
+          "Cleanse fluorite with sound or a brief smudge, avoiding prolonged sun which can fade its color.",
+          "Set it on your work desk or study shelf where focused attention is needed.",
+          "Pair with clear quartz or lapis to deepen the Water element's reflective quality.",
+          "Reset the placement whenever you begin a major project to renew the intention."
+        ],
+        "example": "Place an octahedral fluorite on your desk in the Career sector to support structured thinking during detailed analytical work."
+      },
+      "crystals": [
+        "fluorite",
+        "quartz",
+        "lapis"
+      ],
+      "faq_seeds": [
+        "Where should fluorite be placed in feng shui?",
+        "What element is fluorite in the bagua?",
+        "Can fluorite support focus and decision-making?",
+        "How do I keep fluorite's color from fading?"
+      ],
+      "eastern_note": "BTB feng shui aligns fluorite with the Water element and the Career (Kan) and Knowledge (Gen) palaces, where depth of thought and life-path flow converge. Water's nature is to seek the lowest point and gather, a fitting metaphor for the kind of grounded, accumulative study fluorite is said to support. The stone's ordered internal cubic lattice has long been associated with mental structure across mineral traditions. This combination of fluid element and crystalline order makes fluorite suited to environments where information must be held clearly without reactive scatter."
+    },
+    {
+      "slug": "red-jasper-in-feng-shui",
+      "title": "Red Jasper in Feng Shui: Stability & Vitality",
+      "focus_keyword": "red jasper feng shui",
+      "page_type": "crystal",
+      "definition": "Red jasper carries both Earth and Fire elemental energy, placing it between the Center (Tai Ji) and the Fame and Reputation (Li) bagua areas in BTB feng shui. Its deep red tones carry Fire's activating warmth, while its dense mineral structure provides Earth's stabilizing grounding. This combination makes red jasper a traditional stone for foundational steadiness, the kind of quiet endurance that supports consistent effort over time. Based on traditional practice, it invites grounded vitality rather than volatile energy, helping the body and intentions remain anchored during demanding periods when stability and steady momentum are both needed.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place red jasper in the Center of your space or the Fame sector (back-center, Li), aligned with Earth and Fire elements.",
+        "steps": [
+          "Identify the Center of your home or room, or the Fame sector at the back-center.",
+          "Cleanse red jasper with sound or by resting it on the earth briefly.",
+          "Place it at the structural center to ground and stabilize the entire bagua grid.",
+          "Alternatively, set it in the Fame sector with a candle to honor the Fire element.",
+          "Pair with carnelian or tiger eye to strengthen the warm, grounding cluster."
+        ],
+        "example": "Place a red jasper sphere at the geometric center of your living room to anchor the whole bagua in steady, grounded energy."
+      },
+      "crystals": [
+        "red-jasper",
+        "carnelian",
+        "tiger-eye"
+      ],
+      "faq_seeds": [
+        "Where should red jasper be placed in feng shui?",
+        "What element is red jasper in the bagua?",
+        "Can red jasper support stability and energy?",
+        "How do I use red jasper in the center of my home?"
+      ],
+      "eastern_note": "BTB feng shui reads red jasper as a stone bridging the Center (Tai Ji) palace of Earth and the Fame (Li) palace of Fire. The Center governs overall balance and the foundation from which all other bagua areas extend; Fire governs how one's presence is seen and received. Classical Chinese mineral tradition values jasper-family stones for their quiet, enduring warmth, closer to embers than flame. Red jasper's density and low, steady vibration support the kind of grounded endurance that sustains reputation through consistent conduct rather than dramatic display."
+    },
+    {
+      "slug": "aquamarine-in-feng-shui",
+      "title": "Aquamarine in Feng Shui: Calm & Career",
+      "focus_keyword": "aquamarine feng shui",
+      "page_type": "crystal",
+      "definition": "Aquamarine carries the Water element in its purest visible form, aligning it with the Career and Life Path (Kan) bagua area in BTB feng shui. Water governs the flow of opportunity, communication, and the path one walks through the world, and aquamarine's pale blue-green evokes the meeting of river and sea. Traditionally associated with calm speech and unhurried movement, it invites a sense of clear current rather than turbulent rush. Based on traditional practice, aquamarine supports smoother communication and the courage to follow life-path decisions without forcing, a stone for those who seek flow aligned with deeper intention.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place aquamarine in the Career sector (front-center, Kan), aligned with the Water element to support flowing communication.",
+        "steps": [
+          "Locate the Career sector at the front-center of your space from the doorway.",
+          "Cleanse aquamarine with sound or moonlight, avoiding harsh sun which can pale its color.",
+          "Place it near where conversations, calls, or path decisions happen.",
+          "Pair with blue lace agate or clear quartz to soften and amplify the Water element.",
+          "Refresh the placement with a spoken intention at each new phase of work."
+        ],
+        "example": "Set an aquamarine tumbled stone beside your phone or computer in the Career sector to support clear, unhurried communication."
+      },
+      "crystals": [
+        "aquamarine",
+        "blue-lace-agate",
+        "quartz"
+      ],
+      "faq_seeds": [
+        "Where should aquamarine be placed in feng shui?",
+        "What element is aquamarine in the bagua?",
+        "Can aquamarine support communication and calm?",
+        "How do I cleanse aquamarine safely?"
+      ],
+      "eastern_note": "BTB feng shui aligns aquamarine with the Water element and the Career (Kan) palace, which governs one's life path and the movement of opportunity. The name means 'water of the sea,' and its blue-green has long signified the boundary between known and unknown waters in both Eastern and Western traditions. Water's nature is adaptability, it takes the shape of what holds it while still moving forward. Aquamarine is said to mirror this quality, inviting the kind of calm fluency that lets speech and decisions follow a deeper current rather than surface agitation."
+    },
+    {
+      "slug": "turquoise-in-feng-shui",
+      "title": "Turquoise in Feng Shui: Protection & Healing",
+      "focus_keyword": "turquoise feng shui",
+      "page_type": "crystal",
+      "definition": "Turquoise carries both Water and Metal elemental energy, placing it at the Helpful People and Travel (Qian) bagua area in BTB feng shui, with deep roots in protection traditions across Tibetan, Native American, and Middle Eastern cultures. Its blue-green body bridges Water's flow and Metal's refinement, qualities traditionally associated with safe passage, beneficial alliances, and clear boundaries. Turquoise has long been worn as a guardian stone for travelers and those navigating unfamiliar terrain. Based on traditional practice, it invites supportive relationships and a steadying sense of protection during transitions, aligning the wearer with beneficial conditions.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place turquoise in the Helpful People and Travel sector (front-right, Qian), aligned with Water and Metal elements for support and protection.",
+        "steps": [
+          "Locate the Helpful People and Travel sector at the front-right of your space from the doorway.",
+          "Cleanse turquoise with sound or a soft smudge, avoiding prolonged water exposure.",
+          "Place it near entryways, travel documents, or photos of mentors and allies.",
+          "Pair with lapis or howlite to strengthen the protective Water-element cluster.",
+          "Set an intention for supportive guidance before leaving for new undertakings."
+        ],
+        "example": "Keep a turquoise stone near your keys or travel documents in the Helpful People sector to invite beneficial encounters on the road."
+      },
+      "crystals": [
+        "turquoise",
+        "lapis",
+        "howlite"
+      ],
+      "faq_seeds": [
+        "Where should turquoise be placed in feng shui?",
+        "What element is turquoise in the bagua?",
+        "Can turquoise support protection and travel?",
+        "How do I care for turquoise in feng shui placement?"
+      ],
+      "eastern_note": "BTB feng shui places turquoise in the Helpful People and Travel (Qian) palace, associated with the Metal element and the benefactors who smooth one's path. The stone's significance spans Tibetan traditions, where it is among the most revered protective ornaments, and Native American practices, where it bridges sky and earth. Its blue-green joins Water's adaptability with Metal's defining edge, the quality that discerns friend from obstacle. This cross-cultural heritage makes turquoise suited to thresholds and journeys, where the alignment of helpful conditions matters more than any single effort of will."
+    },
+    {
+      "slug": "amazonite-in-feng-shui",
+      "title": "Amazonite in Feng Shui: Wealth & Courage",
+      "focus_keyword": "amazonite feng shui",
+      "page_type": "crystal",
+      "definition": "Amazonite carries both Wood and Water elemental energy, aligning it primarily with the Wealth and Abundance (Xun) bagua area in BTB feng shui. Wood governs growth and the expansion of resources, while Water nourishes Wood and governs the flow that feeds prosperity. Its turquoise-green color sits at the boundary of both elements, traditionally associated with courageous self-expression and the heart-aligned pursuit of one's goals. Based on traditional practice, amazonite supports the alignment of personal truth with material intention, inviting the kind of grounded confidence that pursues abundance without compromising integrity, a stone for those building livelihood around authentic work.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place amazonite in the Wealth and Abundance sector (back-left, Xun), aligned with Wood and Water elements for courageous growth.",
+        "steps": [
+          "Locate the Wealth sector at the back-left corner of your space from the standing doorway position.",
+          "Cleanse amazonite with sound or moonlight to clear any prior programming.",
+          "Place it near business plans, payment platforms, or objects representing your livelihood.",
+          "Pair with green aventurine or aquamarine to strengthen the Wood-Water nourishing cycle.",
+          "Speak your intention for aligned, courageous action before leaving the placement."
+        ],
+        "example": "Position an amazonite slab in the Wealth corner of your workspace beside your pricing notes to support confident, heart-aligned decisions about money."
+      },
+      "crystals": [
+        "amazonite",
+        "aventurine",
+        "aquamarine"
+      ],
+      "faq_seeds": [
+        "Where should amazonite be placed in feng shui?",
+        "What element is amazonite in the bagua?",
+        "Can amazonite support wealth and courage?",
+        "How do I pair amazonite with other stones?"
+      ],
+      "eastern_note": "BTB feng shui reads amazonite as a stone joining the Wood element of the Wealth (Xun) palace with the Water element that nourishes it. In the five-element generating cycle, Water feeds Wood, abundance grows where flow meets rooted intention. The stone's name recalls the Amazon, signaling a long association with courageous voice and boundary-setting. Classical and modern crystal traditions alike link amazonite with truthful expression, the quality that lets one pursue livelihood without abandoning authenticity. This makes it suited to work where income and integrity must remain joined rather than traded against each other."
+    },
+    {
+      "slug": "sunstone-in-feng-shui",
+      "title": "Sunstone in Feng Shui: Fame & Energy",
+      "focus_keyword": "sunstone feng shui",
+      "page_type": "crystal",
+      "definition": "Sunstone carries the Fire element in radiant form, aligning it with the Fame and Reputation (Li) bagua area in BTB feng shui. Fire governs how one is seen, the visibility of one's work, and the warmth of recognition received in return for genuine effort. Sunstone's sparkling inclusions, caused by light reflecting from aligned mineral platelets, traditionally associate it with embodied confidence and the return of joy after dull periods. Based on traditional practice, sunstone invites a steady, visible presence and the leadership warmth that draws recognition through authentic contribution, rather than the kind of attention-seeking that burns out quickly and leaves nothing behind.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place sunstone in the Fame and Reputation sector (back-center, Li), aligned with the Fire element for visibility and recognition.",
+        "steps": [
+          "Locate the Fame sector at the back-center wall of your space from the doorway.",
+          "Cleanse sunstone with sound or brief sunlight, which honors its Fire nature.",
+          "Place it where your work is visible, near a portfolio, awards, or public-facing materials.",
+          "Pair with carnelian or citrine to strengthen the Fire-element cluster.",
+          "Light a candle nearby during intention-setting to activate the Fire quality."
+        ],
+        "example": "Set a polished sunstone on the Fame wall of your office beside framed credentials to invite steady, earned recognition for your work."
+      },
+      "crystals": [
+        "sunstone",
+        "carnelian",
+        "citrine"
+      ],
+      "faq_seeds": [
+        "Where should sunstone be placed in feng shui?",
+        "What element is sunstone in the bagua?",
+        "Can sunstone support fame and visibility?",
+        "How do I activate sunstone's Fire energy?"
+      ],
+      "eastern_note": "BTB feng shui aligns sunstone with the Fire element and the Fame and Reputation (Li) palace, which governs how one's name and work are received by others. Fire's nature is to rise and illuminate, it cannot help but be seen, and it asks for fuel to sustain itself. The Li palace is traditionally associated with the trigram of clinging fire and clear vision. Sunstone's aventurescence, the optical shimmer produced by light meeting aligned mineral, mirrors this quality of steady radiance earned through consistent illumination rather than brief flare. Recognition, in this framing, follows conduct."
+    },
+    {
+      "slug": "howlite-in-feng-shui",
+      "title": "Howlite in Feng Shui: Calm & Knowledge",
+      "focus_keyword": "howlite feng shui",
+      "page_type": "crystal",
+      "definition": "Howlite carries a grounded Earth quality lightened by an airy stillness, aligning it with the Knowledge and Self-Cultivation (Gen) bagua area in BTB feng shui. The Gen palace governs study, meditation, and the inner work that precedes outward action. Howlite's white body with grey veining traditionally associates it with calm focus and the quietening of mental noise, making it a favored stone for altars and study desks. Based on traditional practice, howlite invites patience and receptive stillness rather than active striving, supporting the conditions where insight can arrive on its own, and where learning can settle into depth rather than stay on the surface.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place howlite in the Knowledge and Self-Cultivation sector (front-left, Gen), aligned with Earth's grounding for calm study.",
+        "steps": [
+          "Locate the Knowledge sector at the front-left of your space from the doorway.",
+          "Cleanse howlite with sound or moonlight to keep its quiet quality clear.",
+          "Place it on a meditation altar, study desk, or reading shelf.",
+          "Pair with selenite or clear quartz to deepen the sense of clarity and calm.",
+          "Sit near the placement during meditation or reflection to absorb its settling influence."
+        ],
+        "example": "Set a howlite tumbled stone on your meditation altar in the Knowledge sector to support quiet, receptive stillness during practice."
+      },
+      "crystals": [
+        "howlite",
+        "selenite",
+        "quartz"
+      ],
+      "faq_seeds": [
+        "Where should howlite be placed in feng shui?",
+        "What element is howlite in the bagua?",
+        "Can howlite support calm and study energy?",
+        "How do I use howlite in a meditation space?"
+      ],
+      "eastern_note": "BTB feng shui aligns howlite with the Knowledge and Self-Cultivation (Gen) palace, an Earth-element area governing meditation, study, and the cultivation of inner stillness. The Gen trigram means 'mountain', stillness resting above earth, which fits howlite's quiet, grounded character. Across crystal traditions howlite is associated with the softening of mental agitation and the patience required for real learning. The Knowledge palace precedes every other outward achievement in BTB teaching: clarity within shapes the path without. Howlite's pale, calm presence supports the receptive conditions under which insight and quiet skill can grow."
+    },
+    {
+      "slug": "labradorite-in-feng-shui",
+      "title": "Labradorite in Feng Shui: Magic & Protection",
+      "focus_keyword": "labradorite feng shui",
+      "page_type": "crystal",
+      "definition": "Labradorite carries the Water element with a protective, transformative quality, aligning it with the Career and Life Path (Kan) bagua area in BTB feng shui. Its labradorescence, the flash of color that appears and disappears as the stone moves, has long associated it with threshold states, hidden potential, and the navigation of change. Water governs the path one walks and the flow of opportunity along it, and labradorite is traditionally valued for guarding that path during uncertain transitions. Based on traditional practice, it invites aligned transformation and a steady sense of protection when the way forward is not yet fully visible.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place labradorite in the Career sector (front-center, Kan), aligned with the Water element to protect and guide life-path flow.",
+        "steps": [
+          "Locate the Career sector at the front-center of your space from the doorway.",
+          "Cleanse labradorite with sound or moonlight to refresh its shifting flash.",
+          "Place it where path decisions, work, or transitions are being considered.",
+          "Pair with moonstone or clear quartz to deepen the Water element's reflective support.",
+          "Turn the stone gently in your hand during moments of uncertainty to witness its flash."
+        ],
+        "example": "Keep a labradorite palm stone on your desk in the Career sector to support steady navigation through a period of professional transition."
+      },
+      "crystals": [
+        "labradorite",
+        "moonstone",
+        "quartz"
+      ],
+      "faq_seeds": [
+        "Where should labradorite be placed in feng shui?",
+        "What element is labradorite in the bagua?",
+        "Can labradorite support protection during change?",
+        "What causes labradorite's flash and its feng shui meaning?"
+      ],
+      "eastern_note": "BTB feng shui aligns labradorite with the Water element and the Career (Kan) palace, the area governing life path and the flow of opportunity. The stone's labradorescence, color that appears only at certain angles, has long been read across traditions as a sign of hidden potential and threshold states. Water's nature is to dissolve fixed forms and carry new ones into being. Labradorite is said to guard this passage, supporting transformation when the way forward is unclear. Its iridescent flash mirrors the moments when hidden paths become briefly visible, then settle back into mystery."
+    },
+    {
+      "slug": "shungite-in-feng-shui",
+      "title": "Shungite in Feng Shui: EMF Protection",
+      "focus_keyword": "shungite feng shui",
+      "page_type": "crystal",
+      "definition": "Shungite carries the Earth element in a uniquely conductive form, aligning it with the Career (Kan) sector and the modern concern of electromagnetic fields around workspaces and electronics in BTB feng shui. Its high carbon content, including the fullerene molecular structures found in natural shungite, has made it a popular stone for placing near routers, computers, and devices that populate contemporary work life. Based on traditional and modern practice, shungite invites a grounding, stabilizing presence in technology-dense environments, supporting a clearer field for focused work. It makes no verified claim of neutralizing EMF, but its Earth quality anchors the nervous system amid digital stimulation.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place shungite near electronics and in the Career sector (front-center, Kan), aligned with the Earth element for grounding amid technology.",
+        "steps": [
+          "Identify areas dense with electronics, the Career sector, a router shelf, or your workstation.",
+          "Cleanse shungite with sound or by resting it on the earth briefly.",
+          "Place raw or polished shungite beside the router, monitor, or Wi-Fi hub.",
+          "Pair with black tourmaline or obsidian to strengthen the protective, grounding cluster.",
+          "Refresh the stones monthly by wiping them and resetting intention."
+        ],
+        "example": "Position a shungite plate beside your Wi-Fi router in the Career sector to invite a steadier field around your workspace."
+      },
+      "crystals": [
+        "shungite",
+        "black-tourmaline",
+        "obsidian"
+      ],
+      "faq_seeds": [
+        "Where should shungite be placed in feng shui?",
+        "What element is shungite in the bagua?",
+        "Can shungite support an EMF-balanced workspace?",
+        "How do I cleanse shungite near electronics?"
+      ],
+      "eastern_note": "BTB feng shui reads shungite as an Earth-element stone placed where modern life most needs grounding, near the electronics that concentrate in the Career (Kan) palace and contemporary workspaces. Shungite's carbon-rich, electrically conductive nature distinguishes it from other Earth stones and gives it a specific modern application that classical feng shui never faced. Earth's role in the five-element cycle is to stabilize and absorb, the quality most called for in technology-dense environments. While shungite makes no verified claim to neutralize EMF, its grounding presence supports a clearer, less over-stimulated field for sustained focused work."
+    },
+    {
+      "slug": "bloodstone-in-feng-shui",
+      "title": "Bloodstone in Feng Shui: Vitality & Courage",
+      "focus_keyword": "bloodstone feng shui",
+      "page_type": "crystal",
+      "definition": "Bloodstone carries both Earth and Fire elemental energy, aligning it with the Family and Health (Zhen) bagua area and the foundational vitality it governs in BTB feng shui. Its dark green body flecked with red has long associated it with life force, courage, and the rooted strength of the physical body. The Zhen palace governs family roots, physical wellbeing, and the kind of steady vitality that underlies all other endeavors. Based on traditional practice, bloodstone invites grounded courage and the alignment of physical energy with ancestral and family roots, supporting the foundational layer from which all other bagua areas draw their strength.",
+      "calculation": {
+        "method": "placement",
+        "formula": "Place bloodstone in the Family and Health sector (middle-left, Zhen), aligned with Earth and Fire elements for foundational vitality.",
+        "steps": [
+          "Locate the Family and Health sector at the middle-left of your space from the doorway.",
+          "Cleanse bloodstone with sound or by resting it briefly on the earth.",
+          "Place it on a family altar, near photographs of ancestors, or in a health-focused area.",
+          "Pair with carnelian or red jasper to strengthen the warming, vitalizing cluster.",
+          "Set an intention for grounded, rooted strength before leaving the placement."
+        ],
+        "example": "Position a bloodstone on a family altar in the Health and Family sector to support rooted vitality and ancestral connection."
+      },
+      "crystals": [
+        "bloodstone",
+        "carnelian",
+        "red-jasper"
+      ],
+      "faq_seeds": [
+        "Where should bloodstone be placed in feng shui?",
+        "What element is bloodstone in the bagua?",
+        "Can bloodstone support vitality and family energy?",
+        "How do I use bloodstone in the Health and Family sector?"
+      ],
+      "eastern_note": "BTB feng shui aligns bloodstone with the Family and Health (Zhen) palace, a Wood-element area in the classical correspondence, but the stone's red-flecked green gives it an Earth-and-Fire character that warms and stabilizes the roots Zhen governs. The Zhen trigram means 'thunder', the arousing force that wakes life from winter. Bloodstone has been associated across Western and Eastern lapidary traditions with life force and the courage of the physical body. Placed in the family sector, it supports the rooted, vital foundation from which growth can rise, honoring the lineage and health that underlie every other pursuit."
+    }
+  ]
+}

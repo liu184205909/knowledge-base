@@ -1,0 +1,198 @@
+{
+  "_meta": {
+    "name": "kua-knowledge",
+    "purpose": "Kua/Gua Number 8 命卦 × 八宅方向 × 元素 × 本命水晶映射（Kua Number Calculator 工具 + 文章矩阵单源）",
+    "school": "Ba Zhai 八宅明镜 (Eight Mansions) + Li Chun 立春太阳历年份切换",
+    "li_chun_rule": "出生在 1/1-2/3（立春 Feb 4 前）年份回退前一年再算（太阳历规则）",
+    "kua_formula": "取出生年后两位相加至单数字 d；男(1900s)=10-d, 男(2000s)=9-d, 女(1900s)=d+5, 女(2000s)=d+6；Kua=5 → 男归2(Kun)/女归8(Gen)",
+    "direction_names": {
+      "auspicious": { "sheng_chi": "Success (Sheng Chi 成功)", "tien_yi": "Health (Tien Yi 健康)", "nien_yen": "Love (Nien Yen 爱情)", "fu_wei": "Stability (Fu Wei 稳定)" },
+      "inauspicious": { "ho_hai": "Mishaps (Ho Hai 祸害)", "wu_kwei": "Five Ghosts (Wu Kwei 五鬼)", "liu_sha": "Six Killings (Liu Sha 六煞)", "chueh_ming": "Total Loss (Chueh Ming 绝命)" }
+    },
+    "group_note": "East Group 东四命(1,3,4,9) 吉方在 N/E/SE/S；West Group 西四命(2,6,7,8) 吉方在 W/NW/SW/NE",
+    "compliance": "based on classical Ba Zhai (Eight Mansions) Feng Shui; a tool for personal reflection and energetic alignment, not a guarantee of outcomes",
+    "url_rule_tool": "/tools/kua-number-calculator/",
+    "url_rule_article": "/feng-shui-kua-number/",
+    "crystal_sources": "每 Kua 的 Element × 幸运色 × 390 水晶库匹配；五行准确（Water→黑/蓝·Wood→绿·Fire→红·Earth→黄/棕·Metal→白/金）"
+  },
+  "kua_numbers": [
+    {
+      "kua": 1,
+      "trigram": { "name": "Kan", "symbol": "☵", "chinese": "坎" },
+      "element": "Water",
+      "group": "East",
+      "lucky_colors": ["black", "blue", "white"],
+      "directions": { "sheng_chi": "SE", "tien_yi": "E", "nien_yen": "S", "fu_wei": "N", "chueh_ming": "W", "wu_kwei": "NE", "liu_sha": "NW", "ho_hai": "SW" },
+      "personality": "Kan (Water) people are reflective, adaptable and deep-thinking. Like water, you flow around obstacles rather than crash into them, gathering insight in stillness. Your strength is inner depth — you sense what others miss and adapt with quiet resilience. The growth edge is avoiding withdrawal: water nourishes best when it moves, not when it pools.",
+      "home_application": "Face your desk toward Sheng Chi (Southeast) for focused, prosperous work; orient your bed so the crown points to Tien Yi (East) to support rest and recovery. Keep the North sector (your Fu Wei stability area) uncluttered and well-lit.",
+      "birth_crystals": [
+        { "role": "primary", "slug": "black-tourmaline-meaning", "reason": "A Water-element anchor that grounds Kan's deep sensitivity, offering a protective boundary so your receptive nature doesn't absorb surrounding stress." },
+        { "role": "support", "slug": "obsidian-meaning", "reason": "Black volcanic glass mirrors Water's depth, supporting clear emotional boundaries and reflective self-honesty." },
+        { "role": "amplify", "slug": "aquamarine-meaning", "reason": "Light Water energy that eases communication and keeps your adaptability flowing rather than frozen." }
+      ],
+      "direction_bracelets": [
+        { "direction": "sheng_chi", "intent": "Success & Wealth (SE)", "slug": "citrine-meaning" },
+        { "direction": "tien_yi", "intent": "Health (E)", "slug": "bloodstone-meaning" },
+        { "direction": "nien_yen", "intent": "Love (S)", "slug": "rose-quartz-meaning" },
+        { "direction": "fu_wei", "intent": "Stability (N)", "slug": "smoky-quartz-meaning" }
+      ],
+      "shop_cta": { "primary_category": "/product-category/black-tourmaline-crystals/", "fallback_search": "/shop/?s=black-tourmaline", "final_fallback": "/product-category/healing-jewelry/" }
+    },
+    {
+      "kua": 2,
+      "trigram": { "name": "Kun", "symbol": "☷", "chinese": "坤" },
+      "element": "Earth",
+      "group": "West",
+      "lucky_colors": ["yellow", "earth tones", "brown"],
+      "directions": { "sheng_chi": "NE", "tien_yi": "W", "nien_yen": "NW", "fu_wei": "SW", "chueh_ming": "SE", "wu_kwei": "E", "liu_sha": "S", "ho_hai": "N" },
+      "personality": "Kun (Earth) people are nurturing, receptive and grounded. You embody the fertile field — patient, supportive, and able to hold space for others to grow. Your reliability is your gift; your growth edge is self-nourishment, remembering that even the richest soil needs tending and rest.",
+      "home_application": "Strengthen the Southwest (your Fu Wei stability corner) with earthy ceramics or earthen crystals; face your workspace toward the Northeast (Sheng Chi) to nurture steady prosperity. Warm yellow and terracotta tones support your element throughout the home.",
+      "birth_crystals": [
+        { "role": "primary", "slug": "citrine-meaning", "reason": "Earth-element sunshine stone that nurtures Kun's generous nature while inviting warmth and abundance without depletion." },
+        { "role": "support", "slug": "tiger-eye-meaning", "reason": "Golden-brown banded quartz grounds Earth energy, supporting steady willpower and grounded decision-making." },
+        { "role": "amplify", "slug": "red-jasper-meaning", "reason": "Earthy red stone that nourishes stamina, helping the nurturing Kun type sustain care for others and self alike." }
+      ],
+      "direction_bracelets": [
+        { "direction": "sheng_chi", "intent": "Success & Wealth (NE)", "slug": "citrine-meaning" },
+        { "direction": "tien_yi", "intent": "Health (W)", "slug": "aventurine-meaning" },
+        { "direction": "nien_yen", "intent": "Love (NW)", "slug": "rose-quartz-meaning" },
+        { "direction": "fu_wei", "intent": "Stability (SW)", "slug": "tiger-eye-meaning" }
+      ],
+      "shop_cta": { "primary_category": "/product-category/citrine-crystals/", "fallback_search": "/shop/?s=citrine", "final_fallback": "/product-category/healing-jewelry/" },
+      "note": "Kua 5 (male) merges into this group — same directions as Kua 2."
+    },
+    {
+      "kua": 3,
+      "trigram": { "name": "Zhen", "symbol": "☳", "chinese": "震" },
+      "element": "Wood",
+      "group": "East",
+      "lucky_colors": ["green", "blue", "black"],
+      "directions": { "sheng_chi": "S", "tien_yi": "N", "nien_yen": "SE", "fu_wei": "E", "chueh_ming": "W", "wu_kwei": "NW", "liu_sha": "NE", "ho_hai": "SW" },
+      "personality": "Zhen (Wood/thunder) people are pioneering, spontaneous and full of initiating energy. Like spring thunder awakening dormant seeds, you spark new beginnings and move quickly from idea to action. Your growth edge is patience — Wood grows strongest with both upward reach and deep roots.",
+      "home_application": "Place living plants in the East (your Fu Wei sector) to strengthen Wood growth energy; face your desk South (Sheng Chi) to fuel initiative and recognition. Avoid clutter in the East, which stagnates your initiating power.",
+      "birth_crystals": [
+        { "role": "primary", "slug": "aventurine-meaning", "reason": "Green Wood-element stone that supports Zhen's growth and new beginnings, inviting opportunity and lucky forward momentum." },
+        { "role": "support", "slug": "moss-agate-meaning", "reason": "Forest-green agate nurtures steady Wood growth, grounding the thunder-type's spontaneity into lasting vitality." },
+        { "role": "amplify", "slug": "jade-meaning", "reason": "Treasured in Eastern tradition as a Wood stone of wisdom and longevity, deepening Zhen's pioneering roots." }
+      ],
+      "direction_bracelets": [
+        { "direction": "sheng_chi", "intent": "Success & Wealth (S)", "slug": "citrine-meaning" },
+        { "direction": "tien_yi", "intent": "Health (N)", "slug": "bloodstone-meaning" },
+        { "direction": "nien_yen", "intent": "Love (SE)", "slug": "rose-quartz-meaning" },
+        { "direction": "fu_wei", "intent": "Stability (E)", "slug": "aventurine-meaning" }
+      ],
+      "shop_cta": { "primary_category": "/product-category/aventurine-crystals/", "fallback_search": "/shop/?s=aventurine", "final_fallback": "/product-category/healing-jewelry/" }
+    },
+    {
+      "kua": 4,
+      "trigram": { "name": "Xun", "symbol": "☴", "chinese": "巽" },
+      "element": "Wood",
+      "group": "East",
+      "lucky_colors": ["green", "purple"],
+      "directions": { "sheng_chi": "N", "tien_yi": "S", "nien_yen": "E", "fu_wei": "SE", "chueh_ming": "NE", "wu_kwei": "W", "liu_sha": "SW", "ho_hai": "NW" },
+      "personality": "Xun (Wind/gentle Wood) people are adaptable, perceptive and quietly influential. Like wind carrying seeds across great distances, your influence spreads through flexibility and subtle persistence rather than force. Your growth edge is rootedness — even the wind benefits from a calm center to blow from.",
+      "home_application": "Keep the Southeast sector (your Tien Yi health area) fresh and airy; place purple or green accents in the North (Sheng Chi) to invite prosperity. Plants in the East nourish your Wind-Wood nature.",
+      "birth_crystals": [
+        { "role": "primary", "slug": "aventurine-meaning", "reason": "Green Wood stone supporting Xun's gentle, persistent growth — opportunity carried on favorable winds." },
+        { "role": "support", "slug": "amethyst-meaning", "reason": "Purple amethyst, the BTB wealth-corner signature, aligns with Xun's lucky purple and clarifies perception." },
+        { "role": "amplify", "slug": "jade-meaning", "reason": "Eastern Wood stone of harmony, deepening the rootedness that balances Wind's constant motion." }
+      ],
+      "direction_bracelets": [
+        { "direction": "sheng_chi", "intent": "Success & Wealth (N)", "slug": "citrine-meaning" },
+        { "direction": "tien_yi", "intent": "Health (SE)", "slug": "bloodstone-meaning" },
+        { "direction": "nien_yen", "intent": "Love (E)", "slug": "rose-quartz-meaning" },
+        { "direction": "fu_wei", "intent": "Stability (S)", "slug": "smoky-quartz-meaning" }
+      ],
+      "shop_cta": { "primary_category": "/product-category/amethyst-crystals/", "fallback_search": "/shop/?s=amethyst", "final_fallback": "/product-category/healing-jewelry/" }
+    },
+    {
+      "kua": 6,
+      "trigram": { "name": "Qian", "symbol": "☰", "chinese": "乾" },
+      "element": "Metal",
+      "group": "West",
+      "lucky_colors": ["white", "gold", "silver", "gray"],
+      "directions": { "sheng_chi": "W", "tien_yi": "NE", "nien_yen": "SW", "fu_wei": "NW", "chueh_ming": "S", "wu_kwei": "N", "liu_sha": "E", "ho_hai": "SE" },
+      "personality": "Qian (Metal/heaven) people are principled, disciplined and natural leaders. You carry the clarity and structure of refined metal — decisive, honorable, and driven by strong inner standards. Your growth edge is flexibility; the strongest metal, like the sage's will, bends without breaking.",
+      "home_application": "Reinforce the Northwest (your Fu Wei sector, also the Helpful People area) with metal objects or white tones to attract supportive allies; face work toward the West (Sheng Chi) for principled success. Keep the space uncluttered — Metal thrives on order.",
+      "birth_crystals": [
+        { "role": "primary", "slug": "quartz-meaning", "reason": "Clear white Metal-element quartz mirrors Qian's clarity and amplifies focused, principled intention." },
+        { "role": "support", "slug": "selenite-meaning", "reason": "Pure white Metal stone of clarity and order, supporting the decisive structure Qian types thrive on." },
+        { "role": "amplify", "slug": "hematite-meaning", "reason": "Silvery metallic stone grounding Metal's sharpness into steady, honorable willpower." }
+      ],
+      "direction_bracelets": [
+        { "direction": "sheng_chi", "intent": "Success & Wealth (W)", "slug": "citrine-meaning" },
+        { "direction": "tien_yi", "intent": "Health (NE)", "slug": "bloodstone-meaning" },
+        { "direction": "nien_yen", "intent": "Love (SW)", "slug": "rose-quartz-meaning" },
+        { "direction": "fu_wei", "intent": "Stability (NW)", "slug": "hematite-meaning" }
+      ],
+      "shop_cta": { "primary_category": "/product-category/quartz-crystals/", "fallback_search": "/shop/?s=clear+quartz", "final_fallback": "/product-category/healing-jewelry/" }
+    },
+    {
+      "kua": 7,
+      "trigram": { "name": "Dui", "symbol": "☱", "chinese": "兑" },
+      "element": "Metal",
+      "group": "West",
+      "lucky_colors": ["white", "silver", "pastels"],
+      "directions": { "sheng_chi": "NW", "tien_yi": "SW", "nien_yen": "NE", "fu_wei": "W", "chueh_ming": "E", "wu_kwei": "SE", "liu_sha": "N", "ho_hai": "S" },
+      "personality": "Dui (Metal/lake) people are expressive, joyful and socially gifted. You carry the reflective brightness of a still lake catching light — communicative, charming, and able to bring pleasure to others. Your growth edge is depth; the lake that shines brightest also runs deepest.",
+      "home_application": "Brighten the West (your Fu Wei sector) with white and metallic accents to support creativity and joy; place reflective surfaces in the Northwest (Sheng Chi) to invite prosperity. Fresh, airy spaces suit your joyful Metal nature.",
+      "birth_crystals": [
+        { "role": "primary", "slug": "quartz-meaning", "reason": "Clear Metal-element quartz amplifies Dui's bright, expressive clarity and creative sparkle." },
+        { "role": "support", "slug": "moonstone-meaning", "reason": "Luminous white-luster stone supporting emotional depth beneath Dui's social charm." },
+        { "role": "amplify", "slug": "selenite-meaning", "reason": "Pure white Metal stone keeping the joyful lake-type's energy clear and refreshed." }
+      ],
+      "direction_bracelets": [
+        { "direction": "sheng_chi", "intent": "Success & Wealth (NW)", "slug": "citrine-meaning" },
+        { "direction": "tien_yi", "intent": "Health (SW)", "slug": "bloodstone-meaning" },
+        { "direction": "nien_yen", "intent": "Love (NE)", "slug": "rose-quartz-meaning" },
+        { "direction": "fu_wei", "intent": "Stability (W)", "slug": "moonstone-meaning" }
+      ],
+      "shop_cta": { "primary_category": "/product-category/quartz-crystals/", "fallback_search": "/shop/?s=moonstone", "final_fallback": "/product-category/healing-jewelry/" }
+    },
+    {
+      "kua": 8,
+      "trigram": { "name": "Gen", "symbol": "☶", "chinese": "艮" },
+      "element": "Earth",
+      "group": "West",
+      "lucky_colors": ["yellow", "brown", "earthy tones"],
+      "directions": { "sheng_chi": "SW", "tien_yi": "NW", "nien_yen": "W", "fu_wei": "NE", "chueh_ming": "S", "wu_kwei": "N", "liu_sha": "E", "ho_hai": "SE" },
+      "personality": "Gen (Earth/mountain) people are still, steady and self-contained. Like a mountain, you provide stability and a grounded presence others rely on; your calm is your power. Your growth edge is movement; even the mountain is shaped by the rivers that flow around it.",
+      "home_application": "Ground the Northeast (your Fu Wei knowledge sector) with earthy crystals and steady objects to support study and stillness; face work toward the Southwest (Sheng Chi) for stable prosperity. Warm, layered earth tones throughout suit your mountain nature.",
+      "birth_crystals": [
+        { "role": "primary", "slug": "citrine-meaning", "reason": "Earthy golden warmth nurturing Gen's mountain-steady nature, inviting abundance without disturbing stillness." },
+        { "role": "support", "slug": "tiger-eye-meaning", "reason": "Banded golden-brown quartz grounding Earth resolve, supporting steady protective strength." },
+        { "role": "amplify", "slug": "smoky-quartz-meaning", "reason": "Earthy smoky stone anchoring mountain energy and gently releasing stagnation." }
+      ],
+      "direction_bracelets": [
+        { "direction": "sheng_chi", "intent": "Success & Wealth (SW)", "slug": "citrine-meaning" },
+        { "direction": "tien_yi", "intent": "Health (NW)", "slug": "bloodstone-meaning" },
+        { "direction": "nien_yen", "intent": "Love (W)", "slug": "rose-quartz-meaning" },
+        { "direction": "fu_wei", "intent": "Stability (NE)", "slug": "tiger-eye-meaning" }
+      ],
+      "shop_cta": { "primary_category": "/product-category/citrine-crystals/", "fallback_search": "/shop/?s=citrine", "final_fallback": "/product-category/healing-jewelry/" },
+      "note": "Kua 5 (female) merges into this group — same directions as Kua 8."
+    },
+    {
+      "kua": 9,
+      "trigram": { "name": "Li", "symbol": "☲", "chinese": "离" },
+      "element": "Fire",
+      "group": "East",
+      "lucky_colors": ["red", "purple", "warm tones"],
+      "directions": { "sheng_chi": "E", "tien_yi": "SE", "nien_yen": "N", "fu_wei": "S", "chueh_ming": "NW", "wu_kwei": "NE", "liu_sha": "W", "ho_hai": "SW" },
+      "personality": "Li (Fire) people are radiant, passionate and visibility-seeking in the best sense. Like fire, you illuminate, inspire and lead through warmth and clarity of vision. Your growth edge is sustainability; fire that tends its fuel burns longest, so guard against burnout.",
+      "home_application": "Strengthen the South (your Fu Wei fame sector) with warm lighting and red accents to support visibility and reputation; face work toward the East (Sheng Chi) for inspired success. Candles and warm tones feed your Fire element.",
+      "birth_crystals": [
+        { "role": "primary", "slug": "carnelian-meaning", "reason": "Warm Fire-element stone fueling Li's radiant confidence and sustained creative vitality." },
+        { "role": "support", "slug": "sunstone-meaning", "reason": "Sunlit Fire stone supporting joyful visibility and leadership without burnout." },
+        { "role": "amplify", "slug": "red-jasper-meaning", "reason": "Earthy red stone grounding Fire's intensity into steady, sustainable passion." }
+      ],
+      "direction_bracelets": [
+        { "direction": "sheng_chi", "intent": "Success & Wealth (E)", "slug": "citrine-meaning" },
+        { "direction": "tien_yi", "intent": "Health (SE)", "slug": "bloodstone-meaning" },
+        { "direction": "nien_yen", "intent": "Love (N)", "slug": "rose-quartz-meaning" },
+        { "direction": "fu_wei", "intent": "Stability (S)", "slug": "carnelian-meaning" }
+      ],
+      "shop_cta": { "primary_category": "/product-category/carnelian-crystals/", "fallback_search": "/shop/?s=carnelian", "final_fallback": "/product-category/healing-jewelry/" }
+    }
+  ]
+}

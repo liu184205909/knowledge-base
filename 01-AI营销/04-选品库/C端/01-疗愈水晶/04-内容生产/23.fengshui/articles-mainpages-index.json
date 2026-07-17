@@ -1,0 +1,230 @@
+{
+  "total": 45,
+  "articles": [
+    {
+      "slug": "feng-shui",
+      "title": "Feng Shui: Complete Guide to Energy, Elements & Crystals",
+      "page_type": "hub"
+    },
+    {
+      "slug": "feng-shui-crystals",
+      "title": "Crystals in Feng Shui: Complete Guide to Placement & Meaning",
+      "page_type": "hub"
+    },
+    {
+      "slug": "feng-shui-bagua-map",
+      "title": "Feng Shui Bagua Map: The 9 Areas & Best Crystals",
+      "page_type": "concept"
+    },
+    {
+      "slug": "feng-shui-bracelet",
+      "title": "Feng Shui Bracelet: Meaning, Which Hand & Best Crystals",
+      "page_type": "concept"
+    },
+    {
+      "slug": "feng-shui-wealth-corner",
+      "title": "Feng Shui Wealth Corner: How to Activate It with Crystals",
+      "page_type": "concept"
+    },
+    {
+      "slug": "feng-shui-five-elements",
+      "title": "Five Elements in Feng Shui: Wood, Fire, Earth, Metal, Water",
+      "page_type": "concept"
+    },
+    {
+      "slug": "feng-shui-kua-number",
+      "title": "Kua Number: How to Calculate & Your Lucky Directions",
+      "page_type": "concept"
+    },
+    {
+      "slug": "feng-shui-protection",
+      "title": "Feng Shui for Protection: Clearing & Shielding Your Space",
+      "page_type": "concept"
+    },
+    {
+      "slug": "crystals-for-wealth-feng-shui",
+      "title": "Crystals for Wealth: Feng Shui Money Crystals Guide",
+      "page_type": "intention"
+    },
+    {
+      "slug": "crystals-for-love-feng-shui",
+      "title": "Crystals for Love: Feng Shui for Relationships",
+      "page_type": "intention"
+    },
+    {
+      "slug": "feng-shui-protection-crystals",
+      "title": "Protection Crystals in Feng Shui: Warding Negative Energy",
+      "page_type": "intention"
+    },
+    {
+      "slug": "feng-shui-good-luck-crystals",
+      "title": "Feng Shui Crystals for Good Luck & Opportunity",
+      "page_type": "intention"
+    },
+    {
+      "slug": "feng-shui-career-crystals",
+      "title": "Feng Shui Crystals for Career & Life Path Success",
+      "page_type": "intention"
+    },
+    {
+      "slug": "feng-shui-bedroom",
+      "title": "Feng Shui Bedroom: Best Crystals for Rest & Romance",
+      "page_type": "room"
+    },
+    {
+      "slug": "feng-shui-living-room",
+      "title": "Feng Shui Living Room: Crystals for Harmony & Welcome",
+      "page_type": "room"
+    },
+    {
+      "slug": "feng-shui-office-desk",
+      "title": "Feng Shui Office & Desk: Crystals for Focus & Success",
+      "page_type": "room"
+    },
+    {
+      "slug": "feng-shui-front-door",
+      "title": "Feng Shui Front Door: Crystals to Welcome Energy",
+      "page_type": "room"
+    },
+    {
+      "slug": "feng-shui-kitchen",
+      "title": "Feng Shui Kitchen: Crystals for Nourishment & Abundance",
+      "page_type": "room"
+    },
+    {
+      "slug": "citrine-in-feng-shui",
+      "title": "Citrine in Feng Shui: Meaning, Placement & Benefits",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "black-tourmaline-in-feng-shui",
+      "title": "Black Tourmaline in Feng Shui: Protection & Placement",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "pyrite-in-feng-shui",
+      "title": "Pyrite in Feng Shui: Wealth Crystal Placement",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "jade-in-feng-shui",
+      "title": "Jade in Feng Shui: Meaning, Placement & Benefits",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "clear-quartz-in-feng-shui",
+      "title": "Clear Quartz in Feng Shui: Meaning & Placement",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "rose-quartz-in-feng-shui",
+      "title": "Rose Quartz in Feng Shui: Love & Placement",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "amethyst-in-feng-shui",
+      "title": "Amethyst in Feng Shui: Wealth Corner Crystal",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "green-aventurine-in-feng-shui",
+      "title": "Green Aventurine in Feng Shui: Luck & Wealth",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "tigers-eye-in-feng-shui",
+      "title": "Tiger's Eye in Feng Shui: Protection & Prosperity",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "carnelian-in-feng-shui",
+      "title": "Carnelian in Feng Shui: Fame & Creativity",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "obsidian-in-feng-shui",
+      "title": "Obsidian in Feng Shui: Protection & Grounding",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "moonstone-in-feng-shui",
+      "title": "Moonstone in Feng Shui: Love & Intuition",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "hematite-in-feng-shui",
+      "title": "Hematite in Feng Shui: Grounding & Protection",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "smoky-quartz-in-feng-shui",
+      "title": "Smoky Quartz in Feng Shui: Clearing & Grounding",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "lapis-lazuli-in-feng-shui",
+      "title": "Lapis Lazuli in Feng Shui: Wisdom & Career",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "malachite-in-feng-shui",
+      "title": "Malachite in Feng Shui: Wealth Transformation",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "selenite-in-feng-shui",
+      "title": "Selenite in Feng Shui: Space Clearing",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "fluorite-in-feng-shui",
+      "title": "Fluorite in Feng Shui: Career & Focus",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "red-jasper-in-feng-shui",
+      "title": "Red Jasper in Feng Shui: Stability & Vitality",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "aquamarine-in-feng-shui",
+      "title": "Aquamarine in Feng Shui: Calm & Career",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "turquoise-in-feng-shui",
+      "title": "Turquoise in Feng Shui: Protection & Healing",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "amazonite-in-feng-shui",
+      "title": "Amazonite in Feng Shui: Wealth & Courage",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "sunstone-in-feng-shui",
+      "title": "Sunstone in Feng Shui: Fame & Energy",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "howlite-in-feng-shui",
+      "title": "Howlite in Feng Shui: Calm & Knowledge",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "labradorite-in-feng-shui",
+      "title": "Labradorite in Feng Shui: Magic & Protection",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "shungite-in-feng-shui",
+      "title": "Shungite in Feng Shui: EMF Protection",
+      "page_type": "crystal"
+    },
+    {
+      "slug": "bloodstone-in-feng-shui",
+      "title": "Bloodstone in Feng Shui: Vitality & Courage",
+      "page_type": "crystal"
+    }
+  ]
+}

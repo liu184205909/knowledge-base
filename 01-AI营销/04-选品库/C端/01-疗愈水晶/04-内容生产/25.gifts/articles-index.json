@@ -1,0 +1,306 @@
+{
+  "total": 43,
+  "articles": [
+    {
+      "slug": "crystal-anniversary-gifts",
+      "title": "6 Best Crystal Gifts for Anniversaries (by Stone Meaning)",
+      "subcategory": "anniversary",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-wedding-anniversary-gifts",
+      "title": "6 Best Crystal Gifts for Wedding Anniversaries (by Stone Meaning)",
+      "subcategory": "anniversary",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-wedding-anniversary-gift-ideas",
+      "title": "6 Best Crystal Gifts for Wedding Anniversaries (by Stone Meaning)",
+      "subcategory": "anniversary",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-15th-anniversary",
+      "title": "6 Best Crystal Gifts for a 15th Anniversary (by Stone Meaning)",
+      "subcategory": "anniversary",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "15th-anniversary-crystal-gifts",
+      "title": "6 Best Crystal Gifts for a 15th Anniversary (by Stone Meaning)",
+      "subcategory": "anniversary",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-anniversary-gifts-for-her",
+      "title": "6 Best Crystal Gifts for Her (by Stone Meaning)",
+      "subcategory": "anniversary",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-anniversary-gifts-for-him",
+      "title": "6 Best Crystal Gifts for Him (by Stone Meaning)",
+      "subcategory": "anniversary",
+      "priority": "P2",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-anniversary-gifts-for-wife",
+      "title": "6 Best Crystal Gifts for Your Wife (by Stone Meaning)",
+      "subcategory": "anniversary",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-anniversary-gift",
+      "title": "6 Best Crystal Gifts for Anniversaries (by Stone Meaning)",
+      "subcategory": "anniversary",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-wedding-gifts",
+      "title": "5 Best Crystal Gifts for Newlyweds (by Stone Meaning)",
+      "subcategory": "wedding",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-her",
+      "title": "6 Best Crystal Gifts for Her (by Stone Meaning)",
+      "subcategory": "by-recipient",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "unique-crystal-gifts-for-her",
+      "title": "6 Best Crystal Gifts for Her (by Stone Meaning)",
+      "subcategory": "by-recipient",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-women",
+      "title": "5 Best Crystal Gifts for Women (by Stone Meaning)",
+      "subcategory": "by-recipient",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-mom",
+      "title": "5 Best Crystal Gifts for Mom (by Stone Meaning)",
+      "subcategory": "by-recipient",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-wife",
+      "title": "5 Best Crystal Gifts for Your Wife (by Stone Meaning)",
+      "subcategory": "by-recipient",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-men",
+      "title": "6 Best Crystal Gifts for Men (by Stone Meaning)",
+      "subcategory": "by-recipient",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-him",
+      "title": "6 Best Crystal Gifts for Him (by Stone Meaning)",
+      "subcategory": "by-recipient",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-home",
+      "title": "5 Best Crystal Gifts for the Home (by Stone Meaning)",
+      "subcategory": "home",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-housewarming-gifts",
+      "title": "5 Best Crystal Gifts for a New Home (by Stone Meaning)",
+      "subcategory": "home",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystals-for-new-home",
+      "title": "5 Best Crystal Gifts for a New Home (by Stone Meaning)",
+      "subcategory": "home",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-under-50",
+      "title": "6 Best Crystal Gifts for Under $50 (by Stone Meaning)",
+      "subcategory": "under-50",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "unique-crystal-gifts",
+      "title": "6 Best Crystal Gifts for Loved Ones (by Stone Meaning)",
+      "subcategory": "ideas",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gift-ideas",
+      "title": "6 Best Crystal Gifts for Loved Ones (by Stone Meaning)",
+      "subcategory": "ideas",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "gifts-for-crystal-lovers",
+      "title": "5 Best Crystal Gifts for Crystal Lovers (by Stone Meaning)",
+      "subcategory": "ideas",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts",
+      "title": "6 Best Crystal Gifts for Loved Ones (by Stone Meaning)",
+      "subcategory": "ideas",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-love",
+      "title": "5 Best Crystal Gifts for Love & Relationships (by Stone Meaning)",
+      "subcategory": "by-intention",
+      "priority": "P2",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-protection",
+      "title": "5 Best Crystal Gifts for Protection (by Stone Meaning)",
+      "subcategory": "by-intention",
+      "priority": "P2",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-prosperity",
+      "title": "5 Best Crystal Gifts for Prosperity (by Stone Meaning)",
+      "subcategory": "by-intention",
+      "priority": "P2",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-calm",
+      "title": "5 Best Crystal Gifts for Calm & Stress Relief (by Stone Meaning)",
+      "subcategory": "by-intention",
+      "priority": "P2",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "what-anniversary-is-crystal",
+      "title": "What Anniversary Is Crystal? (Traditional Anniversary Meanings)",
+      "subcategory": "concept",
+      "priority": "P1",
+      "page_type": "concept"
+    },
+    {
+      "slug": "what-does-gifting-a-crystal-mean",
+      "title": "What Does Gifting a Crystal Mean? (Symbolism & Intent)",
+      "subcategory": "concept",
+      "priority": "P1",
+      "page_type": "concept"
+    },
+    {
+      "slug": "swarovski-vs-natural-crystal",
+      "title": "Swarovski vs Natural Crystal Gifts: What's the Difference?",
+      "subcategory": "concept",
+      "priority": "P2",
+      "page_type": "concept"
+    },
+    {
+      "slug": "crystal-gifts-for-tea-lovers",
+      "title": "5 Best Crystal Gifts for Tea Lovers (by Stone Meaning)",
+      "subcategory": "cross-topic",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-travelers",
+      "title": "5 Best Crystal Gifts for Travelers (by Stone Meaning)",
+      "subcategory": "cross-topic",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-doctors",
+      "title": "5 Best Crystal Gifts for Doctors & Healthcare Workers (by Stone Meaning)",
+      "subcategory": "cross-topic",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-senior-women",
+      "title": "5 Best Crystal Gifts for Senior Women (by Stone Meaning)",
+      "subcategory": "cross-topic",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-knitters",
+      "title": "5 Best Crystal Gifts for Knitters (by Stone Meaning)",
+      "subcategory": "cross-topic",
+      "priority": "P0",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-hikers",
+      "title": "5 Best Crystal Gifts for Hikers & Outdoor Lovers (by Stone Meaning)",
+      "subcategory": "cross-topic",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "easter-crystal-gifts-for-adults",
+      "title": "5 Best Crystal Gifts for Adults (by Stone Meaning)",
+      "subcategory": "cross-topic",
+      "priority": "P1",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "veterans-day-crystal-gifts",
+      "title": "5 Best Crystal Gifts for Veterans (by Stone Meaning)",
+      "subcategory": "cross-topic",
+      "priority": "P2",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-gifts-for-couples",
+      "title": "6 Best Crystal Gifts for Couples (by Stone Meaning)",
+      "subcategory": "couples",
+      "priority": "P3",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-valentines-day-gifts",
+      "title": "5 Best Crystal Gifts for Valentine's Day (by Stone Meaning)",
+      "subcategory": "seasonal",
+      "priority": "P2",
+      "page_type": "listicle"
+    },
+    {
+      "slug": "crystal-mothers-day-gifts",
+      "title": "5 Best Crystal Gifts for Mom (by Stone Meaning)",
+      "subcategory": "seasonal",
+      "priority": "P2",
+      "page_type": "listicle"
+    }
+  ]
+}

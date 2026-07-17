@@ -52,7 +52,7 @@ function buildSchema(a) {
   // ItemList: crystals slug 数组 → meaning URL
   const items = (a.crystals || []).slice(0, 5).map((c, i) => ({ "@type": "ListItem", "position": i + 1, "item": { "@type": "Article", "name": c, "url": "https://" + SITE + "/" + c + "-meaning/" } }));
   if (items.length) schemas.push({ "@context": "https://schema.org", "@type": "ItemList", "itemListElement": items });
-  schemas.push({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://" + SITE + "/" }, { "@type": "ListItem", "position": 2, "name": "Crystals "Meditation" Symbolism", "item": "https://" + SITE + "/crystals-symbolism/" }, { "@type": "ListItem", "position": 3, "name": a.title.replace(/:.*/, ''), "item": url }] });
+  schemas.push({ "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "name": "Home", "item": "https://" + SITE + "/" }, { "@type": "ListItem", "position": 2, "name": "Merged Lines", "item": "https://" + SITE + "/merged-lines/" }, { "@type": "ListItem", "position": 3, "name": a.title.replace(/:.*/, ''), "item": url }] });
   return schemas.map(s => JSON.stringify(s)).join('\n');
 }
 
