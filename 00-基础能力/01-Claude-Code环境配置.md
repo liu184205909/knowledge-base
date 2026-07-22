@@ -131,7 +131,7 @@ claude mcp add -s user google-seo-mcp \
 
 **真源**：`~/.claude/skills/`。Codex 侧 `~/.agents/skills` 是 symlink 自动同步。新 skill 只装真源，别往 `~/.agents/skills/` 放实体。
 
-### 白名单安装源（11 个）
+### 白名单安装源（12 个）
 
 ```bash
 # 文件处理（Anthropic 官方）
@@ -148,6 +148,12 @@ git clone https://github.com/eze-is/web-access ~/.claude/skills/web-access
 
 # 记忆（claude-mem，含 mem-search + knowledge-agent）
 npx skills add thedotmack/claude-mem --agent claude-code -y -g
+
+# 视频转字幕+AI总结（抖音/小红书/B站/YouTube/本地文件）
+npx skills add imlewc/video-to-subtitle-summary-skill --agent claude-code -y -g
+# 依赖：FFmpeg（提取音频）+ faster-whisper（本地ASR，默认）或火山引擎VC API（云端ASR）
+# 抖音/小红书/B站需要 AI Douyin API Key；YouTube 优先用 yt-dlp 直接抓字幕
+# 配置：在 skill 目录下创建 .env 文件设置 ASR_BACKEND 和 API Key
 ```
 
 > ⚠️ 第三方 Skill 存在供应链风险，安装前审查源码和 Star 数，优先选官方或高 Star 仓库。
@@ -287,7 +293,7 @@ cp ~/Downloads/DESIGN.md /path/to/project/DESIGN.md
 
 ## Skill 速查
 
-> **当前白名单（11 个，2026-07-05）**。完整管理规则、判断框架和已删黑名单见 [03-Skill设计与管理.md §5](./03-Skill设计与管理.md#5-skill-管理办法)。
+> **当前白名单（12 个，2026-07-17）**。完整管理规则、判断框架和已删黑名单见 [03-Skill设计与管理.md §5](./03-Skill设计与管理.md#5-skill-管理办法)。
 
 | 场景 | Skill | 触发词 |
 |------|-------|--------|
@@ -299,6 +305,7 @@ cp ~/Downloads/DESIGN.md /path/to/project/DESIGN.md
 | UI 设计（Claude Design 平替，详见专节） | **frontend-design** + DESIGN.md | "做个UI" / "建网页" / "有设计感的界面" / "用frontend-design风格" |
 | WordPress FSE 主题开发 | **wordpress-block-theming** | "改WP主题" / "建WP站" / "主题模板" |
 | 跨会话记忆 | **mem-search** / **knowledge-agent** | "上次怎么解决的" / "建知识库" |
+| 视频转字幕+AI总结（抖音/B站/YouTube/本地文件） | **video-to-subtitle-summary** | 粘贴抖音/B站/YouTube链接 / "总结这个视频" / 本地 .mp4/.mp3 文件路径 |
 
 ### 按需安装（未本地部署，需时再装）
 

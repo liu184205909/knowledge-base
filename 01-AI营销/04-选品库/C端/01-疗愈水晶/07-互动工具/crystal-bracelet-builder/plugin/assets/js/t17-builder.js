@@ -8,7 +8,7 @@
   var money = function (value) { return (config.currencySymbol || '$') + Number(value || 0).toFixed(2); };
   var storageKey = 'ew-t17-v3-draft';
   var state = {
-    type: 'bead',
+    type: 'crystal',
     search: '',
     color: 'all',
     target_wrist_cm: 16,
@@ -105,7 +105,7 @@
 
   function canToggleOrientation(item, variant) {
     var mode = orientationMode(variant);
-    if (!item || !variant || variant.material.component_type !== 'decor') return false;
+    if (!item || !variant || variant.material.component_type !== 'accessory') return false;
     if (mode === 'rotatable') return orientationOptions(variant).length > 1;
     return mode === 'mirrorable' && !variant.mirrored_variant_key && orientationOptions(variant).length > 1;
   }
@@ -201,7 +201,7 @@
   function variantsForCurrentType() {
     if (!state.catalog) return [];
     return state.catalog.materials
-      .filter(function (material) { return material.component_type === state.type; })
+      .filter(function (material) { return materialTab(material) === state.type; })
       .flatMap(function (material) {
         return (material.variants || []).map(function (variant) {
           return Object.assign({ material: material }, variant);
@@ -223,13 +223,29 @@
   function renderFilters() {
     if (!state.catalog) return;
     var colors = new Set(['all']);
-    state.catalog.materials.filter(function (m) { return m.component_type === state.type; }).forEach(function (m) {
+    state.catalog.materials.filter(function (m) { return materialTab(m) === state.type; }).forEach(function (m) {
       if (m.primary_color) colors.add(m.primary_color);
       (m.color_tags || []).forEach(function (color) { colors.add(color); });
     });
     filters.innerHTML = Array.from(colors).map(function (color) {
       var label = color === 'all' ? 'All' : color.replace(/(^|[-_ ])\w/g, function (m) { return m.toUpperCase(); });
       return '<button type="button" data-color="' + escapeHtml(color) + '" class="' + (state.color === color ? 'is-active' : '') + '">' + escapeHtml(label) + '</button>';
+    }).join('');
+  }
+
+  function materialTab(material) {
+    return String((material && (material.library_tab_slug || material.component_type)) || 'crystal');
+  }
+
+  function renderTabs() {
+    var holder = root.querySelector('.ew-t17-tabs');
+    if (!holder || !state.catalog) return;
+    var tabs = Array.isArray(state.catalog.tabs) && state.catalog.tabs.length
+      ? state.catalog.tabs
+      : [{ slug: 'crystal', label: 'Crystals' }, { slug: 'accessory', label: 'Accessories' }];
+    if (!tabs.some(function (tab) { return tab.slug === state.type; })) state.type = tabs[0].slug;
+    holder.innerHTML = tabs.map(function (tab) {
+      return '<button type="button" class="' + (tab.slug === state.type ? 'is-active' : '') + '" data-type="' + escapeAttr(tab.slug) + '" role="tab">' + escapeHtml(tab.label) + '</button>';
     }).join('');
   }
 
@@ -332,7 +348,6 @@
   function renderMetrics() {
     var quote = state.quote;
     root.querySelector('[data-metric="length"]').textContent = quote ? quote.used_length_mm + ' mm' : '0 mm';
-    root.querySelector('[data-metric="weight"]').textContent = quote ? quote.weight_g + ' g' : '0 g';
     root.querySelector('[data-metric="pieces"]').textContent = state.sequence.length;
     var wrist = root.querySelector('.ew-t17-wrist strong');
     wrist.textContent = state.target_wrist_cm.toFixed(1).replace('.0', '') + ' cm';
@@ -363,6 +378,7 @@
   function renderAll() {
     var activeCard = document.activeElement && document.activeElement.closest ? document.activeElement.closest('[data-variant]') : null;
     if (activeCard && root.contains(activeCard)) focusTargetVariantId = activeCard.dataset.variant;
+    renderTabs();
     renderFilters();
     renderGrid();
     renderRing();

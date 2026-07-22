@@ -6,17 +6,18 @@
     "record_policy": "header-only until every production field is approved",
     "exact_header_count": 30,
     "headers": [
-      "material_key", "component_type", "category_slug", "name_en", "primary_color", "color_tags", "intention_tags", "material_image_url", "material_status", "material_sort_order", "variant_key", "size_mm", "shape", "price", "weight_g", "occupied_length_mm", "display_scale", "variant_image_url", "stock_status", "stock_quantity", "compatibility", "compatible_bead_sizes", "orientation_mode", "mirrored_variant_key", "allowed_orientations", "allowed_positions", "neighbor_constraints", "variant_status", "variant_sort_order", "source_name"
+      "material_key", "component_type", "library_tab_slug", "category_slug", "name_en", "primary_color", "color_tags", "intention_tags", "material_image_url", "material_status", "material_sort_order", "variant_key", "size_mm", "shape", "price", "occupied_length_mm", "display_scale", "variant_image_url", "stock_status", "stock_quantity", "compatibility", "compatible_bead_sizes", "orientation_mode", "mirrored_variant_key", "allowed_orientations", "allowed_positions", "neighbor_constraints", "variant_status", "variant_sort_order", "source_name"
     ],
-    "component_type_values": ["bead", "decor", "finish"],
+    "component_type_values": ["crystal", "accessory"],
+    "library_tab_slug": "Editable first-level catalog tab. It must match a backend-managed tab; legacy records default to their component type.",
     "material_status_values": ["draft", "live"],
     "variant_status_values": ["draft", "live", "disabled"],
     "stock_status_values": ["instock", "outofstock", "onbackorder"],
-    "orientation_mode_values": ["none", "fixed_left", "fixed_right", "mirrorable", "rotatable"],
+    "orientation_mode_values": ["none", "fixed_left", "fixed_right", "mirrorable", "rotatable", "tangent", "radial_out", "radial_in"],
     "orientation_values": ["none", "left", "right", "rotate_0", "rotate_90", "rotate_180", "rotate_270"],
     "allowed_position_values": ["any", "start", "end", "interior"],
     "neighbor_constraint_keys": ["previous_component_types", "next_component_types", "previous_variant_keys", "next_variant_keys"],
-    "current_importer_boundary": "Catalog importer accepts only this exact 30-column header, preflights every row, and wraps the batch in a transaction so any invalid row rolls back all writes. It rejects blank or non-numeric size, price, weight, and occupied length; live variants require all four values to be greater than zero. It validates display_scale and compatible_bead_sizes, stock, orientation mode, allowed-orientation, allowed-position, neighbor constraints, and reciprocal fixed left/right physical variants. Catalog importer, database schema, REST response, quote payload, and order snapshot persist approved decor orientation. Directional fields are restricted to Decor and cannot replace distinct physical left/right variant keys. The separate preflight-approved-production-import script must approve evidence and price-review cross-checks before upload."
+    "current_importer_boundary": "Catalog importer accepts only this exact 30-column header, preflights every row, and wraps the batch in a transaction so any invalid row rolls back all writes. library_tab_slug controls the first-level editor tab only; component_type remains the physical type used for quote and orientation validation. It rejects blank or non-numeric size, price, and occupied length; live variants require all three values to be greater than zero. It validates display_scale and compatible_bead_sizes, stock, orientation mode, allowed-orientation, allowed-position, neighbor constraints, and reciprocal fixed left/right physical variants. Catalog importer, REST response, quote payload, and order snapshot persist approved accessory orientation. Directional fields are restricted to Accessories and cannot replace distinct physical left/right variant keys. Weight is not a T17 catalog, quote, or snapshot field. The separate preflight-approved-production-import script must approve evidence and price-review cross-checks before upload."
   },
   "decor_orientation_review": {
     "file": "decor-orientation-review.template.csv",

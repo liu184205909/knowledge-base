@@ -1,0 +1,203 @@
+{
+  "_meta": {
+    "purpose": "Category archive hub SEO intros for goearthward.com (evergreen, no year binding)",
+    "deploy_method": "Code Snippets (loop_start + is_category(slug) + nowdoc echo)",
+    "url_structure": "level1=/category/{slug}/ ; level2=/category/{parent}/{slug}/ (site uses hierarchical category URLs, verified via horoscope=/category/zodiac/horoscope/)",
+    "evergreen_rule": "No year references in intro text (year terms handled by yearly/monthly hub posts). See archive-evergreen-vs-yearly-hub memory.",
+    "is_category_uses_slug": "is_category('horoscope') matches by slug regardless of URL hierarchy",
+    "_name_separator": "Snippet name uses U+2014 em-dash: 'Category Hub — {Name}'. Must stay consistent for deploy.py dedupe (name_map exact match).",
+    "_activate_500": "POST /{id}/activate returns HTTP 500 but is harmless — active is set via payload active:true on POST/PUT. deploy.py no longer calls /activate."
+  },
+  "tarot": {
+    "cat_id": 1570, "name": "Tarot", "count": 47, "parent": 0,
+    "h2": "What Is Tarot?",
+    "ps": [
+      "Tarot is a deck of 78 cards divided into the Major Arcana — 22 cards tracing the soul's journey from The Fool to The World — and the Minor Arcana, four suits (Cups, Wands, Swords, Pentacles) that mirror the everyday currents of love, action, mind, and money. A tarot reading lays these cards out in a spread and reads the relationships between them, turning a question into a story you can actually see.",
+      "Here you'll find every card explained — upright and reversed meanings, card combinations, yes-or-no answers, daily draws, and spreads for love, career, and reflection. Whether you're learning your first spread or interpreting a tricky court card, the guides walk you through each card's symbolism without the jargon.",
+      "Every card also carries a crystal correspondence — Rose Quartz for The Empress's love, Amethyst for The Star's hope, Black Tourmaline for The Tower's shake-up. Hold the stone as you read to anchor the card's energy, then browse the Shop for the piece that matches your draw."
+    ],
+    "faq": [
+      {"q": "Do I need a psychic gift to read tarot?", "a": "No. Tarot is a symbolic system anyone can learn. Each card has established meanings drawn from centuries of tradition, and reading is mostly about noticing patterns and trusting your own interpretation. Practice matters far more than any innate ability."},
+      {"q": "Can tarot predict the future?", "a": "Tarot doesn't fix a single future. It reflects the energies, choices, and patterns active right now — more like a weather report than a script. A reading shows the current direction and what could shift it, leaving your free will intact."},
+      {"q": "Which spread should a beginner start with?", "a": "A simple three-card spread is the best starting point. It's flexible enough for almost any question — past, present, and future, or situation, action, and outcome — and keeps the reading focused while you learn each card."}
+    ]
+  },
+  "zodiac-compatibility": {
+    "cat_id": 1560, "name": "Zodiac Compatibility", "count": 42, "parent": 1559,
+    "h2": "How Zodiac Compatibility Works",
+    "ps": [
+      "Zodiac compatibility looks at how two signs relate through their element (Fire, Earth, Air, Water) and quality (cardinal, fixed, mutable). Signs of the same element usually flow together naturally, while opposing elements can spark growth or friction. A full compatibility reading also weighs Moon, Venus, and Mars placements — the planets that govern emotion, love, and desire — for a picture far deeper than Sun sign alone.",
+      "This section breaks down the sign pairings that matter most — Aries with Libra, Taurus with Scorpio, Cancer with Capricorn — so you can see the strengths, triggers, and long-term potential of any match. Each guide covers romance, friendship, and working relationships, with honest notes on where two signs clash and how to bridge the gap.",
+      "Crystals can soften the rough edges of any pairing: Rose Quartz and Rhodonite for love, Lapis Lazuli for honest communication between clashing elements, Smoky Quartz to ground a volatile Fire-and-Water match. Explore the Shop to find a stone that supports your specific connection."
+    ],
+    "faq": [
+      {"q": "Which zodiac signs are most compatible?", "a": "Signs of the same element usually flow together naturally — Aries with Leo (Fire), Taurus with Virgo (Earth), Gemini with Libra (Air), Cancer with Scorpio (Water). Signs of complementary elements can also pair beautifully when they balance each other."},
+      {"q": "Can incompatible signs make a relationship work?", "a": "Yes. \"Incompatible\" usually means growth-oriented friction, not impossibility. Challenging pairings often carry the most chemistry and learning — they just ask for more self-awareness, communication, and sometimes a grounding crystal to soften the edges."},
+      {"q": "Is Sun sign compatibility enough?", "a": "Sun sign compatibility is a solid starting point, but it's not the whole picture. The Moon (emotion), Venus (love), and Mars (desire) placements in each person's birth chart shape a relationship more precisely. For a serious match, a full chart comparison goes much deeper."}
+    ]
+  },
+  "crystal-combinations": {
+    "cat_id": 1563, "name": "Crystal Combinations", "count": 36, "parent": 1590,
+    "h2": "How to Combine Crystals",
+    "ps": [
+      "Combining crystals lets you stack intentions — calm plus protection, abundance plus focus, love plus courage. The key is harmony of purpose and element: stones that share a goal amplify each other, while stones pulling in opposite directions can muddle the signal. A few classic rules (keep high-vibration stones balanced with grounding ones, don't overload a single bracelet) make any combination safer and clearer.",
+      "Here you'll find tested crystal pairings for every intention — protection, love, abundance, sleep, anxiety, luck — with notes on which stones work together, which to wear apart, and how many is too many. Each guide explains the reasoning behind the pairing so you can build your own combinations with confidence.",
+      "Grounding stones like Black Tourmaline and Hematite anchor any mix, and a few combinations are best approached with care — all covered in the guides below. Build your stack from the Shop, where each piece is chosen for how it layers with the next."
+    ],
+    "faq": [
+      {"q": "How many crystals can I wear at once?", "a": "There's no hard rule, but most people keep a single bracelet or stack focused on two to four intentions so the energy stays clear. Too many stones at once can feel muddled. If you're layering for different goals, group them by theme."},
+      {"q": "Can the wrong crystal combination cause harm?", "a": "Not harm in any dangerous sense — crystals are gentle. What can happen is muddled energy: stones pulling in opposite directions may cancel each other out or feel heavy. Pairing by shared intention keeps a combination clear and effective."},
+      {"q": "Which crystals should be kept apart?", "a": "Few combinations are truly off-limits, but pairing several high-vibration stones with strong grounding ones at once can feel intense. If a mix ever feels like too much, a grounding stone like Black Tourmaline or Hematite will settle it."}
+    ]
+  },
+  "angel-numbers": {
+    "cat_id": 1, "name": "Angel Numbers", "count": 33, "parent": 0,
+    "h2": "What Are Angel Numbers?",
+    "ps": [
+      "Angel numbers are repeating number sequences — 111, 222, 333, and so on — that many people notice on clocks, receipts, and license plates and read as gentle signals from the universe. In numerology, each digit carries a vibration: 1 for new beginnings, 4 for stability, 7 for inner wisdom. A sequence like 1111 or 1212 blends those meanings into a specific message about alignment, intuition, or change.",
+      "This section explains every angel number from 000 through 999 and the master sequences beyond — what each one means, why you keep seeing it, and what to do next. Whether it's 444 grounding you or 555 signaling transition, each guide translates the pattern into plain, practical guidance.",
+      "Many readers pair a repeating number with its matching crystal — Citrine for 888's abundance, Moonstone for 222's partnership, Clear Quartz to amplify any message. Find the stone for your number in the Shop and keep it close as a physical reminder."
+    ]
+  },
+  "crystals-for-condition": {
+    "cat_id": 1544, "name": "Crystals For Condition", "count": 32, "parent": 1590,
+    "h2": "Crystals for Every Condition",
+    "ps": [
+      "Different stones support different needs — anxiety, sleep, focus, protection, grief, confidence — because each crystal carries its own steady frequency. Amethyst calms an overactive mind, Black Tourmaline shields against draining energy, Rose Quartz soothes the heart. Matching the stone to the condition is the simplest, most practical way to start working with crystals.",
+      "Here you'll find guides for crystals by what you're going through: crystals for anxiety and stress, for sleep and insomnia, for protection, for focus and study, for grief, for confidence, and more. Each guide names the best stones, explains how to use them (wear, hold, place under a pillow), and notes what to combine them with.",
+      "For wearable support, browse the Shop's healing jewelry — every bracelet is chosen for a specific intention, so you can carry that energy with you through the day."
+    ]
+  },
+  "zodiac-crystals": {
+    "cat_id": 875, "name": "Zodiac & Crystals", "count": 11, "parent": 1559,
+    "h2": "Crystals for Every Zodiac Sign",
+    "ps": [
+      "Every zodiac sign resonates with certain stones — crystals that match its element, ruling planet, and temperament. Aries blazes with Carnelian, Taurus grounds with Emerald, Gemini sparkles with Citrine, and so on through all twelve signs. Choosing a stone by your sign is one of the oldest and most intuitive ways to pick a crystal.",
+      "This section maps each sign to its best crystals — the primary birthstone, supporting stones, and what each one does for that sign's strengths and blind spots. Whether you're an Aries looking for courage or a Pisces seeking boundaries, you'll find the right stone and how to use it.",
+      "Each sign's stones are available as wearable jewelry in the Shop, so you can carry your zodiac crystal every day."
+    ]
+  },
+  "mbti-tarot": {
+    "cat_id": 1589, "name": "MBTI Tarot", "count": 11, "parent": 0,
+    "h2": "Where MBTI Meets Tarot",
+    "ps": [
+      "The Myers-Briggs Type Indicator sorts personalities into 16 types based on how you think, feel, and act — and each type maps surprisingly well onto the archetypes of the tarot. The Major Arcana cards are themselves a set of personality archetypes: The Fool's openness, The Emperor's structure, The Hermit's introspection. Pairing the two gives you a tarot profile that reflects how you actually move through the world.",
+      "Here you'll find the MBTI types matched to their tarot cards — the main card that captures a type's core, the supporting cards that round it out, and the crystals that anchor the combination. Take the MBTI Tarot quiz to find your type's cards, or browse the types already covered.",
+      "Each MBTI-tarot pairing comes with crystal recommendations — Amethyst for the introspective types, Tiger's Eye for the decisive ones — available in the Shop as jewelry you can wear."
+    ]
+  },
+  "how-to": {
+    "cat_id": 1567, "name": "How To", "count": 11, "parent": 1590,
+    "h2": "How to Work with Crystals",
+    "ps": [
+      "Knowing how to use a crystal matters as much as choosing the right one — cleansing it when you bring it home, charging it under moonlight or sunlight, programming it with an intention, and reading the signs it gives back. These practical steps keep a stone's energy clear and aligned with what you actually want.",
+      "This section is the hands-on reference: how to cleanse crystals (water, smoke, sound, earth), how to charge them, how to set an intention, how to meditate with them, how to build a crystal grid, how to store them, and how to know when a stone needs a reset. Every guide is step-by-step and beginner-friendly.",
+      "Once you know the method, the Shop has the stones and bracelets to practice on — each with notes on its care."
+    ]
+  },
+  "numerology": {
+    "cat_id": 1568, "name": "Numerology", "count": 8, "parent": 0,
+    "h2": "What Is Numerology?",
+    "ps": [
+      "Numerology is the study of the hidden meaning in numbers — your Life Path number (from your birth date), Expression number (from your name), and the repeating numbers that show up in daily life. Each single digit and master number (11, 22, 33) carries a vibration that describes your tendencies, lessons, and timing.",
+      "Here you'll find the core Life Path numbers explained — from 1 the leader to 9 the humanitarian, plus the master numbers 11, 22, and 33 — with the strengths, challenges, and best crystals for each. New guides are added regularly, so check back as the collection grows.",
+      "Each Life Path pairs with crystals that support its gifts and balance its struggles — Citrine for Life Path 3's creativity, Black Obsidian for Life Path 8's ambition. Find yours in the Shop."
+    ]
+  },
+  "crystals-by-color": {
+    "cat_id": 1565, "name": "Crystals by Color", "count": 8, "parent": 1590,
+    "h2": "Crystals by Color",
+    "ps": [
+      "A crystal's color isn't just decoration — it points to the mineral inside and the energy it carries. Red and black stones ground and protect, pink and green stones open the heart, blue stones soothe communication, purple stones quiet the mind, and clear stones amplify whatever you pair them with. Choosing by color is a quick, intuitive way to find the energy you want.",
+      "Here you'll find crystals grouped by color — what each color family does, the most popular stones in it, and how to choose between similar shades. Whether you're drawn to the calm of blue lace agate or the warmth of orange carnelian, each guide explains the color's meaning and its best stones.",
+      "The Shop's jewelry is organized so you can browse by the color you're drawn to — find the shade that matches your intention."
+    ]
+  },
+  "astrology-events": {
+    "cat_id": 1573, "name": "Astrology Events", "count": 7, "parent": 1572,
+    "h2": "Astrology Events and Transits",
+    "ps": [
+      "Astrology events — Mercury retrograde, Venus retrograde, eclipses, New and Full Moons, and the outer planets changing signs — shape the mood and timing of entire weeks and months. Each event carries a different kind of energy: retrogrades ask for review and patience, eclipses bring turning points, New Moons open fresh starts.",
+      "Here you'll find guides on the major astrological events — what each one means, how long it lasts, and how to work with its energy instead of against it. Each event comes with crystal recommendations to help you move through it.",
+      "For the intense transits — retrogrades and eclipses — grounding stones like Smoky Quartz and Black Tourmaline are especially useful. Browse the Shop for a stone to anchor your next transit."
+    ]
+  },
+  "chakra-crystals": {
+    "cat_id": 1564, "name": "Chakra Crystals", "count": 7, "parent": 0,
+    "h2": "Chakra Crystals and Stones",
+    "ps": [
+      "The seven chakras are energy centers running from the base of the spine to the crown, and each one governs a different part of life — survival, creativity, willpower, love, communication, intuition, and connection. Each chakra resonates with specific crystals and colors, and placing the right stone on or near a chakra is said to bring it back into balance.",
+      "Here you'll find each of the seven chakras explained — its location, what it governs, the signs of a blocked or overactive chakra, and the best stones to balance it. From Root chakra Red Jasper to Crown chakra Clear Quartz, every guide names the stones and how to use them.",
+      "The Shop carries chakra jewelry and stone sets designed to align all seven centers — wear them or lay them on the body during meditation."
+    ]
+  },
+  "chinese-zodiac": {
+    "cat_id": 1569, "name": "Chinese Zodiac", "count": 0, "parent": 0,
+    "h2": "The Chinese Zodiac Explained",
+    "ps": [
+      "The Chinese zodiac is a repeating 12-year cycle, with each year ruled by an animal sign — Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, and Pig. Your sign is set by your birth year, and the cycle is further shaped by one of five elements (Wood, Fire, Earth, Metal, Water), so a full rotation takes 60 years to complete. Together the animal and element describe your temperament, your luck, and the years that matter most for you.",
+      "Here you'll find the twelve animal signs explained — personality, compatibility, and the lucky crystals for each — plus how to find your Chinese zodiac sign by birth year and the stones that resonate with it.",
+      "Every animal sign pairs with lucky stones — Jade for the Rabbit, Citrine for the Rooster, and so on. Browse the Shop for jewelry matched to your sign."
+    ]
+  },
+  "dreams": {
+    "cat_id": 1592, "name": "Dreams", "count": 3, "parent": 0,
+    "h2": "Dream Meanings and Interpretation",
+    "ps": [
+      "Dreams speak in symbols — teeth falling out, flying, being chased, showing up unprepared — and for centuries people have read those symbols for insight into the waking life beneath them. Dream interpretation looks at both the universal meaning of a symbol (teeth often signal anxiety or transition) and the personal meaning it holds for you.",
+      "Here you'll find common dream symbols explained — what they usually mean, the questions they ask you to consider, and the different lenses (psychological, spiritual, cultural) that shape a reading. Each guide is practical rather than dogmatic, and leaves room for your own meaning.",
+      "For dream support, soothing stones like Amethyst and Howlite under the pillow can quiet the mind before sleep, and dreamwork crystals like Moonstone can deepen recall. Find them in the Shop."
+    ]
+  },
+  "crystals-by-element": {
+    "cat_id": 1566, "name": "Crystals by Element", "count": 3, "parent": 1590,
+    "h2": "Crystals by Element",
+    "ps": [
+      "In crystal work, stones are often grouped by the four classical elements — Fire, Water, Air, and Earth — and each element matches a different kind of energy. Fire stones (Carnelian, Sunstone) ignite courage and action, Water stones (Aquamarine, Moonstone) carry emotion and intuition, Air stones (Selenite, Clear Quartz) sharpen the mind, Earth stones (Hematite, Moss Agate) ground and stabilize.",
+      "Here you'll find crystals grouped by element — what each element represents, its signature stones, and how to choose stones that match (or intentionally balance) your own temperament and intention.",
+      "Browse the Shop by the element you need more of — fiery motivation, emotional flow, mental clarity, or steady grounding."
+    ]
+  },
+  "zodiac": {
+    "cat_id": 1559, "name": "Zodiac", "count": 0, "parent": 0, "is_parent_hub": true,
+    "h2": "Explore Astrology and the Zodiac",
+    "ps": [
+      "The zodiac is the wheel of twelve signs that astrology uses to read personality, timing, and relationships. This is the hub for everything zodiac on the site — your sign's profile, monthly and yearly horoscopes, how signs pair up, and the crystals matched to each sign.",
+      "Start with your Sun sign, then explore your horoscope, your compatibility with other signs, and the crystals that resonate with your sign. Use the sections below to go deeper into any branch."
+    ],
+    "children": [
+      {"slug": "horoscope", "title": "Horoscopes & Forecasts", "desc": "Monthly and yearly forecasts for every sign, each with a crystal of the month."},
+      {"slug": "zodiac-compatibility", "title": "Zodiac Compatibility", "desc": "How every sign pairs — strengths, clashes, and long-term potential."},
+      {"slug": "zodiac-crystals", "title": "Crystals by Zodiac Sign", "desc": "The best stones for each of the twelve signs."}
+    ]
+  },
+  "crystals": {
+    "cat_id": 1590, "name": "Crystals", "count": 0, "parent": 0, "is_parent_hub": true,
+    "h2": "Explore Crystals",
+    "ps": [
+      "Crystals are the heart of this site — their meanings, how to combine them, how to choose them by intention, color, and element, and how to use them for everyday needs like sleep, focus, and protection. This hub ties every crystal guide together in one place.",
+      "Browse the sections below: crystal combinations, crystals for specific conditions, crystals by color and element, and hands-on how-to guides. Each branch leads to detailed guides and matching jewelry in the Shop."
+    ],
+    "children": [
+      {"slug": "crystal-combinations", "title": "Crystal Combinations", "desc": "Which stones work together, and which to wear apart."},
+      {"slug": "crystals-for-condition", "title": "Crystals for Conditions", "desc": "Stones for anxiety, sleep, focus, protection, and more."},
+      {"slug": "crystals-by-color", "title": "Crystals by Color", "desc": "Choose stones by the energy each color carries."},
+      {"slug": "crystals-by-element", "title": "Crystals by Element", "desc": "Fire, Water, Air, and Earth stones and what they do."},
+      {"slug": "how-to", "title": "How to Work with Crystals", "desc": "Cleansing, charging, programming, grids, and care."}
+    ]
+  },
+  "astrology": {
+    "cat_id": 1572, "name": "Astrology", "count": 0, "parent": 0, "is_parent_hub": true,
+    "h2": "Explore Astrology",
+    "ps": [
+      "Astrology reads the movements of the planets as a mirror for life on Earth — your personality, your timing, your relationships, and the events that shape a season. This hub gathers every astrology branch on the site in one place.",
+      "From horoscopes and zodiac compatibility to the astrology events shaping the sky, the guides below cover how to read the stars and pair them with crystals."
+    ],
+    "children": [
+      {"slug": "horoscope", "title": "Horoscopes", "desc": "Monthly and yearly forecasts for every sign, each with a crystal of the month.", "cross_parent": "zodiac"},
+      {"slug": "zodiac-compatibility", "title": "Zodiac Compatibility", "desc": "How every sign pairs — strengths, clashes, and long-term potential.", "cross_parent": "zodiac"},
+      {"slug": "astrology-events", "title": "Astrology Events", "desc": "Retrogrades, eclipses, and the transits shaping each season."},
+      {"slug": "chinese-zodiac", "title": "Chinese Zodiac", "desc": "The 12 animal signs, their elements, and lucky crystals by birth year.", "cross_parent": ""}
+    ]
+  }
+}

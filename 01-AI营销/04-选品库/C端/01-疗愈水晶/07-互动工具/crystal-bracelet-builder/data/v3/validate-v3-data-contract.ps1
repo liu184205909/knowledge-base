@@ -152,7 +152,6 @@ function Assert-CatalogRows {
 
         $size = Get-NonNegativeNumber $row.size_mm 'size_mm' $rowNumber
         $price = Get-NonNegativeNumber $row.price 'price' $rowNumber
-        $weight = Get-NonNegativeNumber $row.weight_g 'weight_g' $rowNumber
         $occupiedLength = Get-NonNegativeNumber $row.occupied_length_mm 'occupied_length_mm' $rowNumber
         $displayScale = Get-NonNegativeNumber $row.display_scale 'display_scale' $rowNumber
         Assert-Condition ($displayScale -gt 0 -and $displayScale -le 10) "Row $rowNumber display_scale must be greater than zero and no more than 10."
@@ -162,7 +161,7 @@ function Assert-CatalogRows {
             Assert-Condition ($sortValue -eq '' -or $sortValue -match '^\d+$') "Row $rowNumber $sortField must be blank or a non-negative integer."
         }
         if ($variantStatus -eq 'live') {
-            Assert-Condition ($size -gt 0 -and $price -gt 0 -and $weight -gt 0 -and $occupiedLength -gt 0) "Row $rowNumber is live, so size_mm, price, weight_g, and occupied_length_mm must all be greater than zero."
+            Assert-Condition ($size -gt 0 -and $price -gt 0 -and $occupiedLength -gt 0) "Row $rowNumber is live, so size_mm, price, and occupied_length_mm must all be greater than zero."
         }
 
         $stockStatus = (Get-Text $row.stock_status).ToLowerInvariant()
@@ -175,7 +174,7 @@ function Assert-CatalogRows {
         if ($orientationMode -eq '') { $orientationMode = 'none' }
         Assert-Condition ($CatalogContract.orientation_mode_values -contains $orientationMode) "Row $rowNumber has an invalid orientation_mode."
         if ($orientationMode -ne 'none') {
-            Assert-Condition ($componentType -eq 'decor') "Row $rowNumber uses a directional orientation_mode but is not a decor Variant."
+            Assert-Condition ($componentType -eq 'accessory') "Row $rowNumber uses a directional orientation_mode but is not an accessory Variant."
         }
         $orientationValues = Get-StrictList $row.allowed_orientations 'allowed_orientations' $rowNumber
         $orientationDefaults = Get-OrientationDefaults $orientationMode
@@ -221,7 +220,7 @@ Assert-Condition ($contract.schema_version -eq 'ew-t17-v3-data-contract-2026-07'
 
 $catalogPath = Join-Path $DataDirectory $contract.catalog_import.file
 $catalogHeader = Read-CsvHeader $catalogPath
-$expectedCatalogHeaders = @('material_key', 'component_type', 'category_slug', 'name_en', 'primary_color', 'color_tags', 'intention_tags', 'material_image_url', 'material_status', 'material_sort_order', 'variant_key', 'size_mm', 'shape', 'price', 'weight_g', 'occupied_length_mm', 'display_scale', 'variant_image_url', 'stock_status', 'stock_quantity', 'compatibility', 'compatible_bead_sizes', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'variant_status', 'variant_sort_order', 'source_name')
+$expectedCatalogHeaders = @('material_key', 'component_type', 'library_tab_slug', 'category_slug', 'name_en', 'primary_color', 'color_tags', 'intention_tags', 'material_image_url', 'material_status', 'material_sort_order', 'variant_key', 'size_mm', 'shape', 'price', 'occupied_length_mm', 'display_scale', 'variant_image_url', 'stock_status', 'stock_quantity', 'compatibility', 'compatible_bead_sizes', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'variant_status', 'variant_sort_order', 'source_name')
 Assert-Condition ($expectedCatalogHeaders.Count -eq 30) 'Validator must encode all 30 approved import headers.'
 Assert-Condition ($contract.catalog_import.exact_header_count -eq 30) 'Catalog contract must declare 30 approved import headers.'
 Assert-Condition ($catalogHeader.Count -eq 30) 'Catalog import header must contain exactly 30 columns.'

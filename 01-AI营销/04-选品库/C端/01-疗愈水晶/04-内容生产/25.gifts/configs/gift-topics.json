@@ -4,7 +4,7 @@
     "dir": "04-内容生产/25.gifts",
     "created": "2026-07-17",
     "source": "gifts类目系统规划.md §二(7维度关键词)/§四(P0P1P2矩阵)/§六(首批20选题) + 跨主题C + 概念页补全",
-    "total": 43,
+    "total": 42,
     "url_rule": "全根级无前缀（/crystal-anniversary-gifts/），符合 site-url-rule；归档 category slug=crystal-gifts",
     "archive_category": "crystal-gifts",
     "vol_kd_source": "Semrush 3表(gifts规划§数据源) + 规划§二A",
@@ -100,25 +100,6 @@
       ],
       "needs_serp_check": false,
       "notes": "P0黄金切入点=15th=crystal传统主题"
-    },
-    {
-      "slug": "15th-anniversary-crystal-gifts",
-      "title": "The 15th Anniversary Crystal Gift Guide (Traditional + Modern)",
-      "recipient": null,
-      "occasion": "15th-anniversary",
-      "keyword": "15th anniversary crystal gifts",
-      "vol": 210,
-      "kd": 18,
-      "priority": "P1",
-      "subcategory": "anniversary",
-      "n_gifts": 10,
-      "crystals": [
-        "clear-quartz",
-        "rose-quartz",
-        "diamond"
-      ],
-      "needs_serp_check": false,
-      "notes": "争AIO(what anniversary is crystal)"
     },
     {
       "slug": "crystal-anniversary-gifts-for-her",

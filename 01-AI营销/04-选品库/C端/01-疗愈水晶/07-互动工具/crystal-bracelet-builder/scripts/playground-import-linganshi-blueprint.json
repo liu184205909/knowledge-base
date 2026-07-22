@@ -1,0 +1,20 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "landingPage": "/wp-admin/admin.php?page=ew-t17-materials",
+  "steps": [
+    {
+      "step": "activatePlugin",
+      "pluginName": "EarthWard T17 Bracelet Builder",
+      "pluginPath": "/wordpress/wp-content/plugins/plugin"
+    },
+    {
+      "step": "login",
+      "username": "admin",
+      "password": "password"
+    }
+  ]
+}

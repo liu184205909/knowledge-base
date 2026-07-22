@@ -39,7 +39,7 @@ The product keeps its standard Woo direct-purchase flow. The extra `Customize th
 
 `assets/catalog-template.csv` is the import contract. Each row is one purchasable variant. `material_key` and `variant_key` are stable, English slugs. Required columns are:
 
-`material_key`, `component_type`, `name_en`, `variant_key`, `size_mm`, `price`, `weight_g`, and `occupied_length_mm`.
+`material_key`, `component_type`, `name_en`, `variant_key`, `size_mm`, `price`, and `occupied_length_mm`.
 
 The importer creates or updates records by stable ID. Use `draft` until price, image source, compatibility, and production fields have been reviewed. Material records are intentionally separate from WooCommerce products.
 

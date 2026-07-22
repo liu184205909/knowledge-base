@@ -23,7 +23,7 @@
 1. 只将已通过图片、规格、兼容性、库存、价格和生产可行性审核的行放入 `approved-production-catalog.import.csv`。
 2. 每个 `material_key`、`variant_key` 必须稳定且全局唯一；不得复用遗留全局珠径逻辑。一个尺寸是一条独立 Variant。
 3. `component_type` 仅可为 `bead`、`decor` 或 `finish`；`material_status` 仅可为 `draft` 或 `live`；`variant_status` 仅可为 `draft`、`live` 或 `disabled`。
-4. 每个导入行都必须填写且使用非负数值的 `size_mm`、`price`、`weight_g` 与 `occupied_length_mm`。`variant_status=live` 时这四项必须全部大于 `0`；0.1.8 起空白、非数字或不合格 live 值会被导入器拒绝，绝不会再降级为 `0`。
+4. 每个导入行都必须填写且使用非负数值的 `size_mm`、`price` 与 `occupied_length_mm`。`variant_status=live` 时这三项必须全部大于 `0`；空白、非数字或不合格 live 值会被导入器拒绝，绝不会再降级为 `0`。重量不属于 T17 v3 的目录、报价或订单快照字段。
 5. `stock_status` 只能为 `instock`、`outofstock` 或 `onbackorder`；留空时导入器默认 `instock`。`stock_quantity` 可留空表示不追踪数量，填写时只能是非负整数。不可用或待确认的 Variant 不应标为 `live`，不以估算库存替代实际库存。
 6. 导入后在 WordPress 后台回读 Material/Variant 数量、状态和价格版本；再调用 `/wp-json/ew-t17/v1/catalog` 核对仅返回 `live` 记录。
 

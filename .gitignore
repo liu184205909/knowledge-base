@@ -88,3 +88,15 @@ nul
 **/crystal-bracelet-builder/data/v3/research/domestic-image-evidence*/
 **/crystal-bracelet-builder/data/v3/research/overseas-visual*/
 **/crystal-bracelet-builder/images/raw/
+
+# 所有图片和视频文件不推送（体积大，本地保留）
+# 如需例外，用 !path/to/file.webp 单独放行
+*.webp
+*.png
+*.jpg
+*.jpeg
+*.mp4
+*.gif
+*.bmp
+*.svg
+*.ico

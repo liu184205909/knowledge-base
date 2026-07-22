@@ -61,13 +61,13 @@ PLACEHOLDER INSTRUCTIONS:
 - AI_QUICK_N (one per crystal): ONE short line — what crystal #N is best for as a gift here (e.g. "Best for enduring love & milestone anniversaries").
 - AI_INTRO: why crystals make meaningful gifts for ${recipient}/${occasion} — symbolism, longevity, personalization vs ordinary gifts.
 - AI_GIFTS_INTRO: 2-3 sentences introducing the curated list.
-- AI_GIFT_N_MEANING: the stone's mineralogy + traditional symbolism as readable prose (2-3 sentences).
+- AI_GIFT_N_MEANING: include ONE specific mineralogy fact (Mohs hardness / crystal system / chemical formula, drawn from the CRYSTAL DATA) woven into traditional symbolism as readable prose (2-3 sentences). Ground the meaning in something verifiable.
 - AI_GIFT_N_WHY: why THIS stone suits ${recipient}/${occasion} specifically — concrete, not generic "X is calming".
 - AI_GIFT_N_HOWTO: a thoughtful way to gift/present it or a small gifting ritual (differentiation competitors lack).
 - AI_BY_INTENTION: how to choose by intention — love (Rose Quartz) / protection (Black Tourmaline) / prosperity (Citrine) / calm (Amethyst). Short bullets or mini-table.
-- AI_EASTERN: Eastern anchor — accurate tradition per the direction below; cultural symbolism for reflection, NOT cultural appropriation or guarantees.
+- AI_EASTERN: name the SPECIFIC source — a named tradition / text / scholar (e.g. "in Traditional Chinese Medicine", "in Tibetan Buddhist practice", "in the Vedas", "Master Lin Yun's BTB lineage", "in Ayurveda") — NEVER vague "Eastern tradition". Frame as cultural symbolism for reflection, NOT appropriation or guarantees. If unsure of a precise source, keep the claim modest and attributed ("some traditions associate...").
   EASTERN DIRECTION: ${art.eastern_note}
-- AI_HOW_TO_CHOOSE: budget tiers ($ / $$ / $$$) / recipient's intention / relationship stage / cleansing before gifting (mention /tools/crystal-cleansing-timer/).
+- AI_HOW_TO_CHOOSE: NEUTRAL buying guidance — budget tiers / recipient's intention / quality checks (Mohs hardness for daily wear, ask whether a stone is treated or dyed) / relationship stage. Do NOT push our shop; advise in generic terms ("look for...", "check that..."). Mention cleansing before gifting (/tools/crystal-cleansing-timer/).
 - AI_META_DESC: SEO meta description <=155 chars, includes primary keyword.
 - AI_EXCERPT: 1-2 sentence post excerpt.
 - AI_RELATED: output these exact <li> lines (pick 4-6 most relevant):
@@ -81,6 +81,7 @@ CRITICAL RULES:
 4. Three perspectives woven naturally (no labels): crystal mineralogy + traditional symbolism + modern gifting application.
 5. Output HTML <p> paragraphs (<strong> key terms, <em> notes). For each placeholder output: "@@@PLACEHOLDER@@@" then its content then a blank line.
 6. Pricing: use $ / $$ / $$$ tiers only — never invent exact dollar prices.
+7. HONESTY: energy, healing, and symbolism read as traditional meaning and cultural belief — NOT scientifically established effects. Never present belief as fact; prefer "traditionally associated with", "many people find", "in {named tradition}".
 
 OUTPUT ALL ${phs.length} placeholders. No commentary.
 

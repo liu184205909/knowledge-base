@@ -301,6 +301,47 @@ brew install ffmpeg
 
 ---
 
+### video-to-subtitle-summary-skill（视频转字幕+AI总结）
+
+**GitHub**: https://github.com/imlewc/video-to-subtitle-summary-skill
+
+**简介**: Claude Code / Codex Skill，将抖音、小红书、B站、YouTube 视频或本地视频/音频文件转换为字幕文本并生成 AI 摘要
+
+**核心功能**: 在线视频解析下载（或直接抓字幕）→ ASR 语音转文字 → AI 总结生成
+
+**特点**:
+- **多平台覆盖**：抖音、小红书、B站、YouTube + 本地 `.mp4`/`.mp3`/`.wav` 文件
+- **无字幕也能用**：默认用 `faster-whisper` 本地 ASR，不需要视频本身有字幕
+- YouTube 优先用 `yt-dlp` 直接抓人工/自动字幕，没有才回退 ASR
+- 支持火山引擎 VC API 作为云端 ASR 后端（可选）
+- 输出：带时间戳的字幕文本 + AI 结构化总结
+
+**与现有工具的关系**:
+- **video-use**：视频后期处理（剪辑/去口癖/调色/烧字幕）——**做视频**
+- **video-to-subtitle-summary**：视频内容提取（转字幕+AI总结）——**读视频**
+- **MediaCrawler**：社媒数据采集（抓评论/点赞/元数据）——**抓数据**
+- 三者互补，不冲突
+
+**外部依赖**:
+- FFmpeg（提取音频，必需）
+- faster-whisper（本地 ASR，默认后端）
+- yt-dlp（B站下载 + YouTube 字幕抓取）
+- AI Douyin API Key（抖音/小红书/B站在线视频解析，可选）
+
+**快速使用**:
+```bash
+# 安装
+npx skills add imlewc/video-to-subtitle-summary-skill --agent claude-code -y -g
+
+# 使用（在 Claude Code 里直接粘贴链接或文件路径）
+# "总结这个视频 https://www.douyin.com/video/xxx"
+# "把这个本地视频转成字幕 D:/videos/demo.mp4"
+```
+
+**适用场景**: 视频内容调研、竞品视频拆解、课程/演讲转文字、播客内容提取
+
+---
+
 ### MoneyPrinterTurbo
 
 **GitHub**: https://github.com/harry0703/MoneyPrinterTurbo

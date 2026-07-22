@@ -1,4 +1,4 @@
-# Stonelab interaction and direction audit — 2026-07-17
+# StoneLAB product-card, interaction and direction audit — 2026-07-17 to 2026-07-19
 
 ## Scope and evidence boundary
 
@@ -6,6 +6,27 @@
 - Sources: the creator profile at `https://v.douyin.com/Y_1njxYDsMg/`, the three supplied short videos, and the supplied desktop video at `https://www.douyin.com/video/7649699791882973178`.
 - The profile currently labels 22 works. Its rendered DOM exposes 20 video links plus one image note; the supplied long desktop video accounts for the remaining directly reviewed work surface. This is an interaction audit, not a production-material source.
 - Published audio contains narration/music. No competitor sound file is copied. T17 uses an original short Web Audio cue.
+- This file is the single durable StoneLAB reference for T17. Later implementation notes should update this file instead of creating a second competitor-observation document.
+
+## Observed reference versus adopted T17 decisions
+
+| Surface | StoneLAB observation | T17 decision |
+| --- | --- | --- |
+| Responsive layout | The mini-program is vertically stacked. The supplied desktop recording also shows a stacked working surface. | Mobile stays stacked. Desktop keeps the already accepted 55:45 design/library split because it uses the available width more efficiently and is part of the T17 v3 baseline. |
+| Material navigation | Crystal, natural-stone, decor and shaped-material groups are exposed as browseable groups with a persistent category rail. | Crystal and natural-stone beads share the T17 bead library and use subcategories/filters. Accessories and directional decor remain separate material classes because their compatibility and orientation contracts differ. |
+| Product cards | Compact image, name, one current size/price line, and size stepping when alternatives exist. A whole-card tap adds the currently selected item. | Mobile uses two cards per row and desktop three. `- / +` changes the selected Variant only; it never changes quantity. Single-Variant cards keep the same reserved footer height but show no `- / +`. |
+| Released tray | Added items move into the tray, collide, rebound and displace existing items before settling. | Use bounded two-dimensional collision feedback with no overlap or rim overflow. This is visual placement only; recipe order and server quote data remain deterministic. |
+| Assemble/release | A separate action gathers scattered materials into a bracelet and can release them again. | Assemble is repeatable, not a one-shot completion action. It arranges by occupied width and applies automatic direction; release returns to safe free placement. |
+| Fit feedback | The reference shows suggested wrist range and too-tight/too-loose prompts without silently changing the design. | T17 reports Length, Weight, Pieces/target and Suggested wrist. It may recommend an approximate add/remove count but never mutates the recipe automatically. |
+
+## Product-card and catalogue contract learned from the reference
+
+- A catalogue row represents one material style; its size choices are independent Variants with their own price, image, display scale, weight, occupied length and availability.
+- The card shows exactly one active `size + price` line. Stepping size changes the preview and active Variant. It does not render all available sizes at once.
+- The media slot scales around a fixed centre and uses a visual minimum/maximum. A 6 mm bead remains readable and a possible 15 mm bead cannot overflow the card; this display compression does not alter the tray's relative Variant scale.
+- The count badge is recipe feedback. Quantity changes only when the whole card is tapped or an item is removed from the tray.
+- Shaped beads and single-size accessories may have no alternative size. Their cards retain alignment space while omitting misleading size controls.
+- Names, categories, sizes and public prices may be retained as attributed research evidence. They are not Earthward product facts until an Earthward material, supplier, cost, asset-rights and production review has approved them.
 
 ## Creator-work inventory reviewed
 
@@ -53,19 +74,40 @@ Automatic layout uses `layout_orientation` when supplied. Without it, the local 
 
 ## Add-material motion and sound contract
 
-| Surface | Start | End | Normal motion | Reduced-motion path |
-| --- | --- | --- | --- | --- |
-| Mobile | The tapped product-card image below the tray | The deterministic insertion point inside the tray | 420 ms upward arc | 160 ms direct settle, no arc/overshoot |
-| Desktop | The tapped product-card image in the right library | The deterministic insertion point in the left design area | 460 ms leftward arc | 160 ms direct settle, no arc/overshoot |
+| Surface | Launch relationship | First contact | After contact |
+| --- | --- | --- | --- |
+| Mobile | The tapped card is below the tray, so the token enters upward from the lower side. | It contacts an existing item when one blocks the path; otherwise it reaches the upper inset rim. | Rebound follows the measured collision normal, may produce further material/rim contacts, and settles without overlap. |
+| Desktop | The tapped card is in the right library, so the token enters from the right and travels left across the tray. | It contacts an existing item when one blocks the path; otherwise it reaches the left inset rim. | Rebound follows the measured collision normal, may produce further material/rim contacts, and settles without overlap. |
 
 - The moving token is a clone of the selected real material image/fallback already rendered in the card.
 - A whole-card add is immediate and does not wait for the animation to finish. Assemble remains usable while the quote refreshes.
+- The incoming item must not tunnel through existing items to force a rim collision. With a populated tray, a material collision can correctly be the first contact.
+- Entry, rim reflection, pair separation and final settling are one continuous motion. Browser `prefers-reduced-motion` may shorten decorative card-flight effects but must not bypass the collision solver.
+- Verified current T17 empty-tray behaviour records more than one normal-vector rim rebound on both desktop and mobile; controlled multi-item tests record `first_impact=material` when another bead is in the path.
 - Crystal beads play one original approximately 105 ms glass/marble cue on both mobile and desktop.
 - Size `- / +`, filters, drag, reorder, Assemble and non-bead materials do not play the cue.
 - All materials can use the visual flight; decor adopts its automatic strand direction when rendered/assembled.
+
+## Template and editing observations
+
+- Importing a complete design should create an assembled, editable sequence rather than a flattened preview image.
+- Adding another material to an imported assembled design keeps the design editable and reflows the assembled ring; it does not discard the imported Variant identities.
+- Dragging in assembled mode changes sequence order. Dragging in released mode changes free placement. Dragging outside the safe tray boundary removes the item, and Undo restores the previous local edit.
+- Direction is material data plus layout behaviour, not a global direction button. Round beads stay fixed; spacers align to the tangent; charms, pendants and hanging pieces point outward unless an approved Variant explicitly says otherwise.
+
+## Research catalogue and price-use policy
+
+Competitor catalogue records may be kept in `data/v3/research/` only when every row retains source identity and review state. The minimum research fields are source name, source URL or work ID, captured date, source category/name, observed size, displayed price, currency, unit basis, image-evidence path and `research-only` status.
+
+- Publicly displayed prices are benchmarking evidence, not Earthward final prices. They may be normalized for comparison but must not be written into the live catalogue without Earthward cost/margin review and a new price version.
+- Competitor images, screenshots, videos, logos, card compositions and audio are research evidence only. Visibility on a public page does not grant Earthward a commercial image licence.
+- For the current local UI stage, the 235 explicitly named Linganshi images may be referenced as `temporary-draft-enabled` fixtures so product-card structure and Variant behaviour can be tested. Their source identity must remain visible in the research mapping workbook; this temporary use is not a statement that they are final Earthward assets.
+- Temporary competitor imagery must not be bundled into a public production catalogue, public Woo product, final preview export or candidate ZIP. Formal replacement remains a later asset gate and does not block local interaction work.
+- T17 may adopt interaction patterns, information hierarchy, taxonomy ideas and factual size/price observations. It must not present a copied competitor card or image as an Earthward product.
 
 ## Production-data boundary
 
 - This audit does not approve, price or import any candidate material.
 - Production assets still require category, anchor, occupied length, compatibility and orientation review through the existing review/import gates.
 - Research videos and extracted QA frames remain under `visual-qa/` and must never be copied into the production catalog.
+- Key implementation evidence is retained in `interaction-acceptance-spec-20260718.md`, `design-qa.md`, `.fable/competitor-stonelab-empty-1-4-live.mp4`, `.fable/competitor-stonelab-template-add.mp4`, and the matching `visual-qa/responsive-entry-*.png` screenshots. Intermediate debug frames are not product documentation.

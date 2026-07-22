@@ -7,6 +7,7 @@ $required = @(
   't17-builder-ui.css',
   't17-builder-ui.js',
   't17-builder-mock-config.js',
+  't17-builder-linganshi-draft-catalog.js',
   'preview.html',
   't17-builder-config.php'
 )
@@ -26,9 +27,15 @@ foreach ($needle in @('data-t17-ui', 'data-ring', 'data-grid', 'data-dialog="wri
   if ($fragment -notmatch [regex]::Escape($needle)) { throw "Fragment is missing $needle" }
 }
 $preview = Get-Content -LiteralPath (Join-Path $root 'preview.html') -Raw
-foreach ($needle in @('t17-builder-mock-config.js', 't17-builder-ui.js')) {
+foreach ($needle in @('t17-builder-mock-config.js', 't17-builder-linganshi-draft-catalog.js', 't17-builder-ui.js')) {
   if ($preview -notmatch [regex]::Escape($needle)) { throw "Local preview is missing $needle" }
 }
+$linganshiCatalog = Get-Content -LiteralPath (Join-Path $root 't17-builder-linganshi-draft-catalog.js') -Raw
+foreach ($needle in @('ew-t17-v3-linganshi-235-draft-fixture', 'Linganshi 235-card development draft', 'config.mockCatalog')) {
+  if ($linganshiCatalog -notmatch [regex]::Escape($needle)) { throw "Local 235-card catalog is missing $needle" }
+}
+$linganshiAssets = @(Get-ChildItem -LiteralPath (Join-Path $root 'assets\linganshi-draft') -File -Filter '*.webp')
+if ($linganshiAssets.Count -ne 235) { throw "Local 235-card catalog must have exactly 235 WebP assets; found $($linganshiAssets.Count)." }
 if ($preview -match [regex]::Escape('tray-default.png')) { throw 'Local preview must not retain the wood tray fallback.' }
 foreach ($needle in @('trayThemes', 'tray-celadon-alpha.png', 'tray-blue-alpha.png', 'tray-ice-alpha.png', 'tray-walnut-alpha.png')) {
   if ($mockConfig -notmatch [regex]::Escape($needle)) { throw "Local fixture is missing PNG tray theme $needle" }
@@ -53,5 +60,7 @@ foreach ($needle in @('Development fixture — not for sale', 'hero-dzi-bead-1-e
   if ($mockConfig -notmatch [regex]::Escape($needle)) { throw "Local fixture must disclose and contain its intended visual QA source: $needle" }
 }
 if ($config -notmatch 'is_page\(array\(50236, 54723\)\)') { throw 'Config snippet must remain page-scoped.' }
+if ($mockConfig -notmatch [regex]::Escape("physicsMotion: 'essential'") -or $script -notmatch [regex]::Escape("skipPhysics=reduceMotion&&physicsMotionPolicy==='none'")) { throw 'Core scatter collision must remain active when the browser only requests reduced decorative motion.' }
+if ($script -match [regex]::Escape('if(reduceMotion){')) { throw 'Reduced-motion preference must not bypass the core scatter collision solver.' }
 
 Write-Output 'PASS: independent T17 frontend bundle has the required backend-only boundary.'

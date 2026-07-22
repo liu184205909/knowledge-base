@@ -2,6 +2,22 @@
 
 These scripts verify contracts and installed runtime behavior. They do not create WordPress pages, upload plugins, import production catalog data, or publish content.
 
+## Research-only image mapping
+
+`build_linganshi_image_mapping_review.py` reads the existing 244-row Linganshi workbook and the desktop research-image folder, then writes a separate mapping workbook with a 235-row product master, the retained 244 Variant rows, pending-Variant products and legacy alias/missing-image review. It never copies images or changes the source catalogue workbook. All 235 named images are enabled as temporary local draft assets; production import remains a later gate for complete Variant, category, direction, compatibility, occupancy and pricing data.
+
+`build_linganshi_live_catalog_mapping.py` is the current consolidation entrypoint. It combines the 235 named WebP files, the retained legacy Variant workbook, and the captured current mini-program material response. It writes:
+
+- `data/v3/research/linganshi-image-mapping-review-20260720.xlsx`;
+- `data/v3/research/linganshi-235-draft-catalog-20260720.import.csv`;
+- `data/v3/research/linganshi-235-media-upload-manifest-20260720.csv`.
+
+The import file intentionally creates draft-only records. A product with no reliable size/price evidence receives one zero-value placeholder Variant so the 235-image audit remains complete without inventing sellable data. WordPress rejects zero-value live Variants, and these rows must not be promoted until English names, weights, occupied lengths, stock, direction and compatibility are reviewed. Re-running the script preserves any WordPress attachment IDs and media URLs already recorded in the media manifest.
+
+`upload_linganshi_draft_media.py` is an idempotent WordPress Media uploader for the manifest. It is dry-run by default and requires both `--execute` and an exact `--confirm-site=<WP_SITE host>` before any external write. It checks for an existing attachment by stable Material key before uploading and checkpoints the manifest after every successful item. Do not execute it against the public site during the local-acceptance stage.
+
+Do not use the older `build_linganshi_catalog_workbook.py` to perform image mapping: its CSV inputs cover only a subset of the existing workbook and rebuilding would discard manually retained Variant rows.
+
 ## Local source checks
 
 Run before creating a candidate ZIP:

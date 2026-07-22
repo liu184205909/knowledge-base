@@ -12,8 +12,8 @@ final class EW_T17_Frontend {
     }
 
     public static function register_assets() {
-        wp_register_style('ew-t17-builder', EW_T17_URL . 'assets/css/t17-builder.css', array(), EW_T17_VERSION);
-        wp_register_script('ew-t17-builder', EW_T17_URL . 'assets/js/t17-builder.js', array(), EW_T17_VERSION, true);
+        wp_register_style('ew-t17-builder', EW_T17_URL . 'assets/css/t17-builder-ui.css', array(), EW_T17_VERSION);
+        wp_register_script('ew-t17-builder', EW_T17_URL . 'assets/js/t17-builder-ui.js', array(), EW_T17_VERSION, true);
     }
 
     public static function render_shortcode($atts) {
@@ -24,21 +24,37 @@ final class EW_T17_Frontend {
         }
         $recipe = $product_id ? json_decode((string) get_post_meta($product_id, '_ew_t17_recipe_json', true), true) : null;
         $scene = $product_id ? (string) get_post_meta($product_id, '_ew_t17_primary_scene', true) : '';
+        $library_tabs = EW_T17_Catalog::library_tabs();
 
         wp_enqueue_style('ew-t17-builder');
         wp_enqueue_script('ew-t17-builder');
-        wp_localize_script('ew-t17-builder', 'EW_T17', array(
+        wp_localize_script('ew-t17-builder', 'EW_T17_UI_CONFIG', array(
             'restUrl' => esc_url_raw(rest_url('ew-t17/v1/')),
             'ajaxUrl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('ew_t17_builder'),
             'cartUrl' => function_exists('wc_get_cart_url') ? wc_get_cart_url() : '',
             'currencySymbol' => function_exists('get_woocommerce_currency_symbol') ? get_woocommerce_currency_symbol() : '$',
+            'physicsMotion' => 'essential',
+            'mockMode' => false,
+            'trayImage' => EW_T17_URL . 'assets/images/tray-default.png',
+            'trayBrand' => array(
+                'imageUrl' => ($tray_logo_id = absint(get_option('ew_t17_tray_logo_id', 0))) ? (string) wp_get_attachment_image_url($tray_logo_id, 'full') : esc_url_raw((string) get_option('ew_t17_tray_logo_url', '')),
+                'widthPx' => max(24, min(160, absint(get_option('ew_t17_tray_logo_size_px', 54)))),
+                'alt' => 'Earthward',
+                'textFallback' => 'Earthward',
+            ),
             'strings' => array(
                 'catalogEmpty' => __('The material catalog is being prepared. Please return soon.', 'earthward-t17'),
                 'quoteError' => __('We could not update your design price.', 'earthward-t17'),
                 'finishDesign' => __('Finish Design', 'earthward-t17'),
             ),
         ));
+        ob_start();
+        include EW_T17_DIR . 'assets/partials/t17-builder-fragment.php';
+        return ob_get_clean();
+
+        // Legacy shortcode markup below is intentionally unreachable during
+        // this transition and will be removed once the v3 package is accepted.
         ob_start();
         ?>
         <section class="ew-t17-builder" id="t17-builder" data-product-id="<?php echo esc_attr($product_id); ?>" data-scene="<?php echo esc_attr($scene); ?>" data-recipe="<?php echo esc_attr(wp_json_encode($recipe ?: new stdClass())); ?>" data-insertion-policy="after-selected-or-append" data-insertion-position="append" data-selected-item-index="" data-selected-variant-key="" data-selected-component-type="" data-orientation-state="none">
@@ -60,11 +76,11 @@ final class EW_T17_Frontend {
                             <button type="button" class="ew-t17-selection-toolbox__close" data-selection-action="close" aria-label="<?php esc_attr_e('Dismiss selected bead controls', 'earthward-t17'); ?>">&times;</button>
                         </aside>
                     </div>
-                    <div class="ew-t17-builder__metrics"><span><small><?php esc_html_e('Used length', 'earthward-t17'); ?></small><strong data-metric="length">0 mm</strong></span><span><small><?php esc_html_e('Weight', 'earthward-t17'); ?></small><strong data-metric="weight">0 g</strong></span><span><small><?php esc_html_e('Pieces', 'earthward-t17'); ?></small><strong data-metric="pieces">0</strong></span></div>
+                    <div class="ew-t17-builder__metrics"><span><small><?php esc_html_e('Used length', 'earthward-t17'); ?></small><strong data-metric="length">0 mm</strong></span><span><small><?php esc_html_e('Pieces', 'earthward-t17'); ?></small><strong data-metric="pieces">0</strong></span></div>
                     <div class="ew-t17-builder__actions"><button type="button" data-action="reset"><?php esc_html_e('Reset', 'earthward-t17'); ?></button><button type="button" data-action="save"><?php esc_html_e('Save', 'earthward-t17'); ?></button><button type="button" class="is-primary" data-action="finish"><?php esc_html_e('Finish Design', 'earthward-t17'); ?></button></div>
                 </section>
                 <section class="ew-t17-builder__catalog" aria-label="<?php esc_attr_e('Materials', 'earthward-t17'); ?>">
-                    <div class="ew-t17-builder__catalog-head"><div class="ew-t17-tabs" role="tablist"><button type="button" class="is-active" data-type="bead" role="tab">Beads</button><button type="button" data-type="decor" role="tab">Decor</button><button type="button" data-type="finish" role="tab">Finish</button></div><button type="button" class="ew-t17-search" data-action="toggle-search" aria-label="<?php esc_attr_e('Search materials', 'earthward-t17'); ?>">⌕</button></div>
+                    <div class="ew-t17-builder__catalog-head"><div class="ew-t17-tabs" role="tablist"><?php foreach ($library_tabs as $index => $tab) : ?><button type="button" class="<?php echo $index === 0 ? 'is-active' : ''; ?>" data-type="<?php echo esc_attr($tab['slug']); ?>" role="tab"><?php echo esc_html($tab['label']); ?></button><?php endforeach; ?></div><button type="button" class="ew-t17-search" data-action="toggle-search" aria-label="<?php esc_attr_e('Search materials', 'earthward-t17'); ?>">⌕</button></div>
                     <label class="ew-t17-search-field"><span class="screen-reader-text"><?php esc_html_e('Search materials', 'earthward-t17'); ?></span><input type="search" placeholder="Search materials" data-search></label>
                     <div class="ew-t17-builder__filters" data-filters></div>
                     <div class="ew-t17-builder__grid" data-grid></div>

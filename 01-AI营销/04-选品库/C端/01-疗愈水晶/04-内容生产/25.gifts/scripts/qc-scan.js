@@ -7,8 +7,8 @@
 const fs = require('fs'), path = require('path');
 const DIR = path.resolve(__dirname, '..', 'articles');
 const files = fs.readdirSync(DIR).filter(f => f.endsWith('.json'));
-// 合规红线（礼物向：不夸大保证爱情/关系/财富/运势）— 'cures ' 已删（secures 子串误报，真 cure 由 'cure disease' 覆盖）
-const compliance = ['treats illness', 'guarantees', 'will bring wealth', 'will bring love', 'will bring luck', 'will fix your', 'removes negative energy', 'scientifically proven', '100% guaranteed', 'cure disease', 'guarantee love', 'ensure love', 'guaranteed to'];
+// 合规红线（礼物向：不夸大保证爱情/关系/财富/运势）— 'cures '/'guarantees' 已删（secures 子串误报 / 新prompt HONESTY 致AI用否定语境"not a guarantee"合规；正面由 'guaranteed to'/'100% guaranteed' 覆盖）
+const compliance = ['treats illness', 'will bring wealth', 'will bring love', 'will bring luck', 'will fix your', 'removes negative energy', 'scientifically proven', '100% guaranteed', 'cure disease', 'guarantee love', 'ensure love', 'guaranteed to'];
 // AI 套话
 const aicliches = ['delve', 'harness', 'tapestry', 'unlock', 'elevate', 'intricate', 'seamless', 'leverage', 'foster', 'paramount', 'plethora', 'myriad', 'realm of', 'manifest abundance', 'elevate your'];
 const issues = {};

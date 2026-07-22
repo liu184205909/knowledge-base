@@ -5,6 +5,7 @@ defined('ABSPATH') || exit;
 final class EW_T17_Install {
     private const REQUIRED_MATERIAL_COLUMNS = array(
         'category_slug',
+        'library_tab_slug',
         'sort_order',
     );
 
@@ -37,7 +38,8 @@ final class EW_T17_Install {
         dbDelta("CREATE TABLE {$materials} (
             id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
             material_key varchar(96) NOT NULL,
-            component_type varchar(24) NOT NULL DEFAULT 'bead',
+            component_type varchar(24) NOT NULL DEFAULT 'crystal',
+            library_tab_slug varchar(64) NOT NULL DEFAULT 'crystal',
             category_slug varchar(64) NOT NULL DEFAULT '',
             name_en varchar(190) NOT NULL,
             internal_name varchar(190) NOT NULL DEFAULT '',
@@ -55,6 +57,7 @@ final class EW_T17_Install {
             PRIMARY KEY  (id),
             UNIQUE KEY material_key (material_key),
             KEY component_type (component_type),
+            KEY library_tab_slug (library_tab_slug),
             KEY status (status)
         ) {$charset};");
 
@@ -65,7 +68,6 @@ final class EW_T17_Install {
             size_mm decimal(7,2) NOT NULL DEFAULT 0,
             shape varchar(48) NOT NULL DEFAULT 'round',
             price decimal(12,2) NOT NULL DEFAULT 0,
-            weight_g decimal(10,3) NOT NULL DEFAULT 0,
             occupied_length_mm decimal(10,3) NOT NULL DEFAULT 0,
             display_scale decimal(8,3) NOT NULL DEFAULT 1,
             image_id bigint(20) unsigned NOT NULL DEFAULT 0,
@@ -94,6 +96,13 @@ final class EW_T17_Install {
             update_option('ew_t17_db_upgrade_error', __('T17 catalog tables are missing one or more required catalog columns.', 'earthward-t17'));
             return;
         }
+
+        // Keep existing records during the v3 taxonomy rename. Packaging is not
+        // currently a material-library type; old Finish rows remain disabled.
+        $wpdb->query("UPDATE {$materials} SET component_type = 'crystal' WHERE component_type = 'bead'");
+        $wpdb->query("UPDATE {$materials} SET component_type = 'accessory' WHERE component_type = 'decor'");
+        $wpdb->query("UPDATE {$materials} SET library_tab_slug = component_type WHERE library_tab_slug = '' OR library_tab_slug IS NULL");
+        $wpdb->query("UPDATE {$materials} SET status = 'disabled' WHERE component_type IN ('finish', 'packaging')");
 
         update_option('ew_t17_db_version', EW_T17_VERSION);
         delete_option('ew_t17_db_upgrade_error');
