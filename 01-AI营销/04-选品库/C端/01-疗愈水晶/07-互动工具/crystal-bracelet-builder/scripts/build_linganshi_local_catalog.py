@@ -74,7 +74,6 @@ def main() -> None:
                 "id": row["variant_key"],
                 "size_mm": size,
                 "price": price,
-                "weight_g": number(row["weight_g"]),
                 "occupied_length_mm": number(row["occupied_length_mm"]),
                 "display_scale": display_scale(size, row["component_type"]),
                 "compatible_bead_sizes": [],

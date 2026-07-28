@@ -139,6 +139,7 @@ function Assert-CatalogRows {
         $rowNumber++
         $materialKey = Assert-StrictKey $row.material_key 'material_key' $rowNumber
         [void](Assert-StrictKey $row.category_slug 'category_slug' $rowNumber $true)
+        Assert-Condition (-not [string]::IsNullOrWhiteSpace((Get-Text $row.category_label))) "Row $rowNumber requires a human-readable category_label."
         $variantKey = Assert-StrictKey $row.variant_key 'variant_key' $rowNumber
         Assert-Condition (-not [string]::IsNullOrWhiteSpace((Get-Text $row.name_en))) "Row $rowNumber requires name_en."
         $componentType = (Get-Text $row.component_type).ToLowerInvariant()
@@ -220,10 +221,10 @@ Assert-Condition ($contract.schema_version -eq 'ew-t17-v3-data-contract-2026-07'
 
 $catalogPath = Join-Path $DataDirectory $contract.catalog_import.file
 $catalogHeader = Read-CsvHeader $catalogPath
-$expectedCatalogHeaders = @('material_key', 'component_type', 'library_tab_slug', 'category_slug', 'name_en', 'primary_color', 'color_tags', 'intention_tags', 'material_image_url', 'material_status', 'material_sort_order', 'variant_key', 'size_mm', 'shape', 'price', 'occupied_length_mm', 'display_scale', 'variant_image_url', 'stock_status', 'stock_quantity', 'compatibility', 'compatible_bead_sizes', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'variant_status', 'variant_sort_order', 'source_name')
-Assert-Condition ($expectedCatalogHeaders.Count -eq 30) 'Validator must encode all 30 approved import headers.'
-Assert-Condition ($contract.catalog_import.exact_header_count -eq 30) 'Catalog contract must declare 30 approved import headers.'
-Assert-Condition ($catalogHeader.Count -eq 30) 'Catalog import header must contain exactly 30 columns.'
+$expectedCatalogHeaders = @('material_key', 'component_type', 'library_tab_slug', 'category_slug', 'category_label', 'name_en', 'primary_color', 'color_tags', 'intention_tags', 'material_image_url', 'material_status', 'material_sort_order', 'variant_key', 'size_mm', 'shape', 'price', 'occupied_length_mm', 'display_scale', 'variant_image_url', 'stock_status', 'stock_quantity', 'compatibility', 'compatible_bead_sizes', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'variant_status', 'variant_sort_order', 'source_name')
+Assert-Condition ($expectedCatalogHeaders.Count -eq 31) 'Validator must encode all 31 approved import headers.'
+Assert-Condition ($contract.catalog_import.exact_header_count -eq 31) 'Catalog contract must declare 31 approved import headers.'
+Assert-Condition ($catalogHeader.Count -eq 31) 'Catalog import header must contain exactly 31 columns.'
 Assert-Condition (($contract.catalog_import.headers -join ',') -eq ($expectedCatalogHeaders -join ',')) 'Catalog contract headers do not match the strict importer header list.'
 Assert-Condition (($catalogHeader -join ',') -eq ($expectedCatalogHeaders -join ',')) 'Catalog import header must match the current importer contract exactly.'
 $catalogRows = @(Import-Csv -LiteralPath $catalogPath -Encoding UTF8)
@@ -275,7 +276,7 @@ Assert-Condition ($recipe._template_status -like 'NOT_VALID_FOR_WOO*') 'Official
 Assert-Condition ($null -eq $recipe._ew_t17_recipe_json.target_wrist_cm) 'Official recipe template must not contain a wrist value.'
 
 Write-Output 'PASS: v3 data contract is valid.'
-Write-Output "PASS: approved production catalog has the exact 30-column importer header and $($catalogRows.Count) valid data row(s)."
+Write-Output "PASS: approved production catalog has the exact 31-column importer header and $($catalogRows.Count) valid data row(s)."
 Write-Output "PASS: decor orientation review has $($orientationRows.Count) validated non-production review row(s)."
 Write-Output 'PASS: 20 legacy candidates remain non-importable with blank production targets.'
 Write-Output 'PASS: official recipe JSON remains an invalid placeholder template.'

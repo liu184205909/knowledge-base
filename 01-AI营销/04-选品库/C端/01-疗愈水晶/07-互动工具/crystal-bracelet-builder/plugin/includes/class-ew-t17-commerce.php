@@ -24,6 +24,13 @@ final class EW_T17_Commerce {
             'callback' => array(__CLASS__, 'get_official_design'),
             'permission_callback' => '__return_true',
         ));
+        register_rest_route('ew-t17/v1', '/checkout/status', array(
+            'methods' => WP_REST_Server::READABLE,
+            'callback' => array(__CLASS__, 'checkout_status'),
+            'permission_callback' => static function () {
+                return current_user_can('manage_woocommerce');
+            },
+        ));
     }
 
     public static function get_official_design(WP_REST_Request $request) {
@@ -44,6 +51,29 @@ final class EW_T17_Commerce {
             'price_version' => (string) $product->get_meta('_ew_t17_price_version'),
             'primary_scene' => (string) $product->get_meta('_ew_t17_primary_scene'),
             'preview_image_url' => get_the_post_thumbnail_url($product->get_id(), 'large') ?: '',
+        ));
+    }
+
+    /**
+     * Admin-only readiness readback for the hidden DIY carrier product. This
+     * exposes configuration facts only; it never creates a cart or an order.
+     */
+    public static function checkout_status() {
+        $product_id = (int) get_option('ew_t17_custom_product_id', 0);
+        $product = $product_id && function_exists('wc_get_product') ? wc_get_product($product_id) : false;
+        $exists = $product && $product instanceof WC_Product;
+        return rest_ensure_response(array(
+            'configured' => (bool) ($exists && $product->is_purchasable()),
+            'product' => array(
+                'id' => $exists ? $product->get_id() : 0,
+                'exists' => (bool) $exists,
+                'purchasable' => (bool) ($exists && $product->is_purchasable()),
+                'virtual' => (bool) ($exists && $product->is_virtual()),
+                'status' => $exists ? $product->get_status() : '',
+                'catalog_visibility' => $exists ? $product->get_catalog_visibility() : '',
+                'name' => $exists ? $product->get_name() : '',
+                'stock_status' => $exists ? $product->get_stock_status() : '',
+            ),
         ));
     }
 

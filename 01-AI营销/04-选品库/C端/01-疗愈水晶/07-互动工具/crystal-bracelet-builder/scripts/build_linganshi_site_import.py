@@ -140,6 +140,7 @@ def load_rows(workbook: Path) -> list[dict[str, object]]:
             "usd_price": computed_usd_price(usd_price, cny_price, index),
             "top_tab": text(top_tab),
             "category": text(category),
+            "category_label": text(category),
             "direction_rule": normalized_direction(text(direction) or "none"),
             "compatible_bead_sizes": text(compatible),
         })
@@ -223,6 +224,7 @@ def build_catalog(rows: list[dict[str, object]], manifest: dict[str, dict[str, s
             "component_type": component_type,
             "library_tab_slug": tab_slug,
             "category_slug": category_key(str(row["category"])),
+            "category_label": str(row["category_label"]),
             "name_en": name,
             "primary_color": "",
             "color_tags": "",

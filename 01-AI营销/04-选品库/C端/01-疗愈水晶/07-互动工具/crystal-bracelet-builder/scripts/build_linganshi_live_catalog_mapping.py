@@ -27,7 +27,7 @@ MEDIA_MANIFEST = RESEARCH / "linganshi-235-media-upload-manifest-20260720.csv"
 IMPORT_HEADERS = [
     "material_key", "component_type", "library_tab_slug", "category_slug", "name_en", "primary_color",
     "color_tags", "intention_tags", "material_image_url", "material_status",
-    "material_sort_order", "variant_key", "size_mm", "shape", "price", "weight_g",
+    "material_sort_order", "variant_key", "size_mm", "shape", "price",
     "occupied_length_mm", "display_scale", "variant_image_url", "stock_status",
     "stock_quantity", "compatibility", "compatible_bead_sizes", "orientation_mode",
     "mirrored_variant_key", "allowed_orientations", "allowed_positions",
@@ -351,7 +351,7 @@ def main() -> None:
             "共用图片": " | ".join(shared_hashes[str(meta["SHA256"])]) if len(shared_hashes[str(meta["SHA256"])]) > 1 else "",
             "导入状态": "draft-only",
             "本地交互状态": "enabled-draft-review" if missing_size_rows == 0 and missing_price_rows == 0 else "disabled-pending-specs",
-            "生产状态": "blocked-until-english-name-weight-occupancy-and-rules-reviewed",
+            "生产状态": "blocked-until-english-name-occupancy-and-rules-reviewed",
         })
 
         uploaded_media = existing_media.get(material_key, {})
@@ -375,7 +375,6 @@ def main() -> None:
             stock_quantity = int(stock) if isinstance(stock, (int, float)) and stock >= 0 else ""
             stock_status = "instock" if stock is None or not isinstance(stock, (int, float)) or stock != 0 else "outofstock"
             occupied = size if size > 0 else 0.0
-            weight = 0.0
             review_variant_rows.append({
                 "研究商品键": material_key,
                 "商品名称_文件名": name,
@@ -389,7 +388,6 @@ def main() -> None:
                 "来源分类": variant.get("category", ""),
                 "来源库存": "" if stock is None else stock,
                 "来源图片URL": variant.get("image_url", ""),
-                "重量_g": weight,
                 "2D占位_mm": occupied,
                 "方向规则": "pending" if ctype == "accessory" else "none",
                 "适配珠径": "pending" if ctype == "accessory" else "",
@@ -413,7 +411,6 @@ def main() -> None:
                 "size_mm": format_number(size),
                 "shape": "round" if ctype == "crystal" else "accessory",
                 "price": format_number(price),
-                "weight_g": "0",
                 "occupied_length_mm": format_number(occupied),
                 "display_scale": "1",
                 "variant_image_url": material_image_url,
@@ -438,7 +435,6 @@ def main() -> None:
         {"指标": "显式别名", "数量": mapping_counts["live-explicit-alias"], "状态": "仅 draft；保留独立商品，不合并"},
         {"指标": "缺产品数据", "数量": mapping_counts["pending-product-data"], "状态": "生成 0 值 draft 占位，不得上架"},
         {"指标": "导入 Variant 行", "数量": len(import_rows), "状态": "全部 draft；含真实 Variant 与待审占位"},
-        {"指标": "缺重量的 Variant", "数量": sum(1 for row in review_variant_rows if row["重量_g"] <= 0), "状态": "阻止 live"},
         {"指标": "缺尺寸的 Variant", "数量": sum(1 for row in review_variant_rows if row["尺寸_mm"] <= 0), "状态": "阻止 live"},
         {"指标": "缺价格的 Variant", "数量": sum(1 for row in review_variant_rows if row["价格_CNY"] <= 0), "状态": "阻止 live"},
         {"指标": "图片共用例外", "数量": sum(1 for row in product_rows if row["共用图片"]), "状态": "白水晶与高品净体白水晶仍为独立商品"},

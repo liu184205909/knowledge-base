@@ -101,7 +101,7 @@ try {
 
     Write-Host ''
     Write-Host 'V3 data template headers'
-    Test-CsvHeaders -Name 'Production catalog import headers' -Path (Join-Path $data 'approved-production-catalog.import.csv') -RequiredHeaders @('material_key', 'component_type', 'variant_key', 'size_mm', 'price', 'weight_g', 'occupied_length_mm', 'stock_status', 'compatibility', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'variant_status')
+    Test-CsvHeaders -Name 'Production catalog import headers' -Path (Join-Path $data 'approved-production-catalog.import.csv') -RequiredHeaders @('material_key', 'component_type', 'variant_key', 'size_mm', 'price', 'occupied_length_mm', 'stock_status', 'compatibility', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'variant_status')
     Test-CsvHeaders -Name 'Directional decor review headers' -Path (Join-Path $data 'decor-orientation-review.template.csv') -RequiredHeaders @('variant_key', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'approval_status')
     Test-CsvHeaders -Name 'Official design registry headers' -Path (Join-Path $data 'official-design-registry.template.csv') -RequiredHeaders @('design_slot_id', 'woo_product_id', 'design_version', 'price_version', 'recipe_status', 'approval_status')
 

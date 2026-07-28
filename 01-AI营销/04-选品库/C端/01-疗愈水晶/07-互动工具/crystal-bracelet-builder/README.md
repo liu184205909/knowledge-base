@@ -1,47 +1,39 @@
-# T17 水晶手链定制工具 - 工程实现目录
+# T17 水晶手链定制工具
 
-本目录是 v3 需求基线的工程落地。需求与架构决策见 [`02-网站规划/T17水晶手链定制工具-v3需求基线.md`](../../02-网站规划/T17水晶手链定制工具-v3需求基线.md)。
+## 当前状态（2026-07-25 已回读线上）
 
-## 当前代码事实源
+- 线上插件：公开 CSS/JS 均加载 `?ver=0.1.34`（2026-07-25 只读回读）。本地 `0.1.35` 为下一轮候选包，尚未上传或部署。
+- 本地 `0.1.35` 候选源已合并界面调整：分类为首字母大写、左对齐，仅保留纵向滚动并明确覆盖站点全局按钮大写规则；分类栏适度收窄，为商品卡腾出空间；透明底商品图按原始轮廓显示并放大，卡片同时压缩为更紧凑的行高；设计盘放大，盘下操作按钮移至盘上方；Length/Pieces/Suggested wrist 置于设计区左侧并重新平衡字号；总价和 Finish design 置于桌面端材料区底部；工具背景统一为站点白底。尚未部署，必须完成构建和浏览器视觉验收后才能更新线上状态。
+- 公开页面已是 v3 2D 编辑器（`.ew-t17-ui[data-t17-ui]`）。
+- 公开 Catalog：281 个素材、453 个变体；英文名称与分类标签已事务更新并逐条回读，服务端报价已通过一条真实 Variant 的只读验证。
+- 旧的 Step-0 Woo Snippet 已停用；当前隐藏承载商品仍名为 `Custom Crystal Bracelet Test` 且为 virtual。测试环境、履约策略、素材授权和成本/价格审批尚未完成，线上目录全部为 `onbackorder`，不能据此宣称可售准备完成。
 
-- `frontend/t17-builder-ui.js` 是后续前端交互优化的唯一主脚本，不再从旧截图或历史 ZIP 反推代码。
-- `frontend/t17-builder-ui.css`、`t17-builder-fragment.html`、`t17-builder-config.php` 与 `t17-builder-mock-config.js` 是主脚本的必要配套文件，不属于可删除的旧版本。
-- `plugin/` 是独立素材、REST、报价和 Woo 快照的后端源码；前端优化阶段仍需保留，不能用 `t17-builder-ui.js` 替代。
-- `frontend/preview.html` 只用于本地开发验收，不是正式页面。
-- 当前插件源码版本为 `0.1.10`。`build/` 中更早的 ZIP 只是历史候选包，不是源码事实源。
+## 代码事实源
 
-## 目录结构
+- `frontend/`：唯一前端源码与本地 fixture；`preview.html` 只作本地验收。
+- `plugin/`：素材、REST、报价、Woo 加购与订单快照；插件内前端副本必须与 `frontend/` 同步。
+- `data/v3/`：本地导入合同和审批模板，不是线上 Catalog 的审批证明。
+- `scripts/`：本地合同检查、候选包构建和公开只读验证。
 
+## 只读验证
+
+```powershell
+./frontend/validate-frontend-bundle.ps1
+./scripts/validate-backend-material-loop.ps1
+./scripts/validate-directional-decor.ps1 -FailOnMissing
+./data/v3/validate-v3-data-contract.ps1
+./scripts/verify-live-post-upgrade.ps1 -BaseUrl 'https://goearthward.com' -VerificationScope Full -RequiredUiMarker 'ew-t17-ui'
 ```
-crystal-bracelet-builder/
-├── plugin/          WordPress 插件源码（后端数据模型、REST、Woo 加购）
-├── frontend/        独立前端 UI 包（HTML/CSS/JS，不依赖插件上传）
-├── data/v3/         生产数据与导入包
-│   └── research/    P0 研究数据（素材 / 官方设计 / 价格 三条独立数据线）
-├── scripts/         本地验证脚本（源码检查、线上版本验证、素材闭环）
-└── build/           本地候选插件包；不得保留 3D 原型或 Three.js 资产
-```
 
-## 关键文档入口
+`Full` 不会创建购物车或订单；它仍会明确报告交易闭环需要管理员测试。
 
-| 文档 | 作用 |
+## 入口文档
+
+| 文档 | 用途 |
 |---|---|
-| [data/v3/README.md](data/v3/README.md) | v3 数据包总入口：生产数据状态边界、导入审批流程 |
-| [data/v3/research/README.md](data/v3/research/README.md) | P0 研究数据包入口：素材/官方设计/价格三条数据线说明 |
-| [data/v3/research/P0-数据包交接摘要-20260713.md](data/v3/research/P0-数据包交接摘要-20260713.md) | 素材/官方预设数据线交接记录 |
-| [data/v3/research/P0-数据线边界与字段说明-20260713.md](data/v3/research/P0-数据线边界与字段说明-20260713.md) | P0-A/B/C 各线字段定义与采集规则 |
-| [data/v3/research/Earthward-首批定价模型与审核说明-20260713.md](data/v3/research/Earthward-首批定价模型与审核说明-20260713.md) | 价格版本管理、审核字段、审批流程 |
-| [data/v3/research/stonelab-interaction-direction-audit-20260717.md](data/v3/research/stonelab-interaction-direction-audit-20260717.md) | StoneLAB 商品卡、交互、碰撞、方向与竞品素材使用边界的唯一事实源 |
-| [interaction-acceptance-spec-20260718.md](interaction-acceptance-spec-20260718.md) | v3 当前前端交互验收合同；桌面/手机共用的行为边界 |
-| [design-qa.md](design-qa.md) | 已执行的本地视觉与交互验证证据，不替代需求合同 |
-| [plugin/README.md](plugin/README.md) | 插件安装、后台菜单、CSV 导入说明 |
-| [frontend/README.md](frontend/README.md) | 独立前端 UI 包：HTML/CSS/JS 分离交付说明 |
-| [scripts/README.md](scripts/README.md) | 验证脚本：本地源码检查、线上版本验证、素材闭环 |
-
-## 阅读顺序建议
-
-1. **理解需求**：先读 `02-网站规划/` 下的 v3 需求基线
-2. **了解数据**：读 `data/v3/README.md` → `data/v3/research/README.md`
-3. **开发后端**：读 `plugin/README.md` + `scripts/` 下对应验证脚本
-4. **开发前端**：先读 `interaction-acceptance-spec-20260718.md`，再读 `frontend/README.md`
-5. **回读竞品结论**：只读 `data/v3/research/stonelab-interaction-direction-audit-20260717.md`；不要重新从零浏览同一批 StoneLAB 视频
+| [interaction-acceptance-spec-20260718.md](interaction-acceptance-spec-20260718.md) | 当前 2D 编辑器的交互验收合同 |
+| [data/v3/README.md](data/v3/README.md) | 本地导入合同、审批边界与线上状态说明 |
+| [scripts/README.md](scripts/README.md) | 验证与候选包命令 |
+| [plugin/README.md](plugin/README.md) | 插件和 Woo 边界 |
+| [frontend/README.md](frontend/README.md) | 前端源码与本地 fixture |
+| [data/v3/research/stonelab-interaction-direction-audit-20260717.md](data/v3/research/stonelab-interaction-direction-audit-20260717.md) | 竞品交互与方向性依据 |

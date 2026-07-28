@@ -8,8 +8,9 @@ final class EW_T17_Catalog {
     private const ORIENTATION_MODES = array('none', 'tangent', 'radial_out', 'radial_in', 'fixed_left', 'fixed_right', 'mirrorable', 'rotatable');
     private const ORIENTATION_VALUES = array('none', 'left', 'right', 'rotate_0', 'rotate_90', 'rotate_180', 'rotate_270');
     private const POSITION_TYPES = array('any', 'start', 'end', 'interior');
-    private const IMPORT_HEADERS = array('material_key', 'component_type', 'library_tab_slug', 'category_slug', 'name_en', 'primary_color', 'color_tags', 'intention_tags', 'material_image_url', 'material_status', 'material_sort_order', 'variant_key', 'size_mm', 'shape', 'price', 'occupied_length_mm', 'display_scale', 'variant_image_url', 'stock_status', 'stock_quantity', 'compatibility', 'compatible_bead_sizes', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'variant_status', 'variant_sort_order', 'source_name');
+    private const IMPORT_HEADERS = array('material_key', 'component_type', 'library_tab_slug', 'category_slug', 'category_label', 'name_en', 'primary_color', 'color_tags', 'intention_tags', 'material_image_url', 'material_status', 'material_sort_order', 'variant_key', 'size_mm', 'shape', 'price', 'occupied_length_mm', 'display_scale', 'variant_image_url', 'stock_status', 'stock_quantity', 'compatibility', 'compatible_bead_sizes', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'variant_status', 'variant_sort_order', 'source_name');
     private const LEGACY_IMPORT_HEADERS = array('material_key', 'component_type', 'category_slug', 'name_en', 'primary_color', 'color_tags', 'intention_tags', 'material_image_url', 'material_status', 'material_sort_order', 'variant_key', 'size_mm', 'shape', 'price', 'occupied_length_mm', 'display_scale', 'variant_image_url', 'stock_status', 'stock_quantity', 'compatibility', 'compatible_bead_sizes', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'variant_status', 'variant_sort_order', 'source_name');
+    private const LABEL_IMPORT_HEADERS = array('material_key', 'name_en', 'category_label');
 
     public static function init() {
         add_action('rest_api_init', array(__CLASS__, 'register_rest_routes'));
@@ -21,6 +22,7 @@ final class EW_T17_Catalog {
         add_action('admin_post_ew_t17_update_variant', array(__CLASS__, 'update_variant'));
         add_action('admin_post_ew_t17_update_sort_order', array(__CLASS__, 'update_sort_order'));
         add_action('admin_post_ew_t17_import_catalog', array(__CLASS__, 'import_catalog'));
+        add_action('admin_post_ew_t17_import_catalog_labels', array(__CLASS__, 'import_catalog_labels'));
         add_action('admin_post_ew_t17_save_settings', array(__CLASS__, 'save_settings'));
         add_action('admin_post_ew_t17_save_library_tabs', array(__CLASS__, 'save_library_tabs'));
     }
@@ -132,11 +134,18 @@ JS
                 return current_user_can('manage_woocommerce');
             },
         ));
+        register_rest_route('ew-t17/v1', '/catalog/labels', array(
+            'methods' => WP_REST_Server::CREATABLE,
+            'callback' => array(__CLASS__, 'rest_import_catalog_labels'),
+            'permission_callback' => static function () {
+                return current_user_can('manage_woocommerce');
+            },
+        ));
     }
 
     public static function get_catalog() {
         global $wpdb;
-        $materials = $wpdb->get_results("SELECT m.id, m.material_key, m.component_type, m.library_tab_slug, m.category_slug, m.name_en, m.primary_color, m.color_tags, m.intention_tags, m.image_id, m.image_url, m.sort_order FROM " . self::materials_table() . " m WHERE m.status = 'live' AND EXISTS (SELECT 1 FROM " . self::variants_table() . " v WHERE v.material_id = m.id AND v.status = 'live') ORDER BY m.library_tab_slug, m.category_slug, m.sort_order ASC, m.name_en", ARRAY_A);
+        $materials = $wpdb->get_results("SELECT m.id, m.material_key, m.component_type, m.library_tab_slug, m.category_slug, m.category_label, m.name_en, m.primary_color, m.color_tags, m.intention_tags, m.image_id, m.image_url, m.sort_order FROM " . self::materials_table() . " m WHERE m.status = 'live' AND EXISTS (SELECT 1 FROM " . self::variants_table() . " v WHERE v.material_id = m.id AND v.status = 'live') ORDER BY m.library_tab_slug, m.category_slug, m.sort_order ASC, m.name_en", ARRAY_A);
         $variants = $wpdb->get_results("SELECT * FROM " . self::variants_table() . " WHERE status = 'live' ORDER BY sort_order ASC, size_mm, variant_key", ARRAY_A);
         $grouped = array();
 
@@ -379,6 +388,7 @@ JS
                     <tr><th><label for="component_type">Type</label></th><td><select name="component_type" id="component_type"><?php foreach (self::COMPONENT_TYPES as $type) : ?><option value="<?php echo esc_attr($type); ?>" <?php selected(self::component_type(wp_unslash($_GET['new_type'] ?? 'crystal')), $type); ?>><?php echo esc_html(ucfirst($type)); ?></option><?php endforeach; ?></select></td></tr>
                     <tr><th><label for="library_tab_slug">Editor tab</label></th><td><select name="library_tab_slug" id="library_tab_slug"><?php foreach ($library_tabs as $tab) : ?><option value="<?php echo esc_attr($tab['slug']); ?>" <?php selected($tab['slug'], 'crystal'); ?>><?php echo esc_html($tab['label']); ?></option><?php endforeach; ?></select><p class="description">Controls which first-level editor tab shows this material.</p></td></tr>
                     <tr><th><label for="category_slug">Category</label></th><td><input name="category_slug" id="category_slug" class="regular-text" placeholder="crystal / natural-stone / spacer / charm"><p class="description">Stable English browsing category.</p></td></tr>
+                    <tr><th><label for="category_label">Category label</label></th><td><input name="category_label" id="category_label" class="regular-text" placeholder="Natural stone"><p class="description">User-visible category label.</p></td></tr>
                     <tr><th><label for="primary_color">Primary color</label></th><td><input name="primary_color" id="primary_color" class="regular-text" placeholder="purple"></td></tr>
                     <tr><th><label for="color_tags">Color tags</label></th><td><input name="color_tags" id="color_tags" class="regular-text" placeholder="purple, violet"><p class="description">Comma separated.</p></td></tr>
                     <tr><th><label for="intention_tags">Intention tags</label></th><td><input name="intention_tags" id="intention_tags" class="regular-text" placeholder="calm, focus"><p class="description">Comma separated browsing tags.</p></td></tr>
@@ -403,6 +413,14 @@ JS
                 <input type="hidden" name="action" value="ew_t17_import_catalog">
                 <input required type="file" name="catalog_csv" accept=".csv,text/csv">
                 <?php submit_button(__('Import CSV', 'earthward-t17'), 'secondary', 'submit', false); ?>
+            </form>
+            <h2><?php esc_html_e('Update catalog names and category labels', 'earthward-t17'); ?></h2>
+            <p><?php esc_html_e('This importer updates only the user-visible English name and category label for existing materials. It never creates materials or changes variants, prices, stock, images, compatibility, or fulfillment settings.', 'earthward-t17'); ?> <a href="<?php echo esc_url(EW_T17_URL . 'assets/catalog-labels-template.csv'); ?>" download><?php esc_html_e('Download template', 'earthward-t17'); ?></a></p>
+            <form method="post" enctype="multipart/form-data" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
+                <?php wp_nonce_field('ew_t17_import_catalog_labels'); ?>
+                <input type="hidden" name="action" value="ew_t17_import_catalog_labels">
+                <input required type="file" name="catalog_labels_csv" accept=".csv,text/csv">
+                <?php submit_button(__('Update names and labels', 'earthward-t17'), 'secondary', 'submit', false); ?>
             </form>
             <h2><?php esc_html_e('Add variant to an existing material', 'earthward-t17'); ?></h2>
             <form method="post" action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
@@ -461,6 +479,7 @@ JS
                         <tr><th>Material ID</th><td><code><?php echo esc_html($editing['material_key']); ?></code></td></tr>
                         <tr><th><label for="edit_name_en">English name</label></th><td><input required name="name_en" id="edit_name_en" class="regular-text" value="<?php echo esc_attr($editing['name_en']); ?>"></td></tr>
                         <tr><th><label for="edit_category_slug">Category</label></th><td><input name="category_slug" id="edit_category_slug" class="regular-text" value="<?php echo esc_attr($editing['category_slug']); ?>"></td></tr>
+                        <tr><th><label for="edit_category_label">Category label</label></th><td><input name="category_label" id="edit_category_label" class="regular-text" value="<?php echo esc_attr($editing['category_label']); ?>"><p class="description"><?php esc_html_e('User-visible label for the existing category key.', 'earthward-t17'); ?></p></td></tr>
                         <tr><th><label for="edit_library_tab_slug">Editor tab</label></th><td><select name="library_tab_slug" id="edit_library_tab_slug"><?php foreach ($library_tabs as $tab) : ?><option value="<?php echo esc_attr($tab['slug']); ?>" <?php selected($editing['library_tab_slug'] ?? $editing['component_type'], $tab['slug']); ?>><?php echo esc_html($tab['label']); ?></option><?php endforeach; ?></select></td></tr>
                         <tr><th><label for="edit_primary_color">Primary color</label></th><td><input name="primary_color" id="edit_primary_color" class="regular-text" value="<?php echo esc_attr($editing['primary_color']); ?>"></td></tr>
                         <tr><th><label for="edit_color_tags">Color tags</label></th><td><input name="color_tags" id="edit_color_tags" class="regular-text" value="<?php echo esc_attr(implode(', ', self::decode_list($editing['color_tags']))); ?>"><p class="description">Comma separated.</p></td></tr>
@@ -629,6 +648,7 @@ JS
             'component_type' => $type,
             'library_tab_slug' => self::library_tab_slug(wp_unslash($_POST['library_tab_slug'] ?? ''), $type),
             'category_slug' => sanitize_key(wp_unslash($_POST['category_slug'] ?? '')),
+            'category_label' => sanitize_text_field(wp_unslash($_POST['category_label'] ?? '')),
             'name_en' => sanitize_text_field(wp_unslash($_POST['name_en'] ?? '')),
             'primary_color' => sanitize_key(wp_unslash($_POST['primary_color'] ?? '')),
             'color_tags' => wp_json_encode(self::csv_list($_POST['color_tags'] ?? '')),
@@ -682,6 +702,7 @@ JS
             'name_en' => sanitize_text_field(wp_unslash($_POST['name_en'] ?? '')),
             'library_tab_slug' => self::library_tab_slug(wp_unslash($_POST['library_tab_slug'] ?? ''), self::component_type($wpdb->get_var($wpdb->prepare("SELECT component_type FROM " . self::materials_table() . " WHERE id = %d", $material_id)))),
             'category_slug' => sanitize_key(wp_unslash($_POST['category_slug'] ?? '')),
+            'category_label' => sanitize_text_field(wp_unslash($_POST['category_label'] ?? '')),
             'primary_color' => sanitize_key(wp_unslash($_POST['primary_color'] ?? '')),
             'color_tags' => wp_json_encode(self::csv_list($_POST['color_tags'] ?? '')),
             'intention_tags' => wp_json_encode(self::csv_list($_POST['intention_tags'] ?? '')),
@@ -862,6 +883,7 @@ JS
                 'component_type' => $component_type,
                 'library_tab_slug' => self::library_tab_slug($row['library_tab_slug'] ?? '', $component_type),
                 'category_slug' => sanitize_key($row['category_slug'] ?? ''),
+                'category_label' => sanitize_text_field($row['category_label'] ?? ''),
                 'name_en' => sanitize_text_field($row['name_en'] ?? ''),
                 'primary_color' => sanitize_key($row['primary_color'] ?? ''),
                 'color_tags' => wp_json_encode(self::csv_list($row['color_tags'] ?? '')),
@@ -940,6 +962,126 @@ JS
     }
 
     /**
+     * Updates only user-visible material labels. This deliberately has a
+     * smaller contract than the catalog importer so copy updates cannot alter
+     * inventory, prices, images, compatibility, or fulfillment fields.
+     */
+    public static function import_catalog_labels() {
+        if (!current_user_can('manage_woocommerce')) {
+            wp_die(__('You do not have permission to update T17 catalog labels.', 'earthward-t17'));
+        }
+        check_admin_referer('ew_t17_import_catalog_labels');
+        $file = $_FILES['catalog_labels_csv'] ?? null;
+        if (!$file || !empty($file['error']) || !is_uploaded_file($file['tmp_name'])) {
+            self::redirect_label_import(0, 'upload');
+        }
+        $handle = fopen($file['tmp_name'], 'r');
+        if (!$handle) {
+            self::redirect_label_import(0, 'read');
+        }
+        $headers = fgetcsv($handle);
+        if (!$headers) {
+            fclose($handle);
+            self::redirect_label_import(0, 'headers');
+        }
+        $headers[0] = preg_replace('/^\\xEF\\xBB\\xBF/', '', (string) $headers[0]);
+        $headers = array_map(static function ($header) { return sanitize_key((string) $header); }, $headers);
+        if ($headers !== self::LABEL_IMPORT_HEADERS) {
+            fclose($handle);
+            self::redirect_label_import(0, 'columns');
+        }
+
+        $rows = array();
+        $keys = array();
+        while (($values = fgetcsv($handle)) !== false) {
+            if (count($values) !== count(self::LABEL_IMPORT_HEADERS)) {
+                fclose($handle);
+                self::redirect_label_import(0, 'rows');
+            }
+            $row = array_combine(self::LABEL_IMPORT_HEADERS, $values);
+            $key = sanitize_key($row['material_key'] ?? '');
+            $name = sanitize_text_field($row['name_en'] ?? '');
+            $category_label = sanitize_text_field($row['category_label'] ?? '');
+            if (!$row || !$key || !$name || !$category_label || isset($keys[$key])) {
+                fclose($handle);
+                self::redirect_label_import(0, 'rows');
+            }
+            $keys[$key] = true;
+            $rows[] = array('material_key' => $key, 'name_en' => $name, 'category_label' => $category_label);
+        }
+        fclose($handle);
+        if (!$rows) {
+            self::redirect_label_import(0, 'rows');
+        }
+
+        global $wpdb;
+        $wpdb->query('START TRANSACTION');
+        $now = current_time('mysql', true);
+        foreach ($rows as $row) {
+            $id = $wpdb->get_var($wpdb->prepare("SELECT id FROM " . self::materials_table() . " WHERE material_key = %s", $row['material_key']));
+            if (!$id || $wpdb->update(self::materials_table(), array(
+                'name_en' => $row['name_en'],
+                'category_label' => $row['category_label'],
+                'updated_at' => $now,
+            ), array('id' => (int) $id), array('%s', '%s', '%s'), array('%d')) === false) {
+                $wpdb->query('ROLLBACK');
+                self::redirect_label_import(0, 'write');
+            }
+        }
+        $wpdb->query('COMMIT');
+        self::redirect_label_import(count($rows), 'done');
+    }
+
+    /**
+     * Authenticated integration endpoint for the narrow name-and-category-label
+     * update contract. Application-password callers can use it without a
+     * browser nonce; it cannot receive any operational catalog fields.
+     */
+    public static function rest_import_catalog_labels(WP_REST_Request $request) {
+        $payload = $request->get_json_params();
+        $rows = is_array($payload) ? ($payload['rows'] ?? null) : null;
+        if (!is_array($rows) || !$rows) {
+            return new WP_Error('ew_t17_label_import_payload', __('Provide a non-empty rows array.', 'earthward-t17'), array('status' => 400));
+        }
+        if (count($rows) > 1000) {
+            return new WP_Error('ew_t17_label_import_batch_too_large', __('A T17 label import may contain at most 1000 materials.', 'earthward-t17'), array('status' => 400));
+        }
+
+        $prepared = array();
+        $keys = array();
+        foreach ($rows as $row) {
+            if (!is_array($row) || array_diff(array_keys($row), self::LABEL_IMPORT_HEADERS) || array_diff(self::LABEL_IMPORT_HEADERS, array_keys($row))) {
+                return new WP_Error('ew_t17_label_import_payload_shape', __('Each label row must use material_key, name_en, and category_label only.', 'earthward-t17'), array('status' => 400));
+            }
+            $material_key = sanitize_key($row['material_key'] ?? '');
+            $name_en = sanitize_text_field($row['name_en'] ?? '');
+            $category_label = sanitize_text_field($row['category_label'] ?? '');
+            if (!$material_key || !$name_en || !$category_label || isset($keys[$material_key])) {
+                return new WP_Error('ew_t17_label_import_rows', __('Each label row must have unique, non-empty values.', 'earthward-t17'), array('status' => 400));
+            }
+            $keys[$material_key] = true;
+            $prepared[] = array('material_key' => $material_key, 'name_en' => $name_en, 'category_label' => $category_label);
+        }
+
+        global $wpdb;
+        $wpdb->query('START TRANSACTION');
+        $now = current_time('mysql', true);
+        foreach ($prepared as $row) {
+            $id = $wpdb->get_var($wpdb->prepare("SELECT id FROM " . self::materials_table() . " WHERE material_key = %s", $row['material_key']));
+            if (!$id || $wpdb->update(self::materials_table(), array(
+                'name_en' => $row['name_en'],
+                'category_label' => $row['category_label'],
+                'updated_at' => $now,
+            ), array('id' => (int) $id), array('%s', '%s', '%s'), array('%d')) === false) {
+                $wpdb->query('ROLLBACK');
+                return new WP_Error('ew_t17_label_import_write', __('A material label could not be updated.', 'earthward-t17'), array('status' => 500));
+            }
+        }
+        $wpdb->query('COMMIT');
+        return rest_ensure_response(array('updated' => count($prepared), 'atomic' => true));
+    }
+
+    /**
      * Authenticated integration endpoint for the same CSV catalog contract used
      * by the admin importer. It deliberately accepts only the fixed v3 headers
      * and applies the existing full-batch preflight before any write.
@@ -1011,6 +1153,7 @@ JS
                 'component_type' => $component_type,
                 'library_tab_slug' => self::library_tab_slug($row['library_tab_slug'] ?? '', $component_type),
                 'category_slug' => sanitize_key($row['category_slug'] ?? ''),
+                'category_label' => sanitize_text_field($row['category_label'] ?? ''),
                 'name_en' => sanitize_text_field($row['name_en'] ?? ''),
                 'primary_color' => sanitize_key($row['primary_color'] ?? ''),
                 'color_tags' => wp_json_encode(self::csv_list($row['color_tags'] ?? '')),
@@ -1343,14 +1486,13 @@ JS
     }
 
     private static function validated_orientation_list($value, $mode) {
-        $raw = is_array($value) ? null : trim((string) wp_unslash($value));
         $list = self::strict_list($value);
         if (is_wp_error($list)) {
             return $list;
         }
         $defaults = self::orientation_list('', $mode);
         if (!$list) {
-            return $raw === '' || $raw === null ? $defaults : new WP_Error('ew_t17_invalid_orientation_list');
+            return $defaults;
         }
         if (array_diff($list, $defaults)) {
             return new WP_Error('ew_t17_invalid_orientation_list');
@@ -1359,13 +1501,12 @@ JS
     }
 
     private static function validated_position_list($value) {
-        $raw = is_array($value) ? null : trim((string) wp_unslash($value));
         $list = self::strict_list($value);
         if (is_wp_error($list)) {
             return $list;
         }
         if (!$list) {
-            return $raw === '' || $raw === null ? array() : new WP_Error('ew_t17_invalid_position_list');
+            return array();
         }
         if (array_diff($list, self::POSITION_TYPES) || (in_array('any', $list, true) && count($list) !== 1)) {
             return new WP_Error('ew_t17_invalid_position_list');
@@ -1374,12 +1515,19 @@ JS
     }
 
     private static function validated_neighbor_constraints($value) {
-        $raw = trim((string) wp_unslash($value));
-        if ($raw === '') {
+        if (is_array($value)) {
+            $decoded = $value;
+        } else {
+            $raw = trim((string) wp_unslash($value));
+            if ($raw === '') {
+                return array();
+            }
+            $decoded = json_decode($raw, true);
+        }
+        if ($decoded === array()) {
             return array();
         }
-        $decoded = json_decode($raw, true);
-        if (!is_array($decoded) || self::is_list_array($decoded) || !$decoded) {
+        if (!is_array($decoded) || self::is_list_array($decoded)) {
             return new WP_Error('ew_t17_invalid_neighbor_constraints');
         }
         $allowed_keys = array('previous_component_types', 'next_component_types', 'previous_variant_keys', 'next_variant_keys');
@@ -1583,6 +1731,7 @@ JS
             'component_type' => self::component_type($material['component_type']),
             'library_tab_slug' => self::library_tab_slug($material['library_tab_slug'] ?? '', $material['component_type'] ?? 'crystal'),
             'category_slug' => $material['category_slug'] ?? '',
+            'category_label' => $material['category_label'] ?? '',
             'name_en' => $material['name_en'],
             'primary_color' => $material['primary_color'],
             'color_tags' => self::decode_list($material['color_tags']),
@@ -1640,12 +1789,23 @@ JS
         exit;
     }
 
+    private static function redirect_label_import($updated, $status) {
+        wp_safe_redirect(add_query_arg(array('page' => 'ew-t17-materials', 'ew_t17_label_import' => sanitize_key($status), 'updated' => absint($updated)), admin_url('admin.php')));
+        exit;
+    }
+
     private static function render_admin_notices() {
         $import_status = sanitize_key($_GET['ew_t17_import'] ?? '');
         if ($import_status === 'done') {
             printf('<div class="notice notice-success is-dismissible"><p>%s</p></div>', esc_html(sprintf(__('Imported or updated %1$d rows. Skipped %2$d invalid rows.', 'earthward-t17'), absint($_GET['imported'] ?? 0), absint($_GET['skipped'] ?? 0))));
         } elseif ($import_status) {
             printf('<div class="notice notice-error"><p>%s</p></div>', esc_html(__('Catalog CSV was not imported. Check the required columns and upload a valid CSV file.', 'earthward-t17')));
+        }
+        $label_import_status = sanitize_key($_GET['ew_t17_label_import'] ?? '');
+        if ($label_import_status === 'done') {
+            printf('<div class="notice notice-success is-dismissible"><p>%s</p></div>', esc_html(sprintf(__('Updated the English names and category labels for %d materials. No variant fields were changed.', 'earthward-t17'), absint($_GET['updated'] ?? 0))));
+        } elseif ($label_import_status) {
+            echo '<div class="notice notice-error"><p>' . esc_html__('Catalog labels were not updated. Use the exact three-column template, unique existing material IDs, and non-empty English names and category labels.', 'earthward-t17') . '</p></div>';
         }
         if (sanitize_key($_GET['ew_t17_error'] ?? '') !== '') {
             echo '<div class="notice notice-error"><p>' . esc_html__('The material or variant could not be saved. Check its stable ID and required fields.', 'earthward-t17') . '</p></div>';

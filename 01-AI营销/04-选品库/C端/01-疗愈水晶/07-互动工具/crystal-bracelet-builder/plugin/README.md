@@ -1,64 +1,20 @@
-# EarthWard T17 Bracelet Builder
+# EarthWard T17 Bracelet Builder plugin
 
-## Installation
+插件负责 Catalog、REST 报价、Woo DIY 加购和订单快照，并通过 `[ew_t17_bracelet_builder]` 输出 v3 编辑器。正式工具页只使用既有 `/tools/crystal-bracelet-builder/`，不创建新页面。
 
-1. Upload `earthward-t17-bracelet-builder-<version>.zip` in WordPress Admin > Plugins > Add New > Upload Plugin.
-2. Activate `EarthWard T17 Bracelet Builder`.
-3. Do not create a new WordPress page for T17. The existing `/tools/crystal-bracelet-builder/` route remains the only formal tool page; this plugin supplies backend capability only.
-4. In T17 Builder > Material Catalog, set the existing `/tools/crystal-bracelet-builder/` page ID and a price version. This is only the target of official-design Customize links; the plugin does not render the editor page or register a builder shortcode.
-5. Create one hidden WooCommerce virtual product named `Custom Crystal Bracelet`. Set it purchasable and add its product ID to the T17 Builder settings.
-6. Import draft materials with the CSV template, review them, then set both material and variant status to `live`.
+## 运行边界
 
-## Official Design Product
+- Catalog 素材独立于普通 Woo 商品；只有隐藏的 `Custom Crystal Bracelet` 承载 DIY 订单。
+- 服务端按 live Variant 重新报价，并把配方、价格版本和预览快照写入 Woo 订单项。
+- 官方设计仍是普通 Woo 商品；启用 Customize 后，工具页通过 `t17_product` 加载服务端配方。
+- 发布候选包前必须运行项目根目录的四个本地验证脚本；安装或更新后运行公开只读验证器。
 
-Each official design is one normal WooCommerce product. In the Product data > General panel, set:
+## Catalog 导入
 
-- `T17 official design product`: enabled
-- `Allow Customize this design`: enabled
-- `Primary scene`: one stable scene key, such as `calm-grounding`
-- `Design version` and `Price version`
-- `T17 recipe JSON`: a sequence of T17 variant IDs
+`assets/catalog-template.csv` 是唯一导入合同。每行是一个 Variant；`material_key`、`variant_key` 和 `name_en` 必须稳定。先导入 `draft`，完成图片、价格、兼容性和生产审核后才可设为 `live`。
 
-Example recipe:
+仅修正文案时，使用 `assets/catalog-labels-template.csv`：它只接受 `material_key,name_en,category_label`，只更新已有素材的用户可见名称与分类标签；不会新建素材，也不会写入价格、库存、图片、履约或 Variant 字段。自动化调用 `POST /wp-json/ew-t17/v1/catalog/labels`，请求体为 `{ "rows": [...] }`，并要求 `manage_woocommerce` 权限。
 
-```json
-{
-  "target_wrist_cm": 16,
-  "fit_preference": "regular",
-  "sequence": [
-    {"variant_id":"amethyst-8mm"},
-    {"variant_id":"clear-quartz-8mm"},
-    {"variant_id":"amethyst-8mm"}
-  ]
-}
-```
+## 交易验收
 
-The product keeps its standard Woo direct-purchase flow. The extra `Customize this design` button opens the configured builder page with this recipe preloaded.
-
-## Catalog CSV
-
-`assets/catalog-template.csv` is the import contract. Each row is one purchasable variant. `material_key` and `variant_key` are stable, English slugs. Required columns are:
-
-`material_key`, `component_type`, `name_en`, `variant_key`, `size_mm`, `price`, and `occupied_length_mm`.
-
-The importer creates or updates records by stable ID. Use `draft` until price, image source, compatibility, and production fields have been reviewed. Material records are intentionally separate from WooCommerce products.
-
-## Order Boundary
-
-DIY checkout uses the one hidden Woo product only as an order carrier. Before it enters the cart, the server recalculates price from live variant IDs. The resulting recipe and price version are saved as immutable Woo line-item metadata for production and support.
-
-## Future Plugin Updates
-
-From version 0.1.6 onward, use T17 Builder > Release Updates to publish a newer version and the HTTPS URL of its reviewed ZIP. Upload the ZIP to the Media Library first. WordPress will then show the update in its normal Plugins or Updates screen. Automatic updates remain off by default.
-
-The release ZIP must use `earthward-t17-bracelet-builder/` as its top-level directory. The release form is intentionally separate from catalog and Woo product data.
-
-## Post-Deployment Public Check
-
-Run the read-only public verifier after an installation or update:
-
-```powershell
-..\scripts\verify-live-post-upgrade.ps1 -BaseUrl 'https://goearthward.com'
-```
-
-It checks the public catalog route and page output without credentials or WordPress writes. It intentionally reports an empty catalog and an inaccessible draft preview as waiting/manual items rather than a deployment failure; the administrator checks printed by the script still gate production migration.
+公开 REST 和报价成功不等于交易闭环完成。必须在测试环境验证隐藏承载商品的加购、结账、订单快照与退款；不要用真实顾客购物车作为测试环境。

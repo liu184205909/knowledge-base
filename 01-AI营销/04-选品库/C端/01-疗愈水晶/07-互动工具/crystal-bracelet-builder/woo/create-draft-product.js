@@ -5,6 +5,7 @@
  *
  * Usage: node create-draft-product.js
  */
+require('./legacy-step0-guard')(__filename);
 const https = require('https');
 const fs = require('fs');
 const os = require('os');

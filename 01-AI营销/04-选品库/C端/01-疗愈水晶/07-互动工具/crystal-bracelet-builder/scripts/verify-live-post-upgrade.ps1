@@ -17,7 +17,7 @@
     .\verify-live-post-upgrade.ps1 -BaseUrl 'https://goearthward.com' `
         -VerificationScope UiDeployment `
         -OfficialPath '/tools/crystal-bracelet-builder/' `
-        -RequiredUiMarker 'ew-t17-builder'
+        -RequiredUiMarker 'ew-t17-ui'
 
 .EXAMPLE
     .\verify-live-post-upgrade.ps1 -BaseUrl 'https://staging.example.com' `
@@ -36,8 +36,8 @@ param(
 
     [string]$DraftPath = '/?p=54723&preview=true',
 
-    # Backend-only candidates do not expose a public frontend asset or version endpoint.
-    # Keep this as an administrator-attestation value, not a public HTTP assertion.
+    # Keep this as an administrator-attestation value. Formal-page asset loading is
+    # verified by the UI deployment checks after the shortcode migration.
     [ValidatePattern('^$|^\d+\.\d+\.\d+$')]
     [string]$ExpectedPluginVersion = '',
 
@@ -45,8 +45,8 @@ param(
     [ValidateSet('UiDeployment', 'PluginMilestone', 'Full')]
     [string]$VerificationScope = 'PluginMilestone',
 
-    [ValidateSet('ew-t17-builder', 'ew-t17-landing', 'ew-t17-official-designs', 'ew-t17-seo')]
-    [string]$RequiredUiMarker = 'ew-t17-builder',
+    [ValidateSet('ew-t17-ui', 'ew-t17-builder', 'ew-t17-landing', 'ew-t17-official-designs', 'ew-t17-seo')]
+    [string]$RequiredUiMarker = 'ew-t17-ui',
 
     # Optional stable variant key. When omitted, the first public live variant is quoted.
     [string]$QuoteVariantKey = '',
@@ -187,7 +187,7 @@ function Test-CatalogSchema {
     }
 
     $materialFields = @('id', 'material_key', 'component_type', 'category_slug', 'name_en', 'primary_color', 'color_tags', 'intention_tags', 'image_url', 'variants')
-    $variantFields = @('id', 'size_mm', 'shape', 'price', 'weight_g', 'occupied_length_mm', 'display_scale', 'image_url', 'stock_status', 'stock_quantity', 'compatibility', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'sort_order')
+    $variantFields = @('id', 'size_mm', 'shape', 'price', 'occupied_length_mm', 'display_scale', 'image_url', 'stock_status', 'stock_quantity', 'compatibility', 'orientation_mode', 'mirrored_variant_key', 'allowed_orientations', 'allowed_positions', 'neighbor_constraints', 'sort_order')
     $privateFields = @('internal_name', 'source_name', 'source_url', 'notes', 'created_at', 'updated_at')
     $materialCount = 0
     $variantCount = 0
@@ -236,11 +236,11 @@ function Test-QuoteResponse {
         [Parameter(Mandatory = $true)][string]$ExpectedVariantKey
     )
 
-    Test-PropertySet -Object $Quote -Required @('currency', 'total', 'weight_g', 'used_length_mm', 'target_length_mm', 'fit_status', 'snapshot', 'price_version') -Label 'Quote response'
+    Test-PropertySet -Object $Quote -Required @('currency', 'total', 'used_length_mm', 'target_length_mm', 'fit_status', 'snapshot', 'price_version') -Label 'Quote response'
     if ([string]$Quote.currency -notmatch '^[A-Z]{3}$') {
         throw "Quote currency must be an ISO-style three-letter code; received '$($Quote.currency)'."
     }
-    foreach ($field in @('total', 'weight_g', 'used_length_mm', 'target_length_mm')) {
+    foreach ($field in @('total', 'used_length_mm', 'target_length_mm')) {
         if ($Quote.$field -isnot [ValueType]) {
             throw "Quote field '$field' must be numeric."
         }
@@ -257,23 +257,32 @@ function Write-PageMarkers {
     )
 
     $markers = [ordered]@{
-        'Builder output (.ew-t17-builder)'              = $Html -match 'class=["''][^"'']*ew-t17-builder(?:\s|["''])'
-        'Landing output (.ew-t17-landing)'              = $Html -match 'class=["''][^"'']*ew-t17-landing(?:\s|["''])'
-        'Official designs (.ew-t17-official-designs)'   = $Html -match 'class=["''][^"'']*ew-t17-official-designs(?:\s|["''])'
-        'SEO output (.ew-t17-seo)'                      = $Html -match 'class=["''][^"'']*ew-t17-seo(?:\s|["''])'
-        'Raw T17 shortcode remains in HTML'             = $Html -match '\[\s*ew_t17_[a-z0-9_]+'
+        'ew-t17-ui'               = $Html -match 'class=["''][^"'']*ew-t17-ui(?:\s|["''])[^>]*\bdata-t17-ui\b'
+        'ew-t17-builder'          = $Html -match 'class=["''][^"'']*ew-t17-builder(?:\s|["''])'
+        'ew-t17-landing'          = $Html -match 'class=["''][^"'']*ew-t17-landing(?:\s|["''])'
+        'ew-t17-official-designs' = $Html -match 'class=["''][^"'']*ew-t17-official-designs(?:\s|["''])'
+        'ew-t17-seo'              = $Html -match 'class=["''][^"'']*ew-t17-seo(?:\s|["''])'
+        'raw_shortcode'           = $Html -match '\[\s*ew_t17_[a-z0-9_]+'
+    }
+    $labels = @{
+        'ew-t17-ui' = 'V3 builder (.ew-t17-ui[data-t17-ui])'
+        'ew-t17-builder' = 'Legacy builder (.ew-t17-builder)'
+        'ew-t17-landing' = 'Landing output (.ew-t17-landing)'
+        'ew-t17-official-designs' = 'Official designs (.ew-t17-official-designs)'
+        'ew-t17-seo' = 'SEO output (.ew-t17-seo)'
+        'raw_shortcode' = 'Raw T17 shortcode remains in HTML'
     }
 
     Write-Host "  $Label output signals:"
     foreach ($marker in $markers.GetEnumerator()) {
         $state = if ($marker.Value) { 'yes' } else { 'no' }
-        Write-Host ('    {0}: {1}' -f $marker.Key, $state)
+        Write-Host ('    {0}: {1}' -f $labels[$marker.Key], $state)
     }
 
-    if (-not ($markers.Values -contains $true)) {
+    if (-not (@('ew-t17-ui', 'ew-t17-builder', 'ew-t17-landing', 'ew-t17-official-designs', 'ew-t17-seo') | Where-Object { $markers[$_] } | Select-Object -First 1)) {
         Write-Host '    INFO: No v3 T17 output marker was found. This is expected before the official page is migrated.'
     }
-    elseif ($markers['Raw T17 shortcode remains in HTML']) {
+    elseif ($markers['raw_shortcode']) {
         Write-Host '    WARN: A raw T17 shortcode is visible; verify that the page is parsed by WordPress.'
     }
 
@@ -305,7 +314,7 @@ try {
             Write-Host ('Expected plugin version (administrator verification): {0}' -f $ExpectedPluginVersion)
         }
         else {
-            Write-Host 'Plugin version is verified by an administrator; no public frontend asset is expected from the backend-only plugin.'
+            Write-Host 'Plugin version is verified by an administrator; formal-page asset loading is verified after the shortcode migration.'
         }
     }
     else {

@@ -1,6 +1,7 @@
 /**
  * 用 elementor-utils（已验证能认证）创建 draft 产品 + 诊断 wc/v3 权限。
  */
+require('./legacy-step0-guard')(__filename);
 const E = require('D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/templates/elementor-utils');
 
 (async () => {

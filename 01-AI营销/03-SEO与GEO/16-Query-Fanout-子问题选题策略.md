@@ -18,7 +18,7 @@
 
 ---
 
-## 二、子问题挖掘：3 种实操路径
+## 二、子问题挖掘：4 种实操路径
 
 ### 路径 A：直接问 AI（最快，5 分钟出清单）
 
@@ -48,15 +48,69 @@ Prompt 模板（直接复制）：
 
 拿 3-5 个 SERP 前 10 的竞品页面，提取每个页面的 **H2/H3 大纲** → 合并去重 → 这是"Google 已认为合格的回答结构"。你对照自己的内容，缺口就是选题。
 
-> **三条路径不是"交集 = 高置信度"那么干净**——它们是三个不同视角，各有盲区，彼此还会有矛盾：
+### 路径 D：OpenAI Responses API + web_search（工程化、可审计）
+
+**与前 3 条路径的本质差异**：A/B/C 都是在"推测 AI 会怎么拆"——观察 UI 输出、抓 PAA、看竞品。路径 D 直接调用 LLM 后台的 web_search 工具，**记录 AI 真实执行了什么搜索**，是 GEO 研究中最底层、最可审计的方法。
+
+#### 核心机制
+
+OpenAI Responses API 允许把 `web_search` 作为 tool 传入。模型在回答时会自主决定是否触发搜索、搜什么、搜几次，每次搜索返回结构化的 `web_search_call` 对象：
+
+```json
+// 请求
+{
+  "tools": [{"type": "web_search"}],
+  "input": "你的核心话题"
+}
+
+// 响应（每次搜索一条）
+{
+  "type": "web_search_call",
+  "status": "completed",
+  "action": {"query": "..."}
+}
+```
+
+> 字段来源：OpenAI 开发者文档（原 platform.openai.com，已迁移至 developers.openai.com）。文档真实，**字段细节随模型版本可能变动，下列推断未经实际大规模验证**。
+
+#### 可记录的 GEO 研究信号
+
+| 信号 | 来源字段 | 用途 |
+|---|---|---|
+| **真实搜索词** | `action.query` | 比 PAA/Autocomplete 更贴近 LLM 真实 Fan-out 逻辑 |
+| **搜索次数** | `web_search_call` 计数 | 单个用户问题被拆成几次检索 = Fan-out 强度 |
+| **最终引用页面** | Response 中的 citation URL | 被 LLM 选中的源 = 真正的"被引用"，不是"出现在结果池里" |
+| **未被选中的候选** | 与引用页对比 | 诊断自己为什么没被切片——出现在搜索结果但没进答案 |
+
+#### 与路径 A 的差异
+
+| 维度 | 路径 A（直接问 ChatGPT） | 路径 D（调用 web_search API） |
+|---|---|---|
+| 看到的 | UI 给的最终答案 | AI 后台真实的搜索日志 |
+| 可审计性 | 黑盒——不知道内部搜了什么 | 白盒——每次搜索都有结构化记录 |
+| 适用场景 | 快速生成子问题清单 | 严肃 GEO 研究、需要可重复审计 |
+| 成本 | 免费版即可 | 按 token + web_search 调用计费 |
+
+#### 适用场景与限制
+
+- **适合**：需要可审计的 GEO 研究（如本知识库要标来源档位的内容）、批量跑核心话题矩阵、验证路径 A 的清单是否真实
+- **不适合**：日常选题（路径 A 5 分钟搞定的事，不必上 API）
+- **限制**：
+  - 字段结构以 OpenAI 当前文档为准，模型版本更新可能变动
+  - 跑出来的 Fan-out 逻辑 ≠ Google AI Overview 的 Fan-out（不同模型拆解逻辑不同）
+  - 需要工程能力（写脚本、管理 API key、解析响应）
+  - **必须用 OpenAI 官方 API key**——第三方中转（如 moleapi）多数只代理 chat/completions，不支持 Responses API 的 `web_search` 工具，且 token 经常只开通单个模型（本知识库 2026-07-28 实测：moleapi token 仅开通 `gpt-image-2`，调用 `/v1/responses` 返回 403）
+
+> **四条路径不是"交集 = 高置信度"那么干净**——它们是四个不同视角，各有盲区，彼此还会有矛盾：
 >
 > | 路径 | 视角 | 盲区 |
 > |------|------|------|
-> | A. 问 AI | AI 拆解逻辑 | AI "认为"会拆的，不等于真实用户在搜的；GPT 和 Perplexity 拆出来差异很大 |
+> | A. 问 AI | AI 拆解逻辑（UI 层） | AI "认为"会拆的，不等于真实用户在搜的；GPT 和 Perplexity 拆出来差异很大 |
 > | B. PAA/Autocomplete | 真实用户行为（ground truth） | 是 Google 的扩展逻辑，不完全等于 AI 搜索的 Fan-out |
 > | C. 竞品 H2/H3 | 行业惯例 | 过去式，预测不了 AI 关心的新维度 |
+> | **D. web_search API** | **LLM 真实搜索日志** | **OpenAI 一家之言，≠ Google AIO 的 Fan-out；需要工程投入** |
 >
-> **实操建议**：三份清单取**并集**，然后人工判断——B（真实用户）权重最高，A 用于发现"AI 关心但用户还没搜到"的蓝海，C 作为完整性兜底。出现矛盾时以 B 为准。
+> **实操建议**：四份清单取**并集**，然后人工判断——B（真实用户）权重最高，A 用于发现"AI 关心但用户还没搜到"的蓝海，C 作为完整性兜底，D 作为"AI 真实行为"的校验层。出现矛盾时以 B 为准。
 
 ---
 
@@ -183,7 +237,127 @@ Prompt 模板（直接复制）：
 
 ---
 
-## 七、与知识库其他文档的协作关系
+## 七、Fan-out Rank 作为 GEO 第 3 大因子：Zyppy 数据支撑 + ICP 筛选实操
+
+> **数据源**：Cyrus Shepard / Zyppy《AI Citation Ranking Factors Analysis》(2026.05.07)
+> **方法论**：54 个 AI 引用实验/专利/案例研究综合（覆盖 ChatGPT / Gemini / Perplexity）
+> **警告**：相关性 ≠ 因果关系，本文是观察级证据
+
+### 7.1 Top 10 AI 引用因子（Cyrus Shepard 综合评分）
+
+| 排名 | 因子 | 分数 | 与传统 SEO 的关系 |
+|---|---|---|---|
+| 1 | AI Engine Accessibility（可被 AI 爬取） | 9.5 | 传统 robots.txt + 新增 AI bot 屏蔽决策 |
+| 2 | Search Rank（主查询排名） | 9.4 | 完全重叠 |
+| **3** | **Fan-out Rank（Fan-out 子查询排名）** | **9.3** | **本节聚焦** |
+| 4 | Preview Controls（nosnippet 等） | 9.2 | 完全重叠 |
+| 5 | Semantic Closeness（语义贴近度） | 9.2 | 部分重叠 |
+| 6 | Content Format Match（页面类型匹配意图） | 9.0 | 完全重叠 |
+| 7 | RRF Top-n Playbook（多相关查询都排名） | 8.9 | 扩展：与 Fan-out Rank 互补 |
+| 8 | Information Forefront（重要内容置顶） | 8.8 | 完全重叠 |
+| 9 | Information Chunking（清晰结构） | 8.6 | 完全重叠 |
+| 10 | Factually Specificity（具体可验证事实） | 8.3 | 完全重叠 |
+
+**Cyrus 的核心结论**："Win SEO, win AI citations"——**Fan-out Rank 不是替代传统 SEO，是扩展维度**。
+
+### 7.2 Fan-out Rank 的精确含义
+
+**官方定义**（Zyppy）："How the URL ranks for related fan-out queries"——URL 在 AI 扩散出来的相关子查询下的排名。
+
+**关键洞察**：
+- 主查询下排前 10 不够
+- 要在 AI 后台并行检索的 N 个子查询下都排名
+- 这就是本篇文档第二节的"覆盖 N 个子问题"——**Zyppy 用数据证实了这个直觉**
+
+### 7.3 Seer Interactive 印证（额外硬数据 + 重要 caveat）
+
+> **数据源**：Seer Interactive《AIO Impact on Google CTR: 2026 Update》(v3)
+> **样本**：120,000+ 关键词（同品牌对比 AIO 被引用 vs 未被引用）
+
+**核心数据**：在 AIO 出现的 SERP 里，**被引用品牌** vs **未被引用品牌** 的 CTR 差异——有机 **+120%** / 付费 **+41%**。
+
+**⚠️ 重要 caveat（不可误读）**：
+- +120% 是**组间对比**（被引用 vs 未被引用），不是**组内前后对比**（AIO 前 vs AIO 后）
+- AIO 整体上**仍在压低**有机 CTR（vs 无 AIO 时代）
+- **Ahrefs**（2025.12）独立数据：AIO 让排第一的内容 CTR **-58%**
+- **Search Engine Journal**：AIO 中品牌 CTR **-61%**
+
+**📊 AIO 有机 CTR 时间序列（Seer v3，2025.02 – 2026.02）**：
+
+| 时间点 | AIO 有机 CTR | 事件 |
+|---|---|---|
+| 2025.02 | ~1.41% | 初始基线（v1 研究） |
+| 2025.09 | **0.61%**（floor） | 触底（同比 -61%） |
+| 2025.12 | ~1.3% | 缓慢回升（Ahrefs 同期报告 -58%） |
+| **2026.02** | **2.4%** | **2 个月内 +85% 反弹**（v3 最新） |
+
+**反弹 ≠ 恢复**（Cyrus Shepard 在 LinkedIn 评论）：
+> "A rebound from the floor is not the same as recovery. If CTR drops hard, then bounces from 1.3% to 2.4%, that tells me the patient is breathing."
+
+- 2.4% 仍**远低于** AIO 出现前的有机 CTR 水平
+- 反弹原因可能是：谷歌调整 AIO 链接呈现 / 用户学习点击 / 查询结构变化
+- **不能确认**是结构性恢复还是季节性波动——Seer 团队未下结论
+
+**真实含义**：
+- AIO 时代 "不引用就输得更惨"——被引用是**相对优势**，不是绝对增量
+- 即使 2026.02 反弹到 2.4%，整体趋势仍是 **AIO 压低有机 CTR**
+- GEO 投资的正确叙事是"**防御性必需**"，不是"**进攻性增长**"
+- "Win SEO, win AI citations" 的反面是 "**Don't win SEO, lose harder**"
+
+### 7.4 ICP 筛选金矿子查询（子木推导）
+
+> 来源：子木《GEO 流量密码因子之一：Fan-out Rank》(2026.07)
+> **标注**：本节是子木基于 Zyppy 数据推导的实操框架，原文未直接给出
+
+大模型扩散 8-12 个子查询，背后是**不同用户决策阶段**。用 ICP（理想客户画像）筛出"付费意愿最强"的子查询 = 金矿词。
+
+**示例**：
+- 主 Query：`best CRM`
+- 扩散子查询：`best CRM for healthcare small business`
+- 如果你的 ICP 是 healthcare 行业的 small business → **这就是金矿词**
+- 它既是 AI 后台会爬的子查询，又精准卡在 ICP 决策路径上
+
+### 7.5 决策阶段 6 维度映射（子木推导）
+
+每个 Fan-out 子查询背后对应一个用户决策阶段：
+
+| 决策阶段 | 子查询类型 | 示例（best AI video generators） |
+|---|---|---|
+| 用户画像 | who | for content creators |
+| 使用场景 | where/when | for short-form social media |
+| 商业决策 | what choice | pricing comparison 2026 |
+| 价格约束 | budget | free AI video generators |
+| 功能需求 | feature | that can create animations |
+| 竞品比较 | A vs B | Runway vs HeyGen |
+
+**用法**：把第二节"子问题挖掘"产出的子问题清单，按这 6 维度分类，找出 ICP 最强对应的子集优先 all in。
+
+### 7.6 Pillar + Cluster 内容矩阵（子木推导）
+
+```
+Pillar（支柱内容）：覆盖主 Query，传统 SEO 视角
+    │
+    ├─ Cluster 1：用户画像子查询（深度原创）
+    ├─ Cluster 2：使用场景子查询
+    ├─ Cluster 3：商业决策子查询
+    ├─ Cluster 4：价格约束子查询
+    ├─ Cluster 5：功能需求子查询
+    └─ Cluster 6：竞品比较子查询
+```
+
+**进阶**：每个 Cluster 内容同步建设外部信号（Reddit discussions / G2 reviews / Product Hunt）——让 AI 在多维度都能"看见"你。
+
+### 7.7 与本篇其他章节的协作
+
+| 本章提供 | 其他章节提供 |
+|---|---|
+| Fan-out Rank 作为 GEO 因子的数据支撑 | 第二节：3 种挖掘子问题路径 |
+| ICP 筛选 + 决策阶段映射的优先级框架 | 第三节：覆盖度诊断 |
+| Pillar + Cluster 矩阵的内容架构 | 第四节：8 个选品项目的子问题骨架 |
+
+---
+
+## 八、与知识库其他文档的协作关系
 
 | 本篇提供 | 协作文档提供 |
 |---------|-------------|

@@ -17,7 +17,7 @@
 | Product cards | Compact image, name, one current size/price line, and size stepping when alternatives exist. A whole-card tap adds the currently selected item. | Mobile uses two cards per row and desktop three. `- / +` changes the selected Variant only; it never changes quantity. Single-Variant cards keep the same reserved footer height but show no `- / +`. |
 | Released tray | Added items move into the tray, collide, rebound and displace existing items before settling. | Use bounded two-dimensional collision feedback with no overlap or rim overflow. This is visual placement only; recipe order and server quote data remain deterministic. |
 | Assemble/release | A separate action gathers scattered materials into a bracelet and can release them again. | Assemble is repeatable, not a one-shot completion action. It arranges by occupied width and applies automatic direction; release returns to safe free placement. |
-| Fit feedback | The reference shows suggested wrist range and too-tight/too-loose prompts without silently changing the design. | T17 reports Length, Weight, Pieces/target and Suggested wrist. It may recommend an approximate add/remove count but never mutates the recipe automatically. |
+| Fit feedback | The reference shows suggested wrist range and too-tight/too-loose prompts without silently changing the design. | T17 reports Length, Pieces/target and Suggested wrist. It may recommend an approximate add/remove count but never mutates the recipe automatically. |
 
 ## Product-card and catalogue contract learned from the reference
 
@@ -110,4 +110,4 @@ Competitor catalogue records may be kept in `data/v3/research/` only when every 
 - This audit does not approve, price or import any candidate material.
 - Production assets still require category, anchor, occupied length, compatibility and orientation review through the existing review/import gates.
 - Research videos and extracted QA frames remain under `visual-qa/` and must never be copied into the production catalog.
-- Key implementation evidence is retained in `interaction-acceptance-spec-20260718.md`, `design-qa.md`, `.fable/competitor-stonelab-empty-1-4-live.mp4`, `.fable/competitor-stonelab-template-add.mp4`, and the matching `visual-qa/responsive-entry-*.png` screenshots. Intermediate debug frames are not product documentation.
+- Current implementation acceptance is retained in `interaction-acceptance-spec-20260718.md`; visual QA media remains research evidence only. Intermediate debug frames are not product documentation.

@@ -5,6 +5,7 @@
  *
  * Usage: node test-full-pipeline.js
  */
+require('./legacy-step0-guard')(__filename);
 const fs = require('fs');
 const path = require('path');
 const E = require('D:/Code/knowledge-base/01-AI营销/04-选品库/C端/01-疗愈水晶/02-网站规划/templates/elementor-utils');

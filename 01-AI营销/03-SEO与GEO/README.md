@@ -1,6 +1,6 @@
 # SEO与GEO 知识库索引
 
-> 最后更新：2026-07-02（+ 17 PRNS链接权威与最短路径模型：专利+API Leak+DOJ三源 / 外链内链统一 / 准种子界面 / 代表文档聚类 / Reasonable Surfer加权）
+> 最后更新：2026-07-28（+ 16 号新增第七节：Fan-out Rank 作为 GEO 第 3 大因子 / Zyppy 54 研究综合 + Seer Interactive 引用回报硬数据 + 子木 ICP 筛选与决策阶段 6 维度映射 / 第二节新增路径 D：OpenAI Responses API web_search 工程化研究方法）
 
 ---
 
@@ -25,7 +25,9 @@
 ├── 14-AI搜索数据驱动策略与Prompt执行库.md  ← X研究数据+影响力者框架+工具生态+Claude Prompt（核心文档）
 ├── 15-SEO漂移监控.md               ← 上线后SEO信号持续监控
 ├── 16-Query-Fanout-子问题选题策略.md ← 关键词→子问题的选题方法
-└── 17-PRNS链接权威与最短路径模型.md ← 外链/内链权威机制（专利+API Leak+DOJ三源）
+├── 17-PRNS链接权威与最短路径模型.md ← 外链/内链权威机制（专利+API Leak+DOJ三源）
+├── 20-新站信任建立期与算法机制.md  ← 新站"沙盒现象"的算法组件诊断（NavBoost + PRNS + 置信度门槛）
+└── 21-Twiddler框架与重排机制.md   ← Ascorer 之后的重排层（Superroot/Predoc vs Lazy/12+ 已具名 Twiddler）
 ```
 
 > **执行层文档**（工作流、工具配置）已迁移至 [01-营销方法论基础/](../01-营销方法论基础/)
@@ -71,6 +73,12 @@
 | 规划内链架构 | [17](./17-PRNS链接权威与最短路径模型.md) | 内外链统一、从落点页出发、路径最后一段管理 |
 | 判断负面SEO是否有效 | [17](./17-PRNS链接权威与最短路径模型.md) | 垃圾外链不稀释（PRNS管道）、负SEO走的是SpamBrain管道 |
 | 理解PageRank/PageRank_NS | [17](./17-PRNS链接权威与最短路径模型.md) | 2006年替换时间线、专利谱系、API Leak代码级证据 |
+| 诊断新站排名滞后 | [20](./20-新站信任建立期与算法机制.md) | "沙盒"算法组件拆解（NavBoost 曝光分母 + PRNS 距离 + 置信度门槛） |
+| 处理同主体老站资源 | [20](./20-新站信任建立期与算法机制.md) | 老站→新站外链/301决策矩阵（luckycrystals.org 类案例） |
+| 判断"是否被谷歌标记" | [20](./20-新站信任建立期与算法机制.md) | 沙盒期 vs 手动惩罚 5 项诊断（GSC 健康检查清单） |
+| 理解 Ascorer / Twiddler / Superroot | [21](./21-Twiddler框架与重排机制.md) | 5 阶段排名流水线、Predoc vs Lazy Twiddler、12+ 已具名 Twiddler 清单 |
+| 诊断"为什么排名突然变化" | [21](./21-Twiddler框架与重排机制.md) | 多 Twiddler 独立运行 + Category Packer 协调 → 根因极难定位 |
+| 理解同站第二页排不上的现象 | [21](./21-Twiddler框架与重排机制.md) | Diversity Cap / Category Packing（非分数问题，是类型约束） |
 
 ---
 
@@ -178,3 +186,15 @@
 | Lois / 海外SEO与ASO（GSC AI 数据复盘, 2026.07） | 行业 | 05（GSC Generative AI features 实证：586K 曝光 / 223 国 / 日波动 3K-22K / 工具型 AI 检索） |
 | Ahrefs（140 亿页分析, 2023.12） | 研究 | 05（96.55% 零流量基线 + 1.74% 新页进 Top 10） |
 | 鸭老师SEO《EEAT 不是排名因素，也不是你能做的》（2026.07） | 行业 | 02（E-E-A-T 算法对应：T=Q*+P* + 声明 vs 验证 + EEAT checker 产品史批判） |
+| 鸭老师SEO《且看且珍惜》（2026.07） | 行业 | 20（NavBoost 曝光分母 / 0 状态站拿不到分母 / 来源三档分层方法论） |
+| Ahrefs 140 亿页分析（2023.12）— 新页 Top 10 数据复用 | 研究 | 20（1.74% 新页进 Top 10 + 96.55% 零流量基线，信任期统计证据） |
+| goearthward.com GSC 实测（2026.07.27） | 一手数据 | 20（位置 48.3 / quick_wins 空 / 5 项健康检查全 PASS / 老站 luckycrystals.org referringUrl） |
+| grumpy-old-seo.com（Twiddlers 拆解） | 行业 | 21（Predoc/Lazy 双层架构 / Superroot framework / 12+ 已具名 Twiddler） |
+| navboost.com（Twiddler 专项站） | 行业 | 21（Ascorer green ring ~1000 候选 / Category Packer 协调 / 1.7x IR 分数示例） |
+| Christian Ott / seo-kreativ.de（5 阶段教学模型） | 行业 | 21（Crawling→Indexing→Query→Ascorer→Twiddler / API Leak 系统名首次披露） |
+| Julian Redlich / rankmeamadeus.com（Ascorer 名称溯源） | 行业 | 21（Ascorer = "Amit's Scorer"，以 Amit Singhal 命名） |
+| 2018 Twiddler Quick Start Guide（庭审记录公开） | 内部文档 | 21（65+ Twiddler / Predoc vs Lazy / 独立运行原则） |
+| Cyrus Shepard / Zyppy《AI Citation Ranking Factors Analysis》(2026.05) | 研究 | 16（54 个研究综合：Fan-out Rank 9.3 排第 3 / Seer Interactive 引用回报 +120% 有机/+41% 付费 / Win SEO win AI citations） |
+| Seer Interactive AI Overview 引用研究 | 研究 | 16（被 AIO 引用 → 有机点击 +120% + 付费点击 +41%，GEO 投资回报硬证据） |
+| 子木《GEO 流量密码因子之一：Fan-out Rank》(2026.07) | 行业 | 16（基于 Zyppy 数据推导：ICP 筛选金矿子查询 + 决策阶段 6 维度映射 + Pillar-Cluster 矩阵） |
+| OpenAI Responses API web_search tool | 工程化 | 16（路径 D：可记录 LLM 真实搜索词/次数/引用页面，GEO 研究最可审计方法） |

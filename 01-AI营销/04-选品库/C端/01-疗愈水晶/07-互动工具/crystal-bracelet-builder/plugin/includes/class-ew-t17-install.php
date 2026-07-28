@@ -5,6 +5,7 @@ defined('ABSPATH') || exit;
 final class EW_T17_Install {
     private const REQUIRED_MATERIAL_COLUMNS = array(
         'category_slug',
+        'category_label',
         'library_tab_slug',
         'sort_order',
     );
@@ -41,6 +42,7 @@ final class EW_T17_Install {
             component_type varchar(24) NOT NULL DEFAULT 'crystal',
             library_tab_slug varchar(64) NOT NULL DEFAULT 'crystal',
             category_slug varchar(64) NOT NULL DEFAULT '',
+            category_label varchar(190) NOT NULL DEFAULT '',
             name_en varchar(190) NOT NULL,
             internal_name varchar(190) NOT NULL DEFAULT '',
             primary_color varchar(48) NOT NULL DEFAULT '',

@@ -58,7 +58,7 @@ foreach ($material in @($catalog.materials)) {
         Assert-Condition ($null -ne $material.$field) "Catalog material is missing $field."
     }
     foreach ($variant in @($material.variants)) {
-        foreach ($field in @('id', 'size_mm', 'price', 'weight_g', 'occupied_length_mm', 'display_scale', 'image_url', 'compatible_bead_sizes', 'sort_order')) {
+        foreach ($field in @('id', 'size_mm', 'price', 'occupied_length_mm', 'display_scale', 'image_url', 'compatible_bead_sizes', 'sort_order')) {
             Assert-Condition ($null -ne $variant.$field) "Catalog variant $($variant.id) is missing $field."
         }
     }
@@ -84,7 +84,7 @@ if ([string]::IsNullOrWhiteSpace($BeadVariantId)) {
     $packaging = if ([string]::IsNullOrWhiteSpace($PackagingVariantId)) { @{} } else { @{ variant_id = $PackagingVariantId } }
     $quoteRequest = @{ wrap_mode = 'single'; target_wrist_cm = $TargetWristCm; fit_preference = 'regular'; sequence = $sequence; packaging = $packaging } | ConvertTo-Json -Depth 5
     $quote = Invoke-RestMethod -Method Post -Uri "$api/quote" -ContentType 'application/json' -Body $quoteRequest
-    foreach ($field in @('currency', 'total', 'weight_g', 'used_length_mm', 'target_length_mm', 'fit_status', 'snapshot', 'price_version')) {
+    foreach ($field in @('currency', 'total', 'used_length_mm', 'target_length_mm', 'fit_status', 'snapshot', 'price_version')) {
         Assert-Condition ($null -ne $quote.$field) "Quote response is missing $field."
     }
     Assert-Condition (@($quote.snapshot).Count -eq @($sequence).Count) 'Quote snapshot count must match the submitted sequence.'

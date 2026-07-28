@@ -1,7 +1,7 @@
 # Elementor MCP 生产 SOP（Woodmart 主题）
 
-> 2026-07-20 验证通过（page 56325）。本 SOP 记录从零生产 Elementor page 的可靠路径、必传字段、Woodmart 专属规则。后续生产以此为准。
-> **适用范围**：goearthward.com（Woodmart 主题）。通用化（不依赖 Woodmart）见 §10。
+> 2026-07-21 v1.2（合并测试方案文档 + 删除旧文档后）。POC 已通过，page 56325 验证样本。
+> **适用范围**：goearthward.com（Woodmart 主题）。通用化见 §10，产品化路线见 §13。
 
 ---
 
@@ -9,9 +9,10 @@
 
 | 文档 | 角色 |
 |---|---|
-| `Elementor MCP 页面创建测试方案.md` | 测试结论 + POC 历史 |
-| **本文档** | **生产 SOP**（已验证可靠路径） |
-| `Elementor REST API 操作手册.md` | 旧路径（已弃用，保留备查） |
+| **本文档** | **唯一 Elementor page 生产 SOP**（含踩坑记录、Pro widget、产品化路线） |
+| `Gutenberg博客文章REST-API上传指南.md` | post 生产 SOP |
+| ~~`Elementor REST API 操作手册.md`~~ | 已删除（MCP SOP 替代） |
+| ~~`Elementor MCP 页面创建测试方案.md`~~ | 已删除（合并到 §13 附录） |
 
 ---
 
@@ -209,10 +210,37 @@ add-free-widget (heading / text-editor / image / button / icon-box / image-box /
 | 8 | image-box link 不工作 | 传成字符串 `"url"` | 必须传 object `{url: "...", is_external: "", nofollow: ""}` |
 | 9 | border / box_shadow / background 不生效 | 没先传 `border_border: "solid"` / `box_shadow_box_shadow_type: "yes"` / `background_background: "classic"` 触发字段 | 这些 "type" 字段是 Elementor 的开关，必须先传 |
 | 10 | `apply-template` 整页克隆结构 100% 一致但用户否定 | 克隆不算 AI 生产 | 仅用于"模板库"场景，不作为生产路径 |
+| **11** | **batch-update 加 animation 后前端元素消失** | **EMCP fallback 删了 CSS 缓存（meta + 物理文件），但 LiteSpeed Cache 缓存了旧 HTML，Elementor 没机会重生 CSS → animation opacity:0 卡住** | **清缓存（Purge All）让 Elementor 下次访问时重生 CSS；或不用 MCP 加 animation，改用 add-custom-css** |
+| **12** | **EMCP 后台开关变更后 MCP 工具不可用** | **开关变更不触发 MCP 客户端重连** | **重启 Claude Code / Cursor** |
+| **13** | **REST API / MCP update-post 不触发 Elementor CSS 重生** | **WordPress save_post hook ≠ Elementor CSS 重生。CSS 重生需要 Elementor 的 `CSS_File::update_file()` 方法，只有编辑器保存或 WP-CLI 才调用** | **更新 post meta 不够；必须走 Elementor 内部保存流程或清缓存** |
+| **14** | **EMCP CSS 重生机制（代码级分析）** | **EMCP 有两层：1) 优先 `Document::save()`（触发 CSS 重生） 2) Fallback：直接写 meta + 删 CSS 文件（让 Elementor 下次访问重生）。但页面缓存（LiteSpeed/Cloudflare）会阻止"下次访问重生"** | **见坑 #11 解决方案** |
+
+### CSS 重生问题总结与产品化修复
+
+> 从 EMCP 源码 `class-elementor-data.php` line 185-280 分析得出。
+
+**当前最佳实践（使用 EMCP Free 时）**：
+1. 不用 MCP 加 animation 字段（用 `add-custom-css` 代替）
+2. 每次完成 page 后在 Elementor 编辑器手动保存一次
+3. 如果 CSS 丢了（前端空白）：清缓存 → Elementor 自动重生
+
+**产品化时根治方案（fork EMCP 加 5 行 PHP）**：
+
+```php
+// 在 EMCP 的 save_page_data() fallback 路径加：
+if ( class_exists( '\Elementor\Core\Files\CSS\Post' ) ) {
+    $css_file = new \Elementor\Core\Files\CSS\Post( $post_id );
+    $css_file->update_file();  // 直接重生 CSS，不等下次访问
+}
+do_action( 'litespeed_purge_post', $post_id );     // 清 LiteSpeed
+do_action( 'rocket_clean_post', $post_id );          // 清 WP Rocket
+```
+
+**效果**：任何 MCP 操作后 CSS 自动正确，零用户配置，零 WP-CLI 依赖。这是 vs msrbuilds 的**核心差异化卖点**。
 
 ---
 
-## 7. 快速生产模板（7 个标准 section）
+## 7. 快速生产模板（9 个标准 section）
 
 ### 7.1 Hero（全宽 + 背景图 + overlay + 双 CTA）
 
@@ -346,3 +374,133 @@ add-free-widget (heading / text-editor / image / button / icon-box / image-box /
 ## 11. 修订记录
 
 - 2026-07-20：v1.0 首版，基于 page 56325 验证结果
+- 2026-07-21：v1.1 更新
+  - 新增坑 #11-14（batch-update animation / EMCP 开关重连 / Elementor 4.x Regenerate CSS 缺失 / _elementor_css meta 失效）
+  - §7 从 7 section 扩展到 9 section（新增 Testimonial Carousel + Contact Form）
+  - 新增 §12 Pro widget 使用经验（3 个已验证）
+  - page 56325 最终成果：72 元素 / 9 section / 3 个 Pro widget / 前端渲染完美
+- 2026-07-21：v1.2 简化合并
+  - 删除 `Elementor REST API 操作手册.md`（page 生产旧路径，已被 MCP 完全替代）
+  - 删除 `Elementor MCP 页面创建测试方案.md`（POC 历史文档，有用内容合并到 §13）
+  - 新增 §13 附录（POC 测试结论 + 产品化路线 + 引用来源）
+  - 目录从 6 文档简化到 4 文档（删除 2 个 Elementor page 生产冗余文档）
+
+---
+
+## 12. Pro widget 使用经验（已验证）
+
+> 前提：EMCP Tools 后台 → Tools → **Add Pro Widget** 开关 ON，且重启 MCP 客户端。
+> 工具：`emcp-tools-add-pro-widget`（不是 `add-free-widget`）。
+
+### 12.1 已验证可用的 Pro widget（page 56325 实测）
+
+| Widget | 用途 | 关键 settings | CSS 风险 |
+|---|---|---|---|
+| `animated-headline` | Hero 标题高亮动画 | `headline_style: "highlighted"` / `before_text` / `highlighted_text` / `marker: "underline"` / `highlight_color` | ✅ 无（不触发 CSS 重生问题） |
+| `testimonial-carousel` | 客户评价轮播 | `slides: [{_id, content, name, title}]` / `slides_per_view` 三档 / `autoplay` / `space_between` / `slide_background_color` | ✅ 无 |
+| `form` | 联系表单 | `form_fields: [{_id, field_type, field_label, placeholder, required, width}]` / `submit_actions: ["email"]` / `email_to` / `button_background_color` | ✅ 无 |
+
+### 12.2 调用方式
+
+```python
+# 关键区别：用 add-pro-widget，不是 add-free-widget
+emcp-tools-add-pro-widget(
+    post_id=N,
+    parent_id="container_id",
+    widget_type="testimonial-carousel",
+    settings={...}
+)
+```
+
+**用 `add-free-widget` 传 Pro widget_type 会报错**："That is a Pro widget — use add-pro-widget"。
+
+### 12.3 Pro widget 注意事项
+
+1. **不要在 Pro widget 上加 `animation` 字段**（会触发坑 #11 的 CSS 问题）
+2. **form widget 的 `email_to` 必须是站点域名邮箱**（避免被标记为 spam）
+3. **testimonial-carousel 的 `slides` 数组每项必须有 `_id`**（否则 Elementor repeater 不识别）
+4. **animated-headline 的 `tag` 默认是 div**——如果要 SEO 友好，显式传 `tag: "h1"`（但 page-snapshot 的 H1 检测可能不识别，可忽略 warnings）
+
+### 12.4 未测试但理论上可用的 Pro widget（30 个 catalog）
+
+参考 `list-widgets(tier="pro")` 完整清单（flip-box / price-table / portfolio / loop-grid / media-carousel / nav-menu / search / lottie / hotspot / off-canvas 等），按需调用 `add-pro-widget`。
+
+---
+
+## 13. 附录：POC 测试结论与产品化路线
+
+> 从测试方案文档合并（2026-07-21）。POC 已通过，page 56325 是验证样本。
+
+### 13.1 POC 测试结论
+
+| 用例 | 结果 | 关键发现 |
+|---|---|---|
+| B1 简单 page | ✅ 通过 | MCP 原子操作可靠 |
+| B2 build-page 复刻 home | ❌ 失败 | AI 简化 settings 导致响应式字段丢失（不是工具限制，是 AI 实现问题） |
+| B4 apply-template | ✅ 通过 | 100% 保真，但克隆不算生产 |
+| **56325 增量构建（最终路径）** | ✅ **完美** | **add-container + add-free-widget + 严格 1:1 字段 = 可靠的 AI 生产路径** |
+
+**核心结论**：增量构建（逐 section add-container + 严格字段传递）是唯一可靠的 AI 生产路径。不用 build-page（字段会被 normalizer 简化），不用 apply-template（克隆不算生产）。
+
+### 13.2 fork 路线选择
+
+| 方案 | 合法性 | 工作量 | 风险 |
+|---|---|---|---|
+| **fork Free（GPL-2.0）+ 自写 Pro overlay** | ✅ 合法 | 中 | 跟随上游同步 |
+| 复用 msrbuilds Pro 私有代码 | ❌ 违反版权 | — | 法律 + 技术（Freemius）双重风险 |
+| 完全自研，不 fork | ✅ 合法 | 高 | 失去 Free 现成的 120+ 工具 |
+
+**选择 fork Free + 自写 Pro overlay**。
+
+### 13.3 Pro 功能优先级（修正版）
+
+> 基于测试方案 v1（"模板化生产闭环"）修正。56325 成功证明增量构建可行，所以 P0 从"模板库"调整为"工具链优化 + 行业预设"。
+
+| 优先级 | 功能 | 说明 |
+|---|---|---|
+| **P0** | **行业预设 settings 库** | 把水晶 / SEO / 塔罗等垂直领域的高质量 section 的 settings JSON 预设存到插件。AI 引用预设 build-page，不需每次手写字段 |
+| **P0** | **增量构建工作流优化** | 基于本文档 SOP 的可靠路径，封装为"一键生产 page" ability |
+| P1 | Theme Builder | ~3000 行 PHP，参考 msrbuilds 公开代码 |
+| P1 | WooCommerce 集成 | ~600 行 PHP，包装 `wc/v3` |
+| P2 | SEO & a11y 审计 | ~2500 行，完全自研 |
+| P2 | Popup Builder | 调 Elementor Pro 或自研兜底 |
+| P3（跳过） | AI Widget Builder / AI Chat / Agent Skills | 高投入低差异化 |
+
+### 13.4 许可证 & 商业化
+
+- License 系统：[License Manager for WooCommerce](https://wordpress.org/plugins/license-manager-for-woocommerce/)（免费）或自写
+- 更新通道：参考 Free 版 `class-github-updater.php`
+- 定价：参照 msrbuilds $29.99/年，中文市场 ¥199-299/年
+
+### 13.5 差异化策略
+
+1. **中文市场**：i18n + 国内 AI 模型（智谱 / 通义 / DeepSeek）+ 国内支付
+2. **行业方案**：水晶/塔罗/SEO 站群 prebuilt presets
+3. **Elementor 4.0 atomic**：深耕 msrbuilds 未覆盖的 atomic widget
+
+### 13.6 启动条件
+
+POC 已通过（2026-07-21），以下条件满足：
+- [x] 增量构建路径在 9 section / 72 元素 / 3 Pro widget page 上验证成功
+- [x] CSS 自动生成正常（Pro widget 不触发坑 #11）
+- [ ] 已 fork Free 仓库，本地能编译运行（待执行）
+
+**前置任务**（启动时执行）：
+1. 申请新 GitHub 组织
+2. Fork `msrbuilds/elementor-mcp`，改 plugin slug
+3. 移除 Freemius SDK，改自写 license
+4. 按 P0 优先级实现功能
+
+### 13.7 引用来源
+
+**官方文档**：
+- [WordPress MCP Adapter](https://developer.wordpress.org/news/2026/02/from-abilities-to-ai-agents-introducing-the-wordpress-mcp-adapter/)
+- [Elementor 数据结构](https://developers.elementor.com/docs/data-structure/)
+
+**GitHub 项目**：
+- [msrbuilds/elementor-mcp](https://github.com/msrbuilds/elementor-mcp) — 当前使用
+- [wordpress/mcp-adapter](https://github.com/wordpress/mcp-adapter) — 官方（msrbuilds 已打包）
+- [bvisible/elementor-mcp-api](https://github.com/bvisible/elementor-mcp-api) — 备选
+
+**行业分析**：
+- [InstaWP: Best WordPress MCP Servers](https://instawp.com/best-wordpress-mcp-servers-compared/)

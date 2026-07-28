@@ -25,6 +25,9 @@ final class EW_T17_Frontend {
         $recipe = $product_id ? json_decode((string) get_post_meta($product_id, '_ew_t17_recipe_json', true), true) : null;
         $scene = $product_id ? (string) get_post_meta($product_id, '_ew_t17_primary_scene', true) : '';
         $library_tabs = EW_T17_Catalog::library_tabs();
+        $custom_product_id = (int) get_option('ew_t17_custom_product_id', 0);
+        $custom_product = $custom_product_id && function_exists('wc_get_product') ? wc_get_product($custom_product_id) : false;
+        $checkout_available = $custom_product && $custom_product->is_purchasable();
 
         wp_enqueue_style('ew-t17-builder');
         wp_enqueue_script('ew-t17-builder');
@@ -32,11 +35,25 @@ final class EW_T17_Frontend {
             'restUrl' => esc_url_raw(rest_url('ew-t17/v1/')),
             'ajaxUrl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('ew_t17_builder'),
+            'officialDesignId' => $product_id,
             'cartUrl' => function_exists('wc_get_cart_url') ? wc_get_cart_url() : '',
             'currencySymbol' => function_exists('get_woocommerce_currency_symbol') ? get_woocommerce_currency_symbol() : '$',
             'physicsMotion' => 'essential',
-            'mockMode' => false,
+            'mockMode' => !$checkout_available,
+            'checkoutAvailable' => (bool) $checkout_available,
             'trayImage' => EW_T17_URL . 'assets/images/tray-default.png',
+            'trayThemes' => array(
+                array('id' => 'celadon', 'label' => 'Celadon', 'image' => EW_T17_URL . 'assets/images/tray-celadon-alpha.png'),
+                array('id' => 'blue', 'label' => 'Misty blue', 'image' => EW_T17_URL . 'assets/images/tray-blue-alpha.png'),
+                array('id' => 'ice', 'label' => 'Ice white', 'image' => EW_T17_URL . 'assets/images/tray-ice-alpha.png'),
+                array('id' => 'walnut', 'label' => 'Deep walnut', 'image' => EW_T17_URL . 'assets/images/tray-walnut-alpha.png'),
+            ),
+            'tutorialSlides' => array(
+                array('image' => EW_T17_URL . 'assets/images/tutorial-add-materials-dev.png', 'title' => 'Add crystals and accessories', 'copy' => 'Tap a material card to send the selected Variant into the tray.'),
+                array('image' => EW_T17_URL . 'assets/images/tutorial-size-dev.png', 'title' => 'Choose a size before adding', 'copy' => 'Use the minus and plus controls to switch Variant size, then tap the card.'),
+                array('image' => EW_T17_URL . 'assets/images/tutorial-drag-dev.png', 'title' => 'Reorder your bracelet', 'copy' => 'Drag a material around the assembled strand to change its position.'),
+                array('image' => EW_T17_URL . 'assets/images/tutorial-remove-dev.png', 'title' => 'Drag out to remove', 'copy' => 'Drag a material outside the tray to remove it. Undo remains available.'),
+            ),
             'trayBrand' => array(
                 'imageUrl' => ($tray_logo_id = absint(get_option('ew_t17_tray_logo_id', 0))) ? (string) wp_get_attachment_image_url($tray_logo_id, 'full') : esc_url_raw((string) get_option('ew_t17_tray_logo_url', '')),
                 'widthPx' => max(24, min(160, absint(get_option('ew_t17_tray_logo_size_px', 54)))),
