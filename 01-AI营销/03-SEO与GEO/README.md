@@ -1,6 +1,6 @@
 # SEO与GEO 知识库索引
 
-> 最后更新：2026-07-28（+ 16 号新增第七节：Fan-out Rank 作为 GEO 第 3 大因子 / Zyppy 54 研究综合 + Seer Interactive 引用回报硬数据 + 子木 ICP 筛选与决策阶段 6 维度映射 / 第二节新增路径 D：OpenAI Responses API web_search 工程化研究方法）
+> 最后更新：2026-07-29（+ 22 号新增：SEO 投入时机专家立场库 — Eli/Ross/Rand 晚投派 vs Cyrus/Aleyda/Tim 早投派 + 7 位沉默专家 + 三诊断问题框架 / README 索引同步）
 
 ---
 
@@ -20,14 +20,13 @@
 ├── 09-向量搜索与嵌入优化.md        ← 理解AI检索机制时看这个
 ├── 10-内容可检索性框架.md          ← 让内容被AI检索到时看这个
 ├── 11-内容成熟度模型.md            ← 诊断内容策略成熟度时看这个
-├── 12-过程内容策略-B2B信任建设.md   ← B2B品牌信任建设时看这个
-├── 13-大规模关键词排名策略.md       ← 从数百到数百万索引关键词（电商/通用）
-├── 14-AI搜索数据驱动策略与Prompt执行库.md  ← X研究数据+影响力者框架+工具生态+Claude Prompt（核心文档）
-├── 15-SEO漂移监控.md               ← 上线后SEO信号持续监控
-├── 16-Query-Fanout-子问题选题策略.md ← 关键词→子问题的选题方法
-├── 17-PRNS链接权威与最短路径模型.md ← 外链/内链权威机制（专利+API Leak+DOJ三源）
-├── 20-新站信任建立期与算法机制.md  ← 新站"沙盒现象"的算法组件诊断（NavBoost + PRNS + 置信度门槛）
-└── 21-Twiddler框架与重排机制.md   ← Ascorer 之后的重排层（Superroot/Predoc vs Lazy/12+ 已具名 Twiddler）
+├── 12-大规模关键词排名策略.md       ← 从数百到数百万索引关键词（电商/通用）
+├── 13-AI搜索研究与Prompt执行库.md  ← X研究数据+影响力者框架+工具生态+Claude Prompt（核心文档）
+├── 14-SEO漂移监控.md               ← 上线后SEO信号持续监控
+├── 15-Query-Fanout-子问题选题策略.md ← 关键词→子问题的选题方法
+├── 16-PRNS链接权威与最短路径模型.md ← 外链/内链权威机制（专利+API Leak+DOJ三源）
+├── 17-新站信任建立期与算法机制.md  ← 新站"沙盒现象"的算法组件诊断（NavBoost + PRNS + 置信度门槛）
+└── 18-Twiddler框架与重排机制.md   ← Ascorer 之后的重排层（Superroot/Predoc vs Lazy/12+ 已具名 Twiddler）
 ```
 
 > **执行层文档**（工作流、工具配置）已迁移至 [01-营销方法论基础/](../01-营销方法论基础/)
@@ -56,29 +55,29 @@
 | 理解向量搜索/嵌入原理 | [09](./09-向量搜索与嵌入优化.md) | 向量嵌入、余弦相似度、向量化SEO框架 |
 | 让内容被AI检索到 | [10](./10-内容可检索性框架.md) | 5要素诊断、AI Readiness 13项评估、AI图片分组优化、Test-and-Learn |
 | 诊断内容策略成熟度 | [11](./11-内容成熟度模型.md) | 5级模型、升级路径、Barbell Strategy |
-| 做B2B品牌信任建设 | [12](./12-过程内容策略-B2B信任建设.md) | Show Your Work、过程内容公式、E-E-A-T信号 |
-| 大规模关键词排名 | [13](./13-大规模关键词排名策略.md) | 关键词家族、程序化SEO、四阶段扩展模型 |
+| 做B2B品牌信任建设 | [12](../01-营销方法论基础/12-过程内容策略-B2B信任建设.md) | Show Your Work、过程内容公式、E-E-A-T信号（已迁至营销方法论基础） |
+| 大规模关键词排名 | [12](./12-大规模关键词排名策略.md) | 关键词家族、程序化SEO、四阶段扩展模型 |
 | Reddit GEO优化 | [外链库/Reddit GEO](../05-外链资产库/01-Reddit-AI可见度GEO战略指南.md) | Prompt Mapping、Jolly AEO Framework、品牌植入 |
-| 做AI可见性诊断 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | AI可见性诊断Prompt、Ghost Citation检测、引用就绪审计 |
-| 选择AI可见性工具 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | 工具生态对比、Profound/Peec/Otterly分层选型 |
-| 理解Ghost Citation | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | 四引擎差异化、引用vs提及分离策略 |
-| Perplexity专项优化 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | AED内容模板、60天新鲜度循环 |
-| 用Claude做SEO | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | 8个SEO Prompt执行模板 |
-| 了解AI Overviews流量影响 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) + [05](./05-SEO测量危机与新指标.md) | CTR硬数据、覆盖率增长、零点击率 |
-| 对比影响力者方法论 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | Aleyda/Lily Ray/Kevin Indig/Glenn Gabe框架对比 |
-| 用向量嵌入做SEO分析 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) + [09](./09-向量搜索与嵌入优化.md) | Screaming Frog嵌入提取、SCaNN索引、5大应用场景 |
-| 学习AI搜索优化体系 | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) | learningaisearch.com路线图、9位专家实践技巧 |
-| 做Programmatic SEO | [14](./14-AI搜索数据驱动策略与Prompt执行库.md) + [13](./13-大规模关键词排名策略.md) | 三层解耦架构、JSON Schema驱动、渐进式发布 |
-| 做外链建设 | [17](./17-PRNS链接权威与最短路径模型.md) | 最短路径模型、准种子界面、出链密度筛选、可操作变量清单 |
-| 规划内链架构 | [17](./17-PRNS链接权威与最短路径模型.md) | 内外链统一、从落点页出发、路径最后一段管理 |
-| 判断负面SEO是否有效 | [17](./17-PRNS链接权威与最短路径模型.md) | 垃圾外链不稀释（PRNS管道）、负SEO走的是SpamBrain管道 |
-| 理解PageRank/PageRank_NS | [17](./17-PRNS链接权威与最短路径模型.md) | 2006年替换时间线、专利谱系、API Leak代码级证据 |
-| 诊断新站排名滞后 | [20](./20-新站信任建立期与算法机制.md) | "沙盒"算法组件拆解（NavBoost 曝光分母 + PRNS 距离 + 置信度门槛） |
-| 处理同主体老站资源 | [20](./20-新站信任建立期与算法机制.md) | 老站→新站外链/301决策矩阵（luckycrystals.org 类案例） |
-| 判断"是否被谷歌标记" | [20](./20-新站信任建立期与算法机制.md) | 沙盒期 vs 手动惩罚 5 项诊断（GSC 健康检查清单） |
-| 理解 Ascorer / Twiddler / Superroot | [21](./21-Twiddler框架与重排机制.md) | 5 阶段排名流水线、Predoc vs Lazy Twiddler、12+ 已具名 Twiddler 清单 |
-| 诊断"为什么排名突然变化" | [21](./21-Twiddler框架与重排机制.md) | 多 Twiddler 独立运行 + Category Packer 协调 → 根因极难定位 |
-| 理解同站第二页排不上的现象 | [21](./21-Twiddler框架与重排机制.md) | Diversity Cap / Category Packing（非分数问题，是类型约束） |
+| 做AI可见性诊断 | [13](./13-AI搜索研究与Prompt执行库.md) | AI可见性诊断Prompt、Ghost Citation检测、引用就绪审计 |
+| 选择AI可见性工具 | [13](./13-AI搜索研究与Prompt执行库.md) | 工具生态对比、Profound/Peec/Otterly分层选型 |
+| 理解Ghost Citation | [13](./13-AI搜索研究与Prompt执行库.md) | 四引擎差异化、引用vs提及分离策略 |
+| Perplexity专项优化 | [13](./13-AI搜索研究与Prompt执行库.md) | AED内容模板、60天新鲜度循环 |
+| 用Claude做SEO | [13](./13-AI搜索研究与Prompt执行库.md) | 8个SEO Prompt执行模板 |
+| 了解AI Overviews流量影响 | [13](./13-AI搜索研究与Prompt执行库.md) + [05](./05-SEO测量危机与新指标.md) | CTR硬数据、覆盖率增长、零点击率 |
+| 对比影响力者方法论 | [13](./13-AI搜索研究与Prompt执行库.md) | Aleyda/Lily Ray/Kevin Indig/Glenn Gabe框架对比 |
+| 用向量嵌入做SEO分析 | [13](./13-AI搜索研究与Prompt执行库.md) + [09](./09-向量搜索与嵌入优化.md) | Screaming Frog嵌入提取、SCaNN索引、5大应用场景 |
+| 学习AI搜索优化体系 | [13](./13-AI搜索研究与Prompt执行库.md) | learningaisearch.com路线图、9位专家实践技巧 |
+| 做Programmatic SEO | [13](./13-AI搜索研究与Prompt执行库.md) + [12](./12-大规模关键词排名策略.md) | 三层解耦架构、JSON Schema驱动、渐进式发布 |
+| 做外链建设 | [16](./16-PRNS链接权威与最短路径模型.md) | 最短路径模型、准种子界面、出链密度筛选、可操作变量清单 |
+| 规划内链架构 | [16](./16-PRNS链接权威与最短路径模型.md) | 内外链统一、从落点页出发、路径最后一段管理 |
+| 判断负面SEO是否有效 | [16](./16-PRNS链接权威与最短路径模型.md) | 垃圾外链不稀释（PRNS管道）、负SEO走的是SpamBrain管道 |
+| 理解PageRank/PageRank_NS | [16](./16-PRNS链接权威与最短路径模型.md) | 2006年替换时间线、专利谱系、API Leak代码级证据 |
+| 诊断新站排名滞后 | [17](./17-新站信任建立期与算法机制.md) | "沙盒"算法组件拆解（NavBoost 曝光分母 + PRNS 距离 + 置信度门槛） |
+| 处理同主体老站资源 | [17](./17-新站信任建立期与算法机制.md) | 老站→新站外链/301决策矩阵（luckycrystals.org 类案例） |
+| 判断"是否被谷歌标记" | [17](./17-新站信任建立期与算法机制.md) | 沙盒期 vs 手动惩罚 5 项诊断（GSC 健康检查清单） |
+| 理解 Ascorer / Twiddler / Superroot | [18](./18-Twiddler框架与重排机制.md) | 5 阶段排名流水线、Predoc vs Lazy Twiddler、12+ 已具名 Twiddler 清单 |
+| 诊断"为什么排名突然变化" | [18](./18-Twiddler框架与重排机制.md) | 多 Twiddler 独立运行 + Category Packer 协调 → 根因极难定位 |
+| 理解同站第二页排不上的现象 | [18](./18-Twiddler框架与重排机制.md) | Diversity Cap / Category Packing（非分数问题，是类型约束） |
 
 ---
 

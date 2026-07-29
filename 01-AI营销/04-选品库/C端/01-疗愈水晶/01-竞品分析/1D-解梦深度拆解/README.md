@@ -13,7 +13,7 @@
 1. **数量严重不足**：解梦是高量赛道（"dream interpretation" 月搜 50W+，AIO 频繁出现），3 家无法覆盖生态
 2. **旧版质量问题**：DR/流量数字无来源（违反 RLM §2 纪律1）、漏 §3-§7 多章节、P3-D-3 误判 Dream Dictionary "缺少论坛"（实际有 107 评论活跃论坛）
 
-2026-07-07 按 RLM §1A 铁律 SERP 驱动重做：8 种子词（dream interpretation / dream dictionary / ai dream interpretation / dream meaning / dream journal app / ask a dream interpreter / dream symbols / spiritual dream meaning）top20-30 → 过滤大平台（amazon/ebay/wikipedia/youtube/reddit/pinterest 等）→ 真竞品类型二次筛（剔除成品/简单下拉）→ 21 家入册。
+2026-07-07 按 RLM §1A 铁律 SERP 驱动重做：8 种子词（dream interpretation / dream dictionary / ai dream interpretation / dream meaning / dream journal app / ask a dream interpreter / dream symbols / spiritual dream meaning）top20-30 → 过滤大平台（amazon/ebay/wikipedia/youtube/reddit/pinterest 等）→ 真竞品类型二次筛（剔除成品/简单下拉）→ 18 家入册。
 
 ---
 

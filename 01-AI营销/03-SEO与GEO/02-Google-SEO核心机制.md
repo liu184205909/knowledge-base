@@ -1,5 +1,10 @@
 # Google SEO 核心机制（三源交叉验证）
 
+> **定位**：Google 排名核心机制的三源交叉验证（API Leak + DOJ 证词 + 专利）
+> **适用场景**：需要理解 Google 排名底层逻辑（T*×Q*×P* / E-E-A-T / Site Quality / HCU / 链接索引）时
+> **边界与衔接**：不讲重排层细节（→ 18 Twiddler）、不讲外链模型（→ 16 PRNS）、不讲新站信任期（→ 17）
+
+
 > 基于 DOJ 反垄断案证词 + Content Warehouse API Leak（2500+模块/14000+属性）+ MWC Exploit（200万站/90M查询实时数据）三份硬证据整合。
 
 ---
@@ -341,7 +346,7 @@ QRG 原文的结构：Trust 是 E-E-A-T 家族中最重要的成员，其余三�
 
 | 概念层 | 算法层 | 机制 | KB 文档 |
 |--------|--------|------|---------|
-| **Trust（静态存量）** | **Q\*** | 链接图谱距离（[PRNS](./17-PRNS链接权威与最短路径模型.md)）+ siteAuthority + hostAge 时间门槛 | 本节 Q* + [17](./17-PRNS链接权威与最短路径模型.md) |
+| **Trust（静态存量）** | **Q\*** | 链接图谱距离（[PRNS](./16-PRNS链接权威与最短路径模型.md)）+ siteAuthority + hostAge 时间门槛 | 本节 Q* + [16](./16-PRNS链接权威与最短路径模型.md) |
 | **Trust（动态验证）** | **P\*** | NavBoost 13 个月滚动窗口（goodClicks / badClicks / lastLongestClicks） | 本节 P* |
 
 HJ Kim 在 DOJ 庭审中定义 Q* 为 "page quality (i.e., the notion of trustworthiness)"——括号里是定义不是举例。完整模型：**T（概念）= Q\*（第三方背书 × 时间构成的静态存量）+ P\*（用户行为构成的动态验证）**。一个是别人说你可信，一个是用户用行为确认你可信。
@@ -1076,8 +1081,6 @@ Wikipedia 仍然是触发知识面板的**单一最强信号**——一篇 Wikip
 | 品牌 30-40% | 成长期 | 双轨并行：SEO 内容 + 品牌建设 |
 | 品牌 40-50% | 健康成熟 | 维持平衡，注意关键词多样性 |
 | 品牌 > 60% | 过度依赖品牌 | 非品牌词覆盖不足，SEO 内容有缺口 |
-
-> 完整基准数据见 [references/2026-Google-SEO-Benchmark-Report.md](./references/2026-Google-SEO-Benchmark-Report.md)
 
 ---
 

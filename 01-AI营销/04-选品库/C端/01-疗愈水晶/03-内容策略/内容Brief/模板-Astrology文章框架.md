@@ -126,7 +126,7 @@
 ## 8. 生产工程（复用 tarot/numerology 流水线）
 
 1. `configs/astrology-config.json`（module_weights + gentle_note + faq_shared_halves + cta_validation 引用）
-2. `scripts/generate-articles.js`（读 knowledge + config → 13 模块骨架 + `{{AI_*}}` 占位符）
+2. `scripts/generate-articles.js`（读 knowledge + config → 12 模块骨架 + `{{AI_*}}` 占位符）
 3. AI 填充占位符（BATCH=2，glm 质量门，每批 ≤2 篇避免智谱过载）
 4. `scripts/qc-checks.js`（**去AI化硬门禁**：差异化/水晶三要素/确定论禁词=0，非软提示）
 5. `scripts/generate-images.js`（gpt-image-2，loadEnv 强制覆盖，NODE_PATH sharp）

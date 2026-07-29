@@ -1,8 +1,13 @@
 # Twiddler Framework：Google 排名的最后一层重排系统
 
+> **定位**：Google 排名最后一层重排系统（Twiddler Framework：Superroot / Predoc vs Lazy / 65+ 已具名 Twiddler）
+> **适用场景**：理解排名变化根因、诊断"为什么排名突然变动"、理解同站第二页排不上等现象时
+> **边界与衔接**：不讲核心排名机制（→ 02）、不讲新站信任期（→ 17）
+
+
 > 制定时间：2026-07-28
 > 定位：[02-Google-SEO核心机制](./02-Google-SEO核心机制.md) 的深度子模块，专门拆解 Ascorer 初排之后的重排层
-> 关联文档：[02 整体架构](./02-Google-SEO核心机制.md) / [17 PRNS（Ascorer 内部权威信号）](./17-PRNS链接权威与最短路径模型.md) / [20 NavBoost（其中一个 Twiddler）](./20-新站信任建立期与算法机制.md)
+> 关联文档：[02 整体架构](./02-Google-SEO核心机制.md) / [17 PRNS（Ascorer 内部权威信号）](./16-PRNS链接权威与最短路径模型.md) / [20 NavBoost（其中一个 Twiddler）](./17-新站信任建立期与算法机制.md)
 
 ---
 
@@ -147,7 +152,7 @@ Twiddler 不是单一工作模式。Leak 文档揭示四种独立机制：
 | **DMCAFilter** | Predoc | 版权投诉 | 隐藏 DMCA 投诉页面 |
 | **SocialLikesAnnotator** | Lazy | 社交点赞 | 注释社交结果（可能提升可见性） |
 
-**字段名提示**：API Leak 揭示 Twiddler 的输出在 `MustangBasicInfo` attachment 中，可与 `pagerank_ns`（详见 [17-PRNS](./17-PRNS链接权威与最短路径模型.md)）和 `CrapsClickSignals`（详见 [20-新站信任建立期](./20-新站信任建立期与算法机制.md)）并列读取。
+**字段名提示**：API Leak 揭示 Twiddler 的输出在 `MustangBasicInfo` attachment 中，可与 `pagerank_ns`（详见 [17-PRNS](./16-PRNS链接权威与最短路径模型.md)）和 `CrapsClickSignals`（详见 [20-新站信任建立期](./17-新站信任建立期与算法机制.md)）并列读取。
 
 ---
 
@@ -253,7 +258,7 @@ Twiddler 是后端调整函数，不是你能直接优化的对象。但你可�
 ### 关联知识库
 
 - [02-Google-SEO核心机制](./02-Google-SEO核心机制.md) — 完整排名架构（Crawl→Index→Rank→Twiddler→SERP）
-- [17-PRNS链接权威与最短路径模型](./17-PRNS链接权威与最短路径模型.md) — Ascorer 阶段的权威信号
-- [20-新站信任建立期与算法机制](./20-新站信任建立期与算法机制.md) — NavBoost（其中一个 Twiddler）的深度拆解
+- [16-PRNS链接权威与最短路径模型](./16-PRNS链接权威与最短路径模型.md) — Ascorer 阶段的权威信号
+- [17-新站信任建立期与算法机制](./17-新站信任建立期与算法机制.md) — NavBoost（其中一个 Twiddler）的深度拆解
 - [05-SEO测量危机与新指标](./05-SEO测量危机与新指标.md) — 为什么"单一排名"无法测量
-- [15-SEO漂移监控](./15-SEO漂移监控.md) — 排名波动的检测体系
+- [14-SEO漂移监控](./14-SEO漂移监控.md) — 排名波动的检测体系

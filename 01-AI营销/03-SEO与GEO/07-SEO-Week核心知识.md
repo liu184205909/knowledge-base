@@ -1,5 +1,12 @@
 # SEO Week 核心知识（2025 + 2026）
 
+> ⚠️ **Deprecated（已归档）**：本文保留 SEO Week 的来源脉络与时间线，作为会议出处参考。
+> **结论性内容请优先查**：
+> - [03-AI Citation 优化策略](./03-AI Citation优化策略.md) — 影响力者框架与 AI 引用实操
+> - [09-向量搜索与嵌入优化](./09-向量搜索与嵌入优化.md) — Relevance Engineering / 向量嵌入理论层
+>
+> 本文不再作为独立结论入口，仅供溯源使用。
+
 > **定位**：与BrightonSEO偏重实战不同，SEO Week偏**技术和战略前沿** — 向量嵌入、Relevance Engineering、Agent Experience等概念在这里首次系统提出。
 >
 > **最后更新**：2026-05-06

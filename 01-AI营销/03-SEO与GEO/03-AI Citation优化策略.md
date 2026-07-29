@@ -1,5 +1,10 @@
 # AI Citation优化策略（GEO）
 
+> **定位**：AI 引用优化策略（GEO），覆盖 Princeton 论文 + Google 官方立场 + 行业共识 + 案例
+> **适用场景**：做 GEO 优化、提升 AI 引用可见性时
+> **边界与衔接**：不讲选题（→ 15）、不讲实体（→ 04）、不讲 Prompt 执行（→ 13）
+
+
 > **GEO (Generative Engine Optimization)**：优化内容被AI引用，而非传统搜索排名
 > **最后更新**: 2026-07-22（+ Aleyda SaaS GEO五大结论 + ChatGPT vs AI Mode引用来源差异 + 被引用≠获流量 + GSC平台资源追踪）
 
@@ -641,8 +646,6 @@ Seer Interactive（53 品牌 / 547 万查询 / 24.3 亿次展示）追踪的 AIO
 品牌搜索量与排名的相关性（**r = 0.10**）已经超过 DA 与排名的相关性（**r = 0.07**）。
 
 **含义**：用户主动搜索你品牌名的频率，比你的外链组合更能预测排名。对水晶项目来说——品牌建设（社交媒体、PR、UGC）的 SEO 回报可能比纯外链建设更高。
-
-> 完整基准数据见 [references/2026-Google-SEO-Benchmark-Report.md](./references/2026-Google-SEO-Benchmark-Report.md)
 
 ---
 
