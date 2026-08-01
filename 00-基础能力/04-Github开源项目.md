@@ -8,7 +8,7 @@
 
 | 分类 | 数量 | 典型项目 |
 |------|------|---------|
-| [AI 营销工具](#ai-营销工具) | 8 | Fooocus、MoneyPrinterTurbo、Nanobrowser、CloakBrowser、XHS-Crawler-to-Base |
+| [AI 营销工具](#ai-营销工具) | 9 | Fooocus、MoneyPrinterTurbo、HyperFrames、Nanobrowser、CloakBrowser、XHS-Crawler-to-Base |
 | [客服与消息自动化](#客服与消息自动化) | 1 | Evolution API |
 | [AI 开发工具](#ai-开发工具) | 4 | superpowers-zh、TokenTracker、ccusage |
 | [通用效率工具](#通用效率工具) | 8 | ERPNext、PlainApp、Vibe、PDFCraft |
@@ -362,6 +362,64 @@ docker-compose up  # 访问 http://127.0.0.1:8501
 ```
 
 **适用场景**: 自媒体批量短视频生产、产品宣传视频、知识科普视频、社媒内容矩阵运营
+
+---
+
+### HyperFrames
+
+**GitHub**: https://github.com/heygen-com/hyperframes | **Star**: 38K+ | **作者**: HeyGen（AI 视频老玩家，已在自家生产环境使用）
+
+**一句话**：写 HTML/CSS → 渲染 MP4，为 AI Agent 而生。**同输入永远出同视频**（确定性渲染）。
+
+**核心机制**：
+- HTML + CSS + `data-start` / `data-duration` / `data-track-index` 时间轴属性
+- 无头 Chrome 逐帧截图 + FFmpeg 编码 = 确定性输出
+- 动画库任选：GSAP / CSS / Lottie / Three.js / Anime.js / WAAPI
+- 一句 `npx skills add heygen-com/hyperframes --full-depth` 装进 Claude Code，自然语言驱动
+
+**与现有视频工具的关系**：
+| 工具 | 定位 | 我们用在哪 |
+|------|------|-----------|
+| **HyperFrames** | 写 HTML 出 MP4，**确定性 + 批量** | **水晶 SKU 批量产品视频**（500+ SKU × 一个模板） |
+| MoneyPrinterTurbo | AI 主题→素材+配音+字幕全流程 | 主题驱动的横屏 YouTube 内容 |
+| video-use | 自然语言剪辑已有素材 | 后期处理 / 去口癖 / 烧字幕 |
+| video-to-subtitle-summary | 视频转字幕+AI 总结 | 读取竞品视频内容 |
+
+四者互补，**HyperFrames 独占"确定性批量"赛道**——这是其他工具做不到的（Sora/Runway 每次输出不同，无法批量）。
+
+**我们的核心用例**：
+
+水晶项目的具体视频用例（功效卡片双形态 / 博客内嵌 / 精选 SKU）见 [`01-AI营销/04-选品库/C端/01-疗愈水晶/03-内容策略/视频内容策略.md`](../01-AI营销/04-选品库/C端/01-疗愈水晶/03-内容策略/视频内容策略.md)。
+
+**核心定位**：HyperFrames 不是"做内容更有效的工具"，是**把已有信息图/海报内容自动化套成视频版的工具**——它的价值在**触达信息图进不去的算法池**（IG Reels / TikTok / YouTube Shorts），不在内容本身。
+
+**不推荐用例**（避免误用）：
+- ❌ 全 SKU 批量视频（同质化、维护成本高、PDP 不需要）
+- ❌ 订单确认/物流视频（单条 ROI 不值，CRM 邮件更高效）
+- ❌ 工具演示视频（用户基数小，手工录屏更精致）
+
+**快速使用**：
+```bash
+# Claude Code 装技能包（推荐）
+npx skills add heygen-com/hyperframes --full-depth
+
+# 然后直接对话
+# "用 /hyperframes，帮我做一个 8 秒的水晶产品视频，产品图轮播 3 张，标题淡入，末尾显示价格和 CTA"
+
+# CLI 手动流程
+npx hyperframes init my-video
+cd my-video
+npx hyperframes preview      # 浏览器实时预览
+npx hyperframes render       # 渲染成 MP4
+```
+
+**环境要求**：Node.js 22+ + FFmpeg
+
+**能力边界**：
+- ✅ 图文动效 / 数据可视化 / 产品宣传 / 信息图 / 竖版社媒素材 / **批量个性化** / 合成已有素材
+- ❌ 实景剪辑 / 影视级 3D / 绿幕抠像 / 长片叙事 / 多轨混音 / 依赖随机的动画（用 `Date.now()` / `Math.random()` 会破坏确定性）
+
+**适用场景**: 水晶 SKU 批量产品视频、水晶功效社媒卡片、博客内嵌步骤动画、品牌产品宣传短片
 
 ---
 
