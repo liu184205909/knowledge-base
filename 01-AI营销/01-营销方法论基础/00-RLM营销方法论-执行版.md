@@ -411,6 +411,36 @@ XX产品/
 - [ ] Meta 三件套（Title/Description/H1）含目标关键词
 - [ ] 无 CJK 残留 + 无合规禁用词
 
+**规模化内容风险自查表**（来源：[Lily Ray 220+ 站点纵向研究](https://lilyraynyc.substack.com/p/it-works-until-it-doesnt-ai-content-risks)，2026-05）
+
+> 以下 8 种模板在规模化 + 公式化 + 无人工审查时会被 Google 识别为"footprint"。**命中 ≥3 个的批次需重新设计多样性**。
+
+| 高风险模板 | URL 模式 | 风险 |
+|-----------|---------|------|
+| 规模化对比页 | `/blog/[A]-vs-[B]` | 横跨所有组合 = footprint |
+| "What is X" 术语页 | `/glossary/[term]` | 程序化多语言版本最危险 |
+| "Best X for Y" 清单 | affiliate 起源 | 最常见 AI 模板 |
+| **自推清单**（自己排第一） | 无真实测评 | 2026-01 Google 重点打击，40+ 站同日下跌 40-95% |
+| 竞品替代页 | `/blog/[competitor]-alternatives` | 过半流量页是竞品品牌词 = 高危 |
+| 程序化地理/语言页 | 无真实物理地点 | 直接 deindex |
+| FAQ 农场（一页一问） | `/faq/[full-question]` | 2026-05 FAQ Rich Results 已废弃 |
+| 离题内容 | B2B 站发笑话/星座 | 与业务无关的高搜索量内容 |
+
+**实证数据**（规模化 AI 内容的"Mount AI"崩塌曲线）：
+- Lily Ray 220+ 站点：**54% 损失峰值流量 ≥30%**，39% ≥50%，22% ≥75%
+- Semrush 4.2 万页研究：Position #1 人类内容占 **80%**，纯 AI 仅 **9%**——人类内容 8 倍优势（[SEL 报道](https://searchengineland.com/human-content-ai-rank-google-study-473697)）
+- **结论**：placeholder 模式只用于低竞争长尾扩展，核心转化页必须精做
+
+**发布前 Commodity Content 自检**（来源：[Marie Haynes](https://www.mariehaynes.com/the-december-2025-core-update-observations-on-4-sites-that-did-well/)）：
+- **5-to-7 Rule**（[Searchbloom](https://www.searchbloom.com/blog/information-gain-seo/)）：每篇内容提供 5-7 个**竞品 top 10 没有的**信息点
+- **AI 自检 prompt**（Marie Haynes 原版）：`What are 10 concepts discussed in this page? For each, tell me whether this topic has been widely written about online. Does this content add anything truly uniquely interesting? Be brutally honest, don't flatter me.`
+- QRG 最新版 "paraphrased" 提及从 3 → **25 次**，"trust" 出现 **191 次**——Google 训练 AI 识别"重述型内容"的权重显著上升
+
+**Google Scaled Content Abuse 红线**（[官方政策](https://developers.google.com/search/docs/essentials/spam-policies)）：
+- **不区分人类还是 AI**——人类写的低质量规模化内容同样违规
+- 5 大检测维度：内容产量规模 / 低质量薄弱页 / Near-duplicate 模式（SpamBrain AI）/ 缺用户价值 / 重复违规
+- Helpful Content 系统已**并入 core ranking**，不再是独立信号
+
 #### 3.4 发布前质检路由
 
 **质检路由矩阵**：
