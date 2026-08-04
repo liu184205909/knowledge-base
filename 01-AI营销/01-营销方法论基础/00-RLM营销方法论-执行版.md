@@ -42,6 +42,13 @@
 | **TopPages_All + TopKeywords_All** | 竞品 SEO 明细 | 步骤 1B | **TopPages**：URL / Traffic(%) / Traffic / Top Keyword / Primary Intent / LLM Prompts<br>**TopKeywords**：Keyword / Search Volume / KD / CPC / URL / Traffic / Traffic(%) / Number of Results / Keyword Intents |
 | **内容清单** | 选题草案 + 执行池 | 步骤 1H 后 | 目标关键词 / Volume / KD / CPC / 搜索意图 / 内容类型 / 对应 URL / 竞品验证状态 / 建议发布节奏 / Brief 状态 |
 
+> **实际执行规模建议**（基于水晶项目实证 + 独立审核）：
+> - **竞品清单**：初期 30-40 家（覆盖 P0 直接/P1 内容/P2 垂直/P3 泛行业四类），清单本身成本低；P3 泛行业竞品是发现扩展方向（如 Angel Numbers/塔罗/解梦）的关键，不能砍
+> - **1D 深拆**：从 30-40 家清单中精简到 **10-15 家核心竞品**（P0+P1 优先），不需要全做——1D 是一次性资产库，2B 决策遇到"不知道该不该做"时按需补做
+> - **TopPages/TopKeywords**：查 **10-15 家 P0/P1 竞品**，不全量 40 家导出
+> - **Seed-Master**：**可分阶段建**（先核心 Topic Pillar 5-10K，后续主题扩展时补充），但不能改为纯按需查询——全量库是 Topic Discovery 的基础（水晶项目 Dreams 主题 755 篇就是从 Seed-Master 全量库中发现的）
+> - **内容清单**：首批控制在 **100-200 条**（三源验证后），不要一次性 700+ 条草案未裁剪
+
 > **字段细则**（SEMrush 导出删除列规则、字段标注时机、Status 生命周期）见 `01-竞品研究/1B数据处理工具手册.md`。
 >
 > **AI 接手时先验证数据底座存在**：通过 Google Workspace MCP 搜索对应项目文件夹、遍历本地项目文件夹，与项目简报索引比对，不一致以实际为准更新索引。
