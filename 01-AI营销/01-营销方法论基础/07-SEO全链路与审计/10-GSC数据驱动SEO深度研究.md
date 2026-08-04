@@ -204,6 +204,49 @@ Glen 称这是他"13 年 SEO 做过最聪明的事"：
 - 解法：导出 GSC 最近 7 天 top 15 关键词及排名 → 丢给 ChatGPT Operator/Project Mariner（浏览器 agent）→ prompt"逐个搜索，给旧排名 vs 今天排名对照表"→ ~10 分钟出快照。
 - **落地**：`gsc_search_analytics` 导出 top 词 → web-access（浏览器 agent）逐个搜并对比。
 
+### 3.6 AI 分析 prompt 模板（实战版，来源 [NextGrowth.ai](https://nextgrowth.ai/n8n-google-search-console-automation/)）
+
+> 不要把 25000 行原始数据丢给 AI。**先预聚合为 500 词结构化摘要**，再让 AI 输出可执行的优先级清单。
+
+**数据预处理**（喂 AI 前必做）：
+- Top 20 pages by impressions（流量集中度）
+- Top 20 queries by clicks（核心词）
+- Pages with CTR < 2% and impressions > 500（低 CTR 机会）
+- Pages with position 6-15 and impressions > 200（page 2 机会）
+
+**Prompt 模板**：
+
+```
+You are an SEO analyst reviewing weekly Google Search Console data.
+
+SITE: {site}
+DATE RANGE: {weekStart} to {weekEnd}
+TOTAL CLICKS: {totalClicks} (vs {priorClicks} prior week)
+TOTAL IMPRESSIONS: {totalImpressions}
+
+TOP TRAFFIC DROPS (pages down 20%+ week-over-week):
+{trafficDropsList}
+
+PAGE 2 OPPORTUNITY PAGES (position 6-15, impressions > 200):
+{page2OpportunityList}
+
+HIGH IMPRESSION / LOW CTR PAGES (CTR < 2%, impressions > 500):
+{lowCTRList}
+
+Task: For each category above, provide:
+1. The most likely cause (1 sentence)
+2. The recommended action (1-2 sentences, specific)
+3. Priority: HIGH / MEDIUM / LOW
+
+Format as a JSON array of objects with keys:
+url, category, cause, action, priority
+Return only valid JSON. No markdown wrapper.
+```
+
+> **成本参考**：GPT-4o-mini 每次分析 $0.02-0.05，每周一次 ≈ $0.10-0.20/月/站。
+>
+> **Claude Code 适配**：在 Claude Code 会话中，用 `gsc_search_analytics` / `gsc_quick_wins` / `gsc_ctr_opportunities` 三个 MCP 工具拉数据 → 手工或脚本预聚合到上面的模板格式 → 喂给 Claude 分析。不需要 n8n。
+
 ---
 
 ## 4. ⚠️ 反常识与避坑（最值钱的护栏，每个自动化项目必读）
@@ -230,6 +273,11 @@ Glen 称这是他"13 年 SEO 做过最聪明的事"：
 - **Indexing API 仅限 `JobPosting` 和 `BroadcastEvent`**（[Onely 2026-03](https://www.onely.com/blog/how-to-fix-discovered-currently-not-indexed-in-google-search-console/)）：批量提交普通页面**违反 Google 反垃圾政策**，风险整域被标记。正确做法：更新 XML sitemap + 优化内链。
 - **未编辑的大规模 AI 内容主动损害 crawl demand**（2025-05 Google 质量审查情报）：Google 把整域 AI 内容比例纳入 crawl 优先级评估——AI 内容越多，Googlebot 越不愿抓取。**placeholder 模式批量生产的内容需监控 crawl rate 变化**。
 - **Crawl budget 阈值**（Google 官方）：只有 >100 万唯一页 或 1 万+页且每日快速变化才需担心。小站"Discovered – not indexed"几乎都是 crawl demand（质量/流行度）问题而非容量问题。
+
+### 4.6 三个自动化反模式（来源 [NextGrowth.ai](https://nextgrowth.ai/n8n-google-search-console-automation/)，对 Claude Code 同样适用）
+1. **不要每次会话都跑全套 GSC 分析**：数据日复一日变化不大，AI 分析只在异常时触发（掉量/排名异常/核心更新后）。日常只拉数据到 Sheets，周报才跑 AI。
+2. **不要把 MCP 工具调用当产品**：价值在 SEO 洞察，不在调了多少个工具。14 条告警/周里只有 2-3 条值得行动。
+3. **数据预处理再喂 AI**：不要把 25000 行原始 GSC 数据直接丢给 Claude——先聚合为 500 词结构化摘要（top 20 掉量页 / position 6-15 机会 / 低 CTR 页），再让 AI 输出优先级。
 
 ---
 
