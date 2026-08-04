@@ -183,7 +183,7 @@ Dashboard（Grafana / 自建面板）
 
 ### 5.3 与 codex-seo 架构的整合点
 
-基于 [10-SEO审计工具/README.md](../02-自动化工具库/10-SEO审计工具/README.md) 中的架构规划：
+基于 [10-SEO审计工具/README.md](../01-营销方法论基础/07-SEO全链路与审计/README.md) 中的架构规划：
 
 | 整合点 | 说明 |
 |--------|------|
