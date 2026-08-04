@@ -1,6 +1,6 @@
 # 推荐开源项目收藏
 
-> **优质GitHub项目集合** | 持续更新 | 最后更新：2026-05-15
+> **优质GitHub项目集合** | 持续更新 | 最后更新：2026-08-03
 
 ---
 
@@ -10,7 +10,7 @@
 |------|------|---------|
 | [AI 营销工具](#ai-营销工具) | 9 | Fooocus、MoneyPrinterTurbo、HyperFrames、Nanobrowser、CloakBrowser、XHS-Crawler-to-Base |
 | [客服与消息自动化](#客服与消息自动化) | 1 | Evolution API |
-| [AI 开发工具](#ai-开发工具) | 4 | superpowers-zh、TokenTracker、ccusage |
+| [AI 开发工具](#ai-开发工具) | 5 | superpowers-zh、Codex Security、TokenTracker、ccusage |
 | [通用效率工具](#通用效率工具) | 8 | ERPNext、PlainApp、Vibe、PDFCraft |
 
 ---
@@ -608,6 +608,76 @@ npx ccusage@latest
 
 ---
 
+### Codex Security
+
+**GitHub**: https://github.com/openai/codex-security | **Star**: 8,100+ | **作者**: OpenAI | **状态**: Research Preview
+
+**简介**: OpenAI 内部代码安全审计工具开源，前身为 Aardvark（2025.10 内部上线），用 AI 分析代码在上下文中的实际行为判断真实风险，曾挖出 React 框架零日漏洞 CVE-2025-55182（远程代码执行级别）
+
+**核心功能**: AI 驱动的代码漏洞扫描、上下文行为分析（大幅降低误报）、标准/深度两种扫描模式、PR diff 增量扫描、CI/CD 门禁、扫描历史对比、TypeScript SDK 集成
+
+**特点**:
+- **命中率碾压传统工具**（16.2 万行代码实测）：Codex Security 74%（23/31）vs Snyk 28%（25/89）vs Semgrep 20%（29/147），且额外挖出 3 个 Snyk/Semgrep 都未发现的严重漏洞
+- **Beta 期战绩**：累计扫描 120 万次代码提交，找出 792 个严重漏洞 + 10,561 个高危漏洞
+- AI 上下文分析：不只看模式匹配，而是判断代码在它所处环境里的真实风险，从根上解决传统扫描工具"误报太多"的痛点
+- 深度模式可挖复杂逻辑漏洞，但 token 消耗猛（建议 `--max-cost` 设上限）
+- 扫描历史存本地 SQLite，支持 `scans compare` 对比两次扫描差异，追踪修复进度
+- 免费开源，可审计工具本身代码（安全领域加分项）
+
+**依赖**: Node.js 22+ + Python 3.10+
+
+**快速使用**:
+```bash
+# 安装 + 登录 + 扫描（三行命令）
+npm install @openai/codex-security
+npx codex-security login              # ChatGPT 账号登录（免费用户可用）
+npx codex-security scan .             # 扫描当前目录（标准模式）
+
+# 深度模式（token 消耗猛，务必设上限）
+npx codex-security scan . --mode deep --max-cost 10
+
+# PR 增量扫描 + CI 门禁（最实用的组合）
+npx codex-security scan . --diff main --fail-on-severity critical
+
+# 结合架构文档分析（减少误报）
+npx codex-security scan . --knowledge-base ./docs/architecture.md
+
+# 扫描历史管理（本地 SQLite）
+npx codex-security scans list
+npx codex-security scans compare <scan1-id> <scan2-id>
+
+# CI/CD 环境（非交互登录）
+OPENAI_API_KEY=sk-xxx npx codex-security scan .
+```
+
+**定价**: ChatGPT 免费用户可用（消耗套餐自带额度，不额外收费）；CI/CD 用 `OPENAI_API_KEY` 按量计费
+
+**与 Codex 桌面端的关系**: Codex 桌面端（已并入 ChatGPT 桌面客户端）自带 Security 插件，扫描引擎与 CLI 相同。日常写代码顺手扫用插件即可；CLI 的优势是 CI/CD 集成、批量扫描多仓库、历史追踪
+
+**TypeScript SDK 集成**:
+```typescript
+import { CodexSecurity } from "@openai/codex-security";
+const security = new CodexSecurity();
+const result = await security.run(".");
+console.log(result.reportPath);
+await security.close();
+```
+
+**已知边界**（Research Preview 阶段）:
+- 扫描过程可能被 Codex 自家安全策略拦截（讽刺性 bug）
+- 偶发"识别出漏洞但拒绝透露具体内容"的情况
+- 深度模式 token 消耗大，首次务必先设 `--max-cost`
+
+**与现有工具的关系**:
+- **superpowers-zh**：编码纪律（预防漏洞，事前）
+- **Codex Security**：安全扫描（发现漏洞，事中/事后）
+- **TokenTracker / ccusage**：成本追踪（无关维度）
+- superpowers-zh + Codex Security 构成"质量 + 安全"闭环
+
+**适用场景**: 生产代码上线前安全审计、PR 自动扫描门禁、定期全量漏洞扫描、MCP 插件 / Skill 发布前安全检查
+
+---
+
 ## 通用效率工具
 
 > 日常办公、设备互联、内容处理等非 AI 场景
@@ -826,4 +896,4 @@ docker run -d -p 8080:80 --name pdfcraft ghcr.io/pdfcrafttool/pdfcraft:latest
 
 ---
 
-**最后更新**: 2026-06-14
+**最后更新**: 2026-08-03
