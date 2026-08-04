@@ -102,30 +102,7 @@ XX产品/
 - 1E/1F 输出"候选方向"语气（→ 1H 决策），不用"我们的策略"语气。
 - 1H 是唯一完整策略中枢，不重复搬运竞品原始数据，只吸收候选策略点去重排序。
 
-#### 1C 关键词研究核心 How（实证）
-
-> 以下方法均在水晶项目 1C 阶段实际使用，证据见 `1C-关键词研究/` 目录。
-
-**搜索意图分类 + 避开词清单**：
-- Intent 字段标注：Informational / Commercial Investigation / Transactional / Navigational
-- **避开词识别**：同关键词但意图偏移的词需标注避开（如 "dream house" 是电影不是房屋梦、"how to lucid dream" 是教程意图非内容意图）
-- SERP 手动竞争度：对核心词查 top 20-30，识别"小博客进 top10 = 低 DR 可切入"、"Reddit/TikTok 进 AIO = 切入窗口"
-
-**Splinter Method（关键词裂变）**：
-- 复合词单页可命中多意图，对标竞品拆分结构
-- 案例：`yellow snake spiritual meaning` / `black snake in house` / `venomous snake biting` 三个意图可被一个"蛇梦解析"主题承接
-
-**关键词→页面类型映射**：
-- 通过 `map_page_type.py` 或手工，将 Seed-Master 关键词映射到 37 种 Page Type（如 Article-Info / Product / Category-Hub / Tool / FAQ）
-- 映射结果填入 Seed-Master `Recommended Page Type` 列
-
-**优先级评分（5 维参考）**：
-- Volume × KD 反向 × SERP 弱度 × 差异化价值 × 商业价值
-- 简化版：直接按"高优先 / 中优先 / 长尾补全 / 避开"分层（具体标准按行业调整，不硬编码定义）
-
-**倒漏斗策略（精简）**：
-- BOFU（转化意图）→ MOFU（对比考察）→ TOFU（认知科普）
-- B2C 独立站实证：TOFU 百科 + BOFU 功效混合首发（不严格 BOFU 优先），看品类特性调整
+> 1C 关键词研究方法（搜索意图 / Splinter / 页面映射 / 优先级 / 倒漏斗）见 `01-竞品研究/1C关键词研究工具手册.md`。
 
 > 1B-1H 的字段定义、工具操作、模板见 §5 调用规则。
 
@@ -236,14 +213,7 @@ XX产品/
 
 **验收清单**（每页上传后必过）：HTTP 200 + canonical / Title+Meta+H1 含目标关键词 / 导航可达 / 移动端首屏无横向滚动 / 动态区接真实数据 / 图片 webp+alt 完整 / 内链 3-5 条 / JSON-LD Schema 通过。
 
-**批量上传技术执行前置**（实证踩坑清单）：
-- **slug 规范**：`chakras-crystals` vs `chakra-crystals` 容易混淆，需在 2A 统一命名
-- **title 长度**：≤60 字符（天使号码 title 易超）
-- **prev/next 链接语言**：批量生成时易出现 CJK 残留（如 horoscope 144 篇 prev/next 中文）
-- **future post 不要改 date**：会卡住排期
-- **WooCommerce 产品分类**：dynamic_product_module 必须接真实 `product_categories`，不能用静态卡片
-- **图片 URL 回写**：先生成/上传图片→拿 wp_id→回写到 article JSON→再上传文章
-- **draft 批量上传后**：抽检 10% 打开 preview URL 验收
+> 批量上传踩坑清单（slug / title 长度 / prev-next CJK / 图片回写等）见 `02-建站/` 配套文档。
 
 **排期发布**：
 - `schedule-crystal-posts.js` 每天 3 篇，9-21 点随机时间
@@ -266,6 +236,16 @@ XX产品/
 **定位**：本节是**控制面 + 实用 How**。社媒分发见 `04-社媒内容分发/社媒内容分发工作流.md`（项目内容稳定后启动）。
 
 **跨步骤依赖**：内容清单草案可先启动；最终 URL、承接页面、内链规则、内容 Brief 需等步骤 2（2A+2B）完成后锁定或复核。
+
+**⚠️ 跨步骤数据回查**（防止"头重脚轻"，不可跳过）：步骤 3 内容生产前**必须**：
+1. 从 Seed-Master 查该主题线的关键词清单（确认 Volume/KD/Intent）
+2. 从 1H 策略清单查该主题线的策略匹配（模仿/超越/差异化）
+3. config/placeholder 模式同样适用——不能因为批量生产就跳过回查
+
+**⚠️ 跨步骤数据回查**（防止"头重脚轻"，不可跳过）：步骤 3 内容生产前**必须**：
+1. 从 Seed-Master 查该主题线的关键词清单（确认 Volume/KD/Intent）
+2. 从 1H 策略清单查该主题线的策略匹配（模仿/超越/差异化）
+3. config/placeholder 模式同样适用——不能因为批量生产就跳过回查
 
 #### 3.0 内容优先目标
 
@@ -386,22 +366,7 @@ XX产品/
 | 真实数据 | 关键论点有可追溯来源（不编造数据） |
 | 未答之问 | 回应了 SERP 中用户明确提出但竞品未回答的问题 |
 
-**七大 AI 写作特征识别**（精简版，前 4 条必查）：
-1. **Pub Test 失败**：段落读起来像"任何博客都能发"，缺乏品牌声音
-2. **First 10% Deletion**：开头 10% 是冗余引入，应直接给结论
-3. **Kill List 命中**：含 AI 高频词（delve/leverage/tapestry/navigate/unveil 等）
-4. **Human Sandwich 缺失**：没有"真人语气"夹击 AI 段落（如"我戴紫水晶睡觉一个月的变化"）
-5. 模板化句式（"Not only... but also..."）
-6. 过度抽象（无具体案例）
-7. 平衡幻觉（"While X has benefits, Y is also good"）
-
-**六大去 AI 化技术**（前 3 条核心）：
-1. **First 10% Deletion**：删开头冗余，直接进结论（quick-answer blockquote 是落地形式）
-2. **Kill List**：扫描禁用词清单（含合规向：heal/cure/guarantee；含 AI 风格向：delve/leverage/tapestry）
-3. **Human Sandwich**：AI 生成的客观段落之间，夹入"真实使用体验 / 个人观察 / 品牌故事"
-4. Pub Test（读出来像不像真人写的）
-5. High-Low Technique（信息密度交替）
-6. Anti-Pattern Prompting（用反例 prompt 让 AI 避开模板）
+> 七大 AI 写作特征 + 六大去 AI 化技术（含具体操作）→ 详见 `03-内容生产与质检/内容生产实操SOP.md` §2
 
 > 项目级禁用词清单见 `03-内容策略/品牌语调配置.md §4`。AI 风格词与合规词双轨管理。
 
