@@ -5,7 +5,7 @@
 > **2026-06-30 升级（v1→v2）**：融入 Search Intent Lens / 张力分级（3档词数）/ Health-Finances 合规硬边界 / 东方锚点池+意象词校验 / 模块顺序调整（行动 M5 在水晶 M6 前）/ 生成前 Brief / 禁用表达库 / 语义+结构去重升级 / 数据层字段扩展。
 > **适用**：`/{card}-for-{scenario}/` 单牌×单场景解读页（22 Major × 5 场景 Love/Career/Finances/Health/Spiritual Growth = 110 篇基础；正逆位拆分可扩至 220）
 > **与牌义页框架的关系**：[模板-Tarot-牌义页框架](模板-Tarot-牌义页框架.md) 写**单牌普适**（archetype/画面/三视角）；本框架写**该牌在某场景的具体表现**（行为/冲突/人物画像）。两框架物理隔离：场景页不重复 archetype 深度，只落到该场景。
-> **竞品依据**：[1F §2.2](../../01-竞品分析/1F-塔罗内容写法研究.md) —— Labyrinthos 牌义页内嵌 Love/Career/Finances 三列矩阵（每场景 ~150 词）；p.taluo 场景化牌阵页（极薄）。我们做**独立深度场景页**，吸收 Labyrinthos 矩阵做独立页深度。
+> **竞品依据**：[1F §2.2](../../01-竞品分析/1F-内容策略分析/塔罗内容写法研究.md) —— Labyrinthos 牌义页内嵌 Love/Career/Finances 三列矩阵（每场景 ~150 词）；p.taluo 场景化牌阵页（极薄）。我们做**独立深度场景页**，吸收 Labyrinthos 矩阵做独立页深度。
 > **数据源**：`07-互动工具/_shared/tarot-knowledge.json`（22 牌全字段，含每牌专属意象词）+ 本框架 §6 五场景东方锚点池 + §10 scenario-knowledge.json
 > **核心策略**：主词 `{card} for {scenario}` / `{card} love meaning` / `{card} career meaning` / `{card} in love`。差异化：**场景落地具体行为/冲突 + 场景化水晶 + 该场景东方锚点 + 张力分级词数**。
 > **⚠️ 最大风险**：① 5 场景该牌雷同 ② 与牌义页撞内容 ③ Health/Finances 触合规红线 ④ 110+ 篇规模化"同套路换皮"。**本框架核心 = Search Intent Lens + 张力分级 + 合规硬边界 + 东方锚点池 + 去重升级**。
@@ -374,7 +374,7 @@
 
 **硬约束**：
 1. M6 每颗水晶必须说明**为什么这颗配该牌+该场景**（如"The Fool in Finances + Pyrite： Fool 的冲动冒险 × Pyrite 的招财但需聚焦 = 提醒冒险要有焦点"）
-2. **弱化商品感**：写"hold / place / carry during {场景}"使用场景，禁"wear to enhance / attracts X"商品推荐口径（[1F §4.2 黑名单](../../01-竞品分析/1F-塔罗内容写法研究.md)）
+2. **弱化商品感**：写"hold / place / carry during {场景}"使用场景，禁"wear to enhance / attracts X"商品推荐口径（[1F §4.2 黑名单](../../01-竞品分析/1F-内容策略分析/塔罗内容写法研究.md)）
 3. CTA 三级降级（memory `shop-cta-no-deadlink-rule`）：跳特定石类目 HEAD 200→不 200 则 `/shop/?s={stone}` 搜索→搜索空则总 `/healing-jewelry/`
 4. **M6 水晶与 M5 水晶不重复（v2.1 新增，试点反馈 1）**：M6 主写 **2-3 颗水晶**（与 M5 锚点水晶**互斥**），把"为什么是这几颗配该牌该场景"展开写透。M5 已用作行动锚点的那颗，M6 不再作为主写对象重复 hold/place 场景。
    - **正例（Fool for Love）**：M5 锚点 = Moonstone（对话前暂停），M6 主写 = **Rose Quartz（心轮打开但保边界）+ Rhodonite（受伤后重新信任的创伤疗愈石）**，各写一段"为什么这颗配 Fool×Love"，Moonstone 在 M6 仅一句话轻提"pairs with the Moonstone pause from §5"
@@ -413,7 +413,7 @@
 
 1. M7 东方段必须出现**该牌专属意象词**（从 `tarot-knowledge.json > cards[i].eastern_imagery` 取，如 The Fool=悬崖/初心/白纸；The Tower=崩塌/破立；The Hermit=独照/内观）
 2. 缺该牌专属意象词 → 判通用句打回
-3. 东方锚点具体（非"Eastern traditions use crystals"万能句，[1F §0 红线 4](../../01-竞品分析/1F-塔罗内容写法研究.md)）
+3. 东方锚点具体（非"Eastern traditions use crystals"万能句，[1F §0 红线 4](../../01-竞品分析/1F-内容策略分析/塔罗内容写法研究.md)）
 
 ---
 

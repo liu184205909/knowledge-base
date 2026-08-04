@@ -119,7 +119,7 @@
 - **Three of Swords**（心碎）/ **Nine of Swords**（焦虑/失眠）/ **Ten of Swords**（谷底/终结）：M3 + FAQ 守 **Health 黑名单**——不医疗化（不诊断失眠/焦虑/抑郁为疾病、只描述情绪体验）、不承诺水晶疗效（如 Nine of Swords 的 Amethyst 仅"traditionally placed under pillow"，非疗效承诺）
 - **Five of Pentacles**（贫乏/匮乏）：M7 finances + FAQ 守 **Finances 黑名单**——不投资建议、不承诺脱贫、谈 money mindset + 接受帮助 + 建议寻求专业支持
 
-普适黑名单 + 禁用表达库见 [1F §0A](../../01-竞品分析/1F-塔罗内容写法研究.md)。
+普适黑名单 + 禁用表达库见 [1F §0A](../../01-竞品分析/1F-内容策略分析/塔罗内容写法研究.md)。
 
 ---
 
@@ -153,7 +153,7 @@
 
 | 组件 | 执行依据 |
 |---|---|
-| 合规/去 AI 化 | Major §16 + [1F §0A](../../01-竞品分析/1F-塔罗内容写法研究.md) + **本框架 §6**（Swords 阴影牌加固） |
+| 合规/去 AI 化 | Major §16 + [1F §0A](../../01-竞品分析/1F-内容策略分析/塔罗内容写法研究.md) + **本框架 §6**（Swords 阴影牌加固） |
 | CTA 预验证 | Major §3（meaning→shop search→healing-jewelry 三级降级） |
 | Schema | Major §12（Article + FAQPage + BreadcrumbList + ItemList 水晶，无 Product 前端渲染） |
 | 图片 | Major §14（hero 1536×864：牌视觉 + 花色元素色 + best_overall 水晶） |

@@ -4,7 +4,7 @@
 > **适用**：`{beginner-slug}/` 独立新手指南页（10-15 篇：how-to-read-tarot / tarot-for-beginners / first-tarot-deck / how-to-shuffle-tarot / how-to-cleanse-tarot / tarot-card-meanings-list / storing-tarot-cards / daily-tarot-practice / tarot-journaling / reading-tarot-for-yourself / reversed-tarot-cards / major-vs-minor-arcana / reading-tarot-for-others，详见数据层 `beginner-knowledge.json`）。
 > **与牌阵框架关系**：[牌阵框架](模板-Tarot-牌阵框架.md) 写**牌阵本身的教学**（结构/位含义/如何读）；本框架写**新手学塔罗的整体路径**（选牌/洗牌/净化/储存/每日练习/journaling/自读与他读等）。物理隔离：新手指南不讲单牌阵深度，链回牌阵页。
 > **与牌义页框架关系**：[牌义页框架](模板-Tarot-牌义页框架.md) 写牌的普适意义；新手指南 `tarot-card-meanings-list` 是聚合清单页，链回 78 张牌义页。
-> **竞品依据**：[1F §4.1.1 #8 新手指南](../../01-竞品分析/1F-塔罗内容写法研究.md) + SERP 实查（2026-07-03，见 §0）。
+> **竞品依据**：[1F §4.1.1 #8 新手指南](../../01-竞品分析/1F-内容策略分析/塔罗内容写法研究.md) + SERP 实查（2026-07-03，见 §0）。
 > **数据源**：`beginner-knowledge.json`（**第一交付物**，已审）+ 390 库（水晶落位依据）。
 > **核心策略**：主词 `how to read tarot cards` / `tarot for beginners` / `first tarot deck` / `how to shuffle tarot cards` / `how to cleanse tarot cards` 等高搜索新手词。差异化：**学塔罗 × 配水晶（反思辅助口径）+ 东方视角 + 不预言结果而是给反思路径**。
 > **⚠️ 最大风险**：① 抄 biddytarot/learntarot 教学步骤（重复内容）② 把 how-to 写成"算准方法"（违规预测）③ daily-practice/reading-for-others 涉他人 autonomy 与 mental health 边界 ④ 水晶万能论（玄学承诺）⑤ 反位讲成凶兆。

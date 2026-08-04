@@ -2,7 +2,7 @@
 
 > **阶段**: sleep 线 T3（单石×sleep 深页，如 amethyst-for-sleep）专项深化
 > **日期**: 2026-07-09
-> **上游**: [1I-sleep内容线研究.md](1I-sleep内容线研究.md)（sleep 线全貌，5 类页面，T3 = 其第 3 类）
+> **上游**: [1I-sleep内容线/sleep内容线研究.md](1I-sleep内容线/sleep内容线研究.md)（sleep 线全貌，5 类页面，T3 = 其第 3 类）
 > **数据源**: ① serp_check 实测 8 个 {crystal}-for-sleep 词（location=us, device=mobile, language=en，2026-07-09）+ ② 390 meaning 库 5 颗目标水晶 crystal-profile 字段实读（Explore agent，2026-07-09）+ ③ 线上 condition 目录现状（recovery json，post 40530/40861）+ ④ 2A 网站结构 URL 规则 + ⑤ condition-configs 相邻页（anxiety/stress/peace）水晶重叠核查
 > **目的**: 回答 4 个核心问题——① crystals-for-sleep 跟 condition 是否重叠 ② 单石×sleep 矩阵能否扩展 ③ 关键词生态 ④ 390 库 sleep 覆盖——并给出 T3 单石优先级
 > **⚠️ 对 1I 的关键修正**: 1I 把 T1（crystals-for-sleep hub）列为"待做首发批次"，**但该页线上已 publish（post 40530，2026-06-19 恢复）**。T3 深化基于"T1 已存在"的现实重新定位单石页角色。
