@@ -53,6 +53,7 @@ GSC（Google Search Console）是**唯一**告诉你"自己页面在 Google 真�
   - **只点击掉、排名稳 = CTR 衰减** → 可能 AIO 蚕食或标题过时
 - **刷新后主动请求重爬**（[Harbor SEO](https://www.harborseo.ai/content-decay)）：URL Inspection → Request indexing，通常 2-3 周回升；显眼处放 Last updated 日期。
 - **落地**：`gsc_content_decay`（Mario 版，自动 3 个 30 天窗口单调下降检测）。
+- **Google 官方已产品化**（[2025-06 Insights](https://developers.google.com/search/blog/2025/06/search-console-insights)）：Trending down pages = 官方版 content decay 信号，可作为 3 窗口检测的补充触发器；Trending up queries 直接喂内容选题 backlog。
 
 ### 1.5 CTR 机会 —— ⚠️ 警惕 AI 改 meta 反例
 - **机会识别**：高曝光 + 低 CTR（<1%）= title/meta 与意图错配信号（[Rows](https://rows.com/blog/post/google-search-console-keyword-research)）。
@@ -155,6 +156,19 @@ GSC（Google Search Console）是**唯一**告诉你"自己页面在 Google 真�
 - **AI-Powered Configuration**（[官方 2025-12](https://developers.google.com/search/blog/2025/12/ai-powered-configuration)）：Performance 里用自然语言描述（"对比移动端和桌面端品牌词在美国的点击"），GSC 自动转成 filters+comparisons。**Google 自己提醒需人工复核准确性**。
 - **社交渠道进 Insights**（[Brafton](https://brafton.com/blog/seo/a-renewed-way-to-maximize-google-search-console-in-2026/)）：YouTube 等社媒搜索表现并入 Insights，首次跨渠道同框。
 
+### 2.5 2025-2026 GSC 新功能速查（搜索 + 专家验证）
+
+| 功能 | 上线 | 用途 | 来源 |
+|------|------|------|------|
+| **Query Groups** | 2025-10 | Google AI 自动把语义相似 query 聚类成组，整体报告 clicks/impressions——**官方版 query cluster**（替代我们 §8.3 手动聚类） | [官方](https://developers.google.com/search/blog/2025/10/search-console-query-groups) |
+| **Recommendations** | 2024-08 起 | Google 主动给每个站列"按优先级排序的个性化优化建议"——**Google 告诉你下一步修什么**，gsc-radar 阶段 1 应先读这个 | [官方](https://developers.google.com/search/blog/2024/08/search-console-recommendations) |
+| **Insights Trending Up/Down** | 2025-06 | 官方产品化 content decay 信号：Trending down pages = 需刷新；Trending up queries = 新选题来源 | [官方](https://developers.google.com/search/blog/2025/06/search-console-insights) |
+| **API 小时级数据** | 2025-04 | API 支持 hourly breakdown，每天 192 个新数据点，用于日内异动诊断 + 算法更新实时监测 | [官方](https://developers.google.com/search/blog/2025/04/hourly-data) + [Lily Ray](https://x.com/lilyraynyc) |
+| **Weekly/Monthly 视图** | 2025-12 | Performance 新增周/月聚合，消除周末噪声（配合 Custom Annotations 使用） | [官方](https://developers.google.com/search/blog/2025/12/weekly-monthly-views) |
+| **AI Mode Position 陷阱** | 2025-06 | AI Mode 内"链接组"= position 1，嵌入链接仅点击后记 impression；混入 Web 数据会**污染 position 均值** | [Brodie Clark](https://brodieclark.com/ai-mode-google-search-console/)（万人实验） |
+
+> **UK CMA 强制背景**（[Marie Haynes](https://www.mariehaynes.com/new-aio-and-aimode-info-in-gsc/)）：Google 发布 AIO 数据不是出于好心，是英国竞争与市场管理局（CMA）强制要求透明度。发布者可在 GSC 内 opt-out 阻止内容被 AI 使用（但 opt-out AIO ≈ opt-out Search，**绝大多数站不应 opt-out**）。Marie 的 AI 优化 prompt："这页有什么是 AI Overview 没答的？为什么用户仍要点击？"
+
 ---
 
 ## 3. ⭐ GSC + SERP 反查联动（AI 自动化核心，最值钱）
@@ -211,6 +225,11 @@ Glen 称这是他"13 年 SEO 做过最聪明的事"：
 - **domain property 必须 `sc-domain:` 前缀**，否则部分工具静默失败。
 - **GSC 三出口数据不一致**（[Marco Giordano](https://www.linkedin.com/posts/marco-giordano96_a-look-into-google-search-console-and-its-activity-7381991862695415808-om2t)）：UI / API / BigQuery 三个出口有 "different truths"，大站分析要统一用 BigQuery 源。
 - **GSC UI 每 query 最多 1000 行、16 个月历史**——大站要绕开，用 BigQuery Bulk Export（URL×Query×Date 全量，无上限）。
+
+### 4.5 🔴 Indexing API 红线 + AI 内容损害 crawl demand
+- **Indexing API 仅限 `JobPosting` 和 `BroadcastEvent`**（[Onely 2026-03](https://www.onely.com/blog/how-to-fix-discovered-currently-not-indexed-in-google-search-console/)）：批量提交普通页面**违反 Google 反垃圾政策**，风险整域被标记。正确做法：更新 XML sitemap + 优化内链。
+- **未编辑的大规模 AI 内容主动损害 crawl demand**（2025-05 Google 质量审查情报）：Google 把整域 AI 内容比例纳入 crawl 优先级评估——AI 内容越多，Googlebot 越不愿抓取。**placeholder 模式批量生产的内容需监控 crawl rate 变化**。
+- **Crawl budget 阈值**（Google 官方）：只有 >100 万唯一页 或 1 万+页且每日快速变化才需担心。小站"Discovered – not indexed"几乎都是 crawl demand（质量/流行度）问题而非容量问题。
 
 ---
 
