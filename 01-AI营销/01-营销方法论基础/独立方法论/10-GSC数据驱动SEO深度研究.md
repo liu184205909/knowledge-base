@@ -295,7 +295,7 @@ ctr_opportunities 输出必须**透明展示 benchmark**（非黑箱分数），
 **知识库竞品分析体系（RLM 营销方法论 §1A-1H，水晶站实证）**：
 1. **数据采集（1B 五轨道并行）**：轨道A `semrush_to_sheets.py`（Domain Overview/AS/Organic Traffic/流量渠道）+ 轨道C SEMrush Top Pages/Keywords（水晶实证：36 竞品 / TopKeywords_All **45,418 行** / TopPages_All **7,498 行**）+ 轨道E `sitemap-mcp`（全站页面清单）+ 轨道B/D Seed-Master（**47,745 条 × 24 列**）+ 证据回填
 2. **证据验证**（轨道D/Keyword-Page-Proof）：`track_d_backfill.py` 验证竞品 query **真有流量**（非猜）
-3. **深度拆解（1D，套 9 章节模板）**：核心输入是 SEMrush Top Pages/Keywords + Sitemap + Seed-Master + 证据（**不是页面 H2/字数**），分层 P0-P3，见 `01-营销方法论基础/03-模板库/02-竞品深度拆解模板.md`
+3. **深度拆解（1D，套 9 章节模板）**：核心输入是 SEMrush Top Pages/Keywords + Sitemap + Seed-Master + 证据（**不是页面 H2/字数**），分层 P0-P3，见 `01-营销方法论基础/RLM配套/03-模板库/02-竞品深度拆解模板.md`
 4. **跨竞品汇总（1E 结构/1F 内容/1G 用户/1H 策略）** + **社区逆向**（`选品方法论/04-竞品与社区逆向挖掘法.md`：Reddit 9 步法/评论 Q&A/亚马逊搜索词逆向）
 
 **web_reader/web-access 的真实位置**：深度拆解模板的「辅助输入·核心页面轻量复核」，按需验证结构，**非主力数据源**。
