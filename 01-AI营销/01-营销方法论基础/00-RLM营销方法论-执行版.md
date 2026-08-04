@@ -411,7 +411,7 @@ XX产品/
 - [ ] Meta 三件套（Title/Description/H1）含目标关键词
 - [ ] 无 CJK 残留 + 无合规禁用词
 
-> **规模化内容风险自查表 / Mount AI 崩塌数据 / Commodity Content 自检 / Google Scaled Content Abuse 红线** → 详见 `03-内容生产与质检/内容质检深度研究.md`
+> **规模化内容风险自查表 / Mount AI 崩塌数据 / Commodity Content 自检 / Google Scaled Content Abuse 红线** → 详见 `03-内容生产与质检/内容质量标准.md`
 
 #### 3.4 发布前质检路由
 
