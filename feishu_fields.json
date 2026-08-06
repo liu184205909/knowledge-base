@@ -1,0 +1,9 @@
+[
+  {"name":"竞对","type":"text"},
+  {"name":"国别","type":"select","options":[{"name":"国际"},{"name":"外贸"},{"name":"国内"},{"name":"新发现"}]},
+  {"name":"文章类型","type":"select","options":[{"name":"1-解决方案/案例"},{"name":"2-What-Is/原理"},{"name":"3-FAQ/买家提问"},{"name":"4-技术对比/ROI"},{"name":"5-运维/材料/节能"},{"name":"6-展会/新闻/项目"},{"name":"7-地理SEO"},{"name":"8-其他"}]},
+  {"name":"行业场景","type":"text"},
+  {"name":"slug","type":"text"},
+  {"name":"推断主题","type":"text"},
+  {"name":"备注","type":"text"}
+]

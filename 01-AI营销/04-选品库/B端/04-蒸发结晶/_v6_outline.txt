@@ -1,0 +1,152 @@
+
+============================================================
+PANEL tab1: 📊 市场全景与战略框架
+============================================================
+    h3: 🗺️ 网站定位：工业蒸发浓缩与结晶系统 (Evaporation &amp; Crystallization Systems)
+    h3: 💡 关键战略逻辑：Solutions vs Industries 双维度SEO交叉覆盖
+    h3: 🏗 五层战略架构（从业务边界到设备 · Five-Tier Strategic Architecture）
+    h3: 🌐 4条解决方案线详解（Four Solution Lines）
+    h3: 💧 解决方案线 1 · 高盐废液减量与资源化
+    h3: ⚗️ 解决方案线 2 · 工艺液浓缩与产品结晶
+    h3: 🔄 解决方案线 3 · 母液循环与产品回收
+    h3: ⚡ 解决方案线 4 · 节能改造与工业脱碳升级
+    h3: 📌 询盘转化秘诀：B2B中下漏斗内容营销 (Middle-to-Bottom Funnel Content)
+
+============================================================
+PANEL tab2: 🏭 32家竞争对手档案
+============================================================
+
+  [t2s1] 🇨🇳 国内传统供应商 (12家)
+    h2: 国内12家传统供应商档案 定位：你的供应商/生产配套生态
+    h3: 江苏嘉泰蒸发设备股份有限公司
+    h3: 江苏高捷节能科技有限公司 (GOJE)
+    h3: 江苏迈安德食品机械有限公司
+    h3: 上海格兰特机械工程有限公司
+    h3: 深圳瑞升华蒸发浓缩科技有限公司
+    h3: 河北乐恒节能科技股份有限公司
+    h3: 乐科节能科技（河北）有限公司
+    h3: 苏州乔发蒸发器制造有限公司
+    h3: 青岛康景辉环保科技有限公司
+    h3: 上海敏杰蒸发设备制造有限公司
+    h3: 常州江中干燥设备有限公司
+    h3: 江苏瑞恒昌机械制造有限公司
+
+  [t2s2] 🌍 国际行业标杆 (10家)
+    h2: 国际10家标杆竞对档案 定位：看齐的方向/高端客户对标
+    h3: GEA Group — meVap® Series
+    h3: Veolia Water Technologies — HPD®
+    h3: Swenson Technology, Inc.
+    h3: Saltworks Technologies Inc. — SaltMaker®
+    h3: ANDRITZ AG — Separation Division
+    h3: Sulzer Chemtech — Crystallization
+    h3: Alfa Laval — Evaporation Systems
+    h3: Rosenblad Design Group (RDG)
+    h3: EBNER GmbH & Co. KG
+    h3: SPX Flow / Anhydro
+
+  [t2s3] 🎯 +86外贸真实竞对 (10家)
+    h2: 中国10家外贸真实竞争对手（独立站+86） 定位：你真正的出海刺客对手
+    h3: Jiangsu Sunevap Technology Co., Ltd.
+    h3: Wenzhou Enchem Technology Co., Ltd.
+    h3: Jiangsu Hanpu Mechanical Technology Co., Ltd.
+    h3: Shanghai Vanoo Laser Technology Co., Ltd.
+    h3: Dongguan Wteya Environmental Technology Co., Ltd.
+    h3: Wenzhou Ace Machinery Co., Ltd.
+    h3: Toption Tech / Xi'an Toption Instrument Co., Ltd.
+    h3: Shandong Wanze Shengshi Environmental Technology Co., Ltd.
+    h3: Wenzhou Beinuo Machinery Co., Ltd.
+    h3: Joston Machinery / Wenzhou Yinuo Machinery Co., Ltd.
+
+  [t2s4] 📊 对比矩阵+架构型态 [V6新增]
+    h3: 📊 对比矩阵与4种架构型态分析
+      h4: 🎯 32家矩阵洞察：你在哪个位置最有机会？
+      h4: 🎯 市场定位洞察：你的差异化机会在哪？
+      h4: 🎯 内容策略洞察：你的内容差距在哪？
+    h3: ① 设备驱动型 (Equipment-First)
+      h4: ⚠️ 致命弱点
+    h3: ② 解决方案型 (Solution-First)
+      h4: ✓ 核心优势
+    h3: ③ 行业聚焦型 (Industry-First)
+      h4: 💡 配合方式
+    h3: ④ 品牌/技术叙事型 (Brand-Narrative)
+      h4: 🎯 终极标杆
+    h3: 🗺 嘉泰外贸网站的"三阶段演进路径"
+      h4: 解决方案优先 (Solution-First)
+      h4: 行业垂直深耕 (Industry-First)
+      h4: 品牌技术叙事 (Brand-Narrative)
+
+============================================================
+PANEL tab3: 📚 内容营销与案例库
+============================================================
+
+  [t3s1] 📊 技术对比选型图（8篇）
+    h2: 📊 类型一：技术对比选型图 (Technical Comparison &amp; Selection Guide)
+
+  [t3s2] 📋 行业痛点解析图（8篇）
+    h2: 📋 类型二：行业痛点解析图 (Industry Pain Point Deep Dives)
+
+  [t3s3] 🔧 系统工艺流程图（8篇）
+    h2: 🔧 类型三：系统工艺流程图 (System Process Flow Diagrams &amp; PFDs)
+
+  [t3s4] 📝 案例数据结果图（8篇）
+    h2: 📝 类型四：案例数据结果图 (Quantitative Case Data Cards)
+
+  [t3s5] 🏭 32家竞对整合案例库
+    h2: 🏭 32家竞对整合案例库 — 按行业分类（7大行业 × 10+案例）
+    h3: 📈 面向国际买家的案例包装参数规范（必须补齐！）
+
+============================================================
+PANEL tab4: 🎯 差异化建站与SEO指南
+============================================================
+
+  [t4s1] 🛠️ 建站步骤与差异化策略
+    h2: 🛠️ 差异化建站策略与五步落地法
+      h4: 🔑 差异化点1：以"解决方案 (Solutions)"而非"产品设备 (Products)"作为一号导航
+      h4: 🔑 差异化点2：开辟"线4 节能脱碳改造 (Retrofit &amp; Decarbonization)"蓝海板块
+      h4: 🛠️ 独立站建设五步落地法（V4）
+      h4: 📐 推荐网站信息架构（Phase 1 · 解决方案优先）
+    h3: 🖥 首页首屏建议（Hero Section）
+    h3: 📊 内容优先级建议（70/20/10）
+      h4: 📦 V6 新增：来自 Ultimate 的10项建站详细执行步骤
+      h4: 域名选择与云基础设施布局 (Domain & Hosting)
+      h4: 明确网站架构原型 (Site Sitemap & IA)
+      h4: 核心技术路线与设备标准化翻译 (Technical Glossary)
+      h4: 起步案例库梳理与技术参数补齐 (Case Studies Reconstruction)
+      h4: 设计并开发"参数化询盘表单" (Technical Inquiry Form)
+      h4: 4条解决方案线深度内容填充 (Solutions copywriting)
+      h4: 锂电与精细化工行业专页开发 (Industry Landing Pages)
+      h4: 信任建设资产准备 (About Us & Trust Assets)
+      h4: 基础SEO与核心关键词布局部署 (On-Page SEO)
+      h4: 海外主流B2B推广与主动开发启动 (B2B Marketing & Outreach)
+
+  [t4s2] 🎯 核心战略洞察（6条）[V6新增]
+    h2: 🎯 6条核心战略洞察
+    h3: 1. 叙事层级的降维打击（最核心机会）
+    h3: 2. "工业脱碳"的绿色蓝海（解决方案线4）
+    h3: 3. "技术对比矩阵"是降服采购的询盘神器
+    h3: 4. 锂电与新能源材料的全球红利
+    h3: 5. 建立独立的"测试与模拟服务"专页（Trust-Builder）
+    h3: 6. 避开国际巨头的中小项目"空白区"
+
+  [t4s3] 🔑 SEO关键词布局（4类）[V6增强]
+    h2: 🔑 SEO关键词布局（4大类 + 8核心词矩阵）
+      h4: 📈 V4：2026-2027年海外高价值SEO关键词布局表
+      h4: 📦 V6 新增：来自 Ultimate 的关键词4大类系统布局
+    h3: 🟢 第一类：解决方案层核心关键词 (Solutions-Level Keywords)
+    h3: 🔵 第二类：行业垂直 Landing 页关键词 (Industry-Specific Keywords)
+    h3: 🟠 第三类：技术与设备层长尾词 (Technologies & Equipment Keywords)
+    h3: 🟣 第四类：国际竞品替代与地域优势长尾词 (Alternative & Geo Keywords)
+
+  [t4s4] 🌐 Solutions vs Industries [V6新增]
+    h2: 🌐 Solutions（解决方案）vs Industries（行业）— 不是重复，是互补
+      h4: ⚡ 关键理解：一个页面如何对应两个维度？
+      h4: 📌 Solutions 页面应该写什么
+      h4: 📌 Industries 页面应该写什么
+
+  [大小: 7,513 chars]
+
+  [大小: 63,833 chars]
+
+  [大小: 47,070 chars]
+
+  [大小: 37,846 chars]

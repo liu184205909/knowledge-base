@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>嘉泰蒸发结晶 · 内容营销路线图 v1</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; background: #f5f7fa; color: #1a202c; line-height: 1.6; }
+header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 30px 40px; }
+header h1 { font-size: 28px; margin-bottom: 8px; }
+header .meta { font-size: 14px; opacity: 0.85; }
+.container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+.tabs { display: flex; gap: 4px; background: white; border-radius: 8px 8px 0 0; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.06); flex-wrap: wrap; }
+.tab { padding: 14px 24px; cursor: pointer; background: #e2e8f0; color: #475569; font-weight: 500; font-size: 14px; border: none; transition: all 0.2s; }
+.tab.active { background: #1e40af; color: white; }
+.tab:hover:not(.active) { background: #cbd5e1; }
+.panel { display: none; background: white; padding: 32px; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.06); min-height: 600px; }
+.panel.active { display: block; }
+h2 { color: #1e3a8a; margin-bottom: 16px; font-size: 22px; border-bottom: 3px solid #3b82f6; padding-bottom: 8px; }
+h3 { color: #1e40af; margin: 24px 0 12px; font-size: 18px; }
+h4 { color: #374151; margin: 16px 0 8px; font-size: 15px; }
+p { margin-bottom: 10px; color: #374151; }
+table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
+th { background: #1e40af; color: white; padding: 10px 12px; text-align: left; font-weight: 600; }
+td { padding: 10px 12px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+tr:nth-child(even) { background: #f8fafc; }
+tr:hover { background: #eff6ff; }
+.badge { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-right: 4px; }
+.badge-p0 { background: #fee2e2; color: #991b1b; }
+.badge-p1 { background: #fef3c7; color: #92400e; }
+.badge-p2 { background: #d1fae5; color: #065f46; }
+.badge-new { background: #dbeafe; color: #1e40af; }
+.badge-easy { background: #d1fae5; color: #065f46; }
+.badge-medium { background: #fef3c7; color: #92400e; }
+.badge-hard { background: #fee2e2; color: #991b1b; }
+.badge-high { background: #dbeafe; color: #1e40af; }
+.badge-low { background: #f3f4f6; color: #6b7280; }
+.card { background: #f8fafc; border-left: 4px solid #3b82f6; padding: 16px; margin: 12px 0; border-radius: 0 6px 6px 0; }
+.card.warn { border-left-color: #f59e0b; background: #fffbeb; }
+.card.danger { border-left-color: #ef4444; background: #fef2f2; }
+.card.success { border-left-color: #10b981; background: #ecfdf5; }
+.type-block { border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 16px 0; background: #fafbfc; }
+.type-block h3 { margin-top: 0; }
+.type-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+ul { padding-left: 20px; margin: 8px 0; }
+li { margin-bottom: 4px; color: #374151; font-size: 14px; }
+.topic-list { columns: 2; column-gap: 32px; }
+.topic-list li { break-inside: avoid; margin-bottom: 6px; }
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 16px 0; }
+.stat-card { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 20px; border-radius: 8px; text-align: center; }
+.stat-card .num { font-size: 32px; font-weight: 700; }
+.stat-card .label { font-size: 13px; opacity: 0.9; margin-top: 4px; }
+footer { text-align: center; padding: 24px; color: #64748b; font-size: 13px; }
+.tl { color: #6b7280; font-size: 12px; }
+.impact { font-weight: 600; }
+.impact-h { color: #dc2626; }
+.impact-m { color: #f59e0b; }
+.impact-l { color: #10b981; }
+details { margin: 8px 0; padding: 8px 12px; background: #f8fafc; border-radius: 4px; cursor: pointer; }
+details summary { font-weight: 600; color: #1e40af; }
+details[open] { padding-bottom: 12px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>嘉泰蒸发结晶 · 内容营销路线图 v1</h1>
+  <div class="meta">
+    数据基础：39 家竞对 sitemap 审计（29 家已抓取） · 基于 29 家 ~7700 篇竞对文章 ·
+    生成日期 2026-08-05 · 配套报告 <code>29家竞对文章类型统计汇总.md</code> + <code>29家竞对内容市场结构分析.md</code>
+  </div>
+</header>
+
+<div class="container">
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab(0)">总览</button>
+  <button class="tab" onclick="showTab(1)">文章类型（14→8 核心）</button>
+  <button class="tab" onclick="showTab(2)">解决方案选题（733）</button>
+  <button class="tab" onclick="showTab(3)">What-Is/原理选题（363）</button>
+  <button class="tab" onclick="showTab(4)">FAQ/对比/运维选题（295）</button>
+  <button class="tab" onclick="showTab(5)">地理 SEO 选题（95）</button>
+  <button class="tab" onclick="showTab(6)">竞对内容速查</button>
+</div>
+
+<!-- ========== Panel 0: 总览 ========== -->
+<div class="panel active" id="panel-0">
+<h2>总览：为什么需要这个路线图</h2>
+
+<div class="card danger">
+  <strong>核心问题</strong>：原 v6 报告只识别了 <strong>4 种文章类型 × 8 篇 = 32 篇</strong>（技术对比/行业痛点/系统流程/案例数据）。
+  但实际抓取 29 家竞对 sitemap 后发现，竞对在用 <strong>至少 14 种内容类型（可简化为 8 种核心类型）</strong>，头部竞对内容规模已达 <strong>200-3000+ 页</strong>。
+  嘉泰外贸站当前 <strong>228 URL</strong>，其中真正的内容文章几乎为零，差距 10-100 倍。
+</div>
+
+<div class="stat-grid">
+  <div class="stat-card"><div class="num">8</div><div class="label">核心文章类型<br>（简化自原 14 种）</div></div>
+  <div class="stat-card"><div class="num">29/39</div><div class="label">竞对已抓取<br>覆盖率 74%</div></div>
+  <div class="stat-card"><div class="num">~7700</div><div class="label">29 家竞对可分类内容<br>（不含 SKU/产品页）</div></div>
+</div>
+
+<div class="card warn">
+<strong>关于"内容规模目标"</strong>：本路线图不再给出嘉泰 12 月产出篇数目标（原 ~200 篇基于 Sunevap/Vanoo/Enchem 三家外推，与嘉泰自身产能和优先级脱节）。
+<strong>下一步</strong>：12 月路线图（Panel 2）需基于 29 家竞对完整数据重新规划。当前 Panel 2/3/4/5 的具体选题清单仅作参考。
+</div>
+
+<h3>三大差距</h3>
+<table>
+<tr><th>维度</th><th>嘉泰现状</th><th>头部竞对（Sunevap/Vanoo/Saltworks）</th><th>差距倍数</th></tr>
+<tr><td>内容总页数</td><td>~30 案例页 + ~60 产品页</td><td>200-378 深度内容页</td><td class="impact impact-h">10-15×</td></tr>
+<tr><td>文章类型</td><td>1 种（案例展示）</td><td>8 种核心类型并行</td><td class="impact impact-h">8×</td></tr>
+<tr><td>地理 SEO</td><td>0 篇</td><td>60+ 篇模板化地理文章</td><td class="impact impact-h">∞</td></tr>
+<tr><td>FAQ/What-Is</td><td>0 篇</td><td>40-1260 篇</td><td class="impact impact-h">∞</td></tr>
+<tr><td>多语言</td><td>英文+中文</td><td>英文+西语+德语+15 种语言</td><td class="impact impact-m">3-7×</td></tr>
+</table>
+
+<h3>路线图设计原则</h3>
+<div class="card">
+<ol>
+<li><strong>对标 Sunevap + Vanoo + Enchem</strong>（外贸直接竞对），不对标 GEA/Sulzer（体量差距太大）</li>
+<li><strong>8 种核心类型按"SEO 价值 × 生产难度"排序</strong>（由 14 种简化），优先做高价值低难度</li>
+<li><strong>地理 SEO 模板必须 6 个月内启动</strong>——Sunevap 已铺设 60+ 篇，每晚一个月就少几十个长尾关键词</li>
+<li><strong>Enchem 的"What-Is 系列"是最值得模仿的</strong>——技术原创度高、无地理模板、43 篇覆盖全部核心设备</li>
+<li><strong>ANDRITZ 的"Industry Challenges"是终极目标</strong>——深度行业叙事，建立专业权威，但需要 6+ 个月技术写作能力</li>
+<li><strong>康景辉的"FAQ 工厂"打法可降维到英文</strong>——1260 篇中文 FAQ 证明 Q&A 页面是 SEO 长尾利器，英文版 100 篇 FAQ = 流量护城河</li>
+</ol>
+</div>
+
+<h3>29 家竞对 8 种文章类型分布（纯市场数据，不含嘉泰目标）</h3>
+
+<div class="card">
+<strong>数据基础</strong>：29 家竞对 sitemap 全量抓取（2026-08-05），剔除 Swenson（纯产品站）和乐科（sitemap 异常）后，<strong>27 家有效竞对合计 ~7700 篇可分类内容</strong>。
+数据源：<code>29家竞对文章类型统计汇总.md</code>（大表）+ <code>29家竞对内容市场结构分析.md</code>（结构分析）。
+</div>
+
+<table>
+<tr><th>#</th><th>类型</th><th>全市场合计</th><th>占比</th><th>头部 3 家</th><th>稀缺度</th><th>判断</th></tr>
+<tr><td>1</td><td>解决方案/案例/应用</td><td><strong>~2960</strong></td><td>38%</td><td>Myande 167 / Ion Exchange 100 / SAMCO 90</td><td><span class="badge badge-low">过剩（红海）</span></td><td>市场基础盘，100% 覆盖；质量天花板=ANDRITZ industry-challenges</td></tr>
+<tr><td>2</td><td>What-Is/原理/指南</td><td><strong>~1180</strong></td><td>15%</td><td>Toption 153 / Alaqua 100 / Myande 112</td><td><span class="badge badge-low">过剩（红海）</span></td><td>70% 来自模板化产出；高质量原创仅 ~300 篇（ANDRITZ/Enchem/Vanoo/SAMCO）</td></tr>
+<tr><td>3</td><td>FAQ/买家提问</td><td><strong>~1430</strong></td><td>19%</td><td>康景辉 1260 / SAMCO 100 / 敏杰 59</td><td><span class="badge badge-medium">伪过剩</span></td><td>剔除康景辉数字 slug 后仅 170 篇（2.6%）；SAMCO 五件套才是英文范本</td></tr>
+<tr><td>4</td><td>技术对比/ROI</td><td><strong>~340</strong></td><td>4%</td><td>Vanoo 18 / 敏杰 37 / Toption 32</td><td><span class="badge badge-high">稀缺（蓝海）</span></td><td>除地理 SEO 外最稀缺；Vanoo ROI 计算器栏目独家；商业意图最强</td></tr>
+<tr><td>5</td><td>运维/材料/节能</td><td><strong>~640</strong></td><td>8%</td><td>Alfa Laval 240 / SPX Flow 100 / Enchem 10</td><td><span class="badge badge-high">稀缺（蓝海）</span></td><td>国际巨头主导；Enchem 4 篇材料选型是工程师范本</td></tr>
+<tr><td>6</td><td>展会/新闻/项目</td><td><strong>~830</strong></td><td>11%</td><td>ASOS 195 / Alfa Laval 325 / SPX Flow 297</td><td><span class="badge badge-medium">中度饱和</span></td><td>ASOS 展会日历 SEO 独门；Alfa Laval 281 篇投资者公告无价值</td></tr>
+<tr><td>7</td><td>地理 SEO 模板</td><td><strong>~155</strong></td><td>2%</td><td>Sunevap 70 / GEA 33 国别子站 / Alfa Laval 50</td><td><span class="badge badge-high">空白（独占）</span></td><td><strong>最稀缺的内容类型</strong>；Sunevap 单家独占整个赛道，4+ 年先发优势</td></tr>
+<tr><td>8</td><td>其他（跨域/双语）</td><td><strong>~165</strong></td><td>2%</td><td>ENCO 93 / Condorchem 72 / Zewatech 48</td><td><span class="badge badge-low">噪声</span></td><td>跨域占位，非蒸发结晶主业；Google Scaled Content Abuse 风险区</td></tr>
+<tr><td><strong>合计</strong></td><td colspan="2"><strong>~7700 篇</strong></td><td>100%</td><td colspan="2">27 家有效竞对（剔除 Swenson + 乐科）</td><td>CR5=60%（康景辉/Alfa Laval/SPX Flow/Toption/Myande）</td></tr>
+</table>
+
+<div class="card success">
+<strong>稀缺度结论</strong>：真正稀缺的 3 种类型 = <strong>地理 SEO（2%）+ 技术对比/ROI（4%）+ 运维/材料/节能（8%）</strong>，合计仅占市场 14% 但商业意图最强。
+<strong>伪过剩的 1 种</strong>：FAQ（表面 19% 实际 2.6%）——康景辉 1260 篇中文数字 slug FAQ 掩盖了英文高质 FAQ 的真实稀缺。
+<strong>真正过剩的 2 种</strong>：案例/应用（38%）+ What-Is/原理（15%）——模板化饱和。
+<strong>完整数据</strong>：详见 <code>29家竞对文章类型统计汇总.md</code> §3 + <code>29家竞对内容市场结构分析.md</code> §3。
+</div>
+
+</div>
+
+<!-- ========== Panel 1: 14 种文章类型 ========== -->
+<div class="panel" id="panel-1">
+<h2>文章类型详解（原 14 种 · 简化为 8 种核心类型）</h2>
+
+<div class="type-block">
+<div class="type-header"><h3 style="margin:0">类型 1：地理 SEO 模板文（Geo-Targeted Listicles）</h3>
+<span class="badge badge-p0">P0</span><span class="badge badge-easy">生产易</span><span class="badge badge-high">SEO 高价值</span><span class="badge badge-new">新发现</span></div>
+<p><strong>定义</strong>：固定模板 × 地理变量批量生产的文章。"Top X MVR Evaporator Manufacturers in [City/Country]" 是典型格式。</p>
+<p><strong>竞对范本</strong>：Sunevap 已铺设 60+ 篇，覆盖 15+ 国家 20+ 城市 8 种设备类型</p>
+<p><strong>嘉泰适用度</strong>：⭐⭐⭐⭐⭐ 最高。模板化程度高，量产容易，长尾流量护城河。</p>
+<p><strong>生产难度</strong>：低。模板固定后，每篇只需替换城市名+设备名+前 5 名厂商列表。</p>
+<p><strong>SEO 价值</strong>：极高。每个地理关键词都是精准采购意图。</p>
+<details>
+<summary>展开模板结构（嘉泰可直接复用）</summary>
+<ul>
+<li><strong>H1</strong>：Top 5 MVR Evaporator Manufacturers in Karachi, Pakistan [2026]</li>
+<li><strong>Intro</strong>：Why Karachi? + 市场规模数据 + 采购注意事项</li>
+<li><strong>Body × 5</strong>：每家厂商 200 字介绍（公司名/成立年/产能/认证/优势/网站）</li>
+<li><strong>Buying Guide</strong>：How to Choose MVR Evaporator in Pakistan（5 个维度）</li>
+<li><strong>FAQ × 5</strong>：常见问题（价格区间/交货期/安装/售后/认证）</li>
+<li><strong>CTA</strong>：Contact Jiatai for Free Consultation</li>
+</ul>
+</details>
+<details>
+<summary>展开 60 个地理关键词清单（嘉泰第一批）</summary>
+<table>
+<tr><th>设备</th><th>国家/城市组合</th></tr>
+<tr><td>MVR Evaporator</td><td>Australia/Sydney · USA/Houston · France/Paris · Pakistan/Karachi/Lahore · Vietnam/Hanoi/HCM · Indonesia/Jakarta · South Africa/Johannesburg · China/Shanghai · South Korea · India · Jordan · Brazil · Turkey · Saudi Arabia · Malaysia</td></tr>
+<tr><td>MEE Multi-Effect</td><td>同上 15 国（每国 1 篇）</td></tr>
+<tr><td>Falling Film Evaporator</td><td>同上 15 国（每国 1 篇）</td></tr>
+<tr><td>Forced Circulation</td><td>同上 15 国（每国 1 篇）</td></tr>
+</table>
+<p class="tl">= 4 设备 × 15 国 = 60 篇。如果加城市变体，可达 120+ 篇。</p>
+</details>
+</div>
+
+<div class="type-block">
+<div class="type-header"><h3 style="margin:0">类型 2：What-Is 概念解释科普文（Educational Explainer）</h3>
+<span class="badge badge-p0">P0</span><span class="badge badge-easy">生产易</span><span class="badge badge-high">SEO 高价值</span><span class="badge badge-new">新发现</span></div>
+<p><strong>定义</strong>：回答"What is X?"的基础科普文。Google Featured Snippet 金矿。</p>
+<p><strong>竞对范本</strong>：Enchem 43 篇博客中至少 8 篇是 What-Is 格式（What is Evaporation / What is Crystallization / What is FC Crystallizer / About MVR Evaporator / Principle and Improvement of Rising/Falling Film Evaporator）</p>
+<p><strong>嘉泰适用度</strong>：⭐⭐⭐⭐⭐ 最高。技术工程师 1 天可写 2-3 篇，AI 辅助后效率更高。</p>
+<p><strong>生产难度</strong>：低。结构固定：定义 → 原理 → 类型 → 应用 → 选型 → 嘉泰产品 CTA。</p>
+<p><strong>SEO 价值</strong>：极高。Google 搜索 "what is MVR evaporator" 月搜 500+，"what is crystallization" 月搜 2000+。</p>
+<details>
+<summary>展开 40 个 What-Is 选题</summary>
+<div class="topic-list">
+<ol>
+<li>What is an MVR Evaporator? Working Principle, Types, Applications</li>
+<li>What is a Multi-Effect Evaporator (MEE)? Complete Guide</li>
+<li>What is a Falling Film Evaporator? Design, Pros & Cons</li>
+<li>What is a Rising Film Evaporator? Working Principle & Improvements</li>
+<li>What is a Forced Circulation Evaporator? FC Design Guide</li>
+<li>What is a DTB Crystallizer? Draft Tube Baffle Working Principle</li>
+<li>What is an Oslo Crystallizer? Fluidized Bed Crystal Growth</li>
+<li>What is an FC Crystallizer? Forced Circulation Crystallization</li>
+<li>What is Crystallization? Process, Types, Industrial Applications</li>
+<li>What is Evaporation? Industrial Evaporation Technology</li>
+<li>What is ZLD (Zero Liquid Discharge)? System Design Guide</li>
+<li>What is MVR Compression Technology? Centrifugal vs Roots</li>
+<li>What is TVR (Thermal Vapor Recompression)?</li>
+<li>What is Boiling Point Elevation (BPE)? Why It Matters for MVR</li>
+<li>What is a Heat Pump Evaporator? Low Temperature Evaporation</li>
+<li>What is a Wiped Film Evaporator? High Viscosity Applications</li>
+<li>What is Spray Drying? Evaporator + Dryer Integration</li>
+<li>What is an Agitated Thin Film Evaporator?</li>
+<li>What is Mother Liquor Recovery in Chemical Industry?</li>
+<li>What is Reverse Osmosis (RO) Concentrate Treatment?</li>
+<li>What is a Skid-Mounted Evaporator? Plug-and-Play Systems</li>
+<li>What is a Containerized MVR Evaporator?</li>
+<li>What is Industrial Wastewater Evaporation?</li>
+<li>What is Lithium Battery Recycling? MVR Application</li>
+<li>What is Hydrometallurgy? Evaporator in Metal Extraction</li>
+<li>What is Coal Chemical Wastewater ZLD?</li>
+<li>What is Fly Ash Leachate Treatment?</li>
+<li>What is Landfill Leachate Treatment? MVR Solution</li>
+<li>What is Pickling Liquor Recovery?</li>
+<li>What is Caustic Soda (NaOH) Evaporation?</li>
+<li>What is Calcium Chloride Production? Complete Process</li>
+<li>What is Ammonium Sulfate Crystallization?</li>
+<li>What is Potassium Nitrate MVR System?</li>
+<li>What is Sodium Sulfate Crystallization?</li>
+<li>What is Barium Chloride Production? Multi-Effect Crystallization</li>
+<li>What is Zinc Sulfate Crystallization? DTB/OSLO/FC Selection</li>
+<li>What is Copper Sulfate Pentahydrate Crystallization?</li>
+<li>What is Magnesium Sulfate (Epsom Salt) Crystallization?</li>
+<li>What is Nickel Sulfate Crystallization? Battery Grade Production</li>
+<li>What is Lithium Carbonate Reactive Crystallization?</li>
+</ol>
+</div>
+</details>
+</div>
+
+<div class="type-block">
+<div class="type-header"><h3 style="margin:0">类型 3：设备原理深度文（Principle & Design）</h3>
+<span class="badge badge-p0">P0</span><span class="badge badge-medium">生产中等</span><span class="badge badge-high">SEO 高价值</span></div>
+<p><strong>定义</strong>：比 What-Is 更深的设备原理+设计+改进文章。1500-3000 字技术深度文。</p>
+<p><strong>竞对范本</strong>：Vanoo 154 篇 blog 中的核心 50 篇（OSLO/DTB/FC 原理+设计+应用+选型+操作+改进）</p>
+<p><strong>嘉泰适用度</strong>：⭐⭐⭐⭐ 高。技术工程师主笔，是建立专业权威的关键。</p>
+<p><strong>生产难度</strong>：中。需要工艺工程师参与，每篇 1500-3000 字，配流程图+参数表。</p>
+<details>
+<summary>展开 30 个选题</summary>
+<div class="topic-list">
+<ol>
+<li>Oslo Crystallizer: Efficient Fluidized Bed Design for Large Crystal Growth</li>
+<li>DTB Crystallizer: Complete Design Guide, Process, and Uses</li>
+<li>Forced Circulation Evaporator Design: Working Principle & Applications</li>
+<li>Falling Film Evaporator Principle, Improvements & Selection Guide</li>
+<li>Rising Film Evaporator: Principle, Improvements & When to Use</li>
+<li>MVR Evaporator: Complete Technical Guide (Energy, Compressor, Control)</li>
+<li>MVR vs TVR: Efficiency, Cost & Application Comparison</li>
+<li>MVR vs Multi-Effect Evaporator (MEE): Which Is Better?</li>
+<li>How to Reduce Energy Consumption in MVR Evaporators</li>
+<li>Boiling Point Elevation (BPE): The Critical Factor in MVR Design</li>
+<li>MVR Centrifugal Compressor Selection Guide</li>
+<li>MVR Roots Compressor: When to Choose Over Centrifugal</li>
+<li>Multi-Effect Evaporator Energy Economy Optimization</li>
+<li>Heat Pump Evaporator: Low Temperature Crystallization Technology</li>
+<li>How to Prevent Clogging and Scaling in Wastewater Evaporators</li>
+<li>Cleaning and Descaling Solutions for Industrial Evaporators</li>
+<li>Material Selection for Evaporator Systems (SS316L / Titanium / 2507 / Hastelloy)</li>
+<li>Material Selection for Chloride-Containing Feedstock</li>
+<li>How to Select Construction Material of Evaporator</li>
+<li>Operation Cost of Evaporator: How to Reduce OPEX</li>
+<li>MVR Evaporator Inlet Requirements: Quality Indicators</li>
+<li>Ensuring Condensate Water Quality in Evaporator Systems</li>
+<li>COD Removal Rate in Evaporation Process</li>
+<li>Liquid Ring Vacuum Pumps in Evaporation Systems</li>
+<li>Achieving Low Residual Moisture in Industrial Salt Crystallization</li>
+<li>Continuous vs Batch Crystallization: NiSO₄·6H₂O Case Study</li>
+<li>Industrial Crystallizer Scale-Up: DTB/OSLO/FC Process Guide</li>
+<li>Custom Crystallization System Design & Scale-Up</li>
+<li>How to Improve Industrial Crystallization Yield</li>
+<li>Food Grade Crystallizer Material Selection Guide</li>
+</ol>
+</div>
+</details>
+</div>
+
+<div class="type-block">
+<div class="type-header"><h3 style="margin:0">类型 4：行业应用页（Applications by Crystal/Salt Type）</h3>
+<span class="badge badge-p0">P0</span><span class="badge badge-medium">生产中等</span><span class="badge badge-high">SEO 高价值</span><span class="badge badge-new">新发现</span></div>
+<p><strong>定义</strong>：按"被蒸发的物质"组织的应用页。EBNER 的 17 种晶体应用页是终极范本。</p>
+<p><strong>竞对范本</strong>：EBNER 17 种晶体/盐独立应用页（NaCl/KCl/LiCl/LiOH/Li₂CO₃/Li₂SO₄/Na₂SO₄/Na₂CO₃/MgSO₄/(NH₄)₂SO₄/CaCl₂/MgCl₂/FeSO₄/K₂SO₄ SOP/甘油/铝酸钠）</p>
+<p><strong>嘉泰适用度</strong>：⭐⭐⭐⭐⭐ 最高。嘉泰的产品体系就是按晶体/盐类组织的，可以直接 1:1 映射。</p>
+<p><strong>SEO 价值</strong>：极高。"Lithium hydroxide evaporative crystallizer" 是月搜 200+ 的精准采购词。</p>
+<details>
+<summary>展开 25 个应用页选题（基于嘉泰现有产品线）</summary>
+<table>
+<tr><th>#</th><th>晶体/盐类</th><th>应用页标题</th><th>竞对参考</th></tr>
+<tr><td>1</td><td>LiOH 氢氧化锂</td><td>Battery-Grade Lithium Hydroxide Monohydrate Production: Complete MVR Crystallization Guide</td><td>EBNER / Vanoo / Sunevap</td></tr>
+<tr><td>2</td><td>Li₂CO₃ 碳酸锂</td><td>Lithium Carbonate Reactive Crystallization: DTB Crystallizer Precision Process</td><td>Vanoo / Enchem</td></tr>
+<tr><td>3</td><td>LiCl 氯化锂</td><td>MVR Evaporative Crystallizer for Lithium Chloride Concentration</td><td>EBNER</td></tr>
+<tr><td>4</td><td>Li₂SO₄ 硫酸锂</td><td>MVR Evaporator for Lithium Sulfate Concentration in Battery Recycling</td><td>Enchem / EBNER</td></tr>
+<tr><td>5</td><td>NaCl 氯化钠</td><td>Sodium Chloride (NaCl) Evaporation Crystallization: Industrial Salt Production</td><td>EBNER / Vanoo</td></tr>
+<tr><td>6</td><td>KCl 氯化钾</td><td>Potassium Chloride Crystallization: FC vs Oslo Crystallizer Selection</td><td>EBNER</td></tr>
+<tr><td>7</td><td>Na₂SO₄ 硫酸钠</td><td>Sodium Sulfate Wastewater Evaporator Crystallizer: ZLD Solution</td><td>Enchem / Vanoo</td></tr>
+<tr><td>8</td><td>Na₂CO₃ 碳酸钠</td><td>Sodium Carbonate Crystallization System Design</td><td>EBNER</td></tr>
+<tr><td>9</td><td>NaOH 氢氧化钠</td><td>Continuous NaOH Crystallization System: 99% Purity Production</td><td>Vanoo</td></tr>
+<tr><td>10</td><td>CaCl₂ 氯化钙</td><td>Calcium Chloride Complete Production Line: Concentration + Granulation + Drying</td><td>Enchem 6 产品页</td></tr>
+<tr><td>11</td><td>MgSO₄ 硫酸镁</td><td>Magnesium Sulfate (Epsom Salt) FC Crystallizer: Industrial Scale Production</td><td>EBNER / Vanoo</td></tr>
+<tr><td>12</td><td>(NH₄)₂SO₄ 硫酸铵</td><td>Ammonium Sulfate DTB Crystallizer: Crystal Powder/Granule/Pellet Production</td><td>EBNER / Vanoo / Enchem</td></tr>
+<tr><td>13</td><td>BaCl₂ 氯化钡</td><td>Barium Chloride Multi-Effect Evaporation Crystallization: Industrial Production</td><td>Enchem</td></tr>
+<tr><td>14</td><td>CuSO₄·5H₂O 硫酸铜</td><td>Copper Sulfate Pentahydrate DTB Crystallizer Design</td><td>Vanoo</td></tr>
+<tr><td>15</td><td>ZnSO₄ 硫酸锌</td><td>Zinc Sulfate Crystallizer: DTB vs Oslo vs FC Comparison</td><td>Vanoo</td></tr>
+<tr><td>16</td><td>NiSO₄·6H₂O 硫酸镍</td><td>Battery-Grade Nickel Sulfate Hexahydrate Evaporation Crystallization Plant</td><td>Enchem / Vanoo</td></tr>
+<tr><td>17</td><td>KNO₃ 硝酸钾</td><td>Potassium Nitrate MVR System: 2026 OPEX Reduction</td><td>Vanoo</td></tr>
+<tr><td>18</td><td>NaNO₃ 硝酸钠</td><td>Sodium Nitrate Evaporation and Crystallization System</td><td>Enchem</td></tr>
+<tr><td>19</td><td>FeSO₄ 硫酸亚铁</td><td>Iron Sulfate Crystallization: Steel Pickling Liquor Recovery</td><td>EBNER</td></tr>
+<tr><td>20</td><td>K₂SO₄ 硫酸钾</td><td>Potassium Sulfate (SOP) Crystallization: Mannheim Process Integration</td><td>EBNER</td></tr>
+<tr><td>21</td><td>MgCl₂ 氯化镁</td><td>Magnesium Chloride Hexahydrate Crystallization System</td><td>EBNER</td></tr>
+<tr><td>22</td><td>NH₄Cl 氯化铵</td><td>Ammonium Chloride + DMF Co-production: Evaporator-Distillation Integration</td><td>Enchem</td></tr>
+<tr><td>23</td><td>乙醇回收</td><td>Ethanol Recovery System: Pharmaceutical Solvent Distillation</td><td>Enchem</td></tr>
+<tr><td>24</td><td>废盐资源化</td><td>Waste Salt Reuse & Recycle: Crystallization for Circular Economy</td><td>Myande / Saltworks</td></tr>
+<tr><td>25</td><td>甘油/铝酸钠</td><td>Specialty Crystallization: Glycerin / Sodium Aluminate / Industrial Byproducts</td><td>EBNER</td></tr>
+</table>
+</details>
+</div>
+
+<div class="type-block">
+<div class="type-header"><h3 style="margin:0">类型 5：技术对比/选型（Comparison & Selection）</h3>
+<span class="badge badge-p1">P1</span><span class="badge badge-medium">生产中等</span><span class="badge badge-high">SEO 高价值</span></div>
+<p><strong>定义</strong>：A vs B 对比文，原报告已有但只有 8 篇。应扩展至 20 篇。</p>
+<p><strong>竞对范本</strong>：Enchem "MVR vs TVR" / "MVR vs MEE Comparison" 是经典范本</p>
+<details>
+<summary>展开 20 个对比选题</summary>
+<div class="topic-list">
+<ol>
+<li>MVR vs TVR: Efficiency, Cost & Application Guide</li>
+<li>MVR vs Multi-Effect Evaporator (MEE): Total Cost of Ownership</li>
+<li>DTB vs Oslo vs FC Crystallizer: Crystal Size & Energy Comparison</li>
+<li>Forced Circulation vs Falling Film Evaporator: Selection Guide</li>
+<li>Skid-Mounted vs Fixed Installation: CAPEX vs Mobility Trade-off</li>
+<li>Titanium vs SS316L vs Hastelloy C-276: Corrosion Resistance Cost</li>
+<li>Centrifugal vs Roots MVR Compressor: When to Choose Which</li>
+<li>Single-Effect vs Double-Effect vs Triple-Effect: Energy Saving Guide</li>
+<li>Batch vs Continuous Crystallization: Productivity & Crystal Quality</li>
+<li>MVR Heat Pump vs Steam Heated Evaporator: OPEX Comparison</li>
+<li>DTB Crystallizer: 4-Effect vs MVR Energy Consumption Comparison</li>
+<li>ZLD with MVR vs ZLD with RO+Evaporator: System Selection</li>
+<li>Chinese vs European Evaporator Manufacturers: Total Cost Analysis</li>
+<li>Containerized vs Civil Works MVR Plant: 5-Year TCO</li>
+<li>Welded Plate vs Shell-and-Tube Heat Exchanger: Evaporator Application</li>
+<li>Continuous vs Batch MVR: Pharma vs Chemical Industry</li>
+<li>Pilot Plant (50L) vs Production (5000L): Scale-Up Factors</li>
+<li>Open Loop vs Closed Loop Cooling: Crystallizer Application</li>
+<li>Membrane Filtration vs Evaporation: Wastewater Pre-Treatment</li>
+<li>Crystallizer Cooling: Coil vs Jacket vs External Heat Exchanger</li>
+</ol>
+</div>
+</details>
+</div>
+
+<div class="type-block">
+<div class="type-header"><h3 style="margin:0">类型 6：案例数据卡片（Case Study Data Card）</h3>
+<span class="badge badge-p1">P1</span><span class="badge badge-medium">生产中等</span><span class="badge badge-high">SEO 高价值</span></div>
+<p><strong>定义</strong>：单项目案例的标准化展示页。原报告已有 73 案例，应扩展到 100-120。</p>
+<p><strong>结构</strong>：项目背景 → 进料参数 → 工艺选择 → 关键设备 → 运行数据 → 客户收益 → 嘉泰贡献</p>
+<details>
+<summary>展开案例数据卡片标准模板</summary>
+<ul>
+<li><strong>Project Name</strong>: Vietnam Cobalt/Nickel/Sodium Sulfate Triple Crystallizer</li>
+<li><strong>Industry</strong>: Hydrometallurgy / Battery Materials</li>
+<li><strong>Location</strong>: Vietnam</li>
+<li><strong>Capacity</strong>: 50 TPD feed</li>
+<li><strong>Feed Composition</strong>: Co²⁺ 15 g/L, Ni²⁺ 8 g/L, Na⁺ 35 g/L, SO₄²⁻ 120 g/L</li>
+<li><strong>Process</strong>: 3-Stage MVR Concentration → DTB Crystallization → Centrifugation</li>
+<li><strong>Equipment</strong>: 2× MVR Forced Circulation Evaporator + 3× DTB Crystallizer</li>
+<li><strong>Materials</strong>: Shell SS316L / Tubes Titanium / Crystallizer 2507 Duplex</li>
+<li><strong>Performance</strong>: Crystal Size 0.8-1.2mm / Purity 99.2% / Energy 35 kWh/TON</li>
+<li><strong>ROI</strong>: Payback 2.8 years vs Old Steam Heated Plant</li>
+<li><strong>Timeline</strong>: Contract 2024-03 → Commissioning 2025-06 → Acceptance 2025-09</li>
+</ul>
+</details>
+</div>
+
+<div class="type-block">
+<div class="type-header"><h3 style="margin:0">类型 7：买家提问/FAQ（Buyer Questions）</h3>
+<span class="badge badge-p1">P1</span><span class="badge badge-easy">生产易</span><span class="badge badge-high">SEO 高价值</span><span class="badge badge-new">新发现</span></div>
+<p><strong>定义</strong>：从销售对话提取的真实买家问题，每篇回答 1 个问题。康景辉 1260 篇中文 FAQ 的英文降维版。</p>
+<p><strong>竞对范本</strong>：康景辉 1260 篇中文 FAQ（虽不能直接用，但选题来源是金矿）+ Saltworks Buyer Questions</p>
+<details>
+<summary>展开 25 个高频买家问题</summary>
+<div class="topic-list">
+<ol>
+<li>How much does an MVR evaporator cost in 2026?</li>
+<li>What is the delivery time for a custom MVR crystallizer?</li>
+<li>Can MVR evaporators handle high-salinity wastewater (TDS > 10%)?</li>
+<li>What certifications do I need for exporting evaporators to Saudi Arabia?</li>
+<li>How to choose between Chinese and Indian evaporator manufacturers?</li>
+<li>What is the minimum order quantity for a pilot crystallizer?</li>
+<li>Do you provide on-site installation services overseas?</li>
+<li>What is the warranty period for MVR compressor?</li>
+<li>Can MVR evaporator process flammable solvents safely?</li>
+<li>What is the typical energy consumption per ton of water evaporated?</li>
+<li>How to prevent crystal scaling on heat exchanger tubes?</li>
+<li>What is the difference between food-grade and industrial-grade evaporator?</li>
+<li>Can MVR handle radioactive wastewater?</li>
+<li>What is the lifespan of a falling film evaporator?</li>
+<li>How to choose crystallizer material for chloride solutions?</li>
+<li>What are common MVR evaporator failure modes?</li>
+<li>How much space does a 100 TPD ZLD plant require?</li>
+<li>What is the difference between skid-mounted and containerized?</li>
+<li>How to size a crystallizer for ammonium sulfate production?</li>
+<li>What is the RO concentrate treatment by MVR evaporator?</li>
+<li>How to handle foam in high-COD wastewater evaporation?</li>
+<li>Can MVR evaporator process sugar solutions?</li>
+<li>What is the noise level of MVR compressor at 1m distance?</li>
+<li>How to dispose of crystallized salt from ZLD plant?</li>
+<li>What is the typical project timeline from PO to commissioning?</li>
+</ol>
+</div>
+</details>
+</div>
+
+<div class="type-block">
+<div class="type-header"><h3 style="margin:0">类型 8：运维/材料/节能（O&M / Material / Energy）</h3>
+<span class="badge badge-p1">P1</span><span class="badge badge-medium">生产中等</span><span class="badge badge-medium">SEO 中</span></div>
+<p><strong>定义</strong>：面向已购客户的运维知识，建立售后专业口碑。Enchem 这类文章占比 30%。</p>
+<details>
+<summary>展开 20 个运维选题</summary>
+<div class="topic-list">
+<ol>
+<li>How to Prevent Clogging and Scaling in Wastewater Evaporators</li>
+<li>Cleaning and Descaling Solution of Evaporator (Acid / Alkali / Mechanical)</li>
+<li>Material Selection Considerations for Evaporator Systems</li>
+<li>Equipment Material Selection Against Chloride Feedstock (Part 1: Metals)</li>
+<li>Equipment Material Selection Against Chloride Feedstock (Part 2: Non-Metals)</li>
+<li>How to Select Construction Material of Evaporator (Decision Tree)</li>
+<li>Operation Cost of Evaporator: How to Reduce OPEX by 30%</li>
+<li>MVR Evaporator Requirements for Inlet Indicators and Quality</li>
+<li>Ensuring Condensate Water Quality in Evaporator Systems</li>
+<li>The Removal Rate of COD in Evaporation Process</li>
+<li>Common MVR Compressor Faults and Troubleshooting Guide</li>
+<li>How to Reduce Energy Consumption in MVR Evaporators (15 Tips)</li>
+<li>Liquid Ring Vacuum Pumps in Evaporation System: Sizing Guide</li>
+<li>Boiling Point Elevation: How to Compensate in MVR Design</li>
+<li>Preventive Maintenance Schedule for DTB Crystallizer</li>
+<li>How to Improve Crystal Size Distribution in Industrial Crystallization</li>
+<li>Heat Exchanger Fouling Factor: How It Affects Evaporator Performance</li>
+<li>Vacuum System Leaks: Detection and Repair Methods</li>
+<li>MVR Compressor Surge: Causes, Prevention, and Recovery</li>
+<li>Annual Inspection Checklist for Industrial Evaporator Plant</li>
+</ol>
+</div>
+</details>
+</div>
+
+<div class="type-block">
+<div class="type-header"><h3 style="margin:0">类型 9：行业痛点深度叙事（Industry Challenges）</h3>
+<span class="badge badge-p2">P2</span><span class="badge badge-hard">生产难</span><span class="badge badge-high">SEO 高价值</span><span class="badge badge-new">新发现</span></div>
+<p><strong>定义</strong>：ANDRITZ 风格的行业深度文章，5000-8000 字，分析行业挑战+技术方案+客户价值。是建立专业权威的终极武器。</p>
+<p><strong>竞对范本</strong>：ANDRITZ 22 industry-challenges（每篇都是该行业的终极参考文档）</p>
+<details>
+<summary>展开 15 个行业痛点深度选题</summary>
+<div class="topic-list">
+<ol>
+<li>Lithium Battery Black Mass Recycling: Evaporator's Critical Role in Hydrometallurgy</li>
+<li>Coal Chemical Wastewater ZLD: The China Regulatory Push and Technology Choices</li>
+<li>PFAS Treatment: Why Evaporator + Crystallizer Is the Only True Destruction Path</li>
+<li>Semiconductor Fab Water Reuse: The High-Purity ZLD Imperative</li>
+<li>Pharma Wastewater: High COD + Solvent Recovery Integrated Solution</li>
+<li>Oil & Gas Produced Water: Sourcing to Discharge Complete Treatment Train</li>
+<li>Mining Tailings: Water Recovery + Salt Recovery = Circular Mine</li>
+<li>Sea Water Desalination Brine Management: Beyond Ocean Discharge</li>
+<li>Fly Ash Leachate Treatment: MVR + Crystallization for Salt Recovery</li>
+<li>Palm Oil Mill Effluent (POME): High-COD Wastewater Energy Recovery</li>
+<li>Distillery Spent Wash: Ethanol Industry's ZLD Challenge</li>
+<li>Textile Dyeing Wastewater: Color + Salt + COD Triple Challenge</li>
+<li>Electroplating Wastewater: Heavy Metal Recovery via Crystallization</li>
+<li>Steel Pickling Liquor: Acid Recovery + Iron Sulfate Crystallization</li>
+<li>Rare Earth Extraction: Evaporator's Role in Separation + Crystallization</li>
+</ol>
+</div>
+</details>
+</div>
+
+<div class="type-block">
+<div class="type-header"><h3 style="margin:0">类型 10-14：补充类型</h3></div>
+<h4>类型 10：系统流程图解（Process Flow Diagrams）— 10 篇</h4>
+<p>P&ID / 工艺流程图 / 设备布局图。每篇一个典型工艺的完整流程图解。原报告有 8 篇，扩展到 10 篇（增加锂电回收+废盐资源化）。</p>
+<h4>类型 11：展会/客户访问实录（Trade Shows & Customer Visits）— <span class="badge badge-low">已取消</span></h4>
+<p><strong>取消原因</strong>：SEO 价值低（时效性强，长期价值低；Google 不优先索引展会预告）。Sunevap 72 篇 News 中含 20+ 篇展会/客户访问，主要为品牌PR而非获客。
+展会信息应作为<strong>线下营销活动</strong>（销售跟进、名片收集）处理，而非内容营销资产。如需上线，仅在公司新闻板块做简短回顾即可，不进入 SEO 内容矩阵。
+Alfa Laval 281 篇投资者公告（million-sek-order）也证明此类内容对内容营销无借鉴价值。</p>
+<h4>类型 12：可下载资源（Lead Magnets）— 5 份</h4>
+<p>白皮书/选型手册/ROI 计算器/工艺对照表。每份收集销售线索 50-200 个/年。</p>
+<ol>
+<li>MVR Evaporator Selection Guide 2026 (PDF, 30 pages)</li>
+<li>Industrial Crystallizer Design Handbook (PDF, 50 pages)</li>
+<li>ZLD System ROI Calculator (Excel)</li>
+<li>Evaporator Material Selection Decision Tree (PDF)</li>
+<li>Lithium Battery Recycling Process Flow Brochure (PDF)</li>
+</ol>
+<h4>类型 13：测试中心/服务页（Test Center）— 3 页（固定栏目）</h4>
+<p>Swenson Process Development Test Center / GEA Crystallization Test Centers / Alfa Laval Nakskov Test Center 都是高端客户必看页面。</p>
+<h4>类型 14：技术趋势/市场分析（Trend & Market Analysis）— 5 篇</h4>
+<ol>
+<li>Global MVR Evaporator Market 2026-2031: Size, Growth, Key Players</li>
+<li>Lithium Price Impact on Battery-Grade Crystallizer Demand</li>
+<li>ZLD Regulation Worldwide: 2026 Compliance Map</li>
+<li>PFAS Regulation: Evaporator Market Opportunity</li>
+<li>Semiconductor Water Reuse: $X Billion Market by 2030</li>
+</ol>
+</div>
+
+</div>
+
+<!-- ========== Panel 2: 选题库 — 行业解决方案/案例 ========== -->
+<div class="panel" id="panel-2">
+<h2>选题库 — 行业解决方案/案例（733 篇）</h2>
+
+<div class="card">
+<strong>数据基础</strong>：29 家竞对 sitemap 全量抓取（2026-08-05），按"行业 × 应用场景"分类。<br>
+<strong>范围</strong>：仅"行业解决方案/案例"类文章（行业应用页 / 客户案例 / 行业痛点深度 / 项目交付解决方案），不含 What-Is / FAQ / 对比 / 运维 / 地理 SEO / 纯产品页。<br>
+<strong>slug 来源</strong>：均为各竞对 sitemap.xml 直接抓取，非自创。完整清单见 <code>选题库_解决方案案例类.md</code>。
+</div>
+
+<h3>全局统计概览</h3>
+<table>
+<tr><th>分类</th><th>场景</th><th>篇数</th><th>主要覆盖竞对</th></tr>
+<tr><td rowspan="9"><strong>A. 无机盐/晶体（160）</strong></td><td>A1. 锂盐（Li₂CO₃/LiOH/LiCl/Li₂SO₄）</td><td>42</td><td>EBNER/Sunevap/Vanoo/Enchem/Saltworks/ANDRITZ/ENCO/Condorchem/GEA/Myande/Swenson</td></tr>
+<tr><td>A2. 钾肥（KCl MOP/K₂SO₄ SOP）</td><td>17</td><td>EBNER/ANDRITZ/Vanoo/Enchem/Alaqua/ASOS/Beinuo</td></tr>
+<tr><td>A3. 钠盐（NaCl/Na₂SO₄/Na₂CO₃/NaHCO₃）</td><td>33</td><td>ANDRITZ/EBNER/Sunevap/Vanoo/ENCO/Alaqua/Condorchem/ASOS/Alfa Laval/GEA/Swenson/Goldfinch/康景辉/嘉泰</td></tr>
+<tr><td>A4. 钙盐（CaCl₂/CaSO₄）</td><td>7</td><td>EBNER/Vanoo/Enchem/Shachi</td></tr>
+<tr><td>A5. 镁盐（MgSO₄/MgCl₂）</td><td>3</td><td>EBNER/Vanoo</td></tr>
+<tr><td>A6. 铁盐（FeSO₄ 绿矾）</td><td>2</td><td>EBNER/Myande</td></tr>
+<tr><td>A7. 铵盐（(NH₄)₂SO₄/NH₄Cl）</td><td>16</td><td>Saltworks/EBNER/Sunevap/Vanoo/Enchem/ENCO/Condorchem/康景辉/GEA/嘉泰</td></tr>
+<tr><td>A8. 重金属盐（NiSO₄/CuSO₄/ZnSO₄/BaCl₂/KNO₃/CoSO₄）</td><td>17</td><td>Sunevap/Vanoo/Enchem/Condorchem/康景辉</td></tr>
+<tr><td>A9. 特殊（甘油/铝酸钠/硼/磷酸铁锂/腰果酚/草酸/醋酸钠等）</td><td>23</td><td>ANDRITZ/Saltworks/EBNER/Sunevap/Vanoo/Enchem/Condorchem/ASOS/GEA/Myande/Alfa Laval/Toption/Beinuo</td></tr>
+<tr><td rowspan="20"><strong>B. 行业废水（573）</strong></td><td>B1. ZLD 零排放（通用）</td><td>64</td><td>ANDRITZ/Saltworks/Sunevap/Vanoo/Enchem/ENCO/Alaqua/SAMCO/Ion Exchange/Condorchem/Zewatech/Shachi/Goldfinch/MKS/Alfa Laval/GEA/Swenson/嘉泰/康景辉</td></tr>
+<tr><td>B2. 锂电池回收/黑块/正极材料</td><td>21</td><td>ANDRITZ/Saltworks/Sunevap/Vanoo/Enchem/ENCO/Condorchem/康景辉/GEA/Myande/Swenson/敏杰</td></tr>
+<tr><td>B3. FGD 烟气脱硫废水</td><td>5</td><td>ANDRITZ/Saltworks/Condorchem</td></tr>
+<tr><td>B4. 矿山废水（AMD/煤尾矿/重金属矿）</td><td>26</td><td>ANDRITZ/Saltworks/Sunevap/Vanoo/ENCO/Ion Exchange/Condorchem/ASOS/Alfa Laval/GEA</td></tr>
+<tr><td>B5. 油气采出水/页岩气/EOR/SAGD</td><td>12</td><td>Saltworks/Sunevap/Ion Exchange/Condorchem/Alfa Laval</td></tr>
+<tr><td>B6. 垃圾渗滤液/飞灰洗液</td><td>9</td><td>Saltworks/Sunevap/Vanoo/康景辉/Myande/嘉泰</td></tr>
+<tr><td>B7. PFAS 处理</td><td>3</td><td>Saltworks/Condorchem</td></tr>
+<tr><td>B8. 制药/医药废水</td><td>21</td><td>ANDRITZ/Saltworks/Sunevap/Vanoo/Enchem/Ion Exchange/Condorchem/Goldfinch/Alfa Laval/SPX Flow/GEA/Ace/敏杰</td></tr>
+<tr><td>B9. 食品饮料（乳品/淀粉/糖/酒精/酵母/咖啡）</td><td><strong>162</strong></td><td>ANDRITZ/Saltworks/Sunevap/Vanoo/Enchem/ENCO/Ion Exchange/Condorchem/Shachi/MKS/Alfa Laval/SPX Flow/GEA/Myande/Ace/敏杰/嘉泰</td></tr>
+<tr><td>B10. 化工（农药/染料/氯碱/BPA/己内酰胺/PMIDA）</td><td><strong>79</strong></td><td>ANDRITZ/Saltworks/EBNER/Sunevap/Vanoo/Enchem/ENCO/Ion Exchange/Condorchem/Shachi/Goldfinch/Alfa Laval/SPX Flow/康景辉/GEA/Beinuo/嘉泰</td></tr>
+<tr><td>B11. 纺织/粘胶纤维/染整</td><td>12</td><td>EBNER/Sunevap/Ion Exchange/Condorchem/Shachi/Goldfinch/康景辉/嘉泰</td></tr>
+<tr><td>B12. 半导体/电子/数据中心</td><td>4</td><td>Saltworks/Alfa Laval/康景辉</td></tr>
+<tr><td>B13. 核电/放射性</td><td>8</td><td>EBNER/Condorchem/Alfa Laval</td></tr>
+<tr><td>B14. 稀土/钨钼</td><td>4</td><td>Sunevap/Condorchem/ASOS/GEA</td></tr>
+<tr><td>B15. 海水淡化/卤水管理/盐湖</td><td>17</td><td>ANDRITZ/Saltworks/EBNER/Sunevap/Vanoo/Ion Exchange/Condorchem/ASOS/Alfa Laval/GEA/Swenson</td></tr>
+<tr><td>B16. 冷却塔排污</td><td>3</td><td>Saltworks</td></tr>
+<tr><td>B17. 煤化工/焦化</td><td>6</td><td>Saltworks/Sunevap/Vanoo/ENCO</td></tr>
+<tr><td>B18. 冶金/钢铁/轧钢</td><td>11</td><td>ANDRITZ/Sunevap/Ion Exchange/Condorchem/ASOS/Shachi/Alfa Laval/GEA/嘉泰</td></tr>
+<tr><td>B19. 油脂/棕榈油/橄榄油/脂肪醇</td><td>24</td><td>Vanoo/Condorchem/Shachi/Alfa Laval/GEA/Myande</td></tr>
+<tr><td>B20. 其他（造纸/皮革/电镀/化妆品/MDF/危固废）</td><td>82</td><td>ANDRITZ/Saltworks/Sunevap/Vanoo/Enchem/ENCO/Ion Exchange/Condorchem/Zewatech/Shachi/Alfa Laval/SPX Flow/康景辉/Ace/敏杰/嘉泰</td></tr>
+<tr><td colspan="2"><strong>合计</strong></td><td><strong>733</strong></td><td>A 类 160 + B 类 573</td></tr>
+</table>
+
+<h3>A1. 锂盐（42 篇 · 代表性 slug）</h3>
+<ul>
+<li><strong>EBNER</strong>：crystallization-of-li2co3 · crystallization-of-lioh-h2o · crystallization-of-licl · crystallization-of-li2so4</li>
+<li><strong>Sunevap</strong>：seizing-the-lithium-opportunity-black-mass · mvr-evaporator-for-lithium-mother-liquid · powered-by-mvr-salt-lake-brine-lithium-boron · inplement-from-lithium-ore-to-battery-grade</li>
+<li><strong>VANOO</strong>：lithium-hydroxide-dtb-crystallizer · 5l-dtb-reactive-crystallizer-lithium-carbonate · mvr-evaporative-crystallizer-licl · high-efficiency-mvr-evaporation-crystallization-lioh-l2co3</li>
+<li><strong>Saltworks</strong>：lithium-extraction-and-refining · lithium-brine-extraction-technologies · hardrock-spodumene-lithium-processing · lithium-testing</li>
+<li><strong>ANDRITZ</strong>：battery-grade-lithium-production · lithium-iron-phosphate</li>
+<li><strong>Enchem</strong>：application-of-mvr-evaporator-in-power-lithium-battery-recycling · evaporator-equipment-driving-efficiency-in-lithium-battery-recycling</li>
+<li><strong>ENCO</strong>：lithium-refining-process-ultimate-guide · direct-lithium-extraction-processes · brine-lithium-recovery-project-canada · south-korea-5000pta-li2co3 · 10000tpa-eol-battery-ncm-black-mass-lithium</li>
+<li><strong>Condorchem / GEA / Myande / Swenson</strong>：lithium-compounds-extraction-crystallization · evaporation-crystallization-technology-for-posco · brief-description-iron-phosphate-production-process · lithium-refining-using-evaporators</li>
+</ul>
+
+<h3>A2. 钾肥（17 篇 · 代表性 slug）</h3>
+<ul>
+<li><strong>EBNER</strong>：crystallization-of-kcl-mop · crystallization-of-k2so4-sop · large-scale-plant-mop-nacl-from-brine · large-scale-plant-mop-from-clarified-hot-solution · high-value-potassium-sulfate-sop-from-wastewater</li>
+<li><strong>ANDRITZ</strong>：success-story-potash-dewatering-belaruskali</li>
+<li><strong>VANOO</strong>：technical-solution-mvr-evaporator-potassium-chloride-purification · triple-effect-forced-circulation-2205-map-fertilizer</li>
+<li><strong>Alaqua / Enchem / ASOS</strong>：how-to-apply-evaporators-crystallizers-to-fertilizer-production · potassium-sodium-separation-four-effect · asos-rusya-gubre-tesisi-ihale · 28-29-afa-uluslararasi-gubre-forumu</li>
+</ul>
+
+<h3>A3. 钠盐（33 篇 · 代表性 slug）</h3>
+<ul>
+<li><strong>A3a NaCl 真空制盐</strong>（EBNER/Vanoo/ANDRITZ/Alfa Laval/ASOS）：crystallization-of-nacl-vacuum-salt · vacuum-salt-nacl-from-brine · oslo-sodium-chloride-crystallization-lower-opex · triple-effect-forced-circulation-nacl · harvest-the-power-of-the-sea · chelsea-sugar-reduces-carbon-emissions</li>
+<li><strong>A3b Na₂SO₄ 芒硝</strong>（EBNER/Vanoo/Goldfinch/康景辉）：crystallization-of-na2so4-glaubers-salt · evaporation-of-spin-bath-crystallization-sodium-sulfate · regeneration-of-spinning-bath-viscose · sulfate-evaporation-crystallization-system · 15-kld-sodium-sulphate-recovery-eskay</li>
+<li><strong>A3c Na₂CO₃/NaHCO₃ 纯碱小苏打</strong>（ANDRITZ/EBNER/Vanoo/MKS）：crystallization-of-na2co3-soda · sodium-bicarbonate · detergent-manufacturing · continuous-naoh-crystallization-99-purity · caustic-soda-vacuum-evaporation · caustic-recovery-plant</li>
+</ul>
+
+<h3>A4-A6. 钙/镁/铁盐（共 12 篇 · 代表性 slug）</h3>
+<ul>
+<li><strong>A4 钙盐</strong>（7 篇）：evaporation-of-cacl2-solution（EBNER）· can-mvr-evaporators-be-used-for-calcium-chloride · industrial-production-of-calcium-chloride · cacl2-spray-granulation-fluidized-bed（Enchem）· shachi-cacl2-plant-record-time</li>
+<li><strong>A5 镁盐</strong>（3 篇）：crystallization-of-mgso4-7h2o · evaporation-of-mgcl2-solution（EBNER）· industrial-forced-circulation-crystallizer-magnesium-sulfate（Vanoo）</li>
+<li><strong>A6 铁盐</strong>（2 篇）：crystallization-of-feso4-7h2o（EBNER）· brief-description-iron-phosphate-production-process（Myande）</li>
+</ul>
+
+<h3>A7. 铵盐（16 篇 · 代表性 slug）</h3>
+<ul>
+<li><strong>VANOO</strong>：ammonium-sulfate-dtb-crystallizer · ammonium-sulfate-dtb-energy-roi · mvr-evaporation-ammonium-sulfate-low-energy-zld · mvr-forced-circulation-2-5mm-granular · triple-effect-parallel-flow-ammonium-sulfate</li>
+<li><strong>Sunevap</strong>：ammonium-sulfate-wastewater-effectiveness · project-case-mvr-ammonium-sulfate-dye-factory-china</li>
+<li><strong>EBNER / Saltworks / ENCO / Condorchem</strong>：crystallization-of-nh42so4 · applications/ammonia · enco-signed-0-5t-h-ammonium-sul · reuse-industrial-effluents-ammonium-sulfate</li>
+</ul>
+
+<h3>A8. 重金属盐（17 篇 · 代表性 slug）</h3>
+<ul>
+<li><strong>VANOO</strong>：nickel-sulfate-mvr-evaporative-crystallizer · zinc-sulfate-crystallizer-mvr · 720-lph-zinc-sulfate-dtb-oslo · copper-sulfate-pentahydrate-dtb · multi-effect-dtb-barium-chloride · potassium-nitrate-mvr-2026-opex</li>
+<li><strong>Sunevap</strong>：nickel-sulfate-sodium-sulfate-cobalt-sulfate-vietnam · cobalt-sulfate-crystal-production-overseas-customers</li>
+<li><strong>Enchem</strong>：niso4-6h2o-continuous-vs-batch · efficient-zinc-chloride-production-multi-effect-falling-film</li>
+<li><strong>Condorchem / 康景辉</strong>：nickel-cobalt-mining-extraction · 含铬废水三价铬分盐 · 重金属蒸发浓缩分离</li>
+</ul>
+
+<h3>A9. 特殊化学物质（23 篇 · 代表性 slug）</h3>
+<ul>
+<li><strong>EBNER</strong>：evaporation-of-aluminate-solution · evaporation-from-aqueous-glycerin-solution</li>
+<li><strong>VANOO</strong>：wiped-film-evaporator-cashew-phenol · fat-fractionation-system-dtb-pilot-continuous</li>
+<li><strong>Sunevap</strong>：achieve-continuous-production-of-pmida-by-mvr</li>
+<li><strong>GEA / Condorchem / ASOS</strong>：rare-earth-metals-recycling-crystallization · melt-crystallization-high-purity · treatment-effluents-boron · bor-urunleri-tarim · uluslararasi-bor-sempozyumu</li>
+<li><strong>Beinuo</strong>：华鲁恒升 10 万吨草酸连续结晶 · 醋酸钠连续结晶工艺 · 对苯二酚连续冷却结晶 · 葵二酸连续冷却结晶 · 六氟磷酸锂结晶器</li>
+</ul>
+
+<h3>B1. ZLD 零排放（64 篇 · 14 家覆盖 · 代表性 slug）</h3>
+<ul>
+<li><strong>Saltworks</strong>：zero-liquid-discharge-and-minimal-liquid-discharge · brine-management · what-is-zero-liquid-discharge-why-important · how-to-avoid-day-zero-with-zld · how-to-manage-brine-disposal</li>
+<li><strong>Sunevap</strong>：zero-liquid-discharge-future-sustainable-wastewater · mvr-evaporators-make-zld-profitable · mvr-evaporator-high-salt-wastewater-zld-compliance · top-zld-plant-manufacturers-in-china</li>
+<li><strong>VANOO</strong>：comprehensive-zld-solution-industrial-park · forced-circulation-evaporator-zld-bolt-manufacturing · zld-mvr-evaporator-configuration-guide-2026 · zld-evaporation-crystallization-cost-guide · small-mvr-evaporator-zld-low-capex · skid-mounted-mvr-evaporators-zld-roi-2026</li>
+<li><strong>Condorchem</strong>：zero-discharge-vacuum-evaporation-ro · zero-liquid-discharge-evaporation-ponds · cristallizers-zero-discharge · zld-in-mdf-boards · zld-fish-seafood-industry</li>
+<li><strong>Shachi</strong>：zld-for-apis · mvr-based-zld-india-stainless-steel · fastrack-100kld-zld-plant · 30-kld-mvr-zld-stainless-steel</li>
+<li><strong>Goldfinch / GEA / Alfa Laval / Ion Exchange</strong>：zld-in-india · zld-industry-guide · zld-textile-industry · zero-liquid-discharge-installation · turning-wastewater-into-value · alfa-laval-itc-zld · revolutionising-wastewater-zld</li>
+</ul>
+
+<h3>B2. 锂电池回收/黑块（21 篇 · 代表性 slug）</h3>
+<ul>
+<li><strong>Sunevap</strong>：mvr-anode-material-battery · mvr-evaporators-battery-recycling-leachate · mvr-vietnam-cathode-material · mee-recover-black-mass · south-korea-cathode-project</li>
+<li><strong>Enchem / ENCO</strong>：application-of-mvr-evaporator-power-lithium-battery-recycling · evaporator-efficiency-lithium-battery-recycling · 10000tpa-ncm-black-mass-lithium · enco-power-battery-recyclin · enco-pcam-mvr-usa</li>
+<li><strong>ANDRITZ / Saltworks / GEA / Vanoo / 敏杰</strong>：lithium-iron-phosphate · applications/batteries · evaporation-crystallization-posco · lithium-battery-recycling-pilot-equipment-selection · 11181657 锂电粉体 VSD · 7819383 INNOX 带式真空干燥</li>
+</ul>
+
+<h3>B3-B7. 高价值细分行业（共 55 篇 · 代表性 slug）</h3>
+<ul>
+<li><strong>B3 FGD 脱硫</strong>（5）：success-story-huadian-hexi-power · fgd-wastewater-treatment · fgd-wastewater-pilot-results · selective-edr-chloride-removal · treatment-desulfurization-purge-thermal-power</li>
+<li><strong>B4 矿山废水</strong>（26）：mongolia-coal-mine · dewatering-coal-tailing-mongolia · mine-water-treatment · coal-ash-pond-water · mvr-mining-wastewater · closing-water-cycle-mining-zld · south-africa-mine-water-zld · acid-mine-drainage-mvr-zld</li>
+<li><strong>B5 油气采出水</strong>（12）：oil-gas-produced-water-treatment · frac-shale-produced-water · enhanced-oil-recovery-produced-water-desalination · sagd-blowdown-saltmaker · mvr-oil-gas-industry · petrochemical-refinery-case-study</li>
+<li><strong>B6 渗滤液/飞灰</strong>（9）：landfill-leachate-treatment · leachate-high-recovery-zld · uhp-ro-landfill-leachate · mvr-evaporator-fly-ash-wash · landfill-leachate-ro-concentrate-mvr-zld · myande-fly-ash-resource-recovery</li>
+<li><strong>B7 PFAS</strong>（3）：applications/pfas · pfas-contaminated-wastewater-leachate · effluent-treatment-pfas</li>
+</ul>
+
+<h3>B8. 制药废水（21 篇 · 代表性 slug）</h3>
+<ul>
+<li><strong>Sunevap</strong>：how-to-recover-dmac-pharmaceutical-wastewater · how-to-treat-pharmaceutical-wastewater-mvr · mvr-evaporator-synthetic-api-effluent · cphi-korea-2024-pharmaceutical</li>
+<li><strong>VANOO</strong>：pharmaceutical-mvr-evaporation-systems-opex · pharmaceutical-wastewater-mvr-operating-costs · pharmaceutical-mvr-evaporator-prices-specs</li>
+<li><strong>ANDRITZ / Saltworks / Ion Exchange / Alfa Laval</strong>：success-story-novo-nordisk · applications/pharmaceutical · pharma-case-study · compabloc-pharma-water-challenge · biopharma-producer-service-agreement</li>
+<li><strong>Goldfinch / SPX Flow / Ace / 敏杰</strong>：triple-effect-40-kld-aastrid · four-effect-70-kld-alta · pharmaceutical-tubes-fittings-material · pharmaceutical-freeze-dryer · 11229436 中药配方颗粒 GMP</li>
+</ul>
+
+<h3>B9. 食品饮料（162 篇 · 最大场景 · 代表性 slug）</h3>
+<ul>
+<li><strong>ANDRITZ</strong>（20）：success-story-arla-food · success-story-animal-protein · success-story-brantner · corn-starch-solutions · ethanol · high-protein-ddg · pea-processing · plant-based-protein · wheat-gluten-processing</li>
+<li><strong>Alfa Laval</strong>（30）：agroetanol-fuel-ethanol-wheat · amadori-water-recovery · membranes-arla-denmark · dixie-brewery · citrosuco-brazil-juice · palm-oil-effluent · olive-oil-italy · chelsea-sugar · dairy-u-turn-evaporator · coconut-water-concentration</li>
+<li><strong>SPX Flow</strong>（14）：evaporators-natural-colors-food · concentration-natural-colorants · dairy-processing-decisions · dubai-chocolate · protein-craze · anhydro-spray-drying-75-years · whey-microparticulation</li>
+<li><strong>GEA</strong>（22）：from-waste-to-wholegrain-pasta · saving-water-beer · akv-langholt · dairy-naarmann · organic-fermentation-muenster · salzburgmilch-water · zero-water-dairy · ezero-dairy-evaporator · aromaplus-pro · freeze-crystallization-food</li>
+<li><strong>Myande</strong>（60+）：100000-ton-glucose · 1000tpd-cotton-seeds · 1000tpd-rapeseed · 1000tpd-soybean-oil · corn-starch-bioplastics · future-starch-processing · myande-sustainable-innovation-starch</li>
+<li><strong>Saltworks / Sunevap / Vanoo / Enchem / ENCO / Ion Exchange / Condorchem / Shachi / MKS / Ace / 敏杰</strong>：food-and-beverages · mvr-sugar-beet · heat-sensitive-food-evaporation · instant-coffee-4-effect-indonesia · glucose-production-line · dairy-case-study · wastewater-dairy · spray-dryer-flavors · glucose-from-broken-rice · 11229468 脱水菜香辛料</li>
+</ul>
+
+<h3>B10. 化工废水（79 篇 · 代表性 slug）</h3>
+<ul>
+<li><strong>Sunevap</strong>：mvr-electroplating-wastewater · mvr-high-salt-oil-industry · mvr-iron-steel-high-salinity · salt-reclaim-dyeing-industry · agrochemical-wastewater-compliance · bpa-wastewater · pmida-continuous-production</li>
+<li><strong>Saltworks / ANDRITZ / EBNER</strong>：petrochemical-wastewater · heavy-metals · cyanide-wastewater · acid-base-recycling · phenolic-compounds · success-story-lubrizol · detergent-manufacturing · crystallization-from-process-liquors · regeneration-of-electrolysis-bath</li>
+<li><strong>Condorchem</strong>：surface-treatment-wastewater · zinc-coatings · metalworking-effluents · refractory-cod · hydrochloric-acid-recovery-pickling · cellophane-wastewater</li>
+<li><strong>Goldfinch</strong>：15-kld-alkyl-amines · 30-kld-ashu-organics · 25-kld-chemco-atfd · four-effect-100-kld-melog · four-effect-150-kld-metropoliton</li>
+<li><strong>Alfa Laval / 康景辉 / GEA / Beinuo / 嘉泰</strong>：compabloc-dichloroethane-belgian · voc-condenser · aromatic-steam-consumption · 含铬废水 · 氯碱分盐 · akv-langholt-waste-to-value · 华鲁恒升草酸 · cases/203 硫氢化钠</li>
+</ul>
+
+<h3>B11-B20. 其他行业场景（共 188 篇 · 代表性 slug）</h3>
+<ul>
+<li><strong>B11 纺织/染整</strong>（12）：spin-bath-evaporation-na2so4 · viscose-fiber-spinning-bath · dyeing-salt-reclaim · apcs-coatings-wastewater · textile-case-study · dye-industry-case-study</li>
+<li><strong>B12 半导体/电子</strong>（4）：applications/semiconductors · data-center-cooling · italy-cloud-data-center · 电子废水 dxz-17</li>
+<li><strong>B13 核电</strong>（8）：radioactively-contaminated-wastewater · conditioning-low-intermediate-radioactive · tritium-nuclear · nuclear-fuel-reprocessing-purex · nuclear-decommissioning · nuclear-power-plant-effluent</li>
+<li><strong>B14 稀土</strong>（4）：rare-earth-mining-zld-nh4cl · extraction-rare-earths · nadir-toprak-elementler · rare-earth-metals-recycling</li>
+<li><strong>B15 海水淡化/盐湖</strong>（17）：oman-desalination · jebel-ali · brine-management · brackish-water-desalination · uhp-ro-brine · sulfate-discharge-removal · large-scale-wastewater-salt · salt-extraction-desert · salt-lake-brine-lithium-boron · seawater-multi-effect</li>
+<li><strong>B16 冷却塔排污</strong>（3）：cooling-tower-blowdown · 70x-cooling-tower-reduction · chemical-softening-ro-recovery</li>
+<li><strong>B17 煤化工</strong>（6）：coal-ash-pond-water · coal-chem-wastewater-future · yulin-coal-expo · zld-coal-chemical-wastewater · enco-uzbekistan-multi-effect</li>
+<li><strong>B18 冶金/钢铁</strong>（11）：success-story-georgsmarienhuette · iron-steel-high-salinity · steel-metallurgy-case-study · metalworking-effluents · zinc-coatings · european-steel-pickling · shachi-india-stainless-steel-zld · posco-lithium</li>
+<li><strong>B19 油脂</strong>（24）：fat-fractionation-dtb · olive-mill-wastewater · fatty-acid-beading-indonesia · oleochemical-spray-cooling · palm-oil-effluent · olive-oil-italy · tall-oil · coconut-water · 1000tpd-rapeseed/soybean/cotton</li>
+<li><strong>B20 其他</strong>（82）：success-story-leipa · rdf-swindon · schwenk-cement · fox-river · paperboard-india-itc · colombia-municipal-wastewater · stockholm-vatten · biogas-siloxanes-purification · biogas-desulfurization · lead-battery-recycling · fragrance-drying · puresox-scrubbers-vessel</li>
+</ul>
+
+<div class="card success">
+<strong>完整清单</strong>：所有 733 篇 slug（按竞对分组、含中文备注）见 <code>01-竞品分析/选题库_解决方案案例类.md</code>。
+</div>
+
+</div>
+
+<!-- ========== Panel 3: 选题库 — What-Is/原理/指南 ========== -->
+<div class="panel" id="panel-3">
+<h2>选题库 — What-Is / 原理 / 指南（363 篇）</h2>
+
+<div class="card">
+<strong>数据基础</strong>：8 份竞对 sitemap 抓取报告（2026-08-05），按子类分组。<br>
+<strong>范围</strong>：所有"What is X?"基础科普文 + 设备原理深度文 + 工艺指南。Google Featured Snippet 金矿。<br>
+<strong>slug 来源</strong>：均为各竞对 sitemap.xml 直接抓取。完整清单见 <code>选题库_其他类型.md</code> 类型 2。
+</div>
+
+<h3>2a. 蒸发器原理（79 篇）</h3>
+<p>覆盖 MVR / MEE / TVR / 升膜 / 降膜 / 强制循环 / 薄膜 / 刮膜蒸发器的工作原理、选型、改进。</p>
+<ul>
+<li><strong>Sunevap</strong>（10）：what-is-an-evaporator-mvr-multieffect · what-is-a-forced-circulation-evaporator · what-is-multiple-effect-evaporation · mee-vs-mvr-difference · rising-film-principles-applications · core-stage-of-zld-evaporation-concentration · mvr-in-food-beverage · mvr-in-chemical · benefits-of-mvr-evaporator</li>
+<li><strong>VANOO</strong>（30）：what-is-an-mvr-evaporator-principles-applications · mvr-evaporator-working-principle-guide · differences-mvr-vs-traditional · types-of-industrial-evaporators-guide · external-circulation-evaporator-guide · wastewater-evaporator-selection · falling-film-vs-rising-film-comparison · natural-vs-forced-circulation · thin-film-evaporation-principles · wiped-film-evaporator-principle-selection · scraped-film-heat-sensitive · 2025-innovations-forced-circulation-design · crystallizers-in-5-minutes · evaporator-crystallizer</li>
+<li><strong>Enchem</strong>（6）：about-mvr-evaporator · principle-improvement-rising-film · principle-improvement-falling-film · exploring-multiple-effect-evaporators · optimizing-live-steam-economy-mee · mvr-evaporation-and-crystallization</li>
+<li><strong>ENCO</strong>（7）：working-principle-of-mvr-evaporator · basic-principle-of-mvr-evaporator · reason-for-compression-of-mvr · natural-circulation-evaporator · what-are-evaporators-key-types · classification-multi-effect</li>
+<li><strong>Alaqua</strong>（14）：evaporator-complete-guide · exploring-evaporators-functions-types · film-evaporators-types · investigating-heat-transfer-principles · how-evaporators-save-water-energy · rising-film-in-chemical-industry · wastewater-evaporator-what-is-how-works · concentrating-sulfuric-acid · heat-exchanger-for-evaporators · advantages-disadvantages-evaporators</li>
+<li><strong>Goldfinch / Condorchem / Shachi / SPX Flow / Toption / MKS / Ace / Myande</strong>：what-is-evaporators-types-uses · multiple-effect-mee-principle · vacuum-evaporators-brine-treatment · industrial-wastewater-evaporators-guide · 3-key-selection-parameters-mvr · evaporators-types-and-uses · wiped-film-evaporator-working · how-does-a-rotavap-work · what-is-an-evaporator-different-types</li>
+</ul>
+
+<h3>2b. 结晶器原理（34 篇）</h3>
+<p>DTB / Oslo / FC / 冷却 / 真空 / MSMPR 结晶器的设计、工作原理、工业放大。</p>
+<ul>
+<li><strong>VANOO</strong>（14）：dtb-crystallizer-principle-application-benefits · dtb-crystallizer-guide-large-crystal · oslo-crystallizer-working-principle · oslo-crystallizer-application-guide · oslo-uniform-particle-size · oslo-vs-traditional-differences · industrial-crystallizer-scale-up-dtb-oslo-fc · evaporative-crystallizer-food-chemical · how-to-improve-crystallization-yield · lab-scale-crystallizer-guide · custom-crystallization-design-scale-up · necessity-lab-experiments-before-dtb · lithium-hydroxide-evaporative-crystallizer</li>
+<li><strong>Enchem</strong>（6）：what-is-an-fc-crystallizer-design-principle · oslo-crystallizer-fluidized-bed-large-crystal · dtb-crystallizer-guide-design-process-uses · achieving-low-residual-moisture-salt-crystallization · what-is-crystallization · what-is-evaporation</li>
+<li><strong>Alaqua</strong>（8）：crystallizer-types-working-specification · understanding-crystallizers-integral-role · stages-process-of-crystallization · crystallizers-specification-design-methods · different-types-crystallizer-equipment · role-of-nucleation-crystallization · evaporators-crystallizers-fertilizer · salt-crystallization-wastewater</li>
+<li><strong>Sunevap / Condorchem / Zewatech</strong>：what-is-evaporation-cooling-crystallization · what-is-evaporation-crystallization · cristallizers-industrial-zero-discharge · salt-crystallization-wastewater-treatment · lithium-compounds-crystallization-processes · vtr-10000-crystallization-equipment-installation</li>
+</ul>
+
+<h3>2c. MVR/TVR 压缩机与真空泵（7 篇）</h3>
+<ul>
+<li><strong>Enchem</strong>：common-used-mvr-centrifugal-compressor · common-used-mvr-roots-compressor · liquid-ring-vacuum-pumps-evaporation-system</li>
+<li><strong>VANOO</strong>：The-Beating-Heart-of-an-MVR-System-Compressor-Selection-Guide</li>
+<li><strong>Sunevap</strong>：what-is-driving-mvr-market-growth · benefits-of-mvr-in-wastewater-treatment · analysis-mvr-market-trends</li>
+</ul>
+
+<h3>2d. ZLD/废水处理概念（62 篇）</h3>
+<p>ZLD / MLD / ED / EDI / RO / NF / MF / UF / MBR / AOP 等水处理基础概念。</p>
+<ul>
+<li><strong>Saltworks / Sunevap</strong>：what-is-zero-liquid-discharge-why-important · what-is-electrodialysis-reversal-innovations · uhp-ro-nf · what-is-wastewater-treatment-system · what-is-a-wastewater-treatment-plant · what-are-steps-of-wastewater-treatment · what-is-application-scope-of-evaporator · zld-future-sustainable-wastewater</li>
+<li><strong>Ion Exchange</strong>（21）：what-is-new-generation-ngpstp · multi-effect-evaporator-technology · unlocking-power-of-demineralization · best-nanofiltration-membrane · benefits-of-membrane-bioreactor · advanced-oxidation-wastewater · how-mixed-bed-resin-works · stages-of-effective-water-treatment · coagulants-flocculants · osmosis-vs-reverse-osmosis · ultrafiltration-vs-reverse-osmosis</li>
+<li><strong>Condorchem / Goldfinch / SAMCO / MKS</strong>：zero-discharge-vacuum-evaporation-ro · zero-liquid-discharge-evaporation-ponds · zld-in-mdf · membrane-processes-wastewater · ceramic-membranes-effluent · ultrapure-water-electrodeionization · biological-treatment-wastewater · zld-principles · zld-industry-guide · does-your-facility-need-zld</li>
+</ul>
+
+<h3>2e. 通用 What-Is / 工艺 / 设备原理（181 篇）</h3>
+<p>蒸馏、干燥、换热、混合罐、泵阀、树脂、脱盐水、锂精炼、氟去除等通用工业知识。</p>
+<ul>
+<li><strong>ENCO</strong>：introduction-to-crystallizer · classification-of-crystallizers · main-applications-wastewater-evaporator · direct-lithium-extraction-processes · lithium-refining-ultimate-guide · does-ro-remove-fluoride · ro-vs-distilled-water</li>
+<li><strong>Alaqua</strong>（25）：distillation-equipment-industries · choosing-right-distillation-equipment · solvent-recovery-systems-principles · heat-exchanger-hvac-comprehensive · spray-drying-process-overview · spray-dryers-food-chemical · spray-dryers-cosmetics</li>
+<li><strong>SPX Flow</strong>（14）：demystifying-positive-displacement-pumps · enabling-carbon-capture-pumps-energy-transition · how-to-make-great-ice-cream · plant-based-products-next-level · valve-actuator-design-long-term-value · sanitary-pumps-fundamentals · soft-gelatin-capsule-manufacturing</li>
+<li><strong>Toption</strong>（21）：what-materials-lyophilized · adaptability-rotovap-solvents · how-centrifugal-spray-dryer-works · service-life-vacuum-oven · gmp-requirements-spray-dryers-pharma · decarb-reactor-types · spray-drying-suspensions · spray-drying-egg-products</li>
+<li><strong>Shachi</strong>（15）：spray-dryer-process · spray-drying-principle · spray-drying-process-flow · spray-dryer-design · spray-dryer-atomiser · spray-drying-cfd-advantages · spray-drying-fuel-efficiency · spray-cooler-beading-fatty-acid</li>
+<li><strong>Ace</strong>（15）：Classification-stainless-steel-tanks · steam-heating-temperature-control · How-to-Properly-Clean-Mixing-Tank · Reactor-Tanks-Design · Different-Types-Mixing-Equipment · What-Is-Magnetic-Mixing · What-is-a-CIP-System · Why-You-Need-Fermentation-Tank</li>
+<li><strong>SAMCO</strong>（9）：how-to-remove-silica-industrial-water · reduce-water-usage-electrical-generation · reduce-water-pulp-paper · why-remove-copper · remove-lead-industrial-water · cyanide-impacts-industrial</li>
+<li><strong>Myande / Ion Exchange / Alfa Laval / Condorchem / Zewatech / MKS</strong>：3d-design-oils-fats · biological-fermentation-equipment · how-canola-oil-is-made · how-soybean-oil-extraction · indion-lamella-clarifier · fda-compliant-resins · how-to-choose-tubes-fittings-pharma · brief-history-distillation · comparison-vacuum-evaporation · 10-things-choosing-industrial-dryer</li>
+</ul>
+
+<div class="card success">
+<strong>完整清单</strong>：所有 363 篇 slug 见 <code>01-竞品分析/选题库_其他类型.md</code> 类型 2（2a/2b/2c/2d/2e）。
+</div>
+
+</div>
+
+<!-- ========== Panel 4: 选题库 — FAQ/对比/运维 ========== -->
+<div class="panel" id="panel-4">
+<h2>选题库 — FAQ / 对比 / 运维（295 篇）</h2>
+
+<div class="card">
+<strong>数据基础</strong>：8 份竞对 sitemap 抓取报告（2026-08-05）。<br>
+<strong>合并内容</strong>：类型 3 FAQ/买家提问（103 篇）+ 类型 4 技术对比/ROI（78 篇）+ 类型 5 运维/材料/节能（114 篇）。<br>
+<strong>slug 来源</strong>：均为各竞对 sitemap.xml 直接抓取。完整清单见 <code>选题库_其他类型.md</code> 类型 3/4/5。
+</div>
+
+<h3>类型 3：FAQ / 买家提问（103 篇）</h3>
+
+<h4>3a. How-to-choose / 选型 / 采购指南（27 篇）</h4>
+<ul>
+<li><strong>Sunevap</strong>：how-to-choose-between-mvr-and-mee · How-to-Choose-Right-Customized-Evaporator · What-is-Best-Evaporator-High-Salinity · how-to-choose-centrifuge-mvr-crystallization</li>
+<li><strong>VANOO</strong>：china-mvr-evaporator-selection-guide-roi · lithium-battery-recycling-pilot-equipment-selection</li>
+<li><strong>Alaqua</strong>（7）：how-to-identify-leading-crystallizer-suppliers · how-to-choose-right-processing-equipment-supplier · 7-tips-choosing-right-processing-equipment · 10-tips-choosing-right-spray-dryer · how-to-identify-right-heat-exchanger-supplier</li>
+<li><strong>ENCO / Goldfinch / SAMCO / SPX Flow / Toption / Myande / Ion Exchange</strong>：precautions-selecting-wastewater-evaporator · top-commercial-ro-membrane-suppliers · best-multi-effect-evaporator-manufacturer · choose-best-microfiltration-ultrafiltration · four-things-selecting-sanitary-food-grade-pump · china-no1-edible-oil-processing-manufacturer · choose-right-oil-press-machine</li>
+</ul>
+
+<h4>3b. How-much / Cost / 价格（14 篇）</h4>
+<ul>
+<li><strong>SAMCO</strong>（7）：how-much-do-microfiltration-ultrafiltration-cost · how-much-ion-exchange-system-cost · how-much-biological-wastewater-cost · how-much-aerobic-wastewater-cost · anaerobic-wastewater-cost-factors · how-much-industrial-water-treatment-cost · cost-treat-brine-reuse-disposal</li>
+<li><strong>Sunevap</strong>：Is-investment-cost-MVR-high-how-long-recover</li>
+<li><strong>Toption</strong>（6）：how-much-does-freeze-dryer-cost · are-toppette-products-expensive · price-of-rotavapor-environmental · price-rotavapor-evaporation-capacity · price-rotavapor-noise-levels · price-rotavapor-vs-vacuum-pump</li>
+</ul>
+
+<h4>3c. Common-problems / 故障 / 优劣（23 篇）</h4>
+<ul>
+<li><strong>SAMCO</strong>（8）：common-raw-water-problems · common-ion-exchange-problems · common-industrial-water-treatment-problems · common-problems-biological-wastewater · problems-wastewater-treatability-studies · common-problems-silica · types-of-membrane-fouling-causes</li>
+<li><strong>Sunevap</strong>：common-evaporator-problems-custom-solutions · Ask-the-Experts-Top-5-Custom-Evaporators · fastest-efficient-way-evaporate-wastewater</li>
+<li><strong>SPX Flow</strong>（7）：5-reasons-infusion-uht · 5-tips-healthier-ice-cream · five-reasons-asme-certified · five-reasons-genuine-spare-parts · top-5-reasons-insource-milk · top-5-tips-summer · top-5-tips-dairy-processing</li>
+<li><strong>ENCO / Alaqua / Shachi / Toption</strong>：treatment-methods-evaporator-blockage · advantages-disadvantages-evaporators · eliminate-evaporator-fouling-self-cleaning · troubleshoot-common-problems-spray-dryer</li>
+</ul>
+
+<h4>3d. Best-Of / Top-N 供应商列表（20 篇）</h4>
+<ul>
+<li><strong>SAMCO</strong>（8）：best-demineralization-system-companies · best-wastewater-treatability-study-companies · best-biological-wastewater-companies · best-ion-exchange-companies · best-ion-exchange-resin-manufacturing · best-cheapest-ways-dispose-resins · best-companies-cleaning-fouled-membranes · technologies-best-removing-sulfates</li>
+<li><strong>ENCO</strong>（6）：top-5-mvr-evaporator-manufacturers-in-china · top-10-multi-effect-evaporator-factory · top-5-falling-film-evaporator-in-china · top-10-double-effect-suppliers · top-10-triple-effect-supplier · top-10-quadruple-effect-suppl</li>
+<li><strong>SPX Flow</strong>：18-best-commercial-flour-mixer · 101-best-north-carolina-food-beverage · top-10-crystallizer-manufacturer-usa · top-8-spray-drying-manufacturers · best-float-switch-bilge-pump</li>
+<li><strong>Alaqua</strong>：top-10-spray-dryers-manufacturers-2024</li>
+</ul>
+
+<h4>3e. 其他 FAQ / Can / Should（19 篇）</h4>
+<ul>
+<li><strong>Sunevap</strong>（8）：best-way-get-rid-of-grey-water-playa · mix-match-evaporator-condenser-brands · model-fluidised-bed-dryer-aspen · closed-loop-nitrogen-fluid-bed · most-effective-heat-exchanger-cooling · vacuum-dryer-vs-heat-dryer · refrigerant-temperature-evaporator-condenser · book-references-single-effect-evaporator-design</li>
+<li><strong>Toption</strong>（10）：can-glass-filters-block-uv · can-freeze-dryer-insects · can-spray-dryer-ceramics · can-50l-rotowap-bioprocessing · can-vacuum-oven-food-packaging · can-uv-reactor-food-beverage · can-you-freeze-dry-ice-cubes</li>
+<li><strong>Enchem</strong>：can-mvr-evaporators-be-used-for-calcium-chloride</li>
+</ul>
+
+<h3>类型 4：技术对比 / ROI（78 篇）</h3>
+
+<h4>4a. MVR vs MEE vs TVR 对比（8 篇）</h4>
+<ul>
+<li><strong>VANOO</strong>：mvr-crystallizer-vs-multi-effect-cost-energy-roi · mvr-vs-tvr-evaporation-energy-cost · mvr-vs-multi-effect-cost-energy · mee-vs-tvr-vs-mvr-in-zld</li>
+<li><strong>Enchem</strong>：comparison-mvr-vs-multi-effect-mee · mvr-vs-tvr-efficiency-cost-application</li>
+<li><strong>Goldfinch / Zewatech</strong>：simplified-comparison-mee-vs-mvre · comparison-vacuum-evaporation-other-systems</li>
+</ul>
+
+<h4>4b. 结晶器对比（2 篇）</h4>
+<ul>
+<li><strong>VANOO</strong>：oslo-crystallizer-vs-traditional-differences</li>
+<li><strong>Enchem</strong>：niso4-6h2o-continuous-vs-batch-crystallization</li>
+</ul>
+
+<h4>4c. 膜/过滤/材料/设备对比（22 篇）</h4>
+<ul>
+<li><strong>SAMCO</strong>（7）：microfiltration-vs-ultrafiltration · ion-exchange-vs-reverse-osmosis · anaerobic-vs-aerobic-wastewater · biological-vs-chemical-wastewater · biological-vs-chemical-food-beverage · wastewater-treatability-vs-pilot-studies · ion-exchange-vs-membrane-silica</li>
+<li><strong>Ion Exchange</strong>：osmosis-vs-reverse-osmosis · ultrafiltration-vs-reverse-osmosis-better</li>
+<li><strong>Ace</strong>：falling_film_vs_wiped_film · Ale_vs_Lager · Pot_still_vs_Column_stills</li>
+<li><strong>Myande</strong>（4）：chemical-vs-physical-refining · crude-oil-vs-refined-soybean · physical-vs-chemical-refining-edible-oil · soy-protein-concentrate-vs-isolate</li>
+<li><strong>SPX Flow / VANOO / Alaqua / MKS</strong>：5-advantages-genuine-wcb-rotors · key-advantages-external-circumferential · ballast-pumps-comparison · Custom-vs-Standard-Evaporators · difference-rising-film-vs-falling-film · ring-dryer-vs-rotary-dryer</li>
+</ul>
+
+<h4>4d. 价格 / ROI / OPEX / 能耗经济性（46 篇）</h4>
+<ul>
+<li><strong>VANOO</strong>（15）：mvr-evaporator-cost-2026-pricing-opex-payback · mvr-evaporation-cost-energy-savings-2026 · industrial-mvr-roi-energy-efficiency · mvr-system-optimization-reduce-energy-costs · energy-efficient-evaporation-cut-costs-60-percent · mvr-energy-costs-chemical-food · zld-mvr-configuration-guide-2026 · zld-evaporation-crystallization-cost-guide · multi-effect-energy-saving-retrofit · causes-energy-consumption-triple-effect · industrial-energy-efficiency-heat-pumps-2026 · ammonium-sulfate-dtb-energy-roi · potassium-nitrate-mvr-opex-reduction</li>
+<li><strong>Alfa Laval</strong>（9）：lkh-pumps-reduce-energy-costs · service-agreement-cargill-tco · systems-makes-operating-costs-evaporate · cut-costs-beer-distribution · waste-heat-recovery-reduce-energy-costs · lower-costs-heat-recovery · one-year-payback-supermarket · recycle-pulp-mill-cuts-energy · saving-water-electricity-energy-hunter</li>
+<li><strong>SPX Flow</strong>（6）：real-cost-wrong-gearbox-mixing · roi-modern-impeller-selection · scraped-surface-reduces-energy-emissions · kombinator-250-cuts-costs · value-integrated-pumps-mixers-mining</li>
+<li><strong>Myande</strong>（7）：energy-saving-edible-oil-production · energy-saving-edible-oil-mill · how-to-utilize-dc-exhaust-heat · how-to-reduce-energy-refinery · how-to-reduce-oil-loss-refinery · mvr-evaporator-reduce-energy · myande-energy-saving-evaporation</li>
+<li><strong>Enchem / Sunevap / Goldfinch / ENCO</strong>：operation-cost-of-evaporator-reduce · how-to-reduce-energy-mvr · optimize-existing-mee-with-mvr · thermal-efficiency-heat-exchanger · 10x-efficiency-steam-economy-mee · mee-maximization-efficiency-savings · optimize-mvr-energy-use-efficiency</li>
+</ul>
+
+<h3>类型 5：运维 / 材料 / 节能（114 篇）</h3>
+
+<h4>5a. 材料选型 / 防腐（8 篇）</h4>
+<ul>
+<li><strong>Enchem</strong>（4）：equipment-material-selection-against-chloride-1 · equipment-material-selection-against-chloride-2 · how-to-select-construction-material-evaporator · material-selection-considerations-evaporator</li>
+<li><strong>VANOO</strong>：food-grade-crystallizer-material-guide · 2026-anti-fouling-design-guide</li>
+<li><strong>Sunevap / SPX Flow</strong>：hardness-in-water-affects-evaporation · smarter-materials-fewer-failures-mc97</li>
+</ul>
+
+<h4>5b. 清洗 / 防垢 / 防堵 / CIP（8 篇）</h4>
+<ul>
+<li><strong>Enchem</strong>：how-to-prevent-clogging-scaling-wastewater-evaporators · cleaning-and-descaling-solution-evaporator</li>
+<li><strong>Saltworks / VANOO / Myande / Alfa Laval / Ace</strong>：ro-and-evaporator-scale-control-guide · forced-circulation-evaporator-cleaning-guide · know-solve-shell-tube-evaporator-clogging · alfa-laval-performance-audit-cleaning · Stainless_steel_fermenter_cleaning_precautions</li>
+</ul>
+
+<h4>5c. 节能 / 降耗 / 可持续 / ESG / 碳足迹（77 篇）</h4>
+<ul>
+<li><strong>Alfa Laval</strong>（28）：50-energy-savings-district-heating-odessa · beacon-energy-efficient-waste-heat · agitator-dairy-energy-efficiency · brazil-sustainable-water · colombia-municipal-wastewater-remote · geothermal-efficiency-turkey · renewable-natural-gas-spiral-heat · refinery-performance-boosts · chelsea-sugar-carbon-emissions · coconut-water-carbon-footprint · dairy-u-turn-evaporator · ethanol-2000-eur-day · fossil-free-heating-stargard · hong-kong-wastewater-decanter · ammonia-heat-pump-sewage</li>
+<li><strong>SPX Flow</strong>（11）：100-years-apv-plate-heat-exchangers · cavitation-spray-dryer-feed · efficiency-margarine-shortening · mixer-sustainability · path-to-sustainability · plant-based-spreads · rethinking-energy-dairy · sustainable-lactose-whitening · top-four-reasons-upgrade-spray-dryer</li>
+<li><strong>VANOO</strong>（9）：forced-circulation-crystallizer-mvr-opex · mvr-evaporation-industrial-opex-reduction · mvr-crystallizer-energy-saving · energy-efficient-mvr-food-chemical · mvr-crystallizers-zld-food-chemical · turnkey-evaporation-2026-food-energy · efficient-solvent-recovery-scraped-film</li>
+<li><strong>Saltworks</strong>（8）：industrial-wastewater-reuse · water-and-esg-corporate-leaders · 70x-cooling-tower-reduction · chemical-softening-ro-recovery · ro-brine-treatment-maximizing · uhp-ro-brine-management · economic-ceramic-ultrafiltration</li>
+<li><strong>Myande / Sunevap / GEA / Toption / SAMCO / Condorchem / Ion Exchange</strong>：bio-fermentation-sustainable · low-carbon-smart-factory · impact-carbon-neutrality-oil · mvr-evaporators-energy-efficient · no-steam-source-mvr-electricity · how-mvr-save-circulating-water · gea-mevap · insightpartner-evohdry · industry-water-shortages · electrocoagulation-economic</li>
+</ul>
+
+<h4>5d. 运维 / 故障 / 维护 / 监测 / 控制指标（21 篇）</h4>
+<ul>
+<li><strong>ENCO</strong>（5）：preventive-measures-compressor-surge-mvr · maintenance-continuous-crystallizer · control-indicators-multi-effect-evaporators · how-negative-pressure-formed-multi-effect · treatment-method-electroplating-wastewater</li>
+<li><strong>Enchem</strong>（5）：ensuring-condensate-water-quality · mvr-evaporator-inlet-indicators-quality · critical-role-boiling-point-elevation-mvr · removal-rate-cod-evaporation · benefits-secondary-fluidized-bed-cacl2</li>
+<li><strong>Saltworks / Shachi / Alfa Laval / SPX Flow / Toption / Condorchem</strong>：real-time-sensing-scalesense · protect-disposal-wells-capacity · spray-dryer-maintenance · animal-vaccine-china-2-million · why-pump-maintenance-matters · spx-flow-first-year-care · optimize-decarboxylation-decarb-reactor · respirometry-activated-sludge · aerobic-reactors-biological</li>
+</ul>
+
+<div class="card success">
+<strong>完整清单</strong>：所有 295 篇 slug（103 FAQ + 78 对比/ROI + 114 运维/材料/节能）见 <code>01-竞品分析/选题库_其他类型.md</code> 类型 3/4/5。
+</div>
+
+</div>
+
+<!-- ========== Panel 5: 选题库 — 地理 SEO 模板 ========== -->
+<div class="panel" id="panel-5">
+<h2>选题库 — 地理 SEO 模板（95 篇）</h2>
+
+<div class="card">
+<strong>数据基础</strong>：8 份竞对 sitemap 抓取报告（2026-08-05）。<br>
+<strong>定义</strong>：固定模板 × 地理变量批量生产的文章。"Top X [设备] Manufacturers in [City, Country]" 是典型格式。<br>
+<strong>市场地位</strong>：最稀缺的内容类型（全市场仅占 2%）；Sunevap 单家独占整个赛道，4+ 年先发优势。<br>
+<strong>slug 来源</strong>：均为各竞对 sitemap.xml 直接抓取。完整清单见 <code>选题库_其他类型.md</code> 类型 6。
+</div>
+
+<h3>Sunevap（地理 SEO 模板王者，61 篇去重）</h3>
+<p>Sunevap 系统化铺设 9 种设备类型 × 8-10 个国家/城市，覆盖澳大利亚/美国/法国/中国/印尼/越南/巴基斯坦/南非/约翰内斯堡等市场。</p>
+
+<h4>按设备类型分组</h4>
+<table>
+<tr><th>设备类型</th><th>篇数</th><th>代表性 slug</th></tr>
+<tr><td><strong>MVR Evaporator</strong></td><td>9</td><td>top-10-mvr-evaporator-sydney-australia · best-10-mvr-evaporator-houston-usa · best-6-mvr-paris-france · top-7-mvr-shanghai-china · top-9-mvr-jakarta-indonesia · top-8-mvr-hanoi-vietnam · best-5-mvr-karachi-pakistan</td></tr>
+<tr><td><strong>Falling Film Evaporator</strong></td><td>7</td><td>top-8-falling-film-sydney-australia · top-10-falling-film-shanghai · top-10-falling-film-houston-usa · best-5-falling-film-karachi · best-7-falling-film-johannesburg · best-6-falling-film-paris · top-8-falling-film-hanoi</td></tr>
+<tr><td><strong>DTB Crystallizer</strong></td><td>7</td><td>best-7-dtb-paris-france · best-10-dtb-houston-usa · top-6-dtb-jakarta · best-5-dtb-karachi · top-8-dtb-hanoi · best-6-dtb-johannesburg · top-9-dtb-shanghai</td></tr>
+<tr><td><strong>MEE Evaporator</strong></td><td>7</td><td>best-9-mee-karachi · top-10-mee-shanghai · top-4-mee-hanoi · best-8-mee-johannesburg · best-10-mee-houston · top-8-mee-sydney · best-6-mee-paris</td></tr>
+<tr><td><strong>Forced Circulation Evaporator</strong></td><td>7</td><td>best-5-forced-circ-lahore-pakistan · top-7-forced-circ-shanghai · best-6-forced-circ-paris · top-10-forced-circ-sydney · best-7-forced-circ-johannesburg · top-8-forced-circ-hanoi · best-10-forced-circ-houston</td></tr>
+<tr><td><strong>Rising Film Evaporator</strong></td><td>7</td><td>top-5-raising-film-jakarta · best-9-raising-film-karachi · best-8-raising-film-johannesburg · top-4-raising-film-ho-chi-minh · best-10-raising-film-houston · top-10-raising-film-shanghai · top-8-raising-film-sydney</td></tr>
+<tr><td><strong>Double Effect Evaporator</strong></td><td>7</td><td>best-6-double-effect-johannesburg · top-10-double-effect-sydney · best-5-double-effect-karachi · best-10-double-effect-houston · top-6-double-effect-jakarta · best-7-double-effect-paris · top-9-double-effect-shanghai</td></tr>
+<tr><td><strong>Single Effect Evaporator</strong></td><td>7</td><td>top-8-single-effect-hanoi · best-6-single-effect-johannesburg · best-10-single-effect-chicago-usa · top-10-single-effect-sydney · top-6-single-effect-jakarta · best-5-single-effect-lahore · best-7-single-effect-paris</td></tr>
+<tr><td><strong>Modular / ZLD Plant</strong></td><td>2</td><td>best-7-modular-evaporator-paris · top-zld-plant-manufacturers-in-china</td></tr>
+</table>
+
+<h3>Goldfinch Evaporators（印度地区词，9 篇）</h3>
+<ul>
+<li>mvr-evaporator-manufacturers-in-india · multiple-effect-evaporator-manufacturers · multiple-effect-evaporators-in-india · multiple-effect-evaporator-satara · multiple-effect-evaporator-in-gujarat · evaporators-in-india · zero-liquid-discharge-in-india · zero-liquid-discharge-zld-india · zld-plant-wastewater-treatment-in-indian</li>
+</ul>
+
+<h3>SPX Flow（少数 Top-N，4 篇）</h3>
+<ul>
+<li>top-10-crystallizer-manufacturer-in-the-usa · top-8-spray-drying-equipment-manufacturers · 18-best-commercial-flour-mixer-machine-world · 101-best-north-carolina-food-beverage-companies</li>
+</ul>
+
+<h3>ENCO（中国 Top-N，6 篇）</h3>
+<ul>
+<li>top-5-mvr-evaporator-manufacturers-in-china · top-10-multi-effect-evaporator-factory · top-5-falling-film-evaporator-in-china · top-10-double-effect-evaporator-suppliers · top-10-china-triple-effect-evaporator-supplier · top-10-china-quadruple-effect-evaporator-suppl</li>
+</ul>
+
+<h3>Alfa Laval（地理故事，非典型模板，15 篇）</h3>
+<p>注：Alfa Laval 是叙事型地理故事（X-project-in-Y-country），非 Top-N 模板，列出供参考。</p>
+<ul>
+<li>animal-vaccine-producer-china-2-million · alfavap-alfacond-japanese-beet-sugar · nuclear-milestone-china · european-steel-pickling · chnx-decanter-tar-recovery-belgium · citrosuco-juice-brazil · cutting-water-consumption-india · olive-oil-italy · groundwater-china · paperboard-plant-india · self-sufficient-brazil · cloud-data-center-italy · sugar-ethanol-brazil · sweet-source-japan · enzyme-us-thinktop</li>
+</ul>
+
+<div class="card success">
+<strong>完整清单</strong>：所有 95 篇 slug（Sunevap 61 + Goldfinch 9 + SPX Flow 4 + ENCO 6 + Alfa Laval 15）见 <code>01-竞品分析/选题库_其他类型.md</code> 类型 6。
+</div>
+
+</div>
+
+<!-- ========== Panel 6: 竞对速查 ========== -->
+<div class="panel" id="panel-6">
+<h2>竞对内容资产速查表（29 家，基于 sitemap 全量抓取 2026-08-05）</h2>
+
+<div class="card">
+<strong>分层口径</strong>：Tier 1（>500 篇）= 头部内容矩阵；Tier 2（100-500 篇）= 中部实战场；Tier 3（<100 篇）= 小内容站；Tier 4 = 纯产品站/异常站。
+<strong>合计</strong>：29 家合计 ~7700 篇可分类内容（已剔除 SKU/产品页/跨域/数字 slug news）。
+</div>
+
+<h3>国际 7 家（学习标杆，有 sitemap slug）</h3>
+<table>
+<tr><th>#</th><th>竞对</th><th>域名</th><th>可分类内容</th><th>关键栏目</th><th>对标价值</th></tr>
+<tr><td>1</td><td><strong>ANDRITZ</strong></td><td>separation.andritz.com</td><td>143</td><td><strong>22 industry-challenges + 12 success-stories + 11 guides</strong></td><td><span class="badge badge-high">高</span>叙事深度天花板（1500-3000 字/篇，引用 ASME 规范）</td></tr>
+<tr><td>2</td><td><strong>Saltworks</strong></td><td>saltworkstech.com</td><td>177</td><td><strong>21 applications + 11 技术 + 40 articles</strong></td><td><span class="badge badge-high">高</span>高端工业水处理（PFAS/半导体/数据中心）护城河</td></tr>
+<tr><td>3</td><td><strong>EBNER</strong></td><td>ebner-co.de</td><td>120</td><td><strong>17 晶体应用页 + 29 references + 70 posts</strong></td><td><span class="badge badge-high">高</span>按化学物质分类的金标准</td></tr>
+<tr><td>4</td><td>Alfa Laval</td><td>alfalaval.com</td><td>1327（全集团）</td><td>717 news + 610 stories + 240 运维/节能</td><td><span class="badge badge-medium">中</span>运维模板范本（X-energy-savings-in-Y-project-in-Z-地点）</td></tr>
+<tr><td>5</td><td>SPX Flow</td><td>spxflow.com</td><td>807</td><td>1059 news（含经销商公告）+ 297 releases</td><td><span class="badge badge-medium">中</span>食品乳品为主，蒸发结晶子板块</td></tr>
+<tr><td>6</td><td>GEA</td><td>gea.com</td><td>~45（蒸发结晶相关）</td><td>全集团 3648 URL，蒸发结晶仅 ~45 篇 + 33 国别子站</td><td><span class="badge badge-medium">中</span>campaigns 战役页是高级打法</td></tr>
+<tr><td>7</td><td>Swenson</td><td>swensontechnology.com</td><td>0</td><td>纯产品站（34 URL）</td><td><span class="badge badge-low">低</span>不做内容营销；仅产品页 slug 结构可参考</td></tr>
+</table>
+
+<h3>外贸 7 家（直接对手，有 sitemap slug）</h3>
+<table>
+<tr><th>#</th><th>竞对</th><th>域名</th><th>可分类内容</th><th>关键内容</th><th>威胁等级</th></tr>
+<tr><td>1</td><td><strong>Sunevap（=瑞升华）</strong></td><td>sunevapgroup.com</td><td>215</td><td><strong>59 案例 + 72 news + 70 地理 SEO（独家）</strong></td><td><span class="badge badge-high">高</span>头号威胁；唯一系统化铺设地理 SEO 的玩家</td></tr>
+<tr><td>2</td><td><strong>Vanoo（万遨）</strong></td><td>vanootech.com</td><td>154</td><td><strong>67 案例 + 42 What-Is + 18 ROI 计算器（独家）</strong></td><td><span class="badge badge-high">高</span>头号威胁；ROI 计算器栏目全球唯一</td></tr>
+<tr><td>3</td><td><strong>Enchem（恩特）</strong></td><td>enchem-tech.com</td><td>43</td><td><strong>20 技术原创（BPE/COD/氯离子材料选型）+ 11 案例</strong></td><td><span class="badge badge-high">高</span>技术深度工程师范本</td></tr>
+<tr><td>4</td><td>Toption</td><td>toptiontech.com</td><td>640</td><td>实验室/中试 What-Is 153 篇（AI 痕迹）+ 其他 337</td><td><span class="badge badge-low">低</span>不同市场（实验室）；Google Scaled Content Abuse 风险</td></tr>
+<tr><td>5</td><td>Ace（艾斯）</td><td>ace-chn.com</td><td>58</td><td>GMP 卫生级食品制药专科</td><td><span class="badge badge-medium">中</span>细分领域</td></tr>
+<tr><td>6</td><td>Beinuo（贝诺）</td><td>cnbeinuo.com</td><td>~40（外推）</td><td>206 NewsDetail 全数字 slug（无法分类）+ 40 具名案例</td><td><span class="badge badge-medium">中</span>中文 B 端案例命名范本（华鲁恒升等）</td></tr>
+<tr><td>7</td><td>Vteya（科里）</td><td>vteya.com</td><td>?</td><td>932 URL，395 news 全数字 slug，无法分类</td><td><span class="badge badge-medium">中</span>有量无质；冷凝器+UF/RO/MVR 一站式</td></tr>
+</table>
+
+<h3>国内 5 家（参考，有 sitemap slug）</h3>
+<table>
+<tr><th>#</th><th>竞对</th><th>域名</th><th>可分类内容</th><th>关键发现</th><th>参考价值</th></tr>
+<tr><td>1</td><td>嘉泰（参考）</td><td>js-jiatai.com</td><td>91</td><td>28 案例 + 15 What-Is + 10 FAQ（原创度高）</td><td><span class="badge badge-high">高</span>Q2 象限（质高量低）；潜在反超者</td></tr>
+<tr><td>2</td><td>Myande</td><td>myandegroup.com</td><td>431</td><td><strong>167 EPC 案例 + 112 What-Is</strong>（油脂/淀粉/发酵）</td><td><span class="badge badge-medium">中</span>国内内容最完整；Q1 象限</td></tr>
+<tr><td>3</td><td>康景辉</td><td>conqinphi.cn</td><td>1431</td><td><strong>1260 FAQ（数字 slug，SEO 信号弱）</strong> + 33 工业废水</td><td><span class="badge badge-low">低</span>反面教材；不应复制（Google 已打压）</td></tr>
+<tr><td>4</td><td>敏杰</td><td>shmjjx.com</td><td>128</td><td>59 FAQ + 37 对比 + 22 What-Is（中文 B 端模板）</td><td><span class="badge badge-medium">中</span>"X 痛点？敏杰 Y 方案省开支"模板可借鉴</td></tr>
+<tr><td>5</td><td>乐科</td><td>luckyleke.com</td><td>0</td><td>sitemap 异常（套用美宝模板未改域名，8 URL 指向 cqmbjh.com）</td><td><span class="badge badge-low">低</span>SEO 基础设施归零；反面案例</td></tr>
+</table>
+
+<h3>新发现 10 家（2026-08-05 SERP 调查，覆盖印度/土耳其/欧洲本土龙头）</h3>
+<table>
+<tr><th>#</th><th>竞对</th><th>域名</th><th>可分类内容</th><th>关键内容</th><th>对标价值</th></tr>
+<tr><td>1</td><td><strong>SAMCO</strong></td><td>samcotech.com</td><td>254</td><td><strong>100 FAQ 五件套（What-Is+How-Much+How-To+Problems+Best-Of）</strong> + 90 案例</td><td><span class="badge badge-high">高</span>英文 B2B FAQ 模板化最规范范本</td></tr>
+<tr><td>2</td><td><strong>Ion Exchange</strong></td><td>ionexchangeglobal.com</td><td>256</td><td>100 行业垂直 case（12+ 行业）+ 70 news</td><td><span class="badge badge-medium">中</span>印度水处理集团本土护城河</td></tr>
+<tr><td>3</td><td>ENCO（恩创）</td><td>encocn.com</td><td>173</td><td>35 案例 + 10 What-Is + <strong>8 Top-N 对比文</strong>（top-5-mvr-in-china）+ 93 跨域占位</td><td><span class="badge badge-medium">中</span>Top-N 模板可复用；跨域占位是反面教材</td></tr>
+<tr><td>4</td><td>Shachi</td><td>shachiengineering.com</td><td>84</td><td>28 案例 + 19 What-Is + 20 news</td><td><span class="badge badge-low">低</span>喷雾干燥为主，与蒸发结晶相关性弱</td></tr>
+<tr><td>5</td><td>Goldfinch</td><td>goldfinchevaporators.com</td><td>52</td><td>19 案例 + 10 What-Is（印度本土 ZLD）</td><td><span class="badge badge-medium">中</span>案例命名规范（容量-kld-for-客户-地点）可借鉴</td></tr>
+<tr><td>6</td><td>MKS</td><td>mks.co.in</td><td>33</td><td>糖化植物专题（葡萄糖/果糖/赖氨酸）</td><td><span class="badge badge-low">低</span>与蒸发结晶相关性弱</td></tr>
+<tr><td>7</td><td>Alaqua</td><td>alaquainc.com</td><td>250</td><td><strong>100 What-Is（5 设备 × 20 篇模板）</strong> + 50 案例 + 90 其他</td><td><span class="badge badge-low">低</span>内容农场；Google 政策风险</td></tr>
+<tr><td>8</td><td>ASOS</td><td>asos.com.tr</td><td>231</td><td><strong>195 展会/新闻（84%）</strong> + 36 矿物加工</td><td><span class="badge badge-medium">中</span>土耳其本土展会日历 SEO 独门（fuari-年-国家）</td></tr>
+<tr><td>9</td><td>Zewatech</td><td>zewatech.com</td><td>88</td><td>12 案例 + 5 What-Is + 48 ES/EN 双语对照</td><td><span class="badge badge-low">低</span>VTR 单一技术；双语对照可借鉴</td></tr>
+<tr><td>10</td><td>Condorchem</td><td>condorchem.com</td><td>187</td><td>35 案例 + 60 blog + 107 跨域 VOC/废气</td><td><span class="badge badge-medium">中</span>长尾覆盖（橄榄油/鱼鲜/酿酒/核电氚/稀土/MDF）</td></tr>
+</table>
+
+<h3>未抓取 10 家（无可用 sitemap 或纯产品站）</h3>
+<table>
+<tr><th>竞对</th><th>域名</th><th>状态</th></tr>
+<tr><td>Sulzer</td><td>sulzer.com</td><td>14448 URL 全集团，未细分蒸发结晶板块</td></tr>
+<tr><td>Hanpu</td><td>hanputhermal.com</td><td>710 SKU 模板，不是内容站</td></tr>
+<tr><td>RDG</td><td>rdgevaporators.com</td><td>17 URL，已停更 4 年</td></tr>
+<tr><td>高捷节能</td><td>goje.com.cn</td><td>HTML 假 sitemap，无内容</td></tr>
+<tr><td>乔发</td><td>szjohatsu.com</td><td>无可用 sitemap</td></tr>
+<tr><td>其他 5 家（外贸/国内小厂）</td><td>—</td><td>无内容或无 sitemap</td></tr>
+</table>
+
+</div>
+
+</div>
+
+<footer>
+  嘉泰蒸发结晶 · 内容营销路线图 v1（29 家竞对数据版）· 配套 <code>29家竞对文章类型统计汇总.md</code> + <code>29家竞对内容市场结构分析.md</code> · 2026-08-05
+</footer>
+
+<script>
+function showTab(idx) {
+  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', i === idx));
+  document.querySelectorAll('.panel').forEach((p,i) => p.classList.toggle('active', i === idx));
+  window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
