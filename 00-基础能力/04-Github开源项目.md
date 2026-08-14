@@ -1,6 +1,6 @@
 # 推荐开源项目收藏
 
-> **优质GitHub项目集合** | 持续更新 | 最后更新：2026-08-03
+> **优质GitHub项目集合** | 持续更新 | 最后更新：2026-08-12
 
 ---
 
@@ -10,7 +10,7 @@
 |------|------|---------|
 | [AI 营销工具](#ai-营销工具) | 9 | Fooocus、MoneyPrinterTurbo、HyperFrames、Nanobrowser、CloakBrowser、XHS-Crawler-to-Base |
 | [客服与消息自动化](#客服与消息自动化) | 1 | Evolution API |
-| [AI 开发工具](#ai-开发工具) | 5 | superpowers-zh、Codex Security、TokenTracker、ccusage |
+| [AI 开发工具](#ai-开发工具) | 6 | Skill Recorder、superpowers-zh、Codex Security、TokenTracker、ccusage |
 | [通用效率工具](#通用效率工具) | 8 | ERPNext、PlainApp、Vibe、PDFCraft |
 
 ---
@@ -522,6 +522,58 @@ npx superpowers-zh
 ```
 
 **适用场景**: AI 编码纪律强化、Skill 设计参考、团队代码规范自动化
+
+---
+
+### Skill Recorder
+
+**GitHub**: https://github.com/microsoft/skill-recorder | **Star**: 3K+（1 个多月） | **作者**: 微软
+
+**简介**: 录制屏幕操作 → AI 自动重构成可复用 Skill 的桌面应用，"你做一遍，AI 看一遍就会了"。OpenAI Codex「Record & Replay」和 Anthropic「Record a skill」同类能力的**开源版**
+
+**核心功能**: 屏幕活动录制（本地捕获）、麦克风口述思路（Whisper 本地转文字，99 种语言）、AI 分析提炼「意图 + 有序步骤」、一键生成 Skill（Agent 按需调用）或 Automation（定时/触发执行）
+
+**四步工作流**:
+1. **录制** — 快捷键 `⌘⇧R` / `Ctrl+Shift+R`，像平时一样操作
+2. **控制** — 常驻小工具栏，随时静音/切换麦克风/放弃重来
+3. **分析** — GitHub Copilot 整理出总体意图 + 有序步骤列表，可像编辑文档一样修改
+4. **创建** — 确认无误后一键生成 Skill 或 Automation
+
+**特点**:
+- **本地优先**：录制/存储/画面提取/语音转写全本地，只有点「分析」才发云端
+- **记意图不记坐标**：翻译成 Agent 原生工具调用（`gh CLI`、`web_fetch`），不重放 UI 点击
+- **泛化能力强**：录一次提交表单，Agent 学会提交所有同类表单（区别于 RPA 的致命短板）
+- 内置敏感信息检测和脱敏机制
+- 与 RPA 的本质区别：**RPA 把人绑死在界面上，Skill Recorder 把一次演示泛化成一类能力**
+
+**平台**: macOS 主要支持，Windows 11 和 Ubuntu 也可
+
+**快速使用**:
+```bash
+# macOS / Ubuntu（从 release 页面获取 commit hash）
+commit="<40-character-release-commit>"
+curl -fsSL "https://raw.githubusercontent.com/microsoft/skill-recorder/$commit/install.sh" | SKILL_RECORDER_COMMIT="$commit" bash
+
+# Windows (PowerShell)
+$commit="<40-character-release-commit>"
+$env:SKILL_RECORDER_COMMIT=$commit
+irm "https://raw.githubusercontent.com/microsoft/skill-recorder/$commit/install.ps1" | iex
+```
+
+**前置要求**: 分析功能需要带 Copilot 权限的 GitHub 账号；首次启动需授予录屏权限
+
+**⚠️ 注意**: 录制时避免出现密码/Token/API Key 等敏感信息（虽有本地脱敏，但养成好习惯）
+
+**与现有 Skill 工具的关系**:
+| 工具 | 定位 | 产出 |
+|------|------|------|
+| **Skill Recorder** | 录屏自动生成 Skill | 从操作过程提炼的 Skill 文件 |
+| **superpowers-zh** | 编码纪律 Skill 集合 | 预置的 14 个规范 Skill |
+| **system_prompts_leaks** | Prompt 设计参考 | 学习材料，非直接产出 |
+
+三者互补：Skill Recorder 解决**生产**问题（怎么做出来），superpowers-zh 提供**成品**，system_prompts_leaks 提供**设计参考**
+
+**适用场景**: 重复性操作流程沉淀为 Skill、团队 SOP 自动化、Agent 能力批量生产、带新同事式的演示教学
 
 ---
 

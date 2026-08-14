@@ -1,6 +1,7 @@
 # SEO与GEO 知识库索引
 
-> 最后更新：2026-07-29（+ 22 号新增：SEO 投入时机专家立场库 — Eli/Ross/Rand 晚投派 vs Cyrus/Aleyda/Tim 早投派 + 7 位沉默专家 + 三诊断问题框架 / README 索引同步）
+> 最后更新：2026-08-14（+ 19 号新增：叙事操纵与AI时代品牌防御 — Codesmith案例三信道污染模型 + 487天取证方法论 + 品牌防御清单 / 修复来源表 20/21 编号漂移→17/18）
+> 前次更新：2026-07-29（+ 22 号新增：SEO 投入时机专家立场库 — Eli/Ross/Rand 晚投派 vs Cyrus/Aleyda/Tim 早投派 + 7 位沉默专家 + 三诊断问题框架 / README 索引同步）
 
 ---
 
@@ -26,7 +27,8 @@
 ├── 15-Query-Fanout-子问题选题策略.md ← 关键词→子问题的选题方法
 ├── 16-PRNS链接权威与最短路径模型.md ← 外链/内链权威机制（专利+API Leak+DOJ三源）
 ├── 17-新站信任建立期与算法机制.md  ← 新站"沙盒现象"的算法组件诊断（NavBoost + PRNS + 置信度门槛）
-└── 18-Twiddler框架与重排机制.md   ← Ascorer 之后的重排层（Superroot/Predoc vs Lazy/12+ 已具名 Twiddler）
+├── 18-Twiddler框架与重排机制.md   ← Ascorer 之后的重排层（Superroot/Predoc vs Lazy/12+ 已具名 Twiddler）
+└── 19-叙事操纵与AI时代品牌防御.md ← 单点叙事捕获→Google+Reddit+LLM三信道污染（Codesmith案例）
 ```
 
 > **执行层文档**（工作流、工具配置）已迁移至 [01-营销方法论基础/](../01-营销方法论基础/)
@@ -78,6 +80,8 @@
 | 理解 Ascorer / Twiddler / Superroot | [18](./18-Twiddler框架与重排机制.md) | 5 阶段排名流水线、Predoc vs Lazy Twiddler、12+ 已具名 Twiddler 清单 |
 | 诊断"为什么排名突然变化" | [18](./18-Twiddler框架与重排机制.md) | 多 Twiddler 独立运行 + Category Packer 协调 → 根因极难定位 |
 | 理解同站第二页排不上的现象 | [18](./18-Twiddler框架与重排机制.md) | Diversity Cap / Category Packing（非分数问题，是类型约束） |
+| 品牌词 SERP 被 Reddit 负面叙事占据 | [19](./19-叙事操纵与AI时代品牌防御.md) | 三信道污染模型、版主捕获机制、取证方法论 |
+| 流量降但无算法事件无惩罚的诊断 | [19](./19-叙事操纵与AI时代品牌防御.md) + [05](./05-SEO测量危机与新指标.md) | 40/60 归因纪律、LLM 推荐审计、品牌防御清单 |
 
 ---
 
@@ -185,15 +189,17 @@
 | Lois / 海外SEO与ASO（GSC AI 数据复盘, 2026.07） | 行业 | 05（GSC Generative AI features 实证：586K 曝光 / 223 国 / 日波动 3K-22K / 工具型 AI 检索） |
 | Ahrefs（140 亿页分析, 2023.12） | 研究 | 05（96.55% 零流量基线 + 1.74% 新页进 Top 10） |
 | 鸭老师SEO《EEAT 不是排名因素，也不是你能做的》（2026.07） | 行业 | 02（E-E-A-T 算法对应：T=Q*+P* + 声明 vs 验证 + EEAT checker 产品史批判） |
-| 鸭老师SEO《且看且珍惜》（2026.07） | 行业 | 20（NavBoost 曝光分母 / 0 状态站拿不到分母 / 来源三档分层方法论） |
-| Ahrefs 140 亿页分析（2023.12）— 新页 Top 10 数据复用 | 研究 | 20（1.74% 新页进 Top 10 + 96.55% 零流量基线，信任期统计证据） |
-| goearthward.com GSC 实测（2026.07.27） | 一手数据 | 20（位置 48.3 / quick_wins 空 / 5 项健康检查全 PASS / 老站 luckycrystals.org referringUrl） |
-| grumpy-old-seo.com（Twiddlers 拆解） | 行业 | 21（Predoc/Lazy 双层架构 / Superroot framework / 12+ 已具名 Twiddler） |
-| navboost.com（Twiddler 专项站） | 行业 | 21（Ascorer green ring ~1000 候选 / Category Packer 协调 / 1.7x IR 分数示例） |
-| Christian Ott / seo-kreativ.de（5 阶段教学模型） | 行业 | 21（Crawling→Indexing→Query→Ascorer→Twiddler / API Leak 系统名首次披露） |
-| Julian Redlich / rankmeamadeus.com（Ascorer 名称溯源） | 行业 | 21（Ascorer = "Amit's Scorer"，以 Amit Singhal 命名） |
-| 2018 Twiddler Quick Start Guide（庭审记录公开） | 内部文档 | 21（65+ Twiddler / Predoc vs Lazy / 独立运行原则） |
+| 鸭老师SEO《且看且珍惜》（2026.07） | 行业 | 17（NavBoost 曝光分母 / 0 状态站拿不到分母 / 来源三档分层方法论） |
+| Ahrefs 140 亿页分析（2023.12）— 新页 Top 10 数据复用 | 研究 | 17（1.74% 新页进 Top 10 + 96.55% 零流量基线，信任期统计证据） |
+| goearthward.com GSC 实测（2026.07.27） | 一手数据 | 17（位置 48.3 / quick_wins 空 / 5 项健康检查全 PASS / 老站 luckycrystals.org referringUrl） |
+| grumpy-old-seo.com（Twiddlers 拆解） | 行业 | 18（Predoc/Lazy 双层架构 / Superroot framework / 12+ 已具名 Twiddler） |
+| navboost.com（Twiddler 专项站） | 行业 | 18（Ascorer green ring ~1000 候选 / Category Packer 协调 / 1.7x IR 分数示例） |
+| Christian Ott / seo-kreativ.de（5 阶段教学模型） | 行业 | 18（Crawling→Indexing→Query→Ascorer→Twiddler / API Leak 系统名首次披露） |
+| Julian Redlich / rankmeamadeus.com（Ascorer 名称溯源） | 行业 | 18（Ascorer = "Amit's Scorer"，以 Amit Singhal 命名） |
+| 2018 Twiddler Quick Start Guide（庭审记录公开） | 内部文档 | 18（65+ Twiddler / Predoc vs Lazy / 独立运行原则） |
 | Cyrus Shepard / Zyppy《AI Citation Ranking Factors Analysis》(2026.05) | 研究 | 16（54 个研究综合：Fan-out Rank 9.3 排第 3 / Seer Interactive 引用回报 +120% 有机/+41% 付费 / Win SEO win AI citations） |
 | Seer Interactive AI Overview 引用研究 | 研究 | 16（被 AIO 引用 → 有机点击 +120% + 付费点击 +41%，GEO 投资回报硬证据） |
 | 子木《GEO 流量密码因子之一：Fan-out Rank》(2026.07) | 行业 | 16（基于 Zyppy 数据推导：ICP 筛选金矿子查询 + 决策阶段 6 维度映射 + Pillar-Cluster 矩阵） |
 | OpenAI Responses API web_search tool | 工程化 | 16（路径 D：可记录 LLM 真实搜索词/次数/引用页面，GEO 研究最可审计方法） |
+| Lars Lofgren《The Story of Codesmith》（larslofgren.com, 2025.10） | 一手调查 | 19（$23.5M bootcamp 被竞对版主叙事操纵摧毁 / 487 天取证 / 三信道污染模型 / 40-60 归因让步） |
+| Michael Novati 反驳文 + Rand Fishkin/Benyon 佐证（2025.10-2026） | 对立面/行业 | 19（8000 字反方立场 / 取证背书——机制可信与个案归因分开评估） |

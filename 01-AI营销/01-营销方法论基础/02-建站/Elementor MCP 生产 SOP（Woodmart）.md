@@ -9,7 +9,8 @@
 
 | 文档 | 角色 |
 |---|---|
-| **本文档** | **唯一 Elementor page 生产 SOP**（含踩坑记录、Pro widget、产品化路线） |
+| **本文档** | **无 HTML 原型时的 Elementor page 生产 SOP**（增量构建 + 踩坑记录 + Pro widget + 产品化路线） |
+| `HTML转Elementor混合流水线SOP.md` | **有 HTML 原型时的批量生产 SOP**（dudaster 转换 + globals 展开 + SVG/渐变注入 + 间距烘焙，主题无关，2026-08-14 在 evapcryst.com 验证） |
 | `Gutenberg博客文章REST-API上传指南.md` | post 生产 SOP |
 | ~~`Elementor REST API 操作手册.md`~~ | 已删除（MCP SOP 替代） |
 | ~~`Elementor MCP 页面创建测试方案.md`~~ | 已删除（合并到 §13 附录） |
