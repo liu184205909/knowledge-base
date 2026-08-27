@@ -562,6 +562,7 @@ LLM 在推荐品牌时经过三层过滤：
 | 项目 | 要求 |
 |------|------|
 | robots.txt | 放行GPTBot、ClaudeBot、PerplexityBot、Google-Extended |
+| **CCBot（Common Crawl）** | 别拦——与实时爬虫机制不同：GPTBot/ClaudeBot 是**实时抓取**（影响当前 RAG 引用）；CCBot 是**训练语料采集**（影响模型预训练知识，延迟生效但持久）。拦 CCBot = 结构性排除出数据集，流入下游 LLM 训练语料的机会归零（Common Crawl 官方博客《AI Optimization Is Here》明确警告；arXiv 2411.15091 证实大量站点还叠加 IP 屏蔽） |
 | 服务器渲染 | SSR/SSG，不要纯CSR（AI爬虫无法执行JS） |
 | Schema标记 | Organization、FAQ、HowTo、Article（JSON-LD）——为富媒体搜索结果而做，非AI专用 |
 | **Schema Stacking** | 多种Schema在单个`@graph`中组合（Article + FAQPage + Organization + ItemList）→ **3.1× 更高AI引用率**（GenOptima 2026.03） |
