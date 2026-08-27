@@ -5,6 +5,20 @@
 
 ---
 
+## 0a. 原型阶段：防 AI 味设计纪律（hallmark，2026-08-27 增）
+
+本 SOP 输入是「已有 HTML 原型」——原型的**结构与视觉质量**在上游决定。三道防 AI 味关卡各管一层，不重复：
+
+| 层 | 工具/规则 | 时机 |
+|---|---|---|
+| **页面结构/视觉层** | **hallmark skill**（`~/.claude/skills/`，装机与分工见 [01-Claude-Code环境配置.md](../../../00-基础能力/01-Claude-Code环境配置.md) UI 设计三件套节） | 原型生成时：默认走 hallmark 设计流（21 结构×20 主题×50+ 组件组合 + 57 项 slop-test 自检，拒绝 hero 渐变+居中标题+三列圆角卡套路）；存量原型用 `hallmark audit {目录}` 体检出 punch list；竞品参考用 `hallmark study {URL/截图}` 提取设计 DNA（不像素级抄袭） |
+| 布局保真层 | `html-layout-extract` skill（§1.6） | JSON 生成前必跑 |
+| 图片层 | §1.7 提示词纪律（candid documentary / 避免完美对称与霓虹蓝光） | 每次生图 |
+
+**分工**：frontend-design + DESIGN.md 定品牌审美方向，hallmark 管结构多样性与量化自检（两个不同 brief 的页面不应共享同一 hero→三卡→CTA 节奏）。hallmark 产出的原型即本 SOP 下游输入，照常走 §1 起全流程。
+
+---
+
 ## 0. 核心原则：样式走组件 Style 控件，禁止 Custom CSS 复刻
 
 **复刻 HTML 样式时，一律优先使用 Elementor 组件/容器的原生 Style 控件**（widget/container settings、Kit 全局变量），**不要用 Custom CSS 代码补丁**。

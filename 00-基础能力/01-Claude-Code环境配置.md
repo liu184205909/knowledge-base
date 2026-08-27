@@ -131,7 +131,7 @@ claude mcp add -s user google-seo-mcp \
 
 **真源**：`~/.claude/skills/`。Codex 侧 `~/.agents/skills` 是 symlink 自动同步。新 skill 只装真源，别往 `~/.agents/skills/` 放实体。
 
-### 白名单安装源（12 个）
+### 白名单安装源（13 个）
 
 ```bash
 # 文件处理（Anthropic 官方）
@@ -139,6 +139,9 @@ npx skills add anthropics/skills --skill pdf xlsx docx --agent claude-code -y -g
 
 # 联网（CDP 浏览器自动化）— 详见上方 "Web-Access Skill" 章节
 git clone https://github.com/eze-is/web-access ~/.claude/skills/web-access
+
+# 设计（hallmark 防AI味设计，2026-08-27 装）：57 项 slop-test 自检 + 结构组合 + study 提取设计 DNA
+npx skills add nutlope/hallmark --agent claude-code -y -g
 
 # 防护（fable-discipline）/ 开发（frontend-design / wordpress-block-theming）
 # 已就位，非 npx 安装，见各自专节
@@ -198,8 +201,9 @@ npx skills add imlewc/video-to-subtitle-summary-skill --agent claude-code -y -g
 |------|------|------|------|
 | **frontend-design** skill | 审美决策（怎么设计才好看） | bold aesthetic 方向 + 生产级代码 | ✅ 已就位 |
 | **DESIGN.md** | 品牌视觉系统（这个项目长什么样） | 颜色/字体/组件 token | ✅ 索引已 clone |
+| **hallmark** skill（2026-08-27 增） | 防AI味执行与自检（别长一个样） | 21 结构×20 主题×50+ 组件组合 + 57 项 slop-test + audit/redesign/study 三动词 | ✅ 已就位 |
 
-两者职责互补：skill 管「设计哲学」，DESIGN.md 管「项目具象」。端到端覆盖「**审美 → 系统 → 代码**」全链路，无需第三个 MCP。
+三者职责互补：frontend-design 管「设计哲学」，DESIGN.md 管「项目具象」，hallmark 管「结构多样性 + 量化自检 + 存量页面改造」——它坚持**结构差异**而非仅视觉差异（两个不同 brief 的页面不应共享 hero→三卡→CTA→footer 同一节奏），并给已有页面提供 `audit`（只读体检）/ `redesign`（保留文案重做视觉）/ `study`（提取参考站设计 DNA，不像素级抄袭）三个动词。新页面可用 "frontend-design + DESIGN.md 定方向，hallmark 过自检" 组合。[源码 Nutlope/hallmark](https://github.com/Nutlope/hallmark) | 2.5w Star | 纯指令包无 API 依赖。
 
 > 原 Magic MCP（21st.dev）因注册不可用已放弃。组件生成这一环 Claude Code 自身就能胜任——配合 frontend-design 的审美指令直接产出 HTML/CSS/JS/React 代码。未来做 React 项目时可补装 shadcn/ui MCP（见下方可选扩展）。
 
@@ -293,7 +297,7 @@ cp ~/Downloads/DESIGN.md /path/to/project/DESIGN.md
 
 ## Skill 速查
 
-> **当前白名单（12 个，2026-07-17）**。完整管理规则、判断框架和已删黑名单见 [03-Skill设计与管理.md §5](./03-Skill设计与管理.md#5-skill-管理办法)。
+> **当前白名单（13 个，2026-08-27）**。完整管理规则、判断框架和已删黑名单见 [03-Skill设计与管理.md §5](./03-Skill设计与管理.md#5-skill-管理办法)。
 
 | 场景 | Skill | 触发词 |
 |------|-------|--------|
@@ -303,6 +307,7 @@ cp ~/Downloads/DESIGN.md /path/to/project/DESIGN.md
 | GSC 数据驱动 SEO（扫机会+深挖竞品） | **gsc-radar** | "扫一下X的机会" / "X站SEO体检" / "深挖这个关键词" |
 | GA4/GTM 埋点实施 | **analytics-tracking** | "配GA4" / "GTM埋点" / "设转化追踪" / "加事件" |
 | UI 设计（Claude Design 平替，详见专节） | **frontend-design** + DESIGN.md | "做个UI" / "建网页" / "有设计感的界面" / "用frontend-design风格" |
+| 防AI味页面（新建组合+57项自检/存量体检/重设计/DNA提取） | **hallmark** | "用hallmark做落地页" / "hallmark audit 体检{目录}" / "redesign 重做视觉" / "study 提取设计DNA" |
 | WordPress FSE 主题开发 | **wordpress-block-theming** | "改WP主题" / "建WP站" / "主题模板" |
 | 跨会话记忆 | **mem-search** / **knowledge-agent** | "上次怎么解决的" / "建知识库" |
 | 视频转字幕+AI总结（抖音/B站/YouTube/本地文件） | **video-to-subtitle-summary** | 粘贴抖音/B站/YouTube链接 / "总结这个视频" / 本地 .mp4/.mp3 文件路径 |
