@@ -91,7 +91,7 @@ HTML 卡片的 :hover 效果必须映射到容器 **hover 控件**（对照源 C
 
 | 项 | 要求 |
 |---|---|
-| nav/footer | **不进页面 JSON**（由 Theme Builder 全站统一提供）；只搬 `<main>` 内容，hero 面包屑/eyebrow 保留 |
+| nav/footer | **不进页面 JSON**（由 Theme Builder 全站统一提供）；只搬 `<main>` 内容，hero 面包屑/eyebrow 保留。原型内嵌的 header/footer（本地互链预览用，含首页全量 mega 与子页简化 header 两形态）**导入一律剥离**——首页/front page 同为 WP page，不例外（靠垫项目 2026-08-31 定案：header/footer=WoodMart Header/Footer Builder 主题级一次设置） |
 | id | slug 缩写 + 段落代号 + 类型代号 + 序号（如 `mlra00001` / `mlraw00001`），全文件唯一 |
 | 交互降级 | FAQ 折叠 → 静态卡片；CSS 类 → 内联样式（色值对照 HTML `:root`） |
 
