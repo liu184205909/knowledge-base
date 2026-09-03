@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Google Search Console</title>
+<style>
+  @font-face { font-family: 'GSans'; font-style: normal; font-weight: 400 700; src: url('fonts/googlesans.woff2') format('woff2'); }
+  @font-face { font-family: 'RobotoR'; font-style: normal; font-weight: 100 900; src: url('fonts/roboto-real.woff2') format('woff2'); }
+  @font-face { font-family: 'MIExt'; font-style: normal; font-weight: 400; src: url('fonts/material-extended.woff2') format('woff2'); }
+  .ms {
+    font-family: 'MIExt';
+    font-weight: normal; font-style: normal;
+    font-size: 20px; line-height: 1;
+    display: inline-block; white-space: nowrap;
+    direction: ltr; -webkit-font-feature-settings: 'liga'; font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'RobotoR', 'GSans', Arial, 'Microsoft YaHei', sans-serif;
+    background: #f0f4f9; color: rgba(0, 0, 0, 0.87);
+    font-size: 14px; -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== 顶栏（#E2ECFC 浅蓝） ===== */
+  .topbar { display: flex; align-items: center; gap: 14px; height: 64px; padding: 0 20px; background: #e2ecfc; }
+  .topbar .ms { color: #444746; font-size: 22px; }
+  .gsc-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+  .gsc-logo svg { width: 34px; height: 24px; }
+  .gsc-logo .name { font-family: 'GSans', Arial, sans-serif; font-size: 18px; color: #444746; font-weight: 500; }
+  .urlcheck { flex: 0 1 470px; margin-left: 18px; background: #e2ecfc; border: 1px solid #a8adb5; border-radius: 8px; height: 40px; display: flex; align-items: center; padding: 0 14px; color: #757575; font-size: 13.5px; gap: 10px; font-family: 'GSans', 'Microsoft YaHei', sans-serif; }
+  .urlcheck .ms { font-size: 17px; color: #757575; }
+  .top-right { margin-left: auto; display: flex; align-items: center; gap: 20px; }
+  .bell { position: relative; }
+  .bell .badge { position: absolute; top: -7px; right: -11px; background: #d93025; color: #fff; font-size: 9.5px; font-weight: 700; border-radius: 9px; padding: 1px 4.5px; }
+  .avatar { width: 30px; height: 30px; border-radius: 50%; background: #4285f4; color: #fff; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+
+  /* ===== 布局 ===== */
+  .layout { display: flex; align-items: stretch; }
+  .sidebar { width: 280px; background: #f0f4f9; padding: 14px 12px 30px; flex-shrink: 0; }
+  .prop-card { background: #fff; border: 1px solid #c4c7c5; border-radius: 10px; padding: 10px 14px; display: flex; align-items: center; gap: 11px; margin-bottom: 12px; }
+  .prop-card .ms { color: #444746; font-size: 20px; }
+  .prop-card .dom { font-family: 'GSans', 'Microsoft YaHei', sans-serif; font-size: 14px; color: #1f1f1f; font-weight: 500; }
+  .prop-card .caret { margin-left: auto; color: #444746; }
+  .side-item { display: flex; align-items: center; gap: 14px; height: 40px; padding: 0 16px; font-family: 'GSans', 'Microsoft YaHei', sans-serif; font-size: 14px; font-weight: 500; color: #444746; border-radius: 999px; margin: 0 8px 0 0; }
+  .side-item .ms { font-size: 20px; color: #444746; }
+  .side-item.active { background: #c2e7ff; color: #1f1f1f; }
+  .side-item.active .ms { color: #1f1f1f; }
+  .side-group { display: flex; align-items: center; height: 36px; padding: 0 16px; font-family: 'GSans', 'Microsoft YaHei', sans-serif; font-size: 14px; font-weight: 500; color: rgba(0, 0, 0, 0.54); }
+  .side-group .ms { font-size: 18px; margin-right: 14px; }
+  .side-group .chev { margin-left: auto; }
+  .sub-group { padding-left: 24px; height: 34px; font-size: 13px; }
+  .side-item.sub { padding-left: 50px; }
+  .side-sep { height: 1px; background: #dadce0; margin: 8px 14px; }
+
+  /* ===== 主区 ===== */
+  .main { flex: 1; padding: 20px 28px 28px; min-width: 0; }
+  .h1-row { display: flex; align-items: center; margin-bottom: 14px; }
+  .h1 { font-family: 'GSans', 'Microsoft YaHei', sans-serif; font-size: 20px; color: #474747; font-weight: 500; }
+  .h1-tools { margin-left: auto; display: flex; gap: 14px; align-items: center; }
+  .export-btn { display: flex; align-items: center; gap: 8px; font-family: 'GSans', 'Microsoft YaHei', sans-serif; font-size: 13px; color: #0b57d0; font-weight: 500; }
+  .bluebox { width: 28px; height: 28px; border-radius: 999px; background: #c2e7ff; display: flex; align-items: center; justify-content: center; }
+  .bluebox .ms { color: #0b57d0; font-size: 17px; }
+  .h1-tools > .ms { color: #444746; }
+
+  .filter-row { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; }
+  .seg span { padding: 5px 12px; font-family: 'GSans', 'Microsoft YaHei', sans-serif; font-size: 13px; color: #1f1f1f; margin-left: 2px; white-space: nowrap; }
+  .seg span:first-child { margin-left: 0; }
+  .seg span.on { color: #0b57d0; background: #c2e7ff; border-radius: 999px; font-weight: 600; }
+  .dropdown { border: 1px solid #747775; border-radius: 8px; padding: 5px 10px 5px 15px; font-family: 'GSans', 'Microsoft YaHei', sans-serif; font-size: 13px; color: #1f1f1f; background: transparent; white-space: nowrap; }
+  .dropdown b { font-weight: 500; }
+  .filter-fun { width: 32px; height: 30px; border-radius: 999px; background: #c2e7ff; display: flex; align-items: center; justify-content: center; }
+  .filter-fun .ms { color: #0b57d0; font-size: 18px; }
+  .reset { color: #0b57d0; font-family: 'GSans', 'Microsoft YaHei', sans-serif; font-size: 13px; }
+  .updated { margin-left: auto; font-size: 15px; color: rgba(0, 0, 0, 0.54); }
+
+  .cards { display: flex; gap: 12px; margin-bottom: 4px; }
+  .card { flex: 1; border-radius: 16px; padding: 12px 16px 8px; position: relative; height: 119px; }
+  .card.sel-blue { background: #4285f4; }
+  .card.sel-purple { background: #5e35b1; }
+  .card.unsel { background: #fff; }
+  .card .label { font-size: 13px; display: flex; align-items: center; padding-top: 6px; }
+  .sel-blue .label, .sel-purple .label { color: #fff; }
+  .unsel .label { color: rgba(0, 0, 0, 0.54); }
+  .card .cb { width: 16px; height: 16px; border-radius: 3px; display: inline-block; vertical-align: -3px; margin-right: 9px; border: 2px solid #9aa0a6; background: #fff; flex-shrink: 0; }
+  .sel-blue .cb, .sel-purple .cb { border-color: #fff; background: #fff; position: relative; }
+  .sel-blue .cb::after, .sel-purple .cb::after { content: ""; position: absolute; left: 4px; top: 1px; width: 5px; height: 9px; border: solid #1f1f1f; border-width: 0 2.5px 2.5px 0; transform: rotate(42deg); }
+  .sel-blue .cb::after { border-color: #4285f4; }
+  .sel-purple .cb::after { border-color: #5e35b1; }
+  .card .val { font-family: 'RobotoR', Arial, sans-serif; font-size: 32px; font-weight: 400; margin-top: 6px; letter-spacing: -.5px; }
+  .sel-blue .val, .sel-purple .val { color: #fff; }
+  .unsel .val { color: #1f1f1f; }
+  .card .info { position: absolute; right: 10px; bottom: 10px; }
+  .card .info .ms { font-size: 16px; }
+  .sel-blue .info .ms, .sel-purple .info .ms { color: rgba(255, 255, 255, .85); }
+  .unsel .info .ms { color: #9aa0a6; }
+  .granu { align-self: flex-start; margin-top: 4px; border: 1px solid #747775; border-radius: 999px; padding: 5px 12px; font-family: 'GSans', 'Microsoft YaHei', sans-serif; font-size: 13px; color: #1f1f1f; white-space: nowrap; display: flex; gap: 6px; align-items: center; }
+  .granu .ms { font-size: 16px; color: #444746; }
+
+  .chart-card { background: #fff; border-radius: 16px; padding: 14px 8px 6px; margin-top: 6px; }
+  .ai-banner { margin-top: 14px; background: #fff; border-radius: 12px; height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 18px; font-family: 'GSans', 'Microsoft YaHei', sans-serif; font-size: 13px; color: #1f1f1f; }
+  .ai-banner .i { width: 19px; height: 19px; border-radius: 50%; background: #0b57d0; color: #fff; font-size: 12.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: Arial; }
+  .ai-banner .link { margin-left: auto; color: #0b57d0; font-weight: 500; white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="ms">menu</span>
+  <div class="gsc-logo">
+    <img src="gsc_logo.svg" alt="Google Search Console" style="height: 26px; width: auto;">
+  </div>
+  <div class="urlcheck">
+    <span class="ms">search</span>
+    检查"<span data-c="domain"></span>"中的任何网址
+  </div>
+  <div class="top-right">
+    <span class="ms">help</span>
+    <span class="ms">manage_accounts</span>
+    <span class="bell"><span class="ms">notifications</span><span class="badge">100</span></span>
+    <span class="ms" style="font-size:21px">apps</span>
+    <div class="avatar" data-c="avatar">k</div>
+  </div>
+</div>
+
+<div class="layout">
+  <div class="sidebar">
+    <div class="prop-card">
+      <span class="ms">language</span>
+      <div class="dom" data-c="domain"></div>
+      <span class="caret ms" style="font-size:18px">arrow_drop_down</span>
+    </div>
+
+    <div class="side-item"><span class="ms" data-icon="overview">dashboard</span><span data-t="overview">数据概览</span></div>
+    <div class="side-item"><span class="ms" data-icon="insights">trending_up</span><span data-t="insights">流量趋势</span></div>
+    <div class="side-item"><span class="ms" data-icon="urlinspect">track_changes</span><span data-t="urlinspect">网址体检</span></div>
+    <div class="side-sep"></div>
+
+    <div class="side-group">效果 <span class="chev ms" style="font-size:18px">keyboard_arrow_up</span></div>
+    <div class="side-item sub active"><span class="ms" data-icon="search">show_chart</span><span data-t="search">Google 搜索表现</span></div>
+    <div class="side-item sub"><span class="ms" data-icon="discover">insights</span><span data-t="discover">Google 探索流量</span></div>
+    <div class="side-sep"></div>
+
+    <div class="side-group">编制索引 <span class="chev ms" style="font-size:18px">keyboard_arrow_up</span></div>
+    <div class="side-item sub"><span class="ms" data-icon="pages">article</span><span data-t="pages">热门页面</span></div>
+    <div class="side-item sub"><span class="ms" data-icon="video">smart_display</span><span data-t="video">视频表现</span></div>
+    <div class="side-item sub"><span class="ms" data-icon="sitemap">hub</span><span data-t="sitemap">站点地图</span></div>
+    <div class="side-item sub"><span class="ms" data-icon="removal">block</span><span data-t="removal">移除请求</span></div>
+    <div class="side-sep"></div>
+
+    <div class="side-group">体验 <span class="chev ms" style="font-size:18px">keyboard_arrow_up</span></div>
+    <div class="side-item sub"><span class="ms" data-icon="cwx">verified</span><span data-t="cwx">网页体验</span></div>
+    <div class="side-item sub"><span class="ms" data-icon="https">lock</span><span data-t="https">HTTPS</span></div>
+    <div class="side-group sub-group">增强功能 <span class="chev ms" style="font-size:18px">keyboard_arrow_up</span></div>
+    <div class="side-item sub"><span class="ms" data-icon="enh1">layers</span><span data-t="enh1">路径</span></div>
+    <div class="side-item sub"><span class="ms" data-icon="enh2">layers</span><span data-t="enh2">视频</span></div>
+    <div class="side-sep"></div>
+
+    <div class="side-group">安全问题和人工处置措施 <span class="chev ms" style="font-size:18px">keyboard_arrow_down</span></div>
+    <div class="side-sep"></div>
+
+    <div class="side-item"><span class="ms" data-icon="links">share</span><span data-t="links">外链引用</span></div>
+    <div class="side-item"><span class="ms">settings</span>设置</div>
+  </div>
+
+  <div class="main">
+    <div class="h1-row">
+      <div class="h1">在 Google 搜索结果中的表现</div>
+      <div class="h1-tools">
+        <span class="export-btn"><span class="ms" style="font-size:18px">download</span>导出</span>
+        <div class="bluebox"><span class="ms">bar_chart</span></div>
+        <span class="ms">add</span>
+      </div>
+    </div>
+
+    <div class="filter-row">
+      <div class="seg">
+        <span>24小时</span><span>7天</span><span>28天</span><span>3个月</span><span class="on" id="range-label">16个月 ▾</span>
+      </div>
+      <div class="dropdown">搜索类型：<b>网络</b> ▾</div>
+      <div class="dropdown" style="color:#0b57d0">＋ 添加过滤条件</div>
+      <div class="filter-fun"><span class="ms">filter_alt</span></div>
+      <span class="reset">重置过滤条件</span>
+      <span class="updated" data-c="updated">上次更新日期：10小时前</span>
+    </div>
+
+    <div class="cards">
+      <div class="card sel-blue">
+        <div class="label"><span class="cb"></span>总点击次数</div>
+        <div class="val" data-c="clicks">3.6千</div>
+        <div class="info"><span class="ms">help</span></div>
+      </div>
+      <div class="card sel-purple">
+        <div class="label"><span class="cb"></span>总曝光次数</div>
+        <div class="val" data-c="impr">17.5万</div>
+        <div class="info"><span class="ms">help</span></div>
+      </div>
+      <div class="card unsel">
+        <div class="label"><span class="cb"></span>平均点击率</div>
+        <div class="val" data-c="ctr">2.1%</div>
+        <div class="info"><span class="ms">help</span></div>
+      </div>
+      <div class="card unsel">
+        <div class="label"><span class="cb"></span>平均排名</div>
+        <div class="val" data-c="pos">16.0</div>
+        <div class="info"><span class="ms">help</span></div>
+      </div>
+      <div class="granu"><span class="ms">calendar_view_day</span>每日 ▾</div>
+    </div>
+
+    <div class="chart-card">
+      <svg id="chart" width="1060" height="290" viewBox="0 0 1060 290"></svg>
+    </div>
+
+    <div class="ai-banner">
+      <span class="i">i</span>
+      详细了解您的网站在 Google 搜索的生成式 AI 功能中的表现
+      <span class="link">打开报告 ›</span>
+    </div>
+  </div>
+</div>
+
+<script>
+const CFG = window.__CFG__ || {};
+document.querySelectorAll('[data-c]').forEach(el => {
+  const k = el.getAttribute('data-c');
+  if (CFG[k] !== undefined) el.textContent = CFG[k];
+});
+if (CFG.sidebar) {
+  document.querySelectorAll('[data-t]').forEach(el => {
+    const k = el.getAttribute('data-t');
+    if (CFG.sidebar[k]) el.textContent = CFG.sidebar[k];
+  });
+  document.querySelectorAll('[data-icon]').forEach(el => {
+    const k = el.getAttribute('data-icon');
+    if (CFG.sidebar[k + '_icon']) el.textContent = CFG.sidebar[k + '_icon'];
+  });
+}
+if (CFG.months) document.getElementById('range-label').textContent = CFG.months + '个月 ▾';
+
+/* ===== 确定性趋势数据 ===== */
+const T = CFG.trend || {};
+let seed = T.seed || 20260902;
+const rnd = () => (seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296;
+const parts = (T.range || ['2025-05-01', '2026-08-31']).map(s => s.split('-').map(Number));
+const start = new Date(parts[0][0], parts[0][1] - 1, parts[0][2]);
+const end = new Date(parts[1][0], parts[1][1] - 1, parts[1][2]);
+const span = end - start;
+const cb = T.clickBase || [2.5, 10.5];
+const ctrR = T.ctr || [0.015, 0.025];
+const wk = T.weekend || 1.5;
+const hol = T.holiday || 1.2;
+const days = [];
+const d0 = new Date(start);
+while (d0 <= end) {
+  const t = (d0 - start) / span;
+  const dow = d0.getDay(), m = d0.getMonth();
+  const base = cb[0] + (cb[1] - cb[0]) * Math.pow(t, 1.12);
+  const weekend = (dow === 5 || dow === 6) ? wk : (dow === 0 ? 1 + (wk - 1) * 0.45 : 1);
+  let se = 1;
+  if (m === 10 || m === 11) se = hol;
+  if (m === 0 || m === 1) se = 0.92;
+  const clicks = Math.max(1, Math.round(base * weekend * se * (0.84 + rnd() * 0.32)));
+  const ctr = ctrR[0] + (ctrR[1] - ctrR[0]) * t;
+  const impr = Math.round(clicks / (ctr * (0.9 + rnd() * 0.2)));
+  days.push({ d: new Date(d0), clicks, impr });
+  d0.setDate(d0.getDate() + 1);
+}
+
+/* ===== 双轴 SVG（GSC 实测：线 #4285F4/#5E35B1 宽2、无网格、轴字 12px） ===== */
+const svg = document.getElementById('chart');
+const W = +svg.getAttribute('width'), H = +svg.getAttribute('height');
+const L = 40, R = 54, Tp = 10, B = 28;
+const pw = W - L - R, ph = H - Tp - B;
+const maxC = T.maxClicks || 24, maxI = T.maxImpr || 800;
+const X = i => L + (i / (days.length - 1)) * pw;
+const YC = v => Tp + ph - (v / maxC) * ph;
+const YI = v => Tp + ph - (v / maxI) * ph;
+const P = (k, yf) => days.map((x, i) => X(i).toFixed(1) + ',' + yf(x[k]).toFixed(1)).join(' ');
+const NS = 'http://www.w3.org/2000/svg';
+const mk = (tag, attrs, text) => {
+  const el = document.createElementNS(NS, tag);
+  for (const k in attrs) el.setAttribute(k, attrs[k]);
+  if (text !== undefined) el.textContent = text;
+  return el;
+};
+const frag = document.createDocumentFragment();
+[0, maxC / 4, maxC / 2, maxC * 3 / 4, maxC].forEach(v => {
+  frag.appendChild(mk('text', { x: L - 7, y: YC(v) + 4, 'text-anchor': 'end', 'font-size': 12, fill: '#5f6368', 'font-family': "'RobotoR',Arial" }, String(Math.round(v))));
+});
+[0, maxI / 4, maxI / 2, maxI * 3 / 4, maxI].forEach(v => {
+  frag.appendChild(mk('text', { x: W - R + 7, y: YI(v) + 4, 'font-size': 12, fill: '#5f6368', 'font-family': "'RobotoR',Arial" }, v >= 1000 ? (v / 1000).toFixed(1).replace('.0', '') + '千' : String(Math.round(v))));
+});
+const fd = d => d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate();
+const step = Math.max(56, Math.ceil(days.length / 6 / 7) * 7);
+for (let i = 0; i < days.length; i += step) {
+  frag.appendChild(mk('text', { x: X(i), y: H - 9, 'text-anchor': 'middle', 'font-size': 12, fill: '#5f6368', 'font-family': "'RobotoR',Arial" }, fd(days[i].d)));
+}
+frag.appendChild(mk('path', { d: 'M' + L + ',' + (Tp + ph) + ' L' + (W - R) + ',' + (Tp + ph), stroke: '#dadce0', 'stroke-width': 1, fill: 'none' }));
+frag.appendChild(mk('polyline', { points: P('impr', YI), fill: 'none', stroke: '#5e35b1', 'stroke-width': 2 }));
+frag.appendChild(mk('polyline', { points: P('clicks', YC), fill: 'none', stroke: '#4285f4', 'stroke-width': 2 }));
+svg.appendChild(frag);
+window.__RENDER_OK__ = days.length;
+</script>
+</body>
+</html>

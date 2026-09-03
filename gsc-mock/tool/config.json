@@ -1,0 +1,33 @@
+{
+  "domain": "takusushibar.com",
+  "avatar": "k",
+  "months": 16,
+  "clicks": "3.6千",
+  "impr": "17.5万",
+  "ctr": "2.1%",
+  "pos": "16.0",
+  "updated": "上次更新日期：10小时前",
+  "sidebar": {
+    "overview": "数据概览", "overview_icon": "dashboard",
+    "insights": "流量趋势", "insights_icon": "trending_up",
+    "urlinspect": "网址体检", "urlinspect_icon": "track_changes",
+    "search": "搜索表现", "search_icon": "show_chart",
+    "discover": "探索流量", "discover_icon": "insights",
+    "pages": "热门页面", "pages_icon": "article",
+    "video": "视频表现", "video_icon": "smart_display",
+    "sitemap": "站点地图", "sitemap_icon": "hub",
+    "removal": "移除请求", "removal_icon": "block",
+    "cwx": "网页体验", "cwx_icon": "verified",
+    "links": "外链引用", "links_icon": "share"
+  },
+  "trend": {
+    "range": ["2025-05-01", "2026-08-31"],
+    "clickBase": [2.5, 10.5],
+    "ctr": [0.015, 0.025],
+    "weekend": 1.5,
+    "holiday": 1.2,
+    "maxClicks": 24,
+    "maxImpr": 800,
+    "seed": 20260902
+  }
+}

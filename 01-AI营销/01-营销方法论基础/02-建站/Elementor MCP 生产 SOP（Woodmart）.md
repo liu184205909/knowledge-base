@@ -67,15 +67,12 @@ add-free-widget (heading / text-editor / image / button / icon-box / image-box /
 
 ### 2.1 wd_section_stretch 必传场景
 
-**所有 section 顶层容器都要传**（不只是 Hero）：
+**所有 section 顶层容器都要传**（不只是 Hero）。`wd_section_stretch` 控制的是**背景全宽**；`content_width` 按内容需求二选一（cushionmill 2026-09-01 用户裁定）：
 
-```json
-{
-  "wd_section_stretch": "stretch",
-  "content_width": "full",
-  ...
-}
-```
+| 场景 | content_width | 说明 |
+|---|---|---|
+| **长文档内容页（品类页等，默认）** | `"boxed"` | 背景全宽、内容居中约束——一层容器完成，无需内层 wrap 容器。**内容宽度由主题全局设置决定（如 1120/1200），不在页面 JSON 里写死** |
+| 背景图/装饰铺满型 hero | `"full"` | 内容真铺满（水晶站用法） |
 
 **例外**：如果你**故意**让某个 section 内容居中（如 CTA 内层 wrapper），不要在**内层**传 stretch——只在 section 顶层传。
 
@@ -107,6 +104,18 @@ add-free-widget (heading / text-editor / image / button / icon-box / image-box /
 | Row 子容器 width（4 列） | 23% | 45% | 100% |
 | Row 子容器 width（3 列） | 31% | 45% | 100% |
 | Row 子容器 width（2 列） | 48% | 100% | 100% |
+
+### 3.1b section padding 三档 + hero 负 margin 铁律（2026-09-01 cushionmill 定案）
+
+**大 container（section 顶层容器）padding 统一三档**（上下值；左右 0——内容宽由 boxed 界定）：
+
+| 档位 | padding |
+|---|---|
+| desktop | `{"unit":"px","top":"80","right":"10","bottom":"80","left":"10","isLinked":false}` |
+| tablet | `{"unit":"px","top":"60","right":"10","bottom":"60","left":"10","isLinked":false}` |
+| mobile | `{"unit":"px","top":"40","right":"10","bottom":"40","left":"10","isLinked":false}` |
+
+**hero 例外（铁律，2026-09-01 用户裁定）**：hero section 设 `margin: {"unit":"px","top":"-40","right":"0","bottom":"0","left":"0","isLinked":false}` 上拉贴 header（消除页面顶部空隙）。**负 margin 只有 hero 生效，其它任何 section/容器禁用**。
 
 ### 3.2 容器视觉字段（容易跳过）
 
@@ -215,6 +224,13 @@ add-free-widget (heading / text-editor / image / button / icon-box / image-box /
 | **12** | **EMCP 后台开关变更后 MCP 工具不可用** | **开关变更不触发 MCP 客户端重连** | **重启 Claude Code / Cursor** |
 | **13** | **REST API / MCP update-post 不触发 Elementor CSS 重生** | **WordPress save_post hook ≠ Elementor CSS 重生。CSS 重生需要 Elementor 的 `CSS_File::update_file()` 方法，只有编辑器保存或 WP-CLI 才调用** | **更新 post meta 不够；必须走 Elementor 内部保存流程或清缓存** |
 | **14** | **EMCP CSS 重生机制（代码级分析）** | **EMCP 有两层：1) 优先 `Document::save()`（触发 CSS 重生） 2) Fallback：直接写 meta + 删 CSS 文件（让 Elementor 下次访问重生）。但页面缓存（LiteSpeed/Cloudflare）会阻止"下次访问重生"** | **见坑 #11 解决方案** |
+| **15** | **Code Snippets REST PUT 更新会静默失活**：PUT 任意字段（含传 `active:true`）返回 200 但 snippet 变 `active:false`；带 PHP code_error 的 snippet 也被强制失活。曾致 v2 设计系统 CSS 全住在失活 snippet 里——页面样式"反复修复永不生效"的总根源（cushionmill 2026-09-01 实锤，38/9/30/59 号连环踩） | Code Snippets REST API 的 PUT 不处理 active 字段 | **激活唯一路径 = 删旧 + POST 新建**（POST 的 active:true 可靠）；改内容也走删旧重建，用完即删 |
+| **16** | **wp-admin 表单通道（插件上传等）App Password 登不进**：App Password 只覆盖 REST/XMLRPC 认证，不创建浏览器 cookie 登录态，playwright 模拟表单上传必失败 | 认证体系差异 | 文件类部署（插件 assets 更新）走 **Code Snippets 一次性 PHP**：POST 新建 active snippet，`file_put_contents` base64 载荷直写目标文件，前台 GET 触发执行，验证后 DELETE（cushionmill 工具 v1.9.53+ 部署通道） |
+
+| **17** | **CF 对同 URL 的 CSS/JS 缓存 7 天：内容变更不 bump 版本 = 用户永远看旧文件**（cushionmill 工具 v1.9.52 部署后同 URL 再改内容，cf-cache HIT 拦截） | `?ver=` 参数不变则 URL 不变，CF 按旧 URL 回源缓存 | **文件内容任何变更必须 bump 版本参数换 URL**（插件=CD_VERSION+Plugin Version 双处；CSS/JS 文件=改名或加查询参数） |
+| **18** | **TB conditions 格式陷阱**：`singular/post`（无 include/ 前缀）被 parse_condition 解析为 exclude 而**静默不接管**（页面继续走主题默认模板）；且 conditions 写入后必须调 `Conditions_Manager->save_conditions()` 触发缓存重建（get_cache() 只是内存态，"缓存空"是伪信号） | Elementor 条件解析首段语义 | 条件一律写 **`include/singular/post`** 完整格式；写完走 save_conditions 管线（cushionmill TB 32823 实锤，evapcryst 生产站 meta 对照证实） |
+| **19** | **TB 接管后 WoodMart 页头残留**（大图+分类+双 H1+meta）：TB 只接管 body 内容区，主题 single 页头照出 | 主题与 TB 的分工边界 | snippet 挂 `template_redirect` 时机 filter `woodmart_option`（single post 时 single_post_design=default + page_title=false）——filter 不能全局挂（早期调用污染主查询）；另留 CSS `.single-post .wd-page-title{display:none}` 双保险（cushionmill 32823） |
+| **20** | **html_block（WoodMart HTML Block）承载 Elementor 组件的可行性**：menu 引用的 mega block 若要组件化，需 block 可被 Elementor 编辑且前台 the_content 渲染走 Elementor 管线——预研先行，不可行则列表语义用 Elementor Template 承载 | WoodMart block 与 Elementor 文档上下文差异 | 组件化 mega 前先拿一个 block 试验 Elementor 化渲染（cushionmill 29197-29201 组件化工程 2026-09-02） |
 
 ### CSS 重生问题总结与产品化修复
 

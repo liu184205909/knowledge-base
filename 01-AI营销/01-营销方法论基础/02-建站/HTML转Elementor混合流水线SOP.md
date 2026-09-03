@@ -12,6 +12,7 @@
 | 层 | 工具/规则 | 时机 |
 |---|---|---|
 | **页面结构/视觉层** | **hallmark skill**（`~/.claude/skills/`，装机与分工见 [01-Claude-Code环境配置.md](../../../00-基础能力/01-Claude-Code环境配置.md) UI 设计三件套节） | 原型生成时：默认走 hallmark 设计流（21 结构×20 主题×50+ 组件组合 + 57 项 slop-test 自检，拒绝 hero 渐变+居中标题+三列圆角卡套路）；存量原型用 `hallmark audit {目录}` 体检出 punch list；竞品参考用 `hallmark study {URL/截图}` 提取设计 DNA（不像素级抄袭） |
+| **CSS 专业度** | [HTML原型UI设计标准.md](./HTML原型UI设计标准.md)（同目录）——**在生成 HTML 时生效**（写进生成器/agent prompt），本表仅作**兜底**抽查（万一漏网） | 生成时：模板/生成器须内置标准中的 40 行 CSS；转换前：抽查 3-5 页确认 |
 | 布局保真层 | `html-layout-extract` skill（§1.6） | JSON 生成前必跑 |
 | 图片层 | §1.7 提示词纪律（candid documentary / 避免完美对称与霓虹蓝光） | 每次生图 |
 
@@ -37,6 +38,8 @@
 4. **改后三步验证**：写入 → 触发 CSS 重编译（batch-update + add/remove 容器）→ 抓线上编译 CSS 确认规则输出，任何一环不落都视同未生效
 
 **例外（仅两种情况允许 CSS）**：① 组件确实无对应控件（如 nav-menu 下拉无 line-height）——最小化写在该区块所属模板的 Custom CSS 统一管理；② 站级布局 hack（如 sticky header）——集中在 header 模板 Custom CSS。**禁止在页面级/容器级散落 Custom CSS**。
+
+**类管理禁令（2026-09-01 用户裁定，cushionmill 实证）**：JSON 禁写 `css_classes`/`_css_classes` 自定义类锚点、html widget 仅限表格——曾因"全局 CSS+类锚点"捷径叠加 Code Snippets PUT 失活坑（样式死在失活 snippet），造成页面样式反复修不生效。样式差异先 `get-widget-schema` 查组件控件键名；确无控件的用通用选择器+`elementor-element-{id}` 定位最小 CSS（不挂自定义类）。
 
 ---
 
@@ -131,7 +134,7 @@ HTML 卡片的 :hover 效果必须映射到容器 **hover 控件**（对照源 C
 
 ```
 ① REST 建页（draft，含 slug/parent）或复用已有页
-② SQL 补 meta：_elementor_edit_mode=builder（wppi_postmeta INSERT——REST 写不持久、emcp 保存会清掉它；缺此键 Elementor 前端不接管，内容退化裸 HTML、post-XX.css 永不生成）
+② SQL 补 meta：_elementor_edit_mode=builder（wppi_postmeta INSERT——REST 写不持久、emcp 保存会清掉它；缺此键 Elementor 前端不接管，内容退化裸 HTML、post-XX.css 永不生成）。**⚠️ 新建页必查**：REST 新建的页面天然无此键，import-template 成功+CSS 生成也不渲染（前台继续输出 post_content 旧 HTML 假装"导入失败"；靠垫 4 新页实锤——curl grep `e-con` 命中内联 CSS 文本会误判已渲染，验证必须 DOM 查询 `.e-con` 元素数）
 ③ import-template 导入 JSON content（大文件分批；Windows 下大 body 走临时文件避开 32K 命令行限制）
 ④ batch-update 重写各顶层容器 padding（四边平铺格式）
 ⑤ add-container → remove-element 一次
@@ -150,7 +153,11 @@ HTML 卡片的 :hover 效果必须映射到容器 **hover 控件**（对照源 C
 2. **draft 状态下写入的扁平数据，publish 切换时会被 Elementor 保存流程迁回嵌套**——扁平化 batch-update 必须在 **publish 状态下**执行才持久（正确顺序：publish → batch 扁平化 → 渲染验证 → 切回 draft 前复核计数）
 3. **"邻页 CSS 被回滚"的真相是 Cloudflare 对裸 URL 的独立缓存**（2026-08-17 按钮批量修复实测证伪"重编译队列回滚"假说）：页面实际引用的是 `post-XX.css?ver=<新版本号>` URL（永远新版），裸抓 `post-XX.css` 命中的是 CF 缓存的旧版。**终验必须抓页面 HTML 提取其中的 `?ver=` URL 再抓 CSS**，不要裸抓 CSS 文件名；裸 URL 结果异常时先怀疑 CF 缓存再怀疑数据
 
-**⚠️ 重导警告**：`delete-page-content` + 重新 import = 全新导入，**该页之前所有线上手工修复（padding/hover/组件设置）全部被清掉**，必须从 ③ 重新走完 ③④⑤，且 padding 一律四边平铺格式。
+**⚠️ 重导警告**：`delete-page-content` + 重新 import = 全新导入，**该页之前所有线上手工修复（padding/hover/组件设置）全部被清掉**，必须从 ③ 重新走完 ③④⑤，且 padding 一律四边平铺格式。**误覆盖人工修改的找回通道（2026-09-01 实战验证）**：WP revisions 保留每次保存的 `_elementor_data`——`GET /wp-json/wp/v2/pages/{id}/revisions` 找到手改时间点 → 拉 `GET /revisions/{rid}?context=edit` 的 `meta._elementor_data` → MCP import-template 写回。**纪律：用户人工修改期间，禁止对该页跑 delete/import。**
+
+**渲染层锚点漂移坑（2026-09-02 cushionmill TB 实锤）**：Theme Builder 模板接管单页渲染后，正文容器类会变（WoodMart 默认模板的 `.wd-entry-content` 在 TB `theme-post-content` widget 渲染下不存在）——**挂在旧容器类上的全量 CSS 规则集体失锚**（症状：字体/链接样式/H2 全回默认，用户观感像"内链消失"）。规矩：换渲染模板（默认→TB）必须同步核对样式 snippet 的容器锚；snippet 选择器用 `:is(旧锚, 新锚)` 多锚并列兼容。另：`* { font-family: inherit !important }` 的通配继承要与 `:not(h1):not(h2)...` 排除标题——class 型 :not 会抬特异度压过标题规则（同 important 下 inherit 抢赢）。
+
+**浏览器端 JSON 装载乱码坑（2026-09-01 实锤）**：MCP-over-HTTP 大载荷走 base64 时，`JSON.parse(atob(b64))` 会把所有多字节字符（—/±/½/″ 等）变成 mojibake——**atob 返回 Latin-1 字符串**。正解：`JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(b64), c=>c.charCodeAt(0))))`。
 
 ---
 

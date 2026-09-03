@@ -1,0 +1,50 @@
+[
+  {
+    "source_type": "twitter",
+    "source_name": "@denohawari",
+    "title": "our client’s language app was pulling in millions of views on TikTok but NOBODY was finding them on ",
+    "content": "our client’s language app was pulling in millions of views on TikTok but NOBODY was finding them on Google\n\none algorithm change could take away their views and ruin their entire business\n\nso we built them something the algorithm couldn't take away:\n\n- a landing page for every… pic.twitter.com/8RPHDPIMC2",
+    "url": "https://x.com/denohawari/status/2094777041413361982",
+    "id": "de132e436518",
+    "fetched_at": "2026-09-02T17:11:07.030227",
+    "media_type": "text",
+    "media_url": null,
+    "score": 0,
+    "priority": "normal",
+    "category": "",
+    "tags": [],
+    "processed": false,
+    "digest_date": null,
+    "title_cn": null,
+    "content_cn": null,
+    "extra": {
+      "likes": 0,
+      "retweets": 0,
+      "fetch_method": "oembed"
+    }
+  },
+  {
+    "source_type": "twitter",
+    "source_name": "",
+    "title": "已置顶\nLily Ray 😏\n@lilyraynyc\n4月2日\nBig announcement!  After 16 years in SEO, today I'm launching someth",
+    "content": "已置顶\nLily Ray 😏\n@lilyraynyc\n4月2日\nBig announcement!  After 16 years in SEO, today I'm launching something I've been building toward for a long time. 🥳   \n\nIntroducing Algorythmic: my new SEO and AI search consultancy.  \n\nFor the past decade+, I've led award-winning SEO teams at agencies. I've spoken at ~100 Show more\n121\n34\n735\n5.8万",
+    "url": "https://x.com/lilyraynyc",
+    "id": "d26b6cc5c54c",
+    "fetched_at": "2026-09-02T17:11:45.065170",
+    "media_type": "text",
+    "media_url": null,
+    "score": 0,
+    "priority": "normal",
+    "category": "",
+    "tags": [],
+    "processed": false,
+    "digest_date": null,
+    "title_cn": null,
+    "content_cn": null,
+    "extra": {
+      "likes": 0,
+      "retweets": 0,
+      "fetch_method": "playwright"
+    }
+  }
+]

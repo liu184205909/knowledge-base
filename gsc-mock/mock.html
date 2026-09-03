@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Google Search Console - takusushibar.com</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Segoe UI", Roboto, "Google Sans", "Microsoft YaHei", system-ui, sans-serif; background: #fff; color: #202124; -webkit-font-smoothing: antialiased; }
+
+  /* ===== 顶部栏 ===== */
+  .topbar { display: flex; align-items: center; gap: 14px; height: 64px; padding: 0 20px; background: #fff; border-bottom: 1px solid #e8eaed; }
+  .topbar .burger { width: 20px; height: 20px; flex-shrink: 0; }
+  .gsc-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+  .gsc-logo svg { width: 34px; height: 24px; }
+  .gsc-logo .name { font-size: 18px; color: #5f6368; font-weight: 400; letter-spacing: .2px; }
+  .urlcheck { flex: 0 1 480px; margin-left: 20px; background: #f1f3f4; border-radius: 8px; height: 40px; display: flex; align-items: center; padding: 0 16px; color: #5f6368; font-size: 13.5px; gap: 10px; }
+  .top-right { margin-left: auto; display: flex; align-items: center; gap: 20px; color: #5f6368; }
+  .bell { position: relative; }
+  .bell .badge { position: absolute; top: -7px; right: -10px; background: #d93025; color: #fff; font-size: 9.5px; font-weight: 700; border-radius: 9px; padding: 1px 4.5px; }
+  .avatar { width: 30px; height: 30px; border-radius: 50%; background: #1a73e8; color: #fff; font-size: 14px; font-weight: 600; display: flex; align-items: center; justify-content: center; }
+
+  /* ===== 两栏 ===== */
+  .layout { display: flex; align-items: stretch; }
+  /* 侧栏 */
+  .sidebar { width: 252px; background: #f8f9fa; border-right: 1px solid #e8eaed; padding: 12px 10px 30px; flex-shrink: 0; }
+  .prop-card { background: #fff; border: 1px solid #dadce0; border-radius: 8px; padding: 10px 12px; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .prop-card .globe { width: 30px; height: 30px; border-radius: 50%; background: #e8f0fe; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .prop-card .globe svg { width: 16px; height: 16px; stroke: #1967d2; fill: none; stroke-width: 1.7; }
+  .prop-card .dom { font-size: 13.5px; color: #202124; font-weight: 500; }
+  .prop-card .caret { margin-left: auto; color: #5f6368; font-size: 11px; }
+  .side-item { display: flex; align-items: center; gap: 13px; height: 42px; padding: 0 14px; font-size: 13.5px; color: #3c4043; border-radius: 0 20px 20px 0; }
+  .side-item svg { width: 18px; height: 18px; stroke: #5f6368; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+  .side-item.active { background: #e8f0fe; color: #1967d2; font-weight: 600; }
+  .side-item.active svg { stroke: #1967d2; }
+  .side-item .g-icon { width: 19px; height: 19px; flex-shrink: 0; }
+  .side-group { display: flex; align-items: center; height: 36px; padding: 0 14px; font-size: 13px; color: #3c4043; font-weight: 500; }
+  .side-group .chev { margin-left: auto; color: #5f6368; font-size: 10px; }
+  .side-item.sub { padding-left: 46px; }
+  .side-sep { height: 1px; background: #e8eaed; margin: 8px 14px; }
+
+  /* 主区 */
+  .main { flex: 1; padding: 20px 30px 36px; min-width: 0; }
+  .h1-row { display: flex; align-items: center; margin-bottom: 14px; }
+  .h1 { font-size: 21.5px; color: #202124; font-weight: 400; }
+  .h1-tools { margin-left: auto; display: flex; gap: 12px; align-items: center; }
+  .h1-tools svg { width: 19px; height: 19px; stroke: #5f6368; fill: none; stroke-width: 1.6; }
+  .h1-tools .bluebox { width: 28px; height: 28px; border-radius: 6px; background: #1a73e8; display: flex; align-items: center; justify-content: center; }
+  .h1-tools .bluebox svg { width: 15px; height: 15px; stroke: #fff; stroke-width: 2; }
+
+  /* 过滤行 */
+  .filter-row { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
+  .seg { display: flex; align-items: center; }
+  .seg span { padding: 6px 11px; font-size: 12.5px; color: #3c4043; background: #fff; border: 1px solid #dadce0; margin-left: -1px; white-space: nowrap; }
+  .seg span:first-child { border-radius: 5px 0 0 5px; margin-left: 0; }
+  .seg span.on { color: #1967d2; border-color: #1a73e8; font-weight: 600; box-shadow: inset 0 0 0 1px #1a73e8; position: relative; z-index: 1; border-radius: 0; }
+  .seg span:last-child { border-radius: 0 5px 5px 0; }
+  .dropdown { border: 1px solid #dadce0; border-radius: 5px; padding: 6px 12px; font-size: 12.5px; color: #3c4043; background: #fff; white-space: nowrap; }
+  .dropdown b { font-weight: 600; color: #202124; }
+  .filter-fun { width: 32px; height: 30px; border-radius: 5px; background: #e8f0fe; border: 1px solid #c6dafc; display: flex; align-items: center; justify-content: center; }
+  .filter-fun svg { width: 15px; height: 15px; stroke: #1967d2; fill: none; stroke-width: 1.8; }
+  .reset { color: #1a73e8; font-size: 12.5px; }
+  .updated { margin-left: auto; font-size: 12px; color: #5f6368; }
+
+  /* 指标卡 */
+  .cards { display: flex; gap: 12px; margin-bottom: 6px; }
+  .card { flex: 1; border-radius: 12px; padding: 14px 16px 16px; position: relative; min-height: 88px; }
+  .card.sel-blue { background: #1a73e8; }
+  .card.sel-purple { background: #9334e6; }
+  .card.unsel { background: #fff; border: 1px solid #dadce0; }
+  .card .label { font-size: 13px; display: flex; align-items: center; }
+  .sel-blue .label, .sel-purple .label { color: #fff; }
+  .unsel .label { color: #3c4043; }
+  .card .cb { width: 15px; height: 15px; border-radius: 3px; display: inline-block; vertical-align: -2.5px; margin-right: 9px; border: 2px solid #9aa0a6; background: #fff; }
+  .sel-blue .cb { border-color: #fff; background: #fff; position: relative; }
+  .sel-purple .cb { border-color: #fff; background: #fff; position: relative; }
+  .sel-blue .cb::after, .sel-purple .cb::after { content: ""; position: absolute; left: 3.5px; top: .5px; width: 5px; height: 8.5px; border: solid #1a73e8; border-width: 0 2px 2px 0; transform: rotate(42deg); }
+  .sel-purple .cb::after { border-color: #9334e6; }
+  .card .val { font-size: 25px; font-weight: 500; margin-top: 12px; letter-spacing: -.3px; }
+  .sel-blue .val, .sel-purple .val { color: #fff; }
+  .unsel .val { color: #202124; }
+  .card .info { position: absolute; right: 11px; bottom: 10px; font-size: 12px; }
+  .sel-blue .info, .sel-purple .info { color: rgba(255,255,255,.8); }
+  .unsel .info { color: #9aa0a6; }
+  .granu { align-self: flex-start; margin-top: 6px; border: 1px solid #dadce0; border-radius: 5px; padding: 6px 12px; font-size: 12.5px; color: #3c4043; background: #fff; white-space: nowrap; }
+
+  /* 图表 */
+  .chart-area { padding: 6px 6px 2px; }
+  .ai-banner { margin-top: 18px; background: #f1f3f4; border-radius: 8px; height: 46px; display: flex; align-items: center; gap: 12px; padding: 0 18px; font-size: 13px; color: #3c4043; }
+  .ai-banner .i { width: 19px; height: 19px; border-radius: 50%; background: #1a73e8; color: #fff; font-size: 12.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .ai-banner .link { margin-left: auto; color: #1a73e8; font-weight: 500; white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <svg class="burger" viewBox="0 0 24 24" fill="none" stroke="#5f6368" stroke-width="1.7" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  <div class="gsc-logo">
+    <svg viewBox="0 0 40 26" fill="none" stroke-linecap="round" stroke-width="3.2">
+      <path d="M2 21 C6 9, 10 22, 14 12" stroke="#4285f4"/>
+      <path d="M14 12 C17 4.5, 20 8, 22 11" stroke="#ea4335"/>
+      <path d="M22 11 C24.5 14.5, 28 17, 31 12" stroke="#fbbc05"/>
+      <path d="M31 12 C33 8, 35 7, 38 6.5" stroke="#34a853"/>
+    </svg>
+    <span class="name">Google Search Console</span>
+  </div>
+  <div class="urlcheck">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#5f6368" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.5-4.5"/></svg>
+    检查“takusushibar.com”中的任何网址
+  </div>
+  <div class="top-right">
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.3a2.5 2.5 0 1 1 3.4 2.3c-.8.3-.9 1-.9 1.6"/><circle cx="12" cy="16.8" r=".4" fill="currentColor"/></svg>
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="8" r="3.4"/><path d="M4.5 20c.8-3.2 3-5 5.5-5s4.7 1.8 5.5 5"/><path d="M17.5 9.5l3.5 2-3.5 2"/></svg>
+    <span class="bell">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 9.5a6 6 0 1 0-12 0c0 5-2 6-2 6h16s-2-1-2-6"/><path d="M10.3 19.5a2 2 0 0 0 3.4 0"/></svg>
+      <span class="badge">100</span>
+    </span>
+    <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><circle cx="5.5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="18.5" cy="12" r="1.7"/><circle cx="5.5" cy="5.8" r="1.7"/><circle cx="12" cy="5.8" r="1.7"/><circle cx="18.5" cy="5.8" r="1.7"/><circle cx="5.5" cy="18.2" r="1.7"/><circle cx="12" cy="18.2" r="1.7"/><circle cx="18.5" cy="18.2" r="1.7"/></svg>
+    <div class="avatar">k</div>
+  </div>
+</div>
+
+<div class="layout">
+  <!-- 侧栏 -->
+  <div class="sidebar">
+    <div class="prop-card">
+      <div class="globe">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 2.6 14.2 0 17M12 3.5c-2.6 2.4-2.6 14.2 0 17"/></svg>
+      </div>
+      <div class="dom">takusushibar.com</div>
+      <span class="caret">▼</span>
+    </div>
+
+    <div class="side-item">
+      <svg viewBox="0 0 24 24"><path d="M4 11l8-7 8 7"/><path d="M6.5 9.5V20h11V9.5"/></svg>
+      概述
+    </div>
+    <div class="side-item">
+      <svg viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 1 3.5 10.9c-.8.6-1 1.4-1 2.1h-5c0-.7-.2-1.5-1-2.1A6 6 0 0 1 12 3z"/><path d="M9.8 19h4.4"/></svg>
+      数据洞见
+    </div>
+    <div class="side-item">
+      <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
+      网址检查
+    </div>
+    <div class="side-sep"></div>
+
+    <div class="side-group">效果 <span class="chev">▾</span></div>
+    <div class="side-item sub active">
+      <svg class="g-icon" viewBox="0 0 24 24">
+        <path fill="#EA4335" d="M12 5.04c1.62 0 3.06.56 4.2 1.66l3.14-3.14C17.4 1.79 14.9.72 12 .72 7.7.72 3.99 3.19 2.18 6.79l3.66 2.84C6.71 7.02 9.14 5.04 12 5.04z"/>
+        <path fill="#4285F4" d="M23.5 12.27c0-.85-.08-1.66-.22-2.45H12v4.64h6.45c-.28 1.5-1.12 2.77-2.4 3.62l3.65 2.83c2.13-1.97 3.8-4.87 3.8-8.64z"/>
+        <path fill="#FBBC05" d="M5.84 14.37A7.2 7.2 0 0 1 5.46 12c0-.82.14-1.61.38-2.37L2.18 6.79A11.28 11.28 0 0 0 1 12c0 1.82.44 3.55 1.18 5.09l3.66-2.72z"/>
+        <path fill="#34A853" d="M12 23.28c3.06 0 5.63-1.01 7.5-2.74l-3.65-2.83c-1.01.68-2.3 1.08-3.85 1.08-2.86 0-5.29-1.93-6.16-4.53l-3.66 2.84c1.81 3.6 5.52 6.18 9.82 6.18z"/>
+      </svg>
+      Google 搜索结果
+    </div>
+    <div class="side-item sub">
+      <svg viewBox="0 0 24 24"><path d="M12 4l1.9 5.4L19.5 11l-5.6 1.6L12 18l-1.9-5.4L4.5 11l5.6-1.6z"/></svg>
+      Google 探索
+    </div>
+    <div class="side-sep"></div>
+
+    <div class="side-group">编制索引 <span class="chev">▾</span></div>
+    <div class="side-item sub">
+      <svg viewBox="0 0 24 24"><path d="M6 3.5h8.5L19 8v12.5H6z"/><path d="M14 3.5V8h5"/><path d="M9 12.5h6M9 16h6"/></svg>
+      网页
+    </div>
+    <div class="side-item sub">
+      <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="13" rx="2"/><path d="M10.5 9l5 2.5-5 2.5z"/></svg>
+      视频
+    </div>
+    <div class="side-item sub">
+      <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1.5"/><path d="M4 10h16M10 4v16"/></svg>
+      站点地图
+    </div>
+    <div class="side-item sub">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M6 6l12 12"/></svg>
+      移除
+    </div>
+    <div class="side-sep"></div>
+    <div class="side-group">体验 <span class="chev">▾</span></div>
+    <div class="side-item sub">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.2 12.3l2.6 2.6 5-5.4"/></svg>
+      核心网页指标
+    </div>
+    <div class="side-sep"></div>
+
+    <div class="side-item">
+      <svg viewBox="0 0 24 24"><path d="M9.5 14.5l5-5M8 12l-2 2 1.5 4.5L12 17l8-8-5-5-8 8z"/><path d="M6 18l-2 2"/></svg>
+      链接
+    </div>
+    <div class="side-item">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1 1.55V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1-1.55 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.87 1.7 1.7 0 0 0-1.55-1H3a2 2 0 1 1 0-4h.09a1.7 1.7 0 0 0 1.55-1 1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.87.34h0a1.7 1.7 0 0 0 1-1.55V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1 1.55h0a1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.87v0a1.7 1.7 0 0 0 1.55 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.55 1z"/></svg>
+      设置
+    </div>
+  </div>
+
+  <!-- 主区 -->
+  <div class="main">
+    <div class="h1-row">
+      <div class="h1">在 Google 搜索结果中的表现</div>
+      <div class="h1-tools">
+        <svg viewBox="0 0 24 24"><path d="M12 4v11M7.5 10.5L12 15l4.5-4.5M4.5 19.5h15"/></svg>
+        <div class="bluebox"><svg viewBox="0 0 24 24"><path d="M5 19V9M10 19V5M15 19v-7M20 19v-4"/></svg></div>
+        <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+      </div>
+    </div>
+
+    <div class="filter-row">
+      <div class="seg">
+        <span>24小时</span><span>7天</span><span>28天</span><span>3个月</span><span>6个月</span><span>12个月</span><span class="on">16个月 ▾</span>
+      </div>
+      <div class="dropdown">搜索类型：<b>网络</b> ▾</div>
+      <div class="dropdown" style="color:#1a73e8">＋ 添加过滤条件</div>
+      <div class="filter-fun">
+        <svg viewBox="0 0 24 24"><path d="M4 5h16l-6.2 7.4v5.1L10.2 20v-7.6z"/></svg>
+      </div>
+      <span class="reset">重置过滤条件</span>
+      <span class="updated">上次更新日期：10小时前</span>
+    </div>
+
+    <div class="cards">
+      <div class="card sel-blue">
+        <div class="label"><span class="cb"></span>总点击次数</div>
+        <div class="val" id="v-clicks">—</div>
+        <div class="info">ⓘ</div>
+      </div>
+      <div class="card sel-purple">
+        <div class="label"><span class="cb"></span>总曝光次数</div>
+        <div class="val" id="v-impr">—</div>
+        <div class="info">ⓘ</div>
+      </div>
+      <div class="card unsel">
+        <div class="label"><span class="cb"></span>平均点击率</div>
+        <div class="val" id="v-ctr">—</div>
+        <div class="info">ⓘ</div>
+      </div>
+      <div class="card unsel">
+        <div class="label"><span class="cb"></span>平均排名</div>
+        <div class="val" id="v-pos">—</div>
+        <div class="info">ⓘ</div>
+      </div>
+      <div class="granu">每日 ▾</div>
+    </div>
+
+    <div class="chart-area">
+      <svg id="chart" width="1120" height="336" viewBox="0 0 1120 336"></svg>
+    </div>
+
+    <div class="ai-banner">
+      <span class="i">i</span>
+      详细了解您的网站在 Google 搜索的生成式 AI 功能中的表现
+      <span class="link">打开报告 ›</span>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---------- 确定性数据生成（本地餐厅量级·下调版，整体上涨） ---------- */
+let seed = 20260902;
+const rnd = () => (seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296;
+
+const start = new Date(2025, 4, 6);   // 2025-05-06
+const end   = new Date(2026, 8, 1);   // 2026-09-01
+const span  = end - start;
+const days = [];
+for (let d = new Date(start); d <= end; d.setDate(d.getDate() + 1)) {
+  const t = (d - start) / span;                       // 0 → 1
+  const dow = d.getDay(), m = d.getMonth();
+  let clickBase = 2.5 + 8 * Math.pow(t, 1.12);        // 2.5 → 10.5（月点击 ~75 → ~315）
+  const weekend = (dow === 5 || dow === 6) ? 1.5 : (dow === 0 ? 1.2 : 1);   // 周五六峰值（餐厅）
+  let seasonal = 1;
+  if (m === 10 || m === 11) seasonal = 1.2;           // 假日季小高峰
+  if (m === 0 || m === 1) seasonal = 0.92;            // 年初回落
+  const noise = 0.84 + rnd() * 0.32;
+  const clicks = Math.max(1, Math.round(clickBase * weekend * seasonal * noise));
+  const ctr = 0.015 + 0.010 * t;                      // 1.5% → 2.5%（混合加权 ≈2%）
+  const impr = Math.round(clicks / (ctr * (0.9 + rnd() * 0.2)));
+  const pos = Math.max(8, 22 - 10.5 * t + (rnd() - 0.5) * 3);    // 22 → 11.5（加权 ≈16）
+  days.push({ date: new Date(d), clicks, impr, pos });
+}
+
+/* ---------- 汇总指标 ---------- */
+const totC = days.reduce((s, x) => s + x.clicks, 0);
+const totI = days.reduce((s, x) => s + x.impr, 0);
+const fmt = n => n >= 10000 ? (n / 10000).toFixed(1).replace(/\.0$/, '') + '万'
+                            : n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + '千' : String(Math.round(n));
+document.getElementById('v-clicks').textContent = fmt(totC);
+document.getElementById('v-impr').textContent = fmt(totI);
+document.getElementById('v-ctr').textContent = (totC / totI * 100).toFixed(1) + '%';
+const avgPos = days.reduce((s, x) => s + x.pos * x.impr, 0) / totI;
+document.getElementById('v-pos').textContent = avgPos.toFixed(1);
+
+/* ---------- 双轴折线 SVG ---------- */
+const W = 1120, H = 336, L = 46, R = 56, T = 12, B = 32;
+const pw = W - L - R, ph = H - T - B;
+const maxC = 24, maxI = 800;   // 左/右轴量程（本地餐厅日量级·下调版）
+const x = i => L + (i / (days.length - 1)) * pw;
+const yC = v => T + ph - (v / maxC) * ph;
+const yI = v => T + ph - (v / maxI) * ph;
+const pts = (key, yf) => days.map((d, i) => x(i).toFixed(1) + ',' + yf(d[key]).toFixed(1)).join(' ');
+
+let g = '';
+[0, 6, 12, 18, 24].forEach(v => {
+  const yy = yC(v);
+  g += `<line x1="${L}" y1="${yy}" x2="${W - R}" y2="${yy}" stroke="#f1f3f4" stroke-width="1"/>`;
+  g += `<text x="${L - 8}" y="${yy + 4}" text-anchor="end" font-size="11.5" fill="#5f6368">${v}</text>`;
+});
+[0, 200, 400, 600, 800].forEach(v => {
+  const yy = yI(v);
+  g += `<text x="${W - R + 10}" y="${yy + 4}" font-size="11.5" fill="#5f6368">${v >= 1000 ? (v/1000).toFixed(1).replace('.0','') + '千' : v}</text>`;
+});
+const fmtD = d => `${d.getFullYear()}/${d.getMonth() + 1}/${d.getDate()}`;
+for (let i = 0; i < days.length; i += 56) {
+  g += `<text x="${x(i)}" y="${H - 10}" text-anchor="middle" font-size="11.5" fill="#5f6368">${fmtD(days[i].date)}</text>`;
+  g += `<line x1="${x(i)}" y1="${T + ph}" x2="${x(i)}" y2="${T + ph + 4}" stroke="#9aa0a6"/>`;
+}
+g += `<polyline points="${pts('impr', yI)}" fill="none" stroke="#9334e6" stroke-width="1.8" opacity="0.85"/>`;
+g += `<polyline points="${pts('clicks', yC)}" fill="none" stroke="#1a73e8" stroke-width="2"/>`;
+g += `<line x1="${L}" y1="${T + ph}" x2="${W - R}" y2="${T + ph}" stroke="#dadce0"/>`;
+document.getElementById('chart').innerHTML = g;
+</script>
+</body>
+</html>
