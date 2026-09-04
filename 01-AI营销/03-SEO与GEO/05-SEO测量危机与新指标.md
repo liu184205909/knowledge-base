@@ -136,6 +136,8 @@ David Quaid 直指 GEO 工具行业存在**利益冲突**：
 - 类比：知道 X 人经过你的广告牌，但不知道他们是否看了你的广告、是否因此采取了行动
 - **品牌搜索量增长**是目前唯一可靠的 AI 归因替代指标
 
+**黑洞加重（2026-09-03 实证）**：Google 向 AI Mode 订阅者推送 Gemini 3.8 Flash 模型后，Gagan Ghotra 实测多个 TOFU 查询**零链接零引用**，Glenn Gabe 对比确认（3.8 Flash 无引用 vs 默认模型有）——引用可见性开始取决于 Google 用哪个模型服务查询，模型层变化可直接抹掉全部引用流量（来源：[seroundtable](https://www.seroundtable.com/google-ai-mode-gemini-38-no-links-42011.html)，行业媒体 + 实测截图）。
+
 ### 突破：Google GMC AI Performance 报告（2026.06）
 
 > 来源：赛门快跑 EP.140 + Google 官方公告
