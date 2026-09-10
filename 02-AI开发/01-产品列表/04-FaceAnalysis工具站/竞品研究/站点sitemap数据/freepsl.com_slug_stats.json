@@ -1,0 +1,34 @@
+{
+ "url_total": 9,
+ "page_types": {
+  "static_page_or_hub": 8,
+  "tool": 1
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 8
+ },
+ "top_level_dirs": {
+  "/ (root)": 1,
+  "/about": 1,
+  "/contact": 1,
+  "/hunter-eye-test": 1,
+  "/pricing": 1,
+  "/privacy": 1,
+  "/psl-app": 1,
+  "/refunds": 1,
+  "/terms": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://freepsl.com/",
+  "https://freepsl.com/about",
+  "https://freepsl.com/contact",
+  "https://freepsl.com/hunter-eye-test",
+  "https://freepsl.com/pricing",
+  "https://freepsl.com/privacy",
+  "https://freepsl.com/psl-app",
+  "https://freepsl.com/refunds",
+  "https://freepsl.com/terms"
+ ]
+}

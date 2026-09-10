@@ -1,0 +1,32 @@
+{
+ "url_total": 48,
+ "page_types": {
+  "static_page_or_hub": 12,
+  "tool": 16,
+  "blog_post": 20
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 2,
+  "2": 45
+ },
+ "top_level_dirs": {
+  "/blog": 37,
+  "/help-center": 7,
+  "/legal": 3,
+  "/ (root)": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://maxxing.me/",
+  "https://maxxing.me/blog",
+  "https://maxxing.me/blog/age-detector",
+  "https://maxxing.me/blog/age-from-photo",
+  "https://maxxing.me/blog/ai-age-detector",
+  "https://maxxing.me/blog/ai-age-guesser",
+  "https://maxxing.me/blog/ai-face-analysis",
+  "https://maxxing.me/blog/ai-face-rater",
+  "https://maxxing.me/blog/am-i-attractive",
+  "https://maxxing.me/blog/am-i-pretty"
+ ]
+}

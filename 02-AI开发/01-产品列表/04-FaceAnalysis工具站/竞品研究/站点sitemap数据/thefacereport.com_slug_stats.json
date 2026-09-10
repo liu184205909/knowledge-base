@@ -1,0 +1,37 @@
+{
+ "url_total": 85,
+ "page_types": {
+  "static_page_or_hub": 7,
+  "blog_post": 51,
+  "tool": 27
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 7,
+  "2": 76,
+  "3": 1
+ },
+ "top_level_dirs": {
+  "/guides": 54,
+  "/tools": 25,
+  "/ (root)": 1,
+  "/credits": 1,
+  "/pricing": 1,
+  "/privacy": 1,
+  "/sample-report": 1,
+  "/terms": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://thefacereport.com",
+  "https://thefacereport.com/credits",
+  "https://thefacereport.com/guides",
+  "https://thefacereport.com/guides/areum-alternative",
+  "https://thefacereport.com/guides/beard-styles-face-shape",
+  "https://thefacereport.com/guides/better-cheekbones",
+  "https://thefacereport.com/guides/bright-spring-color-palette",
+  "https://thefacereport.com/guides/bright-winter-color-palette",
+  "https://thefacereport.com/guides/collagen-supplements-face",
+  "https://thefacereport.com/guides/deep-autumn-color-palette"
+ ]
+}

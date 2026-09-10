@@ -1,0 +1,43 @@
+{
+ "url_total": 32,
+ "page_types": {
+  "static_page_or_hub": 15,
+  "tool": 8,
+  "blog_post": 9
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 18,
+  "2": 13
+ },
+ "top_level_dirs": {
+  "/blog": 10,
+  "/ethnicity-test": 4,
+  "/looksmax": 2,
+  "/ (root)": 1,
+  "/about-us": 1,
+  "/all-ai-tools": 1,
+  "/api": 1,
+  "/app": 1,
+  "/contact": 1,
+  "/de": 1,
+  "/es": 1,
+  "/face_shape": 1,
+  "/facial-symmetry-test": 1,
+  "/fr": 1,
+  "/golden-ratio-test": 1
+ },
+ "discovered_via": "probe",
+ "sample_urls": [
+  "https://attractivenesstest.com/",
+  "https://attractivenesstest.com/about-us",
+  "https://attractivenesstest.com/all-ai-tools",
+  "https://attractivenesstest.com/api",
+  "https://attractivenesstest.com/app",
+  "https://attractivenesstest.com/blog",
+  "https://attractivenesstest.com/blog/How%20the%20app%20works",
+  "https://attractivenesstest.com/blog/How%20to%20Appear%20more%20Attractive",
+  "https://attractivenesstest.com/blog/How%20to%20Truly%20Look%20Attractive%20in%20your%20Next%20Photo",
+  "https://attractivenesstest.com/blog/How%20to%20get%20more%20matches%20on%20dating%20apps"
+ ]
+}

@@ -65,7 +65,7 @@
 |------|------|
 | [外链资产库](01-AI营销/05-外链资产库/README.md) | 跨项目复用的外链资产积累（平台清单 + 发布记录 + 效果追踪） |
 
-#### 03-SEO与GEO（8 篇）
+#### 03-SEO与GEO（17 篇，2026-09-10 精简：核心 6 篇如下，全量见 [目录 README](01-AI营销/03-SEO与GEO/README.md)）
 
 | # | 文档 | 说明 |
 |---|------|------|
@@ -73,10 +73,8 @@
 | 02 | [Google SEO核心机制](01-AI营销/03-SEO与GEO/02-Google-SEO核心机制.md) | 三源交叉验证：DOJ + CW API Leak + MWC Exploit |
 | 03 | [AI Citation优化策略](01-AI营销/03-SEO与GEO/03-AI%20Citation优化策略.md) | GEO 7 大支柱、各平台引用机制（核心文档） |
 | 04 | [实体与知识图谱理论](01-AI营销/03-SEO与GEO/04-实体与知识图谱理论.md) | 6 信号模型 + 6 步工作流 |
-| 05 | [SEO测量危机与新指标](01-AI营销/03-SEO与GEO/05-SEO测量危机与新指标.md) | 流量下降判断矩阵、AI 可见性指标 |
-| 06 | [AI时代的Local-SEO](01-AI营销/03-SEO与GEO/06-AI时代的Local-SEO.md) | GBP 优化清单、Schema 标记模板 |
-| 07 | [BrightonSEO 2026 数据溯源](01-AI营销/03-SEO与GEO/07-BrightonSEO-April-2026-数据溯源.md) | BrightonSEO April 2026 会议数据来源 |
-| 08 | [SEO Week核心知识](01-AI营销/03-SEO与GEO/08-SEO-Week核心知识.md) | Relevance Engineering、Agent Experience |
+| 05 | [SEO测量危机与新指标](01-AI营销/03-SEO与GEO/05-SEO测量危机与新指标.md) | 流量下降判断矩阵、AI 可见性指标（含漂移监控附录） |
+| 06 | [AI时代的Local-SEO](01-AI营销/03-SEO与GEO/06-AI时代的Local-SEO.md) | GBP 优化清单、多地点品牌 GEO 框架 |
 
 #### 04-选品库
 

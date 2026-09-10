@@ -1,0 +1,79 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+"""SEO 工具分类 hub（slug=seo，parent=tools → /tools/seo/）
+用法：python build_seo_hub_page.py（创建或更新，slug 定位）"""
+import json, io, sys
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+css = """
+#kjg-seo-hub{position:relative;left:50%;transform:translateX(-50%);width:calc(100vw - 36px);max-width:960px;margin:24px 0;font-family:system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;color:#0b0b0b}
+.seo-breadcrumb{font-size:12.5px;color:#898781;margin-bottom:14px}
+.seo-breadcrumb a{color:#52514e;text-decoration:none}
+.seo-breadcrumb a:hover{color:#2a78d6}
+.seo-hero h1{font-size:24px;margin:0 0 8px}
+.seo-hero p{font-size:14px;color:#52514e;margin:0 0 10px;line-height:1.75}
+.seo-catsub{font-size:13px;color:#52514e;background:#fff;border:1px solid #e1e0d9;border-radius:10px;padding:14px 18px;margin:0 0 24px;line-height:1.8}
+.seo-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:26px}
+.seo-card{display:block;background:#fff;border:1px solid #e1e0d9;border-radius:10px;padding:16px 18px;text-decoration:none;color:#0b0b0b;transition:border-color .15s,box-shadow .15s}
+.seo-card:hover{border-color:#2a78d6;box-shadow:0 2px 10px rgba(42,120,214,.12)}
+.seo-card .t{font-size:15.5px;font-weight:700;margin-bottom:5px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.seo-card .t .tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:99px;background:#e7f4ec;color:#0a6b2d;border:1px solid #bfe3cd;font-weight:600}
+.seo-card .d{display:block;font-size:13px;color:#52514e;line-height:1.65}
+.seo-foot{font-size:12px;color:#898781;margin-top:16px}
+@media(max-width:640px){.seo-grid{grid-template-columns:1fr}}
+"""
+
+cards = (
+    '<a class="seo-card" href="/tools/seo-tools/dr-radar/"><span class="t">全球网站权威生态雷达</span>'
+    '<span class="d">基于自建的全球 Top 100 万域名权威数据库（Ahrefs DR），月度更新。核心功能是批量外链验资——把外链资源清单贴进来，逐个输出权威档位与采购建议，自动标记批量灌制的假权威域名；另附 DR 换算表、可疑域名密度图与月度崛起/掉榜雷达。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/dr-checker/"><span class="t">DR Checker 实时域名权威查询</span>'
+    '<span class="d">直连 Ahrefs 官方免费接口，实时返回任意域名的 Domain Rating（不限是否入榜）。比官方查询页多做一步：进入全球权威榜的域名，额外给出全球排名与百分位，方便外链合作与竞对评估时快速定位。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/llms-txt-generator/"><span class="t">llms.txt 生成器</span>'
+    '<span class="d">为独立站生成标准 llms.txt，把站点结构与核心页面清单直接交给 ChatGPT、Perplexity 等 AI 引擎——GEO（生成式引擎优化）的基建动作。填站点信息与页面分组即可生成，支持一键复制与下载，上传根目录即生效。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/robots-txt-generator/"><span class="t">robots.txt 生成器（含 AI 爬虫名单）</span>'
+    '<span class="d">按爬虫分组设置允许 / 禁止目录，一键生成标准 robots.txt。内置 GPTBot、ClaudeBot、PerplexityBot 等主流 AI 爬虫 UA 名单与用途速查——想被 AI 引用还是防 AI 训练，自己说了算。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/json-ld-generator/"><span class="t">JSON-LD 结构化数据生成器</span>'
+    '<span class="d">选 Schema 类型、填表、一键生成完整 JSON-LD 代码块，内置语法校验。覆盖 Organization、LocalBusiness、Article、FAQ、Service、Product 六大跨境站常用结构化数据类型。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/utm-builder/"><span class="t">UTM 链接构建器</span>'
+    '<span class="d">填落地页与五个 UTM 参数，实时生成完整追踪链接，让 GA4 看清每条流量从哪来。内置 Google / Facebook / 邮件常用预设，参数自动小写规范化，避免归因因大小写不一致而分叉。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/hreflang-generator/"><span class="t">hreflang 标签生成器</span>'
+    '<span class="d">为多语言独立站生成完整的一组 hreflang 互指标签，并自动做互指完整性检查：语言代码格式、绝对 URL、重复指向、自指与 x-default 缺失提醒。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/robots-checker/"><span class="t">Robots.txt 检测器</span>'
+    '<span class="d">输入任意域名，实时解析其 robots.txt：规则总数、User-agent 分组、sitemap 声明，以及 GPTBot / ClaudeBot / PerplexityBot / CCBot 等 14 个主流 AI 爬虫的抓取权限对照——判断一个站点对搜索引擎和 AI 助手分别开放到什么程度。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/security-header-checker/"><span class="t">安全响应头检测</span>'
+    '<span class="d">实测任意网页的六项 HTTP 安全头（HSTS / CSP / X-Frame-Options / X-Content-Type-Options / Referrer-Policy / Permissions-Policy），输出评分等级与逐项修复建议。建站上线与技术审计的例行检查项。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/redirect-tracer/"><span class="t">重定向链追踪器</span>'
+    '<span class="d">逐跳追踪任意 URL 实际经历的每一次 301/302/307/308 重定向：状态码、目标地址、跳数与最终落点，最多 10 跳并自动检测环路。迁移换域名、改 URL 结构、排查收录异常前的必查项。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/meta-extractor/"><span class="t">Meta 标签提取器</span>'
+    '<span class="d">一键提取任意页面全部关键 meta：Title 与 Description（含长度校验）、Canonical、Open Graph 分享卡、hreflang 多语言声明、viewport、H1 数量。发布前自检与竞品页面逆向都用得上。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/sitemap-extractor/"><span class="t">Sitemap 提取器</span>'
+    '<span class="d">自动定位任意站点的 sitemap.xml（index 自动展开一层子表），统计 URL 总数、子表结构与 lastmod 月度更新分布——评估站点内容规模与活跃度，选品调研与竞品分析的第一步。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/ai-bot-checker/"><span class="t">AI 爬虫访问检测</span>'
+    '<span class="d">分别以 Googlebot / GPTBot / ClaudeBot / PerplexityBot / CCBot 五个身份实测访问你的站点，并列展示 robots 协议规则与服务器实际拦截——揪出「嘴上没禁、防火墙实拦」的 GEO 隐形杀手。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/query-fanout/"><span class="t">查询扇出生成器</span>'
+    '<span class="d">输入一个核心关键词，GLM 大模型生成三组扩展各 5 条：同义改写、隐含查询、子问题——关键词调研、内容集群规划、FAQ 选题的起手式，把一个词展开成一个主题的完整搜索意图面。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/pagespeed-check/"><span class="t">PageSpeed 性能检测</span>'
+    '<span class="d">调 Google PageSpeed Insights 官方接口，一次测出移动/桌面两端的 Lighthouse 四项评分、LCP/INP/CLS 核心指标与按预估收益排序的优化建议——独立站速度体检与竞站对比的通用尺子。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/dns-lookup/"><span class="t">DNS 记录查询</span>'
+    '<span class="d">A/AAAA/MX/TXT/NS/CNAME/SOA 七类记录一次查全，走 Google DoH 公共接口。域名接入、邮箱配置、SPF/DKIM 验证排查时，先看这里确认解析是否已生效。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/whois-lookup/"><span class="t">Whois 域名信息</span>'
+    '<span class="d">基于 RDAP 免费协议查询任意域名的注册商、注册/到期日与域名状态。域名交易谈判、竞对调查、判断一个站点是新站还是老站，先查注册时间再下结论。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/wayback-check/"><span class="t">Wayback 历史快照</span>'
+    '<span class="d">查询任意 URL 在 Internet Archive 的存档年份分布与各年快照数，直达最近一次存档。研究竞对网站的改版史、评估老域名的真实历史内容，全靠它。</span></a>'
+    '<a class="seo-card" href="/tools/seo-tools/serp-preview/"><span class="t">SERP 预览器</span>'
+    '<span class="d">模拟 Google 搜索结果页的标题与描述截断，桌面/移动双预览，实时校验 Title 与 Description 长度是否溢出——改 TKD 前先看一眼真实展示效果。</span></a>')
+
+
+html = ('<div id="kjg-seo-hub">\n<style>' + css + '</style>\n'
+  '<div class="seo-breadcrumb"><a href="/">首页</a> › <a href="/tools/">在线工具</a> › 工具列表</div>\n'
+  '<div class="seo-hero">\n<h1>跨境谷工具列表</h1>\n'
+  '<p>面向做 Google SEO 的跨境卖家与独立站运营者：19 个工具覆盖域名权威评估、外链尽调、GEO 与技术 SEO 生成器、技术检测四大类，全部免费即开即用。</p>\n</div>\n'
+  '<div class="seo-catsub"><strong>怎么选：</strong>评估单个域名的权威值 → 用 DR Checker 实时查询；手里有一批外链资源要筛选、或想看权威榜的宏观分布与月度变化 → 用权威生态雷达。两者数据同源（Domain Rating by Ahrefs），实时查询走官方接口，榜单分析走我们月度处理的全量数据库。GEO 与技术 SEO 生成器（llms.txt / robots.txt / JSON-LD / UTM / hreflang）即开即用，无数据依赖。</div>\n'
+  f'<div class="seo-grid">\n{cards}\n</div>\n\n'
+  '<div class="seo-foot">数据来源：Domain Rating by Ahrefs · <a href="/tools/" style="color:#898781">全部工具</a> · 跨境谷 kuajinggu.com</div>\n'
+  '</div>')
+
+payload = {"title": "工具列表 - 跨境谷在线工具箱", "slug": "seo-tools", "status": "publish", "content": html}
+io.open('seo_hub_payload.json', 'w', encoding='utf-8').write(json.dumps(payload, ensure_ascii=False))
+print('seo hub payload ready:', len(html))

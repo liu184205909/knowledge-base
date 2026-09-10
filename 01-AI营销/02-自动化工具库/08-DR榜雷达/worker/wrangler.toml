@@ -1,0 +1,8 @@
+name = "dr-radar"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dr-radar"
+database_id = "2936a004-96f8-4812-878d-b3ffb01fe7ad"

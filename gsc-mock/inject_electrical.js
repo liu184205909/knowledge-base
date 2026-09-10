@@ -9,10 +9,11 @@
 
     /* ---- 1. 指标数值 ×3（CTR/排名/域名保持正版） ---- */
     const vmap = {
-      '1.5万': '4.5万',
-      '319万': '562万',
-      '0.5%': '0.8%',
-      'electricalcabinet.net': 'eabel.com'
+      '1.5万': '65.2万',
+      '319万': '2037万',
+      '0.5%': '3.2%',
+      '20.7': '12.8',
+      'electricalcabinet.net': 'crystals.com'
     };
     const applyTexts = function () {
       const tw = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
@@ -23,7 +24,7 @@
           n.nodeValue = n.nodeValue.replace(t, vmap[t]);
           log.texts[t] = (log.texts[t] || 0) + 1;
         } else if (t.indexOf('electricalcabinet') >= 0) {
-          n.nodeValue = n.nodeValue.split('electricalcabinet.net').join('eabel.com').split('electricalcabinet').join('www.eabel');
+          n.nodeValue = n.nodeValue.split('electricalcabinet.net').join('crystals.com').split('electricalcabinet').join('crystals');
           log.texts['dom-frag'] = (log.texts['dom-frag'] || 0) + 1;
         }
       }
@@ -31,14 +32,14 @@
         ['placeholder', 'title', 'aria-label', 'alt'].forEach(function (a) {
           const v = el.getAttribute && el.getAttribute(a);
           if (v && v.indexOf('electricalcabinet') >= 0) {
-            el.setAttribute(a, v.split('electricalcabinet.net').join('eabel.com'));
+            el.setAttribute(a, v.split('electricalcabinet.net').join('crystals.com'));
           }
         });
       });
       document.querySelectorAll('img').forEach(function (img) {
         const s = img.src || '';
         if (s.indexOf('electricalcabinet') >= 0 || (s.indexOf('favicons') >= 0 && img.getBoundingClientRect().width < 60)) {
-          img.src = 'https://www.google.com/s2/favicons?sz=32&domain=eabel.com';
+          img.src = 'https://www.google.com/s2/favicons?sz=32&domain=crystals.com';
           img.srcset = '';
         }
       });
@@ -64,19 +65,23 @@
         const t = (d0 - start) / span;
         const dow = d0.getDay();
         const m = d0.getMonth();
-        const base = 62 + 60 * t;                     // 62 → 122 更缓的线性上升（均值93 ≈ 4.5万/484天）
-        const weekend = (dow === 0 || dow === 6) ? 0.62 : 1;   // B2B：周末低谷
+        // Semrush 走势复刻：2025/5 爬升(22K/月) → 2025/12 峰值(58K/月) → 2026 上半年回落震荡(45K/月) → 尾部陡升(87.5K/月)
+        let base;
+        if (t < 0.45) base = 730 + 1200 * Math.pow(t / 0.45, 1.2);
+        else if (t < 0.88) base = 1930 - 430 * (t - 0.45) / 0.43;
+        else base = 1500 + 1400 * (t - 0.88) / 0.12;
+        const weekend = (dow === 0 || dow === 6) ? 1.2 : 1;    // C端：周末略高
         let se = 1;
-        if (m === 10 || m === 11) se = 1.05;          // 年末微峰
-        const clicks = Math.max(1, Math.round(base * weekend * se * (0.92 + rnd() * 0.16)));
-        const ctr = 0.0072 + 0.0016 * t;              // 0.72% → 0.88%（加权≈0.8%）
+        if (m === 10 || m === 11) se = 1.06;          // 年末假日加持
+        const clicks = Math.max(1, Math.round(base * weekend * se * (0.9 + rnd() * 0.2)));
+        const ctr = 0.028 + 0.008 * t;                // 2.8% → 3.6%（加权≈3.2%，C端电商）
         const impr = Math.round(clicks / (ctr * (0.93 + rnd() * 0.14)));
         days.push({ d: new Date(d0), clicks: clicks, impr: impr });
         d0.setDate(d0.getDate() + 1);
       }
       const L = 40, R = 58, T = 10, B = 26;
       const pw = W - L - R, ph = H - T - B;
-      const maxC = 200, maxI = 18000;
+      const maxC = 3200, maxI = 100000;
       const X = function (i) { return L + (i / (days.length - 1)) * pw; };
       const YC = function (v) { return T + ph - (v / maxC) * ph; };
       const YI = function (v) { return T + ph - (v / maxI) * ph; };
@@ -87,11 +92,11 @@
         if (text !== undefined) el.textContent = text;
         return el;
       };
-      [0, 50, 100, 150, 200].forEach(function (v) {
+      [0, 800, 1600, 2400, 3200].forEach(function (v) {
         frag.appendChild(mk('text', { x: L - 6, y: YC(v) + 4, 'text-anchor': 'end', 'font-size': 12, fill: '#5f6368', 'font-family': 'Roboto,Arial' }, String(v)));
       });
-      [0, 4500, 9000, 13500, 18000].forEach(function (v) {
-        const lbl = v === 0 ? '0' : v >= 10000 ? (v / 10000).toFixed(v % 10000 ? 2 : 0).replace(/\.?0+$/, '') + '万' : (v / 1000).toFixed(1).replace(/\.0$/, '') + '千';
+      [0, 25000, 50000, 75000, 100000].forEach(function (v) {
+        const lbl = v === 0 ? '0' : v >= 10000 ? (v / 10000).toFixed(v % 10000 ? 1 : 0).replace(/\.0$/, '') + '万' : (v / 1000).toFixed(1).replace(/\.0$/, '') + '千';
         frag.appendChild(mk('text', { x: W - R + 6, y: YI(v) + 4, 'font-size': 12, fill: '#5f6368', 'font-family': 'Roboto,Arial' }, lbl));
       });
       const fd = function (d) { return d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate(); };
@@ -133,7 +138,7 @@
         }
         ov.style.left = (b.right + 9) + 'px';
         ov.style.top = (b.top + b.height / 2 - 11) + 'px';
-        ov.textContent = 'eabel.com';
+        ov.textContent = 'crystals.com';
       }
       const inp = [...document.querySelectorAll('input')].find(function (i) {
         return ((i.placeholder || '').indexOf('检查') >= 0 || (i.placeholder || '').indexOf('electrical') >= 0) && i.getBoundingClientRect().width > 200;
@@ -149,7 +154,7 @@
         }
         ov2.style.left = (b.left + 46) + 'px';
         ov2.style.top = (b.top + b.height / 2 - 11) + 'px';
-        ov2.textContent = '检查"eabel.com"中的任何网址';
+        ov2.textContent = '检查"crystals.com"中的任何网址';
       }
     };
 

@@ -1,0 +1,86 @@
+name: dr-radar-monthly
+on:
+  schedule:
+    - cron: '17 3 1 * *'  # 每月 1 号 UTC 3:17 = 北京 11:17
+  workflow_dispatch: {}
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 1. Export live D1 as prev snapshot (上期真源)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx -y wrangler d1 export dr-radar --remote --table=dr --output=prev.sql
+          python import_sql.py prev.sql dr_top1m_prev.sqlite
+
+      - name: 2. Pull fresh Top1M & rebuild local db
+        env:
+          AHREFS_API_KEY: ${{ secrets.AHREFS_API_KEY }}
+        run: bash refresh.sh
+
+      - name: 3. Diff monthly report
+        run: python diff.py --label $(date +%Y-%m)
+
+      - name: 4. Recompute stats & push to D1
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          HTTPS_PROXY: ''
+        run: python push_stats.py --as-of $(date +%Y-%m-%d)
+
+      - name: 5. Full reimport fresh data to D1 (dr 表逐批)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          HTTPS_PROXY: ''
+        run: |
+          python - <<'EOF'
+          # 全量重导 dr 表：先清空再批量 INSERT（复用 d1_http_import 的语句尺寸纪律：1200 行/条）
+          import sqlite3, os, json, urllib.request, time, sys
+          sys.stdout.reconfigure(encoding='utf-8')
+          DB_ID='2936a004-96f8-4812-878d-b3ffb01fe7ad'
+          E={'CLOUDFLARE_API_TOKEN':os.environ['CLOUDFLARE_API_TOKEN'],'CLOUDFLARE_ACCOUNT_ID':os.environ['CLOUDFLARE_ACCOUNT_ID']}
+          url=f"https://api.cloudflare.com/client/v4/accounts/{E['CLOUDFLARE_ACCOUNT_ID']}/d1/database/{DB_ID}/query"
+          def api(sql):
+              body=json.dumps({'sql':sql}).encode()
+              req=urllib.request.Request(url,data=body,method='POST',headers={'Authorization':'Bearer '+E['CLOUDFLARE_API_TOKEN'],'Content-Type':'application/json'})
+              with urllib.request.urlopen(req,timeout=120) as r:
+                  d=json.load(r)
+              if not d.get('success'): raise RuntimeError(str(d.get('errors'))[:200])
+              return d
+          api('DELETE FROM dr')
+          db=sqlite3.connect('dr_top1m.sqlite')
+          rows=db.execute('SELECT domain, dr, "rank" FROM dr').fetchall()
+          print('to import:',len(rows))
+          t0=time.time(); ok=0
+          for i in range(0,len(rows),1200):
+              chunk=rows[i:i+1200]
+              vals=','.join("('"+d.replace("'","''")+"',"+str(dr)+","+str(r)+")" for d,dr,r in chunk)
+              for att in range(5):
+                  try:
+                      api('INSERT INTO dr VALUES '+vals); ok+=len(chunk); break
+                  except Exception as e:
+                      if att==4: raise
+                      time.sleep(10*(2**att))
+              if (i//1200)%100==0: print(f'{ok}/{len(rows)} {time.time()-t0:.0f}s',flush=True)
+          c=api('SELECT COUNT(*) c FROM dr')['result'][0]['results'][0]['c']
+          assert c==len(rows), f'COUNT mismatch {c}!={len(rows)}'
+          print('D1 dr reimported & verified:',c)
+          EOF
+
+      - name: 6. Commit monthly report
+        run: |
+          git config user.name "dr-radar-bot"
+          git config user.email "action@github.com"
+          git add reports/ 2>/dev/null || true
+          git commit -m "monthly: $(date +%Y-%m) diff report & data refresh" || echo "nothing to commit"
+          git push

@@ -1,0 +1,58 @@
+{
+ "domain": "coloranalysislab.com",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://coloranalysislab.com/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://coloranalysislab.com/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 32
+  }
+ ],
+ "page_urls": [
+  "https://coloranalysislab.com",
+  "https://coloranalysislab.com/photo",
+  "https://coloranalysislab.com/colour-analysis-quiz",
+  "https://coloranalysislab.com/gold-or-silver-test",
+  "https://coloranalysislab.com/undertone-test",
+  "https://coloranalysislab.com/hair-color-quiz",
+  "https://coloranalysislab.com/what-colors-look-good-on-me",
+  "https://coloranalysislab.com/blog",
+  "https://coloranalysislab.com/blog/skin-color-chart",
+  "https://coloranalysislab.com/blog/best-colors-for-pale-skin",
+  "https://coloranalysislab.com/blog/cool-skin-tone-colors",
+  "https://coloranalysislab.com/blog/beige-skin-tone-colors",
+  "https://coloranalysislab.com/blog/colors-for-olive-skin",
+  "https://coloranalysislab.com/blog/dark-skin-tone-color-palette",
+  "https://coloranalysislab.com/blog/12-season-color-analysis",
+  "https://coloranalysislab.com/blog/16-season-color-analysis",
+  "https://coloranalysislab.com/blog/korean-color-analysis",
+  "https://coloranalysislab.com/blog/ai-color-analysis",
+  "https://coloranalysislab.com/result/light-spring",
+  "https://coloranalysislab.com/result/true-spring",
+  "https://coloranalysislab.com/result/bright-spring",
+  "https://coloranalysislab.com/result/light-summer",
+  "https://coloranalysislab.com/result/true-summer",
+  "https://coloranalysislab.com/result/soft-summer",
+  "https://coloranalysislab.com/result/soft-autumn",
+  "https://coloranalysislab.com/result/true-autumn",
+  "https://coloranalysislab.com/result/dark-autumn",
+  "https://coloranalysislab.com/result/bright-winter",
+  "https://coloranalysislab.com/result/true-winter",
+  "https://coloranalysislab.com/result/dark-winter",
+  "https://coloranalysislab.com/privacy",
+  "https://coloranalysislab.com/terms"
+ ],
+ "stats": {
+  "total_loc": 32,
+  "pages": 32,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

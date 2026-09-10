@@ -1,0 +1,40 @@
+{
+ "domain": "photoverdict.com",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://photoverdict.com/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://photoverdict.com/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 14
+  }
+ ],
+ "page_urls": [
+  "https://photoverdict.com",
+  "https://photoverdict.com/dating-profile-photos",
+  "https://photoverdict.com/dating-photo-mistakes",
+  "https://photoverdict.com/rate-my-dating-profile",
+  "https://photoverdict.com/rate-my-photo",
+  "https://photoverdict.com/dating-profile-review",
+  "https://photoverdict.com/tinder-photos",
+  "https://photoverdict.com/hinge-photos",
+  "https://photoverdict.com/bumble-photos",
+  "https://photoverdict.com/blurry-tinder-photos",
+  "https://photoverdict.com/review",
+  "https://photoverdict.com/review/sample",
+  "https://photoverdict.com/privacy",
+  "https://photoverdict.com/terms"
+ ],
+ "stats": {
+  "total_loc": 14,
+  "pages": 14,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

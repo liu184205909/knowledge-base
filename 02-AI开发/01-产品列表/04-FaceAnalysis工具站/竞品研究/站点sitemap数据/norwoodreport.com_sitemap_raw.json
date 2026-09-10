@@ -1,0 +1,47 @@
+{
+ "domain": "norwoodreport.com",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://norwoodreport.com/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://norwoodreport.com/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 21
+  }
+ ],
+ "page_urls": [
+  "https://norwoodreport.com/",
+  "https://norwoodreport.com/norwood-scale",
+  "https://norwoodreport.com/should-i-shave-my-head",
+  "https://norwoodreport.com/hair-transplant-cost-calculator",
+  "https://norwoodreport.com/guides",
+  "https://norwoodreport.com/norwood-2",
+  "https://norwoodreport.com/norwood-3",
+  "https://norwoodreport.com/norwood-4",
+  "https://norwoodreport.com/norwood-5",
+  "https://norwoodreport.com/norwood-6",
+  "https://norwoodreport.com/norwood-7",
+  "https://norwoodreport.com/guides/buzz-cut-receding-hairline",
+  "https://norwoodreport.com/guides/buzz-cut-for-balding-men",
+  "https://norwoodreport.com/guides/buzz-cut-for-thinning-hair",
+  "https://norwoodreport.com/guides/buzz-cut-vs-bald",
+  "https://norwoodreport.com/guides/will-i-look-good-bald",
+  "https://norwoodreport.com/guides/mature-hairline-vs-receding",
+  "https://norwoodreport.com/about",
+  "https://norwoodreport.com/methodology",
+  "https://norwoodreport.com/privacy",
+  "https://norwoodreport.com/terms"
+ ],
+ "stats": {
+  "total_loc": 21,
+  "pages": 21,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

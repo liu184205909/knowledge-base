@@ -1,0 +1,29 @@
+{
+ "domain": "face-symmetry-test.com",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://www.face-symmetry-test.com/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://www.face-symmetry-test.com/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 3
+  }
+ ],
+ "page_urls": [
+  "https://www.face-symmetry-test.com/",
+  "https://www.face-symmetry-test.com/other-tools",
+  "https://www.face-symmetry-test.com/data_privacy"
+ ],
+ "stats": {
+  "total_loc": 3,
+  "pages": 3,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

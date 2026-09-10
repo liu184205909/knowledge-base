@@ -1,0 +1,27 @@
+{
+ "url_total": 5,
+ "page_types": {
+  "static_page_or_hub": 3,
+  "blog_post": 1,
+  "tool": 1
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 3,
+  "2": 1
+ },
+ "top_level_dirs": {
+  "/blog": 2,
+  "/ (root)": 1,
+  "/data_privacy": 1,
+  "/other-tools": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://www.eye-shapes.com/",
+  "https://www.eye-shapes.com/blog",
+  "https://www.eye-shapes.com/blog/different-eye-shapes",
+  "https://www.eye-shapes.com/data_privacy",
+  "https://www.eye-shapes.com/other-tools"
+ ]
+}

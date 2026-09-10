@@ -1,0 +1,37 @@
+{
+ "url_total": 11,
+ "page_types": {
+  "static_page_or_hub": 8,
+  "tool": 3
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 10
+ },
+ "top_level_dirs": {
+  "/ (root)": 1,
+  "/about-us": 1,
+  "/age-guesser": 1,
+  "/contact-us": 1,
+  "/cookie-policy": 1,
+  "/face-comparison": 1,
+  "/face-rater": 1,
+  "/face-shape-detector": 1,
+  "/faq": 1,
+  "/privacy-policy": 1,
+  "/terms-and-conditions": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://attractivenesstest.net/",
+  "https://attractivenesstest.net/about-us/",
+  "https://attractivenesstest.net/age-guesser/",
+  "https://attractivenesstest.net/contact-us/",
+  "https://attractivenesstest.net/cookie-policy/",
+  "https://attractivenesstest.net/face-comparison/",
+  "https://attractivenesstest.net/face-rater/",
+  "https://attractivenesstest.net/face-shape-detector/",
+  "https://attractivenesstest.net/faq/",
+  "https://attractivenesstest.net/privacy-policy/"
+ ]
+}

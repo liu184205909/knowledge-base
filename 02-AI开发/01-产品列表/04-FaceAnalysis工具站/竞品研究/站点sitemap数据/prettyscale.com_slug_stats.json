@@ -1,0 +1,35 @@
+{
+ "url_total": 10,
+ "page_types": {
+  "static_page_or_hub": 10
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 9
+ },
+ "top_level_dirs": {
+  "/ (root)": 1,
+  "/body": 1,
+  "/de": 1,
+  "/es": 1,
+  "/fr": 1,
+  "/help": 1,
+  "/ja": 1,
+  "/privacy": 1,
+  "/ru": 1,
+  "/zh": 1
+ },
+ "discovered_via": "probe",
+ "sample_urls": [
+  "https://www.prettyscale.com/",
+  "https://www.prettyscale.com/body/",
+  "https://www.prettyscale.com/de/",
+  "https://www.prettyscale.com/es/",
+  "https://www.prettyscale.com/fr/",
+  "https://www.prettyscale.com/help/",
+  "https://www.prettyscale.com/ja/",
+  "https://www.prettyscale.com/privacy/",
+  "https://www.prettyscale.com/ru/",
+  "https://www.prettyscale.com/zh/"
+ ]
+}

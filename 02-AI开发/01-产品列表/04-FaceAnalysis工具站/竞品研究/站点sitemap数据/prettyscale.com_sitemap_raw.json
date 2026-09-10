@@ -1,0 +1,43 @@
+{
+ "domain": "prettyscale.com",
+ "discovered_via": "probe",
+ "sitemap_urls": [
+  "https://prettyscale.com/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://prettyscale.com/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 10
+  }
+ ],
+ "page_urls": [
+  "https://www.prettyscale.com/",
+  "https://www.prettyscale.com/es/",
+  "https://www.prettyscale.com/ru/",
+  "https://www.prettyscale.com/de/",
+  "https://www.prettyscale.com/fr/",
+  "https://www.prettyscale.com/zh/",
+  "https://www.prettyscale.com/ja/",
+  "https://www.prettyscale.com/help/",
+  "https://www.prettyscale.com/privacy/",
+  "https://www.prettyscale.com/body/"
+ ],
+ "stats": {
+  "total_loc": 10,
+  "pages": 10,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {
+   "es": 1,
+   "ru": 1,
+   "de": 1,
+   "fr": 1,
+   "zh": 1,
+   "ja": 1
+  }
+ }
+}

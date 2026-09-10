@@ -1,0 +1,37 @@
+{
+ "url_total": 21,
+ "page_types": {
+  "static_page_or_hub": 8,
+  "blog_post": 12,
+  "tool": 1
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 8,
+  "2": 12
+ },
+ "top_level_dirs": {
+  "/guides": 13,
+  "/ (root)": 1,
+  "/about": 1,
+  "/eye-shape": 1,
+  "/face-shape": 1,
+  "/hairstyle-finder": 1,
+  "/methodology": 1,
+  "/privacy": 1,
+  "/terms": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://faceshapereport.com/",
+  "https://faceshapereport.com/about",
+  "https://faceshapereport.com/eye-shape",
+  "https://faceshapereport.com/face-shape",
+  "https://faceshapereport.com/guides",
+  "https://faceshapereport.com/guides/glasses-for-diamond-face",
+  "https://faceshapereport.com/guides/glasses-for-heart-face",
+  "https://faceshapereport.com/guides/glasses-for-long-face",
+  "https://faceshapereport.com/guides/glasses-for-oval-face",
+  "https://faceshapereport.com/guides/glasses-for-round-face"
+ ]
+}

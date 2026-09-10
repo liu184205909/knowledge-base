@@ -1,0 +1,43 @@
+{
+ "url_total": 21,
+ "page_types": {
+  "static_page_or_hub": 13,
+  "blog_post": 6,
+  "tool": 2
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 14,
+  "2": 6
+ },
+ "top_level_dirs": {
+  "/guides": 7,
+  "/ (root)": 1,
+  "/about": 1,
+  "/hair-transplant-cost-calculator": 1,
+  "/methodology": 1,
+  "/norwood-2": 1,
+  "/norwood-3": 1,
+  "/norwood-4": 1,
+  "/norwood-5": 1,
+  "/norwood-6": 1,
+  "/norwood-7": 1,
+  "/norwood-scale": 1,
+  "/privacy": 1,
+  "/should-i-shave-my-head": 1,
+  "/terms": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://norwoodreport.com/",
+  "https://norwoodreport.com/about",
+  "https://norwoodreport.com/guides",
+  "https://norwoodreport.com/guides/buzz-cut-for-balding-men",
+  "https://norwoodreport.com/guides/buzz-cut-for-thinning-hair",
+  "https://norwoodreport.com/guides/buzz-cut-receding-hairline",
+  "https://norwoodreport.com/guides/buzz-cut-vs-bald",
+  "https://norwoodreport.com/guides/mature-hairline-vs-receding",
+  "https://norwoodreport.com/guides/will-i-look-good-bald",
+  "https://norwoodreport.com/hair-transplant-cost-calculator"
+ ]
+}

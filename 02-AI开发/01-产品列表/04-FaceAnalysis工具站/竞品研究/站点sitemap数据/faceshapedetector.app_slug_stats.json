@@ -1,0 +1,44 @@
+{
+ "url_total": 213,
+ "page_types": {
+  "static_page_or_hub": 120,
+  "tool": 41,
+  "blog_post": 52
+ },
+ "depth_dist": {
+  "0": 2,
+  "1": 47,
+  "2": 144,
+  "3": 20
+ },
+ "top_level_dirs": {
+  "/blog": 71,
+  "/color-analysis": 24,
+  "/kibbe-body-types": 14,
+  "/nose-shapes": 13,
+  "/eye-shapes": 9,
+  "/face-shapes": 8,
+  "/lip-shapes": 7,
+  "/eyebrow-shapes": 6,
+  "/forehead-shapes": 6,
+  "/jawline-shapes": 6,
+  "/skin-undertones": 4,
+  "/ (root)": 2,
+  "/about": 1,
+  "/age-calculator-by-photo": 1,
+  "/attractiveness-test": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://faceshapedetector.app",
+  "https://faceshapedetector.app/",
+  "https://faceshapedetector.app/about",
+  "https://faceshapedetector.app/age-calculator-by-photo",
+  "https://faceshapedetector.app/attractiveness-test",
+  "https://faceshapedetector.app/beard-styles-face-shape",
+  "https://faceshapedetector.app/blog",
+  "https://faceshapedetector.app/blog/accessories-for-face-shape",
+  "https://faceshapedetector.app/blog/ai-face-shape-detector",
+  "https://faceshapedetector.app/blog/ai-face-shape-detector-for-hairstyle-and-glasses"
+ ]
+}

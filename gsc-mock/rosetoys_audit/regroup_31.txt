@@ -1,0 +1,164 @@
+normalization: strip ^[A-Za-z]+[-][A-Za-z]?\d+ prefix, collapse spaces, lowercase
+total products: 211 | near-dup groups: 7 | SKUs in groups: 49
+
+== GROUP 1  x21  [fishnet,stockings]  norm='erotic mesh bandeau open crotch one-piece'
+   id=21361 cat=fishnet   type=simple   price=13.99   slug=w-3110-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3110 Erotic mesh bandeau open crotch one-piece'
+      imgs=5 main=IMG_2651_20210502-184718_-4-scaled.jpg
+   id=21373 cat=fishnet   type=simple   price=13.99   slug=w-3108-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3108 Erotic mesh bandeau open crotch one-piece'
+      imgs=6 main=IMG_9042_20210430-233112-scaled.jpg
+   id=21391 cat=fishnet   type=simple   price=13.99   slug=w-3117-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3117  Erotic mesh bandeau open crotch one-piece'
+      imgs=6 main=1_ae215620-ec9d-457d-bd2a-1316529ce25c.jpg
+   id=21404 cat=fishnet   type=simple   price=13.99   slug=w-3101-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3101  Erotic mesh bandeau open crotch one-piece'
+      imgs=7 main=IMG_2867_20210412-104847-scaled.jpg
+   id=21426 cat=fishnet   type=simple   price=13.99   slug=w-3106-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3106 Erotic mesh bandeau open crotch one-piece'
+      imgs=7 main=20210426083934-scaled.jpg
+   id=21434 cat=fishnet   type=simple   price=13.99   slug=w-3105-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3105  Erotic mesh bandeau open crotch one-piece'
+      imgs=7 main=IMG_6240_20210420-213832-scaled.jpg
+   id=21449 cat=fishnet   type=simple   price=13.99   slug=w-3102-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3102  Erotic mesh bandeau open crotch one-piece'
+      imgs=7 main=IMG_4222_20210417-011208-scaled.jpg
+   id=21470 cat=fishnet   type=simple   price=15.99   slug=w-3113-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3113 Erotic mesh bandeau open crotch one-piece'
+      imgs=6 main=IMG_8181-scaled.jpg
+   id=21478 cat=fishnet   type=simple   price=13.99   slug=w-3129-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3129 Erotic mesh bandeau open crotch one-piece'
+      imgs=6 main=1_efbfb831-3676-41ac-bccd-6eac585db5d5.jpg
+   id=21495 cat=fishnet   type=simple   price=11.99   slug=w-3133-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3133 Erotic mesh bandeau open crotch one-piece'
+      imgs=3 main=1_0c7ea810-abd9-4c71-be79-1df12eef8196.jpg
+   id=21499 cat=fishnet   type=simple   price=11.99   slug=w-3109-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3109 Erotic mesh bandeau open crotch one-piece'
+      imgs=8 main=IMG_9169_20210502-004525-scaled.jpg
+   id=21508 cat=fishnet   type=simple   price=13.99   slug=w-3126-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3126 Erotic mesh bandeau open crotch one-piece'
+      imgs=4 main=1_33fb7ca0-f12f-4614-8ab2-4967cd8b08d7.jpg
+   id=21513 cat=fishnet   type=simple   price=13.99   slug=w-3118-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3118 Erotic mesh bandeau open crotch one-piece'
+      imgs=4 main=1_5b73fe1c-e43e-4742-8d04-76f442f0e704.jpg
+   id=21523 cat=fishnet   type=simple   price=11.99   slug=w-3134-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3134  Erotic mesh bandeau open crotch one-piece'
+      imgs=4 main=1_98fbf573-f8e3-4d35-9985-ad3534960fc7.jpg
+   id=21528 cat=fishnet   type=simple   price=13.99   slug=w-3119-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3119  Erotic mesh bandeau open crotch one-piece'
+      imgs=4 main=1_bdd8767c-90f8-40ba-80a8-3ee48f97abf1.jpg
+   id=21556 cat=fishnet   type=simple   price=13.99   slug=w-3112-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3112 Erotic mesh bandeau open crotch one-piece'
+      imgs=4 main=IMG_4615_20210511-134109-scaled.jpg
+   id=21570 cat=fishnet   type=simple   price=13.99   slug=w-3123-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3123 Erotic mesh bandeau open crotch one-piece'
+      imgs=7 main=1_20f162a7-b804-4a1d-a5ff-f80b5a7b7815.jpg
+   id=21578 cat=fishnet   type=simple   price=13.99   slug=w-3122-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3122 Erotic mesh bandeau open crotch one-piece'
+      imgs=4 main=1_43f6f12c-c204-4927-a245-898e001cbbf0.jpg
+   id=21583 cat=fishnet   type=simple   price=13.99   slug=w-3103-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3103 Erotic mesh bandeau open crotch one-piece'
+      imgs=5 main=IMG_6029_20210419-004817-scaled.jpg
+   id=21620 cat=fishnet   type=simple   price=13.99   slug=w-3115-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3115  Erotic mesh bandeau open crotch one-piece'
+      imgs=4 main=1_cb4204be-101b-45b3-9371-311de79098fe.jpg
+   id=22155 cat=stockings type=variable price=10.99   slug=w-3201-erotic-mesh-bandeau-open-crotch-one-piece
+      name='W-3201 Erotic mesh bandeau open crotch one-piece'
+      imgs=6 main=2023-06-24161230.jpg
+
+== GROUP 2  x9  [stockings]  norm='cute cow stockings'
+   id=21007 cat=stockings type=variable price=9.99    slug=j-a41-cute-cow-stockings
+      name='J-A41 Cute cow stockings'
+      imgs=5 main=2-6_d5d03482-fe7e-41e5-842a-e770e5f609ff.jpg
+   id=22190 cat=stockings type=variable price=10.99   slug=j-a40-cute-cow-stockings
+      name='J-A40 Cute cow stockings'
+      imgs=8 main=1-11_02b3dfa9-7131-443f-8dbc-51eb21135f7d-scaled.jpg
+   id=22196 cat=stockings type=simple   price=10.99   slug=t-3064-cute-cow-stockings
+      name='T-3064 Cute cow stockings'
+      imgs=3 main=066880702bc16279e4d1ee813cd56cd.jpg
+   id=22237 cat=stockings type=variable price=10.99   slug=j-a28-cute-cow-stockings
+      name='j-a28 Cute cow stockings'
+      imgs=8 main=1-8_30f1797b-5484-4924-a31c-85e9e22eb585.jpg
+   id=22271 cat=stockings type=simple   price=9.99    slug=j-a42-cute-cow-stockings
+      name='j-a42 Cute cow stockings'
+      imgs=5 main=1-7_84cf0cea-bec9-4bfd-8fbc-2b0baa8fbbe1-scaled.jpg
+   id=22276 cat=stockings type=variable price=9.99    slug=j-a43-cute-cow-stockings
+      name='J-A43 Cute cow stockings'
+      imgs=8 main=1-8_8bbccaee-e4aa-41ff-b01b-371e98532a73-scaled.jpg
+   id=22307 cat=stockings type=simple   price=9.99    slug=j-a27-cute-cow-stockings
+      name='J-A27 Cute cow stockings'
+      imgs=5 main=4-5_e3a3dc56-965a-42c6-b76c-27ac3ee8b017-scaled.jpg
+   id=22368 cat=stockings type=simple   price=10.99   slug=j-a33-cute-cow-stockings
+      name='j-a33 Cute cow stockings'
+      imgs=5 main=2-5_93b4ac75-de81-4f50-8db4-2b79d02d5401-scaled.jpg
+   id=22374 cat=stockings type=simple   price=9.99    slug=j-a24-cute-cow-stockings
+      name='j-a24 Cute cow stockings'
+      imgs=5 main=3-5_3322a1b1-6021-492e-84c1-49ff42a0a523.jpg
+
+== GROUP 3  x8  [fishnet]  norm='erotic lingerie jacquard sexy colorful mesh'
+   id=21561 cat=fishnet   type=simple   price=17.99   slug=w-0005-erotic-lingerie-jacquard-sexy-colorful-mesh
+      name='W-0005 Erotic lingerie jacquard sexy colorful mesh'
+      imgs=3 main=IMG_0020_20220707-150946-scaled.jpg
+   id=21566 cat=fishnet   type=simple   price=17.99   slug=w-0006-erotic-lingerie-jacquard-sexy-colorful-mesh
+      name='W-0006 Erotic lingerie jacquard sexy colorful mesh'
+      imgs=3 main=IMG_0014_20220707-145022-scaled.jpg
+   id=21595 cat=fishnet   type=simple   price=17.99   slug=w-0002-erotic-lingerie-jacquard-sexy-colorful-mesh
+      name='W-0002  Erotic lingerie jacquard sexy colorful mesh'
+      imgs=3 main=IMG_8501_20220626-074351-scaled.jpg
+   id=21599 cat=fishnet   type=simple   price=17.99   slug=w-0001-erotic-lingerie-jacquard-sexy-colorful-mesh
+      name='W-0001  Erotic lingerie jacquard sexy colorful mesh'
+      imgs=3 main=IMG_0028_20220707-153251.jpg
+   id=21603 cat=fishnet   type=simple   price=17.99   slug=w-0003-erotic-lingerie-jacquard-sexy-colorful-mesh
+      name='W-0003 Erotic lingerie jacquard sexy colorful mesh'
+      imgs=3 main=IMG_0026_20220707-152714-scaled.jpg
+   id=21607 cat=fishnet   type=simple   price=17.99   slug=w-0004-erotic-lingerie-jacquard-sexy-colorful-mesh
+      name='W-0004 Erotic lingerie jacquard sexy colorful mesh'
+      imgs=3 main=IMG_0023_20220707-151817-scaled.jpg
+   id=21612 cat=fishnet   type=simple   price=17.99   slug=w-0010-erotic-lingerie-jacquard-sexy-colorful-mesh
+      name='W-0010  Erotic lingerie jacquard sexy colorful mesh'
+      imgs=3 main=IMG_0016_20220707-145753-scaled.jpg
+   id=21616 cat=fishnet   type=simple   price=17.99   slug=w-0008-erotic-lingerie-jacquard-sexy-colorful-mesh
+      name='W-0008  Erotic lingerie jacquard sexy colorful mesh'
+      imgs=3 main=IMG_0011_20220707-143801-scaled.jpg
+
+== GROUP 4  x4  [stockings]  norm='black silk fishnet lace jumpsuit sex stockings'
+   id=22213 cat=stockings type=variable price=9.99    slug=w-3084-black-silk-fishnet-lace-jumpsuit-sex-stockings
+      name='W-3084 Black silk fishnet lace jumpsuit sex stockings'
+      imgs=6 main=2023-06-23173105.jpg
+   id=22225 cat=stockings type=variable price=9.99    slug=w-3058-black-silk-fishnet-lace-jumpsuit-sex-stockings
+      name='W -3058 Black silk fishnet lace jumpsuit sex stockings'
+      imgs=6 main=2023-06-23170220.jpg
+   id=22302 cat=stockings type=variable price=10.99   slug=w-3051-black-silk-fishnet-lace-jumpsuit-sex-stockings
+      name='W -3051 Black silk fishnet lace jumpsuit sex stockings'
+      imgs=5 main=3051_f7151fcb-3b48-4a41-8d36-0c83ffd7509e.jpg
+   id=22303 cat=stockings type=variable price=9.99    slug=w-3049-black-silk-fishnet-lace-jumpsuit-sex-stockings
+      name='W -3049 Black silk fishnet lace jumpsuit sex stockings'
+      imgs=6 main=2023-06-23171416.jpg
+
+== GROUP 5  x3  [nightwear]  norm='plush leaky shoulder dress'
+   id=22592 cat=nightwear type=variable price=37.99   slug=lt-048-plush-leaky-shoulder-dress
+      name='LT-048 Plush Leaky Shoulder Dress'
+      imgs=8 main=31_bb9f1966-b561-4d8d-9700-771b096e1567.jpg
+   id=22838 cat=nightwear type=variable price=45.99   slug=lt-280-plush-leaky-shoulder-dress
+      name='LT-280 Plush Leaky Shoulder Dress'
+      imgs=6 main=O1CN01g5OEyK1a9Ue1gE6VO__2212843373287-0-cib.jpg
+   id=22850 cat=nightwear type=variable price=25.99   slug=lt-025-plush-leaky-shoulder-dress
+      name='LT-025 Plush Leaky Shoulder Dress'
+      imgs=3 main=6_5d78fed0-22d8-4fb1-94ab-0aa4626f320e.jpg
+
+== GROUP 6  x2  [nightwear]  norm='denim shorts are hot and tempting'
+   id=20857 cat=nightwear type=variable price=34.99   slug=t-8029-denim-shorts-are-hot-and-tempting
+      name='T-8029 Denim shorts are hot and tempting'
+      imgs=5 main=IMG_2652.jpg
+   id=22697 cat=nightwear type=variable price=34.99   slug=t-8032-denim-shorts-are-hot-and-tempting
+      name='T-8032 Denim shorts are hot and tempting'
+      imgs=5 main=IMG_2688.jpg
+
+== GROUP 7  x2  [stockings]  norm='dark tie love wing collar halloween accessory'
+   id=21035 cat=stockings type=simple   price=9.99    slug=j-a36-dark-tie-love-wing-collar-halloween-accessory
+      name='J-A36 Dark tie love wing collar Halloween accessory'
+      imgs=6 main=4-6_1d22e3c2-9a7e-4313-8cca-1d761d1e8f04.jpg
+   id=21043 cat=stockings type=simple   price=10.99   slug=j-a31-dark-tie-love-wing-collar-halloween-accessory
+      name='J-A31 Dark tie love wing collar Halloween accessory'
+      imgs=6 main=2-6_f3e4c478-eb5d-4dfa-86bb-2ca37c291e23.jpg
+

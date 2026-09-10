@@ -1,0 +1,43 @@
+{
+ "url_total": 84,
+ "page_types": {
+  "static_page_or_hub": 55,
+  "tool": 29
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 22,
+  "2": 16,
+  "3": 45
+ },
+ "top_level_dirs": {
+  "/de": 9,
+  "/es": 9,
+  "/ja": 9,
+  "/zh-TW": 6,
+  "/fr": 5,
+  "/reports": 5,
+  "/tools": 4,
+  "/ko": 3,
+  "/pt": 3,
+  "/ar": 2,
+  "/cs": 2,
+  "/da": 2,
+  "/el": 2,
+  "/fi": 2,
+  "/filters": 2
+ },
+ "discovered_via": "probe",
+ "sample_urls": [
+  "https://looksmaxxingai.app/",
+  "https://looksmaxxingai.app/ar",
+  "https://looksmaxxingai.app/ar/reports/ai-glow-up",
+  "https://looksmaxxingai.app/blog",
+  "https://looksmaxxingai.app/cs",
+  "https://looksmaxxingai.app/cs/reports/ai-glow-up",
+  "https://looksmaxxingai.app/da",
+  "https://looksmaxxingai.app/da/reports/ai-glow-up",
+  "https://looksmaxxingai.app/de",
+  "https://looksmaxxingai.app/de/reports/ai-glow-up"
+ ]
+}

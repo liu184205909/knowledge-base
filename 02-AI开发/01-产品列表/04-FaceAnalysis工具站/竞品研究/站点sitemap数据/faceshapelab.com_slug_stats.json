@@ -1,0 +1,42 @@
+{
+ "url_total": 22,
+ "page_types": {
+  "static_page_or_hub": 10,
+  "blog_post": 1,
+  "tool": 11
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 21
+ },
+ "top_level_dirs": {
+  "/ (root)": 1,
+  "/about-us": 1,
+  "/blog": 1,
+  "/body-shape-calculator": 1,
+  "/body-type-calculator": 1,
+  "/color-analysis-quiz": 1,
+  "/contact-us": 1,
+  "/disclaimer": 1,
+  "/eye-shape-detector": 1,
+  "/face-age-detector": 1,
+  "/face-emotion-detector": 1,
+  "/face-symmetry-detector": 1,
+  "/faqs": 1,
+  "/golden-ratio-face": 1,
+  "/kibbe-body-type-test": 1
+ },
+ "discovered_via": "probe",
+ "sample_urls": [
+  "https://faceshapelab.com/",
+  "https://faceshapelab.com/about-us/",
+  "https://faceshapelab.com/blog/",
+  "https://faceshapelab.com/body-shape-calculator/",
+  "https://faceshapelab.com/body-type-calculator/",
+  "https://faceshapelab.com/color-analysis-quiz/",
+  "https://faceshapelab.com/contact-us/",
+  "https://faceshapelab.com/disclaimer/",
+  "https://faceshapelab.com/eye-shape-detector/",
+  "https://faceshapelab.com/face-age-detector/"
+ ]
+}

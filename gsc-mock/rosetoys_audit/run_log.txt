@@ -1,0 +1,36 @@
+total 481, done 0, todo 481
+progress 50/481 ok=50 fail=0 — 抽验...
+  抽验 22252: 200 name=True slug=True alt=True => PASS
+  抽验 22248: 200 name=True slug=True alt=True => PASS
+progress 100/481 ok=100 fail=0 — 抽验...
+  抽验 21367: 200 name=True slug=True alt=True => PASS
+  抽验 21355: 200 name=True slug=True alt=True => PASS
+progress 150/481 ok=150 fail=0 — 抽验...
+  抽验 20803: 200 name=True slug=True alt=True => PASS
+  抽验 20801: 200 name=True slug=True alt=True => PASS
+progress 200/481 ok=200 fail=0 — 抽验...
+  抽验 20345: 200 name=True slug=True alt=True => PASS
+  抽验 20343: 200 name=True slug=True alt=True => PASS
+progress 250/481 ok=250 fail=0 — 抽验...
+  抽验 19888: 200 name=True slug=True alt=True => PASS
+  抽验 19878: 200 name=True slug=True alt=True => PASS
+progress 300/481 ok=300 fail=0 — 抽验...
+  抽验 19312: 200 name=True slug=True alt=True => PASS
+  抽验 19304: 200 name=True slug=True alt=True => PASS
+FAIL 18275 put=False(200) tkd=False 
+progress 350/481 ok=349 fail=1 — 抽验...
+  抽验 18275: 200 name=False slug=True alt=True => FAIL
+  抽验 18244: 200 name=True slug=True alt=True => PASS
+FAIL 18235 put=False(200) tkd=False 
+FAIL 18216 put=False(200) tkd=False 
+FAIL 17791 put=False(200) tkd=False 
+progress 400/481 ok=396 fail=4 — 抽验...
+  抽验 17684: 200 name=True slug=True alt=True => PASS
+  抽验 17678: 200 name=True slug=True alt=True => PASS
+progress 450/481 ok=446 fail=4 — 抽验...
+  抽验 17227: 200 name=True slug=True alt=True => PASS
+  抽验 17209: 200 name=True slug=True alt=True => PASS
+progress 481/481 ok=477 fail=4 — 抽验...
+  抽验 16891: 200 name=True slug=True alt=True => PASS
+  抽验 16890: 200 name=True slug=True alt=True => PASS
+DONE ok=477 fail=4

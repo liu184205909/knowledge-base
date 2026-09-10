@@ -1,0 +1,36 @@
+{
+ "url_total": 41,
+ "page_types": {
+  "static_page_or_hub": 41
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 9,
+  "2": 31
+ },
+ "top_level_dirs": {
+  "/ai-filter": 19,
+  "/ai-image-generator": 8,
+  "/ai-headshot-generator": 3,
+  "/face-swap": 3,
+  "/photo-enhancer": 3,
+  "/ (root)": 1,
+  "/account-terms": 1,
+  "/ai-tattoo-generator": 1,
+  "/privacy-policy": 1,
+  "/terms-of-service": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://facewow.ai/",
+  "https://facewow.ai/account-terms/",
+  "https://facewow.ai/ai-filter/",
+  "https://facewow.ai/ai-filter/barbie/",
+  "https://facewow.ai/ai-filter/black-and-white/",
+  "https://facewow.ai/ai-filter/caricature-maker/",
+  "https://facewow.ai/ai-filter/christmas/",
+  "https://facewow.ai/ai-filter/glitch-effect/",
+  "https://facewow.ai/ai-filter/gta/",
+  "https://facewow.ai/ai-filter/manga/"
+ ]
+}

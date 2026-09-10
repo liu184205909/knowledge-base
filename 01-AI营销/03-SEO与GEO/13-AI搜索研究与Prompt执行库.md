@@ -86,6 +86,8 @@
 | iPullRank Qforia | 逆向工程Gemini响应和扇出查询 |
 | Profound Query Fanout Feature | 捕获ChatGPT/Gemini/Claude的底层搜索行为 |
 | **zhidaow.com AI提纲工具** | 免费。一键生成兼顾SEO+GEO的英文文章提纲：Fan-out需求扩展 → 竞手差距分析 → PAA FAQ生成，输出含建议字数和段落简介的完整提纲（中文呈现） |
+| **跨境谷查询扇出生成器**（自建，2026-09 上线） | 免费。GLM 生成同义改写/隐含查询/子问题各 5 条——fan-out 的正向模拟，选题与内容覆盖缺口的日常工具。kuajinggu.com/tools/query-fanout/（Worker 走 GLM Coding Plan 通道） |
+| **WebGPT Chrome 扩展**（Lewis） | 免费（GitHub: webgpt-analyzer-extension）。拆 ChatGPT JSON payload：`search_prob`（触发搜索概率）/ `force_search_threshold` / **Used vs Unused Search Results**（看过但未引用的页面）。逆向工程法第 2 步的工程化版——Used vs Unused 对比直接给出优化清单 |
 
 ---
 
@@ -1187,6 +1189,18 @@ Draft page per AEO standard. Return markdown only."
 - 分析被引用页面的共同特征（结构、格式、深度、E-E-A-T信号）
 - 策略：不猜测AI想要什么，直接观察AI实际引用什么
 
+#### 哥飞三步法（中文圈流传版逆向工程，2026-09 裁决定案）
+
+> 三步：①**反推**——问 AI"用户找 XX 工具会怎么提问"，得 prompt 列表（Claude/Gemini 同理）；②**提问**——另开窗口逐个真实提问，观察 AI 如何拆解问题、生成什么搜索词、抓取/引用哪些网页及标题；③**总结**——把观察结果交 AI 分析，得出写什么文章、发到哪里。
+
+**裁决**：方向正确——与 Semrush 调查建议、Aleyda 12 步、peec/Otterly 的 GEO 监控循环同构。但三步强度递减：
+
+| 步 | 裁决 | 修正 |
+|----|------|------|
+| ①反推 prompt | ✅（= tracked prompts 第一步） | AI 假想的问题 ≠ 真实用户问法，须与 GSC 真实 query / autocomplete / PAA 交叉，滤掉自嗨问题 |
+| ②提问观察 | ✅ **最值钱**。观察通道真实：ChatGPT 界面可见搜索词与引用源；工程化版=WebGPT 扩展（见 Query Fan-out 工具链表） | 单次采样是噪声不是规律（须多轮/跨模型/定期复查）；引擎间引用源仅 11% 重合，必须分引擎测；ChatGPT 有相当比例答案来自训练数据而非实时检索，此法只测得到检索层 |
+| ③问 AI 总结 | ⚠️ **最弱**。AI 自我报告不可靠——检索排序（Labrador 索引+BM25+重排）是服务端系统，模型不知道自己为何引用谁；AI 给的多半是训练语料里的 GEO 通识，"多堆关键词"式建议恰是 SE Ranking 证实的**负相关**信号（URL 语义相关性最高组引用 2.7 次 vs 最低组 6.4 次） | 正解：从第 ② 步数据直接归纳——Used vs Unused 引用页差距对比（标题/结构/直接性/深度）；"发哪里"也从被引用页面直接反推（AI 抓 Wikipedia/Reddit/YouTube → 就去哪铺），不问 AI 猜 |
+
 #### Hailey Novak — 实体SEO审计
 
 - **Entity SEO审计**：知识面板（Knowledge Panel）管理是AI可见性的基础
@@ -1287,7 +1301,7 @@ Draft page per AEO standard. Return markdown only."
 
 1. **AI可见性基线测试**：选30-50个目标prompt，在ChatGPT/Gemini/Perplexity上记录品牌表现
 2. **PerplexityBot可爬行性审计**：检查robots.txt、服务器日志、200状态码
-3. **创建llms.txt**：即使效果未证实，作为新兴最佳实践
+3. ~~创建 llms.txt~~ ❌ **2026-09 删除此行动**：多项大规模研究证实无效果（SE Ranking 12.9 万域名"删除反而提升预测精度"、Data Pins 30 万 prompt 无差异、Otterly 实验无正相关），与 03 文档 Google 官方否定一致。本章第七节的"新兴最佳实践"表述已过时，以 03 文档结论为准
 4. **Answer-first重构**：把答案放在内容前50词内
 
 ### 短期（1-2月）

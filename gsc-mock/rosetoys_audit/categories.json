@@ -1,0 +1,128 @@
+[
+ {
+  "id": 20,
+  "name": "Accessories",
+  "slug": "accessories",
+  "parent": 0,
+  "count": 34
+ },
+ {
+  "id": 211,
+  "name": "bikini",
+  "slug": "bikini",
+  "parent": 299,
+  "count": 20
+ },
+ {
+  "id": 177,
+  "name": "Career Costumes",
+  "slug": "career-costumes",
+  "parent": 300,
+  "count": 22
+ },
+ {
+  "id": 183,
+  "name": "Cosplay",
+  "slug": "cosplay",
+  "parent": 300,
+  "count": 111
+ },
+ {
+  "id": 258,
+  "name": "Fishnet lingerie",
+  "slug": "fishnet-lingerie",
+  "parent": 299,
+  "count": 42
+ },
+ {
+  "id": 300,
+  "name": "Halloween Costumes",
+  "slug": "halloween-costumes",
+  "parent": 0,
+  "count": 0
+ },
+ {
+  "id": 127,
+  "name": "Male Rose Toy",
+  "slug": "male-rose-toy",
+  "parent": 154,
+  "count": 3
+ },
+ {
+  "id": 163,
+  "name": "Nightwear",
+  "slug": "nightwear",
+  "parent": 299,
+  "count": 121
+ },
+ {
+  "id": 179,
+  "name": "Pajamas",
+  "slug": "pajamas",
+  "parent": 300,
+  "count": 6
+ },
+ {
+  "id": 129,
+  "name": "Rose Clit Toy",
+  "slug": "rose-clit-toy",
+  "parent": 154,
+  "count": 29
+ },
+ {
+  "id": 130,
+  "name": "Rose Suction Toy",
+  "slug": "rose-suction-toy",
+  "parent": 154,
+  "count": 11
+ },
+ {
+  "id": 128,
+  "name": "Rose Toy Charger",
+  "slug": "rose-toy-charger",
+  "parent": 154,
+  "count": 3
+ },
+ {
+  "id": 131,
+  "name": "Rose Toy Deluxe",
+  "slug": "rose-toy-deluxe",
+  "parent": 154,
+  "count": 7
+ },
+ {
+  "id": 154,
+  "name": "Rose Toys",
+  "slug": "rose-toys",
+  "parent": 0,
+  "count": 0
+ },
+ {
+  "id": 71,
+  "name": "Rose Toys For Women",
+  "slug": "rose-toys-for-women",
+  "parent": 154,
+  "count": 17
+ },
+ {
+  "id": 126,
+  "name": "Rose Vibrator",
+  "slug": "rose-vibrator",
+  "parent": 154,
+  "count": 70
+ },
+ {
+  "id": 250,
+  "name": "Stockings",
+  "slug": "stockings",
+  "parent": 299,
+  "count": 28
+ },
+ {
+  "id": 299,
+  "name": "Women's Lingerie",
+  "slug": "womens-lingerie",
+  "parent": 0,
+  "count": 0
+ }
+]

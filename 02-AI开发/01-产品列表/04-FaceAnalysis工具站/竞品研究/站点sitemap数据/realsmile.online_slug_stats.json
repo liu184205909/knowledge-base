@@ -1,0 +1,43 @@
+{
+ "url_total": 248,
+ "page_types": {
+  "static_page_or_hub": 135,
+  "tool": 42,
+  "blog_post": 71
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 81,
+  "2": 166
+ },
+ "top_level_dirs": {
+  "/blog": 81,
+  "/scores": 52,
+  "/glossary": 18,
+  "/guides": 7,
+  "/attractiveness-test": 4,
+  "/audit": 3,
+  "/compare": 3,
+  "/looksmaxxing-test": 2,
+  "/research": 2,
+  "/ (root)": 1,
+  "/about": 1,
+  "/am-i-handsome": 1,
+  "/am-i-photogenic": 1,
+  "/am-i-pretty": 1,
+  "/am-i-ugly-test": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://realsmile.online/",
+  "https://realsmile.online/about",
+  "https://realsmile.online/am-i-handsome",
+  "https://realsmile.online/am-i-photogenic",
+  "https://realsmile.online/am-i-pretty",
+  "https://realsmile.online/am-i-ugly-test",
+  "https://realsmile.online/analyze",
+  "https://realsmile.online/attractiveness-test",
+  "https://realsmile.online/attractiveness-test/korean",
+  "https://realsmile.online/attractiveness-test/male"
+ ]
+}

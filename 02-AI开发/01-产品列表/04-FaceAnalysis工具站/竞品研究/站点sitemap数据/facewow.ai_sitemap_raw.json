@@ -1,0 +1,73 @@
+{
+ "domain": "facewow.ai",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://facewow.ai/sitemaps/index.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://facewow.ai/sitemaps/index.xml",
+   "status": "ok",
+   "type": "index",
+   "loc_count": 1
+  },
+  {
+   "url": "https://facewow.ai/sitemaps/en.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 41
+  }
+ ],
+ "page_urls": [
+  "https://facewow.ai/ai-filter/pop-art/",
+  "https://facewow.ai/ai-filter/photo-to-cartoon/",
+  "https://facewow.ai/account-terms/",
+  "https://facewow.ai/ai-filter/photo-to-painting/",
+  "https://facewow.ai/face-swap/multiple/",
+  "https://facewow.ai/ai-image-generator/",
+  "https://facewow.ai/ai-filter/christmas/",
+  "https://facewow.ai/ai-filter/caricature-maker/",
+  "https://facewow.ai/ai-image-generator/girl/",
+  "https://facewow.ai/ai-headshot-generator/linkedin-photo/",
+  "https://facewow.ai/ai-tattoo-generator/",
+  "https://facewow.ai/face-swap/",
+  "https://facewow.ai/ai-filter/gta/",
+  "https://facewow.ai/privacy-policy/",
+  "https://facewow.ai/ai-image-generator/avatar/",
+  "https://facewow.ai/ai-filter/photo-to-sketch/",
+  "https://facewow.ai/ai-headshot-generator/portrait/",
+  "https://facewow.ai/ai-image-generator/character/",
+  "https://facewow.ai/terms-of-service/",
+  "https://facewow.ai/ai-image-generator/human/",
+  "https://facewow.ai/photo-enhancer/",
+  "https://facewow.ai/ai-filter/studio-ghibli/",
+  "https://facewow.ai/ai-image-generator/cartoon-character/",
+  "https://facewow.ai/ai-filter/ps2/",
+  "https://facewow.ai/ai-filter/pixel-art-converter/",
+  "https://facewow.ai/ai-headshot-generator/",
+  "https://facewow.ai/ai-image-generator/face/",
+  "https://facewow.ai/ai-filter/manga/",
+  "https://facewow.ai/ai-filter/photo-to-anime/",
+  "https://facewow.ai/photo-enhancer/photo-restoration/",
+  "https://facewow.ai/ai-filter/photo-to-watercolor/",
+  "https://facewow.ai/ai-filter/",
+  "https://facewow.ai/ai-image-generator/anime-girl/",
+  "https://facewow.ai/ai-filter/glitch-effect/",
+  "https://facewow.ai/ai-filter/barbie/",
+  "https://facewow.ai/ai-filter/photo-to-art/",
+  "https://facewow.ai/ai-filter/vintage/",
+  "https://facewow.ai/face-swap/video/",
+  "https://facewow.ai/ai-filter/black-and-white/",
+  "https://facewow.ai/photo-enhancer/colorize/",
+  "https://facewow.ai/"
+ ],
+ "stats": {
+  "total_loc": 41,
+  "pages": 41,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

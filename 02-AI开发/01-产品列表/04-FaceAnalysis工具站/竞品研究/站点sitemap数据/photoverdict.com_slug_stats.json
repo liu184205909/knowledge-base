@@ -1,0 +1,39 @@
+{
+ "url_total": 14,
+ "page_types": {
+  "static_page_or_hub": 14
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 12,
+  "2": 1
+ },
+ "top_level_dirs": {
+  "/review": 2,
+  "/ (root)": 1,
+  "/blurry-tinder-photos": 1,
+  "/bumble-photos": 1,
+  "/dating-photo-mistakes": 1,
+  "/dating-profile-photos": 1,
+  "/dating-profile-review": 1,
+  "/hinge-photos": 1,
+  "/privacy": 1,
+  "/rate-my-dating-profile": 1,
+  "/rate-my-photo": 1,
+  "/terms": 1,
+  "/tinder-photos": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://photoverdict.com",
+  "https://photoverdict.com/blurry-tinder-photos",
+  "https://photoverdict.com/bumble-photos",
+  "https://photoverdict.com/dating-photo-mistakes",
+  "https://photoverdict.com/dating-profile-photos",
+  "https://photoverdict.com/dating-profile-review",
+  "https://photoverdict.com/hinge-photos",
+  "https://photoverdict.com/privacy",
+  "https://photoverdict.com/rate-my-dating-profile",
+  "https://photoverdict.com/rate-my-photo"
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "domain": "maxxing.me",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://maxxing.me/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://maxxing.me/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 48
+  }
+ ],
+ "page_urls": [
+  "https://maxxing.me/",
+  "https://maxxing.me/legal/privacy-policy",
+  "https://maxxing.me/legal/fulfillment-policy",
+  "https://maxxing.me/legal/terms-of-use",
+  "https://maxxing.me/help-center",
+  "https://maxxing.me/blog",
+  "https://maxxing.me/blog/psl-scale",
+  "https://maxxing.me/blog/celebrity-look-alike",
+  "https://maxxing.me/blog/what-is-looksmaxxing",
+  "https://maxxing.me/blog/rate-my-face",
+  "https://maxxing.me/blog/rate-my-photo",
+  "https://maxxing.me/blog/rate-my-picture",
+  "https://maxxing.me/blog/ai-age-detector",
+  "https://maxxing.me/blog/how-to-looksmax",
+  "https://maxxing.me/blog/age-from-photo",
+  "https://maxxing.me/blog/looksmax-ai",
+  "https://maxxing.me/blog/age-detector",
+  "https://maxxing.me/blog/what-do-i-look-like",
+  "https://maxxing.me/blog/jawline-rating",
+  "https://maxxing.me/blog/ai-face-rater",
+  "https://maxxing.me/blog/beauty-analyzer",
+  "https://maxxing.me/blog/face-shape-test",
+  "https://maxxing.me/blog/face-symmetry-test",
+  "https://maxxing.me/blog/ethnicity",
+  "https://maxxing.me/blog/ai-face-analysis",
+  "https://maxxing.me/blog/race",
+  "https://maxxing.me/blog/tinder-photo-rating",
+  "https://maxxing.me/blog/facial-feature-analyzer",
+  "https://maxxing.me/blog/beauty-test",
+  "https://maxxing.me/blog/ai-age-guesser",
+  "https://maxxing.me/blog/how-normal-am-i",
+  "https://maxxing.me/blog/rate-me",
+  "https://maxxing.me/blog/attractiveness-calculator",
+  "https://maxxing.me/blog/guess-my-age",
+  "https://maxxing.me/blog/am-i-pretty",
+  "https://maxxing.me/blog/attractiveness-test",
+  "https://maxxing.me/blog/face-age-test",
+  "https://maxxing.me/blog/looksmaxxing",
+  "https://maxxing.me/blog/attractiveness-scale",
+  "https://maxxing.me/blog/how-old-do-i-look",
+  "https://maxxing.me/blog/am-i-attractive",
+  "https://maxxing.me/blog/how-hot-am-i",
+  "https://maxxing.me/help-center/i-don-t-see-my-subscription-in-my-apple-id",
+  "https://maxxing.me/help-center/i-don-t-see-my-subscription-in-my-google-play-account",
+  "https://maxxing.me/help-center/i-was-unaware-of-the-charges",
+  "https://maxxing.me/help-center/i-didn-t-authorize-a-subscription-or-recurring-charge",
+  "https://maxxing.me/help-center/does-my-subscription-automatically-renew",
+  "https://maxxing.me/help-center/canceling-your-subscription"
+ ],
+ "stats": {
+  "total_loc": 48,
+  "pages": 48,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

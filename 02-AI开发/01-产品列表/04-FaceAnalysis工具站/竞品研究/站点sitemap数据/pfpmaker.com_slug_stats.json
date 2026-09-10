@@ -1,0 +1,44 @@
+{
+ "url_total": 499,
+ "page_types": {
+  "static_page_or_hub": 492,
+  "tool": 2,
+  "blog_post": 5
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 31,
+  "2": 47,
+  "3": 420
+ },
+ "top_level_dirs": {
+  "/pfp": 456,
+  "/profile-pictures": 8,
+  "/blog": 5,
+  "/ (root)": 1,
+  "/ai-avatar": 1,
+  "/ai-headshot-generator": 1,
+  "/ai-makeup": 1,
+  "/ai-portrait-generator": 1,
+  "/ai-profile-pictures": 1,
+  "/attractiveness-test": 1,
+  "/blur-face": 1,
+  "/business": 1,
+  "/cartoonizer": 1,
+  "/contact-us": 1,
+  "/creative-profile-pictures": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://pfpmaker.com/",
+  "https://pfpmaker.com/ai-avatar",
+  "https://pfpmaker.com/ai-headshot-generator",
+  "https://pfpmaker.com/ai-makeup",
+  "https://pfpmaker.com/ai-portrait-generator",
+  "https://pfpmaker.com/ai-profile-pictures",
+  "https://pfpmaker.com/attractiveness-test",
+  "https://pfpmaker.com/blog/38-halloween-profile-pictures-2025",
+  "https://pfpmaker.com/blog/7-steps-for-creating-a-perfect-linkedin-profile",
+  "https://pfpmaker.com/blog/blog-post-template"
+ ]
+}

@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>竞品分析 SOP v4.1 · 执行版</title>
+<style>
+/* Hallmark · pre-emit critique: P4 H4 E4 S4 R5 V4 · genre: editorial(document) · macrostructure: Long Document · theme: petrol-teal on paper */
+:root{
+  --paper:#ffffff;
+  --paper-tint:#f7f9fa;
+  --ink:#21272c;
+  --sub:#5b6570;
+  --line:#e2e6ea;
+  --line-strong:#c7d0d6;
+  --accent:#0e6e84;
+  --accent-deep:#0a5263;
+  --accent-soft:#eaf3f6;
+  --accent-line:#c2dae2;
+  --warn-bg:#fdf6e4;
+  --warn-line:#e3c26a;
+  --warn-ink:#77590f;
+  --danger:#a34a33;
+  --danger-soft:#f9efeb;
+  --danger-line:#e6cdc3;
+  --font-body:system-ui,-apple-system,"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;
+  --font-mono:ui-monospace,Consolas,"Cascadia Mono","Courier New",monospace;
+  --radius:8px;
+  --radius-sm:6px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{font-family:var(--font-body);color:var(--ink);background:var(--paper-tint);line-height:1.75;font-size:15px}
+main{max-width:980px;margin:0 auto;padding:34px 26px 72px}
+section{scroll-margin-top:86px}
+
+/* ============ 顶部 sticky header ============ */
+.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--line);box-shadow:0 1px 8px rgba(32,39,44,.06)}
+.topbar-inner{max-width:980px;margin:0 auto;padding:10px 26px 0}
+.brand-row{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.doc-title{font-size:16.5px;font-weight:700;letter-spacing:.3px}
+.ver-badge{display:inline-block;background:var(--accent);color:#fff;font-size:11.5px;font-weight:600;padding:1px 8px;border-radius:99px;letter-spacing:.5px;vertical-align:2px}
+.doc-meta{font-size:12.5px;color:var(--sub)}
+.spy-nav{display:flex;gap:2px;overflow-x:auto;margin-top:8px;-webkit-overflow-scrolling:touch;scrollbar-width:thin}
+.spy-nav a{flex:0 0 auto;padding:7px 11px 9px;font-size:13px;color:var(--sub);text-decoration:none;border-bottom:2.5px solid transparent;white-space:nowrap}
+.spy-nav a:hover{color:var(--accent-deep);background:var(--accent-soft)}
+.spy-nav a.on{color:var(--accent-deep);font-weight:600;border-bottom-color:var(--accent)}
+.spy-nav a:focus-visible{outline:2px solid var(--accent);outline-offset:-2px;border-radius:4px}
+
+/* ============ 标题与通用 ============ */
+h1{font-size:27px;font-weight:700;letter-spacing:.4px;line-height:1.35}
+.h1-meta{color:var(--sub);font-size:13.5px;margin-top:6px}
+h2{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:700;margin:52px 0 16px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+h2 .no{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:30px;background:var(--accent);color:#fff;font-size:15px;font-weight:700;border-radius:var(--radius-sm);letter-spacing:0}
+h3{font-size:15.5px;font-weight:700;margin:22px 0 8px;color:var(--accent-deep)}
+p{margin:10px 0}
+ul,ol{padding-left:22px;margin:8px 0}
+li{margin:5px 0}
+strong{font-weight:650}
+blockquote{margin:16px 0;padding:12px 16px;border-left:3px solid var(--accent);background:var(--accent-soft);border-radius:0 var(--radius) var(--radius) 0;color:#33404a;font-size:14.5px}
+blockquote strong{color:var(--ink)}
+code{background:#edf0f2;padding:1px 6px;border-radius:4px;font-family:var(--font-mono);font-size:12.8px;color:#8a2f56;word-break:break-all}
+pre{background:#f2f4f6;border:1px solid var(--line);border-radius:var(--radius);padding:10px 14px;overflow-x:auto;margin:10px 0}
+pre code{background:none;padding:0;color:var(--ink);font-size:12.5px;word-break:normal}
+hr.end{border:none;border-top:1px solid var(--line);margin:40px 0 14px}
+
+/* ============ 审核说明块 ============ */
+.review-note{background:var(--warn-bg);border:1px solid var(--warn-line);border-left:4px solid #d9ab3c;border-radius:var(--radius);padding:14px 18px;margin:20px 0;font-size:14px}
+.review-note .rn-title{font-weight:700;color:var(--warn-ink);margin-bottom:4px}
+.review-note ol{margin:6px 0 2px}
+.review-note b{color:var(--warn-ink)}
+
+/* ============ 表格 ============ */
+.table-wrap{overflow-x:auto;margin:14px 0;border:1px solid var(--line);border-radius:var(--radius);background:var(--paper)}
+table{border-collapse:collapse;width:100%;font-size:13.8px;min-width:560px}
+th,td{border-bottom:1px solid var(--line);padding:8px 12px;text-align:left;vertical-align:top}
+th{background:#eef1f4;font-weight:650;white-space:nowrap;font-size:13.2px;border-bottom:2px solid var(--line-strong)}
+tr:last-child td{border-bottom:none}
+tbody tr:nth-child(even) td{background:#fafbfc}
+tbody tr:hover td{background:var(--accent-soft)}
+td.c-key{font-weight:650;color:var(--accent-deep);white-space:nowrap}
+td .num,th .num{color:var(--accent-deep);font-weight:650}
+.tag-yes{display:inline-block;background:var(--accent-soft);color:var(--accent-deep);border:1px solid var(--accent-line);border-radius:4px;padding:0 7px;font-size:12.5px;font-weight:600;white-space:nowrap}
+.tag-cond{display:inline-block;background:var(--paper-tint);color:var(--sub);border:1px solid var(--line-strong);border-radius:4px;padding:0 7px;font-size:12.5px;white-space:nowrap}
+.tag-ban{background:var(--danger-soft);color:var(--danger);border-color:var(--danger-line)}
+tr.ban td{background:var(--danger-soft)}
+tr.ban:hover td{background:#f4e3db}
+
+/* ============ 卡片网格（铁律） ============ */
+.grid-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:12px;margin:16px 0}
+.law{background:var(--paper);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:var(--radius);padding:13px 15px;font-size:13.8px;break-inside:avoid}
+.law .law-head{display:flex;align-items:baseline;gap:8px;margin-bottom:4px}
+.law .law-n{font-family:var(--font-mono);font-size:12px;color:var(--accent);font-weight:700}
+.law .law-name{font-weight:700;font-size:14.2px}
+.law p{margin:0;color:#3a444d}
+
+/* ============ 横向步骤条（§1） ============ */
+.steps{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin:16px 0}
+.step{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-sm);padding:10px 9px 9px;font-size:12.3px;line-height:1.5;break-inside:avoid}
+.step::before{content:"";position:absolute;top:0;left:0;height:3px;width:var(--w,30%);background:var(--accent);border-radius:var(--radius-sm) 0 0 0}
+.step .s-n{font-family:var(--font-mono);font-weight:700;font-size:16px;color:var(--accent);display:block}
+.step .s-name{display:block;font-weight:700;font-size:13px;margin:1px 0 3px}
+.step .s-tip{display:block;color:var(--sub);font-size:11.8px}
+.steps-hint{font-size:12.5px;color:var(--sub);margin:-8px 0 14px}
+
+/* ============ SVG 图容器 ============ */
+figure.diagram{margin:18px 0;padding:14px 12px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);break-inside:avoid}
+figure.diagram svg{display:block;width:100%;height:auto}
+figure.diagram figcaption{font-size:12.5px;color:var(--sub);margin-top:8px;text-align:center}
+.fn-layer{fill:var(--accent-soft);stroke:var(--accent-line);stroke-width:1.2}
+.fn-layer-1{fill:#dfeef3}
+.fn-head{font:700 14px var(--font-body);fill:var(--accent-deep)}
+.fn-body{font:400 12.5px var(--font-body);fill:#3a444d}
+.fn-arrow{fill:var(--accent);opacity:.75}
+.fn-sub{fill:#fff;stroke:var(--accent-line);stroke-width:1}
+.fn-subtext{font:600 12px var(--font-body);fill:var(--accent-deep)}
+.fn-flow{font:700 14px var(--font-mono);fill:var(--accent)}
+
+/* ============ 三维度卡（§3） ============ */
+.dims{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
+.dim{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;break-inside:avoid}
+.dim .d-name{font-weight:700;font-size:15px;color:var(--accent-deep);margin-bottom:2px}
+.dim .d-look{font-size:13px;color:var(--sub);margin-bottom:8px}
+.dim .d-out{font-size:13px;background:var(--accent-soft);border-radius:var(--radius-sm);padding:4px 9px;display:inline-block}
+.darr{text-align:center;color:var(--accent);font-weight:700;font-size:15px;margin:-6px 0 6px}
+
+/* ============ 模式网格（§3 对照） ============ */
+.patterns{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:10px;margin:14px 0}
+.pat{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius-sm);padding:9px 12px;font-size:13px;break-inside:avoid}
+.pat code{display:block;background:none;padding:0;margin-bottom:3px;color:#8a2f56;font-size:12.3px}
+.pat .pat-name{font-weight:650;color:var(--accent-deep)}
+
+/* ============ 双轨分流（§6） ============ */
+.split{display:grid;grid-template-columns:1fr 60px 1fr;align-items:stretch;gap:0;margin:16px 0}
+.split-track{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:13px 16px;font-size:13.8px;break-inside:avoid}
+.split-track .st-kind{font-weight:700;font-size:14.5px;margin-bottom:2px}
+.split-track .st-words{font-family:var(--font-mono);font-size:12.3px;color:var(--sub);margin-bottom:8px}
+.split-track .st-dest{background:var(--accent-soft);border:1px solid var(--accent-line);border-radius:var(--radius-sm);padding:5px 10px;font-size:13.5px}
+.split-track .st-dest b{color:var(--accent-deep)}
+.split-divider{display:flex;align-items:center;justify-content:center;position:relative}
+.split-divider::before{content:"";position:absolute;top:0;bottom:0;left:50%;border-left:2px dashed var(--line-strong)}
+.split-divider span{position:relative;background:var(--paper-tint);border:1px solid var(--line-strong);color:var(--danger);font-size:11px;font-weight:700;padding:2px 4px;border-radius:4px;writing-mode:vertical-lr;letter-spacing:3px}
+
+/* ============ 时间轴（§7 两段式） ============ */
+.phases{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 6px}
+.ph{position:relative;padding-top:26px}
+.ph::before{content:"";position:absolute;top:9px;left:0;right:0;height:2px;background:var(--accent-line)}
+.ph::after{content:"";position:absolute;top:2px;left:0;width:16px;height:16px;border-radius:50%;background:var(--paper);border:4px solid var(--accent)}
+.ph.p-late::after{border-color:#7fb3c1}
+.ph.p-post::after{border-color:#c2dae2}
+.ph-node{position:absolute;top:-11px;left:24px;background:var(--paper-tint);padding:0 6px;font-size:11px;font-weight:700;color:var(--accent-deep);letter-spacing:1px}
+.ph-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:11px 13px;font-size:13.2px;break-inside:avoid}
+.ph-card .pc-t{font-weight:700;font-size:13.5px;margin-bottom:2px}
+.ph-card .pc-t code{font-size:11.8px}
+.ph-card .pc-when{font-size:12px;color:var(--accent-deep);font-weight:650;margin-bottom:5px}
+.ph-card p{margin:0 0 4px;font-size:12.6px;color:#3a444d}
+
+/* ============ 竖向时间线（§8 归因） ============ */
+.tl{position:relative;margin:18px 0;padding-left:6px}
+.tl::before{content:"";position:absolute;left:25px;top:8px;bottom:8px;width:2px;background:var(--accent-line)}
+.tl-item{position:relative;padding:0 0 14px 62px}
+.tl-item:last-child{padding-bottom:2px}
+.tl-n{position:absolute;left:0;top:0;width:32px;height:32px;border-radius:50%;background:var(--paper);border:2px solid var(--accent);color:var(--accent-deep);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono)}
+.tl-item.tl-guard .tl-n{border-style:dashed;border-color:var(--danger);color:var(--danger)}
+.tl-body{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:9px 13px;font-size:13.5px;break-inside:avoid}
+.tl-body .tb-t{font-weight:700}
+.tl-item.tl-guard .tl-body{border-color:var(--danger-line);background:var(--danger-soft)}
+.tl-body .tb-guard-tag{display:inline-block;font-size:11px;font-weight:700;color:var(--danger);border:1px solid var(--danger-line);border-radius:4px;padding:0 6px;margin-left:6px;vertical-align:1px;background:#fff}
+.tl-body p{margin:2px 0 0;font-size:13px;color:#3a444d}
+
+/* ============ 阈值小卡（§5/§6/§8 触发） ============ */
+.kv-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:14px 0}
+.kv{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--radius-sm);padding:10px 14px;font-size:13.5px;break-inside:avoid}
+.kv .kv-t{font-weight:700;font-size:13.8px}
+.kv.alert{border-left-color:var(--danger)}
+.kv.alert .kv-t{color:var(--danger)}
+
+/* ============ 归因类型 chips（§8） ============ */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{background:var(--paper);border:1px solid var(--accent-line);color:var(--accent-deep);border-radius:99px;padding:3px 13px;font-size:13px;font-weight:600}
+.chip.neg{border-color:var(--danger-line);color:var(--danger);background:var(--danger-soft)}
+
+/* ============ 响应式 ============ */
+@media (max-width:760px){
+  main{padding:24px 16px 60px}
+  h1{font-size:23px}
+  h2{font-size:18px}
+  .steps{grid-template-columns:1fr;gap:10px}
+  .step{display:grid;grid-template-columns:34px 1fr;column-gap:10px;align-items:start}
+  .step .s-n{grid-row:1/3;font-size:15px}
+  .step::before{width:100%;border-radius:var(--radius-sm) var(--radius-sm) 0 0}
+  .dims{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}
+  .split-divider{height:34px}
+  .split-divider::before{left:50%;right:auto;top:50%;bottom:auto;width:2px;height:100%;border-left:none;border-top:2px dashed var(--line-strong)}
+  .split-divider span{writing-mode:horizontal-tb;letter-spacing:1px}
+  .phases{grid-template-columns:1fr}
+  .ph{padding-top:0;padding-left:26px}
+  .ph::before{top:4px;bottom:4px;left:8px;right:auto;width:2px;height:auto}
+  .ph::after{top:6px;left:1px}
+  .ph-node{position:static;display:inline-block;margin:0 0 4px;padding:0}
+  .tl::before{left:19px}
+  .tl-item{padding-left:50px}
+  .tl-n{width:26px;height:26px;font-size:12.5px;left:-4px}
+}
+
+/* ============ 打印 ============ */
+@media print{
+  .topbar{display:none}
+  body{background:#fff}
+  main{max-width:none;padding:0}
+  section{scroll-margin-top:0}
+  .table-wrap{border-radius:0}
+  tr:hover td{background:inherit}
+  tbody tr:nth-child(even) td{background:#f5f5f5}
+  figure.diagram,.law,.step,.dim,.pat,.split-track,.ph-card,.tl-body,.kv{box-shadow:none}
+  h2{break-after:avoid}
+  .law,.step,.tl-item,.kv,.pat,figure.diagram,tr{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand-row">
+      <div class="doc-title">竞品分析 SOP <span class="ver-badge">v4.1</span></div>
+      <div class="doc-meta">精简执行版 · 2026-09-08 · 已批准执行</div>
+    </div>
+    <nav class="spy-nav" aria-label="章节导航">
+      <a href="#s0">铁律</a>
+      <a href="#s1">主流程</a>
+      <a href="#s2">产出标准</a>
+      <a href="#s3">三维度</a>
+      <a href="#s4">执行纪律</a>
+      <a href="#s5">博客矩阵</a>
+      <a href="#s6">词池对账</a>
+      <a href="#s7">四查</a>
+      <a href="#s8">归因</a>
+      <a href="#s9">工具主次</a>
+      <a href="#s10">生产契约</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<h1>竞品分析 SOP v4.1（精简执行版）</h1>
+<div class="h1-meta">2026-09-08 · v4.0 审核修正 · 已批准执行 · 全史见 git</div>
+
+<div class="review-note">
+  <div class="rn-title">v4.1 修正说明（2026-09-08 审核后）</div>
+  本版定位：主要读者是 Claude（按 SOP 执行竞研），人类读者审核产出。修正五项优先级最高的问题：
+  <ol>
+    <li>统一工具主次（§9 主次表，删"SEMrush 主源"残留）</li>
+    <li>锁定统计口径（URL 口径 / 页型判定树 / 阈值边界符号化）</li>
+    <li>"不读正文"改为"默认不批量读 + 4 类场景抽查"（头部核心原则）</li>
+    <li>无词级快照不输出分层归因结论（§8 步骤 3 前置条件）</li>
+    <li>冻结双阈值 / 三清单证据绑定 / 证据三级（观察→推断→验证）</li>
+  </ol>
+</div>
+
+<blockquote>
+  <strong>读者</strong>：主要 = Claude（按本 SOP 执行竞研），次要 = 人（审核产出）。叙述 / 教训已压缩为括号出处，全部执行参数保留。<br>
+  <strong>核心原则</strong>：URL slug 本身就是信息（主题 / 类型 / 层级 / pSEO 引擎），足够推断架构 + 内容矩阵。<strong>默认不批量读页面正文</strong>，仅 4 类场景读指定页面：①动态工具 / 交互确认 ②成交方式判定 ③特殊页型抽样（每类 ≥1 页）④内容质量抽查（每站 3-5 代表页）。抽查结论不外推全站。<br>
+  <strong>证据分级</strong>：观察（sitemap 有某类 URL）→ 推断（URL 呈现某模式）→ 验证（SERP / 关键词 / 流量 / 实测兑现）。仅"验证"级可进"可抄"清单。<br>
+  <strong>版本</strong>：v4.1（2026-09-08 审核修正）｜v4.0 精简重构｜v3.3 工具切换 + 归因 + DR｜v3.2 词池对账｜v3.1 四查两段式｜v3.0 结构重构。全史见 git。
+</blockquote>
+
+<!-- ================= §0 ================= -->
+<section id="s0">
+<h2><span class="no">0</span>铁律（每轮执行前过一遍）</h2>
+<div class="grid-cards">
+  <div class="law">
+    <div class="law-head"><span class="law-n">01</span><span class="law-name">真实 SERP 驱动</span></div>
+    <p>竞对发现 / 意图实判只用 Ubersuggest <code>serp_analysis</code>（主）/ DataForSEO（备），<strong>禁 web_search_prime / WebSearch</strong>（通用搜索对 B2B 极不准，塔罗翻车实证）。工具主次全表见 §9</p>
+  </div>
+  <div class="law">
+    <div class="law-head"><span class="law-n">02</span><span class="law-name">发现即全量深档</span></div>
+    <p>每个真实竞对都值得深研，不按主观"对标价值"筛选（筛选 = 信息损失）</p>
+  </div>
+  <div class="law">
+    <div class="law-head"><span class="law-n">03</span><span class="law-name">sitemap 全量不抽样</span></div>
+    <p>raw json 永久留档研究目录（非 tmp），重抓 ≠ 原数据</p>
+  </div>
+  <div class="law">
+    <div class="law-head"><span class="law-n">04</span><span class="law-name">全量核实不凭印象</span></div>
+    <p>"几家有博客"类范围判断必须 Python 扫全量 sitemap</p>
+  </div>
+  <div class="law">
+    <div class="law-head"><span class="law-n">05</span><span class="law-name">敏感词脚本层过滤</span></div>
+    <p>防 agent 会话被杀：研究文档只计数不落词面；过滤规则版本 + 数量 + 时间落 <code>过滤日志.txt</code> 随数据留档（可审计不泄词面）</p>
+  </div>
+  <div class="law">
+    <div class="law-head"><span class="law-n">06</span><span class="law-name">研究→生产闭环</span></div>
+    <p>每个结论必须指向生产侧对应物（模板 / 排产 / 质检断言）</p>
+  </div>
+  <div class="law">
+    <div class="law-head"><span class="law-n">07</span><span class="law-name">需求范围纪律</span></div>
+    <p>改 X 只动 X，顺手发现只报不动</p>
+  </div>
+</div>
+</section>
+
+<!-- ================= §1 ================= -->
+<section id="s1">
+<h2><span class="no">1</span>七步主流程</h2>
+
+<div class="steps" aria-label="七步主流程步骤条">
+  <div class="step" style="--w:100%"><span class="s-n">1</span><span class="s-name">SERP 发现竞对</span><span class="s-tip">数量+饱和度双阈值冻结</span></div>
+  <div class="step" style="--w:86%"><span class="s-n">2</span><span class="s-name">定位 sitemap</span><span class="s-tip">robots→探测降级链</span></div>
+  <div class="step" style="--w:72%"><span class="s-n">3</span><span class="s-name">全量提取留档</span><span class="s-tip">递归 index 取 &lt;loc&gt;</span></div>
+  <div class="step" style="--w:58%"><span class="s-n">4</span><span class="s-name">slug 三维度分析</span><span class="s-tip">机器算分布 LLM 判读</span></div>
+  <div class="step" style="--w:44%"><span class="s-n">5</span><span class="s-name">产出深档</span><span class="s-tip">每家八节独立文档</span></div>
+  <div class="step" style="--w:30%"><span class="s-n">6</span><span class="s-name">博客矩阵→选题</span><span class="s-tip">含博客竞品（Python 核实）</span></div>
+  <div class="step" style="--w:16%"><span class="s-n">7</span><span class="s-name">Ubersuggest 四查</span><span class="s-tip">每竞对必做，两段式</span></div>
+</div>
+<div class="steps-hint">顶部色条表示流程推进方向；全部执行参数见下表。</div>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th style="width:34px">#</th><th style="width:120px">步骤</th><th>要点与参数</th><th style="width:190px">完成标准</th></tr></thead>
+<tbody>
+<tr><td class="c-key">1</td><td><strong>SERP 发现竞对</strong></td><td><code>serp_analysis limit=20-50</code>，<strong>统一口径</strong>：<code>locId=2840</code> / en / desktop、记录查询日期、按注册域名去重（同集团多域名保留主站 + 备注关联）、品牌词 SERP 不作竞对来源。至少<strong>三类词族</strong>：① 品类词 <span class="num">3-5</span>（{产品} replacement / custom）② <strong>工具 / 计价词 <span class="num">5-10</span></strong>（calculator / instant quote / quote online——工具型玩家只从计价词浮出，靠垫漏 8 家教训）③ 场景 / 长尾 <span class="num">2-3</span>。过滤大平台 / OEM 官网 / 目录站 / 聚合页</td><td><strong>数量 + 饱和度双阈值冻结</strong>：≥<span class="num">20-30 家</span>即冻结；不足 20 家→加词族 / 渠道（SaaS Referral 榜反推），<strong>连续两轮新增带来的合格竞对 &lt;<span class="num">2 家</span></strong>即冻结并记录原因（细分市场竞对天然少 ≠ 失败）</td></tr>
+<tr><td class="c-key">2</td><td>定位 sitemap</td><td><strong>降级链</strong>：① 读 <code>robots.txt</code> 全部 <code>Sitemap:</code> 声明 →②无声明 / 不全→常见路径探测（<code>/sitemap.xml</code> <code>/sitemap_index.xml</code> <code>/wp-sitemap.xml</code> 等）→③仍无→内页页脚找 sitemap 链接→④全失败标"无 sitemap"降级（仅目录推断 + 抽样）。工具 = <code>02-自动化工具库/12-sitemap定位器/</code>（自动走完 ①②+ 递归提取）</td><td>每家记录发现方法（robots / 探测 / 内页 / 失败）</td></tr>
+<tr><td class="c-key">3</td><td>全量提取留档</td><td>工具递归 sitemap index 提取 <code>&lt;loc&gt;</code>。<strong>URL 统计口径</strong>：去重后 HTML 页面 URL；排除 image:loc / 视频 / 新闻 / 附件（.pdf/.jpg 等）/ 参数 URL；多语言按独立页统计但标语言维度；lastmod 缺失不剔除（标"无 lastmod"）</td><td>落 <code>{项目}/竞品研究/站点sitemap数据/</code></td></tr>
+<tr><td class="c-key">4</td><td>slug 三维度分析</td><td>机器算分布，LLM 只看统计判读（全部 URL 不进 context）</td><td>见 §3</td></tr>
+<tr><td class="c-key">5</td><td>产出深档</td><td>每家独立文档</td><td>见 §2</td></tr>
+<tr><td class="c-key">6</td><td>博客矩阵→选题</td><td>对所有含博客竞品（Python 核实）</td><td>见 §5</td></tr>
+<tr><td class="c-key">7</td><td>Ubersuggest 四查</td><td>每竞对必做，两段式</td><td>见 §7</td></tr>
+</tbody>
+</table>
+</div>
+
+<blockquote><strong>真实竞对定义</strong>（须全部满足才进名单）：面向相同客户群｜相同或高度替代的产品 / 服务｜在目标市场实际成交｜至少 <span class="num">1</span> 个相关非品牌词进 SERP 前 <span class="num">100</span>。排除：纯媒体 / 目录站 / 平台聚合页 / OEM 供应商官网。</blockquote>
+</section>
+
+<!-- ================= §2 ================= -->
+<section id="s2">
+<h2><span class="no">2</span>产出标准</h2>
+
+<p><strong>每竞对 1 份深档</strong>（<code>竞品研究/竞品站点/{domain}.md</code>，<span class="num">300-500 行</span>，八节缺一即未完成）：</p>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th style="width:150px">节</th><th>内容</th></tr></thead>
+<tbody>
+<tr><td class="c-key">1 档案头</td><td>域名 / 平台 / URL 总数（按步骤 3 口径）/ 流量（月访 X｜有机词 Y｜DA Z｜24 月趋势｜top 词归属）/ 外链强度（<strong>辅助粗筛</strong>：DR(Ahrefs) W——不与流量 / 词数横向等价，不判质量规模）/ 活跃度</td></tr>
+<tr><td class="c-key">2 信息架构 IA</td><td>目录层级树 + 顶级导航推断</td></tr>
+<tr><td class="c-key">3 pSEO 引擎</td><td>核心 slug 模式 + 维度组合 DNA + 代表 URL <span class="num">10</span> 条</td></tr>
+<tr><td class="c-key">4 页型分布</td><td><strong>页型级</strong>统一口径（产品 / 类目 / blog post / 静态 page / 工具页 / 教程页；判定树见 §4）；区分真 SEO 页 vs SKU 长尾 vs tag 归档；无法判定的入"待复核"不强行归类</td></tr>
+<tr><td class="c-key">5 page vs post 判定</td><td>固定层级页 vs 流式内容 → 自建 WP 架构映射</td></tr>
+<tr><td class="c-key">6 更新重心</td><td>lastmod 月度分布 → 近期动作</td></tr>
+<tr><td class="c-key">7 特有情报</td><td>该竞对独有结构资产 / 模式（每家定制，非模板填充）</td></tr>
+<tr><td class="c-key">8 三清单</td><td><strong>可抄 / 可超 / 须避</strong>各 <span class="num">2-3</span> 条，<strong>每条绑定 ≥<span class="num">1</span> 可复核证据</strong>（URL 数 / 关键词数 / 估算流量 / 排名 / SERP 结果 / 实测行为，附数据日期）；无证据只列"待验证"不入三清单</td></tr>
+</tbody>
+</table>
+</div>
+
+<p><strong>另产</strong>：<code>00-对比总表.md</code>（全竞对：域名 / 平台 / URL 数 / pSEO / 页型 / SERP / 流量）+ <strong>《竞对决策级发现总汇》</strong>（随深档出初版、四查后回填定稿）：</p>
+<ul>
+<li>§ 行业格局判断（<span class="num">5-8</span> 条决策级发现 + 支撑档案 + 我方对应决策）</li>
+<li>§ 分战场发现（流量 / 产品 / 内容）</li>
+<li><strong>§ 决策溯源表（我方每个战略决策 ← 支撑它的竞对发现，复盘复用载体）</strong></li>
+<li>§ 空白与机会｜§ 档案索引</li>
+</ul>
+
+<figure class="diagram">
+<svg viewBox="0 0 940 344" role="img" aria-label="完整范式：研究层到执行层的四层流程图">
+  <!-- L1 研究层 -->
+  <rect class="fn-layer fn-layer-1" x="70" y="10" width="800" height="54" rx="7"/>
+  <text class="fn-head" x="92" y="33">研究层</text>
+  <text class="fn-body" x="92" y="52">深档（每竞对 1 份，八节全量，300-500 行/家）</text>
+  <text class="fn-body" x="856" y="42" text-anchor="end" opacity=".55">输入：N 家竞对</text>
+  <path class="fn-arrow" d="M470 66 l-7 12 h14 z"/>
+  <!-- L2 综合决策层 -->
+  <rect class="fn-layer" x="140" y="82" width="660" height="54" rx="7"/>
+  <text class="fn-head" x="162" y="105">综合决策层</text>
+  <text class="fn-body" x="162" y="124">00-对比总表 + 决策级发现总汇 + 决策溯源表</text>
+  <path class="fn-arrow" d="M470 138 l-7 12 h14 z"/>
+  <!-- L3 战略层 -->
+  <rect class="fn-layer" x="210" y="154" width="520" height="54" rx="7"/>
+  <text class="fn-head" x="232" y="177">战略层</text>
+  <text class="fn-body" x="232" y="196">内容策略 + 网站结构</text>
+  <path class="fn-arrow" d="M470 210 l-7 12 h14 z"/>
+  <!-- L4 执行层 -->
+  <rect class="fn-layer" x="70" y="226" width="800" height="98" rx="7"/>
+  <text class="fn-head" x="92" y="250">执行层</text>
+  <text class="fn-body" x="172" y="250">三工序（有依赖顺序，不可倒置）</text>
+  <rect class="fn-sub" x="92" y="262" width="216" height="46" rx="6"/>
+  <text class="fn-subtext" x="200" y="282" text-anchor="middle">① 网站规划 URL 底册</text>
+  <text class="fn-subtext" x="200" y="299" text-anchor="middle" font-weight="400" opacity=".8" font-size="11">站点结构 / 数据层</text>
+  <text class="fn-flow" x="322" y="291" text-anchor="middle">→</text>
+  <rect class="fn-sub" x="340" y="262" width="216" height="46" rx="6"/>
+  <text class="fn-subtext" x="448" y="282" text-anchor="middle">② 页面内容规划</text>
+  <text class="fn-subtext" x="448" y="299" text-anchor="middle" font-weight="400" opacity=".8" font-size="11">pSEO 页面原型</text>
+  <text class="fn-flow" x="570" y="291" text-anchor="middle">→</text>
+  <rect class="fn-sub" x="588" y="262" width="216" height="46" rx="6"/>
+  <text class="fn-subtext" x="696" y="282" text-anchor="middle">③ 文章生产</text>
+  <text class="fn-subtext" x="696" y="299" text-anchor="middle" font-weight="400" opacity=".8" font-size="11">MD → Gutenberg</text>
+</svg>
+<figcaption>完整范式：研究层 → 综合决策层 → 战略层 → 执行层三工序（①②③ 有依赖顺序）</figcaption>
+</figure>
+
+<blockquote>
+<strong>特殊价值竞对追加</strong>：与己方同模式者（同供应链 / 同打法）加"模式级深研"七维度（品类定价 / 配置维度全集 / 信任构建 / 物流 / 冷启动 / 技术栈证据链），产出"它已解决而我方空白的能力清单"。
+</blockquote>
+</section>
+
+<!-- ================= §3 ================= -->
+<section id="s3">
+<h2><span class="no">3</span>slug 三维度（方法论核心）</h2>
+<p style="font-size:13px;color:var(--sub)">URL 分析的三个<strong>视角</strong>（分布是统计结果，非 URL 自身属性）：</p>
+
+<div class="dims">
+  <div class="dim">
+    <div class="d-name">路径结构</div>
+    <div class="d-look">看什么：URL 目录层级</div>
+    <div class="d-out">得出：信息架构 IA</div>
+  </div>
+  <div class="dim">
+    <div class="d-name">命名模式</div>
+    <div class="d-look">看什么：slug 命名规律</div>
+    <div class="d-out">得出：pSEO 引擎 DNA</div>
+  </div>
+  <div class="dim">
+    <div class="d-name">页型分布</div>
+    <div class="d-look">看什么：页型 url_count 占比</div>
+    <div class="d-out">得出：战略重心（产品 / 内容 / pSEO / 本地驱动）</div>
+  </div>
+</div>
+
+<h3>六种模式对照（常见模式非封闭枚举）</h3>
+<div class="patterns">
+  <div class="pat"><code>/{属性A}-{属性B}-{核心词}/</code><span class="pat-name">双属性映射</span></div>
+  <div class="pat"><code>/{规格}/{规格}/</code><span class="pat-name">笛卡尔积</span></div>
+  <div class="pat"><code>{实体}-for-{场景}</code><span class="pat-name">场景导航</span></div>
+  <div class="pat"><code>{实体}-vs-{实体}</code><span class="pat-name">对比页</span></div>
+  <div class="pat"><code>{实体}-alternatives</code><span class="pat-name">替代页</span></div>
+  <div class="pat"><code>{地区}/{核心词}</code><span class="pat-name">地理 pSEO</span></div>
+</div>
+<p style="font-size:13px;color:var(--sub)">发现无法归类的模式即新增模式并记录样本 + 数量（如 品牌×品类 / 地区×服务 / 兼容型号 / 多语言路径）——不强行塞入六类。</p>
+
+<blockquote><strong>流量修正</strong>：吃流量最多的页型 ≠ 页数最多的页型时，战略重心以流量数据为准（slug 分布只是供给面）。</blockquote>
+</section>
+
+<!-- ================= §4 ================= -->
+<section id="s4">
+<h2><span class="no">4</span>执行纪律（判读口径）</h2>
+<div class="table-wrap">
+<table>
+<thead><tr><th style="width:34px">#</th><th>纪律</th></tr></thead>
+<tbody>
+<tr><td class="c-key">1</td><td>页型级不是目录级；<strong>工具页（calculator / quiz / converter / finder…）单独归类</strong>——漏扫 = 漏一条产品线</td></tr>
+<tr><td class="c-key">2</td><td><strong>工具 / 成交判定不能只看 sitemap</strong>：SERP 计价词族命中 + webReader 实抓确认交互（纯 RFQ 询盘不算在线计价）；成交方式过 1D 三问（谁能买 / 买什么 / 怎么成交），禁止凭首页定类型（阿木 <span class="num">186→179</span> 家教训）</td></tr>
+<tr><td class="c-key">3</td><td>一词实测 ≠ 词群结论：每页型 <span class="num">8-16</span> 词 SERP 实测再下结论</td></tr>
+<tr><td class="c-key">4</td><td>AI 抗性分页型统计（单值静态映射词 vs 多值决策词命运不同）</td></tr>
+<tr><td class="c-key">5</td><td>跨词变体意图归并（变体各自全量 vol 虚高 <span class="num">10-20 倍</span>）</td></tr>
+<tr><td class="c-key">6</td><td>平台识别看源码（generator meta / 静态资源域），XML 转义与 image:loc 兼容提取</td></tr>
+<tr><td class="c-key">7</td><td><strong>页面有数字 ≠ 产品价格</strong>：在售价判据 = 数字与商品绑定 + 能选规格 + 能加购物车；仅展示数字 = 标价展示；RFQ 表单 = 非在线计价；专业渠道口径 = "普通消费者无购买资格"非"无价格"；跨性质不算平均价</td></tr>
+<tr><td class="c-key">8</td><td>B2B 计算器可剥离 DOM 留存逻辑本地重放（成本结构外泄情报），遇则采</td></tr>
+<tr><td class="c-key">9</td><td>内容驱动站若主题与购买意图零交集 = 反例非学习对象；学习对象看词族集中度</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>页型判定树</h3>
+<blockquote>按序匹配，命中即归类；全不中 → <strong>"待复核"</strong>不得强行归类：① 有交互输入 / 计算 / 筛选输出 → 工具页 ② 有购物车 / 规格选择 / 成交路径 → 产品页 ③ 流式日期发布体系 → blog post ④ 固定导航 / 服务说明 → 静态 page ⑤ 仅标签 / 作者 / 分页 / 筛选集合 → 归档技术页（不计入内容页统计）</blockquote>
+</section>
+
+<!-- ================= §5 ================= -->
+<section id="s5">
+<h2><span class="no">5</span>博客矩阵 → 选题转化</h2>
+
+<p>适用 = 全部含博客竞品（<code>/blog|/learning-center|/news|/resources|/articles</code> Python 全量扫）：</p>
+<ol>
+<li>每家拆 <code>{domain}_blog_split.json</code> 落 <code>站点sitemap数据/</code></li>
+<li>统一主题轴聚类（测量教程 / 选购对比 / 材质 / 养护 / DIY / 品牌替换 / 行业应用 / 其他）。分类默认基于 slug + 标题，<strong>每篇只归一个主主题</strong>；标题无法判断的标"待人工复核"</li>
+<li>主题 × 竞对篇数矩阵："多家有但量少" = 可超越，"零覆盖" = 空白</li>
+<li>对位自己 <code>posts/</code> 标三档（已覆盖 / 竞有我无 / 全空白）；<strong>进 P0/P1 的选题人工抽样复核后方可排产</strong></li>
+<li>产出 <span class="num">20-30</span> 个 slug 级选题 → <code>01-博客主题矩阵与选题转化.md</code></li>
+</ol>
+
+<div class="kv-row">
+  <div class="kv"><span class="kv-t">"其他" &gt;<span class="num">30%</span> 须二次细分（按标题词频聚类拆分）</span></div>
+  <div class="kv"><span class="kv-t">≥<span class="num">3 家</span>覆盖 = 需求实证 <span class="num">P0</span></span>　1-2 家 = P1，零覆盖 = P2 自证需求</div>
+</div>
+</section>
+
+<!-- ================= §6 ================= -->
+<section id="s6">
+<h2><span class="no">6</span>词池承接对账（四查收尾工序）</h2>
+
+<blockquote>原则会漏，对账表不会（sofa 漏洞：17 页批次漏 sofa <span class="num">8.1K</span> + patio <span class="num">8-10 万</span>词池）。</blockquote>
+
+<h3>两轨分流（不许混淆）</h3>
+<div class="split">
+  <div class="split-track">
+    <div class="st-kind">Transactional / Commercial 词</div>
+    <div class="st-words">custom X · X replacement</div>
+    <div class="st-dest">唯一承接 = <b>page</b>，文章互哺不算</div>
+  </div>
+  <div class="split-divider" aria-hidden="true"><span>不许混淆</span></div>
+  <div class="split-track">
+    <div class="st-kind">Informational 词</div>
+    <div class="st-words">how to · what · cost</div>
+    <div class="st-dest">唯一承接 = <b>post</b></div>
+  </div>
+</div>
+
+<h3>对账表</h3>
+<p>词族 ×「商业词量｜page 承接｜信息词量｜post 承接」逐行核对（原表记法为逐行 <code>✅/❌</code>）。词池 = 四查词级 + <code>keyword_suggestions</code> 自查（每批 <span class="num">3</span> 种子）；<strong>逐词判定先过《关键词调研与搜索意图判定手册》三判</strong>，输出直接填表。</p>
+
+<div class="kv-row">
+  <div class="kv alert"><span class="kv-t">缺页判定</span>：商业词族 <span class="num">≥1,000</span> 无 page = 缺页</div>
+  <div class="kv alert"><span class="kv-t">缺文判定</span>：信息词族 <span class="num">≥500</span> 无 post = 缺文</div>
+</div>
+<p>词族口径：变体归并后去重、排除品牌词、统一 <code>locId=2840</code>。缺口编 <strong>G 号</strong>（词族 + 实测词量 + 竞对实证 + 建议 URL + 优先级 <span class="num">P1≥3,000 / P2 1,000-2,999 / P3&lt;1,000</span>）。</p>
+
+<h3>纪律</h3>
+<ul>
+<li>落 <code>04-内容生产/品类页覆盖盘点.md</code>；先登记再建页</li>
+<li>季节词标旺季窗口（提前 <span class="num">6 个月</span>建页）；并入优先于新页；每次大规模四查后重跑</li>
+</ul>
+</section>
+
+<!-- ================= §7 ================= -->
+<section id="s7">
+<h2><span class="no">7</span>四查（Ubersuggest MCP，每竞对必做）</h2>
+
+<blockquote>slug 分析 = 供给侧推断；四查 = 需求侧验证。单看 sitemap 知道"有什么"，交叉才知道"什么有效"。</blockquote>
+
+<h3>两段式时序（默认）</h3>
+<div class="phases">
+  <div class="ph">
+    <span class="ph-node">阶段① 前置</span>
+    <div class="ph-card">
+      <div class="pc-t"><code>domain_overview</code></div>
+      <div class="pc-when">随发现批次前置（每批 &lt;15 家）</div>
+      <p>摘要 3-5 行（月访 / 词数 / DA / DR / 趋势定性 / top3 词）写入深档 brief；<strong>"增长站 / 衰退站"定性决定该站被当学习对象还是反面样本写</strong>；查完立即落盘</p>
+    </div>
+  </div>
+  <div class="ph p-late">
+    <span class="ph-node">阶段② 后置</span>
+    <div class="ph-card">
+      <div class="pc-t"><code>domain_keywords(limit=10)</code> + <code>domain_top_pages(limit=10, 月访&gt;5K 的家)</code></div>
+      <div class="pc-when">深档完成后置</div>
+      <p>验证 pSEO 引擎推断与页面级兑现；判读有变补"判读修正行"</p>
+    </div>
+  </div>
+  <div class="ph p-post">
+    <span class="ph-node">阶段③ 建站后</span>
+    <div class="ph-card">
+      <div class="pc-t"><code>backlink_opportunity</code></div>
+      <div class="pc-when">建站后独立工序</div>
+      <p>需己方域名作 negative_target</p>
+    </div>
+  </div>
+</div>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th style="width:44px">序</th><th style="width:200px">工具</th><th style="width:120px">全做？</th><th>看什么</th></tr></thead>
+<tbody>
+<tr><td class="c-key">1</td><td><code>domain_overview</code></td><td><span class="tag-yes">必做</span></td><td>规模分级 + 24 月趋势 + 自带 top50 词排名</td></tr>
+<tr><td class="c-key">2</td><td><code>domain_keywords</code></td><td><span class="tag-yes">必做</span></td><td><strong>search_intent 标注</strong>（Transactional / Informational 分布）+ 词级确认</td></tr>
+<tr><td class="c-key">3</td><td><code>domain_top_pages</code></td><td><span class="tag-cond">月访&gt;5K 家</span></td><td><strong>词层流量的页面级兑现</strong>（词层 <span class="num">14K</span> / 页面层 <span class="num">138</span> 的塌方只有此查暴露）</td></tr>
+<tr><td class="c-key">4</td><td><code>backlink_opportunity</code></td><td><span class="tag-cond">建站后</span></td><td>链竞对不链己方的 referring domains</td></tr>
+<tr><td class="c-key">可选</td><td><code>domain_top_countries</code> / paid 字段 / <code>competitors</code></td><td><span class="tag-cond">条件触发</span></td><td>B 端 / 有付费信号 / 名单交叉时：国家布局｜投广告 = 需求验证｜竞对榜交叉</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>限流操作法</h3>
+<ul>
+<li>403 无文案 + auth 正常 = 短时限流，等 <span class="num">60-180s</span>（转做落盘不空等）；报错含 "daily reports limit" = 日额尽当日停</li>
+<li><strong>限流按 payload 加权</strong>：全量 overview 连续 ~<span class="num">15 次</span>触发，limit=10 小查 <span class="num">46 次</span>零触发——大批量时大小查交错</li>
+<li><span class="num">150 次/天</span>：29 家四查一轮 ≈<span class="num">75 次</span>足够。<strong>额度够就全量不抽样</strong></li>
+</ul>
+
+<h3>落盘契约（查完即写）</h3>
+<ol>
+<li>raw 留档 <code>_ubersuggest_*_raw_{日期}.md</code></li>
+<li>深档档案头一行（见 §2）</li>
+<li>总汇回填</li>
+</ol>
+
+<h3>交叉判读</h3>
+<ul>
+<li>有页面无排名 = 无效堆砌（抄结构别抄这个）｜slug 模式 + 对应词有排名 = 引擎已验证直接复用（= 证据分级到"验证"级）</li>
+<li>流量趋势陡降 = 衰退，切入窗口</li>
+<li><strong>词层流量 ≠ 页面层兑现</strong>（keywords 大流量 + top_pages 水位低 = 怪词噪音或衰退站，成色打折）</li>
+<li><strong>品牌词 vs 非品牌词结构</strong>：domain_keywords 首部统计品牌词流量占比——高品牌占比 = 护城河难抢（学品牌建设）；纯非品牌 = pSEO 引擎驱动可复制（正面学习对象）</li>
+<li><strong>社交传播力</strong>：serp_analysis 条目自带 shares——同词同位传播力对比，高分享 = 有传播基因，进"可抄"清单候选证据</li>
+</ul>
+</section>
+
+<!-- ================= §8 ================= -->
+<section id="s8">
+<h2><span class="no">8</span>流量拐点归因（上升 / 下降双向）</h2>
+
+<blockquote>四查 = 横截面快照；归因 = 纵向因果链。<strong>上升站 = 学习对象（什么引擎驱动增长），下降站 = 反面样本 + 切入窗口——双向都归因</strong>。归因结论区分"观察到的相关"与"已验证的因果"。</blockquote>
+
+<div class="kv-row">
+  <div class="kv alert"><span class="kv-t">触发 A</span>：24 月趋势 3 个月内 <span class="num">±40%</span>，或连续两月同向 <span class="num">&gt;25%</span></div>
+  <div class="kv alert"><span class="kv-t">触发 B</span>：季度复查锚定名单异动（<strong>锚定名单每季度重跑 overview 一轮</strong>，竞研从项目制变持续情报资产）</div>
+</div>
+
+<h3>六步归因流水线</h3>
+<div class="tl">
+  <div class="tl-item tl-guard">
+    <span class="tl-n">0</span>
+    <div class="tl-body">
+      <span class="tb-t">剥离季节性</span><span class="tb-guard-tag">防误判</span>
+      <p>品类季节先验 + 两年同月对比；同月同形态 = 季节型误报剔除</p>
+    </div>
+  </div>
+  <div class="tl-item">
+    <span class="tl-n">1</span>
+    <div class="tl-body">
+      <span class="tb-t">曲线定位拐点月</span>
+      <p>domainTraffic 月度序列，拐点 <span class="num">±1 月</span></p>
+    </div>
+  </div>
+  <div class="tl-item">
+    <span class="tl-n">2</span>
+    <div class="tl-body">
+      <span class="tb-t">算法更新对齐</span>
+      <p>vs 核心更新窗口（<strong>Google Search Status Dashboard 官方主源</strong>，Moz 更新史 moz.com/google-algorithm-change 备）；窗口 <span class="num">±2 周</span> = <strong>算法相关型</strong>（仅相关性证据，非确定因果——除非补页面级证据），否则下钻</p>
+    </div>
+  </div>
+  <div class="tl-item">
+    <span class="tl-n">3</span>
+    <div class="tl-body">
+      <span class="tb-t">关键词分层变化</span>
+      <p><strong>前置条件：已有季度词级快照</strong>（快照契约：按季度保存 domain / 关键词 / 排名 / URL / 流量估算 / 数据源）。无快照 → 跳过本步，结论标"部分归因（无词级历史）"，禁输出词级分层月度变化。有快照 → searchKw + 四层（top3 / 4-10 / 11-50 / 51-100）对比：词数不变分层下移 = 排名滑坡｜searchKw 骤降 = 掉出前 100（索引 / 惩罚级）｜topTier 稳 thirdTier 崩 = 中腰部失守（竞对抢位）</p>
+    </div>
+  </div>
+  <div class="tl-item">
+    <span class="tl-n">4</span>
+    <div class="tl-body">
+      <span class="tb-t">页面级定位</span>
+      <p>崩首页 = 站点级｜崩某类页 = 板块级（博客被砍 / pSEO 失效）｜散点 = 正常波动</p>
+    </div>
+  </div>
+  <div class="tl-item">
+    <span class="tl-n">5</span>
+    <div class="tl-body">
+      <span class="tb-t">反链增减性质</span>
+      <p>lost / gained 的 spam_score：丢 spam <span class="num">&gt;50</span> = <strong>疑似良性排毒</strong>（须结合自然链变化 + 目标页流量复核后定性）；丢自然链 + gained 归零 = 外链流失型</p>
+    </div>
+  </div>
+  <div class="tl-item">
+    <span class="tl-n">6</span>
+    <div class="tl-body">
+      <span class="tb-t">归因结论 + 双向动作</span>
+      <p>见下</p>
+    </div>
+  </div>
+</div>
+
+<h3>输出</h3>
+<p><strong>每家一张归因卡</strong>（拐点月 / 归因类型 / 证据 / 我方动作）回填档案头 + 总汇溯源行。</p>
+
+<h3>动作还原工序（触发命中的站必做）</h3>
+<blockquote>归因类型只回答"哪层变了"，动作还原回答"<strong>它做了什么导致流量起 / 落</strong>"。五源证据全部不读正文：</blockquote>
+<div class="table-wrap">
+<table>
+<thead><tr><th style="width:250px">证据源</th><th style="width:230px">看什么</th><th>得出</th></tr></thead>
+<tbody>
+<tr><td class="c-key">lastmod 月度分桶（sitemap 自带，按页型聚合）</td><td>哪个月批量建 / 更了哪类页、停更点</td><td>动作日历（建页潮 / 改版潮 / 停更）</td></tr>
+<tr><td class="c-key"><code>backlinks(order_by=first_seen)</code> 月度分桶</td><td>gained 链接爆发窗口</td><td>外链动作（数字公关 / 被报道 / 可疑采购）</td></tr>
+<tr><td class="c-key">Wayback 快照（拐点月前后各 1 张对比）</td><td>导航 / 板块 / 模板增删</td><td>结构动作（新板块上线 / 砍板块）</td></tr>
+<tr><td class="c-key"><code>domain_top_pages</code> 类型分布 + 集中度</td><td>头部流量靠哪类页吃</td><td>增长引擎定性（pSEO / 内容 / 品牌 / 单品驱动）</td></tr>
+<tr><td class="c-key">sitemap 季度重抓 diff（随锚定名单积累）</td><td>URL 进出清单</td><td>扩张 / 收缩实锤</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="kv-row">
+  <div class="kv"><span class="kv-t">输出"动作时间线卡"</span>：动作行（五源汇总）× 流量行（24 月曲线）上下对齐，标注"动作先于拐点 N 月"→ 引擎动作因果链（例：2025-03 起月铺 <span class="num">400</span> 张 city 页→3 个月后流量 <span class="num">3×</span>；2026-01 停更→当季 <span class="num">-40%</span>）</div>
+  <div class="kv"><span class="kv-t">三清单联动</span>：上升站因果链进"可抄"（<strong>动作 + 剂量 + 见效周期</strong>三项齐全才算一条）；下降站进"须避"+ 我方抢位机会（它丢的词层 = 我方内容窗口）</div>
+  <div class="kv"><span class="kv-t">时滞口径</span>：按站按页型实测记录（<span class="num">3-6 月</span>为经验先验非定值）；lastmod 缺失站降级用 Wayback + 外链双源</div>
+</div>
+
+<h3>归因类型枚举</h3>
+<div class="chips">
+  <span class="chip">算法相关</span>
+  <span class="chip">板块崩塌</span>
+  <span class="chip">外链流失</span>
+  <span class="chip">竞争抢位</span>
+  <span class="chip neg">季节（误报）</span>
+  <span class="chip">品牌损毁</span>
+</div>
+
+<h3>数据缺口</h3>
+<p>Ubersuggest 无词级历史——需词级丢失清单时用 DFS Labs <code>ranked_keywords</code> 季度快照自建 diff（工具参考 <code>02-自动化工具库/08-DR榜雷达/</code>）。</p>
+
+<h3>DR 口径</h3>
+<pre><code>curl -H "Authorization: Bearer $AHREFS_API_KEY" "https://api.ahrefs.com/v3/public/domain-rating-free?target={domain}"</code></pre>
+<p>或 <code>kd_rank.py {domain}</code>（key 在 <code>.env</code>；免费不耗 units；<strong>DR 可被 301 / 灌外链操纵，仅辅助粗筛</strong>——不判竞品质量 / 流量真实性 / 业务规模 / 学习优先级，不与 DA / 流量 / 词数横向等价；自家站不配合 AhrefsBot 爬取，DR 仅用于竞对；Ahrefs 免费接口以当前官方文档为准，档案记录抓取日期）。</p>
+</section>
+
+<!-- ================= §9 ================= -->
+<section id="s9">
+<h2><span class="no">9</span>工具主次与方法边界</h2>
+
+<h3>工具主次表</h3>
+<blockquote>每任务一个主源；结果冲突 → 以主源为准并记录差异；<strong>横向对比必须同源同批</strong>，禁跨工具拼对比。</blockquote>
+<div class="table-wrap">
+<table>
+<thead><tr><th style="width:170px">任务</th><th style="width:230px">主源</th><th style="width:220px">备用</th><th>冲突处理</th></tr></thead>
+<tbody>
+<tr><td class="c-key">SERP 发现 / 意图实判</td><td>Ubersuggest <code>serp_analysis</code></td><td>DataForSEO live advanced</td><td>以真实 SERP 为准，记录差异</td></tr>
+<tr><td class="c-key">流量趋势 / 规模分级</td><td>Ubersuggest <code>domain_overview</code></td><td>—（横向只用同源）</td><td>禁跨工具横向比较</td></tr>
+<tr><td class="c-key">关键词明细 / 词级确认</td><td>Ubersuggest <code>domain_keywords</code></td><td>DFS Labs <code>ranked_keywords</code>（需历史时）</td><td>标注数据源 + 抓取日期</td></tr>
+<tr><td class="c-key">DR（辅助粗筛）</td><td>Ahrefs 免费接口</td><td>—</td><td>仅粗筛不入核心结论</td></tr>
+<tr><td class="c-key">sitemap 定位与提取</td><td><code>12-sitemap定位器</code></td><td>webReader 兜底（反爬站）</td><td>—</td></tr>
+<tr><td class="c-key">页面交互 / 动态价</td><td>Playwright</td><td>webReader</td><td>—</td></tr>
+<tr class="ban"><td class="c-key">竞对发现</td><td><span class="tag-yes tag-ban">禁 web_search_prime / WebSearch</span></td><td>—</td><td>—</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>方法边界</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th style="width:230px">场景</th><th>工具</th></tr></thead>
+<tbody>
+<tr><td class="c-key">竞品架构 + 内容主题</td><td>本 SOP（slug 三维度）</td></tr>
+<tr class="ban"><td class="c-key">深档八节结构分析</td><td><span class="tag-yes tag-ban">禁 Playwright</span>——sitemap + slug 统计 + curl 判平台 + webReader 兜底</td></tr>
+<tr><td class="c-key">配置器测价 / 动态价</td><td>Playwright 单变量回归（JS 价唯一通道）</td></tr>
+<tr><td class="c-key">单页内容 / UX 深拆</td><td>webReader / Playwright（仅限头部 4 类场景）</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+
+<!-- ================= §10 ================= -->
+<section id="s10">
+<h2><span class="no">10</span>本地生产契约（C 端落地）</h2>
+
+<blockquote><strong>研究 → 内容与建站解耦</strong>：全部产物先本地文件化，建站（WP + Woo，竞品 Shopify 不跟随）只是最后导入。<strong>page 走 HTML→Elementor 流水线（禁 REST 塞整页 HTML）；post 走 MD→Gutenberg</strong>；REST 仅用于元数据 / 媒体 / 状态 / 分类等结构化字段，不用于绕过页面构建器注入整页 HTML。</blockquote>
+
+<div class="table-wrap">
+<table>
+<thead><tr><th style="width:130px">步骤</th><th>产物</th><th style="width:150px">位置</th></tr></thead>
+<tbody>
+<tr><td class="c-key">1 站点结构</td><td>url-map 全站 URL 底册 / nav IA</td><td><code>站点结构/</code></td></tr>
+<tr><td class="c-key">2 数据层</td><td>词池 / 实体 JSON（页面生成真源）</td><td><code>数据/</code></td></tr>
+<tr><td class="c-key">3 pSEO 页面</td><td>HTML（目录名 = slug，全页原型，TKD + schema 齐全）</td><td><code>页面原型/</code></td></tr>
+<tr><td class="c-key">4 博客文章</td><td>MD（front matter + 四层矩阵，H1 一次，每篇 ≥1 产品页内链；词量 how-to <span class="num">2000+</span> / gift <span class="num">1800+</span> / 科普 <span class="num">1500+</span>）</td><td><code>文章/</code></td></tr>
+<tr><td class="c-key">5 建站（最后）</td><td>WP 装机 → Elementor 流水线 → REST 写 TKD / 元数据 → Rank Math</td><td>服务器</td></tr>
+</tbody>
+</table>
+</div>
+
+<p><strong>生产纪律</strong>：数据驱动（JSON 生成底座每页文字差异化）｜事实零错（数据 / 价格逐项核对）｜agent 分工防冲突（独立目录）｜建站前全量本地质检，线上验证一次。</p>
+</section>
+
+<hr class="end">
+<p style="color:var(--sub);font-size:13px"><strong>内部来源</strong>：CLAUDE.md SERP 纪律｜memory <code>competitor-research-toolchain</code> / <code>competitor-research-serp-driven-strict</code> / <code>dataforseo-serp-only</code> / <code>ubersuggest-mcp-usage</code>｜靠垫 / 阿木项目实战｜v4.1 审核修正 2026-09-08</p>
+
+</main>
+
+<script>
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('.spy-nav a'));
+  var secs = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+  if(!links.length || !secs.length) return;
+  function setActive(id){
+    links.forEach(function(l){ l.classList.toggle('on', l.getAttribute('href') === '#' + id); });
+  }
+  var current = secs[0].id;
+  setActive(current);
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        // 取 120px 判定线所在 section（header 高度补偿）
+        var best = null;
+        secs.forEach(function(s){
+          var rect = s.getBoundingClientRect();
+          if(rect.top <= 120 && rect.bottom > 120) best = s;
+        });
+        if(best){ current = best.id; setActive(current); }
+      }
+    });
+  }, {rootMargin:'-80px 0px -60% 0px', threshold:0});
+  secs.forEach(function(s){ obs.observe(s); });
+})();
+</script>
+</body>
+</html>

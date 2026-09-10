@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>选品收敛决策读本 · 2026-09</title>
+<style>
+:root{
+  --bg:#f6f4ef; --paper:#fbfaf7; --side:#f1ede5;
+  --text:#22201c; --muted:#7a7365;
+  --accent:#0e6a5a; --accent-ink:#0b5648;
+  --line:#e2dccf; --line2:#d8d2c4;
+  --quote-bg:#f3f0e8; --code-bg:#efeadf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif}
+[id]{scroll-margin-top:24px}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:60}
+#sidebar{position:fixed;top:0;left:0;bottom:0;width:260px;background:var(--side);border-right:1px solid var(--line2);overflow-y:auto;padding:26px 0 44px;z-index:50}
+.brand{padding:0 22px 4px;font-size:19px;font-weight:700}
+.brand-sub{padding:0 22px 20px;font-size:12px;color:var(--muted);border-bottom:1px solid var(--line2);margin-bottom:10px}
+#sidebar nav a{display:block;padding:8px 22px 8px 19px;font-size:13.5px;font-weight:600;color:#403c34;text-decoration:none;border-left:3px solid transparent;line-height:1.45}
+#sidebar nav a.ov{font-weight:400;color:var(--muted);font-size:13px}
+#sidebar nav a:hover{color:var(--accent-ink)}
+#sidebar nav a.on{color:var(--accent-ink);border-left-color:var(--accent);background:rgba(14,106,90,.08)}
+#sidebar nav a .star{color:#b07d2b;margin-right:2px}
+main{margin-left:260px;background:var(--paper);min-height:100vh}
+.content{max-width:800px;margin:0 auto;padding:56px 48px 120px}
+.doc{padding-top:50px;margin-top:50px;border-top:1px solid var(--line2)}
+.doc.first{border-top:none;padding-top:0;margin-top:0}
+.kicker{font-size:12px;letter-spacing:.14em;color:var(--accent);font-weight:600;margin-bottom:10px}
+h1{font-size:27px;line-height:1.35;font-weight:700;margin:0 0 20px}
+h2{font-size:20px;font-weight:700;margin:40px 0 14px;line-height:1.4}
+h3{font-size:16.5px;font-weight:600;margin:28px 0 10px;line-height:1.4}
+p{font-size:15.5px;line-height:1.75;margin:12px 0}
+ul,ol{margin:12px 0;padding-left:26px}
+li{font-size:15.5px;line-height:1.75;margin:4px 0}
+a{color:var(--accent-ink)}
+strong{font-weight:700;color:#14120e}
+.tw{overflow-x:auto;margin:16px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.6;border:1px solid var(--line2);background:#fff}
+thead th{background:#33504a;color:#f4f2ec;font-weight:600;padding:7px 11px;text-align:left;vertical-align:top}
+tbody td{padding:7px 11px;border-top:1px solid var(--line);vertical-align:top}
+tbody tr:nth-child(even) td{background:#f6f3ec}
+.tw.hl{background:#e9f1ec;border:1px solid #c8dbd2;border-radius:6px;padding:5px}
+.tw.hl table{border:1px solid #c8dbd2}
+.tw.hl thead th{background:var(--accent)}
+.tw.hl tbody td{background:#f8fbf9}
+.tw.hl tbody tr:nth-child(even) td{background:#f0f6f2}
+pre{background:var(--code-bg);border:1px solid var(--line2);border-radius:4px;padding:12px 14px;overflow-x:auto;font-family:Consolas,"SF Mono",Menlo,"Courier New",monospace;font-size:12.5px;line-height:1.7;margin:14px 0;white-space:pre}
+code{font-family:Consolas,Menlo,"Courier New",monospace;font-size:.86em;background:var(--code-bg);border:1px solid var(--line);border-radius:3px;padding:.5px 5px}
+pre code{background:none;border:none;padding:0;font-size:inherit}
+blockquote{border-left:3px solid var(--accent);background:var(--quote-bg);padding:10px 16px 10px 14px;margin:16px 0;border-radius:0 4px 4px 0}
+blockquote p{margin:6px 0;font-size:14.5px;color:#454136}
+.meta{font-size:13px;color:var(--muted);margin-top:40px;padding-top:14px;border-top:1px dashed var(--line2)}
+#topbar{display:none}
+#overlay{display:none}
+@media(max-width:920px){
+  #sidebar{transform:translateX(-100%);transition:transform .25s ease;width:280px}
+  body.nav-open #sidebar{transform:none}
+  body.nav-open #overlay{display:block;position:fixed;inset:0;background:rgba(30,28,22,.35);z-index:45}
+  main{margin-left:0}
+  .content{padding:24px 20px 90px}
+  .doc{padding-top:36px;margin-top:36px}
+  h1{font-size:24px}
+  #topbar{display:flex;position:sticky;top:0;z-index:40;align-items:center;gap:12px;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 16px}
+  #menuBtn{font:inherit;font-size:13px;padding:5px 12px;border:1px solid var(--line2);background:var(--side);border-radius:4px;cursor:pointer;color:#403c34}
+  #topbar .tb-title{font-weight:700;font-size:15px}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="topbar"><button id="menuBtn">目录</button><span class="tb-title">选品收敛决策读本 · 2026-09</span></div>
+<div id="overlay"></div>
+
+<aside id="sidebar">
+  <div class="brand">选品收敛决策</div>
+  <div class="brand-sub">2026-09 · 核心浓缩读本</div>
+  <nav>
+    <a class="ov" href="#overview">导读</a>
+    <a href="#doc-0"><span class="star">★</span>90 · 选品收敛决策档案</a>
+    <a href="#doc-1">00 · 词根调研法</a>
+    <a href="#doc-2">01 · 搜索词需求发现法</a>
+    <a href="#doc-3">02 · 关键词挖掘实操</a>
+    <a href="#doc-4">04 · 竞品社区逆向</a>
+    <a href="#doc-5">05 · GEO意图词体系</a>
+    <a href="#doc-6">06 · 痛点逆向</a>
+    <a href="#doc-7">07 · 细分市场四象限</a>
+    <a href="#doc-8">11 · 精准产品定义PMF</a>
+  </nav>
+</aside>
+
+<main>
+<div class="content">
+
+<section id="overview" class="doc first" data-doc>
+<h1>导读</h1>
+<p class="lead"><strong>这是 2026-09 选品收敛的决策读本（核心浓缩版）</strong>：8 篇选品方法论各派一个 agent 对四个对象（滤网9品类 / 车载·吸尘·空净三新族 / 情趣内衣 / 乐高兼容）交叉深度分析（每篇带 Ubersuggest + DataForSEO 真实数据，全部 2026-09-04 采集），主线程合成裁决，另经情趣内衣二审（rosetoys 站审计 + 词族深扫）改判与 POD 二轮口径修正（niche 设计定制层翻案 GO、地图线维持末位）。<strong>★90-决策档案是最终结论</strong>（判定总表 + 执行指令 + 口径修正记录），其余 8 份各压成"判定 / 关键数据 / 独有增量"三段式证据卡——8 份方法论底稿 md 已删，内容固化在本 HTML；情趣内衣二审底稿在 06-情趣内衣目录（20/21），POD 两轮档案为同目录 23-POD整体口径修正分析.md。</p>
+</section>
+
+<section id="doc-0" class="doc" data-doc>
+<div class="kicker">最终决策档案 · 一页纸版 · 2026-09-04（情趣内衣二审改判 + POD 二轮口径修正）</div>
+<h1>90 · 选品收敛决策档案</h1>
+<blockquote>
+<p><strong>性质</strong>：2026年9月选品收敛的最终决策档案（一页纸版）。完整推演过程见本合集后半（8方法论交叉分析浓缩版）；情趣内衣二审底稿在 <code>../C端/06-情趣内衣/</code>（20站审计/21词族深扫）；POD两轮分析见同目录 <code>23-POD整体口径修正分析.md</code>。</p>
+<p><strong>方法</strong>：8篇选品方法论各一agent深度分析（Ubersuggest+DataForSEO实测）→ 主线程裁决分歧 → 情趣内衣二审（2agent）→ POD两轮（口径修正）。</p>
+<p><strong>实战提炼的3条判据已回写</strong> <code>00-选品方法论/00-词根调研法.md</code> §7.3：词池深度第一判据 / autocomplete安全过滤探针 / 型号级有量=A/B型判别式。</p>
+</blockquote>
+
+<h2>判定总表（最终）</h2>
+<div class="tw hl"><table>
+<thead><tr><th>对象</th><th>判定</th><th>一句话依据（核心数字锚点）</th></tr></thead>
+<tbody>
+<tr><td><strong>ClearFit 滤网站（12目录）</strong></td><td>✅ <strong>GO·第一优先=立即建站</strong></td><td>9品类="一种生意的9个货架"（四维全同）；256篇内容+20,128型号库等发射数周——最大风险是"弹药超配、客户为零"</td></tr>
+<tr><td><strong>车载滤芯</strong></td><td>✅ 并入第10品类（P1.5批）</td><td>cabin词池25,037超冰箱水滤（3,227）；车型级有量（rav4 3.6K）；SERP同批玩家（filterheads#2/pureflow#5）。结构=品牌hub→车型页~50→年份页内模块；不碰autozone大盘词</td></tr>
+<tr><td>空净+吸尘器滤芯</td><td>🟡 设备滤芯附属模块</td><td>空净设备型号有量（levoit core 300 1.3K）+CPC最高，但A型结构；吸尘器型号级0量（nv501=50）只做品牌hub</td></tr>
+<tr><td><strong>情趣内衣/丝袜</strong></td><td>✅ <strong>二审改判GO：rosetoys.org站内30-50页精品矩阵</strong></td><td>一审否决的是"从零建站+千页pSEO"（词池~1,500成立）；二审新前提翻案：站内已上211服装SKU+cosplay交叉词实证（720量pos10-12）+竞品圈无lingerie线+12绿格矩阵。执行=类目intro补齐→13子品类hub+5-6场景页+6 plus size页→博客重启。红线：场景词只锚lingerie（honeymoon stockings死格）；rose toy主词246K被巨头锁死流量须自建</td></tr>
+<tr><td><strong>POD·niche设计定制层</strong></td><td>✅ <strong>有条件GO：第二站候选池第二位</strong></td><td>SD 12-31全场最绿+独立小站占位实锤（DA27站在12.1K量词排#3）+<strong>AI生图管线=设计库存量结构优势</strong>（该层竞争变量）。前3组合：家庭关系×服装＞护士职业×服装（16专科×7节日矩阵）＞宠物设计款。启动赶Q4/母亲节；前置排雷IP侵权词</td></tr>
+<tr><td>POD·其他层</td><td>⛔ 砍</td><td>通用词层（Vistaprint/Custom Ink锁死）、photo打印类（Shutterfly/Walgreens 10/10占位+传图重前端）、B2B promo类（CPC $8-10的B2B生意）、地图/星空线（词池污染至600-900+13家占位+专利雷，排队末位）</td></tr>
+<tr><td>11-综合配件站</td><td>🕐 第二站候选池<strong>首位</strong>（维持）</td><td>马桶360K+密封条300K双核；weatherstripping立项前必须补研（既有纪律）</td></tr>
+<tr><td>乐高兼容积木</td><td>⛔ 终审否决（目录已删）</td><td>词池156词+商业词集中未授权IP雷区+BrickLink（乐高自家）垄断+流量生态在站内</td></tr>
+<tr><td>nespresso胶囊/银发mobility/应急族</td><td>⛔ 砍/备用</td><td>胶囊=长尾0量死海；银发=词族2,134太浅（非蓝海）；应急=季节性事件驱动备用</td></tr>
+</tbody>
+</table></div>
+<p><strong>第二站候选池排位</strong>：11-综合配件站 ＞ POD niche设计定制层 ＞ POD地图线（末位）。</p>
+
+<h2>执行指令</h2>
+<ol>
+<li><strong>立即</strong>：ClearFit建站（12目录README"建站后执行线"：装WP→FitPak→批0导入→Phase 1页面→P1内容44篇→上线闸门）；PMF主指标=6个月二单率≥30%，冷启动=Google Ads型号词桥接+Reddit笨功夫</li>
+<li><strong>并行第二优先</strong>：rosetoys丝袜/内衣矩阵（纯内容层，与ClearFit工程互补，已移交专会话执行）</li>
+<li><strong>ClearFit跑通后</strong>：车载第10品类（先做fitment数据源评估）+设备滤芯附属模块</li>
+<li><strong>第二站时点</strong>（ClearFit跑通6-12个月）：11-配件站 vs POD niche层，按当时资源重评RICE</li>
+</ol>
+
+<h2>口径修正记录（防复盘误读）</h2>
+<ul>
+<li><strong>情趣内衣两审</strong>：一审（8agent）"搁置"针对从零建站；二审（2agent）新前提（rosetoys既有站）改判GO。两审证据均真，适用对象不同</li>
+<li><strong>POD两轮</strong>：一轮把POD窄化为地图线（prompt口径错误，用户指出）；二轮按"生产模式×全品类"分层重判——niche设计定制层翻案GO，地图线维持末位</li>
+</ul>
+</section>
+
+<section id="doc-1" class="doc" data-doc>
+<div class="kicker">证据底稿 1/8 · 词根调研法视角</div>
+<h1>00 · 词根调研法</h1>
+<h3>四对象判定</h3>
+<div class="tw"><table>
+<thead><tr><th>对象</th><th>判定</th><th>一句话依据</th></tr></thead>
+<tbody>
+<tr><td>A 滤网9品类</td><td>✅ 维持不变</td><td>一个 filter 词根 × 五种 pSEO 引擎（型号/尺寸/编号/污染物/部件号）互不重叠，无收敛必要</td></tr>
+<tr><td>B1 空净滤芯</td><td>✅ 纳入第10品类（第二批）</td><td>品牌×型号双结构成立 + CPC 全场最高 + SD 大量&lt;20 + 白牌自家配件线弱=平替缝隙</td></tr>
+<tr><td>B2 车载滤芯</td><td>✅ 纳入第11候选（观察位）</td><td>词池 19,571 断层第一 + 车型词 2.4-3.6K（型号库同构）+ SERP 独立站 #2/#5；fitment 工程是门槛</td></tr>
+<tr><td>B3 吸尘器滤芯</td><td>✅ 纳入品牌级页模式</td><td>品牌级成立（shark 18.1K/dyson 12.1K）但型号级死（nv501=50）——禁复制型号库打法</td></tr>
+<tr><td>C 情趣内衣</td><td>🔴 砍掉</td><td>词池 1,465（与替换族差90倍）+ 无替换词根 + SERP 品牌局 + 支付限制——推翻老分析 89/100</td></tr>
+<tr><td>D 乐高兼容</td><td>🔴 否决成立</td><td>词池 156 + 头部&lt;600 + 长尾0量 = nespresso 同型死海 + 商标风险</td></tr>
+</tbody>
+</table></div>
+<h3>关键数据</h3>
+<div class="tw"><table>
+<thead><tr><th>数据点</th><th>数值</th><th>判读</th></tr></thead>
+<tbody>
+<tr><td>替换/维修词族 suggestion 池</td><td><strong>131,676</strong></td><td>断层第一（应急族 12,629、银发 mobility 2,134）——滤网项目词根大盘</td></tr>
+<tr><td>车载 cabin air filter 池</td><td><strong>19,571</strong></td><td>超空净（2,775）7倍；车型词 rav4 3.6K/civic 2.9K/年份级 40-880 全有量</td></tr>
+<tr><td>空净 CPC</td><td>$1-4.81 全场最高</td><td>puroair 4.01-4.81/medify 3.96/alen 3.26；SD 大量 &lt;20（aroeve 9-13）</td></tr>
+<tr><td>吸尘器型号级</td><td>nv501=50/zu55=20/uv540=0</td><td>主词 shark 22.2K 但型号级死——只做品牌页+系列页</td></tr>
+<tr><td>情趣三族合计</td><td><strong>≈1,465</strong></td><td>sexy 1,082 + bridal 260 + plus size 123；对比 cabin 单族 19,571 = 13倍</td></tr>
+<tr><td>情趣导航词占比</td><td>18K+（shein 12.1K/vs 3.6K/amazon 1.3K+1K）</td><td>独立站零机会；另有本地词 4.5K 吃不掉</td></tr>
+<tr><td>lego compatible</td><td>390/月/SD46，池 156 词</td><td>全部受测词族最小；长尾大量 0 量</td></tr>
+<tr><td>车载 SERP [DFS]</td><td>filterheads #2 / pureflowair #5</td><td>独立滤芯站可进；tesla 词 evannex #9</td></tr>
+</tbody>
+</table></div>
+<h3>该视角独有增量</h3>
+<ul>
+<li><strong>修饰词矩阵结论</strong>：一个 Head Term × 20 Modifier 理论上=20 页，但情趣内衣的 Modifier 分布是"导航词吃一半+本地词吃不掉+信息词0量"——矩阵理论页数 × 实测有量词数 ≈ 1,465 做完即到顶，与 CPAP 同病。</li>
+<li><strong>§7 筛选标准量化打分</strong>：情趣内衣五维只过 1.5（毛利✅/竞争🟡/Traffic Cost🟡半过；复购🔴无 replacement 词根；商业意图🟡有效占比&lt;55%）——首次把"值不值得做"从印象分变成逐行打分。</li>
+<li><strong>词根法四条死因框架</strong>（词池浅/无替换复购词根/SERP品牌局/支付限制）——可直接复用于后续服装类候选的快速排除。</li>
+</ul>
+</section>
+
+<section id="doc-2" class="doc" data-doc>
+<div class="kicker">证据底稿 2/8 · 搜索词需求发现法视角</div>
+<h1>01 · 搜索词需求发现法</h1>
+<h3>四对象判定</h3>
+<div class="tw"><table>
+<thead><tr><th>对象</th><th>判定</th><th>一句话依据</th></tr></thead>
+<tbody>
+<tr><td>A 滤网9品类</td><td>进（维持）</td><td>办事型词族断层第一（131,676词）+ 换件周期刚性 + 同批玩家已在 SERP 验证独立站可进</td></tr>
+<tr><td>B1 车载（含tesla hepa）</td><td>并（第10品类）</td><td>办事+决策 83%、池 19,571（sexy族18倍）、车型×品牌笛卡尔积与冰箱型号库同构、4家独立站8次进top8</td></tr>
+<tr><td>B2/B3 吸尘+空净</td><td>并（设备滤芯附属线）</td><td>泛类目词 SERP 友好 + 品牌级词可聚合；但型号级 0 量——量级决定是附属不是主线</td></tr>
+<tr><td>C 情趣内衣</td><td>砍（不留观察位）</td><td>宽族 51% 流量结构性不可获 + 窄族池 1,082 + SERP 零缝隙 + 信任型需求无牌新站不承接</td></tr>
+<tr><td>D 乐高兼容</td><td>维持否（获强化）</td><td>主词 390/月比情趣内衣小三个数量级 + 未授权 IP 词密集（star wars/deadpool/fnaf）= 商标雷区</td></tr>
+</tbody>
+</table></div>
+<h3>关键数据</h3>
+<div class="tw"><table>
+<thead><tr><th>数据点</th><th>数值</th><th>判读</th></tr></thead>
+<tbody>
+<tr><td>cabin 族意图纯度</td><td><strong>办事型 83%</strong></td><td>购买决策 45% + 动作 38%；学习型仅 12% 且 pd=1-3（广告商不打=内容真空）</td></tr>
+<tr><td>lingerie 宽族结构</td><td><strong>51% 不可获</strong></td><td>品牌导航 45%（victoria secret 550K/vs pink 450K）+ near me 6%——独立站结构上拿不到</td></tr>
+<tr><td>sexy 窄族</td><td>池 1,082 词</td><td>办事型 73% 看似健康，但 = cabin 池的 1/18——pSEO 天花板差一个数量级</td></tr>
+<tr><td>车载 SERP 实判 [DFS]</td><td>4家独立站 8次进 5词 top8</td><td>filterheads/pureflowair/filterbuy/discountfilters=滤网9品类同批玩家，打法直接平移</td></tr>
+<tr><td>车载意识词群</td><td>how often 族 ~35K/月</td><td>SERP pd≤3 全真空——教程引流→DIY配件转化路径完整</td></tr>
+<tr><td>情趣考虑阶段</td><td>合计 &lt;2K/月</td><td>用户不从"品牌对比"进入，直接带品牌名搜——评测/横评内容形态无流量基础</td></tr>
+<tr><td>Reddit 价格锚点</td><td>DIY $30-40 vs 官方 $60-148</td><td>tesla 换芯讨论公开——平替价差空间有民间共识</td></tr>
+</tbody>
+</table></div>
+<h3>该视角独有增量</h3>
+<ul>
+<li><strong>词族宽度由品类本质决定</strong>：服装词天然窄（款式×颜色×尺寸有限组合），滤芯词天然宽（车型×年份×品牌×位置笛卡尔积）——这一条决定了 pSEO 规模化天花板，是"情趣内衣砍/车载并入"的最底层解释。</li>
+<li><strong>表层 vs 深层需求拆解</strong>：情趣内衣深层需求=品牌信任（Reddit 共识推高端品牌，"pricy but will last forever"）；滤芯深层需求=型号兼容（功能可验证）——信任型需求的冷启动成本远高于功能型，是无牌新站的致命伤。</li>
+<li><strong>对 89 分老文档的方法论批注</strong>：其五维评估全部建立在供给侧宏观数据（市场规模/毛利/复购）上，无一项经搜索行为验证——"只有热度、没有可获取的动作流量"的镜像案例。</li>
+</ul>
+</section>
+
+<section id="doc-3" class="doc" data-doc>
+<div class="kicker">证据底稿 3/8 · 关键词挖掘实操视角</div>
+<h1>02 · 关键词挖掘实操</h1>
+<h3>四对象判定</h3>
+<div class="tw"><table>
+<thead><tr><th>对象</th><th>判定</th><th>一句话依据</th></tr></thead>
+<tbody>
+<tr><td>A 12-滤网9品类</td><td>进 + 扩容</td><td>家庭场景完整，但移动/设备侧滤芯是体系性盲区——cabin 当年被当噪声剔除是口径损失不是市场损失</td></tr>
+<tr><td>B 三新族</td><td>进（车载★/吸尘★/空净★）</td><td>车载=25K池+三维结构+SERP可进；吸尘=品牌词健康但型号级0量→只做品牌级页；空净=SD 18-31 与耗材模型完美匹配</td></tr>
+<tr><td>C 情趣内衣</td><td>缓（词池合格，模式错位）</td><td>量与 SD 达标（31词过筛）但无型号/年份/件号结构维度→撑不起 pSEO 站，只能做品牌电商站</td></tr>
+<tr><td>D 乐高兼容</td><td>砍（维持）</td><td>"结构词"（set编号/MOC）是社区内容词非购买词，与滤芯词族形态完全相反</td></tr>
+</tbody>
+</table></div>
+<h3>关键数据</h3>
+<div class="tw"><table>
+<thead><tr><th>数据点</th><th>数值</th><th>判读</th></tr></thead>
+<tbody>
+<tr><td>车载建议词池</td><td><strong>25,037</strong></td><td>超冰箱水滤 9 品类词池（2,263）一个数量级——本项目最大单品类词池</td></tr>
+<tr><td>车载字母挖矿</td><td>700+ 词，a-z 满血</td><td>下拉露出 OEM 件号（87139系/bosch 6091c）与年份词——件号页线索</td></tr>
+<tr><td>情趣字母挖矿</td><td>b/c/w 字母空返回</td><td><strong>Google 安全过滤实锤</strong>——发现渠道压缩到 Ubersuggest 单一来源</td></tr>
+<tr><td>情趣过筛词头部</td><td>crotchless 27.1K/SD19、plus size 49.5K/SD29、bridal 27.1K/SD30</td><td>31 词过筛（SD&lt;50、量&gt;100）；SERP 9/10 独立站（avidlove 中国品牌第3）</td></tr>
+<tr><td>车载核心词表头部</td><td>change 60.5K/cabin 40.5K/cost 22.2K SD13/rav4 3.6K</td><td>cost 决策页 SD12-13 极低；how often CPC $5.53 最高</td></tr>
+<tr><td>空净结构</td><td>levoit core 300 1.3K 有量</td><td>空净品牌×型号页可行（机身型号少而集中），与吸尘器型号爆炸相反</td></tr>
+<tr><td>池对比</td><td>车载 25,037 vs 情趣 ≈12,500（噪声率~50%）</td><td>情趣有效池约 6K——12 种子合计且一半是日常服装噪声</td></tr>
+</tbody>
+</table></div>
+<h3>该视角独有增量</h3>
+<ul>
+<li><strong>Google autocomplete 安全过滤=成人品类的天花板探针</strong>：sexy lingerie 字母维度 b/c/w 直接空返回（同工具同口径 cabin 满血）——词库发现渠道被压缩到单一来源，长尾差异化天花板更低。</li>
+<li><strong>"词库合格 ≠ 模式匹配"</strong>：情趣内衣量与 SD 全达标，但维度结构（款式×人群×场景，无强绑定）决定它是选款驱动的品牌电商站——每个词的承接页是"选款+拍摄+尺码+退换"重运营页，不是模板化 pSEO 页。</li>
+<li><strong>车载页面结构方案</strong>（被总报告采纳为定案）：品牌 hub → 车型页（~50 车型，年份做页内模块不单独建URL，件号入下拉选择器）——年份词单量 40-880 不足以独立成页但合计 3.5K+/车型。</li>
+</ul>
+</section>
+
+<section id="doc-4" class="doc" data-doc>
+<div class="kicker">证据底稿 4/8 · 竞品与社区逆向挖掘法视角</div>
+<h1>04 · 竞品社区逆向</h1>
+<h3>四对象判定</h3>
+<div class="tw"><table>
+<thead><tr><th>对象</th><th>判定</th><th>一句话依据</th></tr></thead>
+<tbody>
+<tr><td>C 情趣内衣（重点）</td><td><strong>有条件 GO</strong>（八视角唯一正面）</td><td>需求 135K 全 Transactional；SERP 独立站密度 7-8/10 无垄断但"低竞争"被证伪；逆向法抓到全行业第一痛点=尺码，尺码工具+场景词是新站现实打法</td></tr>
+<tr><td>B 三新族</td><td>分化：吸尘 &gt; 车载（Tesla HEPA 例外）</td><td>车载词被 autozone/walmart 把持；Tesla HEPA 词官网×3+UGC、商业站仅 2 家=唯一明显缝隙；吸尘词独立站友好</td></tr>
+<tr><td>A 9品类滤网</td><td>GO 不变 + 补一层内容增量</td><td>唯一遗漏=评论区差评层（42家竞研未做）：三方滤芯信任赤字是内容差异化弹药</td></tr>
+<tr><td>D 乐高兼容</td><td>维持已否</td><td>无翻案证据：BrickLink 自家垄断+商标风险是结构性障碍</td></tr>
+</tbody>
+</table></div>
+<h3>关键数据</h3>
+<div class="tw"><table>
+<thead><tr><th>数据点</th><th>数值</th><th>判读</th></tr></thead>
+<tbody>
+<tr><td>6词 SERP 独立站密度</td><td>7-8/10</td><td>无一被锁死，细分词 top10 均有中小独立站（moxyintimates/katthelabel 实证小站能进）</td></tr>
+<tr><td>独立站域名池四分法</td><td>30域名：直接7/需求6/搜索14+/标杆2</td><td>主词 top10 全是年营收过亿级玩家——场景词+长尾套装词是唯一切入点</td></tr>
+<tr><td>主词竞争度</td><td>SD48 + pd 89-100</td><td>06文档"SEO竞争小/关键词难度低"被证伪——实际中等偏高竞争，必须走场景长尾</td></tr>
+<tr><td>Top3 直接竞对对照</td><td>Fredericks/Spicy/MARIEMUR</td><td>三站均以"款式×风格×场合"三维导航，<strong>无一以"尺码解决方案"为卖点</strong>（Fredericks 仅静态 Fit Guide）</td></tr>
+<tr><td>亚马逊差评第一高频</td><td>Runs small</td><td>XL用户"tight and lacks coverage"；厂商 Avidlove 官方自认"买大一码"——亚马逊白牌锚定 $20 上下</td></tr>
+<tr><td>冷启动三词矩阵</td><td>lingerie set SD22 / honeymoon SD28 / plus size SD29</td><td>PD 94-100 广告贵→SEO 站成本护城河；Fredericks 的 Bridal Shop 一级入口验证场合线商业价值</td></tr>
+</tbody>
+</table></div>
+<h3>该视角独有增量</h3>
+<ul>
+<li><strong>三源痛点验证法</strong>（本次实战沉淀）：Reddit 跨帖共性 + 亚马逊差评高频词 + 厂商自述/补偿行为，三源指向同一痛点（尺码）时可信度最高——单一来源的痛点不建产品决策。且全行业第一痛点尺码 × 零竞对做成工具 = 尺码计算器差异化空位（总报告二审执行方案第④条调用）。</li>
+<li><strong>SERP 独立站密度判据</strong>：独立站 top10 占比 ≥7/10 = 无垄断可进；含平台自家垄断方（BrickLink 型既当平台又当卖家）= 直接否决——应写入方法论。</li>
+<li><strong>滤芯差评三主题</strong>（同件号改设计/兼容列表错误/漏水）落为 ClearFit 件号页内容模块——42 家竞研遗漏的评论区层，9品类唯一实质新增量。</li>
+</ul>
+</section>
+<section id="doc-5" class="doc" data-doc>
+<div class="kicker">证据底稿 5/8 · GEO 意图词体系视角</div>
+<h1>05 · GEO 意图词体系</h1>
+<h3>四对象判定</h3>
+<div class="tw"><table>
+<thead><tr><th>对象</th><th>GEO可引用性</th><th>一句话判定</th></tr></thead>
+<tbody>
+<tr><td>滤芯替换件（9品类）</td><td><strong>高</strong></td><td>"how often"询问句按品牌×型号无限展开（池 20,318 vs 情趣 1,207），AIO 引用源当前是经销商博客/论坛——垂直站是天然替换者</td></tr>
+<tr><td>三新族</td><td>中高（分族差异大）</td><td>车载 AIO 引用最弱（Mazda经销商博客是头号引用）＞吸尘无 AIO 但被购物卡占位＞空净 AIO 已被垂直站占据（oransi/getpuroair）</td></tr>
+<tr><td>情趣内衣（重点）</td><td><strong>分裂型</strong></td><td>中性场景词（honeymoon/bridal）AI 正常引用且引用品牌独立站；露骨词（sexy lingerie）无 AIO=流量完整留在 organic——AI 不拒绝该品类，反而让独立站主通道更安全</td></tr>
+<tr><td>乐高兼容（已否）</td><td>低（推断）</td><td>品牌词垄断型词族无 GEO 内容位，连"场景词 AIO 引用独立站"的实证缝隙都没有</td></tr>
+</tbody>
+</table></div>
+<h3>关键数据</h3>
+<div class="tw"><table>
+<thead><tr><th>数据点</th><th>数值/结果</th><th>判读</th></tr></thead>
+<tbody>
+<tr><td>词池对比</td><td>滤芯 3 种子 <strong>20,318</strong> vs 情趣 6 种子 ≈1,500</td><td>差一个数量级以上；情趣"低竞争"的另一面是小池子</td></tr>
+<tr><td>sexy lingerie AIO</td><td><strong>无 AIO</strong></td><td>top10 中 8 席品牌独立站——敏感裸词的 AIO 缺位反而是独立站利好（CTR 侵蚀不存在）</td></tr>
+<tr><td>best lingerie for honeymoon AIO</td><td>有，9 引用中 <strong>4 个品牌 DTC 站</strong></td><td>AI 把"新婚内衣"当正常零售查询，AIO 正文直接推荐具体产品——"AI 会不会引用情趣品牌"有实证答案：会</td></tr>
+<tr><td>how often cabin AIO 头号引用</td><td>aldenmazda.com（经销商博客）</td><td>滤芯询问句引用池质量极弱——垂直数据库站是天然降维打击者</td></tr>
+<tr><td>情趣问题词族</td><td>被 bra/underwear 吸收</td><td>"sexy lingerie how to choose"生成失败；"what lingerie to wear"全部展开为 bra 词——独立问题词族不存在，内容必须场景化不能问题化</td></tr>
+<tr><td>语序即生死</td><td>lingerie for honeymoon=0 vs honeymoon lingerie=1,900</td><td>交叉引擎准入纪律（birthstone46页教训）再次应验：先验三形态再定词</td></tr>
+</tbody>
+</table></div>
+<h3>该视角独有增量</h3>
+<ul>
+<li><strong>AIO 触发按词露骨度分级，非按品类一刀切</strong>："sexy lingerie"裸词不触发、"best lingerie for honeymoon"（场景+评估框架）触发——与 Cloud Vision 把 lingerie 归"racy"而非"adult"的政策自洽。</li>
+<li><strong>情趣内衣 = "SERP 型品类"</strong>（流量在传统搜索结果页，不在 AI 答案框）：露骨词无 AIO + 场景词 AIO 引用的正是独立站——对轻资产 SEO 获客模式适配，GEO 不构成否决项反而形成三层利好。</li>
+<li><strong>滤芯询问句引用池空白 = 垂直站降维机会</strong>：9品类至少 6 个有独立"how often/when to/signs"问题词族，与 AIO 挂载机制天然匹配，131,676 词池就是 GEO 内容原料矿——滤网项目 GEO 基本面是四对象中最强的。</li>
+</ul>
+</section>
+
+<section id="doc-6" class="doc" data-doc>
+<div class="kicker">证据底稿 6/8 · 痛点逆向视角</div>
+<h1>06 · 痛点逆向</h1>
+<h3>四对象判定</h3>
+<div class="tw"><table>
+<thead><tr><th>对象</th><th>痛点法判定</th><th>一句话结论</th></tr></thead>
+<tbody>
+<tr><td>A 滤网9品类</td><td><strong>教科书级匹配</strong></td><td>痛点两级（"不知道何时换"+"找不到型号"）与 FilterCalendar + 型号库 22,000 页架构一一对应，独立验证现有架构成立</td></tr>
+<tr><td>B 三新族</td><td>匹配，且痛点频率更高</td><td>空净 3-6 月/车载年更；"型号识别"痛点更复杂（车型年款矩阵）；入口在 how/when 信息词（PD=1-2）与型号长尾</td></tr>
+<tr><td>C 情趣内衣</td><td><strong>方法论边界案例：需公式改造</strong></td><td>购买驱动是"完成场合任务"不是"解决痛苦"；改造公式后可分析且场合词群真实；痛点法覆盖约一半，另一半靠"任务法"</td></tr>
+<tr><td>D 乐高兼容</td><td>独立得出与已否一致</td><td>购买驱动=价格替代（LEGO贵→平替省钱），无场景痛苦可逆向，公式不触发——撑不起"工具+内容"架构</td></tr>
+</tbody>
+</table></div>
+<h3>关键数据</h3>
+<div class="tw"><table>
+<thead><tr><th>数据点</th><th>数值</th><th>判读</th></tr></thead>
+<tbody>
+<tr><td>第一级痛点词族</td><td>how often 词族 PD 全个位数</td><td>"how often to replace air filter in car" 3,600/PD1 等——SERP 无商业页在抢，FilterCalendar 假设被词族直接证实</td></tr>
+<tr><td>第二级痛点行为证据</td><td>allfilters 68% 押注 / filtersfast 30万型号库</td><td>型号词单个无量（Ubersuggest 显示0）≠型号页无流量——总量集中在长尾尾部，行为证据优先于逐词查询口径</td></tr>
+<tr><td>痛点分级 top/bottom</td><td>泳池14 ＞ HVAC 11/空净11/CPAP11 ＞ Inline 6/冰箱空气滤3</td><td>感知+代价之王=泳池；冰箱空气滤痛点最弱与"降挂件"决策互证</td></tr>
+<tr><td>情趣场合词群</td><td>bridal 27.1K / valentines 8.1K / plus size 49.5K</td><td>boudoir SD13 全场最低场景入口（photoshoot PD=2）；颜色词=场合信号（red 1.9K/黑1.9K/白880）</td></tr>
+<tr><td>障碍词证据</td><td>size chart 主词无量 / quiz 50·PD3</td><td>工具词空白=先发窗口；购买搜索主体是女性自己（for girlfriend=0，for wife 1,300 集中于婚姻语境）</td></tr>
+</tbody>
+</table></div>
+<h3>该视角独有增量</h3>
+<ul>
+<li><strong>改造公式</strong>：特定人群 + 刚性场合（日历上必然到来的事件）+ 心理任务 = 必然发生的购买——刚性场合与痛苦一样具有时间上的不可逃避性，保住"必然性"预测力。情趣内衣的痛点不在购买前，在购买过程与场合现场（尺码/隐私/质量/退货四障碍 + "今晚不能出错"的场合压力）。</li>
+<li><strong>痛点强度 ≠ 选品排序</strong>：Inline 痛点合计最低（6）却是重点五品类（竞争真空），CPAP 痛点 11 却搁置（渠道错位）——痛点法正确用法是"验证需求真实性+设计产品形态"，排序须联合竞争密度。</li>
+<li><strong>工具链定位</strong>：尺码计算器=流量入口（对标 FilterCalendar），场合 quiz=转化入口——"痛点法§6 + 工具站词根"组合打法在情趣内衣的镜像（总报告二审执行方案调用）。</li>
+</ul>
+</section>
+
+<section id="doc-7" class="doc" data-doc>
+<div class="kicker">证据底稿 7/8 · 细分市场四象限视角（决策框架担当）</div>
+<h1>07 · 细分市场四象限</h1>
+<h3>四对象判定（15行判定总表核心浓缩）</h3>
+<div class="tw"><table>
+<thead><tr><th>对象</th><th>判定</th><th>一句话理由</th></tr></thead>
+<tbody>
+<tr><td>冰箱水滤/HVAC/泳池（P0）+ Inline/全屋/RO（第二批）</td><td><strong>进</strong></td><td>三口径验证（42站sitemap+36词SERP+164词量级）；泳池=巨头缺席型真空；RO/全屋限耗材替换件侧</td></tr>
+<tr><td>加湿器pad / 冰箱空气滤</td><td><strong>并</strong></td><td>pad 并入 HVAC 附属线（同位置/同季节/同客户群）；空气滤 combo 挂件（12 SKU 天花板）</td></tr>
+<tr><td>CPAP</td><td><strong>降级</strong></td><td>渠道生态错位（保险 DME 主导）+ 做完即到顶 + YMYL——9品类唯一"另一种生意"</td></tr>
+<tr><td>吸尘器/空净滤芯</td><td><strong>降级→扩展池</strong></td><td>品牌 A 型 + 型号词 0 量实锤——11文档已砍的模式；discountfilters 的品类扩张发生在 DA47+5,496页之后，先主后扩是实证顺序</td></tr>
+<tr><td>cabin air filter（通用）/ Tesla HEPA</td><td><strong>降级+单列</strong></td><td>头部信息词主导+AutoZone/Fram 汽配链截流；Tesla 7,200/月真缝但单品牌小盘——主站立住后专页试验，不设品类线</td></tr>
+<tr><td>情趣内衣</td><td><strong>暂不优先</strong></td><td>市场有证据（135K）但企业侧内容素材+感知优势双缺口是结构性错配（非补人可解）——⚠️谨慎进入→"补不了就放一放"</td></tr>
+<tr><td>乐高兼容积木</td><td><strong>砍（维持）</strong></td><td>成交在 BrickLink 站内生态+商标封锁品牌词群——库内旧⭐⭐⭐⭐⭐评分是三重误读样本</td></tr>
+</tbody>
+</table></div>
+<h3>关键数据</h3>
+<div class="tw"><table>
+<thead><tr><th>数据点</th><th>数值/结果</th><th>判读</th></tr></thead>
+<tbody>
+<tr><td>9品类四维拆解</td><td>人群/场景/任务/成交四维全同</td><td>"一种生意的9个货架"——对照假发行业（三种成交方式五类人群）的真分裂；生意定义一句话=美国独栋住宅过滤耗材补货站</td></tr>
+<tr><td>企业六问显式补判</td><td><strong>6/6 通过</strong></td><td>此前 9 品类评估只有市场侧五维，企业侧从未显式回答——本次补齐（供应链/感知优势/内容素材/渠道/服务/投入）</td></tr>
+<tr><td>情趣市场六问</td><td>Q1✅ / Q2🟡 / Q3🔴 / Q4🟡 / Q5🟡 / Q6⚠️</td><td>竞争多且强（9品牌+1平台无一白牌dropship）；Google Shopping 两词 0 展示；毛利模型漏了真人模特/退货/支付溢价三项成本</td></tr>
+<tr><td>情趣企业六问</td><td><strong>2❌ + 1❓</strong></td><td>感知优势❌（1688白牌无差异化）+ 内容素材❌（真人模特依赖，AI能力解决不了"真人穿着效果"）——结构性错配非补人可解</td></tr>
+<tr><td>1688 灌云产业带</td><td>¥3-17/件（$0.42-2.4）</td><td>账面毛利 80%+ 成立——但两个❌已足以落"暂不优先"，账算不过来不影响象限判定</td></tr>
+</tbody>
+</table></div>
+<h3>该视角独有增量</h3>
+<ul>
+<li><strong>市场侧 × 企业侧两维分开判、不压总分</strong>：06文档的 89/100 是"假精确"活标本（五维压成一个排行榜）——四象限（✅优先验证/💪能力型/⚠️谨慎进入/⛔暂不优先）才是正确呈现。</li>
+<li><strong>三重误读自检模板</strong>：流量高≠可进（先看成交方式）、网站少≠蓝海（可能是需求窄或主战场不在Google）、关键词重合≠竞争（按四同过滤有效竞对）——乐高旧评分是三重误读的完整样本。</li>
+<li><strong>"同一行业≠同一种生意"判别式</strong>：四维拆解（人群/场景/任务/成交）是判断"多品类是真分裂还是同构货架"的操作化工具——直接回答了用户"二次分裂"担忧：分裂风险在三新族与跨生意跳跃，不在9品类内部。</li>
+</ul>
+</section>
+
+<section id="doc-8" class="doc" data-doc>
+<div class="kicker">证据底稿 8/8 · 精准产品定义 PMF 视角</div>
+<h1>11 · 精准产品定义 PMF</h1>
+<h3>四对象判定</h3>
+<div class="tw"><table>
+<thead><tr><th>对象</th><th>PMF/闭环判定</th><th>一句话依据</th></tr></thead>
+<tbody>
+<tr><td>A 滤网9品类（ClearFit）</td><td>✅ <strong>闭环成立</strong></td><td>获客健康全通（SEO RICE 4.3+付费无政策限制）；飞轮B已被 discountfilters第1 实证；LTV:CAC 保守 4-10:1（复购=物理确定性）</td></tr>
+<tr><td>B 三新族</td><td>✅ 闭环（跟随A）</td><td>第二波品类复用A的验证管线，不单独验证PMF；Tesla hepa=单点缝隙页</td></tr>
+<tr><td>C 情趣内衣（重点）</td><td>⚠️ <strong>半闭环</strong></td><td>获客"成立但跛脚"（付费双巨头半关闭无放大杠杆）；LTV 结构是"上新驱动"不是"复购驱动"</td></tr>
+<tr><td>D 乐高（对照）</td><td>获客结构"不成立"档</td><td>RICE 里连主通道都立不起来（Reach/Confidence 先天崩塌）；三档分界线=词池可竞争性×渠道政策</td></tr>
+</tbody>
+</table></div>
+<h3>关键数据</h3>
+<div class="tw"><table>
+<thead><tr><th>数据点</th><th>数值</th><th>判读</th></tr></thead>
+<tbody>
+<tr><td>RICE 主通道对比</td><td>滤网 SEO <strong>4.3</strong> vs 情趣 SEO <strong>3.4</strong></td><td>情趣低 21% 且第二名以后断崖（Pinterest 3.0→TikTok 2.0；Meta 0.5/Shopping 0.4 被政策半关闭）</td></tr>
+<tr><td>LTV:CAC 对比</td><td>滤芯 ≈6:1（悲观3:1）vs 情趣 ≈3-4:1（低置信）</td><td>滤芯 3年毛利 LTV≈$99/CAC≈$16；情趣 ≈$60/CAC≈$15-20（留存假设无实测支撑）</td></tr>
+<tr><td>复购结构</td><td>滤芯年2单（物理确定）vs 情趣 1.2-1.5单（场合驱动）</td><td>滤芯转速来源=6个月物理复购（下坡车）；情趣=上新+节日脉冲（踏板车）</td></tr>
+<tr><td>MVP 定义</td><td>冰箱水滤×30-50 SKU + 全品类页面层</td><td>SKU宽度=验证变量必须收窄；页面宽度=资产积累无需收窄（256篇已沉没，边际成本零）</td></tr>
+<tr><td>三假设</td><td>H1流量/H2转化/H3复购</td><td>MVP完成标准：90天型号词进top20 / 首30单转化≥1% / 订阅渗透≥15%——验证的是三条可迁移假设，不是"9个品类哪个好卖"</td></tr>
+<tr><td>竞品获客范本</td><td>Yandy 十年季节病毒+SEO / Adore Me Meta付费+订阅</td><td>跑出规模的两个范本：一个靠时间不可压缩，一个靠情趣定位所没有的付费通道</td></tr>
+</tbody>
+</table></div>
+<h3>该视角独有增量</h3>
+<ul>
+<li><strong>"弹药超配、客户为零"诊断</strong>（总报告列为第一执行项）：ClearFit 处于 Steve Blank 阶段1→2交界，256篇+22,000型号+15原型已备齐数周而零付费客户——"80%项目卡在阶段2→3"的前兆，执行重心应从生产侧切到验证侧（前10个付费客户：Google Ads 型号词桥接 + Reddit 笨功夫）。</li>
+<li><strong>Sean Ellis 电商化改造</strong>：40% 门槛为 SaaS 设计，耗材电商用户"不能在这买去Amazon买不失望"——主指标应换为 <strong>6个月二单率≥30%</strong>，权重重排为 留存曲线 &gt; LTV:CAC &gt; 自然占比 &gt; Sean Ellis。</li>
+<li><strong>"高复购40-60%"交叉证伪</strong>：最成功玩家 Adore Me 复购靠 VIP 付费订阅强制锁定、Yandy 靠万圣节拉新（30%营收）——若自然复购真有40-60%无需订阅硬拉；"高复购"是把订阅制数字错误外推到情趣场景的叙事，真实 LTV 结构更接近时装（上新驱动）。</li>
+</ul>
+<div class="meta"><p><strong>选品判据沉淀（三层过筛）</strong>：数据层（词池可竞争性：SD分布+无品牌词/本地词废区）× 结构层（渠道政策：付费双巨头是否开放）× LTV层（复购驱动力=物理属性还是日历/上新属性）。三层全过=滤网型标的；一层崩塌=乐高型否决；两层弱=情趣内衣型跛脚标的。</p></div>
+</section>
+
+</div>
+</main>
+
+<script>
+(function(){
+  var bar=document.getElementById('progress');
+  var secs=[].slice.call(document.querySelectorAll('section[data-doc]'));
+  var links={};
+  secs.forEach(function(s){
+    links[s.id]=document.querySelector('#sidebar nav a[href="#'+s.id+'"]');
+  });
+  var curId=null;
+  function update(){
+    var st=window.scrollY||document.documentElement.scrollTop;
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0?(st/h*100):0)+'%';
+    var pos=st+140,cur=secs[0];
+    for(var i=0;i<secs.length;i++){if(secs[i].offsetTop<=pos)cur=secs[i];}
+    if(cur&&cur.id!==curId){
+      curId=cur.id;
+      for(var k in links){if(links[k])links[k].classList.toggle('on',k===curId);}
+    }
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+  var btn=document.getElementById('menuBtn');
+  function close(){document.body.classList.remove('nav-open');}
+  if(btn)btn.addEventListener('click',function(){document.body.classList.toggle('nav-open');});
+  document.getElementById('overlay').addEventListener('click',close);
+  [].slice.call(document.querySelectorAll('#sidebar a')).forEach(function(a){
+    a.addEventListener('click',close);
+  });
+})();
+</script>
+</body>
+</html>

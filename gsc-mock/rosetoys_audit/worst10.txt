@@ -1,0 +1,30 @@
+id=21391 score=6 | W-3117  Erotic mesh bandeau open crotch one-piece
+   reasons: SKU前缀, 机翻词:erotic, 双空格, 重复组x21
+   desc(165): Product Details: Material: Lace Project type: Full set of mesh clothing Features: Mesh clothing Color: Black Specification: One size Bust: Recommended
+id=21404 score=6 | W-3101  Erotic mesh bandeau open crotch one-piece
+   reasons: SKU前缀, 机翻词:erotic, 双空格, 重复组x21
+   desc(165): Product Details: Material: Lace Project type: Full set of mesh clothing Features: Mesh clothing Color: Black Specification: One size Bust: Recommended
+id=21434 score=6 | W-3105  Erotic mesh bandeau open crotch one-piece
+   reasons: SKU前缀, 机翻词:erotic, 双空格, 重复组x21
+   desc(165): Product Details: Material: Lace Project type: Full set of mesh clothing Features: Mesh clothing Color: Black Specification: One size Bust: Recommended
+id=21449 score=6 | W-3102  Erotic mesh bandeau open crotch one-piece
+   reasons: SKU前缀, 机翻词:erotic, 双空格, 重复组x21
+   desc(165): Product Details: Material: Lace Project type: Full set of mesh clothing Features: Mesh clothing Color: Black Specification: One size Bust: Recommended
+id=21523 score=6 | W-3134  Erotic mesh bandeau open crotch one-piece
+   reasons: SKU前缀, 机翻词:erotic, 双空格, 重复组x21
+   desc(165): Product Details: Material: Lace Project type: Full set of mesh clothing Features: Mesh clothing Color: Black Specification: One size Bust: Recommended
+id=21528 score=6 | W-3119  Erotic mesh bandeau open crotch one-piece
+   reasons: SKU前缀, 机翻词:erotic, 双空格, 重复组x21
+   desc(165): Product Details: Material: Lace Project type: Full set of mesh clothing Features: Mesh clothing Color: Black Specification: One size Bust: Recommended
+id=21595 score=6 | W-0002  Erotic lingerie jacquard sexy colorful mesh
+   reasons: SKU前缀, 机翻词:sexy/erotic, 双空格, 重复组x8
+   desc(133): Product Details: Material: Polyamide Project type: netsuit Color: iridescent Specification: One size Bust: Recommended weight 40-70Kg
+id=21599 score=6 | W-0001  Erotic lingerie jacquard sexy colorful mesh
+   reasons: SKU前缀, 机翻词:sexy/erotic, 双空格, 重复组x8
+   desc(133): Product Details: Material: Polyamide Project type: netsuit Color: iridescent Specification: One size Bust: Recommended weight 40-70Kg
+id=21612 score=6 | W-0010  Erotic lingerie jacquard sexy colorful mesh
+   reasons: SKU前缀, 机翻词:sexy/erotic, 双空格, 重复组x8
+   desc(133): Product Details: Material: Polyamide Project type: netsuit Color: iridescent Specification: One size Bust: Recommended weight 40-70Kg
+id=21616 score=6 | W-0008  Erotic lingerie jacquard sexy colorful mesh
+   reasons: SKU前缀, 机翻词:sexy/erotic, 双空格, 重复组x8
+   desc(133): Product Details: Material: Polyamide Project type: netsuit Color: iridescent Specification: One size Bust: Recommended weight 40-70Kg

@@ -1,0 +1,37 @@
+{
+ "domain": "attractivenesstest.net",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://attractivenesstest.net/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://attractivenesstest.net/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 11
+  }
+ ],
+ "page_urls": [
+  "https://attractivenesstest.net/",
+  "https://attractivenesstest.net/age-guesser/",
+  "https://attractivenesstest.net/face-shape-detector/",
+  "https://attractivenesstest.net/face-rater/",
+  "https://attractivenesstest.net/face-comparison/",
+  "https://attractivenesstest.net/about-us/",
+  "https://attractivenesstest.net/faq/",
+  "https://attractivenesstest.net/contact-us/",
+  "https://attractivenesstest.net/privacy-policy/",
+  "https://attractivenesstest.net/terms-and-conditions/",
+  "https://attractivenesstest.net/cookie-policy/"
+ ],
+ "stats": {
+  "total_loc": 11,
+  "pages": 11,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "domain": "faceage.ai",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://faceage.ai/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://faceage.ai/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 3
+  }
+ ],
+ "page_urls": [
+  "https://faceage.ai/",
+  "https://faceage.ai/palette",
+  "https://faceage.ai/report"
+ ],
+ "stats": {
+  "total_loc": 3,
+  "pages": 3,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

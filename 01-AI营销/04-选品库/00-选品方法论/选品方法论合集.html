@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>选品方法论合集</title>
+<style>
+:root{
+  --bg:#f6f4ef; --paper:#fbfaf7; --side:#f1ede5;
+  --text:#22201c; --muted:#7a7365;
+  --accent:#0e6a5a; --accent-ink:#0b5648;
+  --line:#e2dccf; --line2:#d8d2c4;
+  --quote-bg:#f3f0e8; --code-bg:#efeadf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",sans-serif}
+[id]{scroll-margin-top:24px}
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--accent);z-index:60}
+/* ---- 侧边栏 ---- */
+#sidebar{position:fixed;top:0;left:0;bottom:0;width:276px;background:var(--side);border-right:1px solid var(--line2);overflow-y:auto;padding:26px 0 44px;z-index:50}
+.brand{padding:0 22px 4px;font-size:19px;font-weight:700}
+.brand-sub{padding:0 22px 20px;font-size:12px;color:var(--muted);border-bottom:1px solid var(--line2);margin-bottom:10px}
+#sidebar nav a.ov-link{display:block;padding:8px 22px 8px 19px;font-size:13.5px;color:var(--muted);text-decoration:none;border-left:3px solid transparent}
+#sidebar nav a.ov-link:hover{color:var(--accent-ink)}
+.doc-item{margin:2px 0}
+.doc-item>a.doc-link{display:block;padding:8px 22px 8px 19px;font-size:14px;font-weight:600;color:#403c34;text-decoration:none;border-left:3px solid transparent;line-height:1.45}
+.doc-item>a.doc-link:hover{color:var(--accent-ink)}
+.doc-item>a.doc-link.on{color:var(--accent-ink);border-left-color:var(--accent);background:rgba(14,106,90,.08)}
+details.sub summary{list-style:none;cursor:pointer;padding:2px 22px;font-size:11.5px;color:var(--muted);user-select:none}
+details.sub summary::-webkit-details-marker{display:none}
+details.sub summary::before{content:"+ 展开小节"}
+details.sub[open] summary::before{content:"− 收起小节"}
+.sub-list{padding:3px 0 9px}
+.sub-list a{display:block;padding:3px 22px 3px 30px;font-size:12.5px;color:#6f6857;text-decoration:none;line-height:1.5}
+.sub-list a:hover{color:var(--accent-ink)}
+/* ---- 正文 ---- */
+main{margin-left:276px;background:var(--paper);min-height:100vh}
+.content{max-width:800px;margin:0 auto;padding:56px 48px 120px}
+.doc{padding-top:54px;margin-top:54px;border-top:1px solid var(--line2)}
+.doc.first{border-top:none;padding-top:0;margin-top:0}
+.kicker{font-size:12px;letter-spacing:.14em;color:var(--accent);font-weight:600;margin-bottom:10px}
+h1{font-size:30px;line-height:1.35;font-weight:700;margin:0 0 22px}
+h2{font-size:22px;font-weight:700;margin:48px 0 16px;line-height:1.4}
+h3{font-size:18px;font-weight:600;margin:32px 0 12px;line-height:1.4}
+h4{font-size:16px;font-weight:600;margin:26px 0 10px}
+p{font-size:15.5px;line-height:1.75;margin:13px 0}
+ul,ol{margin:13px 0;padding-left:26px}
+li{font-size:15.5px;line-height:1.75;margin:4px 0}
+a{color:var(--accent-ink)}
+strong{font-weight:700;color:#14120e}
+ul.task{list-style:none;padding-left:4px}
+ul.task li{padding-left:26px;position:relative}
+ul.task li::before{content:"☐";position:absolute;left:2px;top:0;color:#8a8272;font-size:15px}
+/* 表格 */
+.tw{overflow-x:auto;margin:18px 0}
+table{width:100%;border-collapse:collapse;font-size:13.5px;line-height:1.6;border:1px solid var(--line2);background:#fff}
+thead th{background:#33504a;color:#f4f2ec;font-weight:600;padding:8px 12px;text-align:left;vertical-align:top}
+tbody td{padding:8px 12px;border-top:1px solid var(--line);vertical-align:top}
+tbody tr:nth-child(even) td{background:#f6f3ec}
+/* 代码 */
+pre{background:var(--code-bg);border:1px solid var(--line2);border-radius:4px;padding:14px 16px;overflow-x:auto;font-family:Consolas,"SF Mono",Menlo,"Courier New",monospace;font-size:13px;line-height:1.7;margin:16px 0;white-space:pre}
+code{font-family:Consolas,Menlo,"Courier New",monospace;font-size:.86em;background:var(--code-bg);border:1px solid var(--line);border-radius:3px;padding:.5px 5px}
+pre code{background:none;border:none;padding:0;font-size:inherit}
+/* 引用 */
+blockquote{border-left:3px solid var(--accent);background:var(--quote-bg);padding:12px 18px 12px 16px;margin:18px 0;border-radius:0 4px 4px 0}
+blockquote p{margin:7px 0;font-size:14.5px;color:#454136}
+blockquote ul,blockquote ol{margin:7px 0;padding-left:22px}
+blockquote li{font-size:14.5px}
+/* 总览 */
+#overview .lead{font-size:15px;color:#5b564c;line-height:1.75;margin:6px 0 10px}
+#overview .ov-item{padding:15px 0;border-bottom:1px solid var(--line)}
+#overview .ov-item:last-child{border-bottom:none}
+#overview .ov-name{font-size:15.5px;font-weight:700}
+#overview .ov-name .no{color:var(--accent);font-weight:700;margin-right:8px;font-variant-numeric:tabular-nums}
+#overview .ov-name a{color:var(--text);text-decoration:none;border-bottom:1px solid var(--accent)}
+#overview .ov-desc{font-size:14px;color:#5b564c;line-height:1.7;margin-top:5px}
+.meta{font-size:13px;color:var(--muted);margin-top:44px;padding-top:14px;border-top:1px dashed var(--line2)}
+/* 移动端 */
+#topbar{display:none}
+#overlay{display:none}
+@media(max-width:920px){
+  #sidebar{transform:translateX(-100%);transition:transform .25s ease;width:288px;background:var(--side)}
+  body.nav-open #sidebar{transform:none}
+  body.nav-open #overlay{display:block;position:fixed;inset:0;background:rgba(30,28,22,.35);z-index:45}
+  main{margin-left:0}
+  .content{padding:24px 20px 90px}
+  .doc{padding-top:40px;margin-top:40px}
+  h1{font-size:26px}
+  h2{font-size:20px}
+  #topbar{display:flex;position:sticky;top:0;z-index:40;align-items:center;gap:12px;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 16px}
+  #menuBtn{font:inherit;font-size:13px;padding:5px 12px;border:1px solid var(--line2);background:var(--side);border-radius:4px;cursor:pointer;color:#403c34}
+  #topbar .tb-title{font-weight:700;font-size:15px}
+}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="topbar"><button id="menuBtn">目录</button><span class="tb-title">选品方法论</span></div>
+<div id="overlay"></div>
+
+<aside id="sidebar">
+  <div class="brand">选品方法论</div>
+  <div class="brand-sub">8 篇合集读本 · 本地阅读版</div>
+  <nav>
+    <a class="ov-link" href="#overview">总览</a>
+    <div class="doc-item">
+      <a class="doc-link" href="#doc-0">00 · 词根调研法</a>
+      <details class="sub" data-for="doc-0"><div class="sub-list">
+        <a href="#d0-1">1. 两类词根 + 变现力</a>
+        <a href="#d0-2">2. 选品词根清单（6 类）</a>
+        <a href="#d0-3">3. 工具站词根清单</a>
+        <a href="#d0-4">4. 工具站 SEO 策略</a>
+        <a href="#d0-5">5. 程序化 SEO 修饰词矩阵</a>
+        <a href="#d0-6">6. 组合搜索公式</a>
+        <a href="#d0-7">7. 筛选标准</a>
+        <a href="#d0-8">8. 关键词 Seed Patterns 速查</a>
+        <a href="#d0-rel">相关文档</a>
+      </div></details>
+    </div>
+    <div class="doc-item">
+      <a class="doc-link" href="#doc-1">01 · 搜索词需求发现法</a>
+      <details class="sub" data-for="doc-1"><div class="sub-list">
+        <a href="#d1-1">1. 底层认知：搜索即需求</a>
+        <a href="#d1-2">2. 意图分类：决策旅程阶段</a>
+        <a href="#d1-3">3. 需求发现的四条路径</a>
+        <a href="#d1-4">4. 验证需求的三个信号</a>
+        <a href="#d1-5">5. 跨场景适用性</a>
+        <a href="#d1-6">6. 关键工具清单</a>
+      </div></details>
+    </div>
+    <div class="doc-item">
+      <a class="doc-link" href="#doc-2">02 · 关键词挖掘实操手册</a>
+      <details class="sub" data-for="doc-2"><div class="sub-list">
+        <a href="#d2-1">1. 找种子词的三种方法</a>
+        <a href="#d2-2">2. 拓展长尾词的六种方法</a>
+        <a href="#d2-3">3. 数据筛选</a>
+        <a href="#d2-4">4. 标准工作流：五步建词库</a>
+        <a href="#d2-5">5. 工具矩阵速查</a>
+      </div></details>
+    </div>
+    <div class="doc-item">
+      <a class="doc-link" href="#doc-3">04 · 竞品与社区逆向挖掘法</a>
+      <details class="sub" data-for="doc-3"><div class="sub-list">
+        <a href="#d3-1">1. 亚马逊搜索词报告逆向挖掘</a>
+        <a href="#d3-2">2. 付费意愿挖掘</a>
+        <a href="#d3-3">3. Reddit 社区需求调研</a>
+        <a href="#d3-4">4. 评论区与 Q&amp;A 洞察</a>
+        <a href="#d3-5">5. 趋势挖掘需求</a>
+        <a href="#d3-6">6. 兴趣拆解法</a>
+      </div></details>
+    </div>
+    <div class="doc-item">
+      <a class="doc-link" href="#doc-4">05 · GEO意图词挖掘体系</a>
+      <details class="sub" data-for="doc-4"><div class="sub-list">
+        <a href="#d4-1">1. GEO vs 传统SEO挖词差异</a>
+        <a href="#d4-2">2. 意图词三层基础架构</a>
+        <a href="#d4-3">3. 意图词生成公式</a>
+        <a href="#d4-4">4. L1-L5 五层级挖词策略</a>
+        <a href="#d4-5">5. 五步搭建完整意图词库</a>
+        <a href="#d4-6">6. 行业化适配</a>
+        <a href="#d4-7">7. 避坑原则</a>
+      </div></details>
+    </div>
+    <div class="doc-item">
+      <a class="doc-link" href="#doc-5">06 · 痛点逆向选品法</a>
+      <details class="sub" data-for="doc-5"><div class="sub-list">
+        <a href="#d5-1">1. 方法论</a>
+        <a href="#d5-2">2. 完整流程：10 分钟选品落地</a>
+        <a href="#d5-3">3. 供应链与定价</a>
+        <a href="#d5-4">4. AI 营销素材降维打击</a>
+        <a href="#d5-5">5. 痛点分类速查表</a>
+        <a href="#d5-6">6. 与其他选品方法的配合</a>
+        <a href="#d5-7">7. 一句话总结</a>
+      </div></details>
+    </div>
+    <div class="doc-item">
+      <a class="doc-link" href="#doc-6">07 · 细分市场选择与企业匹配</a>
+      <details class="sub" data-for="doc-6"><div class="sub-list">
+        <a href="#d6-1">1. 同一行业 ≠ 同一种生意</a>
+        <a href="#d6-2">2. 流量数据的三重误读</a>
+        <a href="#d6-3">3. 市场侧评估六问</a>
+        <a href="#d6-4">4. 企业侧匹配六问</a>
+        <a href="#d6-5">5. 最小 ICP 假设</a>
+        <a href="#d6-6">6. 四象限决策</a>
+        <a href="#d6-7">7. 三类跨境老板</a>
+        <a href="#d6-8">8. 七步流程总览</a>
+        <a href="#d6-rel">与库内文档的衔接</a>
+      </div></details>
+    </div>
+    <div class="doc-item">
+      <a class="doc-link" href="#doc-7">11 · 精准产品定义与全渠道增长框架</a>
+      <details class="sub" data-for="doc-7"><div class="sub-list">
+        <a href="#d7-1">第一部分：PMF 验证</a>
+        <a href="#d7-2">第二部分：全渠道增长体系</a>
+        <a href="#d7-3">第三部分：执行检查清单</a>
+        <a href="#d7-4">第四部分：与知识库协作</a>
+        <a href="#d7-5">数据来源</a>
+      </div></details>
+    </div>
+  </nav>
+</aside>
+
+<main>
+<div class="content">
+
+<section id="overview" class="doc first" data-doc>
+<h1>选品方法论 · 总览</h1>
+<p class="lead">8 篇方法覆盖选品全链路：从词根与搜索词发现方向，到关键词实操、竞品与社区逆向、GEO 意图词、痛点逆向，再到细分市场选择与企业匹配，最终以 PMF 验证与全渠道增长收口。</p>
+<div class="ov-item">
+  <div class="ov-name"><span class="no">00</span><a href="#doc-0">词根调研法</a></div>
+  <div class="ov-desc">英文词根 = 场景/功能/问题的精准表达。选品词根发现"卖什么"，工具站词根发现"做什么工具引流"，修饰词矩阵发现"做什么类型的页面"。三类方法交叉使用。</div>
+</div>
+<div class="ov-item">
+  <div class="ov-name"><span class="no">01</span><a href="#doc-1">搜索词需求发现法</a></div>
+  <div class="ov-desc">搜索词是用户最少防备、最接近真实状态的表达。搜索词背后不是观点，而是任务。</div>
+</div>
+<div class="ov-item">
+  <div class="ov-name"><span class="no">02</span><a href="#doc-2">关键词挖掘实操手册</a></div>
+  <div class="ov-desc">种子词只是起点，长尾关键词才是真正带来精准流量的关键。高价值词 = 意图明确 + 竞争可控 + 与业务强相关。</div>
+</div>
+<div class="ov-item">
+  <div class="ov-name"><span class="no">04</span><a href="#doc-3">竞品与社区逆向挖掘法</a></div>
+  <div class="ov-desc">你的竞争对手已经帮你验证了哪些方向有市场，你的用户已经在评论区写下了真实抱怨。你只需要去发现，不需要去猜测。</div>
+</div>
+<div class="ov-item">
+  <div class="ov-name"><span class="no">05</span><a href="#doc-4">GEO意图词挖掘体系</a></div>
+  <div class="ov-desc">GEO 的挖词本质，不是"找 AI 喜欢的词"，而是"找用户真实需求的词"——从传统 SEO 的关键词主题匹配，升级为用户全决策旅程的意图需求精准匹配。</div>
+</div>
+<div class="ov-item">
+  <div class="ov-name"><span class="no">06</span><a href="#doc-5">痛点逆向选品法</a></div>
+  <div class="ov-desc">先锁定人群在真实场景中的痛点，再用数据验证需求强度，最后反向匹配解决方案（产品）。用户买的不是产品，是解决方案。</div>
+</div>
+<div class="ov-item">
+  <div class="ov-name"><span class="no">07</span><a href="#doc-6">细分市场选择与企业匹配</a></div>
+  <div class="ov-desc">发现大方向之后、PMF 验证之前，缺一段判断：这个大行业里选哪个细分，以及自己的企业接不接得住。市场吸引力与企业匹配度是两个独立维度。</div>
+</div>
+<div class="ov-item">
+  <div class="ov-name"><span class="no">11</span><a href="#doc-7">精准产品定义与全渠道增长框架</a></div>
+  <div class="ov-desc">从"选品"到"增长"之间缺的那块拼图——解决"怎么验证它真的有人买（PMF）"和"验证通过后怎么选渠道做增长（全渠道体系）"。</div>
+</div>
+</section>
+
+<section id="doc-0" class="doc" data-doc>
+<div class="kicker">第 1 篇 · 共 8 篇</div>
+<h1>词根调研法</h1>
+<blockquote>
+<p><strong>核心思路</strong>：英文词根 = 场景/功能/问题的精准表达。选品词根发现"卖什么"，工具站词根发现"做什么工具引流"，修饰词矩阵发现"做什么类型的页面"。三类方法交叉使用。</p>
+<p><strong>来源</strong>：<a href="https://mp.weixin.qq.com/s/jMkpc8iDj--vyUI9PA5PnQ">小渔聊独立站</a>、<a href="https://mp.weixin.qq.com/s/j4Pm5YPObHA9zEg80Thu4w">桃与SaaS</a>、<a href="https://mp.weixin.qq.com/s/PDF3Bbfx8ryShOmcMfgdbg">赫兹/droidHZ</a>、<a href="https://ahrefs.com/blog/the-free-tools-seo-strategy/">Ahrefs / Ryan Law</a>、<a href="https://seomatic.ai/blog/programmatic-seo-keyword-research">SEOmatic</a>、<a href="https://seranking.com/blog/keyword-types/">SE Ranking</a></p>
+<p><strong>最后更新</strong>：2026-07-22</p>
+</blockquote>
+<h2 id="d0-1">1. 两类词根 + 变现力</h2>
+<div class="tw"><table>
+<thead><tr><th></th><th>选品词根</th><th>工具站词根</th></tr></thead>
+<tbody>
+<tr><td><strong>用户行为</strong></td><td>搜完会<strong>买</strong></td><td>搜完会<strong>用</strong></td></tr>
+<tr><td><strong>词根类型</strong></td><td>场景/替换/功能/人群/属性/定制</td><td>calculator/converter/generator/checker 等</td></tr>
+<tr><td><strong>目标</strong></td><td>发现卖什么产品</td><td>做什么工具页面引流</td></tr>
+<tr><td><strong>交叉使用</strong></td><td>用选品词根找产品方向，用工具词根给产品站做引流工具页</td><td></td></tr>
+</tbody>
+</table></div>
+<p><strong>变现力分级</strong>（词根不仅看搜索量，还要看购买意图强度）：</p>
+<div class="tw"><table>
+<thead><tr><th>变现力</th><th>词根类型</th><th>举例</th></tr></thead>
+<tbody>
+<tr><td><strong>高</strong></td><td>定制/纪念类</td><td>custom map, personalized gift</td></tr>
+<tr><td><strong>高</strong></td><td>替换/复购类</td><td>replacement filter, refill</td></tr>
+<tr><td><strong>中</strong></td><td>场景/人群类</td><td>ergonomic chair, survival kit</td></tr>
+<tr><td><strong>低</strong></td><td>纯工具/动作类</td><td>calculator, converter（但可做引流工具页）</td></tr>
+</tbody>
+</table></div>
+<h2 id="d0-2">2. 选品词根清单（6 类）</h2>
+<h3>2.1 场景/问题类</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>含义</th><th>产品方向</th><th>案例</th></tr></thead>
+<tbody>
+<tr><td><strong>Emergency</strong></td><td>应急</td><td>充电宝+手电+收音机组合</td><td>户外应急电源套装</td></tr>
+<tr><td><strong>Survival</strong></td><td>生存</td><td>户外生存工具包、净水器</td><td>72小时生存背包</td></tr>
+<tr><td><strong>Outage</strong></td><td>停电/中断</td><td>备用照明、手摇发电设备</td><td>停电应急灯</td></tr>
+<tr><td><strong>Preparedness</strong></td><td>防备</td><td>灾难预备套装</td><td>地震/飓风应急箱</td></tr>
+<tr><td><strong>Disaster</strong></td><td>灾难</td><td>灾后恢复工具</td><td>防水文件袋+应急毯</td></tr>
+</tbody>
+</table></div>
+<h3>2.2 替换/维修类（高频复购）</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>含义</th><th>产品方向</th><th>案例</th></tr></thead>
+<tbody>
+<tr><td><strong>Replacement</strong></td><td>替换件</td><td>滤网、刷头、刀片、配件</td><td>空气净化器替换滤网</td></tr>
+<tr><td><strong>Parts</strong></td><td>配件/零部件</td><td>家电配件、水暖配件</td><td>sink drain parts、vacuum parts</td></tr>
+<tr><td><strong>Refill</strong></td><td>补充装</td><td>洗手液、墨水、肥皂</td><td>自动出液器补充装</td></tr>
+<tr><td><strong>Repair</strong></td><td>维修</td><td>维修工具包、修复胶</td><td>屏幕修复套装</td></tr>
+<tr><td><strong>Spare</strong></td><td>备件</td><td>备用零件、备用电池</td><td>备用遥控器</td></tr>
+<tr><td><strong>Upgrade</strong></td><td>升级</td><td>原厂配件的升级替代</td><td>更好的替换刷头</td></tr>
+</tbody>
+</table></div>
+<blockquote><p><strong>Parts 词根价值</strong>：实测案例月流量仅 4.3K 但 Traffic Cost 5.3K，商业意图占比 73%+。低流量高意图 &gt; 高流量低意图。</p></blockquote>
+<h3>2.3 功能/动作类</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>含义</th><th>产品方向</th><th>案例</th></tr></thead>
+<tbody>
+<tr><td><strong>Calculate</strong></td><td>计算</td><td>细分计算器（厨房、编织、建筑、税）</td><td>编织针数计算器</td></tr>
+<tr><td><strong>Convert</strong></td><td>转换</td><td>适配器、转换器（电压、接口、单位）</td><td>欧洲旅行电源转换器</td></tr>
+<tr><td><strong>Correct / Correction</strong></td><td>矫正</td><td>体态、视力、牙齿、脚趾</td><td>儿童矫正鞋</td></tr>
+<tr><td><strong>Detect / Detector</strong></td><td>检测</td><td>水质、甲醛、辐射、金属</td><td>家用水质检测笔</td></tr>
+<tr><td><strong>Sterilize / Sterilizer</strong></td><td>消毒</td><td>UV消毒盒、蒸汽消毒</td><td>手机UV消毒盒</td></tr>
+<tr><td><strong>Compress / Compression</strong></td><td>压缩</td><td>收纳袋、运动护具、医疗</td><td>旅行压缩收纳袋</td></tr>
+<tr><td><strong>Filter / Filtration</strong></td><td>过滤</td><td>水过滤、空气过滤、油过滤</td><td>龙头净水器</td></tr>
+<tr><td><strong>Dispense / Dispenser</strong></td><td>分配</td><td>肥皂、食物、水、纸巾</td><td>宠物自动喂食器</td></tr>
+<tr><td><strong>Seal / Sealing</strong></td><td>密封</td><td>真空封口、防水密封</td><td>食物真空封口机</td></tr>
+<tr><td><strong>Insulate / Insulation</strong></td><td>隔离</td><td>隔热、隔音、保温</td><td>窗户隔热膜</td></tr>
+<tr><td><strong>Charge / Charger</strong></td><td>充电</td><td>细分充电场景</td><td>太阳能背包充电器</td></tr>
+<tr><td><strong>Mount / Mounting</strong></td><td>固定/安装</td><td>手机架、显示器臂、工具挂架</td><td>床头手机支架</td></tr>
+<tr><td><strong>Amplify / Amplifier</strong></td><td>放大/增强</td><td>声音、信号、视觉</td><td>老年人电视声音放大器</td></tr>
+<tr><td><strong>Automate / Automation</strong></td><td>自动化</td><td>定时器、智能开关、自动装置</td><td>自动浇花器</td></tr>
+</tbody>
+</table></div>
+<h3>2.4 人群/健康类</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>含义</th><th>产品方向</th><th>案例</th></tr></thead>
+<tbody>
+<tr><td><strong>Ergonomic</strong></td><td>人体工学</td><td>办公椅、键盘、鼠标</td><td>站立办公桌转换器</td></tr>
+<tr><td><strong>Orthopedic</strong></td><td>骨科/矫形</td><td>鞋垫、枕头、坐垫</td><td>狗狗骨科床</td></tr>
+<tr><td><strong>Corrective</strong></td><td>矫正</td><td>姿势矫正器、脚趾分离器</td><td>驼背矫正带</td></tr>
+<tr><td><strong>Therapeutic</strong></td><td>治疗</td><td>热敷、冷敷、按摩</td><td>颈椎治疗仪</td></tr>
+<tr><td><strong>Pediatric</strong></td><td>儿科</td><td>婴儿专用产品</td><td>婴儿指甲修剪器</td></tr>
+<tr><td><strong>Senior / Geriatric</strong></td><td>老年</td><td>辅助设备、安全产品</td><td>老年人防滑洗澡椅</td></tr>
+<tr><td><strong>Rehab / Rehabilitation</strong></td><td>康复</td><td>术后恢复、运动康复</td><td>膝盖康复训练器</td></tr>
+</tbody>
+</table></div>
+<h3>2.5 属性/形态类</h3>
+<blockquote><p>不单独使用，要和品类词根组合搜索。</p></blockquote>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>叠加逻辑</th><th>案例</th></tr></thead>
+<tbody>
+<tr><td><strong>Portable</strong></td><td>任何产品都有便携版本</td><td>便携洗衣机</td></tr>
+<tr><td><strong>Foldable</strong></td><td>节省空间 = 小户型/旅行刚需</td><td>折叠菜板</td></tr>
+<tr><td><strong>Collapsible</strong></td><td>更极端节省</td><td>收缩硅胶水壶</td></tr>
+<tr><td><strong>Waterproof</strong></td><td>户外、浴室、海洋场景</td><td>防水蓝牙音箱</td></tr>
+<tr><td><strong>Solar</strong></td><td>离网场景 = 便携+应急</td><td>太阳能充电宝</td></tr>
+<tr><td><strong>Adjustable</strong></td><td>一款产品覆盖多个用户</td><td>可调节桌面高度</td></tr>
+<tr><td><strong>Heavy-duty</strong></td><td>专业/工业级 = 高价</td><td>重型犬链</td></tr>
+<tr><td><strong>Compact</strong></td><td>小空间优化</td><td>紧凑型空气净化器</td></tr>
+</tbody>
+</table></div>
+<h3>2.6 定制/纪念类（高溢价、高意图）</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>产品方向</th><th>案例</th></tr></thead>
+<tbody>
+<tr><td><strong>Map</strong></td><td>地理位置、游戏地图、纪念地图</td><td>权力的游戏攻略地图</td></tr>
+<tr><td><strong>Custom / Customize</strong></td><td>任何品类的定制版本</td><td>定制宠物项圈</td></tr>
+<tr><td><strong>Personalized</strong></td><td>刻字、印照片、专属设计</td><td>个性化名字项链</td></tr>
+<tr><td><strong>Engrave / Engraving</strong></td><td>首饰、手表、酒瓶</td><td>刻字结婚对戒</td></tr>
+<tr><td><strong>Print / Printed</strong></td><td>T恤、海报、手机壳</td><td>宠物定制手机壳</td></tr>
+<tr><td><strong>Memorial</strong></td><td>纪念品、追悼品</td><td>宠物骨灰纪念项链</td></tr>
+<tr><td><strong>Keepsake</strong></td><td>出生、婚礼、毕业纪念</td><td>婴儿手足印套装</td></tr>
+<tr><td><strong>Monogram</strong></td><td>刺绣、压印、雕刻</td><td>字母组合浴巾</td></tr>
+</tbody>
+</table></div>
+<blockquote><p>Custom Map 验证：用 "map" 词根广泛匹配，排除地理位置词条，仍有 2 万+ 关键词。产品形态多样（纸质/画框/3D/花束）= 多个 SKU。</p></blockquote>
+<h2 id="d0-3">3. 工具站词根清单</h2>
+<h3>3.1 生成/创建类</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>常见搭配</th><th>建站方向</th></tr></thead>
+<tbody>
+<tr><td><strong>Generator</strong></td><td>Password Generator, Name Generator, QR Code Generator</td><td>随机内容生成</td></tr>
+<tr><td><strong>Maker</strong></td><td>Logo Maker, Video Maker</td><td>在线制作</td></tr>
+<tr><td><strong>Creator</strong></td><td>Content Creator, Logo Creator</td><td>内容创作</td></tr>
+<tr><td><strong>Builder</strong></td><td>App Builder, Website Builder</td><td>可视化搭建</td></tr>
+<tr><td><strong>Constructor</strong></td><td>Website Constructor</td><td>同 Builder，技术向</td></tr>
+</tbody>
+</table></div>
+<h3>3.2 转换/处理类</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>常见搭配</th><th>建站方向</th></tr></thead>
+<tbody>
+<tr><td><strong>Converter</strong></td><td>Currency Converter, PDF Converter</td><td>格式/单位转换</td></tr>
+<tr><td><strong>Translator</strong></td><td>Language Translator</td><td>在线翻译</td></tr>
+<tr><td><strong>Processor</strong></td><td>Data Processor, Image Processor</td><td>数据处理</td></tr>
+<tr><td><strong>Formatter</strong></td><td>JSON Formatter, Code Formatter</td><td>数据格式化</td></tr>
+<tr><td><strong>Compiler</strong></td><td>C++ Compiler, Java Compiler</td><td>代码编译</td></tr>
+<tr><td><strong>Compressor</strong></td><td>Image Compressor, File Compressor</td><td>文件压缩</td></tr>
+<tr><td><strong>Optimizer</strong></td><td>Image Optimizer, SEO Optimizer</td><td>性能优化</td></tr>
+</tbody>
+</table></div>
+<h3>3.3 检查/验证类</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>常见搭配</th><th>建站方向</th></tr></thead>
+<tbody>
+<tr><td><strong>Checker</strong></td><td>Grammar Checker, Plagiarism Checker</td><td>在线验证</td></tr>
+<tr><td><strong>Detector</strong></td><td>AI Content Detector, Virus Detector</td><td>问题检测</td></tr>
+<tr><td><strong>Analyzer</strong></td><td>Text Analyzer, Performance Analyzer</td><td>数据分析</td></tr>
+<tr><td><strong>Evaluator</strong></td><td>Website Evaluator</td><td>评估/打分</td></tr>
+<tr><td><strong>Validator</strong></td><td>Email Validator, HTML Validator</td><td>格式验证</td></tr>
+<tr><td><strong>Comparator</strong></td><td>Price Comparator, Product Comparator</td><td>对比</td></tr>
+<tr><td><strong>Tester</strong></td><td>Speed Tester, Compatibility Tester</td><td>性能测试</td></tr>
+<tr><td><strong>Auditor</strong></td><td>SEO Auditor, Security Auditor</td><td>审计</td></tr>
+</tbody>
+</table></div>
+<h3>3.4 计算/模拟类</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>常见搭配</th><th>建站方向</th></tr></thead>
+<tbody>
+<tr><td><strong>Calculator</strong></td><td>Mortgage Calculator, BMI Calculator</td><td>细分计算器站</td></tr>
+<tr><td><strong>Simulator</strong></td><td>Investment Simulator, Flight Simulator</td><td>场景模拟</td></tr>
+<tr><td><strong>Estimator</strong></td><td>Cost Estimator, Time Estimator</td><td>费用估算</td></tr>
+<tr><td><strong>Counter</strong></td><td>Word Counter, Character Counter</td><td>统计/计数</td></tr>
+</tbody>
+</table></div>
+<blockquote><p>Calculator / Simulator 的本质不是"算数"，是<strong>决策辅助</strong>。需要代码逻辑，大媒体覆盖不到。</p></blockquote>
+<h3>3.5 下载/上传类</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>常见搭配</th></tr></thead>
+<tbody>
+<tr><td><strong>Downloader</strong></td><td>YouTube Downloader, MP3 Downloader</td></tr>
+<tr><td><strong>Uploader</strong></td><td>File Uploader, Image Uploader</td></tr>
+<tr><td><strong>Scraper</strong></td><td>Web Scraper, Data Scraper</td></tr>
+<tr><td><strong>Extractor</strong></td><td>Text Extractor, Audio Extractor</td></tr>
+</tbody>
+</table></div>
+<h3>3.6 编辑/查看类</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>常见搭配</th></tr></thead>
+<tbody>
+<tr><td><strong>Editor</strong></td><td>Photo Editor, Video Editor</td></tr>
+<tr><td><strong>Viewer</strong></td><td>PDF Viewer, 3D Viewer</td></tr>
+<tr><td><strong>Recorder</strong></td><td>Screen Recorder, Audio Recorder</td></tr>
+<tr><td><strong>Designer</strong></td><td>Logo Designer, Web Designer</td></tr>
+<tr><td><strong>Cropper</strong></td><td>Image Cropper</td></tr>
+<tr><td><strong>Resizer</strong></td><td>Image Resizer</td></tr>
+</tbody>
+</table></div>
+<h3>3.7 管理/监控类</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>常见搭配</th></tr></thead>
+<tbody>
+<tr><td><strong>Manager</strong></td><td>Project Manager, Password Manager</td></tr>
+<tr><td><strong>Planner</strong></td><td>Event Planner, Meal Planner</td></tr>
+<tr><td><strong>Tracker</strong></td><td>Package Tracker, Expense Tracker</td></tr>
+<tr><td><strong>Scheduler</strong></td><td>Meeting Scheduler</td></tr>
+<tr><td><strong>Monitor</strong></td><td>System Monitor, Price Monitor</td></tr>
+<tr><td><strong>Organizer</strong></td><td>Task Organizer, File Organizer</td></tr>
+</tbody>
+</table></div>
+<h3>3.8 导航/连接类</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>常见搭配</th></tr></thead>
+<tbody>
+<tr><td><strong>Explorer</strong></td><td>File Explorer, Data Explorer</td></tr>
+<tr><td><strong>Navigator</strong></td><td>GPS Navigator</td></tr>
+<tr><td><strong>Finder</strong></td><td>Font Finder, Color Finder</td></tr>
+<tr><td><strong>Matcher</strong></td><td>Color Matcher, Product Matcher</td></tr>
+</tbody>
+</table></div>
+<h3>3.9 模板/示例类</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>常见搭配</th></tr></thead>
+<tbody>
+<tr><td><strong>Template</strong></td><td>Resume Template, Email Template</td></tr>
+<tr><td><strong>Example</strong></td><td>Code Example, Resume Example</td></tr>
+<tr><td><strong>Sample</strong></td><td>Resume Sample</td></tr>
+<tr><td><strong>Pattern</strong></td><td>Knitting Pattern, Design Pattern</td></tr>
+</tbody>
+</table></div>
+<h3>3.10 通知/响应类</h3>
+<div class="tw"><table>
+<thead><tr><th>词根</th><th>常见搭配</th></tr></thead>
+<tbody>
+<tr><td><strong>Notifier</strong></td><td>Price Notifier, News Notifier</td></tr>
+<tr><td><strong>Responder</strong></td><td>Auto Responder</td></tr>
+<tr><td><strong>Assistant</strong></td><td>AI Assistant, Virtual Assistant</td></tr>
+</tbody>
+</table></div>
+<h3>3.11 CPC 筛选 + 场景价值</h3>
+<p><strong>不碰的词根</strong>（CPC 太低，娱乐性质）：maker、randomizer、picker、inverter</p>
+<p><strong>场景价值</strong>：</p>
+<div class="tw"><table>
+<thead><tr><th>场景</th><th>人群</th><th>CPC</th><th>评估</th></tr></thead>
+<tbody>
+<tr><td>健康/金融计算器</td><td>高价值决策者</td><td>高</td><td>优先做</td></tr>
+<tr><td>开发者工具</td><td>技术人群</td><td>中</td><td>可做</td></tr>
+<tr><td>图片压缩/编辑</td><td>普通用户</td><td>低-中</td><td>批量做</td></tr>
+<tr><td>随机取名/抽奖</td><td>娱乐用户</td><td>低</td><td>不做</td></tr>
+</tbody>
+</table></div>
+<h2 id="d0-4">4. 工具站 SEO 策略（Ahrefs 方法论）</h2>
+<blockquote><p>来源：<a href="https://ahrefs.com/blog/the-free-tools-seo-strategy/">Ryan Law / Ahrefs, 2026-07-16</a></p></blockquote>
+<h3>4.1 AI 抗性</h3>
+<pre><code>文章：AI 可以总结 → 用户不点击
+工具：AI 可以描述"如何计算"，但不能替用户做计算 → 用户必须访问页面</code></pre>
+<h3>4.2 硬数据案例</h3>
+<div class="tw"><table>
+<thead><tr><th>网站</th><th>工具类型</th><th>月访问量（美国）</th></tr></thead>
+<tbody>
+<tr><td>Omni Calculator</td><td>计算器库</td><td><strong>230 万</strong></td></tr>
+<tr><td>Ahrefs /writing-tools/</td><td>写作工具集</td><td>峰值 <strong>~100 万</strong></td></tr>
+<tr><td>FreeConvert</td><td>文件转换器</td><td><strong>150 万</strong></td></tr>
+<tr><td>Coolors</td><td>色彩生成器</td><td><strong>59 万</strong></td></tr>
+<tr><td>Adobe PDF-to-Word</td><td>文档转换器</td><td><strong>38.5 万</strong></td></tr>
+<tr><td>Canva /templates/</td><td>模板库</td><td><strong>50.5 万</strong></td></tr>
+<tr><td>HubSpot 签名生成器</td><td>生成器</td><td><strong>5.5 万</strong></td></tr>
+<tr><td>Shopify 利润计算器</td><td>计算器</td><td>峰值 <strong>2 万</strong></td></tr>
+</tbody>
+</table></div>
+<p>非工具站品牌（Shopify、HubSpot、Adobe）也在用免费工具引流——工具是面向目标客户的"免费前门"。</p>
+<h3>4.3 关键词筛选法</h3>
+<p><strong>头部关键词打不过</strong>：mortgage calculator (KD 81)、qr code generator (KD 90)</p>
+<p><strong>可赢关键词</strong>（低 KD，高潜力）：</p>
+<div class="tw"><table>
+<thead><tr><th>关键词</th><th>月搜索量</th><th>KD</th><th>流量潜力</th></tr></thead>
+<tbody>
+<tr><td>etsy fee calculator</td><td>2,000</td><td>7</td><td>4,000</td></tr>
+<tr><td>tattoo price calculator</td><td>350</td><td>1</td><td>1,700</td></tr>
+<tr><td>yaml to json</td><td>2,900</td><td>1</td><td>2,200</td></tr>
+<tr><td>band name generator</td><td>1.1 万</td><td>7</td><td>1.4 万</td></tr>
+</tbody>
+</table></div>
+<p><strong>筛选公式</strong>：<code>KD ≤ 30 + Lowest DR filter + 按 Traffic Potential 排序</code></p>
+<h3>4.4 SERP 检查</h3>
+<div class="tw"><table>
+<thead><tr><th>排名页面类型</th><th>判断</th><th>行动</th></tr></thead>
+<tbody>
+<tr><td><strong>薄工具页</strong></td><td>你可以做得更好</td><td>✅ 做</td></tr>
+<tr><td><strong>3000 字深度文章</strong></td><td>用户想读不想做</td><td>❌ 不是工具机会</td></tr>
+</tbody>
+</table></div>
+<h3>4.5 AI 构建 Prompt 模板</h3>
+<p>好的 Prompt = 输入字段 + 输出结果 + 页面文案（标题/说明/FAQ）。</p>
+<p><strong>Ahrefs 实测</strong>：$1.24 + 1 分钟生成可用计算器。</p>
+<pre><code>Build me a single-page "[thing] calculator" as one self-contained HTML
+file. Inputs: [list fields with defaults]. Outputs: [list results]. Show
+the working underneath each number. Make it fast and mobile-friendly, with
+a clear title, a one-line explainer, and no login. Underneath the calculator,
+add a short FAQ answering "[common question 1]" and "[common question 2]".</code></pre>
+<h3>4.6 部署方案</h3>
+<div class="tw"><table>
+<thead><tr><th>平台</th><th>方式</th><th>SEO 要点</th></tr></thead>
+<tbody>
+<tr><td>WordPress</td><td>Custom HTML block（<code>/tools/xxx/</code>）</td><td>不用 iframe</td></tr>
+<tr><td>React/Next.js</td><td>直接集成</td><td>最佳 SEO</td></tr>
+<tr><td>快速上线</td><td>静态托管 + 主站链接</td><td>主站加链接传权重</td></tr>
+</tbody>
+</table></div>
+<h2 id="d0-5">5. 程序化 SEO 修饰词矩阵（Keyword Modifier Matrix）</h2>
+<blockquote>
+<p><strong>和词根体系的关系</strong>：词根解决"做什么产品/工具"，修饰词矩阵解决"做什么类型的页面"。</p>
+<p><strong>来源</strong>：<a href="https://seomatic.ai/blog/programmatic-seo-keyword-research">SEOmatic</a>、<a href="https://seranking.com/blog/keyword-types/">SE Ranking</a>、<a href="https://www.searchenginejournal.com/how-to-organize-your-keyword-modifiers-to-create-long-tail-strategy/6526/">Search Engine Journal</a>、<a href="https://pageforge.pro/tools/programmatic-seo-keyword-generator/">PageForge</a></p>
+</blockquote>
+<h3>5.1 核心公式</h3>
+<pre><code>Head Term × Modifier = 页面模板
+  Head Term = 你的产品/品类/主题（来自词根研究）
+  Modifier = 用户搜索意图的前缀/后缀</code></pre>
+<h3>5.2 按搜索意图分类的 Modifier</h3>
+<div class="tw"><table>
+<thead><tr><th>意图</th><th>Modifier</th><th>页面类型</th></tr></thead>
+<tbody>
+<tr><td><strong>Informational</strong></td><td>how to, what is, guide to, tips, ideas, examples, definition, meaning, benefits</td><td>教程/指南页</td></tr>
+<tr><td><strong>Commercial</strong></td><td>best, top, vs, review, comparison, alternatives, cheap, affordable, premium</td><td>评测/对比页</td></tr>
+<tr><td><strong>Transactional</strong></td><td>buy, order, price, cost, deal, discount, coupon, near me, for sale, wholesale</td><td>购买/落地页</td></tr>
+<tr><td><strong>Navigational</strong></td><td>brand names, login, official site, alternative to, substitute for</td><td>品牌导航页</td></tr>
+</tbody>
+</table></div>
+<h3>5.3 完整 Modifier 清单</h3>
+<p><strong>前缀</strong>：</p>
+<pre><code>best / top / cheap / affordable / free / premium / professional
+alternative to / substitute for / similar to
+how to / what is / why / when to
+diy / homemade / natural / organic
+used / refurbished</code></pre>
+<p><strong>后缀</strong>：</p>
+<pre><code>for beginners / for kids / for seniors / for pregnancy / for travel
+for sale / online / near me / in [city]
+cost / price / under $50 / under $100
+review / reviews / reddit / vs
+wholesale / bulk / custom / personalized
+template / checklist / guide / pdf
+meaning / benefits / properties / uses</code></pre>
+<p><strong>动词型</strong>：</p>
+<pre><code>how to [clean/use/charge/identify] [品类]
+is [品类] [safe/real/worth it]
+can [品类] [go in water/be in sun/go through airport]
+does [品类] [work/help/fade]</code></pre>
+<h3>5.4 矩阵交叉示例</h3>
+<pre><code>Head Term: amethyst
+
+amethyst meaning           → 含义页（Informational）
+amethyst vs rose quartz    → 对比页（Commercial）
+amethyst for anxiety       → 用例页（Informational→Transactional）
+amethyst near me           → 本地页（Transactional）
+amethyst cost              → 定价页（Transactional）
+how to clean amethyst      → 教程页（Informational）
+is amethyst safe in water  → FAQ 页（Informational）</code></pre>
+<p><strong>一个 Head Term × 20 个 Modifier = 20 个页面机会</strong>。</p>
+<h3>5.5 关键词聚类避免同质化</h3>
+<blockquote><p>来源：<a href="https://searchenginezine.com/keywords/long-tail/programmatic-keyword-clustering/">Search Engine Zine - Programmatic Keyword Clustering Framework</a></p></blockquote>
+<p><strong>问题</strong>：Head Term × Modifier 矩阵可能产生大量相似页面 → Google 判定 thin content → 降权。</p>
+<p><strong>解决</strong>：</p>
+<ol>
+<li>把所有 Modifier 关键词按语义聚类</li>
+<li>同一个聚类内的关键词合并到一个页面（而非每词一页）</li>
+<li>不同聚类之间确保内容差异足够大</li>
+</ol>
+<pre><code>示例聚类：
+  聚类 A："amethyst for sleep / amethyst for insomnia / amethyst under pillow"
+  → 合并为一个页面："Amethyst for Sleep: Benefits, How to Use &amp; Science"
+
+  聚类 B："amethyst for anxiety / amethyst for stress / amethyst for calming"
+  → 合并为一个页面："Amethyst for Anxiety: Does It Work?"
+
+  A 和 B 内容差异足够大 → 不触发同质化</code></pre>
+<h3>5.6 pSEO 风险控制</h3>
+<blockquote><p>与 18-AI批量内容风险与爬取经济学 呼应。</p></blockquote>
+<ul>
+<li>pSEO 不是无限生成页面——<strong>页面数量必须与域名权重匹配</strong></li>
+<li>验证每个 Modifier 的搜索量后再生成页面</li>
+<li>Google 已明确打击 programmatic spam</li>
+<li>新站分批发布，每批配套外链 + 社媒信号</li>
+</ul>
+<h2 id="d0-6">6. 组合搜索公式</h2>
+<pre><code>场景词根 + 品类 = 产品机会
+功能词根 + 人群 = 细分市场
+属性词根 + 品类 = 差异化
+替换词根 + 品牌/型号 = 复购市场
+定制词根 + 品类/场景 = 高溢价产品
+工具词根 + 自家产品 = 引流工具页</code></pre>
+<h3>词根 × 自家产品 交叉法</h3>
+<p>不是用词根找新品，而是给已有产品发现新的流量入口。在 Ahrefs/Semrush 输入相关词根，找搜索量大但竞品没覆盖的关键词。</p>
+<h2 id="d0-7">7. 筛选标准</h2>
+<h3>7.1 选品筛选</h3>
+<div class="tw"><table>
+<thead><tr><th>维度</th><th>值得做</th><th>不值得做</th></tr></thead>
+<tbody>
+<tr><td>毛利</td><td>&gt; 50%</td><td>&lt; 30%</td></tr>
+<tr><td>竞争</td><td>搜索结果 &lt; 1000</td><td>大品牌垄断</td></tr>
+<tr><td>复购</td><td>有消耗品或配件</td><td>一次性购买</td></tr>
+<tr><td><strong>Traffic Cost</strong></td><td><strong>高（低流量高意图）</strong></td><td><strong>低（高流量低意图）</strong></td></tr>
+<tr><td><strong>商业意图占比</strong></td><td><strong>Commercial + Transactional &gt; 60%</strong></td><td><strong>Informational &gt; 70%</strong></td></tr>
+</tbody>
+</table></div>
+<h3>7.2 工具站筛选</h3>
+<div class="tw"><table>
+<thead><tr><th>维度</th><th>值得做</th><th>不值得做</th></tr></thead>
+<tbody>
+<tr><td>KD</td><td>≤ 30</td><td>&gt; 50</td></tr>
+<tr><td>SERP 页面类型</td><td>薄工具页</td><td>深度文章</td></tr>
+<tr><td>CPC</td><td>高（健康/金融/开发）</td><td>低（娱乐）</td></tr>
+<tr><td>AI 抗性</td><td>高（用户必须使用工具）</td><td>低（AI 可总结）</td></tr>
+<tr><td>开发成本</td><td>AI 生成 &lt; $5</td><td>需要开发团队</td></tr>
+</tbody>
+</table></div>
+<h2 id="d0-8">8. 关键词 Seed Patterns 速查</h2>
+<p><strong>Calculator 类</strong>：</p>
+<pre><code>[thing] calculator / [thing] cost calculator / [thing] price calculator
+how much [thing] / how many [thing] / [thing] estimator
+[metric] to [metric] / [thing] per [unit] / [thing] savings calculator</code></pre>
+<p><strong>Converter 类</strong>：</p>
+<pre><code>[niche format] to [niche format] / convert [format] to [format]
+[pro file] to csv / [pro file] to excel / [format] to pdf
+[format] converter online / batch [format] converter</code></pre>
+<p><strong>Generator 类</strong>：</p>
+<pre><code>[thing] generator / [thing] maker / [thing] creator
+[thing] name generator / random [thing] generator
+ai [thing] generator / [thing] builder</code></pre>
+<p><strong>Template 类</strong>：</p>
+<pre><code>[document] template / [document] example / [document] format
+printable [document] / editable [document] template / [document] checklist</code></pre>
+<p><strong>Modifier 类</strong>（搭配 Head Term 使用）：</p>
+<pre><code>best [thing] / [thing] vs [thing] / [thing] for [audience]
+[thing] near me / [thing] cost / alternative to [thing]
+how to [verb] [thing] / is [thing] [adjective]</code></pre>
+<h2 id="d0-rel">相关文档</h2>
+<ul>
+<li>01-搜索词需求发现法 — 搜索词挖掘的具体操作</li>
+<li>02-关键词挖掘实操手册 — 关键词工具使用手册</li>
+<li>05-GEO意图词挖掘体系 — AI 搜索意图词挖掘</li>
+<li>06-痛点逆向选品法 — 从痛点出发的选品方法</li>
+<li>18-AI批量内容风险与爬取经济学 — pSEO 批量页面风险控制</li>
+</ul>
+<p class="meta">创建时间: 2026-04-20 | 最后更新: 2026-07-22（简化 + Modifier 矩阵按意图分类 + 关键词聚类 + pSEO 风险）</p>
+</section>
+<section id="doc-1" class="doc" data-doc>
+<div class="kicker">第 2 篇 · 共 8 篇</div>
+<h1>搜索词需求发现法：从用户搜索行为中挖掘真实需求</h1>
+<blockquote><p><strong>核心认知</strong>：搜索词是用户最少防备、最接近真实状态的表达。一个人遇到问题，往往不会先写帖子解释自己的处境，而是直接打开搜索框输入一句朴素的话。搜索词背后不是观点，而是任务。（来源：<a href="https://mp.weixin.qq.com/s/hNISncP2LWGCiEuSMJ7YDw">边跑步边读书</a>、<a href="https://mp.weixin.qq.com/s/Lerp9aa1jJpzWS5BL3mNZQ">展小赢</a>、<a href="https://mp.weixin.qq.com/s/X7N0CkZJjw23y39J-1H74A">凌晨进化岛</a>、<a href="https://mp.weixin.qq.com/s/ii3Ne2wvmQI4Qi2LbR65BQ">tree</a>）</p></blockquote>
+<h2 id="d1-1">1. 底层认知：搜索即需求</h2>
+<h3>1.1 为什么搜索词比评论区、直播间更真实？</h3>
+<div class="tw"><table>
+<thead><tr><th>数据来源</th><th>用户心理</th><th>可信度</th></tr></thead>
+<tbody>
+<tr><td>点赞/评论</td><td>随手行为、情绪化</td><td>低</td></tr>
+<tr><td>直播间互动</td><td>被引导、从众</td><td>中</td></tr>
+<tr><td>私信/客服</td><td>有目的性</td><td>中</td></tr>
+<tr><td><strong>搜索词</strong></td><td><strong>主动表达、无人引导</strong></td><td><strong>高</strong></td></tr>
+</tbody>
+</table></div>
+<p>搜索是用户在说：<strong>"我遇到了问题，我想找答案。"</strong> 它不像点赞那样随手，不像评论那样浮泛。</p>
+<h3>1.2 两种搜索：学习 vs 办事</h3>
+<p>不是所有搜索词都适合挖掘产品需求，先分清类型：</p>
+<div class="tw"><table>
+<thead><tr><th>类型</th><th>特征</th><th>例子</th><th>适合做什么</th></tr></thead>
+<tbody>
+<tr><td><strong>学习型</strong></td><td>想理解概念</td><td>what is vector database、why ai hallucination happens</td><td>文章、课程、科普</td></tr>
+<tr><td><strong>办事型</strong></td><td>想完成动作</td><td>convert pdf to word、remove background from image</td><td><strong>工具/产品</strong></td></tr>
+</tbody>
+</table></div>
+<p><strong>优先看办事型</strong>。动作越清楚，产品方向越容易落地。反之，只有热度没有动作的词，做起来容易变成泛泛的内容。</p>
+<h3>1.3 表层需求 vs 深层需求</h3>
+<p>用户说出来的不一定是真需求：</p>
+<div class="tw"><table>
+<thead><tr><th>表层需求（用户说的）</th><th>深层需求（用户没说的）</th></tr></thead>
+<tbody>
+<tr><td>我想减肥</td><td>重建自信与社会认同</td></tr>
+<tr><td>我想买个洗衣机</td><td>解决家务焦虑、释放时间</td></tr>
+<tr><td>我要一个食谱</td><td>对失控生活的紧急补救，重新感受掌控感</td></tr>
+</tbody>
+</table></div>
+<p><strong>关键方法</strong>：对每个搜索词追问"用户真正想要成为什么样的自己"。</p>
+<h2 id="d1-2">2. 意图分类：用户处在决策旅程的哪个阶段？</h2>
+<h3>2.1 三阶段模型</h3>
+<p>用户的决策过程分为三个阶段，每个阶段的搜索意图完全不同：</p>
+<pre><code>意识（Awareness）→ 考虑（Consideration）→ 决策（Decision）</code></pre>
+<div class="tw"><table>
+<thead><tr><th>阶段</th><th>用户心理</th><th>搜索词特征</th><th>内容/产品机会</th></tr></thead>
+<tbody>
+<tr><td><strong>意识</strong></td><td>我遇到了问题，但还不知道怎么解决</td><td>宽泛问题词</td><td>教程、科普、入门指南</td></tr>
+<tr><td><strong>考虑</strong></td><td>我开始排列可选方案</td><td>对比词、评价词</td><td>对比评测、排行榜、专家点评</td></tr>
+<tr><td><strong>决策</strong></td><td>我准备买了</td><td>品牌+优惠词、where to buy</td><td>优惠落地页、好价引导</td></tr>
+</tbody>
+</table></div>
+<p><strong>示例</strong>：</p>
+<div class="tw"><table>
+<thead><tr><th>搜索词</th><th>阶段</th></tr></thead>
+<tbody>
+<tr><td>太阳能板冬天能用吗？</td><td>意识</td></tr>
+<tr><td>Jackery vs EcoFlow</td><td>考虑</td></tr>
+<tr><td>Jackery 优惠码</td><td>决策</td></tr>
+<tr><td>folding ebike</td><td>意识</td></tr>
+<tr><td>best lightweight folding ebike under $1000</td><td>考虑</td></tr>
+<tr><td>Brand A discount code</td><td>决策</td></tr>
+</tbody>
+</table></div>
+<h3>2.2 不同阶段的内容策略</h3>
+<p>品牌不应该只出现在用户"准备买"的阶段，而应覆盖全旅程：</p>
+<ul>
+<li><strong>意识阶段</strong>：种草不是撒网，是<strong>引导用户进入认知框架</strong></li>
+<li><strong>考虑阶段</strong>：对比不是选项堆叠，是<strong>帮助用户排除焦虑</strong></li>
+<li><strong>决策阶段</strong>：优惠不是促销喊话，是<strong>为已准备好的人开一扇门</strong></li>
+</ul>
+<h2 id="d1-3">3. 需求发现的四条路径</h2>
+<h3>3.1 搜索词分析（最直接）</h3>
+<p><strong>方法</strong>：动作词 + 对象组合</p>
+<div class="tw"><table>
+<thead><tr><th>动作词</th><th>组合示例</th><th>产生需求</th></tr></thead>
+<tbody>
+<tr><td>remove</td><td>remove background、remove watermark、remove vocals from song</td><td>去背景工具、人声分离工具</td></tr>
+<tr><td>convert</td><td>convert pdf to word、convert video to mp3</td><td>格式转换工具</td></tr>
+<tr><td>generate</td><td>generate logo、generate qr code、generate subtitles</td><td>生成类工具</td></tr>
+<tr><td>compress</td><td>compress image、compress pdf</td><td>压缩工具</td></tr>
+<tr><td>summarize</td><td>summarize youtube video、summarize long article</td><td>总结类工具</td></tr>
+<tr><td>extract</td><td>extract text from image、extract audio from video</td><td>提取类工具</td></tr>
+</tbody>
+</table></div>
+<p><strong>公式</strong>：<code>动作 + 对象 + 场景</code> = 具体需求</p>
+<h3>3.2 竞品差评挖掘</h3>
+<p>拆解对标的成功模式，同时找用户差评吐槽——<strong>同类产品不足之处就是机会</strong>。</p>
+<h3>3.3 趋势跟踪</h3>
+<ul>
+<li>Google Trends 相关查询看飙升词</li>
+<li>社媒平台热门 hashtag（如 TikTok 飙升话题）</li>
+<li>不同平台"大家都在搜什么"</li>
+</ul>
+<h3>3.4 社区洞察</h3>
+<p>从 Reddit、YouTube、小红书评论区挖掘用户真实抱怨和使用场景。用户在评论区的提问往往比搜索词更具体、更带情绪。</p>
+<h2 id="d1-4">4. 验证需求的三个信号</h2>
+<p>一个关键词如果同时满足以下三件事，就值得继续跟：</p>
+<ol>
+<li><strong>Google Trends 有变化</strong> —— 连续几天有上升，不是只跳一下就没了</li>
+<li><strong>搜索结果页还不算拥挤</strong> —— 用无痕浏览器搜，首页没有全是成熟大站</li>
+<li><strong>社交媒体有人讨论具体场景</strong> —— Reddit/YouTube 有人吐槽现有方案不好用</li>
+</ol>
+<p><strong>这还不是"可以开干"的信号，但至少说明它不是拍脑袋想出来的。</strong></p>
+<h2 id="d1-5">5. 跨场景适用性</h2>
+<p>这套方法不限于某个行业，以下场景方法互通：</p>
+<div class="tw"><table>
+<thead><tr><th>场景</th><th>"需求挖掘"的叫法</th><th>本质相同</th></tr></thead>
+<tbody>
+<tr><td>跨境电商</td><td>选品</td><td>找到用户愿意花钱解决的问题</td></tr>
+<tr><td>工具站</td><td>需求发现</td><td>找到用户搜索量大的办事型需求</td></tr>
+<tr><td>内容创作</td><td>选题</td><td>找到用户在问的问题</td></tr>
+<tr><td>AI产品</td><td>需求梳理</td><td>找到用户需要完成但还没被很好满足的任务</td></tr>
+<tr><td>SEO/GEO</td><td>关键词研究</td><td>找到用户搜索意图对应的内容机会</td></tr>
+</tbody>
+</table></div>
+<p><strong>核心逻辑一致</strong>：搜索词 = 用户痛点的表达，你只需要去发现和满足。</p>
+<h2 id="d1-6">6. 关键工具清单</h2>
+<div class="tw"><table>
+<thead><tr><th>工具</th><th>用途</th><th>费用</th></tr></thead>
+<tbody>
+<tr><td>Google Trends</td><td>看趋势变化、做关键词对比</td><td>免费</td></tr>
+<tr><td>Google 搜索下拉框</td><td>发现用户真实搜索词</td><td>免费</td></tr>
+<tr><td>Google 搜索结果页</td><td>判断竞争拥挤度</td><td>免费</td></tr>
+<tr><td>Reddit/YouTube评论区</td><td>挖掘真实场景和抱怨</td><td>免费</td></tr>
+<tr><td>Ahrefs / SEMrush</td><td>搜索量、竞争度、关键词反查</td><td>付费</td></tr>
+<tr><td>卖家精灵</td><td>亚马逊关键词反查</td><td>付费</td></tr>
+<tr><td>5118 / 爱站</td><td>国内关键词数据</td><td>免费/付费</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="doc-2" class="doc" data-doc>
+<div class="kicker">第 3 篇 · 共 8 篇</div>
+<h1>关键词挖掘实操手册：从种子词到高价值词库</h1>
+<blockquote><p><strong>一句话总结</strong>：种子词只是起点，长尾关键词才是真正带来精准流量的关键。高价值词 = 意图明确 + 竞争可控 + 与业务强相关。（来源：<a href="https://mp.weixin.qq.com/s/1ELdfOiTWPR0RE9NACA_Kw">兵哥说独立站</a>、<a href="https://mp.weixin.qq.com/s/7ZnP6hT33olAyNoHLYmUEg">白杨SEO</a>、<a href="https://mp.weixin.qq.com/s/PDF3Bbfx8ryShOmcMfgdbg">赫兹/droidHZ</a>）</p></blockquote>
+<h2 id="d2-1">1. 找种子词的三种方法</h2>
+<h3>1.1 从产品/服务本身思考</h3>
+<p>你是卖咖啡的 → 种子词：咖啡、手冲咖啡、咖啡豆</p>
+<p>你做SEO服务 → 种子词：SEO顾问、SEO诊断、小红书排名</p>
+<h3>1.2 从目标人群需求思考</h3>
+<p>上班打工族不会搜"精品咖啡"，但会搜"提神饮料"、"早晨提神"。</p>
+<p><strong>注意书面语 vs 口语化</strong>：大闸蟹券(书面) vs 螃蟹券(口语)——都有搜索量。</p>
+<h3>1.3 从竞品入手</h3>
+<p>用 5118、爱站、Ahrefs 挖掘同行排名好的关键词，筛选出适合你业务的。</p>
+<h2 id="d2-2">2. 拓展长尾词的六种方法</h2>
+<h3>方法1：搜索引擎下拉框</h3>
+<p>百度、Google、小红书、抖音输入种子词，看下拉建议——<strong>这些都是用户高频搜索词</strong>。</p>
+<p><strong>字母挖矿法</strong>：输入种子词后依次加 a-z：</p>
+<ul>
+<li><code>folding ebike a</code> → folding ebike amazon, folding ebike accessories</li>
+<li><code>folding ebike b</code> → folding ebike battery, folding ebike bag</li>
+<li><code>folding ebike c</code> → folding ebike canada, folding ebike cheap</li>
+</ul>
+<p><strong>通配符法</strong>：在关键词中间加 <code>*</code>：</p>
+<ul>
+<li><code>* folding ebike</code> → best folding ebike, lightweight folding ebike</li>
+<li><code>folding ebike *</code> → folding ebike reviews, folding ebike for sale</li>
+</ul>
+<h3>方法2：搜索结果页底部相关搜索</h3>
+<p>搜 A 词的人通常还会搜 B、C、D 词——这是拓展关键词和发现相关主题的绝佳位置。</p>
+<h3>方法3：Google Trends 相关查询</h3>
+<p>看"相关查询"中的飙升词，挖掘近期出现的新需求或热度上升较快的需求。</p>
+<h3>方法4：AI 辅助快速拓展</h3>
+<p>有 10-20 个种子词后，用 AI 瞬间拓展出几百个相关词。</p>
+<p><strong>ChatGPT 提示词模板</strong>：</p>
+<pre><code>我正在做关键词研究，主题是"[你的产品/领域]"。
+
+请帮我：
+1. 列出30个相关的长尾关键词
+2. 按搜索意图分类（信息型/商业型/交易型）
+3. 标注每个词的竞争难度预判（高/中/低）
+4. 给出每个词的内容建议（写什么类型的文章）</code></pre>
+<p><strong>种子词 + 修饰词组合公式</strong>：</p>
+<div class="tw"><table>
+<thead><tr><th>修饰类型</th><th>公式</th><th>示例</th></tr></thead>
+<tbody>
+<tr><td>场景</td><td>[产品] for [场景]</td><td>folding ebike for camping</td></tr>
+<tr><td>人群</td><td>[产品] for [人群]</td><td>folding ebike for seniors</td></tr>
+<tr><td>痛点</td><td>[产品] with [痛点解决]</td><td>folding ebike with long range</td></tr>
+<tr><td>对比</td><td>[产品] vs [竞品]</td><td>folding ebike vs regular ebike</td></tr>
+<tr><td>用途</td><td>best [产品] for [用途]</td><td>best folding ebike for commuting</td></tr>
+</tbody>
+</table></div>
+<h3>方法5：竞品关键词反查</h3>
+<p>竞品已经帮你验证了哪些词有流量价值。</p>
+<p><strong>Semrush 实操步骤</strong>（以竞品网站为例）：</p>
+<ol>
+<li>打开 Semrush → "Organic Research"</li>
+<li>输入竞品域名</li>
+<li>点击 "Positions" 查看所有自然搜索关键词</li>
+<li>筛选器：排除品牌词、按搜索量排序、看竞品排名 5-20 位的词</li>
+</ol>
+<p><strong>找机会的3个信号</strong>：</p>
+<ul>
+<li>竞品排名第 5-15 位，且内容质量一般 → 你有机会超越</li>
+<li>多个竞品都在竞争，但内容都偏老 → 更新更全的内容有机会</li>
+<li>搜索量稳定，但首页论坛/问答类结果多 → 商业内容有机会</li>
+</ul>
+<h3>方法6：专业工具批量挖掘</h3>
+<div class="tw"><table>
+<thead><tr><th>工具</th><th>核心功能</th><th>适合谁</th></tr></thead>
+<tbody>
+<tr><td>Ahrefs</td><td>最全面的外链+关键词数据</td><td>专业SEO</td></tr>
+<tr><td>Semrush</td><td>功能最全的SEO套件</td><td>团队使用</td></tr>
+<tr><td>5118</td><td>国内关键词数据</td><td>国内市场</td></tr>
+<tr><td>爱站</td><td>国内竞品分析</td><td>国内市场</td></tr>
+<tr><td>Google Keyword Planner</td><td>免费、藏在Google Ads后台</td><td>入门首选</td></tr>
+</tbody>
+</table></div>
+<h2 id="d2-3">3. 数据筛选：只留下能带来流量和转化的词</h2>
+<h3>3.1 判断关键词价值的三个维度</h3>
+<div class="tw"><table>
+<thead><tr><th>维度</th><th>说明</th><th>实操标准</th></tr></thead>
+<tbody>
+<tr><td><strong>搜索意图</strong></td><td>用户搜这个词想干什么？</td><td>信息型(学习) / 商业型(对比) / 交易型(购买)</td></tr>
+<tr><td><strong>竞争难度</strong></td><td>首页都是什么网站？</td><td>大站多=难，小站/论坛多=有机会</td></tr>
+<tr><td><strong>业务匹配度</strong></td><td>搜这个词的人是你的目标客户吗？</td><td>匹配度越高，价值越高</td></tr>
+</tbody>
+</table></div>
+<h3>3.2 核心筛选指标</h3>
+<div class="tw"><table>
+<thead><tr><th>指标</th><th>含义</th><th>建议阈值</th></tr></thead>
+<tbody>
+<tr><td>KD (Keyword Difficulty)</td><td>竞争难度 0-100</td><td>新手 &lt;30，进阶 &lt;50</td></tr>
+<tr><td>月搜索量</td><td>月均搜索次数</td><td>一般 &gt;100</td></tr>
+<tr><td>CPC</td><td>广告主愿意出的价格</td><td>高CPC = 商业价值高</td></tr>
+<tr><td>SERP特征</td><td>是否有Featured Snippet等</td><td>有 = 更多曝光机会</td></tr>
+</tbody>
+</table></div>
+<h3>3.3 筛选避坑</h3>
+<ul>
+<li><strong>搜索量大但意图模糊</strong>：如 "ebike" → 竞争激烈，转化低</li>
+<li><strong>搜索量中等但意图明确</strong>：如 "best folding ebike for commuting" → 精准，竞争可控</li>
+<li><strong>商业价值判断</strong>："咖啡的历史"(低) vs "家用全自动咖啡机推荐"(高)</li>
+<li><strong>尽量做HOW词，不只是WHAT词</strong>："GEO怎么做" 比 "GEO是什么" 更有价值</li>
+</ul>
+<h2 id="d2-4">4. 标准工作流：五步建词库</h2>
+<pre><code>第一步：定方向（用户需求推导）
+  → 花30分钟理解目标用户决策路径
+  → 产出：10-20个核心种子词
+
+第二步：拓思路（AI辅助+谷歌下拉）
+  → 快速拓展到100+候选词
+  → 产出：初步词库
+
+第三步：抄作业（竞品反查）
+  → 用Semrush/Ahrefs分析3-5个竞品的关键词库
+  → 找出他们没做好的词
+
+第四步：做决策（专业工具筛选）
+  → 按KD和Volume筛选
+  → 确定优先攻克的20-30个词
+
+第五步：持续迭代（季度循环）
+  → 月度：监控搜索趋势变化
+  → 季度：优化低转化词，放大高价值词
+  → 年度：全面复盘，更新核心词库</code></pre>
+<h2 id="d2-5">5. 工具矩阵速查</h2>
+<h3>免费工具</h3>
+<div class="tw"><table>
+<thead><tr><th>工具</th><th>用途</th></tr></thead>
+<tbody>
+<tr><td>Google 搜索下拉框</td><td>发现长尾词</td></tr>
+<tr><td>Google 搜索结果页相关搜索</td><td>拓展相关主题</td></tr>
+<tr><td>Google Trends</td><td>看趋势、对比关键词</td></tr>
+<tr><td>Google Keyword Planner</td><td>查搜索量（需注册Google Ads）</td></tr>
+<tr><td>亚马逊 Reviews/Q&amp;A</td><td>挖掘用户真实需求</td></tr>
+<tr><td>Reddit 行业子版块</td><td>真实用户场景和抱怨</td></tr>
+</tbody>
+</table></div>
+<h3>付费工具</h3>
+<div class="tw"><table>
+<thead><tr><th>工具</th><th>用途</th><th>价格参考</th></tr></thead>
+<tbody>
+<tr><td>Ahrefs</td><td>全面的关键词+外链分析</td><td>月费制</td></tr>
+<tr><td>Semrush</td><td>SEO套件，竞品分析</td><td>月费制</td></tr>
+<tr><td>卖家精灵</td><td>亚马逊关键词反查</td><td>月费制</td></tr>
+<tr><td>5118</td><td>国内关键词挖掘</td><td>免费/付费</td></tr>
+<tr><td>爱站</td><td>国内竞品分析</td><td>免费/付费</td></tr>
+<tr><td>Ubersuggest</td><td>关键词建议+SEO分析</td><td>免费/付费</td></tr>
+</tbody>
+</table></div>
+<h3>AI辅助</h3>
+<div class="tw"><table>
+<thead><tr><th>工具</th><th>适合场景</th></tr></thead>
+<tbody>
+<tr><td>ChatGPT</td><td>头脑风暴、批量生成词组、分类整理</td></tr>
+<tr><td>Claude</td><td>复杂需求分析、长上下文理解</td></tr>
+<tr><td>Gemini</td><td>结合Google搜索数据</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="doc-3" class="doc" data-doc>
+<div class="kicker">第 4 篇 · 共 8 篇</div>
+<h1>竞品与社区逆向挖掘法：从对手和用户那里找需求</h1>
+<blockquote><p><strong>核心思路</strong>：你的竞争对手已经帮你验证了哪些方向有市场，你的用户已经在评论区写下了真实抱怨。你只需要去发现，不需要去猜测。（来源：<a href="https://mp.weixin.qq.com/s/Ovt5i2g9nRC9ph9-KNCSwA">阿澄在深圳</a>、<a href="https://mp.weixin.qq.com/s/ii3Ne2wvmQI4Qi2LbR65BQ">tree</a>、<a href="https://mp.weixin.qq.com/s/0P-zwazPIJ0yjCzbusTlDQ">YangyiGrow</a>、<a href="https://mp.weixin.qq.com/s/5DJ1e-feMkFK1U_XAJK56w">周大丘</a>）</p></blockquote>
+<h2 id="d3-1">1. 亚马逊搜索词报告逆向挖掘（4招）</h2>
+<blockquote><p>来源：6年亚马逊运营阿澄的实战经验。核心转变：从"广告优化视角"切换到"产品开发视角"看搜索词报告。</p></blockquote>
+<h3>招式1：从ASIN数据中逆向挖掘Listing优化方向</h3>
+<p>搜索词报告中有产品ASIN数据——在Listing没问题的情况下，这些ASIN都是与你的产品高度相关的竞品。</p>
+<p><strong>分析只点击无转化的ASIN</strong>：</p>
+<ul>
+<li>说明你的Listing展现在它页面上抢不过它</li>
+<li>思考：自己的链接哪里不够？还是流量词抢不过它？</li>
+<li>通过关键词反查工具，对比流量关键词</li>
+<li>发现自己链接还未覆盖到的长尾词和卖点</li>
+</ul>
+<p><strong>案例</strong>：同样卖玻璃杯，发现"加厚杯壁"关键词点击多、流量大 → 说明市场对加厚杯壁有需求 → 这就是产品优化方向。</p>
+<h3>招式2：词频统计发现高频需求</h3>
+<p>不是看关键词整体，而是看<strong>关键词词根</strong>出现的频率。</p>
+<p><strong>案例</strong>：搜索词报告出现 insulated water bottle、leak-proof water bottle、dishwasher safe water bottle</p>
+<ul>
+<li>拆解词根：insulated、leak-proof、dishwasher safe 出现频率高</li>
+<li>带有这些词根的关键词 ACOS、点击率、转化率也不错</li>
+<li><strong>结论</strong>：防漏、保温、易清洗的杯子在市场上受欢迎</li>
+<li>同时检查自己链接是否埋了这些关键词</li>
+</ul>
+<h3>招式3：高点击低转化的搜索词可能是机会</h3>
+<p><strong>常规操作</strong>：把这类词直接否定 ❌</p>
+<p><strong>进阶思考</strong>：</p>
+<ul>
+<li>用户为什么点进来但不买？是不是我们的产品缺少某个功能？</li>
+<li>案例：卖玻璃杯配玻璃吸管，发现 "glass cup with silicone straws" 点击多但无转化</li>
+<li>不要否定这个词！思考：用户要硅胶吸管是因为玻璃吸管易碎、材质硬</li>
+<li><strong>行动</strong>：延伸新关键词（不锈钢吸管、不会伤牙齿的吸管），开新广告测试</li>
+<li><strong>甚至可以</strong>：新开FBM链接，玻璃杯配玻璃吸管+赠送硅胶吸管套头 → 产品微创新</li>
+</ul>
+<h3>招式4：ASIN反查自己的产品</h3>
+<p>用工具反查自己产品ASIN的流量词，看系统收录是否跑偏：</p>
+<ul>
+<li>你卖玻璃杯，反查词出现塑料杯、纸杯、金属杯 → 说明Listing需要优化埋词</li>
+<li>把链接拉回到正确的流量中</li>
+</ul>
+<h2 id="d3-2">2. 付费意愿挖掘：看谁在花钱</h2>
+<h3>2.1 看广告后台</h3>
+<p>哪些品类在持续投广 → 能持续投广说明能持续获得回报 → 这个方向有商业价值。</p>
+<h3>2.2 看招聘市场</h3>
+<p>拆解不同行业的工作环节，哪些环节可以用工具提效：</p>
+<ul>
+<li>有创始人反向把雇主当作目标客户，主动推荐自己的服务</li>
+<li>招聘需求 = 企业痛点 = 产品机会</li>
+</ul>
+<h3>2.3 看二手/社交平台</h3>
+<p>看闲鱼、小红书、抖音、淘宝在卖什么：</p>
+<ul>
+<li>重点找 <strong>60分能力就能解决但销量稳定</strong> 的需求</li>
+<li>不追大热门，找小而稳</li>
+</ul>
+<h3>2.4 基建反推法：从 SaaS 客户名单找机会（技术化升级版）</h3>
+<blockquote><p><strong>原理</strong>：接入某 SaaS 的网站，每次页面加载都会请求该 SaaS 的 JS/iframe → SaaS 的<strong>外链回流榜（Similarweb Referral）≈ 按真实活跃度排序的客户名单</strong>。僵尸站、弃坑站不会出现在榜上——比官方案例页诚实（案例是营销挑的，流量榜是用户行为投票的）。客户名单 = 付费意愿清单。</p></blockquote>
+<p><strong>完整操作链</strong>（案例：纪录片付费站 dearkellyfilm.com，来源：社群讨论 2026-08）：</p>
+<pre><code>选垂直基建 → Similarweb 查它的 Referral 来源榜
+→ 榜上域名 = 接入该基建的活跃站
+→ DevTools Network 面板验证技术栈（XHR 出现 client.memberstack.com / stripe.com 即坐实）
+→ 三角验证时机：Domain Created（注册时间）+ 月流量 + SERP 排名
+→ 判断：新注册 + 已有流量 + 已上首页 = niche 刚被验证、窗口期短但竞争少</code></pre>
+<p><strong>可反查的垂直基建清单</strong>（越垂直，客户画像越准；查 Cloudflare/Stripe 无意义——人人都在用）：</p>
+<div class="tw"><table>
+<thead><tr><th>反查对象</th><th>反推出的人群画像</th></tr></thead>
+<tbody>
+<tr><td>Memberstack / Outseta / Podia</td><td>非技术出身做付费内容/会员站</td></tr>
+<tr><td>Senja / Testimonial.to</td><td>正在收集社会证明的新产品（=刚上线阶段）</td></tr>
+<tr><td>Circle / Skool</td><td>做付费社群的</td></tr>
+<tr><td>Kajabi / Teachable</td><td>做课程的知识博主</td></tr>
+<tr><td>Carrd + Stripe</td><td>一次性落地页收款</td></tr>
+</tbody>
+</table></div>
+<p><strong>比 Similarweb 更直接的工具</strong>：BuiltWith / Wappalyzer 支持<strong>按技术栈正向搜网站</strong>（"列出所有用 X 的站"）——Similarweb 反推适合发现头部活跃客户，BuiltWith 适合拿全量清单。</p>
+<p><strong>实战案例</strong>（明文）：查 Memberstack 的 7 月 Referral 榜，第二名 dearkellyfilm.com（纪录片付费站，Webflow+Memberstack+Stripe+Vimeo 隐私嵌入，零代码搭建）；同榜单发现 3dlogolab.io（2D Logo 转 3D 工具站，月访问 200K）——3D Logo 这种小众领域 2025 年有两个站上线且已进谷歌首页，说明 niche 刚被验证。</p>
+<p><strong>与 SERP 发现法的互补</strong>（推断）：DataForSEO 查 SERP 只能看到"SEO 做出来的站"；基建反推能发现<strong>靠社群/Referral 流量活着、还没做 SEO 就已经在赚钱的站</strong>。两者互补，反推发现后仍走竞品分析 SOP 深研。</p>
+<p><strong>底层思维</strong>："假装不懂代码的普通人怎么解决 X"——普通人为解决问题拼装出的工具组合，就是被验证的需求数据库。</p>
+<h2 id="d3-3">3. Reddit 社区需求调研（AI辅助9步法）</h2>
+<blockquote><p>来源：YangyiGrow 的实战案例。核心：用户会在评论区提问，AI可以帮你挖掘出来。</p></blockquote>
+<h3>步骤流程</h3>
+<pre><code>1. 确定调研问题（来自SEO关键词或自身洞察）
+      ↓
+2. 用AI构建搜索词（Claude帮你生成可能的提问方式）
+      ↓
+3. 在Reddit搜索问题（Reddit站内搜索 or Google搜索）
+      ↓
+4. 安装AI阅读插件（如 CelHive Link）
+      ↓
+5. 用插件阅读评论（Pick Page → Open Sidebar）
+      ↓
+6. 追问溯源评论（要求AI提供出处，避免幻觉）
+      ↓
+7. 让AI分析挖掘（提取痛点、需求、机会）
+      ↓
+8. 重复过程找共性（看20-50个有互动的帖子）
+      ↓
+9. 生成调研文档（让AI整理为结构化报告）</code></pre>
+<h3>关键技巧</h3>
+<ul>
+<li><strong>用AI生成搜索词</strong>：不要只用自己的角度，让Claude帮你生成外国人可能的"提问方式"</li>
+<li><strong>验证幻觉</strong>：要求AI提供溯源评论，确认内容真实存在</li>
+<li><strong>关注评论区</strong>：评论区比帖子本身更有价值——用户在评论中暴露真实需求和痛点</li>
+<li><strong>跨帖子找共性</strong>：看20-50个帖子后，重复出现的痛点就是真实需求</li>
+</ul>
+<h3>AI提示词示例</h3>
+<pre><code>我在Reddit上搜索了关于"[主题]"的帖子。请帮我分析以下评论内容：
+
+1. 提取用户提到的主要痛点（标注出现频率）
+2. 提取用户提到的期望功能/解决方案
+3. 找出用户对现有产品的不满
+4. 总结可能的商业机会
+
+请为每个结论提供具体的评论出处。</code></pre>
+<h2 id="d3-4">4. 评论区与Q&amp;A洞察</h2>
+<blockquote><p>无论是亚马逊、小红书还是任何平台，评论区都藏着真实需求。</p></blockquote>
+<h3>4.1 看什么</h3>
+<div class="tw"><table>
+<thead><tr><th>内容</th><th>能发现什么</th></tr></thead>
+<tbody>
+<tr><td>差评/吐槽</td><td>产品不足 → 你的改进方向</td></tr>
+<tr><td>问"有没有XX功能的"</td><td>未被满足的需求</td></tr>
+<tr><td>"我买了XX但不好用"</td><td>竞品弱点</td></tr>
+<tr><td>推荐其他产品的评论</td><td>替代方案 → 你的参考</td></tr>
+</tbody>
+</table></div>
+<h3>4.2 亚马逊评论区技巧</h3>
+<ul>
+<li>Reviews：看1-3星评价，提取高频抱怨词</li>
+<li>Q&amp;A：用户主动提问 = 最直接的需求表达</li>
+<li>亚马逊前端 Rufus（AI助手）：也可以挖掘关键词</li>
+</ul>
+<h3>4.3 小红书评论区技巧</h3>
+<ul>
+<li>在具体赛道的关键词下找爆款内容</li>
+<li>重点看评论区很火的笔记——评论区有用户最真实的声音</li>
+<li>把用户提到的需求/痛点关键词记录下来</li>
+</ul>
+<h2 id="d3-5">5. 趋势挖掘需求</h2>
+<h3>5.1 看社媒热门内容</h3>
+<ul>
+<li>TikTok/抖音 飙升的 hashtag（如之前的AI水果视频）</li>
+<li>各平台"大家都在搜什么"</li>
+<li>Product Hunt / Indie Hackers 上新出现的独立产品</li>
+</ul>
+<h3>5.2 看源头商家</h3>
+<ul>
+<li>Facebook 相关群组中B端用户在找什么货</li>
+<li>1688/阿里巴巴 新品类趋势</li>
+<li>行业展会的热门品类</li>
+</ul>
+<h2 id="d3-6">6. 兴趣拆解法</h2>
+<p>从个人经验和兴趣出发，拆解兴趣爱好的各个环节，看是否有可以提供服务的地方。</p>
+<p><strong>示例</strong>：</p>
+<div class="tw"><table>
+<thead><tr><th>兴趣群体</th><th>可拆解环节</th><th>产品/服务机会</th></tr></thead>
+<tbody>
+<tr><td>手账爱好者</td><td>笔、本子、贴纸、收纳、排版模板</td><td>模板生成器、收纳方案</td></tr>
+<tr><td>健身爱好者</td><td>训练计划、饮食、记录、装备</td><td>训练计划工具、进度追踪器</td></tr>
+<tr><td>观鸟爱好者</td><td>识别、记录、装备、社群</td><td>鸟类识别工具、观鸟地图</td></tr>
+<tr><td>笔记软件爱好者</td><td>同步、模板、搜索、分享</td><td>模板市场、知识管理工具</td></tr>
+</tbody>
+</table></div>
+<p><strong>关键</strong>：从自己熟悉的兴趣切入，比从零了解一个行业更高效。</p>
+</section>
+<section id="doc-4" class="doc" data-doc>
+<div class="kicker">第 5 篇 · 共 8 篇</div>
+<h1>GEO意图词挖掘体系：从关键词匹配到全意图精准匹配</h1>
+<blockquote><p><strong>核心转变</strong>：GEO(Generative Engine Optimization)的挖词本质，不是"找AI喜欢的词"，而是"找用户真实需求的词"。从传统SEO的「关键词主题匹配」升级为「用户全决策旅程的意图需求精准匹配」。（来源：<a href="https://mp.weixin.qq.com/s/GrFXuFIhK-cISP3PQtbXqA">AI搜索老胡</a>，基于《GEO全意图内容体系白皮书》）</p></blockquote>
+<h2 id="d4-1">1. GEO vs 传统SEO挖词的核心差异</h2>
+<div class="tw"><table>
+<thead><tr><th>维度</th><th>传统SEO</th><th>GEO</th></tr></thead>
+<tbody>
+<tr><td><strong>匹配方式</strong></td><td>关键词主题匹配</td><td>用户全决策旅程意图精准匹配</td></tr>
+<tr><td><strong>词库目标</strong></td><td>流量词堆砌</td><td>可被AI精准识别的意图词库</td></tr>
+<tr><td><strong>内容导向</strong></td><td>为了排名</td><td>为了被AI系统引用和推荐</td></tr>
+<tr><td><strong>用户视角</strong></td><td>关键词背后的搜索量</td><td>关键词背后的真实需求和决策阶段</td></tr>
+</tbody>
+</table></div>
+<p><strong>核心认知</strong>：只有精准匹配用户全周期决策需求的意图词，才能被AI系统优先识别、引用和推荐。</p>
+<h2 id="d4-2">2. 意图词三层基础架构</h2>
+<p>所有词库搭建遵循三层结构，确保AI可精准识别：</p>
+<h3>第一层：意图标签（L1-L5层级标签）</h3>
+<ul>
+<li><strong>定义</strong>：概括用户在特定决策阶段的核心需求，是词库的"锚点"</li>
+<li><strong>要求</strong>：每个层级确定 5-10 个核心意图标签</li>
+<li><strong>示例</strong>：L1认知层的"采购成本高"、L2探索层的"高性价比采购方案"</li>
+</ul>
+<h3>第二层：关键词组</h3>
+<p>围绕意图标签的具体搜索词，分两类：</p>
+<div class="tw"><table>
+<thead><tr><th>类型</th><th>定义</th><th>要求</th></tr></thead>
+<tbody>
+<tr><td><strong>精准词</strong></td><td>聚焦核心需求的短词</td><td>每个意图标签下 ≥3个</td></tr>
+<tr><td><strong>长尾词</strong></td><td>细分场景、细分维度的延伸词</td><td>每个意图标签下 ≥5个</td></tr>
+</tbody>
+</table></div>
+<h3>第三层：询问句</h3>
+<p>用户真实搜索时的自然语言提问方式。</p>
+<ul>
+<li><strong>要求</strong>：每个关键词组匹配对应询问句，覆盖"是什么、为什么、怎么办、怎么选、哪家好"</li>
+<li><strong>重要性</strong>：AI搜索时代用户"直接提问"的交互习惯，是AI搜索匹配的核心载体</li>
+</ul>
+<h2 id="d4-3">3. 意图词生成公式</h2>
+<pre><code>意图词 = 需求维度 + 行业属性 + 层级标签 + 转化导向</code></pre>
+<div class="tw"><table>
+<thead><tr><th>要素</th><th>说明</th><th>示例</th></tr></thead>
+<tbody>
+<tr><td><strong>需求维度</strong></td><td>用户核心痛点/诉求</td><td>效率提升、成本降低、质量稳定、风险规避</td></tr>
+<tr><td><strong>行业属性</strong></td><td>所属行业/场景</td><td>制造业、3C电子、食品加工、母婴消费</td></tr>
+<tr><td><strong>层级标签</strong></td><td>L1-L5意图层级</td><td>决定内容类型和转化目标</td></tr>
+<tr><td><strong>转化导向</strong></td><td>期望引导的用户行为</td><td>了解问题、对比方案、联系咨询、预约考察</td></tr>
+</tbody>
+</table></div>
+<p><strong>示例</strong>：</p>
+<ul>
+<li>需求维度(成本降低) + 行业属性(五金制造) + 层级标签(L2探索层) + 转化导向(方案了解)</li>
+<li>→ 意图词："五金制造批量采购成本降低方案"</li>
+<li>→ 询问句："五金制造企业批量采购怎么降低成本？"</li>
+</ul>
+<h2 id="d4-4">4. L1-L5 五层级差异化挖词策略</h2>
+<blockquote><p>不同层级的用户心理、搜索行为、需求目标完全不同</p></blockquote>
+<div class="tw"><table>
+<thead><tr><th>层级</th><th>用户状态</th><th>搜索行为</th><th>挖词侧重</th><th>内容类型</th></tr></thead>
+<tbody>
+<tr><td><strong>L1 认知层</strong></td><td>发现问题，不知道怎么解决</td><td>宽泛问题词</td><td>核心痛点词</td><td>行业科普、问题解析</td></tr>
+<tr><td><strong>L2 探索层</strong></td><td>开始寻找解决方案</td><td>方案类词</td><td>解决方案词、对比词</td><td>方案介绍、产品推荐</td></tr>
+<tr><td><strong>L3 评估层</strong></td><td>对比不同供应商/产品</td><td>品牌+评价词</td><td>筛选标准词、口碑词</td><td>对比评测、案例分析</td></tr>
+<tr><td><strong>L4 决策层</strong></td><td>准备购买/合作</td><td>品牌+交易词</td><td>优惠词、购买词</td><td>优惠落地页、联系方式</td></tr>
+<tr><td><strong>L5 忠诚层</strong></td><td>已购买，关注售后/口碑</td><td>品牌+服务词</td><td>口碑词、复购词</td><td>用户故事、售后服务</td></tr>
+</tbody>
+</table></div>
+<h2 id="d4-5">5. 五步搭建完整意图词库</h2>
+<h3>第一步：需求梳理——锚定方向</h3>
+<ol>
+<li>完成目标客群画像（身份、行业、规模、核心诉求）</li>
+<li>绘制用户完整决策旅程（从问题觉醒到口碑传播）</li>
+<li>为L1-L5每个层级确定 5-10 个核心意图标签</li>
+</ol>
+<h3>第二步：关键词挖掘——拓展广度</h3>
+<p><strong>挖掘渠道</strong>：</p>
+<div class="tw"><table>
+<thead><tr><th>渠道</th><th>特点</th></tr></thead>
+<tbody>
+<tr><td>AI搜索下拉推荐</td><td>符合AI搜索习惯</td></tr>
+<tr><td>相关提问</td><td>自然语言提问形式</td></tr>
+<tr><td>竞品词库</td><td>已验证的词</td></tr>
+<tr><td>行业报告</td><td>宏观趋势</td></tr>
+<tr><td>客户真实咨询问题</td><td>一线需求</td></tr>
+<tr><td>销售一线反馈</td><td>转化导向</td></tr>
+<tr><td>垂直平台热门提问</td><td>行业垂直</td></tr>
+</tbody>
+</table></div>
+<p><strong>挖掘维度</strong>：围绕每个意图标签，从5个方向延伸：</p>
+<ol>
+<li>问题原因</li>
+<li>解决方案</li>
+<li>筛选标准</li>
+<li>品牌验证</li>
+<li>口碑评价</li>
+</ol>
+<h3>第三步：词库筛选——保障精准度</h3>
+<p><strong>筛选四指标</strong>：</p>
+<div class="tw"><table>
+<thead><tr><th>指标</th><th>优先策略</th></tr></thead>
+<tbody>
+<tr><td><strong>相关性</strong></td><td>剔除与业务不相关的泛化词</td></tr>
+<tr><td><strong>搜索量</strong></td><td>优先有稳定搜索需求的词</td></tr>
+<tr><td><strong>竞争度</strong></td><td>中小企业优先选竞争度适中的词</td></tr>
+<tr><td><strong>转化潜力</strong></td><td>优先有明确需求指向的词，剔除纯科普泛词</td></tr>
+</tbody>
+</table></div>
+<h3>第四步：层级标注——搭建结构</h3>
+<ul>
+<li>严格按照L1-L5定义标注</li>
+<li>无指向性搜索词 → L1-L3</li>
+<li>有指向性品牌词 → L4-L5</li>
+<li><strong>一词一标，不重复不混乱</strong></li>
+<li>按层级、意图标签分类归档</li>
+</ul>
+<h3>第五步：持续迭代——保持有效</h3>
+<div class="tw"><table>
+<thead><tr><th>周期</th><th>动作</th></tr></thead>
+<tbody>
+<tr><td><strong>月度</strong></td><td>监控搜索趋势，新增热门词、剔除无效词</td></tr>
+<tr><td><strong>季度</strong></td><td>分析内容效果，优化低引用/低转化的词</td></tr>
+<tr><td><strong>年度</strong></td><td>全面复盘，根据业务变化重构核心框架</td></tr>
+</tbody>
+</table></div>
+<h2 id="d4-6">6. 行业化适配</h2>
+<h3>ToB vs ToC 挖词核心差异</h3>
+<div class="tw"><table>
+<thead><tr><th></th><th>ToB</th><th>ToC</th></tr></thead>
+<tbody>
+<tr><td><strong>决策链</strong></td><td>长、多人参与</td><td>短、个人决策</td></tr>
+<tr><td><strong>挖词重点</strong></td><td>L2-L3（解决方案、供应商筛选）</td><td>L1和L5（消费痛点、用户口碑）</td></tr>
+<tr><td><strong>词库风格</strong></td><td>垂直、专业、场景化</td><td>贴合个人生活、口语化</td></tr>
+<tr><td><strong>长尾词方向</strong></td><td>企业业务场景</td><td>个人消费场景</td></tr>
+<tr><td><strong>询问句</strong></td><td>更正式、专业</td><td>更口语、情绪化</td></tr>
+</tbody>
+</table></div>
+<h3>中小企业轻量化方案</h3>
+<p>资源有限时，不需要大而全：</p>
+<ol>
+<li><strong>极简意图标签</strong>：每层级仅3-5个核心标签，放弃泛化科普词</li>
+<li><strong>聚焦高转化词</strong>：重心放L2-L3，L1仅3-5个痛点词，L4-L5复用客户资源</li>
+<li><strong>控制词库规模</strong>：每个意图标签仅5-10个核心词</li>
+<li><strong>优先常青词</strong>：不受时间影响的词，如"XX问题解决方法"、"XX供应商筛选标准"</li>
+</ol>
+<h2 id="d4-7">7. 避坑原则</h2>
+<div class="tw"><table>
+<thead><tr><th>误区</th><th>正确做法</th></tr></thead>
+<tbody>
+<tr><td>为AI而挖词，脱离用户真实需求</td><td>找用户真实需求的词，才能获得AI持续引用</td></tr>
+<tr><td>一词多标，层级混乱</td><td>一词一标，严格对应L1-L5</td></tr>
+<tr><td>只追大流量泛词</td><td>中小企业优先选竞争适中、精准的词</td></tr>
+<tr><td>一次性工程，不迭代</td><td>建立月度/季度/年度迭代机制</td></tr>
+<tr><td>只看搜索量不看转化</td><td>优先有转化潜力的词，不为流量而流量</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="doc-5" class="doc" data-doc>
+<div class="kicker">第 6 篇 · 共 8 篇</div>
+<h1>痛点逆向选品法：从真实场景到精准产品</h1>
+<blockquote>
+<p><strong>核心思路</strong>：先锁定人群在真实场景中的痛点，再用数据验证需求强度，最后反向匹配解决方案（产品）。用户买的不是产品，是解决方案。</p>
+<p><strong>与其他方法的区别</strong>：</p>
+<ul>
+<li>词根法（00）：从<strong>搜索词</strong>出发 → 找产品</li>
+<li>搜索词法（01）：从<strong>用户搜索行为</strong>出发 → 理解需求</li>
+<li>竞品逆向法（04）：从<strong>竞品运营数据</strong>出发 → 找机会</li>
+<li><strong>本方法</strong>：从<strong>真实生活场景</strong>出发 → 找痛点 → 反推产品</li>
+</ul>
+</blockquote>
+<h2 id="d5-1">1. 方法论</h2>
+<pre><code>观察真实场景 → 拆解人群痛点 → 数据验证需求强度 → ChatGPT反向生成产品方案 → TikTok/广告工具验证变现 → 供应链落地</code></pre>
+<p><strong>为什么"痛点优先"有效</strong>：</p>
+<ul>
+<li>用户买的不是产品，是<strong>解决方案</strong></li>
+<li>有真实痛苦的场景，才有必然发生的购买</li>
+<li>从痛点出发选品，天然带购买意图，转化率高于"看起来酷"的选品</li>
+</ul>
+<p><strong>选品思维对比</strong>：</p>
+<div class="tw"><table>
+<thead><tr><th>维度</th><th>正向选品（新手常见）</th><th>逆向选品（本方法）</th></tr></thead>
+<tbody>
+<tr><td>起点</td><td>产品（"这个好酷"）</td><td>痛点（"这些人好难受"）</td></tr>
+<tr><td>问题</td><td>"我能卖什么？"</td><td>"谁在受什么苦？"</td></tr>
+<tr><td>验证</td><td>靠颜值和感觉</td><td>靠搜索趋势+竞品数据</td></tr>
+<tr><td>结果</td><td>投产比不稳定</td><td>痛点匹配 = 转化率保障</td></tr>
+</tbody>
+</table></div>
+<h2 id="d5-2">2. 完整流程：10 分钟选品落地</h2>
+<h3>2.1 场景观察（日常积累）</h3>
+<blockquote><p>不是坐在电脑前刷速卖通，而是<strong>观察真实生活场景中的人群行为</strong></p></blockquote>
+<p><strong>场景触发公式</strong>：</p>
+<pre><code>特定人群 + 特定场景 + 长时间/高强度活动 = 必然痛点</code></pre>
+<p><strong>示例</strong>：</p>
+<div class="tw"><table>
+<thead><tr><th>场景</th><th>人群</th><th>活动</th><th>痛点方向</th></tr></thead>
+<tbody>
+<tr><td>夏季欧洲旅游</td><td>游客</td><td>日行 10km+ 石板路</td><td>足部/膝盖/腰部疼痛</td></tr>
+<tr><td>海滩度假</td><td>家庭</td><td>大人带小孩暴晒</td><td>晒伤/中暑/沙子进鞋</td></tr>
+<tr><td>冬季滑雪</td><td>滑雪者</td><td>零下户外全天</td><td>冻伤/干燥/肌肉酸痛</td></tr>
+<tr><td>办公久坐</td><td>白领</td><td>每天 8h+ 坐姿</td><td>腰椎/颈椎/眼睛</td></tr>
+<tr><td>新生儿</td><td>新手妈妈</td><td>24h 无规律作息</td><td>睡眠不足/腰背痛/焦虑</td></tr>
+<tr><td>搬家</td><td>租房族</td><td>一次性重体力</td><td>背痛/手磨破/家具磕碰</td></tr>
+<tr><td>露营</td><td>户外爱好者</td><td>离网 2-3 天</td><td>充电/净水/蚊虫/保暖</td></tr>
+<tr><td>考研/高考</td><td>学生</td><td>长时间伏案</td><td>颈椎/眼疲劳/久坐肿胀</td></tr>
+</tbody>
+</table></div>
+<p><strong>观察来源</strong>：</p>
+<ul>
+<li>TikTok/YouTube 热门视频（看场景，不看产品）</li>
+<li>朋友圈/小红书旅游照片（看人群行为）</li>
+<li>新闻热点（大规模事件 = 大规模痛点）</li>
+<li>自身和身边人的抱怨</li>
+</ul>
+<h3>2.2 AI 拆解痛点（5 分钟）</h3>
+<p>用 ChatGPT 批量生成痛点清单：</p>
+<p><strong>提示词模板</strong>：</p>
+<pre><code>[特定人群]在[特定场景]中，每天[具体活动描述]。
+列举他们可能遇到的前 5-10 大身体/心理/便利性问题，
+需具体到部位、症状和场景描述。</code></pre>
+<p><strong>示例输出</strong>（欧洲旅游步行族）：</p>
+<ul>
+<li>足部疼痛/水泡（长时间行走压迫足底筋膜）</li>
+<li>膝盖酸胀（石板路冲击膝关节）</li>
+<li>腰部劳损（背包负重导致腰椎压力）</li>
+<li>腿部水肿（静脉血液回流不畅）</li>
+<li>足底筋膜炎（反复摩擦引发炎症）</li>
+</ul>
+<h3>2.3 趋势验证（2 分钟）</h3>
+<p>用 Google Trends 验证需求的<strong>时效性和持续性</strong>：</p>
+<p><strong>检查两个数据</strong>：</p>
+<ol>
+<li><strong>近 24 小时趋势</strong>：是否"上升"？说明当下有真实搜索需求</li>
+<li><strong>近 12 个月趋势</strong>：曲线是否全年平稳？说明是"常青型需求"</li>
+</ol>
+<p><strong>判断标准</strong>：</p>
+<div class="tw"><table>
+<thead><tr><th>趋势形态</th><th>含义</th><th>产品策略</th></tr></thead>
+<tbody>
+<tr><td>旺季峰值 + 全年平稳</td><td>常青型需求</td><td>适合长期运营，全年生意</td></tr>
+<tr><td>仅旺季有峰值</td><td>季节性需求</td><td>提前 2 个月备货，旺季冲量</td></tr>
+<tr><td>持续上升</td><td>增长型需求</td><td>新兴市场，尽早入场</td></tr>
+<tr><td>持续下降</td><td>衰退型需求</td><td>不做</td></tr>
+</tbody>
+</table></div>
+<p><strong>案例</strong>："Foot Pain" 在旅游旺季达峰值，但全年无明显低谷 → 足部护理品适合全年运营。</p>
+<h3>2.4 反向生成产品方案（1 分钟）</h3>
+<p>用 ChatGPT 从痛点反推产品：</p>
+<p><strong>提示词模板</strong>：</p>
+<pre><code>设计 5 款针对[目标人群]的[痛点类别]产品，
+要求：便携易带、单价 &lt; 50 美元、使用场景明确。</code></pre>
+<p><strong>示例输出</strong>（旅游步行族足部护理）：</p>
+<ul>
+<li>人体工学鞋垫（减震 + 足弓支撑）</li>
+<li>压缩袜（促进血液循环）</li>
+<li>便携足部按摩滚轮（随时随地放松）</li>
+<li>硅胶前掌垫（缓解前足压力）</li>
+<li>防磨脚贴（针对新鞋摩擦部位）</li>
+</ul>
+<h3>2.5 视觉验证（1 分钟）</h3>
+<p>用 TikTok 筛选爆款视觉元素：</p>
+<p><strong>看 3 类信号</strong>：</p>
+<ol>
+<li><strong>高互动视频</strong>：点赞 8 万+，评论区高频 "Where to buy"、"Does it work for..."</li>
+<li><strong>重复出现的设计元素</strong>：如"蜂窝状减震结构"、"蓝色硅胶按摩颗粒"</li>
+<li><strong>场景化演绎</strong>：游客穿鞋垫走在鹅卵石路上，"2 万步后终于不痛了！"</li>
+</ol>
+<blockquote><p>评论区问 "Where to buy" = 最强购买信号，直接验证痛点→产品匹配度。</p></blockquote>
+<h3>2.6 商业验证（1 分钟）</h3>
+<p>用广告间谍工具验证变现数据：</p>
+<p><strong>工具</strong>：Winning Hunter、AdSpy、BigSpy 等</p>
+<p><strong>筛选条件</strong>：</p>
+<ul>
+<li>Winning Ad Score &gt; 70（广告持续投放超 7 天 = 真正赚钱）</li>
+<li>最近 30 天销售额可观</li>
+<li>落地页拆解：看竞品是否使用了相同的痛点场景</li>
+</ul>
+<h2 id="d5-3">3. 供应链与定价</h2>
+<h3>3.1 选款渠道</h3>
+<div class="tw"><table>
+<thead><tr><th>渠道</th><th>特点</th></tr></thead>
+<tbody>
+<tr><td>速卖通</td><td>搜索品类词，找销量 &gt; 1000、评价 4.7+ 的供应商</td></tr>
+<tr><td>CJ Dropshipping</td><td>海外仓，物流时效快</td></tr>
+<tr><td>ZenDrop</td><td>同上，海外仓为主</td></tr>
+<tr><td>1688</td><td>价格更低，但需自己处理物流</td></tr>
+</tbody>
+</table></div>
+<h3>3.2 黄金定价公式</h3>
+<pre><code>售价 = 成本 × 3（3 倍法则）
+心理定价 = 整数 - 0.01（19.99 而非 20）</code></pre>
+<p><strong>示例</strong>：</p>
+<ul>
+<li>成本 $6 × 3 = $18 → 定价 $19.99</li>
+<li>运费 $5.99（实测比免运费更易出单）</li>
+<li>单笔利润：$19.99 + $5.99 - $6 = <strong>$19.98</strong></li>
+</ul>
+<h3>3.3 运费策略</h3>
+<ul>
+<li>设运费（$5.99）比免运费的转化率更高（用户认为"有运费 = 真实产品"）</li>
+<li>也可以把运费揉进售价做 "Free Shipping"，看品类 A/B 测试结果</li>
+</ul>
+<h2 id="d5-4">4. AI 营销素材降维打击</h2>
+<blockquote><p>同行用手机拍产品视频，你用 AI 生成场景化素材，点击率高 2.3 倍，CVR 高 1.8 倍。</p></blockquote>
+<h3>4.1 三步 AI 素材生产流水线</h3>
+<div class="tw"><table>
+<thead><tr><th>步骤</th><th>工具</th><th>输出</th></tr></thead>
+<tbody>
+<tr><td>生成脚本</td><td>ChatGPT</td><td>30 秒视频文案（痛点→方案→效果）</td></tr>
+<tr><td>生成画面</td><td>Midjourney / DALL-E</td><td>场景化产品图（带特效）</td></tr>
+<tr><td>制作视频</td><td>Runway / 可灵 / 即梦</td><td>动态视频 + 字幕</td></tr>
+</tbody>
+</table></div>
+<h3>4.2 ChatGPT 脚本提示词</h3>
+<pre><code>生成一段 30 秒视频文案：
+场景：[具体场景描述]
+痛点：[痛点描述]
+解决方案：[产品核心卖点]
+结尾：[用户获得效果的画面]</code></pre>
+<h3>4.3 Midjourney 画面提示词模板</h3>
+<pre><code>[人物描述] wearing/using [产品], [场景背景], [表情/动作], [特效元素]</code></pre>
+<p>示例：<code>American tourist wearing blue insoles, Colosseum background, happy expression, glowing shoes</code></p>
+<h2 id="d5-5">5. 痛点分类速查表</h2>
+<blockquote><p>按身体部位和场景分类，选品时可快速对照</p></blockquote>
+<h3>5.1 身体疼痛类</h3>
+<div class="tw"><table>
+<thead><tr><th>痛点</th><th>场景</th><th>产品方向</th></tr></thead>
+<tbody>
+<tr><td>足部疼痛</td><td>旅游暴走、跑步、久站</td><td>鞋垫、压缩袜、足底按摩器、防磨贴</td></tr>
+<tr><td>膝盖酸胀</td><td>爬山、石板路、跑步</td><td>护膝、减震鞋垫、关节支撑</td></tr>
+<tr><td>腰部劳损</td><td>背包负重、久坐、搬家</td><td>腰带、人体工学背包、坐垫</td></tr>
+<tr><td>颈椎僵硬</td><td>久坐办公、低头看手机</td><td>颈枕、颈椎矫正器、显示器支架</td></tr>
+<tr><td>手腕疼痛</td><td>打字、游戏、举铁</td><td>护腕、人体工学键盘/鼠标</td></tr>
+<tr><td>眼睛疲劳</td><td>长时间屏幕、夜间阅读</td><td>蓝光眼镜、护眼灯、蒸汽眼罩</td></tr>
+<tr><td>肌肉酸痛</td><td>运动后、搬家、重体力</td><td>筋膜枪、冷热敷贴、泡沫轴</td></tr>
+</tbody>
+</table></div>
+<h3>5.2 心理/情绪类</h3>
+<div class="tw"><table>
+<thead><tr><th>痛点</th><th>场景</th><th>产品方向</th></tr></thead>
+<tbody>
+<tr><td>焦虑/压力</td><td>工作、考试、育儿</td><td>冥想工具、减压玩具、香薰</td></tr>
+<tr><td>睡眠障碍</td><td>旅行倒时差、失眠</td><td>白噪音机、遮光眼罩、褪黑素</td></tr>
+<tr><td>孤独感</td><td>独居、远程办公</td><td>宠物用品、社交桌游、AI 陪伴</td></tr>
+<tr><td>外貌焦虑</td><td>社交媒体、约会</td><td>护肤、美白牙贴、塑身衣</td></tr>
+</tbody>
+</table></div>
+<h3>5.3 便利/效率类</h3>
+<div class="tw"><table>
+<thead><tr><th>痛点</th><th>场景</th><th>产品方向</th></tr></thead>
+<tbody>
+<tr><td>充电焦虑</td><td>旅行、户外、通勤</td><td>便携充电宝、太阳能充电器</td></tr>
+<tr><td>收纳混乱</td><td>旅行打包、小户型</td><td>收纳袋、压缩袋、多功能挂袋</td></tr>
+<tr><td>清洁困难</td><td>租房、养宠、厨房</td><td>便携清洁工具、除毛器、去污笔</td></tr>
+<tr><td>温度不适</td><td>冬季户外、夏季通勤</td><td>暖手宝、降温颈巾、发热袜</td></tr>
+</tbody>
+</table></div>
+<h2 id="d5-6">6. 与其他选品方法的配合</h2>
+<div class="tw"><table>
+<thead><tr><th>配合方式</th><th>示例</th></tr></thead>
+<tbody>
+<tr><td><strong>痛点法 + 词根法</strong></td><td>发现"足部疼痛"痛点后，用 "insole / orthopedic / compression" 词根挖掘长尾关键词</td></tr>
+<tr><td><strong>痛点法 + 竞品逆向法</strong></td><td>发现痛点后，用亚马逊 ASIN 反查找到已有竞品，分析差评找改进空间</td></tr>
+<tr><td><strong>痛点法 + GEO 意图词</strong></td><td>将痛点转化为 AI 搜索时代的意图词（"Why do my feet hurt after walking all day?"）</td></tr>
+<tr><td><strong>痛点法 + 工具站词根</strong></td><td>围绕痛点建工具引流页（"Foot Pain Calculator"、"Shoe Size to Insole Size Converter"）</td></tr>
+</tbody>
+</table></div>
+<h2 id="d5-7">7. 一句话总结</h2>
+<blockquote>
+<p><strong>先有真实存在的痛苦，才有必然发生的购买。</strong></p>
+<p>选品不是选产品，是选"谁的什么痛苦"。痛苦越真实、越迫切、越频繁，产品越好卖。</p>
+</blockquote>
+</section>
+<section id="doc-6" class="doc" data-doc>
+<div class="kicker">第 7 篇 · 共 8 篇</div>
+<h1>细分市场选择与企业匹配</h1>
+<blockquote>
+<p><strong>核心思路</strong>：发现大方向（词根/搜索词/痛点/竞品，见00-06）之后、PMF验证（见11）之前，缺一段判断：这个大行业里<strong>选哪个细分</strong>，以及<strong>自己的企业接不接得住</strong>。市场吸引力与企业匹配度是两个独立维度，不能压成一个总分排先后。</p>
+<p><strong>与其他方法的关系</strong>：</p>
+<ul>
+<li>词根法（00）/搜索词法（01）/关键词手册（02）/竞品逆向（04）/GEO意图词（05）/痛点逆向（06）：解决"<strong>从哪发现机会</strong>"</li>
+<li><strong>本方法</strong>：解决"发现之后，<strong>选哪个细分、接不接得住</strong>"</li>
+<li>精准产品定义（11）：解决"选定后，<strong>验证真的有人买（PMF）</strong>"</li>
+</ul>
+<p><strong>来源</strong>：<a href="https://mp.weixin.qq.com/s/0Er3fSRbDPxO10A4vxh2NQ">认真思考的阿木·DTC独立站系列第4篇</a>（205个假发相关网站逐站复核样本，流量为Semrush数据，核查日期2026-08-30）+ <a href="https://mp.weixin.qq.com/s/8Kegcx2Qx_nyXpT8Dz-hGg">第3篇·竞对名单核实与四分法</a>。来源层级：行业专家分析 + 作者自有研究样本——数据仅代表研究池，用于比较方向间相对大小，不等于市场规模。</p>
+<p><strong>最后更新</strong>：2026-08-31</p>
+</blockquote>
+<h2 id="d6-1">1. 前提认知：同一行业 ≠ 同一种生意</h2>
+<p>看到"某品类有市场"就铺产品，是选品第一步就可能犯的错。同一个行业里，真正做的可能是完全不同的生意。</p>
+<p><strong>案例：205个假发相关网站拆出10个细分方向</strong>（按主要产品、目标人群、使用场景、成交方式逐站归类）：</p>
+<div class="tw"><table>
+<thead><tr><th>细分方向</th><th>网站数</th><th>样本自然流量合计</th><th>关键差异</th></tr></thead>
+<tbody>
+<tr><td>专业接发与沙龙安装</td><td>42</td><td>约86.1万</td><td>流量最高，但依赖发型师账户/授权渠道/沙龙安装</td></tr>
+<tr><td>无胶人发整顶假发</td><td>50</td><td>约84.6万</td><td>全部支持消费者直接购买，DTC友好</td></tr>
+<tr><td>消费者即时接发与增量</td><td>27</td><td>约41.7万</td><td>—</td></tr>
+<tr><td>女性稀疏与Hair Topper</td><td>19</td><td>约20.3万</td><td>服务头顶分缝变宽、不愿戴整顶的女性</td></tr>
+<tr><td>整顶假发综合品牌</td><td>29</td><td>约18.5万</td><td>—</td></tr>
+<tr><td>男士Hair System</td><td>2</td><td>约3万</td><td>样本最少，涉及现货/个性化/不同底网结构</td></tr>
+<tr><td>医疗脱发与高接触修复</td><td>4</td><td>约1.1万</td><td>化疗/斑秃人群，重咨询、隐私、定制</td></tr>
+<tr><td>其余（编发保护发型/时尚化纤/混合型）</td><td>—</td><td>—</td><td>—</td></tr>
+</tbody>
+</table></div>
+<p><strong>四维拆解法</strong>：不按产品名称归类，按以下四个维度拆——</p>
+<pre><code>产品形态（整顶/Topper/接发/Hair System）
+× 目标人群（消费者/发型师/医疗脱发者）
+× 使用场景（日常佩戴/特殊场合/修复）
+× 成交方式（直接下单/咨询定制/专业渠道授权）</code></pre>
+<p>产品都和头发有关，但<strong>用户为什么买、怎么买、买完需不需要专业服务</strong>完全不同。这决定了后续看什么评价、进什么社区、做什么内容都不一样。</p>
+<h2 id="d6-2">2. 流量数据的三重误读（工具数据解读纪律）</h2>
+<p>选品判断天天用 Semrush/Ubersuggest/Ahrefs，这张表是数据解读的防错纪律：</p>
+<div class="tw"><table>
+<thead><tr><th>误读</th><th>表面信号</th><th>实际陷阱</th><th>判断动作</th></tr></thead>
+<tbody>
+<tr><td><strong>① 流量高 = 可进</strong></td><td>专业接发86.1万流量最高</td><td>42家中仅27家消费者可直接购买，其余走专业产品销售/发型师账户/沙龙成交——<strong>成交方式决定流量归属</strong>，DTC团队接不住</td><td>先看成交方式，再看流量</td></tr>
+<tr><td><strong>② 网站少 = 蓝海</strong></td><td>男士Hair System仅2家</td><td>可能是竞争弱，也可能是<strong>需求本身窄</strong>，或大量交易发生在线下/沙龙/经销商，搜索引擎里根本看不见</td><td>网站少只说明"需要继续查"，不能翻译成"竞争小、容易赚钱"</td></tr>
+<tr><td><strong>③ 关键词重合 = 竞争</strong></td><td>都在抢头发相关词</td><td>关键词重合只证明<strong>相关</strong>，不证明<strong>同生意</strong>——要排除不同人群、不同产品形态、不同成交方式的网站后，剩下的才是有效竞争</td><td>有效竞争对手 = 服务同一批客户 + 解决同一问题 + 已获得流量或订单</td></tr>
+</tbody>
+</table></div>
+<blockquote><p>与库内竞研纪律的一致性：这里的"有效竞争"判定与竞品研究铁律（SERP驱动→过滤不同类型→只留真实同生意者）同构。此表是选品视角的表述。</p></blockquote>
+<h3>2b. 竞对名单四分法（判定之后：研究池里每类网站的用途）</h3>
+<p>判定完谁是对手，剩下的问题是<strong>非对手怎么用</strong>。同一批相关网站分四份，各司其职（来源：<a href="https://mp.weixin.qq.com/s/8Kegcx2Qx_nyXpT8Dz-hGg">阿木 DTC 系列③</a>，205 站复核：3 万+词重合 → 616 有流量 → 205 主营相关 → 179 家真消费者零售）：</p>
+<div class="tw"><table>
+<thead><tr><th>名单</th><th>判定</th><th>用途</th></tr></thead>
+<tbody>
+<tr><td><strong>直接竞对</strong></td><td>产品/客户/问题/成交方式四同，真抢订单</td><td><strong>比较</strong>：价格/评价/信任构建/转化路径，进深度研究锚定名单</td></tr>
+<tr><td><strong>需求竞对</strong></td><td>产品不同，解决同一问题（整顶假发 vs Hair Topper vs Clip-in 接发都在解决"发量看起来少"）</td><td><strong>打开思路</strong>：消费者除了买你还有什么选择</td></tr>
+<tr><td><strong>搜索竞对</strong></td><td>不卖同类产品但挡在 SERP 前面（媒体/医院/教程/社区/大零售商）</td><td><strong>做内容</strong>：抢的是注意力和搜索入口，内容策略针对它们设计</td></tr>
+<tr><td><strong>能力标杆</strong></td><td>不抢客户但某项能力突出（新手教育/医疗场景信任/预约流程）</td><td><strong>补短板</strong>：学单项能力，不整站照抄</td></tr>
+</tbody>
+</table></div>
+<blockquote><p>四份混在一起只是一堆域名；拆开才知道下一步看谁、学什么。"行业卷不卷"同理——不能靠体感，拆到具体产品/客户/问题/成交方式后，"3 万多家相关网站"实际只剩 179 家真对手，且内部还分不同方向。</p></blockquote>
+<h2 id="d6-3">3. 市场侧评估六问（先放下企业条件，只看市场）</h2>
+<div class="tw"><table>
+<thead><tr><th>#</th><th>问题</th><th>看什么</th><th>信号示例</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>有没有真实需求？</strong></td><td>不只看关键词搜索量：有没有一批网站持续获得流量？有没有产品评价和用户讨论？需求是偶尔出现还是反复出现？</td><td>无胶假发网站反复强调 Glueless / Wear and Go / Beginner Friendly——"不会安装、不想用胶水"是一批消费者的共同问题</td></tr>
+<tr><td>2</td><td><strong>问题重不重要？</strong></td><td>触发购买的是什么？不解决用户承担什么代价？为什么现在买而不是半年后？</td><td>造型问题 vs 治疗期脱水的紧迫度、付费动机完全不同</td></tr>
+<tr><td>3</td><td><strong>有多少有效竞争对手？</strong></td><td>按§2③的有效竞争定义，排除不同人群/形态/成交方式的网站</td><td>—</td></tr>
+<tr><td>4</td><td><strong>能不能在线上顺利成交？</strong></td><td>看完页面就能下单？还是要选色/测量/安装/顾问沟通？还是只向持证专业人士开放？</td><td>成交方式越重，服务越多，团队与成本结构完全不同</td></tr>
+<tr><td>5</td><td><strong>生意算不算得过来？</strong></td><td>原料/打样/库存/退货/客服/物流/复购/获客成本。<strong>竞对网站算不完整，必须代入自己的经营数据</strong></td><td>售价高 ≠ 利润高</td></tr>
+<tr><td>6</td><td><strong>有没有持续获客入口？</strong></td><td>有没有值得做的搜索内容？有没有真人展示/教程/测评/用户故事？用户在不在 TikTok/YouTube/Reddit 讨论？</td><td>高度依赖效果展示的产品，长期产不出真人素材就会卡死在渠道上</td></tr>
+</tbody>
+</table></div>
+<p>六问答完只得到<strong>初步判断</strong>——市场看起来不错，不代表适合你。</p>
+<h2 id="d6-4">4. 企业侧匹配六问（很多老板往外看，忘了看自己）</h2>
+<div class="tw"><table>
+<thead><tr><th>#</th><th>问题</th><th>判定标准</th></tr></thead>
+<tbody>
+<tr><td>1</td><td><strong>现有供应链能不能做？</strong></td><td>不是样品能不能勉强做出来，而是品质/交期/成本/稳定性能否<strong>长期承接</strong></td></tr>
+<tr><td>2</td><td><strong>产品有没有可被感知的优势？</strong></td><td>"我们质量很好"不算——消费者能不能在页面/视频/使用中<strong>看懂</strong>差异才算</td></tr>
+<tr><td>3</td><td><strong>内容素材能不能持续生产？</strong></td><td>依赖真人效果/佩戴过程/颜色对比的品类，有没有模特/造型师/拍摄团队/稳定素材来源</td></tr>
+<tr><td>4</td><td><strong>有没有对应的渠道能力？</strong></td><td>Google搜索/Facebook投放/TikTok内容/达人合作/专业沙龙渠道，需要的团队不一样</td></tr>
+<tr><td>5</td><td><strong>能不能承担对应的服务？</strong></td><td>选色/尺寸/安装指导/敏感咨询/退换货谁来接——标准商品和高接触定制不是同一种客服难度</td></tr>
+<tr><td>6</td><td><strong>团队愿意投入多久？</strong></td><td>有没有负责人？预算能承受几轮测试？三个月没跑通是优化还是停止？</td></tr>
+</tbody>
+</table></div>
+<blockquote><p>供应链不是负担而是起点：工艺经验、供应商关系、成本判断、质控和交付能力是多年积累——<strong>脱离熟悉供应链，你什么都不是</strong>。看到热门品类就彻底换行业，是反向操作。</p></blockquote>
+<h2 id="d6-5">5. 最小ICP假设（VOC调研的前置件）</h2>
+<p>市场和企业都看完，还缺一个人：<strong>产品准备卖给谁</strong>。没有基本方向就去看评价/社区/客服记录，会什么都收集，最后得到一堆互相矛盾的信息。</p>
+<p><strong>先写五件事，形成等待验证的假设（不是最终画像）</strong>：</p>
+<ol>
+<li>谁可能会买</li>
+<li>什么事情触发了需求</li>
+<li>她/他真正想完成什么</li>
+<li>最担心什么</li>
+<li>我们准备去哪里验证</li>
+</ol>
+<p><strong>反例</strong>："25-35岁、喜欢时尚、追求品质生活"——几乎可以套在任何消费品牌上，没有信息量。</p>
+<p><strong>假发行业三个不同ICP假设示例</strong>：</p>
+<div class="tw"><table>
+<thead><tr><th>细分</th><th>可能的用户</th><th>核心任务</th><th>核心担心</th></tr></thead>
+<tbody>
+<tr><td>无胶人发假发</td><td>不会安装、不想用胶水，想在家快速获得自然效果的女性</td><td>拿起来就能戴</td><td>发际线不自然/容易滑动/尺寸不合适/"Wear and Go"只是广告</td></tr>
+<tr><td>女性Hair Topper</td><td>分缝变宽、头顶稀疏、暂不愿戴整顶的女性</td><td>局部增量与原生融合</td><td>颜色能否融合/夹子伤不伤发/底网尺寸怎么选</td></tr>
+<tr><td>医疗脱发修复</td><td>化疗/斑秃/明显脱发人群</td><td>不只是产品，还包括舒适、隐私、尊重、可靠咨询</td><td>高接触服务的信任</td></tr>
+</tbody>
+</table></div>
+<p>ICP不同 → 后续要看的评价、要进的社区、要问的问题、要做的内容<strong>完全不同</strong>。这就是最小ICP的作用：不宣布"客户是谁"，只告诉团队"下一轮验证谁"。</p>
+<h2 id="d6-6">6. 四象限决策：不做总分排行榜</h2>
+<div class="tw"><table>
+<thead><tr><th></th><th><strong>企业接得住</strong></th><th><strong>企业接不住/证据不足</strong></th></tr></thead>
+<tbody>
+<tr><td><strong>市场有证据</strong></td><td>✅ <strong>优先验证</strong>（不是马上重仓：单页站/小产品集合/小预算广告测点击-加购-咨询-转化）</td><td>⚠️ <strong>谨慎进入</strong>（先判断缺口能不能补：合作方/补人员/重设成交方式；短时间补不了就放一放）</td></tr>
+<tr><td><strong>市场证据不足</strong></td><td>💪 <strong>能力型机会</strong>（有供应链、试错成本低，但要继续补需求/竞争/用户证据，不能"我们能生产"就自嗨）</td><td>⛔ <strong>暂不优先</strong>（不一定永远不能做，只是现在不值得投时间资金）</td></tr>
+</tbody>
+</table></div>
+<p><strong>为什么不做总分排行榜</strong>：</p>
+<ul>
+<li>市场吸引力可以通过外部数据研究；企业能力里的大量信息<strong>只有老板和团队自己知道</strong></li>
+<li>AI 可以整理网站、统计流量、归类产品，但"能不能做、要不要投"最后必须由人判断</li>
+<li>把外部可测和内部不可测的维度压成一个总分，是假精确</li>
+</ul>
+<p><strong>验证的停止条件要提前写清</strong>：预算、周期、什么信号算通过；有点击/咨询/加购但没成交 → 查页面/产品/价格/信任；到约定周期始终无有效信号 → 砍掉，回到四象限重看。</p>
+<h2 id="d6-7">7. 三类跨境老板，切细分的起点不一样</h2>
+<div class="tw"><table>
+<thead><tr><th>老板类型</th><th>最重要的资料在哪</th><th>关键动作</th></tr></thead>
+<tbody>
+<tr><td><strong>已跑通0-1的DTC</strong></td><td>不在Semrush也不在竞对网站，在<strong>自己的订单/广告/客服</strong>里：谁已购买？什么卖点带来转化？哪些SKU退货高？客服反复答什么？</td><td>内部数据（看自己跑通了什么）+ 外部调研（看市场）合起来判断：收窄人群 / 扩产品 / 进新场景</td></tr>
+<tr><td><strong>平台转DTC</strong></td><td>平台卖得好是重要的需求证据</td><td>但平台替你提供的比价/评价/流量/交易信任都没了——重新回答：消费者为什么主动搜你？为什么离开平台？靠什么建立信任？搬Listing ≠ 建品牌</td></tr>
+<tr><td><strong>工厂/贸易商转B2C</strong></td><td>熟悉的供应链</td><td>沿现有工艺/原料/设备找<strong>不同人群、场景、产品形态</strong>；第一轮不匹配就沿相近供应链做第二轮；只有供应链确实无机会且资源无法迁移，才讨论换行业</td></tr>
+</tbody>
+</table></div>
+<h2 id="d6-8">8. 七步流程总览</h2>
+<pre><code>① 找出大品类里的有效网站和有流量页面
+② 按【人群 × 场景 × 购买任务 × 成交方式】拆细分（不按产品名）
+③ 选出3个左右候选方向（不要一上来研究十几个）
+④ 市场六问：需求真不真 / 问题重不重要 / 有效竞争 / 线上成交 / 生意账 / 获客入口
+⑤ 企业六问：供应链 / 感知优势 / 内容素材 / 渠道 / 服务 / 投入意愿
+⑥ 每个候选写一个最小ICP（五要素）→ 再做VOC调研（评价/社区/客服/访谈）
+⑦ 选1-2个方向做成本可控的最小验证（预算/周期/停止条件提前写清）</code></pre>
+<blockquote><p>调研的目的是<strong>排掉明显的大错、提高决策质量</strong>，不是等到100%把握才开始——商业没有这样的答案。</p></blockquote>
+<h2 id="d6-rel">与库内文档的衔接</h2>
+<ul>
+<li><strong>上游</strong>：00词根法 / 01搜索词法 / 04竞品逆向 / 06痛点逆向 → 产出"大方向 + 候选细分"</li>
+<li><strong>本篇</strong>：四维拆解 → 流量三重误读排查 → 市场×企业双维四象限 → 最小ICP</li>
+<li><strong>下游</strong>：11-精准产品定义（选定细分后的PMF验证：Sean Ellis测试 / LTV:CAC / 留存曲线）→ 全渠道增长</li>
+</ul>
+</section>
+<section id="doc-7" class="doc" data-doc>
+<div class="kicker">第 8 篇 · 共 8 篇</div>
+<h1>精准产品定义与全渠道增长框架</h1>
+<blockquote>
+<p><strong>定位</strong>：从"选品"到"增长"之间缺的那块拼图——你已有的 选品方法论/ 解决"找什么卖"，本篇解决"怎么验证它真的有人买（PMF）"和"验证通过后怎么选渠道做增长（全渠道体系）"。</p>
+<p><strong>数据来源</strong>：Steve Blank / Marc Andreessen / Sean Ellis / Dan Olsen (Lean Product Playbook) / Intercom (RICE) / Umbrex / BigCommerce (2026)</p>
+</blockquote>
+<h2 id="d7-1">第一部分：精准产品定义——PMF 验证</h2>
+<h3>一、什么是 PMF</h3>
+<p><strong>Marc Andreessen 的原始定义</strong>：</p>
+<blockquote>
+<p>"Product-Market Fit means being in a good market with a product that can satisfy that market."</p>
+<p>"创业公司唯一重要的事情就是达到 PMF。"</p>
+</blockquote>
+<p><strong>翻译成大白话</strong>：你的产品正好满足了一群真实存在的用户的真实需求，他们愿意<strong>付钱并且持续用</strong>。</p>
+<h3>二、Steve Blank 客户开发四步法</h3>
+<div class="tw"><table>
+<thead><tr><th>阶段</th><th>目标</th><th>关键动作</th><th>退出标志</th></tr></thead>
+<tbody>
+<tr><td><strong>1. 客户发现</strong></td><td>找到真实痛点</td><td>访谈 50-100 个目标用户</td><td>能说出"谁的什么问题，现有方案不够好"</td></tr>
+<tr><td><strong>2. 客户验证</strong></td><td>MVP 测试</td><td>做最简版本，找到<strong>愿意付钱的</strong>前 10 个客户</td><td>有可重复的销售路径</td></tr>
+<tr><td><strong>3. 客户创造</strong></td><td>开始需求生成</td><td>从"创始人亲自卖"转向"可规模化获客"</td><td>有稳定的获客渠道</td></tr>
+<tr><td><strong>4. 公司建设</strong></td><td>规模化</td><td>团队扩张、流程标准化</td><td>增长可预测</td></tr>
+</tbody>
+</table></div>
+<blockquote><p><strong>关键提醒</strong>：80% 的项目卡在<strong>阶段 2→3 之间</strong>（MVP 能用但卖不出去）。这不是产品问题，是<strong>PMF 没达成</strong>。</p></blockquote>
+<h3>三、Sean Ellis PMF 测试（最实用的量化指标）</h3>
+<p><strong>操作方法</strong>：</p>
+<p>给你的活跃用户发一份简短问卷，核心问题只有一个：</p>
+<blockquote>
+<p><strong>"如果你不能再使用 [产品名]，你会感到怎样？"</strong></p>
+<ul class="task">
+<li>非常失望</li>
+<li>有点失望</li>
+<li>不失望（这产品对我没那么有用）</li>
+<li>N/A——我已经不用了</li>
+</ul>
+</blockquote>
+<p><strong>基准线</strong>：</p>
+<div class="tw"><table>
+<thead><tr><th>"非常失望"占比</th><th>判断</th></tr></thead>
+<tbody>
+<tr><td><strong>≥40%</strong></td><td>✅ PMF 达成，可以开始规模化增长</td></tr>
+<tr><td><strong>25–40%</strong></td><td>⚠️ 接近但未到，需要优化产品或调整目标用户</td></tr>
+<tr><td><strong>&lt;25%</strong></td><td>❌ PMF 未达成，回到客户发现阶段</td></tr>
+</tbody>
+</table></div>
+<blockquote><p><strong>Sean Ellis 原话</strong>："在 PMF 达成之前，几乎不可能实现增长。" 所以如果你在 &lt;40% 时疯狂投广告 = 烧钱。</p></blockquote>
+<h3>四、PMF 的多维验证（不只看一个指标）</h3>
+<div class="tw"><table>
+<thead><tr><th>指标</th><th>基准</th><th>怎么测</th></tr></thead>
+<tbody>
+<tr><td><strong>Sean Ellis 测试</strong></td><td>≥40% "非常失望"</td><td>问卷</td></tr>
+<tr><td><strong>LTV:CAC</strong></td><td>≥3:1</td><td>LTV = 客单价 × 复购次数；CAC = 总获客费 / 新客数</td></tr>
+<tr><td><strong>留存曲线</strong></td><td>趋平（不再下降）</td><td>第 N 周留存率折线图——如果曲线持续下降 = PMF 未达成</td></tr>
+<tr><td><strong>自然增长占比</strong></td><td>≥30% 的新用户来自口碑/搜索</td><td>GA4 里看 traffic source</td></tr>
+</tbody>
+</table></div>
+<blockquote><p>⚠️ <strong>诚实提醒</strong>：PMF 不是"是/否"的二元判断，是一个<strong>渐进过程</strong>。不要等"完美 PMF"才开始增长——40% 是一个<strong>行动门槛</strong>，不是终点。</p></blockquote>
+<h3>五、MVP 的真实意义</h3>
+<p><strong>MVP 不是"最小化产品"，是"最小化验证"</strong>：</p>
+<div class="tw"><table>
+<thead><tr><th>常见误解</th><th>正确理解</th></tr></thead>
+<tbody>
+<tr><td>MVP = 做个简陋版本先卖</td><td>MVP = 用最少的功能测试<strong>最核心的假设</strong></td></tr>
+<tr><td>目标是"做出能卖的产品"</td><td>目标是"验证有人愿意买"</td></tr>
+<tr><td>MVP 完成后直接上线上量</td><td>MVP 完成后<strong>验证 PMF</strong>，再决定是否上量</td></tr>
+</tbody>
+</table></div>
+<p><strong>"生于 MVP，死于 PMF"</strong>——MVP 帮你快速试错，但最终成败取决于 PMF。</p>
+<h3>六、3 个实操教训（来自"转型 6 次才找到 PMF"案例）</h3>
+<ol>
+<li><strong>别把销售外包</strong>——找到 PMF 本身就够复杂了，别再增加"是产品问题还是销售问题"这个变量</li>
+<li><strong>拿不下第一个客户是最常见的瓶颈</strong>——对应你已有的 YC《前 10 个客户》方法论（创始人亲自跑、做不可规模化的笨功夫）</li>
+<li><strong>用户付了钱但不满意 = PMF 未达成</strong>——别用"有人买了"自我安慰，要看留存和复购</li>
+</ol>
+<h2 id="d7-2">第二部分：全渠道增长体系</h2>
+<h3>一、渠道选择矩阵——RICE 打分模型</h3>
+<h4>RICE 公式</h4>
+<pre><code>RICE Score = (Reach × Impact × Confidence) ÷ Effort</code></pre>
+<div class="tw"><table>
+<thead><tr><th>因子</th><th>含义</th><th>打分范围</th></tr></thead>
+<tbody>
+<tr><td><strong>R</strong>each</td><td>这个渠道能触达多少目标用户？</td><td>1–10（或具体人数 ÷1000）</td></tr>
+<tr><td><strong>I</strong>mpact</td><td>对转化的影响有多大？</td><td>0.25（低）/ 1（中）/ 3（高）/ 10（极高）</td></tr>
+<tr><td><strong>C</strong>onfidence</td><td>你有多大把握这个渠道会有效？</td><td>50%（低）/ 80%（中）/ 100%（高）</td></tr>
+<tr><td><strong>E</strong>ffort</td><td>需要多少时间/人力？</td><td>1–10（或人·周数）</td></tr>
+</tbody>
+</table></div>
+<h4>简化版：ICE 打分</h4>
+<p>如果你嫌 RICE 太重，用 ICE：</p>
+<pre><code>ICE Score = Impact × Confidence × Ease（1-10 各项）</code></pre>
+<h4>渠道评估示例（以水晶项目为例）</h4>
+<div class="tw"><table>
+<thead><tr><th>渠道</th><th>Reach</th><th>Impact</th><th>Confidence</th><th>Effort</th><th>RICE Score</th><th>优先级</th></tr></thead>
+<tbody>
+<tr><td>Google SEO</td><td>9</td><td>3（高）</td><td>80%</td><td>5</td><td><strong>4.3</strong></td><td>★★★</td></tr>
+<tr><td>Pinterest</td><td>7</td><td>3（高）</td><td>50%</td><td>4</td><td><strong>2.6</strong></td><td>★★☆</td></tr>
+<tr><td>小红书</td><td>6</td><td>2（中）</td><td>80%</td><td>4</td><td><strong>2.4</strong></td><td>★★☆</td></tr>
+<tr><td>红人合作</td><td>5</td><td>3（高）</td><td>50%</td><td>3</td><td><strong>2.5</strong></td><td>★★☆</td></tr>
+<tr><td>TikTok</td><td>8</td><td>2（中）</td><td>50%</td><td>5</td><td><strong>1.6</strong></td><td>★☆☆</td></tr>
+<tr><td>Reddit</td><td>4</td><td>3（高）</td><td>50%</td><td>3</td><td><strong>2.0</strong></td><td>★☆☆</td></tr>
+<tr><td>付费广告</td><td>9</td><td>2（中）</td><td>80%</td><td>7</td><td><strong>2.1</strong></td><td>★☆☆</td></tr>
+</tbody>
+</table></div>
+<blockquote><p><strong>注意</strong>：分数因产品/品类/市场而异。这不是通用答案，是<strong>框架模板</strong>——你给自己的项目打分时，每个数字都会不同。</p></blockquote>
+<h3>二、增长飞轮</h3>
+<h4>飞轮的核心逻辑</h4>
+<p>飞轮 = 一个<strong>自我强化的循环</strong>：每转一圈，下一圈更容易。</p>
+<pre><code>投入 → 初始动力 → 积累 → 溢出效应 → 加速 → 更多积累 → 更快加速</code></pre>
+<h4>3 种飞轮模型</h4>
+<p><strong>模型 A：亚马逊飞轮（经典）</strong></p>
+<pre><code>低价/高价值 → 客户体验好 → 口碑传播 → 更多流量 → 规模效应 → 成本降低 → 低价/高价值</code></pre>
+<p><strong>模型 B：内容资产飞轮（适合 SEO 驱动的独立站）</strong></p>
+<pre><code>内容资产积累（文章/工具/数据）→ 自然流量增长 → 用户数据/邮箱列表
+→ 精准再营销 → 更高转化率 → 更多收入 → 更多内容投入 → 更多内容资产</code></pre>
+<p><strong>模型 C：社媒+红人飞轮（适合社媒驱动的品牌）</strong></p>
+<pre><code>红人合作/UGC → 社媒声量 → 品牌词搜索量上升 → SEO 流量增长
+→ 更多用户 → 更多 UGC → 更多红人愿意合作 → 更大声量</code></pre>
+<blockquote><p><strong>你的水晶项目最适合模型 B + C 的组合</strong>：内容资产（390 水晶百科 + zodiac 配对 + combinations）积累 → SEO 流量 → 同时启动红人合作 → UGC → 品牌词搜索上升 → 双飞轮叠加。</p></blockquote>
+<h3>三、渠道协同——不要同时启动所有渠道</h3>
+<h4>启动顺序</h4>
+<pre><code>[阶段 1] 在一个渠道做到 PMF（Sean Ellis ≥40%）
+    ↓ 验证通过后
+[阶段 2] 用 RICE 选择第 2-3 个渠道
+    ↓ 每个渠道做 4-6 周测试
+[阶段 3] 评估 ROI，砍掉低效渠道，加码高效渠道
+    ↓ 找到 2-3 个稳定渠道后
+[阶段 4] 构建飞轮（渠道之间互相强化）</code></pre>
+<blockquote><p>⚠️ <strong>最常见的错误</strong>：一开始就同时启动 5 个渠道。每个渠道都做不深，全部失败。</p></blockquote>
+<h4>渠道分层</h4>
+<div class="tw"><table>
+<thead><tr><th>层级</th><th>角色</th><th>适合的渠道</th><th>衡量指标</th></tr></thead>
+<tbody>
+<tr><td><strong>引流层</strong></td><td>拉新用户进来</td><td>Google SEO、TikTok、红人合作、Pinterest</td><td>流量、曝光</td></tr>
+<tr><td><strong>转化层</strong></td><td>把流量变成订单</td><td>落地页优化、邮件营销、再营销广告、Promo Code</td><td>转化率、CPA</td></tr>
+<tr><td><strong>留存层</strong></td><td>让客户复购+传播</td><td>Newsletter、社群、会员体系、UGC</td><td>LTV、复购率、NPS</td></tr>
+</tbody>
+</table></div>
+<h3>四、归因模型——哪个渠道真的带来了销售</h3>
+<div class="tw"><table>
+<thead><tr><th>归因方式</th><th>逻辑</th><th>适用场景</th></tr></thead>
+<tbody>
+<tr><td><strong>首次触达</strong></td><td>第一接触的渠道拿全部功劳</td><td>品牌认知阶段</td></tr>
+<tr><td><strong>末次触达</strong></td><td>最后接触的渠道拿全部功劳</td><td>直接转化追踪</td></tr>
+<tr><td><strong>线性归因</strong></td><td>每个触点平均分</td><td>全链路评估</td></tr>
+<tr><td><strong>位置归因</strong></td><td>首尾各 40%，中间 20%</td><td>平衡首末</td></tr>
+<tr><td><strong>数据驱动</strong></td><td>算法根据历史数据分配</td><td>有足够数据时</td></tr>
+</tbody>
+</table></div>
+<blockquote><p>⚠️ <strong>诚实提醒</strong>：没有完美的归因模型。建议同时看<strong>首次触达</strong>（哪个渠道拉新能力强）和<strong>末次触达</strong>（哪个渠道促成交易），两个维度交叉看。</p></blockquote>
+<h2 id="d7-3">第三部分：执行检查清单</h2>
+<h3>产品定义检查清单</h3>
+<ul class="task">
+<li>我能用一句话说清楚"<strong>谁的什么问题</strong>，我的产品怎么解决"</li>
+<li>我访谈过至少 30 个目标用户（不是朋友/同事）</li>
+<li>我有前 10 个<strong>付费</strong>客户（不是免费试用）</li>
+<li>Sean Ellis 测试结果 ≥40%（或留存曲线趋平）</li>
+<li>LTV:CAC ≥3:1（或趋势明确向好）</li>
+<li>有 ≥30% 新用户来自自然口碑（不是广告）</li>
+</ul>
+<h3>全渠道启动检查清单</h3>
+<ul class="task">
+<li>我在一个渠道上做到了 PMF</li>
+<li>我用 RICE 给候选渠道打了分</li>
+<li>我选定了 2-3 个优先渠道（不是 5+）</li>
+<li>每个渠道有明确的 4-6 周测试计划和成功标准</li>
+<li>我有飞轮设计（渠道之间如何互相强化）</li>
+<li>我定义了 3 层渠道（引流/转化/留存）各自的 KPI</li>
+</ul>
+<h2 id="d7-4">第四部分：与现有知识库的协作</h2>
+<div class="tw"><table>
+<thead><tr><th>本篇提供</th><th>关联文档补充</th></tr></thead>
+<tbody>
+<tr><td>PMF 验证方法（Sean Ellis + LTV:CAC + 留存曲线）</td><td><code>选品方法论/06-痛点逆向选品法.md</code> 提供"从痛点到选品"</td></tr>
+<tr><td>MVP 设计原则</td><td><code>选品方法论/00-词根调研法.md</code> 提供"从词根到需求"</td></tr>
+<tr><td>渠道选择矩阵（RICE）</td><td><code>01-营销方法论基础/07-SEO全链路与审计/02-SEO全链路工作流.md</code> 提供 SEO 渠道深度</td></tr>
+<tr><td>增长飞轮设计</td><td><code>03-SEO与GEO/</code> 的内容资产积累 = 飞轮的"初始动力"</td></tr>
+<tr><td>归因模型</td><td><code>01-营销方法论基础/07-SEO全链路与审计/10-GSC数据驱动SEO深度研究.md</code> 提供数据追踪方法</td></tr>
+<tr><td>前 10 个客户打法</td><td>YC 方法论（《创业者必读——如何拿下你的前10个客户》）</td></tr>
+</tbody>
+</table></div>
+<h2 id="d7-5">数据来源</h2>
+<ul>
+<li>PMF 理论：Marc Andreessen (2007), Steve Blank (Customer Development 4 步法)</li>
+<li>Sean Ellis PMF 测试：GrowthHackers, Mixpanel, Lean Product Playbook (Dan Olsen)</li>
+<li>RICE 框架：Intercom（原创）</li>
+<li>ICE 框架：Sean Ellis / GrowthHackers</li>
+<li>全渠道策略：Umbrex, BigCommerce (2026), Digital Applied (2026), Emarsys</li>
+<li>飞轮模型：Amazon（经典）+ 自整理 DTC/社媒变体</li>
+</ul>
+</section>
+
+</div>
+</main>
+
+<script>
+(function(){
+  var bar=document.getElementById('progress');
+  var secs=[].slice.call(document.querySelectorAll('section[data-doc]'));
+  var items={};
+  secs.forEach(function(s){
+    items[s.id]={
+      link:document.querySelector('a.doc-link[href="#'+s.id+'"]'),
+      det:document.querySelector('details.sub[data-for="'+s.id+'"]')
+    };
+  });
+  var curId=null;
+  function update(){
+    var st=window.scrollY||document.documentElement.scrollTop;
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.width=(h>0?(st/h*100):0)+'%';
+    var pos=st+140,cur=secs[0];
+    for(var i=0;i<secs.length;i++){if(secs[i].offsetTop<=pos)cur=secs[i];}
+    if(cur&&cur.id!==curId){
+      curId=cur.id;
+      for(var k in items){
+        var it=items[k];
+        if(!it)continue;
+        if(it.link)it.link.classList.toggle('on',k===curId);
+        if(k===curId&&it.det)it.det.setAttribute('open','');
+      }
+    }
+  }
+  window.addEventListener('scroll',update,{passive:true});
+  window.addEventListener('resize',update);
+  update();
+  var btn=document.getElementById('menuBtn');
+  function close(){document.body.classList.remove('nav-open');}
+  if(btn)btn.addEventListener('click',function(){document.body.classList.toggle('nav-open');});
+  document.getElementById('overlay').addEventListener('click',close);
+  [].slice.call(document.querySelectorAll('#sidebar a')).forEach(function(a){
+    a.addEventListener('click',close);
+  });
+})();
+</script>
+</body>
+</html>

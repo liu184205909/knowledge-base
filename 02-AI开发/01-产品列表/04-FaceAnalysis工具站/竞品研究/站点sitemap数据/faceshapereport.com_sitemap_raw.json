@@ -1,0 +1,47 @@
+{
+ "domain": "faceshapereport.com",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://faceshapereport.com/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://faceshapereport.com/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 21
+  }
+ ],
+ "page_urls": [
+  "https://faceshapereport.com/",
+  "https://faceshapereport.com/face-shape",
+  "https://faceshapereport.com/eye-shape",
+  "https://faceshapereport.com/hairstyle-finder",
+  "https://faceshapereport.com/guides",
+  "https://faceshapereport.com/guides/hairstyles-for-round-face",
+  "https://faceshapereport.com/guides/hairstyles-for-oval-face",
+  "https://faceshapereport.com/guides/hairstyles-for-square-face",
+  "https://faceshapereport.com/guides/hairstyles-for-heart-face",
+  "https://faceshapereport.com/guides/haircuts-for-long-faces",
+  "https://faceshapereport.com/guides/hairstyles-for-diamond-face",
+  "https://faceshapereport.com/guides/glasses-for-round-face",
+  "https://faceshapereport.com/guides/glasses-for-square-face",
+  "https://faceshapereport.com/guides/glasses-for-heart-face",
+  "https://faceshapereport.com/guides/glasses-for-oval-face",
+  "https://faceshapereport.com/guides/glasses-for-long-face",
+  "https://faceshapereport.com/guides/glasses-for-diamond-face",
+  "https://faceshapereport.com/about",
+  "https://faceshapereport.com/methodology",
+  "https://faceshapereport.com/privacy",
+  "https://faceshapereport.com/terms"
+ ],
+ "stats": {
+  "total_loc": 21,
+  "pages": 21,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "url_total": 42,
+ "page_types": {
+  "static_page_or_hub": 8,
+  "blog_post": 25,
+  "tool": 9
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 7,
+  "2": 34
+ },
+ "top_level_dirs": {
+  "/blog": 35,
+  "/ (root)": 1,
+  "/about": 1,
+  "/compare": 1,
+  "/contact": 1,
+  "/disclaimer": 1,
+  "/privacy": 1,
+  "/terms": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://www.golden-face-ratio.com",
+  "https://www.golden-face-ratio.com/about",
+  "https://www.golden-face-ratio.com/blog",
+  "https://www.golden-face-ratio.com/blog/1618-face-proportion-explained",
+  "https://www.golden-face-ratio.com/blog/ai-golden-ratio-face-analysis",
+  "https://www.golden-face-ratio.com/blog/beauty-score-calculator-explained",
+  "https://www.golden-face-ratio.com/blog/best-golden-ratio-face-apps",
+  "https://www.golden-face-ratio.com/blog/best-products-to-enhance-golden-ratio-face",
+  "https://www.golden-face-ratio.com/blog/celebrities-golden-ratio-faces",
+  "https://www.golden-face-ratio.com/blog/chin-to-philtrum-ratio-calculator"
+ ]
+}

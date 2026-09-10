@@ -1,0 +1,68 @@
+{
+ "domain": "golden-face-ratio.com",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://www.golden-face-ratio.com/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://www.golden-face-ratio.com/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 42
+  }
+ ],
+ "page_urls": [
+  "https://www.golden-face-ratio.com",
+  "https://www.golden-face-ratio.com/blog",
+  "https://www.golden-face-ratio.com/compare",
+  "https://www.golden-face-ratio.com/about",
+  "https://www.golden-face-ratio.com/contact",
+  "https://www.golden-face-ratio.com/privacy",
+  "https://www.golden-face-ratio.com/disclaimer",
+  "https://www.golden-face-ratio.com/terms",
+  "https://www.golden-face-ratio.com/blog/looksmaxing-guide",
+  "https://www.golden-face-ratio.com/blog/beauty-score-calculator-explained",
+  "https://www.golden-face-ratio.com/blog/fibonacci-face-1618-beauty",
+  "https://www.golden-face-ratio.com/blog/how-is-beauty-measured-science",
+  "https://www.golden-face-ratio.com/blog/ideal-face-proportions-measurement-guide",
+  "https://www.golden-face-ratio.com/blog/chin-to-philtrum-ratio-calculator",
+  "https://www.golden-face-ratio.com/blog/face-shape-calculator-measurements",
+  "https://www.golden-face-ratio.com/blog/facial-thirds-calculator-guide",
+  "https://www.golden-face-ratio.com/blog/facial-width-to-height-ratio-fwhr",
+  "https://www.golden-face-ratio.com/blog/qoves-faceiqlabs-free-alternatives",
+  "https://www.golden-face-ratio.com/blog/best-products-to-enhance-golden-ratio-face",
+  "https://www.golden-face-ratio.com/blog/eye-spacing-ratio-explained",
+  "https://www.golden-face-ratio.com/blog/golden-ratio-side-profile-analysis",
+  "https://www.golden-face-ratio.com/blog/midface-ratio-explained",
+  "https://www.golden-face-ratio.com/blog/perfect-face-ratio-myth",
+  "https://www.golden-face-ratio.com/blog/what-is-a-good-golden-ratio-face-score",
+  "https://www.golden-face-ratio.com/blog/facial-harmony-score-explained",
+  "https://www.golden-face-ratio.com/blog/what-is-the-golden-ratio-face",
+  "https://www.golden-face-ratio.com/blog/golden-ratio-face-test",
+  "https://www.golden-face-ratio.com/blog/how-to-measure-golden-ratio-face",
+  "https://www.golden-face-ratio.com/blog/best-golden-ratio-face-apps",
+  "https://www.golden-face-ratio.com/blog/upload-photo-golden-ratio-analysis",
+  "https://www.golden-face-ratio.com/blog/golden-ratio-face-symmetry",
+  "https://www.golden-face-ratio.com/blog/1618-face-proportion-explained",
+  "https://www.golden-face-ratio.com/blog/celebrities-golden-ratio-faces",
+  "https://www.golden-face-ratio.com/blog/golden-ratio-face-plastic-surgery",
+  "https://www.golden-face-ratio.com/blog/golden-ratio-makeup-techniques",
+  "https://www.golden-face-ratio.com/blog/golden-ratio-face-across-ethnicities",
+  "https://www.golden-face-ratio.com/blog/golden-ratio-face-aging",
+  "https://www.golden-face-ratio.com/blog/golden-ratio-face-beauty-standards",
+  "https://www.golden-face-ratio.com/blog/free-golden-ratio-face-calculator",
+  "https://www.golden-face-ratio.com/blog/ai-golden-ratio-face-analysis",
+  "https://www.golden-face-ratio.com/blog/history-of-golden-ratio-in-beauty",
+  "https://www.golden-face-ratio.com/blog/science-of-facial-attractiveness"
+ ],
+ "stats": {
+  "total_loc": 42,
+  "pages": 42,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

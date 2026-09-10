@@ -1,0 +1,74 @@
+{
+ "domain": "lookmax-analyzer.com",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://lookmax-analyzer.com/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://lookmax-analyzer.com/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 48
+  }
+ ],
+ "page_urls": [
+  "https://lookmax-analyzer.com/",
+  "https://lookmax-analyzer.com/tools",
+  "https://lookmax-analyzer.com/looksmaxing-test",
+  "https://lookmax-analyzer.com/looksmax-report",
+  "https://lookmax-analyzer.com/pricing",
+  "https://lookmax-analyzer.com/is-my-face-attractive",
+  "https://lookmax-analyzer.com/face-shape-detector",
+  "https://lookmax-analyzer.com/face-symmetry-test",
+  "https://lookmax-analyzer.com/jawline-analyzer",
+  "https://lookmax-analyzer.com/canthal-tilt-calculator",
+  "https://lookmax-analyzer.com/looksmaxxingpedia",
+  "https://lookmax-analyzer.com/about",
+  "https://lookmax-analyzer.com/methodology",
+  "https://lookmax-analyzer.com/faq",
+  "https://lookmax-analyzer.com/contact",
+  "https://lookmax-analyzer.com/privacy",
+  "https://lookmax-analyzer.com/terms",
+  "https://lookmax-analyzer.com/blog",
+  "https://lookmax-analyzer.com/is-5-10-attractive",
+  "https://lookmax-analyzer.com/is-6-10-attractive",
+  "https://lookmax-analyzer.com/is-7-10-attractive",
+  "https://lookmax-analyzer.com/is-8-10-attractive",
+  "https://lookmax-analyzer.com/blog/cheekbones",
+  "https://lookmax-analyzer.com/blog/eyes",
+  "https://lookmax-analyzer.com/blog/how-face-score-is-calculated",
+  "https://lookmax-analyzer.com/blog/how-to-take-good-face-photo",
+  "https://lookmax-analyzer.com/blog/jawline",
+  "https://lookmax-analyzer.com/blog/minoxidil-myths-truths",
+  "https://lookmax-analyzer.com/blog/proportions",
+  "https://lookmax-analyzer.com/blog/symmetry",
+  "https://lookmax-analyzer.com/blog/tiktok-face-check-problem-confidence",
+  "https://lookmax-analyzer.com/blog/top-5-facial-features-that-affect-attractiveness",
+  "https://lookmax-analyzer.com/blog/why-beauty-matters",
+  "https://lookmax-analyzer.com/blog/why-face-score-changes-different-apps",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/mogging",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/chad",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/hunter-eyes",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/canthal-tilt",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/facial-harmony",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/facial-thirds",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/recessed-chin",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/jawline",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/cheekbones",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/eye-area",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/midface",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/forward-growth",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/psl",
+  "https://lookmax-analyzer.com/looksmaxxingpedia/smv"
+ ],
+ "stats": {
+  "total_loc": 48,
+  "pages": 48,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

@@ -116,7 +116,11 @@ AI 推荐 → 用户直接搜索品牌名 → 进入品牌官网 → 快速完�
 
 **71%的引用来源只在1个平台上出现** → 必须分别优化每个平台。
 
-**ChatGPT 与 Bing 的强绑定**：**87% 的 ChatGPT 引用对应 Bing 搜索 Top 10 结果**（controlaltdigital 2026）。这意味着 Bing SEO 是影响 ChatGPT 引用的最直接杠杆——在 Bing 排名好 = 在 ChatGPT 可见性高。
+**ChatGPT 与 Bing 的强绑定（2026-09 已修正）**：早期研究称 **87% 的 ChatGPT 引用对应 Bing 搜索 Top 10 结果**（controlaltdigital 2026）。但 peec.ai 2026-09 对 ChatGPT 服务端事件流的分析证实 **ChatGPT 运行自建索引 Labrador**（`result_source` 字段四值：Labrador / Bright / Oxylabs / SERP），配 **12 个垂直索引**（通用网页/PDF/YouTube/新闻/arXiv/Wikipedia/本地/金融/法律/医疗/购物/图片），外部数据源至少 8 家（Bright Data、Oxylabs、微软 Web IQ、Yelp/TripAdvisor 授权等），Bing 主要只出现在 Deep Research 场景；购物检索栈含 BM25 词法筛选 + 400 候选重排 + 12,288/4,096 维 ANN 向量检索（自有爬虫速度约 35,000 请求/小时）。**"Bing 排名 = ChatGPT 可见性"的代理逻辑已失效，只能直接观察 ChatGPT 引用行为**。
+
+> **Labrador 独立佐证（2026-09 交叉验证）**：Tomek Rudzki、Search Engine Watch、Digital Yeast 等独立确认（非 peec 单源）；Advanced Web Ranking 提示 OpenAI 文档承认 robots.txt 规则**部分场景不约束** ChatGPT 浏览行为。**Resoneo 分析 1,249 条 ChatGPT 回答发现：授权/小站在 Labrador 自有索引下可能获得比传统 Google 排名更公平的曝光**——对小站工具站是结构性利好。
+
+配套事实：ChatGPT 购物结果已 **100% 来自商品 feed**（流量带 `utm_medium=feed&utm_source=chatgpt.com`；提交入口 chatgpt.com/merchants——**2026-09 时点为申请表+候补名单制**，商家自助平台"今年晚些时候"推出。⚠️ "100%/Google 数据退出"为 Juozas 单一一手源，方向受多源支持但精确比例未证实）；本地类引用优先走 Yelp/TripAdvisor 授权数据；**锁定模式提问可自查页面是否已进 Labrador 缓存**。购物数据演进时间线（Juozas Kaziukėnas 系列观察，勿混淆新旧状态）：2025 抓取 Google Shopping（Semrush 实验证实、当时 83% 产品来自 Google）→ 2026 自建 merchant dashboard + feed 体系 + browsable catalog / Instant Cart / sponsored products → 2026-09 起 100% 自有 feed、Google Shopping 数据退出。**品类限制（官方明文，2026-06-24 版 OpenAI Commerce Policies，rosetoys 会话 CDP 实抓）**：成人性用品（含 sex toys 与 fetish 类产品）禁止进入所有商业面（产品列表/feeds/merchant/链接网页），且申请被拒可能留负面商家记录；同类对照：Google/Microsoft Shopping 受限允许（可开 adult 设置），Meta 禁止。**品类政策是 feed 渠道的前置门禁——先查政策再动工**（完整评估见 04-选品库/C端/06-情趣内衣/20-rosetoys站现状审计.md §9）。
 
 **各平台引用风格差异**（GenOptima 2026.03 实测数据）：
 
@@ -458,6 +462,26 @@ AI 更容易引用结构化的、可拆解的内容，而非叙事流畅但结�
 - **"终极指南"模式有害**：大而全反而降低引用率，精准聚焦更有效
 
 ---
+
+### ChatGPT 引用 20 因素：SE Ranking 12.9 万域名研究（2025-11）
+
+> 来源：SE Ranking，129,000 域名 / 216,524 页面 / 20 垂直 / 100,000 条 ChatGPT prompt，XGBoost + SHAP 量化各因素贡献
+
+| 因素 | 关键数据 | 含义 |
+|------|---------|------|
+| **引用域名数（最强信号）** | >32K 是 ≤200 的 **3.5 倍**；跨 32K 阈值平均引用从 2.9 跳到 5.6 | 外链基本面仍是引用第一驱动 |
+| 域名流量 | 10M+ 月访客 8.5 次 vs <190K 的 2-2.9 次 | — |
+| 域名信任度 | DT>90 ≈ DT<43 的 **4 倍**；.gov/.edu 仅 3.2 次（低于非信任区 4 次） | 内容质量胜过域名后缀 |
+| Google 可见性 | 前 45 位 5 次 vs 64-75 位 3.1 次 | 传统 SEO 仍是地基（与 r=0.720 互证） |
+| 内容深度 | >2,900 词 5.1 vs <800 词 3.2；统计事实 ≥19 个 5.4 vs 2.8 | 与 Princeton"数值数据"支柱互证 |
+| **更新新鲜度** | 近 3 月更新 **6.0 vs 3.6** | 与"3 个月新鲜度悬崖"互证 |
+| **反直觉：标题/URL 关键词堆砌负相关** | URL 语义相关性最高（0.84-1.00）仅 **2.7 次** vs 最低（0-0.57）**6.4 次**；标题同理 2.8 vs 5.9 | 清晰描述主题 > 关键词匹配；Google"不要为 AI 搜索单独改写"的又一实证 |
+| llms.txt | "删掉反而提升预测精度"（removing it improved predictive accuracy） | 与 Google 官方否定、Otterly 实验互证 |
+| FAQ schema | 有 3.6 vs 无 4.2 | 与 Otterly"Schema 是 SEO 杠杆非 GEO 杠杆"互证 |
+| 评论平台矩阵 | Trustpilot/G2/Capterra/Sitejabber/Yelp 多平台入驻 4.6-6.3 vs 缺失 1.8（**3 倍**） | 小站缺外链时的"信任倍增器" |
+| Quora/Reddit 提及 | Quora 提及 ≤33 次 1.7 → 6.6M 次 7.0 | 品牌提及的规模效应 |
+
+**作者结论**："What really drives ChatGPT citations are the fundamentals"——外链、信任度、流量、深度清晰的内容；社交提及锦上添花；llms.txt / AI 专用 schema 等"快捷技巧"基本无效。各因素相互依赖，单点过度优化反而降低整体效果。
 
 ## 内容优化实操
 
@@ -911,7 +935,7 @@ Bing将AI检索词分为**15种意图类型**：Comparison、Research、Informat
 
 ## SEO Week 关键研究
 
-> 详细内容见 [07-SEO-Week核心知识.md](./07-SEO-Week核心知识.md)
+> 原 07 号独立文档已删除，SEO Week 结论性内容已并入本文件与 09
 
 | 演讲者 | 核心发现 |
 |--------|---------|
@@ -1025,8 +1049,7 @@ Bing将AI检索词分为**15种意图类型**：Comparison、Research、Informat
 
 - [01-内容质量标准.md](./01-内容质量标准.md) — 写作标准和流程
 - [04-实体与知识图谱理论.md](./04-实体与知识图谱理论.md) — 实体优化工作流
-- [05-SEO测量危机与新指标.md](./05-SEO测量危机与新指标.md) — AI可见性测量体系
-- [07-SEO-Week核心知识.md](./07-SEO-Week核心知识.md) — SEO Week详细内容
+- [05-SEO测量危机与新指标.md](./05-SEO测量危机与新指标.md) — AI可见性测量体系（含附录：SEO漂移监控）
 
 ---
 

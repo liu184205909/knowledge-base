@@ -1,0 +1,48 @@
+{
+ "domain": "faceshapelab.com",
+ "discovered_via": "probe",
+ "sitemap_urls": [
+  "https://faceshapelab.com/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://faceshapelab.com/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 22
+  }
+ ],
+ "page_urls": [
+  "https://faceshapelab.com/",
+  "https://faceshapelab.com/eye-shape-detector/",
+  "https://faceshapelab.com/nose-shape-detector/",
+  "https://faceshapelab.com/lip-shape-detector/",
+  "https://faceshapelab.com/face-symmetry-detector/",
+  "https://faceshapelab.com/golden-ratio-face/",
+  "https://faceshapelab.com/color-analysis-quiz/",
+  "https://faceshapelab.com/skin-tone-analyzer/",
+  "https://faceshapelab.com/body-shape-calculator/",
+  "https://faceshapelab.com/body-type-calculator/",
+  "https://faceshapelab.com/kibbe-body-types/",
+  "https://faceshapelab.com/kibbe-body-type-test/",
+  "https://faceshapelab.com/face-age-detector/",
+  "https://faceshapelab.com/face-emotion-detector/",
+  "https://faceshapelab.com/similar-faces/",
+  "https://faceshapelab.com/blog/",
+  "https://faceshapelab.com/faqs/",
+  "https://faceshapelab.com/about-us/",
+  "https://faceshapelab.com/contact-us/",
+  "https://faceshapelab.com/pricing/",
+  "https://faceshapelab.com/privacy-policy/",
+  "https://faceshapelab.com/disclaimer/"
+ ],
+ "stats": {
+  "total_loc": 22,
+  "pages": 22,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

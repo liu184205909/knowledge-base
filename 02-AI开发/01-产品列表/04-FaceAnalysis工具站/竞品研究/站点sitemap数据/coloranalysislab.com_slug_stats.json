@@ -1,0 +1,39 @@
+{
+ "url_total": 32,
+ "page_types": {
+  "static_page_or_hub": 18,
+  "blog_post": 10,
+  "tool": 4
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 9,
+  "2": 22
+ },
+ "top_level_dirs": {
+  "/result": 12,
+  "/blog": 11,
+  "/ (root)": 1,
+  "/colour-analysis-quiz": 1,
+  "/gold-or-silver-test": 1,
+  "/hair-color-quiz": 1,
+  "/photo": 1,
+  "/privacy": 1,
+  "/terms": 1,
+  "/undertone-test": 1,
+  "/what-colors-look-good-on-me": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://coloranalysislab.com",
+  "https://coloranalysislab.com/blog",
+  "https://coloranalysislab.com/blog/12-season-color-analysis",
+  "https://coloranalysislab.com/blog/16-season-color-analysis",
+  "https://coloranalysislab.com/blog/ai-color-analysis",
+  "https://coloranalysislab.com/blog/beige-skin-tone-colors",
+  "https://coloranalysislab.com/blog/best-colors-for-pale-skin",
+  "https://coloranalysislab.com/blog/colors-for-olive-skin",
+  "https://coloranalysislab.com/blog/cool-skin-tone-colors",
+  "https://coloranalysislab.com/blog/dark-skin-tone-color-palette"
+ ]
+}

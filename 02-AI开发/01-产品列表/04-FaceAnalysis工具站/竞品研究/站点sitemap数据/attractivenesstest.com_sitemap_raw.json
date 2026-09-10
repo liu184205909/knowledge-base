@@ -1,0 +1,62 @@
+{
+ "domain": "attractivenesstest.com",
+ "discovered_via": "probe",
+ "sitemap_urls": [
+  "https://attractivenesstest.com/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://attractivenesstest.com/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 32
+  }
+ ],
+ "page_urls": [
+  "https://attractivenesstest.com/",
+  "https://attractivenesstest.com/app",
+  "https://attractivenesstest.com/api",
+  "https://attractivenesstest.com/ethnicity-test/",
+  "https://attractivenesstest.com/looksmax",
+  "https://attractivenesstest.com/face_shape",
+  "https://attractivenesstest.com/golden-ratio-test",
+  "https://attractivenesstest.com/facial-symmetry-test",
+  "https://attractivenesstest.com/interpupillary-distance-test",
+  "https://attractivenesstest.com/all-ai-tools",
+  "https://attractivenesstest.com/science",
+  "https://attractivenesstest.com/blog/How%20the%20app%20works",
+  "https://attractivenesstest.com/blog/Statistics%20of%20the%20results",
+  "https://attractivenesstest.com/blog/How%20to%20Appear%20more%20Attractive",
+  "https://attractivenesstest.com/blog",
+  "https://attractivenesstest.com/privacy-policy",
+  "https://attractivenesstest.com/terms-of-use",
+  "https://attractivenesstest.com/contact",
+  "https://attractivenesstest.com/about-us",
+  "https://attractivenesstest.com/de/",
+  "https://attractivenesstest.com/es/",
+  "https://attractivenesstest.com/fr/",
+  "https://attractivenesstest.com/looksmax/app",
+  "https://attractivenesstest.com/blog/Science%20of%20attractiveness",
+  "https://attractivenesstest.com/blog/How%20to%20Truly%20Look%20Attractive%20in%20your%20Next%20Photo",
+  "https://attractivenesstest.com/blog/How%20to%20get%20more%20matches%20on%20dating%20apps",
+  "https://attractivenesstest.com/blog/How%20to%20look%20and%20feel%20younger",
+  "https://attractivenesstest.com/blog/The%20Ultimate%20Guide%20to%20Facial%20Symmetry",
+  "https://attractivenesstest.com/blog/What%20is%20Attractiveness",
+  "https://attractivenesstest.com/ethnicity-test/de/",
+  "https://attractivenesstest.com/ethnicity-test/es/",
+  "https://attractivenesstest.com/ethnicity-test/fr/"
+ ],
+ "stats": {
+  "total_loc": 32,
+  "pages": 32,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {
+   "de": 1,
+   "es": 1,
+   "fr": 1
+  }
+ }
+}

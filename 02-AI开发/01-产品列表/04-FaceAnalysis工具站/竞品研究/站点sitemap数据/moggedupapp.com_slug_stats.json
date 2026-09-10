@@ -1,0 +1,44 @@
+{
+ "url_total": 249,
+ "page_types": {
+  "static_page_or_hub": 129,
+  "blog_post": 31,
+  "tool": 89
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 38,
+  "2": 106,
+  "3": 104
+ },
+ "top_level_dirs": {
+  "/blog": 31,
+  "/da": 20,
+  "/de": 20,
+  "/es": 20,
+  "/fr": 20,
+  "/it": 20,
+  "/pl": 20,
+  "/pt": 20,
+  "/sv": 20,
+  "/tools": 15,
+  "/glossary": 8,
+  "/features": 6,
+  "/guide": 2,
+  "/ (root)": 1,
+  "/chin-tucks": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://moggedupapp.com/",
+  "https://moggedupapp.com/blog",
+  "https://moggedupapp.com/blog/7-real-posture-correction-before-and-after-transformations",
+  "https://moggedupapp.com/blog/8-essential-posture-exercises-for-men-to-stand-taller-in-2025",
+  "https://moggedupapp.com/blog/a-man-s-guide-to-jawline-exercises-that-actually-work",
+  "https://moggedupapp.com/blog/a-no-nonsense-daily-skincare-routine-for-men",
+  "https://moggedupapp.com/blog/achieve-a-defined-jawline-with-jaw-strengthening-exercises",
+  "https://moggedupapp.com/blog/asymmetrical-face-treatment-your-definitive-guide",
+  "https://moggedupapp.com/blog/before-and-after-chin-exercises",
+  "https://moggedupapp.com/blog/facial-exercises-for-neck-your-jawline-sculpting-guide"
+ ]
+}

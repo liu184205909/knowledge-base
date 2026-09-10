@@ -1,0 +1,55 @@
+{
+ "domain": "bodyshapereport.com",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://bodyshapereport.com/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://bodyshapereport.com/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 29
+  }
+ ],
+ "page_urls": [
+  "https://bodyshapereport.com",
+  "https://bodyshapereport.com/body-shape-calculator",
+  "https://bodyshapereport.com/body-shape-analyzer",
+  "https://bodyshapereport.com/body-type-quiz",
+  "https://bodyshapereport.com/kibbe-body-type-quiz",
+  "https://bodyshapereport.com/shapes/hourglass",
+  "https://bodyshapereport.com/shapes/pear",
+  "https://bodyshapereport.com/shapes/apple",
+  "https://bodyshapereport.com/shapes/rectangle",
+  "https://bodyshapereport.com/shapes/inverted-triangle",
+  "https://bodyshapereport.com/shapes/spoon",
+  "https://bodyshapereport.com/kibbe/dramatic",
+  "https://bodyshapereport.com/kibbe/soft-dramatic",
+  "https://bodyshapereport.com/kibbe/flamboyant-natural",
+  "https://bodyshapereport.com/kibbe/natural",
+  "https://bodyshapereport.com/kibbe/soft-natural",
+  "https://bodyshapereport.com/kibbe/dramatic-classic",
+  "https://bodyshapereport.com/kibbe/classic",
+  "https://bodyshapereport.com/kibbe/soft-classic",
+  "https://bodyshapereport.com/kibbe/flamboyant-gamine",
+  "https://bodyshapereport.com/kibbe/gamine",
+  "https://bodyshapereport.com/kibbe/soft-gamine",
+  "https://bodyshapereport.com/kibbe/theatrical-romantic",
+  "https://bodyshapereport.com/kibbe/romantic",
+  "https://bodyshapereport.com/report",
+  "https://bodyshapereport.com/methodology",
+  "https://bodyshapereport.com/about",
+  "https://bodyshapereport.com/privacy",
+  "https://bodyshapereport.com/terms"
+ ],
+ "stats": {
+  "total_loc": 29,
+  "pages": 29,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

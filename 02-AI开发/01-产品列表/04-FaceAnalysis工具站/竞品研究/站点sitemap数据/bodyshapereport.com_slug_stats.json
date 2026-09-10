@@ -1,0 +1,39 @@
+{
+ "url_total": 29,
+ "page_types": {
+  "static_page_or_hub": 25,
+  "tool": 4
+ },
+ "depth_dist": {
+  "0": 1,
+  "1": 9,
+  "2": 19
+ },
+ "top_level_dirs": {
+  "/kibbe": 13,
+  "/shapes": 6,
+  "/ (root)": 1,
+  "/about": 1,
+  "/body-shape-analyzer": 1,
+  "/body-shape-calculator": 1,
+  "/body-type-quiz": 1,
+  "/kibbe-body-type-quiz": 1,
+  "/methodology": 1,
+  "/privacy": 1,
+  "/report": 1,
+  "/terms": 1
+ },
+ "discovered_via": "robots",
+ "sample_urls": [
+  "https://bodyshapereport.com",
+  "https://bodyshapereport.com/about",
+  "https://bodyshapereport.com/body-shape-analyzer",
+  "https://bodyshapereport.com/body-shape-calculator",
+  "https://bodyshapereport.com/body-type-quiz",
+  "https://bodyshapereport.com/kibbe-body-type-quiz",
+  "https://bodyshapereport.com/kibbe/classic",
+  "https://bodyshapereport.com/kibbe/dramatic",
+  "https://bodyshapereport.com/kibbe/dramatic-classic",
+  "https://bodyshapereport.com/kibbe/flamboyant-gamine"
+ ]
+}

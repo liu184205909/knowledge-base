@@ -1,0 +1,31 @@
+{
+ "domain": "eye-shapes.com",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://www.eye-shapes.com/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://www.eye-shapes.com/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 5
+  }
+ ],
+ "page_urls": [
+  "https://www.eye-shapes.com/",
+  "https://www.eye-shapes.com/blog",
+  "https://www.eye-shapes.com/blog/different-eye-shapes",
+  "https://www.eye-shapes.com/other-tools",
+  "https://www.eye-shapes.com/data_privacy"
+ ],
+ "stats": {
+  "total_loc": 5,
+  "pages": 5,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}

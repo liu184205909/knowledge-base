@@ -1,0 +1,35 @@
+{
+ "domain": "freepsl.com",
+ "discovered_via": "robots",
+ "sitemap_urls": [
+  "https://freepsl.com/sitemap.xml"
+ ],
+ "sitemap_sources": [
+  {
+   "url": "https://freepsl.com/sitemap.xml",
+   "status": "ok",
+   "type": "urlset",
+   "loc_count": 9
+  }
+ ],
+ "page_urls": [
+  "https://freepsl.com/",
+  "https://freepsl.com/hunter-eye-test",
+  "https://freepsl.com/psl-app",
+  "https://freepsl.com/pricing",
+  "https://freepsl.com/refunds",
+  "https://freepsl.com/about",
+  "https://freepsl.com/privacy",
+  "https://freepsl.com/terms",
+  "https://freepsl.com/contact"
+ ],
+ "stats": {
+  "total_loc": 9,
+  "pages": 9,
+  "excluded": {
+   "params": 0,
+   "asset": 0
+  },
+  "lang_prefix": {}
+ }
+}
