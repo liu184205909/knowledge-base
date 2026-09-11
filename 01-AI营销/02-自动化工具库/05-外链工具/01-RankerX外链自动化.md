@@ -44,11 +44,11 @@ POST 需 `Content-Type: application/json; charset=utf-8` + `Accept: application/
 1. `PUT /action/create/xcampaign` 的 body **不是明文 JSON，是 lz-string 压缩串**：`LZString.compressToEncodedURIComponent(JSON.stringify({saveWizard:false, wizard:<wizard对象>}))`（CDN：lz-string@1.5.0 动态加载进页面即可）。发明文 JSON 服务端直接 500 无信息
 2. wizard 对象从 `GET /rest/xwizards/{id}` 取，逐层改：`linksAndKeywords[i]`（urls/primaryKeyword/brandedKeyword + 五锚文本百分比；**tags 是字符串不是数组**，必填）、`content[i].contentGroupId`（**每层都要**，可共用一个组）、`campaignName`
 3. **`w.startDate = Date.now()` 必须设**（epoch 毫秒）——null 会导致调度器 "Invalid date"，32 个 project 永远 SCHEDULED 不执行（首跑踩坑实测，campaign 1 因此作废重建）；`w.nDay` 控制发完天数
-4. 服务端校验按序报错（200 + error 数组，有明确 message，可迭代修复）
-5. **硬门槛：Captcha 双开关都要配**——`autoSolveCaptcha:true + primaryZeroCaptchaInfo.captchaKey`（图片码）**且** `useGoogleNoCaptcha:true + googleNoCaptchaZeroCaptchaInfo.captchaKey`（reCAPTCHA），缺一创建被拒
-6. Options 写入协议：`POST /rest/options` body 是 **options 对象本身**（不带 {options:...} 外包装，包装版报 Server error）；保存后 `GET /action/check_balance/primary_captcha` 验余额
-7. 打码服务用 **0captcha.com（=RankerX 内置 ZeroCaptcha）**，2026-09 充值 $40+，image+google 双余额同 key
-8. campaign 建成后 project 自动排队（nextRun≈创建后5分钟），无需手动 start；`GET /action/start/project/{id}` 是 GET 非 POST
+4. **架构真相（2026-09-10 实测定案）：云端面板（xxx.rankerx.net）只是配置/监控层，执行引擎是桌面客户端**。官网只卖桌面软件（Win/Mac/Linux，$49.99/月），云端 project 手动 start 后返回 COMPLETED 但 **Accounts/Backlinks 全 Count=0（假完成）**——云端 worker 不会替你执行。campaign 全部配好后需装桌面版登录同账号，执行引擎在本地跑（用自己的 IP/代理）。project 手动启动三步：`GET /action/delete/schedule/{id}` → `GET /action/start/project/{id}` → 25 秒内标记 COMPLETED（仅指令层）
+5. 服务端校验按序报错（200 + error 数组，有明确 message，可迭代修复）
+6. **硬门槛：Captcha 双开关都要配**——`autoSolveCaptcha:true + primaryZeroCaptchaInfo.captchaKey`（图片码）**且** `useGoogleNoCaptcha:true + googleNoCaptchaZeroCaptchaInfo.captchaKey`（reCAPTCHA），缺一创建被拒
+7. Options 写入协议：`POST /rest/options` body 是 **options 对象本身**（不带 {options:...} 外包装，包装版报 Server error）；保存后 `GET /action/check_balance/primary_captcha` 验余额
+8. 打码服务用 **0captcha.com（=RankerX 内置 ZeroCaptcha）**，2026-09 充值 $40+，image+google 双余额同 key
 9. 会话内操作链全程 <10 分钟（session 时效），超时整页重载自愈后重来；**fetch hook 装两次会致栈溢出**，重装前先整页 reload；云端 *.rankerx.net 偶发全片 503 闪断，等 1-2 分钟自愈
 10. 文章批量导入：`POST /rest/upload_raw_articles_file_name_title/{groupId}`，multipart FormData 字段 `file`，文件名即标题，支持 HTML 内容
 11. XWizard 表单 UI 的 Ant Select tags 输入无法用合成事件填（chips 加不进），走 REST 路线绕开
