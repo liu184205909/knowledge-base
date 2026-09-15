@@ -2,7 +2,7 @@
 
 > **vehicleaid 实验线工具文档**：云端面板 REST API、账号策略、实验纪律 | 2026-09-09 CDP 实测建档
 >
-> 相关：[外链建设指南](../../01-营销方法论基础/05-外链建设/外链建设指南.md)（方法论层，白帽主力策略）；Web2.0 资产层实证结论出来后回填该指南，不提前写。
+> 相关：[外链建设指南](../../01-营销方法论基础/06-外链建设/外链建设指南.md)（方法论层，白帽主力策略）；Web2.0 资产层实证结论出来后回填该指南，不提前写。
 
 ---
 
@@ -89,7 +89,7 @@ POST 需 `Content-Type: application/json; charset=utf-8` + `Accept: application/
 
 **书签类高权重**：bitly PR93 df / flipboard PR91 df / instapaper PR85 df；google.* 系 73 个为 nofollow 重定向（引蜘蛛用，非权重）。
 
-**guest post：无此功能**。changelog（1.4.3.0→2.3.6.4 全版本）零 guest post 记录——guest post 属人工/付费投递，走[外链建设指南](../../01-营销方法论基础/05-外链建设/外链建设指南.md)白帽线，不在本工具范围。
+**guest post：无此功能**。changelog（1.4.3.0→2.3.6.4 全版本）零 guest post 记录——guest post 属人工/付费投递，走[外链建设指南](../../01-营销方法论基础/06-外链建设/外链建设指南.md)白帽线，不在本工具范围。
 
 **changelog 要点**（rankerx.com/homepage/rankerx-changelog/，桌面版版本号 1.x/2.x）：Tumblr/Wordpress 从"新增"列表缺席但在几十个版本的修复列表高频出现（长期支持+持续修引擎）；最新版 2.3.6.4 新增 Medium 风格文章平台、DA70+ 社区档案站；2.3.3.9 加自定义域名 Web2.0 模块。Blogspot 全 changelog 无记录（blogger.com 在池内可用）。
 

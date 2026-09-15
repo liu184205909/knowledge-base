@@ -24,6 +24,7 @@
 """
 import argparse
 import gzip
+import html
 import io
 import json
 import os
@@ -83,12 +84,21 @@ def is_index(body):
 
 
 def extract_locs(body):
-    # 精确匹配 <loc>, 不会误吃 <image:loc>; 兼容 CDATA
-    return re.findall(r"<loc>\s*(?:<!\[CDATA\[)?\s*([^<\]]+?)\s*(?:\]\]>)?\s*</loc>", body)
+    # 精确匹配 <loc>, 不会误吃 <image:loc>; 兼容 CDATA; 反转义 XML 实体(&amp; 等)
+    return [html.unescape(u) for u in
+            re.findall(r"<loc>\s*(?:<!\[CDATA\[)?\s*([^<\]]+?)\s*(?:\]\]>)?\s*</loc>", body)]
 
 
 def netloc(url):
     return urllib.parse.urlsplit(url).netloc.lower()
+
+
+def same_site(url, base_domain):
+    """同主域判定: 裸域或其子域(www./cdn. 等)都算同域, 防止 www 前缀导致误判跨域;
+    注意后缀必须带点边界, 否则 neonsigns.com.au 会被 neonsigns.com 误匹配."""
+    nl = netloc(url)
+    base = netloc("https://" + base_domain)
+    return nl == base or nl.endswith("." + base)
 
 
 def crawl(sitemap_url, base_domain, seen, sources, locs_out, depth=0):
@@ -111,7 +121,7 @@ def crawl(sitemap_url, base_domain, seen, sources, locs_out, depth=0):
                     "type": "index" if idx else "urlset", "loc_count": len(locs)})
     for loc in locs:
         if idx:
-            if netloc(loc) and netloc(loc) != netloc("https://" + base_domain):
+            if netloc(loc) and not same_site(loc, base_domain):
                 # 跨域 sitemap(常见于 CDN/子域分工): 记录不展开
                 if CROSS_DOMAIN == "record":
                     sources.append({"url": loc, "status": "cross-domain-skip"})

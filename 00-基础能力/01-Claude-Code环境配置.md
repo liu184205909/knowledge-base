@@ -179,7 +179,7 @@ npx skills add imlewc/video-to-subtitle-summary-skill --agent claude-code -y -g
 
 ### gsc-radar（GSC 数据驱动 SEO 工作流 — 自建）
 
-[配套方法论文档](../01-AI营销/01-营销方法论基础/10-GSC数据驱动SEO深度研究.md) | 基于 google-seo-mcp（必装+代理补丁）
+[配套方法论文档](../01-AI营销/01-营销方法论基础/01-SEO全链路工作流.md) | 基于 google-seo-mcp（必装+代理补丁）
 
 **定位**：GSC 数据驱动的 SEO 自动化，**单 skill 两阶段**。阶段1扫描（quick_wins/ctr_opportunities/content_decay/traffic_drops/cannibalization + 品牌词过滤 → 出「本周优化清单」）；阶段2深挖（针对目标拉 SERP+AI Overview+竞品 top3 → 生成具体改进：改 title/H1/补子主题/内链）。把"发现机会→诊断→生成改进→验证闭环"自动化。
 

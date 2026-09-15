@@ -1,3 +1,283 @@
+# SEO 全链路工作流（三合一：SEO全链路 + GSC数据驱动 + GEO五段布局）
+
+> **定位**：SEO 与 GEO 的操作工作流合集——项目各阶段照此执行。三部分各自独立成章：
+> 第 I 部分 SEO 全链路七步闭环 ｜ 第 II 部分 GSC 数据驱动分析方法论 ｜ 第 III 部分 C 端 GEO 五段旅程布局
+> **知识层依据**（机制/研究/数据）在 [03-SEO与GEO/](../../03-SEO与GEO/README.md)，本文只管"何时做什么"。
+> 2026-09-14 由 02/10/20 三文档合并。配套脚本（已迁工具库）：[13-SEO审计脚本包](../../02-自动化工具库/13-SEO审计脚本包/README.md)（keyword_cannibalization_checker / onpage_seo_checker / seo_technical_auditor）
+
+---
+
+
+<!-- ======== 第 I 部分：SEO 全链路工作流（原 01-SEO全链路工作流.md，2026-09-14 并入）======== -->
+
+# SEO 全链路工作流
+
+> 基于 Claude Code + Skills + MCP 构建的七步闭环 SEO 工作流。
+
+---
+
+## 与 RLM 流程的关系
+
+本文件不替代 RLM 的竞品分析、网站规划和内容策略。它主要用于两个场景：
+
+1. **网站上线前**：检查技术 SEO、页面结构、Schema、Sitemap、性能、移动端体验
+2. **网站上线后**：监控索引、排名、流量、外链、内容质量和竞品变化
+
+**输入/输出关系**：
+- RLM 产出的关键词库、网站规划、内容清单 → 是本工作流的输入
+- 本工作流产出的审计报告、修复清单、监控报告 → 反向更新 RLM 的策略和内容优先级
+
+---
+
+## 工作流总览
+
+```
+Audit → Strategy → Optimization → Content → Quality → Monitoring → Delivery
+ 诊断     规划         修复         生产      质控       监控         交付
+```
+
+所有步骤均可在 Claude Code 中用自然语言调用对应 Skill 完成，无需编写代码。
+
+### 按项目阶段选择流程
+
+不是每个项目都需要完整跑七步。根据当前阶段选择执行范围：
+
+| 场景 | 应执行步骤 | 可暂缓 |
+|------|----------|--------|
+| 新站上线前 | Audit → Optimization → Quality → Delivery | Monitoring 上线后再做 |
+| 已上线但没流量 | Audit → Strategy → Content → Monitoring | Delivery 可简化 |
+| 已有流量要增长 | Strategy → Content → Quality → Monitoring | 基础 Audit 可抽样 |
+| 流量下跌 | Audit → Monitoring → Optimization | 新内容生产可暂缓 |
+
+---
+
+## 第一步：Site Audit（网站审计）
+
+**做什么：** 全面诊断网站的技术结构、内容质量、On-page SEO、图片优化、Schema 部署等维度。
+
+**用什么 Skill：**
+
+| Skill | 诊断维度 |
+|-------|---------|
+| seo-technical | 可爬取性、索引状态、安全性、移动适配、Core Web Vitals |
+| seo-visual | 首屏内容分析、移动端渲染、图片/视频审计 |
+| seo-schema | 结构化数据检测与验证（JSON-LD） |
+| seo-sitemap | XML Sitemap 验证与质量检查 |
+| seo-performance | Core Web Vitals 实测（LCP/FID/CLS） |
+
+**产出物：** 完整审计报告，可交付客户（Fiverr 同类服务参考价 $195）。
+
+---
+
+## 第二步：Strategy（战略规划）
+
+**做什么：** 基于审计结果，生成可执行的 SEO 路线图，包括关键词策略、内容矩阵、Local SEO、Content Pillar 结构。
+
+**用什么 Skill：**
+
+| Skill | 规划维度 |
+|-------|---------|
+| seo-dataforseo | SERP 数据分析、关键词指标、竞品对比 |
+| seo-google | GSC 流量数据、CrUX 真实用户指标、索引状态 |
+| seo-local | GBP 信号、NAP 一致性、Local Schema、竞品分析 |
+| seo-maps | 地理网格排名追踪、GBP 审计、评论分析 |
+| blog-persona | 目标用户画像构建 |
+| blog-calendar | 内容日历规划 |
+
+**产出物：** 12 周路线图（含每周任务、优先级、KPI）。
+
+### 发布顺序策略
+
+内容发布顺序直接影响 thematic foundation 的建立速度。核心原则：**先覆盖低竞争子主题建立主题权威 → 再冲高搜索量核心词**。
+
+| 批次 | 时间 | 内容 | 目的 |
+|------|------|------|------|
+| 第一批 | 第 1-4 周 | 每个集群的 3-5 个低竞争子主题页（长尾词、问题型查询） | 让搜索引擎理解网站的主题边界 |
+| 第二批 | 第 5-8 周 | 集群的 Pillar Page（支柱页） | 此时已有子页面通过内链支撑，Pillar Page 初始排名更有利 |
+| 第三批 | 第 9-12 周 | 高搜索量核心词页面 | 此时网站已积累 Q*（站级质量）的 thematic foundation |
+
+**为什么不能先冲核心词**：新站在搜索引擎没有主题理解之前直接冲高竞争词，初始排名很低（SegIndexer 低 tier），没有曝光 → 没有用户信号 → 继续低 tier（死循环）。先建覆盖再冲核心词，是用子主题的积累为核心词页面"铺路"。
+
+---
+
+## 第三步：Site Optimization（网站优化）
+
+**做什么：** 生成 Critical Issues 修复清单，每条问题附带 step-by-step 修复指南。
+
+**用什么 Skill：**
+
+| Skill | 修复维度 |
+|-------|---------|
+| seo-sitemap | 生成/验证 XML Sitemap、提交到 GSC |
+| seo-technical | robots.txt、meta 标签、canonical、HTTPS、重定向 |
+| seo-schema | 生成缺失的 Schema JSON-LD（Organization、FAQ、HowTo 等） |
+
+**产出物：** 按优先级排序的修复清单 + 每条修复指南。
+
+---
+
+## 第四步：Content Generation（内容生产）
+
+**做什么：** 按 Content Pillar 结构自动生成博客文章、产品页、FAQ 页面，内容自动插入结构化数据。
+
+**用什么 Skill：**
+
+| Skill | 生产环节 |
+|-------|---------|
+| blog-persona | 确定目标读者和语调 |
+| blog-brief | 生成内容需求文档（关键词、搜索意图、竞品分析） |
+| blog-outline | 生成文章大纲 |
+| blog | 按大纲生成长文内容 |
+| blog-schema | 为文章生成结构化数据（Article、FAQ、HowTo） |
+| blog-geo | 地理定向内容优化 |
+| seo-geo | GEO/AI 搜索优化（ChatGPT、Perplexity、AIO 引用就绪） |
+| seo-image-gen | OG/Social 预览图片分析与生成计划 |
+
+**产出物：** 带 Schema 的完整内容文件（Markdown / HTML）。
+
+---
+
+## 第五步：Quality Check（质量检测）
+
+**做什么：** 四层 AI 检测确保内容质量：非 AI 化、E-E-A-T 合规、关键词密度合理、搜索意图匹配。
+
+**用什么 Skill：**
+
+| Skill | 检测维度 |
+|-------|---------|
+| seo-content | E-E-A-T 信号、可读性、内容深度、薄内容检测 |
+| blog-audit | 内容审计（完整性、SEO 合规性） |
+| blog-factcheck | 事实核查 |
+| blog-cannibalization | 内容蚕食检测（避免内部竞争） |
+| blog-analyze | 文章综合分析 |
+
+**产出物：** 质量评分报告。低于标准自动触发重写，通过后才进入发布环节。
+
+---
+
+## 第六步：Monitoring（持续监控）
+
+> SEO 是持续性的，"做一次"不够。
+
+**做什么：** 持续追踪排名变化、流量波动、技术问题、竞品动态。
+
+**用什么 Skill：**
+
+| Skill | 监控维度 |
+|-------|---------|
+| alert-manager | 排名下降、流量异动、技术问题预警 |
+| seo-google | GSC 数据趋势（索引量、点击量、排名变化） |
+| seo-performance | Core Web Vitals 趋势 |
+| seo-backlinks | 外链增长/丢失监控 |
+| seo-dataforseo | 竞品排名追踪 |
+
+**产出物：** 周报/月报 + 异常告警。
+
+---
+
+## 第七步：Delivery（交付）
+
+**做什么：** 将所有产出物整理为可交付格式。
+
+**交付物清单：**
+
+| 交付物 | 格式 | 来源 |
+|--------|------|------|
+| 审计报告 | PDF | 第一步 audit 输出 |
+| 战略路线图 | PDF / Markdown | 第二步 strategy 输出 |
+| 修复清单 | Markdown | 第三步 optimization 输出 |
+| 内容文件 | Markdown + Schema JSON-LD | 第四步 content 输出 |
+| 质量报告 | PDF | 第五步 quality 输出 |
+| 监控仪表盘 | Interactive Dashboard | 第六步 monitoring 输出 |
+
+---
+
+## Skill 调用速查表
+
+```
+# 审计阶段
+seo-technical    → 技术审计
+seo-visual       → 视觉审计
+seo-schema       → 结构化数据审计
+seo-sitemap      → Sitemap 审计
+seo-performance  → 性能审计
+
+# 规划阶段
+seo-dataforseo   → 关键词/SERP 数据
+seo-google       → GSC/CrUX 数据
+seo-local        → 本地 SEO 规划
+seo-maps         → 地图排名规划
+blog-persona     → 用户画像
+blog-calendar    → 内容日历
+
+# 优化阶段
+seo-technical    → 技术修复
+seo-sitemap      → Sitemap 生成
+seo-schema       → Schema 生成
+
+# 内容阶段
+blog-brief       → 内容需求文档
+blog-outline     → 文章大纲
+blog             → 内容生成
+blog-schema      → 内容 Schema
+blog-geo         → 地理内容优化
+seo-geo          → AI 搜索优化
+seo-image-gen    → 图片分析与规划
+
+# 质控阶段
+seo-content      → E-E-A-T 审核
+blog-audit       → 内容审计
+blog-factcheck   → 事实核查
+blog-cannibalization → 蚕食检测
+
+# 监控阶段
+alert-manager    → 异常告警
+seo-google       → GSC 趋势
+seo-performance  → CWV 趋势
+seo-backlinks    → 外链监控
+seo-dataforseo   → 竞品追踪
+```
+
+---
+
+## MCP 工具配置
+
+本工作流依赖两个 MCP 数据源：
+
+| MCP Server | 定位 | 状态 | 安装指南 |
+|------------|------|------|----------|
+| **DataForSEO MCP** | 第三方 SEO 数据（关键词/SERP/趋势/竞品） | 必装 | [Claude Code 环境配置](../../00-基础能力/01-Claude-Code环境配置.md) |
+| **GSC MCP** (suganthan-gsc-mcp) | 自有网站数据（GSC 流量/索引/排名） | 后期按需安装 | [Claude Code 环境配置](../../00-基础能力/01-Claude-Code环境配置.md) |
+
+### DataForSEO MCP（必装）
+
+按查询付费（单次 < $0.01），覆盖工作流中 `seo-dataforseo` Skill 的所有数据需求。
+
+**核心模块：** `KEYWORDS_DATA`（关键词研究）+ `SERP`（搜索结果分析）
+
+**典型用途：**
+- 关键词搜索量、CPC、竞争度查询
+- Google/YouTube SERP 实时数据
+- Google Trends 趋势分析
+- 地区关注度与人群画像
+
+> 详见 [Claude Code 环境配置 - DataForSEO MCP 章节](../../00-基础能力/01-Claude-Code环境配置.md)
+
+### GSC MCP（后期按需）
+
+当网站接入 Google Search Console 后安装，用于读取自有网站的真实流量和索引数据。免费开源，内置 20 个工具（分析 11 + 监控 2 + 报告 3 + 索引 4）。
+
+> 详见 [Claude Code 环境配置](../../00-基础能力/01-Claude-Code环境配置.md)
+
+### 局限性
+
+- **AI 解读准确性**：MCP 返回的数据是精确的，但 AI 的解读可能出错（过度归因、编造解释）——需人工审核
+- **数据权限边界**：只能访问 API 暴露的数据，无法替代专业工具的私有数据库（如 Ahrefs 的外链库）
+- **API 费用控制**：AI Agent 自主运行时可能产生意外调用，需用 `ENABLED_MODULES` 限制范围
+
+
+<!-- ======== 第 II 部分：GSC 数据驱动 SEO 深度研究（原 01-SEO全链路工作流.md，2026-09-14 并入）======== -->
+
 # GSC 数据驱动 SEO 深度研究：方法论 × AI 自动化
 
 > 最后更新：2026-06-22 | 配套工具：google-seo-mcp（Mario 版）| 配套 skill：gsc-radar（建设中）
@@ -477,3 +757,276 @@ google-seo-mcp 是 100+ 工具的能力底座（14 大类），gsc-radar 目前�
 
 **反 AI 优先的实战**
 - [25K→80K clicks：最有效的自动化多不需要 AI](https://www.reddit.com/r/n8n/comments/1jeuzjg/automation_workflows_that_grew_my_traffic_from/)
+
+
+<!-- ======== 第 III 部分：C 端 GEO 五段旅程布局工作流（原 20-C端GEO五段旅程布局工作流.md，2026-09-14 并入）======== -->
+
+# C端项目 GEO 五段旅程布局工作流
+
+> **定位**：C 端项目的 GEO 布局必读工作流——立项前读（判断品类空间+提前布局基础设施）、内容排期读（五段配比）、运营复盘读（基线测试与缺口修补）
+> **适用场景**：任何 C 端独立站项目（B2C 实物/工具订阅）
+> **边界与衔接**：AI 引用机制与平台差异见 03-SEO与GEO/03；pSEO 规模化见 03-SEO与GEO/12；AISV 监测方法论见 03-SEO与GEO/13。本文只管"何时做什么"
+> **创建**：2026-09-14，基于交易意图 prompt 分类学专项调研（Profound 50M / OpenAI 官方论文 / Adobe 零售计量 / peec 50万商业 prompt 等多源，全量来源在文末）
+
+---
+
+## 为什么按"五段旅程"布局（定量锚点）
+
+| 数据点 | 数值 | 含义 |
+|---|---|---|
+| 交易型意图：传统搜索 vs ChatGPT | 0.6% → **6.1%**（约10倍，唯一在 AI 端放大的意图） | 购买问题正在涌进对话——交易段 prompt 就是出单位置 |
+| AI 引荐流量转化率 | 比非 AI 高 **42%**（Adobe，一年前还是低 38%，完全反转） | AI 流量少而精 |
+| 商业 prompt 触发实时搜索 | **53.5%**（信息型仅 18.7%） | 商业问题 AI 必联网=引用机会 |
+| 购买前平均 prompt 数 | **6.3 个**（22% 用户要 10+） | 单页打法失效，需整段覆盖 |
+| 用户最终选择 | **74% 选 AI 回答中提及最多的品牌** | 缺席=把名字让给竞品 |
+| 品类品牌格局 | **53.7% 品类无定局品牌**（prompt 间漂移严重） | 新站有机会，但单次测试是噪声 |
+| 购后搜索 AIO 触发率 | **94.4%（全漏斗最高）** | 购后内容=最低成本可见性位置 |
+| ChatGPT 购物卡数据源 | **100% 由 Google Shopping 有机 top40 解释**（Bing 仅~11%） | GMC feed 是购物卡开关；小品牌接入后最快一天出现 |
+
+## 五段 × 布局动作 × 时机（主表）
+
+| 段 | 典型 prompt 形态 | 布局动作 | 时机 |
+|---|---|---|---|
+| **1 发现** | best X for [use case] / X ideas / [price 约束]+品类（"under $200"前置）/ 场景化描述原话 | 非品牌词内容矩阵；标题与小节匹配 fanout 自动加词（best/review/2026/top/vs）；AI 端 fanout 会把 1 个头查询拆 4-20 个子查询——覆盖子意图而非主词 | 内容排期时：非品牌发现词占内容矩阵大头 |
+| **2 考虑** | X vs Y / best alternatives to [竞品] / does X support [条件] / [Brand A] vs [Brand B] for [persona] | 自有 head-to-head 对比页+诚实权衡表（不藏缺点的对比更易被引用）；Comparison 类 AIO 覆盖 93-97%，是必争位 | 建站后第一波内容：对比页+替代页 |
+| **3 决策** | is [brand] legit / worth it / why so expensive / should I wait for Black Friday / what payment plans | 公开价格、退货政策、真实评分（Trustpilot 等评论平台入驻=AI 敢推你的前提）；57.5% 用户被 AI 劝退过购买——负口碑会被放大 | 建站时：trust 页+评论平台账号；运营期持续养评分 |
+| **4 交易 ★** | where can I buy X / [裸品牌词] / how much is X / with delivery time / under $X + 规格 / near me + availability / [payment] 支持类 | **主战场在 feed 层与结构化数据，不在文章**：①GMC feed（购物卡开关）②服务端 JSON-LD Product+aggregateRating（缺评分类目下等于隐身，实测"开关级翻转"）③页面平文本化运费/交期/支付方式（AI 提取前提） | **建站时就要做**（最容易漏）：feed+schema 先于交易段内容 |
+| **5 购后** | how to clean X / can you machine wash X / what happens if I [cancel/return] / how to fix | 护理/清洁/退货 FAQ——AIO 触发率最高段+竞争几乎为零；捕获品牌词售后流量与复购 | 内容排期时：与发现段并行排，成本低优先做 |
+
+## 立项前检查（品类政策门禁，rosetoys 教训）
+
+**先查品类政策再动 feed**：OpenAI Commerce Policies 明文禁成人品类（所有商业面）；Google/Microsoft Shopping 受限允许（可开 adult 设置）。非受限品类（家居/工具/常规 B2C）无此问题，直接走 GMC。
+
+## 基线测试纪律（运营复盘用）
+
+1. 五段各 5-10 条 prompt（按本文形态库 × 项目品类词根组装），ChatGPT 锁定模式（查 Labrador 缓存收录）+ 普通模式各一轮
+2. 记录：品牌出现/被引用 URL/占位竞品——与 GSC 数据对照，分离"SEO 先行信号"与"GEO 缺口"
+3. 53.7% 品类无定局品牌 + prompt 间漂移 → 单轮结果只作基线，季度重测才成结论
+4. 商业意图对话占比 13.9%→19.2%（一年+38%）——趋势向上，基线值得每年重做
+
+## 主要来源（分级）
+
+- **官方一手**：OpenAI《How People Use ChatGPT》110万对话样本论文 / OpenAI shopping research（home-and-garden 为强项品类）
+- **研究机构**：Adobe Analytics 零售计量（AI 转化+42%）/ Bain & Sensor Tower（购物 prompt 增速与站内点击率 2.2%→5.7%）
+- **工具商一手**：Profound（50M prompt 意图分布/购物触发预测 1 亿 prompt）/ peec（50万商业 prompt 分类/AIO 分段触发率）/ Semrush（60万引用研究：74% 多提及获胜；2,338 消费者双向调查）
+- **社区实测**：Shopify 社区（feed/aggregateRating 开关级案例）/ CrazyEgg（120+ prompt 零自动成单→出单发生在点击零售商之后）
+- 推断构造的 prompt 示例（无一手研究覆盖的垂直品类）在各使用处单独标注，未混入上表
+
+
+<!-- ======== 第 IV 部分：SEO 漂移监控体系（原 05 号附录，2026-09-14 迁入）======== -->
+
+## 第 IV 部分：SEO 漂移监控体系
+
+> **定位**：内容上线后持续监控 SEO 信号变化（基线采集 + 对比检测 + 变化预警 + 漂移报告格式）。原 05 号附录迁入，全库引用请指本部分。架构参考：[codex-seo seo-drift workflow](https://github.com/AgriciDaniel/codex-seo)
+
+---
+
+## 一、为什么需要漂移监控
+
+| 场景 | 后果 | 漂移监控的作用 |
+|------|------|---------------|
+| CMS 更新覆盖了自定义 Meta | 排名下降但发现延迟数周 | 自动检测 Title/Meta 变更 |
+| 新增页面忘记加 Canonical | 重复内容稀释权重 | 检测 Canonical 缺失/变更 |
+| Schema 被主题更新破坏 | Rich Result 丢失 | 检测 Schema 类型/字段变化 |
+| H1 被 A/B 测试工具修改 | 页面主题信号弱化 | 检测标题层级变化 |
+| 内链结构被内容团队改动 | 权重流向改变 | 检测内链锚文本/数量变化 |
+| 竞手页面突然优化 | 你的排名被动下滑 | 定期对比竞手页面快照 |
+
+**核心原则**：优化不是一次性事件，而是一个需要持续监控的闭环。没有监控的优化 = 盲目优化。
+
+---
+
+## 二、监控信号体系
+
+### 2.1 信号分层
+
+```
+┌───────────────────────────────────────────────────┐
+│  P0 关键信号（任何变化都应预警）                      │
+│  • Title Tag                                      │
+│  • Meta Description                               │
+│  • Canonical URL                                  │
+│  • H1 标题                                        │
+│  • robots.txt（整站级）                             │
+│  • 页面 HTTP 状态码                                │
+├───────────────────────────────────────────────────┤
+│  P1 重要信号（显著变化应预警）                        │
+│  • Schema/Structured Data 类型与字段               │
+│  • H2-H3 标题层级                                  │
+│  • 内部链接数量（页面级）                            │
+│  • 图片 ALT 标签覆盖率                              │
+│  • hreflang 标签                                   │
+├───────────────────────────────────────────────────┤
+│  P2 趋势信号（定期审查，趋势异常时预警）              │
+│  • 页面字数                                        │
+│  • 外链数量（需要第三方数据）                        │
+│  • Core Web Vitals 指标                            │
+│  • 索引覆盖率（GSC）                                │
+│  • 关键词排名位置                                   │
+└───────────────────────────────────────────────────┘
+```
+
+### 2.2 每个信号的基线结构
+
+```json
+{
+  "url": "https://example.com/page",
+  "snapshot_date": "2026-06-11",
+  "signals": {
+    "title": "Example Page Title | Brand",
+    "meta_description": "160 chars description...",
+    "canonical": "https://example.com/page",
+    "h1": "Main Page Heading",
+    "h2_count": 5,
+    "schema_types": ["Article", "FAQPage"],
+    "internal_links": 12,
+    "external_links": 3,
+    "images_total": 8,
+    "images_with_alt": 7,
+    "status_code": 200,
+    "word_count": 1850,
+    "hreflang": ["en", "zh", "es"]
+  }
+}
+```
+
+---
+
+## 三、监控流程
+
+### 3.1 三阶段闭环
+
+```
+ 采集基线          对比检测          预警与修复
+ ─────────   →   ─────────   →   ──────────────
+ 首次全量抓取      定期增量抓取      变化报告 → 排查 → 修复 → 更新基线
+```
+
+### 3.2 采集频率建议
+
+| 信号类型 | 采集频率 | 理由 |
+|----------|---------|------|
+| P0 关键信号 | 每日或每次部署后 | 部署是高风险时刻 |
+| P1 重要信号 | 每周 | Schema 和内链变化通常不是瞬时的 |
+| P2 趋势信号 | 每月 | 排名和流量是滞后指标，月度足够 |
+| 竞手页面快照 | 每月 | 竞手变化频率通常低于自身 |
+
+### 3.3 基线管理规则
+
+1. **首次基线**：优化完成后 48 小时内采集，确认优化效果已生效
+2. **更新基线**：每次有意修改 SEO 元素后，手动触发基线更新（标注变更原因）
+3. **回滚基线**：如果修改导致排名下降，回滚到上一个已知良好的基线
+4. **版本管理**：保留最近 N 个基线快照（建议 N=10），用于趋势分析
+
+---
+
+## 四、漂移报告格式
+
+### 4.1 变更分类
+
+| 分类 | 含义 | 示例 |
+|------|------|------|
+| **changed** | 信号值发生变化 | Title 从 A 变为 B |
+| **missing** | 信号从有到无 | Schema 消失 |
+| **added** | 信号从无到有 | 新增 FAQPage Schema |
+| **regressed** | 信号质量下降 | ALT 覆盖率从 90% 降到 60% |
+| **improved** | 信号质量提升 | 字数从 800 增加到 1500 |
+
+### 4.2 报告模板
+
+```markdown
+# SEO Drift Report — 2026-06-11
+
+## 摘要
+- 检测页面：150
+- 有变化：12 页面（8%）
+- P0 变更：2 页面 ⚠️
+- P1 变更：5 页面
+- P2 变更：5 页面
+
+## P0 关键变更（需立即排查）
+
+| URL | 信号 | 旧值 | 新值 | 可能原因 |
+|-----|------|------|------|---------|
+| /products/a | title | "Product A - Brand" | "Product A" | CMS 模板更新 |
+| /blog/post-1 | canonical | /blog/post-1 | /blog/post-1?ref=newsletter | URL 参数泄漏 |
+
+## P1 重要变更
+
+| URL | 信号 | 变化类型 | 详情 |
+|-----|------|---------|------|
+| /about | schema | missing | Organization Schema 消失 |
+| /services | h2_count | changed | 8 → 3（内容被精简） |
+
+## 趋势（P2）
+...
+```
+
+---
+
+## 五、技术实现路径
+
+### 5.1 轻量级方案（推荐起步）
+
+```
+Python 脚本（复用 seo_technical_auditor.py 的检查逻辑）
+    ↓
+输出 JSON 快照 → 存入 .seo-cache/pages/{slug}/snapshots/
+    ↓
+diff 脚本对比相邻快照 → 生成 Markdown 报告
+    ↓
+报告推送到 Slack / 邮件 / GitHub Issue
+```
+
+**优势**：无需外部依赖，复用现有审计脚本。
+
+### 5.2 集成方案（规模化时）
+
+```
+爬虫调度器（Scrapy / Playwright）
+    ↓
+SEO 信号提取 → JSON 存储（SQLite / PostgreSQL）
+    ↓
+diff 引擎（信号对比 + 变更分类）
+    ↓
+告警路由（Slack / PagerDuty / GSC 邮件通知）
+    ↓
+Dashboard（Grafana / 自建面板）
+```
+
+### 5.3 与 codex-seo 架构的整合点
+
+基于 本文第 I 部分 中的架构规划：
+
+| 整合点 | 说明 |
+|--------|------|
+| `.seo-cache/` 共享缓存 | 漂移快照存入 `pages/{slug}/snapshots/`，其他 Skill 可复用基线数据 |
+| 条件式调度 | 检测到部署事件时自动触发漂移检查，而非固定周期 |
+| 基线即审计输入 | 技术审计 Skill 可直接读取最新快照作为"当前状态"，无需重新抓取 |
+
+---
+
+## 六、与知识库其他文档的关系
+
+| 文档 | 关系 |
+|------|------|
+| [01-内容质量标准](../../03-SEO与GEO/01-内容质量标准.md) | 质量标准定义了"什么是好的"，漂移监控检测"是否从好变差" |
+| [02-Google-SEO核心机制](../../03-SEO与GEO/02-Google-SEO核心机制.md) | 核心机制定义了 SEO 信号体系，漂移监控中的信号分类基于此 |
+| [08-内容审计与优化工具包](../03-内容生产与质检/04-内容审计与优化工具包.md) | 内容审计是定期全量检查，漂移监控是持续增量检查（互补） |
+| [10-内容可检索性框架](../../03-SEO与GEO/10-内容可检索性框架.md) | 可检索性是目标，漂移监控确保可检索性不被破坏 |
+| [13-AI搜索研究与Prompt执行库](../../03-SEO与GEO/13-AI搜索研究与Prompt执行库.md) | Prompt 执行库产出优化内容，漂移监控验证优化效果持久 |
+
+---
+
+## 七、实施优先级
+
+**当前状态**：架构设计阶段，未实施。
+
+**建议优先级**：中。等 SEO 项目实际执行并达到稳定优化状态后启动。过早实施会在内容频繁变动期产生大量噪音告警。
+
+**启动条件**：
+1. 核心 SEO 优化已落地（Title/Meta/Schema/H1 已优化完毕）
+2. 内容更新频率趋于稳定（非每日大量新页面上线）
+3. 有至少 1 个月的 GSC 数据基线
+
+**最小可行方案**：仅监控 P0 关键信号的 Title + Canonical + H1，覆盖首页 + Top 10 流量页面，每周一次。

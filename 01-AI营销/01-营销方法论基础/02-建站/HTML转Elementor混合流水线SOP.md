@@ -168,6 +168,7 @@ HTML 卡片的 :hover 效果必须映射到容器 **hover 控件**（对照源 C
 - [ ] **线上预览逐项确认**：卡片分列正确、Industries 等区块卡片数正确、section 间距正常、H1 数量 1、头尾（Theme Builder）在
 - [ ] 线上 HTML 抓取验证：`<h1` 计数 = 1；`data-elementor-type="header"` 存在；`page-header` 不存在
 - [ ] 移动端 375px：多列卡片堆叠 1 列
+- [ ] **桌面几何级列数实测**（2026-09-12 增：DOM 数量级验收放不过"CSS 零输出"崩坏）：playwright getBoundingClientRect 同 y 分组测关键区块列数，与原型对照逐项一致（hero 列数/卡片 grid/图文行）——agent 自验≠审核，施工后须独立几何验收
 
 **验收纪律**：数据层验证通过 ≠ 完成。凡"声明完成"，必须以线上预览为准。
 
@@ -193,6 +194,7 @@ HTML 卡片的 :hover 效果必须映射到容器 **hover 控件**（对照源 C
 | 用 find-element search_text 找图片 | 搜不到 image widget 嵌套的 image.url（假阴性） | 直接 curl 渲染 HTML grep 图文件名/attachment id |
 | 重导后不重跑 ③④⑤ | 之前线上修复全被清掉，间距/hover 失而复得地丢失 | 重导=全新导入，完整重走流程 |
 | 生图提示词写 "4:3" 等比例 | gpt-image-2 被诱导偏离 size 参数输出错尺寸 | 比例只由 aspect_ratio 控件控，提示词不提比例 |
+| **EMCP update-post 写结构化 HTML 到 post_content** | **EMCP 通道自定义 HTML 清洗剥除 div/class/main（class 185→0 实锤，结构塌成纯文本+wpautop 插 br=全站一列）**——clearfitfilters 30 张 page 实锤 2026-09-12 | 结构化 HTML 一律标准 WP REST 写入 + `<!-- wp:html -->` 包裹（免疫 wpautop）；EMCP 通道仅用于 Elementor JSON 操作 |
 | REST 建页后不补 `_elementor_edit_mode=builder` | Elementor 不接管，内容裸 HTML 零样式零 CSS（数据全对） | SQL INSERT wppi_postmeta（REST 写不持久） |
 | draft 页等 CSS 自动生成 | draft 前端不渲染，post-XX.css 永不生成 | publish 窗口渲染一次再切回（或 snippet 强制 clear_cache+Post::create） |
 
