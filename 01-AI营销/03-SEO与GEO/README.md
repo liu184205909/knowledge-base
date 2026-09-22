@@ -24,7 +24,8 @@
 ├── 16-PRNS链接权威与最短路径模型.md ← 外链/内链权威机制（专利+API Leak+DOJ三源）
 ├── 17-新站信任建立期与算法机制.md  ← 新站"沙盒现象"的算法组件诊断（NavBoost + PRNS + 置信度门槛）
 ├── 18-Twiddler框架与重排机制.md   ← Ascorer 之后的重排层（Superroot/Predoc vs Lazy/12+ 已具名 Twiddler）
-└── 19-叙事操纵与AI时代品牌防御.md ← 单点叙事捕获→Google+Reddit+LLM三信道污染（Codesmith案例）
+├── 19-叙事操纵与AI时代品牌防御.md ← 单点叙事捕获→Google+Reddit+LLM三信道污染（Codesmith案例）
+└── 20-知识面板实体工程-三路线与九路径.md ← 品牌获取Google知识面板（Entity Home/IMDb喂KG/鸭老师9手法实证/九路径帽色分级）
 ```
 
 > **执行层文档**（工作流、工具配置）已迁移至 [01-营销方法论基础/](../01-营销方法论基础/)

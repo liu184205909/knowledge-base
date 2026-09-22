@@ -16,16 +16,16 @@
 
 ---
 
-## 与 RLM 流程的关系
+## 与竞品研究流程的关系（2026-09-17 更新：原 RLM 母文档已删除）
 
-本文件不替代 RLM 的竞品分析、网站规划和内容策略。它主要用于两个场景：
+本文件不替代竞品研究与内容策略（竞研现行权威源：[竞品分析SOP](../01-竞品研究/竞品分析SOP.md)）。它主要用于两个场景：
 
 1. **网站上线前**：检查技术 SEO、页面结构、Schema、Sitemap、性能、移动端体验
 2. **网站上线后**：监控索引、排名、流量、外链、内容质量和竞品变化
 
 **输入/输出关系**：
-- RLM 产出的关键词库、网站规划、内容清单 → 是本工作流的输入
-- 本工作流产出的审计报告、修复清单、监控报告 → 反向更新 RLM 的策略和内容优先级
+- 竞品分析SOP 产出的关键词库、竞品档案、内容清单 → 是本工作流的输入
+- 本工作流产出的审计报告、修复清单、监控报告 → 反向更新竞研结论和内容优先级
 
 ---
 
@@ -36,7 +36,7 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
  诊断     规划         修复         生产      质控       监控         交付
 ```
 
-所有步骤均可在 Claude Code 中用自然语言调用对应 Skill 完成，无需编写代码。
+所有步骤均可在 Claude Code 中以自然语言驱动完成，无需手写代码。**工具形态说明**（2026-09-17 校订）：下文表中的 `seo-*` 系列为 **subagent（Agent 工具调用）而非 skill**，按名调用 skill 会找不到；内容生产与质检的操作权威层在 `03-内容生产与质检/`（02-生产SOP / 03-EEAT准入 / 04-审计工具包）；SERP/GSC 数据通道见下方"数据通道配置"节。
 
 ### 按项目阶段选择流程
 
@@ -55,9 +55,9 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 
 **做什么：** 全面诊断网站的技术结构、内容质量、On-page SEO、图片优化、Schema 部署等维度。
 
-**用什么 Skill：**
+**用什么 subagent：**
 
-| Skill | 诊断维度 |
+| subagent | 诊断维度 |
 |-------|---------|
 | seo-technical | 可爬取性、索引状态、安全性、移动适配、Core Web Vitals |
 | seo-visual | 首屏内容分析、移动端渲染、图片/视频审计 |
@@ -75,14 +75,14 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 
 **用什么 Skill：**
 
-| Skill | 规划维度 |
+| 工具 | 规划维度 |
 |-------|---------|
-| seo-dataforseo | SERP 数据分析、关键词指标、竞品对比 |
-| seo-google | GSC 流量数据、CrUX 真实用户指标、索引状态 |
-| seo-local | GBP 信号、NAP 一致性、Local Schema、竞品分析 |
-| seo-maps | 地理网格排名追踪、GBP 审计、评论分析 |
-| blog-persona | 目标用户画像构建 |
-| blog-calendar | 内容日历规划 |
+| Ubersuggest MCP `serp_analysis`（主用，见"数据通道配置"） | SERP 数据分析、关键词指标、竞品对比 |
+| seo-google（subagent） | GSC 流量数据、CrUX 真实用户指标、索引状态 |
+| seo-local（subagent） | GBP 信号、NAP 一致性、Local Schema、竞品分析 |
+| seo-maps（subagent） | 地理网格排名追踪、GBP 审计、评论分析 |
+
+> 旧版此表还列有 blog-persona / blog-calendar 两个 skill——不存在，已删（2026-09-17）。用户画像与内容排期在 Brief 阶段完成，操作见 [02-内容生产实操SOP §1](../03-内容生产与质检/02-内容生产实操SOP.md)。
 
 **产出物：** 12 周路线图（含每周任务、优先级、KPI）。
 
@@ -104,13 +104,13 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 
 **做什么：** 生成 Critical Issues 修复清单，每条问题附带 step-by-step 修复指南。
 
-**用什么 Skill：**
+**用什么 subagent：**
 
-| Skill | 修复维度 |
+| subagent | 修复维度 |
 |-------|---------|
 | seo-sitemap | 生成/验证 XML Sitemap、提交到 GSC |
 | seo-technical | robots.txt、meta 标签、canonical、HTTPS、重定向 |
-| seo-schema | 生成缺失的 Schema JSON-LD（Organization、FAQ、HowTo 等） |
+| seo-schema | 生成缺失的 Schema JSON-LD（Organization、Article 等） |
 
 **产出物：** 按优先级排序的修复清单 + 每条修复指南。
 
@@ -120,18 +120,16 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 
 **做什么：** 按 Content Pillar 结构自动生成博客文章、产品页、FAQ 页面，内容自动插入结构化数据。
 
-**用什么 Skill：**
+**用什么：**
 
-| Skill | 生产环节 |
-|-------|---------|
-| blog-persona | 确定目标读者和语调 |
-| blog-brief | 生成内容需求文档（关键词、搜索意图、竞品分析） |
-| blog-outline | 生成文章大纲 |
-| blog | 按大纲生成长文内容 |
-| blog-schema | 为文章生成结构化数据（Article、FAQ、HowTo） |
-| blog-geo | 地理定向内容优化 |
-| seo-geo | GEO/AI 搜索优化（ChatGPT、Perplexity、AIO 引用就绪） |
-| seo-image-gen | OG/Social 预览图片分析与生成计划 |
+| 环节 | 权威操作源 |
+|------|-----------|
+| Brief 锁定（七门槛）→ 写作 → 去AI化 → 事实核查 → 批量验收 | [02-内容生产实操SOP.md](../03-内容生产与质检/02-内容生产实操SOP.md)（同目录 03-内容生产与质检/，§1-§6 全链路） |
+| 质量标准与可检索性（Answer Capsule / Fan-out / Schema 主干） | [01-内容质量与可检索性标准.md](../03-内容生产与质检/01-内容质量与可检索性标准.md) |
+| seo-geo（subagent） | GEO/AI 搜索优化（ChatGPT、Perplexity、AIO 引用就绪） |
+| seo-image-gen（subagent） | OG/Social 预览图片分析与生成计划 |
+
+> 旧版此表列有 blog-persona / blog-brief / blog-outline / blog / blog-schema / blog-geo 六个 skill——均不存在（2026-09-17 实测 ~/.claude/skills/ 17 个 skill 全名单核对），已改指真实权威源。Schema 类型口径同步：主干 Article/Organization/BreadcrumbList，FAQPage 可选、HowTo 已降权（见 01-标准 §五）。
 
 **产出物：** 带 Schema 的完整内容文件（Markdown / HTML）。
 
@@ -141,15 +139,17 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 
 **做什么：** 四层 AI 检测确保内容质量：非 AI 化、E-E-A-T 合规、关键词密度合理、搜索意图匹配。
 
-**用什么 Skill：**
+**用什么：**
 
-| Skill | 检测维度 |
-|-------|---------|
-| seo-content | E-E-A-T 信号、可读性、内容深度、薄内容检测 |
-| blog-audit | 内容审计（完整性、SEO 合规性） |
-| blog-factcheck | 事实核查 |
-| blog-cannibalization | 内容蚕食检测（避免内部竞争） |
-| blog-analyze | 文章综合分析 |
+| 检测维度 | 权威操作源 |
+|---------|-----------|
+| E-E-A-T 信号、可读性、内容深度、薄内容检测 | seo-content（subagent） |
+| 事实核查三级风控（🔴统计/医疗不核实不发布） | [02-内容生产实操SOP §3.3](../03-内容生产与质检/02-内容生产实操SOP.md) |
+| 内容蚕食检测（避免内部竞争） | 脚本 `keyword_cannibalization_checker.py`（[13-SEO审计脚本包](../../02-自动化工具库/13-SEO审计脚本包/README.md)）+ 本文第 II 部分 §1.3 |
+| 内容审计（完整性、SEO 合规性、100 分评分） | [04-内容审计与优化工具包.md](../03-内容生产与质检/04-内容审计与优化工具包.md) |
+| 发布前单篇准入（Commodity 自检 + 差异化评估） | [03-EEAT内容质量评估.md](../03-内容生产与质检/03-EEAT内容质量评估.md) |
+
+> 旧版此表列有 blog-audit / blog-factcheck / blog-cannibalization / blog-analyze 四个 skill——均不存在（2026-09-17 实测），已改指真实权威源。
 
 **产出物：** 质量评分报告。低于标准自动触发重写，通过后才进入发布环节。
 
@@ -161,15 +161,18 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 
 **做什么：** 持续追踪排名变化、流量波动、技术问题、竞品动态。
 
-**用什么 Skill：**
+**用什么：**
 
-| Skill | 监控维度 |
+| 工具 | 监控维度 |
 |-------|---------|
-| alert-manager | 排名下降、流量异动、技术问题预警 |
-| seo-google | GSC 数据趋势（索引量、点击量、排名变化） |
-| seo-performance | Core Web Vitals 趋势 |
-| seo-backlinks | 外链增长/丢失监控 |
-| seo-dataforseo | 竞品排名追踪 |
+| 第 IV 部分 漂移监控体系（本文档） | 排名下降、流量异动、技术问题预警（Title/Meta/Canonical/H1 信号基线 + diff） |
+| gsc-radar skill（已建成） | GSC 机会扫描/掉量/衰减/自相竞争（周级） |
+| seo-google（subagent） | GSC 数据趋势（索引量、点击量、排名变化） |
+| seo-performance（subagent） | Core Web Vitals 趋势 |
+| seo-backlinks（subagent） | 外链增长/丢失监控（DR 快查走 Ahrefs 免费通道，见"数据通道配置"） |
+| Ubersuggest MCP `serp_analysis`（主用） | 竞品排名追踪 |
+
+> 旧版此表列有 alert-manager skill——不存在（2026-09-17 实测），监控告警职能由第 IV 部分漂移监控承接，已替换。
 
 **产出物：** 周报/月报 + 异常告警。
 
@@ -192,10 +195,10 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 
 ---
 
-## Skill 调用速查表
+## 工具调用速查表（2026-09-17 校订：seo-* 为 subagent，blog-*/alert-manager 已除名）
 
 ```
-# 审计阶段
+# 审计阶段（subagent）
 seo-technical    → 技术审计
 seo-visual       → 视觉审计
 seo-schema       → 结构化数据审计
@@ -203,84 +206,87 @@ seo-sitemap      → Sitemap 审计
 seo-performance  → 性能审计
 
 # 规划阶段
-seo-dataforseo   → 关键词/SERP 数据
-seo-google       → GSC/CrUX 数据
-seo-local        → 本地 SEO 规划
-seo-maps         → 地图排名规划
-blog-persona     → 用户画像
-blog-calendar    → 内容日历
+serp_analysis    → 关键词/SERP 数据（Ubersuggest MCP，主用）
+seo-google       → GSC/CrUX 数据（subagent）
+seo-local        → 本地 SEO 规划（subagent）
+seo-maps         → 地图排名规划（subagent）
 
-# 优化阶段
+# 优化阶段（subagent）
 seo-technical    → 技术修复
 seo-sitemap      → Sitemap 生成
 seo-schema       → Schema 生成
 
 # 内容阶段
-blog-brief       → 内容需求文档
-blog-outline     → 文章大纲
-blog             → 内容生成
-blog-schema      → 内容 Schema
-blog-geo         → 地理内容优化
-seo-geo          → AI 搜索优化
-seo-image-gen    → 图片分析与规划
+02-内容生产实操SOP → Brief/写作/核查/批量验收全链路（03-内容生产与质检/）
+seo-geo          → AI 搜索优化（subagent）
+seo-image-gen    → 图片分析与规划（subagent）
 
 # 质控阶段
-seo-content      → E-E-A-T 审核
-blog-audit       → 内容审计
-blog-factcheck   → 事实核查
-blog-cannibalization → 蚕食检测
+seo-content      → E-E-A-T 审核（subagent）
+02-SOP §3.3      → 事实核查三级风控
+04-审计工具包    → 内容审计 100 分评分
+03-EEAT          → 发布前单篇准入
+keyword_cannibalization_checker.py → 蚕食检测（脚本）
 
 # 监控阶段
-alert-manager    → 异常告警
-seo-google       → GSC 趋势
-seo-performance  → CWV 趋势
-seo-backlinks    → 外链监控
-seo-dataforseo   → 竞品追踪
+第 IV 部分漂移监控 → 异常告警（Title/Meta/Canonical 基线 diff）
+gsc-radar        → GSC 机会雷达（skill，已建成）
+seo-google       → GSC 趋势（subagent）
+seo-performance  → CWV 趋势（subagent）
+seo-backlinks    → 外链监控（subagent，DR 走 Ahrefs 免费通道）
+serp_analysis    → 竞品 SERP 追踪（Ubersuggest MCP）
 ```
 
 ---
 
-## MCP 工具配置
+## 数据通道配置（SERP / GSC / DR，2026-09-17 按 2026-09-07 定案重写）
 
-本工作流依赖两个 MCP 数据源：
+> 旧版写"DataForSEO MCP 必装"——与当前环境相反（全局 MCP 实测无 DataForSEO MCP，2026-09-07 定案 SERP 主用已切换为 Ubersuggest）。工具主次全表见 [竞品分析SOP §9](../01-竞品研究/竞品分析SOP.md)。
+>
+> **🔴 铁律：禁止 web_search_prime / WebSearch 做竞研**（通用搜索工具对 B2B 工业设备搜索极不准确，曾导致竞对完全失效）。
 
-| MCP Server | 定位 | 状态 | 安装指南 |
-|------------|------|------|----------|
-| **DataForSEO MCP** | 第三方 SEO 数据（关键词/SERP/趋势/竞品） | 必装 | [Claude Code 环境配置](../../00-基础能力/01-Claude-Code环境配置.md) |
-| **GSC MCP** (suganthan-gsc-mcp) | 自有网站数据（GSC 流量/索引/排名） | 后期按需安装 | [Claude Code 环境配置](../../00-基础能力/01-Claude-Code环境配置.md) |
+### 通道 1：Ubersuggest MCP `serp_analysis`（SERP 主用）
 
-### DataForSEO MCP（必装）
+- 参数：`keyword` + `locId=2840` + `limit=20-50`；150 次/天全局额度（与四查共享）
+- 自带 AI Overview 位次 / SERP 特征类型（popular_products/local_pack/PAA）/ clicks / DA
+- 同词实测与 DataForSEO organic 前 8 完全一致（同源 Google SERP）
+- 403 时等 60-180s 重试
 
-按查询付费（单次 < $0.01），覆盖工作流中 `seo-dataforseo` Skill 的所有数据需求。
+### 通道 2：DataForSEO REST API（SERP 备用）
 
-**核心模块：** `KEYWORDS_DATA`（关键词研究）+ `SERP`（搜索结果分析）
+**触发条件**：Ubersuggest 限流/日额尽 / 需 depth>20 深挖 / Labs 端点 / 历史快照自建。
 
-**典型用途：**
-- 关键词搜索量、CPC、竞争度查询
-- Google/YouTube SERP 实时数据
-- Google Trends 趋势分析
-- 地区关注度与人群画像
+- 端点（2026-08-21 实测，旧路径已 404）：`POST https://api.dataforseo.com/v3/serp/google/organic/live/advanced`（**无 /post 后缀**，含 organic 层级）
+- body 单层 JSON 数组：`[{"keyword":"...","location_code":2840,"language_code":"en"}]`（双层嵌套报 Invalid Field: keyword）
+- basic auth，凭证 `.env` 的 `DFS_API_LOGIN` / `DFS_API_PASSWORD`；$0.002/次
+- 完整诊断见 [19-DataForSEO-SERP诊断报告](../../04-选品库/B端/06-矫直机/19-DataForSEO-SERP诊断报告.md)
 
-> 详见 [Claude Code 环境配置 - DataForSEO MCP 章节](../../00-基础能力/01-Claude-Code环境配置.md)
+### 通道 3：GSC 直连 API（自有站数据——优先直连，MCP 备选）
 
-### GSC MCP（后期按需）
+- **优先直接 API 调用（更可靠）**：Search Analytics API `searchanalytics.query`，dimension 用法见第 II 部分 §6 落地映射
+- **读前先刷新 token 否则 401**：`python C:/Users/Dylan/tools/refresh_google_token.py`（失效加 `--reauth`）
+- 凭证：`~/.google_workspace_mcp/credentials/lzn184205909@gmail.com.json`，Token 字段名 `token`，代理 `http://127.0.0.1:10808`
+- GSC MCP（suganthan-gsc-mcp）为备选，未配置不影响本工作流（第 II 部分已配直连降级路径）
 
-当网站接入 Google Search Console 后安装，用于读取自有网站的真实流量和索引数据。免费开源，内置 20 个工具（分析 11 + 监控 2 + 报告 3 + 索引 4）。
+### 通道 4：Ahrefs 免费 DR（竞对档案 / 外链强度）
 
-> 详见 [Claude Code 环境配置](../../00-基础能力/01-Claude-Code环境配置.md)
+- DR 查询（免费不耗 units）：`curl -s -H "Authorization: Bearer $AHREFS_API_KEY" "https://api.ahrefs.com/v3/public/domain-rating-free?target={domain}"`（key 在 `.env` 的 `AHREFS_API_KEY`）
+- Top 1M DR 榜：`/v3/public/domain-rating-top-domains?from=1&to=100`
 
 ### 局限性
 
-- **AI 解读准确性**：MCP 返回的数据是精确的，但 AI 的解读可能出错（过度归因、编造解释）——需人工审核
-- **数据权限边界**：只能访问 API 暴露的数据，无法替代专业工具的私有数据库（如 Ahrefs 的外链库）
-- **API 费用控制**：AI Agent 自主运行时可能产生意外调用，需用 `ENABLED_MODULES` 限制范围
+- **AI 解读准确性**：API 返回的数据是精确的，但 AI 的解读可能出错（过度归因、编造解释）——需人工审核
+- **数据权限边界**：只能访问 API 暴露的数据；Ahrefs 深度外链库为私有数据（免费通道仅覆盖 DR 查询与 Top 1M 榜）
+- **费用控制**：DataForSEO 按次计费（$0.002/次），Agent 自主运行时限调用次数
+
+> 环境与凭证基础设施详见 [Claude Code 环境配置](../../../00-基础能力/01-Claude-Code环境配置.md)。
 
 
 <!-- ======== 第 II 部分：GSC 数据驱动 SEO 深度研究（原 01-SEO全链路工作流.md，2026-09-14 并入）======== -->
 
 # GSC 数据驱动 SEO 深度研究：方法论 × AI 自动化
 
-> 最后更新：2026-06-22 | 配套工具：google-seo-mcp（Mario 版）| 配套 skill：gsc-radar（建设中）
+> 最近修订：2026-09-17 | 配套工具：GSC 直连 API（google-seo-mcp 未配置，语义映射见 §6 通道现状说明）| 配套 skill：gsc-radar（已建成，~/.claude/skills/gsc-radar/SKILL.md）
 >
 > 本文档是「方法论层」，回答"业界怎么用 GSC、怎么结合 AI"。具体执行层（调哪个工具、参数）见 §6 落地映射；自动化封装见 §7 skill 路线。
 
@@ -467,12 +473,12 @@ Glen 称这是他"13 年 SEO 做过最聪明的事"：
 - **核心论点**：如果 <2 年的新站/新页能排进某词的前两页，说明 Google 对该词"青睐新鲜内容/站"，老站没占满——**这些词对你也易攻**。
 - **执行**：拉一批 500-5000 月搜的 niche 词 → Google 搜每个 → 排名站过 Whois/Archive 查年龄 → <2 年的站排名好 = 命中。
 - **年轻页版本**（战术3）：site: 搜大站 + 日期范围筛 3-8 周前发布的文章 → 看哪些新页已拉流量（用图片 URL 上传日期交叉验证真实发布时间，绕过改日期）。
-- **落地**：`serp_check`（Mario 版）拉 SERP → web-access/Whois 查排名域年龄 → 筛"年轻站排名"的词。
+- **落地**：`serp_analysis`（Ubersuggest MCP，主用）拉 SERP → web-access/Whois 查排名域年龄 → 筛"年轻站排名"的词。
 
 ### 3.3 Google CSE 监控竞品新内容（[战术2](https://detailed.com/advanced-keyword-research/)）
 - 用 Google Custom Search Engine 限定搜竞品站 → `intitle:` + 月份/年份 看对手最新目标词。
 - 进阶：CSE 的 Search Features > Advanced 支持按 schema key 排序（如按 review-RatingCount、metatags-DateModified）→ 找竞品"高评论数页"或"刚更新页"。
-- **落地**：web-access + CSE；或 `serp_check` 限定竞品域。
+- **落地**：web-access + CSE；或 `serp_analysis` 限定竞品域。
 
 ### 3.4 "弱结果"超车（[战术4](https://detailed.com/advanced-keyword-research/)）
 - 找排名好但内容薄/旧的结果（forum 老帖/quora 未答/yelp 纯列表）→ 这些是易超车机会。
@@ -579,7 +585,7 @@ Return only valid JSON. No markdown wrapper.
             ▼
 ┌─ 阶段2·深挖（gsc-radar，重/按需/单目标）──────┐
 │  复刻 CXL Agent 2（§3.1）                        │
-│  ├─ serp_check 拉 SERP top                      │
+│  ├─ serp_analysis 拉 SERP top                   │
 │  ├─ serp_aio_monitor 看 AIO 是否蚕食（§2.3）     │
 │  ├─ web-reader 抓竞品 top3 内容                  │
 │  ├─ 弱结果识别（§3.4）/ 年轻站反查（§3.2）       │
@@ -601,6 +607,11 @@ Return only valid JSON. No markdown wrapper.
 ---
 
 ## 6. 落地映射：技巧 → google-seo-mcp 工具
+
+> **通道现状说明**（2026-09-17，与 CLAUDE.md「Google 服务访问」节对齐）：google-seo-mcp 当前**未配置**——下表是"若配置后的语义映射"，当前实际执行走直连通道：
+> - **GSC 全族指标**（`gsc_quick_wins` / `gsc_search_analytics` / `gsc_ctr_opportunities` / `gsc_content_decay` / `gsc_traffic_drops` / `gsc_cannibalization` / `gsc_inspect_url`）→ 直连 GSC Search Analytics API `searchanalytics.query`（dimension 用法照下表；**读前先 `python C:/Users/Dylan/tools/refresh_google_token.py` 刷 token，否则 401**）；快照对比（`history_save_snapshot`/`history_diff`）由 gsc-radar skill 内置快照逻辑承接
+> - **SERP 反查族**（`serp_check` / `serp_paa_extractor` / `serp_aio_monitor`）→ Ubersuggest MCP `serp_analysis`（keyword+locId=2840+limit=20-50，自带 AI Overview 位次与 SERP 特征类型，AIO 监控可由其位次替代）
+> - 执行层封装见 gsc-radar skill（`~/.claude/skills/gsc-radar/SKILL.md`，已建成）
 
 | 技巧（章节） | MCP 工具 | 关键参数/输出 |
 |---|---|---|
@@ -632,7 +643,7 @@ Return only valid JSON. No markdown wrapper.
 
 > 合为一个 skill 而非两个（原计划 gsc-radar + serp-deep-dive 已合并）：Claude 调 MCP 工具只返回 top N 结构化结果、不碰全量数据，无 CXL 那种 choke；一个命令走全流程，Claude 按意图路由（"扫一下"→阶段1，"深挖X"→阶段2）。
 
-与现有 SEO skill 协同：`seo-audit`（技术审计）、`competitor-analysis`（竞品）、`content-refresher`（内容刷新）、`blog-google`（Google API）—— gsc-radar 产出机会清单后，可调用 content-refresher 落地刷新、competitor-analysis 做竞品深挖。
+与现有工具协同（2026-09-17 校订，旧版列的 seo-audit / competitor-analysis / content-refresher / blog-google 四个 skill 均不存在，已替换为真实通道）：技术审计走 `seo-technical`（subagent）与 [13-SEO审计脚本包](../../02-自动化工具库/13-SEO审计脚本包/README.md)；竞品深挖按 [竞品分析SOP](../01-竞品研究/竞品分析SOP.md) 执行；内容刷新落地走 [02-内容生产实操SOP §5.3 更新处置三选一](../03-内容生产与质检/02-内容生产实操SOP.md)；Google API 直连纪律见本文"数据通道配置"节——gsc-radar 产出机会清单后按上述通道落地。
 
 ---
 
@@ -684,21 +695,21 @@ ctr_opportunities 输出必须**透明展示 benchmark**（非黑箱分数），
 
 每条带：目标 URL/query + 调哪个 MCP 验证 + 下一步动作。这是 skill 从"分析工具"到"决策助手"的质变。
 
-### 8.6 阶段2 竞品深挖 × 知识库 RLM §1B-1D（2026-06-22 重大修正）
+### 8.6 阶段2 竞品深挖编排（2026-09-17 更新：竞研体系已迁至竞品分析SOP）
 
-> ⚠️ **修正**：竞品分析主力是 **SEMrush 数据 + Sitemap + Seed-Master 证据**，不是 web_reader 浅抓页面。曾误把 web_reader 当主力，已修正 gsc-radar SKILL 关联段。
+> ⚠️ **历史修正注记（2026-06-22）**：竞品分析主力**不是** web_reader 浅抓页面——曾误把 web_reader 当主力，已修正。该教训在现行工具链下依然成立：webReader 仅做单页降级与轻量复核，采集以 sitemap 为唯一源。
 
-**知识库竞品分析体系（RLM 营销方法论 §1A-1H，水晶站实证）**：
-1. **数据采集（1B 五轨道并行）**：轨道A `semrush_to_sheets.py`（Domain Overview/AS/Organic Traffic/流量渠道）+ 轨道C SEMrush Top Pages/Keywords（水晶实证：36 竞品 / TopKeywords_All **45,418 行** / TopPages_All **7,498 行**）+ 轨道E `sitemap-mcp`（全站页面清单）+ 轨道B/D Seed-Master（**47,745 条 × 24 列**）+ 证据回填
-2. **证据验证**（轨道D/Keyword-Page-Proof）：`track_d_backfill.py` 验证竞品 query **真有流量**（非猜）
-3. **深度拆解（1D，套 9 章节模板）**：核心输入是 SEMrush Top Pages/Keywords + Sitemap + Seed-Master + 证据（**不是页面 H2/字数**），分层 P0-P3，见 `01-营销方法论基础/01-竞品研究/1D-竞品深度拆解模板.md`
-4. **跨竞品汇总（1E 结构/1F 内容/1G 用户/1H 策略）** + **社区逆向**（`选品方法论/04-竞品与社区逆向挖掘法.md`：Reddit 9 步法/评论 Q&A/亚马逊搜索词逆向）
+**竞研现行权威源**：[竞品分析SOP](../01-竞品研究/竞品分析SOP.md)（9-16 改版后三工具链：**Ubersuggest `serp_analysis`（发现竞对）→ sitemap 定位器（结构分析，降级链 robots→探测→none）→ webReader（单页降级）**）。原 RLM 营销方法论 §1A-1H 体系母文档已删除，四层渐进式分析（域名验证→sitemap 结构→内容抽样→采集执行）全在竞品分析SOP。
 
-**web_reader/web-access 的真实位置**：深度拆解模板的「辅助输入·核心页面轻量复核」，按需验证结构，**非主力数据源**。
+**深度拆解**：套 [竞品深度拆解模板](../01-竞品研究/竞品深度拆解模板.md)（9 章节模板，分层 P0-P3）——核心输入是 SERP 数据 + Sitemap 结构 + 词库证据（**不是页面 H2/字数**）。
 
-**gsc-radar 阶段2 编排**：GSC 定位词（第一方）→ `serp_check` 看 SERP 竞品（L1 元信息）→ 对 top 竞品跑轨道 A/C/E（SEMrush + Sitemap）→ 套 9 章节深度拆解模板 → `track_d_backfill` 验证证据 → `topic_discovery`/`map_page_type` 找主题缺口；web_reader 仅复核关键页面。
+**社区逆向**：[04-竞品与社区逆向挖掘法](../../04-选品库/00-选品方法论/04-竞品与社区逆向挖掘法.md)（Reddit 9 步法 / 评论 Q&A / 亚马逊搜索词逆向）。
 
-**实测发现（electricalcabinet 阶段2，2026-06-22）**：`sitemap-mcp` 对 KDM Steel/E-Abel 探测返回 0（非标准 sitemap 位置/屏蔽）+ `get_sitemap_pages` 报 `TypeError`（MCP 内部 bug）→ 触发模板「数据缺失降级规则」：缺 Sitemap 降级到 Top Pages + 核心页面爬取（web-access）；SEMrush 轨道需 Tabbit `--remote-debugging-port=9222` 登录 semrush.com + 项目级竞品总表。**教训**：做竞品分析前先确认 SEMrush/Sitemap 可获取性，缺失时按降级规则走，不硬抓页面假装完整分析。
+**web_reader/web-access 的真实位置**：深度拆解模板的「辅助输入·核心页面轻量复核」，按需验证结构，**非主力数据源**（sitemap 驱动采集，见竞品分析SOP）。
+
+**gsc-radar 阶段2 编排**（2026-09-17 工具名同步）：GSC 定位词（第一方）→ `serp_analysis` 看 SERP 竞品（自带 AIO 位次/DA）→ 对 top 竞品跑 sitemap 定位器拿全站 URL 结构 → 套 9 章节深度拆解模板 → webReader 仅复核关键页面。
+
+**实测发现（electricalcabinet 阶段2，2026-06-22）**：sitemap 探测对非标准 sitemap 位置/屏蔽的站（KDM Steel/E-Abel）返回 0 → 触发模板「数据缺失降级规则」：缺 sitemap 时降级到 webReader 核心页面抽样。**教训**：做竞品分析前先确认 sitemap/数据可获取性，缺失时按降级规则走，不硬抓页面假装完整分析。
 
 ### 我们的差异化（不抄竞品，保持优势）
 - **GA4↔GSC 跨域归因**（`cross_opportunity_matrix` / `cross_seo_to_revenue_attribution` 等）— Suganthan/Serploom/AnalySEO 全部只到 GSC clicks 层，**我们到 revenue**，回答"优化哪页能赚钱"而非"优化哪页能涨流量"。降维打击。
@@ -714,7 +725,7 @@ google-seo-mcp 是 100+ 工具的能力底座（14 大类），gsc-radar 目前�
 | GSC | 12 | ✅ 阶段1主力 | — |
 | SERP | 4 | ✅ 阶段2 | — |
 | History | 3 | ✅ 复查闭环 | — |
-| **Cross（GSC×GA4）** | 6 | ❌ 未编排 | ⭐⭐⭐ 落地 §8.6 revenue 差异化：`cross_opportunity_matrix`（机会×转化四象限）+ `cross_seo_to_revenue_attribution`（query→收入）接入决策队列，从"涨流量"升级到"赚钱" |
+| **Cross（GSC×GA4）** | 6 | ✅ 2026-09-16 编入 gsc-radar 阶段1第7项（GA4 runReport dim=landingPage × GSC page 级 join，标"转化页/纯流量页"，转化页 quick win 权重加倍）。**前提**：token 含 `analytics.readonly`（Data API 不认 `analytics.edit`，refresh 脚本已补该 scope，旧 token 需 `--reauth`）+ 站有转化事件（B 端=表单事件，无则跳过） |
 | **AEO** | 3 | ❌ 未编排 | ⭐⭐ `serp_aio_monitor` 已发现 AIO 蚕食，但"适配 AIO"（`aeo_ai_bots_robots_audit` 放行 AI 爬虫 / `aeo_llms_txt_check`）没接上 |
 | **CrUX** | 3 | ❌ 仅原则提 | ⭐⭐ 防幻觉原则要 ranking_loss 附证据，`crux_history` 同期 LCP 回归即现成证据，应常态化 |
 | GA4 | 14 | ❌ | 行为分析，部分靠 Cross 间接覆盖 |
@@ -1010,10 +1021,9 @@ Dashboard（Grafana / 自建面板）
 
 | 文档 | 关系 |
 |------|------|
-| [01-内容质量标准](../../03-SEO与GEO/01-内容质量标准.md) | 质量标准定义了"什么是好的"，漂移监控检测"是否从好变差" |
+| [01-内容质量与可检索性标准](../03-内容生产与质检/01-内容质量与可检索性标准.md) | 质量标准定义了"什么是好的"，漂移监控检测"是否从好变差"（含原 10 号可检索性框架，2026-09-14 并入） |
 | [02-Google-SEO核心机制](../../03-SEO与GEO/02-Google-SEO核心机制.md) | 核心机制定义了 SEO 信号体系，漂移监控中的信号分类基于此 |
 | [08-内容审计与优化工具包](../03-内容生产与质检/04-内容审计与优化工具包.md) | 内容审计是定期全量检查，漂移监控是持续增量检查（互补） |
-| [10-内容可检索性框架](../../03-SEO与GEO/10-内容可检索性框架.md) | 可检索性是目标，漂移监控确保可检索性不被破坏 |
 | [13-AI搜索研究与Prompt执行库](../../03-SEO与GEO/13-AI搜索研究与Prompt执行库.md) | Prompt 执行库产出优化内容，漂移监控验证优化效果持久 |
 
 ---
