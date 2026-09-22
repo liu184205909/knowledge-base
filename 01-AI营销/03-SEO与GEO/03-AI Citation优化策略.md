@@ -170,6 +170,43 @@ AI 推荐 → 用户直接搜索品牌名 → 进入品牌官网 → 快速完�
 
 ---
 
+## Profound 引擎行为实证（Blyskal 数据矿，2026-09-22 入库）
+
+> **来源**：Joshua Blyskal（Profound 创始团队/AI Strategy & Research，前 HubSpot Marketing Engineer，AI Search Grader 作者）——深圳 SEO 大会演讲 + LinkedIn 研究帖（主阵地，X@JBlyskal 零干货）+ TechSEO Connect 250M deck + joshblyskal.com 研究全集。数据矿总量：10 亿引用/15 亿 prompt（四篇主研究）。来源分级：**一手平台数据研究**（当前 GEO 领域最大样本级）。他的元方法论值得效仿：逐数字披露样本/日期/局限，维护"常见误引澄清"清单。
+
+### A. 引擎机制实证（8 条硬发现）
+
+1. **4-7% 问题**：250M 回答/30亿引用——传统 SEO 指标（外链/排名/DA）只解释 **4-7%** 的引用方差，93-96% 未解释。"不是 SEO 没用，是 table stakes + 递减收益——强域名改善几率，但不能告诉引擎哪段话解决查询"。**SEO 是资格赛，竞争发生在引用层**
+2. **引用前只读 ~100 字符**：ChatGPT 无法读全文后才引用——**Title/Description/URL/Snippet 是唯一推介**。4-7 个自然语言词的 slug 在高引组多 11.4%（URL 是"小检索文档"）；首页仅占引用 2.2%，博客/观点 34.2% + 对比页 27.3% 占主体
+3. **引擎互不相通**：Claude×ChatGPT 引用域名平均重叠仅 **8%**；各引擎第一引用源各异（ChatGPT=Wikipedia 9.3%、Perplexity=Reddit 6.5%、Claude=Amazon、Gemini=YouTube）——"没有 universal 的 AEO 结果页"
+4. **ChatGPT 3 秒管道**：T+50ms 出 5 变体 → SerpAPI 并行 → T+600ms 50 URL → T+700ms 抓前 5-7 可信页 section → T+2500ms 生成。**JS 渲染内容实测零引用**（管道只读静态 HTML）
+5. **检索后端迁移**：ChatGPT-Google 对齐 2025-04 的 12% → 07 的 33%，Bing 26%→8%；"citation flattening"——人类点击位 10 仅 2.5% 但 ChatGPT 引用 4%，**进 top10 就有真实机会**
+6. **搜索触发率**：ChatGPT 总体仅 **17.4%** 的对话触发 web 搜索（Claude 36.6%）；分意图 commercial 53.5% / informational 18.7% / generative 8.9%。"best/near me/年份"触发检索，"what is"倾向模型内回答
+7. **Claude 的 Brave 依赖与时效形状**：79.2% Claude 引用可在 Brave 前 10 找到（每次调 10-15 次 Brave API，成本高）；**94% 的 Claude fanout 带年份**（ChatGPT 仅 17%）——"Claude 的行为奖励时效语言"；Claude UGC 仅 0.9% vs ChatGPT 15.8%（17倍差）
+8. **Entity update 冲击**：2025-10-18 ChatGPT 引入 Entity["brand"] 字段——每答案品牌提及 6-7 个砍到 3-4 个，平均品牌可见性 -31%，头部与长尾差距收窄
+
+### B. 意图结构剧变（50M prompts 研究 + 750万商业追踪）
+
+- **生成型 37.5% 成最大意图类**（信息型 32.7%）——"传统搜索分类法没有这一类"；导航型从 32.2% **崩到 2.1%**；交易型 0.6%→6.1%
+- **商业类 prompt 13.9%→19.2%**（2026-08 追踪）；时间线：5/5 OpenAI Ads Manager beta → **5/7 ChatGPT 答案内品牌名变高亮可点击 → 品牌站 referral 一夜 +40-60%**（去查自己 5/7 前后的分析数据）
+- 提出 **Commerciality rate（商业化率）** 作为 prompt 追踪的 size-of-prize 指标；漏斗顶部变高——优化"答案里被顺带提及"的场景
+- 深圳大会口径（8月8日起 ChatGPT 从 Answers→Evaluating）：fanout +60-70% 但 safe_urls 稳定（用双倍搜索得同等答案）；**64% 二次 fanout 承接首轮 2+ 概念**（Claude 仅 6%）——在"摸索穿行"而非 A→B 检索。引用结构：Documentation +84%/First-party +30%/Commercial +30%/机构 +58%；**Social -91%/UGC -71%/第三方机构 -36%/Listicles -38%**
+
+### C. 对我们项目的落地含义（GEO 优先）
+
+| 发现 | 项目动作 |
+|---|---|
+| 软件对比页引用率 30% vs 博客 2%（Ramp：2 页 30 天可见性 3.2%→22.2%，胜 $50M 预算竞对） | **品类页/对比页的 GEO 优先级 > 博客量产**——靠垫站 BOFU 零售商截流页是 listicle 型（正在贬值 -38%），**品类页（Commercial +30%）才是 ChatGPT 引用主战场** |
+| 引用前只读 100 字符 | 品类页/工具页的 **meta description 按"答案级声明句"重写**（剧透答案+具体数字，非营销文案）；URL 语义化已合规（custom- 前缀）✓ |
+| JS 渲染零引用 | **技术审计项**：工具站前端计算器的内容层需 SSR fallback；WoodMart/Woo 产品数据确认 SSR 可见 |
+| PDP 研究：FAQ +848%/视频 +103%/评分 +36%/规格 +23% | 品类页 FAQ 模块与规格表是 GEO 最高 ROI 元素（靠垫 17 品类页逐页过） |
+| Limitations 披露（"鞋底多少毫米泡棉"级具体性） | 与活人感体系"真让步"完全同构——两条独立证据链合流，品类页加"不适合什么"内容 |
+| 50% 高引内容 <13 周 + RunRepeat 发布日即出报告 | 内容更新节奏绑产品日历（新品发布日 = 内容更新日） |
+| AI Mode 双路由：本地/库存走 Google 生态（Maps/GBP） | **B 端站（拉床/打磨/配电柜）的 GBP 完善是 GEO 动作**，不是可选项 |
+| 搜索触发率：commercial 53.5% 最高 | 页面类型选择已在高触发区（BOFU 词）✓——泛信息词在 ChatGPT 多为模型内回答，GEO 投入集中在 commercial 意图 |
+| 引擎互不相通 8% | GEO 按引擎分策：ChatGPT=第一方参数页+文档结构；Claude=Brave 前 10 对齐+时效语言（页面带年份+更新日期）；AI Mode=H1/H2 Themes+GBP |
+| 4-7% 问题 | 预算分配依据：传统 SEO（外链/排名）做到 table stakes 即止，增量投入转引用层（参数完备/实体一致/多源提及） |
+
 ## Princeton GEO论文核心发现
 
 > Princeton + Georgia Tech, KDD 2024, 10000条查询
