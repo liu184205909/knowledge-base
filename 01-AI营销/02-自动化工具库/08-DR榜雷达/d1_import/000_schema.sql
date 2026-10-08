@@ -1,2 +1,0 @@
-CREATE TABLE IF NOT EXISTS dr (domain TEXT PRIMARY KEY, dr REAL, "rank" INTEGER);
-CREATE INDEX IF NOT EXISTS idx_rank ON dr("rank");

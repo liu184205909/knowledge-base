@@ -100,6 +100,7 @@ HTML 卡片的 :hover 效果必须映射到容器 **hover 控件**（对照源 C
 
 ### 1.6 布局保真（2026-08-17 新增，血的教训）
 
+
 | 项 | 要求 |
 |---|---|
 | **判据=渲染≠源码** | HTML 源码标签顺序 ≠ 视觉排版（视觉由 CSS 决定）。生成 json 前必须在浏览器打开原型看**真实渲染**，按渲染布局映射容器结构，禁止按源码顺序线性生成 widget |
@@ -111,6 +112,12 @@ HTML 卡片的 :hover 效果必须映射到容器 **hover 控件**（对照源 C
 | **执行工具** | 本节判据的自动化工具 = skill `html-layout-extract`（`~/.claude/skills/`，playwright 渲染几何测量→布局规格单 JSON）。**生成 JSON 前必跑**（规格单驱动容器拆分）；验收对线上跑同款 diff。本文定判据，skill 定执行——SOP 与 skill 双向引用、不合并 |
 
 ---
+
+### 1.6b 禁单 widget 占位容器（2026-09-26 用户裁定，802 处返工教训）
+
+HTML 原型的 CSS 类名（`img-placeholder` 等）**不得直译为 Elementor 容器层**。一个仅包含单个 widget（图片/标题等）的纯占位容器是冗余嵌套——圆角/边距等样式**直接写在 widget 的 Style settings 上**（如 `image_border_radius`），widget 直挂其布局父容器。判定：容器仅含 1 个 widget 且自身无 width 分列/背景/边框等实质样式 = 冗余，删除该层并上提子 widget（容器上的 radius 平移到 widget 对应控件）。历史批量产出须用结构普查脚本（census 模式：`_title LIKE 'img-placeholder'` 计数）清点后统一修复。
+
+**⚠️ 平移键名（2026-09-26 R1 批考证）**：image widget 的边框族控件是 `image_border_border/width/color/radius`（Group name='image_border'，selector `{{WRAPPER}} img`）——写成容器同名的 `border_*` 是**无效键静默不输出 CSS**（pink 页 6 个历史死键实证）。text-editor 等无专用圆角控件的 widget 用通用 `_border_radius`。另：带底色/圆角的图注卡片（img-placeholder 内是 text-editor 图注文字）是设计样式**非冗余**，保留不删。
 
 ### 1.7 图片规范（AI 生成 + 组件展示）
 
@@ -142,7 +149,7 @@ HTML 卡片的 :hover 效果必须映射到容器 **hover 控件**（对照源 C
 ⑦ publish 窗口渲染：<30 秒临时 publish → 匿名访问该页（?cb= 防缓存）触发 CSS 生成与线上审计 → 切回 draft。draft 页 CSS 永不自动生成，此步是 CSS 落盘的唯一可靠路径
 ```
 
-**通道备注**：若会话无目标站点 MCP 服务器，用 EMCP 插件 MCP-over-HTTP：`POST /wp-json/mcp/emcp-tools-server`（basic auth + Mcp-Session-Id 会话，工具名带 emcp-tools- 前缀），全部工具等效。
+**通道备注**：若会话无目标站点 MCP 服务器，用 EMCP 插件 MCP-over-HTTP：`POST /wp-json/mcp/emcp-tools-server`（basic auth + Mcp-Session-Id 会话，工具名带 emcp-tools- 前缀），全部工具等效。另：Elementor 4.3+ 自带**原生 MCP**（2026-09-24 customneon.live 验证，memory `elementor-mcp-native-tool`）——只覆盖读结构/建页/文档设置/widget schema，**V3 组件级写入与本文 JSON 导入流程不受其影响**（原生 manage-elements 为 V4 atomic 专属）。
 
 **CSS 生成机制（读插件源码证实的系统性事实）**：EMCP 的 import/batch-update/add-remove 写数据**均不保证生成 CSS**（仅 themer 渲染器走 Post::create）。批量部署的可选核武器：临时装 Code Snippets → REST 激活 snippet 调 `files_manager->clear_cache()` + 每页 `Post::create()` 强制重编译 → 用完停用删除插件（evapcryst 43 页部署实测，站点恢复原状无残留）。
 

@@ -2,6 +2,7 @@
 """
 reddit_comment_collector.py - Reddit 评论采集工具
 基于 Reddit JSON 端点（.json 功法），无需 API 密钥
+关联文档: 流程框架=01-竞品研究/Reddit选品与营销SOP.md | 技术参考=同目录/Reddit的JSON功法.md
 输入: subreddit 名称或搜索关键词
 处理: 采集帖子 + 评论 → 输出为 comment_insight_analyzer.py 可直接分析的格式
 输出: CSV（评论数据）+ 采集摘要

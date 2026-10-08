@@ -14,6 +14,7 @@
 | `Gutenberg博客文章REST-API上传指南.md` | post 生产 SOP |
 | ~~`Elementor REST API 操作手册.md`~~ | 已删除（MCP SOP 替代） |
 | ~~`Elementor MCP 页面创建测试方案.md`~~ | 已删除（合并到 §13 附录） |
+| **Elementor 4.3+ 原生 MCP** | 2026-09-24 customneon.live 验证：只覆盖**读结构 / 建页 / 文档设置 / widget schema 查询**；**V3 组件级写入仍走本文 EMCP 流程**（原生 manage-elements 为 V4 atomic 专属）。分工详见 memory `elementor-mcp-native-tool` |
 
 ---
 
