@@ -1,7 +1,7 @@
 # Gutenberg 博客文章 REST API 上传指南
 
 > 通过 `wp-json/wp/v2/posts` 端点上传 Gutenberg 区块格式的博客文章。
-> 与 Elementor 操作手册互补：Elementor 用于核心页面（首页/产品页/Landing Page），Gutenberg 用于博客文章。
+> 与 Elementor 双文档互补（原《Elementor 操作手册》2026-07 已删）：核心页面走 [Elementor MCP 生产 SOP（Woodmart）](./Elementor%20MCP%20生产%20SOP（Woodmart）.md)（无原型）或 [HTML转Elementor混合流水线SOP](./HTML转Elementor混合流水线SOP.md)（有原型），博客文章走本指南——post 走 MD→Gutenberg 通道的唯一文档。
 
 ---
 
@@ -12,7 +12,7 @@
 | REST API 端点 | `/wp-json/wp/v2/pages` | `/wp-json/wp/v2/posts` |
 | 内容格式 | Elementor JSON（`_elementor_data`） | Gutenberg Block HTML（`content` 字段） |
 | 页面类型 | 首页、产品页、Landing Page、About | 博客文章、教程、指南 |
-| RLM 步骤 | 步骤 2B/2C（建站阶段） | 步骤 3（内容创作阶段） |
+| 生产阶段 | 建站阶段（核心页面） | 内容创作阶段（博客） |
 | 设计复杂度 | 高（可视化布局） | 低（内容驱动） |
 | SEO 优势 | 页面级控制 | 文章级优化，天然适合 SEO |
 
@@ -58,25 +58,7 @@ Gutenberg 的 `content` 字段使用 HTML 注释标记区块边界：
 
 ### 常用区块模板
 
-#### 标题
-
-```html
-<!-- wp:heading {"level":2} -->
-<h2>H2 标题</h2>
-<!-- /wp:heading -->
-
-<!-- wp:heading {"level":3} -->
-<h3>H3 标题</h3>
-<!-- /wp:heading -->
-```
-
-#### 段落
-
-```html
-<!-- wp:paragraph -->
-<p>普通段落文本。</p>
-<!-- /wp:paragraph -->
-```
+> 标题/段落模板即上文格式演示（wp:heading 带 level、wp:paragraph 包 `<p>`），不重复列出。
 
 #### 列表
 
@@ -184,6 +166,8 @@ curl -X POST 'https://example.com/wp-json/wp/v2/posts' \
   }'
 ```
 
+> **meta 键按站内 SEO 插件替换**：现役多站用 RankMath（`rank_math_title` / `rank_math_description`），示例中 Yoast 键名仅为老站示范——上传前查目标站点实际插件。
+
 ### 5B. 先上传图片，再发布文章
 
 ```bash
@@ -196,16 +180,12 @@ curl -X POST 'https://example.com/wp-json/wp/v2/media' \
 
 # 返回中获取 id 字段（如 123）和 source_url
 
-# Step 2: 发布文章，引用图片
-curl -X POST 'https://example.com/wp-json/wp/v2/posts' \
-  -H 'Authorization: Basic dXNlcm5hbWU6YXBwX3Bhc3N3b3Jk' \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "title": "Amethyst Crystal Healing Guide",
-    "status": "publish",
-    "content": "<!-- wp:image {\"id\":123,\"sizeSlug\":\"large\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://example.com/wp-content/uploads/amethyst-guide.jpg\" alt=\"Amethyst crystal\" /></figure>\n<!-- /wp:image -->\n\n<!-- wp:paragraph -->\n<p>Amethyst is...</p>\n<!-- /wp:paragraph -->",
-    "featured_media": 123
-  }'
+# Step 2: 发布文章，引用图片——请求体同 §5A，仅两处差异：
+#   ① content 内嵌 wp:image 块（引用 Step 1 返回的 id 与 source_url）：
+#      <!-- wp:image {"id":123,"sizeSlug":"large"} -->
+#      <figure class="wp-block-image size-large"><img src="https://example.com/wp-content/uploads/amethyst-guide.jpg" alt="Amethyst crystal" /></figure>
+#      <!-- /wp:image -->
+#   ② 加 "featured_media": 123
 ```
 
 ### 5C. 更新已有文章
@@ -287,7 +267,7 @@ curl -X POST 'https://example.com/wp-json/wp/v2/categories' \
 
 ---
 
-## 10. 自动化工作流（RLM 步骤 3）
+## 10. 自动化工作流（内容创作阶段）
 
 ```
 AI 生成文章（Markdown）

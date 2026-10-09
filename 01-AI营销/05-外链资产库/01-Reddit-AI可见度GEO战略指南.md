@@ -1,7 +1,7 @@
 # Reddit AI 可见度（GEO）战略指南
 
 > **文档定位**：面向 B2B/B2C 品牌营销团队、SEO 从业者、增长负责人的 Reddit GEO（Generative Engine Optimization）实战手册
-> **关联文档**：本文件是 Reddit GEO 的战略层（为什么做+怎么衡量）。操作流程见 `01-营销方法论基础/01-竞品研究/Reddit选品与营销SOP.md`（五帖法+回复策略）；技术参考见 `02-自动化工具库/06-用户洞察工具/Reddit的JSON功法.md`；批量工具用同目录 `reddit_comment_collector.py`。
+> **关联文档**：本文件是 Reddit GEO 的战略层（为什么做+怎么衡量）。操作流程见 `06-社媒营销/Reddit选品与营销SOP.md`（五帖法+回复策略）；技术参考见 `02-自动化工具库/06-用户洞察工具/Reddit的JSON功法.md`；批量工具用同目录 `reddit_comment_collector.py`。
 > **最后更新**：2026-08-03
 > **核心论断**：Reddit 已从社交平台跃升为 AI 搜索的基础设施——ChatGPT、Perplexity、Google AI Overviews 超过 40% 的引用来源是 Reddit 内容；2026.03+ 进入 Phase 3 AI Citation 时代，货币从"排名"变为"被 LLM 引用"
 

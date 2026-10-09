@@ -1,7 +1,8 @@
 # Pinterest 运营方案 v2 —— Buffer 网页 UI 通道（CDP 驱动）
 
 > 定稿：2026-10-08 | 探测实测：2026-10-08（CDP localhost:3456 全程）
-> 取代关系：本文取代 `批量排程架构方案.md`（v1，2026-10-07）的执行层结论——v1 的 Pinterest agent API 队列、原生 CSV Bulk、Buffer 付费 CSV 三通道全部废弃（用户 10-09 裁定）。v1 的发布时间科学、板策略分析仍有效，本文引用不重抄。
+> **【v2.1 更新 2026-10-08】执行层升级：Buffer MCP 直连取代 CDP 网页 UI 成为主通道**——用户在 Claude Code 连接 `mcp.buffer.com/mcp`（OAuth 授权），`create_post` 等结构化工具直接可用（工具前缀 `mcp__buffer__`）。**板字段已攻克**（此前 CDP 时代唯一 ⏳ 项）：`create_post(metadata:{pinterest:{boardServiceId, title, url}}, assets:[{image:{url, metadata:{altText}}}], channelId, schedulingType:"automatic", saveToDraft)` 实测创建草稿成功且 metadata.board 正确解析。板 serviceId 用 `get_channel` 读 `metadata.boards[].serviceId`（7 板全量已存 `temp/buffer_pin_boards.json`）。免费档 API 配额：1 API key / 3000 calls/月（用户贴官方定价表确认），当前消耗 9/3000。CDP 网页 UI 方案（本文 §7）降级为 MCP 不可用时的备用。
+> 取代关系：本文取代 `批量排程架构方案.md`（v1，2026-10-07）的执行层结论——v1 的 Pinterest agent API 队列、原生 CSV Bulk、Buffer 付费 CSV 三通道全部废弃（用户 10-09 裁定）。v1 唯一仍有效的"发布时间科学"已并入本文 **§3.4**；板策略以总计划 §1.1 七板新表为准；**v1 文件已于 2026-10-08 目录整理时删除**（git 历史可溯）。
 > 来源分级：**本文 §1 探测结论全部为实测**（Buffer UI 实抓，代码级证据）；标〔推断〕处为基于证据的推论。
 
 ---
@@ -15,6 +16,9 @@
 | 唯一发布通道 | **Buffer 网页 UI**（CDP 操作第三方 SaaS=安全，无 Pinterest 反自动化风险——与 Meta Business Suite 的红线不同，Buffer 是已过审中间商，我方只是模拟人手填表） |
 | 素材策略 | 站内几百页一天一条也够；**图片复用就生图**——生图同时替换网站 + 发社媒（一图两用） |
 | 素材库现状 | 542 条 100% 唯一图 + 74 张生图就位（本地 `pin-gen-images/`）+ feed 已关 |
+| Pinterest Standard API 审核状态 | 10-07 已发 OAuth demo 视频，**pending 中**；**若通过也不启用**（用户裁定 Buffer 唯一通道，审批结果仅作记录） |
+
+> **开源排程工具通道排除备注（2026-10-08 定案，源自同日删除的《开源排程工具调研.md》）**：Postiz/Mixpost/TryPost 等开源自托管方案**结构性不可行**——Pinterest app 审核/secret 与 app 所有者绑定，开源分发 production secret=被滥用=被撤销，无项目敢做（GitHub 全扫描无 star>100 例外）；"零 API 门槛"只存在于 SaaS 托管版（Buffer / Postiz Cloud），而 Postiz Cloud 免费档仅 50 帖总量、$29/月约为 Buffer 5 倍价，无性价比。FB 线一切自托管开源工具同为死路（均要求自建 Meta app，我方红线）。
 
 ---
 
@@ -81,7 +85,7 @@ Buffer 队列（Free：10 槽/频道滚动，Next Available 模式自动落位�
         │
         │  ② Buffer 按 posting schedule 定时发布
         ▼
-Pinterest 7 板（板名与素材库 board 字段一一对应，实测同步正常）
+Pinterest 7 板（板名与素材库 **`_board` 字段**一一对应——2026-10-08 交叉核对：素材库的 `board` 是语义重分类（7 类），与线上板名**不**一一对应（如 236 条 "Cushion Guides & Ideas" 散在 6 块原始板上）；排期灌库时取板一律用 `_board` 原始板名 → `temp/buffer_pin_boards.json` 查 serviceId）
         │
         ├── ③ KPI：Buffer Basic analytics（过程指标）+ Pinterest 原生 Analytics（outbound clicks 权威源）
         ▼
@@ -102,13 +106,37 @@ cushionmill.com 落地页（Destination Link 全带，UTM 规则见 §6）
 ### 3.2 队列运作细节
 
 - 定时模式固定用 **Next Available**（默认）：管线只管灌内容，落位时刻交给 Buffer 的 posting schedule——这就是"零日常关注"的免费版实现。
-- posting schedule 首次配置（**待办，一次性**）：queue 页 → 设置每日 3 个发布时刻。时刻按美东流量峰（v1 `批量排程架构方案.md` §二的时刻表：晚 8-11 点美东为主）换算成上海时间录入；夏令时切换时（11 月/3 月）核对一次。
+- posting schedule 首次配置（**待办，一次性**）：queue 页 → 设置每日 3 个发布时刻。时刻按美东流量峰（**§3.4 时刻表**：工作日晚 20:00-22:00 ET 为主力窗口）换算成上海时间录入；夏令时切换时（11 月/3 月）核对一次。
 
 ### 3.3 时区红线
 
 Buffer 账户时区=Shanghai（实测）。posting schedule、队列显示均按上海时间。**换算错误=发布时刻全偏 12-13 小时**，配置后必看队列页第一条的落位时刻是否等于预期。
 
+### 3.4 发帖时刻科学依据（自 v1《批量排程架构方案.md》§二并入存档，原文件 2026-10-08 删除）
+
+**Pinterest（home décor / 电商类目，美东 ET）**：
+
+| 时段（ET） | 强度 | 来源 |
+|---|---|---|
+| 周六早 ~8:00 | 单点最强窗口之一 | Postlia 2026 |
+| 工作日晚 20:00-22:00 | 最强常驻窗口 | Viraly / Hopper HQ 2026 共识 |
+| 午间 12:00-13:00 | 次强（午休峰） | 多源一致 |
+| 周末下午 14:00-16:00 | 次强 | OnlySocial 等 |
+| 周五-周日 | 家装 refresh 内容加权日 | Pinterest moments marketing 口径 |
+
+home décor 属"规划型"类目（用户在晚间/周末的浏览-收藏会话中决策），**季节性内容提前 30-60 天布局**——与节令线"目标下一季"纪律同构。
+
+**Facebook（Page，美国受众）**：峰=工作日 9-11AM / 12PM / 5-7PM ET；**周二-四最强、周末最弱**（与 Pinterest 相反）；频率 1 帖/天最优，最多 2。
+
+**每日条数（Pinterest）**：新账号 **3-5 条/天甜点区**（Tailwind 2025；50+/天=spam 风险区）；算法奖励 **fresh 图**——同图配不同文案 ≠ fresh，扩量只能靠新图（§4 生图循环的依据）。
+
 ## 4. 生图循环（一图两用）
+
+### 4.0 Before/After 对比图系列（2026-10-09 用户定案新增形态）
+
+竞对 Coleman Furniture 验证的定制垫类目高转化形态（参考 pin/228768856065849786）：**上下分格对比——上格 AFTER（新垫饱满挺括）/下格 BEFORE（旧垫塌陷泛黄），同机位同光线同家具，左下角白粗体 AFTER/BEFORE 角标，1000×1500 竖版**。先展示理想态再给落差的心理设计。
+
+生产管线（2026-10-09 首批 10 张实测定稿）：**单次生成 1024×1536 上下两格对比图**（prompt 描述"top half shows AFTER...bottom half shows BEFORE..."，模型内在保证同机位同光线）→ PIL 归一 1000×1500+AFTER/BEFORE 白粗体角标 → 上传媒体库 → 入素材库 → 优先滚动补槽。**【实测教训：两次分开生成锁不住同场景**——即使 prompt 逐字相同仍机位/背景漂移，i2i 参考图也会被重演，首批第 1 对即废；单次双格是唯一稳法】。一致性验收用视觉模型逐张 QA（zai 通道），不过的弃用（宁缺毋滥）。生图纪律全套适用（三禁负面清单/FLAT KNIFE-EDGE SEAMS/形态硬约束）；BEFORE 态词=sagging/flattened/faded/wrinkled/sun-bleached，AFTER 态词=plump/firm/crisp seams/tailored fit。首批成品：`pin-gen-images/before-after/`（10 张，split/before/after/final 四套留档），最好一张 09-tcushion-armchair（T 形垫+扶手磨损细节最真）。
 
 优先级顺序：
 
@@ -207,4 +235,4 @@ el.click();
 
 - 探测截图：`temp/buffer_*.png`（calendar/schedule/channels/composer/menu/queue/filled）
 - 测试污染：零（composer 测试内容已清空关闭，Queue 0 / Drafts 0，无草稿残留）
-- 历史工件处置：`csv-批次/batch-001.csv`、`pin-素材库.json.bak` 为已废弃通道残留，可归档不删（git 可溯）
+- 历史工件处置：`pin-素材库.json.bak` 已于 2026-10-08 目录整理删除（.json 本体在 + git 可溯）；`csv-批次/batch-001.csv` 此前已清理

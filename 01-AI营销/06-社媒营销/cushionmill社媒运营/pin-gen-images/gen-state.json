@@ -367,5 +367,89 @@
   "local": "p540-cushion-covers.png",
   "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p540-cushion-covers.png",
   "alt": "Custom-fit flame orange replacement cushions for outdoor dining chairs with newly covered cushions"
+ },
+ "34942": {
+  "images": [
+   {
+    "local": "p0b-spec-01-hero.png",
+    "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0b-spec-01-hero.png",
+    "alt": "Custom cushions made to your measurements - five chairs fitted with new custom seat cushions in a bright workshop",
+    "slot": "featured"
+   },
+   {
+    "local": "p0b-spec-02-measure.png",
+    "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0b-spec-02-measure.png",
+    "alt": "How to measure for a custom cushion - tape measure across the width and thickness of an old seat cushion",
+    "slot": "content-step1"
+   },
+   {
+    "local": "p0b-spec-03-fabric.png",
+    "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0b-spec-03-fabric.png",
+    "alt": "Choosing custom cushion fabrics - outdoor performance fabric swatch cards fanned out for color comparison",
+    "slot": "content-step2"
+   },
+   {
+    "local": "p0b-spec-04-shape.png",
+    "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0b-spec-04-shape.png",
+    "alt": "Custom L-shaped and trapezoid cushions cut to shape on a workshop cutting table",
+    "slot": "content-step3"
+   },
+   {
+    "local": "p0b-spec-05-onchair.png",
+    "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0b-spec-05-onchair.png",
+    "alt": "Finished custom seat cushion fitted edge-to-edge on a vintage wooden dining chair",
+    "slot": "content-result"
+   }
+  ],
+  "batch": "2026-10-09 p0-batch1"
+ },
+ "38528": {
+  "local": "p0b-woodard-cortland.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0b-woodard-cortland.png",
+  "alt": "Woodard Cortland style cast aluminum dining chairs with new custom replacement cushions in sand and fern green",
+  "slot": "content-append",
+  "batch": "2026-10-09 p0-batch1"
+ },
+ "38529": {
+  "local": "p0b-woodard-briarwood.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0b-woodard-briarwood.png",
+  "alt": "Woodard Briarwood style woven wicker loveseat with new terracotta replacement cushions on a covered porch",
+  "slot": "content-append",
+  "batch": "2026-10-09 p0-batch1"
+ },
+ "38465": {
+  "local": "p0b-owlee-ashbury.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0b-owlee-ashbury.png",
+  "alt": "OW Lee Ashbury style forged aluminum lounge chairs with new sand replacement cushions on a redwood deck",
+  "slot": "content-append",
+  "batch": "2026-10-09 p0-batch1"
+ },
+ "38419": {
+  "local": "p0b-owlee-casa.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0b-owlee-casa.png",
+  "alt": "OW Lee Casa style woven wicker dining chairs with new ivory replacement cushions on a Mediterranean patio",
+  "slot": "content-append",
+  "batch": "2026-10-09 p0-batch1"
+ },
+ "38472": {
+  "local": "p0b-hamptonbay-swivel.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0b-hamptonbay-swivel.png",
+  "alt": "Hampton Bay style patio swivel chairs with new flat slate blue replacement seat pads",
+  "slot": "content-append",
+  "batch": "2026-10-09 p0-batch1"
+ },
+ "38530": {
+  "local": "p0b-tropitone-montreux.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0b-tropitone-montreux.png",
+  "alt": "Tropitone Montreux style curved wicker resort sofa with new white and navy replacement cushions by the pool",
+  "slot": "content-append",
+  "batch": "2026-10-09 p0-batch1"
+ },
+ "38527": {
+  "local": "p0b-homecrest-pearlcreek.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0b-homecrest-pearlcreek.png",
+  "alt": "Homecrest Pearl Creek style vintage swivel rockers with new turquoise and oatmeal replacement cushions",
+  "slot": "content-append",
+  "batch": "2026-10-09 p0-batch1"
  }
 }

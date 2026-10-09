@@ -77,7 +77,7 @@ PullPush 初筛模板：`after` = 当前 unix 秒 − 7×86400（**不支持 `7d
 6. `"rocker cushion"` `(m)`
 7. `"daybed cushion"` `(m)`
 
-**P0 品牌词监控**（【2026-09-30 增】第三方真实提及=GEO 资产唯一发现通道；同轮搜索顺手跑，零额外时间；命中即按 GEO 指南 §5.6 响应）：
+**P0 品牌词监控**（【2026-09-30 增】第三方真实提及=GEO 资产唯一发现通道；命中即按 GEO 指南 §5.6 响应；**【2026-10-08 用户拍板降频】从每日轮改为每周一轮（周一并入主搜索轮）**——连续 9 轮（周窗）零命中，日检信息增益趋零；恢复触发：任一周轮命中→回升每日轮 2 周）：
 1. `"cushion mill"` `t=week`
 2. `"cushionmill"` `t=week`
 3. `"the cushion mill"` `t=week`
@@ -274,6 +274,14 @@ PullPush 初筛模板：`after` = 当前 unix 秒 − 7×86400（**不支持 `7d
 >
 > **通道备注**：www 详情页当日 2 次卡"Reddit-全网主阵地"空壳态（body 仅 35 字符 AIX 浮层，关重开无效），old.reddit 详情页正常读取——§1 备用通道对读帖层同样有效，www/old 可用性当日互换漂移再证一例。
 
+### 7b-9 晚间轮信号（2026-10-09 晚实战批）
+
+> 晚间轮 6 查询（P0 `"custom cushions" recommendation`(w) / P1 `"outdoor cushions" replacement`(m) / P1 `"banquette" cushion`(m) / P3 `"window seat" cushion`(m) / P0 `"someone to make" cushion`(m) / 主词 `"custom cushions"`(w) 滚动核）+ **P2 #7 r/Lovesac Sactional flair 页首扫**。6 词零新增（已档+噪音）；**flair 页首扫即命中 3 条 <24h 活帖**（1x0uf61/1x0x7wm/1x0up6p，全 10-08 发 13-28h）——搜索词周窗连日冻结时，**宿主品牌 flair 页是活帖的高效补充源**（该 sub 帖流密度高，P2 #7 通道地位上调：与主词并列为每日首查项）。1x0uf61 深读合格（28h+12 评论无人给渠道+痛点直配），old.reddit 发布遇连续 2 次静默失败（JS click+clickAt 真实手势均内容滞留/评论未现），停手冷却 18 分钟后草稿恢复法重试（新会话+重注入+clickAt）**第 3 次仍静默失败——彻底停手**；profile 自查确认 3 次提交均未成立（无重复发风险，账号干净），归因=账号层限流（对照 10-03 案例 40 分钟冷却成功，本轮冷却不足）；**【2026-10-09 晚通道结论】www 发布层 shadow DOM 不可穿透（10-07）+old 发布层 3 连静默（10-09）=双通道同日堵死首例**，处置=冷却 24h 后优先重发该帖（草稿 base64 存 `temp/reply-1009-b64.txt`，发帖窗口 72h 内有效）。品牌监控周一轮不占今日。
+
+26. **[痛点原话·枕头会倒]** Sactional 直背需外塞腰枕且抱枕会倒 → "I hear the pillows topple over on straight back"+"the fact that one would have to put extra pillows behind the couch cushions for the couch to be comfortable chaps my ass so much"（1x0uf61 r/Lovesac 2026-10-08，楼主 megoonie- 配置咨询；评论区 DIY 方案=IKEA $10 床垫塞背/lumbar pillows）→ 动作：**lumbar/腰靠形态词候选**（P3 词表补 "lumbar cushion"+"back cushion" 词族）；Sactional 深座腰靠=Lovesac 替代垫线（P2 #1）的相邻 SKU 证据；痛点机制=抱枕 poly fill/down 轻且滑（密度叙事可迁移）。
+27. **[痛点原话·泡沫芯发臭]** 洗罩救不了芯 → "The covers unzip, so I washed those and they came out fine. The foam inserts are the problem."（1vz1j1z r/CleaningTips 2026-08-26，晒几天雨后"damp basement smell every time you sit on them"，44 天超龄仅信号）→ 动作：P1 发霉簇再+1；B3 发霉救垫指南的"罩可洗芯不可洗"分层论据；quick-dry 泡沫差异化侧证。
+28. **[竞品差评点·高端退货]** $5k Sactional 整组退货中 → "Asking because I bought one due to the hype on here and I'm currently in the return process... they're actually having a white glove pickup"（1x0up6p r/Lovesac PvtCW 2026-10-08，$5000+ 档客单，对比 Room & Board 价差 $500/$1500）→ 动作：Lovesac 差评证据链再+1（1wst2h8 一年塌之外新增"服务差退货"维度）；PvtCW 入台账 #20（退货后替代方案优先响应）。
+
 **版规核查方法更新（09-29）**：`/r/X/about/rules` 会重定向 `/mod/X/rules/`（mod 视图），innerText 抓不到——**版规核查走 CDP 截图人工读**。
 
 ## 7c. 五帖法市场情报台账（2026-09-29/30 深度调研存档，2026-10-02 自情报文档并入）
@@ -379,9 +387,9 @@ PullPush 初筛模板：`after` = 当前 unix 秒 − 7×86400（**不支持 `7d
 | Reddit Ads | 不做只观察 | CPC 便宜 5-10 倍但站未验证转化；上线后若测 $5/天×2 周 |
 | 用户调研 | 已覆盖+补 poll | 原生 poll 帖月 1-2 条；外链问卷必被 AutoMod 删 |
 | 多号矩阵 | quietporchmike=灾备 | 平行人格走不同 sub 矩阵，永不互动 |
-| 品牌监测 | **已并入 §2 词表 P0** | "cushion mill"/"cushionmill"/"the cushion mill" 三词每日轮 |
+| 品牌监测 | **已并入 §2 词表 P0** | "cushion mill"/"cushionmill"/"the cushion mill" 三词**每周一轮（2026-10-08 拍板降频，9 轮零命中）**，周一随主轮跑 |
 
-**背景事实**：facebook.com/thecushionill 主页=同名他者废弃资产（2026-09-30 用户确认非我方、不影响建号）。每日时间预算从 15 分钟升到 20 分钟（+3 分钟品牌词轮+2 分钟回复干货写足）。
+**背景事实**：facebook.com/thecushionill 主页=同名他者废弃资产（2026-09-30 用户确认非我方、不影响建号）。每日时间预算从 15 分钟升到 20 分钟（+2 分钟回复干货写足；品牌词轮 3 分钟因 2026-10-08 降频为周轮，仅周一计入——周一约 23 分钟，其余日 ~17 分钟）。
 
 ## 11. 潜在用户台账字段（2026-10-07 挖掘测试定案，随 §3 筛选同步记录）
 

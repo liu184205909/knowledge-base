@@ -127,8 +127,7 @@ HTML 原型的 CSS 类名（`img-placeholder` 等）**不得直译为 Elementor 
 | 比例约定 | hero 右图 / Solutions 卡图 4:3；Industries 行业条 16:9（以各项目 HTML 原型为准） |
 | 图片尺寸 | gpt-image-2 生成 1536x1024，展示端由 aspect_ratio + object-fit cover 裁切 |
 | 写实要求 | 提示词强调：candid documentary industrial photography / DSLR / natural daylight / realistic wear and tear / film grain / no people / not a 3D render——避免完美对称与霓虹蓝光（AI 感主要来源） |
-| **多效/混合系统参考风格** | 多效蒸发/混合盐系统配图参考 enchem 实拍风格：多组立式蒸发器按序排列+钢结构平台+黄色检修护栏+管线走向+蓝天简洁背景（写实摄影，无文字标签）——"落地感"与现场代入是这类图的核心价值（用户 2026-08-18 指定参考） |
-| **室内厂房/中央循环场景** | 双效/中央循环蒸发器配图参考 enchem 冶金案例：**室内厂房环境**（墙面+水泥地面）+中央循环管集中式结构+上层黄护栏平台+下层蓝色泵组辅助设备——与室外多效组图（蓝天）形成场景区分；写实实拍、细节到泵的机械结构（2026-08-18 补充参考） |
+| **B2B 蒸发结晶配图参考**（evapcryst 项目） | 多效/混合系统=enchem 实拍风格（立式蒸发器阵列+钢结构平台+黄护栏+管线+蓝天简洁背景）；室内厂房/中央循环=enchem 冶金案例（厂房环境+水泥地面+集中式结构+上层黄护栏+下层泵组）——两场景刻意区分，写实实拍无文字标签，"落地感"是核心价值（2026-08-18 指定） |
 | **工业尺度感（设备类硬要求）** | 设备图提示词必须含尺度参照物词：manways / steel platform with railings / ladders / multi-story plant structure / piping rack / factory floor——AI 默认倾向生成"实验室小设备"观感，无参照物则大装置会被画小。生成后质检专门判一项：**设备是 10 米级大型装置还是小型设备观感**（双视觉模型交叉判定更稳，2026-08-17 ZLD 设备卡实测 3/3 达标范例） |
 | ⚠️ 提示词坑 | 提示词含 "4:3" 等比例字样会诱导 gpt-image-2 偏离 size 参数（输出错尺寸）——比例由 aspect_ratio 控件控制，提示词不写比例 |
 | 部署链路 | 本地 JSON `image:{url:"assets/...",id:""}` → 部署前 Python 深拷贝替换 url=媒体库 source_url、id=attachment id（REST POST /wp-json/wp/v2/media multipart 上传）→ import-template |

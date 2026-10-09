@@ -1,7 +1,7 @@
 # Elementor MCP 生产 SOP（Woodmart 主题）
 
 > 2026-07-21 v1.2（合并测试方案文档 + 删除旧文档后）。POC 已通过，page 56325 验证样本。
-> **适用范围**：goearthward.com（Woodmart 主题）。通用化见 §10，产品化路线见 §13。
+> **适用范围**：goearthward.com（Woodmart 主题）。
 
 ---
 
@@ -9,11 +9,11 @@
 
 | 文档 | 角色 |
 |---|---|
-| **本文档** | **无 HTML 原型时的 Elementor page 生产 SOP**（增量构建 + 踩坑记录 + Pro widget + 产品化路线） |
+| **本文档** | **无 HTML 原型时的 Elementor page 生产 SOP**（增量构建 + 踩坑记录 + Pro widget） |
 | `HTML转Elementor混合流水线SOP.md` | **有 HTML 原型时的批量生产 SOP**（dudaster 转换 + globals 展开 + SVG/渐变注入 + 间距烘焙，主题无关，2026-08-14 在 evapcryst.com 验证） |
-| `Gutenberg博客文章REST-API上传指南.md` | post 生产 SOP |
+| `Gutenberg博客文章上传指南.md` | post 生产 SOP |
 | ~~`Elementor REST API 操作手册.md`~~ | 已删除（MCP SOP 替代） |
-| ~~`Elementor MCP 页面创建测试方案.md`~~ | 已删除（合并到 §13 附录） |
+| ~~`Elementor MCP 页面创建测试方案.md`~~ | 已删除（POC 历史文档，结论并入本文坑列表） |
 | **Elementor 4.3+ 原生 MCP** | 2026-09-24 customneon.live 验证：只覆盖**读结构 / 建页 / 文档设置 / widget schema 查询**；**V3 组件级写入仍走本文 EMCP 流程**（原生 manage-elements 为 V4 atomic 专属）。分工详见 memory `elementor-mcp-native-tool` |
 
 ---
@@ -75,6 +75,8 @@ add-free-widget (heading / text-editor / image / button / icon-box / image-box /
 | **长文档内容页（品类页等，默认）** | `"boxed"` | 背景全宽、内容居中约束——一层容器完成，无需内层 wrap 容器。**内容宽度由主题全局设置决定（如 1120/1200），不在页面 JSON 里写死** |
 | 背景图/装饰铺满型 hero | `"full"` | 内容真铺满（水晶站用法） |
 
+**不传 stretch 的实测后果**（信任栏 4 个 23% 卡片，page 56325）：内容被压在 boxed ~1140px 内，每个卡片仅 ~262px，文案挤、行数不一致、卡片不等高；传 stretch 后背景边到边，每个卡片 ~441px，文案宽松、卡片等高。
+
 **例外**：如果你**故意**让某个 section 内容居中（如 CTA 内层 wrapper），不要在**内层**传 stretch——只在 section 顶层传。
 
 ---
@@ -107,6 +109,8 @@ add-free-widget (heading / text-editor / image / button / icon-box / image-box /
 | Row 子容器 width（2 列） | 48% | 100% | 100% |
 
 ### 3.1b section padding 三档 + hero 负 margin 铁律（2026-09-01 cushionmill 定案）
+
+> padding 三档铁律真源=[HTML转Elementor混合流水线SOP](./HTML转Elementor混合流水线SOP.md) §1.2（2026-09-23 双文档裁定统一），本节为 MCP 通道字段参考。
 
 **大 container（section 顶层容器）padding 统一三档**（上下值；左右 0——内容宽由 boxed 界定）：
 
@@ -164,25 +168,6 @@ add-free-widget (heading / text-editor / image / button / icon-box / image-box /
 
 ---
 
-## 4. Section 全宽规则
-
-**所有 section 顶层容器**（直接挂在 page 根下的 container）都要传：
-
-```json
-{
-  "wd_section_stretch": "stretch",
-  "content_width": "full"
-}
-```
-
-**实际效果对比**（信任栏 4 个 23% 卡片）：
-- 不传 stretch：内容宽度 boxed 1140px，每个 23% 卡片 ~262px，文案挤、行数不一致、卡片不等高
-- 传 stretch：viewport 全宽（如 1920px），每个 23% 卡片 ~441px，文案宽松、卡片等高
-
-**例外**：内层 wrapper container（不是 section 顶层）不要传 stretch，否则会破坏嵌套布局。
-
----
-
 ## 5. 工具选择决策树
 
 ```
@@ -227,7 +212,6 @@ add-free-widget (heading / text-editor / image / button / icon-box / image-box /
 | **14** | **EMCP CSS 重生机制（代码级分析）** | **EMCP 有两层：1) 优先 `Document::save()`（触发 CSS 重生） 2) Fallback：直接写 meta + 删 CSS 文件（让 Elementor 下次访问重生）。但页面缓存（LiteSpeed/Cloudflare）会阻止"下次访问重生"** | **见坑 #11 解决方案** |
 | **15** | **Code Snippets REST PUT 更新会静默失活**：PUT 任意字段（含传 `active:true`）返回 200 但 snippet 变 `active:false`；带 PHP code_error 的 snippet 也被强制失活。曾致 v2 设计系统 CSS 全住在失活 snippet 里——页面样式"反复修复永不生效"的总根源（cushionmill 2026-09-01 实锤，38/9/30/59 号连环踩） | Code Snippets REST API 的 PUT 不处理 active 字段 | **激活唯一路径 = 删旧 + POST 新建**（POST 的 active:true 可靠）；改内容也走删旧重建，用完即删 |
 | **16** | **wp-admin 表单通道（插件上传等）App Password 登不进**：App Password 只覆盖 REST/XMLRPC 认证，不创建浏览器 cookie 登录态，playwright 模拟表单上传必失败 | 认证体系差异 | 文件类部署（插件 assets 更新）走 **Code Snippets 一次性 PHP**：POST 新建 active snippet，`file_put_contents` base64 载荷直写目标文件，前台 GET 触发执行，验证后 DELETE（cushionmill 工具 v1.9.53+ 部署通道） |
-
 | **17** | **CF 对同 URL 的 CSS/JS 缓存 7 天：内容变更不 bump 版本 = 用户永远看旧文件**（cushionmill 工具 v1.9.52 部署后同 URL 再改内容，cf-cache HIT 拦截） | `?ver=` 参数不变则 URL 不变，CF 按旧 URL 回源缓存 | **文件内容任何变更必须 bump 版本参数换 URL**（插件=CD_VERSION+Plugin Version 双处；CSS/JS 文件=改名或加查询参数） |
 | **18** | **TB conditions 格式陷阱**：`singular/post`（无 include/ 前缀）被 parse_condition 解析为 exclude 而**静默不接管**（页面继续走主题默认模板）；且 conditions 写入后必须调 `Conditions_Manager->save_conditions()` 触发缓存重建（get_cache() 只是内存态，"缓存空"是伪信号） | Elementor 条件解析首段语义 | 条件一律写 **`include/singular/post`** 完整格式；写完走 save_conditions 管线（cushionmill TB 32823 实锤，evapcryst 生产站 meta 对照证实） |
 | **19** | **TB 接管后 WoodMart 页头残留**（大图+分类+双 H1+meta）：TB 只接管 body 内容区，主题 single 页头照出 | 主题与 TB 的分工边界 | snippet 挂 `template_redirect` 时机 filter `woodmart_option`（single post 时 single_post_design=default + page_title=false）——filter 不能全局挂（早期调用污染主查询）；另留 CSS `.single-post .wd-page-title{display:none}` 双保险（cushionmill 32823） |
@@ -245,32 +229,18 @@ add-free-widget (heading / text-editor / image / button / icon-box / image-box /
 | **31** | **Elementor Conditions_Manager::$location_cache 全局中毒**：早期某次调用把空结果毒进静态 location 缓存后，template_include 永远命中污染值——**任何新建 TB 模板都不接管**（旧模板能用纯属树里旧数据侥幸）。修复=mu-plugin 在 template_include 优先级 9 调 `Conditions_Manager->clear_location_cache()`（cushionmill `mu-plugins/cm-fix-tb-location-cache.php`，**不可删**）。另：wp_unslash 损坏的历史模板副本会与好模板同条件竞争劫持页面（34947/34949 三胞胎事件）——建新 TB 后必须核对 conditions 树无重复/死引用 | Elementor Pro 静态缓存无失效机制 | 新建 TB 模板不接管时先查 location_cache；conditions 树保持"每 location 一个活模板"；Posts 皮肤控件写值带 `cards_` 前缀（如 cards_posts_per_page，注册名无前缀读取名有前缀——skin get_control_id 机制） |
 | **32** | **PHP 字面量含非 ASCII 字符经 Code Snippets 通道会静默损坏**（POÄNG 写进 snippet code 后执行时变坏串，str_replace 空转/写入失败两次实锤）——与 GBK/shell 转义坑同族 | snippet 存储层编码 | 需要非 ASCII 字面量时：PHP 侧用 chr(0xC3).chr(0x84) 构造字节，或**替换逻辑放 Python 侧**（PHP 只做 base64 读写回）；snippet 返回值必须用独立 GET 复查 DB 实态（fixed 计数≠落库） |
 
-### CSS 重生问题总结与产品化修复
+### CSS 重生问题总结
 
-> 从 EMCP 源码 `class-elementor-data.php` line 185-280 分析得出。
+> 从 EMCP 源码 `class-elementor-data.php` line 185-280 分析得出（机制详见坑 #11-#14）。
 
 **当前最佳实践（使用 EMCP Free 时）**：
 1. 不用 MCP 加 animation 字段（用 `add-custom-css` 代替）
 2. 每次完成 page 后在 Elementor 编辑器手动保存一次
 3. 如果 CSS 丢了（前端空白）：清缓存 → Elementor 自动重生
 
-**产品化时根治方案（fork EMCP 加 5 行 PHP）**：
-
-```php
-// 在 EMCP 的 save_page_data() fallback 路径加：
-if ( class_exists( '\Elementor\Core\Files\CSS\Post' ) ) {
-    $css_file = new \Elementor\Core\Files\CSS\Post( $post_id );
-    $css_file->update_file();  // 直接重生 CSS，不等下次访问
-}
-do_action( 'litespeed_purge_post', $post_id );     // 清 LiteSpeed
-do_action( 'rocket_clean_post', $post_id );          // 清 WP Rocket
-```
-
-**效果**：任何 MCP 操作后 CSS 自动正确，零用户配置，零 WP-CLI 依赖。这是 vs msrbuilds 的**核心差异化卖点**。
-
 ---
 
-## 7. 快速生产模板（9 个标准 section）
+## 7. 快速生产模板（7 个标准 section）
 
 ### 7.1 Hero（全宽 + 背景图 + overlay + 双 CTA）
 
@@ -354,24 +324,6 @@ do_action( 'rocket_clean_post', $post_id );          // 清 WP Rocket
 
 ---
 
-## 8. 生产流程示例（含 7 section 的完整 page）
-
-参考 `Home Clone - MCP Rebuild`（page 56325），共 64 元素 / 7 section / max_depth 4 / warnings=[]。
-
-**生成步骤**（约 30 个 MCP 调用）：
-1. `create-page` 1 次
-2. Hero section：1 add-container + 1 add-container（inner）+ 2 add-widget（heading + text-editor）+ 1 add-container（button row）+ 2 add-widget = 7 调用
-3. 信任栏：1 add-container + 4 add-container（子卡片）+ 4 add-widget = 9 调用
-4. 意图卡：1 add-container + 1 add-container（标题栏）+ 2 add-widget + 1 add-container（row）+ 3 add-container + 3 add-widget = 11 调用
-5. Why：1 add-container + 2 add-container + 3 add-widget + 1 add-container + 2 add-widget = 9 调用
-6. Use cases：1 add-container + 1 add-widget + 1 add-container + 3 add-container + 12 add-widget = 18 调用
-7. FAQ：1 add-container + 3 add-widget = 4 调用
-8. CTA：1 add-container + 3 add-widget = 4 调用
-
-**总耗时**：~5-10 分钟（含 AI 思考时间）
-
----
-
 ## 9. 验收清单
 
 每个 page 完成后必须验收：
@@ -385,33 +337,11 @@ do_action( 'rocket_clean_post', $post_id );          // 清 WP Rocket
 
 ---
 
-## 10. 通用化路线（后期考虑）
-
-> 目前 SOP 强依赖 Woodmart。未来产品化时需要解决：
-
-| Woodmart 依赖点 | 通用化方案 |
-|---|---|
-| `wd_section_stretch` | 用 Elementor 标准 `page_template: elementor_header_footer` 或 `full-width` page template |
-| `wd_title` widget | 用标准 `heading` widget + 自定义副标题 text-editor |
-| `wd_products_tabs` | 自研 widget 包装 `wc/v3` REST |
-| `wd_product_categories` | 同上 |
-| `wd__woodmart_title_off` page meta | 用标准 `elementor_canvas` page template |
-
----
-
 ## 11. 修订记录
 
-- 2026-07-20：v1.0 首版，基于 page 56325 验证结果
-- 2026-07-21：v1.1 更新
-  - 新增坑 #11-14（batch-update animation / EMCP 开关重连 / Elementor 4.x Regenerate CSS 缺失 / _elementor_css meta 失效）
-  - §7 从 7 section 扩展到 9 section（新增 Testimonial Carousel + Contact Form）
-  - 新增 §12 Pro widget 使用经验（3 个已验证）
-  - page 56325 最终成果：72 元素 / 9 section / 3 个 Pro widget / 前端渲染完美
-- 2026-07-21：v1.2 简化合并
-  - 删除 `Elementor REST API 操作手册.md`（page 生产旧路径，已被 MCP 完全替代）
-  - 删除 `Elementor MCP 页面创建测试方案.md`（POC 历史文档，有用内容合并到 §13）
-  - 新增 §13 附录（POC 测试结论 + 产品化路线 + 引用来源）
-  - 目录从 6 文档简化到 4 文档（删除 2 个 Elementor page 生产冗余文档）
+- 2026-07-20/21：v1.0 首版（page 56325 验证）→ v1.1 新增坑 #11-14 + §12 Pro widget 经验 → v1.2 合并删除 REST 手册与测试方案两文档
+- 2026-09 ~ 2026-10：坑列表扩至 #32（Code Snippets / TB conditions / element cache / 编码等 cushionmill+evapcryst 实战）；§2.1 / §3.1b 并入 cushionmill 裁定，§3.1b 标注混合流水线 SOP 为真源
+- 2026-10-09：v1.3 瘦身——删 §4（全宽规则并入 §2.1）/ §8（调用次数算术）/ §10（通用化路线）与 CSS 产品化半节，清理 §13 悬空引用；§7 订正为 7 个标准 section；修订记录压缩
 
 ---
 

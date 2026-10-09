@@ -1,7 +1,7 @@
 # Reddit 的 JSON 功法
 
 > 来源：Reddit r/ClaudeCode 社区、AI Jason（@AIJasonZ）YouTube/Instagram 系列内容整理
-> **关联文档**：本文件是 JSON API 端点的技术参考。流程框架见 `01-营销方法论基础/01-竞品研究/Reddit选品与营销SOP.md`（五帖法+Engagement 策略）；批量采集用同目录 `reddit_comment_collector.py`。
+> **关联文档**：本文件是 JSON API 端点的技术参考。流程框架见 `06-社媒营销/Reddit选品与营销SOP.md`（五帖法+Engagement 策略）；批量采集用同目录 `reddit_comment_collector.py`。
 > 核心思路：利用 Reddit 的隐藏 JSON 端点，免费获取结构化数据，无需 API 密钥
 
 ## 一、核心技巧

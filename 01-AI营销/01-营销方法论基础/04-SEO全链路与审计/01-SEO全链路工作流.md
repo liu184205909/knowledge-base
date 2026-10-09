@@ -1,7 +1,7 @@
 # SEO 全链路工作流（三合一：SEO全链路 + GSC数据驱动 + GEO五段布局）
 
-> **定位**：SEO 与 GEO 的操作工作流合集——项目各阶段照此执行。三部分各自独立成章：
-> 第 I 部分 SEO 全链路七步闭环 ｜ 第 II 部分 GSC 数据驱动分析方法论 ｜ 第 III 部分 C 端 GEO 五段旅程布局
+> **定位**：SEO 与 GEO 的操作工作流合集——项目各阶段照此执行。四部分各自独立成章：
+> 第 I 部分 SEO 全链路七步闭环 ｜ 第 II 部分 GSC 数据驱动分析方法论 ｜ 第 III 部分 C 端 GEO 五段旅程布局 ｜ 第 IV 部分 SEO 漂移监控体系
 > **知识层依据**（机制/研究/数据）在 [03-SEO与GEO/](../../03-SEO与GEO/README.md)，本文只管"何时做什么"。
 > 2026-09-14 由 02/10/20 三文档合并。配套脚本（已迁工具库）：[13-SEO审计脚本包](../../02-自动化工具库/13-SEO审计脚本包/README.md)（keyword_cannibalization_checker / onpage_seo_checker / seo_technical_auditor）
 
@@ -195,91 +195,22 @@ Audit → Strategy → Optimization → Content → Quality → Monitoring → D
 
 ---
 
-## 工具调用速查表（2026-09-17 校订：seo-* 为 subagent，blog-*/alert-manager 已除名）
+## 数据通道配置（SERP / GSC / DR）
 
-```
-# 审计阶段（subagent）
-seo-technical    → 技术审计
-seo-visual       → 视觉审计
-seo-schema       → 结构化数据审计
-seo-sitemap      → Sitemap 审计
-seo-performance  → 性能审计
-
-# 规划阶段
-serp_analysis    → 关键词/SERP 数据（Ubersuggest MCP，主用）
-seo-google       → GSC/CrUX 数据（subagent）
-seo-local        → 本地 SEO 规划（subagent）
-seo-maps         → 地图排名规划（subagent）
-
-# 优化阶段（subagent）
-seo-technical    → 技术修复
-seo-sitemap      → Sitemap 生成
-seo-schema       → Schema 生成
-
-# 内容阶段
-02-内容生产实操SOP → Brief/写作/核查/批量验收全链路（03-内容生产与质检/）
-seo-geo          → AI 搜索优化（subagent）
-seo-image-gen    → 图片分析与规划（subagent）
-
-# 质控阶段
-seo-content      → E-E-A-T 审核（subagent）
-02-SOP §3.3      → 事实核查三级风控
-04-审计工具包    → 内容审计 100 分评分
-03-EEAT          → 发布前单篇准入
-keyword_cannibalization_checker.py → 蚕食检测（脚本）
-
-# 监控阶段
-第 IV 部分漂移监控 → 异常告警（Title/Meta/Canonical 基线 diff）
-gsc-radar        → GSC 机会雷达（skill，已建成）
-seo-google       → GSC 趋势（subagent）
-seo-performance  → CWV 趋势（subagent）
-seo-backlinks    → 外链监控（subagent，DR 走 Ahrefs 免费通道）
-serp_analysis    → 竞品 SERP 追踪（Ubersuggest MCP）
-```
-
----
-
-## 数据通道配置（SERP / GSC / DR，2026-09-17 按 2026-09-07 定案重写）
-
-> 旧版写"DataForSEO MCP 必装"——与当前环境相反（全局 MCP 实测无 DataForSEO MCP，2026-09-07 定案 SERP 主用已切换为 Ubersuggest）。工具主次全表见 [竞品分析SOP §9](../01-竞品研究/竞品分析SOP.md)。
+> **真源指针**：工具调用参数与凭证纪律以全局 CLAUDE.md『SERP/竞对搜索』『Google 服务访问』两节 + [竞品分析SOP §9](../01-竞品研究/竞品分析SOP.md) 为真源——Ubs `serp_analysis` 参数与额度 / DataForSEO 端点与 body 单层格式 / GSC token 刷新命令 / Ahrefs DR curl 均在彼处，本文不重复。旧版写"DataForSEO MCP 必装"与当前环境相反（2026-09-07 定案 SERP 主用已切换为 Ubersuggest）。
 >
 > **🔴 铁律：禁止 web_search_prime / WebSearch 做竞研**（通用搜索工具对 B2B 工业设备搜索极不准确，曾导致竞对完全失效）。
 
-### 通道 1：Ubersuggest MCP `serp_analysis`（SERP 主用）
-
-- 参数：`keyword` + `locId=2840` + `limit=20-50`；150 次/天全局额度（与四查共享）
-- 自带 AI Overview 位次 / SERP 特征类型（popular_products/local_pack/PAA）/ clicks / DA
-- 同词实测与 DataForSEO organic 前 8 完全一致（同源 Google SERP）
-- 403 时等 60-180s 重试
-
-### 通道 2：DataForSEO REST API（SERP 备用）
-
-**触发条件**：Ubersuggest 限流/日额尽 / 需 depth>20 深挖 / Labs 端点 / 历史快照自建。
-
-- 端点（2026-08-21 实测，旧路径已 404）：`POST https://api.dataforseo.com/v3/serp/google/organic/live/advanced`（**无 /post 后缀**，含 organic 层级）
-- body 单层 JSON 数组：`[{"keyword":"...","location_code":2840,"language_code":"en"}]`（双层嵌套报 Invalid Field: keyword）
-- basic auth，凭证 `.env` 的 `DFS_API_LOGIN` / `DFS_API_PASSWORD`；$0.002/次
-- 完整诊断见 [19-DataForSEO-SERP诊断报告](../../04-选品库/B端/06-矫直机/19-DataForSEO-SERP诊断报告.md)
-
-### 通道 3：GSC 直连 API（自有站数据——优先直连，MCP 备选）
-
-- **优先直接 API 调用（更可靠）**：Search Analytics API `searchanalytics.query`，dimension 用法见第 II 部分 §6 落地映射
-- **读前先刷新 token 否则 401**：`python C:/Users/Dylan/tools/refresh_google_token.py`（失效加 `--reauth`）
-- 凭证：`~/.google_workspace_mcp/credentials/lzn184205909@gmail.com.json`，Token 字段名 `token`，代理 `http://127.0.0.1:10808`
-- GSC MCP（suganthan-gsc-mcp）为备选，未配置不影响本工作流（第 II 部分已配直连降级路径）
-
-### 通道 4：Ahrefs 免费 DR（竞对档案 / 外链强度）
-
-- DR 查询（免费不耗 units）：`curl -s -H "Authorization: Bearer $AHREFS_API_KEY" "https://api.ahrefs.com/v3/public/domain-rating-free?target={domain}"`（key 在 `.env` 的 `AHREFS_API_KEY`）
-- Top 1M DR 榜：`/v3/public/domain-rating-top-domains?from=1&to=100`
+**本节独有细节**：
+- Ubs `serp_analysis` 403 时等 60-180s 重试；DFS 触发条件 = Ubs 限流/日额尽 / 需 depth>20 深挖 / Labs 端点 / 历史快照自建
+- GSC 优先直连 API（MCP 备选未配置不影响本工作流），dimension 用法见第 II 部分 §6 落地映射
+- 环境与凭证基础设施详见 [Claude Code 环境配置](../../../00-基础能力/01-Claude-Code环境配置.md)
 
 ### 局限性
 
 - **AI 解读准确性**：API 返回的数据是精确的，但 AI 的解读可能出错（过度归因、编造解释）——需人工审核
 - **数据权限边界**：只能访问 API 暴露的数据；Ahrefs 深度外链库为私有数据（免费通道仅覆盖 DR 查询与 Top 1M 榜）
 - **费用控制**：DataForSEO 按次计费（$0.002/次），Agent 自主运行时限调用次数
-
-> 环境与凭证基础设施详见 [Claude Code 环境配置](../../../00-基础能力/01-Claude-Code环境配置.md)。
 
 
 <!-- ======== 第 II 部分：GSC 数据驱动 SEO 深度研究（原 01-SEO全链路工作流.md，2026-09-14 并入）======== -->
@@ -485,6 +416,8 @@ Glen 称这是他"13 年 SEO 做过最聪明的事"：
 - Glenn 的例子：MakeupTalk 一个 4 年没更新的帖排"is ipsy worth it"；Reddit r/Succulents 一个 15 评论、无人真正回答的帖排该意图词。
 - **落地**：SERP top 结果 → 评估内容质量/更新时间 → 标"弱结果可超"。
 
+> 单词级排产前深研（非本文件审计场景）→ [关键词调研与SERP深研SOP](../01-竞品研究/关键词调研与SERP深研SOP.md)
+
 ### 3.5 核心更新后用 GSC 导出 + 浏览器 agent 对比排名（[Marie Haynes](https://www.mariehaynes.com/use-chatgpt-operator-to-check-your-rankings-immediately-following-a-google-core-update/)）
 - Google 核心更新发布当天，GA4 数据有延迟，GSC 也滞后。
 - 解法：导出 GSC 最近 7 天 top 15 关键词及排名 → 丢给 ChatGPT Operator/Project Mariner（浏览器 agent）→ prompt"逐个搜索，给旧排名 vs 今天排名对照表"→ ~10 分钟出快照。
@@ -569,81 +502,39 @@ Return only valid JSON. No markdown wrapper.
 
 ## 5. 工作流架构（落地设计）
 
-基于 §3.1 两段式 + §4 避坑。**三段同属 gsc-radar 单 skill**（合为一是因为 MCP 工具只返 top N、无 choke；Claude 按意图路由阶段）：
+基于 §3.1 两段式 + §4 避坑，**三段同属 gsc-radar 单 skill**（合为一是因为 MCP 工具只返 top N、无 choke；Claude 按意图路由阶段）：
 
-```
-┌─ gsc-radar（轻 / 高频 / 每周）─────────────────┐
-│  限 top N 防 choke（§4.2）                       │
-│  ├─ gsc_quick_wins（pos4-15，品牌词过滤 §1.1）   │
-│  ├─ gsc_ctr_opportunities（低CTR，标注待灰度）   │
-│  ├─ gsc_content_decay（3窗口真衰减）             │
-│  ├─ gsc_traffic_drops（ranking/ctr/demand分类）  │
-│  └─ gsc_cannibalization（同query多页）           │
-│  输出：结构化「本周优化清单」+ 每项建议           │
-└──────────────────────────────────────────────────┘
-            │ 选高优先级目标（机会词/掉量页）
-            ▼
-┌─ 阶段2·深挖（gsc-radar，重/按需/单目标）──────┐
-│  复刻 CXL Agent 2（§3.1）                        │
-│  ├─ serp_analysis 拉 SERP top                   │
-│  ├─ serp_aio_monitor 看 AIO 是否蚕食（§2.3）     │
-│  ├─ web-reader 抓竞品 top3 内容                  │
-│  ├─ 弱结果识别（§3.4）/ 年轻站反查（§3.2）       │
-│  └─ Claude 对比自家页 → 具体改进清单             │
-│  输出：可执行的改 title/补子主题/加内链指令      │
-└──────────────────────────────────────────────────┘
-            │ 执行改进
-            ▼
-┌─ 验证闭环（4-6 周后）─────────────────────────┐
-│  history_save_snapshot（优化前）                 │
-│  → GSC Custom Annotation 标"优化了X"（§2.4）     │
-│  → 4-6 周 history_diff 看是否回升                │
-│  → AI 改 meta 的必须先灰度对照（§4.1）           │
-└──────────────────────────────────────────────────┘
-```
+**流程一行**：阶段1 扫描（轻/高频/每周；quick_wins＋ctr_opportunities＋content_decay＋traffic_drops＋cannibalization 五族切片，限 top N 防 choke §4.2、品牌词过滤 §1.1 → 输出"本周优化清单"）→ 选高优先级目标（机会词/掉量页）→ 阶段2 深挖（重/按需/单目标；复刻 CXL Agent 2 §3.1：serp_analysis 拉 SERP top 与 AIO 位次 → web-reader 抓竞品 top3 → 弱结果识别 §3.4 / 年轻站反查 §3.2 → Claude 对比自家页出可执行改进指令）→ 验证闭环（优化前快照 → GSC Custom Annotation 标注 §2.4 → 4-6 周 diff 看是否回升；AI 改 meta 必先灰度对照 §4.1）。
+
+**执行真源**：gsc-radar skill（`~/.claude/skills/gsc-radar/SKILL.md`，已建成）——工具编排与参数以其为权威，本节只留方法论。
 
 **多语言站特殊处理**（electricalcabinet 有 ja/fr/it/ar/tr/es/de）：按语言分组报告，多语种长尾（如 スイッチギア、断路器、fusibile elettrico）单独列——这些往往是低竞争高意图的金矿。
 
 ---
 
-## 6. 落地映射：技巧 → google-seo-mcp 工具
+## 6. 落地映射：技巧 → 直连 API dimension
 
-> **通道现状说明**（2026-09-17，与 CLAUDE.md「Google 服务访问」节对齐）：google-seo-mcp 当前**未配置**——下表是"若配置后的语义映射"，当前实际执行走直连通道：
-> - **GSC 全族指标**（`gsc_quick_wins` / `gsc_search_analytics` / `gsc_ctr_opportunities` / `gsc_content_decay` / `gsc_traffic_drops` / `gsc_cannibalization` / `gsc_inspect_url`）→ 直连 GSC Search Analytics API `searchanalytics.query`（dimension 用法照下表；**读前先 `python C:/Users/Dylan/tools/refresh_google_token.py` 刷 token，否则 401**）；快照对比（`history_save_snapshot`/`history_diff`）由 gsc-radar skill 内置快照逻辑承接
-> - **SERP 反查族**（`serp_check` / `serp_paa_extractor` / `serp_aio_monitor`）→ Ubersuggest MCP `serp_analysis`（keyword+locId=2840+limit=20-50，自带 AI Overview 位次与 SERP 特征类型，AIO 监控可由其位次替代）
-> - 执行层封装见 gsc-radar skill（`~/.claude/skills/gsc-radar/SKILL.md`，已建成）
+> **通道现状**（2026-09-17）：google-seo-mcp 未配置——GSC 全族（quick_wins / search_analytics / ctr_opportunities / content_decay / traffic_drops / cannibalization / inspect_url）走直连 Search Analytics API（读前刷 token，见第 I 部分"数据通道配置"）；SERP 反查族（serp_check / paa / aio_monitor）走 Ubs `serp_analysis`（自带 AIO 位次，AIO 监控由其位次替代）；快照对比由 gsc-radar skill 内置。§1.x 各节已有"落地"行，此处只列 dimension 速查：
 
-| 技巧（章节） | MCP 工具 | 关键参数/输出 |
-|---|---|---|
-| Striking distance（§1.2） | `gsc_quick_wins` | site_url, days=90, min_impressions; 输出 opportunity_score + estimated_extra_clicks |
-| CTR 机会（§1.5） | `gsc_ctr_opportunities` | 输出低CTR页 + 该位置预期CTR；**⚠️改前看§4.1** |
-| 内容衰减（§1.4） | `gsc_content_decay` | 自动3个30天窗口单调下降 |
-| 掉量分类（§1.4） | `gsc_traffic_drops` | diagnosis: ranking_loss/ctr_collapse/demand_decline/disappeared |
-| 自相竞争（§1.3） | `gsc_cannibalization` | 同query≥2页 |
-| Page×Query（§1.3） | `gsc_search_analytics` | dimensions=[page,query] |
-| 品牌词分离（§1.1） | `gsc_search_analytics` | 拉全量query后本地regex分桶 |
-| Question/Intent regex（§1.7） | `gsc_search_analytics` | 拉query后本地regex（how/why/vs/buy） |
-| URL 索引诊断（§1.6） | `gsc_inspect_url` | 单URL；批量循环注意2000/日配额 |
-| AIO 蚕食推断（§2.3） | `serp_aio_monitor` | 批量查关键词AIO存在性 |
-| SERP 反查竞品（§3.1-3.4） | `serp_check`/`serp_paa_extractor` + web-reader | 拉SERP+抓竞品+Claude对比 |
-| 核心更新后排名快照（§3.5） | `gsc_search_analytics` + web-access | 导出top词+浏览器agent逐个搜 |
-| 验证闭环（§5） | `history_save_snapshot`/`history_diff` | 优化前后对比 |
+| 技巧（章节） | 直连 API 用法 |
+|---|---|
+| Striking distance（§1.2） | query 过滤 pos 4-15，砍 <100 展现 |
+| CTR 机会（§1.5） | 高曝光低 CTR 过滤；**⚠️改前看 §4.1** |
+| 内容衰减/掉量分类（§1.4） | 3 个 30 天窗口，diagnosis 分 ranking/ctr/demand/disappeared |
+| 自相竞争（§1.3） | dimensions=[query,page]，同 query ≥2 页 |
+| Page×Query 下钻（§1.3） | dimensions=[page,query] |
+| 品牌词/Intent regex（§1.1/§1.7） | 拉全量 query 后本地 regex 分桶（API 不支持 regex 参数） |
+| URL 索引诊断（§1.6） | URL Inspection API 循环，2000/日配额 |
+| 核心更新后排名快照（§3.5） | 导出 top 词 + web-access 浏览器 agent 逐个搜 |
+| 验证闭环（§5） | gsc-radar skill 内置快照 + 4-6 周 diff |
 
 ---
 
 ## 7. Skill 落地
 
-**单 skill `gsc-radar`（两阶段）**，已建于 `~/.claude/skills/gsc-radar/SKILL.md`：
+**单 skill `gsc-radar`**（阶段1 扫描=§1+§5 上 / 阶段2 深挖=§3+§5 中 / 复查闭环=§5 下），执行真源 `~/.claude/skills/gsc-radar/SKILL.md`（已建成）。合为一而非两个（原计划 gsc-radar + serp-deep-dive 已合并）：MCP 只返 top N 无 choke，一个命令走全流程，Claude 按意图路由（"扫一下"→阶段1，"深挖X"→阶段2）。
 
-| 阶段 | 做什么 | 对应章节 |
-|---|---|---|
-| 阶段1 扫描 | GSC 内部切片（quick_wins/ctr/decay/drops/cannibalization + 品牌词过滤），限 top N 防 choke | §1 + §5 上 |
-| 阶段2 深挖 | 针对目标拉 SERP+AIO+竞品，生成具体改进（§1.2 五步 playbook） | §3 + §5 中 |
-| 复查闭环 | history_save_snapshot + annotation + 4-6周 diff | §5 下 |
-
-> 合为一个 skill 而非两个（原计划 gsc-radar + serp-deep-dive 已合并）：Claude 调 MCP 工具只返回 top N 结构化结果、不碰全量数据，无 CXL 那种 choke；一个命令走全流程，Claude 按意图路由（"扫一下"→阶段1，"深挖X"→阶段2）。
-
-与现有工具协同（2026-09-17 校订，旧版列的 seo-audit / competitor-analysis / content-refresher / blog-google 四个 skill 均不存在，已替换为真实通道）：技术审计走 `seo-technical`（subagent）与 [13-SEO审计脚本包](../../02-自动化工具库/13-SEO审计脚本包/README.md)；竞品深挖按 [竞品分析SOP](../01-竞品研究/竞品分析SOP.md) 执行；内容刷新落地走 [02-内容生产实操SOP §5.3 更新处置三选一](../03-内容生产与质检/02-内容生产实操SOP.md)；Google API 直连纪律见本文"数据通道配置"节——gsc-radar 产出机会清单后按上述通道落地。
+与现有工具协同：技术审计走 `seo-technical`（subagent）与 [13-SEO审计脚本包](../../02-自动化工具库/13-SEO审计脚本包/README.md)；竞品深挖按 [竞品分析SOP](../01-竞品研究/竞品分析SOP.md)；内容刷新落地走 [02-内容生产实操SOP §5.3 更新处置三选一](../03-内容生产与质检/02-内容生产实操SOP.md)；gsc-radar 产出机会清单后按上述通道落地。
 
 ---
 
@@ -651,11 +542,8 @@ Return only valid JSON. No markdown wrapper.
 
 > gsc-radar SKILL.md 已整合执行层。以下方法论补充。
 
-### 8.1 防幻觉三原则（来源 [Suganthan GSC MCP v1.1.0](https://suganthan.com/blog/google-search-console-mcp-server/) 三层）
-AI 出 GSC 分析最致命是数字幻觉（把 312 clicks 说成 350、臆断"核心更新导致"无证据）。三层防护：
-1. **Guardrail prompts**：工具描述写死"只基于返回数据分析，报精确数字，不知道就说不知道"
-2. **Data provenance**：每响应带 `_meta`（source/tool/params）— google-seo-mcp 已内置
-3. **verify_claim**：结论前 re-query API 核对关键数字 — skill 收尾可选自检 top3 数字（成本 3 次额外调用，自用可接受）
+### 8.1 防幻觉三原则（来源 [Suganthan GSC MCP v1.1.0](https://suganthan.com/blog/google-search-console-mcp-server/)）
+AI 出 GSC 分析最致命是数字幻觉（把 312 clicks 说成 350、臆断"核心更新导致"无证据）。三层防护 = Guardrail prompts（只基于返回数据、报精确数字、不知道就说不知道）+ Data provenance（每响应带 `_meta` 源标记）+ verify_claim（结论前 re-query 核对关键数字）。执行层措辞以 gsc-radar SKILL.md 为准（更新更全）。
 
 ### 8.2 content_gaps：该写未写选题（来源 Suganthan）
 `gsc_search_analytics` filter `position>20 AND impressions>100` → 有曝光但排不上的 query = 真实需求未覆盖。
@@ -664,36 +552,13 @@ AI 出 GSC 分析最致命是数字幻觉（把 312 clicks 说成 350、臆断"�
 - 多语种 query 单独列（如 スイッチギア/断路器 = 低竞争高意图金矿）
 
 ### 8.3 Query cluster → 补 H2（来源 [Serploom](https://serploom.com/blog/gsc-quick-wins) / [NEURONwriter](https://neuronwriter.com/striking-distance-audit-gsc-2026/)）
-单页 N≥5 相关 query 卡 pos 11-20 且语义聚集 = **内容深度不够**的精确信号。
-- `gsc_search_analytics` dim=[query,page] 过滤该 page，统计 query 数 + 位置集中度
-- 输出"建议补 H2：[query1]/[query2]..."
-- 比 NEURONwriter 的 NLP semantic gap 接地气（用真实 GSC query 而非 NLP 打分）
+单页 N≥5 相关 query 卡 pos 11-20 且语义聚集 = **内容深度不够**的精确信号：dim=[query,page] 过滤该 page 统计 query 数+位置集中度，输出"建议补 H2"清单。比 NLP semantic gap 打分接地气（用真实 GSC query）。执行细节以 gsc-radar SKILL.md 为准。
 
 ### 8.4 CTR 7 档 benchmark（来源 [Serploom 2026](https://serploom.com/blog/gsc-quick-wins)）
-ctr_opportunities 输出必须**透明展示 benchmark**（非黑箱分数），让用户看到推导过程：
-
-| position | 预期 CTR |
-|---|---|
-| 1 | 25-35% |
-| 2 | 12-18% |
-| 3 | 8-13% |
-| 4 | 6-9% |
-| 5 | 5-8% |
-| 6-7 | 3-6% |
-| 8-10 | 2-4% |
-
-每条标"你 pos X 该 Y%，实际 Z%，gap Δ"。加 **device pivot**（`dim=[query,device]`，mobile vs desktop 差 >5 位 → flag mobile 落后，跑 `lighthouse_audit strategy=mobile`）和 country pivot（未开发市场/本地化机会）。
+低 CTR 输出必须**透明展示 benchmark**（非黑箱分数），每条标"你 pos X 该 Y%，实际 Z%，gap Δ"。7 档基准：pos1=25-35% / 2=12-18% / 3=8-13% / 4=6-9% / 5=5-8% / 6-7=3-6% / 8-10=2-4%。加 device pivot（`dim=[query,device]`，mobile vs desktop 差 >5 位 flag 落后）与 country pivot（未开发市场机会）。执行细节以 gsc-radar SKILL.md 为准。
 
 ### 8.5 content_recommendations 决策融合（来源 Suganthan）— 从工具升级成助手
-把 quick_wins + decay + drops + cannibalization + content_gaps 融成**单一优先级行动队列**（避免用户自己拼）：
-
-| 动作 | 来源 | 排序 |
-|---|---|---|
-| **UPDATE**（改现有页） | quick_wins + decay + ctr_opportunities | 按 impressions × lift_potential |
-| **CREATE**（建新内容） | content_gaps query | 按 impressions |
-| **CONSOLIDATE**（合并/区分） | cannibalization 对 | 标 merge/differentiate |
-
-每条带：目标 URL/query + 调哪个 MCP 验证 + 下一步动作。这是 skill 从"分析工具"到"决策助手"的质变。
+把 quick_wins + decay + drops + cannibalization + content_gaps 融成**单一优先级行动队列**：**UPDATE**（改现有页，按 impressions × lift_potential）/ **CREATE**（建新内容，按 impressions）/ **CONSOLIDATE**（合并/区分 cannibalization 对）。每条带目标 URL/query + 验证工具 + 下一步动作——这是 skill 从"分析工具"到"决策助手"的质变。转化页权重加倍等排序细则以 gsc-radar SKILL.md 为准。
 
 ### 8.6 阶段2 竞品深挖编排（2026-09-17 更新：竞研体系已迁至竞品分析SOP）
 
@@ -738,36 +603,11 @@ google-seo-mcp 是 100+ 工具的能力底座（14 大类），gsc-radar 目前�
 
 ---
 
-## 附录：关键来源索引（均可访问，2026-06 验证）
+## 附录：关键来源索引（正文已全部内联原文链接，均 2026-06 验证可访问）
 
-**Google 官方（最权威）**
-- [Search Generative AI 性能报告（2026-06）](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports)
-- [AI-Powered Configuration（2025-12）](https://developers.google.com/search/blog/2025/12/ai-powered-configuration)
-- [Branded queries filter（2025-11）](https://developers.google.com/search/blog/2025/11/search-console-branded-filter)
-- [Custom Annotations（2025-11）](https://coywolf.com/news/seo/google-adds-custom-annotations-to-search-console/)
-- [URL Inspection 工具](https://support.google.com/webmasters/answer/9012289)
-
-**专家深度长文（一手）**
-- [CXL – n8n AI SEO agent 实战（含 choke 教训 + 双 agent）](https://cxl.com/blog/seo-workflow-n8n-automation/)
-- [Detailed.com – Glen Allsopp 高级关键词 4 战术](https://detailed.com/advanced-keyword-research/)
-- [Brodie Clark – AIO 在 GSC 的追踪实验](https://brodieclark.com/ai-overviews-google-search-console/)
-- [Analyseo – Striking Distance 完整 playbook](https://analyseo.app/blog/striking-distance-keywords-search-console)
-- [Rows – GSC 关键词研究（4x 增量区）](https://rows.com/blog/post/google-search-console-keyword-research)
-- [Seer Interactive – AI 改 meta 反例（对照实验）](https://www.seerinteractive.com/insights/using-chatgpt-to-rewrite-meta-descriptions-results-in-decreased-performance)
-- [Glenn Gabe/GSQi – Regex + Delta Report + AIO manual action](https://www.gsqi.com/marketing-blog/filter-gsc-data-regular-expressions-ga/)
-- [Marco Giordano – GSC + BigQuery URL 级分析](https://www.linkedin.com/posts/marco-giordano96_a-look-into-google-search-console-and-its-activity-7381991862695415808-om2t)
-- [Marie Haynes – 核心更新后用 Operator 查排名](https://www.mariehaynes.com/use-chatgpt-operator-to-check-your-rankings-immediately-following-a-google-core-update/)
-- [Onely – Discovered not indexed 详解](https://www.onely.com/blog/how-to-fix-discovered-currently-not-indexed-in-google-search-console/)
-- [Steve Toth – Question regex](https://www.linkedin.com/posts/stevetothjr_seonotebook-activity-6787527490517782528-iSTx)
-
-**工具/产品化参考**
-- [Suganthan – GSC MCP 20 工具](https://suganthan.com/blog/google-search-console-mcp-server/)
-- [Suganthan – BigQuery MCP 32 工具（revenue per keyword）](https://suganthan.com/blog/bigquery-mcp-server/)
-- [Screaming Frog + ChatGPT 批量 meta](https://www.screamingfrog.co.uk/seo-spider/tutorials/how-to-crawl-with-chatgpt/)
-- [Profound – GSC 节点 + AI 搜索可见性](https://www.tryprofound.com/blog/introducing-google-search-console-nodes-for-profound-agents)
-
-**反 AI 优先的实战**
-- [25K→80K clicks：最有效的自动化多不需要 AI](https://www.reddit.com/r/n8n/comments/1jeuzjg/automation_workflows_that_grew_my_traffic_from/)
+- **Google 官方（最权威）**：Search Generative AI 性能报告（2026-06）/ AI-Powered Configuration / Branded queries filter / Custom Annotations / URL Inspection / Query Groups / Recommendations / hourly API / weekly-monthly 视图——正文 §2 各节已内链官方页
+- **专家深度长文（一手）**：CXL n8n AI SEO agent 实战（choke 教训+双 agent）/ Detailed.com Glen Allsopp 4 战术 / Brodie Clark AIO 实验 / Analyseo striking-distance playbook / Rows / Seer Interactive AI 改 meta 对照实验 / Glenn Gabe-GSQi / Marco Giordano BigQuery / Marie Haynes / Onely / Steve Toth question regex——正文各节已内链
+- **工具/产品化 + 反 AI 实战**：Suganthan GSC MCP（20 工具）与 BigQuery MCP（32 工具，revenue per keyword）/ Screaming Frog+ChatGPT 批量 meta / Profound GSC 节点 / [25K→80K clicks：最有效的自动化多不需要 AI](https://www.reddit.com/r/n8n/comments/1jeuzjg/automation_workflows_that_grew_my_traffic_from/)（Reddit）
 
 
 <!-- ======== 第 III 部分：C 端 GEO 五段旅程布局工作流（原 20-C端GEO五段旅程布局工作流.md，2026-09-14 并入）======== -->
@@ -851,55 +691,15 @@ google-seo-mcp 是 100+ 工具的能力底座（14 大类），gsc-radar 目前�
 
 ### 2.1 信号分层
 
-```
-┌───────────────────────────────────────────────────┐
-│  P0 关键信号（任何变化都应预警）                      │
-│  • Title Tag                                      │
-│  • Meta Description                               │
-│  • Canonical URL                                  │
-│  • H1 标题                                        │
-│  • robots.txt（整站级）                             │
-│  • 页面 HTTP 状态码                                │
-├───────────────────────────────────────────────────┤
-│  P1 重要信号（显著变化应预警）                        │
-│  • Schema/Structured Data 类型与字段               │
-│  • H2-H3 标题层级                                  │
-│  • 内部链接数量（页面级）                            │
-│  • 图片 ALT 标签覆盖率                              │
-│  • hreflang 标签                                   │
-├───────────────────────────────────────────────────┤
-│  P2 趋势信号（定期审查，趋势异常时预警）              │
-│  • 页面字数                                        │
-│  • 外链数量（需要第三方数据）                        │
-│  • Core Web Vitals 指标                            │
-│  • 索引覆盖率（GSC）                                │
-│  • 关键词排名位置                                   │
-└───────────────────────────────────────────────────┘
-```
+| 层级 | 信号 | 预警规则 |
+|---|---|---|
+| **P0 关键** | Title Tag / Meta Description / Canonical URL / H1 / robots.txt（整站级）/ 页面 HTTP 状态码 | 任何变化都应预警 |
+| **P1 重要** | Schema 类型与字段 / H2-H3 标题层级 / 内部链接数量（页面级）/ 图片 ALT 覆盖率 / hreflang | 显著变化应预警 |
+| **P2 趋势** | 页面字数 / 外链数量（需第三方数据）/ Core Web Vitals / 索引覆盖率（GSC）/ 关键词排名位置 | 定期审查，趋势异常时预警 |
 
 ### 2.2 每个信号的基线结构
 
-```json
-{
-  "url": "https://example.com/page",
-  "snapshot_date": "2026-06-11",
-  "signals": {
-    "title": "Example Page Title | Brand",
-    "meta_description": "160 chars description...",
-    "canonical": "https://example.com/page",
-    "h1": "Main Page Heading",
-    "h2_count": 5,
-    "schema_types": ["Article", "FAQPage"],
-    "internal_links": 12,
-    "external_links": 3,
-    "images_total": 8,
-    "images_with_alt": 7,
-    "status_code": 200,
-    "word_count": 1850,
-    "hreflang": ["en", "zh", "es"]
-  }
-}
-```
+每页一条 JSON 快照：顶层 `url` + `snapshot_date` + `signals`；signals 固定字段 = title / meta_description / canonical / h1 / h2_count / schema_types / internal_links / external_links / images_total / images_with_alt / status_code / word_count / hreflang。
 
 ---
 
@@ -907,11 +707,7 @@ google-seo-mcp 是 100+ 工具的能力底座（14 大类），gsc-radar 目前�
 
 ### 3.1 三阶段闭环
 
-```
- 采集基线          对比检测          预警与修复
- ─────────   →   ─────────   →   ──────────────
- 首次全量抓取      定期增量抓取      变化报告 → 排查 → 修复 → 更新基线
-```
+**采集基线**（首次全量抓取）→ **对比检测**（定期增量抓取）→ **预警与修复**（变化报告 → 排查 → 修复 → 更新基线）。
 
 ### 3.2 采集频率建议
 
@@ -946,74 +742,24 @@ google-seo-mcp 是 100+ 工具的能力底座（14 大类），gsc-radar 目前�
 ### 4.2 报告模板
 
 ```markdown
-# SEO Drift Report — 2026-06-11
-
-## 摘要
-- 检测页面：150
-- 有变化：12 页面（8%）
-- P0 变更：2 页面 ⚠️
-- P1 变更：5 页面
-- P2 变更：5 页面
-
+# SEO Drift Report — {date}
+## 摘要：检测页面 N；有变化 M（x%）；P0 变更 a ⚠️ / P1 变更 b / P2 变更 c
 ## P0 关键变更（需立即排查）
-
 | URL | 信号 | 旧值 | 新值 | 可能原因 |
-|-----|------|------|------|---------|
-| /products/a | title | "Product A - Brand" | "Product A" | CMS 模板更新 |
-| /blog/post-1 | canonical | /blog/post-1 | /blog/post-1?ref=newsletter | URL 参数泄漏 |
-
+     例：title "Product A - Brand"→"Product A"（CMS 模板更新）；canonical 泄漏 ?ref= 参数
 ## P1 重要变更
-
 | URL | 信号 | 变化类型 | 详情 |
-|-----|------|---------|------|
-| /about | schema | missing | Organization Schema 消失 |
-| /services | h2_count | changed | 8 → 3（内容被精简） |
-
-## 趋势（P2）
-...
+     例：schema missing（Organization 消失）；h2_count 8→3（内容被精简）
+## 趋势（P2）...
 ```
 
 ---
 
 ## 五、技术实现路径
 
-### 5.1 轻量级方案（推荐起步）
-
-```
-Python 脚本（复用 seo_technical_auditor.py 的检查逻辑）
-    ↓
-输出 JSON 快照 → 存入 .seo-cache/pages/{slug}/snapshots/
-    ↓
-diff 脚本对比相邻快照 → 生成 Markdown 报告
-    ↓
-报告推送到 Slack / 邮件 / GitHub Issue
-```
-
-**优势**：无需外部依赖，复用现有审计脚本。
-
-### 5.2 集成方案（规模化时）
-
-```
-爬虫调度器（Scrapy / Playwright）
-    ↓
-SEO 信号提取 → JSON 存储（SQLite / PostgreSQL）
-    ↓
-diff 引擎（信号对比 + 变更分类）
-    ↓
-告警路由（Slack / PagerDuty / GSC 邮件通知）
-    ↓
-Dashboard（Grafana / 自建面板）
-```
-
-### 5.3 与 codex-seo 架构的整合点
-
-基于 本文第 I 部分 中的架构规划：
-
-| 整合点 | 说明 |
-|--------|------|
-| `.seo-cache/` 共享缓存 | 漂移快照存入 `pages/{slug}/snapshots/`，其他 Skill 可复用基线数据 |
-| 条件式调度 | 检测到部署事件时自动触发漂移检查，而非固定周期 |
-| 基线即审计输入 | 技术审计 Skill 可直接读取最新快照作为"当前状态"，无需重新抓取 |
+- **轻量级方案（推荐起步）**：Python 脚本复用 seo_technical_auditor.py 检查逻辑 → 输出 JSON 快照存 `.seo-cache/pages/{slug}/snapshots/` → diff 脚本对比相邻快照生成 Markdown 报告 → 推送 Slack / 邮件 / GitHub Issue。无需外部依赖，复用现有审计脚本。
+- **集成方案（规模化时）**：爬虫调度器（Scrapy / Playwright）→ 信号提取入 SQLite / PostgreSQL → diff 引擎（信号对比 + 变更分类）→ 告警路由（Slack / PagerDuty / GSC 邮件）→ Dashboard（Grafana / 自建面板）。
+- **与 codex-seo 架构的整合点**：`.seo-cache/` 共享缓存（漂移快照供其他 Skill 复用基线数据）；条件式调度（检测到部署事件自动触发漂移检查，而非固定周期）；基线即审计输入（技术审计 Skill 直接读最新快照作"当前状态"，无需重新抓取）。
 
 ---
 
@@ -1023,7 +769,7 @@ Dashboard（Grafana / 自建面板）
 |------|------|
 | [01-内容质量与可检索性标准](../03-内容生产与质检/01-内容质量与可检索性标准.md) | 质量标准定义了"什么是好的"，漂移监控检测"是否从好变差"（含原 10 号可检索性框架，2026-09-14 并入） |
 | [02-Google-SEO核心机制](../../03-SEO与GEO/02-Google-SEO核心机制.md) | 核心机制定义了 SEO 信号体系，漂移监控中的信号分类基于此 |
-| [08-内容审计与优化工具包](../03-内容生产与质检/04-内容审计与优化工具包.md) | 内容审计是定期全量检查，漂移监控是持续增量检查（互补） |
+| [04-内容审计与优化工具包](../03-内容生产与质检/04-内容审计与优化工具包.md) | 内容审计是定期全量检查，漂移监控是持续增量检查（互补） |
 | [13-AI搜索研究与Prompt执行库](../../03-SEO与GEO/13-AI搜索研究与Prompt执行库.md) | Prompt 执行库产出优化内容，漂移监控验证优化效果持久 |
 
 ---

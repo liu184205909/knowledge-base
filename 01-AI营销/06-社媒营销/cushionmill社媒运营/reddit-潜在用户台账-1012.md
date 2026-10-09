@@ -30,6 +30,9 @@
 | 17 | Guitar-Such | r/Mid_Century 1wojhug 评论区（09-23） | 求购：Adrian Pearsall 2196-TR 弧形咖啡桌配套垫（"Perfect!! Now to find a cushion"） | C 端中古家具玩家（karma 2,081，显示名 SA TACOS） | 老帖评论区不回（14 天）；观察其独立发帖 | 🟢 台账观察 |
 | 18 | NeverSky454 | r/AskIreland 1v8qvzv（07-28） | 求购：沙发整体换芯（"after 5 years everything is feeling a bit squashed and flat"，0 人类回答） | C 端（爱尔兰） | 不动（71 天超龄+地域范围外——美站 50 states 配送不覆盖） | ⚪ 范围外 |
 | 19 | Guygirl00 | r/nova 1v2utvx（07-21） | 求购：皮革坐垫换芯 "foam replaced in leather seat cushions"（0 回答） | C 端（弗吉尼亚） | 不动（77 天超龄+本地意图） | ⚪ 范围外 |
+| 20 | PvtCW | r/Lovesac 1x0up6p 评论区（10-08） | 抱怨现有·退货中：$5k Sactional 整组退货（"experience has been so bad... white glove pickup"），对比 Room & Board 价差 | C 端高客单（$5k 档） | 不动该帖（价格讨论语境）；**画像标记=退货完成后的替代方案帖优先响应** | 🟢 高价值画像 |
+| 21 | squeeps_21 | r/Lovesac 1x0uf61 评论区（10-08） | 抱怨现有：深座+斜背要塞枕头才舒服 "one would have to put extra pillows behind the couch cushions for the couch to be comfortable chaps my ass so much" | C 端 Sactional 新用户 | 不动（评论暴露）；**腰靠/lumbar 需求画像**，观察其独立发帖 | 🟢 台账观察 |
+| 22 | thewolfwalker | r/Lovesac 1x0x7wm 评论区（10-08） | 求购·进行时：计划 Loved 买二手内芯+"order new covers"（原厂罩语境） | C 端（Sactional 散件自组） | 不动（原厂罩语境，第三方定制错位）；A7 replacement covers 弱画像 | ⚪ 弱信号 |
 
 **My 账号已出现标记**：spaceplaza 在 1wst2h8 / 1wsgaot / 1wte59f 三帖已有回帖——台账 #2/#4/#5 与日更轮天然重叠。
 
@@ -70,6 +73,19 @@
 | `"daybed cushion"` (m) | 5 | 0 | 全老帖/噪音（1p 双投求购 2025 中期/1m affiliate/1h frame dupe/1a 办公室）——daybed 亦证安静形态词 |
 | 品牌词×3 (w) | 0 | — | 连续第 9 轮零命中（词 1 仅 1 条 mobygames 游戏噪音） |
 | 合计 | 19 | 0 | 无 ≤24h 可回帖，无新 username 入账 |
+
+### 2c. 晚间轮追加（2026-10-09 晚，5 词+主词滚动核+Lovesac flair 页）
+
+| 词 | 召回 | 新增有效 | 构成 |
+|----|------|----------|------|
+| `"custom cushions" recommendation` (w) | 7 | 0 | 4 已档+3 噪音（摩托/脚伤×2） |
+| `"outdoor cushions" replacement` (m) | 7 | 0（1 信号） | 1 已档+1vz1j1z 发霉清洗帖（08-26 超龄，信号入 §7b-9）+5 噪音 |
+| `"banquette" cushion` (m) | 7 | 0 | 1 已档+1w0gqn3 banquette 求购（ID 序≈8 月底超龄）+1x08udb 油漆帖（跑题）+UK 双投+2 弱 |
+| `"window seat" cushion` (m) | 7 | 0 | 1 已档+6 噪音（小说×3/AI 生图×2/猫） |
+| `"someone to make" cushion` (m) | 7 | 0 | 2 已档+5 噪音（脚垫/小说×2/约会/银戒） |
+| `"custom cushions"` (w) 滚动核 | 7 | 0 | 与日间轮一致+Kia 汽车双投新噪音（1x0umfa/1x0ujy7） |
+| **r/Lovesac Sactional flair 页** | 3 | **3 活帖** | 1x0uf61/1x0x7wm/1x0up6p 全 10-08 发（13-28h）——**flair 页通道首发命中：全部 1x0 前缀<24h，是当晚唯一活帖来源** |
+| 合计 | 45 | 3 活帖/3 用户 | #20/#21/#22 入账；1x0uf61 可回（发布遇静默失败见 §7b-9） |
 
 ## 3. 画像粗判方法与数据
 
