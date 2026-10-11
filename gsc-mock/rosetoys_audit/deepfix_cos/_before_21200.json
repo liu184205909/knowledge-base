@@ -1,0 +1,228 @@
+{
+ "id": 21200,
+ "name": "Plush Cat Ear Bell Headband",
+ "slug": "p-140-plush-cat-ear-bell-hairband",
+ "permalink": "https://rosetoys.org/product/p-140-plush-cat-ear-bell-hairband/",
+ "date_created": "2024-07-03T09:37:11",
+ "date_created_gmt": "2024-07-03T01:37:11",
+ "date_modified": "2026-10-11T00:22:43",
+ "date_modified_gmt": "2026-10-10T16:22:43",
+ "type": "variable",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>A plush headband with cat ears and an attached bell, in white or black, one size. The ears hold their shape through wear - the structural test plush accessories usually fail.</p>\n<p>The bell joins the ears per the pictures, completing the cat read in a single piece. This is the headband that pairs with the cat-bell collars in the same category.</p>\n<ul>\n<li>Material: polyester plush</li>\n<li>Item type: headband with bell</li>\n<li>Style: cat ear</li>\n<li>Color: white or black</li>\n<li>Fit: one size</li>\n</ul>\n<p>Two colorways. The cat accessory that starts at the head instead of the neck, matched to the collar line.</p>\n",
+ "short_description": "<p>Plush cat-ear headband with bell in white or black, one size, shape-holding ears.</p>\n",
+ "sku": "A8729280577809",
+ "price": "15.99",
+ "regular_price": "",
+ "sale_price": "",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 20,
+   "name": "Accessories",
+   "slug": "accessories"
+  }
+ ],
+ "brands": [],
+ "tags": [],
+ "images": [
+  {
+   "id": 21285,
+   "date_created": "2024-07-03T17:42:14",
+   "date_created_gmt": "2024-07-03T01:42:14",
+   "date_modified": "2024-07-03T17:42:14",
+   "date_modified_gmt": "2024-07-03T01:42:14",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/6-6_a2f1e240-9f60-4936-91eb-55b544f09359.jpg",
+   "name": "6-6_a2f1e240-9f60-4936-91eb-55b544f09359.jpg",
+   "alt": "Plush cat ear bell hairband",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/6-6_a2f1e240-9f60-4936-91eb-55b544f09359.jpg 2316w, https://rosetoys.org/wp-content/uploads/2024/07/6-6_a2f1e240-9f60-4936-91eb-55b544f09359-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/6-6_a2f1e240-9f60-4936-91eb-55b544f09359-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/6-6_a2f1e240-9f60-4936-91eb-55b544f09359-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/6-6_a2f1e240-9f60-4936-91eb-55b544f09359-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/6-6_a2f1e240-9f60-4936-91eb-55b544f09359-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/6-6_a2f1e240-9f60-4936-91eb-55b544f09359-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/6-6_a2f1e240-9f60-4936-91eb-55b544f09359-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/6-6_a2f1e240-9f60-4936-91eb-55b544f09359-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/6-6_a2f1e240-9f60-4936-91eb-55b544f09359-860x860.jpg 860w",
+   "sizes": "(max-width: 2316px) 100vw, 2316px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/6-6_a2f1e240-9f60-4936-91eb-55b544f09359-430x430.jpg"
+  },
+  {
+   "id": 21287,
+   "date_created": "2024-07-03T17:42:20",
+   "date_created_gmt": "2024-07-03T01:42:20",
+   "date_modified": "2024-07-03T17:42:20",
+   "date_modified_gmt": "2024-07-03T01:42:20",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/5-6_16494139-9928-4cff-928e-d2c562750048.jpg",
+   "name": "5-6_16494139-9928-4cff-928e-d2c562750048.jpg",
+   "alt": "Plush cat ear bell hairband",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/5-6_16494139-9928-4cff-928e-d2c562750048.jpg 2316w, https://rosetoys.org/wp-content/uploads/2024/07/5-6_16494139-9928-4cff-928e-d2c562750048-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/5-6_16494139-9928-4cff-928e-d2c562750048-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/5-6_16494139-9928-4cff-928e-d2c562750048-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/5-6_16494139-9928-4cff-928e-d2c562750048-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/5-6_16494139-9928-4cff-928e-d2c562750048-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/5-6_16494139-9928-4cff-928e-d2c562750048-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/5-6_16494139-9928-4cff-928e-d2c562750048-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/5-6_16494139-9928-4cff-928e-d2c562750048-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/5-6_16494139-9928-4cff-928e-d2c562750048-860x860.jpg 860w",
+   "sizes": "(max-width: 2316px) 100vw, 2316px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/5-6_16494139-9928-4cff-928e-d2c562750048-430x430.jpg"
+  },
+  {
+   "id": 21288,
+   "date_created": "2024-07-03T17:42:25",
+   "date_created_gmt": "2024-07-03T01:42:25",
+   "date_modified": "2024-07-03T17:42:25",
+   "date_modified_gmt": "2024-07-03T01:42:25",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/4-6_c9b7998f-2849-4eb6-8f29-c393a86dd306.jpg",
+   "name": "4-6_c9b7998f-2849-4eb6-8f29-c393a86dd306.jpg",
+   "alt": "Plush cat ear bell hairband",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/4-6_c9b7998f-2849-4eb6-8f29-c393a86dd306.jpg 2316w, https://rosetoys.org/wp-content/uploads/2024/07/4-6_c9b7998f-2849-4eb6-8f29-c393a86dd306-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/4-6_c9b7998f-2849-4eb6-8f29-c393a86dd306-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/4-6_c9b7998f-2849-4eb6-8f29-c393a86dd306-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/4-6_c9b7998f-2849-4eb6-8f29-c393a86dd306-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/4-6_c9b7998f-2849-4eb6-8f29-c393a86dd306-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/4-6_c9b7998f-2849-4eb6-8f29-c393a86dd306-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/4-6_c9b7998f-2849-4eb6-8f29-c393a86dd306-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/4-6_c9b7998f-2849-4eb6-8f29-c393a86dd306-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/4-6_c9b7998f-2849-4eb6-8f29-c393a86dd306-860x860.jpg 860w",
+   "sizes": "(max-width: 2316px) 100vw, 2316px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/4-6_c9b7998f-2849-4eb6-8f29-c393a86dd306-430x430.jpg"
+  },
+  {
+   "id": 21289,
+   "date_created": "2024-07-03T17:42:31",
+   "date_created_gmt": "2024-07-03T01:42:31",
+   "date_modified": "2024-07-03T17:42:31",
+   "date_modified_gmt": "2024-07-03T01:42:31",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/3-6_58ae38e7-ea43-4498-916f-b6664ba0bb5f.jpg",
+   "name": "3-6_58ae38e7-ea43-4498-916f-b6664ba0bb5f.jpg",
+   "alt": "Plush cat ear bell hairband",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/3-6_58ae38e7-ea43-4498-916f-b6664ba0bb5f.jpg 2316w, https://rosetoys.org/wp-content/uploads/2024/07/3-6_58ae38e7-ea43-4498-916f-b6664ba0bb5f-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/3-6_58ae38e7-ea43-4498-916f-b6664ba0bb5f-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/3-6_58ae38e7-ea43-4498-916f-b6664ba0bb5f-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/3-6_58ae38e7-ea43-4498-916f-b6664ba0bb5f-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/3-6_58ae38e7-ea43-4498-916f-b6664ba0bb5f-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/3-6_58ae38e7-ea43-4498-916f-b6664ba0bb5f-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/3-6_58ae38e7-ea43-4498-916f-b6664ba0bb5f-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/3-6_58ae38e7-ea43-4498-916f-b6664ba0bb5f-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/3-6_58ae38e7-ea43-4498-916f-b6664ba0bb5f-860x860.jpg 860w",
+   "sizes": "(max-width: 2316px) 100vw, 2316px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/3-6_58ae38e7-ea43-4498-916f-b6664ba0bb5f-430x430.jpg"
+  },
+  {
+   "id": 21290,
+   "date_created": "2024-07-03T17:42:36",
+   "date_created_gmt": "2024-07-03T01:42:36",
+   "date_modified": "2024-07-03T17:42:36",
+   "date_modified_gmt": "2024-07-03T01:42:36",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/1-6_f35baf56-78a6-419a-8b4b-5240c6976f6e.jpg",
+   "name": "1-6_f35baf56-78a6-419a-8b4b-5240c6976f6e.jpg",
+   "alt": "Plush cat ear bell hairband",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/1-6_f35baf56-78a6-419a-8b4b-5240c6976f6e.jpg 2316w, https://rosetoys.org/wp-content/uploads/2024/07/1-6_f35baf56-78a6-419a-8b4b-5240c6976f6e-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/1-6_f35baf56-78a6-419a-8b4b-5240c6976f6e-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/1-6_f35baf56-78a6-419a-8b4b-5240c6976f6e-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/1-6_f35baf56-78a6-419a-8b4b-5240c6976f6e-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/1-6_f35baf56-78a6-419a-8b4b-5240c6976f6e-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/1-6_f35baf56-78a6-419a-8b4b-5240c6976f6e-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/1-6_f35baf56-78a6-419a-8b4b-5240c6976f6e-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/1-6_f35baf56-78a6-419a-8b4b-5240c6976f6e-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/1-6_f35baf56-78a6-419a-8b4b-5240c6976f6e-860x860.jpg 860w",
+   "sizes": "(max-width: 2316px) 100vw, 2316px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/1-6_f35baf56-78a6-419a-8b4b-5240c6976f6e-430x430.jpg"
+  },
+  {
+   "id": 21291,
+   "date_created": "2024-07-03T17:42:41",
+   "date_created_gmt": "2024-07-03T01:42:41",
+   "date_modified": "2024-07-03T17:42:41",
+   "date_modified_gmt": "2024-07-03T01:42:41",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/2-6_d0427355-b619-48bf-8073-f9d4d270cfdd.jpg",
+   "name": "2-6_d0427355-b619-48bf-8073-f9d4d270cfdd.jpg",
+   "alt": "Plush cat ear bell hairband",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/2-6_d0427355-b619-48bf-8073-f9d4d270cfdd.jpg 2174w, https://rosetoys.org/wp-content/uploads/2024/07/2-6_d0427355-b619-48bf-8073-f9d4d270cfdd-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/2-6_d0427355-b619-48bf-8073-f9d4d270cfdd-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/2-6_d0427355-b619-48bf-8073-f9d4d270cfdd-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/2-6_d0427355-b619-48bf-8073-f9d4d270cfdd-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/2-6_d0427355-b619-48bf-8073-f9d4d270cfdd-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/2-6_d0427355-b619-48bf-8073-f9d4d270cfdd-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/2-6_d0427355-b619-48bf-8073-f9d4d270cfdd-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/2-6_d0427355-b619-48bf-8073-f9d4d270cfdd-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/2-6_d0427355-b619-48bf-8073-f9d4d270cfdd-860x860.jpg 860w",
+   "sizes": "(max-width: 2174px) 100vw, 2174px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/2-6_d0427355-b619-48bf-8073-f9d4d270cfdd-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 5,
+   "name": "Color",
+   "slug": "pa_color",
+   "position": 0,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "Black",
+    "White"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [
+  21293,
+  21928,
+  21294,
+  21929
+ ],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<del aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>20.99</bdi></span></del> <span class=\"screen-reader-text\">Original price was: &#036;20.99.</span><ins aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>15.99</bdi></span></ins><span class=\"screen-reader-text\">Current price is: &#036;15.99.</span>",
+ "related_ids": [
+  21167,
+  21114,
+  21070,
+  21168,
+  21041
+ ],
+ "meta_data": [
+  {
+   "id": 52004,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 52826,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 102468,
+   "key": "rank_math_title",
+   "value": "Plush Cat Ear Bell Headband, 2 Colors | RoseToys"
+  },
+  {
+   "id": 102469,
+   "key": "rank_math_description",
+   "value": "Polyester plush headband with cat ears and bell in white or black. One size, shape-holding construction, pairs with the cat collar line."
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": true,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/21200",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

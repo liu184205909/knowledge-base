@@ -1,0 +1,6 @@
+{
+  "title": "fsurgery-read-TEMP",
+  "scope": "global",
+  "active": true,
+  "code": "add_action('rest_api_init', function() {\n  register_rest_route('fsurgery/v1', '/read', array(\n    'methods' => 'GET',\n    'permission_callback' => function() { return current_user_can('manage_options'); },\n    'callback' => function($req) {\n      $out = array();\n      $pid = intval($req->get_param('post'));\n      if ($pid) {\n        $out['meta'] = array();\n        foreach (get_post_meta($pid) as $k => $v) { $out['meta'][$k] = maybe_unserialize($v[0]); }\n        $out['post'] = array('post_type' => get_post_type($pid), 'status' => get_post_status($pid));\n      }\n      $opt = get_option('xts-woodmart-options');\n      if (is_array($opt)) {\n        $out['xts_footer'] = array();\n        foreach ($opt as $k => $v) { if (preg_match('/footer|prefooter|single_footer|page_footer/i', $k)) $out['xts_footer'][$k] = $v; }\n      } else { $out['xts_type'] = gettype($opt); }\n      $out['theme_mods_woodmart'] = get_option('theme_mods_woodmart');\n      $out['sidebars'] = wp_get_sidebars_widgets();\n      $out['widgets_opt'] = array();\n      foreach (array('widget_woodmart-html-block', 'widget_block', 'widget_text') as $w) { $out['widgets_opt'][$w] = get_option($w); }\n      return $out;\n    }\n  ));\n});"
+}

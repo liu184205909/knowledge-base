@@ -1,0 +1,561 @@
+[
+ {
+  "id": "71dc9a5",
+  "elType": "section",
+  "settings": {
+   "wd_section_stretch": "stretch-content",
+   "background_background": "classic",
+   "background_color": "#db3340",
+   "structure": "40",
+   "margin": {
+    "unit": "px",
+    "top": "0",
+    "right": "0",
+    "bottom": "0",
+    "left": "0",
+    "isLinked": false
+   },
+   "padding": {
+    "unit": "px",
+    "top": "0",
+    "right": "0",
+    "bottom": "0",
+    "left": "0",
+    "isLinked": false
+   }
+  },
+  "elements": [
+   {
+    "id": "f54fae3",
+    "elType": "column",
+    "settings": {
+     "_column_size": "50",
+     "woodmart_text_align": "center",
+     "border_width": {
+      "top": "0",
+      "left": "0",
+      "right": "1",
+      "bottom": "0",
+      "unit": "px",
+      "isLinked": ""
+     },
+     "border_color": "rgba(255,255,255,0.15)",
+     "column_sticky_offset": "50",
+     "scroll_y": "-80",
+     "align": "center",
+     "padding": {
+      "unit": "px",
+      "top": "30",
+      "right": "15",
+      "bottom": "30",
+      "left": "15",
+      "isLinked": ""
+     },
+     "_inline_size_mobile": 50,
+     "padding_tablet": {
+      "unit": "px",
+      "top": "30",
+      "right": "15",
+      "bottom": "30",
+      "left": "15",
+      "isLinked": false
+     },
+     "padding_mobile": {
+      "unit": "px",
+      "top": "20",
+      "right": "20",
+      "bottom": "20",
+      "left": "20",
+      "isLinked": true
+     }
+    },
+    "elements": [
+     {
+      "id": "a42fde4",
+      "elType": "widget",
+      "settings": {
+       "icon_type": "icon",
+       "btn_text": "",
+       "image_size": "custom",
+       "subtitle": "",
+       "title": "Free shipping Over $69",
+       "btn_position": "hover",
+       "image": {
+        "id": 18811,
+        "url": "http://rosetoys.org/wp-content/uploads/2023/12/marketplace-icon-4.svg"
+       },
+       "woodmart_color_scheme": "light",
+       "title_size": "small",
+       "info_box_inline": "yes",
+       "image_custom_dimension": {
+        "width": "60",
+        "height": "60"
+       },
+       "content": "",
+       "icon_text": "53",
+       "scroll_y": "-80",
+       "_element_width": "auto",
+       "image_vertical_alignment": "bottom",
+       "subtitle_color": "primary",
+       "title_tag": "p",
+       "__globals__": {
+        "icon_bg_color": ""
+       }
+      },
+      "elements": [],
+      "widgetType": "wd_infobox"
+     }
+    ],
+    "isInner": ""
+   },
+   {
+    "id": "9b95299",
+    "elType": "column",
+    "settings": {
+     "_column_size": "50",
+     "woodmart_text_align": "center",
+     "border_width": {
+      "top": "0",
+      "left": "0",
+      "right": "1",
+      "bottom": "0",
+      "unit": "px",
+      "isLinked": ""
+     },
+     "border_color": "rgba(255,255,255,0.15)",
+     "column_sticky_offset": "50",
+     "scroll_y": "-80",
+     "align": "center",
+     "padding": {
+      "unit": "px",
+      "top": "30",
+      "right": "15",
+      "bottom": "30",
+      "left": "15",
+      "isLinked": ""
+     },
+     "_inline_size_mobile": 50,
+     "padding_tablet": {
+      "unit": "px",
+      "top": "30",
+      "right": "15",
+      "bottom": "30",
+      "left": "15",
+      "isLinked": false
+     },
+     "padding_mobile": {
+      "unit": "px",
+      "top": "20",
+      "right": "20",
+      "bottom": "20",
+      "left": "20",
+      "isLinked": true
+     }
+    },
+    "elements": [
+     {
+      "id": "c5a39ff",
+      "elType": "widget",
+      "settings": {
+       "icon_type": "icon",
+       "btn_text": "",
+       "image_size": "custom",
+       "subtitle": "",
+       "title": "14 Days Return Policy\n",
+       "btn_position": "hover",
+       "image": {
+        "id": 18812,
+        "url": "http://rosetoys.org/wp-content/uploads/2023/12/marketplace-icon-3.svg"
+       },
+       "woodmart_color_scheme": "light",
+       "title_size": "small",
+       "info_box_inline": "yes",
+       "image_custom_dimension": {
+        "width": "60",
+        "height": "60"
+       },
+       "content": "",
+       "icon_text": "53",
+       "scroll_y": "-80",
+       "_element_width": "auto",
+       "image_vertical_alignment": "bottom",
+       "subtitle_color": "primary",
+       "title_tag": "p",
+       "__globals__": {
+        "icon_bg_color": ""
+       }
+      },
+      "elements": [],
+      "widgetType": "wd_infobox"
+     }
+    ],
+    "isInner": ""
+   },
+   {
+    "id": "28077ee",
+    "elType": "column",
+    "settings": {
+     "_column_size": "50",
+     "woodmart_text_align": "center",
+     "border_width": {
+      "top": "0",
+      "left": "0",
+      "right": "1",
+      "bottom": "0",
+      "unit": "px",
+      "isLinked": ""
+     },
+     "border_color": "rgba(255,255,255,0.15)",
+     "column_sticky_offset": "50",
+     "scroll_y": "-80",
+     "align": "center",
+     "padding": {
+      "unit": "px",
+      "top": "30",
+      "right": "15",
+      "bottom": "30",
+      "left": "15",
+      "isLinked": ""
+     },
+     "_inline_size_mobile": 50,
+     "padding_tablet": {
+      "unit": "px",
+      "top": "30",
+      "right": "15",
+      "bottom": "30",
+      "left": "15",
+      "isLinked": false
+     },
+     "padding_mobile": {
+      "unit": "px",
+      "top": "20",
+      "right": "20",
+      "bottom": "20",
+      "left": "20",
+      "isLinked": true
+     }
+    },
+    "elements": [
+     {
+      "id": "de5b186",
+      "elType": "widget",
+      "settings": {
+       "icon_type": "icon",
+       "btn_text": "",
+       "image_size": "custom",
+       "subtitle": "",
+       "title": "SUPPORT 24/7",
+       "btn_position": "hover",
+       "image": {
+        "id": 18813,
+        "url": "http://rosetoys.org/wp-content/uploads/2023/12/marketplace-icon-2.svg"
+       },
+       "woodmart_color_scheme": "light",
+       "title_size": "small",
+       "info_box_inline": "yes",
+       "image_custom_dimension": {
+        "width": "60",
+        "height": "60"
+       },
+       "content": "",
+       "icon_text": "53",
+       "scroll_y": "-80",
+       "_element_width": "auto",
+       "image_vertical_alignment": "bottom",
+       "subtitle_color": "primary",
+       "title_tag": "p",
+       "__globals__": {
+        "icon_bg_color": ""
+       }
+      },
+      "elements": [],
+      "widgetType": "wd_infobox"
+     }
+    ],
+    "isInner": ""
+   },
+   {
+    "id": "f987b21",
+    "elType": "column",
+    "settings": {
+     "_column_size": "50",
+     "woodmart_text_align": "center",
+     "column_sticky_offset": "50",
+     "scroll_y": "-80",
+     "align": "center",
+     "border_width": {
+      "top": "0",
+      "left": "0",
+      "right": "1",
+      "bottom": "0",
+      "unit": "px",
+      "isLinked": ""
+     },
+     "border_color": "rgba(255,255,255,0.15)",
+     "padding": {
+      "unit": "px",
+      "top": "30",
+      "right": "15",
+      "bottom": "30",
+      "left": "15",
+      "isLinked": ""
+     },
+     "_inline_size_mobile": 50,
+     "padding_tablet": {
+      "unit": "px",
+      "top": "30",
+      "right": "15",
+      "bottom": "30",
+      "left": "15",
+      "isLinked": false
+     },
+     "padding_mobile": {
+      "unit": "px",
+      "top": "20",
+      "right": "20",
+      "bottom": "20",
+      "left": "20",
+      "isLinked": true
+     }
+    },
+    "elements": [
+     {
+      "id": "c99985d",
+      "elType": "widget",
+      "settings": {
+       "icon_type": "icon",
+       "btn_text": "",
+       "image_size": "custom",
+       "subtitle": "",
+       "title": "100% Payment Secure\n",
+       "btn_position": "hover",
+       "image": {
+        "id": 18814,
+        "url": "http://rosetoys.org/wp-content/uploads/2023/12/marketplace-icon-1.svg"
+       },
+       "woodmart_color_scheme": "light",
+       "title_size": "small",
+       "info_box_inline": "yes",
+       "image_custom_dimension": {
+        "width": "60",
+        "height": "60"
+       },
+       "content": "",
+       "icon_text": "53",
+       "scroll_y": "-80",
+       "_element_width": "auto",
+       "image_vertical_alignment": "bottom",
+       "subtitle_color": "primary",
+       "title_tag": "p",
+       "__globals__": {
+        "icon_bg_color": ""
+       }
+      },
+      "elements": [],
+      "widgetType": "wd_infobox"
+     }
+    ],
+    "isInner": ""
+   }
+  ],
+  "isInner": ""
+ },
+ {
+  "id": "3791792",
+  "elType": "section",
+  "settings": {
+   "wd_section_stretch": "stretch-content",
+   "background_background": "classic",
+   "background_image": {
+    "url": "http://rosetoys.org/wp-content/uploads/2024/01/camping-footer-bg.jpg",
+    "id": 18880,
+    "size": "",
+    "alt": "",
+    "source": "library"
+   },
+   "background_repeat": "no-repeat",
+   "background_size": "cover",
+   "margin": {
+    "unit": "px",
+    "top": "0",
+    "right": "0",
+    "bottom": "0",
+    "left": "0",
+    "isLinked": false
+   },
+   "margin_tablet": {
+    "unit": "px",
+    "top": "0",
+    "right": "0",
+    "bottom": "0",
+    "left": "0",
+    "isLinked": false
+   },
+   "margin_mobile": {
+    "unit": "px",
+    "top": "0",
+    "right": "0",
+    "bottom": "0",
+    "left": "0",
+    "isLinked": false
+   },
+   "padding": {
+    "unit": "px",
+    "top": "40",
+    "right": "0",
+    "bottom": "40",
+    "left": "0",
+    "isLinked": false
+   },
+   "padding_mobile": {
+    "unit": "px",
+    "top": "30",
+    "right": "20",
+    "bottom": "30",
+    "left": "20",
+    "isLinked": false
+   }
+  },
+  "elements": [
+   {
+    "id": "1992e56",
+    "elType": "column",
+    "settings": {
+     "_column_size": 100,
+     "_inline_size": null,
+     "column_sticky_offset": 50,
+     "scroll_y": -80
+    },
+    "elements": [
+     {
+      "id": "193989e",
+      "elType": "widget",
+      "settings": {
+       "image": {
+        "url": "http://rosetoys.org/wp-content/uploads/2023/12/logo-no-background.png",
+        "id": 18324,
+        "size": "",
+        "alt": "Rose Toys logo",
+        "source": "library"
+       },
+       "image_size": "full",
+       "image_custom_dimension": {
+        "width": "300",
+        "height": "35"
+       },
+       "width": {
+        "unit": "%",
+        "size": 15,
+        "sizes": []
+       },
+       "width_mobile": {
+        "unit": "%",
+        "size": 46,
+        "sizes": []
+       },
+       "space": {
+        "unit": "%",
+        "size": 24,
+        "sizes": []
+       },
+       "space_mobile": {
+        "unit": "%",
+        "size": 59,
+        "sizes": []
+       },
+       "height": {
+        "unit": "px",
+        "size": 30,
+        "sizes": []
+       },
+       "scroll_y": -80
+      },
+      "elements": [],
+      "widgetType": "image"
+     },
+     {
+      "id": "9a849ed",
+      "elType": "widget",
+      "settings": {
+       "view": "inline",
+       "icon_list": [
+        {
+         "text": "Privacy Policy",
+         "selected_icon": {
+          "value": "",
+          "library": ""
+         },
+         "_id": "3657b67",
+         "link": {
+          "url": "https://rosetoys.org/privacy-policy/",
+          "is_external": "",
+          "nofollow": "",
+          "custom_attributes": ""
+         }
+        },
+        {
+         "text": "Refund Policy",
+         "selected_icon": {
+          "value": "",
+          "library": ""
+         },
+         "link": {
+          "url": "https://rosetoys.org/refund_returns/",
+          "is_external": "",
+          "nofollow": "",
+          "custom_attributes": ""
+         },
+         "_id": "5afb19f"
+        },
+        {
+         "text": "Term of Service",
+         "selected_icon": {
+          "value": "",
+          "library": ""
+         },
+         "link": {
+          "url": "https://rosetoys.org/term-of-service/",
+          "is_external": "",
+          "nofollow": "",
+          "custom_attributes": ""
+         },
+         "_id": "cf0ac05"
+        }
+       ],
+       "icon_align": "center",
+       "divider": "yes",
+       "text_shadow_text_shadow_type": "yes",
+       "text_color": "#FFFFFF",
+       "scroll_y": -80,
+       "icon_typography_typography": "custom",
+       "icon_typography_line_height_mobile": {
+        "unit": "em",
+        "size": 2,
+        "sizes": []
+       }
+      },
+      "elements": [],
+      "widgetType": "icon-list"
+     },
+     {
+      "id": "15996115",
+      "elType": "widget",
+      "settings": {
+       "size": "small",
+       "color": "light",
+       "style": "bordered",
+       "scroll_y": "-80",
+       "show_label": "",
+       "label_text": "Share: ",
+       "type": "follow"
+      },
+      "elements": [],
+      "widgetType": "wd_social_buttons"
+     }
+    ],
+    "isInner": false
+   }
+  ],
+  "isInner": false
+ }
+]

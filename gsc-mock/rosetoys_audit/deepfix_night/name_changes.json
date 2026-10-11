@@ -1,0 +1,587 @@
+[
+ [
+  18983,
+  "Open-Back Openwork Jumpsuit",
+  "原27字符纯机翻词序；补连字符规范。材料 polyester 属实"
+ ],
+ [
+  19010,
+  "Sheer Lace Loungewear Jumpsuit",
+  "整串机翻浓缩；pajamas/loungewear/no slip skirt 混词收敛；材质 lace 属实"
+ ],
+ [
+  19076,
+  "Chiffon Open-Crotch Uniform Lingerie Set",
+  "Uniform seduction bed passion 机翻堆词；open gear=开档误译纠正为 open-crotch"
+ ],
+ [
+  19186,
+  "Deep-V Patent Leather Teddy",
+  "onesie=婴儿连体服误译→teddy；三围参数真实存在，正文展开"
+ ],
+ [
+  19187,
+  "Lace Slip Nightdress with Thong in Four Colors",
+  "suspender 吊带误译纠正→slip 语境（fine straps 入正文）；hot and spicy/perspective 剥；四色参数上标题"
+ ],
+ [
+  19268,
+  "Zip-Closure Patent Leather Uniform Set",
+  "Sweet cool 剥；zippered→Zip-Closure；三件组成（top+panties+garters）属实"
+ ],
+ [
+  19274,
+  "Plush Off-Shoulder Dress with Neck Ring",
+  "Leaky Shoulder=漏肩误译→Off-Shoulder；neck ring 参数回填"
+ ],
+ [
+  19276,
+  "Chain-Accent Patent Leather Jumpsuit Set",
+  "three-point 三点式直译剥；chain+bracelet 参数上标题"
+ ],
+ [
+  19282,
+  "Chinese-Style Lace-Up Loungewear Set",
+  "home attire→Loungewear；top+shorts 组成回填"
+ ],
+ [
+  19346,
+  "Velvet Christmas Slit Dress with Neck Ring",
+  "suspender 吊带误译纠正→直筒 slip 结构；Christmas 参数回填；neck ring 上标题"
+ ],
+ [
+  19392,
+  "Yoga Tank and Pants Set in Black or Gray",
+  "Sexy opener yoga attire 机翻（opener=开裆无参数据不写）；tank top+yoga pants 组成上标题；两色属实"
+ ],
+ [
+  19728,
+  "Fitted Stretch Jumpsuit in Black or White",
+  "Tight stretch 直译自然化→Fitted Stretch；双色参数上标题"
+ ],
+ [
+  19734,
+  "Chinese-Style Vintage Lace Set in Three Colors",
+  "belly pocket=肚兜直译剥（正文用 halter 结构描述）；tricolor lace seduction 堆词收敛；三色属实"
+ ],
+ [
+  19756,
+  "Patent Leather Uniform Lingerie Set",
+  "Hot leather uniform temptation bed teasing no-take passion set 整串机翻浓缩；no-take（免脱）剥；M/L/XL 属实"
+ ],
+ [
+  19821,
+  "Dark Japanese-Style Kimono Lingerie Set",
+  "Erotic lingerie 剥；kimono+tunic 两件参数回填 Set；dark/Japanese 属实"
+ ],
+ [
+  19866,
+  "Strappy Garter Lingerie Set in Three Colors",
+  "New erotic lingerie sexy 堆词剥；leg ring garter three-point set→Strappy Garter Set（三点式剥）；三色属实"
+ ],
+ [
+  19967,
+  "Red Elf Princess Costume with Headpiece",
+  "Velvet 与参数 Material: Polyester 冲突→材质不写；三件组成（dress+sleeves+headwear）回填"
+ ],
+ [
+  20072,
+  "Mesh Christmas Costume Dress with Accessories",
+  "seduction 剥；四件组成（headgear+neck ring+bracelet+dress）→with Accessories；Christmas 属实"
+ ],
+ [
+  20097,
+  "Patent Leather Club Dress with Neck Ring",
+  "Nightclub queen 堆词→Club；queen 剥；neck ring 参数回填；三围真实存在正文展开"
+ ],
+ [
+  20187,
+  "High-Slit Cheongsam Dress in Two Colors",
+  "Fun lingerie（情趣误译）+nightclub lust 剥；high slit 属实；两色上标题；体重参数为磅制"
+ ],
+ [
+  20280,
+  "Ice-Silk Boyfriend Shirt Sleepwear in Two Colors",
+  "ice wire=冰丝误译→ice silk；large size 剥（S-L 非大码）；双色上标题"
+ ],
+ [
+  20479,
+  "Japanese-Style Sexy Pajama Dress",
+  "fun clothes/easy to take off/seductive bed exposed 整串机翻剥；Japanese clothing 参数回填；参数弱保守短名"
+ ],
+ [
+  20537,
+  "Chinese-Style Chiffon Cheongsam Dress",
+  "sex and emotional fun（情趣误译）剥；chiffon+Chinese+cheongsam 参数回填"
+ ],
+ [
+  20720,
+  "Crotchless Sheer Nightgown Set with Bow Front",
+  "See-through gauze skirt/three-point（三点式）剥；desc 明示 crotchless+front bow tie 属实上标题；stain=satin 误译正文修正"
+ ],
+ [
+  20721,
+  "Open-Crotch Sheer Lace Nightdress Set",
+  "half-length seductive 剥；desc 明示 open crotch+bow；三色属实"
+ ],
+ [
+  20722,
+  "Open-Crotch Lace Jumpsuit in Two Colors",
+  "open range=开档误译→Open-Crotch；双色上标题"
+ ],
+ [
+  20723,
+  "Sheer Lace Nightdress with T-Back Panty",
+  "原15字符过短；nightdress+T-pants 组成回填；T-pants→T-back panty 规范"
+ ],
+ [
+  20724,
+  "Open-Crotch Backless Dress in Two Colors",
+  "Sexual, funny（情趣误译）剥；open gear→Open-Crotch；backless 参数回填；双色属实"
+ ],
+ [
+  20749,
+  "Backless Open-Crotch Patent Leather Dress",
+  "queen traction（女王牵引）乱译剥；bracelet 参数入正文；backless+open crotch 属实"
+ ],
+ [
+  20763,
+  "Deep-V Embroidered Slip Nightdress in Three Colors",
+  "seduction 堆词剥；embroidered/deep-V/side-split 属实；三色上标题"
+ ],
+ [
+  20764,
+  "High-Stretch Chiffon Bodycon Skirt in Two Colors",
+  "small breasted/pure desire/hip wrapped 机翻堆词剥；hip wrapped→Bodycon；High Elasticity 参数回填；双色属实"
+ ],
+ [
+  20765,
+  "High-Waist Split Mini Nightdress in Three Colors",
+  "suspender 吊带误译纠正→high-waist mini 语境；nightclub style 参数入正文；三色上标题"
+ ],
+ [
+  20769,
+  "Cut-Out Sheer Jumpsuit in Black",
+  "hollow open cut 直译→Cut-Out；sexy perspective→Sheer；单色黑"
+ ],
+ [
+  20776,
+  "Butterfly Lace Halter Nightdress Set",
+  "no-off（免脱）剥；butterfly lace+two-piece 参数回填；⚠️原 desc 含 'little one' 儿童化表述必清除（本次重写即清除）"
+ ],
+ [
+  20782,
+  "Chiffon Slip Nightdress and Robe Loungewear Set",
+  "suspender 吊带误译纠正→slip；dressing gown+bathrobe→robe 收敛；三码属实"
+ ],
+ [
+  20786,
+  "Vintage Chinese-Style Cheongsam Nightdress",
+  "velvet 与参数 chiffon 冲突→材质不上标题；passionate and sexy 堆词剥；vintage+Chinese 属实"
+ ],
+ [
+  20795,
+  "Sexy Lace Slip Nightdress",
+  "pure lust（纯欲）slipsuit 生造词→slip nightdress 规范；宽容量 40-70kg 进正文"
+ ],
+ [
+  20801,
+  "Chiffon Slip Nightdress in Two Colors",
+  "satin 与参数 chiffon 冲突→satin 剥；loungewear pajamas 堆词收敛；双色属实"
+ ],
+ [
+  20803,
+  "Lace Teddy Nightdress",
+  "feminine/one-piece pajamas 弱词剥；jumpsuit 参数→teddy 品类词；宽容量 40-70kg 进正文"
+ ],
+ [
+  20815,
+  "Chain Patent Leather Lingerie Set",
+  "剥货号「T- 2423」（空格变体）；Sensible（乱译）剥；五件组成（bracelet+neck ring+T-pants+chain+jumpsuit）入正文"
+ ],
+ [
+  20819,
+  "Satin Angel-Wing Backless Nightdress",
+  "sling（吊带误译）剥；uniform temptation/backless temptation 双堆词收敛为 Backless；angel wings 参数（wings of angels）回填"
+ ],
+ [
+  20832,
+  "High-Slit Jacquard Cheongsam Nightdress",
+  "Chinese buckle（盘扣）直译剥；strappy seductive 堆词剥；jacquard+high slit 参数回填；双色属实"
+ ],
+ [
+  20837,
+  "Large Bow Teddy Lingerie in Black",
+  "three-point（三点式）剥；jumpsuit→teddy（连体）；large bow 参数回填"
+ ],
+ [
+  20852,
+  "Open-Cup Open-Crotch Lace Jumpsuit",
+  "open-chest→Open-Cup（内衣标准词）；mesh clothing 参数回填 Sheer；双 open 功能词属实"
+ ],
+ [
+  20857,
+  "Denim-Style Shorts in Three Sizes",
+  "整句标题（are hot and tempting）改名词短语；Cowboy style→Denim-Style；三码属实"
+ ],
+ [
+  20955,
+  "Chiffon Uniform One-Piece Lingerie",
+  "small breasts show big/conjoined/pure desire 机翻堆词剥；One-Piece 参数回填；40-70kg 宽容量进正文"
+ ],
+ [
+  20964,
+  "Skinny Patent Leather Teddy",
+  "no-take passion（免脱）剥；Skinny→skinny 属实保留；Queen 弱词剥；jumpsuit→teddy"
+ ],
+ [
+  20971,
+  "Sheer Lace Slip Nightdress",
+  "suspender 吊带误译纠正→slip 语境；passion seduce hot sexy transparent on bed 堆词收敛为 Sheer；lace 参数回填"
+ ],
+ [
+  20978,
+  "Open-Crotch Sheer Lace Jumpsuit",
+  "open-gear no-take（开档免脱）双误译→Open-Crotch；Transparent→Sheer；jumpsuit 参数属实"
+ ],
+ [
+  20993,
+  "Sheer Lace Bow Slip Nightdress",
+  "no-take off（免脱）剥；bow 参数回填；与 20971 同厂近似款用 Bow 区分；Queen 弱词剥"
+ ],
+ [
+  21476,
+  "High-Stretch Criss-Cross Lace Bodysuit",
+  "bodysuite 拼写错纠正；crossover→Criss-Cross；lace tassels 参数回填；双色属实"
+ ],
+ [
+  21493,
+  "Polka-Dot Mesh Lingerie Set with Straps",
+  "printing dot→Polka-Dot；ribbon binding→Straps；sex set 堆词剥；五码 S-XXL 属实"
+ ],
+ [
+  21542,
+  "Leaf-Lace Deep-V Teddy Bodysuit",
+  "亚马逊式长标题清洗；leaf lace/deep V/backless/criss-cross straps 参数保留；S-XXL 属实"
+ ],
+ [
+  21564,
+  "Deep-V High-Slit Maxi Dress with Chains",
+  "原11词组式标题自然化；chain embellishment 参数回填；M/XL 磅制三码换算"
+ ],
+ [
+  21588,
+  "Chiffon Open-Work Tie-Up Jumpsuit Set",
+  "Three-piece 括号改 Set；tie-up/open-work 属实；Combo 双买法（+短裙/单衣）入正文"
+ ],
+ [
+  21610,
+  "Secret-Agent Strappy Jumpsuit Costume",
+  "Agent→Secret-Agent 自然化；open range jumpsuit→strappy（开档无确证不写）；Set Black/Set gray 变体属实"
+ ],
+ [
+  21633,
+  "Backless High-Slit Bodycon Dress in Plus Sizes",
+  "Tiktok same style 商标前缀剥；Dazzling Night 系列名剥；M-5XL 大码区间上标题（5XL 80-100kg）"
+ ],
+ [
+  21637,
+  "Criss-Cross Floral Lace Bra and Panty Set",
+  "亚马逊长标题清洗；crisscross+floral lace+两件组成回填；one size 属实"
+ ],
+ [
+  21685,
+  "Sheer Shirt-Style Nightdress with Breast Chain",
+  "Tiktok same style 商标前缀剥；Tempting Night 系列名剥；shirt-style+lace+breast chain 参数回填；M-3XL 属实"
+ ],
+ [
+  21726,
+  "Midnight Lace Lingerie with G-String",
+  "Temptation/Female Charm/Seduction 三堆词收敛；G-String 参数回填（Panties Type）；One Costume 单件属实"
+ ],
+ [
+  21732,
+  "Open-Crotch Pearl Lace Uniform Set in Three Colors",
+  "Wearable and charming 废词剥；open gear→Open-Crotch；pearl 参数回填；三色属实；48+11=59"
+ ],
+ [
+  21733,
+  "Uniform-Style Sheer Nightdress, Four Colors",
+  "suspender 吊带误译纠正+Open File（开档）剥（40-75kg 宽松剪裁无确证）；Temptation Tease Free Passion 堆词剥；四色属实"
+ ],
+ [
+  21734,
+  "Hollow-Out Backless Lace Nightdress",
+  "Tiktok same style 商标前缀剥；hollow-out/backless/strap nightdress 参数保留；L 单码 79cm/72cm 围度入正文"
+ ],
+ [
+  21735,
+  "Butterfly-Bow Mesh Nightdress in Two Colors",
+  "Tiktok same style 商标前缀剥；Butterfly Knot→Butterfly-Bow；shirt-style 参数入正文；双色属实"
+ ],
+ [
+  21766,
+  "Butterfly Lace Crotchless Teddy",
+  "Tiktok same style+系列名 Butterfly Enigma 双剥；crotchless 参数回填上标题；三色属实；stain=satin 误译正文修正"
+ ],
+ [
+  21767,
+  "Cut-Out Open-Crotch Lace Jumpsuit",
+  "spicy cut-out opening 堆词收敛；open gear→Open-Crotch；三色属实"
+ ],
+ [
+  21768,
+  "Front-Slit Lace Nightdress in Three Colors",
+  "temptation 堆词剥；front slit 上标题；L/2XL 双码+三色属实；wine red 属实"
+ ],
+ [
+  21809,
+  "Two-Way-Zip Short-Sleeve Jumpsuit",
+  "Silky swimcloth（泳衣料直译）剥；double-ended zipper→Two-Way-Zip；short sleeve+body-bound 参数回填"
+ ],
+ [
+  21815,
+  "Big-Bow Christmas Gift Costume",
+  "Big ribbon gift uniform→gift-wrap 语境自然化；Christmas 参数回填；clothing only 单件属实"
+ ],
+ [
+  21819,
+  "Sheer Mesh Lace Jumpsuit",
+  "seduction 堆词剥；mesh+lace 双材质属实保留；单色黑"
+ ],
+ [
+  22019,
+  "Sequin Fringe Club Bodysuit in Silver",
+  "Nightclub→Club；sequined fringed→Sequin Fringe；silver 参数上标题；S/M/L 磅制三码"
+ ],
+ [
+  22020,
+  "White Petal Bodysuit in Three Sizes",
+  "three-point（三点式）剥；petals→Petal；Bodysuit+（含配件暗示）保守为单 bodysuit；白色属实"
+ ],
+ [
+  22433,
+  "Sheer Lace Slip Dress in Two Colors",
+  "Perspectives on（透视误译前置怪词）+suspender 吊带误译双纠正→Sheer Slip；One piece skirt 参数；双色属实"
+ ],
+ [
+  22434,
+  "Backless Split-Hem Lace Nightdress Set",
+  "high split split deep V 重复修正；nightdress+T-pants 组成→Set；三码真实围度展开"
+ ],
+ [
+  22439,
+  "Black Open-Crotch Three-Piece Lingerie Set",
+  "open gear no-take 双误译→Open-Crotch；Material polyester（非 leather）以参数为准；三件组成回填"
+ ],
+ [
+  22459,
+  "Sheer Lace Nightdress in Three Colors",
+  "small breasts/bed teasing flirting 三堆词剥；Perspective→Sheer；jumpsuit 参数与 dress 语料并存以品类词 nightdress 统一；三色属实"
+ ],
+ [
+  22487,
+  "Sheer Mesh Panel High-Slit Club Dress",
+  "paneled→Panel 微调；perspective nightclub style→Club；clothing only 单件属实"
+ ],
+ [
+  22498,
+  "Classic Lace Slip Nightdress",
+  "seduction suit 堆词剥；Item dress 单件→不写 Set；原26字符过短增强为品类+风格"
+ ],
+ [
+  22504,
+  "Steel-Boned Lace Corset Set in Two Colors",
+  "steel to court（钢圈宫廷乱译）→Steel-Boned；Steel rim corset 参数回填；top+panties 组成→Set；双色属实"
+ ],
+ [
+  22505,
+  "Patent Leather Bunny Costume Set",
+  "one-piece bunny girl→Costume Set；四件组成（headband+jumpsuit+tail+leg loop）回填；双色属实"
+ ],
+ [
+  22506,
+  "Butterfly Mesh Nightdress with T-Back Panty",
+  "Suspenders（吊带误译复数形）剥；butterfly+mesh+dress+T pants 组成回填；Length 65cm/Waist 64-104 围度入正文"
+ ],
+ [
+  22507,
+  "Deep-V Embroidered Chemise in Red or Black",
+  "suspender 吊带误译纠正→chemise（与 20763 slip 区分近似款）；tie 参数保留；红黑双色属实"
+ ],
+ [
+  22520,
+  "Butterfly Lace Teddy in Two Colors",
+  "suspender 吊带误译纠正+「butterfly ends the body」乱句剥；hundred=白误译以 attrs White 为准；jumpsuit→teddy"
+ ],
+ [
+  22521,
+  "Cross-Strap Nightdress in Two Colors",
+  "Erotic lingerie feminine 堆词剥；cross straps 参数上标题；70-120/60-90 宽容量入正文"
+ ],
+ [
+  22536,
+  "Hollow-Out Butterfly Crotchless Lace Teddy",
+  "Perspective+Open File（开档误译）纠正；butterfly+hollow mesh 参数回填；crotchless desc 明示属实"
+ ],
+ [
+  22541,
+  "Chain Openwork Three-Piece Lingerie Set",
+  "three-point（三点式）→Three-Piece；chain+openwork+chest patch 参数回填；see-through breathable 属实"
+ ],
+ [
+  22578,
+  "Sheer Mesh Halter Lingerie Set",
+  "belly pocket（肚兜直译）剥→halter 结构描述（图示肚兜结构）；Thin transparent 堆词收敛 Sheer Mesh；两色 attrs 属实"
+ ],
+ [
+  22579,
+  "Underwire Push-Up Open-Crotch Lingerie Set",
+  "亚马逊长标题清洗；Underwire Push-Up+Open Crotch+Mesh Skirt+Trousers 参数全回填；90-155lbs 磅制"
+ ],
+ [
+  22587,
+  "Sheer Mesh Slip Nightdress in Black",
+  "seduction hot 堆词剥；sheer+slip+black 全部属实保留；26字符原过短增强"
+ ],
+ [
+  22592,
+  "Off-Shoulder Leather Teddy with Leg Loops",
+  "Leaky Shoulder=漏肩误译二次出现→Off-Shoulder（与 19274 同名不同品：本款 leather 四色+leg loops）；四色属实"
+ ],
+ [
+  22614,
+  "Four-Piece Lace Uniform Costume Set",
+  "Fun Lingerie/Small Chest Gathering/Emotional/Pure Desire 七连机翻堆词全剥；四件组成（jumpsuit+suspenders+sleeves+headwear）回填"
+ ],
+ [
+  22632,
+  "Sheer Tulle Lace Jumpsuit",
+  "Pure（纯欲残词）sexy 堆词剥；tulle+jumpsuit 参数回填；picture color 如实"
+ ],
+ [
+  22687,
+  "Lace Slip Chemise Nightdress",
+  "open non-off jumpsuit small breasted sheer suit 堆词剥（开档免脱无确证）；dress+nightdress 参数→slip chemise（与 20971/20993 区分）"
+ ],
+ [
+  22701,
+  "Open-Crotch Sheer Lace Slip Dress",
+  "erotic lingerie nightdress 堆词剥；open crotch 属实上标题；dress+picture color 如实"
+ ],
+ [
+  22708,
+  "Ruffled Chiffon Slip Nightdress in Three Colors",
+  "sweet 堆词剥；ruffled 参数上标题；三码三色属实；set→单件 dress（参数 dress）"
+ ],
+ [
+  22710,
+  "Joker Card Sheer Mesh Costume Set",
+  "playing card clown=扑克J牌小丑→Joker Card；three-point 剥；mesh clothing 参数回填"
+ ],
+ [
+  22717,
+  "Patent Leather Collar Teddy Set",
+  "Bed No-Fire（欲火乱译）剥；neck ring+jumpsuit 两件组成→Collar Teddy Set"
+ ],
+ [
+  22724,
+  "Soft Maid Costume Set with Neck Collar",
+  "cute soft cute dressed as soft girl 三连软妹直译剥；neck ring+jumpsuit 参数回填；maid 语境保留"
+ ],
+ [
+  22731,
+  "Office-Uniform Chiffon Teddy",
+  "Passion temptation flirting hot bed battle gown（战袍）五连堆词剥；OL 参数→Office-Uniform；jumpsuit→teddy"
+ ],
+ [
+  22747,
+  "Queen Patent Leather Uniform Teddy",
+  "Flirt queen seduce passion 三堆词收敛为 Queen；与 20964 近似款用 Uniform+Queen 区分；单色 picture"
+ ],
+ [
+  22755,
+  "Sheer Lace Fairy Nightdress in Two Colors",
+  "passion temptation pure lust private room 五连堆词剥；fairy（原文风格词）保留；双色属实"
+ ],
+ [
+  22768,
+  "Floral Deep-V Slip Nightdress in Pink",
+  "sling（吊带误译）纠正→slip；Sexy Lingerie 前缀+Hot 堆词剥；floral+pink+deep-V 参数回填；90-155lbs 磅制"
+ ],
+ [
+  22790,
+  "Front-Clip Deep-V Pajama Set, Two Colors",
+  "sling（吊带误译）纠正+Hot 堆词剥；front buckle→Front-Clip；Pants+Top 两件回填；black/apricot 属实"
+ ],
+ [
+  22806,
+  "Hollow-Out Cheongsam Lingerie Dress, Three Colors",
+  "亚马逊长标题清洗（Sexy Lingerie/Hot/Small-Chest Perspective Uniform 五堆词剥）；hollow-out+cheongsam 参数回填；三色属实"
+ ],
+ [
+  22807,
+  "Lace Mesh Skirt and Trousers Lingerie Set",
+  "sling（吊带误译）纠正+Temptation/Split/Non-removable 三堆词剥；Mesh Skirt+Trousers 组成回填；90-155lbs"
+ ],
+ [
+  22814,
+  "Devil's-Eye Halloween Lingerie Set",
+  "Devils→Devil's（所有格）；gauze skirt+T pants+devil horn+leg ring 四件回填；Bust72/Length58 围度入正文"
+ ],
+ [
+  22818,
+  "Underwire Push-Up Lace Nightdress Set",
+  "gathers a sundress（聚拢吊带裙乱译）→Underwire Push-Up；steel rim 参数=underwire；nightdress+T pants 组成；M/L 围度磅制"
+ ],
+ [
+  22829,
+  "Openwork Lace Club Dress with T-Back Panty",
+  "Sexy openwork nightclub style dress pajamas 堆词收敛；gauze skirt+tong 组成回填；picture color"
+ ],
+ [
+  22837,
+  "Heart Cut-Out Bikini Set in Three Sizes",
+  "midnight 弱词剥（无语境支撑）；love hollowed-out→Heart Cut-Out；bra+panties 组成；三码围度展开"
+ ],
+ [
+  22843,
+  "Off-Shoulder Bodycon Mesh Lingerie Set",
+  "Perspective→Mesh 参数词替换；wrap hip→Bodycon；off-shoulder/sleeping dress→lingerie set（三件组成）"
+ ],
+ [
+  22884,
+  "Embroidered Mesh Bodysuit in Five Sizes",
+  "ladies/onesies 弱词剥；mesh embroidery→Embroidered Mesh；S-XXL 五码属实"
+ ],
+ [
+  22921,
+  "White Sheer Mesh Lingerie Set",
+  "Dream 弱词剥；white+sheer 参数回填；costume→set（保守）"
+ ],
+ [
+  22932,
+  "Cinched-Waist Lace Teddy in Two Colors",
+  "one-piece vest→teddy；lace cinched waist 参数上标题；双色属实；85-135lbs"
+ ],
+ [
+  22933,
+  "Midnight Openwork Jumpsuit, Three Sizes",
+  "seduction 堆词剥；Midnight 保留（风格词）；S/M/L 真实围度（三围全列）展开"
+ ],
+ [
+  22959,
+  "Silver Cut-Out Bodysuit in Three Sizes",
+  "inner（内搭直译）剥；silver 参数上标题；S/M/L 磅制三码"
+ ],
+ [
+  22960,
+  "Bow-Accent Mesh Bodysuit in Two Colors",
+  "sexy butt showing 直译剥；bow 参数上标题；S-XL 四码+红黑双色"
+ ],
+ [
+  22997,
+  "Deep-V Stretch Bodysuit in Three Colors",
+  "one-piece skirt→bodysuit（参数 bodysuit 为准）；high elasticity→Stretch；三色三码属实"
+ ]
+]

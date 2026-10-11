@@ -1,0 +1,215 @@
+{
+ "id": 22022,
+ "name": "Sheer Mesh Skirt Maid Outfit",
+ "slug": "m-504-sheer-mesh-skirt-maid-outfit",
+ "permalink": "https://rosetoys.org/product/m-504-sheer-mesh-skirt-maid-outfit/",
+ "date_created": "2024-07-03T10:31:52",
+ "date_created_gmt": "2024-07-03T02:31:52",
+ "date_modified": "2026-10-11T00:10:50",
+ "date_modified_gmt": "2026-10-10T16:10:50",
+ "type": "variable",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>A maid outfit over a sheer mesh skirt: headdress, bodysuit, and bracelet in black, S through L by weight. S fits 85-105 lbs, M fits 105-120, L fits 120-140.</p>\n<p>The mesh skirt moves like fabric and photographs like costume, which is the combination lace tassels are for. The bodysuit underneath carries the fit, so the skirt can stay sheer.</p>\n<ul>\n<li>Material: polyester mesh</li>\n<li>Includes: headdress, bodysuit, bracelet</li>\n<li>Style: maid, lace tassels</li>\n<li>Color: black</li>\n<li>Sizing: S / M / L by weight, 85-140 lbs</li>\n</ul>\n<p>Three sizes with lbs bands. The mesh-skirt option in the maid category for buyers past the one-size range.</p>\n",
+ "short_description": "<p>Black sheer mesh maid outfit with headdress, bodysuit and bracelet, S to L for 85-140 lbs.</p>\n",
+ "sku": "A9446697861393",
+ "price": "23.99",
+ "regular_price": "",
+ "sale_price": "",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 183,
+   "name": "Cosplay",
+   "slug": "cosplay"
+  }
+ ],
+ "brands": [],
+ "tags": [],
+ "images": [
+  {
+   "id": 22064,
+   "date_created": "2024-07-03T18:45:34",
+   "date_created_gmt": "2024-07-03T02:45:34",
+   "date_modified": "2024-07-03T18:45:34",
+   "date_modified_gmt": "2024-07-03T02:45:34",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/2_2dd79a7f-c764-4d57-aba0-a8f92e7dc216.jpg",
+   "name": "2_2dd79a7f-c764-4d57-aba0-a8f92e7dc216.jpg",
+   "alt": "Sheer mesh skirt maid outfit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/2_2dd79a7f-c764-4d57-aba0-a8f92e7dc216.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/2_2dd79a7f-c764-4d57-aba0-a8f92e7dc216-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/2_2dd79a7f-c764-4d57-aba0-a8f92e7dc216-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/2_2dd79a7f-c764-4d57-aba0-a8f92e7dc216-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/2_2dd79a7f-c764-4d57-aba0-a8f92e7dc216-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/2_2dd79a7f-c764-4d57-aba0-a8f92e7dc216-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/2_2dd79a7f-c764-4d57-aba0-a8f92e7dc216-430x430.jpg"
+  },
+  {
+   "id": 22066,
+   "date_created": "2024-07-03T18:45:35",
+   "date_created_gmt": "2024-07-03T02:45:35",
+   "date_modified": "2024-07-03T18:45:35",
+   "date_modified_gmt": "2024-07-03T02:45:35",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/1_53b9437b-d119-4c65-8ecf-1c791b3e5944.jpg",
+   "name": "1_53b9437b-d119-4c65-8ecf-1c791b3e5944.jpg",
+   "alt": "Sheer mesh skirt maid outfit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/1_53b9437b-d119-4c65-8ecf-1c791b3e5944.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/1_53b9437b-d119-4c65-8ecf-1c791b3e5944-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/1_53b9437b-d119-4c65-8ecf-1c791b3e5944-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/1_53b9437b-d119-4c65-8ecf-1c791b3e5944-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/1_53b9437b-d119-4c65-8ecf-1c791b3e5944-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/1_53b9437b-d119-4c65-8ecf-1c791b3e5944-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/1_53b9437b-d119-4c65-8ecf-1c791b3e5944-430x430.jpg"
+  },
+  {
+   "id": 22067,
+   "date_created": "2024-07-03T18:45:36",
+   "date_created_gmt": "2024-07-03T02:45:36",
+   "date_modified": "2024-07-03T18:45:36",
+   "date_modified_gmt": "2024-07-03T02:45:36",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/3_3dca84ec-3f1e-4831-8154-3b598ec3f240.jpg",
+   "name": "3_3dca84ec-3f1e-4831-8154-3b598ec3f240.jpg",
+   "alt": "Sheer mesh skirt maid outfit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/3_3dca84ec-3f1e-4831-8154-3b598ec3f240.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/3_3dca84ec-3f1e-4831-8154-3b598ec3f240-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/3_3dca84ec-3f1e-4831-8154-3b598ec3f240-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/3_3dca84ec-3f1e-4831-8154-3b598ec3f240-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/3_3dca84ec-3f1e-4831-8154-3b598ec3f240-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/3_3dca84ec-3f1e-4831-8154-3b598ec3f240-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/3_3dca84ec-3f1e-4831-8154-3b598ec3f240-430x430.jpg"
+  },
+  {
+   "id": 22068,
+   "date_created": "2024-07-03T18:45:38",
+   "date_created_gmt": "2024-07-03T02:45:38",
+   "date_modified": "2024-07-03T18:45:38",
+   "date_modified_gmt": "2024-07-03T02:45:38",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/4_89b603fc-af12-42ac-9164-985a68141f13.jpg",
+   "name": "4_89b603fc-af12-42ac-9164-985a68141f13.jpg",
+   "alt": "Sheer mesh skirt maid outfit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/4_89b603fc-af12-42ac-9164-985a68141f13.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/4_89b603fc-af12-42ac-9164-985a68141f13-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/4_89b603fc-af12-42ac-9164-985a68141f13-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/4_89b603fc-af12-42ac-9164-985a68141f13-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/4_89b603fc-af12-42ac-9164-985a68141f13-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/4_89b603fc-af12-42ac-9164-985a68141f13-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/4_89b603fc-af12-42ac-9164-985a68141f13-430x430.jpg"
+  },
+  {
+   "id": 22069,
+   "date_created": "2024-07-03T18:45:39",
+   "date_created_gmt": "2024-07-03T02:45:39",
+   "date_modified": "2024-07-03T18:45:39",
+   "date_modified_gmt": "2024-07-03T02:45:39",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/5_82ad7ca2-d912-4f54-ab45-b1dc461d0d0e.jpg",
+   "name": "5_82ad7ca2-d912-4f54-ab45-b1dc461d0d0e.jpg",
+   "alt": "Sheer mesh skirt maid outfit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/5_82ad7ca2-d912-4f54-ab45-b1dc461d0d0e.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/5_82ad7ca2-d912-4f54-ab45-b1dc461d0d0e-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/5_82ad7ca2-d912-4f54-ab45-b1dc461d0d0e-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/5_82ad7ca2-d912-4f54-ab45-b1dc461d0d0e-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/5_82ad7ca2-d912-4f54-ab45-b1dc461d0d0e-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/5_82ad7ca2-d912-4f54-ab45-b1dc461d0d0e-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/5_82ad7ca2-d912-4f54-ab45-b1dc461d0d0e-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "L",
+    "M",
+    "S"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [
+  22070,
+  22071,
+  22072
+ ],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<del aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>46.99</bdi></span></del> <span class=\"screen-reader-text\">Original price was: &#036;46.99.</span><ins aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>23.99</bdi></span></ins><span class=\"screen-reader-text\">Current price is: &#036;23.99.</span>",
+ "related_ids": [
+  19235,
+  19208,
+  19157,
+  19239,
+  19012
+ ],
+ "meta_data": [
+  {
+   "id": 61140,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 61628,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 102055,
+   "key": "rank_math_title",
+   "value": "Sheer Mesh Skirt Maid Outfit | RoseToys"
+  },
+  {
+   "id": 102056,
+   "key": "rank_math_description",
+   "value": "Black mesh maid outfit with headdress, bodysuit and bracelet in lace tassel styling. Sizes S-M-L for 85-140 lbs by weight."
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": true,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/22022",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

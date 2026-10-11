@@ -1,0 +1,189 @@
+# -*- coding: utf-8 -*-
+"""Wave 6 plan source: 26 blind-spot SKUs (20 bikini term-211 + 6 moved).
+All facts from _before_*.json params. No swimwear functional words (wave-5 doc 30 ruling).
+No '&' in names (Woo entity pitfall). No lovingocean. No child-linked wording."""
+
+PLAN = {
+ "19104": {
+  "new_name": "Open-Crotch Chain Backless Jumpsuit",
+  "desc": "<p>An open-crotch chain-detail jumpsuit in black polyester, cut backless and paired with the matching neck ring. The chain trim runs along the neckline, and the open-crotch cut keeps this piece in the erotic lingerie lane rather than the bodysuit lane.</p><p>The jumpsuit comes in three sizes: S for 90-110 lbs, M for 110-130 lbs and L for 130-155 lbs, so the chain drape sits where it should instead of pulling across the chest.</p><ul><li>Material: polyester</li><li>Includes: jumpsuit, chain neck ring</li><li>Style: open crotch, backless, chain trim</li><li>Color: black</li><li>Sizing: S 90-110 lbs, M 110-130 lbs, L 130-155 lbs</li></ul><p>The two-piece bundle - garment plus ring - means the hardware arrives matched. Wearing the ring alone or the jumpsuit alone splits the set across two looks, which is how most owners end up using it.</p><p>Hand wash cold and lay flat to dry; the chain hardware holds its finish through repeated wear when kept out of the dryer.</p><p>A harness-adjacent addition for the lingerie drawer that wants one garment doing the work of straps and rings.</p>",
+  "short": "Black polyester open-crotch jumpsuit with chain neck ring and backless cut, three sizes S-L for 90-155 lbs. Harness-style erotic lingerie piece.",
+  "tkd_title": "Open-Crotch Chain Backless Jumpsuit | RoseToys",
+  "tkd_desc": "Black polyester open-crotch jumpsuit with chain neck ring and backless cut, three sizes S-L for 90-155 lbs. Harness-style erotic lingerie at RoseToys."
+ },
+ "19240": {
+  "new_name": "Christmas Bunny Girl Micro Set",
+  "desc": "<p>A Christmas bunny-girl micro set built from five pieces: bra, panties, rabbit ears, neck ring and wrist bracelet, in red or pink polyester. It reads as the holiday-party version of the classic bunny look, with the ears and collar doing the character work.</p><p>One size covers 88-132 lbs (40-60 kg) - the standard band for this category.</p><ul><li>Material: polyester</li><li>Includes: bra, panties, rabbit ears, neck ring, bracelet</li><li>Style: Christmas bunny girl</li><li>Color: red or pink</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>Red is the Christmas-tree classic; pink leans the same set toward the cuter end of the bunny spectrum. The polyester is thin and light - a party-night fabric rather than an all-night one.</p><p>Five coordinated pieces at one bundled price; the ears, ring and bracelet alone usually cost extra when sourced separately from a two-piece set.</p><p>The December-party option with the character pieces included in the bundle rather than improvised from separates.</p>",
+  "short": "Five-piece Christmas bunny set: bra, panties, rabbit ears, neck ring and bracelet in red or pink polyester, one size for 88-132 lbs.",
+  "tkd_title": "Christmas Bunny Girl Micro Set, 2 Colors | RoseToys",
+  "tkd_desc": "Five-piece Christmas bunny girl micro set with bra, panties, ears, neck ring and bracelet in red or pink polyester, one size for 88-132 lbs."
+ },
+ "19419": {
+  "new_name": "Velvet High-Slit Christmas Mini Dress",
+  "desc": "<p>A red velvet Christmas mini dress with a high slit, sold with the matching neck ring and arm sleeves. The velvet face gives the piece its holiday weight, while the slit keeps it in lingerie territory rather than party-dress territory.</p><p>One size covers 88-132 lbs (40-60 kg); the velvet base drapes rather than clings through that range, which suits the high-slit line.</p><ul><li>Material: polyester velvet</li><li>Includes: dress, neck ring, arm sleeves</li><li>Style: Christmas, high slit</li><li>Color: red</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>The sleeves are the distinguishing piece - they echo the bunny-set format without the full costume commitment. Together with the neck ring, they turn a simple red dress into a styled three-piece outfit.</p><p>Hand wash cold to keep the velvet pile standing, and air dry away from direct heat.</p><p>The velvet route into holiday lingerie for anyone whose shelf already has the chiffon and lace versions.</p>",
+  "short": "Red velvet Christmas mini dress with high slit, neck ring and arm sleeves, one size for 88-132 lbs. Holiday lingerie in polyester velvet.",
+  "tkd_title": "Velvet High-Slit Christmas Mini Dress | RoseToys",
+  "tkd_desc": "Red polyester-velvet Christmas mini dress with high slit, neck ring and arm sleeves, one size for 88-132 lbs. Holiday lingerie at RoseToys."
+ },
+ "19435": {
+  "new_name": "Halloween Witch One-Piece Micro Set",
+  "desc": "<p>A Halloween witch micro set in purple polyester, cut as a single piece instead of the usual bra-and-panties pair. The one-piece construction means no strap adjustments and a fixed silhouette - closer in spirit to a cut-out bodysuit than to a two-piece micro set.</p><p>One size covers 88-132 lbs (40-60 kg), with the polyester sitting flush against the skin through the band and the single-piece cut holding its line.</p><ul><li>Material: polyester</li><li>Includes: one-piece micro set</li><li>Style: Halloween witch, one-piece</li><li>Color: purple</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>Purple is the witch palette default, and the deep tone holds up against the lighter purples of most witch hats sold separately. The costume completes with whatever hat, broom or prop the wearer already owns.</p><p>A Halloween piece that works as a costume base in late October and as plain lingerie through the rest of the year - the purple tone carries both readings.</p>",
+  "short": "Purple polyester witch one-piece micro set for Halloween, single-piece cut, one size for 88-132 lbs. Costume base or standalone lingerie.",
+  "tkd_title": "Halloween Witch One-Piece Micro Set | RoseToys",
+  "tkd_desc": "Purple polyester Halloween witch one-piece micro set with single-piece cut, one size for 88-132 lbs. Costume base or standalone lingerie."
+ },
+ "19448": {
+  "new_name": "Openwork Lace-Up Micro Set",
+  "desc": "<p>An openwork lace-up micro set: bra and T-back panties in polyester, four colors deep - black, pink, red and white. The openwork knit shows skin through the fabric itself, and the lace-up front sets how much.</p><p>One size spans 88-154 lbs (40-70 kg), one of the wider ranges in this category, thanks to the tie-adjustable construction at both the bust and the hips.</p><ul><li>Material: polyester</li><li>Includes: bra, T-back panties</li><li>Style: openwork, lace-up front</li><li>Colors: black, pink, red, white</li><li>Sizing: one size, 88-154 lbs (40-70 kg)</li></ul><p>Four colors make this the palette-flexible entry of the micro-set shelf: black and red for classic evening moods, white for bridal-adjacent looks, pink for the softer register.</p><p>The T-back cut stays put under the ties - no riding up, no re-adjusting mid-evening.</p><p>Between the four colors and the adjustable front, this is the set where the wearer sets the reveal level with the ties rather than with sizing.</p>",
+  "short": "Openwork lace-up micro set in polyester, bra and T-back panties, four colors black to white, one size for 88-154 lbs.",
+  "tkd_title": "Openwork Lace-Up Micro Set, 4 Colors | RoseToys",
+  "tkd_desc": "Polyester openwork lace-up micro set with bra and T-back panties in black, pink, red or white, one size for 88-154 lbs at RoseToys."
+ },
+ "19457": {
+  "new_name": "Lace Cut-Out Micro Set",
+  "desc": "<p>A lace micro set with cut-out detailing - bra and panties in black, red or white polyester lace. The cut-outs break up the lace pattern with bare skin, placing this set between full-coverage lace and strappy designs.</p><p>One size rated for 88-132 lbs (40-60 kg), with a bust range of 70-110 cm and waist range of 60-100 cm - some of the clearest fit numbers on the micro-set shelf.</p><ul><li>Material: polyester lace</li><li>Includes: bra, panties</li><li>Style: cut-out, micro</li><li>Colors: black, red, white</li><li>Sizing: one size, bust 70-110 cm, waist 60-100 cm, 88-132 lbs</li></ul><p>White reads bridal, red reads Valentine, black reads any night - the three-color spread covers the gifting calendar without changing the cut.</p><p>Check the bust and waist numbers before ordering rather than going by weight alone; lace has limited forgiveness at the seams.</p><p>The cut-out placement targets the line between coverage and display, which is the whole reason to choose cut-outs over solid lace.</p>",
+  "short": "Polyester lace cut-out micro set, bra and panties in black, red or white, one size for bust 70-110 cm and 88-132 lbs.",
+  "tkd_title": "Lace Cut-Out Micro Set, 3 Colors | RoseToys",
+  "tkd_desc": "Polyester lace cut-out micro set with bra and panties in black, red or white, one size for bust 70-110 cm, 88-132 lbs, at RoseToys."
+ },
+ "19473": {
+  "new_name": "Milk Silk Christmas Micro Set",
+  "desc": "<p>A Christmas micro set in milk-silk chiffon - five pieces including headband, neck ring, wrist bracelet, bra and panties, all in red. The chiffon version of the holiday set trades the shine of polyester for a matte, powder-soft hand.</p><p>One size covers 88-132 lbs (40-60 kg).</p><ul><li>Material: chiffon (milk silk)</li><li>Includes: headband, neck ring, bracelet, bra, panties</li><li>Style: Christmas micro set</li><li>Color: red</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>Five pieces in matched red make this a complete holiday look as delivered - the headband and neck ring alone carry the Christmas theme, so the bra and panties stay simple.</p><p>Between the headband and the neck ring, the accessory layer does the holiday work; the underlayer stays a plain red micro set that survives past December.</p><p>Chiffon also packs smaller than velvet or plush - relevant if this travels on a holiday trip rather than staying home. Cold hand-washing keeps the softness that justifies choosing it over polyester.</p>",
+  "short": "Red milk-silk chiffon Christmas micro set, five pieces from headband to panties, one size for 88-132 lbs. Soft holiday lingerie.",
+  "tkd_title": "Milk Silk Christmas Micro Set, 5 Pieces | RoseToys",
+  "tkd_desc": "Red milk-silk chiffon Christmas micro set with five pieces, headband, neck ring, bracelet, bra and panties, one size for 88-132 lbs."
+ },
+ "19477": {
+  "new_name": "Milk-Silk Lace Maid Micro Set",
+  "desc": "<p>A milk-silk maid micro set with lace trim and padded construction: bra, T-back panties and garter, in white or black. The thickened chest pads give the bra its shape without a separate push-up frame.</p><p>One size covers 88-132 lbs (40-60 kg); the three pieces run matched in fabric and trim.</p><ul><li>Material: milk silk</li><li>Includes: bra, T-back panties, garter</li><li>Features: thickened chest pads</li><li>Colors: white, black</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>White is the classic maid register; black shifts the same cut toward the stricter end of the role-play spectrum. The three-piece format skips the apron and skirt of the full maid dress - this is the reduced micro version of the outfit.</p><p>The T-back panties match the bra's trim line, which is the detail that keeps a three-piece set reading as one design rather than as separate garments sold together.</p><p>Silk-family fabric wants cold hand-washing, kept apart from the rougher garments in the load.</p>",
+  "short": "Milk-silk maid micro set in white or black - bra with thickened pads, T-back panties and garter, one size for 88-132 lbs.",
+  "tkd_title": "Milk-Silk Lace Maid Micro Set, 2 Colors | RoseToys",
+  "tkd_desc": "Milk-silk maid micro set with padded bra, T-back panties and garter in white or black, thickened chest pads, one size for 88-132 lbs."
+ },
+ "19626": {
+  "new_name": "Lace-Up Two-Piece Micro Set",
+  "desc": "<p>A lace-up two-piece micro set - bra and panties in polyester with front ties, offered in purple, green, black and white. The green is the unusual entry here; most micro sets stop at the three-color standard.</p><p>One size rated for 88-132 lbs (40-60 kg), with a stated bust range of 70-120 cm and waist range of 60-90 cm.</p><ul><li>Material: polyester</li><li>Includes: bra, panties</li><li>Style: lace-up, two-piece</li><li>Colors: purple, green, black, white</li><li>Sizing: one size, bust 70-120 cm, waist 60-90 cm, 88-132 lbs</li></ul><p>The tie-front bra adjusts across the bust range without hardware, and the matching panties repeat the lace-up detail at the hips.</p><p>Green is the differentiator here: micro sets rarely carry it, and it gives the cut a costume lane the black and white versions do not have.</p><p>The stated bust and waist ranges are the numbers to check first - more useful than the weight band for this cut.</p>",
+  "short": "Lace-up two-piece micro set in purple, green, black or white polyester, one size for bust 70-120 cm and 88-132 lbs.",
+  "tkd_title": "Lace-Up Two-Piece Micro Set, 4 Colors | RoseToys",
+  "tkd_desc": "Polyester lace-up two-piece micro set with bra and panties in purple, green, black or white, one size for bust 70-120 cm at RoseToys."
+ },
+ "19637": {
+  "new_name": "Strappy Micro Set",
+  "desc": "<p>Five black pieces make up this strappy micro set: bra, panties, eye mask, wrist bracelet and leg ring in polyester. The strapping crosses at the chest and hips, and the bundled accessories push the set past the bare two-piece format into full outfit territory.</p><p>One size covers 88-132 lbs (40-60 kg); the straps tie, so the fit moves within the band.</p><ul><li>Material: polyester</li><li>Includes: bra, panties, eye mask, bracelet, leg ring</li><li>Style: strappy, five-piece</li><li>Color: black</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>The eye mask is the piece that changes how the set gets used - it comes inside the bundle, not as an add-on purchase. Black keeps the whole package in the bondage-adjacent register the strapping suggests.</p><p>The leg ring and bracelet mirror each other at ankle and wrist - the set's symmetry detail, visible from every angle.</p><p>Five black pieces, one matched look, no separate styling decisions needed.</p>",
+  "short": "Black strappy five-piece micro set with bra, panties, eye mask, bracelet and leg ring, one size for 88-132 lbs. Matched strappy look.",
+  "tkd_title": "Strappy Micro Set with Eye Mask, 5 Pieces | RoseToys",
+  "tkd_desc": "Black strappy micro set, five pieces with bra, panties, eye mask, bracelet and leg ring, one size for 88-132 lbs at RoseToys."
+ },
+ "19642": {
+  "new_name": "Bow-Tie Open-Cut Bikini Set",
+  "desc": "<p>An open-cut bikini-style lingerie set with bow-tie accents: bra, panties, wrist bracelet and neck bow tie in black or purple polyester. The open cut keeps coverage minimal, and the bows supply the decorative counterpoint.</p><p>One size rated for 88-132 lbs (40-60 kg), with a stated bust range of 70-100 cm and waist range of 65-98 cm - the numbers to check before the weight band.</p><ul><li>Material: polyester</li><li>Includes: bra, panties, bracelet, bow tie</li><li>Style: open-cut, bow accents</li><li>Colors: black, purple</li><li>Sizing: one size, bust 70-100 cm, waist 65-98 cm, 88-132 lbs</li></ul><p>Four pieces for the price most sets charge for two - the bracelet and bow tie arrive as part of the bundle, extending the look past the bra-and-panties core.</p><p>Purple is the less common of the two colors here, and it pulls the same costume-adjacent duty that purple always does in this category.</p><p>The bow tie works at the neck or in the hair; either placement carries the same black-or-purple coordination.</p>",
+  "short": "Open-cut bikini-style lingerie set with bows, four pieces in black or purple polyester, one size for bust 70-100 cm and 88-132 lbs.",
+  "tkd_title": "Bow-Tie Open-Cut Bikini Set, 4 Pieces | RoseToys",
+  "tkd_desc": "Polyester open-cut bikini-style lingerie set with bra, panties, bracelet and bow tie in black or purple, one size for 88-132 lbs."
+ },
+ "19643": {
+  "new_name": "Halter-Neck Garter Lingerie Set",
+  "desc": "<p>A halter-neck lingerie set with garter: top, panties and garter belt in white or black polyester. The halter neckline ties behind the neck and leaves the shoulders and back bare - the defining line of this cut, and the reason the silhouette photographs the way it does.</p><p>One size covers 88-132 lbs (40-60 kg), and the three pieces arrive matched in fabric and finish.</p><ul><li>Material: polyester</li><li>Includes: top, panties, garter</li><li>Style: halter neck, three-piece</li><li>Colors: white, black</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>Pair the garter with stockings or wear it bare - the set reads complete either way, which is the flexibility that a fixed three-piece garter set usually lacks.</p><p>White gives the bridal angle, black the default evening one; both colors hold the same halter line across the shoulders.</p><p>Three pieces in matched fabric, one of the simpler routes into the gartered silhouette without assembling separates from different listings.</p>",
+  "short": "Halter-neck lingerie set with garter - top, panties and garter belt in white or black polyester, one size for 88-132 lbs.",
+  "tkd_title": "Halter-Neck Garter Lingerie Set, 2 Colors | RoseToys",
+  "tkd_desc": "Polyester halter-neck lingerie set with top, panties and garter in white or black, one size for 88-132 lbs, at RoseToys."
+ },
+ "19644": {
+  "new_name": "Sheer Lace Micro Set",
+  "desc": "<p>A sheer lace micro set - bra and T-back panties in red, white or black polyester lace over a see-through base. Where solid micro sets suggest, sheer lace states outright; the see-through fabric itself is the feature of the set.</p><p>One size covers 88-132 lbs (40-60 kg), with the stretch in the lace band handling the in-between weights.</p><ul><li>Material: polyester lace (sheer)</li><li>Includes: bra, T-back panties</li><li>Style: sheer, two-piece</li><li>Colors: red, white, black</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>The T-back keeps the rear view unbroken - the same reason this cut shows up across most of the sheer sets on the shelf.</p><p>Red, white and black cover the standard three registers of the category: classic, bridal and default. Nothing exotic in the color spread - the sheer format done straight, in the three shades that sell year-round.</p><p>Between the three colors the only decision is mood; the cut and the fabric stay identical.</p>",
+  "short": "Sheer lace micro set in red, white or black - bra and T-back panties in see-through polyester lace, one size for 88-132 lbs.",
+  "tkd_title": "Sheer Lace Micro Set, 3 Colors | RoseToys",
+  "tkd_desc": "Sheer polyester lace micro set with bra and T-back panties in red, white or black, one size for 88-132 lbs at RoseToys."
+ },
+ "19660": {
+  "new_name": "Cow Maid Micro Set",
+  "desc": "<p>A cow-print maid micro set in black polyester - the animal-print entry in the maid category, shipped as one complete bundle. The cow theme gives the maid format its playful branch, separate from the strict French original.</p><p>One size covers 88-132 lbs (40-60 kg), the standard band for one-size lingerie.</p><ul><li>Material: polyester</li><li>Includes: complete set, one bundle</li><li>Style: cow print, maid</li><li>Color: black</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>Cow print sits at the gentle end of the animal-pattern scale, and the maid framing gives it a structure the plain micro set lacks.</p><p>Where the bunny and cat sets lean costume, the cow maid set leans domestic - the apron-and-collar family of role-play wear, in the print that made it mainstream.</p><p>As a gift it lands in the safe zone: themed enough to be remembered, sized so no measurement exchange is needed. Check the weight band before ordering; one size is the only cut offered.</p>",
+  "short": "Cow-print maid micro set in black polyester, one complete bundle, one size for 88-132 lbs. Animal-print take on the maid format.",
+  "tkd_title": "Cow Maid Micro Set | RoseToys",
+  "tkd_desc": "Black polyester cow-print maid micro set, one complete bundle, one size for 88-132 lbs. The animal-print branch of the maid category at RoseToys."
+ },
+ "19732": {
+  "new_name": "Plush Cat-Girl Open-Crotch Set",
+  "desc": "<p>A plush cat-girl set with open-crotch panties: headband, neck ornament, bra, garter, wrist bracelet and the cat-tail open-crotch T-back, in pink, white or black. Six pieces, with the tail as the signature element of the set.</p><p>One size covers 88-143 lbs (40-65 kg) - a slightly wider band than the category standard.</p><ul><li>Material: polyester plush</li><li>Includes: headband, neck ornament, bra, garter, bracelet, cat-tail open-crotch panties</li><li>Style: cat-girl, open crotch</li><li>Colors: pink, white, black</li><li>Sizing: one size, 88-143 lbs (40-65 kg)</li></ul><p>Plush fabric makes this the cold-weather cat set - the texture reads cozy where lace reads dressed-up. The open-crotch cut is functional rather than decorative.</p><p>Six coordinated pieces in the bundle; the headband and tail alone set the character, so the rest of the set stays simple.</p><p>Of the three colors, pink leans hardest into the cat-girl character; black and white read closer to general lingerie with the ears as the only signal.</p>",
+  "short": "Plush cat-girl set in pink, white or black - six pieces with open-crotch cat-tail panties, one size for 88-143 lbs. Costume-grade texture.",
+  "tkd_title": "Plush Cat-Girl Open-Crotch Set, 6 Pieces | RoseToys",
+  "tkd_desc": "Polyester plush cat-girl set, six pieces with headband, garter and open-crotch cat-tail panties in pink, white or black, 88-143 lbs."
+ },
+ "19776": {
+  "new_name": "Christmas-Inspired Slip Dress",
+  "desc": "<p>A red Christmas-inspired slip dress in polyester - a single garment, nothing else in the bundle. The slip cut sits close through the body on thin straps, in the standard nightwear silhouette.</p><p>Two sizes instead of the usual one: M for 88-121 lbs (40-55 kg) and L for 121-143 lbs (55-65 kg) - the more precise route when one-size bands miss the mark.</p><ul><li>Material: polyester</li><li>Includes: slip dress, single piece</li><li>Style: Christmas, slip dress</li><li>Color: red</li><li>Sizing: M 88-121 lbs (40-55 kg), L 121-143 lbs (55-65 kg)</li></ul><p>The red satin-finish polyester carries the Christmas register on its own - no prints, no trim. That restraint separates it from the costumed end of the holiday shelf.</p><p>Between the M and L split, the dress covers 88-143 lbs in total - the two-size format halves the fitting risk of one-size nightwear.</p><p>Layer it under a robe for the gift-opening version, or wear it as the standalone December nightdress.</p>",
+  "short": "Red polyester Christmas-inspired slip dress, single thin-strap piece, two sizes M and L for 88-143 lbs. The restrained holiday nightwear choice.",
+  "tkd_title": "Christmas-Inspired Slip Dress, Red | RoseToys",
+  "tkd_desc": "Red polyester Christmas-inspired slip dress, single piece in two sizes M and L for 88-143 lbs. Holiday nightwear at RoseToys."
+ },
+ "19894": {
+  "new_name": "Fawn Christmas Lingerie Set",
+  "desc": "<p>Six pieces carry this fawn-themed Christmas set: bra, panties, neck ring, mini skirt, wrist bracelet and the fawn headdress that anchors the theme. Black or red base, in polyester.</p><p>One size covers 88-132 lbs (40-60 kg); the skirt line sits at the upper hip, layered over the panties.</p><ul><li>Material: polyester</li><li>Includes: bra, panties, neck ring, skirt, bracelet, fawn headdress</li><li>Style: Christmas, fawn</li><li>Colors: black, red</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>The skirt is the structural piece here - most micro sets stop at a bra and panties, and the added skirt gives this one a two-layer silhouette inside the same bundle price.</p><p>Fawn sits between the reindeer cliches and the bunny default: recognizable, less common, still Christmas-adjacent once the headdress is on.</p><p>Six pieces at the set price; the fawn headdress is what sells the theme, and it arrives included in the bundle rather than left to the buyer to source separately.</p>",
+  "short": "Fawn Christmas lingerie set, six pieces from fawn headdress to mini skirt in black or red polyester, one size for 88-132 lbs.",
+  "tkd_title": "Fawn Christmas Lingerie Set, 6 Pieces | RoseToys",
+  "tkd_desc": "Polyester fawn Christmas lingerie set with six pieces, headdress, skirt, neck ring, bracelet, bra and panties, one size for 88-132 lbs."
+ },
+ "19902": {
+  "new_name": "Cow Bikini Five-Piece Set",
+  "desc": "<p>A cow bikini set in five pieces: bra, panties, headgear, neck ring and cow socks, all in black polyester. The socks are the distinguishing inclusion - they carry the animal theme to the feet without sourcing separates.</p><p>One size covers 88-132 lbs (40-60 kg), the standard single-size band across this category of animal-print sets.</p><ul><li>Material: polyester</li><li>Includes: bra, panties, headgear, neck ring, cow socks</li><li>Style: cow, five-piece</li><li>Color: black</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>Five matched pieces at the bundle price - headgear and socks alone typically add cost when bought apart from a two-piece core.</p><p>The cow theme runs through every piece rather than living on one garment; that consistency is what separates a designed set from an assembled one.</p><p>The head-to-foot option in the cow lineup - the same print family as the maid version, with the theme pushed further out to the socks and the headgear.</p>",
+  "short": "Black cow bikini set in five pieces - bra, panties, headgear, neck ring and cow socks, one size for 88-132 lbs. Head-to-foot animal theme.",
+  "tkd_title": "Cow Bikini Five-Piece Set | RoseToys",
+  "tkd_desc": "Black polyester cow bikini set, five pieces with bra, panties, headgear, neck ring and cow socks, one size for 88-132 lbs at RoseToys."
+ },
+ "20011": {
+  "new_name": "Ice-Silk Hollow-Out Lace-Up Set",
+  "desc": "<p>An ice-silk set with a hollow-out cut and lace-up detailing, closed with a bow knot, in black, pink, red or grey. The ice-silk base is the cooling-fabric pick of this shelf - noticeably smoother against the skin than standard polyester.</p><p>One size covers 88-132 lbs (40-60 kg); the lace-up ties take up the slack inside that band.</p><ul><li>Material: ice silk</li><li>Includes: full set</li><li>Style: hollow-out, lace-up, bow knot</li><li>Colors: black, pink, red, grey</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>Grey is the quiet standout of the four-color line - it reads muted where black reads dramatic, and it is the rarest color in this category's usual spread.</p><p>The bow knot sits at the lace-up point, functional and decorative at once: it holds the adjustment and finishes the line.</p><p>Ice silk also carries less sheen than satin-finish polyester in photos - a subtler look for buyers who want the set quiet rather than glossy.</p>",
+  "short": "Ice-silk hollow-out set with lace-up bow knot in black, pink, red or grey, one size for 88-132 lbs. Cooling fabric, four colors.",
+  "tkd_title": "Ice-Silk Hollow-Out Lace-Up Set, 4 Colors | RoseToys",
+  "tkd_desc": "Ice-silk hollow-out lace-up set with bow knot in black, pink, red or grey, one size for 88-132 lbs. Cooling fabric lingerie at RoseToys."
+ },
+ "20116": {
+  "new_name": "Six-Piece Maid Lingerie Set",
+  "desc": "<p>Neck ring, bra, mini skirt, apron, T-back panties and leg ring - the six counted pieces of this full maid outfit in silk. This is the complete maid outfit rather than the reduced micro format, apron and skirt both present and counted.</p><p>One size covers 88-132 lbs (40-60 kg); the apron tie sets where the waist sits.</p><ul><li>Material: silk</li><li>Includes: neck ring, bra, skirt, apron, T-back panties, leg ring</li><li>Style: maid, six-piece</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>Six pieces at this single price undercuts the build-it-from-separates route, where an apron alone often costs a third of what a full set runs.</p><p>The leg ring is the piece most maid sets omit - it extends the theme past the hemline and closes the outfit without needing stockings at all.</p><p>For role-play wearers who want the recognized maid outline rather than a themed animal variation, this is the baseline format in its complete form.</p>",
+  "short": "Six-piece maid set in silk - neck ring, bra, skirt, apron, T-back panties and leg ring, one size for 88-132 lbs.",
+  "tkd_title": "Six-Piece Maid Lingerie Set | RoseToys",
+  "tkd_desc": "Six-piece maid lingerie set with neck ring, bra, skirt, apron, T-back panties and leg ring, one size for 88-132 lbs at RoseToys."
+ },
+ "20278": {
+  "new_name": "Lolita Five-Piece Lingerie Set",
+  "desc": "<p>Five pieces define this Lolita-style lingerie set: bra, panties, garter, neck ring and leg ring, in white, pink or black polyester. The neck ring and leg ring are the character pieces - they build the silhouette out past the bra-and-panties core.</p><p>One size covers 88-132 lbs (40-60 kg).</p><ul><li>Material: polyester</li><li>Includes: bra, panties, garter, neck ring, leg ring</li><li>Style: Lolita, five-piece</li><li>Colors: white, pink, black</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>White and pink carry the sweet register the style is known for; black pushes the same cut toward the gothic branch of the family. Three colors, three moods, one silhouette.</p><p>The garter takes stockings or goes bare, and the five-piece set holds its look either way.</p><p>Of the three colorways, pink is the hardest to find elsewhere in this cut - most five-piece sets on the shelf default to black and white, and stop right there.</p><p>The leg ring and neck ring bracket the set top and bottom, which is what gives the five-piece format its named silhouette.</p>",
+  "short": "Lolita five-piece lingerie set - bra, panties, garter, neck ring and leg ring in white, pink or black, one size for 88-132 lbs.",
+  "tkd_title": "Lolita Five-Piece Lingerie Set, 3 Colors | RoseToys",
+  "tkd_desc": "Polyester Lolita-style five-piece lingerie set with bra, panties, garter, neck ring and leg ring in white, pink or black, 88-132 lbs."
+ },
+ "20396": {
+  "new_name": "Christmas Pearl Lingerie Set",
+  "desc": "<p>A Christmas lingerie set with pearl detailing on a chiffon base: headband, bra, panties and leg loops, in red or black. The pearls sit against the light chiffon and give the set its dressed finish.</p><p>One size covers 88-132 lbs (40-60 kg) - the standard band for the holiday-set format.</p><ul><li>Material: chiffon</li><li>Includes: headband, bra, panties, leg loops</li><li>Style: Christmas, pearl detail</li><li>Colors: red, black</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>Four pieces with the headband included - the holiday theme arrives complete in the bundle rather than as a separately styled add-on. Chiffon keeps the drape light; the pearls keep it from reading plain.</p><p>Leg loops are the inclusion that separates this from a standard four-piece holiday set - they carry the theme down the leg the same way the headband carries it up.</p><p>Red serves the Christmas register, black the year-round one - the same pearl detailing carries both readings without a change in cut.</p>",
+  "short": "Chiffon Christmas lingerie set with pearl detail - headband, bra, panties and leg loops in red or black, one size for 88-132 lbs.",
+  "tkd_title": "Christmas Pearl Lingerie Set, 2 Colors | RoseToys",
+  "tkd_desc": "Chiffon Christmas lingerie set with pearl detail, headband, bra, panties and leg loops in red or black, one size for 88-132 lbs."
+ },
+ "20491": {
+  "new_name": "Lace Bunny Micro Set",
+  "desc": "<p>A lace bunny micro set in four pieces: bra, panties, headband and neck ring, in white or black polyester lace. The headband carries the ears and the neck ring closes the look - the two accessories that define the bunny format.</p><p>One size covers 88-132 lbs (40-60 kg).</p><ul><li>Material: polyester lace</li><li>Includes: bra, panties, headband, neck ring</li><li>Style: bunny, four-piece</li><li>Colors: white, black</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>White gives the bunny look its classic register; black tilts the same four pieces toward the cocktail end of the spectrum. Two colors, no functional difference between them.</p><p>Four matched pieces at the single set price - the neck ring alone is the piece that cheaper bundles on this shelf tend to drop first.</p><p>The four-piece count is what makes this a set rather than a bra-and-panties pair with packaging: both accessories carry the bunny theme, and neither one is filler.</p><p>Simple, recognizable, complete as delivered - the default entry point of the bunny format.</p>",
+  "short": "Lace bunny micro set, four pieces with headband and neck ring in white or black polyester, one size for 88-132 lbs.",
+  "tkd_title": "Lace Bunny Micro Set, 4 Pieces | RoseToys",
+  "tkd_desc": "Polyester lace bunny micro set with bra, panties, headband and neck ring in white or black, one size for 88-132 lbs at RoseToys."
+ },
+ "20625": {
+  "new_name": "Backless Christmas Sweater",
+  "desc": "<p>A backless Christmas sweater in red polyester - one single piece, no accessories in the bundle. The sweater knit gives it the cold-weather hand, while the open back keeps the piece on the lingerie side of the line rather than in loungewear.</p><p>One size covers 88-132 lbs (40-60 kg); the knit stretches across the band without pulling at the seams.</p><ul><li>Material: polyester</li><li>Includes: sweater, single piece</li><li>Style: Christmas, backless</li><li>Color: red</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>Red sweater knit is the December default across the board - this version turns it toward the evening with the backless cut. The single-piece format makes it the simplest holiday option on the whole nightwear shelf.</p><p>Worn with the pearl strands or the leg-warmers already in the drawer, it holds a full December outfit together without another purchase.</p><p>Hand wash cold to keep the knit from pilling over the seasons, and lay each piece flat to dry.</p>",
+  "short": "Red backless Christmas sweater in polyester knit, single piece with stretch across the band, one size for 88-132 lbs. Cold-weather holiday lingerie.",
+  "tkd_title": "Backless Christmas Sweater, Red | RoseToys",
+  "tkd_desc": "Red polyester backless Christmas sweater, single piece knit with stretch, one size for 88-132 lbs. Cold-weather holiday lingerie at RoseToys."
+ },
+ "20630": {
+  "new_name": "Plush Tiger Five-Piece Set",
+  "desc": "<p>Tiger stripe on coral fleece: this plush five-piece set covers bra, panties, hat, arm sleeves and leg loops. Coral fleece is the plushest base on this shelf - thicker than standard plush and warmer than any lace in the category.</p><p>One size covers 88-132 lbs (40-60 kg).</p><ul><li>Material: coral fleece</li><li>Includes: bra, panties, hat, arm sleeves, leg loops</li><li>Style: tiger stripe, five-piece</li><li>Sizing: one size, 88-132 lbs (40-60 kg)</li></ul><p>Tiger stripe is the louder cat option - where the cat-girl set plays cute, this one plays bold. The hat and sleeves carry the stripe across the whole silhouette.</p><p>Of the animal sets in the category, tiger is the one that reads costume-first rather than lingerie-first - the print does that on its own.</p><p>Five pieces in one bundle, and the fleece makes it a winter-party set rather than a summer-convention one. Cold wash cycles keep the coral fleece from matting down over time.</p>",
+  "short": "Coral-fleece plush tiger set in five pieces - bra, panties, hat, sleeves and leg loops, tiger striped, one size for 88-132 lbs.",
+  "tkd_title": "Plush Tiger Five-Piece Set, Coral Fleece | RoseToys",
+  "tkd_desc": "Coral-fleece plush tiger set with five pieces, hat, sleeves and leg loops, tiger striped, one size for 88-132 lbs at RoseToys."
+ },
+ "22024": {
+  "new_name": "Irregular-Zip Chain Dress",
+  "desc": "<p>A chain-detail dress with irregular zips in black polyester - a single piece, no separate accessories. The zips run at off angles rather than straight lines, and the chain detailing gives the dress its hardware edge.</p><p>One size spans 90-155 lbs - one of the widest single-size bands anywhere on the lingerie shelf.</p><ul><li>Material: polyester</li><li>Includes: dress, single piece</li><li>Style: chain detail, irregular zips</li><li>Color: black</li><li>Sizing: one size, 90-155 lbs</li></ul><p>The zip placement is the design itself: every closure is a visible detail rather than hidden hardware. Layered over a bodysuit or worn on bare skin, the dress shifts between outerwear and lingerie depending on what sits under it.</p><p>Between the chain and the zips, the dress carries enough metal detail to anchor an outfit on its own - no belt or collar needed.</p><p>Hand wash cold; the zips and chain hardware want air drying away from direct heat.</p>",
+  "short": "Black polyester chain-detail dress with irregular zips, single piece cut, one size for 90-155 lbs. Hardware-edge lingerie with visible metal closures.",
+  "tkd_title": "Irregular-Zip Chain Dress, Black | RoseToys",
+  "tkd_desc": "Black polyester chain dress with irregular zips, single piece, one size for 90-155 lbs. Hardware-edge lingerie with visible closures."
+ }
+}

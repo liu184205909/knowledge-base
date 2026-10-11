@@ -1,0 +1,250 @@
+{
+ "id": 19424,
+ "name": "Bear-Style Bandeau Dress",
+ "slug": "m-570-bear-style-bandeau-dress",
+ "permalink": "https://rosetoys.org/product/m-570-bear-style-bandeau-dress/",
+ "date_created": "2024-07-02T21:02:15",
+ "date_created_gmt": "2024-07-02T13:02:15",
+ "date_modified": "2026-10-10T23:48:08",
+ "date_modified_gmt": "2026-10-10T15:48:08",
+ "type": "variable",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>Coral fleece in bear styling: neck ring, dress, and bracelet, in white or brown, one size for 40-60 kg. The fleece is the whole point - this is the costume you pick when every other option looks cold.</p>\n<p>The bandeau dress is a straight drape, which fleece handles well, and the neck ring and bracelet carry the bear cues without a full mascot commitment. White and brown choose between polar and classic.</p>\n<ul>\n<li>Material: coral fleece</li>\n<li>Includes: neck ring, dress, bracelet</li>\n<li>Style: bear</li>\n<li>Color: white or brown</li>\n<li>Sizing: one size, recommended 40-60 kg</li>\n</ul>\n<p>One size for 40-60 kg. Lounging, cozy costume nights, and cold apartments all covered.</p>\n",
+ "short_description": "<p>Coral fleece bear-style bandeau dress with neck ring and bracelet, white or brown, one size for 40-60 kg.</p>\n",
+ "sku": "A9011094814993",
+ "price": "35.99",
+ "regular_price": "",
+ "sale_price": "",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 183,
+   "name": "Cosplay",
+   "slug": "cosplay"
+  }
+ ],
+ "brands": [],
+ "tags": [
+  {
+   "id": 113,
+   "name": "\"New\"",
+   "slug": "new"
+  }
+ ],
+ "images": [
+  {
+   "id": 19551,
+   "date_created": "2024-07-03T05:20:58",
+   "date_created_gmt": "2024-07-02T13:20:58",
+   "date_modified": "2024-07-03T05:20:58",
+   "date_modified_gmt": "2024-07-02T13:20:58",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/1_38d4a9eb-25bf-43f3-bec5-50e69e4cb76e.jpg",
+   "name": "1_38d4a9eb-25bf-43f3-bec5-50e69e4cb76e.jpg",
+   "alt": "Bear-style bandeau dress",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/1_38d4a9eb-25bf-43f3-bec5-50e69e4cb76e.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/1_38d4a9eb-25bf-43f3-bec5-50e69e4cb76e-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/1_38d4a9eb-25bf-43f3-bec5-50e69e4cb76e-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/1_38d4a9eb-25bf-43f3-bec5-50e69e4cb76e-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/1_38d4a9eb-25bf-43f3-bec5-50e69e4cb76e-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/1_38d4a9eb-25bf-43f3-bec5-50e69e4cb76e-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/1_38d4a9eb-25bf-43f3-bec5-50e69e4cb76e-430x430.jpg"
+  },
+  {
+   "id": 19553,
+   "date_created": "2024-07-03T05:21:00",
+   "date_created_gmt": "2024-07-02T13:21:00",
+   "date_modified": "2024-07-03T05:21:00",
+   "date_modified_gmt": "2024-07-02T13:21:00",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/2_a62b53ad-2c34-47d2-92f4-afe4ee5a65aa.jpg",
+   "name": "2_a62b53ad-2c34-47d2-92f4-afe4ee5a65aa.jpg",
+   "alt": "Bear-style bandeau dress",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/2_a62b53ad-2c34-47d2-92f4-afe4ee5a65aa.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/2_a62b53ad-2c34-47d2-92f4-afe4ee5a65aa-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/2_a62b53ad-2c34-47d2-92f4-afe4ee5a65aa-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/2_a62b53ad-2c34-47d2-92f4-afe4ee5a65aa-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/2_a62b53ad-2c34-47d2-92f4-afe4ee5a65aa-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/2_a62b53ad-2c34-47d2-92f4-afe4ee5a65aa-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/2_a62b53ad-2c34-47d2-92f4-afe4ee5a65aa-430x430.jpg"
+  },
+  {
+   "id": 19554,
+   "date_created": "2024-07-03T05:21:01",
+   "date_created_gmt": "2024-07-02T13:21:01",
+   "date_modified": "2024-07-03T05:21:01",
+   "date_modified_gmt": "2024-07-02T13:21:01",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/3_9454ae8b-e647-4c2c-9e47-8f01f7597f79.jpg",
+   "name": "3_9454ae8b-e647-4c2c-9e47-8f01f7597f79.jpg",
+   "alt": "Bear-style bandeau dress",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/3_9454ae8b-e647-4c2c-9e47-8f01f7597f79.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/3_9454ae8b-e647-4c2c-9e47-8f01f7597f79-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/3_9454ae8b-e647-4c2c-9e47-8f01f7597f79-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/3_9454ae8b-e647-4c2c-9e47-8f01f7597f79-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/3_9454ae8b-e647-4c2c-9e47-8f01f7597f79-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/3_9454ae8b-e647-4c2c-9e47-8f01f7597f79-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/3_9454ae8b-e647-4c2c-9e47-8f01f7597f79-430x430.jpg"
+  },
+  {
+   "id": 19555,
+   "date_created": "2024-07-03T05:21:02",
+   "date_created_gmt": "2024-07-02T13:21:02",
+   "date_modified": "2024-07-03T05:21:02",
+   "date_modified_gmt": "2024-07-02T13:21:02",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/8-9_c85cbbe3-f61b-44ee-8de7-dbad0b78c85d.jpg",
+   "name": "8-9_c85cbbe3-f61b-44ee-8de7-dbad0b78c85d.jpg",
+   "alt": "Bear-style bandeau dress",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/8-9_c85cbbe3-f61b-44ee-8de7-dbad0b78c85d.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/8-9_c85cbbe3-f61b-44ee-8de7-dbad0b78c85d-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/8-9_c85cbbe3-f61b-44ee-8de7-dbad0b78c85d-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/8-9_c85cbbe3-f61b-44ee-8de7-dbad0b78c85d-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/8-9_c85cbbe3-f61b-44ee-8de7-dbad0b78c85d-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/8-9_c85cbbe3-f61b-44ee-8de7-dbad0b78c85d-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/8-9_c85cbbe3-f61b-44ee-8de7-dbad0b78c85d-430x430.jpg"
+  },
+  {
+   "id": 19556,
+   "date_created": "2024-07-03T05:21:03",
+   "date_created_gmt": "2024-07-02T13:21:03",
+   "date_modified": "2024-07-03T05:21:03",
+   "date_modified_gmt": "2024-07-02T13:21:03",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/2-9_72b5e96f-3b8a-41ca-a9f9-7d471a50266b.jpg",
+   "name": "2-9_72b5e96f-3b8a-41ca-a9f9-7d471a50266b.jpg",
+   "alt": "Bear-style bandeau dress",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/2-9_72b5e96f-3b8a-41ca-a9f9-7d471a50266b.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_72b5e96f-3b8a-41ca-a9f9-7d471a50266b-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_72b5e96f-3b8a-41ca-a9f9-7d471a50266b-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_72b5e96f-3b8a-41ca-a9f9-7d471a50266b-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_72b5e96f-3b8a-41ca-a9f9-7d471a50266b-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_72b5e96f-3b8a-41ca-a9f9-7d471a50266b-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/2-9_72b5e96f-3b8a-41ca-a9f9-7d471a50266b-430x430.jpg"
+  },
+  {
+   "id": 19557,
+   "date_created": "2024-07-03T05:21:04",
+   "date_created_gmt": "2024-07-02T13:21:04",
+   "date_modified": "2024-07-03T05:21:04",
+   "date_modified_gmt": "2024-07-02T13:21:04",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/5-9_e12cbfca-8a24-4362-a7d4-e485fbf6e3bd.jpg",
+   "name": "5-9_e12cbfca-8a24-4362-a7d4-e485fbf6e3bd.jpg",
+   "alt": "Bear-style bandeau dress",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/5-9_e12cbfca-8a24-4362-a7d4-e485fbf6e3bd.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/5-9_e12cbfca-8a24-4362-a7d4-e485fbf6e3bd-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/5-9_e12cbfca-8a24-4362-a7d4-e485fbf6e3bd-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/5-9_e12cbfca-8a24-4362-a7d4-e485fbf6e3bd-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/5-9_e12cbfca-8a24-4362-a7d4-e485fbf6e3bd-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/5-9_e12cbfca-8a24-4362-a7d4-e485fbf6e3bd-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/5-9_e12cbfca-8a24-4362-a7d4-e485fbf6e3bd-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "One size"
+   ]
+  },
+  {
+   "id": 5,
+   "name": "Color",
+   "slug": "pa_color",
+   "position": 1,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "Brown",
+    "White"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [
+  19558,
+  19615,
+  19630,
+  22078,
+  19559,
+  19616,
+  19631,
+  22079,
+  22091
+ ],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>35.99</bdi></span>",
+ "related_ids": [
+  17071,
+  17800,
+  17678,
+  17426,
+  17710
+ ],
+ "meta_data": [
+  {
+   "id": 35232,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 36863,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 103927,
+   "key": "rank_math_title",
+   "value": "Bear-Style Bandeau Dress, 2 Colors | RoseToys"
+  },
+  {
+   "id": 103928,
+   "key": "rank_math_description",
+   "value": "Coral fleece bear costume with bandeau dress, neck ring and bracelet in white or brown. One size for 40-60 kg, cozy three-piece set."
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": true,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/19424",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

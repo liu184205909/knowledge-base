@@ -1,0 +1,9638 @@
+{
+ "summary": {
+  "total": 481,
+  "ok_count": 481,
+  "by_wave": {
+   "w4-toy": {
+    "n": 139,
+    "ok": 139
+   },
+   "w1w2-zero": {
+    "n": 32,
+    "ok": 32
+   },
+   "w3-night": {
+    "n": 117,
+    "ok": 117
+   },
+   "w5-cos": {
+    "n": 167,
+    "ok": 167
+   },
+   "w6": {
+    "n": 26,
+    "ok": 26
+   }
+  },
+  "fails": [],
+  "pulled_at": "2026-10-11"
+ },
+ "rows": [
+  {
+   "id": 16890,
+   "wave": "w4-toy",
+   "name": "Smart Remote Control Rose Butterfly Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 202,
+   "short_w": 19,
+   "rmt_len": 55,
+   "rmd_len": 139,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 16891,
+   "wave": "w4-toy",
+   "name": "Rose Vibrator with 10 Vibrations and 5 Rotations",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 179,
+   "short_w": 21,
+   "rmt_len": 57,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 16892,
+   "wave": "w4-toy",
+   "name": "Rose Thrusting Bullet Vibrator, 3-in-1",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 188,
+   "short_w": 18,
+   "rmt_len": 49,
+   "rmd_len": 144,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 16893,
+   "wave": "w4-toy",
+   "name": "Rose Blossom Sucking and Vibrating Toy",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 172,
+   "short_w": 20,
+   "rmt_len": 47,
+   "rmd_len": 137,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 16894,
+   "wave": "w4-toy",
+   "name": "Rabbit Dual G-Spot Rose Sucker Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 167,
+   "short_w": 18,
+   "rmt_len": 50,
+   "rmd_len": 142,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 16895,
+   "wave": "w4-toy",
+   "name": "Rose Tongue Vibe with 9+9 Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 180,
+   "short_w": 21,
+   "rmt_len": 42,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 16896,
+   "wave": "w4-toy",
+   "name": "G-Spot Thrusting Vibrator with 10 Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 158,
+   "short_w": 19,
+   "rmt_len": 50,
+   "rmd_len": 144,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 16908,
+   "wave": "w4-toy",
+   "name": "Rose Suction Vibrator with Flapping Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 188,
+   "short_w": 26,
+   "rmt_len": 52,
+   "rmd_len": 144,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 16935,
+   "wave": "w4-toy",
+   "name": "Rose Vibrator with 10 Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 184,
+   "short_w": 18,
+   "rmt_len": 38,
+   "rmd_len": 144,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 16939,
+   "wave": "w4-toy",
+   "name": "Blooming Rose Vibrating Kegel Ball",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 160,
+   "short_w": 19,
+   "rmt_len": 45,
+   "rmd_len": 144,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 16945,
+   "wave": "w1w2-zero",
+   "name": "Vibrant Rose Pleasure Buddy",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 161,
+   "short_w": 26,
+   "rmt_len": 38,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 16952,
+   "wave": "w4-toy",
+   "name": "Rose G-Spot Nipple Clit Pleaser",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 161,
+   "short_w": 18,
+   "rmt_len": 42,
+   "rmd_len": 135,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 16959,
+   "wave": "w4-toy",
+   "name": "Warming Rose Vibrator with 10 Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 180,
+   "short_w": 18,
+   "rmt_len": 46,
+   "rmd_len": 145,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 16960,
+   "wave": "w4-toy",
+   "name": "LINN 2-in-1 Suction and Vibe Rose Toy",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 185,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 135,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 16978,
+   "wave": "w4-toy",
+   "name": "Red Rose G-spot Licker Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 181,
+   "short_w": 21,
+   "rmt_len": 42,
+   "rmd_len": 145,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17014,
+   "wave": "w4-toy",
+   "name": "3-in-1 Rose Tongue Licker Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 171,
+   "short_w": 20,
+   "rmt_len": 45,
+   "rmd_len": 137,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17033,
+   "wave": "w4-toy",
+   "name": "Blushing Rose Wand Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 173,
+   "short_w": 18,
+   "rmt_len": 38,
+   "rmd_len": 137,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17071,
+   "wave": "w4-toy",
+   "name": "Smart Remote Control Wearable Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 177,
+   "short_w": 20,
+   "rmt_len": 49,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17079,
+   "wave": "w4-toy",
+   "name": "Wireless App-Controlled Wearable Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 162,
+   "short_w": 18,
+   "rmt_len": 52,
+   "rmd_len": 144,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17080,
+   "wave": "w4-toy",
+   "name": "Dual-Action Rose Tongue Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 165,
+   "short_w": 18,
+   "rmt_len": 43,
+   "rmd_len": 141,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17089,
+   "wave": "w4-toy",
+   "name": "Rose Tongue Vibrator with Dual Eggs",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 160,
+   "short_w": 18,
+   "rmt_len": 46,
+   "rmd_len": 138,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17110,
+   "wave": "w4-toy",
+   "name": "Rose Toy with 10 Biting Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 158,
+   "short_w": 18,
+   "rmt_len": 40,
+   "rmd_len": 144,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17111,
+   "wave": "w4-toy",
+   "name": "Rose Pleasure Combo, 3-Function Sucking Toy",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 172,
+   "short_w": 18,
+   "rmt_len": 54,
+   "rmd_len": 144,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17118,
+   "wave": "w4-toy",
+   "name": "Rose Lick Dual-Head Silicone Stimulator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 164,
+   "short_w": 18,
+   "rmt_len": 50,
+   "rmd_len": 148,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17139,
+   "wave": "w4-toy",
+   "name": "Rose Sucking Vibrator with 10 Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 161,
+   "short_w": 18,
+   "rmt_len": 46,
+   "rmd_len": 138,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17140,
+   "wave": "w4-toy",
+   "name": "Rose Licking Vibrator with 10 Frequencies",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 170,
+   "short_w": 19,
+   "rmt_len": 52,
+   "rmd_len": 135,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17150,
+   "wave": "w4-toy",
+   "name": "Rose Auto-Thrust Sucking Stimulator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 173,
+   "short_w": 18,
+   "rmt_len": 46,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17164,
+   "wave": "w4-toy",
+   "name": "Sensual Rose Sucking Toy",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 175,
+   "short_w": 21,
+   "rmt_len": 35,
+   "rmd_len": 142,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17179,
+   "wave": "w4-toy",
+   "name": "Tongue-Lick Rose Vibrator with 10 Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 148,
+   "short_w": 23,
+   "rmt_len": 50,
+   "rmd_len": 144,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17200,
+   "wave": "w4-toy",
+   "name": "Rose Sucker 2-in-1 Toy",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 170,
+   "short_w": 20,
+   "rmt_len": 33,
+   "rmd_len": 139,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17201,
+   "wave": "w4-toy",
+   "name": "Rose Suction Pleasure Toy, 9+9 Modes",
+   "cats": [
+    "Rose Toy Deluxe"
+   ],
+   "desc_w": 146,
+   "short_w": 19,
+   "rmt_len": 47,
+   "rmd_len": 137,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17209,
+   "wave": "w4-toy",
+   "name": "Dual-Ended Sucking Rose Pleasure",
+   "cats": [
+    "Male Rose Toy"
+   ],
+   "desc_w": 161,
+   "short_w": 21,
+   "rmt_len": 43,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17227,
+   "wave": "w4-toy",
+   "name": "Vibrating Sucking Rose Toy, 10+10 Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 155,
+   "short_w": 20,
+   "rmt_len": 50,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17234,
+   "wave": "w4-toy",
+   "name": "Rose Tongue Sucker Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 152,
+   "short_w": 18,
+   "rmt_len": 38,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17235,
+   "wave": "w4-toy",
+   "name": "Rose Tongue Vibrator, 9+9 Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 166,
+   "short_w": 20,
+   "rmt_len": 42,
+   "rmd_len": 139,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17244,
+   "wave": "w4-toy",
+   "name": "Women's Tease Rose Toy",
+   "cats": [
+    "Rose Toy Deluxe"
+   ],
+   "desc_w": 162,
+   "short_w": 21,
+   "rmt_len": 33,
+   "rmd_len": 142,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17256,
+   "wave": "w4-toy",
+   "name": "Tongue-Licking Rose Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 152,
+   "short_w": 18,
+   "rmt_len": 39,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17266,
+   "wave": "w4-toy",
+   "name": "Blossom Clitoral Vibrator for Women",
+   "cats": [
+    "Rose Toy Deluxe"
+   ],
+   "desc_w": 191,
+   "short_w": 21,
+   "rmt_len": 46,
+   "rmd_len": 135,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17281,
+   "wave": "w4-toy",
+   "name": "Rose Vibrator for Women",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 160,
+   "short_w": 18,
+   "rmt_len": 34,
+   "rmd_len": 139,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17295,
+   "wave": "w4-toy",
+   "name": "Tide Rose Vibrator, 10+10 Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 158,
+   "short_w": 20,
+   "rmt_len": 42,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17311,
+   "wave": "w4-toy",
+   "name": "Licking Rose Vibrator Massager",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 174,
+   "short_w": 21,
+   "rmt_len": 41,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17319,
+   "wave": "w4-toy",
+   "name": "Flaming Rose Telescopic Vibrator, 12 Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 174,
+   "short_w": 18,
+   "rmt_len": 53,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17336,
+   "wave": "w4-toy",
+   "name": "Suction Rose Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 159,
+   "short_w": 19,
+   "rmt_len": 32,
+   "rmd_len": 139,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17343,
+   "wave": "w4-toy",
+   "name": "Dual-Ended Red Rose Pleasure Toy",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 175,
+   "short_w": 23,
+   "rmt_len": 43,
+   "rmd_len": 135,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17354,
+   "wave": "w4-toy",
+   "name": "360° Spinning Rose Stimulator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 152,
+   "short_w": 19,
+   "rmt_len": 40,
+   "rmd_len": 145,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17364,
+   "wave": "w4-toy",
+   "name": "Bird of Passion Rose Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 169,
+   "short_w": 21,
+   "rmt_len": 40,
+   "rmd_len": 145,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17365,
+   "wave": "w4-toy",
+   "name": "Magnetic Rose Pleasure Wand",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 156,
+   "short_w": 19,
+   "rmt_len": 38,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17373,
+   "wave": "w4-toy",
+   "name": "Vibrating Rose Egg Toy",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 151,
+   "short_w": 20,
+   "rmt_len": 33,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17391,
+   "wave": "w4-toy",
+   "name": "Intimate Tongue Rose Vibrator for Women",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 150,
+   "short_w": 19,
+   "rmt_len": 50,
+   "rmd_len": 138,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17398,
+   "wave": "w4-toy",
+   "name": "Rose Kneading Massager, 9+9 Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 155,
+   "short_w": 20,
+   "rmt_len": 44,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17404,
+   "wave": "w4-toy",
+   "name": "Intimate Rose Licking Vibrator",
+   "cats": [
+    "Rose Toy Deluxe"
+   ],
+   "desc_w": 163,
+   "short_w": 18,
+   "rmt_len": 41,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17412,
+   "wave": "w4-toy",
+   "name": "Rose Clit Licker with 10+10 Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 171,
+   "short_w": 20,
+   "rmt_len": 44,
+   "rmd_len": 137,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17420,
+   "wave": "w4-toy",
+   "name": "Rose Lick Tongue Masturbator",
+   "cats": [
+    "Male Rose Toy"
+   ],
+   "desc_w": 150,
+   "short_w": 19,
+   "rmt_len": 39,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17426,
+   "wave": "w4-toy",
+   "name": "Dual-Tongue Rose Pleasure Egg",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 157,
+   "short_w": 22,
+   "rmt_len": 40,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17427,
+   "wave": "w4-toy",
+   "name": "Extendable Rose with Lickable Tongue",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 157,
+   "short_w": 18,
+   "rmt_len": 47,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17435,
+   "wave": "w4-toy",
+   "name": "Telescopic Rose Suction Toy Vibe",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 154,
+   "short_w": 19,
+   "rmt_len": 43,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17453,
+   "wave": "w4-toy",
+   "name": "BloomTouch Rose Tongue Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 157,
+   "short_w": 19,
+   "rmt_len": 42,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17461,
+   "wave": "w4-toy",
+   "name": "Floral Tongue Wand Vibrator, 12 Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 154,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 137,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17467,
+   "wave": "w4-toy",
+   "name": "Dual Action Rose Vibrator",
+   "cats": [
+    "Male Rose Toy"
+   ],
+   "desc_w": 161,
+   "short_w": 22,
+   "rmt_len": 36,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17474,
+   "wave": "w4-toy",
+   "name": "Pulsating Rose Vibrating Eggs",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 160,
+   "short_w": 21,
+   "rmt_len": 40,
+   "rmd_len": 137,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17480,
+   "wave": "w4-toy",
+   "name": "Rose Vibrator with 2 Interchangeable Heads",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 157,
+   "short_w": 18,
+   "rmt_len": 53,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17490,
+   "wave": "w4-toy",
+   "name": "Auto Tongue Telescopic Egg Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 154,
+   "short_w": 19,
+   "rmt_len": 46,
+   "rmd_len": 135,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17491,
+   "wave": "w4-toy",
+   "name": "Vibrating Suction Wand Pleasure Toy",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 147,
+   "short_w": 20,
+   "rmt_len": 46,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17503,
+   "wave": "w4-toy",
+   "name": "10-Mode Breast Vibrator for Women",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 158,
+   "short_w": 18,
+   "rmt_len": 44,
+   "rmd_len": 139,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17525,
+   "wave": "w4-toy",
+   "name": "Bluetooth G-Spot Vibrator with Dolphin Design",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 161,
+   "short_w": 20,
+   "rmt_len": 56,
+   "rmd_len": 143,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17526,
+   "wave": "w4-toy",
+   "name": "Secret Vibrating Panty Toy",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 155,
+   "short_w": 19,
+   "rmt_len": 37,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17533,
+   "wave": "w4-toy",
+   "name": "Rose Bead Vibrating Anal Plug",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 176,
+   "short_w": 19,
+   "rmt_len": 40,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17554,
+   "wave": "w4-toy",
+   "name": "4-in-1 Telescopic Fairy Vibrating Wand",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 180,
+   "short_w": 20,
+   "rmt_len": 49,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17555,
+   "wave": "w4-toy",
+   "name": "Butterfly Elastic Wearable Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 152,
+   "short_w": 18,
+   "rmt_len": 46,
+   "rmd_len": 140,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17563,
+   "wave": "w4-toy",
+   "name": "Rabbit Vibrator with 3+7 Motor Modes",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 170,
+   "short_w": 20,
+   "rmt_len": 47,
+   "rmd_len": 145,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17580,
+   "wave": "w4-toy",
+   "name": "Wearable Rose Vibrator with Magnetic Clip",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 180,
+   "short_w": 19,
+   "rmt_len": 52,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17587,
+   "wave": "w4-toy",
+   "name": "Lotus Masturbation Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 169,
+   "short_w": 19,
+   "rmt_len": 38,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17588,
+   "wave": "w4-toy",
+   "name": "Inyarose Rose Vibrator with 10 Settings",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 166,
+   "short_w": 18,
+   "rmt_len": 50,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17599,
+   "wave": "w4-toy",
+   "name": "Lipstick Vibrator with 3 Heads",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 161,
+   "short_w": 18,
+   "rmt_len": 41,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17618,
+   "wave": "w4-toy",
+   "name": "Rose Stamen Vibrator",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 159,
+   "short_w": 19,
+   "rmt_len": 31,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17667,
+   "wave": "w4-toy",
+   "name": "Rose Licking Tongue Pleasure Toy",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 165,
+   "short_w": 20,
+   "rmt_len": 43,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17668,
+   "wave": "w4-toy",
+   "name": "Pink Poppy Vibrator, 10 Ultrasonic Modes",
+   "cats": [
+    "Rose Toy Deluxe"
+   ],
+   "desc_w": 149,
+   "short_w": 19,
+   "rmt_len": 51,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17669,
+   "wave": "w4-toy",
+   "name": "Rose Heart Suction Toy, 10 Modes",
+   "cats": [
+    "Rose Suction Toy"
+   ],
+   "desc_w": 150,
+   "short_w": 20,
+   "rmt_len": 43,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17670,
+   "wave": "w4-toy",
+   "name": "Rose Toy Tapping Vibrator, 10 Modes",
+   "cats": [
+    "Rose Toy Deluxe"
+   ],
+   "desc_w": 167,
+   "short_w": 19,
+   "rmt_len": 46,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17671,
+   "wave": "w4-toy",
+   "name": "Rose Vibrator Female Pleasure Toy",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 165,
+   "short_w": 18,
+   "rmt_len": 44,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17677,
+   "wave": "w4-toy",
+   "name": "2-in-1 Rose Vibrator, 9+9 Modes",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 153,
+   "short_w": 21,
+   "rmt_len": 42,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17678,
+   "wave": "w4-toy",
+   "name": "Sensual Duo Rose Massage Toy",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 154,
+   "short_w": 18,
+   "rmt_len": 39,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17684,
+   "wave": "w4-toy",
+   "name": "Rose Clit Sucker with 9 Airflow Modes",
+   "cats": [
+    "Rose Suction Toy"
+   ],
+   "desc_w": 165,
+   "short_w": 18,
+   "rmt_len": 48,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17694,
+   "wave": "w4-toy",
+   "name": "Sensual Tongue Stimulating Rose Toy",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 202,
+   "short_w": 18,
+   "rmt_len": 46,
+   "rmd_len": 135,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17701,
+   "wave": "w4-toy",
+   "name": "Intimate Vaginal Sucking Vibrator",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 175,
+   "short_w": 21,
+   "rmt_len": 44,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17710,
+   "wave": "w4-toy",
+   "name": "Teasing Breast Vibrator with 10 Modes",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 162,
+   "short_w": 19,
+   "rmt_len": 48,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17711,
+   "wave": "w4-toy",
+   "name": "Tongue Tease Rose Clit Stimulator",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 146,
+   "short_w": 18,
+   "rmt_len": 44,
+   "rmd_len": 138,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17717,
+   "wave": "w4-toy",
+   "name": "Tongue-Sucking Vibrator, 3+3 Modes",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 159,
+   "short_w": 18,
+   "rmt_len": 45,
+   "rmd_len": 139,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17729,
+   "wave": "w4-toy",
+   "name": "Women's Rose Sucking Vibrator",
+   "cats": [
+    "Rose Suction Toy"
+   ],
+   "desc_w": 159,
+   "short_w": 20,
+   "rmt_len": 40,
+   "rmd_len": 135,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17742,
+   "wave": "w4-toy",
+   "name": "Powerful Rose Vibrations for Women",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 174,
+   "short_w": 20,
+   "rmt_len": 45,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17753,
+   "wave": "w4-toy",
+   "name": "Rose Suction Vibrator with 3 Speeds",
+   "cats": [
+    "Rose Suction Toy"
+   ],
+   "desc_w": 154,
+   "short_w": 19,
+   "rmt_len": 46,
+   "rmd_len": 139,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17754,
+   "wave": "w4-toy",
+   "name": "Rose Suck Vibe in Three Colors",
+   "cats": [
+    "Rose Suction Toy"
+   ],
+   "desc_w": 158,
+   "short_w": 20,
+   "rmt_len": 41,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17766,
+   "wave": "w4-toy",
+   "name": "Tongue-Suck Rose Pleasure Toy",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 151,
+   "short_w": 19,
+   "rmt_len": 40,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17778,
+   "wave": "w4-toy",
+   "name": "Rose Kiss Sucking Licker Vibrator",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 156,
+   "short_w": 19,
+   "rmt_len": 44,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17791,
+   "wave": "w4-toy",
+   "name": "Rose Suction Vibrator, Silent Bass",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 144,
+   "short_w": 20,
+   "rmt_len": 45,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17800,
+   "wave": "w4-toy",
+   "name": "Blooming Rose Suction Vibrator",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 147,
+   "short_w": 20,
+   "rmt_len": 41,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17812,
+   "wave": "w4-toy",
+   "name": "Licking Rose Toy, 10 Looping Modes",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 156,
+   "short_w": 20,
+   "rmt_len": 45,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17819,
+   "wave": "w4-toy",
+   "name": "Rose Tongue Sucker, Travel-Size",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 159,
+   "short_w": 20,
+   "rmt_len": 42,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17830,
+   "wave": "w4-toy",
+   "name": "Dual Rose Tongue Vibrator",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 153,
+   "short_w": 19,
+   "rmt_len": 36,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17839,
+   "wave": "w4-toy",
+   "name": "Rose Sucking Stimulator, 10 Modes",
+   "cats": [
+    "Rose Suction Toy"
+   ],
+   "desc_w": 159,
+   "short_w": 18,
+   "rmt_len": 44,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17848,
+   "wave": "w4-toy",
+   "name": "Cute Rose Tongue Vibrator",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 157,
+   "short_w": 22,
+   "rmt_len": 36,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17859,
+   "wave": "w4-toy",
+   "name": "2-Motor Rose Clitoral Vibrator",
+   "cats": [
+    "Rose Toy Deluxe"
+   ],
+   "desc_w": 163,
+   "short_w": 18,
+   "rmt_len": 41,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17873,
+   "wave": "w4-toy",
+   "name": "Tickle Rose Suction Toy, Detachable",
+   "cats": [
+    "Rose Suction Toy"
+   ],
+   "desc_w": 148,
+   "short_w": 18,
+   "rmt_len": 46,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17877,
+   "wave": "w4-toy",
+   "name": "Air-Pulse Rose Toy with 10 Modes",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 155,
+   "short_w": 18,
+   "rmt_len": 43,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17887,
+   "wave": "w4-toy",
+   "name": "Lily Rose Tongue Vibrator",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 156,
+   "short_w": 19,
+   "rmt_len": 36,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17908,
+   "wave": "w4-toy",
+   "name": "Rose Vibrator Wand with Tongue",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 169,
+   "short_w": 20,
+   "rmt_len": 41,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17930,
+   "wave": "w4-toy",
+   "name": "Rose Petal Nipple Vibrator",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 145,
+   "short_w": 19,
+   "rmt_len": 37,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17952,
+   "wave": "w4-toy",
+   "name": "Rose Egg Vibrator with 10 Sucking Modes",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 153,
+   "short_w": 20,
+   "rmt_len": 50,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17961,
+   "wave": "w4-toy",
+   "name": "Elegant Rose Suction Toy, 9 Modes",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 146,
+   "short_w": 18,
+   "rmt_len": 44,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17970,
+   "wave": "w4-toy",
+   "name": "Dual-Motor Rose Tongue Vibrator",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 149,
+   "short_w": 19,
+   "rmt_len": 42,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 17978,
+   "wave": "w4-toy",
+   "name": "Wireless Egg Vibrator with Suction and Licking",
+   "cats": [
+    "Rose Suction Toy"
+   ],
+   "desc_w": 149,
+   "short_w": 18,
+   "rmt_len": 57,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18004,
+   "wave": "w4-toy",
+   "name": "Rose Tapping Vibrator with 10 Modes",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 156,
+   "short_w": 19,
+   "rmt_len": 46,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18015,
+   "wave": "w4-toy",
+   "name": "Rose Lick Vibrator with 10 Modes",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 166,
+   "short_w": 18,
+   "rmt_len": 43,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18025,
+   "wave": "w4-toy",
+   "name": "Rose Tongue Vibe, 10 Licking Modes",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 159,
+   "short_w": 18,
+   "rmt_len": 45,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18033,
+   "wave": "w4-toy",
+   "name": "2-in-1 Rose Suction Vibrator",
+   "cats": [
+    "Rose Suction Toy"
+   ],
+   "desc_w": 163,
+   "short_w": 19,
+   "rmt_len": 39,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18043,
+   "wave": "w4-toy",
+   "name": "Magnetic Charging Cable for Rose Toys",
+   "cats": [
+    "Rose Toy Charger"
+   ],
+   "desc_w": 183,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18054,
+   "wave": "w4-toy",
+   "name": "Rose Nipple Clit Stimulator Toy",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 158,
+   "short_w": 18,
+   "rmt_len": 42,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18063,
+   "wave": "w4-toy",
+   "name": "Sensa Lick Rose Tongue Simulator",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 146,
+   "short_w": 19,
+   "rmt_len": 43,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18083,
+   "wave": "w4-toy",
+   "name": "Rose Tongue Vibrator, 10 Modes",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 146,
+   "short_w": 18,
+   "rmt_len": 41,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18103,
+   "wave": "w4-toy",
+   "name": "Rose Kneading Tongue Vibrator",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 145,
+   "short_w": 18,
+   "rmt_len": 40,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18104,
+   "wave": "w4-toy",
+   "name": "USB to 2.5mm Audio Charging Cable",
+   "cats": [
+    "Rose Toy Charger"
+   ],
+   "desc_w": 175,
+   "short_w": 23,
+   "rmt_len": 44,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18112,
+   "wave": "w4-toy",
+   "name": "Tongue Licking Suction Vibrator for Women",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 158,
+   "short_w": 20,
+   "rmt_len": 52,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18120,
+   "wave": "w4-toy",
+   "name": "Tulip Clitoral Vibrator, 7 Quiet Modes",
+   "cats": [
+    "Rose Suction Toy"
+   ],
+   "desc_w": 151,
+   "short_w": 20,
+   "rmt_len": 49,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18128,
+   "wave": "w4-toy",
+   "name": "Tongue Lick Suck Vibrator, Compact",
+   "cats": [
+    "Rose Suction Toy"
+   ],
+   "desc_w": 148,
+   "short_w": 20,
+   "rmt_len": 45,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18135,
+   "wave": "w4-toy",
+   "name": "Rose Tongue Egg with 10 Frequencies",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 147,
+   "short_w": 20,
+   "rmt_len": 46,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18165,
+   "wave": "w4-toy",
+   "name": "Dual-Tongued Rose Teaser Vibrator",
+   "cats": [
+    "Rose Clit Toy"
+   ],
+   "desc_w": 152,
+   "short_w": 18,
+   "rmt_len": 44,
+   "rmd_len": 138,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18168,
+   "wave": "w4-toy",
+   "name": "2.5mm Pin Sex Toy Charger Cable",
+   "cats": [
+    "Rose Toy Charger"
+   ],
+   "desc_w": 169,
+   "short_w": 22,
+   "rmt_len": 42,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18216,
+   "wave": "w4-toy",
+   "name": "Rhea Plus 4-in-1 Rose Licking Toy",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 175,
+   "short_w": 21,
+   "rmt_len": 44,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18217,
+   "wave": "w4-toy",
+   "name": "Hermosa-2 Flower Clit Vibrator with Tongue",
+   "cats": [
+    "Rose Vibrator"
+   ],
+   "desc_w": 207,
+   "short_w": 20,
+   "rmt_len": 53,
+   "rmd_len": 139,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18226,
+   "wave": "w4-toy",
+   "name": "Rose Toy with Thrusting Dildo",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 180,
+   "short_w": 19,
+   "rmt_len": 40,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18235,
+   "wave": "w4-toy",
+   "name": "Rose Licking Mini Vibrator, 9+9 Modes",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 157,
+   "short_w": 20,
+   "rmt_len": 48,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18244,
+   "wave": "w4-toy",
+   "name": "Rose Clit Licking Toy with Egg Vibrator",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 159,
+   "short_w": 21,
+   "rmt_len": 50,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18275,
+   "wave": "w4-toy",
+   "name": "Holly Rose 2-in-1 Suction Vibrator",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 169,
+   "short_w": 19,
+   "rmt_len": 45,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18283,
+   "wave": "w4-toy",
+   "name": "Rose Tongue Vibrator with Lip-Like Flaps",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 160,
+   "short_w": 20,
+   "rmt_len": 51,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18290,
+   "wave": "w4-toy",
+   "name": "Nectar Rose Flapping Suction Toy",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 175,
+   "short_w": 19,
+   "rmt_len": 43,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18297,
+   "wave": "w4-toy",
+   "name": "Dora 2-in-1 Rose Suction and G-Spot Toy",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 198,
+   "short_w": 20,
+   "rmt_len": 50,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18305,
+   "wave": "w4-toy",
+   "name": "Butterfly Rose Toy Sucking G-Spot Vibrator",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 169,
+   "short_w": 18,
+   "rmt_len": 53,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18313,
+   "wave": "w4-toy",
+   "name": "Rose Toy with Tongue, Red, 7 Modes",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 193,
+   "short_w": 20,
+   "rmt_len": 45,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18320,
+   "wave": "w4-toy",
+   "name": "New Rose Suction Toy",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 181,
+   "short_w": 20,
+   "rmt_len": 31,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18444,
+   "wave": "w4-toy",
+   "name": "The Original Rose Toy in Seven Colors",
+   "cats": [
+    "Rose Toys For Women"
+   ],
+   "desc_w": 204,
+   "short_w": 20,
+   "rmt_len": 48,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18983,
+   "wave": "w3-night",
+   "name": "Open-Back Openwork Jumpsuit",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 184,
+   "short_w": 21,
+   "rmt_len": 38,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18990,
+   "wave": "w5-cos",
+   "name": "Cow Print Pajama Set",
+   "cats": [
+    "Pajamas"
+   ],
+   "desc_w": 170,
+   "short_w": 28,
+   "rmt_len": 41,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 18996,
+   "wave": "w5-cos",
+   "name": "Hooded Bunny Sweatshirt and Skirt Set",
+   "cats": [
+    "Pajamas"
+   ],
+   "desc_w": 176,
+   "short_w": 26,
+   "rmt_len": 48,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19009,
+   "wave": "w5-cos",
+   "name": "Japanese Black and White Lolita Maid Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 187,
+   "short_w": 24,
+   "rmt_len": 51,
+   "rmd_len": 135,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19010,
+   "wave": "w3-night",
+   "name": "Sheer Lace Loungewear Jumpsuit",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 166,
+   "short_w": 23,
+   "rmt_len": 41,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19011,
+   "wave": "w5-cos",
+   "name": "Yes Daddy Campus Swimsuit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 164,
+   "short_w": 21,
+   "rmt_len": 46,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19012,
+   "wave": "w5-cos",
+   "name": "Oriental High-Slit Retro Cheongsam",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 172,
+   "short_w": 23,
+   "rmt_len": 55,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19013,
+   "wave": "w5-cos",
+   "name": "White One-Piece Bunny Girl Set",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 177,
+   "short_w": 29,
+   "rmt_len": 41,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19015,
+   "wave": "w5-cos",
+   "name": "Cobweb Hip Skirt with Thong and Leg Loops",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 182,
+   "short_w": 22,
+   "rmt_len": 41,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19021,
+   "wave": "w5-cos",
+   "name": "Dark Patent Leather Pleated Skirt Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 165,
+   "short_w": 20,
+   "rmt_len": 48,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19027,
+   "wave": "w5-cos",
+   "name": "Sexy Sailor Uniform Set, Navy",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 152,
+   "short_w": 20,
+   "rmt_len": 40,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19032,
+   "wave": "w5-cos",
+   "name": "Rose Embroidered Bridal Lingerie Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 163,
+   "short_w": 28,
+   "rmt_len": 47,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19038,
+   "wave": "w5-cos",
+   "name": "Christmas Bandeau Uniform Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 167,
+   "short_w": 20,
+   "rmt_len": 40,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19045,
+   "wave": "w5-cos",
+   "name": "Bunny Girl Uniform Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 171,
+   "short_w": 20,
+   "rmt_len": 43,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19053,
+   "wave": "w5-cos",
+   "name": "Cut-Out Cheongsam-Style Swimsuit",
+   "cats": [
+    "Pajamas"
+   ],
+   "desc_w": 162,
+   "short_w": 29,
+   "rmt_len": 43,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19055,
+   "wave": "w5-cos",
+   "name": "Midnight Maid Servant Costume Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 174,
+   "short_w": 21,
+   "rmt_len": 44,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19065,
+   "wave": "w5-cos",
+   "name": "Catwoman Open-Crotch Chiffon Onesie",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 157,
+   "short_w": 27,
+   "rmt_len": 46,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19076,
+   "wave": "w3-night",
+   "name": "Chiffon Open-Crotch Uniform Lingerie Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 151,
+   "short_w": 21,
+   "rmt_len": 51,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19104,
+   "wave": "w6",
+   "name": "Open-Crotch Chain Backless Jumpsuit",
+   "cats": [
+    "Women's Lingerie"
+   ],
+   "desc_w": 175,
+   "short_w": 21,
+   "rmt_len": 46,
+   "rmd_len": 150,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19109,
+   "wave": "w5-cos",
+   "name": "Sheer Mesh Bride Role-Play Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 170,
+   "short_w": 21,
+   "rmt_len": 41,
+   "rmd_len": 118,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19149,
+   "wave": "w5-cos",
+   "name": "2024 DE Football Collection Sexy Cheering Apparel",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 158,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19153,
+   "wave": "w5-cos",
+   "name": "2024 FR Football Collection Sexy Cheering Apparel",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 165,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19157,
+   "wave": "w5-cos",
+   "name": "Anime Queen Patent Leather Jumpsuit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 153,
+   "short_w": 28,
+   "rmt_len": 46,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19185,
+   "wave": "w5-cos",
+   "name": "Patent Leather Police Uniform Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 165,
+   "short_w": 22,
+   "rmt_len": 53,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19186,
+   "wave": "w3-night",
+   "name": "Deep-V Patent Leather Teddy",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 175,
+   "short_w": 21,
+   "rmt_len": 38,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19187,
+   "wave": "w3-night",
+   "name": "Lace Slip Nightdress with Thong in Four Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 168,
+   "short_w": 22,
+   "rmt_len": 57,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19188,
+   "wave": "w5-cos",
+   "name": "Plus-Size Lace Maid Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 166,
+   "short_w": 23,
+   "rmt_len": 41,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19189,
+   "wave": "w5-cos",
+   "name": "Black and White Bridal Chiffon Skirt Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 162,
+   "short_w": 21,
+   "rmt_len": 45,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19208,
+   "wave": "w5-cos",
+   "name": "Little Devil Leather Coat with Wings",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 160,
+   "short_w": 20,
+   "rmt_len": 47,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19235,
+   "wave": "w5-cos",
+   "name": "Chiffon Vintage Print Kimono Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 163,
+   "short_w": 21,
+   "rmt_len": 43,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19239,
+   "wave": "w5-cos",
+   "name": "Plus-Size Nurse Dress Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 170,
+   "short_w": 22,
+   "rmt_len": 42,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19240,
+   "wave": "w6",
+   "name": "Christmas Bunny Girl Micro Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 154,
+   "short_w": 22,
+   "rmt_len": 51,
+   "rmd_len": 140,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19250,
+   "wave": "w5-cos",
+   "name": "Bunny JK Uniform Set",
+   "cats": [
+    "Pajamas"
+   ],
+   "desc_w": 162,
+   "short_w": 29,
+   "rmt_len": 37,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19255,
+   "wave": "w5-cos",
+   "name": "Sexy Christmas Style Cheongsam",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 154,
+   "short_w": 21,
+   "rmt_len": 52,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19268,
+   "wave": "w3-night",
+   "name": "Zip-Closure Patent Leather Uniform Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 158,
+   "short_w": 21,
+   "rmt_len": 49,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19274,
+   "wave": "w3-night",
+   "name": "Plush Off-Shoulder Dress with Neck Ring",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 164,
+   "short_w": 22,
+   "rmt_len": 50,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19276,
+   "wave": "w3-night",
+   "name": "Chain-Accent Patent Leather Jumpsuit Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 161,
+   "short_w": 22,
+   "rmt_len": 51,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19282,
+   "wave": "w3-night",
+   "name": "Chinese-Style Lace-Up Loungewear Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 151,
+   "short_w": 21,
+   "rmt_len": 47,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19289,
+   "wave": "w5-cos",
+   "name": "Office Romance Secretary Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 154,
+   "short_w": 20,
+   "rmt_len": 39,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19295,
+   "wave": "w5-cos",
+   "name": "Christmas Style Chinese Cheongsam",
+   "cats": [
+    "Career Costumes"
+   ],
+   "desc_w": 180,
+   "short_w": 25,
+   "rmt_len": 44,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19297,
+   "wave": "w5-cos",
+   "name": "Blue Flight Attendant Uniform Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 175,
+   "short_w": 28,
+   "rmt_len": 44,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19304,
+   "wave": "w5-cos",
+   "name": "Stretch Open-Crotch One-Piece Swimsuit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 177,
+   "short_w": 23,
+   "rmt_len": 49,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19312,
+   "wave": "w5-cos",
+   "name": "Split Bandeau Lace Secretary Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 151,
+   "short_w": 20,
+   "rmt_len": 43,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19320,
+   "wave": "w5-cos",
+   "name": "Plush Bow Christmas Dress",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 152,
+   "short_w": 30,
+   "rmt_len": 40,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19328,
+   "wave": "w5-cos",
+   "name": "Sheer Strap Lace Nurse Dress",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 181,
+   "short_w": 24,
+   "rmt_len": 39,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19337,
+   "wave": "w5-cos",
+   "name": "Bunny Girl Chiffon Lingerie Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 172,
+   "short_w": 26,
+   "rmt_len": 42,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19346,
+   "wave": "w3-night",
+   "name": "Velvet Christmas Slit Dress with Neck Ring",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 168,
+   "short_w": 22,
+   "rmt_len": 53,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19348,
+   "wave": "w5-cos",
+   "name": "Open-Crotch Bunny Maid Jumpsuit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 175,
+   "short_w": 27,
+   "rmt_len": 42,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19372,
+   "wave": "w5-cos",
+   "name": "Sweet Mesh Bride Jumpsuit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 173,
+   "short_w": 27,
+   "rmt_len": 36,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19380,
+   "wave": "w5-cos",
+   "name": "Patchwork Christmas Stage Skirt Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 150,
+   "short_w": 20,
+   "rmt_len": 46,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19382,
+   "wave": "w5-cos",
+   "name": "Preppy Sailor Dress with Short Skirt",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 177,
+   "short_w": 28,
+   "rmt_len": 47,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19392,
+   "wave": "w3-night",
+   "name": "Yoga Tank and Pants Set in Black or Gray",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 159,
+   "short_w": 21,
+   "rmt_len": 51,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19394,
+   "wave": "w5-cos",
+   "name": "Women's Nightclub Uniform Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 171,
+   "short_w": 26,
+   "rmt_len": 40,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19403,
+   "wave": "w5-cos",
+   "name": "Split Plush Bunny Girl Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 154,
+   "short_w": 21,
+   "rmt_len": 47,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19419,
+   "wave": "w6",
+   "name": "Velvet High-Slit Christmas Mini Dress",
+   "cats": [
+    "Women's Lingerie"
+   ],
+   "desc_w": 150,
+   "short_w": 23,
+   "rmt_len": 48,
+   "rmd_len": 139,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19424,
+   "wave": "w5-cos",
+   "name": "Bear-Style Bandeau Dress",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 151,
+   "short_w": 22,
+   "rmt_len": 45,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19435,
+   "wave": "w6",
+   "name": "Halloween Witch One-Piece Micro Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 152,
+   "short_w": 20,
+   "rmt_len": 46,
+   "rmd_len": 137,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19448,
+   "wave": "w6",
+   "name": "Openwork Lace-Up Micro Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 153,
+   "short_w": 20,
+   "rmt_len": 47,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19457,
+   "wave": "w6",
+   "name": "Lace Cut-Out Micro Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 157,
+   "short_w": 22,
+   "rmt_len": 43,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19461,
+   "wave": "w5-cos",
+   "name": "Christmas Style Maid Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 183,
+   "short_w": 24,
+   "rmt_len": 45,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19467,
+   "wave": "w5-cos",
+   "name": "Plush Bow Slip Dress",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 150,
+   "short_w": 21,
+   "rmt_len": 46,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19473,
+   "wave": "w6",
+   "name": "Milk Silk Christmas Micro Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 159,
+   "short_w": 20,
+   "rmt_len": 50,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19477,
+   "wave": "w6",
+   "name": "Milk-Silk Lace Maid Micro Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 156,
+   "short_w": 22,
+   "rmt_len": 50,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19547,
+   "wave": "w5-cos",
+   "name": "Chiffon Bunny Girl Evening Dress",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 151,
+   "short_w": 20,
+   "rmt_len": 43,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19561,
+   "wave": "w5-cos",
+   "name": "Bear Style Lace-Up Dress",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 159,
+   "short_w": 21,
+   "rmt_len": 42,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19566,
+   "wave": "w5-cos",
+   "name": "Lolita Maid Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 168,
+   "short_w": 21,
+   "rmt_len": 36,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19626,
+   "wave": "w6",
+   "name": "Lace-Up Two-Piece Micro Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 151,
+   "short_w": 20,
+   "rmt_len": 48,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19637,
+   "wave": "w6",
+   "name": "Strappy Micro Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 151,
+   "short_w": 22,
+   "rmt_len": 52,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19642,
+   "wave": "w6",
+   "name": "Bow-Tie Open-Cut Bikini Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 162,
+   "short_w": 22,
+   "rmt_len": 48,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19643,
+   "wave": "w6",
+   "name": "Halter-Neck Garter Lingerie Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 152,
+   "short_w": 21,
+   "rmt_len": 52,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19644,
+   "wave": "w6",
+   "name": "Sheer Lace Micro Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 155,
+   "short_w": 23,
+   "rmt_len": 41,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19660,
+   "wave": "w6",
+   "name": "Cow Maid Micro Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 156,
+   "short_w": 21,
+   "rmt_len": 29,
+   "rmd_len": 145,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19665,
+   "wave": "w5-cos",
+   "name": "Cute Bunny Maid Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 160,
+   "short_w": 27,
+   "rmt_len": 40,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19727,
+   "wave": "w5-cos",
+   "name": "Sheer Lace One-Piece with Concealed Clasp",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 156,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19728,
+   "wave": "w3-night",
+   "name": "Fitted Stretch Jumpsuit in Black or White",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 157,
+   "short_w": 21,
+   "rmt_len": 52,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19729,
+   "wave": "w5-cos",
+   "name": "Sexy Qipao with Double Mesh Split",
+   "cats": [
+    "Career Costumes"
+   ],
+   "desc_w": 151,
+   "short_w": 21,
+   "rmt_len": 50,
+   "rmd_len": 135,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19730,
+   "wave": "w5-cos",
+   "name": "Hollow-Out Jacquard Qipao",
+   "cats": [
+    "Career Costumes"
+   ],
+   "desc_w": 171,
+   "short_w": 27,
+   "rmt_len": 46,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19731,
+   "wave": "w5-cos",
+   "name": "Dark Style Bunny Girl Suit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 170,
+   "short_w": 23,
+   "rmt_len": 46,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19732,
+   "wave": "w6",
+   "name": "Plush Cat-Girl Open-Crotch Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 153,
+   "short_w": 22,
+   "rmt_len": 51,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19733,
+   "wave": "w5-cos",
+   "name": "Gold Velvet Bow Bunny Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 154,
+   "short_w": 22,
+   "rmt_len": 46,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19734,
+   "wave": "w3-night",
+   "name": "Chinese-Style Vintage Lace Set in Three Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 158,
+   "short_w": 21,
+   "rmt_len": 57,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19756,
+   "wave": "w3-night",
+   "name": "Patent Leather Uniform Lingerie Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 154,
+   "short_w": 22,
+   "rmt_len": 46,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19760,
+   "wave": "w5-cos",
+   "name": "Knitted Cutout Turtleneck Sweater",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 153,
+   "short_w": 27,
+   "rmt_len": 44,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19776,
+   "wave": "w6",
+   "name": "Christmas-Inspired Slip Dress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 156,
+   "short_w": 21,
+   "rmt_len": 45,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19799,
+   "wave": "w5-cos",
+   "name": "Sheer Patent Leather Nurse Uniform",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 158,
+   "short_w": 23,
+   "rmt_len": 45,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19804,
+   "wave": "w5-cos",
+   "name": "Openwork Strappy Open-Chest Sweater",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 155,
+   "short_w": 29,
+   "rmt_len": 46,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19821,
+   "wave": "w3-night",
+   "name": "Dark Japanese-Style Kimono Lingerie Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 160,
+   "short_w": 24,
+   "rmt_len": 50,
+   "rmd_len": 118,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19837,
+   "wave": "w5-cos",
+   "name": "Sexy Bunny Set with Garter Belt",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 172,
+   "short_w": 23,
+   "rmt_len": 42,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19853,
+   "wave": "w5-cos",
+   "name": "Cat Girl Maid Uniform Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 167,
+   "short_w": 21,
+   "rmt_len": 46,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19866,
+   "wave": "w3-night",
+   "name": "Strappy Garter Lingerie Set in Three Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 155,
+   "short_w": 24,
+   "rmt_len": 54,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19871,
+   "wave": "w5-cos",
+   "name": "Maid Bedroom Lingerie Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 177,
+   "short_w": 23,
+   "rmt_len": 46,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19878,
+   "wave": "w5-cos",
+   "name": "School Uniform Miniskirt Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 178,
+   "short_w": 28,
+   "rmt_len": 49,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19888,
+   "wave": "w5-cos",
+   "name": "Playful Catgirl Split Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 160,
+   "short_w": 28,
+   "rmt_len": 36,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19894,
+   "wave": "w6",
+   "name": "Fawn Christmas Lingerie Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 154,
+   "short_w": 22,
+   "rmt_len": 48,
+   "rmd_len": 135,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19900,
+   "wave": "w5-cos",
+   "name": "Rabbit-Tail Open-Front Teddy",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 177,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19902,
+   "wave": "w6",
+   "name": "Cow Bikini Five-Piece Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 151,
+   "short_w": 24,
+   "rmt_len": 36,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19907,
+   "wave": "w5-cos",
+   "name": "Little Devil Jumpsuit Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 176,
+   "short_w": 28,
+   "rmt_len": 41,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19925,
+   "wave": "w5-cos",
+   "name": "Laser Patent Leather One-Piece Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 156,
+   "short_w": 27,
+   "rmt_len": 45,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19930,
+   "wave": "w5-cos",
+   "name": "Lace Sweetheart Maid Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 156,
+   "short_w": 27,
+   "rmt_len": 45,
+   "rmd_len": 137,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19932,
+   "wave": "w5-cos",
+   "name": "Nun Habit Costume, Black",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 168,
+   "short_w": 28,
+   "rmt_len": 35,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19938,
+   "wave": "w5-cos",
+   "name": "Lace Bride Wedding Night Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 157,
+   "short_w": 20,
+   "rmt_len": 39,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19944,
+   "wave": "w5-cos",
+   "name": "Flight Attendant Uniform Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 158,
+   "short_w": 20,
+   "rmt_len": 49,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19967,
+   "wave": "w3-night",
+   "name": "Red Elf Princess Costume with Headpiece",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 159,
+   "short_w": 22,
+   "rmt_len": 50,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19980,
+   "wave": "w5-cos",
+   "name": "Christmas Plush Bunny Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 158,
+   "short_w": 23,
+   "rmt_len": 46,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19994,
+   "wave": "w5-cos",
+   "name": "One-Piece Bunny Girl Uniform",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 166,
+   "short_w": 23,
+   "rmt_len": 48,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 19999,
+   "wave": "w5-cos",
+   "name": "Lace-Mesh Back-Cutout Maid Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 150,
+   "short_w": 20,
+   "rmt_len": 41,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20005,
+   "wave": "w5-cos",
+   "name": "At-Home Maid Costume",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 174,
+   "short_w": 26,
+   "rmt_len": 41,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20011,
+   "wave": "w6",
+   "name": "Ice-Silk Hollow-Out Lace-Up Set",
+   "cats": [
+    "Women's Lingerie"
+   ],
+   "desc_w": 154,
+   "short_w": 22,
+   "rmt_len": 52,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20013,
+   "wave": "w5-cos",
+   "name": "Ancient Chinese Dancer Costume Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 154,
+   "short_w": 22,
+   "rmt_len": 45,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20040,
+   "wave": "w5-cos",
+   "name": "Nurse Dress Role-Play Set",
+   "cats": [
+    "Career Costumes"
+   ],
+   "desc_w": 165,
+   "short_w": 21,
+   "rmt_len": 46,
+   "rmd_len": 139,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20044,
+   "wave": "w5-cos",
+   "name": "Cute Three-Point Maid Outfit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 166,
+   "short_w": 29,
+   "rmt_len": 39,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20050,
+   "wave": "w5-cos",
+   "name": "Laser Leather One-Piece Bunny Uniform",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 159,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20052,
+   "wave": "w5-cos",
+   "name": "OL Teacher Uniform Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 171,
+   "short_w": 27,
+   "rmt_len": 33,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20060,
+   "wave": "w5-cos",
+   "name": "Japanese School One-Piece Swimsuit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 173,
+   "short_w": 24,
+   "rmt_len": 45,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20067,
+   "wave": "w5-cos",
+   "name": "Sheer Sailor Uniform One-Piece",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 175,
+   "short_w": 27,
+   "rmt_len": 41,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20072,
+   "wave": "w3-night",
+   "name": "Mesh Christmas Costume Dress with Accessories",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 158,
+   "short_w": 21,
+   "rmt_len": 56,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20085,
+   "wave": "w5-cos",
+   "name": "Velvet Little Red Riding Hood Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 170,
+   "short_w": 27,
+   "rmt_len": 44,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20097,
+   "wave": "w3-night",
+   "name": "Patent Leather Club Dress with Neck Ring",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 200,
+   "short_w": 21,
+   "rmt_len": 51,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20101,
+   "wave": "w5-cos",
+   "name": "Cut-Out Open-Chest Nurse Uniform",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 167,
+   "short_w": 22,
+   "rmt_len": 43,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20116,
+   "wave": "w6",
+   "name": "Six-Piece Maid Lingerie Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 154,
+   "short_w": 21,
+   "rmt_len": 38,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20122,
+   "wave": "w5-cos",
+   "name": "Policewoman Uniform Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 169,
+   "short_w": 30,
+   "rmt_len": 44,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20157,
+   "wave": "w5-cos",
+   "name": "Nun Uniform with High-Slit Skirt",
+   "cats": [
+    "Career Costumes"
+   ],
+   "desc_w": 178,
+   "short_w": 27,
+   "rmt_len": 43,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20185,
+   "wave": "w5-cos",
+   "name": "Open-Chest Sweater Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 157,
+   "short_w": 20,
+   "rmt_len": 43,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20186,
+   "wave": "w5-cos",
+   "name": "Lingerie Surprise Box, 5 to 10 Pieces",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 190,
+   "short_w": 24,
+   "rmt_len": 45,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20187,
+   "wave": "w3-night",
+   "name": "High-Slit Cheongsam Dress in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 166,
+   "short_w": 22,
+   "rmt_len": 50,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20188,
+   "wave": "w5-cos",
+   "name": "Backless Knit Sweater",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 175,
+   "short_w": 27,
+   "rmt_len": 42,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20206,
+   "wave": "w5-cos",
+   "name": "Deep-V Hollow-Out Bunny Girl One-Piece",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 153,
+   "short_w": 29,
+   "rmt_len": 44,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20215,
+   "wave": "w5-cos",
+   "name": "Sexy Secretary Uniform Set",
+   "cats": [
+    "Career Costumes"
+   ],
+   "desc_w": 177,
+   "short_w": 27,
+   "rmt_len": 47,
+   "rmd_len": 135,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20254,
+   "wave": "w5-cos",
+   "name": "College Off-the-Shoulder Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 156,
+   "short_w": 21,
+   "rmt_len": 49,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20255,
+   "wave": "w5-cos",
+   "name": "Patent Leather Bunny Girl Suit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 160,
+   "short_w": 24,
+   "rmt_len": 50,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20265,
+   "wave": "w5-cos",
+   "name": "Preppy Sheer JK Onesie",
+   "cats": [
+    "Pajamas"
+   ],
+   "desc_w": 175,
+   "short_w": 27,
+   "rmt_len": 39,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20271,
+   "wave": "w5-cos",
+   "name": "Bunny Girl One-Piece Uniform",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 166,
+   "short_w": 24,
+   "rmt_len": 49,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20278,
+   "wave": "w6",
+   "name": "Lolita Five-Piece Lingerie Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 170,
+   "short_w": 23,
+   "rmt_len": 51,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20279,
+   "wave": "w5-cos",
+   "name": "Open-Chest Backless Sweater",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 167,
+   "short_w": 29,
+   "rmt_len": 42,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20280,
+   "wave": "w3-night",
+   "name": "Ice-Silk Boyfriend Shirt Sleepwear in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 166,
+   "short_w": 22,
+   "rmt_len": 59,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20297,
+   "wave": "w5-cos",
+   "name": "OL Secretary Set with Short Skirt and Tie",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 155,
+   "short_w": 22,
+   "rmt_len": 52,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20315,
+   "wave": "w5-cos",
+   "name": "Rose Lace See-Through Maid Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 163,
+   "short_w": 20,
+   "rmt_len": 51,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20321,
+   "wave": "w5-cos",
+   "name": "Japanese Openwork Apron Lolita Maid Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 158,
+   "short_w": 23,
+   "rmt_len": 44,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20329,
+   "wave": "w5-cos",
+   "name": "Lace Wedding Bridal Outfit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 173,
+   "short_w": 20,
+   "rmt_len": 47,
+   "rmd_len": 139,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20337,
+   "wave": "w5-cos",
+   "name": "Open-Chest Secretary Dress Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 180,
+   "short_w": 27,
+   "rmt_len": 41,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20342,
+   "wave": "w5-cos",
+   "name": "Midnight Little Devil Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 151,
+   "short_w": 22,
+   "rmt_len": 46,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20343,
+   "wave": "w5-cos",
+   "name": "Three-Point Cat Girl Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 175,
+   "short_w": 28,
+   "rmt_len": 45,
+   "rmd_len": 137,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20345,
+   "wave": "w5-cos",
+   "name": "Sheer One-Piece Kitty Suit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 169,
+   "short_w": 27,
+   "rmt_len": 37,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20382,
+   "wave": "w5-cos",
+   "name": "Sheer JK Student Lingerie",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 162,
+   "short_w": 29,
+   "rmt_len": 46,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20383,
+   "wave": "w5-cos",
+   "name": "Cute Cat Girl Open-Crotch Jumpsuit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 168,
+   "short_w": 28,
+   "rmt_len": 40,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20391,
+   "wave": "w5-cos",
+   "name": "French Maid Cosplay Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 172,
+   "short_w": 28,
+   "rmt_len": 42,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20396,
+   "wave": "w6",
+   "name": "Christmas Pearl Lingerie Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 158,
+   "short_w": 23,
+   "rmt_len": 49,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20402,
+   "wave": "w5-cos",
+   "name": "Plush Cat Girl One-Piece Costume",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 169,
+   "short_w": 30,
+   "rmt_len": 43,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20424,
+   "wave": "w5-cos",
+   "name": "Halterneck Bunny One-Piece",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 172,
+   "short_w": 29,
+   "rmt_len": 47,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20452,
+   "wave": "w5-cos",
+   "name": "Classical Cheongsam Style Dress",
+   "cats": [
+    "Career Costumes"
+   ],
+   "desc_w": 168,
+   "short_w": 27,
+   "rmt_len": 42,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20460,
+   "wave": "w5-cos",
+   "name": "Hollow-Out Nurse Uniform",
+   "cats": [
+    "Career Costumes"
+   ],
+   "desc_w": 171,
+   "short_w": 28,
+   "rmt_len": 45,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20479,
+   "wave": "w3-night",
+   "name": "Japanese-Style Sexy Pajama Dress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 178,
+   "short_w": 23,
+   "rmt_len": 43,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20486,
+   "wave": "w5-cos",
+   "name": "Belly-Pocket Maid Set with Socks",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 171,
+   "short_w": 25,
+   "rmt_len": 43,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20491,
+   "wave": "w6",
+   "name": "Lace Bunny Micro Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 165,
+   "short_w": 21,
+   "rmt_len": 41,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20493,
+   "wave": "w5-cos",
+   "name": "Women's Sheer Maid Uniform",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 160,
+   "short_w": 26,
+   "rmt_len": 37,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20506,
+   "wave": "w5-cos",
+   "name": "Blue V-Strap One-Piece Lingerie",
+   "cats": [
+    "Pajamas"
+   ],
+   "desc_w": 162,
+   "short_w": 27,
+   "rmt_len": 42,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20533,
+   "wave": "w5-cos",
+   "name": "Bunny Girl Tube-Top Dress Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 176,
+   "short_w": 29,
+   "rmt_len": 40,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20537,
+   "wave": "w3-night",
+   "name": "Chinese-Style Chiffon Cheongsam Dress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 157,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 121,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20544,
+   "wave": "w5-cos",
+   "name": "Openwork-Chest Jumpsuit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 163,
+   "short_w": 24,
+   "rmt_len": 34,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20551,
+   "wave": "w5-cos",
+   "name": "Youth Student Outfit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 164,
+   "short_w": 28,
+   "rmt_len": 42,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20556,
+   "wave": "w5-cos",
+   "name": "Student Miniskirt Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 175,
+   "short_w": 27,
+   "rmt_len": 43,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20570,
+   "wave": "w5-cos",
+   "name": "Little Devil Wings Bikini Set with Chain",
+   "cats": [
+    "Pajamas"
+   ],
+   "desc_w": 180,
+   "short_w": 28,
+   "rmt_len": 51,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20578,
+   "wave": "w5-cos",
+   "name": "Sheer Student Shirt with Bow Collar",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 170,
+   "short_w": 27,
+   "rmt_len": 46,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20584,
+   "wave": "w5-cos",
+   "name": "Magnolia Japanese Kimono",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 170,
+   "short_w": 26,
+   "rmt_len": 35,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20590,
+   "wave": "w5-cos",
+   "name": "Mandala Witch Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 159,
+   "short_w": 20,
+   "rmt_len": 36,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20596,
+   "wave": "w5-cos",
+   "name": "Japanese Open-Chest Kimono Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 166,
+   "short_w": 29,
+   "rmt_len": 41,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20601,
+   "wave": "w5-cos",
+   "name": "Secretary Teacher Costume Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 163,
+   "short_w": 27,
+   "rmt_len": 40,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20619,
+   "wave": "w5-cos",
+   "name": "Sheer Kitten Maid Outfit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 164,
+   "short_w": 28,
+   "rmt_len": 35,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20625,
+   "wave": "w6",
+   "name": "Backless Christmas Sweater",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 155,
+   "short_w": 22,
+   "rmt_len": 42,
+   "rmd_len": 141,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20630,
+   "wave": "w6",
+   "name": "Plush Tiger Five-Piece Set",
+   "cats": [
+    "Bikini"
+   ],
+   "desc_w": 153,
+   "short_w": 22,
+   "rmt_len": 51,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20636,
+   "wave": "w5-cos",
+   "name": "Women's Police Uniform Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 171,
+   "short_w": 28,
+   "rmt_len": 47,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20652,
+   "wave": "w5-cos",
+   "name": "Open-Crotch Maid One-Piece",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 157,
+   "short_w": 28,
+   "rmt_len": 43,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20662,
+   "wave": "w5-cos",
+   "name": "Sexy Backless Cow Set",
+   "cats": [
+    "Pajamas"
+   ],
+   "desc_w": 177,
+   "short_w": 27,
+   "rmt_len": 42,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20663,
+   "wave": "w5-cos",
+   "name": "Schoolgirl Lace Two-Piece Lingerie Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 161,
+   "short_w": 29,
+   "rmt_len": 49,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20664,
+   "wave": "w5-cos",
+   "name": "Cute Dog Print Fleece Lounge Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 163,
+   "short_w": 22,
+   "rmt_len": 43,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20679,
+   "wave": "w5-cos",
+   "name": "School One-Piece Swimsuit, Navy",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 156,
+   "short_w": 25,
+   "rmt_len": 42,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20686,
+   "wave": "w5-cos",
+   "name": "Sheer Cow Print Maid Outfit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 168,
+   "short_w": 27,
+   "rmt_len": 38,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20720,
+   "wave": "w3-night",
+   "name": "Crotchless Sheer Nightgown Set with Bow Front",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 157,
+   "short_w": 24,
+   "rmt_len": 56,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20721,
+   "wave": "w3-night",
+   "name": "Open-Crotch Sheer Lace Nightdress Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 171,
+   "short_w": 22,
+   "rmt_len": 48,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20722,
+   "wave": "w3-night",
+   "name": "Open-Crotch Lace Jumpsuit in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 166,
+   "short_w": 20,
+   "rmt_len": 50,
+   "rmd_len": 118,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20723,
+   "wave": "w3-night",
+   "name": "Sheer Lace Nightdress with T-Back Panty",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 176,
+   "short_w": 21,
+   "rmt_len": 50,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20724,
+   "wave": "w3-night",
+   "name": "Open-Crotch Backless Dress in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 172,
+   "short_w": 21,
+   "rmt_len": 51,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20749,
+   "wave": "w3-night",
+   "name": "Backless Open-Crotch Patent Leather Dress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 203,
+   "short_w": 20,
+   "rmt_len": 52,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20763,
+   "wave": "w3-night",
+   "name": "Deep-V Embroidered Slip Nightdress in Three Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 165,
+   "short_w": 21,
+   "rmt_len": 59,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20764,
+   "wave": "w3-night",
+   "name": "High-Stretch Chiffon Bodycon Skirt in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 159,
+   "short_w": 21,
+   "rmt_len": 59,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20765,
+   "wave": "w3-night",
+   "name": "High-Waist Split Mini Nightdress in Three Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 168,
+   "short_w": 21,
+   "rmt_len": 59,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20769,
+   "wave": "w3-night",
+   "name": "Cut-Out Sheer Jumpsuit in Black",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 171,
+   "short_w": 21,
+   "rmt_len": 42,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20776,
+   "wave": "w3-night",
+   "name": "Butterfly Lace Halter Nightdress Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 179,
+   "short_w": 21,
+   "rmt_len": 47,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20782,
+   "wave": "w3-night",
+   "name": "Chiffon Slip Nightdress and Robe Loungewear Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 174,
+   "short_w": 21,
+   "rmt_len": 58,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20786,
+   "wave": "w3-night",
+   "name": "Vintage Chinese-Style Cheongsam Nightdress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 163,
+   "short_w": 22,
+   "rmt_len": 53,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20795,
+   "wave": "w3-night",
+   "name": "Sexy Lace Slip Nightdress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 177,
+   "short_w": 22,
+   "rmt_len": 36,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20801,
+   "wave": "w3-night",
+   "name": "Chiffon Slip Nightdress in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 178,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20803,
+   "wave": "w3-night",
+   "name": "Lace Teddy Nightdress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 160,
+   "short_w": 22,
+   "rmt_len": 32,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20815,
+   "wave": "w3-night",
+   "name": "Chain Patent Leather Lingerie Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 177,
+   "short_w": 21,
+   "rmt_len": 44,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20819,
+   "wave": "w3-night",
+   "name": "Satin Angel-Wing Backless Nightdress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 179,
+   "short_w": 22,
+   "rmt_len": 47,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20832,
+   "wave": "w3-night",
+   "name": "High-Slit Jacquard Cheongsam Nightdress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 179,
+   "short_w": 23,
+   "rmt_len": 50,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20837,
+   "wave": "w3-night",
+   "name": "Large Bow Teddy Lingerie in Black",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 184,
+   "short_w": 21,
+   "rmt_len": 44,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20852,
+   "wave": "w3-night",
+   "name": "Open-Cup Open-Crotch Lace Jumpsuit",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 179,
+   "short_w": 22,
+   "rmt_len": 45,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20857,
+   "wave": "w3-night",
+   "name": "Denim-Style Shorts in Three Sizes",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 177,
+   "short_w": 21,
+   "rmt_len": 44,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20955,
+   "wave": "w3-night",
+   "name": "Chiffon Uniform One-Piece Lingerie",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 166,
+   "short_w": 21,
+   "rmt_len": 45,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20964,
+   "wave": "w3-night",
+   "name": "Skinny Patent Leather Teddy",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 166,
+   "short_w": 21,
+   "rmt_len": 38,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20971,
+   "wave": "w3-night",
+   "name": "Sheer Lace Slip Nightdress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 179,
+   "short_w": 22,
+   "rmt_len": 37,
+   "rmd_len": 118,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20978,
+   "wave": "w3-night",
+   "name": "Open-Crotch Sheer Lace Jumpsuit",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 174,
+   "short_w": 21,
+   "rmt_len": 42,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 20993,
+   "wave": "w3-night",
+   "name": "Sheer Lace Bow Slip Nightdress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 175,
+   "short_w": 22,
+   "rmt_len": 41,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21008,
+   "wave": "w5-cos",
+   "name": "Cute Puppy Leather Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 155,
+   "short_w": 30,
+   "rmt_len": 46,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21009,
+   "wave": "w5-cos",
+   "name": "Cat Bell Collar with Chain",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 174,
+   "short_w": 28,
+   "rmt_len": 47,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21010,
+   "wave": "w5-cos",
+   "name": "Star Hollow-Out Puppy Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 171,
+   "short_w": 23,
+   "rmt_len": 39,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21011,
+   "wave": "w5-cos",
+   "name": "Pink Heart and Star Leather Choker",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 167,
+   "short_w": 25,
+   "rmt_len": 45,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21012,
+   "wave": "w5-cos",
+   "name": "Small Bell Double Leather Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 178,
+   "short_w": 26,
+   "rmt_len": 43,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21013,
+   "wave": "w5-cos",
+   "name": "Bow Big Bell Leather Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 169,
+   "short_w": 27,
+   "rmt_len": 38,
+   "rmd_len": 142,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21014,
+   "wave": "w5-cos",
+   "name": "Black Butterfly Choker Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 170,
+   "short_w": 26,
+   "rmt_len": 50,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21016,
+   "wave": "w1w2-zero",
+   "name": "Ultra-Sheer Tear-Away Stockings",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 143,
+   "short_w": 23,
+   "rmt_len": 42,
+   "rmd_len": 121,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21035,
+   "wave": "w1w2-zero",
+   "name": "Dark Tie Love-Wing Collar, Halloween Accessory",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 140,
+   "short_w": 17,
+   "rmt_len": 57,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21041,
+   "wave": "w5-cos",
+   "name": "Leopard Print Fluff Punk Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 173,
+   "short_w": 26,
+   "rmt_len": 52,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21070,
+   "wave": "w5-cos",
+   "name": "Heart Star Leather Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 160,
+   "short_w": 28,
+   "rmt_len": 46,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21071,
+   "wave": "w5-cos",
+   "name": "Classic Big Bell Leather Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 175,
+   "short_w": 26,
+   "rmt_len": 52,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21083,
+   "wave": "w5-cos",
+   "name": "Dark Love-Wing Halloween Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 159,
+   "short_w": 25,
+   "rmt_len": 42,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21088,
+   "wave": "w5-cos",
+   "name": "Pink Diamond-Accent Puppy Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 152,
+   "short_w": 27,
+   "rmt_len": 43,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21092,
+   "wave": "w5-cos",
+   "name": "Plush Snowflake Pearl Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 163,
+   "short_w": 23,
+   "rmt_len": 39,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21093,
+   "wave": "w5-cos",
+   "name": "Big-Bell Leather Collar and Chain Set",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 181,
+   "short_w": 29,
+   "rmt_len": 50,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21114,
+   "wave": "w5-cos",
+   "name": "Couple Plush Bracelet, 3 Colors",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 160,
+   "short_w": 20,
+   "rmt_len": 42,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21129,
+   "wave": "w5-cos",
+   "name": "Vintage Denim Bell Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 168,
+   "short_w": 29,
+   "rmt_len": 36,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21138,
+   "wave": "w5-cos",
+   "name": "Nightclub Leather Collar and Chain Set",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 155,
+   "short_w": 21,
+   "rmt_len": 51,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21139,
+   "wave": "w5-cos",
+   "name": "Love Bow Stretch Leg Garter",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 167,
+   "short_w": 28,
+   "rmt_len": 48,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21167,
+   "wave": "w5-cos",
+   "name": "Punk Leather Heart Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 169,
+   "short_w": 26,
+   "rmt_len": 46,
+   "rmd_len": 135,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21168,
+   "wave": "w5-cos",
+   "name": "Skeleton Heart Collar with Chain",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 169,
+   "short_w": 25,
+   "rmt_len": 43,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21176,
+   "wave": "w5-cos",
+   "name": "Heart Leather Leg Garter",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 170,
+   "short_w": 27,
+   "rmt_len": 42,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21194,
+   "wave": "w5-cos",
+   "name": "Black Love Collar Set",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 151,
+   "short_w": 29,
+   "rmt_len": 32,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21198,
+   "wave": "w5-cos",
+   "name": "Cute Bow Bell Neck Ring",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 176,
+   "short_w": 27,
+   "rmt_len": 44,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21199,
+   "wave": "w5-cos",
+   "name": "Sheer Lace Eye Patch, Styles 3039 and 3040",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 174,
+   "short_w": 30,
+   "rmt_len": 41,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21200,
+   "wave": "w5-cos",
+   "name": "Plush Cat Ear Bell Headband",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 174,
+   "short_w": 27,
+   "rmt_len": 48,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21223,
+   "wave": "w5-cos",
+   "name": "Rose Silicone Mask, 2 Colors",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 152,
+   "short_w": 21,
+   "rmt_len": 39,
+   "rmd_len": 134,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21228,
+   "wave": "w5-cos",
+   "name": "Open-Back Stretch Slim Leggings",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 150,
+   "short_w": 28,
+   "rmt_len": 42,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21239,
+   "wave": "w5-cos",
+   "name": "Flower Heart Leather Collar Set",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 159,
+   "short_w": 28,
+   "rmt_len": 42,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21240,
+   "wave": "w5-cos",
+   "name": "Leather Blackout Eye Mask, 3 Colors",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 168,
+   "short_w": 30,
+   "rmt_len": 46,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21257,
+   "wave": "w5-cos",
+   "name": "Leather Feather Tickler, 2 Styles",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 172,
+   "short_w": 27,
+   "rmt_len": 44,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21269,
+   "wave": "w5-cos",
+   "name": "Romantic Lace Cutout Socks",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 161,
+   "short_w": 28,
+   "rmt_len": 47,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21292,
+   "wave": "w1w2-zero",
+   "name": "Open-Crotch Lace Jumpsuit in Black and Red",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 153,
+   "short_w": 20,
+   "rmt_len": 53,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21312,
+   "wave": "w1w2-zero",
+   "name": "Rhinestone Mesh Bodysuit in Black and Red",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 163,
+   "short_w": 20,
+   "rmt_len": 52,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21346,
+   "wave": "w1w2-zero",
+   "name": "Sexy Openwork Split Bikini in Three Colors",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 153,
+   "short_w": 22,
+   "rmt_len": 53,
+   "rmd_len": 121,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21351,
+   "wave": "w5-cos",
+   "name": "Pink Heart Lock Collar",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 154,
+   "short_w": 27,
+   "rmt_len": 33,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21355,
+   "wave": "w5-cos",
+   "name": "Harajuku Red Checkered Choker",
+   "cats": [
+    "Accessories"
+   ],
+   "desc_w": 156,
+   "short_w": 28,
+   "rmt_len": 40,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21367,
+   "wave": "w1w2-zero",
+   "name": "Sexy Sheer Bandeau Mesh Bodysuit",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 158,
+   "short_w": 22,
+   "rmt_len": 43,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21398,
+   "wave": "w1w2-zero",
+   "name": "Black Lace Jumpsuit with Drawstring Opening",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 159,
+   "short_w": 23,
+   "rmt_len": 54,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21412,
+   "wave": "w1w2-zero",
+   "name": "Sheer Bunny Mesh Costume Set with Headpiece",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 164,
+   "short_w": 23,
+   "rmt_len": 54,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21442,
+   "wave": "w1w2-zero",
+   "name": "Black Sheer Mesh Teddy",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 154,
+   "short_w": 25,
+   "rmt_len": 33,
+   "rmd_len": 121,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21476,
+   "wave": "w3-night",
+   "name": "High-Stretch Criss-Cross Lace Bodysuit",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 173,
+   "short_w": 21,
+   "rmt_len": 49,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21485,
+   "wave": "w1w2-zero",
+   "name": "Sheer Mesh Bodysuit",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 160,
+   "short_w": 20,
+   "rmt_len": 30,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21489,
+   "wave": "w1w2-zero",
+   "name": "Patterned Sheer Mesh Bodysuit",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 152,
+   "short_w": 21,
+   "rmt_len": 40,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21493,
+   "wave": "w3-night",
+   "name": "Polka-Dot Mesh Lingerie Set with Straps",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 171,
+   "short_w": 20,
+   "rmt_len": 50,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21499,
+   "wave": "w1w2-zero",
+   "name": "Black Open-Crotch Mesh Bandeau Teddy",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 153,
+   "short_w": 21,
+   "rmt_len": 47,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21518,
+   "wave": "w1w2-zero",
+   "name": "Sheer Reindeer Fishnet Lingerie Set",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 163,
+   "short_w": 21,
+   "rmt_len": 46,
+   "rmd_len": 132,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21533,
+   "wave": "w1w2-zero",
+   "name": "Open-Crotch Sheer Lace Bodystocking",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 165,
+   "short_w": 21,
+   "rmt_len": 46,
+   "rmd_len": 139,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21542,
+   "wave": "w3-night",
+   "name": "Leaf-Lace Deep-V Teddy Bodysuit",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 193,
+   "short_w": 20,
+   "rmt_len": 42,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21544,
+   "wave": "w1w2-zero",
+   "name": "Red Christmas Reindeer Fishnet Lingerie Set",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 152,
+   "short_w": 22,
+   "rmt_len": 54,
+   "rmd_len": 141,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21549,
+   "wave": "w1w2-zero",
+   "name": "Lace Slip Nightdress with Mesh Pants",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 157,
+   "short_w": 22,
+   "rmt_len": 47,
+   "rmd_len": 130,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21561,
+   "wave": "w1w2-zero",
+   "name": "Iridescent Jacquard Fishnet Bodystocking",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 163,
+   "short_w": 26,
+   "rmt_len": 51,
+   "rmd_len": 146,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21564,
+   "wave": "w3-night",
+   "name": "Deep-V High-Slit Maxi Dress with Chains",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 203,
+   "short_w": 22,
+   "rmt_len": 50,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21588,
+   "wave": "w3-night",
+   "name": "Chiffon Open-Work Tie-Up Jumpsuit Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 177,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 121,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21590,
+   "wave": "w1w2-zero",
+   "name": "Gold-Trim Christmas Fishnet Lingerie Set",
+   "cats": [
+    "Fishnet lingerie"
+   ],
+   "desc_w": 152,
+   "short_w": 21,
+   "rmt_len": 51,
+   "rmd_len": 140,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 21610,
+   "wave": "w3-night",
+   "name": "Secret-Agent Strappy Jumpsuit Costume",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 178,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21633,
+   "wave": "w3-night",
+   "name": "Backless High-Slit Bodycon Dress in Plus Sizes",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 188,
+   "short_w": 20,
+   "rmt_len": 57,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21637,
+   "wave": "w3-night",
+   "name": "Criss-Cross Floral Lace Bra and Panty Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 179,
+   "short_w": 21,
+   "rmt_len": 52,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21685,
+   "wave": "w3-night",
+   "name": "Sheer Shirt-Style Nightdress with Breast Chain",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 184,
+   "short_w": 23,
+   "rmt_len": 57,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21726,
+   "wave": "w3-night",
+   "name": "Midnight Lace Lingerie with G-String",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 176,
+   "short_w": 21,
+   "rmt_len": 47,
+   "rmd_len": 118,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21732,
+   "wave": "w3-night",
+   "name": "Open-Crotch Pearl Lace Uniform Set in Three Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 185,
+   "short_w": 21,
+   "rmt_len": 59,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21733,
+   "wave": "w3-night",
+   "name": "Uniform-Style Sheer Nightdress, Four Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 172,
+   "short_w": 21,
+   "rmt_len": 54,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21734,
+   "wave": "w3-night",
+   "name": "Hollow-Out Backless Lace Nightdress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 180,
+   "short_w": 22,
+   "rmt_len": 46,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21735,
+   "wave": "w3-night",
+   "name": "Butterfly-Bow Mesh Nightdress in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 167,
+   "short_w": 21,
+   "rmt_len": 54,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21766,
+   "wave": "w3-night",
+   "name": "Butterfly Lace Crotchless Teddy",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 172,
+   "short_w": 21,
+   "rmt_len": 42,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21767,
+   "wave": "w3-night",
+   "name": "Cut-Out Open-Crotch Lace Jumpsuit",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 171,
+   "short_w": 23,
+   "rmt_len": 44,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21768,
+   "wave": "w3-night",
+   "name": "Front-Slit Lace Nightdress in Three Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 191,
+   "short_w": 22,
+   "rmt_len": 53,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21809,
+   "wave": "w3-night",
+   "name": "Two-Way-Zip Short-Sleeve Jumpsuit",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 171,
+   "short_w": 21,
+   "rmt_len": 44,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21815,
+   "wave": "w3-night",
+   "name": "Big-Bow Christmas Gift Costume",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 194,
+   "short_w": 21,
+   "rmt_len": 41,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 21819,
+   "wave": "w3-night",
+   "name": "Sheer Mesh Lace Jumpsuit",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 163,
+   "short_w": 22,
+   "rmt_len": 35,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22019,
+   "wave": "w3-night",
+   "name": "Sequin Fringe Club Bodysuit in Silver",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 193,
+   "short_w": 22,
+   "rmt_len": 48,
+   "rmd_len": 118,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22020,
+   "wave": "w3-night",
+   "name": "White Petal Bodysuit in Three Sizes",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 183,
+   "short_w": 22,
+   "rmt_len": 46,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22021,
+   "wave": "w5-cos",
+   "name": "Hip-Baring Split Secretary Uniform",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 166,
+   "short_w": 29,
+   "rmt_len": 45,
+   "rmd_len": 136,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22022,
+   "wave": "w5-cos",
+   "name": "Sheer Mesh Skirt Maid Outfit",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 171,
+   "short_w": 27,
+   "rmt_len": 39,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22024,
+   "wave": "w6",
+   "name": "Irregular-Zip Chain Dress",
+   "cats": [
+    "Women's Lingerie"
+   ],
+   "desc_w": 150,
+   "short_w": 21,
+   "rmt_len": 43,
+   "rmd_len": 133,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22056,
+   "wave": "w5-cos",
+   "name": "Hot Tutor Uniform Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 169,
+   "short_w": 22,
+   "rmt_len": 41,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22074,
+   "wave": "w5-cos",
+   "name": "Combat Agent Uniform",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 154,
+   "short_w": 29,
+   "rmt_len": 31,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22081,
+   "wave": "w5-cos",
+   "name": "Plush Cute Bunny Set",
+   "cats": [
+    "Cosplay"
+   ],
+   "desc_w": 153,
+   "short_w": 28,
+   "rmt_len": 41,
+   "rmd_len": 121,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22130,
+   "wave": "w1w2-zero",
+   "name": "Stretch Lace Stockings in Multiple Colors",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 136,
+   "short_w": 18,
+   "rmt_len": 52,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 22131,
+   "wave": "w1w2-zero",
+   "name": "Black One-Piece Lace Stockings with Panty",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 161,
+   "short_w": 24,
+   "rmt_len": 52,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 22153,
+   "wave": "w1w2-zero",
+   "name": "Fishnet Stockings in Multiple Colors",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 139,
+   "short_w": 18,
+   "rmt_len": 47,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 22154,
+   "wave": "w1w2-zero",
+   "name": "Open Wet-Look Stockings",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 138,
+   "short_w": 18,
+   "rmt_len": 34,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 22188,
+   "wave": "w1w2-zero",
+   "name": "Erotic Black Lace Fishnet Stockings",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 152,
+   "short_w": 20,
+   "rmt_len": 46,
+   "rmd_len": 121,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 22189,
+   "wave": "w1w2-zero",
+   "name": "Open-shift one-piece stockings",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 142,
+   "short_w": 18,
+   "rmt_len": 41,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 22200,
+   "wave": "w1w2-zero",
+   "name": "Sensual Black Lace Bodystocking",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 141,
+   "short_w": 20,
+   "rmt_len": 42,
+   "rmd_len": 121,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 22213,
+   "wave": "w1w2-zero",
+   "name": "Black Fishnet Lace Bodystocking Jumpsuit",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 161,
+   "short_w": 21,
+   "rmt_len": 51,
+   "rmd_len": 131,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 22248,
+   "wave": "w1w2-zero",
+   "name": "Seductive Lace Suspender Stockings",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 149,
+   "short_w": 23,
+   "rmt_len": 45,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 22252,
+   "wave": "w1w2-zero",
+   "name": "Sheer Butterfly Fishnet Stockings",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 129,
+   "short_w": 19,
+   "rmt_len": 44,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 22258,
+   "wave": "w1w2-zero",
+   "name": "Sheer High-Stretch Slimming Stockings",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 131,
+   "short_w": 18,
+   "rmt_len": 48,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 22276,
+   "wave": "w1w2-zero",
+   "name": "Cute Cow Print Stockings",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 127,
+   "short_w": 19,
+   "rmt_len": 35,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 22291,
+   "wave": "w1w2-zero",
+   "name": "Four-Sided Open Lace Pantyhose",
+   "cats": [
+    "Stockings"
+   ],
+   "desc_w": 150,
+   "short_w": 19,
+   "rmt_len": 41,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true
+   }
+  },
+  {
+   "id": 22433,
+   "wave": "w3-night",
+   "name": "Sheer Lace Slip Dress in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 162,
+   "short_w": 21,
+   "rmt_len": 46,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22434,
+   "wave": "w3-night",
+   "name": "Backless Split-Hem Lace Nightdress Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 214,
+   "short_w": 21,
+   "rmt_len": 49,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22439,
+   "wave": "w3-night",
+   "name": "Black Open-Crotch Three-Piece Lingerie Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 177,
+   "short_w": 22,
+   "rmt_len": 53,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22459,
+   "wave": "w3-night",
+   "name": "Sheer Lace Nightdress in Three Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 173,
+   "short_w": 22,
+   "rmt_len": 48,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22487,
+   "wave": "w3-night",
+   "name": "Sheer Mesh Panel High-Slit Club Dress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 171,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22498,
+   "wave": "w3-night",
+   "name": "Classic Lace Slip Nightdress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 174,
+   "short_w": 21,
+   "rmt_len": 39,
+   "rmd_len": 121,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22504,
+   "wave": "w3-night",
+   "name": "Steel-Boned Lace Corset Set in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 172,
+   "short_w": 22,
+   "rmt_len": 52,
+   "rmd_len": 121,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22505,
+   "wave": "w3-night",
+   "name": "Patent Leather Bunny Costume Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 187,
+   "short_w": 21,
+   "rmt_len": 43,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22506,
+   "wave": "w3-night",
+   "name": "Butterfly Mesh Nightdress with T-Back Panty",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 174,
+   "short_w": 23,
+   "rmt_len": 54,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22507,
+   "wave": "w3-night",
+   "name": "Deep-V Embroidered Chemise in Red or Black",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 198,
+   "short_w": 22,
+   "rmt_len": 53,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22520,
+   "wave": "w3-night",
+   "name": "Butterfly Lace Teddy in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 171,
+   "short_w": 21,
+   "rmt_len": 45,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22521,
+   "wave": "w3-night",
+   "name": "Cross-Strap Nightdress in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 179,
+   "short_w": 24,
+   "rmt_len": 47,
+   "rmd_len": 122,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22536,
+   "wave": "w3-night",
+   "name": "Hollow-Out Butterfly Crotchless Lace Teddy",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 179,
+   "short_w": 22,
+   "rmt_len": 53,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22541,
+   "wave": "w3-night",
+   "name": "Chain Openwork Three-Piece Lingerie Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 168,
+   "short_w": 19,
+   "rmt_len": 50,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22578,
+   "wave": "w3-night",
+   "name": "Sheer Mesh Halter Lingerie Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 167,
+   "short_w": 23,
+   "rmt_len": 41,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22579,
+   "wave": "w3-night",
+   "name": "Underwire Push-Up Open-Crotch Lingerie Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 185,
+   "short_w": 21,
+   "rmt_len": 53,
+   "rmd_len": 119,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22587,
+   "wave": "w3-night",
+   "name": "Sheer Mesh Slip Nightdress in Black",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 168,
+   "short_w": 22,
+   "rmt_len": 46,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22592,
+   "wave": "w3-night",
+   "name": "Off-Shoulder Leather Teddy with Leg Loops",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 188,
+   "short_w": 20,
+   "rmt_len": 52,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22614,
+   "wave": "w3-night",
+   "name": "Four-Piece Lace Uniform Costume Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 178,
+   "short_w": 19,
+   "rmt_len": 46,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22632,
+   "wave": "w3-night",
+   "name": "Sheer Tulle Lace Jumpsuit",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 174,
+   "short_w": 21,
+   "rmt_len": 36,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22687,
+   "wave": "w3-night",
+   "name": "Lace Slip Chemise Nightdress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 153,
+   "short_w": 23,
+   "rmt_len": 39,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22701,
+   "wave": "w3-night",
+   "name": "Open-Crotch Sheer Lace Slip Dress",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 162,
+   "short_w": 22,
+   "rmt_len": 44,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22708,
+   "wave": "w3-night",
+   "name": "Ruffled Chiffon Slip Nightdress in Three Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 187,
+   "short_w": 23,
+   "rmt_len": 58,
+   "rmd_len": 118,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22710,
+   "wave": "w3-night",
+   "name": "Joker Card Sheer Mesh Costume Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 166,
+   "short_w": 21,
+   "rmt_len": 44,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22717,
+   "wave": "w3-night",
+   "name": "Patent Leather Collar Teddy Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 171,
+   "short_w": 22,
+   "rmt_len": 42,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22724,
+   "wave": "w3-night",
+   "name": "Soft Maid Costume Set with Neck Collar",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 155,
+   "short_w": 21,
+   "rmt_len": 49,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22731,
+   "wave": "w3-night",
+   "name": "Office-Uniform Chiffon Teddy",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 156,
+   "short_w": 22,
+   "rmt_len": 39,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22747,
+   "wave": "w3-night",
+   "name": "Queen Patent Leather Uniform Teddy",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 162,
+   "short_w": 22,
+   "rmt_len": 45,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22755,
+   "wave": "w3-night",
+   "name": "Sheer Lace Fairy Nightdress in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 179,
+   "short_w": 22,
+   "rmt_len": 52,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22768,
+   "wave": "w3-night",
+   "name": "Floral Deep-V Slip Nightdress in Pink",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 166,
+   "short_w": 21,
+   "rmt_len": 48,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22790,
+   "wave": "w3-night",
+   "name": "Front-Clip Deep-V Pajama Set, Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 175,
+   "short_w": 20,
+   "rmt_len": 51,
+   "rmd_len": 128,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22806,
+   "wave": "w3-night",
+   "name": "Hollow-Out Cheongsam Lingerie Dress, Three Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 170,
+   "short_w": 21,
+   "rmt_len": 60,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22807,
+   "wave": "w3-night",
+   "name": "Lace Mesh Skirt and Trousers Lingerie Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 166,
+   "short_w": 21,
+   "rmt_len": 52,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22814,
+   "wave": "w3-night",
+   "name": "Devil's-Eye Halloween Lingerie Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 186,
+   "short_w": 21,
+   "rmt_len": 45,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22818,
+   "wave": "w3-night",
+   "name": "Underwire Push-Up Lace Nightdress Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 202,
+   "short_w": 22,
+   "rmt_len": 48,
+   "rmd_len": 127,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22829,
+   "wave": "w3-night",
+   "name": "Openwork Lace Club Dress with T-Back Panty",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 176,
+   "short_w": 24,
+   "rmt_len": 53,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22837,
+   "wave": "w3-night",
+   "name": "Heart Cut-Out Bikini Set in Three Sizes",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 189,
+   "short_w": 23,
+   "rmt_len": 50,
+   "rmd_len": 121,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22843,
+   "wave": "w3-night",
+   "name": "Off-Shoulder Bodycon Mesh Lingerie Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 177,
+   "short_w": 19,
+   "rmt_len": 49,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22884,
+   "wave": "w3-night",
+   "name": "Embroidered Mesh Bodysuit in Five Sizes",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 210,
+   "short_w": 22,
+   "rmt_len": 50,
+   "rmd_len": 126,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22921,
+   "wave": "w3-night",
+   "name": "White Sheer Mesh Lingerie Set",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 157,
+   "short_w": 24,
+   "rmt_len": 40,
+   "rmd_len": 118,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22932,
+   "wave": "w3-night",
+   "name": "Cinched-Waist Lace Teddy in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 176,
+   "short_w": 21,
+   "rmt_len": 49,
+   "rmd_len": 129,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22933,
+   "wave": "w3-night",
+   "name": "Midnight Openwork Jumpsuit, Three Sizes",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 216,
+   "short_w": 22,
+   "rmt_len": 50,
+   "rmd_len": 124,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22959,
+   "wave": "w3-night",
+   "name": "Silver Cut-Out Bodysuit in Three Sizes",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 185,
+   "short_w": 21,
+   "rmt_len": 49,
+   "rmd_len": 120,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22960,
+   "wave": "w3-night",
+   "name": "Bow-Accent Mesh Bodysuit in Two Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 199,
+   "short_w": 26,
+   "rmt_len": 49,
+   "rmd_len": 123,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  },
+  {
+   "id": 22997,
+   "wave": "w3-night",
+   "name": "Deep-V Stretch Bodysuit in Three Colors",
+   "cats": [
+    "Nightwear"
+   ],
+   "desc_w": 186,
+   "short_w": 23,
+   "rmt_len": 50,
+   "rmd_len": 125,
+   "ok": true,
+   "checks": {
+    "desc_deep": true,
+    "short_ok": true,
+    "rmt_ok": true,
+    "rmd_ok": true,
+    "name_plan": true
+   }
+  }
+ ],
+ "catnames": {
+  "126": "Rose Vibrator",
+  "131": "Rose Toy Deluxe",
+  "127": "Male Rose Toy",
+  "129": "Rose Clit Toy",
+  "130": "Rose Suction Toy",
+  "71": "Rose Toys For Women",
+  "128": "Rose Toy Charger",
+  "163": "Nightwear",
+  "179": "Pajamas",
+  "183": "Cosplay",
+  "20": "Accessories",
+  "299": "Women's Lingerie",
+  "211": "Bikini",
+  "177": "Career Costumes",
+  "250": "Stockings",
+  "258": "Fishnet lingerie"
+ }
+}

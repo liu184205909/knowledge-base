@@ -274,6 +274,14 @@ PullPush 初筛模板：`after` = 当前 unix 秒 − 7×86400（**不支持 `7d
 >
 > **通道备注**：www 详情页当日 2 次卡"Reddit-全网主阵地"空壳态（body 仅 35 字符 AIX 浮层，关重开无效），old.reddit 详情页正常读取——§1 备用通道对读帖层同样有效，www/old 可用性当日互换漂移再证一例。
 
+### 7b-10 日间轮信号（2026-10-10 实战批）
+
+> **Lovesac 帖 1x0uf61 重发成功**（任务驱动）：r/Lovesac 深座腰靠配置帖（10-08 发，楼主 megoonie- 问 angle back vs straight back）10-10 发布成功（评论 pez5h1x）——昨夜 3 连静默失败后隔 18h 冷却即通，佐证"静默失败=账号层临时限流+冷却可解"假设。**草稿槽惊魂**：昨夜 b64 备份文件已被 temp 清理丢失，但 Reddit 端 localStorage 草稿槽存活；解码后发现**草稿内容错配**（密度+塞套话题+引用 1x0uf61 评论区不存在的评论者 tereedactyl——疑为 1wst2h8 系残留，若发出即穿帮）→ 按帖子实况重写（几何归因+IKEA topper/定制 wedge 两路线+Cushion Mill 顾客口吻+~3 周交期真实缺点+seat depth minus 2" 测量干货）。**发布链路新定案**：www 帖子页渲染需 10-12 秒（body:35 空壳态等待即可非关重开）；Lexical contenteditable 直接单次注入（focus+selectNodeContents+collapse(false)+execCommand insertText 全文含 \n\n）+ elementFromPoint 提交**一次成功**——修正 10-01"切 Markdown 唯一正解"：**不可见（w:0）的切换按钮盲点会致 composer shadowRoot 塌缩**，Lexical 直接注入是可靠兜底。
+>
+> 日更轮 7 查询（flair 页+主词(w)连 5 轮冻结+bench(m)+**lumbar 词族首试**+lumbar couch+patio falling apart+wicker(m)）零合格帖——**0 回复合规日**；flair 页也零新增（10-08 三帖已档）=整站求购流安静日。lumbar 裸词全办公椅/轮椅噪音（品类错位），词族切入须换 "back cushion"+sectional 语境。台账跟进：westindian92 第 4 天楼主仍未回应（窗口未开）；追加 megoonie- 入台账 #23（已触达观察）。
+
+29. **[信号·词效] lumbar 词族裸词不可用**（2026-10-10 首试）：`"lumbar cushion"`(m) 召回 7 帖全办公椅/轮椅/医疗语境（r/OfficeChairs×2/hysterectomy/wheelchairs 等），`"lumbar cushions" couch` 加语境仍 4 帖全无关 → 动作：P3 词表 lumbar/back cushion 词族标注"须沙发语境限定"（下轮 `"back cushion" sectional`），家居侧腰靠需求画像继续从 r/Lovesac flair 页收敛（#21/#23）。
+
 ### 7b-9 晚间轮信号（2026-10-09 晚实战批）
 
 > 晚间轮 6 查询（P0 `"custom cushions" recommendation`(w) / P1 `"outdoor cushions" replacement`(m) / P1 `"banquette" cushion`(m) / P3 `"window seat" cushion`(m) / P0 `"someone to make" cushion`(m) / 主词 `"custom cushions"`(w) 滚动核）+ **P2 #7 r/Lovesac Sactional flair 页首扫**。6 词零新增（已档+噪音）；**flair 页首扫即命中 3 条 <24h 活帖**（1x0uf61/1x0x7wm/1x0up6p，全 10-08 发 13-28h）——搜索词周窗连日冻结时，**宿主品牌 flair 页是活帖的高效补充源**（该 sub 帖流密度高，P2 #7 通道地位上调：与主词并列为每日首查项）。1x0uf61 深读合格（28h+12 评论无人给渠道+痛点直配），old.reddit 发布遇连续 2 次静默失败（JS click+clickAt 真实手势均内容滞留/评论未现），停手冷却 18 分钟后草稿恢复法重试（新会话+重注入+clickAt）**第 3 次仍静默失败——彻底停手**；profile 自查确认 3 次提交均未成立（无重复发风险，账号干净），归因=账号层限流（对照 10-03 案例 40 分钟冷却成功，本轮冷却不足）；**【2026-10-09 晚通道结论】www 发布层 shadow DOM 不可穿透（10-07）+old 发布层 3 连静默（10-09）=双通道同日堵死首例**，处置=冷却 24h 后优先重发该帖（草稿 base64 存 `temp/reply-1009-b64.txt`，发帖窗口 72h 内有效）。品牌监控周一轮不占今日。

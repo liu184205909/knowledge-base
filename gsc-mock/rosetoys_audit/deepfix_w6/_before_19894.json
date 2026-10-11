@@ -1,0 +1,239 @@
+{
+ "id": 19894,
+ "name": "Cute Fawn Christmas set",
+ "slug": "m-24-cute-fawn-christmas-set",
+ "permalink": "https://rosetoys.org/product/m-24-cute-fawn-christmas-set/",
+ "date_created": "2024-07-02T21:46:32",
+ "date_created_gmt": "2024-07-02T13:46:32",
+ "date_modified": "2026-09-04T16:18:33",
+ "date_modified_gmt": "2026-09-04T08:18:33",
+ "type": "simple",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>Product Details: lovingocean<br data-mce-fragment=\"1\">Material: Polyester<br data-mce-fragment=\"1\">Item type: bra + panties + neck ring + <br data-mce-fragment=\"1\">skirt + bracelet + fawn headdress<br data-mce-fragment=\"1\">Features: Three-point type<br data-mce-fragment=\"1\">Color: Black/Red<br data-mce-fragment=\"1\">Specification: One size <br data-mce-fragment=\"1\">Recommended weight 40-60kg</p>\n",
+ "short_description": "",
+ "sku": "A8960203948305",
+ "price": "42.99",
+ "regular_price": "55.99",
+ "sale_price": "42.99",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 211,
+   "name": "Bikini",
+   "slug": "bikini"
+  }
+ ],
+ "brands": [],
+ "tags": [
+  {
+   "id": 113,
+   "name": "\"New\"",
+   "slug": "new"
+  }
+ ],
+ "images": [
+  {
+   "id": 19893,
+   "date_created": "2024-07-03T05:46:24",
+   "date_created_gmt": "2024-07-02T13:46:24",
+   "date_modified": "2024-07-03T05:46:32",
+   "date_modified_gmt": "2024-07-02T13:46:32",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/1-8_ccd1172f-ebaf-4231-a1a3-747c3449526b-scaled.jpg",
+   "name": "1-8_ccd1172f-ebaf-4231-a1a3-747c3449526b.jpg",
+   "alt": "Cute Fawn Christmas set",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/1-8_ccd1172f-ebaf-4231-a1a3-747c3449526b-scaled.jpg 2560w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_ccd1172f-ebaf-4231-a1a3-747c3449526b-scaled-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_ccd1172f-ebaf-4231-a1a3-747c3449526b-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_ccd1172f-ebaf-4231-a1a3-747c3449526b-scaled-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_ccd1172f-ebaf-4231-a1a3-747c3449526b-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_ccd1172f-ebaf-4231-a1a3-747c3449526b-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_ccd1172f-ebaf-4231-a1a3-747c3449526b-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_ccd1172f-ebaf-4231-a1a3-747c3449526b-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_ccd1172f-ebaf-4231-a1a3-747c3449526b-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_ccd1172f-ebaf-4231-a1a3-747c3449526b-860x860.jpg 860w",
+   "sizes": "(max-width: 2560px) 100vw, 2560px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/1-8_ccd1172f-ebaf-4231-a1a3-747c3449526b-scaled-430x430.jpg"
+  },
+  {
+   "id": 19895,
+   "date_created": "2024-07-03T05:46:33",
+   "date_created_gmt": "2024-07-02T13:46:33",
+   "date_modified": "2024-07-03T05:46:33",
+   "date_modified_gmt": "2024-07-02T13:46:33",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/6-8_faba9444-7613-4f0f-8432-7b4aeee12ccd-scaled.jpg",
+   "name": "6-8_faba9444-7613-4f0f-8432-7b4aeee12ccd.jpg",
+   "alt": "Cute Fawn Christmas set",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/6-8_faba9444-7613-4f0f-8432-7b4aeee12ccd-scaled.jpg 2560w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_faba9444-7613-4f0f-8432-7b4aeee12ccd-scaled-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_faba9444-7613-4f0f-8432-7b4aeee12ccd-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_faba9444-7613-4f0f-8432-7b4aeee12ccd-scaled-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_faba9444-7613-4f0f-8432-7b4aeee12ccd-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_faba9444-7613-4f0f-8432-7b4aeee12ccd-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_faba9444-7613-4f0f-8432-7b4aeee12ccd-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_faba9444-7613-4f0f-8432-7b4aeee12ccd-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_faba9444-7613-4f0f-8432-7b4aeee12ccd-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_faba9444-7613-4f0f-8432-7b4aeee12ccd-860x860.jpg 860w",
+   "sizes": "(max-width: 2560px) 100vw, 2560px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/6-8_faba9444-7613-4f0f-8432-7b4aeee12ccd-scaled-430x430.jpg"
+  },
+  {
+   "id": 19896,
+   "date_created": "2024-07-03T05:46:42",
+   "date_created_gmt": "2024-07-02T13:46:42",
+   "date_modified": "2024-07-03T05:46:42",
+   "date_modified_gmt": "2024-07-02T13:46:42",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/8-8_23e7dae4-a686-4695-a258-31e25fdf92e9-scaled.jpg",
+   "name": "8-8_23e7dae4-a686-4695-a258-31e25fdf92e9.jpg",
+   "alt": "Cute Fawn Christmas set",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/8-8_23e7dae4-a686-4695-a258-31e25fdf92e9-scaled.jpg 2560w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_23e7dae4-a686-4695-a258-31e25fdf92e9-scaled-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_23e7dae4-a686-4695-a258-31e25fdf92e9-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_23e7dae4-a686-4695-a258-31e25fdf92e9-scaled-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_23e7dae4-a686-4695-a258-31e25fdf92e9-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_23e7dae4-a686-4695-a258-31e25fdf92e9-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_23e7dae4-a686-4695-a258-31e25fdf92e9-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_23e7dae4-a686-4695-a258-31e25fdf92e9-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_23e7dae4-a686-4695-a258-31e25fdf92e9-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_23e7dae4-a686-4695-a258-31e25fdf92e9-860x860.jpg 860w",
+   "sizes": "(max-width: 2560px) 100vw, 2560px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/8-8_23e7dae4-a686-4695-a258-31e25fdf92e9-scaled-430x430.jpg"
+  },
+  {
+   "id": 19897,
+   "date_created": "2024-07-03T05:46:51",
+   "date_created_gmt": "2024-07-02T13:46:51",
+   "date_modified": "2024-07-03T05:46:51",
+   "date_modified_gmt": "2024-07-02T13:46:51",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/2-8_d3e7d408-445f-4730-913c-63d97a4cd43b-scaled.jpg",
+   "name": "2-8_d3e7d408-445f-4730-913c-63d97a4cd43b.jpg",
+   "alt": "Cute Fawn Christmas set",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/2-8_d3e7d408-445f-4730-913c-63d97a4cd43b-scaled.jpg 2560w, https://rosetoys.org/wp-content/uploads/2024/07/2-8_d3e7d408-445f-4730-913c-63d97a4cd43b-scaled-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/2-8_d3e7d408-445f-4730-913c-63d97a4cd43b-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/2-8_d3e7d408-445f-4730-913c-63d97a4cd43b-scaled-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/2-8_d3e7d408-445f-4730-913c-63d97a4cd43b-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/2-8_d3e7d408-445f-4730-913c-63d97a4cd43b-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/2-8_d3e7d408-445f-4730-913c-63d97a4cd43b-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/2-8_d3e7d408-445f-4730-913c-63d97a4cd43b-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/2-8_d3e7d408-445f-4730-913c-63d97a4cd43b-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/2-8_d3e7d408-445f-4730-913c-63d97a4cd43b-860x860.jpg 860w",
+   "sizes": "(max-width: 2560px) 100vw, 2560px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/2-8_d3e7d408-445f-4730-913c-63d97a4cd43b-scaled-430x430.jpg"
+  },
+  {
+   "id": 19898,
+   "date_created": "2024-07-03T05:47:00",
+   "date_created_gmt": "2024-07-02T13:47:00",
+   "date_modified": "2024-07-03T05:47:00",
+   "date_modified_gmt": "2024-07-02T13:47:00",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/5-8_322d1406-d15a-4edc-a7ef-bf1c71f1c634-scaled.jpg",
+   "name": "5-8_322d1406-d15a-4edc-a7ef-bf1c71f1c634.jpg",
+   "alt": "Cute Fawn Christmas set",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/5-8_322d1406-d15a-4edc-a7ef-bf1c71f1c634-scaled.jpg 2560w, https://rosetoys.org/wp-content/uploads/2024/07/5-8_322d1406-d15a-4edc-a7ef-bf1c71f1c634-scaled-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/5-8_322d1406-d15a-4edc-a7ef-bf1c71f1c634-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/5-8_322d1406-d15a-4edc-a7ef-bf1c71f1c634-scaled-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/5-8_322d1406-d15a-4edc-a7ef-bf1c71f1c634-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/5-8_322d1406-d15a-4edc-a7ef-bf1c71f1c634-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/5-8_322d1406-d15a-4edc-a7ef-bf1c71f1c634-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/5-8_322d1406-d15a-4edc-a7ef-bf1c71f1c634-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/5-8_322d1406-d15a-4edc-a7ef-bf1c71f1c634-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/5-8_322d1406-d15a-4edc-a7ef-bf1c71f1c634-860x860.jpg 860w",
+   "sizes": "(max-width: 2560px) 100vw, 2560px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/5-8_322d1406-d15a-4edc-a7ef-bf1c71f1c634-scaled-430x430.jpg"
+  },
+  {
+   "id": 19899,
+   "date_created": "2024-07-03T05:47:09",
+   "date_created_gmt": "2024-07-02T13:47:09",
+   "date_modified": "2024-07-03T05:47:09",
+   "date_modified_gmt": "2024-07-02T13:47:09",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/7-8_9d776c2c-9b21-4f81-9361-e99358552741-scaled.jpg",
+   "name": "7-8_9d776c2c-9b21-4f81-9361-e99358552741.jpg",
+   "alt": "Cute Fawn Christmas set",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/7-8_9d776c2c-9b21-4f81-9361-e99358552741-scaled.jpg 2560w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_9d776c2c-9b21-4f81-9361-e99358552741-scaled-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_9d776c2c-9b21-4f81-9361-e99358552741-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_9d776c2c-9b21-4f81-9361-e99358552741-scaled-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_9d776c2c-9b21-4f81-9361-e99358552741-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_9d776c2c-9b21-4f81-9361-e99358552741-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_9d776c2c-9b21-4f81-9361-e99358552741-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_9d776c2c-9b21-4f81-9361-e99358552741-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_9d776c2c-9b21-4f81-9361-e99358552741-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_9d776c2c-9b21-4f81-9361-e99358552741-860x860.jpg 860w",
+   "sizes": "(max-width: 2560px) 100vw, 2560px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/7-8_9d776c2c-9b21-4f81-9361-e99358552741-scaled-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": false,
+   "options": [
+    "One size"
+   ]
+  },
+  {
+   "id": 5,
+   "name": "Color",
+   "slug": "pa_color",
+   "position": 1,
+   "visible": true,
+   "variation": false,
+   "options": [
+    "Set Red"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<del aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>55.99</bdi></span></del> <span class=\"screen-reader-text\">Original price was: &#036;55.99.</span><ins aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>42.99</bdi></span></ins><span class=\"screen-reader-text\">Current price is: &#036;42.99.</span>",
+ "related_ids": [
+  16890,
+  17426,
+  17079,
+  17118,
+  17684
+ ],
+ "meta_data": [
+  {
+   "id": 40409,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 40446,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 103598,
+   "key": "rank_math_title",
+   "value": "Cute Fawn Christmas set | RoseToys"
+  },
+  {
+   "id": 103599,
+   "key": "rank_math_description",
+   "value": "Polyester cute Fawn Christmas set with three-point type in black, red. One size, recommended weight 40-60kg. Includes bra + panties + neck ring + skirt +"
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": false,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/19894",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

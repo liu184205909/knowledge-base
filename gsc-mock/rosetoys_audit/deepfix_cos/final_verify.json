@@ -1,0 +1,31 @@
+{
+ "total": 167,
+ "name_ok": 167,
+ "desc_ok": 167,
+ "short_ok": 167,
+ "rmT_ok": 167,
+ "rmD_ok": 167,
+ "slug_ok": 167,
+ "price_ok": 167,
+ "img_ok": 167,
+ "slop_hits": [],
+ "fails": [],
+ "stats": {
+  "desc_words": [
+   150,
+   190
+  ],
+  "short_words": [
+   20,
+   30
+  ],
+  "tkd_title_len": [
+   31,
+   55
+  ],
+  "tkd_desc_len": [
+   118,
+   142
+  ]
+ }
+}

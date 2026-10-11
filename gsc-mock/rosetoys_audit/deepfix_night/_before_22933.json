@@ -1,0 +1,244 @@
+{
+ "id": 22933,
+ "name": "Midnight seduction openwork jumpsuit",
+ "slug": "m-158-midnight-seduction-openwork-jumpsuit",
+ "permalink": "https://rosetoys.org/product/m-158-midnight-seduction-openwork-jumpsuit/",
+ "date_created": "2024-07-03T11:33:00",
+ "date_created_gmt": "2024-07-03T03:33:00",
+ "date_modified": "2026-09-04T16:01:47",
+ "date_modified_gmt": "2026-09-04T08:01:47",
+ "type": "variable",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>Product Details: lovingocean<br data-mce-fragment=\"1\">Material: polyester<br data-mce-fragment=\"1\">Project type: Jumpsuit<br data-mce-fragment=\"1\">Specialty: openwork design<br data-mce-fragment=\"1\">Color: Black<br data-mce-fragment=\"1\">Specification:<br data-mce-fragment=\"1\">S: Bust: 72-86 cm Waist: 60-66 cm Recommended weight: 40-50 kg<br data-mce-fragment=\"1\">M: Bust: 76-90 cm Waist: 64-70 cm Recommended weight: 50-60 kg<br data-mce-fragment=\"1\">L: Bust: 80-94 cm Waist: 68-74 cm Recommended weight: 60-65 kg</p>\n",
+ "short_description": "",
+ "sku": "A8971833999633",
+ "price": "26.99",
+ "regular_price": "",
+ "sale_price": "",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 163,
+   "name": "Nightwear",
+   "slug": "nightwear"
+  }
+ ],
+ "brands": [],
+ "tags": [
+  {
+   "id": 113,
+   "name": "\"New\"",
+   "slug": "new"
+  }
+ ],
+ "images": [
+  {
+   "id": 22975,
+   "date_created": "2024-07-03T19:34:13",
+   "date_created_gmt": "2024-07-03T03:34:13",
+   "date_modified": "2024-07-03T19:34:13",
+   "date_modified_gmt": "2024-07-03T03:34:13",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/4-9_9926e0d5-9622-4ec8-bd9f-827d5721a4ee.jpg",
+   "name": "4-9_9926e0d5-9622-4ec8-bd9f-827d5721a4ee.jpg",
+   "alt": "Midnight seduction openwork jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/4-9_9926e0d5-9622-4ec8-bd9f-827d5721a4ee.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_9926e0d5-9622-4ec8-bd9f-827d5721a4ee-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_9926e0d5-9622-4ec8-bd9f-827d5721a4ee-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_9926e0d5-9622-4ec8-bd9f-827d5721a4ee-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_9926e0d5-9622-4ec8-bd9f-827d5721a4ee-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_9926e0d5-9622-4ec8-bd9f-827d5721a4ee-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/4-9_9926e0d5-9622-4ec8-bd9f-827d5721a4ee-430x430.jpg"
+  },
+  {
+   "id": 22977,
+   "date_created": "2024-07-03T19:34:14",
+   "date_created_gmt": "2024-07-03T03:34:14",
+   "date_modified": "2024-07-03T19:34:14",
+   "date_modified_gmt": "2024-07-03T03:34:14",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/2-9_507b087b-989c-4bab-b029-a8f3b8e1c889.jpg",
+   "name": "2-9_507b087b-989c-4bab-b029-a8f3b8e1c889.jpg",
+   "alt": "Midnight seduction openwork jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/2-9_507b087b-989c-4bab-b029-a8f3b8e1c889.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_507b087b-989c-4bab-b029-a8f3b8e1c889-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_507b087b-989c-4bab-b029-a8f3b8e1c889-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_507b087b-989c-4bab-b029-a8f3b8e1c889-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_507b087b-989c-4bab-b029-a8f3b8e1c889-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_507b087b-989c-4bab-b029-a8f3b8e1c889-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/2-9_507b087b-989c-4bab-b029-a8f3b8e1c889-430x430.jpg"
+  },
+  {
+   "id": 22978,
+   "date_created": "2024-07-03T19:34:16",
+   "date_created_gmt": "2024-07-03T03:34:16",
+   "date_modified": "2024-07-03T19:34:16",
+   "date_modified_gmt": "2024-07-03T03:34:16",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/1-9_7d23f007-e169-4b4b-988f-1958658aa1ba.jpg",
+   "name": "1-9_7d23f007-e169-4b4b-988f-1958658aa1ba.jpg",
+   "alt": "Midnight seduction openwork jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/1-9_7d23f007-e169-4b4b-988f-1958658aa1ba.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_7d23f007-e169-4b4b-988f-1958658aa1ba-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_7d23f007-e169-4b4b-988f-1958658aa1ba-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_7d23f007-e169-4b4b-988f-1958658aa1ba-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_7d23f007-e169-4b4b-988f-1958658aa1ba-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_7d23f007-e169-4b4b-988f-1958658aa1ba-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/1-9_7d23f007-e169-4b4b-988f-1958658aa1ba-430x430.jpg"
+  },
+  {
+   "id": 22979,
+   "date_created": "2024-07-03T19:34:17",
+   "date_created_gmt": "2024-07-03T03:34:17",
+   "date_modified": "2024-07-03T19:34:17",
+   "date_modified_gmt": "2024-07-03T03:34:17",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/3-9_5710430d-d2a6-4ad5-a1f4-e6f9e929c81e.jpg",
+   "name": "3-9_5710430d-d2a6-4ad5-a1f4-e6f9e929c81e.jpg",
+   "alt": "Midnight seduction openwork jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/3-9_5710430d-d2a6-4ad5-a1f4-e6f9e929c81e.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/3-9_5710430d-d2a6-4ad5-a1f4-e6f9e929c81e-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/3-9_5710430d-d2a6-4ad5-a1f4-e6f9e929c81e-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/3-9_5710430d-d2a6-4ad5-a1f4-e6f9e929c81e-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/3-9_5710430d-d2a6-4ad5-a1f4-e6f9e929c81e-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/3-9_5710430d-d2a6-4ad5-a1f4-e6f9e929c81e-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/3-9_5710430d-d2a6-4ad5-a1f4-e6f9e929c81e-430x430.jpg"
+  },
+  {
+   "id": 22980,
+   "date_created": "2024-07-03T19:34:19",
+   "date_created_gmt": "2024-07-03T03:34:19",
+   "date_modified": "2024-07-03T19:34:19",
+   "date_modified_gmt": "2024-07-03T03:34:19",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/7-9_b518443a-aab9-44df-af9d-e07f3b643287.jpg",
+   "name": "7-9_b518443a-aab9-44df-af9d-e07f3b643287.jpg",
+   "alt": "Midnight seduction openwork jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/7-9_b518443a-aab9-44df-af9d-e07f3b643287.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_b518443a-aab9-44df-af9d-e07f3b643287-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_b518443a-aab9-44df-af9d-e07f3b643287-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_b518443a-aab9-44df-af9d-e07f3b643287-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_b518443a-aab9-44df-af9d-e07f3b643287-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_b518443a-aab9-44df-af9d-e07f3b643287-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/7-9_b518443a-aab9-44df-af9d-e07f3b643287-430x430.jpg"
+  },
+  {
+   "id": 22981,
+   "date_created": "2024-07-03T19:34:20",
+   "date_created_gmt": "2024-07-03T03:34:20",
+   "date_modified": "2024-07-03T19:34:20",
+   "date_modified_gmt": "2024-07-03T03:34:20",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/9-9_838dc3b1-7b22-45c7-aaad-5c74438fd27a.jpg",
+   "name": "9-9_838dc3b1-7b22-45c7-aaad-5c74438fd27a.jpg",
+   "alt": "Midnight seduction openwork jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/9-9_838dc3b1-7b22-45c7-aaad-5c74438fd27a.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_838dc3b1-7b22-45c7-aaad-5c74438fd27a-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_838dc3b1-7b22-45c7-aaad-5c74438fd27a-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_838dc3b1-7b22-45c7-aaad-5c74438fd27a-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_838dc3b1-7b22-45c7-aaad-5c74438fd27a-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_838dc3b1-7b22-45c7-aaad-5c74438fd27a-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/9-9_838dc3b1-7b22-45c7-aaad-5c74438fd27a-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "L(60-65KG)",
+    "M(50-60KG)",
+    "S(40-50KG)"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [
+  22982,
+  22983,
+  22984
+ ],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<del aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>50.99</bdi></span></del> <span class=\"screen-reader-text\">Original price was: &#036;50.99.</span><ins aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>26.99</bdi></span></ins><span class=\"screen-reader-text\">Current price is: &#036;26.99.</span>",
+ "related_ids": [
+  17684,
+  17491,
+  17877,
+  17426,
+  17678
+ ],
+ "meta_data": [
+  {
+   "id": 71049,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 71542,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 72231,
+   "key": "_children",
+   "value": []
+  },
+  {
+   "id": 101528,
+   "key": "rank_math_title",
+   "value": "Midnight seduction openwork jumpsuit | RoseToys"
+  },
+  {
+   "id": 101529,
+   "key": "rank_math_description",
+   "value": "polyester midnight seduction openwork jumpsuit with openwork design in black. Available in S, M and L, recommended weight 40-65kg."
+  },
+  {
+   "id": 111125,
+   "key": "_elementor_page_assets",
+   "value": []
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": true,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/22933",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

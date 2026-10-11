@@ -1,0 +1,247 @@
+{
+ "id": 18043,
+ "name": "Magnetic Charg Cable Adsorption",
+ "slug": "magnetic-charg-cable-adsorption",
+ "permalink": "https://rosetoys.org/product/magnetic-charg-cable-adsorption/",
+ "date_created": "2023-12-18T23:08:17",
+ "date_created_gmt": "2023-12-18T15:08:17",
+ "date_modified": "2026-10-10T15:41:36",
+ "date_modified_gmt": "2026-10-10T07:41:36",
+ "type": "variable",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<h2>Product Description</h2>\n<p>This magnetic charging cable is designed for rose toys that use magnetic contact charging, replacing a lost or damaged cable so your toy stays ready for use. It is offered in black and white, with six magnet spacing options ranging from 5mm to 10mm to match the charging contacts of your device. The cable connects to a standard USB power source such as a wall adapter, power bank or computer port. Please confirm the magnet spacing of your original cable before ordering to ensure a correct fit.</p>\n<p>Product Details:<br />Item type: magnetic charging cable<br />Color: Black/White<br />Size: Magnet Spacing 5mm/6mm/7mm/8mm/9mm/10mm</p>\n",
+ "short_description": "<p>magnetic-charging-cable</p>\n",
+ "sku": "A8560464691509",
+ "price": "25.00",
+ "regular_price": "",
+ "sale_price": "",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": false,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 128,
+   "name": "Rose Toy Charger",
+   "slug": "rose-toy-charger"
+  }
+ ],
+ "brands": [],
+ "tags": [
+  {
+   "id": 142,
+   "name": "\"Rose Chargers\"",
+   "slug": "rose-chargers"
+  }
+ ],
+ "images": [
+  {
+   "id": 18169,
+   "date_created": "2023-12-18T23:10:48",
+   "date_created_gmt": "2023-12-18T15:10:48",
+   "date_modified": "2023-12-18T23:10:48",
+   "date_modified_gmt": "2023-12-18T15:10:48",
+   "src": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-872581.jpg",
+   "name": "magnetic-charging-cable-adsorption-data-cable-872581.jpg",
+   "alt": "Magnetic Charg Cable Adsorption",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-872581.jpg 800w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-872581-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-872581-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-872581-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-872581-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-872581-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-872581-430x430.jpg"
+  },
+  {
+   "id": 18170,
+   "date_created": "2023-12-18T23:10:49",
+   "date_created_gmt": "2023-12-18T15:10:49",
+   "date_modified": "2023-12-18T23:10:49",
+   "date_modified_gmt": "2023-12-18T15:10:49",
+   "src": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-885520.jpg",
+   "name": "magnetic-charging-cable-adsorption-data-cable-885520.jpg",
+   "alt": "Magnetic Charg Cable Adsorption",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-885520.jpg 800w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-885520-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-885520-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-885520-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-885520-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-885520-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-885520-430x430.jpg"
+  },
+  {
+   "id": 18171,
+   "date_created": "2023-12-18T23:10:50",
+   "date_created_gmt": "2023-12-18T15:10:50",
+   "date_modified": "2023-12-18T23:10:50",
+   "date_modified_gmt": "2023-12-18T15:10:50",
+   "src": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-997152.jpg",
+   "name": "magnetic-charging-cable-adsorption-data-cable-997152.jpg",
+   "alt": "Magnetic Charg Cable Adsorption",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-997152.jpg 790w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-997152-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-997152-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-997152-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-997152-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-997152-768x768.jpg 768w",
+   "sizes": "(max-width: 790px) 100vw, 790px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-997152-430x430.jpg"
+  },
+  {
+   "id": 18172,
+   "date_created": "2023-12-18T23:10:51",
+   "date_created_gmt": "2023-12-18T15:10:51",
+   "date_modified": "2023-12-18T23:10:51",
+   "date_modified_gmt": "2023-12-18T15:10:51",
+   "src": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-281327.jpg",
+   "name": "magnetic-charging-cable-adsorption-data-cable-281327.jpg",
+   "alt": "Magnetic Charg Cable Adsorption",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-281327.jpg 790w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-281327-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-281327-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-281327-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-281327-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-281327-768x768.jpg 768w",
+   "sizes": "(max-width: 790px) 100vw, 790px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-281327-430x430.jpg"
+  },
+  {
+   "id": 18173,
+   "date_created": "2023-12-18T23:10:52",
+   "date_created_gmt": "2023-12-18T15:10:52",
+   "date_modified": "2023-12-18T23:10:52",
+   "date_modified_gmt": "2023-12-18T15:10:52",
+   "src": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-438863.jpg",
+   "name": "magnetic-charging-cable-adsorption-data-cable-438863.jpg",
+   "alt": "Magnetic Charg Cable Adsorption",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-438863.jpg 790w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-438863-430x537.jpg 430w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-438863-150x187.jpg 150w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-438863-700x875.jpg 700w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-438863-240x300.jpg 240w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-438863-640x800.jpg 640w, https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-438863-768x960.jpg 768w",
+   "sizes": "(max-width: 790px) 100vw, 790px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2023/12/magnetic-charging-cable-adsorption-data-cable-438863-430x537.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "Magnet Spacing 10mm",
+    "Magnet Spacing 5mm",
+    "Magnet Spacing 6mm",
+    "Magnet Spacing 7mm",
+    "Magnet Spacing 8mm",
+    "Magnet Spacing 9mm"
+   ]
+  },
+  {
+   "id": 5,
+   "name": "Color",
+   "slug": "pa_color",
+   "position": 1,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "Black",
+    "White"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [
+  18175,
+  18176,
+  18177,
+  18178,
+  18179,
+  18180,
+  18181,
+  18182,
+  18183,
+  18184,
+  18185,
+  18186
+ ],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>25.00</bdi></span>",
+ "related_ids": [
+  18168,
+  18104
+ ],
+ "meta_data": [
+  {
+   "id": 23746,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 24157,
+   "key": "_wp_page_template",
+   "value": "default"
+  },
+  {
+   "id": 30214,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 104596,
+   "key": "rank_math_title",
+   "value": "Magnetic Charg Cable Adsorption | RoseToys"
+  },
+  {
+   "id": 104597,
+   "key": "rank_math_description",
+   "value": "Magnetic USB charging cable for rose toys in black or white, with six magnet spacing options from 5mm to 10mm to match your device."
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": true,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/18043",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

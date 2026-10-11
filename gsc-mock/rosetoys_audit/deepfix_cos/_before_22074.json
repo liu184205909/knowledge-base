@@ -1,0 +1,201 @@
+{
+ "id": 22074,
+ "name": "Combat Agent Uniform",
+ "slug": "m-548-combat-agent-uniform",
+ "permalink": "https://rosetoys.org/product/m-548-combat-agent-uniform/",
+ "date_created": "2024-07-03T10:45:41",
+ "date_created_gmt": "2024-07-03T02:45:41",
+ "date_modified": "2026-10-11T00:11:13",
+ "date_modified_gmt": "2026-10-10T16:11:13",
+ "type": "simple",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>A combat-agent costume in polyester: dress and thong in black, one size for 85-130 lbs. The genre is the tactical-adjacent action figure - the dress cut keeps it costume rather than utility.</p>\n<p>The dark styling reference in the original listing translates to an all-black palette with structure in the bodice. Two pieces, one colorway, no ambiguity about what it is.</p>\n<ul>\n<li>Material: polyester</li>\n<li>Includes: dress, thong</li>\n<li>Style: combat agent, dark</li>\n<li>Color: black</li>\n<li>Sizing: one size, 85-130 lbs</li>\n</ul>\n<p>One size for 85-130 lbs. The action-genre entry in a category full of nurse and maid defaults.</p>\n",
+ "short_description": "<p>Black combat agent uniform with dress and thong, one size for 85-130 lbs, dark polyester costume.</p>\n",
+ "sku": "A9384215445777",
+ "price": "18.99",
+ "regular_price": "40.99",
+ "sale_price": "18.99",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 183,
+   "name": "Cosplay",
+   "slug": "cosplay"
+  }
+ ],
+ "brands": [],
+ "tags": [],
+ "images": [
+  {
+   "id": 22073,
+   "date_created": "2024-07-03T18:45:40",
+   "date_created_gmt": "2024-07-03T02:45:40",
+   "date_modified": "2024-07-03T18:45:41",
+   "date_modified_gmt": "2024-07-03T02:45:41",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/2_d0ff6a2e-426a-4f3c-b404-19228659d10d.jpg",
+   "name": "2_d0ff6a2e-426a-4f3c-b404-19228659d10d.jpg",
+   "alt": "Combat agent uniform",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/2_d0ff6a2e-426a-4f3c-b404-19228659d10d.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/2_d0ff6a2e-426a-4f3c-b404-19228659d10d-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/2_d0ff6a2e-426a-4f3c-b404-19228659d10d-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/2_d0ff6a2e-426a-4f3c-b404-19228659d10d-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/2_d0ff6a2e-426a-4f3c-b404-19228659d10d-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/2_d0ff6a2e-426a-4f3c-b404-19228659d10d-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/2_d0ff6a2e-426a-4f3c-b404-19228659d10d-430x430.jpg"
+  },
+  {
+   "id": 22075,
+   "date_created": "2024-07-03T18:45:42",
+   "date_created_gmt": "2024-07-03T02:45:42",
+   "date_modified": "2024-07-03T18:45:42",
+   "date_modified_gmt": "2024-07-03T02:45:42",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/3_bfdc10e0-d5b7-4187-a6c9-7c2cc12c91f5.jpg",
+   "name": "3_bfdc10e0-d5b7-4187-a6c9-7c2cc12c91f5.jpg",
+   "alt": "Combat agent uniform",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/3_bfdc10e0-d5b7-4187-a6c9-7c2cc12c91f5.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/3_bfdc10e0-d5b7-4187-a6c9-7c2cc12c91f5-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/3_bfdc10e0-d5b7-4187-a6c9-7c2cc12c91f5-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/3_bfdc10e0-d5b7-4187-a6c9-7c2cc12c91f5-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/3_bfdc10e0-d5b7-4187-a6c9-7c2cc12c91f5-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/3_bfdc10e0-d5b7-4187-a6c9-7c2cc12c91f5-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/3_bfdc10e0-d5b7-4187-a6c9-7c2cc12c91f5-430x430.jpg"
+  },
+  {
+   "id": 22076,
+   "date_created": "2024-07-03T18:45:43",
+   "date_created_gmt": "2024-07-03T02:45:43",
+   "date_modified": "2024-07-03T18:45:43",
+   "date_modified_gmt": "2024-07-03T02:45:43",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/4_41432774-7dc2-49eb-9385-d4d2cb0b7dc8.jpg",
+   "name": "4_41432774-7dc2-49eb-9385-d4d2cb0b7dc8.jpg",
+   "alt": "Combat agent uniform",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/4_41432774-7dc2-49eb-9385-d4d2cb0b7dc8.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/4_41432774-7dc2-49eb-9385-d4d2cb0b7dc8-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/4_41432774-7dc2-49eb-9385-d4d2cb0b7dc8-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/4_41432774-7dc2-49eb-9385-d4d2cb0b7dc8-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/4_41432774-7dc2-49eb-9385-d4d2cb0b7dc8-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/4_41432774-7dc2-49eb-9385-d4d2cb0b7dc8-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/4_41432774-7dc2-49eb-9385-d4d2cb0b7dc8-430x430.jpg"
+  },
+  {
+   "id": 22077,
+   "date_created": "2024-07-03T18:45:44",
+   "date_created_gmt": "2024-07-03T02:45:44",
+   "date_modified": "2024-07-03T18:45:44",
+   "date_modified_gmt": "2024-07-03T02:45:44",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/6_c04de231-06a8-4684-8fa7-e14174060326.jpg",
+   "name": "6_c04de231-06a8-4684-8fa7-e14174060326.jpg",
+   "alt": "Combat agent uniform",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/6_c04de231-06a8-4684-8fa7-e14174060326.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/6_c04de231-06a8-4684-8fa7-e14174060326-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/6_c04de231-06a8-4684-8fa7-e14174060326-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/6_c04de231-06a8-4684-8fa7-e14174060326-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/6_c04de231-06a8-4684-8fa7-e14174060326-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/6_c04de231-06a8-4684-8fa7-e14174060326-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/6_c04de231-06a8-4684-8fa7-e14174060326-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": false,
+   "options": [
+    "One size"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<del aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>40.99</bdi></span></del> <span class=\"screen-reader-text\">Original price was: &#036;40.99.</span><ins aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>18.99</bdi></span></ins><span class=\"screen-reader-text\">Current price is: &#036;18.99.</span>",
+ "related_ids": [
+  19157,
+  19185,
+  19304,
+  19032,
+  19065
+ ],
+ "meta_data": [
+  {
+   "id": 61696,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 61727,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 102040,
+   "key": "rank_math_title",
+   "value": "Combat Agent Uniform | RoseToys"
+  },
+  {
+   "id": 102041,
+   "key": "rank_math_description",
+   "value": "Black polyester combat agent costume with dress and thong, dark styling. One size for 85-130 lbs, action-genre two-piece set."
+  },
+  {
+   "id": 111857,
+   "key": "_elementor_page_assets",
+   "value": []
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": false,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/22074",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

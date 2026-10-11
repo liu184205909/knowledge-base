@@ -1,0 +1,310 @@
+{
+ "id": 20584,
+ "name": "Magnolia Japanese Kimono",
+ "slug": "t-2412-magnolia-japanese-kimono",
+ "permalink": "https://rosetoys.org/product/t-2412-magnolia-japanese-kimono/",
+ "date_created": "2024-07-02T23:59:43",
+ "date_created_gmt": "2024-07-02T15:59:43",
+ "date_modified": "2026-10-11T00:07:33",
+ "date_modified_gmt": "2026-10-10T16:07:33",
+ "type": "simple",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>A Japanese kimono set in polyester: the robe and a matching thong, as pictured, one size for 40-60 kg. The magnolia pattern is the print, and it is the only decoration the garment needs.</p>\n<p>Two pieces, with the robe doing the dressing and the thong doing the rest. The kimono cut wraps and ties at the waist, which adjusts across the whole one-size range without tailoring.</p>\n<ul>\n<li>Material: polyester</li>\n<li>Includes: kimono, thong</li>\n<li>Style: Japanese</li>\n<li>Color: as pictured</li>\n<li>Sizing: one size, recommended 40-60 kg</li>\n</ul>\n<p>One size for 40-60 kg. The simplest kimono option in the category, and the print carries it.</p>\n",
+ "short_description": "<p>Magnolia-print Japanese kimono with matching thong, one size for 40-60 kg, polyester wrap robe.</p>\n",
+ "sku": "A8702108926225",
+ "price": "25.99",
+ "regular_price": "55.99",
+ "sale_price": "25.99",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 183,
+   "name": "Cosplay",
+   "slug": "cosplay"
+  }
+ ],
+ "brands": [],
+ "tags": [
+  {
+   "id": 184,
+   "name": "\"Cosplay\"",
+   "slug": "cosplay"
+  },
+  {
+   "id": 186,
+   "name": "\"Leather collar\"",
+   "slug": "leather-collar"
+  },
+  {
+   "id": 165,
+   "name": "\"lingerie\"",
+   "slug": "lingerie"
+  },
+  {
+   "id": 180,
+   "name": "\"loungewear\"",
+   "slug": "loungewear"
+  },
+  {
+   "id": 187,
+   "name": "\"necklace\"",
+   "slug": "necklace"
+  },
+  {
+   "id": 178,
+   "name": "\"pajamas\"",
+   "slug": "pajamas"
+  },
+  {
+   "id": 188,
+   "name": "\"Panties\"",
+   "slug": "panties"
+  },
+  {
+   "id": 167,
+   "name": "\"sexual love\"",
+   "slug": "sexual-love"
+  },
+  {
+   "id": 168,
+   "name": "\"sexy lingerie\"",
+   "slug": "sexy-lingerie"
+  },
+  {
+   "id": 190,
+   "name": "\"stockings\"",
+   "slug": "stockings"
+  },
+  {
+   "id": 189,
+   "name": "\"thong\"",
+   "slug": "thong"
+  },
+  {
+   "id": 169,
+   "name": "\"Tiktok\"",
+   "slug": "tiktok"
+  },
+  {
+   "id": 170,
+   "name": "\"u6027u7231\"",
+   "slug": "u6027u7231"
+  },
+  {
+   "id": 171,
+   "name": "\"u6027u7231u670du9970\"",
+   "slug": "u6027u7231u670du9970"
+  },
+  {
+   "id": 172,
+   "name": "\"u6027u7231u7528u54c1\"",
+   "slug": "u6027u7231u7528u54c1"
+  },
+  {
+   "id": 173,
+   "name": "\"u60c5u8da3\"",
+   "slug": "u60c5u8da3"
+  },
+  {
+   "id": 174,
+   "name": "\"u60c5u8da3u670du9970\"",
+   "slug": "u60c5u8da3u670du9970"
+  },
+  {
+   "id": 175,
+   "name": "\"u60c5u8da3u7528u54c1\"",
+   "slug": "u60c5u8da3u7528u54c1"
+  },
+  {
+   "id": 182,
+   "name": "\"u60c5u8da3u7f51u8863\"",
+   "slug": "u60c5u8da3u7f51u8863"
+  },
+  {
+   "id": 181,
+   "name": "\"underwear\"",
+   "slug": "underwear"
+  }
+ ],
+ "images": [
+  {
+   "id": 20583,
+   "date_created": "2024-07-03T07:59:36",
+   "date_created_gmt": "2024-07-02T15:59:36",
+   "date_modified": "2024-07-03T07:59:43",
+   "date_modified_gmt": "2024-07-02T15:59:43",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/3-7-scaled.jpg",
+   "name": "3-7.jpg",
+   "alt": "Magnolia Japanese kimono",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/3-7-scaled.jpg 2557w, https://rosetoys.org/wp-content/uploads/2024/07/3-7-scaled-430x431.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/3-7-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/3-7-scaled-700x701.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/3-7-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/3-7-799x800.jpg 799w, https://rosetoys.org/wp-content/uploads/2024/07/3-7-768x769.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/3-7-1534x1536.jpg 1534w, https://rosetoys.org/wp-content/uploads/2024/07/3-7-2046x2048.jpg 2046w, https://rosetoys.org/wp-content/uploads/2024/07/3-7-860x861.jpg 860w",
+   "sizes": "(max-width: 2557px) 100vw, 2557px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/3-7-scaled-430x431.jpg"
+  },
+  {
+   "id": 20585,
+   "date_created": "2024-07-03T07:59:44",
+   "date_created_gmt": "2024-07-02T15:59:44",
+   "date_modified": "2024-07-03T07:59:44",
+   "date_modified_gmt": "2024-07-02T15:59:44",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/4-7_5fe7a88f-1fc1-4e06-962a-b8644f4a04d8-scaled.jpg",
+   "name": "4-7_5fe7a88f-1fc1-4e06-962a-b8644f4a04d8.jpg",
+   "alt": "Magnolia Japanese kimono",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/4-7_5fe7a88f-1fc1-4e06-962a-b8644f4a04d8-scaled.jpg 1974w, https://rosetoys.org/wp-content/uploads/2024/07/4-7_5fe7a88f-1fc1-4e06-962a-b8644f4a04d8-scaled-430x558.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/4-7_5fe7a88f-1fc1-4e06-962a-b8644f4a04d8-scaled-150x195.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/4-7_5fe7a88f-1fc1-4e06-962a-b8644f4a04d8-scaled-700x908.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/4-7_5fe7a88f-1fc1-4e06-962a-b8644f4a04d8-231x300.jpg 231w, https://rosetoys.org/wp-content/uploads/2024/07/4-7_5fe7a88f-1fc1-4e06-962a-b8644f4a04d8-617x800.jpg 617w, https://rosetoys.org/wp-content/uploads/2024/07/4-7_5fe7a88f-1fc1-4e06-962a-b8644f4a04d8-768x996.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/4-7_5fe7a88f-1fc1-4e06-962a-b8644f4a04d8-1185x1536.jpg 1185w, https://rosetoys.org/wp-content/uploads/2024/07/4-7_5fe7a88f-1fc1-4e06-962a-b8644f4a04d8-1579x2048.jpg 1579w, https://rosetoys.org/wp-content/uploads/2024/07/4-7_5fe7a88f-1fc1-4e06-962a-b8644f4a04d8-860x1115.jpg 860w",
+   "sizes": "(max-width: 1974px) 100vw, 1974px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/4-7_5fe7a88f-1fc1-4e06-962a-b8644f4a04d8-scaled-430x558.jpg"
+  },
+  {
+   "id": 20586,
+   "date_created": "2024-07-03T07:59:52",
+   "date_created_gmt": "2024-07-02T15:59:52",
+   "date_modified": "2024-07-03T07:59:52",
+   "date_modified_gmt": "2024-07-02T15:59:52",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/2-7_d91eb8d7-8e1d-4b10-95a1-5145c52ee8bb-scaled.jpg",
+   "name": "2-7_d91eb8d7-8e1d-4b10-95a1-5145c52ee8bb.jpg",
+   "alt": "Magnolia Japanese kimono",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/2-7_d91eb8d7-8e1d-4b10-95a1-5145c52ee8bb-scaled.jpg 2560w, https://rosetoys.org/wp-content/uploads/2024/07/2-7_d91eb8d7-8e1d-4b10-95a1-5145c52ee8bb-scaled-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/2-7_d91eb8d7-8e1d-4b10-95a1-5145c52ee8bb-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/2-7_d91eb8d7-8e1d-4b10-95a1-5145c52ee8bb-scaled-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/2-7_d91eb8d7-8e1d-4b10-95a1-5145c52ee8bb-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/2-7_d91eb8d7-8e1d-4b10-95a1-5145c52ee8bb-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/2-7_d91eb8d7-8e1d-4b10-95a1-5145c52ee8bb-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/2-7_d91eb8d7-8e1d-4b10-95a1-5145c52ee8bb-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/2-7_d91eb8d7-8e1d-4b10-95a1-5145c52ee8bb-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/2-7_d91eb8d7-8e1d-4b10-95a1-5145c52ee8bb-860x860.jpg 860w",
+   "sizes": "(max-width: 2560px) 100vw, 2560px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/2-7_d91eb8d7-8e1d-4b10-95a1-5145c52ee8bb-scaled-430x430.jpg"
+  },
+  {
+   "id": 20587,
+   "date_created": "2024-07-03T08:00:01",
+   "date_created_gmt": "2024-07-02T16:00:01",
+   "date_modified": "2024-07-03T08:00:01",
+   "date_modified_gmt": "2024-07-02T16:00:01",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/6-7.jpg",
+   "name": "6-7.jpg",
+   "alt": "Magnolia Japanese kimono",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/6-7.jpg 2318w, https://rosetoys.org/wp-content/uploads/2024/07/6-7-430x393.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/6-7-150x137.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/6-7-700x640.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/6-7-328x300.jpg 328w, https://rosetoys.org/wp-content/uploads/2024/07/6-7-875x800.jpg 875w, https://rosetoys.org/wp-content/uploads/2024/07/6-7-768x702.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/6-7-1536x1405.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/6-7-2048x1873.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/6-7-860x787.jpg 860w",
+   "sizes": "(max-width: 2318px) 100vw, 2318px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/6-7-430x393.jpg"
+  },
+  {
+   "id": 20588,
+   "date_created": "2024-07-03T08:00:07",
+   "date_created_gmt": "2024-07-02T16:00:07",
+   "date_modified": "2024-07-03T08:00:07",
+   "date_modified_gmt": "2024-07-02T16:00:07",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/7-7.jpg",
+   "name": "7-7.jpg",
+   "alt": "Magnolia Japanese kimono",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/7-7.jpg 2318w, https://rosetoys.org/wp-content/uploads/2024/07/7-7-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/7-7-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/7-7-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/7-7-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/7-7-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/7-7-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/7-7-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/7-7-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/7-7-860x860.jpg 860w",
+   "sizes": "(max-width: 2318px) 100vw, 2318px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/7-7-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": false,
+   "options": [
+    "One size"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<del aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>55.99</bdi></span></del> <span class=\"screen-reader-text\">Original price was: &#036;55.99.</span><ins aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>25.99</bdi></span></ins><span class=\"screen-reader-text\">Current price is: &#036;25.99.</span>",
+ "related_ids": [
+  19038,
+  19045,
+  19187,
+  19021,
+  19076
+ ],
+ "meta_data": [
+  {
+   "id": 46216,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 46250,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 103006,
+   "key": "rank_math_title",
+   "value": "Magnolia Japanese Kimono | RoseToys"
+  },
+  {
+   "id": 103007,
+   "key": "rank_math_description",
+   "value": "Japanese polyester kimono with magnolia print and matching thong, as pictured. One size for 40-60 kg, wrap-tie costume robe."
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": false,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/20584",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

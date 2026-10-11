@@ -23,9 +23,10 @@
 |---|------|------|------|---------|------|---------|
 | 1 | 10-04 | Where can you buy replacement couch cushions | disclosure 无链接（发布时后处理失败） | ✅ 96h+（10-08 复查仍活） | 无 | 无链接（disclosure 文字仍在） |
 | 2 | 10-04 | Are personalized cushions good to buy | 无披露+纯文本 URL | ✅ 96h+（10-08 复查仍活） | 无 | ✅ 完好 |
-| 3 | 10-08 | How can I find a custom bench cushion | 披露+纯文本 URL（草稿 temp/quora_answer3_draft.txt） | ✅ 20h 存活（题页时间戳 20h，早于 48h——10-10 补 72h 点复查） | 无（题页 Recommended 第 1 位展开，另 2 个他人答案被折叠） | ✅ 纯文本完好，无锚点 |
+| 3 | 10-08 | How can I find a custom bench cushion | 披露+纯文本 URL（草稿 temp/quora_answer3_draft.txt） | ✅ 72h 存活（10-10 复查：独立页正常+题页展开） | 无（题页唯一展开位，2 个他人答案折叠） | ✅ 纯文本完好，无锚点（72h） |
+| 4 | 10-10 | I have an odd-shaped window seat that requires custom cushions. Where can I order cushions that fit perfectly in that space | 披露+纯文本 URL（草稿 temp/quora_answer4_draft.txt；落地页 window-seat-cushion 产品页预验 200） | ✅ 发布即验存活（/answer/ 独立页，10-12 补 48h 点复查） | 无（发布时全题 0 答案=独占位） | ✅ 纯文本完好，无锚点（发布即验） |
 
-**初判（n=3 不足以下结论）**：三形态（disclosure-only / URL-only / 组合）全部零死亡零折叠，前两条已跨 96h；组合形态（#3）~20h 首查通过且题页独占可见位。**推荐组合形态=披露文字+纯文本 URL**（披露是账号长期防封资产，URL 放答案中后段第三方列举语境）。
+**初判（n=4 不足以下结论）**：三形态（disclosure-only / URL-only / 组合）全部零死亡零折叠，#1 #2 跨 96h、#3 跨 72h；组合形态（#3 #4）题页独占可见位。**推荐组合形态=披露文字+纯文本 URL**（披露是账号长期防封资产，URL 放答案中后段第三方列举语境）。
 
 ## 3. 内容纪律
 
@@ -63,4 +64,6 @@
 ## 信号台账
 
 - 10-08 复查读数：#3 3 views / 0 upvote（题页独占展开位）；#1 #2 各 2 views / 0 upvote；profile 13 Answers / 40 content views（20 this month）；全站无 Verify 黄条、无 CF 挑战。
-- 选题池（10-08 搜索实测，均 0 答案）：What are the best custom window seat cushions（best 型+3 年老题）；I have an odd-shaped window seat that requires custom cushions. Where can I order cushions that fit perfectly（真实求购场景，采购意图最强）——第 4 条候选，落地页发布前先验产品页 200。
+- 10-10 复查+发布：#3 72h 存活，4 views / 0 upvote，URL 纯文本完好；#4 发布成功（odd-shaped window seat 题，/answer/ 独立页验证通过）；profile 14 Answers / 45 content views；无 Verify 黄条。当日发布 1 条（上限内）。
+- 10-10 CF 教训：连续硬导航（/search→首页→/unanswered 猜错 slug 等多连跳）触发整页挑战且不自动过——**单 tab 内导航≤2 次，触发挑战立即关 tab 冷却 60s 换新**；冷却后 /search 可正常访问。0 答案新题不被 Google 索引，WebSearch 找不到 Quora URL，定位真实题目必须走站内 /search。
+- 选题池（10-08 搜索实测，均 0 答案）：What are the best custom window seat cushions（best 型+3 年老题）——下一条候选，落地页发布前先验产品页 200。~~odd-shaped window seat 题~~ 已作 #4 发布（10-10）。

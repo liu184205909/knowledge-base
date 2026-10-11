@@ -1,0 +1,210 @@
+{
+ "id": 21564,
+ "name": "Long skirt with a deep V high slit chain",
+ "slug": "j-3030-long-skirt-with-a-deep-v-high-slit-chain",
+ "permalink": "https://rosetoys.org/product/j-3030-long-skirt-with-a-deep-v-high-slit-chain/",
+ "date_created": "2024-07-03T10:04:20",
+ "date_created_gmt": "2024-07-03T02:04:20",
+ "date_modified": "2026-09-04T16:07:12",
+ "date_modified_gmt": "2026-09-04T08:07:12",
+ "type": "variable",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>Product Details:<br data-mce-fragment=\"1\">Material: Polyester<br data-mce-fragment=\"1\">Single item type:D<span data-mce-fragment=\"1\">ress</span> + T pants<br data-mce-fragment=\"1\">Features:Chain embellishment<br data-mce-fragment=\"1\">Specifications:<br data-mce-fragment=\"1\"> M Recommended weight: 105-120 lbs<br data-mce-fragment=\"1\"> L Recommended weight: 120-140 lbs<br data-mce-fragment=\"1\"> XL recommended weight: 140-155 lbs</p>\n<div id=\"gtx-trans\" style=\"position: absolute; left: 233px; top: 162.594px;\">\n<div class=\"gtx-trans-icon\"></div>\n</div>\n",
+ "short_description": "",
+ "sku": "A9103927869713",
+ "price": "25.99",
+ "regular_price": "",
+ "sale_price": "",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 163,
+   "name": "Nightwear",
+   "slug": "nightwear"
+  }
+ ],
+ "brands": [],
+ "tags": [],
+ "images": [
+  {
+   "id": 21668,
+   "date_created": "2024-07-03T18:10:03",
+   "date_created_gmt": "2024-07-03T02:10:03",
+   "date_modified": "2024-07-03T18:10:03",
+   "date_modified_gmt": "2024-07-03T02:10:03",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/1-5_d2c9e330-98b8-44a8-b9dc-485e3022c9e9.jpg",
+   "name": "1-5_d2c9e330-98b8-44a8-b9dc-485e3022c9e9.jpg",
+   "alt": "Long skirt with a deep V high slit chain",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/1-5_d2c9e330-98b8-44a8-b9dc-485e3022c9e9.jpg 2000w, https://rosetoys.org/wp-content/uploads/2024/07/1-5_d2c9e330-98b8-44a8-b9dc-485e3022c9e9-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/1-5_d2c9e330-98b8-44a8-b9dc-485e3022c9e9-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/1-5_d2c9e330-98b8-44a8-b9dc-485e3022c9e9-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/1-5_d2c9e330-98b8-44a8-b9dc-485e3022c9e9-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/1-5_d2c9e330-98b8-44a8-b9dc-485e3022c9e9-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/1-5_d2c9e330-98b8-44a8-b9dc-485e3022c9e9-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/1-5_d2c9e330-98b8-44a8-b9dc-485e3022c9e9-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/1-5_d2c9e330-98b8-44a8-b9dc-485e3022c9e9-860x860.jpg 860w",
+   "sizes": "(max-width: 2000px) 100vw, 2000px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/1-5_d2c9e330-98b8-44a8-b9dc-485e3022c9e9-430x430.jpg"
+  },
+  {
+   "id": 21670,
+   "date_created": "2024-07-03T18:10:06",
+   "date_created_gmt": "2024-07-03T02:10:06",
+   "date_modified": "2024-07-03T18:10:06",
+   "date_modified_gmt": "2024-07-03T02:10:06",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/2-5_1b3cc507-163b-4004-94e8-777dc37f81e3.jpg",
+   "name": "2-5_1b3cc507-163b-4004-94e8-777dc37f81e3.jpg",
+   "alt": "Long skirt with a deep V high slit chain",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/2-5_1b3cc507-163b-4004-94e8-777dc37f81e3.jpg 2000w, https://rosetoys.org/wp-content/uploads/2024/07/2-5_1b3cc507-163b-4004-94e8-777dc37f81e3-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/2-5_1b3cc507-163b-4004-94e8-777dc37f81e3-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/2-5_1b3cc507-163b-4004-94e8-777dc37f81e3-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/2-5_1b3cc507-163b-4004-94e8-777dc37f81e3-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/2-5_1b3cc507-163b-4004-94e8-777dc37f81e3-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/2-5_1b3cc507-163b-4004-94e8-777dc37f81e3-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/2-5_1b3cc507-163b-4004-94e8-777dc37f81e3-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/2-5_1b3cc507-163b-4004-94e8-777dc37f81e3-860x860.jpg 860w",
+   "sizes": "(max-width: 2000px) 100vw, 2000px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/2-5_1b3cc507-163b-4004-94e8-777dc37f81e3-430x430.jpg"
+  },
+  {
+   "id": 21671,
+   "date_created": "2024-07-03T18:10:09",
+   "date_created_gmt": "2024-07-03T02:10:09",
+   "date_modified": "2024-07-03T18:10:09",
+   "date_modified_gmt": "2024-07-03T02:10:09",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/3-5.jpg",
+   "name": "3-5.jpg",
+   "alt": "Long skirt with a deep V high slit chain",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/3-5.jpg 1999w, https://rosetoys.org/wp-content/uploads/2024/07/3-5-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/3-5-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/3-5-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/3-5-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/3-5-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/3-5-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/3-5-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/3-5-860x860.jpg 860w",
+   "sizes": "(max-width: 1999px) 100vw, 1999px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/3-5-430x430.jpg"
+  },
+  {
+   "id": 21672,
+   "date_created": "2024-07-03T18:10:12",
+   "date_created_gmt": "2024-07-03T02:10:12",
+   "date_modified": "2024-07-03T18:10:12",
+   "date_modified_gmt": "2024-07-03T02:10:12",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/4-5_b0d281a2-dfbe-4771-885e-c8aadb1ada25.jpg",
+   "name": "4-5_b0d281a2-dfbe-4771-885e-c8aadb1ada25.jpg",
+   "alt": "Long skirt with a deep V high slit chain",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/4-5_b0d281a2-dfbe-4771-885e-c8aadb1ada25.jpg 2000w, https://rosetoys.org/wp-content/uploads/2024/07/4-5_b0d281a2-dfbe-4771-885e-c8aadb1ada25-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/4-5_b0d281a2-dfbe-4771-885e-c8aadb1ada25-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/4-5_b0d281a2-dfbe-4771-885e-c8aadb1ada25-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/4-5_b0d281a2-dfbe-4771-885e-c8aadb1ada25-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/4-5_b0d281a2-dfbe-4771-885e-c8aadb1ada25-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/4-5_b0d281a2-dfbe-4771-885e-c8aadb1ada25-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/4-5_b0d281a2-dfbe-4771-885e-c8aadb1ada25-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/4-5_b0d281a2-dfbe-4771-885e-c8aadb1ada25-860x860.jpg 860w",
+   "sizes": "(max-width: 2000px) 100vw, 2000px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/4-5_b0d281a2-dfbe-4771-885e-c8aadb1ada25-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "L(120-140 lbs)",
+    "M(105-120lbs)",
+    "XL(140-155 lbs)"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [
+  21673,
+  21961,
+  21674,
+  21962,
+  21675,
+  21963
+ ],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<del aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>55.99</bdi></span></del> <span class=\"screen-reader-text\">Original price was: &#036;55.99.</span><ins aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>25.99</bdi></span></ins><span class=\"screen-reader-text\">Current price is: &#036;25.99.</span>",
+ "related_ids": [
+  19186,
+  20072,
+  20537,
+  19728,
+  19967
+ ],
+ "meta_data": [
+  {
+   "id": 54782,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 55673,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 102249,
+   "key": "rank_math_title",
+   "value": "Long skirt with a deep V high slit chain | RoseToys"
+  },
+  {
+   "id": 102250,
+   "key": "rank_math_description",
+   "value": "Polyester long skirt with a deep V high slit chain with chain embellishment. Includes D ress + T pants, recommended weight 105-155 lbs."
+  },
+  {
+   "id": 111261,
+   "key": "_elementor_page_assets",
+   "value": []
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": true,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/21564",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "id": 22932,
+ "name": "Lace one-piece vest",
+ "slug": "t-003-lace-one-piece-vest",
+ "permalink": "https://rosetoys.org/product/t-003-lace-one-piece-vest/",
+ "date_created": "2024-07-03T11:33:39",
+ "date_created_gmt": "2024-07-03T03:33:39",
+ "date_modified": "2026-09-04T16:01:38",
+ "date_modified_gmt": "2026-09-04T08:01:38",
+ "type": "variable",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>Product Details:<br data-mce-fragment=\"1\">Material: Polyester<br data-mce-fragment=\"1\">Type of item: Jumpsuit<br data-mce-fragment=\"1\">Feature: Lace cinched waist<br data-mce-fragment=\"1\">Color: White/Black<br data-mce-fragment=\"1\">Size: One size</p>\n<p>Recommended weight: 85-135 lbs</p>\n",
+ "short_description": "",
+ "sku": "A9069721485585",
+ "price": "19.99",
+ "regular_price": "",
+ "sale_price": "",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 163,
+   "name": "Nightwear",
+   "slug": "nightwear"
+  }
+ ],
+ "brands": [],
+ "tags": [],
+ "images": [
+  {
+   "id": 22966,
+   "date_created": "2024-07-03T19:34:05",
+   "date_created_gmt": "2024-07-03T03:34:05",
+   "date_modified": "2024-07-03T19:34:05",
+   "date_modified_gmt": "2024-07-03T03:34:05",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/3_6ffb33ce-4712-4286-85f8-90bb84d656ea.jpg",
+   "name": "3_6ffb33ce-4712-4286-85f8-90bb84d656ea.jpg",
+   "alt": "Lace one-piece vest",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/3_6ffb33ce-4712-4286-85f8-90bb84d656ea.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/3_6ffb33ce-4712-4286-85f8-90bb84d656ea-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/3_6ffb33ce-4712-4286-85f8-90bb84d656ea-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/3_6ffb33ce-4712-4286-85f8-90bb84d656ea-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/3_6ffb33ce-4712-4286-85f8-90bb84d656ea-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/3_6ffb33ce-4712-4286-85f8-90bb84d656ea-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/3_6ffb33ce-4712-4286-85f8-90bb84d656ea-430x430.jpg"
+  },
+  {
+   "id": 22968,
+   "date_created": "2024-07-03T19:34:07",
+   "date_created_gmt": "2024-07-03T03:34:07",
+   "date_modified": "2024-07-03T19:34:07",
+   "date_modified_gmt": "2024-07-03T03:34:07",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/4_8c6e509e-fbef-4e67-b446-f7872b094a00.jpg",
+   "name": "4_8c6e509e-fbef-4e67-b446-f7872b094a00.jpg",
+   "alt": "Lace one-piece vest",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/4_8c6e509e-fbef-4e67-b446-f7872b094a00.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/4_8c6e509e-fbef-4e67-b446-f7872b094a00-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/4_8c6e509e-fbef-4e67-b446-f7872b094a00-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/4_8c6e509e-fbef-4e67-b446-f7872b094a00-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/4_8c6e509e-fbef-4e67-b446-f7872b094a00-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/4_8c6e509e-fbef-4e67-b446-f7872b094a00-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/4_8c6e509e-fbef-4e67-b446-f7872b094a00-430x430.jpg"
+  },
+  {
+   "id": 22969,
+   "date_created": "2024-07-03T19:34:08",
+   "date_created_gmt": "2024-07-03T03:34:08",
+   "date_modified": "2024-07-03T19:34:08",
+   "date_modified_gmt": "2024-07-03T03:34:08",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/5_3f0e1000-7e21-4815-8af5-4dd0ca334612.jpg",
+   "name": "5_3f0e1000-7e21-4815-8af5-4dd0ca334612.jpg",
+   "alt": "Lace one-piece vest",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/5_3f0e1000-7e21-4815-8af5-4dd0ca334612.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/5_3f0e1000-7e21-4815-8af5-4dd0ca334612-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/5_3f0e1000-7e21-4815-8af5-4dd0ca334612-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/5_3f0e1000-7e21-4815-8af5-4dd0ca334612-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/5_3f0e1000-7e21-4815-8af5-4dd0ca334612-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/5_3f0e1000-7e21-4815-8af5-4dd0ca334612-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/5_3f0e1000-7e21-4815-8af5-4dd0ca334612-430x430.jpg"
+  },
+  {
+   "id": 22970,
+   "date_created": "2024-07-03T19:34:09",
+   "date_created_gmt": "2024-07-03T03:34:09",
+   "date_modified": "2024-07-03T19:34:09",
+   "date_modified_gmt": "2024-07-03T03:34:09",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/6_e4d0730b-7fc6-4a8f-b843-676d751de06c.jpg",
+   "name": "6_e4d0730b-7fc6-4a8f-b843-676d751de06c.jpg",
+   "alt": "Lace one-piece vest",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/6_e4d0730b-7fc6-4a8f-b843-676d751de06c.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/6_e4d0730b-7fc6-4a8f-b843-676d751de06c-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/6_e4d0730b-7fc6-4a8f-b843-676d751de06c-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/6_e4d0730b-7fc6-4a8f-b843-676d751de06c-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/6_e4d0730b-7fc6-4a8f-b843-676d751de06c-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/6_e4d0730b-7fc6-4a8f-b843-676d751de06c-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/6_e4d0730b-7fc6-4a8f-b843-676d751de06c-430x430.jpg"
+  },
+  {
+   "id": 22971,
+   "date_created": "2024-07-03T19:34:10",
+   "date_created_gmt": "2024-07-03T03:34:10",
+   "date_modified": "2024-07-03T19:34:10",
+   "date_modified_gmt": "2024-07-03T03:34:10",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/7_cfe2c6ce-15aa-4a0f-995a-ca14a79b4b23.jpg",
+   "name": "7_cfe2c6ce-15aa-4a0f-995a-ca14a79b4b23.jpg",
+   "alt": "Lace one-piece vest",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/7_cfe2c6ce-15aa-4a0f-995a-ca14a79b4b23.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/7_cfe2c6ce-15aa-4a0f-995a-ca14a79b4b23-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/7_cfe2c6ce-15aa-4a0f-995a-ca14a79b4b23-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/7_cfe2c6ce-15aa-4a0f-995a-ca14a79b4b23-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/7_cfe2c6ce-15aa-4a0f-995a-ca14a79b4b23-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/7_cfe2c6ce-15aa-4a0f-995a-ca14a79b4b23-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/7_cfe2c6ce-15aa-4a0f-995a-ca14a79b4b23-430x430.jpg"
+  },
+  {
+   "id": 22972,
+   "date_created": "2024-07-03T19:34:11",
+   "date_created_gmt": "2024-07-03T03:34:11",
+   "date_modified": "2024-07-03T19:34:11",
+   "date_modified_gmt": "2024-07-03T03:34:11",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/8_9205b855-eee6-42eb-a349-08ca00601471.jpg",
+   "name": "8_9205b855-eee6-42eb-a349-08ca00601471.jpg",
+   "alt": "Lace one-piece vest",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/8_9205b855-eee6-42eb-a349-08ca00601471.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/8_9205b855-eee6-42eb-a349-08ca00601471-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/8_9205b855-eee6-42eb-a349-08ca00601471-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/8_9205b855-eee6-42eb-a349-08ca00601471-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/8_9205b855-eee6-42eb-a349-08ca00601471-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/8_9205b855-eee6-42eb-a349-08ca00601471-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/8_9205b855-eee6-42eb-a349-08ca00601471-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "One size"
+   ]
+  },
+  {
+   "id": 5,
+   "name": "Color",
+   "slug": "pa_color",
+   "position": 1,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "Black",
+    "White"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [
+  22973,
+  22974
+ ],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<del aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>40.99</bdi></span></del> <span class=\"screen-reader-text\">Original price was: &#036;40.99.</span><ins aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>19.99</bdi></span></ins><span class=\"screen-reader-text\">Current price is: &#036;19.99.</span>",
+ "related_ids": [
+  19276,
+  20280,
+  20721,
+  20187,
+  19346
+ ],
+ "meta_data": [
+  {
+   "id": 71032,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 71471,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 101514,
+   "key": "rank_math_title",
+   "value": "Lace one-piece vest | RoseToys"
+  },
+  {
+   "id": 101515,
+   "key": "rank_math_description",
+   "value": "Polyester lace one-piece vest with lace cinched waist in white, black. One size, recommended weight 85-135 lbs, available at RoseToys."
+  },
+  {
+   "id": 110761,
+   "key": "_elementor_page_assets",
+   "value": []
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": true,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/22932",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

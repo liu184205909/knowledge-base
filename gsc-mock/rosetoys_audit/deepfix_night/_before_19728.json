@@ -1,0 +1,277 @@
+{
+ "id": 19728,
+ "name": "Tight stretch jumpsuit",
+ "slug": "m-033-tight-stretch-jumpsuit",
+ "permalink": "https://rosetoys.org/product/m-033-tight-stretch-jumpsuit/",
+ "date_created": "2024-07-02T21:34:43",
+ "date_created_gmt": "2024-07-02T13:34:43",
+ "date_modified": "2026-09-04T16:19:56",
+ "date_modified_gmt": "2026-09-04T08:19:56",
+ "type": "variable",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>Product Details:<br data-mce-fragment=\"1\">Material: polyester<br data-mce-fragment=\"1\">Project type: Jumpsuit<br data-mce-fragment=\"1\">Features: Fitted fit<br data-mce-fragment=\"1\">Color: Black/White<br data-mce-fragment=\"1\">Specification: one size Recommended weight: 40-60kg<br data-mce-fragment=\"1\"></p>\n",
+ "short_description": "",
+ "sku": "A8953176883473",
+ "price": "20.99",
+ "regular_price": "",
+ "sale_price": "",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 163,
+   "name": "Nightwear",
+   "slug": "nightwear"
+  }
+ ],
+ "brands": [],
+ "tags": [
+  {
+   "id": 113,
+   "name": "\"New\"",
+   "slug": "new"
+  }
+ ],
+ "images": [
+  {
+   "id": 19747,
+   "date_created": "2024-07-03T05:35:32",
+   "date_created_gmt": "2024-07-02T13:35:32",
+   "date_modified": "2024-07-03T05:35:32",
+   "date_modified_gmt": "2024-07-02T13:35:32",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/1-10_18fa68f2-26d8-4a47-9833-5c9e76872d06.jpg",
+   "name": "1-10_18fa68f2-26d8-4a47-9833-5c9e76872d06.jpg",
+   "alt": "Tight stretch jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/1-10_18fa68f2-26d8-4a47-9833-5c9e76872d06.jpg 2011w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_18fa68f2-26d8-4a47-9833-5c9e76872d06-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_18fa68f2-26d8-4a47-9833-5c9e76872d06-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_18fa68f2-26d8-4a47-9833-5c9e76872d06-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_18fa68f2-26d8-4a47-9833-5c9e76872d06-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_18fa68f2-26d8-4a47-9833-5c9e76872d06-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_18fa68f2-26d8-4a47-9833-5c9e76872d06-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_18fa68f2-26d8-4a47-9833-5c9e76872d06-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_18fa68f2-26d8-4a47-9833-5c9e76872d06-860x860.jpg 860w",
+   "sizes": "(max-width: 2011px) 100vw, 2011px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/1-10_18fa68f2-26d8-4a47-9833-5c9e76872d06-430x430.jpg"
+  },
+  {
+   "id": 19749,
+   "date_created": "2024-07-03T05:35:36",
+   "date_created_gmt": "2024-07-02T13:35:36",
+   "date_modified": "2024-07-03T05:35:36",
+   "date_modified_gmt": "2024-07-02T13:35:36",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/5-10_3a990f5c-5012-4843-bb99-3e44760daf87.jpg",
+   "name": "5-10_3a990f5c-5012-4843-bb99-3e44760daf87.jpg",
+   "alt": "Tight stretch jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/5-10_3a990f5c-5012-4843-bb99-3e44760daf87.jpg 2160w, https://rosetoys.org/wp-content/uploads/2024/07/5-10_3a990f5c-5012-4843-bb99-3e44760daf87-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/5-10_3a990f5c-5012-4843-bb99-3e44760daf87-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/5-10_3a990f5c-5012-4843-bb99-3e44760daf87-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/5-10_3a990f5c-5012-4843-bb99-3e44760daf87-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/5-10_3a990f5c-5012-4843-bb99-3e44760daf87-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/5-10_3a990f5c-5012-4843-bb99-3e44760daf87-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/5-10_3a990f5c-5012-4843-bb99-3e44760daf87-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/5-10_3a990f5c-5012-4843-bb99-3e44760daf87-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/5-10_3a990f5c-5012-4843-bb99-3e44760daf87-860x860.jpg 860w",
+   "sizes": "(max-width: 2160px) 100vw, 2160px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/5-10_3a990f5c-5012-4843-bb99-3e44760daf87-430x430.jpg"
+  },
+  {
+   "id": 19750,
+   "date_created": "2024-07-03T05:35:40",
+   "date_created_gmt": "2024-07-02T13:35:40",
+   "date_modified": "2024-07-03T05:35:40",
+   "date_modified_gmt": "2024-07-02T13:35:40",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/3-10_862d419a-a1ef-4173-9cd6-47719410ef9e.jpg",
+   "name": "3-10_862d419a-a1ef-4173-9cd6-47719410ef9e.jpg",
+   "alt": "Tight stretch jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/3-10_862d419a-a1ef-4173-9cd6-47719410ef9e.jpg 2160w, https://rosetoys.org/wp-content/uploads/2024/07/3-10_862d419a-a1ef-4173-9cd6-47719410ef9e-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/3-10_862d419a-a1ef-4173-9cd6-47719410ef9e-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/3-10_862d419a-a1ef-4173-9cd6-47719410ef9e-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/3-10_862d419a-a1ef-4173-9cd6-47719410ef9e-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/3-10_862d419a-a1ef-4173-9cd6-47719410ef9e-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/3-10_862d419a-a1ef-4173-9cd6-47719410ef9e-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/3-10_862d419a-a1ef-4173-9cd6-47719410ef9e-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/3-10_862d419a-a1ef-4173-9cd6-47719410ef9e-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/3-10_862d419a-a1ef-4173-9cd6-47719410ef9e-860x860.jpg 860w",
+   "sizes": "(max-width: 2160px) 100vw, 2160px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/3-10_862d419a-a1ef-4173-9cd6-47719410ef9e-430x430.jpg"
+  },
+  {
+   "id": 19751,
+   "date_created": "2024-07-03T05:35:45",
+   "date_created_gmt": "2024-07-02T13:35:45",
+   "date_modified": "2024-07-03T05:35:45",
+   "date_modified_gmt": "2024-07-02T13:35:45",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/4-10_8c64ebae-8f61-4f1c-8df8-85098f4356eb.jpg",
+   "name": "4-10_8c64ebae-8f61-4f1c-8df8-85098f4356eb.jpg",
+   "alt": "Tight stretch jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/4-10_8c64ebae-8f61-4f1c-8df8-85098f4356eb.jpg 2061w, https://rosetoys.org/wp-content/uploads/2024/07/4-10_8c64ebae-8f61-4f1c-8df8-85098f4356eb-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/4-10_8c64ebae-8f61-4f1c-8df8-85098f4356eb-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/4-10_8c64ebae-8f61-4f1c-8df8-85098f4356eb-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/4-10_8c64ebae-8f61-4f1c-8df8-85098f4356eb-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/4-10_8c64ebae-8f61-4f1c-8df8-85098f4356eb-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/4-10_8c64ebae-8f61-4f1c-8df8-85098f4356eb-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/4-10_8c64ebae-8f61-4f1c-8df8-85098f4356eb-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/4-10_8c64ebae-8f61-4f1c-8df8-85098f4356eb-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/4-10_8c64ebae-8f61-4f1c-8df8-85098f4356eb-860x860.jpg 860w",
+   "sizes": "(max-width: 2061px) 100vw, 2061px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/4-10_8c64ebae-8f61-4f1c-8df8-85098f4356eb-430x430.jpg"
+  },
+  {
+   "id": 19752,
+   "date_created": "2024-07-03T05:35:50",
+   "date_created_gmt": "2024-07-02T13:35:50",
+   "date_modified": "2024-07-03T05:35:50",
+   "date_modified_gmt": "2024-07-02T13:35:50",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/6-10_7e2ddbfe-825b-470b-82c4-7768b7408cb5.jpg",
+   "name": "6-10_7e2ddbfe-825b-470b-82c4-7768b7408cb5.jpg",
+   "alt": "Tight stretch jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/6-10_7e2ddbfe-825b-470b-82c4-7768b7408cb5.jpg 2061w, https://rosetoys.org/wp-content/uploads/2024/07/6-10_7e2ddbfe-825b-470b-82c4-7768b7408cb5-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/6-10_7e2ddbfe-825b-470b-82c4-7768b7408cb5-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/6-10_7e2ddbfe-825b-470b-82c4-7768b7408cb5-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/6-10_7e2ddbfe-825b-470b-82c4-7768b7408cb5-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/6-10_7e2ddbfe-825b-470b-82c4-7768b7408cb5-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/6-10_7e2ddbfe-825b-470b-82c4-7768b7408cb5-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/6-10_7e2ddbfe-825b-470b-82c4-7768b7408cb5-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/6-10_7e2ddbfe-825b-470b-82c4-7768b7408cb5-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/6-10_7e2ddbfe-825b-470b-82c4-7768b7408cb5-860x860.jpg 860w",
+   "sizes": "(max-width: 2061px) 100vw, 2061px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/6-10_7e2ddbfe-825b-470b-82c4-7768b7408cb5-430x430.jpg"
+  },
+  {
+   "id": 19753,
+   "date_created": "2024-07-03T05:35:55",
+   "date_created_gmt": "2024-07-02T13:35:55",
+   "date_modified": "2024-07-03T05:35:55",
+   "date_modified_gmt": "2024-07-02T13:35:55",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/7-10_1fbab95c-46e3-4694-8557-295a7263e8f2.jpg",
+   "name": "7-10_1fbab95c-46e3-4694-8557-295a7263e8f2.jpg",
+   "alt": "Tight stretch jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/7-10_1fbab95c-46e3-4694-8557-295a7263e8f2.jpg 2160w, https://rosetoys.org/wp-content/uploads/2024/07/7-10_1fbab95c-46e3-4694-8557-295a7263e8f2-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/7-10_1fbab95c-46e3-4694-8557-295a7263e8f2-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/7-10_1fbab95c-46e3-4694-8557-295a7263e8f2-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/7-10_1fbab95c-46e3-4694-8557-295a7263e8f2-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/7-10_1fbab95c-46e3-4694-8557-295a7263e8f2-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/7-10_1fbab95c-46e3-4694-8557-295a7263e8f2-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/7-10_1fbab95c-46e3-4694-8557-295a7263e8f2-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/7-10_1fbab95c-46e3-4694-8557-295a7263e8f2-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/7-10_1fbab95c-46e3-4694-8557-295a7263e8f2-860x860.jpg 860w",
+   "sizes": "(max-width: 2160px) 100vw, 2160px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/7-10_1fbab95c-46e3-4694-8557-295a7263e8f2-430x430.jpg"
+  },
+  {
+   "id": 19754,
+   "date_created": "2024-07-03T05:35:59",
+   "date_created_gmt": "2024-07-02T13:35:59",
+   "date_modified": "2024-07-03T05:35:59",
+   "date_modified_gmt": "2024-07-02T13:35:59",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/9-10_89d09ff8-7f8b-4bbe-b3d8-f08c9cd2b746.jpg",
+   "name": "9-10_89d09ff8-7f8b-4bbe-b3d8-f08c9cd2b746.jpg",
+   "alt": "Tight stretch jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/9-10_89d09ff8-7f8b-4bbe-b3d8-f08c9cd2b746.jpg 2160w, https://rosetoys.org/wp-content/uploads/2024/07/9-10_89d09ff8-7f8b-4bbe-b3d8-f08c9cd2b746-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/9-10_89d09ff8-7f8b-4bbe-b3d8-f08c9cd2b746-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/9-10_89d09ff8-7f8b-4bbe-b3d8-f08c9cd2b746-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/9-10_89d09ff8-7f8b-4bbe-b3d8-f08c9cd2b746-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/9-10_89d09ff8-7f8b-4bbe-b3d8-f08c9cd2b746-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/9-10_89d09ff8-7f8b-4bbe-b3d8-f08c9cd2b746-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/9-10_89d09ff8-7f8b-4bbe-b3d8-f08c9cd2b746-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/9-10_89d09ff8-7f8b-4bbe-b3d8-f08c9cd2b746-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/9-10_89d09ff8-7f8b-4bbe-b3d8-f08c9cd2b746-860x860.jpg 860w",
+   "sizes": "(max-width: 2160px) 100vw, 2160px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/9-10_89d09ff8-7f8b-4bbe-b3d8-f08c9cd2b746-430x430.jpg"
+  },
+  {
+   "id": 19755,
+   "date_created": "2024-07-03T05:36:05",
+   "date_created_gmt": "2024-07-02T13:36:05",
+   "date_modified": "2024-07-03T05:36:05",
+   "date_modified_gmt": "2024-07-02T13:36:05",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/10-10_5d37ea06-e7e9-4104-8c2a-482bd02bc0d9.jpg",
+   "name": "10-10_5d37ea06-e7e9-4104-8c2a-482bd02bc0d9.jpg",
+   "alt": "Tight stretch jumpsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/10-10_5d37ea06-e7e9-4104-8c2a-482bd02bc0d9.jpg 2160w, https://rosetoys.org/wp-content/uploads/2024/07/10-10_5d37ea06-e7e9-4104-8c2a-482bd02bc0d9-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/10-10_5d37ea06-e7e9-4104-8c2a-482bd02bc0d9-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/10-10_5d37ea06-e7e9-4104-8c2a-482bd02bc0d9-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/10-10_5d37ea06-e7e9-4104-8c2a-482bd02bc0d9-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/10-10_5d37ea06-e7e9-4104-8c2a-482bd02bc0d9-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/10-10_5d37ea06-e7e9-4104-8c2a-482bd02bc0d9-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/10-10_5d37ea06-e7e9-4104-8c2a-482bd02bc0d9-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/10-10_5d37ea06-e7e9-4104-8c2a-482bd02bc0d9-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/10-10_5d37ea06-e7e9-4104-8c2a-482bd02bc0d9-860x860.jpg 860w",
+   "sizes": "(max-width: 2160px) 100vw, 2160px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/10-10_5d37ea06-e7e9-4104-8c2a-482bd02bc0d9-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "One size"
+   ]
+  },
+  {
+   "id": 5,
+   "name": "Color",
+   "slug": "pa_color",
+   "position": 1,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "Black",
+    "White"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [
+  19757,
+  22525,
+  19758,
+  22526,
+  22537
+ ],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>20.99</bdi></span>",
+ "related_ids": [
+  17079,
+  17139,
+  17491,
+  17110,
+  16891
+ ],
+ "meta_data": [
+  {
+   "id": 39079,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 39304,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 103778,
+   "key": "rank_math_title",
+   "value": "Tight stretch jumpsuit | RoseToys"
+  },
+  {
+   "id": 103779,
+   "key": "rank_math_description",
+   "value": "polyester tight stretch jumpsuit with fitted fit in black, white. One size, recommended weight 40-60kg, available at RoseToys."
+  },
+  {
+   "id": 110847,
+   "key": "_elementor_page_assets",
+   "value": []
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": true,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/19728",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

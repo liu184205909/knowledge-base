@@ -1,0 +1,194 @@
+{
+ "id": 21815,
+ "name": "Big ribbon gift uniform",
+ "slug": "p-181-big-ribbon-gift-uniform",
+ "permalink": "https://rosetoys.org/product/p-181-big-ribbon-gift-uniform/",
+ "date_created": "2024-07-03T10:16:06",
+ "date_created_gmt": "2024-07-03T02:16:06",
+ "date_modified": "2026-09-04T16:06:08",
+ "date_modified_gmt": "2026-09-04T08:06:08",
+ "type": "simple",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>Product Details:<br data-mce-fragment=\"1\">Material: Polyester<br data-mce-fragment=\"1\">Item Type: Clothing only<br data-mce-fragment=\"1\">Features: Christmas style<br data-mce-fragment=\"1\">Color: Red<br data-mce-fragment=\"1\">Size: One size<br data-mce-fragment=\"1\">Recommended weight: 40-60Kg</p>\n",
+ "short_description": "",
+ "sku": "A8996731126033",
+ "price": "21.99",
+ "regular_price": "42.99",
+ "sale_price": "21.99",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 163,
+   "name": "Nightwear",
+   "slug": "nightwear"
+  }
+ ],
+ "brands": [],
+ "tags": [
+  {
+   "id": 113,
+   "name": "\"New\"",
+   "slug": "new"
+  }
+ ],
+ "images": [
+  {
+   "id": 21814,
+   "date_created": "2024-07-03T18:16:02",
+   "date_created_gmt": "2024-07-03T02:16:02",
+   "date_modified": "2024-07-03T18:16:06",
+   "date_modified_gmt": "2024-07-03T02:16:06",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/1-10_8248c931-9592-444d-8d27-e4054b8495ff.jpg",
+   "name": "1-10_8248c931-9592-444d-8d27-e4054b8495ff.jpg",
+   "alt": "Big ribbon gift uniform",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/1-10_8248c931-9592-444d-8d27-e4054b8495ff.jpg 2160w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_8248c931-9592-444d-8d27-e4054b8495ff-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_8248c931-9592-444d-8d27-e4054b8495ff-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_8248c931-9592-444d-8d27-e4054b8495ff-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_8248c931-9592-444d-8d27-e4054b8495ff-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_8248c931-9592-444d-8d27-e4054b8495ff-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_8248c931-9592-444d-8d27-e4054b8495ff-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_8248c931-9592-444d-8d27-e4054b8495ff-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_8248c931-9592-444d-8d27-e4054b8495ff-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/1-10_8248c931-9592-444d-8d27-e4054b8495ff-860x860.jpg 860w",
+   "sizes": "(max-width: 2160px) 100vw, 2160px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/1-10_8248c931-9592-444d-8d27-e4054b8495ff-430x430.jpg"
+  },
+  {
+   "id": 21816,
+   "date_created": "2024-07-03T18:16:07",
+   "date_created_gmt": "2024-07-03T02:16:07",
+   "date_modified": "2024-07-03T18:16:07",
+   "date_modified_gmt": "2024-07-03T02:16:07",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/2-10_491d4f6f-c07e-463c-a12c-536b860dbbef.jpg",
+   "name": "2-10_491d4f6f-c07e-463c-a12c-536b860dbbef.jpg",
+   "alt": "Big ribbon gift uniform",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/2-10_491d4f6f-c07e-463c-a12c-536b860dbbef.jpg 2091w, https://rosetoys.org/wp-content/uploads/2024/07/2-10_491d4f6f-c07e-463c-a12c-536b860dbbef-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/2-10_491d4f6f-c07e-463c-a12c-536b860dbbef-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/2-10_491d4f6f-c07e-463c-a12c-536b860dbbef-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/2-10_491d4f6f-c07e-463c-a12c-536b860dbbef-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/2-10_491d4f6f-c07e-463c-a12c-536b860dbbef-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/2-10_491d4f6f-c07e-463c-a12c-536b860dbbef-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/2-10_491d4f6f-c07e-463c-a12c-536b860dbbef-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/2-10_491d4f6f-c07e-463c-a12c-536b860dbbef-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/2-10_491d4f6f-c07e-463c-a12c-536b860dbbef-860x860.jpg 860w",
+   "sizes": "(max-width: 2091px) 100vw, 2091px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/2-10_491d4f6f-c07e-463c-a12c-536b860dbbef-430x430.jpg"
+  },
+  {
+   "id": 21817,
+   "date_created": "2024-07-03T18:16:11",
+   "date_created_gmt": "2024-07-03T02:16:11",
+   "date_modified": "2024-07-03T18:16:11",
+   "date_modified_gmt": "2024-07-03T02:16:11",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/8-10_214dcce1-9492-4922-bd5f-04c7a3285cff.jpg",
+   "name": "8-10_214dcce1-9492-4922-bd5f-04c7a3285cff.jpg",
+   "alt": "Big ribbon gift uniform",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/8-10_214dcce1-9492-4922-bd5f-04c7a3285cff.jpg 2160w, https://rosetoys.org/wp-content/uploads/2024/07/8-10_214dcce1-9492-4922-bd5f-04c7a3285cff-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/8-10_214dcce1-9492-4922-bd5f-04c7a3285cff-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/8-10_214dcce1-9492-4922-bd5f-04c7a3285cff-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/8-10_214dcce1-9492-4922-bd5f-04c7a3285cff-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/8-10_214dcce1-9492-4922-bd5f-04c7a3285cff-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/8-10_214dcce1-9492-4922-bd5f-04c7a3285cff-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/8-10_214dcce1-9492-4922-bd5f-04c7a3285cff-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/8-10_214dcce1-9492-4922-bd5f-04c7a3285cff-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/8-10_214dcce1-9492-4922-bd5f-04c7a3285cff-860x860.jpg 860w",
+   "sizes": "(max-width: 2160px) 100vw, 2160px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/8-10_214dcce1-9492-4922-bd5f-04c7a3285cff-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": false,
+   "options": [
+    "One size"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<del aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>42.99</bdi></span></del> <span class=\"screen-reader-text\">Original price was: &#036;42.99.</span><ins aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>21.99</bdi></span></ins><span class=\"screen-reader-text\">Current price is: &#036;21.99.</span>",
+ "related_ids": [
+  17391,
+  16891,
+  17678,
+  17710,
+  17150
+ ],
+ "meta_data": [
+  {
+   "id": 57217,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 57245,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 102092,
+   "key": "rank_math_title",
+   "value": "Big ribbon gift uniform | RoseToys"
+  },
+  {
+   "id": 102093,
+   "key": "rank_math_description",
+   "value": "Polyester big ribbon gift uniform with christmas style in red. One size, recommended weight 40-60kg, available at RoseToys."
+  },
+  {
+   "id": 111393,
+   "key": "_elementor_page_assets",
+   "value": []
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": false,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/21815",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

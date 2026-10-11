@@ -45,7 +45,7 @@
 | 逐页拆解 | webReader | 抽页实抓 | SERP 元数据不含正文，字数/H2/覆盖点靠实抓 |
 | 词量/KD/标签初筛 | Ubs `keyword_overview` / `match_keywords` | — | 标签**只作初筛，不作终判** |
 
-**纪律**：禁 WebSearch/web_search_prime（铁律）；Ubs user-scope OAuth 子 agent 不可见 → 主会话查完落盘；档案头记查询日期，超 3 个月的重写场景必重拉（SERP 是快照）。
+**纪律**：禁 WebSearch/web_search_prime（铁律）；Ubs MCP 子 agent **可直接调用**（2026-10-10 复测确认：57 工具全可见+认证有效——旧纪律"子 agent 不可见须主会话代拉落盘"系过时记载，作废；SERP 快照仍须落盘留痕供档案引用）；档案头记查询日期，超 3 个月的重写场景必重拉（SERP 是快照）。
 
 ---
 
@@ -83,7 +83,7 @@
 | for sale / buy / custom / replacement / price | **product/category（文章互哺不算承接）** |
 | 平均多少钱/区间查询 | 不做（3.1 已杀） |
 
-page 走 HTML→Elementor 流水线，post 走 MD→Gutenberg（竞品SOP §10 本地生产契约）。
+page 走 HTML→Elementor 流水线，post 走 MD→Gutenberg（竞品SOP §10 本地生产契约）。**本 SOP 适用边界=搜索承接页**（词驱动的类目/产品/工具/post 页）；非搜索承接页（about/contact/政策页/首页等转化信任层）不走本 SOP，设计依据见竞品SOP §10 页面类型矩阵。
 
 ### 3.3 SERP 承接审计（页型终判）+ 三级不匹配全杀
 

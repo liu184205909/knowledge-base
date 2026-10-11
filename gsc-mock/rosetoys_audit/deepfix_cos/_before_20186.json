@@ -1,0 +1,376 @@
+{
+ "id": 20186,
+ "name": "Lingerie Surprise Box, 5 to 10 Pieces",
+ "slug": "surprise-box-49-5pieces",
+ "permalink": "https://rosetoys.org/product/surprise-box-49-5pieces/",
+ "date_created": "2024-07-02T22:27:16",
+ "date_created_gmt": "2024-07-02T14:27:16",
+ "date_modified": "2026-10-11T00:16:49",
+ "date_modified_gmt": "2026-10-10T16:16:49",
+ "type": "variable",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>A mystery box built for the indecisive: full lingerie outfits, leather collars, toys, and other items from the catalog, at a per-piece cost well under list price. Three box sizes run 5, 7, and 10 pieces, and three size bands run S (40-50 kg), M (50-60 kg), and L (60-70 kg).</p>\n<p>Contents include items not yet released on the site, which is the gamble and the fun of the format. Every box is packed to its piece count - the floor is the count you choose, not a maybe.</p>\n<ul>\n<li>Contents: lingerie sets, collars, toys, and catalog surprises</li>\n<li>Piece counts: 5, 7, or 10 per box</li>\n<li>Sizing: S (40-50 kg), M (50-60 kg), L (60-70 kg)</li>\n<li>Note: intimate items, non-returnable once opened</li>\n</ul>\n<p>Pick piece count and size band at checkout. If choosing is the hard part, this listing exists to skip it.</p>\n",
+ "short_description": "<p>Mystery lingerie box in 5, 7 or 10 pieces with unreleased items, sized S to L, non-returnable.</p>\n",
+ "sku": "A8606734254353",
+ "price": "54.99",
+ "regular_price": "",
+ "sale_price": "",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 20,
+   "name": "Accessories",
+   "slug": "accessories"
+  }
+ ],
+ "brands": [],
+ "tags": [
+  {
+   "id": 185,
+   "name": "\"body Chain\"",
+   "slug": "body-chain"
+  },
+  {
+   "id": 184,
+   "name": "\"Cosplay\"",
+   "slug": "cosplay"
+  },
+  {
+   "id": 186,
+   "name": "\"Leather collar\"",
+   "slug": "leather-collar"
+  },
+  {
+   "id": 165,
+   "name": "\"lingerie\"",
+   "slug": "lingerie"
+  },
+  {
+   "id": 180,
+   "name": "\"loungewear\"",
+   "slug": "loungewear"
+  },
+  {
+   "id": 187,
+   "name": "\"necklace\"",
+   "slug": "necklace"
+  },
+  {
+   "id": 178,
+   "name": "\"pajamas\"",
+   "slug": "pajamas"
+  },
+  {
+   "id": 188,
+   "name": "\"Panties\"",
+   "slug": "panties"
+  },
+  {
+   "id": 167,
+   "name": "\"sexual love\"",
+   "slug": "sexual-love"
+  },
+  {
+   "id": 168,
+   "name": "\"sexy lingerie\"",
+   "slug": "sexy-lingerie"
+  },
+  {
+   "id": 189,
+   "name": "\"thong\"",
+   "slug": "thong"
+  },
+  {
+   "id": 169,
+   "name": "\"Tiktok\"",
+   "slug": "tiktok"
+  },
+  {
+   "id": 170,
+   "name": "\"u6027u7231\"",
+   "slug": "u6027u7231"
+  },
+  {
+   "id": 171,
+   "name": "\"u6027u7231u670du9970\"",
+   "slug": "u6027u7231u670du9970"
+  },
+  {
+   "id": 172,
+   "name": "\"u6027u7231u7528u54c1\"",
+   "slug": "u6027u7231u7528u54c1"
+  },
+  {
+   "id": 173,
+   "name": "\"u60c5u8da3\"",
+   "slug": "u60c5u8da3"
+  },
+  {
+   "id": 174,
+   "name": "\"u60c5u8da3u670du9970\"",
+   "slug": "u60c5u8da3u670du9970"
+  },
+  {
+   "id": 175,
+   "name": "\"u60c5u8da3u7528u54c1\"",
+   "slug": "u60c5u8da3u7528u54c1"
+  },
+  {
+   "id": 182,
+   "name": "\"u60c5u8da3u7f51u8863\"",
+   "slug": "u60c5u8da3u7f51u8863"
+  },
+  {
+   "id": 181,
+   "name": "\"underwear\"",
+   "slug": "underwear"
+  }
+ ],
+ "images": [
+  {
+   "id": 20227,
+   "date_created": "2024-07-03T07:36:23",
+   "date_created_gmt": "2024-07-02T15:36:23",
+   "date_modified": "2026-10-10T22:18:06",
+   "date_modified_gmt": "2026-10-10T06:18:06",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/excalubur_2.jpg",
+   "name": "excalubur_2.jpg",
+   "alt": "Surprise Box ($49/5pieces)",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/excalubur_2.jpg 750w, https://rosetoys.org/wp-content/uploads/2024/07/excalubur_2-430x459.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/excalubur_2-150x160.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/excalubur_2-700x747.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/excalubur_2-281x300.jpg 281w",
+   "sizes": "(max-width: 750px) 100vw, 750px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/excalubur_2-430x459.jpg"
+  },
+  {
+   "id": 20229,
+   "date_created": "2024-07-03T07:36:24",
+   "date_created_gmt": "2024-07-02T15:36:24",
+   "date_modified": "2026-10-10T22:18:02",
+   "date_modified_gmt": "2026-10-10T06:18:02",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/123.jpg",
+   "name": "123.jpg",
+   "alt": "Surprise Box ($49/5pieces)",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/123.jpg 1200w, https://rosetoys.org/wp-content/uploads/2024/07/123-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/123-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/123-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/123-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/123-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/123-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/123-860x860.jpg 860w",
+   "sizes": "(max-width: 1200px) 100vw, 1200px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/123-430x430.jpg"
+  },
+  {
+   "id": 20230,
+   "date_created": "2024-07-03T07:36:26",
+   "date_created_gmt": "2024-07-02T15:36:26",
+   "date_modified": "2026-10-10T22:17:59",
+   "date_modified_gmt": "2026-10-10T06:17:59",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/321.jpg",
+   "name": "321.jpg",
+   "alt": "Surprise Box ($49/5pieces)",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/321.jpg 1200w, https://rosetoys.org/wp-content/uploads/2024/07/321-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/321-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/321-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/321-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/321-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/321-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/321-860x860.jpg 860w",
+   "sizes": "(max-width: 1200px) 100vw, 1200px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/321-430x430.jpg"
+  },
+  {
+   "id": 20231,
+   "date_created": "2024-07-03T07:36:28",
+   "date_created_gmt": "2024-07-02T15:36:28",
+   "date_modified": "2026-10-10T22:17:55",
+   "date_modified_gmt": "2026-10-10T06:17:55",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/4a7a9004c068615d2de5c30d0da635b5.jpg",
+   "name": "4a7a9004c068615d2de5c30d0da635b5.jpg",
+   "alt": "Surprise Box ($49/5pieces)",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/4a7a9004c068615d2de5c30d0da635b5.jpg 1200w, https://rosetoys.org/wp-content/uploads/2024/07/4a7a9004c068615d2de5c30d0da635b5-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/4a7a9004c068615d2de5c30d0da635b5-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/4a7a9004c068615d2de5c30d0da635b5-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/4a7a9004c068615d2de5c30d0da635b5-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/4a7a9004c068615d2de5c30d0da635b5-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/4a7a9004c068615d2de5c30d0da635b5-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/4a7a9004c068615d2de5c30d0da635b5-860x860.jpg 860w",
+   "sizes": "(max-width: 1200px) 100vw, 1200px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/4a7a9004c068615d2de5c30d0da635b5-430x430.jpg"
+  },
+  {
+   "id": 20232,
+   "date_created": "2024-07-03T07:36:30",
+   "date_created_gmt": "2024-07-02T15:36:30",
+   "date_modified": "2026-10-10T22:17:52",
+   "date_modified_gmt": "2026-10-10T06:17:52",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/123141.jpg",
+   "name": "123141.jpg",
+   "alt": "Surprise Box ($49/5pieces)",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/123141.jpg 1200w, https://rosetoys.org/wp-content/uploads/2024/07/123141-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/123141-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/123141-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/123141-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/123141-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/123141-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/123141-860x860.jpg 860w",
+   "sizes": "(max-width: 1200px) 100vw, 1200px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/123141-430x430.jpg"
+  },
+  {
+   "id": 20233,
+   "date_created": "2024-07-03T07:36:31",
+   "date_created_gmt": "2024-07-02T15:36:31",
+   "date_modified": "2026-10-10T22:17:48",
+   "date_modified_gmt": "2026-10-10T06:17:48",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/1234.jpg",
+   "name": "1234.jpg",
+   "alt": "Surprise Box ($49/5pieces)",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/1234.jpg 1200w, https://rosetoys.org/wp-content/uploads/2024/07/1234-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/1234-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/1234-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/1234-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/1234-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/1234-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/1234-860x860.jpg 860w",
+   "sizes": "(max-width: 1200px) 100vw, 1200px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/1234-430x430.jpg"
+  },
+  {
+   "id": 20234,
+   "date_created": "2024-07-03T07:36:33",
+   "date_created_gmt": "2024-07-02T15:36:33",
+   "date_modified": "2026-10-10T22:17:44",
+   "date_modified_gmt": "2026-10-10T06:17:44",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/lADPKHe20s0IZavNCtrNBQQ_1284_2778.jpg",
+   "name": "lADPKHe20s0IZavNCtrNBQQ_1284_2778.jpg",
+   "alt": "Surprise Box ($49/5pieces)",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/lADPKHe20s0IZavNCtrNBQQ_1284_2778.jpg 1200w, https://rosetoys.org/wp-content/uploads/2024/07/lADPKHe20s0IZavNCtrNBQQ_1284_2778-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/lADPKHe20s0IZavNCtrNBQQ_1284_2778-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/lADPKHe20s0IZavNCtrNBQQ_1284_2778-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/lADPKHe20s0IZavNCtrNBQQ_1284_2778-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/lADPKHe20s0IZavNCtrNBQQ_1284_2778-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/lADPKHe20s0IZavNCtrNBQQ_1284_2778-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/lADPKHe20s0IZavNCtrNBQQ_1284_2778-860x860.jpg 860w",
+   "sizes": "(max-width: 1200px) 100vw, 1200px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/lADPKHe20s0IZavNCtrNBQQ_1284_2778-430x430.jpg"
+  },
+  {
+   "id": 20235,
+   "date_created": "2024-07-03T07:36:35",
+   "date_created_gmt": "2024-07-02T15:36:35",
+   "date_modified": "2026-10-10T22:17:41",
+   "date_modified_gmt": "2026-10-10T06:17:41",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/1123e20s0IZavNCtrNBQQ_1284_2778.jpg",
+   "name": "1123e20s0IZavNCtrNBQQ_1284_2778.jpg",
+   "alt": "Surprise Box ($49/5pieces)",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/1123e20s0IZavNCtrNBQQ_1284_2778.jpg 1200w, https://rosetoys.org/wp-content/uploads/2024/07/1123e20s0IZavNCtrNBQQ_1284_2778-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/1123e20s0IZavNCtrNBQQ_1284_2778-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/1123e20s0IZavNCtrNBQQ_1284_2778-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/1123e20s0IZavNCtrNBQQ_1284_2778-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/1123e20s0IZavNCtrNBQQ_1284_2778-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/1123e20s0IZavNCtrNBQQ_1284_2778-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/1123e20s0IZavNCtrNBQQ_1284_2778-860x860.jpg 860w",
+   "sizes": "(max-width: 1200px) 100vw, 1200px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/1123e20s0IZavNCtrNBQQ_1284_2778-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "L (60-70kg)",
+    "M (50-60kg)",
+    "S (40-50kg)"
+   ]
+  },
+  {
+   "id": 9,
+   "name": "Combo",
+   "slug": "pa_combo",
+   "position": 1,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "10 pieces",
+    "5 pieces",
+    "7 pieces"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [
+  20236,
+  20237,
+  20238,
+  20239,
+  20240,
+  20241,
+  20242,
+  20243,
+  20256,
+  20244,
+  20257
+ ],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<span class=\"woocommerce-Price-amount amount\" aria-hidden=\"true\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>54.99</bdi></span> <span aria-hidden=\"true\">&ndash;</span> <span class=\"woocommerce-Price-amount amount\" aria-hidden=\"true\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>94.99</bdi></span><span class=\"screen-reader-text\">Price range: &#36;54.99 through &#36;94.99</span>",
+ "related_ids": [
+  21093,
+  21083,
+  21139,
+  19013,
+  21092
+ ],
+ "meta_data": [
+  {
+   "id": 42689,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 43166,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 103361,
+   "key": "rank_math_title",
+   "value": "Lingerie Surprise Box, 5-10 Pieces | RoseToys"
+  },
+  {
+   "id": 103362,
+   "key": "rank_math_description",
+   "value": "Mystery lingerie box with outfits, collars and toys in 5, 7 or 10 pieces, S to L sizing. Unreleased items included, final sale."
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": true,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/20186",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

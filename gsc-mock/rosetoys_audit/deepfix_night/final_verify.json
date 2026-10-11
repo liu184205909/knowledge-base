@@ -1,0 +1,28 @@
+{
+ "total": 117,
+ "name_ok": 117,
+ "desc_ok": 117,
+ "short_ok": 117,
+ "rmT_ok": 117,
+ "rmD_ok": 117,
+ "slug_ok": 117,
+ "price_ok": 117,
+ "slop_hits": [],
+ "fails": [],
+ "desc_wc": {
+  "min": 148,
+  "max": 207
+ },
+ "tkd_title_len": {
+  "min": 32,
+  "max": 60
+ },
+ "tkd_desc_len": {
+  "min": 109,
+  "max": 134
+ },
+ "short_wc": {
+  "min": 19,
+  "max": 25
+ }
+}

@@ -1,0 +1,228 @@
+{
+ "id": 20060,
+ "name": "Japanese School One-Piece Swimsuit",
+ "slug": "m-287-japanese-style-school-one-piece-swimsuit",
+ "permalink": "https://rosetoys.org/product/m-287-japanese-style-school-one-piece-swimsuit/",
+ "date_created": "2024-07-02T22:01:37",
+ "date_created_gmt": "2024-07-02T14:01:37",
+ "date_modified": "2026-10-10T23:58:35",
+ "date_modified_gmt": "2026-10-10T15:58:35",
+ "type": "simple",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>The Japanese school swimsuit reference in white polyester, one size for 40-60 kg. This is the full-coverage version of the campus swimsuit category - a one-piece cut with the school silhouette rather than the costume adaptation of it.</p>\n<p>White is the less common choice for this genre, where navy dominates, and it changes the read completely: less uniform, more costume. The cut stays true to the reference with a high back and a fitted line.</p>\n<ul>\n<li>Material: polyester</li>\n<li>Item type: one-piece swimsuit</li>\n<li>Style: Japanese school</li>\n<li>Color: white</li>\n<li>Sizing: one size, recommended 40-60 kg</li>\n</ul>\n<p>One size for 40-60 kg. The authentic-cut option in a category full of loose interpretations.</p>\n",
+ "short_description": "<p>White polyester Japanese school one-piece swimsuit, fitted cut, one size for 40-60 kg, costume reference.</p>\n",
+ "sku": "A8971929616657",
+ "price": "19.99",
+ "regular_price": "30.99",
+ "sale_price": "19.99",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 183,
+   "name": "Cosplay",
+   "slug": "cosplay"
+  }
+ ],
+ "brands": [],
+ "tags": [
+  {
+   "id": 113,
+   "name": "\"New\"",
+   "slug": "new"
+  }
+ ],
+ "images": [
+  {
+   "id": 20059,
+   "date_created": "2024-07-03T06:01:33",
+   "date_created_gmt": "2024-07-02T14:01:33",
+   "date_modified": "2024-07-03T06:01:37",
+   "date_modified_gmt": "2024-07-02T14:01:37",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/2-9_e4409a5d-b338-4a58-ac12-ee1389163015.jpg",
+   "name": "2-9_e4409a5d-b338-4a58-ac12-ee1389163015.jpg",
+   "alt": "Japanese-style school one-piece swimsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/2-9_e4409a5d-b338-4a58-ac12-ee1389163015.jpg 2316w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_e4409a5d-b338-4a58-ac12-ee1389163015-430x424.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_e4409a5d-b338-4a58-ac12-ee1389163015-150x148.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_e4409a5d-b338-4a58-ac12-ee1389163015-700x690.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_e4409a5d-b338-4a58-ac12-ee1389163015-304x300.jpg 304w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_e4409a5d-b338-4a58-ac12-ee1389163015-812x800.jpg 812w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_e4409a5d-b338-4a58-ac12-ee1389163015-768x757.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_e4409a5d-b338-4a58-ac12-ee1389163015-1536x1513.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_e4409a5d-b338-4a58-ac12-ee1389163015-2048x2018.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/2-9_e4409a5d-b338-4a58-ac12-ee1389163015-860x847.jpg 860w",
+   "sizes": "(max-width: 2316px) 100vw, 2316px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/2-9_e4409a5d-b338-4a58-ac12-ee1389163015-430x424.jpg"
+  },
+  {
+   "id": 20061,
+   "date_created": "2024-07-03T06:01:38",
+   "date_created_gmt": "2024-07-02T14:01:38",
+   "date_modified": "2024-07-03T06:01:38",
+   "date_modified_gmt": "2024-07-02T14:01:38",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/4-9_e0769c70-012c-4d18-ad6c-6e02dacbe46a.jpg",
+   "name": "4-9_e0769c70-012c-4d18-ad6c-6e02dacbe46a.jpg",
+   "alt": "Japanese-style school one-piece swimsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/4-9_e0769c70-012c-4d18-ad6c-6e02dacbe46a.jpg 2316w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_e0769c70-012c-4d18-ad6c-6e02dacbe46a-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_e0769c70-012c-4d18-ad6c-6e02dacbe46a-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_e0769c70-012c-4d18-ad6c-6e02dacbe46a-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_e0769c70-012c-4d18-ad6c-6e02dacbe46a-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_e0769c70-012c-4d18-ad6c-6e02dacbe46a-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_e0769c70-012c-4d18-ad6c-6e02dacbe46a-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_e0769c70-012c-4d18-ad6c-6e02dacbe46a-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_e0769c70-012c-4d18-ad6c-6e02dacbe46a-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/4-9_e0769c70-012c-4d18-ad6c-6e02dacbe46a-860x860.jpg 860w",
+   "sizes": "(max-width: 2316px) 100vw, 2316px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/4-9_e0769c70-012c-4d18-ad6c-6e02dacbe46a-430x430.jpg"
+  },
+  {
+   "id": 20062,
+   "date_created": "2024-07-03T06:01:44",
+   "date_created_gmt": "2024-07-02T14:01:44",
+   "date_modified": "2024-07-03T06:01:44",
+   "date_modified_gmt": "2024-07-02T14:01:44",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/1-9_2a74f077-5e31-48c2-b18f-582dcf992b80.jpg",
+   "name": "1-9_2a74f077-5e31-48c2-b18f-582dcf992b80.jpg",
+   "alt": "Japanese-style school one-piece swimsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/1-9_2a74f077-5e31-48c2-b18f-582dcf992b80.jpg 2101w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_2a74f077-5e31-48c2-b18f-582dcf992b80-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_2a74f077-5e31-48c2-b18f-582dcf992b80-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_2a74f077-5e31-48c2-b18f-582dcf992b80-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_2a74f077-5e31-48c2-b18f-582dcf992b80-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_2a74f077-5e31-48c2-b18f-582dcf992b80-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_2a74f077-5e31-48c2-b18f-582dcf992b80-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_2a74f077-5e31-48c2-b18f-582dcf992b80-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_2a74f077-5e31-48c2-b18f-582dcf992b80-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/1-9_2a74f077-5e31-48c2-b18f-582dcf992b80-860x860.jpg 860w",
+   "sizes": "(max-width: 2101px) 100vw, 2101px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/1-9_2a74f077-5e31-48c2-b18f-582dcf992b80-430x430.jpg"
+  },
+  {
+   "id": 20063,
+   "date_created": "2024-07-03T06:01:48",
+   "date_created_gmt": "2024-07-02T14:01:48",
+   "date_modified": "2024-07-03T06:01:48",
+   "date_modified_gmt": "2024-07-02T14:01:48",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/7-9_25fc3a07-5751-4ec1-b7ca-ff5f4b1b154f.jpg",
+   "name": "7-9_25fc3a07-5751-4ec1-b7ca-ff5f4b1b154f.jpg",
+   "alt": "Japanese-style school one-piece swimsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/7-9_25fc3a07-5751-4ec1-b7ca-ff5f4b1b154f.jpg 2316w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_25fc3a07-5751-4ec1-b7ca-ff5f4b1b154f-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_25fc3a07-5751-4ec1-b7ca-ff5f4b1b154f-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_25fc3a07-5751-4ec1-b7ca-ff5f4b1b154f-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_25fc3a07-5751-4ec1-b7ca-ff5f4b1b154f-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_25fc3a07-5751-4ec1-b7ca-ff5f4b1b154f-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_25fc3a07-5751-4ec1-b7ca-ff5f4b1b154f-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_25fc3a07-5751-4ec1-b7ca-ff5f4b1b154f-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_25fc3a07-5751-4ec1-b7ca-ff5f4b1b154f-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/7-9_25fc3a07-5751-4ec1-b7ca-ff5f4b1b154f-860x860.jpg 860w",
+   "sizes": "(max-width: 2316px) 100vw, 2316px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/7-9_25fc3a07-5751-4ec1-b7ca-ff5f4b1b154f-430x430.jpg"
+  },
+  {
+   "id": 20064,
+   "date_created": "2024-07-03T06:01:54",
+   "date_created_gmt": "2024-07-02T14:01:54",
+   "date_modified": "2024-07-03T06:01:54",
+   "date_modified_gmt": "2024-07-02T14:01:54",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/6-9_05af1525-fb47-407d-adda-d04c4f5536ba.jpg",
+   "name": "6-9_05af1525-fb47-407d-adda-d04c4f5536ba.jpg",
+   "alt": "Japanese-style school one-piece swimsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/6-9_05af1525-fb47-407d-adda-d04c4f5536ba.jpg 2316w, https://rosetoys.org/wp-content/uploads/2024/07/6-9_05af1525-fb47-407d-adda-d04c4f5536ba-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/6-9_05af1525-fb47-407d-adda-d04c4f5536ba-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/6-9_05af1525-fb47-407d-adda-d04c4f5536ba-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/6-9_05af1525-fb47-407d-adda-d04c4f5536ba-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/6-9_05af1525-fb47-407d-adda-d04c4f5536ba-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/6-9_05af1525-fb47-407d-adda-d04c4f5536ba-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/6-9_05af1525-fb47-407d-adda-d04c4f5536ba-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/6-9_05af1525-fb47-407d-adda-d04c4f5536ba-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/6-9_05af1525-fb47-407d-adda-d04c4f5536ba-860x860.jpg 860w",
+   "sizes": "(max-width: 2316px) 100vw, 2316px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/6-9_05af1525-fb47-407d-adda-d04c4f5536ba-430x430.jpg"
+  },
+  {
+   "id": 20065,
+   "date_created": "2024-07-03T06:01:59",
+   "date_created_gmt": "2024-07-02T14:01:59",
+   "date_modified": "2024-07-03T06:01:59",
+   "date_modified_gmt": "2024-07-02T14:01:59",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/9-9_5cde1307-8774-44b4-8118-826170243ba0.jpg",
+   "name": "9-9_5cde1307-8774-44b4-8118-826170243ba0.jpg",
+   "alt": "Japanese-style school one-piece swimsuit",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/9-9_5cde1307-8774-44b4-8118-826170243ba0.jpg 2399w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_5cde1307-8774-44b4-8118-826170243ba0-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_5cde1307-8774-44b4-8118-826170243ba0-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_5cde1307-8774-44b4-8118-826170243ba0-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_5cde1307-8774-44b4-8118-826170243ba0-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_5cde1307-8774-44b4-8118-826170243ba0-800x800.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_5cde1307-8774-44b4-8118-826170243ba0-768x768.jpg 768w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_5cde1307-8774-44b4-8118-826170243ba0-1536x1536.jpg 1536w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_5cde1307-8774-44b4-8118-826170243ba0-2048x2048.jpg 2048w, https://rosetoys.org/wp-content/uploads/2024/07/9-9_5cde1307-8774-44b4-8118-826170243ba0-860x860.jpg 860w",
+   "sizes": "(max-width: 2399px) 100vw, 2399px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/9-9_5cde1307-8774-44b4-8118-826170243ba0-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": false,
+   "options": [
+    "One size"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<del aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>30.99</bdi></span></del> <span class=\"screen-reader-text\">Original price was: &#036;30.99.</span><ins aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>19.99</bdi></span></ins><span class=\"screen-reader-text\">Current price is: &#036;19.99.</span>",
+ "related_ids": [
+  17089,
+  17678,
+  17753,
+  17111,
+  17071
+ ],
+ "meta_data": [
+  {
+   "id": 41657,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 41694,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 103435,
+   "key": "rank_math_title",
+   "value": "Japanese School One-Piece Swimsuit | RoseToys"
+  },
+  {
+   "id": 103436,
+   "key": "rank_math_description",
+   "value": "White polyester Japanese school one-piece swimsuit with authentic fitted cut. One size for 40-60 kg, campus costume reference."
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": false,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/20060",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

@@ -11,7 +11,7 @@
 
 | # | username | 来源帖 | 信号类型 | 画像 | 建议触达 | 状态 |
 |---|----------|--------|----------|------|----------|------|
-| 1 | **westindian92** | r/interiordecorating 1wz5y0k（2026-10-06） | 求购：定制皮沙发罩+垫罩（10 年 Room & Board sectional，"Reupholstery is $$$"） | C 端业主，karma 123 | 已触达（10-07 spaceplaza 回帖：两条路干货+三渠道混合推荐，Cushion Mill 顾客口吻顺带提及=本周首次品牌提及）——10-08 核：楼主未追问（评论仅我方 1 条）；10-09 核（第 3 天，old.reddit 通道+datetime 核对 10-06T17:14Z）：楼主仍未回应，跟进窗口未开，继续观察 | 🟡 已回帖观察 |
+| 1 | **westindian92** | r/interiordecorating 1wz5y0k（2026-10-06） | 求购：定制皮沙发罩+垫罩（10 年 Room & Board sectional，"Reupholstery is $$$"） | C 端业主，karma 123 | 已触达（10-07 spaceplaza 回帖：两条路干货+三渠道混合推荐，Cushion Mill 顾客口吻顺带提及=本周首次品牌提及）——10-08 核：楼主未追问（评论仅我方 1 条）；10-09 核（第 3 天，old.reddit 通道+datetime 核对 10-06T17:14Z）：楼主仍未回应；10-10 核（第 4 天，old.reddit）：楼主仍未回应（评论区仅我方条目），跟进窗口未开，继续观察 | 🟡 已回帖观察 |
 | 2 | hardyz | r/Lovesac 1wst2h8（09-28） | 抱怨现有垫：Sactional 十年垫塌，找 latex/品牌替代 | C 端真实老户（12 年，7,320 karma，1,699 帖） | 已触达（spaceplaza 已回密度干货）——观察其追问 | 🟡 已回帖观察 |
 | 3 | Disastrous_Soup5314 | 同上评论区 | 抱怨现有垫：Sactional 3 年+两男孩使用，同需求者（评论区暴露的第二需求人） | C 端，533 karma | 观察其独立发帖 | 🟢 台账观察 |
 | 4 | Lower-Attention-3205 | r/upholstery 1wsgaot（09-28） | 问测量+求购：摇椅坐高降 2"，"no idea what type of foam to order" | C 端新号（20 karma，为求助注册） | 已触达（spaceplaza 已回）——倾向换底座方案，不强推 | 🟡 已回帖观察 |
@@ -31,8 +31,9 @@
 | 18 | NeverSky454 | r/AskIreland 1v8qvzv（07-28） | 求购：沙发整体换芯（"after 5 years everything is feeling a bit squashed and flat"，0 人类回答） | C 端（爱尔兰） | 不动（71 天超龄+地域范围外——美站 50 states 配送不覆盖） | ⚪ 范围外 |
 | 19 | Guygirl00 | r/nova 1v2utvx（07-21） | 求购：皮革坐垫换芯 "foam replaced in leather seat cushions"（0 回答） | C 端（弗吉尼亚） | 不动（77 天超龄+本地意图） | ⚪ 范围外 |
 | 20 | PvtCW | r/Lovesac 1x0up6p 评论区（10-08） | 抱怨现有·退货中：$5k Sactional 整组退货（"experience has been so bad... white glove pickup"），对比 Room & Board 价差 | C 端高客单（$5k 档） | 不动该帖（价格讨论语境）；**画像标记=退货完成后的替代方案帖优先响应** | 🟢 高价值画像 |
-| 21 | squeeps_21 | r/Lovesac 1x0uf61 评论区（10-08） | 抱怨现有：深座+斜背要塞枕头才舒服 "one would have to put extra pillows behind the couch cushions for the couch to be comfortable chaps my ass so much" | C 端 Sactional 新用户 | 不动（评论暴露）；**腰靠/lumbar 需求画像**，观察其独立发帖 | 🟢 台账观察 |
+| 21 | squeeps_21 | r/Lovesac 1x0uf61 评论区（10-08） | 抱怨现有：深座+斜背要塞枕头才舒服 "one would have to put extra pillows behind the couch cushions for the couch to be comfortable chaps my ass so much" | C 端 Sactional 新用户 | 不动（评论暴露）；**腰靠/lumbar 需求画像**，观察其独立发帖（10-10 我方已在 1x0uf61 主评论区回帖，squeeps_21 本人仍未触达） | 🟢 台账观察 |
 | 22 | thewolfwalker | r/Lovesac 1x0x7wm 评论区（10-08） | 求购·进行时：计划 Loved 买二手内芯+"order new covers"（原厂罩语境） | C 端（Sactional 散件自组） | 不动（原厂罩语境，第三方定制错位）；A7 replacement covers 弱画像 | ⚪ 弱信号 |
+| 23 | megoonie- | r/Lovesac 1x0uf61（2026-10-08）楼主 | 求购·进行时：深座配置买前咨询（angle back vs straight back 抉择，"the angle back made me wish I had another pillow behind me"+"pillows topple over on straight back"），高意向活跃 OP（22 评论逐条回复型） | C 端 Sactional 准新客（配置未交付=腰靠 wedge 潜在需求） | 已触达（10-10 spaceplaza 回帖 pez5h1x：几何归因+两条路线 IKEA topper/定制 wedge+Cushion Mill 顾客口吻+~3 周交期真实缺点）——观察其回复 | 🟡 已回帖观察 |
 
 **My 账号已出现标记**：spaceplaza 在 1wst2h8 / 1wsgaot / 1wte59f 三帖已有回帖——台账 #2/#4/#5 与日更轮天然重叠。
 
@@ -86,6 +87,21 @@
 | `"custom cushions"` (w) 滚动核 | 7 | 0 | 与日间轮一致+Kia 汽车双投新噪音（1x0umfa/1x0ujy7） |
 | **r/Lovesac Sactional flair 页** | 3 | **3 活帖** | 1x0uf61/1x0x7wm/1x0up6p 全 10-08 发（13-28h）——**flair 页通道首发命中：全部 1x0 前缀<24h，是当晚唯一活帖来源** |
 | 合计 | 45 | 3 活帖/3 用户 | #20/#21/#22 入账；1x0uf61 可回（发布遇静默失败见 §7b-9） |
+
+### 2d. 日更轮追加（2026-10-10，6 词+flair 页）
+
+| 词 | 召回 | 新增有效 | 构成 |
+|----|------|----------|------|
+| **r/Lovesac Sactional flair 页** | 3 | 0 | 1x0x7wm/1x0up6p/1x0uf61 全 10-08 已档三帖，无新帖（flair 页零滚动） |
+| `"custom cushions"` (w) | 7 | 0 | 与 10-09 轮完全一致——周窗连续第 5 轮冻结 |
+| `"bench cushion"` (m) | 7 | 0 | 4 已档+Camry×3（与历史轮一致） |
+| `"lumbar cushion"` (m)【新词族首试】 | 7 | 0 | **全办公椅/轮椅/医疗语境**（r/OfficeChairs×2/PcBuild/hysterectomy/wheelchairs/WomanSurvivalGuide）——裸词与家居垫品类错位 |
+| `"lumbar cushions" couch` (m) | 4 | 0 | 全噪音（关系/术后/Vine）——语境词组合召回被稀释 |
+| `"patio cushions" falling apart` (m) | 6 | 0 | 召回全无关（OR 分词稀释+当日新帖 dominate） |
+| `"wicker cushion"` (m) | 5 | 0 | 全老帖/噪音（星体投射/WickerParadise 营销/bose 耳机垫）——词族持续安静第 3 轮验证 |
+| 合计 | 39 | 0 | **0 回复合规日**（6 词+flair 页零合格帖）；词效结论：lumbar 词族裸词不可用，需换 "lumbar" + 沙发语境词（sectional/sofa/back cushion）再试 |
+
+**10-10 词效侧证**：lumbar 新词族首试失败——办公椅 lumbar support 是独立市场，家居语境必须从 sectional/sofa 侧切入（下轮试 `"back cushion" sectional`）；主词周窗冻结已 5 轮，活帖来源事实上收敛到 flair 页（本日 flair 页也零新增=整站求购流安静日）。
 
 ## 3. 画像粗判方法与数据
 

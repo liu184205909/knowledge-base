@@ -123,3 +123,4 @@ temp/
 # HTML转Elementor 流水线中间产物（本地保留）
 _st_publish.json
 _st_w2e/
+data-assets/

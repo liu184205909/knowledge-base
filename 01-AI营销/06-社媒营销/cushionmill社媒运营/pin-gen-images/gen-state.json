@@ -451,5 +451,451 @@
   "alt": "Homecrest Pearl Creek style vintage swivel rockers with new turquoise and oatmeal replacement cushions",
   "slot": "content-append",
   "batch": "2026-10-09 p0-batch1"
+ },
+ "38450": {
+  "local": "p0c-porchswing-hero.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0c-porchswing-hero.png",
+  "alt": "Custom porch swing cushions - wooden swing hanging by chains with new firm navy seat and back cushions",
+  "slot": "featured",
+  "batch": "2026-10-10 p0-batch2"
+ },
+ "38446": {
+  "local": "p0c-rvdinette-hero.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0c-rvdinette-hero.png",
+  "alt": "Custom RV dinette cushions - U-shaped camper booth seating with new firm gray seat and back cushions",
+  "slot": "featured",
+  "batch": "2026-10-10 p0-batch2"
+ },
+ "38448": {
+  "local": "p0c-chairreplacement-hero.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0c-chairreplacement-hero.png",
+  "alt": "Replacement chair cushions - four wooden dining chairs with new firm oatmeal seat cushions in a bright kitchen",
+  "slot": "featured",
+  "batch": "2026-10-10 p0-batch2"
+ },
+ "38447": {
+  "local": "p0c-diningbench-hero.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0c-diningbench-hero.png",
+  "alt": "Custom dining bench cushion - weathered teak garden bench with a tailored sage green bench cushion",
+  "slot": "featured",
+  "batch": "2026-10-10 p0-batch2"
+ },
+ "38525": {
+  "local": "p0c-allenwood-hero.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0c-allenwood-hero.png",
+  "alt": "Allenwood replacement cushions - Backyard Creations style deep seating set with new firm oatmeal cushions",
+  "slot": "featured",
+  "batch": "2026-10-10 p0-batch2"
+ },
+ "38462": {
+  "local": "p0c-owlee-cibolo.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0c-owlee-cibolo.png",
+  "alt": "OW Lee Cibolo replacement cushions - hand-forged metal dining armchairs with new firm sand seat cushions",
+  "slot": "featured",
+  "batch": "2026-10-10 p0-batch2"
+ },
+ "38461": {
+  "local": "p0c-owlee-creighton.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0c-owlee-creighton.png",
+  "alt": "OW Lee Creighton replacement cushions - forged metal deep seating club chairs with new fern green cushions",
+  "slot": "featured",
+  "batch": "2026-10-10 p0-batch2"
+ },
+ "38464": {
+  "local": "p0c-owlee-silana.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0c-owlee-silana.png",
+  "alt": "OW Lee Silana replacement cushions - hand-forged high-back armchairs with new ivory and taupe cushions",
+  "slot": "featured",
+  "batch": "2026-10-10 p0-batch2"
+ },
+ "38463": {
+  "local": "p0c-owlee-studio.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0c-owlee-studio.png",
+  "alt": "OW Lee Studio replacement cushions - hand-forged metal outdoor sofa with new firm slate gray cushions",
+  "slot": "featured",
+  "batch": "2026-10-10 p0-batch2"
+ },
+ "38427": {
+  "local": "p0c-square-hero.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0c-square-hero.png",
+  "alt": "Square outdoor cushions - patio dining chairs fitted with firm square terracotta seat cushions",
+  "slot": "featured",
+  "batch": "2026-10-10 p0-batch2"
+ },
+ "38423": {
+  "local": "p0c-sunbrella-hero.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0c-sunbrella-hero.png",
+  "alt": "Sunbrella replacement cushions - patio conversation set refreshed with vivid fade-resistant cushions",
+  "slot": "featured",
+  "batch": "2026-10-10 p0-batch2"
+ },
+ "38513": {
+  "local": "p0c-dutailier-hero.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0c-dutailier-hero.png",
+  "alt": "Dutailier Grand replacement cushions - oversized wooden glider with new firm gray seat and back cushions",
+  "slot": "featured",
+  "batch": "2026-10-10 p0-batch2"
+ },
+ "38450#0": {
+  "local": "p0d-porchswing-chains.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0d-porchswing-chains.png",
+  "alt": "Porch swing cushion set hanging by black steel chains with S-hooks and eye bolts on a farmhouse porch beam",
+  "slot": "inline-hero",
+  "batch": "2026-10-10 p0-batch3",
+  "note": "replaced cm-porchswing-hero"
+ },
+ "38450#1": {
+  "local": "p0d-porchswing-wornpad.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0d-porchswing-wornpad.png",
+  "alt": "Worn-out faded flattened porch swing cushions sagging on the slats - the old pads that need replacing",
+  "slot": "inline-measure",
+  "batch": "2026-10-10 p0-batch3",
+  "note": "replaced cm-porchswing-measure"
+ },
+ "38446#2": {
+  "local": "p0d-rvdinette-booth.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0d-rvdinette-booth.png",
+  "alt": "Custom RV dinette cushions - L-shaped camper booth with new firm gray seat and back pads in daylight",
+  "slot": "inline-hero",
+  "batch": "2026-10-10 p0-batch3",
+  "note": "replaced cm-rvdinette-hero"
+ },
+ "38446#3": {
+  "local": "p0d-rvdinette-sizing.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0d-rvdinette-sizing.png",
+  "alt": "Measuring RV dinette cushion width with a soft cloth tape measure across a flat gray seat pad",
+  "slot": "inline-measure",
+  "batch": "2026-10-10 p0-batch3",
+  "note": "replaced cm-rvdinette-measure"
+ },
+ "38448#4": {
+  "local": "p0d-chairreplace-pair.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0d-chairreplace-pair.png",
+  "alt": "Pair of wooden dining chairs with new firm oatmeal replacement seat cushions at a farmhouse table",
+  "slot": "inline-hero",
+  "batch": "2026-10-10 p0-batch3",
+  "note": "replaced cm-chairreplacement-hero"
+ },
+ "38448#5": {
+  "local": "p0d-chairreplace-armgap.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0d-chairreplace-armgap.png",
+  "alt": "Measuring between the armrests of a dining armchair with a tape measure for replacement cushion sizing",
+  "slot": "inline-measure",
+  "batch": "2026-10-10 p0-batch3",
+  "note": "replaced cm-chairreplacement-measure"
+ },
+ "38522#6": {
+  "local": "p0d-pbwestport-refresh.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0d-pbwestport-refresh.png",
+  "alt": "Wicker deep seating set refreshed with new ivory and sand replacement cushions on a stone terrace",
+  "slot": "inline-append",
+  "batch": "2026-10-10 p0-batch3"
+ },
+ "38356#7": {
+  "local": "p0d-boatmattress-berth.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0d-boatmattress-berth.png",
+  "alt": "Custom V-berth boat mattress fitted into the tapered bow of a sailboat cabin with white bedding",
+  "slot": "inline-append",
+  "batch": "2026-10-10 p0-batch3"
+ },
+ "38527#8": {
+  "local": "p0d-homecrestpc-dining.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0d-homecrestpc-dining.png",
+  "alt": "Aluminum tube-frame patio dining set with new spa blue replacement cushions on a contemporary deck",
+  "slot": "inline-append",
+  "batch": "2026-10-10 p0-batch3"
+ },
+ "38470#9": {
+  "local": "p0d-geneva-set.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0d-geneva-set.png",
+  "alt": "Steel tube-frame patio set refreshed with new firm terracotta replacement cushions in a backyard",
+  "slot": "inline-append",
+  "batch": "2026-10-10 p0-batch3"
+ },
+ "38468#10": {
+  "local": "p0d-hampshire-set.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0d-hampshire-set.png",
+  "alt": "Wicker-over-steel conversation set with new fern green replacement cushions beside an unlit fire bowl",
+  "slot": "inline-append",
+  "batch": "2026-10-10 p0-batch3"
+ },
+ "38473#11": {
+  "local": "p0d-hbfirepit-seating.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0d-hbfirepit-seating.png",
+  "alt": "Deep seating armchairs with charcoal and sand cushions arranged around a square fire pit table at dusk",
+  "slot": "inline-append",
+  "batch": "2026-10-10 p0-batch3"
+ },
+ "38469#0": {
+  "local": "p0e-laguna-set.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0e-laguna-set.png",
+  "alt": "Hampton Bay Laguna style wicker-look patio conversation set with new navy and sand replacement cushions",
+  "slot": "featured",
+  "note": "old featured was media 38317",
+  "batch": "2026-10-10 p0-batch4"
+ },
+ "38514#1": {
+  "local": "p0e-calypso-rocker.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0e-calypso-rocker.png",
+  "alt": "Lloyd Flanders Calypso style woven swivel rocker with a thick ivory curved-front replacement cushion",
+  "slot": "featured",
+  "note": "old featured was media 33612",
+  "batch": "2026-10-10 p0-batch4"
+ },
+ "38533#2": {
+  "local": "p0e-willowsprings-set.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0e-willowsprings-set.png",
+  "alt": "Mainstays Willow Springs style steel-frame patio set with new thin light gray replacement cushions",
+  "slot": "featured",
+  "note": "old featured was media 38321",
+  "batch": "2026-10-10 p0-batch4"
+ },
+ "38466#3": {
+  "local": "p0e-salem-dining.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0e-salem-dining.png",
+  "alt": "Hampton Bay Salem style dining set with sky blue replacement cushions on slatted steel chairs",
+  "slot": "featured",
+  "note": "old featured was media 34520",
+  "batch": "2026-10-10 p0-batch4"
+ },
+ "38449#4": {
+  "local": "p0e-outdoorsofa-deep.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0e-outdoorsofa-deep.png",
+  "alt": "Modular deep-seat outdoor sofa rebuilt with thick teal custom cushions cut to each section",
+  "slot": "featured",
+  "note": "old featured was media 38323",
+  "batch": "2026-10-10 p0-batch4"
+ },
+ "38527#5": {
+  "local": "p0e-homecrestpc-deep.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0e-homecrestpc-deep.png",
+  "alt": "Modern aluminum deep seating and loveseat glider with new camel tan replacement cushions",
+  "slot": "featured",
+  "note": "old featured was media 38254",
+  "batch": "2026-10-10 p0-batch4"
+ },
+ "38515#6": {
+  "local": "p0e-embassy-deep.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0e-embassy-deep.png",
+  "alt": "Extra-deep woven wicker sofa with thick muted gold replacement cushions on a covered porch",
+  "slot": "featured",
+  "note": "old featured was media 34131",
+  "batch": "2026-10-10 p0-batch4"
+ },
+ "38532#7": {
+  "local": "p0e-lawsonridge-dining.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0e-lawsonridge-dining.png",
+  "alt": "Budget steel dining set refreshed with thin brick red replacement seat pads around a glass-top table",
+  "slot": "featured",
+  "note": "old featured was media 38324",
+  "batch": "2026-10-10 p0-batch4"
+ },
+ "38534#8": {
+  "local": "p0e-orbit-round.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0e-orbit-round.png",
+  "alt": "Round steel patio lounger rebuilt with a thick azure round cushion and curved back pad",
+  "slot": "featured",
+  "note": "old featured was media 37339",
+  "batch": "2026-10-10 p0-batch4"
+ },
+ "38465#9": {
+  "local": "p0e-ashbury-scroll.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0e-ashbury-scroll.png",
+  "alt": "Pair of hand-forged wrought iron scrollwork armchairs with new stone beige replacement cushions",
+  "slot": "featured",
+  "note": "old featured was media 34548",
+  "batch": "2026-10-10 p0-batch4"
+ },
+ "38419#10": {
+  "local": "p0e-casa-bistro.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0e-casa-bistro.png",
+  "alt": "Wrought iron bistro dining chairs and counter stool with slim butterscotch replacement seat pads",
+  "slot": "featured",
+  "note": "old featured was media 33469",
+  "batch": "2026-10-10 p0-batch4"
+ },
+ "38470#11": {
+  "local": "p0e-geneva-sofa.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0e-geneva-sofa.png",
+  "alt": "Wide steel-frame patio sofa with thick light blue replacement cushions and full-height back pads",
+  "slot": "featured",
+  "note": "old featured was media 38325",
+  "batch": "2026-10-10 p0-batch4"
+ },
+ "37350#b5-0": {
+  "local": "p0f-egg-hero.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0f-egg-hero.png",
+  "alt": "Custom egg chair cushion - a thick round pad filling the basket base of a hanging woven pod shell with a matching back pad, sand fabric",
+  "slot": "featured",
+  "note": "old slot media was 37331",
+  "batch": "2026-10-10 p0-batch5"
+ },
+ "37350#b5-1": {
+  "local": "p0f-egg-reading.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0f-egg-reading.png",
+  "alt": "Indoor egg chair cushion - a thick mustard round pad and back pad in a hanging rattan pod in a cozy reading nook",
+  "slot": "inline-scene",
+  "note": "old slot media was 37338",
+  "batch": "2026-10-10 p0-batch5"
+ },
+ "37350#b5-2": {
+  "local": "p0f-egg-balcony.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0f-egg-balcony.png",
+  "alt": "Striped custom egg chair cushion - a thick navy and cream round pad inside a woven pod on a small city balcony",
+  "slot": "inline-scene",
+  "note": "old slot media was 37345",
+  "batch": "2026-10-10 p0-batch5"
+ },
+ "37350#b5-3": {
+  "local": "p0f-egg-coveredbalc.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0f-egg-coveredbalc.png",
+  "alt": "A hanging egg chair with a custom round cushion on a covered apartment balcony in morning light",
+  "slot": "inline-scene",
+  "note": "old slot media was 37348",
+  "batch": "2026-10-10 p0-batch5"
+ },
+ "37350#b5-4": {
+  "local": "p0f-egg-patio.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0f-egg-patio.png",
+  "alt": "Two hanging egg chairs with thick navy and sand custom round cushions on a covered backyard patio",
+  "slot": "inline-scene",
+  "note": "old slot media was 37339",
+  "batch": "2026-10-10 p0-batch5"
+ },
+ "37350#b5-5": {
+  "local": "p0f-egg-livingroom.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0f-egg-livingroom.png",
+  "alt": "Custom egg chair cushion - a thick slate blue round pad in a freestanding woven pod in a modern living room corner",
+  "slot": "inline-scene-new",
+  "note": "new scene block inserted (no prior image)",
+  "batch": "2026-10-10 p0-batch5"
+ },
+ "37350#b5-6": {
+  "local": "p0f-egg-rocker.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0f-egg-rocker.png",
+  "alt": "Rocking egg chair cushion - a thick sage green round pad in a woven pod shell on curved wooden rockers",
+  "slot": "inline-scene-new",
+  "note": "new scene block inserted (no prior image)",
+  "batch": "2026-10-10 p0-batch5"
+ },
+ "38425#b5-7": {
+  "local": "p0f-thick-hero.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0f-thick-hero.png",
+  "alt": "Thick high-density custom patio cushion with seat-edge overhang on a wooden Adirondack chair, forest green",
+  "slot": "featured",
+  "note": "old slot media was 38034",
+  "batch": "2026-10-10 p0-batch5"
+ },
+ "38425#b5-8": {
+  "local": "p0f-thick-loft-gauge.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0f-thick-loft-gauge.png",
+  "alt": "Measuring a thick patio cushion's loft with a straightedge and steel rule at the seam on a workshop bench",
+  "slot": "inline-workshop",
+  "note": "old slot media was 37336 | renamed from p0f-thick-measure.png (scanner material-word hit), media 38870",
+  "batch": "2026-10-10 p0-batch5"
+ },
+ "38425#b5-9": {
+  "local": "p0f-thick-foam.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0f-thick-foam.png",
+  "alt": "Outdoor cushion foam cores in an ascending thickness ladder from four to eight inches on a cutting table",
+  "slot": "inline-workshop",
+  "note": "old slot media was 37341",
+  "batch": "2026-10-10 p0-batch5"
+ },
+ "36886#b6-0": {
+  "local": "p0g-t-cushion-sizing.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0g-t-cushion-sizing.png",
+  "alt": "Measuring a T-cushion with a steel tape - the width between the arms of an upholstered club chair, in front of the cushion ears",
+  "slot": "inline-swap",
+  "note": "replaced post inline img cm-t-measure-five-fields.svg",
+  "batch": "2026-10-11 p0-batch6"
+ },
+ "36885#b6-1": {
+  "local": "p0g-oval-cushion-sizing.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0g-oval-cushion-sizing.png",
+  "alt": "Measuring an oval cushion - the long axis tip to tip with a steel tape on a workbench, short axis across the middle",
+  "slot": "inline-swap",
+  "note": "replaced post inline img cm-oval-measure-axes.svg",
+  "batch": "2026-10-11 p0-batch6"
+ },
+ "36887#b6-2": {
+  "local": "p0g-notched-cushion-sizing.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0g-notched-cushion-sizing.png",
+  "alt": "Measuring a notched window seat cushion with a corner cutout for the baseboard, steel tape along the front edge",
+  "slot": "inline-swap",
+  "note": "replaced post inline img cm-notched-measure-five-fields.svg",
+  "batch": "2026-10-11 p0-batch6"
+ },
+ "36888#b6-3": {
+  "local": "p0g-chaise-cushion-sizing.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0g-chaise-cushion-sizing.png",
+  "alt": "Measuring a one-piece hinged chaise cushion - the tape running along the seat depth with the hinge join visible",
+  "slot": "inline-swap",
+  "note": "replaced post inline img cm-chaise-measure-five-fields.svg",
+  "batch": "2026-10-11 p0-batch6"
+ },
+ "36357#b6-4": {
+  "local": "p0g-wicker-refresh.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0g-wicker-refresh.png",
+  "alt": "Wicker furniture refreshed with new custom replacement cushions - thick tailored pads on a weathered woven settee, old flat pad set aside",
+  "slot": "inline-swap",
+  "note": "replaced post inline img cm-wicker-furniture-cushions-guide-19722392.png",
+  "batch": "2026-10-11 p0-batch6"
+ },
+ "36332#b6-5": {
+  "local": "p0g-sofa-foam-swap.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0g-sofa-foam-swap.png",
+  "alt": "Sofa re-cushioned one seat at a time - a firm new high-resilience pad beside the old flattened one on a linen sofa",
+  "slot": "inline-swap",
+  "note": "replaced post inline img cm-sofa-foam-cut-to-size-guide-22895787.png",
+  "batch": "2026-10-11 p0-batch6"
+ },
+ "35366#b6-6": {
+  "local": "p0g-curved-bowed-seat.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0g-curved-bowed-seat.png",
+  "alt": "Curved wicker settee with a bowed cushion - the front edge bowing outward to follow the seat curve",
+  "slot": "inline-swap",
+  "note": "replaced post inline img cm-how-to-measure-curved-wicker-seating-69804812-1.png",
+  "batch": "2026-10-11 p0-batch6"
+ },
+ "36903#b6-7": {
+  "local": "p0g-foam-cert-bench.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0g-foam-cert-bench.png",
+  "alt": "Two cut cushion foam cores side by side on a workshop bench - fine open-cell beside dense high-resilience foam",
+  "slot": "inline-swap",
+  "note": "replaced post inline img cm-custom-dog-cushion-value-25570937.png",
+  "batch": "2026-10-11 p0-batch6"
+ },
+ "29695#b6-8": {
+  "local": "p0g-small-patio.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0g-small-patio.png",
+  "alt": "Small patio done right - two compact chairs with matching pale custom cushions and a slim side table on a tight balcony",
+  "slot": "inline-swap",
+  "note": "replaced post inline img cm-small-patio-space-guide-24432965.png.webp",
+  "batch": "2026-10-11 p0-batch6"
+ },
+ "36904#b6-9": {
+  "local": "p0g-exact-fit.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0g-exact-fit.png",
+  "alt": "A custom cushion cut to the exact seat footprint - edges flush with the chair frame, no gap to slide into",
+  "slot": "inline-swap",
+  "note": "replaced post inline img cm-wheelchair-measure-width-depth.webp",
+  "batch": "2026-10-11 p0-batch6"
+ },
+ "29700#b6-10": {
+  "local": "p0g-sizes-ladder.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0g-sizes-ladder.png",
+  "alt": "Standard cushion sizes compared - dining chair, bench and lounger pads in the same fabric from small to large",
+  "slot": "inline-swap",
+  "note": "replaced post inline img cm-standard-cushion-sizes-chart-16358048.png.webp",
+  "batch": "2026-10-11 p0-batch6"
+ },
+ "38041#b6-11": {
+  "local": "p0g-deep-seat.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0g-deep-seat.png",
+  "alt": "Deep seating patio group with extra-thick custom cushions - a club chair and sofa with tall firm seat pads",
+  "slot": "inline-swap",
+  "note": "replaced post inline img cm-ofds-hero-20261002.jpg",
+  "batch": "2026-10-11 p0-batch6"
  }
 }

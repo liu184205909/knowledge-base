@@ -1,0 +1,263 @@
+{
+ "id": 19274,
+ "name": "Plush Leaky Shoulder Dress",
+ "slug": "m-20-plush-leaky-shoulder-dress",
+ "permalink": "https://rosetoys.org/product/m-20-plush-leaky-shoulder-dress/",
+ "date_created": "2024-07-02T20:46:33",
+ "date_created_gmt": "2024-07-02T12:46:33",
+ "date_modified": "2026-09-04T16:22:51",
+ "date_modified_gmt": "2026-09-04T08:22:51",
+ "type": "variable",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>Material: Polyester<br data-mce-fragment=\"1\">Project type: neck ring + dress<br data-mce-fragment=\"1\">Feature: Shoulder design<br data-mce-fragment=\"1\">Color: Red<br data-mce-fragment=\"1\">Specification: S Recommended weight: 40-45kg<br data-mce-fragment=\"1\">          M Recommended weight: 45-55kg <br data-mce-fragment=\"1\">           L Recommended weight: 55-60kg <br data-mce-fragment=\"1\">           XL Recommended weight 60-65kg</p>\n",
+ "short_description": "",
+ "sku": "A8938082337041",
+ "price": "45.89",
+ "regular_price": "",
+ "sale_price": "",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 163,
+   "name": "Nightwear",
+   "slug": "nightwear"
+  }
+ ],
+ "brands": [],
+ "tags": [
+  {
+   "id": 113,
+   "name": "\"New\"",
+   "slug": "new"
+  },
+  {
+   "id": 166,
+   "name": "\"nightdress\"",
+   "slug": "nightdress"
+  },
+  {
+   "id": 212,
+   "name": "\"u5723u8bde\"",
+   "slug": "u5723u8bde"
+  }
+ ],
+ "images": [
+  {
+   "id": 19439,
+   "date_created": "2024-07-03T05:02:28",
+   "date_created_gmt": "2024-07-02T13:02:28",
+   "date_modified": "2024-07-03T05:02:28",
+   "date_modified_gmt": "2024-07-02T13:02:28",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/1-8_7e3f5be6-e200-4549-9f4f-a4b07405c8a4.jpg",
+   "name": "1-8_7e3f5be6-e200-4549-9f4f-a4b07405c8a4.jpg",
+   "alt": "Plush Leaky Shoulder Dress",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/1-8_7e3f5be6-e200-4549-9f4f-a4b07405c8a4.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_7e3f5be6-e200-4549-9f4f-a4b07405c8a4-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_7e3f5be6-e200-4549-9f4f-a4b07405c8a4-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_7e3f5be6-e200-4549-9f4f-a4b07405c8a4-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_7e3f5be6-e200-4549-9f4f-a4b07405c8a4-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/1-8_7e3f5be6-e200-4549-9f4f-a4b07405c8a4-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/1-8_7e3f5be6-e200-4549-9f4f-a4b07405c8a4-430x430.jpg"
+  },
+  {
+   "id": 19441,
+   "date_created": "2024-07-03T05:02:30",
+   "date_created_gmt": "2024-07-02T13:02:30",
+   "date_modified": "2024-07-03T05:02:30",
+   "date_modified_gmt": "2024-07-02T13:02:30",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/6-8_89f4d7ae-d551-4425-9a64-e3284d5105ff.jpg",
+   "name": "6-8_89f4d7ae-d551-4425-9a64-e3284d5105ff.jpg",
+   "alt": "Plush Leaky Shoulder Dress",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/6-8_89f4d7ae-d551-4425-9a64-e3284d5105ff.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_89f4d7ae-d551-4425-9a64-e3284d5105ff-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_89f4d7ae-d551-4425-9a64-e3284d5105ff-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_89f4d7ae-d551-4425-9a64-e3284d5105ff-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_89f4d7ae-d551-4425-9a64-e3284d5105ff-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/6-8_89f4d7ae-d551-4425-9a64-e3284d5105ff-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/6-8_89f4d7ae-d551-4425-9a64-e3284d5105ff-430x430.jpg"
+  },
+  {
+   "id": 19442,
+   "date_created": "2024-07-03T05:02:30",
+   "date_created_gmt": "2024-07-02T13:02:30",
+   "date_modified": "2024-07-03T05:02:30",
+   "date_modified_gmt": "2024-07-02T13:02:30",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/7-8_660ddcb6-ecb2-4459-b5ed-9d6a30daea60.jpg",
+   "name": "7-8_660ddcb6-ecb2-4459-b5ed-9d6a30daea60.jpg",
+   "alt": "Plush Leaky Shoulder Dress",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/7-8_660ddcb6-ecb2-4459-b5ed-9d6a30daea60.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_660ddcb6-ecb2-4459-b5ed-9d6a30daea60-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_660ddcb6-ecb2-4459-b5ed-9d6a30daea60-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_660ddcb6-ecb2-4459-b5ed-9d6a30daea60-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_660ddcb6-ecb2-4459-b5ed-9d6a30daea60-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/7-8_660ddcb6-ecb2-4459-b5ed-9d6a30daea60-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/7-8_660ddcb6-ecb2-4459-b5ed-9d6a30daea60-430x430.jpg"
+  },
+  {
+   "id": 19443,
+   "date_created": "2024-07-03T05:02:32",
+   "date_created_gmt": "2024-07-02T13:02:32",
+   "date_modified": "2024-07-03T05:02:32",
+   "date_modified_gmt": "2024-07-02T13:02:32",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/8-8_cb5f69e5-4cda-4cce-a3e5-478b05b2d482.jpg",
+   "name": "8-8_cb5f69e5-4cda-4cce-a3e5-478b05b2d482.jpg",
+   "alt": "Plush Leaky Shoulder Dress",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/8-8_cb5f69e5-4cda-4cce-a3e5-478b05b2d482.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_cb5f69e5-4cda-4cce-a3e5-478b05b2d482-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_cb5f69e5-4cda-4cce-a3e5-478b05b2d482-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_cb5f69e5-4cda-4cce-a3e5-478b05b2d482-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_cb5f69e5-4cda-4cce-a3e5-478b05b2d482-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/8-8_cb5f69e5-4cda-4cce-a3e5-478b05b2d482-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/8-8_cb5f69e5-4cda-4cce-a3e5-478b05b2d482-430x430.jpg"
+  },
+  {
+   "id": 19444,
+   "date_created": "2024-07-03T05:02:33",
+   "date_created_gmt": "2024-07-02T13:02:33",
+   "date_modified": "2024-07-03T05:02:33",
+   "date_modified_gmt": "2024-07-02T13:02:33",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/3-8_cad2156f-7b81-4acd-a112-d4925625b7a3.jpg",
+   "name": "3-8_cad2156f-7b81-4acd-a112-d4925625b7a3.jpg",
+   "alt": "Plush Leaky Shoulder Dress",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/3-8_cad2156f-7b81-4acd-a112-d4925625b7a3.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/3-8_cad2156f-7b81-4acd-a112-d4925625b7a3-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/3-8_cad2156f-7b81-4acd-a112-d4925625b7a3-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/3-8_cad2156f-7b81-4acd-a112-d4925625b7a3-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/3-8_cad2156f-7b81-4acd-a112-d4925625b7a3-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/3-8_cad2156f-7b81-4acd-a112-d4925625b7a3-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/3-8_cad2156f-7b81-4acd-a112-d4925625b7a3-430x430.jpg"
+  },
+  {
+   "id": 19445,
+   "date_created": "2024-07-03T05:02:34",
+   "date_created_gmt": "2024-07-02T13:02:34",
+   "date_modified": "2024-07-03T05:02:34",
+   "date_modified_gmt": "2024-07-02T13:02:34",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/4-8_5f6dd2d8-130f-4823-9be1-9f97c2e98e54.jpg",
+   "name": "4-8_5f6dd2d8-130f-4823-9be1-9f97c2e98e54.jpg",
+   "alt": "Plush Leaky Shoulder Dress",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/4-8_5f6dd2d8-130f-4823-9be1-9f97c2e98e54.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/4-8_5f6dd2d8-130f-4823-9be1-9f97c2e98e54-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/4-8_5f6dd2d8-130f-4823-9be1-9f97c2e98e54-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/4-8_5f6dd2d8-130f-4823-9be1-9f97c2e98e54-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/4-8_5f6dd2d8-130f-4823-9be1-9f97c2e98e54-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/4-8_5f6dd2d8-130f-4823-9be1-9f97c2e98e54-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/4-8_5f6dd2d8-130f-4823-9be1-9f97c2e98e54-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "L(55-60KG)",
+    "M(45-55KG)",
+    "S(40-45KG)",
+    "XL(60-65KG)"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [
+  19446,
+  19533,
+  19602,
+  22819,
+  19447,
+  19534,
+  19603,
+  22820,
+  19449,
+  19535,
+  19604,
+  22821,
+  19450,
+  19536,
+  19605,
+  22822
+ ],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>45.89</bdi></span>",
+ "related_ids": [
+  17118,
+  17426,
+  17491,
+  17391,
+  17071
+ ],
+ "meta_data": [
+  {
+   "id": 34293,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 35375,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 104102,
+   "key": "rank_math_title",
+   "value": "Plush Leaky Shoulder Dress | RoseToys"
+  },
+  {
+   "id": 104103,
+   "key": "rank_math_description",
+   "value": "Polyester plush Leaky Shoulder Dress with shoulder design in red. Available in S, M and L. Includes neck ring + dress."
+  },
+  {
+   "id": 110973,
+   "key": "_elementor_page_assets",
+   "value": []
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": true,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/19274",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}

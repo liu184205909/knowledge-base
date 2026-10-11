@@ -1,0 +1,229 @@
+{
+ "id": 19011,
+ "name": "Yes Daddy Campus Swimsuit",
+ "slug": "t-008-yes-daddy-campus-swimsuits",
+ "permalink": "https://rosetoys.org/product/t-008-yes-daddy-campus-swimsuits/",
+ "date_created": "2024-07-02T20:24:03",
+ "date_created_gmt": "2024-07-02T12:24:03",
+ "date_modified": "2026-10-10T23:41:28",
+ "date_modified_gmt": "2026-10-10T15:41:28",
+ "type": "variable",
+ "status": "publish",
+ "featured": false,
+ "catalog_visibility": "visible",
+ "description": "<p>A one-size campus swimsuit costume in stretch polyester, built for theme nights that value speed over fuss. The set pairs a cropped top with a matching onesie, both in high-elasticity fabric that moves with the body rather than against it.</p>\n<p>The styling reads as the classic school swimsuit look, the kind that needs no explanation at a costume party. Between the two colorways, white keeps the retro reference loudest while black reads more understated once the lights go down.</p>\n<ul>\n<li>Material: polyester</li>\n<li>Includes: top, onesie</li>\n<li>Features: high elasticity</li>\n<li>Color: white or black</li>\n<li>Sizing: one size, 85-130 lbs</li>\n</ul>\n<p>The 85-130 lbs range is honest rather than optimistic: sitting at the top of it means a close, second-skin fit rather than a relaxed one.</p>\n",
+ "short_description": "<p>High-stretch campus swimsuit costume with cropped top and onesie, one size fitting 85-130 lbs in black or white.</p>\n",
+ "sku": "A9082298564881",
+ "price": "21.99",
+ "regular_price": "",
+ "sale_price": "",
+ "date_on_sale_from": null,
+ "date_on_sale_from_gmt": null,
+ "date_on_sale_to": null,
+ "date_on_sale_to_gmt": null,
+ "on_sale": true,
+ "purchasable": true,
+ "total_sales": 0,
+ "virtual": false,
+ "downloadable": false,
+ "downloads": [],
+ "download_limit": 0,
+ "download_expiry": 0,
+ "external_url": "",
+ "button_text": "",
+ "tax_status": "taxable",
+ "tax_class": "",
+ "manage_stock": true,
+ "stock_quantity": 1000,
+ "backorders": "yes",
+ "backorders_allowed": true,
+ "backordered": false,
+ "low_stock_amount": null,
+ "sold_individually": false,
+ "weight": "",
+ "dimensions": {
+  "length": "",
+  "width": "",
+  "height": ""
+ },
+ "shipping_required": true,
+ "shipping_taxable": true,
+ "shipping_class": "",
+ "shipping_class_id": 0,
+ "reviews_allowed": true,
+ "average_rating": "0.00",
+ "rating_count": 0,
+ "upsell_ids": [],
+ "cross_sell_ids": [],
+ "parent_id": 0,
+ "purchase_note": "",
+ "categories": [
+  {
+   "id": 183,
+   "name": "Cosplay",
+   "slug": "cosplay"
+  }
+ ],
+ "brands": [],
+ "tags": [],
+ "images": [
+  {
+   "id": 19120,
+   "date_created": "2024-07-03T04:35:09",
+   "date_created_gmt": "2024-07-02T12:35:09",
+   "date_modified": "2024-07-03T04:35:09",
+   "date_modified_gmt": "2024-07-02T12:35:09",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/1_3f81a3e0-bbc4-45f1-9051-f4cd77e45747.jpg",
+   "name": "1_3f81a3e0-bbc4-45f1-9051-f4cd77e45747.jpg",
+   "alt": "Yes Daddy Campus swimsuits",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/1_3f81a3e0-bbc4-45f1-9051-f4cd77e45747.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/1_3f81a3e0-bbc4-45f1-9051-f4cd77e45747-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/1_3f81a3e0-bbc4-45f1-9051-f4cd77e45747-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/1_3f81a3e0-bbc4-45f1-9051-f4cd77e45747-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/1_3f81a3e0-bbc4-45f1-9051-f4cd77e45747-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/1_3f81a3e0-bbc4-45f1-9051-f4cd77e45747-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/1_3f81a3e0-bbc4-45f1-9051-f4cd77e45747-430x430.jpg"
+  },
+  {
+   "id": 19122,
+   "date_created": "2024-07-03T04:35:10",
+   "date_created_gmt": "2024-07-02T12:35:10",
+   "date_modified": "2024-07-03T04:35:10",
+   "date_modified_gmt": "2024-07-02T12:35:10",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/2_0150178a-15ca-484f-a802-4260916c9bbe.jpg",
+   "name": "2_0150178a-15ca-484f-a802-4260916c9bbe.jpg",
+   "alt": "Yes Daddy Campus swimsuits",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/2_0150178a-15ca-484f-a802-4260916c9bbe.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/2_0150178a-15ca-484f-a802-4260916c9bbe-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/2_0150178a-15ca-484f-a802-4260916c9bbe-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/2_0150178a-15ca-484f-a802-4260916c9bbe-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/2_0150178a-15ca-484f-a802-4260916c9bbe-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/2_0150178a-15ca-484f-a802-4260916c9bbe-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/2_0150178a-15ca-484f-a802-4260916c9bbe-430x430.jpg"
+  },
+  {
+   "id": 19123,
+   "date_created": "2024-07-03T04:35:11",
+   "date_created_gmt": "2024-07-02T12:35:11",
+   "date_modified": "2024-07-03T04:35:11",
+   "date_modified_gmt": "2024-07-02T12:35:11",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/3_a667a8fe-5a9c-44eb-9742-2fbb78c0803e.jpg",
+   "name": "3_a667a8fe-5a9c-44eb-9742-2fbb78c0803e.jpg",
+   "alt": "Yes Daddy Campus swimsuits",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/3_a667a8fe-5a9c-44eb-9742-2fbb78c0803e.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/3_a667a8fe-5a9c-44eb-9742-2fbb78c0803e-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/3_a667a8fe-5a9c-44eb-9742-2fbb78c0803e-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/3_a667a8fe-5a9c-44eb-9742-2fbb78c0803e-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/3_a667a8fe-5a9c-44eb-9742-2fbb78c0803e-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/3_a667a8fe-5a9c-44eb-9742-2fbb78c0803e-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/3_a667a8fe-5a9c-44eb-9742-2fbb78c0803e-430x430.jpg"
+  },
+  {
+   "id": 19124,
+   "date_created": "2024-07-03T04:35:12",
+   "date_created_gmt": "2024-07-02T12:35:12",
+   "date_modified": "2024-07-03T04:35:12",
+   "date_modified_gmt": "2024-07-02T12:35:12",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/5_d21a0933-bcb9-4ee7-a74e-295d6bf8225f.jpg",
+   "name": "5_d21a0933-bcb9-4ee7-a74e-295d6bf8225f.jpg",
+   "alt": "Yes Daddy Campus swimsuits",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/5_d21a0933-bcb9-4ee7-a74e-295d6bf8225f.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/5_d21a0933-bcb9-4ee7-a74e-295d6bf8225f-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/5_d21a0933-bcb9-4ee7-a74e-295d6bf8225f-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/5_d21a0933-bcb9-4ee7-a74e-295d6bf8225f-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/5_d21a0933-bcb9-4ee7-a74e-295d6bf8225f-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/5_d21a0933-bcb9-4ee7-a74e-295d6bf8225f-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/5_d21a0933-bcb9-4ee7-a74e-295d6bf8225f-430x430.jpg"
+  },
+  {
+   "id": 19125,
+   "date_created": "2024-07-03T04:35:13",
+   "date_created_gmt": "2024-07-02T12:35:13",
+   "date_modified": "2024-07-03T04:35:13",
+   "date_modified_gmt": "2024-07-02T12:35:13",
+   "src": "https://rosetoys.org/wp-content/uploads/2024/07/4_0bb2f067-0816-4136-a14c-73317f64bda6.jpg",
+   "name": "4_0bb2f067-0816-4136-a14c-73317f64bda6.jpg",
+   "alt": "Yes Daddy Campus swimsuits",
+   "srcset": "https://rosetoys.org/wp-content/uploads/2024/07/4_0bb2f067-0816-4136-a14c-73317f64bda6.jpg 800w, https://rosetoys.org/wp-content/uploads/2024/07/4_0bb2f067-0816-4136-a14c-73317f64bda6-430x430.jpg 430w, https://rosetoys.org/wp-content/uploads/2024/07/4_0bb2f067-0816-4136-a14c-73317f64bda6-150x150.jpg 150w, https://rosetoys.org/wp-content/uploads/2024/07/4_0bb2f067-0816-4136-a14c-73317f64bda6-700x700.jpg 700w, https://rosetoys.org/wp-content/uploads/2024/07/4_0bb2f067-0816-4136-a14c-73317f64bda6-300x300.jpg 300w, https://rosetoys.org/wp-content/uploads/2024/07/4_0bb2f067-0816-4136-a14c-73317f64bda6-768x768.jpg 768w",
+   "sizes": "(max-width: 800px) 100vw, 800px",
+   "thumbnail": "https://rosetoys.org/wp-content/uploads/2024/07/4_0bb2f067-0816-4136-a14c-73317f64bda6-430x430.jpg"
+  }
+ ],
+ "attributes": [
+  {
+   "id": 7,
+   "name": "Size",
+   "slug": "pa_size",
+   "position": 0,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "One size"
+   ]
+  },
+  {
+   "id": 5,
+   "name": "Color",
+   "slug": "pa_color",
+   "position": 1,
+   "visible": true,
+   "variation": true,
+   "options": [
+    "Black",
+    "White"
+   ]
+  }
+ ],
+ "default_attributes": [],
+ "variations": [
+  19126,
+  19127
+ ],
+ "grouped_products": [],
+ "menu_order": 0,
+ "price_html": "<del aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>33.99</bdi></span></del> <span class=\"screen-reader-text\">Original price was: &#036;33.99.</span><ins aria-hidden=\"true\"><span class=\"woocommerce-Price-amount amount\"><bdi><span class=\"woocommerce-Price-currencySymbol\" translate=\"no\" dir=\"auto\">&#36;</span>21.99</bdi></span></ins><span class=\"screen-reader-text\">Current price is: &#036;21.99.</span>",
+ "related_ids": [
+  19255,
+  19297,
+  19289,
+  19153,
+  19235
+ ],
+ "meta_data": [
+  {
+   "id": 32043,
+   "key": "rank_math_internal_links_processed",
+   "value": "1"
+  },
+  {
+   "id": 32788,
+   "key": "_wpcom_is_markdown",
+   "value": ""
+  },
+  {
+   "id": 104344,
+   "key": "rank_math_title",
+   "value": "Yes Daddy Campus Swimsuit, 2 Colors | RoseToys"
+  },
+  {
+   "id": 104345,
+   "key": "rank_math_description",
+   "value": "Yes Daddy campus swimsuit costume in stretch polyester with top and onesie. One size for 85-130 lbs, in black or white."
+  },
+  {
+   "id": 111836,
+   "key": "_elementor_page_assets",
+   "value": []
+  }
+ ],
+ "stock_status": "instock",
+ "has_options": true,
+ "post_password": "",
+ "global_unique_id": "",
+ "jetpack_sharing_enabled": true,
+ "_links": {
+  "self": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products/19011",
+    "targetHints": {
+     "allow": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE"
+     ]
+    }
+   }
+  ],
+  "collection": [
+   {
+    "href": "https://rosetoys.org/wp-json/wc/v3/products"
+   }
+  ]
+ }
+}
