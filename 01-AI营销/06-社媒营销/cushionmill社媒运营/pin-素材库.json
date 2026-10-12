@@ -533,7 +533,8 @@
   "desc": "Restaurant Booth Cushions: Specifying for Dinner-Rush Duty — the full guide with photos, measuring tips and fabric notes. Learn exactly what to check before you order custom cushions: foam densities, fabric types, and how to measure so the fit is right the first time. 119 fabrics and made-to-measure cutting available.",
   "board": "Cushion Guides & Ideas",
   "_board": "Customer Spaces",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-13 buffer-mcp"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/09/hb-santa-rosa-cushions.png.webp",
@@ -569,7 +570,8 @@
   "desc": "Everything to know before you replace or order cushions: A restaurant booth is the hardest job in the cushion world. Residential cushions measure duty in hours per day; a busy booth measures turns per day — eight to twelve sittings, ever We cut custom cushions to your measurements in 119 indoor & outdoor fabrics — high-density foam options, 4-7 business day production, free shipping over $158.",
   "board": "Cushion Guides & Ideas",
   "_board": "Customer Spaces",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-13 buffer-mcp"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/09/hb-pembrey-cushions.png.webp",
@@ -623,7 +625,8 @@
   "desc": "How to Measure Radius Corners on Cushions (With Real Examples) — the full guide with photos, measuring tips and fabric notes. Learn exactly what to check before you order custom cushions: foam densities, fabric types, and how to measure so the fit is right the first time. 119 fabrics and made-to-measure cutting available.",
   "board": "Cushion Guides & Ideas",
   "_board": "How to Measure Cushions",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-13 buffer-mcp"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/10/cm-tropitone-02-crescent.jpg",
@@ -659,7 +662,8 @@
   "desc": "Everything to know before you replace or order cushions: Square corners are the default assumption on every cutting form we have ever printed. When a frame actually has rounded front corners and the order says nothing about them, the kni We cut custom cushions to your measurements in 119 indoor & outdoor fabrics — high-density foam options, 4-7 business day production, free shipping over $158.",
   "board": "Cushion Guides & Ideas",
   "_board": "How to Measure Cushions",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-13 buffer-mcp"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/08/custom-patio-chair-cushions-a.webp",
@@ -4968,9 +4972,9 @@
   "link": "https://cushionmill.com/product/custom-bay-window-cushions/",
   "desc": "Same bay, same garden view: sun-bleached cushion out, plump sage-green custom cushion in, cut to the exact angled measurements. Cut to your exact measurements, made in 4-7 days, in your choice of 119 fabrics. Zip-off covers unzip fully so you can wash the covers anytime — never sewn shut. Free remake if the fit isn't right.",
   "board": "Customer Spaces",
-  "queued_at": "2026-10-09 before-after-b1",
+  "queued_at": "2026-10-13 buffer-mcp",
   "_board": "How to Measure Cushions",
-  "_used": false
+  "_used": true
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/10/cm-before-after-06-dining-chairs.png",

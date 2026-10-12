@@ -10,7 +10,7 @@
 |---|---|
 | 交期 | 标准 4-7 business days / 加急 rush 3-5；运输另加 3-6 周 |
 | 运费 | orders over $158 免运费 |
-| 优惠码 | WELCOME8 = 8% off 首购（仅优惠帖使用，其余帖不提码） |
+| 优惠码 | WELCOME5 = 5% off 首购（仅优惠帖使用，其余帖不提码；2026-10-13 由 WELCOME8/8% 改定） |
 | 禁承诺 | ties 系带 / non-slip 防滑底 / piping 滚边 / tufting·quilting 绗缝——一律不写 |
 | 禁外传 | 海绵拼接工艺、分段运输细节、PayPal 人工账单路线（内部 only） |
 | 不提 | 寄样（sampling）、"落选/退回"措辞（两色套话术只说 swap） |
@@ -178,16 +178,16 @@ Made in 4-7 business days (rush 3-5). Free shipping over $158.
 This weekend, measure the nook: https://cushionmill.com/product/custom-breakfast-nook-cushions/
 ```
 
-### FB-4 · 优惠帖 · WELCOME8 首发（排期槽：W3 周日 10-25 美东上午；隔周 1 条）
+### FB-4 · 优惠帖 · WELCOME5 首发（排期槽：W3 周日 10-25 美东上午；隔周 1 条）
 
 **图**：`https://cushionmill.com/wp-content/uploads/2026/09/cm-how-to-measure-outdoor-cushions-32663057-1.png`
 
 ```
-First order? Here's 8% off.
+First order? Here's 5% off.
 
-Code WELCOME8 — 8% off your first custom cushion order.
+Code WELCOME5 — 5% off your first custom cushion order.
 
-How it works: measure your furniture (width, depth, thickness), choose from 119 indoor & outdoor fabrics, enter WELCOME8 at checkout. We cut each cushion to your measurements — made in 4-7 business days (rush 3-5), free shipping over $158, and if the fit misses, the remake is on us.
+How it works: measure your furniture (width, depth, thickness), choose from 119 indoor & outdoor fabrics, enter WELCOME5 at checkout. We cut each cushion to your measurements — made in 4-7 business days (rush 3-5), free shipping over $158, and if the fit misses, the remake is on us.
 
 Standard sizes had their chance. Order to your measurements instead:
 https://cushionmill.com/custom-cushions/
@@ -215,11 +215,11 @@ https://cushionmill.com/custom-cushions/
 | 2 | 10-13 周二 22:00 | `6ac78a6e444a36d3be1f4f6f` | FB-1 泡沫密度 Tip（Why cushions go flat） | cm-cushion-filling-types-guide |
 | 3 | 10-15 周四 22:00 | `6ac78a74daf7bb7cba1ec7ac` | FB-2 Before & After 藤椅两色套 4 块 | custom-rattan-cushions-a.webp ※1 |
 | 4 | 10-17 周六 22:00 | `6ac78a7a82db5af660c2b243` | FB-3 早餐角场景 | custom-breakfast-nook-cushions.webp |
-| 5 | 10-18 周日 23:00 | `6ac78a8708d405a9e7febfb8` | WELCOME8 优惠帖（措辞 A：New here? Start with 8% off） | wcc_measure.png |
+| 5 | 10-18 周日 23:00 | `6ac78a8708d405a9e7febfb8` | WELCOME5 优惠帖（措辞 A：New here? Start with 5% off） | wcc_measure.png |
 | 6 | 10-20 周二 22:00 | `6ac78a8dd1ababbf88addf2d` | 新产·户外垫保养 12 习惯 | cm-outdoor-cushion-maintenance-tips |
 | 7 | 10-22 周四 22:00 | `6ac78a9508d405a9e7fec333` | 新产·测量三数指南（Will they fit?） | cm-mt-outdoor-cushions |
 | 8 | 10-24 周六 22:00 | `6ac78a9de63932e2c59fc23b` | 新产·室内垫自检保养（Saturday check） | cm-indoor-furniture-cushion-care |
-| 9 | 10-25 周日 23:00 | `6ac78aa6daf7bb7cba1ed476` | FB-4 WELCOME8 优惠帖（措辞 B：First order? 原稿） | cm-how-to-measure-outdoor-cushions |
+| 9 | 10-25 周日 23:00 | `6ac78aa6daf7bb7cba1ed476` | FB-4 WELCOME5 优惠帖（措辞 B：First order? 原稿） | cm-how-to-measure-outdoor-cushions |
 | 10 | 10-27 周二 22:00 | `6ac78ac9444a36d3be1f6a3b` | 新产·定价构成解释（Why one cushion costs that much） | cm-pricing-formula-v2 |
 
 ※1 FB-2 客户实拍照片截至排期日未落位，按本轮指令照排，配图改用 rattan 产品场景图（非客户照冒充）；**真实客户照片到位后可 edit_post 换图**。

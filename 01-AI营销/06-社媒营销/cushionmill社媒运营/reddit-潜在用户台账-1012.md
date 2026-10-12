@@ -11,7 +11,7 @@
 
 | # | username | 来源帖 | 信号类型 | 画像 | 建议触达 | 状态 |
 |---|----------|--------|----------|------|----------|------|
-| 1 | **westindian92** | r/interiordecorating 1wz5y0k（2026-10-06） | 求购：定制皮沙发罩+垫罩（10 年 Room & Board sectional，"Reupholstery is $$$"） | C 端业主，karma 123 | 已触达（10-07 spaceplaza 回帖：两条路干货+三渠道混合推荐，Cushion Mill 顾客口吻顺带提及=本周首次品牌提及）——10-08 核：楼主未追问（评论仅我方 1 条）；10-09 核（第 3 天，old.reddit 通道+datetime 核对 10-06T17:14Z）：楼主仍未回应；10-10 核（第 4 天，old.reddit）：楼主仍未回应（评论区仅我方条目），跟进窗口未开，继续观察 | 🟡 已回帖观察 |
+| 1 | **westindian92** | r/interiordecorating 1wz5y0k（2026-10-06） | 求购：定制皮沙发罩+垫罩（10 年 Room & Board sectional，"Reupholstery is $$$"） | C 端业主，karma 123 | 已触达（10-07 spaceplaza 回帖：两条路干货+三渠道混合推荐，Cushion Mill 顾客口吻顺带提及=本周首次品牌提及）——10-08 核：楼主未追问（评论仅我方 1 条）；10-09 核（第 3 天，old.reddit 通道+datetime 核对 10-06T17:14Z）：楼主仍未回应；10-10 核（第 4 天，old.reddit）：楼主仍未回应；10-13 核（第 7 天，www 空壳→old.reddit 读通）：评论区仍仅我方 1 条，零回应——**改周度核，不再日核** | 🟡 已回帖观察（降频） |
 | 2 | hardyz | r/Lovesac 1wst2h8（09-28） | 抱怨现有垫：Sactional 十年垫塌，找 latex/品牌替代 | C 端真实老户（12 年，7,320 karma，1,699 帖） | 已触达（spaceplaza 已回密度干货）——观察其追问 | 🟡 已回帖观察 |
 | 3 | Disastrous_Soup5314 | 同上评论区 | 抱怨现有垫：Sactional 3 年+两男孩使用，同需求者（评论区暴露的第二需求人） | C 端，533 karma | 观察其独立发帖 | 🟢 台账观察 |
 | 4 | Lower-Attention-3205 | r/upholstery 1wsgaot（09-28） | 问测量+求购：摇椅坐高降 2"，"no idea what type of foam to order" | C 端新号（20 karma，为求助注册） | 已触达（spaceplaza 已回）——倾向换底座方案，不强推 | 🟡 已回帖观察 |
@@ -33,9 +33,30 @@
 | 20 | PvtCW | r/Lovesac 1x0up6p 评论区（10-08） | 抱怨现有·退货中：$5k Sactional 整组退货（"experience has been so bad... white glove pickup"），对比 Room & Board 价差 | C 端高客单（$5k 档） | 不动该帖（价格讨论语境）；**画像标记=退货完成后的替代方案帖优先响应** | 🟢 高价值画像 |
 | 21 | squeeps_21 | r/Lovesac 1x0uf61 评论区（10-08） | 抱怨现有：深座+斜背要塞枕头才舒服 "one would have to put extra pillows behind the couch cushions for the couch to be comfortable chaps my ass so much" | C 端 Sactional 新用户 | 不动（评论暴露）；**腰靠/lumbar 需求画像**，观察其独立发帖（10-10 我方已在 1x0uf61 主评论区回帖，squeeps_21 本人仍未触达） | 🟢 台账观察 |
 | 22 | thewolfwalker | r/Lovesac 1x0x7wm 评论区（10-08） | 求购·进行时：计划 Loved 买二手内芯+"order new covers"（原厂罩语境） | C 端（Sactional 散件自组） | 不动（原厂罩语境，第三方定制错位）；A7 replacement covers 弱画像 | ⚪ 弱信号 |
-| 23 | megoonie- | r/Lovesac 1x0uf61（2026-10-08）楼主 | 求购·进行时：深座配置买前咨询（angle back vs straight back 抉择，"the angle back made me wish I had another pillow behind me"+"pillows topple over on straight back"），高意向活跃 OP（22 评论逐条回复型） | C 端 Sactional 准新客（配置未交付=腰靠 wedge 潜在需求） | 已触达（10-10 spaceplaza 回帖 pez5h1x：几何归因+两条路线 IKEA topper/定制 wedge+Cushion Mill 顾客口吻+~3 周交期真实缺点）——观察其回复 | 🟡 已回帖观察 |
+| 23 | megoonie- | r/Lovesac 1x0uf61（2026-10-08）楼主 | 求购·进行时：深座配置买前咨询（angle back vs straight back 抉择，"the angle back made me wish I had another pillow behind me"+"pillows topple over on straight back"），高意向活跃 OP（22 评论逐条回复型） | C 端 Sactional 准新客（配置未交付=腰靠 wedge 潜在需求） | 已触达（10-10 spaceplaza 回帖 pez5h1x：几何归因+两条路线 IKEA topper/定制 wedge+Cushion Mill 顾客口吻+~3 周交期真实缺点）——10-13 核（第 3 天）：pez5h1x 零回复（nestedReplies=0，score=1 存活），窗口未开继续观察 | 🟡 已回帖观察 |
+| 24 | SuitableCause995 | r/upholstery 1wwr05d（2026-10-03）楼主 | 抱怨现有·求替代：Ashley L 形沙发超大靠枕 "huge oversized back pillows I absolutely hate. Would love suggestions on what to replace them with"（评论区 3 条在要照片，互动中） | C 端（消费者口吻误入从业 sub） | 超窗不回（9.4 天）；**靠枕/lumbar 替换画像**（10-13 `"back cushion" sectional` 词首试产出），观察其独立发帖 | 🟢 台账观察 |
 
 **My 账号已出现标记**：spaceplaza 在 1wst2h8 / 1wsgaot / 1wte59f 三帖已有回帖——台账 #2/#4/#5 与日更轮天然重叠。
+
+## 1a. 存量扫描批次（2026-10-13 专项，30 天窗 looking-for 求购帖，含 DM 状态列）
+
+> **批次说明**：用户指令扩窗专项——日常轮 72h/24h 窗漏掉的 30 天存量求购帖。扫描 15 查询（r/upholstery×5 词+r/Lovesac×3+r/DesignMyRoom+r/furniture×2+r/interiordecorating+全站×4）→ 60+ 帖 → 深读 9 帖分层。**DM 通道本轮未实测**——评论 2 触发 Reddit 限流信号（"Looks like you've been doing that a lot."）后按风控铁律全停，DM 排队下一窗口。量控结果：评论 2/2（1 成功 1 限流未发）、DM 0/3。
+> **DM 状态列取值**：已发 / 失败弃 / 排队（帖龄窗口内待发）/ 不适用（B 层观察不 DM）。
+
+| # | username | 来源帖 | 信号类型 | 画像 | 建议触达 | DM 状态 | 状态 |
+|---|----------|--------|----------|------|----------|---------|------|
+| 25 | **Possible_Mud_1692** | r/upholstery 1x0r349（2026-10-08）楼主 | 求购：继承 mission style 沙发，过敏需换全部垫+面料，问渠道或 DIY，关注泡沫化学安全（"does not release cyanide"） | C 端业主（新面孔） | 已触达（10-13 spaceplaza 评论 12:41Z：CertiPUR-US 科普+2.8-3lb 密度+DIY 切割+四渠道混合推荐含 Cushion Mill 顾客口吻+3 周交期真实缺点） | 排队（限流全停未发；评论已触达，DM 为服务式补充） | 🟡 已评论观察 |
+| 26 | **fagbac** | r/upholstery 1x3ksxp（2026-10-11）楼主 | 抱怨现有垫：免费沙发 down/feather 芯塌陷漏毛（"back cushion completely collapses"），需换 foam 芯+可能换罩 | C 端业主（1 天活帖） | **排队明日**（10-13 评论注入成功但提交触发限流未发；限流冷却 18h+ 后重发——评论草稿 b64 在 temp/rd_c2_b64.txt，风控窗口 24-48h 后优先） | 排队（同上限流；评论先行，DM 跟评论） | 🟡 待触达（限流中） |
+| 27 | **kevinrhurst** | r/SaltLakeCity 1wuahxv（2026-09-30）楼主 | 求购：4 个**非矩形异形**靠背垫换芯，直说网购标准泡沫块不可行，求 SLC 本地 upholsterer | C 端业主（异形需求=我方配置器正中场景） | 老帖不回（12 天）；本地 sub 敏感——若回只干货+比价语境；观察其未获本地推荐后的后续 | 不适用（B 层） | 🟢 高价值画像 |
+| 28 | meow_cat_cat | r/Lovesac 1ww9law（2026-10-03）楼主 | 抱怨现有垫：Sactional 直背靠枕倒+毯子一拉带走（standard fill），评论区 10 条全是 DIY velcro 讨论无人给渠道 | C 端 Sactional 用户（评论区含 PvtCW #20/megoonie- #23 交叉） | 老帖不回（9 天）；**靠枕倒=腰靠/wedge 需求画像**（与 #21/#23 同款痛点第 3 例） | 不适用（B 层） | 🟢 台账观察 |
+| 29 | Full-Way1255 | r/Lovesac 1wq1oot（2026-09-25）楼主 | 求购·已解决：深座太深用腰枕削 4" 坐深（pillow hack 晒经验帖非求购）；评论区 Disastrous_Soup5314 #3 交叉 | C 端 Sactional 矮个用户 | 不动（已自己解决 17 天）；画像=深座修正需求者 | 不适用（B 层） | 🟢 画像样本 |
+| 30 | secondorder_ | r/DesignMyRoom 1x2edak + r/interiordecorating 1x2ebos（2026-10-10 双投）楼主 | 弱信号：卧房凹龛窗台求利用创意（5 评论全窗帘/储物建议，无人提垫） | C 端（审美求助语境） | 不动（审美帖+cushion 未被提及，回复突兀）；观察其是否后续问窗座垫 | 不适用（弱） | ⚪ 弱信号 |
+| 31 | taniith | r/upholstery 1x3p0jf（2026-10-12）楼主 | 材料咨询：18 年躺椅本地店换 foam 后背颈发热（评论区已建议 Dry Fast 开孔泡沫） | C 端（换芯售后语境） | 不动（材料咨询非求购；Dry Fast 建议已在评论区=已答）；quick-dry 泡沫差异化侧证 | 不适用（弱） | ⚪ 弱信号 |
+| 32 | smurfey002 | r/upholstery 1wzuk2f（2026-10-07）楼主 | 范围外：汽车座椅扶手换泡沫（"hard plastic+leather"） | 汽车内饰 DIY | 不动（品类错位）；0 评论帖仅记录 | 不适用 | ⚪ 范围外 |
+| 33 | deb1183 | r/upholstery 1wxfkk9（2026-10-04）楼主 | 范围外：UK+船/玻璃钢座椅 vinyl 粘合剂求助 | UK 用户（地域双错位） | 不动 | 不适用 | ⚪ 范围外 |
+| 34 | BelleDuMorte | r/upholstery 1wye7m3（2026-10-05）楼主 | B2B/DIY 错位：FBM 免费沙发全 DIY 重包项目（edge wire 修复，评论区全从业技术讨论） | DIY 爱好者（非客户） | 不动（SOP 负面清单：从业者 DIY 讨论） | 不适用 | ⚪ 错位归档 |
+
+**本轮通道记录**：old.reddit 详情页复活（10-06 全挂后首次复通，读+发布均走 old）；www 详情页发布层 shadow DOM 堵死态复现（composer rect 全 0，10-07 状态回归）；old 发布链路 textarea 注入+button.save click 实证可用（评论 1 一次成功），连续第 2 条触发账号限流——**本日触达配额实际耗尽**。
 
 ## 2. 本轮扫描覆盖与噪音账本（词召回率实测）
 
@@ -102,6 +123,18 @@
 | 合计 | 39 | 0 | **0 回复合规日**（6 词+flair 页零合格帖）；词效结论：lumbar 词族裸词不可用，需换 "lumbar" + 沙发语境词（sectional/sofa/back cushion）再试 |
 
 **10-10 词效侧证**：lumbar 新词族首试失败——办公椅 lumbar support 是独立市场，家居语境必须从 sectional/sofa 侧切入（下轮试 `"back cushion" sectional`）；主词周窗冻结已 5 轮，活帖来源事实上收敛到 flair 页（本日 flair 页也零新增=整站求购流安静日）。
+
+### 2e. 日更轮追加（2026-10-13，含品牌监控周轮补跑）
+
+| 词 | 召回 | 新增有效 | 构成 |
+|----|------|----------|------|
+| **r/Lovesac Sactional flair 页** | 3 | 0（1 深读） | 1 新帖 1x3eqwa（Corded Velvet 洗后斑驳，43h 落窗）——13 评论"正常现象"共识+零采购需求（warranty 语境），不回；2 已档 |
+| `"custom cushions"` (w) | 7 | 0 | 3 新面孔=布置求助三连投（hotgirldownshift 1x1o3a8/1x2hqmm/1x2hr5a，双投计 1）——bay window 垫是**已有资产非需求**（"with custom cushion"），93h 超窗+couch 级讨论，不回；其余已档/噪音 |
+| `"back cushion" sectional` (m)【新试词】 | 7 | 1（#24） | 2 条 r/FurnitureForLess affiliate listicle+1wwr05d 深读（Ashley 靠枕替换真需求但 9.4 天超窗）+老帖 |
+| `"outdoor cushions" replacement` (m) | 7 | 0 | 全已档/噪音 |
+| `"custom bench cushion"` (m) | 6 | 0 | 全 2024-25 老帖+1 已档 |
+| 品牌词×3 (w) 周轮补跑 | 0 | — | 连续第 10 轮零命中（降频后第一次周轮） |
+| 合计 | 37+品牌3 | 1 | **0 回复合规日**（counter=0≤2）；词效：back cushion+sectional 语境方向正确（首试即中真需求帖） |
 
 ## 3. 画像粗判方法与数据
 
