@@ -365,11 +365,17 @@ docker-compose up  # 访问 http://127.0.0.1:8501
 
 ---
 
+### huashu-art-motion（艺术动画 skill）
+
+**GitHub**: https://github.com/alchaincyf/huashu-art-motion | **Star**: 3.5K+（开源6天） | **作者**: 花叔
+
+**一句话**：用代码画 35 种艺术史风格并让画活起来——每风格一张配方卡（渲染管线+色板+母题动法+签名转场+短板），9 种解说动画语法，`--stills` 可单渲静帧=**35 套可控可复现的美术方向**（比生图模型可控性强：参数在卡里，同输入同输出）。MIT 全本地零 API（uv+Playwright+ffmpeg），中文 skill 国产模型可跑；`--width 1080 --height 1920` 直出竖版。本机 2026-10-12 试渲验证：nouveau 7/10 还原+2026 扁平 8.5/10（DTC 电商风），Pinterest 素材可用。与 HyperFrames 互补：**艺术风格化用 huashu，工程批量/嵌入用 HyperFrames**。
+
 ### HyperFrames
 
-**GitHub**: https://github.com/heygen-com/hyperframes | **Star**: 38K+ | **作者**: HeyGen（AI 视频老玩家，已在自家生产环境使用）
+**GitHub**: https://github.com/heygen-com/hyperframes | **Star**: 61K+（2026-10-12 实抓，7个月从38K翻倍） | **作者**: HeyGen（AI 视频老玩家，已在自家生产环境使用）
 
-**一句话**：写 HTML/CSS → 渲染 MP4，为 AI Agent 而生。**同输入永远出同视频**（确定性渲染）。
+**一句话**：写 HTML/CSS → 渲染 MP4，为 AI Agent 而生。**同输入永远出同视频**（确定性渲染）。2026-10 已长成完整生态：**自带 10 个 Claude skill**（hyperframes-animation/audio/cli/core/creative/keyframes/registry/studio/media-use，npx init 自动注册）、`<hyperframes-player>` **可嵌网页 web component**（品类页免托管 MP4）、AWS Lambda/云渲染批量、registry 约 400 个现成视觉组件（CRT扫描线/故障/图表/代码窗等）、Studio 桌面编辑器。本机 2026-10-12 init+render 闭环验证通过（temp/hf-test）。
 
 **核心机制**：
 - HTML + CSS + `data-start` / `data-duration` / `data-track-index` 时间轴属性
