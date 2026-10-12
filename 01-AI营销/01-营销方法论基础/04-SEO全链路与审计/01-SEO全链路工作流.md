@@ -610,6 +610,33 @@ google-seo-mcp 是 100+ 工具的能力底座（14 大类），gsc-radar 目前�
 - **工具/产品化 + 反 AI 实战**：Suganthan GSC MCP（20 工具）与 BigQuery MCP（32 工具，revenue per keyword）/ Screaming Frog+ChatGPT 批量 meta / Profound GSC 节点 / [25K→80K clicks：最有效的自动化多不需要 AI](https://www.reddit.com/r/n8n/comments/1jeuzjg/automation_workflows_that_grew_my_traffic_from/)（Reddit）
 
 
+<!-- ======== 第 II 部分附录：GSC 数据口径与陷阱清单（2026-10-12 增，全网调研入库）======== -->
+
+## GSC 数据口径与陷阱清单（2026-10）
+
+> 来源：GSC 官方 API 文档/blog 2025-2026 新功能 + nqz.ai/advancedwebranking 实测 + OpenGSC/SEOTesting 工具生态调研。供 gsc-radar 与本部分所有查询共用。
+
+### API 能力升级（2025-2026 官方上线，多数人未用）
+
+| 能力 | 用法 | 上线时间 |
+|---|---|---|
+| **小时级数据** | `dimensions:["hour"]` + `dataState:"hourly_all"`，响应带 `first_incomplete_hour` 标记未定型起点。发布/改版后日内即时反应诊断 | 2025-04 |
+| **官方 Annotations** | Performance 图表右键加注（120 字符，暂不可编辑）——只做标记层，前后对比逻辑需自建（gsc-radar 变更笔记已承接） | 2025-11 |
+| **Branded/Non-branded 过滤器** | 官方 AI 分类可捕捉拼错与变体，但不可自定义词表——与自建 regex 交叉校验用 | 2025-11（2026-03 全量） |
+| **Query groups** | Insights 卡片 Top/Trending up/down 三视图，仅大 query 量资产可用，API 不暴露 | 2025-10 |
+| **BigQuery Bulk Data Export** | 每天最高 100 万行彻底绕过 API 25K 限制；含 `is_anonymized_query` 字段可量化匿名 query 占比。**无历史回填**（从启用日开始） | — |
+
+### 陷阱清单
+
+1. **25,000 行上限三路绕过**：`startRow` 分页 / **日切片**（24h 窗口逐日拉——实测 50K 行整段导出只覆盖 5-15% query，逐日才能拉全）/ BigQuery Export
+2. **`first_incomplete_date` 护栏**：`dataState=all` 按日分组时响应自带"哪天起数据还会变"——近 3 天数据未定型，禁当结论
+3. **position 是曝光加权平均**：`SUM(sum_top_position)/SUM(impressions)+1`——会掩盖双峰分布（同时排 1 和 50 平均出 25）。判读口诀：**曝光降+点击稳+排名升 = Google 报告口径变化，非真实损失**
+4. **多维度组合行数骤降**：实测 2 维度后约剩 3,500 行，维度不是免费的
+5. **16 个月保留期**：数据到点即删 API 也拿不回——季度 `history_save_snapshot` 是底线归档
+6. **数据延迟 24-72h 常态，偶发 71h+**；`dataState=all` 含未定型数据
+7. **AI bot 流量污染**：ChatGPT/Atlas 搜索按真人混入——隔离 regex 见 gsc-radar 阶段1步骤0
+8. **`aggregationType` 口径**：`byProperty` vs `byPage` 数据不同；group/filter by page 时不能 byProperty
+
 <!-- ======== 第 III 部分：C 端 GEO 五段旅程布局工作流（原 20-C端GEO五段旅程布局工作流.md，2026-09-14 并入）======== -->
 
 # C端项目 GEO 五段旅程布局工作流
