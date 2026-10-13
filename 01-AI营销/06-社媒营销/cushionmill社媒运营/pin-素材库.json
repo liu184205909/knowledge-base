@@ -4992,9 +4992,9 @@
   "link": "https://cushionmill.com/product/custom-porch-swing-cushions/",
   "desc": "Golden-hour favorite: the porch swing with a faded, sagging tan cushion, then the same swing with a plump custom replacement. Cut to your exact measurements, made in 4-7 days, in your choice of 119 fabrics. Zip-off covers unzip fully so you can wash the covers anytime — never sewn shut. Free remake if the fit isn't right.",
   "board": "Outdoor Patio Cushions",
-  "queued_at": "2026-10-09 before-after-b1",
+  "queued_at": "2026-10-13T04:44:00Z",
   "_board": "Outdoor Patio Cushions",
-  "_used": false
+  "_used": true
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/10/cm-before-after-08-daybed.png",
@@ -5012,9 +5012,9 @@
   "link": "https://cushionmill.com/how-to-measure-t-cushion/",
   "desc": "The classic T-cushion armchair: burgundy seat worn flat and wrinkled, then remade plump with crisp seams — measured the T-cushion way. Cut to your exact measurements, made in 4-7 days, in your choice of 119 fabrics. Zip-off covers unzip fully so you can wash the covers anytime — never sewn shut. Free remake if the fit isn't right.",
   "board": "How to Measure Cushions",
-  "queued_at": "2026-10-09 before-after-b1",
+  "queued_at": "2026-10-13T04:44:00Z",
   "_board": "How to Measure Cushions",
-  "_used": false
+  "_used": true
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/10/cm-before-after-10-breakfast-nook.png",
@@ -5022,9 +5022,9 @@
   "link": "https://cushionmill.com/product/custom-breakfast-nook-cushions/",
   "desc": "Corner bench comeback: the nook's flattened mustard cushions replaced with firm custom ones cut to every angle. Cut to your exact measurements, made in 4-7 days, in your choice of 119 fabrics. Zip-off covers unzip fully so you can wash the covers anytime — never sewn shut. Free remake if the fit isn't right.",
   "board": "Custom Bench Cushions",
-  "queued_at": "2026-10-09 before-after-b1",
+  "queued_at": "2026-10-13T04:44:00Z",
   "_board": "Custom Bench Cushions",
-  "_used": false
+  "_used": true
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0b-spec-01-hero.png",
@@ -5768,6 +5768,126 @@
   "link": "https://cushionmill.com/product/custom-ottoman-cushions/",
   "desc": "A sunken slouching ottoman cushion, then a firm tailored one that holds its shape. Cut to your exact measurements, made in 4-7 days, in your choice of 119 fabrics. Zip-off covers unzip fully so you can wash the covers anytime — never sewn shut. Free remake if the fit isn't right.",
   "board": "Customer Spaces",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-rv-dinette-cover.png",
+  "title": "RV Dinette Cushion Covers: A Booth Re-Covered",
+  "link": "https://cushionmill.com/rv-dinette-cushion-covers/",
+  "desc": "Covers-only rebuild for the booth you measured: snug tailored panels, zipper where geometry allows, solution-dyed fabric behind big glass.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-13 p0-batch7",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-couch-density-1.png",
+  "title": "High Density Couch Foam: What 50D Looks Like at Rest",
+  "link": "https://cushionmill.com/high-density-foam-couch-guide/",
+  "desc": "Density shows in the edges - crisp square corners that stand tall on the frame, year after year, while cheaper cores sink into the linen.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-13 p0-batch7",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-foam-crosschart.png",
+  "title": "Cushion Foam: Thickness x Density, Cut in Foam",
+  "link": "https://cushionmill.com/cushion-foam-density-and-thickness-guide/",
+  "desc": "Two dials, one honest comparison: the same footprint in three loft steps makes the comfort-per-inch tradeoff visible before you order.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-13 p0-batch7",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-chaise-two-piece-1.png",
+  "title": "Two-Piece Chaise Cushions: Where the Tape Sits",
+  "link": "https://cushionmill.com/chaise-lounge-cushion-measurements/",
+  "desc": "Seat pad flat and square, back pad on its own numbers - a straight join between them, each piece ordering on its own merits.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-13 p0-batch7",
+  "_board": "How to Measure Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-rocker-backfit.png",
+  "title": "Rocking Chair Back Cushions: The Chord Method",
+  "link": "https://cushionmill.com/how-to-measure-rocking-chair-cushions/",
+  "desc": "Curved backs take a chord - a straight tape rail to rail at the widest span - not a number bent around the curve the finished pad will follow.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-13 p0-batch7",
+  "_board": "How to Measure Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-baywindow-depth.png",
+  "title": "Window Seat Cushion Depth: Glass to Front Edge",
+  "link": "https://cushionmill.com/window-seat-cushion-measurement/",
+  "desc": "One clean reading decides the alcove: from the glass straight out to the bench edge - tuck fully in, or leave a reading lip.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-13 p0-batch7",
+  "_board": "How to Measure Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-piano-bench-top.png",
+  "title": "Piano Bench Cushions: The Practice-Hour Top",
+  "link": "https://cushionmill.com/piano-bench-cushion/",
+  "desc": "Firm and thin, two to three inches of dense core in a quiet fabric - posture stays honest and the pedal view stays clear.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-13 p0-batch7",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-mudroom-entry.png",
+  "title": "Mudroom Bench Cushions: Dressed for Weather",
+  "link": "https://cushionmill.com/mudroom-bench-cushion/",
+  "desc": "Indoor furniture living an outdoor life: quick-dry core, solution-dyed cover, one clean run the length of the bench.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-13 p0-batch7",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-kitchen-nook-1.png",
+  "title": "Kitchen Bench Cushions: One Lot, Every Seat",
+  "link": "https://cushionmill.com/kitchen-bench-cushions/",
+  "desc": "Bench and chairs share a table, so the pads share a bolt: one firm-thin dining spec across the set, matching on day one and after a year of spills.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-13 p0-batch7",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-hall-bench-run.png",
+  "title": "Indoor Bench Cushions: One Long Run",
+  "link": "https://cushionmill.com/indoor-bench-cushions-guide/",
+  "desc": "Long benches are why custom lengths exist - a single pad cut to the full run reads calmer than two butted squares.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-13 p0-batch7",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-cushion-rotation-1.png",
+  "title": "Indoor Cushion Care: Rotation, Caught Mid-Habit",
+  "link": "https://cushionmill.com/indoor-furniture-cushion-care/",
+  "desc": "The cheapest life-extender in indoor care: a quarter-turn and a flip on wash day, so three cores age at the same slow rate.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-13 p0-batch7",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-cover-drying.png",
+  "title": "How to Clean Couch Cushions: Wash Day for the Covers",
+  "link": "https://cushionmill.com/how-to-clean-couch-cushions/",
+  "desc": "Zipped covers make the monthly deep-clean a laundry task: wash, hang smooth, back on the cores while the fabric still holds its shape.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-13 p0-batch7",
   "_board": "Customer Spaces",
   "_used": false
  }

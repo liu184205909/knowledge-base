@@ -897,5 +897,101 @@
   "slot": "inline-swap",
   "note": "replaced post inline img cm-ofds-hero-20261002.jpg",
   "batch": "2026-10-11 p0-batch6"
+ },
+ "38042#b7-0": {
+  "local": "p0h-rv-dinette-cover.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-rv-dinette-cover.png",
+  "alt": "RV dinette booth with new snug tailored cushion covers in warm gray, bench seats around the table in daylight through a big RV window",
+  "slot": "inline-insert",
+  "note": "appended H3 + figure.post-sec-img at end of post",
+  "batch": "2026-10-13 p0-batch7"
+ },
+ "29430#b7-1": {
+  "local": "p0h-couch-density.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-couch-density-1.png",
+  "alt": "High-density couch cushions standing tall with crisp square edges on a linen sofa in a bright living room",
+  "slot": "inline-insert",
+  "note": "appended H3 + figure.post-sec-img at end of post",
+  "batch": "2026-10-13 p0-batch7"
+ },
+ "37324#b7-2": {
+  "local": "p0h-foam-crosschart.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-foam-crosschart.png",
+  "alt": "Cut cushion foam cores in three ascending thicknesses lined up on an indoor workshop cutting table",
+  "slot": "inline-insert",
+  "note": "appended H3 + figure.post-sec-img at end of post",
+  "batch": "2026-10-13 p0-batch7"
+ },
+ "29301#b7-3": {
+  "local": "p0h-chaise-two-piece.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-chaise-two-piece-1.png",
+  "alt": "Two-piece chaise lounge cushion set - separate seat pad and back pad on an indoor chaise with a tape measure across the seat width",
+  "slot": "inline-insert",
+  "note": "appended H3 + figure.post-sec-img at end of post",
+  "batch": "2026-10-13 p0-batch7"
+ },
+ "29505#b7-4": {
+  "local": "p0h-rocker-backfit.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-rocker-backfit.png",
+  "alt": "Wooden rocking chair fitted with flat seat pad and tall back pad, tape measure held along the curved back rail",
+  "slot": "inline-insert",
+  "note": "appended H3 + figure.post-sec-img at end of post",
+  "batch": "2026-10-13 p0-batch7"
+ },
+ "29735#b7-5": {
+  "local": "p0h-baywindow-depth.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-baywindow-depth.png",
+  "alt": "Bay window seat with thick oatmeal cushion pad, tape measure running from the window glass to the front edge of the pad",
+  "slot": "inline-insert",
+  "note": "appended H3 + figure.post-sec-img at end of post",
+  "batch": "2026-10-13 p0-batch7"
+ },
+ "29648#b7-6": {
+  "local": "p0h-piano-bench-top.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-piano-bench-top.png",
+  "alt": "Polished upright piano with its wooden bench fitted with a firm flat charcoal seat pad",
+  "slot": "inline-insert",
+  "note": "appended H3 + figure.post-sec-img at end of post",
+  "batch": "2026-10-13 p0-batch7"
+ },
+ "29593#b7-7": {
+  "local": "p0h-mudroom-entry.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-mudroom-entry.png",
+  "alt": "Mudroom entry bench with plain oatmeal bench pad, coat hooks above and a boot tray below",
+  "slot": "inline-insert",
+  "note": "appended H3 + figure.post-sec-img at end of post",
+  "batch": "2026-10-13 p0-batch7"
+ },
+ "29550#b7-8": {
+  "local": "p0h-kitchen-nook.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-kitchen-nook-1.png",
+  "alt": "Kitchen dining nook with a wooden bench pad and matching chair pads at the table",
+  "slot": "inline-insert",
+  "note": "appended H3 + figure.post-sec-img at end of post",
+  "batch": "2026-10-13 p0-batch7"
+ },
+ "29536#b7-9": {
+  "local": "p0h-hall-bench-run.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-hall-bench-run.png",
+  "alt": "Long entryway hall bench with a single tailored slate blue bench cushion running its full length",
+  "slot": "inline-insert",
+  "note": "appended H3 + figure.post-sec-img at end of post",
+  "batch": "2026-10-13 p0-batch7"
+ },
+ "29538#b7-10": {
+  "local": "p0h-cushion-rotation.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-cushion-rotation-1.png",
+  "alt": "One sofa seat cushion flipped up on its end to air beside its spot, cushion rotation in practice",
+  "slot": "inline-insert",
+  "note": "appended H3 + figure.post-sec-img at end of post",
+  "batch": "2026-10-13 p0-batch7"
+ },
+ "29455#b7-11": {
+  "local": "p0h-cover-drying.png",
+  "wp_url": "https://cushionmill.com/wp-content/uploads/2026/10/p0h-cover-drying.png",
+  "alt": "Clean cushion covers hung drying on an indoor rack beside a sunny window on wash day",
+  "slot": "inline-insert",
+  "note": "appended H3 + figure.post-sec-img at end of post",
+  "batch": "2026-10-13 p0-batch7"
  }
 }

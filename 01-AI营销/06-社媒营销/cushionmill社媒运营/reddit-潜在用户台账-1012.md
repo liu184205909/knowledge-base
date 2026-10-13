@@ -45,8 +45,8 @@
 
 | # | username | 来源帖 | 信号类型 | 画像 | 建议触达 | DM 状态 | 状态 |
 |---|----------|--------|----------|------|----------|---------|------|
-| 25 | **Possible_Mud_1692** | r/upholstery 1x0r349（2026-10-08）楼主 | 求购：继承 mission style 沙发，过敏需换全部垫+面料，问渠道或 DIY，关注泡沫化学安全（"does not release cyanide"） | C 端业主（新面孔） | 已触达（10-13 spaceplaza 评论 12:41Z：CertiPUR-US 科普+2.8-3lb 密度+DIY 切割+四渠道混合推荐含 Cushion Mill 顾客口吻+3 周交期真实缺点） | 排队（限流全停未发；评论已触达，DM 为服务式补充） | 🟡 已评论观察 |
-| 26 | **fagbac** | r/upholstery 1x3ksxp（2026-10-11）楼主 | 抱怨现有垫：免费沙发 down/feather 芯塌陷漏毛（"back cushion completely collapses"），需换 foam 芯+可能换罩 | C 端业主（1 天活帖） | **排队明日**（10-13 评论注入成功但提交触发限流未发；限流冷却 18h+ 后重发——评论草稿 b64 在 temp/rd_c2_b64.txt，风控窗口 24-48h 后优先） | 排队（同上限流；评论先行，DM 跟评论） | 🟡 待触达（限流中） |
+| 25 | **Possible_Mud_1692** | r/upholstery 1x0r349（2026-10-08）楼主 | 求购：继承 mission style 沙发，过敏需换全部垫+面料，问渠道或 DIY，关注泡沫化学安全（"does not release cyanide"） | C 端业主（新面孔） | 已触达（10-12 spaceplaza 评论 12:41Z：CertiPUR-US 科普+2.8-3lb 密度+DIY 切割+四渠道混合推荐含 Cushion Mill 顾客口吻+3 周交期真实缺点）——**10-13 核（第 2 天）：我方评论被 Reddit 移除（[ Removed by Reddit ]，帖子页+profile 页双页一致），无人回复**；DM 不发 | 不适用（账号风控全停+评论已死，DM 失去依附） | 🔴 评论被移除 |
+| 26 | **fagbac** | r/upholstery 1x3ksxp（2026-10-11）楼主 | 抱怨现有垫：免费沙发 down/feather 芯塌陷漏毛（"back cushion completely collapses"），需换 foam 芯+可能换罩 | C 端业主（1 天活帖） | **排队后延**（10-12 评论提交触发限流未发；10-13 b 轮确认账号 1x0r349 评论被移除=反垃圾高压态，**重发无限期后延至账号风控解除**——评论草稿 b64 在 temp/rd_c2_b64.txt，72h 帖窗 10-14 截止，若届时账号仍未解禁则弃该帖） | 排队（同前，账号风控解除后再评估） | 🟡 待触达（账号风控中） |
 | 27 | **kevinrhurst** | r/SaltLakeCity 1wuahxv（2026-09-30）楼主 | 求购：4 个**非矩形异形**靠背垫换芯，直说网购标准泡沫块不可行，求 SLC 本地 upholsterer | C 端业主（异形需求=我方配置器正中场景） | 老帖不回（12 天）；本地 sub 敏感——若回只干货+比价语境；观察其未获本地推荐后的后续 | 不适用（B 层） | 🟢 高价值画像 |
 | 28 | meow_cat_cat | r/Lovesac 1ww9law（2026-10-03）楼主 | 抱怨现有垫：Sactional 直背靠枕倒+毯子一拉带走（standard fill），评论区 10 条全是 DIY velcro 讨论无人给渠道 | C 端 Sactional 用户（评论区含 PvtCW #20/megoonie- #23 交叉） | 老帖不回（9 天）；**靠枕倒=腰靠/wedge 需求画像**（与 #21/#23 同款痛点第 3 例） | 不适用（B 层） | 🟢 台账观察 |
 | 29 | Full-Way1255 | r/Lovesac 1wq1oot（2026-09-25）楼主 | 求购·已解决：深座太深用腰枕削 4" 坐深（pillow hack 晒经验帖非求购）；评论区 Disastrous_Soup5314 #3 交叉 | C 端 Sactional 矮个用户 | 不动（已自己解决 17 天）；画像=深座修正需求者 | 不适用（B 层） | 🟢 画像样本 |
@@ -55,6 +55,8 @@
 | 32 | smurfey002 | r/upholstery 1wzuk2f（2026-10-07）楼主 | 范围外：汽车座椅扶手换泡沫（"hard plastic+leather"） | 汽车内饰 DIY | 不动（品类错位）；0 评论帖仅记录 | 不适用 | ⚪ 范围外 |
 | 33 | deb1183 | r/upholstery 1wxfkk9（2026-10-04）楼主 | 范围外：UK+船/玻璃钢座椅 vinyl 粘合剂求助 | UK 用户（地域双错位） | 不动 | 不适用 | ⚪ 范围外 |
 | 34 | BelleDuMorte | r/upholstery 1wye7m3（2026-10-05）楼主 | B2B/DIY 错位：FBM 免费沙发全 DIY 重包项目（edge wire 修复，评论区全从业技术讨论） | DIY 爱好者（非客户） | 不动（SOP 负面清单：从业者 DIY 讨论） | 不适用 | ⚪ 错位归档 |
+| 35 | CuratedLens | r/AskSeattle 1x46d5j（2026-10-12T16:23Z）楼主 | 求购·只换罩：沙发垫**只求 covers 不求垫芯**（"Just looking for someone who can do the covers for couch cushions, not the couch itself"），已看 Etsy 想转本地（"support local"） | C 端业主（12h 活帖，7 评论） | 不回（评论区已给出 2 个本地 upholsterer 推荐=有供应商回复，降 B 层+本地意图明确）；**A7 replacement covers 精确画像**（与 #10 Own-Neck-2089 同型第 2 例） | 不适用（B 层） | 🟢 台账观察 |
+| 36 | Full-Way1255（新帖跟进） | r/Lovesac 1x4f4ih（2026-10-12T21:53Z）=台账 #29 用户的新帖 | 抱怨服务：*Loved by Lovesac* 平台加运费+取消退货（$159 运费/$1966 订单），非垫需求 | C 端 Sactional 老户（与 #29 同人） | 不动（物流政策吐槽，评论区仅致谢；若其 Sactional 垫出问题转向替代=新帖优先响应） | 不适用 | 🟢 画像样本（跟进记录） |
 
 **本轮通道记录**：old.reddit 详情页复活（10-06 全挂后首次复通，读+发布均走 old）；www 详情页发布层 shadow DOM 堵死态复现（composer rect 全 0，10-07 状态回归）；old 发布链路 textarea 注入+button.save click 实证可用（评论 1 一次成功），连续第 2 条触发账号限流——**本日触达配额实际耗尽**。
 
@@ -135,6 +137,17 @@
 | `"custom bench cushion"` (m) | 6 | 0 | 全 2024-25 老帖+1 已档 |
 | 品牌词×3 (w) 周轮补跑 | 0 | — | 连续第 10 轮零命中（降频后第一次周轮） |
 | 合计 | 37+品牌3 | 1 | **0 回复合规日**（counter=0≤2）；词效：back cushion+sectional 语境方向正确（首试即中真需求帖） |
+
+### 2f. b 轮追加（2026-10-13 下午，增量扫描：flair 页+新词；账号风控全停日）
+
+> **风控事件（本轮头条）**：10-12 晚发出的 1x0r349 评论（#25）被 Reddit 反垃圾移除（[ Removed by Reddit ]，帖子页+profile 双页一致，10-13 核实）；profile 近 10 条评论仅此 1 条被移除（pez5h1x/1wz5y0k/1wte59f 等健在）。叠加 10-12 晚限流文案=账号处于反垃圾高压态 → **评论 0/2、DM 0/3 全停**（任务铁律）。fagbac 评论重发无限期后延，账号解禁信号=新评论存活 48h+（先用 r/CushionMill 类低风险动作试，或纯只读观察 3-5 天）。
+
+| 词 | 召回 | 新增有效 | 构成 |
+|----|------|----------|------|
+| **r/Lovesac Sactional flair 页** | 3 新帖（10-12 晚发） | 0（2 判定+1 深读） | 1x4f4ih 运费吐槽（#29 用户新帖，#36 跟进）/1x4govg 交付晒帖/1x4bkm0 物流求助——全非垫求购 |
+| `"looking for custom cushion"` (m) | 1 | 0 | 1oajfo 老帖（2024 前） |
+| `"couch cushion" replacement` (m)【新词】 | 7 | 1（#35） | **1x46d5j r/AskSeattle 深读**（只换罩求购，12h 活帖但评论区已有 2 本地推荐=降 B 层）+游轮/ condo/狗咬/耳机噪音+1 已档（1wuahxv） |
+| 合计 | 11 | 1 | 0 回复（风控全停非合规缺口）；词效：`"couch cushion" replacement` 首试即中 12h 活帖（词族保留） |
 
 ## 3. 画像粗判方法与数据
 

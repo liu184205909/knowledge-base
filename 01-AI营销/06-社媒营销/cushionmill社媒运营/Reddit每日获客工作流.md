@@ -290,6 +290,14 @@ PullPush 初筛模板：`after` = 当前 unix 秒 − 7×86400（**不支持 `7d
 27. **[痛点原话·泡沫芯发臭]** 洗罩救不了芯 → "The covers unzip, so I washed those and they came out fine. The foam inserts are the problem."（1vz1j1z r/CleaningTips 2026-08-26，晒几天雨后"damp basement smell every time you sit on them"，44 天超龄仅信号）→ 动作：P1 发霉簇再+1；B3 发霉救垫指南的"罩可洗芯不可洗"分层论据；quick-dry 泡沫差异化侧证。
 28. **[竞品差评点·高端退货]** $5k Sactional 整组退货中 → "Asking because I bought one due to the hype on here and I'm currently in the return process... they're actually having a white glove pickup"（1x0up6p r/Lovesac PvtCW 2026-10-08，$5000+ 档客单，对比 Room & Board 价差 $500/$1500）→ 动作：Lovesac 差评证据链再+1（1wst2h8 一年塌之外新增"服务差退货"维度）；PvtCW 入台账 #20（退货后替代方案优先响应）。
 
+### 7b-11 b 轮信号（2026-10-13 下午实战批）
+
+> **风控事件（本节头条）**：10-12 晚 1x0r349 评论（CertiPUR-US 科普+四渠道混合推荐）**被 Reddit 反垃圾移除**（[ Removed by Reddit ]，帖子页+profile 双页一致；profile 近 10 条评论仅此 1 条被移除，pez5h1x 等 10-10 评论健在）——时间线：10-12 12:41Z 发布成功→12:44Z 第二条触发限流文案→10-13 核实第一条被移除。判定=账号层反垃圾高压态（连发+内容含多渠道推荐结构）。处置：评论/DM 全停，fagbac 重发无限期后延；**解禁观察法=3-5 天纯只读，或先在低风险 sub 发 1 条纯干货（零品牌零链接）试存活 48h**。教训沉淀：四渠道混合推荐虽是"防广告画像"定案话术，但连发两条（其中一条 730+ 字符长文）仍是触发面——**账号连续触达间隔≥48h 且单日长评论 ≤1 条**。
+
+30. **[信号·A7 换罩第 2 例]** 只换罩不换芯需求再+1 → "Just looking for someone who can do the covers for couch cushions, not the couch itself"（1x46d5j r/AskSeattle CuratedLens 2026-10-12T16:23Z，7 评论已有 2 本地推荐）→ 动作：A7 replacement covers SKU 评估证据链第 3 例（1w3pqxs #14 / Own-Neck-2089 #10 / 本帖）；"support local" 语境=本地 upholsterer 仍是第一竞对再证。
+31. **[画像·Lovesac 服务差评第二维度]** *Loved by Lovesac* 平台化加运费+取消退货 → "there is now a shipping charge... my order was 1966 bef[ore]"（1x4f4ih r/Lovesac Full-Way1255 2026-10-12T21:53Z）→ 动作：Lovesac 差评证据链维度补充（1wst2h8 垫塌/1x0up6p 退货/本帖运费政策）；免费运费门槛叙事（over $158 free shipping）的对比素材候选。
+32. **[词效] `"couch cushion" replacement` (m) 首试即中**：召回 7 中 1 条 12h 活帖（虽降 B 层）——与 `"foam replacement" cushion` 同族的"部件+replacement"结构词效好，词族保留进轮换。
+
 **版规核查方法更新（09-29）**：`/r/X/about/rules` 会重定向 `/mod/X/rules/`（mod 视图），innerText 抓不到——**版规核查走 CDP 截图人工读**。
 
 ## 7c. 五帖法市场情报台账（2026-09-29/30 深度调研存档，2026-10-02 自情报文档并入）

@@ -34,7 +34,7 @@
 | 项 | 要求 |
 |---|---|
 | 顶层 section 容器 | `content_width: "boxed"` + `boxed_width: {"unit":"px","size":1200,"sizes":[]}`（对齐 HTML `.container { max-width:1200px }`；背景色/渐变不受影响仍全宽） |
-| 卡片分列容器 | `width: {"unit":"%","size":"31","sizes":[]}` **对象格式**；禁止 `_element_custom_width: "31%"` 字符串格式（对 Container 无效 → 渲染一列） |
+| 卡片分列容器 | `width: {"unit":"%","size":"31","sizes":[]}` **对象格式**；禁止 `_element_custom_width: "31%"` 字符串格式（对 Container 无效 → 渲染一列）；**⚠ width% 控件的 CSS 输出前提=该容器自身 `content_width:"full"`**（顶层 section 保持 `boxed`+1200 不变，两层职责正交）——不补此键则数据全对但 CSS 静默零输出 width 声明、全站单列（Elementor 4.3.4 evercombe 通道预验实测复现；同 memory `elementor-width-contentwidth-rootcause`） |
 | flex_wrap | 分列 row 容器**不设 wrap**（`nowrap` 或留空）——width 未生效时 wrap 会让 100% 宽子容器逐个换行（卡片一列的隐藏帮凶）；响应式换行一律由 `width_tablet`/`width_mobile` 三档控制 |
 | 响应式三档 | 每个分列容器必带 `width_tablet` / `width_mobile`。参考值：≤34% 列 → tablet 45 / mobile 100；≥35% 列 → tablet 100 / mobile 100 |
 | 静态自查 | 全文件 grep `_element_custom_width` 必须 **0 命中** |
