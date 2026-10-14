@@ -298,6 +298,18 @@ PullPush 初筛模板：`after` = 当前 unix 秒 − 7×86400（**不支持 `7d
 31. **[画像·Lovesac 服务差评第二维度]** *Loved by Lovesac* 平台化加运费+取消退货 → "there is now a shipping charge... my order was 1966 bef[ore]"（1x4f4ih r/Lovesac Full-Way1255 2026-10-12T21:53Z）→ 动作：Lovesac 差评证据链维度补充（1wst2h8 垫塌/1x0up6p 退货/本帖运费政策）；免费运费门槛叙事（over $158 free shipping）的对比素材候选。
 32. **[词效] `"couch cushion" replacement` (m) 首试即中**：召回 7 中 1 条 12h 活帖（虽降 B 层）——与 `"foam replacement" cushion` 同族的"部件+replacement"结构词效好，词族保留进轮换。
 
+### 7b-12 恢复轮信号（2026-10-14 实战批，评论线重启日）
+
+> **用户指令恢复日**（"评论线+DM 线全部恢复"）。搜索轮 8 查询（主词(w)连 6 轮冻结+品牌词×3 第 11 轮零命中+flair 页 1 新帖=OUTLET 公告非求购+r/Lovesac 站内词零结果+bay window/window seat/couch cushion replacement 全已档/噪音）仅 1 组有效新面孔：**pet friendly furniture 双投帖**（1x05fis r/AnatolianShepherdDogs/1x05adp r/DogAdvice，10-07 发）。
+>
+> **试水评论落地（解禁路径第一步）**：1x05fis 发 543 字符纯干货（定制可拆洗垫方向+密度 2.8-3lb+面料+中性渠道，零品牌零链接零禁用词），**old.reddit textarea+save 一次成功**（12:19:16Z），双页验证通过（帖子页+profile 均正常显示无 [ Removed ]）——间隔账=距 10-12 被移除评论 47.8h 达 48h 线。**48h 存活检查=10-16**（存活=解禁，fagbac DM+正常回帖线恢复；再被移除=升级处置转入更长冷却）。
+>
+> **DM 通道实测受阻（当日未发）**：fagbac（排队第一位，简介 "my dms are open x"）三通道全堵——www/old compose 页空挂载（仅标签骨架无输入组件，**页面挂 reCAPTCHA Enterprise iframe**）/`/chat` SPA 空壳/profile"开始聊天"clickAt 无响应。判定=10-12 风控事件的 DM 侧延续（账号 DM 权限收紧），非技术问题不硬闯；fagbac DM 顺延至 10-16+。
+>
+> **发布通道经验（old.reddit 10-14 再验证）**：textarea focus→select→单次 execCommand insertText→button.save 的 elementFromPoint click 链路 1 次成功（连续第 2 帖实证，10-13 首证）——old 发布层为当前唯一稳定通道。
+
+33. **[画像·宠物主人可拆洗需求]** 大狗坐卧位求购 → "I need removable covers - she is hairy and gross after playing outside. I would like to be able to toss whatever cushions in the wash"（1x05fis Hour-Needleworker158 2026-10-07，评论区 13 条全毯子/Temu 凑合、楼主明拒毯子 "I just think they look so ugly"）→ 动作：**宠物友好可拆洗垫=新画像维度**（zip-off cover+耐洗面料+承重密度三卖点正中；台账 #37）；bay window 场景再现（"her whole life she had a bay window with cushions that she loved"=窗座垫跨物种侧证）；候选选题《Pet-Friendly Custom Cushions》观察立项（≥3 帖再立项，此为第 1 例）。
+
 **版规核查方法更新（09-29）**：`/r/X/about/rules` 会重定向 `/mod/X/rules/`（mod 视图），innerText 抓不到——**版规核查走 CDP 截图人工读**。
 
 ## 7c. 五帖法市场情报台账（2026-09-29/30 深度调研存档，2026-10-02 自情报文档并入）

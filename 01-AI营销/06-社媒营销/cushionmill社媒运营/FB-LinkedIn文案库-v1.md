@@ -207,22 +207,26 @@ https://cushionmill.com/custom-cushions/
 
 ## 4. 排期总表（2026-10-08 排满，两频道各 10 条 scheduled，Buffer 验证通过）
 
-### 4.1 Facebook Page（频道 `6ac759336a5c39ccb64e6760`，二/四/六 22:00+08，周日优惠帖 23:00+08）
+### 4.1 Facebook Page（频道 `6ac759336a5c39ccb64e6760`；2026-10-14 补档批起转日频，新批次统一 16:00 UTC=美东午间 12:00；旧批次保留原 14:00/15:00 UTC）
 
-| # | 时刻(+08) | Buffer ID | 主题 | 图 |
+| # | 时刻(UTC) | Buffer ID | 主题 | 图 |
 |---|---|---|---|---|
-| 1 | 10-10 周六 22:00 | `6ac7876ae63932e2c59f2c73` | 品牌门面首发（前轮已排） | cm-porchswing-hero |
-| 2 | 10-13 周二 22:00 | `6ac78a6e444a36d3be1f4f6f` | FB-1 泡沫密度 Tip（Why cushions go flat） | cm-cushion-filling-types-guide |
-| 3 | 10-15 周四 22:00 | `6ac78a74daf7bb7cba1ec7ac` | FB-2 Before & After 藤椅两色套 4 块 | custom-rattan-cushions-a.webp ※1 |
-| 4 | 10-17 周六 22:00 | `6ac78a7a82db5af660c2b243` | FB-3 早餐角场景 | custom-breakfast-nook-cushions.webp |
-| 5 | 10-18 周日 23:00 | `6ac78a8708d405a9e7febfb8` | WELCOME5 优惠帖（措辞 A：New here? Start with 5% off） | wcc_measure.png |
-| 6 | 10-20 周二 22:00 | `6ac78a8dd1ababbf88addf2d` | 新产·户外垫保养 12 习惯 | cm-outdoor-cushion-maintenance-tips |
-| 7 | 10-22 周四 22:00 | `6ac78a9508d405a9e7fec333` | 新产·测量三数指南（Will they fit?） | cm-mt-outdoor-cushions |
-| 8 | 10-24 周六 22:00 | `6ac78a9de63932e2c59fc23b` | 新产·室内垫自检保养（Saturday check） | cm-indoor-furniture-cushion-care |
-| 9 | 10-25 周日 23:00 | `6ac78aa6daf7bb7cba1ed476` | FB-4 WELCOME5 优惠帖（措辞 B：First order? 原稿） | cm-how-to-measure-outdoor-cushions |
-| 10 | 10-27 周二 22:00 | `6ac78ac9444a36d3be1f6a3b` | 新产·定价构成解释（Why one cushion costs that much） | cm-pricing-formula-v2 |
+| 1 | 10-10 14:00 | `6ac7876ae63932e2c59f2c73` | 品牌门面首发（已发） | cm-porchswing-hero |
+| 2 | 10-13 14:00 | `6ac78a6e444a36d3be1f4f6f` | FB-1 泡沫密度 Tip（已发） | cm-cushion-filling-types-guide |
+| 3 | 10-14 16:00 | `6acf2206848c31c80961ca80` | 补档·秋冬收仓（three weekends left） | cm-store-outdoor-cushions-winter |
+| 4 | 10-15 16:00 | `6acf2212b610c3011fa3bc0c` | 补档·深坐标准垫不合（Universal fit never fit） | custom-deep-seat-cushions-a |
+| 5 | 10-16 16:00 | `6acf229c0ab87a16c8e6f785` | 补档·Sunbrella 值不值 | cm-sunbrella-vs-outdoor-fabric-97002354-2 |
+| 6 | 10-17 16:00 | `6acf22a21f3f10bcb7b5d092` | 补档·本地 upholsterer vs 线上（$700 锚点） | cm-barcelona-chair-cushions |
+| 7 | 10-18 16:00 | `6acf22aeb610c3011fa3e37b` | 补档·霉斑急救（storage 续集） | cm-how-to-clean-mold |
+| 8 | 10-19 16:00 | `6acf22b6f847f2ad9ec6ca86` | 补档·厚度与坐高（knees decide） | cm-cushion-thickness-guide |
+| 9 | 10-20 16:00 待转正 | `6acf22be1f3f10bcb7b5d635` | 补档·Adirondack 扇背（**draft**，槽位释放后 edit_post 转正） | 01-thin-fan-back-adirondack |
+| 10 | 10-21 16:00 待转正 | `6acf22c5f847f2ad9ec6ce18` | 补档·秋千垫停产换新（**draft**，同上次日转正） | cm-porch-swing-repl-oldnew |
+| 11 | 10-22 14:00 | `6ac78a9508d405a9e7fec333` | 旧批·测量三数指南（保留） | cm-mt-outdoor-cushions |
+| 12 | 10-24 14:00 | `6ac78a9de63932e2c59fc23b` | 旧批·室内垫自检保养（保留） | cm-indoor-furniture-cushion-care |
+| 13 | 10-25 15:00 | `6ac78aa6daf7bb7cba1ed476` | FB-4 WELCOME5 优惠帖（保留） | cm-how-to-measure-outdoor-cushions |
+| 14 | 10-27 14:00 | `6ac78ac9444a36d3be1f6a3b` | 旧批·定价构成解释（保留） | cm-pricing-formula-v2 |
 
-※1 FB-2 客户实拍照片截至排期日未落位，按本轮指令照排，配图改用 rattan 产品场景图（非客户照冒充）；**真实客户照片到位后可 edit_post 换图**。
+**2026-10-14 补档批记录**：用户指令 10-14~10-21 断档 8 天每天 1 条（FB 转日频）。旧批隔天节奏 4 帖（#3 藤椅两色套 10-15 / #4 早餐角 10-17 / #5 WELCOME5 措辞 A 10-18 / #6 户外保养 12 习惯 10-20）已删除腾槽——免费档每频道 10 条 scheduled 硬上限，8 新+4 旧保留=12 超限；全文均在 §2/§4 可随时复排，原 Buffer ID `6ac78a74daf7bb7cba1ec7ac`/`6ac78a7a82db5af660c2b243`/`6ac78a8708d405a9e7febfb8`/`6ac78a8dd1ababbf88addf2d` 已失效。10-20/21 两帖因队列满暂为 draft（draft 不占上限），10-14 帖发出（16:00 UTC）释放槽位后即可转正：edit_post 加 dueAt=次日 16:00Z 即可，文案图均已就位。补档 8 帖选题全部避开旧批与 10-22~27 四条（pricing/自检/WELCOME5/测量），配图均验 200 且 1536×1024。
 
 ### 4.2 LinkedIn（频道 `6ac777196a5c39ccb64f694f`，一/三/五 21:30+08）
 

@@ -45,8 +45,8 @@
 
 | # | username | 来源帖 | 信号类型 | 画像 | 建议触达 | DM 状态 | 状态 |
 |---|----------|--------|----------|------|----------|---------|------|
-| 25 | **Possible_Mud_1692** | r/upholstery 1x0r349（2026-10-08）楼主 | 求购：继承 mission style 沙发，过敏需换全部垫+面料，问渠道或 DIY，关注泡沫化学安全（"does not release cyanide"） | C 端业主（新面孔） | 已触达（10-12 spaceplaza 评论 12:41Z：CertiPUR-US 科普+2.8-3lb 密度+DIY 切割+四渠道混合推荐含 Cushion Mill 顾客口吻+3 周交期真实缺点）——**10-13 核（第 2 天）：我方评论被 Reddit 移除（[ Removed by Reddit ]，帖子页+profile 页双页一致），无人回复**；DM 不发 | 不适用（账号风控全停+评论已死，DM 失去依附） | 🔴 评论被移除 |
-| 26 | **fagbac** | r/upholstery 1x3ksxp（2026-10-11）楼主 | 抱怨现有垫：免费沙发 down/feather 芯塌陷漏毛（"back cushion completely collapses"），需换 foam 芯+可能换罩 | C 端业主（1 天活帖） | **排队后延**（10-12 评论提交触发限流未发；10-13 b 轮确认账号 1x0r349 评论被移除=反垃圾高压态，**重发无限期后延至账号风控解除**——评论草稿 b64 在 temp/rd_c2_b64.txt，72h 帖窗 10-14 截止，若届时账号仍未解禁则弃该帖） | 排队（同前，账号风控解除后再评估） | 🟡 待触达（账号风控中） |
+| 25 | **Possible_Mud_1692** | r/upholstery 1x0r349（2026-10-08）楼主 | 求购：继承 mission style 沙发，过敏需换全部垫+面料，问渠道或 DIY，关注泡沫化学安全（"does not release cyanide"） | C 端业主（新面孔） | 已触达（10-12 spaceplaza 评论 12:41Z：CertiPUR-US 科普+2.8-3lb 密度+DIY 切割+四渠道混合推荐含 Cushion Mill 顾客口吻+3 周交期真实缺点）——**10-13 核（第 2 天）：我方评论被 Reddit 移除（[ Removed by Reddit ]，帖子页+profile 页双页一致），无人回复**；10-14 核（第 3 天，只读轮）：仍 [ Removed by Reddit ] 未恢复，评论区 3 条他人评论健在；DM 不发 | 不适用（账号风控全停+评论已死，DM 失去依附） | 🔴 评论被移除 |
+| 26 | **fagbac** | r/upholstery 1x3ksxp（2026-10-11）楼主 | 抱怨现有垫：免费沙发 down/feather 芯塌陷漏毛（"back cushion completely collapses"），需换 foam 芯+可能换罩 | C 端业主（10-14 profile 核：4,335 karma/709 帖/2 年/**简介明写 "my dms are open x"**=DM 接受度背书；gf 关节问题=支撑性坐感需求） | **评论线已弃**（帖窗截止）；**DM 线顺延**（10-14 恢复轮实测 DM 三通道空挂载+reCAPTCHA Enterprise=账号层收紧，见 §2h；待试水评论 1x05fis 存活 48h 后 10-16+ 重试，草稿 b64 仍留 temp/rd_c2_b64.txt） | 排队（通道受阻，10-16+ 重试） | 🟡 待触达（DM 通道恢复后） |
 | 27 | **kevinrhurst** | r/SaltLakeCity 1wuahxv（2026-09-30）楼主 | 求购：4 个**非矩形异形**靠背垫换芯，直说网购标准泡沫块不可行，求 SLC 本地 upholsterer | C 端业主（异形需求=我方配置器正中场景） | 老帖不回（12 天）；本地 sub 敏感——若回只干货+比价语境；观察其未获本地推荐后的后续 | 不适用（B 层） | 🟢 高价值画像 |
 | 28 | meow_cat_cat | r/Lovesac 1ww9law（2026-10-03）楼主 | 抱怨现有垫：Sactional 直背靠枕倒+毯子一拉带走（standard fill），评论区 10 条全是 DIY velcro 讨论无人给渠道 | C 端 Sactional 用户（评论区含 PvtCW #20/megoonie- #23 交叉） | 老帖不回（9 天）；**靠枕倒=腰靠/wedge 需求画像**（与 #21/#23 同款痛点第 3 例） | 不适用（B 层） | 🟢 台账观察 |
 | 29 | Full-Way1255 | r/Lovesac 1wq1oot（2026-09-25）楼主 | 求购·已解决：深座太深用腰枕削 4" 坐深（pillow hack 晒经验帖非求购）；评论区 Disastrous_Soup5314 #3 交叉 | C 端 Sactional 矮个用户 | 不动（已自己解决 17 天）；画像=深座修正需求者 | 不适用（B 层） | 🟢 画像样本 |
@@ -148,6 +148,27 @@
 | `"looking for custom cushion"` (m) | 1 | 0 | 1oajfo 老帖（2024 前） |
 | `"couch cushion" replacement` (m)【新词】 | 7 | 1（#35） | **1x46d5j r/AskSeattle 深读**（只换罩求购，12h 活帖但评论区已有 2 本地推荐=降 B 层）+游轮/ condo/狗咬/耳机噪音+1 已档（1wuahxv） |
 | 合计 | 11 | 1 | 0 回复（风控全停非合规缺口）；词效：`"couch cushion" replacement` 首试即中 12h 活帖（词族保留） |
+
+### 2g. 冷却只读核（2026-10-14，账号风控观察第 3 天）
+
+> **只读四查结果（比特 cm-socials CDP 3460，old.reddit 通道）**：
+> ① **被移除评论未恢复**——1x0r349 帖子页我方评论仍 [ Removed by Reddit ]（score=0），同帖他人 3 条评论健在；profile 近 10 条评论仅 10-12 这条 removed，其余 9 条全存活。
+> ② **账号无新风控信号**——profile 正常渲染、无 suspension 标记；10-12 后零新评论（无被再移除项）。
+> ③ **Inbox/PM 零新消息**——PM 已归档（唯一消息=3 年前 u/reddit 系统信）；old inbox "还没有人留言"（评论回复/提及均零）。
+> ④ **相关 sub 信号安静**——r/upholstery 新帖 15 条全为从业修复/材料讨论（repair/adhesive/spring clips/nap direction），零垫求购；r/Lovesac Sactional flair 页 sort=new 最新仍为 10-12 三帖（1x4govg/1x4f4ih/1x3eqwa 全已档），48h 零新帖。
+> **触达决策：继续冷却不硬闯**（移除未恢复=解禁信号未出现）。判定口径沿 §2f：新评论存活 48h+ 才算解禁——下次只读核 10-15/10-16，若彼时移除恢复或观察满 5 天，可用 r/ 无害 sub 一条低风险试评论验证，再谈 fagbac 类触达恢复。fagbac 帖（#26）按预案弃。
+
+### 2h. 恢复轮（2026-10-14，用户指令"评论线+DM 线全部恢复"）
+
+> **搜索轮 8 查询**：主词 `"custom cushions"`(w)（7 帖全已档/噪音，周窗连 6 轮冻结）+ 品牌词×3(w)（**连续第 11 轮零命中**，周轮外补跑）+ r/Lovesac Sactional flair 页（1 新帖 1x1pbpv OUTLET 公告非求购+3 已档）+ r/Lovesac 站内 cushion 词(w)（零结果）+ `"bay window" cushion`(m) + `"window seat" cushion`(m) + `"couch cushion" replacement`(w)（全已档/噪音）。
+> **试水评论已发（解禁路径第一步落地）**：**1x05fis r/AnatolianShepherdDogs**（"Need pet friendly furniture"，2026-10-07T19:12Z，13 评论）——楼主 **Hour-Needleworker158**（115 磅安纳托利亚牧羊犬主人）求"可拆洗套椅子/坐垫"，评论区 13 条全是毯子/Temu futon 凑合，楼主活跃拒绝毯子方案 4+ 条（"I just think they look so ugly"），**无人给定制渠道**=补位不撞车。选此帖理由=品种小 sub 低风险（非 upholstery 行业 sub，任务书要求）+需求正中可拆洗拉链套+楼主人宠双场景。**我方评论 2026-10-14T12:19:16Z 发布成功**（old.reddit textarea 注入+save click 一次成功，543 字符纯干货：定制可拆洗方向+2.8-3lb 密度+户外/帆布面料+中性渠道 local upholsterer/online made-to-measure，**零品牌零链接零禁用词**）——双页验证通过（帖子页+profile 页均正常显示无 [ Removed ] 标记）。**48h 存活检查=10-16 复核项**（存活即解禁信号，fagbac DM 与正常回帖线随后恢复）。
+> **DM 线通道受阻（未发）**：fagbac（#26，DM 排队第一位）当日三通道全堵——www compose 空挂载（页面仅标签骨架无输入组件，**挂着 reCAPTCHA Enterprise iframe**=账号层 DM 权限收紧信号）/old compose 同症状/`/chat` SPA 空壳/profile"开始聊天"按钮 clickAt 无响应（closed shadow+组件不挂载）。判定=10-12 风控事件的 DM 侧延续，**非技术问题不硬闯**；fagbac DM 排队顺延至试水评论存活 48h 后（10-16+）随通道恢复重试。
+> **风控间隔账**：10-12 被移除评论（12:41Z）→ 今日试水（12:19Z）间隔 47.8h≈48h 纪律线达标；今日触达配额=评论 1/1 用尽，DM 未发。
+
+| # | username | 来源帖 | 信号类型 | 画像 | 建议触达 | DM 状态 | 状态 |
+|---|----------|--------|----------|------|----------|---------|------|
+| 37 | **Hour-Needleworker158** | r/AnatolianShepherdDogs 1x05fis + r/DogAdvice 1x05adp 双投（2026-10-07T19:07/19:12Z）楼主 | 求购·进行时：115 磅大狗坐卧位求"removable washable covers"椅子/坐垫，明拒 slipcover/毯子（审美敏感），"scouring the internet and coming up with nothing that ticks all the boxes" | C 端宠物主人（活跃 OP，双帖 19 评论逐条回复型） | 已触达（10-14 spaceplaza 试水评论 1x05fis 版：定制可拆洗垫方向干货，零品牌——试水帖转化不指望，跟进=楼主追问时再给渠道层） | 不适用（C 端回帖线） | 🟡 已回帖观察（试水存活检查 10-16） |
+| 26 状态更新 | fagbac | — | — | — | 评论线已弃（帖窗截止）；DM 顺延 | **排队（通道受阻：compose/chat 三通道空挂载+reCAPTCHA Enterprise，10-14 实测；待试水评论存活 48h 后重试）** | 🟡 待触达（DM 通道恢复后） |
 
 ## 3. 画像粗判方法与数据
 
