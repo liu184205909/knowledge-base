@@ -1,0 +1,1907 @@
+{
+ "topic": "outdoor-replacement",
+ "site": "cushionmill.com",
+ "queries": [
+  {
+   "q": "custom replacement cushions outdoor furniture",
+   "intent": ""
+  },
+  {
+   "q": "how to measure cushions for replacement",
+   "intent": ""
+  },
+  {
+   "q": "best outdoor cushion fabric for full sun",
+   "intent": ""
+  },
+  {
+   "q": "replacement cushions for patio furniture sets",
+   "intent": ""
+  },
+  {
+   "q": "how firm should outdoor seat cushions be",
+   "intent": ""
+  }
+ ],
+ "intents": {
+  "custom replacement cushions outdoor furniture": [
+   {
+    "intent": "SEARCH_ALWAYS",
+    "keywords": "cushions replacement patio 家具 custom",
+    "query": "custom replacement cushions outdoor furniture"
+   }
+  ],
+  "how to measure cushions for replacement": [
+   {
+    "intent": "SEARCH_ALWAYS",
+    "keywords": "cushions replacement 尺寸 how to measure",
+    "query": "how to measure cushions for replacement"
+   }
+  ],
+  "best outdoor cushion fabric for full sun": [
+   {
+    "intent": "SEARCH_ALWAYS",
+    "keywords": "户外 cushion fabric full sun",
+    "query": "best outdoor cushion fabric for full sun"
+   }
+  ],
+  "replacement cushions for patio furniture sets": [
+   {
+    "intent": "SEARCH_ALWAYS",
+    "keywords": "patio furniture sets replacement cushions",
+    "query": "replacement cushions for patio furniture sets"
+   }
+  ],
+  "how firm should outdoor seat cushions be": [
+   {
+    "intent": "SEARCH_ALWAYS",
+    "keywords": "户外 seat cushions how firm should be",
+    "query": "how firm should outdoor seat cushions be"
+   }
+  ]
+ },
+ "pool": {
+  "https://zipcushions.com/en-gb/products/custom-outdoor-patio-cushions": {
+   "title": "Custom Outdoor Patio Cushions",
+   "domain": "zipcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 1
+    }
+   ],
+   "publish": ""
+  },
+  "https://favoyard.com/blogs/news/patio-cushion-replacement-guide-refresh-for-less-2026": {
+   "title": "Patio Cushion Replacement Guide: Refresh for Less (2026)",
+   "domain": "favoyard.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 2
+    },
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 5
+    }
+   ],
+   "publish": "2026/05/08"
+  },
+  "http://shunshelter.com/article/how-to-make-replacement-cushions-for-patio-furniture": {
+   "title": "Creating Custom Patio Cushions: A DIY Guide",
+   "domain": "shunshelter.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 3
+    }
+   ],
+   "publish": "2025/05/27"
+  },
+  "https://www.wpa-pool.com/best-replacement-patio-cushions-for-outdoor-sets": {
+   "title": "11 Best Replacement Patio Cushions for Outdoor Sets (October 2026)",
+   "domain": "wpa-pool.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 4
+    },
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 2
+    },
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 3
+    }
+   ],
+   "publish": "2026/09/25"
+  },
+  "https://www.foamorder.com/custom-cushions/outdoor-cushions/patio?srsltid=AfmBOoqqdcyc4MnlxvEqchcAhST5N0Jf6M0rJ5ImHH_-0yVat7jLHbTk": {
+   "title": "Custom Patio Cushions for Replacement of Outdoor Furniture",
+   "domain": "foamorder.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 5
+    }
+   ],
+   "publish": ""
+  },
+  "https://patiopads.com": {
+   "title": "Replacement Patio Chair Cushions & Pads Will Make Your Casual Furniture Like NEW Again",
+   "domain": "patiopads.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 6
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.patiolane.com/products/custom-outdoor-chair-cushions": {
+   "title": "Custom Outdoor Chair Cushions",
+   "domain": "patiolane.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 7
+    }
+   ],
+   "publish": ""
+  },
+  "https://urbanmancaves.com/blogs/news/custom-patio-furniture-cushions": {
+   "title": "Custom Patio Furniture Cushions: A Complete Buyer's Guide",
+   "domain": "urbanmancaves.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 8
+    }
+   ],
+   "publish": "2026/05/17"
+  },
+  "https://www.foamorder.com/custom-cushions/outdoor-cushions/patio?srsltid=AfmBOoqmoWU9uzM5oVVNWX4mx66F3aQL3Hj9nZ8ny3hCGWiKUvZkSHWZ": {
+   "title": "Replacement Cushions for Outdoor and Patio Furniture",
+   "domain": "foamorder.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 9
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.foamorder.com/custom-cushions/outdoor-cushions/patio": {
+   "title": "Custom Patio Cushions for Replacement of Outdoor Furniture",
+   "domain": "foamorder.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 10
+    }
+   ],
+   "publish": ""
+  },
+  "http://www.trcushions.com/why-custom-outdoor-cushions-are-the-secret-to-a-better-patio": {
+   "title": "Why Custom Outdoor Cushions Are the Secret to a Better Patio",
+   "domain": "trcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 11
+    }
+   ],
+   "publish": ""
+  },
+  "https://azcushions.com/products": {
+   "title": "Cushions and Slings Made From the Finest Materials",
+   "domain": "azcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 12
+    }
+   ],
+   "publish": "2023/11/16"
+  },
+  "https://www.foamorder.com/custom-cushions/outdoor-cushions": {
+   "title": "Custom Outdoor Cushions",
+   "domain": "foamorder.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 13
+    }
+   ],
+   "publish": ""
+  },
+  "https://carefocusdaily.com/outdoor/outdoor-furniture-cushion-replacement-guide": {
+   "title": "How to Replace Outdoor Furniture Cushions: A Complete Guide",
+   "domain": "carefocusdaily.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 14
+    },
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 22
+    }
+   ],
+   "publish": "2026/02/01"
+  },
+  "https://www.cascadiaoutdoorcushions.com/gensun-casual-replacement-cushions-standard-ottoman": {
+   "title": "Custom Outdoor Cushions, Patio Pillows & Replacement Slings",
+   "domain": "cascadiaoutdoorcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 15
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.cascadiaoutdoorcushions.com/blog?pagenumber=2": {
+   "title": "Custom Outdoor Cushions, Patio Pillows & Replacement Slings",
+   "domain": "cascadiaoutdoorcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 16
+    }
+   ],
+   "publish": ""
+  },
+  "https://test.cascadiaoutdoorcushions.com/about-us": {
+   "title": "Custom Outdoor Cushions, Patio Pillows & Replacement Slings",
+   "domain": "test.cascadiaoutdoorcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 17
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.cascadiaoutdoorcushions.com/hanamint-replacement-cushions-standard-club-chair-2": {
+   "title": "Custom Outdoor Cushions, Patio Pillows & Replacement Slings",
+   "domain": "cascadiaoutdoorcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 18
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.cascadiaoutdoorcushions.com/blog/month/2026-5": {
+   "title": "Custom Outdoor Cushions, Patio Pillows & Replacement Slings",
+   "domain": "cascadiaoutdoorcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 19
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.americancasualliving.com/2026/03": {
+   "title": "March 2026 - American Casual Living",
+   "domain": "americancasualliving.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 20
+    }
+   ],
+   "publish": "2026/03/10"
+  },
+  "https://caluco.com/reasons-to-buy-custom-replacement-cushions-for-commercial-patio-furniture": {
+   "title": "Reasons to Buy Custom Replacement Cushions for Commercial Patio Furniture",
+   "domain": "caluco.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 21
+    }
+   ],
+   "publish": "2019/02/25"
+  },
+  "https://cfrpatio.com/services/custom-cushions": {
+   "title": "Custom Outdoor Cushions",
+   "domain": "cfrpatio.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 22
+    }
+   ],
+   "publish": ""
+  },
+  "https://cushionhouseaustralia.com.au/2020/02/27/replacement-outdoor-cushions": {
+   "title": "You’re going to replace outdoor furniture cushions for your home",
+   "domain": "cushionhouseaustralia.com.au",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 23
+    },
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 22
+    }
+   ],
+   "publish": "2023/02/08"
+  },
+  "https://patiolane.com/custom-manufactured-products.html": {
+   "title": "Order Custom Cushions & Pillows – Easy Online Builder",
+   "domain": "patiolane.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 24
+    }
+   ],
+   "publish": ""
+  },
+  "http://carolinacushion.com": {
+   "title": "Replacement Cushions for Outdoor Furniture",
+   "domain": "carolinacushion.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 25
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.onlinereplacementcushions.com/transform-old-patio-furniture-with-replacement-cushions": {
+   "title": "How Replacement Cushions Can Transform Old Patio Furniture",
+   "domain": "onlinereplacementcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 26
+    }
+   ],
+   "publish": "2026/04/15"
+  },
+  "http://www.cascadiaoutdoorcushions.com/why-design-your-own-cushions": {
+   "title": "Why Design Your Own Outdoor Cushions",
+   "domain": "cascadiaoutdoorcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 27
+    }
+   ],
+   "publish": ""
+  },
+  "https://onlinereplacementcushions.com": {
+   "title": "Home",
+   "domain": "onlinereplacementcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 28
+    }
+   ],
+   "publish": ""
+  },
+  "https://embillieco.au/pages/replacement-cushions": {
+   "title": "Can You Replace Outdoor Furniture Cushions?",
+   "domain": "embillieco.au",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 29
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.modernmemorydesign.com/pages/outdoor-cushions-nj": {
+   "title": "Outdoor & Patio Cushions NJ  Custom Sunbrella Cushions",
+   "domain": "modernmemorydesign.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 30
+    }
+   ],
+   "publish": ""
+  },
+  "https://zipcushions.com/collections/outdoor-cushions": {
+   "title": "Custom Outdoor Cushions for The Personalized Patio Comfort",
+   "domain": "zipcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 31
+    }
+   ],
+   "publish": ""
+  },
+  "https://artisanfurnituremakers.com?p=746": {
+   "title": "Outdoor Cushion Replacements for Your Patio - Artisan Furniture Makers",
+   "domain": "artisanfurnituremakers.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 32
+    }
+   ],
+   "publish": "2024/11/09"
+  },
+  "https://cushiondoctor.com/revitalize-your-outdoor-space-with-custom-cushion-replacements": {
+   "title": "Revitalize Your Outdoor Space with Custom Cushion Replacements",
+   "domain": "cushiondoctor.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 33
+    }
+   ],
+   "publish": "2025/03/05"
+  },
+  "https://www.onlinereplacementcushions.com/benefits-of-custom-outdoor-cushions": {
+   "title": "The Benefits of Custom Outdoor Replacement Cushions",
+   "domain": "onlinereplacementcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 34
+    }
+   ],
+   "publish": "2026/04/18"
+  },
+  "http://cushionsking.com": {
+   "title": "Sunbrella Replacement Cushions",
+   "domain": "cushionsking.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 35
+    }
+   ],
+   "publish": ""
+  },
+  "http://theworldincushions.com/?p=488": {
+   "title": "Replace Outdoor Furniture Cushions: Complete 2025 Guide",
+   "domain": "theworldincushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 36
+    }
+   ],
+   "publish": "2025/11/11"
+  },
+  "https://www.onlinereplacementcushions.com/why-custom-sunbrella-replacement-cushions-are-worth-it": {
+   "title": "Why Custom Sunbrella Replacement Cushions Are Worth the Investment",
+   "domain": "onlinereplacementcushions.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 37
+    }
+   ],
+   "publish": "2026/06/27"
+  },
+  "https://caluco.com/outdoors-quick-ship/replacement-cushion-2": {
+   "title": "Custom Replacement Cushions By Caluco Patio Manufacturer",
+   "domain": "caluco.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 38
+    }
+   ],
+   "publish": ""
+  },
+  "https://mypatiolife.com/?p=4455": {
+   "title": "How Custom Patio Cushions Refresh Your Outdoor Space",
+   "domain": "mypatiolife.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 39
+    }
+   ],
+   "publish": ""
+  },
+  "https://kayakcambria.com/best-replacement-patio-cushions": {
+   "title": "10 Best Replacement Patio Cushions (October 2026) Tested Picks",
+   "domain": "kayakcambria.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 40
+    },
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 15
+    }
+   ],
+   "publish": "2026/09/25"
+  },
+  "https://www.americancushionfactory.com/about-us": {
+   "title": "Replacement Cushions for Outdoor Patio Furniture by American Cushion Factory",
+   "domain": "americancushionfactory.com",
+   "hits": [
+    {
+     "q": "custom replacement cushions outdoor furniture",
+     "rank": 41
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.fabricakraft.com/blogs/news/how-to-measure-couch-cushions": {
+   "title": "How to Measure Couch Cushions for Replacement",
+   "domain": "fabricakraft.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 1
+    }
+   ],
+   "publish": "2026/10/08"
+  },
+  "https://www.feather-fibre-foam-cushions.co.uk?p=55": {
+   "title": "Measuring your cushions for replacements",
+   "domain": "feather-fibre-foam-cushions.co.uk",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 2
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.fabricakraft.com/blogs/news/how-to-measure-for-replacement-outdoor-cushions": {
+   "title": "How to Measure for Replacement Outdoor Cushions",
+   "domain": "fabricakraft.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 3
+    }
+   ],
+   "publish": "2026/10/09"
+  },
+  "https://patiocushions.co.uk/?p=27995": {
+   "title": "How to Measure Replacement Garden Cushions Correctly (Step-by-Step Guide)",
+   "domain": "patiocushions.co.uk",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 4
+    }
+   ],
+   "publish": "2026/06/08"
+  },
+  "https://kraftcushions.com/blogs/news/how-to-take-precise-measurements-for-custom-replacement-cushions": {
+   "title": "How to Take Precise Measurements for Custom Replacement Cushions",
+   "domain": "kraftcushions.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 5
+    }
+   ],
+   "publish": "2026/08/25"
+  },
+  "https://gencush.com/how-to-measure-for-replacement-outdoor-cushions": {
+   "title": "How to Measure for Replacement Outdoor Cushions",
+   "domain": "gencush.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 6
+    }
+   ],
+   "publish": "2024/08/01"
+  },
+  "https://allaroundthe-house.com/?p=2092": {
+   "title": "How to Measure for Replacement Wicker Loveseat Cushions",
+   "domain": "allaroundthe-house.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 7
+    }
+   ],
+   "publish": "2025/08/14"
+  },
+  "https://cozycove.co.uk/can-you-replace-just-the-cushions-on-a-couch-a-complete-guide": {
+   "title": "Can You Replace Just the Cushions on a Couch? A Complete Guide",
+   "domain": "cozycove.co.uk",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 8
+    }
+   ],
+   "publish": "2026/05/04"
+  },
+  "https://www.wickercushionsonline.com/blog/measure-replacement-cushions": {
+   "title": "How To Measure Replacement Cushions Correctly",
+   "domain": "wickercushionsonline.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 9
+    }
+   ],
+   "publish": "2026/03/31"
+  },
+  "http://www.cascadiaoutdoorcushions.com/how-to-measure": {
+   "title": "How to Measure for Outdoor Replacement Cushions",
+   "domain": "cascadiaoutdoorcushions.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 10
+    }
+   ],
+   "publish": ""
+  },
+  "https://royalshadeusa.com/blogs/blog/how-to-measure-foam-for-replacement-cushions-a-step-by-step-guide": {
+   "title": "How to Measure Foam for Replacement Cushions: A Step-by-Step Guide",
+   "domain": "royalshadeusa.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 11
+    }
+   ],
+   "publish": "2026/08/20"
+  },
+  "http://srshopee.in/replacement-sofa-cushions-where-and-how-to-buy": {
+   "title": "Replacement Sofa Cushions: Where and How to Buy",
+   "domain": "srshopee.in",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 12
+    }
+   ],
+   "publish": "2025/05/16"
+  },
+  "https://uscushion.com/de-eu/blogs/rv-cushion-guide/how-to-measure-rv-cushions-for-replacement-step-by-step": {
+   "title": "How to Measure RV Cushions for Replacement (Step-by-Step)",
+   "domain": "uscushion.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 13
+    }
+   ],
+   "publish": ""
+  },
+  "https://seasonalconceptsonline.com/?p=744508": {
+   "title": "How to Measure Patio Cushions",
+   "domain": "seasonalconceptsonline.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 14
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.foamorder.com/how_to_measure?srsltid=AfmBOooleKXPMCkD5bDmtPeOepq8B3uNWiKxpVK8v23qpNewyTC5oy0j": {
+   "title": "How to Measure Couch Cushions for Replacement Foam",
+   "domain": "foamorder.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 15
+    }
+   ],
+   "publish": ""
+  },
+  "https://localorangeryprices.co.uk/tag/replacement-sofa-cushions": {
+   "title": "Replacement Sofa Cushions: How to Pick, Measure and Install",
+   "domain": "localorangeryprices.co.uk",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 16
+    }
+   ],
+   "publish": "2025/06/12"
+  },
+  "http://theworldincushions.com/?p=500": {
+   "title": "How to Replace Outdoor Furniture Cushions: Complete Guide 2025",
+   "domain": "theworldincushions.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 17
+    }
+   ],
+   "publish": "2025/12/01"
+  },
+  "https://eathealthy365.com/a-guide-to-measuring-replacement-sofa-cushions": {
+   "title": "A Guide to Measuring Replacement Sofa Cushions",
+   "domain": "eathealthy365.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 18
+    }
+   ],
+   "publish": "2025/11/15"
+  },
+  "https://opalretail.co.uk/blogs/garden-outdoor/outsunny-replacement-cushions-guide": {
+   "title": "Outsunny Replacement Cushions: Sizes, Compatibility & Where to Buy",
+   "domain": "opalretail.co.uk",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 19
+    }
+   ],
+   "publish": "2026/04/12"
+  },
+  "https://www.fabricakraft.com/blogs/news/how-to-measure-chaise-lounge-cushions": {
+   "title": "How to Measure Chaise Lounge Cushions",
+   "domain": "fabricakraft.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 20
+    }
+   ],
+   "publish": "2026/10/08"
+  },
+  "https://www.phanmarket.com/sofa/accessories/replacement-cushions-for-a-couch": {
+   "title": "The Complete Guide to Sofa Cushion Replacement",
+   "domain": "phanmarket.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 21
+    }
+   ],
+   "publish": ""
+  },
+  "http://www.foambymail.com/MEAS.html": {
+   "title": "Measuring for Replacement Foam Cushions",
+   "domain": "foambymail.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 23
+    }
+   ],
+   "publish": ""
+  },
+  "https://eathealthy365.com/measuring-for-your-couch-cushion-replacement": {
+   "title": "Measuring for Your Couch Cushion Replacement",
+   "domain": "eathealthy365.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 24
+    }
+   ],
+   "publish": "2026/04/10"
+  },
+  "https://www.thereplacementcushion.com/how-to-measure": {
+   "title": "How to measure",
+   "domain": "thereplacementcushion.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 25
+    }
+   ],
+   "publish": ""
+  },
+  "http://www.thecompanystore.com/how-to-choose-outdoor-patio-cushions.html": {
+   "title": "How To Measure For Outdoor Cushions (and Replace the Old Ones)",
+   "domain": "thecompanystore.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 26
+    }
+   ],
+   "publish": ""
+  },
+  "https://easybreezyporchswings.com/blogs/resources/replacing-outdoor-swing-bed-cushions-when-and-how-to-do-it": {
+   "title": "Replacing Outdoor Swing Bed Cushions: When and How to Do It",
+   "domain": "easybreezyporchswings.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 27
+    }
+   ],
+   "publish": ""
+  },
+  "https://telectronichub.com/home/expert-tips-for-accurately-measuring-your-sofa-cushions-for-perfect-covers": {
+   "title": "Expert Tips For Accurately Measuring Your Sofa Cushions For Perfect Covers",
+   "domain": "telectronichub.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 28
+    }
+   ],
+   "publish": "2026/07/09"
+  },
+  "https://www.coversandall.com/blog/how-to-measure-for-replacement-cushions-and-covers/?srsltid=AfmBOopywkFLICtM5Wu-qQGWJw8DhZnzToiNbWXBTj6RSnHJ7RX_eBwg": {
+   "title": "How to Measure for Replacement Cushions and Covers",
+   "domain": "coversandall.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 29
+    }
+   ],
+   "publish": "2023/01/21"
+  },
+  "https://tlrweb.co.uk/can-you-just-replace-couch-cushions-a-practical-guide-to-refreshing-your-sofa-without-a-full-replacement": {
+   "title": "Can You Just Replace Couch Cushions? A Practical Guide to Refreshing Your Sofa Without a Full Replacement",
+   "domain": "tlrweb.co.uk",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 30
+    }
+   ],
+   "publish": "2025/11/23"
+  },
+  "https://www.cascadiaoutdoorcushions.com/how-to-measure-for-wicker-patio-furniture-cushions": {
+   "title": "Custom Outdoor Cushions, Patio Pillows & Replacement Slings",
+   "domain": "cascadiaoutdoorcushions.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 31
+    }
+   ],
+   "publish": ""
+  },
+  "https://cushionguys.co.uk/how-to-measure": {
+   "title": "How to Measure Cushions for a Perfect Fit – Complete Made-to-Measure Guide",
+   "domain": "cushionguys.co.uk",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 32
+    }
+   ],
+   "publish": "2018/03/12"
+  },
+  "https://royalcomport.com/how-to-measure-replacement-outdoor-cushions": {
+   "title": "How To Measure Replacement Outdoor Cushions: Quick Guide",
+   "domain": "royalcomport.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 33
+    }
+   ],
+   "publish": "2025/12/27"
+  },
+  "https://whichoutdoor.com/outdoor-sofa-cushion-replacements": {
+   "title": "Outdoor Sofa Cushion Replacements",
+   "domain": "whichoutdoor.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 34
+    }
+   ],
+   "publish": "2023/06/12"
+  },
+  "https://patiopads.com/customer-care/how-to-measure-cushions": {
+   "title": "How to Measure Your Patio Cushions for Replacement",
+   "domain": "patiopads.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 35
+    }
+   ],
+   "publish": "2017/05/19"
+  },
+  "https://decordash.blog/measure-couch-cushions-replacement": {
+   "title": "How to Measure Couch Cushions for Replacement [Expert Guide]",
+   "domain": "decordash.blog",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 36
+    }
+   ],
+   "publish": "2026/05/04"
+  },
+  "https://www.wickerparadise.com/how-to-measure-outdoor-cushions-correctly.html": {
+   "title": "How to Measure Outdoor Cushions Correctly (Step-by-Step)",
+   "domain": "wickerparadise.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 37
+    }
+   ],
+   "publish": "2026/02/17"
+  },
+  "https://replaceyourcushions.com/sizing-and-faq": {
+   "title": "Replace Your Cushions FAQ",
+   "domain": "replaceyourcushions.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 38
+    }
+   ],
+   "publish": ""
+  },
+  "https://uscushion.com/en-eu/blogs/normal-content/custom-size-cushion": {
+   "title": "Custom Size Cushions Guide Perfect Fit Foam Fabrics and Shapes",
+   "domain": "uscushion.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 39
+    }
+   ],
+   "publish": "2026/01/06"
+  },
+  "http://impacttissue.co.uk/where-to-find-replacement-sofa-cushions-for-a-fresh-update": {
+   "title": "Where to Find Replacement Sofa Cushions for a Fresh Update",
+   "domain": "impacttissue.co.uk",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 40
+    }
+   ],
+   "publish": "2025/01/18"
+  },
+  "https://favoyard.com/blogs/news/how-to-measure-outdoor-cushions": {
+   "title": "How to Measure Outdoor Cushions for a Better Fit?",
+   "domain": "favoyard.com",
+   "hits": [
+    {
+     "q": "how to measure cushions for replacement",
+     "rank": 41
+    }
+   ],
+   "publish": "2026/05/19"
+  },
+  "http://mp.weixin.qq.com/s?__biz=MzIyNTc1MjE4NQ==&mid=2247486134&idx=7&sn=a77432555aac06c1803c36812eb23666": {
+   "title": "DEYI TEXTILE OUTDOOR FABRIC布艺Outdoor Fabric窗帘Deyi Textile",
+   "domain": "mp.weixin.qq.com",
+   "hits": [
+    {
+     "q": "best outdoor cushion fabric for full sun",
+     "rank": 1
+    }
+   ],
+   "publish": ""
+  },
+  "http://www.ynsjsm.cn/qian/481598.html": {
+   "title": "在哪里可以买到sunproof fabric（发布时间：2025-08-25 06:04:46）",
+   "domain": "ynsjsm.cn",
+   "hits": [
+    {
+     "q": "best outdoor cushion fabric for full sun",
+     "rank": 2
+    }
+   ],
+   "publish": "2025-08-25"
+  },
+  "https://www.ovios-home.com/blogs/home-style-upgrade/ultimate-guide-replacement-patio-cushions-upgrade-frames": {
+   "title": "The Ultimate Guide to Upgrading Frames with Replacement Patio Cushions",
+   "domain": "ovios-home.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 1
+    }
+   ],
+   "publish": "2026/04/08"
+  },
+  "https://whatpatio.com/patio-furniture-replacement-cushion-sets": {
+   "title": "Patio Furniture Replacement Cushion Sets - Whatpatio",
+   "domain": "whatpatio.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 4
+    }
+   ],
+   "publish": "2024/01/09"
+  },
+  "https://www.howgarden.blog/where-to-buy-replacement-patio-furniture-cushions": {
+   "title": "Where to Buy Replacement Cushions for Patio Furniture [7 Best Sites]",
+   "domain": "howgarden.blog",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 6
+    }
+   ],
+   "publish": "2026/04/26"
+  },
+  "https://whatpatio.com/patio-set-replacement-cushions": {
+   "title": "Patio Set Replacement Cushions",
+   "domain": "whatpatio.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 7
+    }
+   ],
+   "publish": "2024/02/11"
+  },
+  "https://www.ovios-home.com/blogs/home-style-upgrade/secret-long-lasting-patio-furniture-replacement-cushion-ecosystem": {
+   "title": "The Secret to Long-Lasting Patio Furniture: The Replacement Cushion Ecosystem",
+   "domain": "ovios-home.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 8
+    }
+   ],
+   "publish": "2026/03/30"
+  },
+  "https://rulaer.net/blogs/guides/your-outdoor-cushions-gave-out-heres-how-to-replace-them-properly": {
+   "title": "Your Outdoor Cushions Gave Out. Here's How to Replace Them Properly",
+   "domain": "rulaer.net",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 9
+    }
+   ],
+   "publish": "2026/05/20"
+  },
+  "https://carefocusdaily.com/outdoor/replacement-cushions-for-wicker-furniture": {
+   "title": "How to Choose Replacement Cushions for Wicker Outdoor Furniture",
+   "domain": "carefocusdaily.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 10
+    }
+   ],
+   "publish": "2026/02/01"
+  },
+  "https://www.cascadiaoutdoorcushions.com/outdoor-cushions-by-manufacturer": {
+   "title": "Outdoor Cushions By Manufacturer",
+   "domain": "cascadiaoutdoorcushions.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 11
+    }
+   ],
+   "publish": ""
+  },
+  "https://urbanhearthhomes.com/outdoor-replacement-cushions-for-patio-furniture-the-complete-2026-guide-to-comfort-and-style": {
+   "title": "Outdoor Replacement Cushions for Patio Furniture: The Complete 2026 Guide to Comfort and Style - Urbanhearthhomes",
+   "domain": "urbanhearthhomes.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 12
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.retailmarket.net/products/udpatio-outdoor-cushions-for-patio-furniture-7-piece-replacement-cushions-for-outdoor-furniture-patio-sectional-cushions-outdoor-couch-cushions-for-4-seat-patio-conversation-sets-navy-blue": {
+   "title": "UDPATIO 7-Piece Outdoor Cushions Set - Navy Blue",
+   "domain": "retailmarket.net",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 13
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.ovios-home.com/blogs/home-style-upgrade/how-to-measure-and-choose-the-best-replacement-patio-cushions": {
+   "title": "How to Measure and Choose the Best Replacement Patio Cushions",
+   "domain": "ovios-home.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 14
+    }
+   ],
+   "publish": "2026/04/25"
+  },
+  "https://backyardalpha.com/best-outdoor-sofa-cushions-replacements": {
+   "title": "Best Outdoor Sofa Cushions Replacements for Patio Sets",
+   "domain": "backyardalpha.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 16
+    }
+   ],
+   "publish": "2026/03/16"
+  },
+  "https://www.ovios-home.com/blogs/home-style-upgrade/revive-your-patio-replacement-cushions-covers-guide": {
+   "title": "Revive Your Patio: The Ultimate Guide to Replacement Cushions and Covers",
+   "domain": "ovios-home.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 17
+    }
+   ],
+   "publish": "2026/04/06"
+  },
+  "https://lawnhelpful.com/best-replacement-cushions-for-outdoor-furniture": {
+   "title": "5 Best Replacement Cushions for Outdoor Furniture  LawnHelpful.com",
+   "domain": "lawnhelpful.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 18
+    }
+   ],
+   "publish": "2026/09/25"
+  },
+  "https://carefocusdaily.com/outdoor/better-homes-gardens-outdoor-cushions-guide": {
+   "title": "Better Homes & Gardens Outdoor Cushions Guide (2026)",
+   "domain": "carefocusdaily.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 19
+    }
+   ],
+   "publish": "2026/02/01"
+  },
+  "https://www.kiddofspeed.com/best-outdoor-cushion-sets-for-patio-furniture": {
+   "title": "9 Best Outdoor Cushion Sets For Patio Furniture (September 2026)",
+   "domain": "kiddofspeed.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 20
+    }
+   ],
+   "publish": "2026/08/03"
+  },
+  "https://greenpatiolawn.com/best-outdoor-furniture-pillow-replacements": {
+   "title": "Best Outdoor Furniture Pillow Replacements for 6-Seat Patio Sets",
+   "domain": "greenpatiolawn.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 21
+    }
+   ],
+   "publish": "2026/09/29"
+  },
+  "https://whatpatio.com/replacement-cushions-for-outdoor-patio-set": {
+   "title": "Replacement Cushions For Outdoor Patio Set - Whatpatio",
+   "domain": "whatpatio.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 23
+    }
+   ],
+   "publish": "2024/03/30"
+  },
+  "https://www.cascadiaoutdoorcushions.com/principle-tropics-universal-deep-seating-outdoor-cushions-size-b-2": {
+   "title": "Principle Tropics  Universal Deep Seating Outdoor Cushions SIZE B",
+   "domain": "cascadiaoutdoorcushions.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 24
+    }
+   ],
+   "publish": ""
+  },
+  "https://backyardalpha.com/best-outdoor-furniture-cushion-replacements": {
+   "title": "Best Outdoor Furniture Cushion Replacements for Patio Comfort and Longevity",
+   "domain": "backyardalpha.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 25
+    }
+   ],
+   "publish": "2026/03/16"
+  },
+  "https://www.ovios-home.com/blogs/home-style-upgrade/how-to-find-exact-fit-replacement-cushions-for-wicker-sets": {
+   "title": "How to Find Exact-Fit Replacement Cushions for Wicker Sets",
+   "domain": "ovios-home.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 26
+    }
+   ],
+   "publish": "2026/04/08"
+  },
+  "https://whatpatio.com/winston-patio-furniture-replacement-cushions": {
+   "title": "Winston Patio Furniture Replacement Cushions: Revitalizing Your Outdoor Oasis",
+   "domain": "whatpatio.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 27
+    }
+   ],
+   "publish": "2023/08/18"
+  },
+  "https://www.cascadiaoutdoorcushions.com/assemble-sand-universal-deep-seating-outdoor-cushions-size-d": {
+   "title": "Assemble Sand  Universal Deep Seating Outdoor Cushions SIZE D",
+   "domain": "cascadiaoutdoorcushions.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 28
+    }
+   ],
+   "publish": ""
+  },
+  "https://topgardeningtools.com/best-outdoor-cushions-for-patio-furniture": {
+   "title": "5 Best Outdoor Cushions for Patio Furniture (2026)",
+   "domain": "topgardeningtools.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 29
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.cascadiaoutdoorcushions.com/e-array-dune-universal-deep-seating-outdoor-cushions-size-a": {
+   "title": "Universal Deep Seating Replacement Cushions in Sunbrella Fabric  Custom Outdoor Cushions Made to Order  Cascadia Outdoor Cushions",
+   "domain": "cascadiaoutdoorcushions.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 30
+    }
+   ],
+   "publish": ""
+  },
+  "https://www.wayfair.com/keyword.php?keyword=ty+pennington+patio+furniture+replacement+cushions": {
+   "title": "Ty Pennington Patio Furniture Replacement Cushions",
+   "domain": "wayfair.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 31
+    }
+   ],
+   "publish": ""
+  },
+  "https://carolinapatiofurniture.com/replace-outdoor-cushions-or-replace-the-furniture": {
+   "title": "Replace Outdoor Cushions or Replace the Furniture?",
+   "domain": "carolinapatiofurniture.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 32
+    }
+   ],
+   "publish": "2026/08/19"
+  },
+  "https://swordslife.com/en-us/products/605585755964944": {
+   "title": "Outdoor Replacement Cushions for 4-6 Seat Sectional Sofas – Water-Repe",
+   "domain": "swordslife.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 33
+    }
+   ],
+   "publish": ""
+  },
+  "https://whatpatio.com/patio-cushions-replacements": {
+   "title": "Patio Cushion Replacements: A Comprehensive Guide",
+   "domain": "whatpatio.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 34
+    }
+   ],
+   "publish": "2024/02/05"
+  },
+  "https://www.wayfair.com/keyword.php?keyword=kevin+charles+patio+furniture+replacement+cushion+cover": {
+   "title": "Kevin Charles Patio Furniture Replacement Cushion Cover",
+   "domain": "wayfair.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 35
+    }
+   ],
+   "publish": ""
+  },
+  "https://wayfair.com/keyword.php?keyword=suncrown+patio+furniture+replacement+cushion": {
+   "title": "Suncrown Patio Furniture Replacement Cushion",
+   "domain": "wayfair.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 36
+    }
+   ],
+   "publish": ""
+  },
+  "https://mygardenplans.com/how-to-replace-patio-furniture-cushions": {
+   "title": "Revamp Your Outdoor Oasis: A Step-by-Step Guide on How to Replace Patio Furniture Cushions",
+   "domain": "mygardenplans.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 37
+    }
+   ],
+   "publish": "2025/03/18"
+  },
+  "https://belugasupply.com/best-replacement-cushions-for-outdoor-furniture": {
+   "title": "Best Replacement Cushions for Outdoor Furniture to Enhance Comfort and Durability",
+   "domain": "belugasupply.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 38
+    }
+   ],
+   "publish": "2025/11/23"
+  },
+  "https://meaford-energy.com/discontinued-martha-stewart-patio-furniture-cushions-your-complete-replacement-guide-for-2026": {
+   "title": "Discontinued Martha Stewart Patio Furniture Cushions: Your Complete Replacement Guide for 2026",
+   "domain": "meaford-energy.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 39
+    }
+   ],
+   "publish": "2026/04/22"
+  },
+  "https://carefocusdaily.com/outdoor/replacement-pillows-for-outdoor-furniture": {
+   "title": "How to Choose Replacement Pillows for Outdoor Furniture",
+   "domain": "carefocusdaily.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 40
+    }
+   ],
+   "publish": "2026/02/01"
+  },
+  "https://www.amazon.com/Aoxun-Replacement-Furniture-Waterproof-Conversation/dp/B0GHYGD5TS": {
+   "title": "Aoxun Outdoor Replacement Cushions for Patio Furniture, Waterproof Sofa Cushion for 6-Seat Rattan Wicker Sectional Patio Conversation Sets, 14-Piece Cushions Set for L-Shape Couch, Gray",
+   "domain": "amazon.com",
+   "hits": [
+    {
+     "q": "replacement cushions for patio furniture sets",
+     "rank": 41
+    }
+   ],
+   "publish": ""
+  },
+  "https://telectronichub.com/home/outdoor-sofa-seat-cushions": {
+   "title": "Outdoor Sofa Seat Cushions Explained: Key Specifications, Features, and Common Uses",
+   "domain": "telectronichub.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 1
+    }
+   ],
+   "publish": "2026/07/06"
+  },
+  "http://www.urbanoutdoorfurniture.com/knowledge/35429.html": {
+   "title": "How do I choose cushions that will stay put on my deep-seated urban outdoor furniture?",
+   "domain": "urbanoutdoorfurniture.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 2
+    }
+   ],
+   "publish": "2026/05/16"
+  },
+  "https://comedybustours.com/grand-canyon/grand-canyon-bus-rides": {
+   "title": "Grand Canyon Bus Rides: A Seat Cushion Checklist",
+   "domain": "comedybustours.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 3
+    }
+   ],
+   "publish": "2026/08/24"
+  },
+  "https://pickhunting.com/seat-cushion-for-hunting": {
+   "title": "Top 5 Hunting Seat Cushions: Comfort & Stealth Guide - PickHunting",
+   "domain": "pickhunting.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 4
+    }
+   ],
+   "publish": "2025/12/28"
+  },
+  "https://cushion-air.com/?p=2994": {
+   "title": "How Firm Should a Seat Cushion Be? A Practical Guide to Adjustable Air Support",
+   "domain": "cushion-air.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 5
+    }
+   ],
+   "publish": "2026/09/19"
+  },
+  "https://thedecoradvisor.com/settee-seat-pads": {
+   "title": "Settee Seat Pads Explained: How to Choose the Best Comfort and Style",
+   "domain": "thedecoradvisor.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 6
+    }
+   ],
+   "publish": ""
+  },
+  "https://carefocusdaily.com/outdoor/outdoor-seat-cushions-guide": {
+   "title": "How to Choose Outdoor Seat Cushions: A Practical Guide",
+   "domain": "carefocusdaily.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 7
+    }
+   ],
+   "publish": "2026/02/01"
+  },
+  "https://www.organictextiles.com/pages/gols-certified-organic-latex-seat-cushions-support-care-guide": {
+   "title": "GOLS Certified: Organic Latex Seat Cushions Support & Care Guide",
+   "domain": "organictextiles.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 8
+    }
+   ],
+   "publish": ""
+  },
+  "https://telectronichub.com/home/outdoor-u-shaped-seat-cushions": {
+   "title": "The Science Behind Outdoor U Shaped Seat Cushions: Properties, Production, and Applications",
+   "domain": "telectronichub.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 9
+    }
+   ],
+   "publish": "2026/07/09"
+  },
+  "https://mytailorkit.com/outdoor-cushions": {
+   "title": "Top 5 Outdoor Cushions: Comfort & Durability Guide",
+   "domain": "mytailorkit.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 10
+    }
+   ],
+   "publish": "2026/01/20"
+  },
+  "https://telectronichub.com/home/pallet-seat-cushions": {
+   "title": "An Overview of Pallet Seat Cushions: Standards, Grades, and Mechanical Performance",
+   "domain": "telectronichub.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 11
+    }
+   ],
+   "publish": "2026/07/09"
+  },
+  "https://carefocusdaily.com/outdoor/round-outdoor-seat-cushions-guide": {
+   "title": "Round Outdoor Seat Cushions: Choose Comfort & Durability",
+   "domain": "carefocusdaily.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 12
+    }
+   ],
+   "publish": "2026/02/01"
+  },
+  "https://taketravelinfo.com/what-is-a-travel-seat-cushion-pillow": {
+   "title": "What Is a Travel Seat Cushion Pillow? Meaning, Types, and When to Use",
+   "domain": "taketravelinfo.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 13
+    }
+   ],
+   "publish": "2026/07/25"
+  },
+  "https://theoutdoorstores.com/best-outdoor-seat-cushions": {
+   "title": "Best Outdoor Seat Cushions (2026): Expert Comparison Guide, Reviews, FAQs & More",
+   "domain": "theoutdoorstores.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 14
+    }
+   ],
+   "publish": "2026/04/12"
+  },
+  "https://help.harbourlifestyle.co.uk/en-GB/care-guide-outdoor-seat-cushions-6492048": {
+   "title": "Care Guide: Outdoor Seat Cushions",
+   "domain": "help.harbourlifestyle.co.uk",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 15
+    }
+   ],
+   "publish": ""
+  },
+  "https://telectronichub.com/home/red-outdoor-rocking-chair-cushions": {
+   "title": "Red Outdoor Rocking Chair Cushions: Technical Specifications, Production Process, and Applications",
+   "domain": "telectronichub.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 16
+    }
+   ],
+   "publish": "2026/07/09"
+  },
+  "https://carefocusdaily.com/outdoor/20x20-outdoor-seat-cushions-guide": {
+   "title": "20x20 Outdoor Seat Cushions Guide: How to Choose Right",
+   "domain": "carefocusdaily.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 17
+    }
+   ],
+   "publish": "2026/02/01"
+  },
+  "https://fernandomoreno.es/en/sofa-de-exterior-para-terraza": {
+   "title": "How to choose an outdoor sofa for the terrace: structure, fabrics and measurements",
+   "domain": "fernandomoreno.es",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 18
+    }
+   ],
+   "publish": "2026/10/02"
+  },
+  "https://www.fabricakraft.com/blogs/news/deep-seat-outdoor-cushions-are-taking-over-the-best-designed-patios-here-s-the-size-difference": {
+   "title": "Deep Seat Outdoor Cushions Are Taking Over the Best-Designed Patios. Here’s the Size Difference.",
+   "domain": "fabricakraft.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 19
+    }
+   ],
+   "publish": "2026/04/02"
+  },
+  "https://telectronichub.com/materials/leather-seat-cushions": {
+   "title": "Understanding Leather Seat Cushions: Composition, Standards, and Applications",
+   "domain": "telectronichub.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 20
+    }
+   ],
+   "publish": "2026/07/07"
+  },
+  "https://yourautospace.com/seat-cushion-for-hunting": {
+   "title": "Top 5 Seat Cushions For Hunting: Comfort Guide",
+   "domain": "yourautospace.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 21
+    }
+   ],
+   "publish": "2026/01/08"
+  },
+  "https://hometosight.com/how-to-choose-car-seat-cushions-for-long-drives-based-on-your-driving-posture": {
+   "title": "How to Choose Car Seat Cushions for Long Drives Based on Your Driving Posture?",
+   "domain": "hometosight.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 22
+    }
+   ],
+   "publish": "2026/08/09"
+  },
+  "https://yourautospace.com/hunting-seat-cushion": {
+   "title": "Top 5 Hunting Seat Cushions: Comfort & Durability",
+   "domain": "yourautospace.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 23
+    }
+   ],
+   "publish": "2026/01/06"
+  },
+  "https://sidecamping.com/best-seat-cushions-for-hunting": {
+   "title": "Best Seat Cushions for Hunting: Stay Comfortable in the Field",
+   "domain": "sidecamping.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 24
+    }
+   ],
+   "publish": "2026/09/17"
+  },
+  "https://travelersenthusiasm.com/best-ergonomic-seat-cushions-for-road-trips": {
+   "title": "5 Best Ergonomic Seat Cushions for Road Trips in 2026",
+   "domain": "travelersenthusiasm.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 25
+    }
+   ],
+   "publish": "2025/07/01"
+  },
+  "http://loomhometextiles.com/blogs/news/how-to-choose-a-comfortable-seat-cushion-for-outdoor-use": {
+   "title": "How to Choose a Comfortable Seat Cushion for Outdoor Use",
+   "domain": "loomhometextiles.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 26
+    }
+   ],
+   "publish": "2025/12/18"
+  },
+  "https://travelersenthusiasm.com/best-travel-seat-cushions-for-lower-back-pain-relief": {
+   "title": "7 Best Travel Seat Cushions of 2026 for Lower Back Pain Relief",
+   "domain": "travelersenthusiasm.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 27
+    }
+   ],
+   "publish": "2026/01/21"
+  },
+  "http://www.urbanoutdoorfurniture.com/knowledge/40976.html": {
+   "title": "How can I make my urban outdoor furniture more comfortable for longer periods of lounging?",
+   "domain": "urbanoutdoorfurniture.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 28
+    }
+   ],
+   "publish": "2026/08/05"
+  },
+  "http://www.beanbagsrus.com/blogs/news/selecting-outdoor-cushions": {
+   "title": "What to Consider When Choosing the Best Outdoor Cushions",
+   "domain": "beanbagsrus.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 29
+    }
+   ],
+   "publish": "2024/11/07"
+  },
+  "https://zipcushions.com/pages/how-to-measure-custom-cushions": {
+   "title": "How to Measure Your Cushions",
+   "domain": "zipcushions.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 30
+    }
+   ],
+   "publish": ""
+  },
+  "https://thecushioncompanynz.co.nz/product/outdoor-seat-cushions": {
+   "title": "Custom Made Seat Pad Cushions",
+   "domain": "thecushioncompanynz.co.nz",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 31
+    }
+   ],
+   "publish": ""
+  },
+  "https://hometosight.com/best-outdoor-seat-cushions": {
+   "title": "7 Best Outdoor Seat Cushions  Rain-Proof Your Patio Seat",
+   "domain": "hometosight.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 32
+    }
+   ],
+   "publish": "2026/06/11"
+  },
+  "https://eathealthy365.com/the-best-foam-for-an-outdoor-seat-cushion": {
+   "title": "The Best Foam for an Outdoor Seat Cushion",
+   "domain": "eathealthy365.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 33
+    }
+   ],
+   "publish": "2025/07/04"
+  },
+  "https://simplysolved.blog/best-foam-for-outdoor-cushions": {
+   "title": "What Kind of Foam Do You Use for Outdoor Cushions? [Expert Guide]",
+   "domain": "simplysolved.blog",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 34
+    }
+   ],
+   "publish": "2026/06/08"
+  },
+  "https://ift.tt/4tzJDSC": {
+   "title": "How to Measure Outdoor Cushions Correctly (Step-by-Step)",
+   "domain": "ift.tt",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 35
+    }
+   ],
+   "publish": "2026/02/17"
+  },
+  "https://www.sunstoneoutdoor.com/news/80": {
+   "title": "What Siz Cushion for Outdoor Chairs",
+   "domain": "sunstoneoutdoor.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 36
+    }
+   ],
+   "publish": "2026/01/09"
+  },
+  "https://inspiringyard.com/waterproof-outdoor-seat-cushions": {
+   "title": "Top 5 Waterproof Seat Cushions: Outdoor Comfort Guide",
+   "domain": "inspiringyard.com",
+   "hits": [
+    {
+     "q": "how firm should outdoor seat cushions be",
+     "rank": 37
+    }
+   ],
+   "publish": "2026/03/23"
+  }
+ },
+ "domains": {
+  "cascadiaoutdoorcushions.com": 11,
+  "carefocusdaily.com": 8,
+  "telectronichub.com": 6,
+  "foamorder.com": 5,
+  "ovios-home.com": 5,
+  "whatpatio.com": 5,
+  "onlinereplacementcushions.com": 4,
+  "fabricakraft.com": 4,
+  "zipcushions.com": 3,
+  "favoyard.com": 3,
+  "wpa-pool.com": 3,
+  "eathealthy365.com": 3,
+  "wayfair.com": 3,
+  "patiopads.com": 2,
+  "patiolane.com": 2,
+  "caluco.com": 2,
+  "cushionhouseaustralia.com.au": 2,
+  "theworldincushions.com": 2,
+  "kayakcambria.com": 2,
+  "uscushion.com": 2,
+  "backyardalpha.com": 2,
+  "urbanoutdoorfurniture.com": 2,
+  "yourautospace.com": 2,
+  "hometosight.com": 2,
+  "travelersenthusiasm.com": 2,
+  "shunshelter.com": 1,
+  "urbanmancaves.com": 1,
+  "trcushions.com": 1,
+  "azcushions.com": 1,
+  "test.cascadiaoutdoorcushions.com": 1,
+  "americancasualliving.com": 1,
+  "cfrpatio.com": 1,
+  "carolinacushion.com": 1,
+  "embillieco.au": 1,
+  "modernmemorydesign.com": 1,
+  "artisanfurnituremakers.com": 1,
+  "cushiondoctor.com": 1,
+  "cushionsking.com": 1,
+  "mypatiolife.com": 1,
+  "americancushionfactory.com": 1,
+  "feather-fibre-foam-cushions.co.uk": 1,
+  "patiocushions.co.uk": 1,
+  "kraftcushions.com": 1,
+  "gencush.com": 1,
+  "allaroundthe-house.com": 1,
+  "cozycove.co.uk": 1,
+  "wickercushionsonline.com": 1,
+  "royalshadeusa.com": 1,
+  "srshopee.in": 1,
+  "seasonalconceptsonline.com": 1,
+  "localorangeryprices.co.uk": 1,
+  "opalretail.co.uk": 1,
+  "phanmarket.com": 1,
+  "foambymail.com": 1,
+  "thereplacementcushion.com": 1,
+  "thecompanystore.com": 1,
+  "easybreezyporchswings.com": 1,
+  "coversandall.com": 1,
+  "tlrweb.co.uk": 1,
+  "cushionguys.co.uk": 1,
+  "royalcomport.com": 1,
+  "whichoutdoor.com": 1,
+  "decordash.blog": 1,
+  "wickerparadise.com": 1,
+  "replaceyourcushions.com": 1,
+  "impacttissue.co.uk": 1,
+  "mp.weixin.qq.com": 1,
+  "ynsjsm.cn": 1,
+  "howgarden.blog": 1,
+  "rulaer.net": 1,
+  "urbanhearthhomes.com": 1,
+  "retailmarket.net": 1,
+  "lawnhelpful.com": 1,
+  "kiddofspeed.com": 1,
+  "greenpatiolawn.com": 1,
+  "topgardeningtools.com": 1,
+  "carolinapatiofurniture.com": 1,
+  "swordslife.com": 1,
+  "mygardenplans.com": 1,
+  "belugasupply.com": 1,
+  "meaford-energy.com": 1,
+  "amazon.com": 1,
+  "comedybustours.com": 1,
+  "pickhunting.com": 1,
+  "cushion-air.com": 1,
+  "thedecoradvisor.com": 1,
+  "organictextiles.com": 1,
+  "mytailorkit.com": 1,
+  "taketravelinfo.com": 1,
+  "theoutdoorstores.com": 1,
+  "help.harbourlifestyle.co.uk": 1,
+  "fernandomoreno.es": 1,
+  "sidecamping.com": 1,
+  "loomhometextiles.com": 1,
+  "beanbagsrus.com": 1,
+  "thecushioncompanynz.co.nz": 1,
+  "simplysolved.blog": 1,
+  "ift.tt": 1,
+  "sunstoneoutdoor.com": 1,
+  "inspiringyard.com": 1
+ }
+}
