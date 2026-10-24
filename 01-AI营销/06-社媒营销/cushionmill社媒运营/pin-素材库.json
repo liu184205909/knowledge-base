@@ -149,7 +149,8 @@
   "desc": "Tired of replacements that almost fit? These patio cushions are cut to YOUR measurements in your choice of 119 fabrics — indoor upholstery to marine-grade outdoor. Zipper covers come off for washing. Standard production 4-7 business days, rush 3-5. If the fit misses, the remake is on us. Tap the pin to see fabric options and start measuring.",
   "board": "Custom Patio Cushions",
   "_board": "Replacement Cushions by Brand",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-23 buffer-scheduled"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/09/cm-how-long-does-wicker-furniture-last-22008336.png",
@@ -205,7 +206,8 @@
   "desc": "Tired of replacements that almost fit? These outdoor cushions are cut to YOUR measurements in your choice of 119 fabrics — indoor upholstery to marine-grade outdoor. Zipper covers come off for washing. Standard production 4-7 business days, rush 3-5. If the fit misses, the remake is on us. Tap the pin to see fabric options and start measuring.",
   "board": "Custom Patio Cushions",
   "_board": "Outdoor Patio Cushions",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-23 buffer-scheduled"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/09/cm-how-to-care-for-teak-furniture-10186277.png.webp",
@@ -234,7 +236,8 @@
   "desc": "How to Measure Outdoor Cushions: The Complete Step-by-Step Guide (2026) — the full guide with photos, measuring tips and fabric notes. Learn exactly what to check before you order custom cushions: foam densities, fabric types, and how to measure so the fit is right the first time. 119 fabrics and made-to-measure cutting available.",
   "board": "Cushion Guides & Ideas",
   "_board": "How to Measure Cushions",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-18 buffer-scheduled 6ad4633f/6ad46350/6ad4635a/6ad4635f/6ad46364"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/09/outdoor-seat-cushions-a.webp",
@@ -262,9 +265,10 @@
   "desc": "Patio Cushions made to your exact measurements — send width, depth and thickness and we cut each cushion to your figures. Choose from 119 indoor & outdoor fabrics, high-density foam options included. Production runs 4-7 business days (3-5 rush). Free shipping over $158, free remake if the fit misses.",
   "board": "Custom Patio Cushions",
   "_board": "How to Measure Cushions",
-  "_used": false,
+  "_used": true,
   "_mismatch": true,
-  "_mismatch_note": "MM1010 错配: OW Lee Creighton(锻铝户外)挂室内古董木摇椅书房图 cm-vintage-antique-furniture-cushions-25006349.png; 顶位候选=idx570 p0c-owlee-creighton(视觉已验: 金属户外扶手椅)"
+  "_mismatch_note": "MM1010 错配: OW Lee Creighton(锻铝户外)挂室内古董木摇椅书房图 cm-vintage-antique-furniture-cushions-25006349.png; 顶位候选=idx570 p0c-owlee-creighton(视觉已验: 金属户外扶手椅)",
+  "queued_at": "2026-10-23 buffer-scheduled"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/09/cm-mt-outdoor-cushions-16240552.png.webp",
@@ -403,7 +407,9 @@
   "desc": "D-Shaped Cushions: The Flat-Back Round Seat Spec — the full guide with photos, measuring tips and fabric notes. Learn exactly what to check before you order custom cushions: foam densities, fabric types, and how to measure so the fit is right the first time. 119 fabrics and made-to-measure cutting available.",
   "board": "Cushion Guides & Ideas",
   "_board": "Customer Spaces",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-23 buffer-scheduled",
+  "buffer_post_id": "6adb54d72e6bddea983f0eae"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/09/cm-round-outdoor-cushions-guide-81957176.png",
@@ -450,7 +456,9 @@
   "desc": "Custom patio cushions for Hampton Bay Salem Replacement Cushions — Custom Cut to Your Measurements: measured, cut and sewn to your three numbers — no generic sizes, no guessing. 119 fabrics including solution-dyed outdoor options that shrug off UV and mildew. High-density foam choices for firm, lasting support. Made in 4-7 business days; free shipping on orders over $158.",
   "board": "Custom Patio Cushions",
   "_board": "How to Measure Cushions",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-23 buffer-scheduled",
+  "buffer_post_id": "6adb54db6556f503c43064dd"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/09/cm-prevent-mold-outdoor-cushions-22892437.png",
@@ -459,7 +467,9 @@
   "desc": "How to Prevent Mold on Outdoor Cushions: The Moisture-Management System — the full guide with photos, measuring tips and fabric notes. Learn exactly what to check before you order custom cushions: foam densities, fabric types, and how to measure so the fit is right the first time. 119 fabrics and made-to-measure cutting available.",
   "board": "Cushion Guides & Ideas",
   "_board": "Outdoor Patio Cushions",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-23 buffer-scheduled",
+  "buffer_post_id": "6adb54df6556f503c4306601"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/08/AS-013.jpg.webp",
@@ -552,7 +562,8 @@
   "desc": "Bay Window Cushions: Measuring Angles, Radii and the Center Panel — the full guide with photos, measuring tips and fabric notes. Learn exactly what to check before you order custom cushions: foam densities, fabric types, and how to measure so the fit is right the first time. 119 fabrics and made-to-measure cutting available.",
   "board": "Cushion Guides & Ideas",
   "_board": "Customer Spaces",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-23 buffer-scheduled"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/10/cm-diningbench-hero-20261002.png",
@@ -2370,7 +2381,8 @@
   "desc": "Daybed Cushions that slide, sag or never quite fit? Replace them with custom-cut ones — measure width, depth and thickness, pick from 119 fabrics, and get cushions made for your guest room furniture instead of the other way around. High-density foam options hold shape season after season. Made in 4-7 business days.",
   "board": "Custom Bench Cushions",
   "_board": "Customer Spaces",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-18 buffer-scheduled 6ad4633f/6ad46350/6ad4635a/6ad4635f/6ad46364"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/10/wilson-fisher-backyard-creations-replacement-cushions-hero.jpg",
@@ -3152,7 +3164,8 @@
   "desc": "Window Seat Cushion Measurement: How to Get a Perfect Fit — the full guide with photos, measuring tips and fabric notes. Learn exactly what to check before you order custom cushions: foam densities, fabric types, and how to measure so the fit is right the first time. 119 fabrics and made-to-measure cutting available.",
   "board": "Cushion Guides & Ideas",
   "_board": "Window Seat Cushions",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-18 buffer-scheduled 6ad4633f/6ad46350/6ad4635a/6ad4635f/6ad46364"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/09/egg_hero_main_51608681.png",
@@ -4982,9 +4995,9 @@
   "link": "https://cushionmill.com/product/custom-dining-chair-cushions/",
   "desc": "Two farmhouse dining chairs, before with flattened terracotta pads and after with firm, fresh custom seats made to measure. Cut to your exact measurements, made in 4-7 days, in your choice of 119 fabrics. Zip-off covers unzip fully so you can wash the covers anytime — never sewn shut. Free remake if the fit isn't right.",
   "board": "Customer Spaces",
-  "queued_at": "2026-10-09 before-after-b1",
+  "queued_at": "2026-10-18 buffer-scheduled 6ad4633f/6ad46350/6ad4635a/6ad4635f/6ad46364",
   "_board": "How to Measure Cushions",
-  "_used": false
+  "_used": true
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/10/cm-before-after-07-porch-swing.png",
@@ -5733,7 +5746,8 @@
   "desc": "A patio chaise lounge with a pancake-flat faded pad, then a plump teal custom replacement with clean flat seams. Cut to your exact measurements, made in 4-7 days, in your choice of 119 fabrics. Zip-off covers unzip fully so you can wash the covers anytime — never sewn shut. Free remake if the fit isn't right.",
   "board": "Outdoor Patio Cushions",
   "_board": "Outdoor Patio Cushions",
-  "_used": false
+  "_used": true,
+  "queued_at": "2026-10-18 buffer-scheduled 6ad4633f/6ad46350/6ad4635a/6ad4635f/6ad46364"
  },
  {
   "img": "https://cushionmill.com/wp-content/uploads/2026/10/cm-before-after-12-rv-dinette.png",
@@ -5999,6 +6013,236 @@
   "board": "Cushion Guides & Ideas",
   "queued_at": "2026-10-14 p0-batch8",
   "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/cm-before-after-16-glider.png",
+  "title": "Before & After: Sun-Bleached Glider Bench Cushion Replaced With a Plump Custom Pad",
+  "link": "https://cushionmill.com/product/custom-glider-cushions/",
+  "desc": "A faded, flattened sunroom glider bench pad, then a thick plump forest-green one cut to the exact bench size. Cut to your exact measurements, made in 4-7 days, in your choice of 119 fabrics. Zip-off covers unzip fully so you can wash the covers anytime — never sewn shut. Free remake if the fit isn't right.",
+  "board": "Outdoor Patio Cushions",
+  "queued_at": "2026-10-15 ba3",
+  "_board": "Outdoor Patio Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/cm-before-after-17-bistro.png",
+  "title": "Before & After: Cracked Kitchen Stool Cushions vs Custom Terracotta Replacements",
+  "link": "https://cushionmill.com/product/custom-dining-chair-cushions/",
+  "desc": "Cracked tan counter-stool pads in a kitchen nook, then firm plump terracotta pads made to each stool's exact seat. Cut to your exact measurements, made in 4-7 days, in your choice of 119 fabrics. Zip-off covers unzip fully so you can wash the covers anytime — never sewn shut. Free remake if the fit isn't right.",
+  "board": "Customer Spaces",
+  "queued_at": "2026-10-15 ba3",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/cm-before-after-18-rocker.png",
+  "title": "Before & After: Sagging Porch Rocker Cushion vs a Firm Custom Denim Blue Pad",
+  "link": "https://cushionmill.com/product/custom-rocking-chair-cushions/",
+  "desc": "A deflated pale-yellow porch rocker seat pad, then a dense denim-blue one that holds its shape. Cut to your exact measurements, made in 4-7 days, in your choice of 119 fabrics. Zip-off covers unzip fully so you can wash the covers anytime — never sewn shut. Free remake if the fit isn't right.",
+  "board": "Outdoor Patio Cushions",
+  "queued_at": "2026-10-15 ba3",
+  "_board": "Outdoor Patio Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/cm-before-after-19-lounge.png",
+  "title": "Before & After: Yellowed Sun Lounger Cushion vs a Plump Custom Coral Pad",
+  "link": "https://cushionmill.com/product/custom-chaise-lounge-cushions/",
+  "desc": "A thin, yellowed backyard lounger pad, then a full coral replacement resting loose and firm. Cut to your exact measurements, made in 4-7 days, in your choice of 119 fabrics. Zip-off covers unzip fully so you can wash the covers anytime — never sewn shut. Free remake if the fit isn't right.",
+  "board": "Outdoor Patio Cushions",
+  "queued_at": "2026-10-15 ba3",
+  "_board": "Outdoor Patio Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/cm-before-after-20-bar-stool.png",
+  "title": "Before & After: Worn Gray Bar Stool Cushions Restored to Plump Black Pads",
+  "link": "https://cushionmill.com/product/custom-bar-stool-cushions/",
+  "desc": "Faded, deflated gray pads on three kitchen-island stools, then crisp black replacements, all three cut to the same seat. Cut to your exact measurements, made in 4-7 days, in your choice of 119 fabrics. Zip-off covers unzip fully so you can wash the covers anytime — never sewn shut. Free remake if the fit isn't right.",
+  "board": "Customer Spaces",
+  "queued_at": "2026-10-15 ba3",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-sofa-spring.png",
+  "title": "Sofa Foam Replacement: The After Look",
+  "link": "https://cushionmill.com/sofa-foam-replacement-cost/",
+  "desc": "Every seat pad back to plump and square, tops reading as one flat plane - new foam does the work the old fill forgot.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-sofa-sunken-2.png",
+  "title": "One Sagging Seat Cushion = One Core to Replace",
+  "link": "https://cushionmill.com/sofa-foam-replacement-cost/",
+  "desc": "One end cushion sunk and wrinkled while the neighbor holds firm - the classic sign only one section has gone soft.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-foamcore-stand.png",
+  "title": "Your Seat Core Starts as Honest Stock",
+  "link": "https://cushionmill.com/sofa-foam-replacement-cost/",
+  "desc": "Straight-cut upholstery foam cores at the cutting station, cream open-cell faces - the replacement part before it meets a cover.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-sectional-room.png",
+  "title": "Sectional Cushion Replacement, In Place",
+  "link": "https://cushionmill.com/sectional-cushion-replacement-guide/",
+  "desc": "An L-shaped sectional dressed head to toe in matching slate gray pads - one piece instead of a patchwork of old and new.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-sectional-chaise-end.png",
+  "title": "The Chaise End Gets Its Own Pads",
+  "link": "https://cushionmill.com/sectional-cushion-replacement-guide/",
+  "desc": "Pads running the length of the lounge, back cushion behind them - the section where generic pads visibly fail first.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-sectional-modules-2.png",
+  "title": "Modular Sectionals: One Continuous Level Plane",
+  "link": "https://cushionmill.com/sectional-cushion-replacement-guide/",
+  "desc": "Every seat pad cut from the same sheet at the same height - when one module sits lower, the whole sofa reads tired.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "Customer Spaces",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-custom-sizes-3.png",
+  "title": "Custom Means: Different Widths, One Order",
+  "link": "https://cushionmill.com/custom-vs-standard-cushions/",
+  "desc": "Finished pads of clearly different widths and depths from one order - each built to a different chair in the same house.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "How to Measure Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-standard-short.png",
+  "title": "The Standard-Size Failure Mode",
+  "link": "https://cushionmill.com/custom-vs-standard-cushions/",
+  "desc": "An off-the-shelf pad too narrow for the bench - bare wood on both sides, sliding in a frame it never matched.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "How to Measure Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-custom-exact.png",
+  "title": "Edge-to-Edge: The Custom Counterpart",
+  "link": "https://cushionmill.com/custom-vs-standard-cushions/",
+  "desc": "Same bench, same room - the only change is a pad cut to the tape-measure numbers instead of the shelf.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "How to Measure Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-bench-kraft.png",
+  "title": "Bench Measuring Day: Kraft Paper + Square",
+  "link": "https://cushionmill.com/bench-cushion-measurements/",
+  "desc": "The framing square keeps your lines square to the edges; the paper becomes the template the pad is cut from.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "Custom Bench Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-bench-bedend.png",
+  "title": "The Foot-of-Bed Bench, Cushioned",
+  "link": "https://cushionmill.com/bench-cushion-measurements/",
+  "desc": "A thick cream pad with a smooth flat top turns a hard wooden afterthought into part of the bedroom.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "Custom Bench Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-bench-depth.png",
+  "title": "Bench Cushion Depth, Seen From the Side",
+  "link": "https://cushionmill.com/bench-cushion-measurements/",
+  "desc": "A sage green pad whose profile rises well above the seat board - what several inches of loft looks like in the room.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "Custom Bench Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-dshape-vanity.png",
+  "title": "The D-Shape on a Vanity Stool",
+  "link": "https://cushionmill.com/d-shaped-cushions/",
+  "desc": "A blush pad following the seat, flat side tucked at the back, curve opening toward your knees.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "How to Measure Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-dshape-pair.png",
+  "title": "Two Measurements, One D-Shaped Pattern",
+  "link": "https://cushionmill.com/d-shaped-cushions/",
+  "desc": "Straight back edge, rounded front edge - laid flat on the cutting table, the geometry is plain.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "How to Measure Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-dshape-wicker-1.png",
+  "title": "Round-Back Rattan + One D-Shaped Pad",
+  "link": "https://cushionmill.com/d-shaped-cushions/",
+  "desc": "A moss green D-pad following the seat line, bare woven backrest behind - the frame supplies the curves.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "How to Measure Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-sunbrella-line.png",
+  "title": "Wash Day Starts at the Clothesline",
+  "link": "https://cushionmill.com/sunbrella-care-guide/",
+  "desc": "Covers off, hung evenly in the sun - air drying keeps the fabric happy in a way a hot dryer never will.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "Sunbrella Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-sunbrella-rinse-1.png",
+  "title": "Rinse Low and Even, No Jet Blast",
+  "link": "https://cushionmill.com/sunbrella-care-guide/",
+  "desc": "A fine arc of water across a pad laid flat on stone slabs, droplets beading, water sheeting off the smooth top.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "Sunbrella Cushions",
+  "_used": false
+ },
+ {
+  "img": "https://cushionmill.com/wp-content/uploads/2026/10/p0j-sunbrella-stack.png",
+  "title": "Stack Flat, Never on Edge",
+  "link": "https://cushionmill.com/sunbrella-care-guide/",
+  "desc": "Four clean dry pads stacked flat on a covered porch table, holding their shape until the next season.",
+  "board": "Cushion Guides & Ideas",
+  "queued_at": "2026-10-15 p0-batch9",
+  "_board": "Sunbrella Cushions",
   "_used": false
  }
 ]

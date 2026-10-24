@@ -18,6 +18,8 @@
 | ❌ 弃用 | webReader/curl/Jina 直连 `*.json`；old.reddit；WebSearch `site:`；DDG HTML | — | 分别 403 / 登录墙 / 只回 1 条 2020 老帖 / JS challenge 202 |
 
 > **【2026-10-07 通道漂移】www 帖子页评论发布层 shadow DOM 不可穿透**（elementFromPoint 指向错误/composer rect 全 0，clickAt 链路失效）——**old.reddit 为评论发布备用通道**（纯 textarea 表单：focus→单次 insertText→elementElement 验证后提交，1wz5y0k 实证可用）；old 域名与 www 的可用性会互换漂移，发布前双通道探测。
+>
+> **【2026-10-17 发布层定案·handler 断层+API 直调通道】old.reddit 前端提交链路当日全断**：button.save click×3 + form Ctrl+Enter 键盘×1 **全部零网络请求**（fetch/XHR probe 实证；jQuery._data(save 按钮)=零事件绑定、form 仅 keypress）——静默失败≠账号限流（10-09 归因至少部分误判），是前端 handler 断层。**当前唯一可用发布通道=页面上下文 API 直调**：`fetch('/api/comment', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded','X-Modhash':window.reddit.modhash,'X-Requested-With':'XMLHttpRequest'}, body:'api_type=json&thing_id=t3_{帖子id}&text={评论全文}'})`（cookie 自动带），**200+errors=[] 即发布成立**（响应含新评论 t1_id），照旧双页验证；脚本模板 `temp/_apipost.js`。
 
 **【2026-09-29/30 五帖法实测修正】old.reddit 部分复活**：`old.reddit.com` 的**帖子详情页**连发 40 帖无任何限流（www 详情页约 10 帖后触发匿名限流）——批量深读帖子时用 old 域名详情页替代 www；**搜索仍走 www**（old 搜索与 `*.json` 限制不变）。**【2026-10-06 漂移】old.reddit 详情页本机出口 ERR_TIMED_OUT 全挂——深读回落 www 详情页**（当日 2 帖无碍）。
 
@@ -309,6 +311,28 @@ PullPush 初筛模板：`after` = 当前 unix 秒 − 7×86400（**不支持 `7d
 > **发布通道经验（old.reddit 10-14 再验证）**：textarea focus→select→单次 execCommand insertText→button.save 的 elementFromPoint click 链路 1 次成功（连续第 2 帖实证，10-13 首证）——old 发布层为当前唯一稳定通道。
 
 33. **[画像·宠物主人可拆洗需求]** 大狗坐卧位求购 → "I need removable covers - she is hairy and gross after playing outside. I would like to be able to toss whatever cushions in the wash"（1x05fis Hour-Needleworker158 2026-10-07，评论区 13 条全毯子/Temu 凑合、楼主明拒毯子 "I just think they look so ugly"）→ 动作：**宠物友好可拆洗垫=新画像维度**（zip-off cover+耐洗面料+承重密度三卖点正中；台账 #37）；bay window 场景再现（"her whole life she had a bay window with cushions that she loved"=窗座垫跨物种侧证）；候选选题《Pet-Friendly Custom Cushions》观察立项（≥3 帖再立项，此为第 1 例）。
+
+### 7b-13 终核+恢复轮信号（2026-10-17 实战批，评论线恢复达成）
+
+> **48h 终核（头条）**：试水评论 1x05fis **双页存活**（实际核随 ~74h）——帖子页 543 字符完整+profile 置顶在场，removed=false；对照 1x0r349 仍 [ Removed by Reddit ]（第 5 天，反垃圾移除不回滚）。**解禁成立，但三层状态分离**：内容层（已有评论不被移除）✅ / 发布层=前端 handler 断层（技术故障非账号限制，§1 新定案）/ DM 层 ❌（fagbac 四路全堵 10-14 完整复现：old compose 301 强跳 www/www compose 空壳×3 含硬刷新/chat 空壳×2/profile"开始聊天"真实点击零挂载，reCAPTCHA Enterprise 持续在场）——**评论解禁≠DM 解锁，独立信号**；DM 线 3-5 天后 compose 探针重试，草稿留 temp。
+>
+> **评论线恢复实发 1 条**：r/BuyItForLife 1tf0s06（§10 月度老帖激活首目标，2026-05 求购帖）——楼主 zls23 评论层原话 "without concrete numbers to look for, I have no idea"（11 条评论无人给密度数字），我方 **ph9bwec**（2026-10-17T06:36:48Z，563 字符纯干货：2.8-3lb+ILD 35-40 数字直给+4" 好泡沫>6" 廉价填充厚度论+遮阳 sunroom 可跳过 marine foam 的 UV 洞察，零品牌零链接零禁用词），**经 API 直调通道发布**一次成功，双页验证通过。间隔账：距 10-14 试水评论 ~66h≥48h ✅，单日长评 1/1 ✅。
+>
+> **候选断点**：r/Lovesac 1x7jl1i "New covers"（10-16T15:41Z 晒帖，楼主两狗家庭换 corded velvet 罩+"do a full wash of the blue"=可洗刚需语境）——537 字符两狗洗护干货草稿已备（内外翻冷水晾干/芯晒太阳去狗味/corded velvet 藏毛+勾丝小缺点），因单日长评配额未发，**次日 ≥48h 后 API 直调补发**（草稿在 temp/rd-dm-bp-1017.md）。本轮搜索 4 查询零新求购帖：主词(w)第 8 轮冻结/`"couch cushion" replacement`(m) 1 新面孔=DIY 负面清单/`"pet friendly" cushion`(m) 1x4pahy 不合格（4 天超窗+r/furniture_ecom_brands 是 B2B 品牌方 sub，消费者帖发错位）/flair 页 2 新帖（1x7jl1i 候选+1x6smke 40h 超窗）；1wq7vuf r/UpDweller 深读=官方账号 What A Room 软广帖不碰（品牌方营销帖禁评论入纪律）。品牌词×3 本轮未跑（周一轮照旧）。
+
+34. **[画像·换罩晒单可发域]** 两狗家庭换罩晒帖的洗护语境可发（2026-10-17 定）——1x7jl1i 楼主换罩动机即 "do a full wash of the blue (have 2 dogs)"，洗护工艺干货（水温/晾干/芯晒）在晒帖下自然且正中痛点；与 §7b-5 #21 审美帖可发域同构（晒单帖跟帖=社区自然行为，第 1 周仍零品牌）。→ 动作：候选评论草稿已备（洗护三连+corded velvet 勾丝缺点），次日经 API 直调发布。
+35. **[信号·B4 密度文社区空白再证]** BIFL 老帖楼主对密度数字的明确呼求 → "I understand that high density foam is better, but without concrete numbers to look for, I have no idea"（1tf0s06 zls23 评论层 2026-05）→ 动作：B4 密度权威文（已排期）目标读者原话级证据+1（§7b-2 #9 / §7b-3 #11 之外第 3 例：消费者侧密度数字空白跨 6 个月仍成立）；"most companies selling pre-made cushions don't provide the foam specs"=品牌页 FAQ"为什么我们公布 foam 规格"叙事角度。
+36. **[画像·品牌方 sub 识别]** r/furniture_ecom_brands 类 sub 名即 B2B（"brands, founders, entrepreneurs"）——1x4pahy 消费者求购帖发在品牌方 sub=错位帖，回帖会给品牌方运营贡献互动。→ 动作：sub 筛查清单补一条：**sub 定位文案含 brands/founders/entrepreneurs/managers=B2B 场，消费者口吻帖不回**（§3 筛选负清单补行）。
+
+### 7b-14 间隔修正+DM 第 2 天探针轮（2026-10-18 实战批，评论 0 发=纪律拦截日）
+
+> **间隔账修正（头条，调度层教训）**：任务书断言"10-18 ≥48h 达标可发 1x7jl1i"与台账时间戳矛盾——ph9bwec 实发 10-17T06:36:48Z，10-18T05:59Z 核时时页面显示"23 小时前"=间隔 23.4h；10-17 断点文件"次日（≥48h 后）可发"为**跨日≠48h 的算法笔误**（06:36Z+48h=10-19T06:36Z 才达标）。按铁律拦截不发，1x7jl1i 最早可发 **10-19T06:36:48Z 后**。教训：**间隔达标判定必须用"上一条评论时间戳+48h"硬算，禁用"次日/隔天"自然日表述**（调度任务书时同样适用）。
+>
+> **DM 探针第 2 天（提前轻探）**：两路全堵复现——www `/chat/compose` 18 字符空壳+reCAPTCHA Enterprise 在场；old `/message/compose/?to=fagbac` 301 强跳 www+125 字符标签骨架空壳（同一 reCAPTCHA key）。**第 2 天仍锁**，不硬闯；明日/后日继续探（原计划 3-5 天窗=10-19~10-21）。fagbac 草稿仍留 temp。
+>
+> **扫描轮 5 查询零新增候选**：flair 页三帖全已档；主词(w) 第 9 轮冻结；r/BuyItForLife 3 条当日新帖全品类无关；**r/Cushions 实测死 sub（最新帖 2026-08-08，从台账活跃 sub 扫描名单移除）**；`"couch cushion" replacement`(m) 全已档/噪音。顺带核 ph9bwec 存活（23h，removed=false）。
+
+37. **[纪律·间隔账算法]** 触达间隔≥48h 的达标判定必须用上一条评论时间戳硬算——10-17 断点"次日可发"系跨日≠48h 笔误，10-18 调度照抄导致任务书断言错误（agent 侧拦截未发，无实际违规）。→ 动作：断点/任务书的时间断言出口前必附"上一条评论戳+48h 落点"算式；调度层与执行层共用此格式。
 
 **版规核查方法更新（09-29）**：`/r/X/about/rules` 会重定向 `/mod/X/rules/`（mod 视图），innerText 抓不到——**版规核查走 CDP 截图人工读**。
 
