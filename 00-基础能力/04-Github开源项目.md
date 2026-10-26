@@ -1,6 +1,6 @@
 # 推荐开源项目收藏
 
-> **优质GitHub项目集合** | 持续更新 | 最后更新：2026-08-24
+> **优质GitHub项目集合** | 持续更新 | 最后更新：2026-10-26（+GenOffice 收录观察）
 
 ---
 
@@ -11,7 +11,7 @@
 | [AI 营销工具](#ai-营销工具) | 9 | Fooocus、MoneyPrinterTurbo、HyperFrames、Nanobrowser、CloakBrowser、XHS-Crawler-to-Base |
 | [客服与消息自动化](#客服与消息自动化) | 1 | Evolution API |
 | [AI 开发工具](#ai-开发工具) | 6 | Skill Recorder、superpowers-zh、Codex Security、TokenTracker、ccusage |
-| [通用效率工具](#通用效率工具) | 9 | ERPNext、PlainApp、Vibe、PDFCraft、free-for.dev |
+| [通用效率工具](#通用效率工具) | 10 | ERPNext、PlainApp、Vibe、PDFCraft、GenOffice、free-for.dev |
 
 ---
 
@@ -954,6 +954,32 @@ docker run -d -p 8080:80 --name pdfcraft ghcr.io/pdfcrafttool/pdfcraft:latest
 
 ---
 
+### GenOffice（开源 AI 办公套件 — 收录观察，未安装）
+
+**GitHub**: https://github.com/genspark-ai/genoffice | **版本**: v0.7.204 | **License**: Apache-2.0（`ee/` 目录企业模块除外） | **作者**: Genspark（Mainfunc, Inc.）
+
+**简介**: 自称"世界首个全功能开源 AI 办公套件"——六个 Electron 应用（Docs/Sheets/Slides/PDF/Markdown + 外壳）共用一层纯 TypeScript 引擎，AI 编辑是原生工作流而非外挂聊天框。读写真 Office 格式（.docx/.xlsx/.pptx）+ PDF/Markdown 编辑。
+
+**核心技术亮点**（工程上有真功夫，非套壳）:
+- **docx 字节保留往返**: 只重写脏段落的 OOXML 片段，未触碰部分原字节写回——Word 打开不出差异；分页复现 Word 行为
+- **PDF 真编辑**: 页面内容流重写 + 原字体子集嵌入（PDFium wasm），非"白块遮盖"式假编辑
+- **xlsx**: Univer UI + Rust sidecar（calamine+IronCalc），图表/透视表/切片器；**pptx**: 自研引擎，母版/智能参考线
+- 文档编辑全本地离线；文件不上传
+
+**AI 后端绑定（关键限制）**: AI 功能走 Genspark 账号 device-code 登录，模型经 Genspark 代理（Claude/GPT/Gemini），用户不输入 API key；搜索/生图/转录工具端点同为 Genspark——**编辑器免费离线，AI 能力是 Genspark 的获客面**。
+
+**CLI/MCP 说法未验证**: 推荐文称自带 `genoffice` 命令行 + agent skill + `genoffice mcp`（29 工具）可让 agent 无窗口操作 Office 文件；但 main README、docs/、npm registry 均未见（2026-10-26 查证）——可能随安装包附带未文档化，装后需自验。
+
+**未安装决策（2026-10-26）**: ①agent 链路核心卖点未验证；②AI 绑 Genspark 账号，与自有模型链路重叠；③我们的 Office 文件需求低频，docx/pdf/xlsx skills（Python 路线）已覆盖；④Electron 六应用资源占用大。安装包已试下载（130MB）后删除。
+
+**与现有工具的关系**: docx/pdf/xlsx skills 走 Python 库直改文件（agent 通道已有）；GenOffice 的差异化在 GUI 所见即所得 + 字节保留补丁——若未来有"人工精修 Word/PPT + 保留原格式"场景再启用。
+
+**适用场景**: 免费替代 Office 处理 .docx/.pptx、PDF 原字体改字、本地 MD↔Word 转换（不依赖 Pandoc）
+
+**来源**: [开源先锋 - 本周 5 个硬核实用的Github项目](https://mp.weixin.qq.com/s/Dx-L_zFzdzOymc8VyKIDYg)（2026-10-26 阅读，CLI 部分与官方 README 有出入，以本条目查证为准）
+
+---
+
 ### free-for.dev（免费云服务索引 — OPC 白嫖圣经）
 
 **GitHub**: https://github.com/free-for-dev/free-for.dev | **Star**: 132K+ | **在线版**: https://free-for.dev
@@ -1004,4 +1030,4 @@ docker run -d -p 8080:80 --name pdfcraft ghcr.io/pdfcrafttool/pdfcraft:latest
 
 ---
 
-**最后更新**: 2026-08-24
+**最后更新**: 2026-10-26
